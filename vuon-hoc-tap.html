@@ -1057,7 +1057,10 @@ nav.main{position:sticky;top:62px;z-index:55;background:transparent}
       <span id="brandAvatar" onclick="openTeacherProfile()" title="Hồ sơ giáo viên — bấm để chỉnh" style="cursor:pointer;flex-shrink:0"></span>
       <span>
         <div class="bt" id="brandName">GIÁO VIÊN</div>
-        <div class="bs">VƯỜN HỌC TẬP</div>
+        <div class="bs" style="display:flex;align-items:center;gap:5px">
+          <img src="logos/ab.png" alt="An Bình" style="height:14px;width:auto;opacity:.85;vertical-align:middle" onerror="this.style.display='none'">
+          VƯỜN HỌC TẬP
+        </div>
       </span>
     </div>
     <div class="top-tools">
@@ -1536,19 +1539,25 @@ function loadVoices(){
     },2000);
   }
 }
-if("speechSynthesis" in window){ loadVoices(); speechSynthesis.onvoiceschanged = loadVoices; }
+if("speechSynthesis" in window){
+  loadVoices();
+  speechSynthesis.onvoiceschanged = loadVoices;
+  // iOS: voices only available after first user touch
+  if(/iP(hone|ad|od)/i.test(navigator.userAgent)){
+    document.addEventListener('touchend', function _iosVU(){loadVoices();document.removeEventListener('touchend',_iosVU);},{once:true,passive:true});
+  }
+}
 
 let dangDoc=null;
 function doc(txt, opt){
   opt=opt||{};
   if(!("speechSynthesis" in window)) return;
-  speechSynthesis.cancel();                    // không bao giờ chồng giọng đọc
+  speechSynthesis.cancel();
   if(!txt) return;
-  if(!VI.length) return;
   const u=new SpeechSynthesisUtterance(String(txt));
   u.lang="vi-VN"; u.rate=opt.rate||ST.rate; u.pitch=opt.pitch||1.05; u.volume=ST.sound?1:0;
   const v = VI.find(x=>x.name===ST.voice) || VI[0];
-  if(v) u.voice=v;
+  if(v) u.voice=v;   // không set voice nếu không có VI → browser tự dùng vi-VN tốt nhất
   if(opt.xong) u.onend=opt.xong;
   dangDoc=u; speechSynthesis.speak(u);
 }
@@ -11769,19 +11778,12 @@ const HP_VOICE_GUIDES={
 let _hpAudio=null;
 
 // Cache giọng offline (Web Speech API)
-let _hpViVoice=null;
-function _hpLoadVoices(){
-  const all=speechSynthesis.getVoices();
-  _hpViVoice=all.find(v=>v.lang==='vi-VN')||all.find(v=>v.lang.startsWith('vi'))||null;
-}
-if(window.speechSynthesis){speechSynthesis.onvoiceschanged=_hpLoadVoices;_hpLoadVoices();}
-
 function _hpSpeakOffline(txt){
   if(!window.speechSynthesis)return;
   speechSynthesis.cancel();
   const u=new SpeechSynthesisUtterance(txt);
   u.lang='vi-VN';u.rate=0.68;u.pitch=1.05;
-  if(_hpViVoice)u.voice=_hpViVoice;
+  const v=VI[0]||null; if(v)u.voice=v;
   speechSynthesis.speak(u);
 }
 
