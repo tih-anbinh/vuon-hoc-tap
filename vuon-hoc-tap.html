@@ -1516,14 +1516,24 @@ const SFX={
 };
 
 /* ---------- 4. GIỌNG ĐỌC TIẾNG VIỆT ---------- */
-let VOICES=[], VI=[];
+let VOICES=[], VI=[], _vPoll=0, _vWarnShown=false;
 function loadVoices(){
   if(!("speechSynthesis" in window)) return;
   VOICES = speechSynthesis.getVoices()||[];
   VI = VOICES.filter(v=>/^vi(-|_|$)/i.test(v.lang||"") || /vietnam/i.test(v.name||""));
+  if(!VI.length && _vPoll<20){_vPoll++;setTimeout(loadVoices,300);return;}
   if(!ST.voice && VI.length){
     const uu = VI.find(v=>/hoaimy|nammin|natural|online/i.test(v.name)) || VI[0];
     ST.voice = uu.name; save();
+  }
+  if(!VI.length && !_vWarnShown){
+    _vWarnShown=true;
+    setTimeout(()=>{
+      const t=document.createElement('div');
+      t.style.cssText='position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#3a3350;color:#fff;padding:10px 18px;border-radius:14px;font-size:.85rem;z-index:9999;max-width:320px;text-align:center;line-height:1.4;box-shadow:0 4px 16px rgba(0,0,0,.3)';
+      t.innerHTML='Trình duyệt chưa có giọng Tiếng Việt.<br><b>Edge</b> đọc tốt hơn Chrome.<br><small>Chrome: Cài giọng Việt qua Windows Settings → Ngôn ngữ → Giọng nói</small>';
+      document.body.appendChild(t);setTimeout(()=>t.remove(),7000);
+    },2000);
   }
 }
 if("speechSynthesis" in window){ loadVoices(); speechSynthesis.onvoiceschanged = loadVoices; }
@@ -1534,6 +1544,7 @@ function doc(txt, opt){
   if(!("speechSynthesis" in window)) return;
   speechSynthesis.cancel();                    // không bao giờ chồng giọng đọc
   if(!txt) return;
+  if(!VI.length) return;
   const u=new SpeechSynthesisUtterance(String(txt));
   u.lang="vi-VN"; u.rate=opt.rate||ST.rate; u.pitch=opt.pitch||1.05; u.volume=ST.sound?1:0;
   const v = VI.find(x=>x.name===ST.voice) || VI[0];
@@ -3662,7 +3673,11 @@ function idbOpen(){return new Promise((ok,no)=>{const r=indexedDB.open(WRITING_V
 async function saveFontBlob(buf,name){const db=await idbOpen();return new Promise((ok,no)=>{const t=db.transaction(WRITING_V4.store,'readwrite');t.objectStore(WRITING_V4.store).put({buf,name},'primary');t.oncomplete=ok;t.onerror=()=>no(t.error);});}
 async function getFontBlob(){try{const db=await idbOpen();return await new Promise((ok,no)=>{const r=db.transaction(WRITING_V4.store).objectStore(WRITING_V4.store).get('primary');r.onsuccess=()=>ok(r.result);r.onerror=()=>no(r.error);});}catch(e){return null}}
 async function loadFontBuffer(buf,name){try{const ff=new FontFace(WRITING_V4.fontName,buf);await ff.load();document.fonts.add(ff);WRITING_V4.loaded=true;WRITING_V4.source=name||'Font đã nhập';document.documentElement.style.setProperty('--fh',"'"+WRITING_V4.fontName+"','Patrick Hand','Comic Sans MS','Segoe Print',cursive");return true}catch(e){console.error(e);return false}}
-async function restoreWritingFont(){const o=await getFontBlob();if(o)await loadFontBuffer(o.buf,o.name);}
+async function restoreWritingFont(){
+  const o=await getFontBlob();
+  if(o){await loadFontBuffer(o.buf,o.name);return;}
+  try{const r=await fetch('HP001_4_hang_normal.ttf');if(r.ok)await loadFontBuffer(await r.arrayBuffer(),'HP001_4_hang_normal.ttf');}catch(e){}
+}
 function fontStateHTML(){return `<div class="font-status"><span class="font-dot ${WRITING_V4.loaded?'ok':''}"></span><span>${WRITING_V4.loaded?'Đang dùng font chuẩn: '+esc(WRITING_V4.source):'Chưa nhập font HP001. Đang dùng mẫu dự phòng.'}</span></div>`}
 async function importWritingFont(file){if(!file)return;const buf=await file.arrayBuffer();const ok=await loadFontBuffer(buf,file.name);if(ok){await saveFontBlob(buf,file.name);SFX.ok();veTrang()}else alert('Không đọc được font này. Hãy chọn tệp .ttf hoặc .otf.');}
 function writingToolbar(){return `<div class="font-lab"><button class="btn v sm" id="openWorksheet">📄 Tạo trang luyện viết</button></div></div>`}
