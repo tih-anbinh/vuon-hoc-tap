@@ -1534,7 +1534,7 @@ function loadVoices(){
     setTimeout(()=>{
       const t=document.createElement('div');
       t.style.cssText='position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#3a3350;color:#fff;padding:10px 18px;border-radius:14px;font-size:.85rem;z-index:9999;max-width:320px;text-align:center;line-height:1.4;box-shadow:0 4px 16px rgba(0,0,0,.3)';
-      t.innerHTML='Trình duyệt chưa có giọng Tiếng Việt.<br><b>Edge</b> đọc tốt hơn Chrome.<br><small>Chrome: Cài giọng Việt qua Windows Settings → Ngôn ngữ → Giọng nói</small>';
+      t.innerHTML='Chrome không hỗ trợ giọng Tiếng Việt của Windows.<br>Dùng <b>Microsoft Edge</b> để có giọng Hoài My / Nam Minh.';
       document.body.appendChild(t);setTimeout(()=>t.remove(),7000);
     },2000);
   }
