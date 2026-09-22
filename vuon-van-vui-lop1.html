@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>🌈 Vườn Vần Lớp 1 – Học Tiếng Việt Vui Vẻ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root { --font:'Baloo 2','Segoe UI',sans-serif; --r:20px; --sh:0 8px 32px rgba(0,0,0,.15); }
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:var(--font);background:#87CEEB;min-height:100vh;overflow-x:hidden;touch-action:manipulation;user-select:none;}
+.screen{display:none;min-height:100vh;}
+.screen.active{display:flex;flex-direction:column;}
+
+/* ── MENU ── */
+#menuScreen{background:linear-gradient(180deg,#87CEEB 0%,#B2EBF2 60%,#A8E6CF 100%);align-items:center;padding:18px 14px 110px;position:relative;overflow:hidden;}
+.cloud{position:absolute;background:#fff;border-radius:50px;opacity:.75;animation:fc linear infinite;}
+.cloud::before,.cloud::after{content:'';position:absolute;background:#fff;border-radius:50%;}
+@keyframes fc{from{transform:translateX(-220px)}to{transform:translateX(calc(100vw + 220px))}}
+.grass{position:absolute;bottom:0;left:0;right:0;height:90px;background:linear-gradient(180deg,transparent,#52b788);z-index:1;}
+.flower{position:absolute;bottom:46px;font-size:30px;animation:sway 3s infinite ease-in-out;z-index:2;}
+@keyframes sway{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(5deg)}}
+.menu-title{font-size:clamp(24px,6vw,50px);font-weight:900;text-align:center;
+  background:linear-gradient(90deg,#FF6B6B,#FF9F43,#FFE66D,#6BCB77,#4D96FF,#C77DFF);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.menu-sub{font-size:clamp(12px,2.8vw,18px);color:#4a7a8a;text-align:center;margin-bottom:24px;}
+.game-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;max-width:860px;width:100%;z-index:3;position:relative;}
+.game-card{background:#fff;border-radius:22px;padding:20px 16px;cursor:pointer;transition:transform .2s,box-shadow .2s;box-shadow:var(--sh);border:3px solid transparent;position:relative;overflow:hidden;}
+.game-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,.2);}
+.game-card:active{transform:translateY(-2px) scale(.98);}
+.game-card svg.card-deco{position:absolute;inset:0;width:100%;height:100%;opacity:.07;pointer-events:none;}
+.game-card .ce{font-size:50px;display:block;text-align:center;margin-bottom:8px;position:relative;z-index:1;}
+.game-card h2{font-size:20px;font-weight:800;text-align:center;margin-bottom:4px;position:relative;z-index:1;}
+.game-card p{font-size:13px;text-align:center;color:#666;line-height:1.4;position:relative;z-index:1;}
+.card-badge{position:absolute;top:10px;right:10px;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;color:#fff;z-index:2;}
+.game-card.c1{border-color:#FFE66D}.game-card.c1 h2{color:#D97706}.game-card.c1 .card-badge{background:#D97706}
+.game-card.c2{border-color:#4ECDC4}.game-card.c2 h2{color:#0891B2}.game-card.c2 .card-badge{background:#0891B2}
+.game-card.c3{border-color:#C77DFF}.game-card.c3 h2{color:#7C3AED}.game-card.c3 .card-badge{background:#7C3AED}
+.game-card.c4{border-color:#FF6B6B}.game-card.c4 h2{color:#DC2626}.game-card.c4 .card-badge{background:#DC2626}
+.game-card.c5{border-color:#6BCB77}.game-card.c5 h2{color:#059669}.game-card.c5 .card-badge{background:#059669}
+.game-card.c6{border-color:#a0d8ef}.game-card.c6 h2{color:#0369A1}.game-card.c6 .card-badge{background:#0369A1}
+
+/* ── Game header ── */
+.ghdr{display:flex;align-items:center;padding:11px 14px;background:rgba(255,255,255,.93);backdrop-filter:blur(10px);box-shadow:0 2px 10px rgba(0,0,0,.1);gap:10px;flex-shrink:0;}
+.back{background:#f1f5f9;border:none;border-radius:11px;padding:7px 13px;font-size:18px;cursor:pointer;font-family:var(--font);font-weight:700;transition:background .2s;}
+.back:hover{background:#e2e8f0;}
+.gtitle{font-size:18px;font-weight:800;flex:1;}
+.score-pill{background:#FFE66D;border-radius:20px;padding:5px 13px;font-size:13px;font-weight:700;color:#92400E;}
+.tbar{height:6px;background:#e5e7eb;border-radius:3px;overflow:hidden;flex:1;min-width:60px;}
+.tfill{height:100%;background:linear-gradient(90deg,#6BCB77,#FFE66D,#FF6B6B);border-radius:3px;transition:width .5s linear;}
+
+/* ── Game 1: Butterfly ── */
+#game1Screen{background:linear-gradient(180deg,#87CEEB 0%,#B2F2BB 100%);position:relative;overflow:hidden;}
+.g1area{flex:1;position:relative;overflow:hidden;}
+.tgt{position:absolute;top:12px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.96);border-radius:20px;padding:8px 22px;text-align:center;z-index:10;box-shadow:0 4px 20px rgba(0,0,0,.15);min-width:230px;pointer-events:none;}
+.tgt-lbl{font-size:12px;color:#666;font-weight:600;}
+.tgt-van{font-size:34px;font-weight:900;line-height:1.1;}
+.tgt-grp{font-size:12px;color:#7C3AED;font-weight:700;}
+.bfly{position:absolute;cursor:pointer;display:flex;flex-direction:column;align-items:center;z-index:5;transition:left 1.2s ease,top 1.2s ease;}
+.bfly-icon{font-size:42px;animation:bfloat 2.5s infinite ease-in-out;display:block;}
+.bfly-lbl{background:#fff;border-radius:12px;padding:3px 10px;font-size:19px;font-weight:800;border:2px solid #e5e7eb;box-shadow:0 2px 8px rgba(0,0,0,.13);white-space:nowrap;margin-top:-4px;}
+@keyframes bfloat{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-14px) rotate(4deg)}}
+.pop-fx{position:absolute;pointer-events:none;font-size:18px;font-weight:800;color:#F59E0B;z-index:20;animation:popup .7s ease-out forwards;}
+@keyframes popup{0%{opacity:1;transform:translateY(0) scale(.8)}100%{opacity:0;transform:translateY(-60px) scale(1.2)}}
+
+/* ── Game 2: Explorer ── */
+#game2Screen{background:linear-gradient(135deg,#f0f4ff,#fdf4ff);overflow:hidden;}
+.g2inner{flex:1;overflow-y:auto;padding:13px;display:flex;flex-direction:column;gap:13px;}
+.grp-tabs{display:flex;gap:7px;overflow-x:auto;padding:2px 0;flex-shrink:0;scrollbar-width:none;}
+.grp-tabs::-webkit-scrollbar{display:none;}
+.grp-tab{background:#fff;border:2px solid #e5e7eb;border-radius:20px;padding:6px 14px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;font-family:var(--font);transition:all .2s;flex-shrink:0;}
+.grp-tab.active{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-color:transparent;}
+.vdisplay{background:#fff;border-radius:20px;padding:16px;box-shadow:var(--sh);}
+.vg-title{font-size:16px;font-weight:800;color:#374151;margin-bottom:4px;}
+.vg-desc{font-size:13px;color:#9CA3AF;margin-bottom:13px;}
+.vchips{display:flex;flex-wrap:wrap;gap:8px;}
+.vchip{color:#fff;border-radius:13px;padding:8px 16px;font-size:22px;font-weight:800;cursor:pointer;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 12px rgba(102,126,234,.3);}
+.vchip:hover{transform:translateY(-3px) scale(1.07);}
+.vchip.sel{transform:scale(1.12);box-shadow:0 8px 22px rgba(0,0,0,.25);}
+.ex-box{margin-top:13px;background:linear-gradient(135deg,#fefce8,#fff7ed);border-radius:14px;padding:14px;border:2px solid #FDE68A;text-align:center;min-height:100px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.ex-rare{background:linear-gradient(135deg,#f8fafc,#f1f5f9);border-color:#CBD5E1;min-height:80px;}
+.ex-van{font-size:44px;font-weight:900;color:#DC2626;line-height:1;}
+.ex-word{font-size:16px;font-weight:700;color:#7C3AED;margin-top:4px;}
+
+/* ── Game 3: Memory ── */
+#game3Screen{background:linear-gradient(135deg,#fdf2ff,#f0fdf4);overflow:hidden;}
+.g3inner{flex:1;display:flex;flex-direction:column;padding:11px;gap:10px;overflow:hidden;}
+.mem-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;flex:1;max-width:560px;margin:0 auto;width:100%;}
+.mcard{aspect-ratio:1;position:relative;cursor:pointer;perspective:500px;}
+.mcard-in{width:100%;height:100%;position:relative;transform-style:preserve-3d;transition:transform .44s ease;}
+.mcard.flipped .mcard-in{transform:rotateY(180deg);}
+.mcard-f,.mcard-b{position:absolute;inset:0;border-radius:13px;display:flex;align-items:center;justify-content:center;backface-visibility:hidden;-webkit-backface-visibility:hidden;}
+.mcard-f{background:linear-gradient(135deg,#667eea,#764ba2);font-size:28px;box-shadow:0 4px 12px rgba(102,126,234,.3);}
+.mcard-b{background:#fff;border:3px solid #e5e7eb;transform:rotateY(180deg);flex-direction:column;gap:3px;box-shadow:0 4px 12px rgba(0,0,0,.08);padding:4px;}
+.mcard-b .cv{font-size:18px;font-weight:900;color:#7C3AED;text-align:center;}
+.mcard-b .ci{font-size:24px;}
+.mcard-b .cw{font-size:10px;color:#7C3AED;font-weight:700;text-align:center;}
+.mcard.matched .mcard-f{background:linear-gradient(135deg,#6BCB77,#4ECDC4);}
+.mcard.matched .mcard-b{background:#f0fdf4;border-color:#6BCB77;}
+.mcard.matched{pointer-events:none;}
+.mcard.wrong .mcard-b{border-color:#FF6B6B;background:#fff5f5;animation:shake .4s ease;}
+@keyframes shake{0%,100%{transform:rotateY(180deg) translateX(0)}25%{transform:rotateY(180deg) translateX(-6px)}75%{transform:rotateY(180deg) translateX(6px)}}
+.mem-status{text-align:center;font-size:15px;font-weight:700;color:#4B5563;flex-shrink:0;}
+
+/* ── Game 4: Quiz ── */
+#game4Screen{background:linear-gradient(135deg,#e8fff4,#f0f4ff);overflow:hidden;}
+.g4inner{flex:1;display:flex;flex-direction:column;padding:13px;gap:13px;overflow:hidden;}
+.q-card{background:#fff;border-radius:22px;padding:18px;text-align:center;box-shadow:var(--sh);flex-shrink:0;}
+.q-label{font-size:13px;color:#9CA3AF;font-weight:600;margin-bottom:3px;}
+.q-text{font-size:21px;font-weight:800;color:#1F2937;line-height:1.35;}
+.q-van{font-size:48px;font-weight:900;margin:6px 0;display:block;}
+.opts-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;flex:1;}
+.opt{background:#fff;border:3px solid #e5e7eb;border-radius:18px;font-size:22px;font-weight:900;color:#1F2937;cursor:pointer;font-family:var(--font);transition:all .2s;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,.07);min-height:68px;padding:8px;text-align:center;}
+.opt:hover{border-color:#7C3AED;transform:translateY(-3px);box-shadow:0 8px 20px rgba(124,58,237,.2);}
+.opt.correct{background:linear-gradient(135deg,#6BCB77,#4ECDC4);border-color:transparent;color:#fff;transform:scale(1.04);}
+.opt.wrong{background:linear-gradient(135deg,#FF6B6B,#FF9F43);border-color:transparent;color:#fff;animation:shake2 .4s ease;}
+@keyframes shake2{0%,100%{transform:translateX(0)}25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+.opt:disabled{cursor:default;}
+
+/* ── Game 5: Star Rain ── */
+#game5Screen{background:linear-gradient(180deg,#1a1a2e 0%,#16213e 40%,#0f3460 100%);overflow:hidden;}
+.g5inner{flex:1;position:relative;overflow:hidden;}
+.g5-prompt{position:absolute;top:10px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.12);border:2px solid rgba(255,255,255,.3);backdrop-filter:blur(8px);border-radius:18px;padding:10px 22px;text-align:center;z-index:10;pointer-events:none;min-width:250px;}
+.g5-plbl{font-size:12px;color:#94A3B8;font-weight:600;}
+.g5-pvan{font-size:32px;font-weight:900;color:#FFE66D;line-height:1.1;}
+.g5-pgrp{font-size:12px;color:#C77DFF;font-weight:700;}
+.star{position:absolute;cursor:pointer;display:flex;flex-direction:column;align-items:center;transition:top .05s linear;}
+.star-icon{font-size:36px;animation:twinkle 1.5s infinite ease-in-out;display:block;}
+@keyframes twinkle{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.7;transform:scale(1.15)}}
+.star-lbl{background:rgba(255,255,255,.15);border:1.5px solid rgba(255,255,255,.4);color:#fff;border-radius:10px;padding:3px 10px;font-size:17px;font-weight:800;white-space:nowrap;margin-top:-4px;}
+.explode{position:absolute;pointer-events:none;z-index:20;font-size:24px;animation:explode .7s ease-out forwards;}
+@keyframes explode{0%{opacity:1;transform:scale(.5)}100%{opacity:0;transform:scale(2.2) translateY(-40px)}}
+.ground{position:absolute;bottom:0;left:0;right:0;height:50px;background:linear-gradient(180deg,transparent,rgba(255,100,100,.3));}
+
+/* ── Library ── */
+#libraryScreen{background:#f8fafc;overflow-y:auto;}
+.lib-inner{padding:13px;display:flex;flex-direction:column;gap:10px;}
+.lib-grp{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.07);}
+.lib-ghdr{padding:10px 14px;font-size:14px;font-weight:800;color:#fff;display:flex;align-items:center;gap:8px;}
+.lib-gbdy{padding:13px;display:flex;flex-wrap:wrap;gap:7px;}
+.lib-van{background:#f1f5f9;border-radius:10px;padding:7px 14px;font-size:18px;font-weight:700;color:#1F2937;cursor:pointer;transition:all .2s;border:2px solid transparent;}
+.lib-van:hover{transform:scale(1.06);}
+
+/* ── Win overlay ── */
+.win-ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:100;align-items:center;justify-content:center;backdrop-filter:blur(8px);}
+.win-ov.show{display:flex;}
+.win-card{background:#fff;border-radius:28px;padding:36px 28px;text-align:center;max-width:340px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,.3);animation:wbounce .5s ease-out;}
+@keyframes wbounce{0%{transform:scale(.5) translateY(50px);opacity:0}70%{transform:scale(1.05)}100%{transform:scale(1);opacity:1}}
+.win-ej{font-size:66px;display:block;margin-bottom:8px;}
+.win-ttl{font-size:28px;font-weight:900;color:#1F2937;margin-bottom:6px;}
+.win-sc{font-size:18px;color:#7C3AED;font-weight:700;margin-bottom:20px;}
+.win-btns{display:flex;gap:10px;justify-content:center;}
+.wbtn{padding:11px 20px;border-radius:14px;font-size:15px;font-weight:700;cursor:pointer;border:none;font-family:var(--font);transition:transform .2s;}
+.wbtn:hover{transform:translateY(-2px);}
+.wbtn.pri{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;}
+.wbtn.sec{background:#f1f5f9;color:#4B5563;}
+
+/* ── Particles ── */
+.sparkle{position:fixed;pointer-events:none;z-index:200;font-size:22px;animation:sfx .9s ease-out forwards;}
+@keyframes sfx{0%{opacity:1;transform:translateY(0) scale(1)}100%{opacity:0;transform:translateY(-90px) scale(.2)}}
+.conf{position:fixed;pointer-events:none;z-index:201;border-radius:2px;animation:cdrop linear forwards;}
+@keyframes cdrop{0%{transform:translateY(-20px) rotate(0);opacity:1}100%{transform:translateY(100vh) rotate(720deg);opacity:0}}
+
+/* ── Responsive ── */
+@media(max-width:480px){.game-grid{grid-template-columns:1fr 1fr;}.mem-grid{gap:5px;}.mcard-b .cv{font-size:13px;}.mcard-b .ci{font-size:18px;}.opt{font-size:17px;min-height:58px;}.q-van{font-size:36px;}}
+@media(max-width:340px){.game-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<!-- ══ MENU ══ -->
+<div id="menuScreen" class="screen active">
+  <div class="cloud" style="width:130px;height:42px;top:6%;animation-duration:19s;animation-delay:-4s"><div style="position:absolute;width:65px;height:65px;border-radius:50%;background:#fff;top:-32px;left:14px"></div><div style="position:absolute;width:85px;height:75px;border-radius:50%;background:#fff;top:-44px;right:9px"></div></div>
+  <div class="cloud" style="width:86px;height:30px;top:17%;animation-duration:25s;animation-delay:-12s"><div style="position:absolute;width:46px;height:46px;border-radius:50%;background:#fff;top:-23px;left:10px"></div></div>
+  <div class="cloud" style="width:110px;height:36px;top:10%;animation-duration:21s;animation-delay:-8s"><div style="position:absolute;width:56px;height:56px;border-radius:50%;background:#fff;top:-28px;left:13px"></div><div style="position:absolute;width:72px;height:65px;border-radius:50%;background:#fff;top:-38px;right:8px"></div></div>
+  <div class="grass"></div>
+  <div class="flower" style="left:4%">🌻</div><div class="flower" style="left:12%;animation-delay:-.9s">🌸</div>
+  <div class="flower" style="left:26%;animation-delay:-1.7s">🦋</div><div class="flower" style="right:26%;animation-delay:-1.2s">🌷</div>
+  <div class="flower" style="right:11%;animation-delay:-.5s">🌺</div><div class="flower" style="right:3%;animation-delay:-2s">🌼</div>
+  <div style="position:relative;z-index:3;display:flex;flex-direction:column;align-items:center;gap:16px;width:100%;margin-top:18px">
+    <div>
+      <div class="menu-title">🌈 Vườn Vần Lớp 1</div>
+      <div class="menu-sub">Học tiếng Việt thật vui · 125 vần lớp 1</div>
+    </div>
+    <div class="game-grid" id="menuGrid"></div>
+  </div>
+</div>
+
+<!-- ══ GAME 1: BUTTERFLY ══ -->
+<div id="game1Screen" class="screen">
+  <div class="ghdr">
+    <button class="back" onclick="backToMenu()">← Menu</button>
+    <div class="gtitle" style="color:#D97706">🦋 Bắt Bướm Vần</div>
+    <span class="score-pill" id="g1Score">0 điểm</span>
+    <span id="g1Lives" style="font-size:19px;letter-spacing:2px">❤️❤️❤️</span>
+  </div>
+  <div style="display:flex;align-items:center;gap:10px;padding:6px 13px;background:rgba(255,255,255,.75)">
+    <span style="font-size:12px;font-weight:600;color:#666">Thời gian:</span>
+    <div class="tbar"><div class="tfill" id="g1TF" style="width:100%"></div></div>
+    <span id="g1TT" style="font-size:13px;font-weight:700;color:#374151">60s</span>
+  </div>
+  <div class="g1area" id="g1Area">
+    <div class="tgt"><div class="tgt-lbl">Bắt bướm có vần:</div><div class="tgt-van" id="g1Tgt">—</div><div class="tgt-grp" id="g1TgtG"></div></div>
+  </div>
+</div>
+
+<!-- ══ GAME 2: EXPLORER ══ -->
+<div id="game2Screen" class="screen">
+  <div class="ghdr">
+    <button class="back" onclick="backToMenu()">← Menu</button>
+    <div class="gtitle" style="color:#0891B2">🔮 Lò Vần Ma Thuật</div>
+  </div>
+  <div class="g2inner">
+    <div class="grp-tabs" id="g2Tabs"></div>
+    <div class="vdisplay">
+      <div class="vg-title" id="g2GT"></div>
+      <div class="vg-desc" id="g2GD"></div>
+      <div class="vchips" id="g2Chips"></div>
+      <div class="ex-box" id="g2Ex"><div style="color:#D1D5DB;font-size:15px">Chọn một vần để xem ví dụ nhé! 👆</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ GAME 3: MEMORY ══ -->
+<div id="game3Screen" class="screen">
+  <div class="ghdr">
+    <button class="back" onclick="backToMenu()">← Menu</button>
+    <div class="gtitle" style="color:#7C3AED">🃏 Lật Bài Đôi</div>
+    <span class="score-pill" id="g3Mv">0 lượt</span>
+  </div>
+  <div class="g3inner">
+    <div class="mem-status" id="g3St">Chọn 2 thẻ giống nhau nhé!</div>
+    <div class="mem-grid" id="g3Grid"></div>
+    <div style="display:flex;gap:8px;justify-content:center;flex-shrink:0">
+      <button style="background:#f1f5f9;border:none;border-radius:11px;padding:9px 20px;font-size:14px;font-weight:700;cursor:pointer;font-family:var(--font)" onclick="initG3()">🔄 Chơi lại</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ GAME 4: QUIZ ══ -->
+<div id="game4Screen" class="screen">
+  <div class="ghdr">
+    <button class="back" onclick="backToMenu()">← Menu</button>
+    <div class="gtitle" style="color:#DC2626">🏆 Siêu Vần</div>
+    <span class="score-pill" id="g4Sc">0/10</span>
+  </div>
+  <div class="g4inner">
+    <div style="display:flex;align-items:center;gap:10px">
+      <span style="font-size:12px;font-weight:600;color:#666">Thời gian:</span>
+      <div class="tbar"><div class="tfill" id="g4TF" style="width:100%"></div></div>
+      <span id="g4TT" style="font-size:13px;font-weight:700;color:#374151">10s</span>
+    </div>
+    <div class="q-card">
+      <div class="q-label" id="g4Lbl">Câu 1/10</div>
+      <div class="q-text" id="g4Q">Vần nào?</div>
+      <span class="q-van" id="g4V">ai</span>
+    </div>
+    <div class="opts-grid" id="g4Opts"></div>
+  </div>
+</div>
+
+<!-- ══ GAME 5: STAR RAIN ══ -->
+<div id="game5Screen" class="screen">
+  <div class="ghdr" style="background:rgba(20,20,50,.9)">
+    <button class="back" onclick="backToMenu()" style="background:rgba(255,255,255,.15);color:#fff">← Menu</button>
+    <div class="gtitle" style="color:#FFE66D">🌠 Mưa Sao Vần</div>
+    <span class="score-pill" id="g5Sc">0 điểm</span>
+    <span id="g5Lv" style="font-size:19px;letter-spacing:2px">❤️❤️❤️</span>
+  </div>
+  <div style="display:flex;align-items:center;gap:10px;padding:6px 13px;background:rgba(20,20,50,.8)">
+    <span style="font-size:12px;font-weight:600;color:#94A3B8">Lượt:</span>
+    <div class="tbar" style="background:rgba(255,255,255,.2)"><div class="tfill" id="g5TF" style="width:100%"></div></div>
+    <span id="g5TT" style="font-size:13px;font-weight:700;color:#E2E8F0">60s</span>
+  </div>
+  <div class="g5inner" id="g5Area">
+    <div class="g5-prompt"><div class="g5-plbl">Bắn hạ sao có vần:</div><div class="g5-pvan" id="g5Tgt">—</div><div class="g5-pgrp" id="g5TgtG"></div></div>
+    <div class="ground"></div>
+  </div>
+</div>
+
+<!-- ══ LIBRARY ══ -->
+<div id="libraryScreen" class="screen">
+  <div class="ghdr">
+    <button class="back" onclick="backToMenu()">← Menu</button>
+    <div class="gtitle">📚 Thư Viện 125 Vần</div>
+  </div>
+  <div class="lib-inner" id="libContent"></div>
+</div>
+
+<!-- ══ WIN OVERLAY ══ -->
+<div class="win-ov" id="winOv">
+  <div class="win-card">
+    <span class="win-ej" id="wEj">🌟</span>
+    <div class="win-ttl" id="wTtl">Xuất sắc!</div>
+    <div class="win-sc" id="wSc"></div>
+    <div class="win-btns">
+      <button class="wbtn sec" onclick="backToMenu()">Menu</button>
+      <button class="wbtn pri" id="wRep">Chơi lại</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════════════════
+//  VẦN DATA – đã kiểm tra chính tả & nghĩa
+//  Mỗi ví dụ: { w: "từ ví dụ", e: "emoji" }
+//  Chú thích lỗi được sửa trong comment
+// ══════════════════════════════════════════════════
+const VG = [
+  { id:'ai', name:'Vần đôi i / y',      desc:'Âm chính + i hoặc y cuối',        color:'#FF6B6B', em:'🔴',
+    vans:['ai','ay','ây','oi','ôi','ơi','ui','ưi'],
+    ex:{
+      ai:{w:'con gái',   e:'👧'}, // gái = g+ai ✓
+      ay:{w:'cái máy',   e:'🤖'}, // máy = m+ay ✓ (sửa: "cái hay" quá trừu tượng)
+      ây:{w:'cây cối',   e:'🌳'}, // cây = c+ây ✓
+      oi:{w:'học giỏi',  e:'🏆'}, // giỏi = gi+oi ✓ (sửa: "trời oi" là tiếng địa phương)
+      ôi:{w:'ôi chao',   e:'😮'}, // ôi = ô+i ✓
+      ơi:{w:'bơi lội',   e:'🏊'}, // bơi = b+ơi ✓
+      ui:{w:'cái túi',   e:'👜'}, // túi = t+ui ✓
+      ưi:{w:'lười biếng',e:'😴'}, // lười = l+ưi ✓
+    }
+  },
+  { id:'ao', name:'Vần đôi o / u',      desc:'Âm chính + o hoặc u cuối',        color:'#FF9F43', em:'🟠',
+    vans:['ao','au','âu','eo','êu','iu','ưu'],
+    ex:{
+      ao :{w:'cái ao',    e:'🏞️'}, // ao = a+o ✓
+      au :{w:'đau bụng',  e:'😢'}, // đau = đ+au ✓  (sửa: "màu nâu" → nâu kết thúc âu, không phải au)
+      âu :{w:'con trâu',  e:'🐃'}, // trâu = tr+âu ✓
+      eo :{w:'con mèo',   e:'🐱'}, // mèo = m+eo ✓  (sửa: "eo nhỏ" → eo là phần thân, khó hình dung)
+      êu :{w:'yêu thương',e:'❤️'}, // yêu = y+êu ✓
+      iu :{w:'hắt hiu',   e:'🍂'}, // hiu = h+iu ✓  (sửa: "chiu chiu" không phải từ chuẩn)
+      ưu :{w:'ưu tiên',   e:'⭐'}, // ưu = ư+u ✓
+    }
+  },
+  { id:'n',  name:'Kết thúc N',         desc:'Âm cuối là phụ âm N',             color:'#FFE66D', em:'🟡',
+    vans:['an','ăn','ân','on','ôn','ơn','en','ên','in','un'],
+    ex:{
+      an:{w:'bình an',  e:'☮️'}, // an = a+n ✓
+      ăn:{w:'ăn cơm',   e:'🍚'}, // ăn = ă+n ✓
+      ân:{w:'ân cần',   e:'💕'}, // ân = â+n ✓
+      on:{w:'hộp lon',  e:'🥫'}, // lon = l+on ✓
+      ôn:{w:'ôn bài',   e:'📚'}, // ôn = ô+n ✓
+      ơn:{w:'cảm ơn',   e:'🙏'}, // ơn = ơ+n ✓
+      en:{w:'hẹn gặp',  e:'📅'}, // hẹn = h+en ✓  (sửa: "kẹn tóc" → kẹp mới đúng)
+      ên:{w:'bên cạnh', e:'👥'}, // bên = b+ên ✓
+      in:{w:'in ấn',    e:'🖨️'}, // in = i+n ✓
+      un:{w:'bún bò',   e:'🍜'}, // bún = b+un ✓
+    }
+  },
+  { id:'ng', name:'Kết thúc NG',        desc:'Âm cuối là phụ âm NG',            color:'#6BCB77', em:'🟢',
+    vans:['ang','ăng','âng','ong','ông','ưng','eng','êng','ing','ung'],
+    ex:{
+      ang:{w:'sáng sớm',   e:'🌅'}, // sáng = s+ang ✓
+      ăng:{w:'trăng sao',  e:'🌙'}, // trăng = tr+ăng ✓
+      âng:{w:'nâng đỡ',    e:'💪'}, // nâng = n+âng ✓  (sửa LỖI LỚN: "phân vân" → phân/vân kết thúc bằng AN, không phải ÂNG)
+      ong:{w:'con ong',    e:'🐝'}, // ong = o+ng ✓
+      ông:{w:'ông bà',     e:'👴'}, // ông = ô+ng ✓
+      ưng:{w:'chim ưng',   e:'🦅'}, // ưng = ư+ng ✓
+      eng:{w:'kẻng báo',   e:'🔔'}, // kẻng (cái kẻng gõ hiệu) = k+eng ✓
+      êng:{w:'(hiếm dùng)',e:'📝'}, // êng: không có từ phổ biến lớp 1
+      ing:{w:'(hiếm dùng)',e:'📝'}, // ing: rất hiếm trong tiếng Việt phổ thông
+      ung:{w:'ung dung',   e:'😌'}, // ung = u+ng ✓
+    }
+  },
+  { id:'nh', name:'Kết thúc NH',        desc:'Âm cuối là phụ âm NH',            color:'#4D96FF', em:'🔵',
+    vans:['anh','ênh','inh'],
+    ex:{
+      anh:{w:'anh trai', e:'👦'}, // anh = a+nh ✓
+      ênh:{w:'lênh đênh',e:'🛶'}, // lênh = l+ênh ✓
+      inh:{w:'xinh đẹp', e:'💕'}, // xinh = x+inh ✓  (sửa LỖI LỚN: "động cơ ⚙️" hoàn toàn sai)
+    }
+  },
+  { id:'m',  name:'Kết thúc M',         desc:'Âm cuối là phụ âm M',             color:'#C77DFF', em:'🟣',
+    vans:['am','ăm','âm','om','ôm','ơm','em','êm','im','um'],
+    ex:{
+      am:{w:'quả cam',   e:'🍊'}, // cam = c+am ✓  (sửa LỖI LỚN: "buổi sáng" → sáng kết thúc ANG, không phải AM)
+      ăm:{w:'năm nay',   e:'📅'}, // năm = n+ăm ✓
+      âm:{w:'âm nhạc',   e:'🎵'}, // âm = â+m ✓
+      om:{w:'om sòm',    e:'📣'}, // om = o+m ✓  (sửa LỖI: "ôm ấp" → ôm kết thúc ÔM, không phải OM)
+      ôm:{w:'ôm mẹ',    e:'🤱'}, // ôm = ô+m ✓
+      ơm:{w:'cơm ngon',  e:'🍛'}, // cơm = c+ơm ✓
+      em:{w:'em gái',    e:'👧'}, // em = e+m ✓
+      êm:{w:'êm dịu',   e:'🌸'}, // êm = ê+m ✓
+      im:{w:'im lặng',   e:'🤫'}, // im = i+m ✓
+      um:{w:'um tùm',    e:'🌿'}, // um = u+m ✓
+    }
+  },
+  { id:'c',  name:'Kết thúc C',         desc:'Âm cuối C (âm tắc vô thanh)',     color:'#11998e', em:'🟩',
+    vans:['ac','ăc','âc','oc','ôc','uc','ưc'],
+    ex:{
+      ac:{w:'hạt lạc',  e:'🥜'}, // lạc = l+ac ✓
+      ăc:{w:'thắc mắc', e:'❓'}, // thắc = th+ăc ✓
+      âc:{w:'bấc đèn',  e:'🕯️'}, // bấc = b+âc ✓
+      oc:{w:'cái lọc',  e:'🧹'}, // lọc = l+oc ✓  (sửa LỖI: "con ốc" → ốc = ôc, không phải oc)
+      ôc:{w:'con ốc',   e:'🐌'}, // ốc = ô+c ✓  (ốc thuộc nhóm ÔC, không phải OC)
+      uc:{w:'cúc áo',   e:'🔘'}, // cúc = c+uc ✓
+      ưc:{w:'ước mơ',   e:'🌠'}, // ước = ư+c ✓
+    }
+  },
+  { id:'ch', name:'Kết thúc CH',        desc:'Âm cuối CH',                      color:'#38ef7d', em:'💚',
+    vans:['ach','êch','ich'],
+    ex:{
+      ach:{w:'sách vở', e:'📖'}, // sách = s+ach ✓
+      êch:{w:'con ếch',  e:'🐸'}, // ếch = ê+ch ✓
+      ich:{w:'ích lợi',  e:'💡'}, // ích = i+ch ✓
+    }
+  },
+  { id:'p',  name:'Kết thúc P',         desc:'Âm cuối P (âm tắc vô thanh)',     color:'#f7971e', em:'🧡',
+    vans:['ap','ăp','âp','op','ôp','ơp','ep','êp','ip','up'],
+    ex:{
+      ap:{w:'áp lực',      e:'💪'}, // áp = a+p ✓
+      ăp:{w:'gắp thức ăn', e:'🥢'}, // gắp = g+ăp ✓
+      âp:{w:'bập bênh',    e:'⚖️'}, // bập = b+âp ✓
+      op:{w:'chóp núi',    e:'🏔️'}, // chóp = ch+op ✓  (sửa LỖI: "hộp nhỏ" → hộp = ôp, không phải op)
+      ôp:{w:'ốp lưng',    e:'📱'}, // ốp = ô+p ✓
+      ơp:{w:'hớp nước',    e:'💧'}, // hớp = h+ơp ✓
+      ep:{w:'ép nước',     e:'🧃'}, // ép = e+p ✓
+      êp:{w:'xếp hàng',    e:'🚶'}, // xếp = x+êp ✓  (sửa: "kẹp tóc" → cần kiểm tra âm ê)
+      ip:{w:'dịp Tết',     e:'🎊'}, // dịp = d+ip ✓  (sửa: "tip nhỏ" là từ Anh)
+      up:{w:'úp mặt',      e:'😔'}, // úp = u+p ✓
+    }
+  },
+  { id:'t',  name:'Kết thúc T',         desc:'Âm cuối T (âm tắc vô thanh)',     color:'#fd746c', em:'❤️',
+    vans:['at','ăt','ât','ot','ôt','ơt','et','êt','it','ut','ưt'],
+    ex:{
+      at:{w:'mèo nhát',  e:'🐱'}, // nhát = nh+at ✓
+      ăt:{w:'đôi mắt',   e:'👁️'}, // mắt = m+ăt ✓
+      ât:{w:'bật đèn',   e:'💡'}, // bật = b+ât ✓
+      ot:{w:'nốt nhạc',  e:'🎵'}, // nốt = n+ot ✓  (sửa LỖI: "con cút" → cút = c+ut, không phải ot)
+      ôt:{w:'đột ngột',  e:'😲'}, // đột = đ+ôt ✓  (sửa LỖI: "cái nút" → nút = ut, không phải ôt)
+      ơt:{w:'vớt cá',    e:'🎣'}, // vớt = v+ơt ✓  (sửa LỖI: "cà rốt" → rốt = r+ôt, không phải ơt)
+      et:{w:'két sắt',   e:'🔐'}, // két = k+et ✓
+      êt:{w:'mệt mỏi',   e:'😴'}, // mệt = m+êt ✓
+      it:{w:'ít thôi',   e:'👌'}, // ít = i+t ✓
+      ut:{w:'nút chai',  e:'🍾'}, // nút = n+ut ✓  (nút đúng là ut; ôt đã tách riêng)
+      ưt:{w:'nứt nẻ',    e:'🧱'}, // nứt = n+ưt ✓
+    }
+  },
+  { id:'oa', name:'Âm đệm O',           desc:'Vần bắt đầu bằng âm đệm O',       color:'#f953c6', em:'💜',
+    vans:['oa','oe','oai','oay','oan','oăn','oang','oăng','oac','oắc','oach'],
+    ex:{
+      oa  :{w:'hoa hồng',     e:'🌹'}, // hoa = h+oa ✓
+      oe  :{w:'khoe khoang',  e:'😏'}, // khoe = kh+oe ✓  (sửa LỖI: "cong queo" → queo kết thúc EO, không phải OE)
+      oai :{w:'oai nghiêm',   e:'👑'}, // oai = o+ai ✓
+      oay :{w:'xoay tròn',    e:'🌀'}, // xoay = x+oay ✓
+      oan :{w:'oan ức',       e:'😢'}, // oan = o+an ✓
+      oăn :{w:'tóc xoăn',    e:'💇'}, // xoăn = x+oăn ✓
+      oang:{w:'tiếng choang', e:'🔔'}, // choang = ch+oang ✓
+      oăng:{w:'xoắng lại',   e:'🌀'}, // xoắng = x+oăng ✓ (hiếm gặp)
+      oac :{w:'miệng hoác',   e:'😮'}, // hoác = h+oac ✓
+      'oắc':{w:'thoắc cái',   e:'⚡'}, // thoắc = th+oắc ✓
+      oach:{w:'tiếng toạch',  e:'💥'}, // toạch = t+oach ✓
+    }
+  },
+  { id:'ua', name:'Âm đệm U',           desc:'Vần bắt đầu bằng âm đệm U',       color:'#b721ff', em:'💙',
+    vans:['ua','uê','uy','uay','uân','uât','uyn'],
+    ex:{
+      ua :{w:'mua sắm',  e:'🛍️'}, // mua = m+ua ✓
+      uê :{w:'thành Huế',e:'🏛️'}, // Huế = H+uê ✓
+      uy :{w:'uy quyền', e:'⚖️'}, // uy = u+y ✓
+      uay:{w:'quay phim',e:'🎬'}, // quay = qu+uay ✓
+      uân:{w:'tuân thủ', e:'✅'}, // tuân = t+uân ✓
+      uât:{w:'xuất hiện',e:'✨'}, // xuất = x+uât ✓
+      uyn:{w:'huynh đệ', e:'👫'}, // huynh = hu+ynh → uy+n → uyn ✓
+    }
+  },
+  { id:'ie', name:'Nguyên âm đôi IÊ',   desc:'Vần có nguyên âm đôi iê / yê',    color:'#2193b0', em:'🌊',
+    vans:['ia','iêc','iên','iêp','iêt','iêu','iêm','iêng','yên','yêu'],
+    ex:{
+      ia  :{w:'mía đường', e:'🌾'}, // mía = m+ia ✓
+      iêc :{w:'màu biếc',  e:'💙'}, // biếc = b+iêc ✓
+      iên :{w:'kiên nhẫn', e:'🌟'}, // kiên = k+iên ✓
+      iêp :{w:'tiếp tục',  e:'▶️'}, // tiếp = t+iêp ✓
+      iêt :{w:'Việt Nam',  e:'🇻🇳'}, // Việt = Vi+êt → iêt ✓
+      iêu :{w:'chiều tối', e:'🌆'}, // chiều = ch+iêu ✓
+      iêm :{w:'kiếm sống', e:'💼'}, // kiếm = k+iêm ✓
+      iêng:{w:'riêng tư',  e:'🔒'}, // riêng = r+iêng ✓
+      yên :{w:'yên tĩnh',  e:'🤫'}, // yên = y+ên (= iên) ✓
+      yêu :{w:'yêu thương',e:'❤️'}, // yêu = y+êu ✓
+    }
+  },
+  { id:'uo', name:'Nguyên âm đôi UÔ',   desc:'Vần có nguyên âm đôi uô',         color:'#1565C0', em:'🔷',
+    vans:['uôc','uôn','uôt','uông','uôi'],
+    ex:{
+      uôc:{w:'thuốc men', e:'💊'}, // thuốc = th+uôc ✓
+      uôn:{w:'buôn bán',  e:'🛒'}, // buôn = b+uôn ✓
+      uôt:{w:'tuột dốc',  e:'🛝'}, // tuột = t+uôt ✓
+      uông:{w:'uống nước',e:'🥤'}, // uống = uô+ng → uông ✓
+      uôi:{w:'buổi học',  e:'📚'}, // buổi = b+uôi ✓
+    }
+  },
+  { id:'uo2',name:'Nguyên âm đôi ƯƠ',   desc:'Vần có nguyên âm đôi ươ',         color:'#4A148C', em:'🔮',
+    vans:['ưa','ươc','ươn','ươp','ượt','ươm','ương','ươi'],
+    ex:{
+      ưa  :{w:'mưa rơi',   e:'🌧️'}, // mưa = m+ưa ✓
+      ươc :{w:'nước ngọt', e:'💧'}, // nước = n+ươc ✓
+      ươn :{w:'vươn tới',  e:'🤸'}, // vươn = v+ươn ✓
+      ươp :{w:'ướp lạnh',  e:'🧊'}, // ướp = ư+ơp → ươp ✓
+      ượt :{w:'vượt qua',  e:'🏆'}, // vượt = v+ượt ✓
+      ươm :{w:'ươm cây',   e:'🌱'}, // ươm = ươ+m ✓
+      ương:{w:'hương thơm',e:'🌺'}, // hương = h+ương ✓
+      ươi :{w:'tươi cười', e:'😊'}, // tươi = t+ươi ✓
+    }
+  }
+];
+
+const ALL_VANS = VG.flatMap(g => g.vans.map(v => ({ v, g })));
+
+// ══════════════════════════════════════════════════
+//  AUDIO
+// ══════════════════════════════════════════════════
+let ACtx = null;
+const ac = () => { if (!ACtx) ACtx = new (window.AudioContext || window.webkitAudioContext)(); return ACtx; };
+function tone(f,d,t='sine',v=.28){
+  try{const ctx=ac(),o=ctx.createOscillator(),g=ctx.createGain();o.connect(g);g.connect(ctx.destination);
+  o.type=t;o.frequency.setValueAtTime(f,ctx.currentTime);g.gain.setValueAtTime(v,ctx.currentTime);
+  g.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+d);o.start(ctx.currentTime);o.stop(ctx.currentTime+d);}catch(e){}
+}
+const sndOk  = ()=>{ tone(523,.09);setTimeout(()=>tone(659,.09),90);setTimeout(()=>tone(784,.18),180); };
+const sndErr = ()=>{ tone(220,.18,'sawtooth',.14); };
+const sndPop = ()=>{ tone(900,.05);setTimeout(()=>tone(1400,.09),30); };
+const sndWin = ()=>{ [523,523,659,784,1047].forEach((f,i)=>setTimeout(()=>tone(f,.22),i*110)); };
+function speakVI(t,rate){if(!('speechSynthesis' in window))return;const u=new SpeechSynthesisUtterance(String(t));u.lang='vi-VN';u.rate=rate||0.85;speechSynthesis.cancel();speechSynthesis.speak(u);}
+
+// ══════════════════════════════════════════════════
+//  SVG STICKER GENERATOR
+// ══════════════════════════════════════════════════
+function makeSVG(emoji, word, color) {
+  // Escape for SVG text
+  const eWord = word.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 210" width="200" height="175"
+      style="filter:drop-shadow(0 8px 20px ${color}55);animation:wbounce .4s ease-out">
+    <defs>
+      <radialGradient id="sg" cx="50%" cy="40%" r="60%">
+        <stop offset="0%" style="stop-color:white;stop-opacity:1"/>
+        <stop offset="100%" style="stop-color:${color};stop-opacity:.18"/>
+      </radialGradient>
+    </defs>
+    <!-- outer ring -->
+    <ellipse cx="120" cy="105" rx="114" ry="100" fill="${color}22"/>
+    <!-- card -->
+    <rect x="10" y="8" width="220" height="194" rx="30" fill="url(#sg)" stroke="${color}" stroke-width="4"/>
+    <!-- decorative dots top -->
+    <circle cx="44" cy="34" r="11" fill="${color}66"/>
+    <circle cx="196" cy="34" r="11" fill="${color}66"/>
+    <circle cx="120" cy="22" r="8" fill="${color}44"/>
+    <!-- decorative dots bottom -->
+    <circle cx="44" cy="178" r="8" fill="${color}44"/>
+    <circle cx="196" cy="178" r="8" fill="${color}44"/>
+    <!-- large emoji -->
+    <text x="120" y="118" font-size="80" text-anchor="middle" dominant-baseline="middle">${emoji}</text>
+    <!-- word pill -->
+    <rect x="34" y="160" width="172" height="30" rx="15" fill="${color}33"/>
+    <text x="120" y="179" font-size="15" font-weight="bold" fill="${color}" text-anchor="middle"
+          dominant-baseline="middle" font-family="Baloo 2,Segoe UI,sans-serif">${eWord}</text>
+    <!-- sparkle accents -->
+    <text x="18" y="55" font-size="16">✨</text>
+    <text x="200" y="55" font-size="16">⭐</text>
+    <text x="18" y="160" font-size="13">🌟</text>
+    <text x="202" y="160" font-size="13">💫</text>
+  </svg>`;
+}
+
+function makeRareSVG(van, color) {
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" width="200" height="133"
+      style="filter:drop-shadow(0 4px 12px #CBD5E144)">
+    <rect x="10" y="8" width="220" height="144" rx="24" fill="#f8fafc" stroke="#CBD5E1" stroke-width="3"/>
+    <text x="120" y="62" font-size="44" text-anchor="middle" dominant-baseline="middle">📝</text>
+    <text x="120" y="100" font-size="14" font-weight="bold" fill="#64748B" text-anchor="middle"
+          font-family="Baloo 2,sans-serif">Vần "${van}" hiếm dùng</text>
+    <text x="120" y="120" font-size="11" fill="#94A3B8" text-anchor="middle"
+          font-family="Baloo 2,sans-serif">trong tiếng Việt phổ thông</text>
+  </svg>`;
+}
+
+// ══════════════════════════════════════════════════
+//  MENU CARDS (with SVG decorative backgrounds)
+// ══════════════════════════════════════════════════
+const MENU_CARDS = [
+  { cls:'c1', g:1, em:'🦋', title:'Bắt Bướm Vần',     desc:'Bắt bướm mang đúng vần – cẩn thận bướm giả!',  badge:'Hành động',
+    deco:`<svg viewBox="0 0 300 200" preserveAspectRatio="none"><ellipse cx="60" cy="40" rx="50" ry="40" fill="#FFE66D"/><ellipse cx="240" cy="160" rx="60" ry="50" fill="#FF9F43"/><ellipse cx="150" cy="100" rx="80" ry="30" fill="#FFE66D"/></svg>` },
+  { cls:'c2', g:2, em:'🔮', title:'Lò Vần Ma Thuật',   desc:'Khám phá 125 vần – xem ví dụ sinh động!',       badge:'Khám phá',
+    deco:`<svg viewBox="0 0 300 200" preserveAspectRatio="none"><circle cx="50" cy="50" r="60" fill="#4ECDC4"/><circle cx="250" cy="150" r="70" fill="#2193b0"/></svg>` },
+  { cls:'c3', g:3, em:'🃏', title:'Lật Bài Đôi',       desc:'Lật thẻ, tìm cặp vần + hình ảnh khớp nhau!',    badge:'Trí nhớ',
+    deco:`<svg viewBox="0 0 300 200" preserveAspectRatio="none"><rect x="20" y="20" width="80" height="80" rx="20" fill="#C77DFF"/><rect x="200" y="100" width="90" height="90" rx="25" fill="#a98ef0"/></svg>` },
+  { cls:'c4', g:4, em:'🏆', title:'Siêu Vần 10 Câu',   desc:'10 câu · 10 giây/câu. Bạn dám thử không?',      badge:'Thử thách',
+    deco:`<svg viewBox="0 0 300 200" preserveAspectRatio="none"><polygon points="150,10 180,80 260,80 200,130 220,200 150,155 80,200 100,130 40,80 120,80" fill="#FF6B6B"/></svg>` },
+  { cls:'c5', g:5, em:'🌠', title:'Mưa Sao Vần',       desc:'Sao rơi từ trời – bắn hạ đúng vần!',            badge:'Sao băng',
+    deco:`<svg viewBox="0 0 300 200" preserveAspectRatio="none"><circle cx="100" cy="60" r="8" fill="#6BCB77"/><circle cx="200" cy="40" r="12" fill="#4ECDC4"/><circle cx="150" cy="140" r="10" fill="#6BCB77"/><circle cx="50" cy="160" r="7" fill="#38ef7d"/><circle cx="260" cy="130" r="9" fill="#6BCB77"/></svg>` },
+  { cls:'c6', g:0, em:'📚', title:'Thư Viện 125 Vần',  desc:'Xem toàn bộ 125 vần lớp 1 theo 15 nhóm.',      badge:'Tra cứu',
+    deco:`<svg viewBox="0 0 300 200" preserveAspectRatio="none"><rect x="10" y="10" width="280" height="40" rx="8" fill="#a0d8ef"/><rect x="10" y="60" width="280" height="40" rx="8" fill="#a0d8ef"/><rect x="10" y="110" width="280" height="40" rx="8" fill="#a0d8ef"/></svg>` },
+];
+
+function buildMenu() {
+  const grid = document.getElementById('menuGrid');
+  grid.innerHTML = MENU_CARDS.map(c => `
+    <div class="game-card ${c.cls}" onclick="${c.g>0?'startGame('+c.g+')':'showLibrary()'}">
+      <svg class="card-deco" viewBox="0 0 300 200" preserveAspectRatio="none">${c.deco}</svg>
+      <span class="card-badge">${c.badge}</span>
+      <span class="ce">${c.em}</span>
+      <h2>${c.title}</h2>
+      <p>${c.desc}</p>
+    </div>`).join('');
+}
+
+// ══════════════════════════════════════════════════
+//  SCREEN MANAGEMENT
+// ══════════════════════════════════════════════════
+let curGame = null;
+const $  = id => document.getElementById(id);
+const ss = id => { document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active')); $(id).classList.add('active'); };
+
+function startGame(n) { curGame=n; cleanUp(); [,initG1,initG2,initG3,initG4,initG5][n](); ss(`game${n}Screen`); }
+function showLibrary() { buildLib(); ss('libraryScreen'); }
+function backToMenu()  { cleanUp(); hideWin(); ss('menuScreen'); }
+
+// ══════════════════════════════════════════════════
+//  PARTICLES
+// ══════════════════════════════════════════════════
+function sparkles(x,y){
+  ['⭐','✨','🌟','💫','🎉'].forEach((em,i)=>{
+    const el=document.createElement('div'); el.className='sparkle'; el.textContent=em;
+    el.style.cssText=`left:${x+(Math.random()-.5)*90}px;top:${y+(Math.random()-.5)*45}px;animation-delay:${i*.06}s`;
+    document.body.appendChild(el); setTimeout(()=>el.remove(),1000);
+  });
+}
+function confetti(){
+  const cls=['#FF6B6B','#FFE66D','#6BCB77','#4D96FF','#C77DFF','#FF9F43'];
+  for(let i=0;i<70;i++) setTimeout(()=>{
+    const el=document.createElement('div'); el.className='conf';
+    const w=7+Math.random()*9;
+    el.style.cssText=`left:${Math.random()*100}vw;background:${cls[Math.random()*cls.length|0]};
+      animation-duration:${1.5+Math.random()*2}s;animation-delay:${Math.random()*.6}s;
+      width:${w}px;height:${w}px;border-radius:${Math.random()>.5?'50%':'2px'}`;
+    document.body.appendChild(el); setTimeout(()=>el.remove(),3200);
+  },i*25);
+}
+
+// ══════════════════════════════════════════════════
+//  WIN OVERLAY
+// ══════════════════════════════════════════════════
+function showWin(ej,ttl,sc,replay){
+  $('wEj').textContent=ej; $('wTtl').textContent=ttl; $('wSc').textContent=sc;
+  $('wRep').onclick=()=>{hideWin();replay();};
+  $('winOv').classList.add('show'); sndWin(); confetti();
+}
+function hideWin(){ $('winOv').classList.remove('show'); }
+
+// ══════════════════════════════════════════════════
+//  UTILITIES
+// ══════════════════════════════════════════════════
+function shuffle(a){ const b=[...a]; for(let i=b.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[b[i],b[j]]=[b[j],b[i]];} return b; }
+
+// ══════════════════════════════════════════════════
+//  GAME 1 – BUTTERFLY CATCHER
+// ══════════════════════════════════════════════════
+let g1sc=0,g1lv=3,g1tl=60,g1over=false,g1iv=null,g1biv=null,g1tgt=null,g1bid=0;
+const BFLY=['🦋','🦋','🦋','🦗','🐛','🦟','🐞'];
+
+function initG1(){
+  g1sc=0;g1lv=3;g1tl=60;g1over=false;
+  $('g1Area').querySelectorAll('.bfly,.pop-fx').forEach(e=>e.remove());
+  updG1(); pickTgt1();
+  g1biv=setInterval(spawnBfly,1600);
+  g1iv=setInterval(()=>{
+    g1tl--; const p=(g1tl/60)*100;
+    $('g1TF').style.width=p+'%'; $('g1TT').textContent=g1tl+'s';
+    if(g1tl<=0) endG1();
+  },1000);
+}
+function updG1(){
+  $('g1Score').textContent=g1sc+' điểm';
+  $('g1Lives').textContent='❤️'.repeat(g1lv)+'🖤'.repeat(3-g1lv);
+}
+function pickTgt1(){
+  const grp=VG[Math.random()*VG.length|0];
+  const v=grp.vans[Math.random()*grp.vans.length|0];
+  g1tgt={v,grp}; $('g1Tgt').textContent=v; $('g1Tgt').style.color=grp.color; $('g1TgtG').textContent=grp.name; speakVI('Vần ' + v, 0.8);
+}
+function spawnBfly(){
+  if(!$('game1Screen').classList.contains('active')) return;
+  const area=$('g1Area'),aW=area.offsetWidth,aH=area.offsetHeight;
+  const isOk=Math.random()<.38;
+  let v,grp;
+  if(isOk){v=g1tgt.v;grp=g1tgt.grp;}
+  else{const p=ALL_VANS.filter(x=>x.v!==g1tgt.v);const pick=p[Math.random()*p.length|0];v=pick.v;grp=pick.g;}
+  const id=g1bid++,el=document.createElement('div');
+  el.className='bfly'; el.dataset.ok=isOk; el.dataset.id=id;
+  const em=isOk?'🦋':BFLY[Math.random()*BFLY.length|0];
+  el.innerHTML=`<span class="bfly-icon">${em}</span><div class="bfly-lbl" style="color:${grp.color}">${v}</div>`;
+  const sx=20+Math.random()*(aW-100),sy=90+Math.random()*(aH-140);
+  el.style.cssText=`left:${sx}px;top:${sy}px`;
+  el.onclick=()=>catchBfly(el);
+  area.appendChild(el);
+  const mv=setInterval(()=>{
+    if(!el.isConnected){clearInterval(mv);return;}
+    const nx=Math.max(10,Math.min(aW-90,parseFloat(el.style.left)+(Math.random()-.5)*70));
+    const ny=Math.max(90,Math.min(aH-90,parseFloat(el.style.top)+(Math.random()-.5)*50));
+    el.style.left=nx+'px'; el.style.top=ny+'px';
+  },1300);
+  setTimeout(()=>{if(el.isConnected)el.remove();clearInterval(mv);},9000);
+}
+function catchBfly(el){
+  if(g1over) return;
+  const ok=el.dataset.ok==='true';
+  const r=el.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height/2;
+  if(ok){
+    g1sc+=10; sndPop(); sparkles(cx,cy);
+    const fx=document.createElement('div'); fx.className='pop-fx';
+    fx.textContent='+10 ⭐'; fx.style.left=el.style.left; fx.style.top=el.style.top;
+    $('g1Area').appendChild(fx); setTimeout(()=>fx.remove(),800);
+    el.remove(); pickTgt1();
+  } else {
+    g1lv--; sndErr();
+    el.style.opacity='.4'; el.style.transform='scale(.7)';
+    setTimeout(()=>{if(el.isConnected)el.remove();},450);
+    if(g1lv<=0) endG1();
+  }
+  updG1();
+}
+function endG1(){
+  g1over=true; cleanUp();
+  const ej=g1sc>=80?'🏆':g1sc>=40?'🌟':'🦋';
+  const t=g1sc>=80?'Thám tử bướm vô địch!':g1sc>=40?'Bắt bướm giỏi lắm!':'Cố thêm lần nữa nhé!';
+  showWin(ej,t,`Điểm số: ${g1sc} ⭐`,initG1);
+}
+
+// ══════════════════════════════════════════════════
+//  GAME 2 – SYLLABLE EXPLORER (SVG Sticker)
+// ══════════════════════════════════════════════════
+function initG2(){
+  const tabs=$('g2Tabs'); tabs.innerHTML='';
+  VG.forEach((g,i)=>{
+    const t=document.createElement('button'); t.className='grp-tab'+(i===0?' active':'');
+    t.textContent=g.em+' '+g.name; t.onclick=()=>selG2(g,t); tabs.appendChild(t);
+  });
+  selG2(VG[0],tabs.children[0]);
+}
+function selG2(grp,tab){
+  document.querySelectorAll('.grp-tab').forEach(t=>t.classList.remove('active')); tab.classList.add('active');
+  $('g2GT').textContent=grp.em+' '+grp.name; $('g2GD').textContent=grp.desc;
+  const chips=$('g2Chips'); chips.innerHTML='';
+  grp.vans.forEach(v=>{
+    const c=document.createElement('div'); c.className='vchip';
+    c.textContent=v; c.style.background=`linear-gradient(135deg,${grp.color},${grp.color}99)`;
+    c.onclick=e=>{
+      chips.querySelectorAll('.vchip').forEach(x=>x.classList.remove('sel'));
+      c.classList.add('sel'); showEx2(v,grp,e);
+    };
+    chips.appendChild(c);
+  });
+  $('g2Ex').className='ex-box';
+  $('g2Ex').innerHTML='<div style="color:#D1D5DB;font-size:15px">Chọn một vần để xem ví dụ nhé! 👆</div>';
+}
+function showEx2(v,grp,e){
+  sndOk();
+  const r=e.target.getBoundingClientRect(); sparkles(r.left+r.width/2,r.top);
+  const ex=grp.ex[v]; speakVI('Vần ' + v + (ex && ex.w!=='(hiếm dùng)' ? '. ' + ex.w : ''), 0.82);
+  const box=$('g2Ex');
+  if(ex && ex.w==='(hiếm dùng)'){
+    box.className='ex-box ex-rare';
+    box.innerHTML=makeRareSVG(v,grp.color);
+  } else if(ex){
+    box.className='ex-box';
+    box.style.animation='none'; box.offsetHeight;
+    box.innerHTML=makeSVG(ex.e,ex.w,grp.color);
+    box.style.animation='';
+  } else {
+    box.className='ex-box';
+    box.innerHTML=`<div class="ex-van">${v}</div>`;
+  }
+}
+
+// ══════════════════════════════════════════════════
+//  GAME 3 – MEMORY PAIRS
+// ══════════════════════════════════════════════════
+const MPOOL=[
+  {v:'ai',e:'👧',w:'gái'},{v:'ao',e:'🏞️',w:'ao'},{v:'an',e:'☮️',w:'an'},
+  {v:'anh',e:'👦',w:'anh'},{v:'ăn',e:'🍚',w:'ăn'},{v:'âm',e:'🎵',w:'âm'},
+  {v:'ôm',e:'🤗',w:'ôm'},{v:'êm',e:'🌸',w:'êm'},{v:'im',e:'🤫',w:'im'},
+  {v:'ong',e:'🐝',w:'ong'},{v:'ông',e:'👴',w:'ông'},{v:'oan',e:'😢',w:'oan'},
+  {v:'yêu',e:'❤️',w:'yêu'},{v:'ươi',e:'😊',w:'tươi'},{v:'ưa',e:'🌧️',w:'mưa'},
+  {v:'uôi',e:'📚',w:'buổi'},{v:'oa',e:'🌹',w:'hoa'},{v:'iêt',e:'🇻🇳',w:'Việt'},
+];
+let g3fl=[],g3mt=0,g3mv=0,g3lk=false,g3tot=0;
+
+function initG3(){
+  g3fl=[];g3mt=0;g3mv=0;g3lk=false;
+  $('g3Mv').textContent='0 lượt'; $('g3St').textContent='Chọn 2 thẻ giống nhau nhé!';
+  const pairs=shuffle(MPOOL).slice(0,8); g3tot=pairs.length;
+  let cards=[];
+  pairs.forEach((p,i)=>{cards.push({id:i*2,pi:i,type:'van',p});cards.push({id:i*2+1,pi:i,type:'img',p});});
+  cards=shuffle(cards);
+  const grid=$('g3Grid'); grid.innerHTML='';
+  cards.forEach(card=>{
+    const el=document.createElement('div'); el.className='mcard';
+    el.dataset.pi=card.pi; el.dataset.type=card.type;
+    el.innerHTML=`<div class="mcard-in">
+      <div class="mcard-f">🌟</div>
+      <div class="mcard-b">${card.type==='van'
+        ?`<div class="cv">${card.p.v}</div>`
+        :`<div class="ci">${card.p.e}</div><div class="cw">${card.p.w}</div>`}
+      </div></div>`;
+    el.onclick=()=>flipCard3(el);
+    grid.appendChild(el);
+  });
+}
+function flipCard3(el){
+  if(g3lk||el.classList.contains('flipped')||el.classList.contains('matched')) return;
+  el.classList.add('flipped'); g3fl.push(el);
+  tone(440+g3fl.length*110,.1);
+  if(g3fl.length===2){
+    g3mv++; $('g3Mv').textContent=g3mv+' lượt'; g3lk=true;
+    const[a,b]=g3fl;
+    if(a.dataset.pi===b.dataset.pi&&a.dataset.type!==b.dataset.type){
+      setTimeout(()=>{
+        a.classList.add('matched');b.classList.add('matched');g3mt++;sndOk();
+        const r=a.getBoundingClientRect();sparkles(r.left+r.width/2,r.top+r.height/2);
+        g3fl=[];g3lk=false;
+        $('g3St').textContent=`Tuyệt! ${g3mt}/${g3tot} cặp ✅`;
+        if(g3mt===g3tot) setTimeout(()=>showWin('🃏','Trí nhớ siêu đỉnh!',`${g3mv} lượt · ${g3tot} cặp`,initG3),500);
+      },400);
+    } else {
+      setTimeout(()=>{
+        a.classList.add('wrong');b.classList.add('wrong');sndErr();
+        setTimeout(()=>{a.classList.remove('flipped','wrong');b.classList.remove('flipped','wrong');g3fl=[];g3lk=false;},650);
+      },600);
+    }
+  }
+}
+
+// ══════════════════════════════════════════════════
+//  GAME 4 – QUIZ CHALLENGE
+// ══════════════════════════════════════════════════
+let g4qs=[],g4cur=0,g4ok=0,g4tmr=null;
+
+function genQ4(){
+  return shuffle(ALL_VANS).slice(0,10).map(({v,g})=>{
+    const useGroup=Math.random()<.55;
+    let q,ans,opts;
+    if(useGroup){
+      q=`Vần "${v}" thuộc nhóm nào?`; ans=g.name;
+      opts=shuffle(VG.filter(x=>x.id!==g.id).map(x=>x.name)).slice(0,3);
+    } else {
+      const same=g.vans.filter(x=>x!==v);
+      if(same.length===0){q=`Vần "${v}" thuộc nhóm nào?`;ans=g.name;opts=shuffle(VG.filter(x=>x.id!==g.id).map(x=>x.name)).slice(0,3);}
+      else{
+        q=`Vần nào cùng nhóm với "${v}"?`;
+        ans=same[Math.random()*same.length|0];
+        opts=shuffle(VG.filter(x=>x.id!==g.id).flatMap(x=>x.vans)).slice(0,3);
+      }
+    }
+    return{v,g,q,ans,opts:shuffle([ans,...opts])};
+  });
+}
+function initG4(){g4qs=genQ4();g4cur=0;g4ok=0;showQ4();}
+function showQ4(){
+  if(g4cur>=g4qs.length){endG4();return;}
+  const q=g4qs[g4cur];
+  $('g4Lbl').textContent=`Câu ${g4cur+1}/10`; $('g4Sc').textContent=`${g4ok}/10`;
+  $('g4Q').textContent=q.q; $('g4V').textContent=q.v; $('g4V').style.color=q.g.color;
+  const od=$('g4Opts'); od.innerHTML='';
+  q.opts.forEach(op=>{
+    const b=document.createElement('button');b.className='opt';b.textContent=op;
+    b.onclick=()=>ansQ4(b,op,q);od.appendChild(b);
+  });
+  let tl=10; $('g4TF').style.width='100%'; $('g4TT').textContent='10s';
+  if(g4tmr)clearInterval(g4tmr);
+  g4tmr=setInterval(()=>{
+    tl--;$('g4TF').style.width=(tl/10*100)+'%';$('g4TT').textContent=tl+'s';
+    if(tl<=0){
+      clearInterval(g4tmr);
+      od.querySelectorAll('.opt').forEach(b=>{b.disabled=true;if(b.textContent===q.ans)b.classList.add('correct');});
+      sndErr();setTimeout(()=>{g4cur++;showQ4();},1400);
+    }
+  },1000);
+}
+function ansQ4(btn,ans,q){
+  clearInterval(g4tmr);
+  $('g4Opts').querySelectorAll('.opt').forEach(b=>b.disabled=true);
+  if(ans===q.ans){
+    btn.classList.add('correct');g4ok++;sndOk();
+    const r=btn.getBoundingClientRect();sparkles(r.left+r.width/2,r.top);
+  } else {
+    btn.classList.add('wrong');
+    $('g4Opts').querySelectorAll('.opt').forEach(b=>{if(b.textContent===q.ans)b.classList.add('correct');});
+    sndErr();
+  }
+  $('g4Sc').textContent=`${g4ok}/10`;
+  setTimeout(()=>{g4cur++;showQ4();},1400);
+}
+function endG4(){
+  const p=g4ok/10;
+  const ej=p>=.9?'🏆':p>=.7?'🌟':p>=.5?'👍':'📚';
+  const t=p>=.9?'Siêu Vần Vô Địch!':p>=.7?'Giỏi lắm!':p>=.5?'Khá tốt!':'Học thêm rồi thử lại!';
+  showWin(ej,t,`${g4ok}/10 câu đúng ✅`,initG4);
+}
+
+// ══════════════════════════════════════════════════
+//  GAME 5 – STAR RAIN
+// ══════════════════════════════════════════════════
+let g5sc=0,g5lv=3,g5tl=60,g5over=false,g5iv=null,g5siv=null,g5sid=0,g5tgt=null;
+const STARS=['⭐','🌟','✨','💫','🌠','⚡','🎇'];
+
+function initG5(){
+  g5sc=0;g5lv=3;g5tl=60;g5over=false;g5sid=0;
+  $('g5Area').querySelectorAll('.star,.explode').forEach(e=>e.remove());
+  updG5();pickTgt5();
+  g5siv=setInterval(spawnStar,1400);
+  g5iv=setInterval(()=>{
+    g5tl--;const p=(g5tl/60)*100;
+    $('g5TF').style.width=p+'%';$('g5TT').textContent=g5tl+'s';
+    if(g5tl<=0) endG5();
+  },1000);
+}
+function updG5(){
+  $('g5Sc').textContent=g5sc+' điểm';
+  $('g5Lv').textContent='❤️'.repeat(g5lv)+'🖤'.repeat(3-g5lv);
+}
+function pickTgt5(){
+  const grp=VG[Math.random()*VG.length|0];
+  const v=grp.vans[Math.random()*grp.vans.length|0];
+  g5tgt={v,grp};$('g5Tgt').textContent=v;$('g5Tgt').style.color=grp.color;$('g5TgtG').textContent=grp.name; speakVI('Vần ' + v, 0.8);
+}
+function spawnStar(){
+  if(!$('game5Screen').classList.contains('active')) return;
+  const area=$('g5Area'),aW=area.offsetWidth,aH=area.offsetHeight;
+  const isOk=Math.random()<.4;
+  let v,grp;
+  if(isOk){v=g5tgt.v;grp=g5tgt.grp;}
+  else{const p=ALL_VANS.filter(x=>x.v!==g5tgt.v);const pick=p[Math.random()*p.length|0];v=pick.v;grp=pick.g;}
+  const id=g5sid++,el=document.createElement('div');
+  el.className='star';el.dataset.ok=isOk;el.dataset.id=id;
+  const em=STARS[Math.random()*STARS.length|0];
+  el.innerHTML=`<span class="star-icon">${em}</span><div class="star-lbl" style="color:${grp.color}">${v}</div>`;
+  const sx=10+Math.random()*(aW-100);
+  el.style.cssText=`left:${sx}px;top:-70px`;
+  el.onclick=()=>hitStar(el);
+  area.appendChild(el);
+  const speed=1.2+Math.random()*.8;
+  const fall=setInterval(()=>{
+    if(!el.isConnected){clearInterval(fall);return;}
+    const cy=parseFloat(el.style.top)+speed;
+    el.style.top=cy+'px';
+    if(cy>aH-55){
+      clearInterval(fall);if(!el.isConnected)return;
+      if(el.dataset.ok==='true'){g5lv--;sndErr();updG5();if(g5lv<=0)endG5();}
+      el.remove();
+    }
+  },16);
+}
+function hitStar(el){
+  if(g5over) return;
+  const ok=el.dataset.ok==='true';
+  const r=el.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height/2;
+  const fx=document.createElement('div');fx.className='explode';
+  if(ok){g5sc+=10;sndPop();sparkles(cx,cy);fx.textContent='💥+10';fx.style.color='#FFE66D';}
+  else{g5lv--;sndErr();fx.textContent='❌';fx.style.color='#FF6B6B';}
+  fx.style.cssText+=`;left:${cx-20}px;top:${cy-20}px`;
+  $('g5Area').appendChild(fx);setTimeout(()=>fx.remove(),750);
+  el.remove();
+  if(ok) pickTgt5();
+  updG5();
+  if(g5lv<=0) endG5();
+}
+function endG5(){
+  g5over=true;cleanUp();
+  const ej=g5sc>=100?'🌠':g5sc>=60?'🌟':g5sc>=30?'⭐':'🌙';
+  const t=g5sc>=100?'Thần Xạ Thủ Sao!':g5sc>=60?'Bắn sao cực đỉnh!':'Luyện thêm nhé!';
+  showWin(ej,t,`Điểm số: ${g5sc} ⭐`,initG5);
+}
+
+// ══════════════════════════════════════════════════
+//  LIBRARY
+// ══════════════════════════════════════════════════
+function buildLib(){
+  const c=$('libContent');c.innerHTML='';
+  const total=ALL_VANS.length;
+  c.insertAdjacentHTML('beforeend',`<div style="background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-radius:14px;padding:12px 16px;font-weight:700;margin-bottom:4px">
+    📚 Tổng cộng ${total} vần · ${VG.length} nhóm</div>`);
+  VG.forEach(grp=>{
+    const g=document.createElement('div');g.className='lib-grp';
+    const h=document.createElement('div');h.className='lib-ghdr';
+    h.style.background=`linear-gradient(135deg,${grp.color},${grp.color}bb)`;
+    h.innerHTML=`<span>${grp.em}</span><span>${grp.name}</span><span style="margin-left:auto;opacity:.8;font-size:13px">${grp.vans.length} vần</span>`;
+    const b=document.createElement('div');b.className='lib-gbdy';
+    grp.vans.forEach(v=>{
+      const chip=document.createElement('div');chip.className='lib-van';chip.textContent=v;
+      const ex=grp.ex[v];
+      if(ex) chip.title=ex.e+' '+ex.w;
+      chip.onclick=()=>{
+        sndOk();chip.style.background=grp.color+'33';chip.style.color=grp.color;chip.style.borderColor=grp.color;
+        const exV=grp.ex[v]; speakVI('Vần ' + v + (exV && exV.w!=='(hiếm dùng)' ? '. ' + exV.w : ''), 0.82);
+        setTimeout(()=>{chip.style.background='';chip.style.color='';chip.style.borderColor='';},700);
+      };
+      b.appendChild(chip);
+    });
+    g.appendChild(h);g.appendChild(b);c.appendChild(g);
+  });
+}
+
+// ══════════════════════════════════════════════════
+//  CLEANUP & INIT
+// ══════════════════════════════════════════════════
+function cleanUp(){
+  if(g1iv){clearInterval(g1iv);g1iv=null;}
+  if(g1biv){clearInterval(g1biv);g1biv=null;}
+  if(g4tmr){clearInterval(g4tmr);g4tmr=null;}
+  if(g5iv){clearInterval(g5iv);g5iv=null;}
+  if(g5siv){clearInterval(g5siv);g5siv=null;}
+}
+document.addEventListener('visibilitychange',()=>{if(document.hidden)cleanUp();});
+
+// Build menu on load
+buildMenu();
+</script>
+</body>
+</html>

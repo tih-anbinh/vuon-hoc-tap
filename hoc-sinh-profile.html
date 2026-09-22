@@ -1,0 +1,431 @@
+<!--
+  Author: Huy Tran
+  Company: Cadence Design Systems Vietnam
+  Email: huytran@cadence.com
+  Created: 2026-09-20
+-->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <title>🏅 Hồ Sơ Học Sinh – Lớp 1</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--ff:'Baloo 2',sans-serif;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:var(--ff);background:linear-gradient(135deg,#e8f4fd,#fce8f7);min-height:100vh;padding:0 0 80px;animation:fadein .4s ease;}
+@keyframes fadein{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+/* ── TOP BAR ── */
+.topbar{display:flex;align-items:center;gap:10px;padding:12px 16px;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);box-shadow:0 2px 12px rgba(0,0,0,.1);position:sticky;top:0;z-index:50;}
+.topbar-title{font-size:20px;font-weight:900;background:linear-gradient(90deg,#667eea,#f093fb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;flex:1;}
+.nav-btn{background:#f1f5f9;border:none;border-radius:12px;padding:7px 14px;font-size:13px;font-weight:700;cursor:pointer;font-family:var(--ff);transition:background .2s;white-space:nowrap;}
+.nav-btn:hover{background:#e2e8f0;}
+
+/* ── MAIN CONTENT ── */
+.page{max-width:600px;margin:0 auto;padding:16px;}
+
+/* ── PROFILE CARD ── */
+.profile-card{background:#fff;border-radius:24px;padding:24px;box-shadow:0 6px 24px rgba(0,0,0,.1);text-align:center;margin-bottom:16px;position:relative;}
+.avatar-circle{width:96px;height:96px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);display:flex;align-items:center;justify-content:center;font-size:54px;margin:0 auto 12px;box-shadow:0 4px 16px rgba(102,126,234,.35);cursor:pointer;overflow:hidden;position:relative;}
+.cam-overlay{position:absolute;bottom:2px;right:2px;background:rgba(0,0,0,.6);border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:13px;pointer-events:none;}
+.av-photo{width:100%;height:100%;object-fit:cover;border-radius:50%;position:absolute;inset:0;}
+.setup-av-wrap{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);display:flex;align-items:center;justify-content:center;font-size:42px;cursor:pointer;margin:0 auto 4px;border:3px dashed #667eea99;overflow:hidden;position:relative;transition:transform .2s;}
+.setup-av-wrap:hover{transform:scale(1.06);}
+.pname{font-size:28px;font-weight:900;color:#1F2937;}
+.psub{font-size:14px;color:#9CA3AF;font-weight:600;margin-bottom:10px;}
+.streak-badge{display:inline-flex;align-items:center;gap:5px;background:linear-gradient(135deg,#FF9F43,#FF6B6B);color:#fff;border-radius:20px;padding:5px 14px;font-size:13px;font-weight:700;}
+.edit-btn{position:absolute;top:14px;right:14px;background:#f1f5f9;border:none;border-radius:10px;padding:6px 12px;font-size:13px;font-weight:700;cursor:pointer;font-family:var(--ff);}
+.edit-btn:hover{background:#e2e8f0;}
+
+/* ── STATS ROW ── */
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px;}
+.stat-card{background:#fff;border-radius:20px;padding:14px 8px;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,.08);}
+.stat-num{font-size:28px;font-weight:900;}
+.stat-lbl{font-size:11px;color:#9CA3AF;font-weight:600;margin-top:2px;}
+
+/* ── STREAK CALENDAR ── */
+.sec-title{font-size:16px;font-weight:800;color:#374151;margin-bottom:10px;}
+.calendar-card{background:#fff;border-radius:20px;padding:16px;box-shadow:0 4px 14px rgba(0,0,0,.08);margin-bottom:16px;}
+.cal-row{display:flex;gap:8px;justify-content:space-between;}
+.cal-day{flex:1;display:flex;flex-direction:column;align-items:center;gap:5px;}
+.cal-lbl{font-size:10px;font-weight:700;color:#9CA3AF;}
+.cal-dot{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;}
+.cal-dot.done{background:linear-gradient(135deg,#6BCB77,#4ECDC4);color:#fff;}
+.cal-dot.miss{background:#f1f5f9;color:#D1D5DB;}
+.cal-dot.today{box-shadow:0 0 0 3px #667eea44;}
+
+/* ── BADGES ── */
+.badges-card{background:#fff;border-radius:20px;padding:16px;box-shadow:0 4px 14px rgba(0,0,0,.08);margin-bottom:16px;}
+.badges-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.badge-item{border-radius:16px;padding:12px 6px;text-align:center;position:relative;transition:transform .2s;}
+.badge-item.earned{background:linear-gradient(135deg,#FFF7ED,#FEF3C7);border:2px solid #FDE68A;}
+.badge-item.earned:hover{transform:translateY(-3px);}
+.badge-item.locked{background:#f8fafc;border:2px solid #E5E7EB;}
+.badge-icon{font-size:28px;display:block;margin-bottom:4px;}
+.badge-item.locked .badge-icon{filter:grayscale(1);opacity:.35;}
+.badge-name{font-size:10px;font-weight:700;color:#374151;line-height:1.3;}
+.badge-item.locked .badge-name{color:#9CA3AF;}
+.lock-overlay{position:absolute;top:6px;right:6px;font-size:12px;}
+
+/* ── GAME PROGRESS ── */
+.progress-card{background:#fff;border-radius:20px;padding:16px;box-shadow:0 4px 14px rgba(0,0,0,.08);margin-bottom:16px;}
+.games-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;}
+.gp-card{border-radius:14px;padding:10px 6px;text-align:center;cursor:pointer;border:2px solid #E5E7EB;transition:all .2s;background:#f9fafb;}
+.gp-card:hover{border-color:#667eea;background:#EEF2FF;transform:translateY(-2px);}
+.gp-em{font-size:24px;display:block;margin-bottom:4px;}
+.gp-title{font-size:9px;font-weight:700;color:#374151;line-height:1.3;}
+.gp-stars{font-size:11px;margin-top:3px;}
+.s-lit{color:#F59E0B;}
+.s-dim{color:#E5E7EB;}
+
+/* ── NAV BUTTONS ── */
+.nav-row{display:flex;gap:10px;justify-content:center;margin-top:8px;}
+.big-btn{padding:13px 22px;border-radius:16px;font-size:15px;font-weight:800;cursor:pointer;border:none;font-family:var(--ff);transition:transform .2s,box-shadow .2s;}
+.big-btn:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.15);}
+.btn-game{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;}
+.btn-garden{background:linear-gradient(135deg,#6BCB77,#4ECDC4);color:#fff;}
+
+/* ── SETUP MODAL ── */
+.modal-ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:100;align-items:center;justify-content:center;backdrop-filter:blur(8px);}
+.modal-ov.show{display:flex;}
+.modal-card{background:#fff;border-radius:28px;padding:32px 24px;max-width:380px;width:92%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.25);animation:pop .4s ease-out;}
+@keyframes pop{from{transform:scale(.7);opacity:0}70%{transform:scale(1.04)}to{transform:scale(1);opacity:1}}
+.modal-title{font-size:22px;font-weight:900;color:#1F2937;margin-bottom:6px;}
+.modal-sub{font-size:14px;color:#6B7280;margin-bottom:18px;}
+.name-input{width:100%;border:2.5px solid #E5E7EB;border-radius:14px;padding:11px 14px;font-size:18px;font-weight:700;font-family:var(--ff);outline:none;text-align:center;transition:border .2s;}
+.name-input:focus{border-color:#667eea;}
+.avatar-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin:16px 0;}
+.av-opt{font-size:26px;border:2.5px solid #E5E7EB;border-radius:12px;padding:6px;cursor:pointer;transition:all .2s;background:none;}
+.av-opt.sel{border-color:#667eea;background:#EEF2FF;transform:scale(1.15);}
+.start-btn{width:100%;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border:none;border-radius:16px;padding:13px;font-size:17px;font-weight:800;cursor:pointer;font-family:var(--ff);margin-top:8px;transition:transform .2s;}
+.start-btn:hover{transform:translateY(-2px);}
+
+@media(max-width:420px){.games-grid{grid-template-columns:repeat(3,1fr);}.badges-grid{grid-template-columns:repeat(3,1fr);}.stats-row .stat-num{font-size:22px;}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-title">🏅 Hồ Sơ Của Em</div>
+  <button class="nav-btn" onclick="localStorage.setItem('vhq_open_hub','1');location.href='vuon-hoc-tap.html'">🎮 Vườn Game</button>
+  <button class="nav-btn" onclick="location.href='vuon-hoc-tap.html'">🏡 Vườn Học</button>
+</div>
+
+<div class="page">
+  <!-- Profile card -->
+  <div class="profile-card" id="profileCard">
+    <button class="edit-btn" onclick="openSetup()">✏️ Sửa</button>
+    <div class="avatar-circle" id="dispAvatar" onclick="triggerPhotoUpload()" title="Bấm để đổi ảnh">
+      <span id="dispAvatarInner">🦊</span>
+      <div class="cam-overlay">📷</div>
+    </div>
+    <input type="file" id="avatarFile" accept="image/*" style="display:none" onchange="onAvatarFileChange(this)">
+    <div class="pname" id="dispName">Học Sinh</div>
+    <div class="psub">Học sinh lớp 1</div>
+    <div class="streak-badge" id="dispStreak">🔥 1 ngày liên tiếp</div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="stat-num" id="statStars" style="color:#F59E0B">0</div>
+      <div class="stat-lbl">Ngôi Sao ⭐</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" id="statGames" style="color:#667eea">0</div>
+      <div class="stat-lbl">Game đã chơi</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" id="statBestStreak" style="color:#FF6B6B">0</div>
+      <div class="stat-lbl">Chuỗi dài nhất 🔥</div>
+    </div>
+  </div>
+
+  <!-- Streak calendar -->
+  <div class="calendar-card">
+    <div class="sec-title">📅 7 Ngày Gần Đây</div>
+    <div class="cal-row" id="calRow"></div>
+  </div>
+
+  <!-- Badges -->
+  <div class="badges-card">
+    <div class="sec-title">🏅 Huy Hiệu</div>
+    <div class="badges-grid" id="badgesGrid"></div>
+  </div>
+
+  <!-- Game progress -->
+  <div class="progress-card">
+    <div class="sec-title">🎮 Tiến Độ Các Game</div>
+    <div class="games-grid" id="gamesGrid"></div>
+  </div>
+
+  <!-- Nav -->
+  <div class="nav-row">
+    <button class="big-btn btn-game" onclick="localStorage.setItem('vhq_open_hub','1');location.href='vuon-hoc-tap.html'">🎮 Vào Vườn Game</button>
+    <button class="big-btn btn-garden" onclick="location.href='vuon-hoc-tap.html'">🏡 Vườn Học Tập</button>
+  </div>
+</div>
+
+<!-- Setup modal -->
+<div class="modal-ov" id="setupModal">
+  <div class="modal-card">
+    <div class="modal-title">Chào em! 😊</div>
+    <div class="modal-sub">Hãy cho cô biết tên em nhé</div>
+    <input class="name-input" id="nameInput" type="text" maxlength="20" placeholder="Tên của em…">
+    <div style="font-size:14px;font-weight:700;color:#374151;margin-top:14px;margin-bottom:10px">Hình đại diện:</div>
+    <div class="setup-av-wrap" id="setupAvWrap" onclick="triggerPhotoUpload()" title="Bấm để tải ảnh lên">
+      <span id="setupAvInner">🦊</span>
+      <div class="cam-overlay">📷</div>
+    </div>
+    <div style="font-size:11px;color:#9CA3AF;margin-bottom:12px">Bấm ảnh để tải lên · Hoặc chọn emoji bên dưới</div>
+    <div class="avatar-grid" id="avatarGrid"></div>
+    <button class="start-btn" onclick="saveProfile()">🌟 Bắt đầu học!</button>
+  </div>
+</div>
+
+<script>
+const AVATARS=['🦊','🐼','🐸','🦁','🐨','🐧','🦋','🌟','🐬','🦄','🐙','🎈'];
+let selAvatar=AVATARS[0];
+
+const BADGES=[
+  {id:'first',   icon:'🌟',name:'Ngôi Sao Đầu', desc:'Đạt sao đầu tiên',        cond:s=>s.totalStars>=1},
+  {id:'star10',  icon:'⭐', name:'Sao Bạc',       desc:'Tích lũy 10 ngôi sao',    cond:s=>s.totalStars>=10},
+  {id:'star30',  icon:'🏅', name:'Sao Vàng',      desc:'Tích lũy 30 ngôi sao',    cond:s=>s.totalStars>=30},
+  {id:'star50',  icon:'🏆', name:'Vô Địch',        desc:'Tích lũy 50 ngôi sao',    cond:s=>s.totalStars>=50},
+  {id:'streak3', icon:'🔥', name:'Chuyên Cần',    desc:'Học 3 ngày liên tiếp',     cond:s=>s.bestStreak>=3},
+  {id:'streak7', icon:'💎', name:'Siêu Cần Cù',   desc:'Học 7 ngày liên tiếp',     cond:s=>s.bestStreak>=7},
+  {id:'games5',  icon:'🎮', name:'Thám Tử Game',  desc:'Chơi 5 game khác nhau',   cond:s=>s.gamesPlayed>=5},
+  {id:'perfect', icon:'🎯', name:'Hoàn Hảo',       desc:'Đạt 3 sao trong 1 game',  cond:s=>s.hasPerfect},
+];
+
+const HUB_GAMES=[
+  {id:'dem-sao',  em:'⭐',title:'Đếm Sao'},
+  {id:'cong-vui', em:'➕',title:'Cộng Vui'},
+  {id:'tru-vui',  em:'➖',title:'Trừ Vui'},
+  {id:'hinh-hoc', em:'🔷',title:'Hình Học'},
+  {id:'xep-so',   em:'🔢',title:'Xếp Số'},
+  {id:'vuon-van', em:'🌈',title:'Vườn Vần'},
+  {id:'nhan-chu', em:'🔤',title:'Nhận Chữ'},
+  {id:'ghep-van', em:'🧩',title:'Ghép Vần'},
+  {id:'doc-tu',   em:'📖',title:'Đọc Từ Nhanh'},
+  {id:'dien-tieng',em:'✏️',title:'Điền Tiếng'},
+];
+
+function loadProfile(){ return JSON.parse(localStorage.getItem('vg_profile')||'{}'); }
+function loadScores(){  return JSON.parse(localStorage.getItem('vgHub_scores')||'{}'); }
+function loadVisits(){  return JSON.parse(localStorage.getItem('vg_visits')||'[]'); }
+
+function computeStats(){
+  const scores=loadScores(), profile=loadProfile();
+  const vals=Object.values(scores);
+  return {
+    totalStars:vals.reduce((s,x)=>s+(x.bestStars||0),0),
+    gamesPlayed:vals.filter(x=>(x.played||0)>0).length,
+    bestStreak:profile.bestStreak||0,
+    hasPerfect:vals.some(x=>(x.bestStars||0)>=3),
+  };
+}
+
+function updateStreak(){
+  const p=loadProfile();
+  const visits=loadVisits();
+  const today=new Date().toISOString().slice(0,10);
+  if(!visits.includes(today)){
+    visits.push(today);
+    if(visits.length>60) visits.splice(0,visits.length-60);
+    localStorage.setItem('vg_visits',JSON.stringify(visits));
+    if(!p.lastVisit){
+      p.streak=1;
+    } else {
+      const diff=Math.round((new Date(today)-new Date(p.lastVisit))/86400000);
+      p.streak=diff===1?(p.streak||0)+1:1;
+    }
+    p.lastVisit=today;
+    p.bestStreak=Math.max(p.bestStreak||0,p.streak);
+    localStorage.setItem('vg_profile',JSON.stringify(p));
+  }
+}
+
+// ── PHOTO UPLOAD ──────────────────────────────────────────
+function triggerPhotoUpload(){ document.getElementById('avatarFile').click(); }
+
+function resizeImage(file, maxPx, cb){
+  const reader=new FileReader();
+  reader.onload=e=>{
+    const img=new Image();
+    img.onload=()=>{
+      const scale=Math.min(maxPx/img.width, maxPx/img.height, 1);
+      const canvas=document.createElement('canvas');
+      canvas.width=Math.round(img.width*scale);
+      canvas.height=Math.round(img.height*scale);
+      canvas.getContext('2d').drawImage(img,0,0,canvas.width,canvas.height);
+      cb(canvas.toDataURL('image/jpeg',0.82));
+    };
+    img.src=e.target.result;
+  };
+  reader.readAsDataURL(file);
+}
+
+function onAvatarFileChange(inp){
+  const file=inp.files[0]; if(!file) return;
+  resizeImage(file, 240, dataUrl=>{
+    const p=loadProfile();
+    p.avatarImg=dataUrl;
+    localStorage.setItem('vg_profile',JSON.stringify(p));
+    renderAvatarDisplay(p);
+    updateSetupPreview(p);
+  });
+  inp.value='';
+}
+
+function renderAvatarDisplay(p){
+  const inner=document.getElementById('dispAvatarInner');
+  const circle=document.getElementById('dispAvatar');
+  const oldImg=circle.querySelector('.av-photo');
+  if(oldImg) oldImg.remove();
+  if(p && p.avatarImg){
+    inner.style.display='none';
+    const img=document.createElement('img');
+    img.src=p.avatarImg; img.className='av-photo';
+    circle.insertBefore(img, circle.firstChild);
+  } else {
+    inner.style.display='';
+    inner.textContent=(p&&p.avatar)||'🦊';
+  }
+}
+
+function updateSetupPreview(p){
+  const wrap=document.getElementById('setupAvWrap'); if(!wrap) return;
+  const inner=document.getElementById('setupAvInner');
+  const oldImg=wrap.querySelector('.av-photo');
+  if(oldImg) oldImg.remove();
+  if(p && p.avatarImg){
+    inner.style.display='none';
+    const img=document.createElement('img');
+    img.src=p.avatarImg; img.className='av-photo';
+    wrap.insertBefore(img, wrap.firstChild);
+  } else {
+    inner.style.display='';
+    inner.textContent=(p&&p.avatar)||selAvatar||'🦊';
+  }
+}
+
+// ── PROFILE RENDER ────────────────────────────────────────
+function renderProfile(){
+  const p=loadProfile();
+  renderAvatarDisplay(p);
+  document.getElementById('dispName').textContent=p.name||'Học Sinh';
+  document.getElementById('dispStreak').textContent='🔥 '+(p.streak||1)+' ngày liên tiếp';
+  const s=computeStats();
+  document.getElementById('statStars').textContent=s.totalStars;
+  document.getElementById('statGames').textContent=s.gamesPlayed;
+  document.getElementById('statBestStreak').textContent=s.bestStreak;
+}
+
+function renderCalendar(){
+  const visits=new Set(loadVisits());
+  const today=new Date();
+  const DAY_LABELS=['CN','T2','T3','T4','T5','T6','T7'];
+  const row=document.getElementById('calRow');
+  row.innerHTML='';
+  for(let i=6;i>=0;i--){
+    const d=new Date(today); d.setDate(today.getDate()-i);
+    const ds=d.toISOString().slice(0,10);
+    const isToday=(i===0);
+    const done=visits.has(ds);
+    const lbl=DAY_LABELS[d.getDay()];
+    row.insertAdjacentHTML('beforeend',`
+      <div class="cal-day">
+        <div class="cal-lbl">${lbl}</div>
+        <div class="cal-dot ${done?'done':'miss'}${isToday?' today':''}">${done?'✓':'·'}</div>
+      </div>`);
+  }
+}
+
+function renderBadges(){
+  const s=computeStats();
+  const grid=document.getElementById('badgesGrid');
+  grid.innerHTML=BADGES.map(b=>{
+    const earned=b.cond(s);
+    return `<div class="badge-item ${earned?'earned':'locked'}" title="${b.desc}">
+      ${!earned?'<span class="lock-overlay">🔒</span>':''}
+      <span class="badge-icon">${b.icon}</span>
+      <div class="badge-name">${b.name}</div>
+    </div>`;
+  }).join('');
+}
+
+function renderGames(){
+  const scores=loadScores();
+  const grid=document.getElementById('gamesGrid');
+  grid.innerHTML=HUB_GAMES.map(g=>{
+    const best=(scores[g.id]||{}).bestStars||0;
+    const stars=[0,1,2].map(i=>`<span class="${i<best?'s-lit':'s-dim'}">★</span>`).join('');
+    return `<div class="gp-card" onclick="location.href='vuon-game-hub.html'" title="${g.title}">
+      <span class="gp-em">${g.em}</span>
+      <div class="gp-title">${g.title}</div>
+      <div class="gp-stars">${stars}</div>
+    </div>`;
+  }).join('');
+}
+
+// ── SETUP MODAL ──
+function buildAvatarGrid(){
+  const grid=document.getElementById('avatarGrid');
+  grid.innerHTML=AVATARS.map(av=>`
+    <button class="av-opt${av===selAvatar?' sel':''}" onclick="pickAvatar('${av}')">${av}</button>
+  `).join('');
+}
+
+function pickAvatar(av){
+  selAvatar=av;
+  // Picking emoji clears photo
+  const p=loadProfile(); delete p.avatarImg;
+  localStorage.setItem('vg_profile',JSON.stringify(p));
+  updateSetupPreview({avatar:av});
+  document.querySelectorAll('.av-opt').forEach(b=>b.classList.toggle('sel',b.textContent===av));
+}
+
+function openSetup(){
+  const p=loadProfile();
+  const inp=document.getElementById('nameInput');
+  inp.value=p.name||'';
+  selAvatar=p.avatar||AVATARS[0];
+  buildAvatarGrid();
+  updateSetupPreview(p);
+  document.getElementById('setupModal').classList.add('show');
+  setTimeout(()=>inp.focus(),200);
+}
+
+function saveProfile(){
+  const name=document.getElementById('nameInput').value.trim();
+  if(!name){document.getElementById('nameInput').focus();return;}
+  const p=loadProfile();
+  p.name=name; p.avatar=selAvatar;
+  if(!p.joined) p.joined=new Date().toISOString().slice(0,10);
+  if(!p.streak) p.streak=1;
+  if(!p.bestStreak) p.bestStreak=1;
+  localStorage.setItem('vg_profile',JSON.stringify(p));
+  document.getElementById('setupModal').classList.remove('show');
+  renderProfile();
+}
+
+// ── INIT ──
+(function init(){
+  const p=loadProfile();
+  updateStreak();
+  if(!p.name){
+    selAvatar=AVATARS[0];
+    buildAvatarGrid();
+    document.getElementById('setupModal').classList.add('show');
+  }
+  renderProfile();
+  renderCalendar();
+  renderBadges();
+  renderGames();
+})();
+</script>
+</body>
+</html>

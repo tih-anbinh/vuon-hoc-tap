@@ -1,0 +1,866 @@
+<!--
+  Author: Huy Tran
+  Company: Cadence Design Systems Vietnam
+  Email: huytran@cadence.com
+  Created: 2026-09-20
+-->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>🎮 Vườn Game – Lớp 1</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+:root{--ff:'Baloo 2',sans-serif;--r:18px;--sh:0 6px 24px rgba(0,0,0,.13);}
+body{font-family:var(--ff);background:linear-gradient(150deg,#c8e6ff 0%,#e8d5ff 100%);min-height:100vh;overflow-x:hidden;user-select:none;touch-action:manipulation;}
+
+/* ── TOP BAR ── */
+#topBar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(12px);
+  display:flex;align-items:center;gap:10px;padding:10px 16px;box-shadow:0 2px 12px rgba(0,0,0,.1);}
+#topBar .logo{font-size:clamp(16px,4vw,22px);font-weight:900;background:linear-gradient(90deg,#667eea,#FF6B6B,#FFE66D,#6BCB77);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;white-space:nowrap;}
+#topBar .stars-total{margin-left:auto;background:linear-gradient(135deg,#FFE66D,#FF9F43);
+  border-radius:20px;padding:5px 14px;font-size:14px;font-weight:800;color:#7c4700;white-space:nowrap;}
+
+/* ── FILTER TABS ── */
+#filterBar{display:flex;gap:8px;padding:12px 16px 4px;overflow-x:auto;scrollbar-width:none;}
+#filterBar::-webkit-scrollbar{display:none;}
+.ftab{background:#fff;border:2px solid #e2e8f0;border-radius:22px;padding:7px 18px;
+  font-size:14px;font-weight:700;cursor:pointer;white-space:nowrap;font-family:var(--ff);
+  transition:all .2s;flex-shrink:0;}
+.ftab.active{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border-color:transparent;}
+
+/* ── GAME CARD GRID ── */
+#hubWrap{padding:12px 14px 80px;}
+#cardGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;}
+
+.gcard{background:#fff;border-radius:20px;overflow:hidden;cursor:pointer;
+  box-shadow:var(--sh);transition:transform .2s,box-shadow .2s;position:relative;}
+.gcard:hover{transform:translateY(-6px);box-shadow:0 14px 36px rgba(0,0,0,.18);}
+.gcard:active{transform:translateY(-2px) scale(.97);}
+.gcard-hdr{height:110px;display:flex;align-items:center;justify-content:center;position:relative;}
+.gcard-hdr .big-em{font-size:52px;filter:drop-shadow(0 4px 8px rgba(0,0,0,.2));}
+.gcard-cat{position:absolute;top:8px;right:8px;font-size:10px;font-weight:700;
+  padding:3px 8px;border-radius:12px;background:rgba(255,255,255,.35);color:#fff;backdrop-filter:blur(4px);}
+.gcard-body{padding:10px 12px 12px;}
+.gcard-title{font-size:15px;font-weight:800;color:#1e293b;line-height:1.2;margin-bottom:3px;}
+.gcard-desc{font-size:11px;color:#64748b;line-height:1.4;}
+.gcard-stars{margin-top:6px;font-size:14px;letter-spacing:1px;}
+.gcard-stars .s-lit{color:#FFD700;}
+.gcard-stars .s-dim{color:#e2e8f0;}
+
+/* ── GAME AREA ── */
+#gameArea{display:none;flex-direction:column;min-height:100vh;}
+#gameArea.show{display:flex;}
+#gameHdr{display:flex;align-items:center;gap:8px;padding:10px 14px;
+  background:rgba(255,255,255,.9);backdrop-filter:blur(10px);
+  box-shadow:0 2px 10px rgba(0,0,0,.1);flex-shrink:0;}
+.back-btn{background:#f1f5f9;border:none;border-radius:11px;padding:7px 13px;
+  font-size:17px;cursor:pointer;font-family:var(--ff);font-weight:700;transition:background .2s;}
+.back-btn:hover{background:#e2e8f0;}
+#gameTitle{font-size:17px;font-weight:800;flex:1;}
+#scorePill{background:#FFE66D;border-radius:16px;padding:4px 12px;font-size:13px;font-weight:700;color:#7c4700;}
+#timerWrap{display:flex;align-items:center;gap:6px;min-width:80px;}
+.tbar{height:7px;background:#e5e7eb;border-radius:4px;flex:1;overflow:hidden;}
+.tfill{height:100%;border-radius:4px;background:linear-gradient(90deg,#6BCB77,#FFE66D,#FF6B6B);transition:width .2s linear;}
+#timerNum{font-size:12px;font-weight:700;color:#475569;min-width:22px;text-align:right;}
+#gameStage{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;align-items:center;gap:14px;}
+
+/* ── QUIZ SHARED ── */
+.q-prompt{background:#fff;border-radius:20px;padding:18px;text-align:center;
+  box-shadow:var(--sh);width:100%;max-width:480px;}
+.q-label{font-size:12px;color:#9ca3af;font-weight:600;margin-bottom:4px;}
+.q-big{font-size:40px;font-weight:900;color:#1e293b;line-height:1.1;}
+.q-sub{font-size:14px;color:#7c3aed;font-weight:700;margin-top:4px;}
+.opts-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;max-width:480px;}
+.opt-btn{background:#fff;border:3px solid #e2e8f0;border-radius:18px;
+  font-size:24px;font-weight:900;color:#1e293b;cursor:pointer;font-family:var(--ff);
+  transition:all .18s;padding:14px 8px;box-shadow:0 4px 12px rgba(0,0,0,.07);min-height:70px;
+  display:flex;align-items:center;justify-content:center;text-align:center;}
+.opt-btn:hover{border-color:#7c3aed;transform:translateY(-3px);box-shadow:0 8px 20px rgba(124,58,237,.2);}
+.opt-btn.correct{background:linear-gradient(135deg,#6BCB77,#4ECDC4);border-color:transparent;color:#fff;}
+.opt-btn.wrong{background:linear-gradient(135deg,#FF6B6B,#FF9F43);border-color:transparent;color:#fff;
+  animation:shake .35s ease;}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+.opt-btn:disabled{cursor:default;}
+
+/* ── DEM SAO specific ── */
+#demSaoBox{background:#fff;border-radius:20px;padding:20px;box-shadow:var(--sh);
+  width:100%;max-width:480px;text-align:center;}
+#demSaoBox .stars-display{display:flex;flex-wrap:wrap;gap:4px;justify-content:center;
+  min-height:80px;align-items:center;font-size:36px;line-height:1.2;}
+
+/* ── HINH HOC ── */
+#shapeBox{background:#fff;border-radius:20px;padding:20px;box-shadow:var(--sh);
+  width:100%;max-width:480px;display:flex;justify-content:center;}
+#shapeBox svg{max-width:260px;width:100%;height:auto;}
+
+/* ── XEP SO ── */
+#xepSoGrid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;width:100%;max-width:480px;}
+.xep-tile{aspect-ratio:1;border-radius:14px;font-size:26px;font-weight:900;border:3px solid #e2e8f0;
+  background:#fff;cursor:pointer;font-family:var(--ff);transition:all .2s;
+  display:flex;align-items:center;justify-content:center;box-shadow:0 3px 10px rgba(0,0,0,.08);}
+.xep-tile.done-tile{background:linear-gradient(135deg,#6BCB77,#4ECDC4);border-color:transparent;
+  color:#fff;cursor:default;}
+.xep-tile.next-tile{border-color:#4D96FF;animation:pulse-border 1s infinite ease-in-out;}
+@keyframes pulse-border{0%,100%{box-shadow:0 0 0 0 #4D96FF66}50%{box-shadow:0 0 0 6px #4D96FF22}}
+.xep-tile.wrong-tile{animation:shake .35s ease;border-color:#FF6B6B;}
+
+/* ── GHEP VAN ── */
+#ghepBox{background:#fff;border-radius:20px;padding:20px;box-shadow:var(--sh);
+  width:100%;max-width:480px;text-align:center;}
+.ghep-parts{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:8px;}
+.ghep-part{background:linear-gradient(135deg,#f0f4ff,#e8d5ff);border-radius:14px;
+  padding:10px 20px;font-size:36px;font-weight:900;color:#5046e4;min-width:70px;}
+.ghep-plus{font-size:28px;font-weight:900;color:#9ca3af;}
+.ghep-em{font-size:52px;margin-bottom:4px;}
+
+/* ── WIN OVERLAY ── */
+#winOv{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:200;
+  align-items:center;justify-content:center;backdrop-filter:blur(8px);}
+#winOv.show{display:flex;}
+.win-card{background:#fff;border-radius:28px;padding:36px 28px;text-align:center;
+  max-width:340px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,.28);
+  animation:winBounce .5s cubic-bezier(.34,1.56,.64,1);}
+@keyframes winBounce{0%{transform:scale(.4) translateY(60px);opacity:0}100%{transform:scale(1);opacity:1}}
+.win-ej{font-size:66px;display:block;margin-bottom:6px;}
+.win-ttl{font-size:26px;font-weight:900;color:#1e293b;margin-bottom:4px;}
+.win-sc{font-size:16px;color:#7c3aed;font-weight:700;margin-bottom:10px;}
+.win-stars{font-size:36px;letter-spacing:4px;margin-bottom:20px;}
+.win-btns{display:flex;gap:10px;justify-content:center;}
+.wbtn{padding:11px 22px;border-radius:14px;font-size:15px;font-weight:700;
+  cursor:pointer;border:none;font-family:var(--ff);transition:transform .18s;}
+.wbtn:hover{transform:translateY(-2px);}
+.wbtn.pri{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;}
+.wbtn.sec{background:#f1f5f9;color:#475569;}
+
+/* ── PARTICLES ── */
+.sparkle{position:fixed;pointer-events:none;z-index:300;font-size:20px;
+  animation:sparkUp .9s ease-out forwards;}
+@keyframes sparkUp{0%{opacity:1;transform:translateY(0) scale(.8)}100%{opacity:0;transform:translateY(-90px) scale(1.3)}}
+.conf-p{position:fixed;pointer-events:none;z-index:301;border-radius:2px;animation:confDrop linear forwards;}
+@keyframes confDrop{0%{transform:translateY(-10px) rotate(0);opacity:1}100%{transform:translateY(100vh) rotate(720deg);opacity:0}}
+
+/* ── RESPONSIVE ── */
+@media(max-width:400px){
+  #cardGrid{grid-template-columns:repeat(2,1fr);}
+  .opt-btn{font-size:19px;min-height:58px;}
+  .q-big{font-size:32px;}
+}
+@media(min-width:600px){#cardGrid{grid-template-columns:repeat(3,1fr);}}
+@media(min-width:900px){#cardGrid{grid-template-columns:repeat(4,1fr);}}
+@media(min-width:1200px){#cardGrid{grid-template-columns:repeat(5,1fr);}}
+</style>
+</head>
+<body>
+
+<!-- ══ TOP BAR ══ -->
+<div id="topBar">
+  <div class="logo">🎮 Vườn Game – Lớp 1</div>
+  <div class="stars-total" id="totalStarsBar">⭐ 0 sao</div>
+  <button id="profileBtn" onclick="window.open('hoc-sinh-profile.html','_blank')"
+    style="background:linear-gradient(135deg,#667eea,#764ba2);border:none;border-radius:50%;width:38px;height:38px;font-size:22px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 8px rgba(102,126,234,.4)"
+    title="Hồ sơ học sinh">🦊</button>
+</div>
+
+<!-- ══ HUB ══ -->
+<div id="hubWrap">
+  <div id="filterBar">
+    <button class="ftab active" onclick="setFilter('all',this)">🎮 Tất cả</button>
+    <button class="ftab" onclick="setFilter('toan',this)">📐 Toán</button>
+    <button class="ftab" onclick="setFilter('tv',this)">📖 Tiếng Việt</button>
+  </div>
+  <div id="cardGrid"></div>
+</div>
+
+<!-- ══ GAME AREA ══ -->
+<div id="gameArea">
+  <div id="gameHdr">
+    <button class="back-btn" onclick="exitGame()">← Thoát</button>
+    <div id="gameTitle">—</div>
+    <div id="scorePill" style="display:none">0 điểm</div>
+    <div id="timerWrap" style="display:none">
+      <div class="tbar"><div class="tfill" id="timerFill" style="width:100%"></div></div>
+      <div id="timerNum">—</div>
+    </div>
+  </div>
+  <div id="gameStage"></div>
+</div>
+
+<!-- ══ WIN OVERLAY ══ -->
+<div id="winOv">
+  <div class="win-card">
+    <span class="win-ej" id="wEj">🌟</span>
+    <div class="win-ttl" id="wTtl">Xuất sắc!</div>
+    <div class="win-sc" id="wSc"></div>
+    <div class="win-stars" id="wStars"></div>
+    <div class="win-btns">
+      <button class="wbtn sec" onclick="exitGame()">🏠 Thoát</button>
+      <button class="wbtn pri" id="wReplay">🔄 Chơi lại</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════════════════════════
+//  GAME CATALOG
+// ══════════════════════════════════════════════════════════
+const CATALOG = [
+  {id:'dem-sao',  cat:'toan', em:'⭐', title:'Đếm Sao',      desc:'Đếm số ngôi sao và chọn đáp án đúng',        hdr:'linear-gradient(135deg,#1e3a8a,#4D96FF)'},
+  {id:'cong-vui', cat:'toan', em:'➕', title:'Cộng Vui',      desc:'Tính phép cộng trong phạm vi 10',             hdr:'linear-gradient(135deg,#FF6B6B,#FF9F43)'},
+  {id:'tru-vui',  cat:'toan', em:'➖', title:'Trừ Vui',       desc:'Tính phép trừ trong phạm vi 10',              hdr:'linear-gradient(135deg,#6BCB77,#4ECDC4)'},
+  {id:'hinh-hoc', cat:'toan', em:'🔷', title:'Hình Học',      desc:'Nhận biết hình tròn, vuông, tam giác, chữ nhật',hdr:'linear-gradient(135deg,#C77DFF,#764ba2)'},
+  {id:'xep-so',   cat:'toan', em:'🔢', title:'Xếp Số',        desc:'Bấm số từ 1 đến 10 theo thứ tự',             hdr:'linear-gradient(135deg,#FFE66D,#FF9F43)'},
+  {id:'vuon-van', cat:'tv',   em:'🌈', title:'Vườn Vần',      desc:'5 trò chơi với 125 vần lớp 1',                hdr:'linear-gradient(135deg,#667eea,#764ba2)'},
+  {id:'nhan-chu', cat:'tv',   em:'🔤', title:'Nhận Chữ',      desc:'Nghe từ – chọn chữ cái đầu đúng',            hdr:'linear-gradient(135deg,#FF6B6B,#C77DFF)'},
+  {id:'ghep-van', cat:'tv',   em:'🧩', title:'Ghép Vần',      desc:'Ghép âm đầu và vần thành tiếng có nghĩa',    hdr:'linear-gradient(135deg,#38ef7d,#11998e)'},
+  {id:'doc-tu',   cat:'tv',   em:'📖', title:'Đọc Từ Nhanh',  desc:'Đọc từ rồi chọn hình ảnh đúng – luyện đọc hiểu', hdr:'linear-gradient(135deg,#f093fb,#f5576c)'},
+  {id:'dien-tieng',cat:'tv',  em:'✏️', title:'Điền Tiếng',    desc:'Chọn tiếng còn thiếu để hoàn thành câu',     hdr:'linear-gradient(135deg,#4facfe,#00f2fe)'},
+];
+
+// ══════════════════════════════════════════════════════════
+//  LOCAL STORAGE
+// ══════════════════════════════════════════════════════════
+function loadScores(){ try{return JSON.parse(localStorage.getItem('vgHub_scores')||'{}')}catch{return {}} }
+function saveScore(id,stars){
+  const d=loadScores(); if(!d[id]) d[id]={played:0,bestStars:0};
+  d[id].played++; d[id].bestStars=Math.max(d[id].bestStars,stars);
+  try{localStorage.setItem('vgHub_scores',JSON.stringify(d))}catch{}
+}
+function totalStars(){ const d=loadScores(); return Object.values(d).reduce((s,v)=>s+(v.bestStars||0),0); }
+function updateStarBar(){ document.getElementById('totalStarsBar').textContent='⭐ '+totalStars()+' sao'; }
+
+// ══════════════════════════════════════════════════════════
+//  HUB RENDERING
+// ══════════════════════════════════════════════════════════
+let curFilter='all';
+function setFilter(f,btn){
+  curFilter=f;
+  document.querySelectorAll('.ftab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderHub();
+}
+function renderHub(){
+  const scores=loadScores();
+  const games=CATALOG.filter(g=>curFilter==='all'||g.cat===curFilter);
+  document.getElementById('cardGrid').innerHTML=games.map(g=>{
+    const best=(scores[g.id]||{}).bestStars||0;
+    const stars=['★','★','★'].map((_,i)=>`<span class="${i<best?'s-lit':'s-dim'}">★</span>`).join('');
+    return `<div class="gcard" onclick="launchGame('${g.id}')">
+      <div class="gcard-hdr" style="background:${g.hdr}">
+        <span class="big-em">${g.em}</span>
+        <span class="gcard-cat">${g.cat==='toan'?'📐 Toán':'📖 T.Việt'}</span>
+      </div>
+      <div class="gcard-body">
+        <div class="gcard-title">${g.title}</div>
+        <div class="gcard-desc">${g.desc}</div>
+        <div class="gcard-stars">${stars}</div>
+      </div>
+    </div>`;
+  }).join('');
+  updateStarBar();
+}
+
+// ══════════════════════════════════════════════════════════
+//  AUDIO
+// ══════════════════════════════════════════════════════════
+let ACtx=null;
+const ac=()=>{if(!ACtx)ACtx=new(window.AudioContext||window.webkitAudioContext)();return ACtx;};
+function tone(f,d,t='sine',v=.28){try{const ctx=ac(),o=ctx.createOscillator(),g=ctx.createGain();o.connect(g);g.connect(ctx.destination);o.type=t;o.frequency.setValueAtTime(f,ctx.currentTime);g.gain.setValueAtTime(v,ctx.currentTime);g.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+d);o.start();o.stop(ctx.currentTime+d);}catch(e){}}
+const sndOk=()=>{tone(523,.08);setTimeout(()=>tone(659,.08),80);setTimeout(()=>tone(784,.15),160);};
+const sndErr=()=>tone(200,.2,'sawtooth',.15);
+const sndPop=()=>{tone(880,.06);setTimeout(()=>tone(1320,.1),50);};
+const sndWin=()=>{[523,523,659,784,1047].forEach((f,i)=>setTimeout(()=>tone(f,.2),i*100));};
+function speakVI(t,rate){if(!('speechSynthesis' in window))return;const u=new SpeechSynthesisUtterance(String(t));u.lang='vi-VN';u.rate=rate||0.85;speechSynthesis.cancel();speechSynthesis.speak(u);}
+
+// ══════════════════════════════════════════════════════════
+//  PARTICLES
+// ══════════════════════════════════════════════════════════
+function sparkles(x,y){['⭐','✨','🌟','💫'].forEach((em,i)=>{const el=document.createElement('div');el.className='sparkle';el.textContent=em;el.style.cssText=`left:${x+(Math.random()-.5)*80}px;top:${y+(Math.random()-.5)*40}px;animation-delay:${i*.05}s`;document.body.appendChild(el);setTimeout(()=>el.remove(),1000);});}
+function confetti(){const cls=['#FF6B6B','#FFE66D','#6BCB77','#4D96FF','#C77DFF','#FF9F43'];for(let i=0;i<60;i++)setTimeout(()=>{const el=document.createElement('div');el.className='conf-p';const w=6+Math.random()*8;el.style.cssText=`left:${Math.random()*100}vw;background:${cls[Math.random()*cls.length|0]};animation-duration:${1.5+Math.random()*2}s;animation-delay:${Math.random()*.5}s;width:${w}px;height:${w}px;border-radius:${Math.random()>.5?'50%':'2px'}`;document.body.appendChild(el);setTimeout(()=>el.remove(),3000);},i*22);}
+
+// ══════════════════════════════════════════════════════════
+//  TIMER / GAME CONTROLLER
+// ══════════════════════════════════════════════════════════
+let timers=[];
+function cleanUp(){timers.forEach(clearInterval);timers=[];}
+function push(iv){timers.push(iv);return iv;}
+
+let curGameId=null, curReplayFn=null;
+
+function launchGame(id){
+  cleanUp(); hideWin();
+  curGameId=id;
+  const g=CATALOG.find(x=>x.id===id);
+  document.getElementById('gameTitle').textContent=g.em+' '+g.title;
+  document.getElementById('gameTitle').style.color='';
+  document.getElementById('scorePill').style.display='';
+  document.getElementById('timerWrap').style.display='';
+  document.getElementById('gameStage').innerHTML='';
+  document.getElementById('hubWrap').style.display='none';
+  const ga=document.getElementById('gameArea');ga.classList.add('show');
+
+  const inits={
+    'dem-sao': initDemSao,
+    'cong-vui': initCongVui,
+    'tru-vui': initTruVui,
+    'hinh-hoc': initHinhHoc,
+    'xep-so': initXepSo,
+    'vuon-van': initVuonVan,
+    'nhan-chu': initNhanChu,
+    'ghep-van': initGhepVan,
+    'doc-tu': initDocTu,
+    'dien-tieng': initDienTieng,
+  };
+  if(inits[id]) inits[id]();
+}
+
+function exitGame(){
+  cleanUp(); hideWin();
+  document.getElementById('hubWrap').style.display='';
+  document.getElementById('gameArea').classList.remove('show');
+  document.getElementById('gameStage').innerHTML='';
+  renderHub();
+}
+
+function setScore(n){ document.getElementById('scorePill').textContent=n+' điểm'; }
+function setTimerBar(pct,t){ document.getElementById('timerFill').style.width=pct+'%'; document.getElementById('timerNum').textContent=t+'s'; }
+function hideHdr(){ document.getElementById('scorePill').style.display='none'; document.getElementById('timerWrap').style.display='none'; }
+
+function showWin(ej,ttl,sc,stars,replayFn){
+  saveScore(curGameId,stars); updateStarBar();
+  curReplayFn=replayFn;
+  document.getElementById('wEj').textContent=ej;
+  document.getElementById('wTtl').textContent=ttl;
+  document.getElementById('wSc').textContent=sc;
+  document.getElementById('wStars').textContent=['★','★','★'].map((_,i)=>i<stars?'⭐':'☆').join('');
+  document.getElementById('wReplay').onclick=()=>{hideWin();if(replayFn)replayFn();};
+  document.getElementById('winOv').classList.add('show');
+  sndWin(); confetti();
+}
+function hideWin(){ document.getElementById('winOv').classList.remove('show'); }
+
+// ══════════════════════════════════════════════════════════
+//  SHARED QUIZ HELPER
+//  promptHTML: HTML for the prompt card
+//  choices: array of strings
+//  correctIdx: index of correct answer
+//  onResult(correct, event): called after answer
+// ══════════════════════════════════════════════════════════
+function quiz4(promptHTML, choices, correctIdx, onResult){
+  const stage=document.getElementById('gameStage');
+  stage.innerHTML='';
+  const pEl=document.createElement('div'); pEl.className='q-prompt'; pEl.innerHTML=promptHTML; stage.appendChild(pEl);
+  const og=document.createElement('div'); og.className='opts-grid';
+  choices.forEach((ch,i)=>{
+    const b=document.createElement('button'); b.className='opt-btn'; b.innerHTML=ch;
+    b.onclick=e=>{
+      og.querySelectorAll('.opt-btn').forEach(x=>{x.disabled=true;});
+      if(i===correctIdx){b.classList.add('correct');sndOk();const r=b.getBoundingClientRect();sparkles(r.left+r.width/2,r.top+r.height/2);}
+      else{b.classList.add('wrong');og.querySelectorAll('.opt-btn')[correctIdx].classList.add('correct');sndErr();}
+      onResult(i===correctIdx,e);
+    };
+    og.appendChild(b);
+  });
+  stage.appendChild(og);
+}
+
+// ══════════════════════════════════════════════════════════
+//  GAME 1: ĐẾM SAO
+// ══════════════════════════════════════════════════════════
+function initDemSao(){
+  let round=0,score=0,tl=0,total=10;
+  setScore(0);
+  const EMJ=['⭐','🌟','✨'];
+  function rand(lo,hi){return Math.floor(Math.random()*(hi-lo+1))+lo;}
+  function distract(n,cnt){const s=new Set([n]);while(s.size<cnt+1){const x=rand(1,10);if(x!==n)s.add(x);}s.delete(n);return [...s].slice(0,cnt);}
+
+  function nextQ(){
+    if(round>=total){endDemSao();return;}
+    cleanQTimers();
+    round++;
+    const n=rand(1,10);
+    const opts=shuffle([n,...distract(n,3)]);
+    const ci=opts.indexOf(n);
+    const stars=Array.from({length:n},()=>EMJ[rand(0,2)]).join('');
+
+    const stage=document.getElementById('gameStage'); stage.innerHTML='';
+    const box=document.createElement('div'); box.className='q-prompt';
+    box.innerHTML=`<div class="q-label">Câu ${round}/${total}</div>
+      <div id="demSaoDisplay" style="display:flex;flex-wrap:wrap;gap:6px;justify-content:center;min-height:80px;align-items:center;font-size:38px;line-height:1.3;padding:8px 0">${stars}</div>
+      <div class="q-sub">Có bao nhiêu ngôi sao?</div>`;
+    stage.appendChild(box);
+
+    const og=document.createElement('div'); og.className='opts-grid';
+    opts.forEach((ch,i)=>{
+      const b=document.createElement('button'); b.className='opt-btn'; b.textContent=ch;
+      b.onclick=e=>{
+        og.querySelectorAll('.opt-btn').forEach(x=>x.disabled=true);
+        clearQTimer();
+        if(i===ci){b.classList.add('correct');score+=10;setScore(score);sndOk();const r=b.getBoundingClientRect();sparkles(r.left+r.width/2,r.top+r.height/2);}
+        else{b.classList.add('wrong');og.querySelectorAll('.opt-btn')[ci].classList.add('correct');sndErr();}
+        setTimeout(nextQ,1100);
+      };
+      og.appendChild(b);
+    });
+    stage.appendChild(og);
+    startQTimer(20,nextQ);
+  }
+
+  let qtl=0,qtimer=null;
+  function startQTimer(sec,onExpire){ qtl=sec; setTimerBar(100,qtl); clearQTimer(); qtimer=push(setInterval(()=>{ qtl--;setTimerBar(qtl/sec*100,qtl); if(qtl<=0){clearQTimer();onExpire();} },1000)); }
+  function clearQTimer(){ if(qtimer){clearInterval(qtimer);const idx=timers.indexOf(qtimer);if(idx>-1)timers.splice(idx,1);qtimer=null;} }
+  function cleanQTimers(){ clearQTimer(); }
+
+  function endDemSao(){
+    cleanUp();
+    const stars=score>=80?3:score>=50?2:1;
+    const ej=stars===3?'🏆':stars===2?'🌟':'⭐';
+    const t=stars===3?'Xuất sắc! Đếm siêu nhanh!':stars===2?'Rất giỏi!':'Luyện thêm nhé!';
+    showWin(ej,t,`Điểm: ${score}/100`,stars,initDemSao);
+  }
+  nextQ();
+}
+
+// ══════════════════════════════════════════════════════════
+//  GAME 2: CỘNG VUI
+// ══════════════════════════════════════════════════════════
+function initCongVui(){
+  let round=0,score=0,total=10;
+  setScore(0);
+  function rand(lo,hi){return Math.floor(Math.random()*(hi-lo+1))+lo;}
+  function distract(n,cnt){const s=new Set([n]);while(s.size<cnt+1){const x=rand(1,10);if(x!==n)s.add(x);}s.delete(n);return [...s].slice(0,cnt);}
+
+  function nextQ(){
+    if(round>=total){endCong();return;}
+    round++;
+    let a=rand(1,9),b=rand(1,9);
+    while(a+b>10){b=rand(1,9-a+1);}
+    const ans=a+b;
+    const opts=shuffle([ans,...distract(ans,3)]);
+    const ci=opts.indexOf(ans);
+
+    let qtl=10,qtimer=null;
+    function clearQT(){if(qtimer){clearInterval(qtimer);const i=timers.indexOf(qtimer);if(i>-1)timers.splice(i,1);qtimer=null;}}
+    function answered(correct,e){
+      clearQT();
+      if(correct){score+=10;setScore(score);}
+      setTimeout(nextQ,1100);
+    }
+
+    quiz4(
+      `<div class="q-label">Câu ${round}/${total}</div>
+       <div class="q-big">${a} + ${b} = <span style="color:#FF6B6B">?</span></div>`,
+      opts.map(String), ci, answered
+    );
+    setTimerBar(100,qtl);
+    qtimer=push(setInterval(()=>{qtl--;setTimerBar(qtl/10*100,qtl);if(qtl<=0){clearQT();const og=document.querySelector('.opts-grid');if(og)og.querySelectorAll('.opt-btn').forEach((b,i)=>{b.disabled=true;if(i===ci)b.classList.add('correct');});sndErr();setTimeout(nextQ,1100);}},1000));
+  }
+
+  function endCong(){
+    cleanUp();
+    const stars=score>=80?3:score>=50?2:1;
+    showWin(stars===3?'🏆':stars===2?'🌟':'➕',stars===3?'Cộng siêu nhanh!':stars===2?'Rất giỏi!':'Cố lên nào!',`Điểm: ${score}/100`,stars,initCongVui);
+  }
+  nextQ();
+}
+
+// ══════════════════════════════════════════════════════════
+//  GAME 3: TRỪ VUI
+// ══════════════════════════════════════════════════════════
+function initTruVui(){
+  let round=0,score=0,total=10;
+  setScore(0);
+  function rand(lo,hi){return Math.floor(Math.random()*(hi-lo+1))+lo;}
+  function distract(n,cnt){const s=new Set([n]);while(s.size<cnt+1){const x=rand(0,9);if(x!==n)s.add(x);}s.delete(n);return [...s].slice(0,cnt);}
+
+  function nextQ(){
+    if(round>=total){endTru();return;}
+    round++;
+    const a=rand(2,10),b=rand(1,a-1);
+    const ans=a-b;
+    const opts=shuffle([ans,...distract(ans,3)]);
+    const ci=opts.indexOf(ans);
+
+    let qtl=10,qtimer=null;
+    function clearQT(){if(qtimer){clearInterval(qtimer);const i=timers.indexOf(qtimer);if(i>-1)timers.splice(i,1);qtimer=null;}}
+    function answered(correct){
+      clearQT();
+      if(correct){score+=10;setScore(score);}
+      setTimeout(nextQ,1100);
+    }
+
+    quiz4(
+      `<div class="q-label">Câu ${round}/${total}</div>
+       <div class="q-big">${a} − ${b} = <span style="color:#6BCB77">?</span></div>`,
+      opts.map(String), ci, answered
+    );
+    setTimerBar(100,qtl);
+    qtimer=push(setInterval(()=>{qtl--;setTimerBar(qtl/10*100,qtl);if(qtl<=0){clearQT();const og=document.querySelector('.opts-grid');if(og)og.querySelectorAll('.opt-btn').forEach((b,i)=>{b.disabled=true;if(i===ci)b.classList.add('correct');});sndErr();setTimeout(nextQ,1100);}},1000));
+  }
+
+  function endTru(){
+    cleanUp();
+    const stars=score>=80?3:score>=50?2:1;
+    showWin(stars===3?'🏆':stars===2?'🌟':'➖',stars===3?'Trừ giỏi lắm!':stars===2?'Rất tốt!':'Thử lại nào!',`Điểm: ${score}/100`,stars,initTruVui);
+  }
+  nextQ();
+}
+
+// ══════════════════════════════════════════════════════════
+//  GAME 4: HÌNH HỌC
+// ══════════════════════════════════════════════════════════
+const SHAPES=[
+  {name:'Hình tròn', svg:(c)=>`<circle cx="100" cy="80" r="65" fill="${c}" stroke="#fff" stroke-width="4"/>`},
+  {name:'Hình vuông', svg:(c)=>`<rect x="25" y="15" width="150" height="130" rx="10" fill="${c}" stroke="#fff" stroke-width="4"/>`},
+  {name:'Tam giác', svg:(c)=>`<polygon points="100,10 190,155 10,155" fill="${c}" stroke="#fff" stroke-width="4"/>`},
+  {name:'Chữ nhật', svg:(c)=>`<rect x="10" y="35" width="180" height="100" rx="10" fill="${c}" stroke="#fff" stroke-width="4"/>`},
+];
+const SHAPE_COLORS=['#FF6B6B','#4D96FF','#6BCB77','#FFE66D','#C77DFF','#FF9F43'];
+
+function initHinhHoc(){
+  let round=0,score=0,total=10;
+  setScore(0);
+  document.getElementById('timerWrap').style.display='none';
+
+  function nextQ(){
+    if(round>=total){endHinh();return;}
+    round++;
+    const si=Math.floor(Math.random()*SHAPES.length);
+    const shape=SHAPES[si];
+    const color=SHAPE_COLORS[Math.floor(Math.random()*SHAPE_COLORS.length)];
+    const opts=shuffle(SHAPES.map(s=>s.name));
+    const ci=opts.indexOf(shape.name);
+    const stage=document.getElementById('gameStage'); stage.innerHTML='';
+
+    const sbox=document.createElement('div'); sbox.className='q-prompt';
+    sbox.innerHTML=`<div class="q-label">Câu ${round}/${total} – Đây là hình gì?</div>
+      <svg viewBox="0 0 200 160" width="200" height="160" style="display:block;margin:auto">${shape.svg(color)}</svg>`;
+    stage.appendChild(sbox);
+
+    const og=document.createElement('div'); og.className='opts-grid';
+    opts.forEach((ch,i)=>{
+      const b=document.createElement('button'); b.className='opt-btn'; b.style.fontSize='16px'; b.textContent=ch;
+      b.onclick=()=>{
+        og.querySelectorAll('.opt-btn').forEach(x=>x.disabled=true);
+        if(i===ci){b.classList.add('correct');score+=10;setScore(score);sndOk();const r=b.getBoundingClientRect();sparkles(r.left+r.width/2,r.top+r.height/2);}
+        else{b.classList.add('wrong');og.querySelectorAll('.opt-btn')[ci].classList.add('correct');sndErr();}
+        setTimeout(nextQ,1100);
+      };
+      og.appendChild(b);
+    });
+    stage.appendChild(og);
+  }
+
+  function endHinh(){
+    cleanUp();
+    const stars=score>=80?3:score>=50?2:1;
+    showWin(stars===3?'🏆':stars===2?'🌟':'🔷',stars===3?'Nhận hình cực giỏi!':stars===2?'Khá giỏi!':'Ôn lại nhé!',`Điểm: ${score}/100`,stars,initHinhHoc);
+  }
+  nextQ();
+}
+
+// ══════════════════════════════════════════════════════════
+//  GAME 5: XẾP SỐ
+// ══════════════════════════════════════════════════════════
+function initXepSo(){
+  let next=1,done=0,tl=30,over=false;
+  setScore(0);
+  const nums=shuffle([1,2,3,4,5,6,7,8,9,10]);
+
+  const stage=document.getElementById('gameStage'); stage.innerHTML='';
+  const info=document.createElement('div');
+  info.style.cssText='background:#fff;border-radius:14px;padding:10px 18px;font-weight:700;font-size:15px;color:#475569;width:100%;max-width:480px;text-align:center;box-shadow:var(--sh)';
+  info.innerHTML='Bấm số <span id="nextHint" style="color:#4D96FF;font-size:22px;font-weight:900">1</span> theo thứ tự!';
+  stage.appendChild(info);
+
+  const grid=document.createElement('div'); grid.id='xepSoGrid'; grid.className='';
+  grid.style.cssText='display:grid;grid-template-columns:repeat(5,1fr);gap:10px;width:100%;max-width:480px;';
+  nums.forEach(n=>{
+    const t=document.createElement('button'); t.className='xep-tile'; t.textContent=n; t.dataset.n=n;
+    if(n===1) t.classList.add('next-tile');
+    t.onclick=()=>{
+      if(over) return;
+      if(parseInt(t.dataset.n)===next){
+        t.classList.remove('next-tile'); t.classList.add('done-tile'); t.disabled=true;
+        sndPop(); done++; next++;
+        const r=t.getBoundingClientRect(); sparkles(r.left+r.width/2,r.top+r.height/2);
+        document.getElementById('nextHint').textContent=next<=10?next:'✅';
+        const nx=document.querySelector(`.xep-tile[data-n="${next}"]`);
+        if(nx) nx.classList.add('next-tile');
+        setScore(done*10);
+        if(done===10){over=true;cleanUp();endXep();}
+      } else {
+        t.classList.add('wrong-tile'); sndErr(); setTimeout(()=>t.classList.remove('wrong-tile'),400);
+      }
+    };
+    grid.appendChild(t);
+  });
+  stage.appendChild(grid);
+
+  setTimerBar(100,tl);
+  const iv=push(setInterval(()=>{tl--;setTimerBar(tl/30*100,tl);if(tl<=0){clearInterval(iv);over=true;endXep();}},1000));
+
+  function endXep(){
+    cleanUp();
+    const sc=done*10;
+    const stars=done>=10?3:done>=7?2:1;
+    showWin(stars===3?'🏆':stars===2?'🌟':'🔢',stars===3?'Xếp số vô địch!':stars===2?'Rất nhanh!':'Cố thêm nào!',`${done}/10 số · ${sc} điểm`,stars,initXepSo);
+  }
+}
+
+// ══════════════════════════════════════════════════════════
+//  GAME 6: VƯỜN VẦN (iframe)
+// ══════════════════════════════════════════════════════════
+function initVuonVan(){
+  hideHdr();
+  document.getElementById('gameTitle').textContent='🌈 Vườn Vần';
+  document.getElementById('gameStage').style.padding='0';
+  document.getElementById('gameStage').innerHTML=
+    `<iframe src="vuon-van-vui-lop1.html"
+       style="width:100%;height:calc(100vh - 60px);border:none;border-radius:0;display:block;flex:1"
+       allowfullscreen></iframe>`;
+}
+
+// ══════════════════════════════════════════════════════════
+//  GAME 7: NHẬN CHỮ
+// ══════════════════════════════════════════════════════════
+const NHAN_CHU_POOL=[
+  {word:'ba',   start:'b'},{word:'cá',   start:'c'},{word:'da',   start:'d'},
+  {word:'đi',   start:'đ'},{word:'gà',   start:'g'},{word:'hoa',  start:'h'},
+  {word:'kẹo',  start:'k'},{word:'la',   start:'l'},{word:'ma',   start:'m'},
+  {word:'na',   start:'n'},{word:'ra',   start:'r'},{word:'sa',   start:'s'},
+  {word:'ta',   start:'t'},{word:'vui',  start:'v'},{word:'xa',   start:'x'},
+  {word:'lá',   start:'l'},{word:'mẹ',   start:'m'},{word:'bé',   start:'b'},
+  {word:'phở',  start:'ph'},{word:'nhà', start:'nh'},
+];
+function initNhanChu(){
+  let round=0,score=0,total=10;
+  setScore(0);
+  const pool=shuffle([...NHAN_CHU_POOL]);
+
+  function nextQ(){
+    if(round>=total){endNhan();return;}
+    round++;
+    const item=pool[(round-1)%pool.length];
+    const allStarts=[...new Set(NHAN_CHU_POOL.map(x=>x.start))];
+    const distractors=shuffle(allStarts.filter(s=>s!==item.start)).slice(0,3);
+    const opts=shuffle([item.start,...distractors]);
+    const ci=opts.indexOf(item.start);
+
+    let qtl=10,qtimer=null;
+    function clearQT(){if(qtimer){clearInterval(qtimer);const i=timers.indexOf(qtimer);if(i>-1)timers.splice(i,1);qtimer=null;}}
+    function answered(correct){
+      clearQT();
+      if(correct){score+=10;setScore(score);}
+      setTimeout(nextQ,1100);
+    }
+
+    quiz4(
+      `<div class="q-label">Câu ${round}/${total}</div>
+       <div class="q-big" style="color:#7c3aed">${item.word}</div>
+       <div class="q-sub">Chữ cái đầu là gì?
+         <button onclick="speakVI('${item.word.replace(/'/g,"\\'")}',0.75)" style="background:none;border:none;cursor:pointer;font-size:18px;vertical-align:middle;margin-left:6px">🔊</button>
+       </div>`,
+      opts, ci, answered
+    );
+    speakVI(item.word, 0.75);
+    setTimerBar(100,qtl);
+    qtimer=push(setInterval(()=>{qtl--;setTimerBar(qtl/10*100,qtl);if(qtl<=0){clearQT();const og=document.querySelector('.opts-grid');if(og)og.querySelectorAll('.opt-btn').forEach((b,i)=>{b.disabled=true;if(i===ci)b.classList.add('correct');});sndErr();setTimeout(nextQ,1100);}},1000));
+  }
+
+  function endNhan(){
+    cleanUp();
+    const stars=score>=80?3:score>=50?2:1;
+    showWin(stars===3?'🏆':stars===2?'🌟':'🔤',stars===3?'Nhận chữ siêu giỏi!':stars===2?'Khá tốt!':'Ôn chữ cái nhé!',`Điểm: ${score}/100`,stars,initNhanChu);
+  }
+  nextQ();
+}
+
+// ══════════════════════════════════════════════════════════
+//  GAME 8: GHÉP VẦN
+// ══════════════════════════════════════════════════════════
+const GHEP_POOL=[
+  {am:'b',  van:'a',   word:'ba',   em:'🐐'},{am:'c',  van:'á',   word:'cá',   em:'🐟'},
+  {am:'m',  van:'ẹ',   word:'mẹ',   em:'👩'},{am:'b',  van:'é',   word:'bé',   em:'👶'},
+  {am:'g',  van:'à',   word:'gà',   em:'🐔'},{am:'h',  van:'oa',  word:'hoa',  em:'🌸'},
+  {am:'k',  van:'ẹo',  word:'kẹo',  em:'🍬'},{am:'l',  van:'á',   word:'lá',   em:'🍃'},
+  {am:'m',  van:'ây',  word:'mây',  em:'☁️'},{am:'nh', van:'à',   word:'nhà',  em:'🏠'},
+  {am:'t',  van:'ay',  word:'tay',  em:'✋'},{am:'ch', van:'ân',  word:'chân', em:'🦶'},
+  {am:'m',  van:'ắt',  word:'mắt',  em:'👁️'},{am:'t',  van:'ai',  word:'tai',  em:'👂'},
+  {am:'m',  van:'ũi',  word:'mũi',  em:'👃'},{am:'r',  van:'ăng', word:'răng', em:'🦷'},
+  {am:'t',  van:'óc',  word:'tóc',  em:'💇'},{am:'c',  van:'ổ',   word:'cổ',   em:'🦒'},
+];
+function initGhepVan(){
+  let round=0,score=0,total=10;
+  setScore(0);
+  const pool=shuffle([...GHEP_POOL]);
+
+  function nextQ(){
+    if(round>=total){endGhep();return;}
+    round++;
+    const item=pool[(round-1)%pool.length];
+    const distractors=shuffle(GHEP_POOL.filter(x=>x.word!==item.word)).slice(0,3);
+    const opts=shuffle([item,...distractors]);
+    const ci=opts.findIndex(x=>x.word===item.word);
+    const stage=document.getElementById('gameStage'); stage.innerHTML='';
+
+    const pEl=document.createElement('div'); pEl.className='q-prompt';
+    pEl.innerHTML=`<div class="q-label">Câu ${round}/${total} – Ghép lại thành tiếng!</div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin:8px 0">
+        <div style="background:linear-gradient(135deg,#f0f4ff,#e8d5ff);border-radius:14px;padding:10px 22px;font-size:38px;font-weight:900;color:#5046e4">${item.am}</div>
+        <div style="font-size:28px;font-weight:900;color:#9ca3af">+</div>
+        <div style="background:linear-gradient(135deg,#fff7ed,#fde68a);border-radius:14px;padding:10px 22px;font-size:38px;font-weight:900;color:#D97706">${item.van}</div>
+      </div>
+      <div style="font-size:13px;color:#9ca3af">= ?</div>`;
+    stage.appendChild(pEl);
+    speakVI(item.am + ' - ' + item.van, 0.8);
+
+    const og=document.createElement('div'); og.className='opts-grid';
+    opts.forEach((ch,i)=>{
+      const b=document.createElement('button'); b.className='opt-btn';
+      b.innerHTML=`<div>${ch.em}</div><div style="font-size:18px;font-weight:800">${ch.word}</div>`;
+      b.onclick=e=>{
+        og.querySelectorAll('.opt-btn').forEach(x=>x.disabled=true);
+        if(i===ci){b.classList.add('correct');score+=10;setScore(score);sndOk();speakVI(item.word,0.8);const r=b.getBoundingClientRect();sparkles(r.left+r.width/2,r.top+r.height/2);}
+        else{b.classList.add('wrong');og.querySelectorAll('.opt-btn')[ci].classList.add('correct');sndErr();}
+        setTimeout(nextQ,1100);
+      };
+      og.appendChild(b);
+    });
+    stage.appendChild(og);
+  }
+
+  function endGhep(){
+    cleanUp();
+    const stars=score>=80?3:score>=50?2:1;
+    showWin(stars===3?'🏆':stars===2?'🌟':'🧩',stars===3?'Ghép vần cực giỏi!':stars===2?'Rất tốt!':'Luyện thêm nhé!',`Điểm: ${score}/100`,stars,initGhepVan);
+  }
+  nextQ();
+}
+
+// ══════════════════════════════════════════════════════════
+//  UTILS
+// ══════════════════════════════════════════════════════════
+function shuffle(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[b[i],b[j]]=[b[j],b[i]];}return b;}
+
+// ══════════════════════════════════════════════════════════
+//  GAME 9: ĐỌC TỪ NHANH
+// ══════════════════════════════════════════════════════════
+const DOC_TU_POOL=[
+  {word:'con mèo',em:'🐱'},{word:'con chó',em:'🐶'},{word:'con gà',em:'🐔'},
+  {word:'con cá',em:'🐟'},{word:'con bướm',em:'🦋'},{word:'con ong',em:'🐝'},
+  {word:'quả cam',em:'🍊'},{word:'quả táo',em:'🍎'},{word:'quả chuối',em:'🍌'},
+  {word:'quả dâu',em:'🍓'},{word:'bông hoa',em:'🌸'},{word:'cái cây',em:'🌳'},
+  {word:'mặt trời',em:'☀️'},{word:'ngôi sao',em:'⭐'},{word:'đám mây',em:'☁️'},
+  {word:'xe đạp',em:'🚲'},{word:'ô tô',em:'🚗'},{word:'máy bay',em:'✈️'},
+  {word:'quyển sách',em:'📚'},{word:'cây bút',em:'✏️'},{word:'cái bàn',em:'🪑'},
+  {word:'ông bà',em:'👴'},{word:'mẹ hiền',em:'👩'},{word:'bé trai',em:'👦'},
+];
+function initDocTu(){
+  let round=0,score=0,total=10;
+  setScore(0);
+  const pool=shuffle([...DOC_TU_POOL]);
+  function nextQ(){
+    if(round>=total){endDocTu();return;}
+    round++;
+    const item=pool[(round-1)%pool.length];
+    const distractors=shuffle(DOC_TU_POOL.filter(x=>x.word!==item.word)).slice(0,3);
+    const opts=shuffle([item,...distractors]);
+    const ci=opts.findIndex(x=>x.word===item.word);
+    let qtl=10,qtimer=null;
+    function clearQT(){if(qtimer){clearInterval(qtimer);const i=timers.indexOf(qtimer);if(i>-1)timers.splice(i,1);qtimer=null;}}
+    function answered(correct){clearQT();if(correct){score+=10;setScore(score);}setTimeout(nextQ,1100);}
+    quiz4(
+      `<div class="q-label">Câu ${round}/${total} – Chọn hình đúng!</div>
+       <div class="q-big" style="color:#e11d48;letter-spacing:2px">${item.word}
+         <button onclick="speakVI('${item.word.replace(/'/g,"\\'")}',0.8)" style="background:none;border:none;cursor:pointer;font-size:20px;vertical-align:middle">🔊</button>
+       </div>`,
+      opts.map(o=>`<span style="font-size:44px">${o.em}</span>`), ci,
+      (correct)=>{if(correct){speakVI(item.word+'. Đúng rồi!',0.85);}answered(correct);}
+    );
+    speakVI(item.word, 0.82);
+    setTimerBar(100,qtl);
+    qtimer=push(setInterval(()=>{qtl--;setTimerBar(qtl/10*100,qtl);if(qtl<=0){clearQT();const og=document.querySelector('.opts-grid');if(og)og.querySelectorAll('.opt-btn').forEach((b,i)=>{b.disabled=true;if(i===ci)b.classList.add('correct');});sndErr();setTimeout(nextQ,1100);}},1000));
+  }
+  function endDocTu(){cleanUp();const stars=score>=80?3:score>=50?2:1;showWin(stars===3?'📖':'🌟','Đọc từ '+(stars===3?'xuất sắc!':stars===2?'khá giỏi!':'cần luyện thêm!'),`Điểm: ${score}/100`,stars,initDocTu);}
+  nextQ();
+}
+
+// ══════════════════════════════════════════════════════════
+//  GAME 10: ĐIỀN TIẾNG
+// ══════════════════════════════════════════════════════════
+const DIEN_POOL=[
+  {before:'Con',blank:'mèo',after:'kêu meo meo',opts:['mèo','chó','gà','vịt'],em:'🐱'},
+  {before:'Bầu trời có nhiều',blank:'mây',after:'trắng',opts:['mây','sao','gió','mưa'],em:'☁️'},
+  {before:'Em ăn',blank:'cơm',after:'buổi trưa',opts:['cơm','bánh','bún','phở'],em:'🍚'},
+  {before:'Mẹ mua cho em quả',blank:'táo',after:'đỏ',opts:['táo','cam','chuối','dâu'],em:'🍎'},
+  {before:'Em đi học bằng',blank:'xe đạp',after:'',opts:['xe đạp','ô tô','máy bay','thuyền'],em:'🚲'},
+  {before:'Bông',blank:'hoa',after:'nở rất đẹp',opts:['hoa','cây','lá','cỏ'],em:'🌸'},
+  {before:'Buổi sáng có',blank:'mặt trời',after:'ấm áp',opts:['mặt trời','mặt trăng','ngôi sao','đám mây'],em:'☀️'},
+  {before:'Em đọc',blank:'sách',after:'rất chăm',opts:['sách','báo','truyện','thư'],em:'📚'},
+  {before:'Con',blank:'bướm',after:'bay lượn trong vườn',opts:['bướm','ong','chim','cá'],em:'🦋'},
+  {before:'Em viết bằng',blank:'bút chì',after:'',opts:['bút chì','thước','bàn','ghế'],em:'✏️'},
+  {before:'Trên trời có nhiều',blank:'ngôi sao',after:'lấp lánh',opts:['ngôi sao','mây','mưa','nắng'],em:'⭐'},
+  {before:'Em uống',blank:'nước',after:'mát lạnh',opts:['nước','sữa','trà','sinh tố'],em:'💧'},
+];
+function initDienTieng(){
+  let round=0,score=0,total=10;
+  setScore(0);
+  const pool=shuffle([...DIEN_POOL]);
+  function nextQ(){
+    if(round>=total){endDien();return;}
+    round++;
+    const item=pool[(round-1)%pool.length];
+    const opts=shuffle([...item.opts]);
+    const ci=opts.indexOf(item.blank);
+    let qtl=15,qtimer=null;
+    function clearQT(){if(qtimer){clearInterval(qtimer);const i=timers.indexOf(qtimer);if(i>-1)timers.splice(i,1);qtimer=null;}}
+    function answered(correct){
+      clearQT();
+      if(correct){score+=10;setScore(score);const full=(item.before+' '+item.blank+' '+item.after).trim();setTimeout(()=>speakVI(full,0.8),300);}
+      setTimeout(nextQ,1400);
+    }
+    const before=item.before||''; const after=item.after||'';
+    quiz4(
+      `<div class="q-label">Câu ${round}/${total} – Chọn tiếng còn thiếu!</div>
+       <div style="font-size:18px;font-weight:700;color:#374151;text-align:center;margin:8px 0;line-height:1.7">
+         ${before} <span style="display:inline-block;min-width:80px;background:#FDE68A;border-radius:10px;padding:2px 12px;border:2px dashed #D97706">___</span> ${after}
+         <button onclick="speakVI('${(before+' gì '+after).trim().replace(/'/g,"\\'")}',0.8)" style="background:none;border:none;cursor:pointer;font-size:16px;vertical-align:middle">🔊</button>
+       </div>
+       <div style="font-size:24px;text-align:center">${item.em}</div>`,
+      opts, ci, answered
+    );
+    speakVI((before+' gì '+after).trim(), 0.8);
+    setTimerBar(100,qtl);
+    qtimer=push(setInterval(()=>{qtl--;setTimerBar(qtl/15*100,qtl);if(qtl<=0){clearQT();const og=document.querySelector('.opts-grid');if(og)og.querySelectorAll('.opt-btn').forEach((b,i)=>{b.disabled=true;if(i===ci)b.classList.add('correct');});sndErr();setTimeout(nextQ,1400);}},1000));
+  }
+  function endDien(){cleanUp();const stars=score>=80?3:score>=50?2:1;showWin(stars===3?'✏️':'🌟','Điền tiếng '+(stars===3?'xuất sắc!':stars===2?'giỏi lắm!':'cố lên nào!'),`Điểm: ${score}/100`,stars,initDienTieng);}
+  nextQ();
+}
+
+// ══════════════════════════════════════════════════════════
+//  INIT
+// ══════════════════════════════════════════════════════════
+(function initProfile(){
+  const p=JSON.parse(localStorage.getItem('vg_profile')||'{}');
+  const today=new Date().toISOString().slice(0,10);
+  if(p.name){
+    const btn=document.getElementById('profileBtn');
+    if(btn) btn.textContent=p.avatar||'🦊';
+    if(p.lastVisit!==today){
+      const diff=p.lastVisit?Math.round((new Date(today)-new Date(p.lastVisit))/86400000):null;
+      p.streak=diff===1?(p.streak||0)+1:1; p.lastVisit=today;
+      p.bestStreak=Math.max(p.bestStreak||0,p.streak);
+      localStorage.setItem('vg_profile',JSON.stringify(p));
+    }
+  }
+  const visits=JSON.parse(localStorage.getItem('vg_visits')||'[]');
+  if(!visits.includes(today)){visits.push(today);if(visits.length>60)visits.splice(0,visits.length-60);localStorage.setItem('vg_visits',JSON.stringify(visits));}
+})();
+renderHub();
+</script>
+</body>
+</html>
