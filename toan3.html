@@ -269,6 +269,15 @@ body.mode-game #tab-game{display:block}
 .shp.sel{border-color:#1565c0;background:#e3f2fd;box-shadow:0 0 0 3px #bbdefb}
 .shp.right{border-color:#2e7d32;background:#e8f5e9}
 .shp.wrong{border-color:#d32f2f;background:#ffebee}
+/* Đặt tính rồi tính – các ô hàng */
+.col-sum{display:inline-block;margin:12px auto 4px;text-align:right}
+.col-row{display:flex;justify-content:flex-end;gap:6px;align-items:center;margin:2px 0}
+.col-cell{width:42px;height:46px;display:flex;align-items:center;justify-content:center;font-size:27px;font-weight:800;color:#0d47a1;font-family:'Courier New',monospace}
+.col-op{width:26px;height:46px;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:900;color:#c62828}
+.col-line{border-top:3px solid #37474f;margin:5px 0 7px}
+.col-box{width:42px;height:46px;font-size:26px;font-weight:800;text-align:center;border:2.5px solid var(--blue);border-radius:9px;color:#c62828;background:#fff;font-family:inherit;padding:0}
+.col-box:focus{outline:none;border-color:#ff8f00;box-shadow:0 0 0 3px #ffe082}
+@media(max-width:600px){.col-cell,.col-box{width:34px;height:40px;font-size:22px}.col-op{width:20px;height:40px;font-size:22px}}
 @media(max-width:600px){.map-row{padding:0 5%}.station{width:80px;height:80px;font-size:26px}.dnd-baskets{gap:8px}.gcard{padding:12px 13px}}
 </style>
 </head>
@@ -2375,6 +2384,8 @@ function gMakeQ(gen){
   if(gen==='phanmay' && roll<0.55) return gDndFractionQ();
   if(gen==='bieuthuc' && roll<0.45) return gOrderQ();
   if((gen==='hinhhoc'||gen==='chuvidt') && roll<0.4) return gCountShapesQ();
+  if(gen==='congtru3'||gen==='congtru') return gColumnQ(gen);      /* đặt tính: điền ô */
+  if(gen==='nhanchia' && roll<0.6) return gColumnQ('nhanchia');
   const o=GEN[gen]();
   if(o.type==='mc') return {kind:'mc', q:o.q, opts:o.opts, ansIdx:o.ansIdx, sol:o.sol};
   if(o.type==='solve'){
@@ -2438,6 +2449,38 @@ function gCountShapesQ(){
     q:`👆 Nhấn vào <b>tất cả ${target}</b> rồi bấm Kiểm tra.`,
     sol:`Có <b>${cnt}</b> ${target} trong hình.`};
 }
+/* Mini-game 5: Đặt tính rồi tính – điền số vào từng ô hàng */
+function gColumnQ(gen){
+  let a,b,op,ans;
+  if(gen==='congtru3'){
+    if(Math.random()<0.5){ a=R(120,850); b=R(110,1000-a); op='+'; ans=a+b; }
+    else { a=R(300,999); b=R(110,a-40); op='−'; ans=a-b; }
+  }else if(gen==='congtru'){
+    if(Math.random()<0.5){ a=R(10000,60000); b=R(1000,99999-a); op='+'; ans=a+b; }
+    else { a=R(20000,99999); b=R(1000,a-100); op='−'; ans=a-b; }
+  }else{ const d=R(2,9); a=R(1000, Math.floor(99999/d)); b=d; op='×'; ans=a*b; }
+  return {kind:'column', a, b, op, ans,
+    q:`📝 Đặt tính rồi tính — điền kết quả vào <b>từng ô</b> (đơn vị bên phải):`,
+    sol:`${fmt(a)} ${op} ${fmt(b)} = <b>${fmt(ans)}</b>.`};
+}
+function gColRow(str, width, opChar, inputs){
+  let cells=`<span class="col-op">${opChar||''}</span>`;
+  const pad=width-str.length;
+  for(let i=0;i<pad;i++) cells+=`<span class="col-cell empty"></span>`;
+  if(inputs){ for(let i=0;i<str.length;i++) cells+=`<input class="col-box" maxlength="1" inputmode="numeric" autocomplete="off">`; }
+  else { for(const ch of str) cells+=`<span class="col-cell">${ch}</span>`; }
+  return `<div class="col-row">${cells}</div>`;
+}
+function gColumnBody(q){
+  const as=String(q.a), bs=String(q.b), ns=String(q.ans);
+  const width=Math.max(as.length, bs.length, ns.length);
+  return `<div class="col-sum">
+    ${gColRow(as, width, '')}
+    ${gColRow(bs, width, q.op)}
+    <div class="col-line"></div>
+    ${gColRow(ns, width, '', true)}
+  </div>`;
+}
 function gStart(w){
   if(w>G.unlocked) return;
   GS={w, qs:gBuildQuestions(w), i:0, correct:0, hearts:3, answered:false, picked:null, dndSel:null, countSel:new Set(), dead:false, timer:null};
@@ -2459,6 +2502,8 @@ function gRenderQ(){
       <div style="text-align:center;font-size:12.5px;color:#5b7086;margin-top:8px">Kéo thẻ vàng vào rổ đúng (hoặc chạm chọn rổ) rồi bấm Kiểm tra.</div></div>`;
   }else if(q.kind==='count'){
     body=`<div class="count-grid">`+q.shapes.map((t,i)=>`<button class="shp" data-i="${i}" onclick="gCountTap(${i})">${gShapeSVG(t,i)}</button>`).join('')+`</div>`;
+  }else if(q.kind==='column'){
+    body=`<div style="text-align:center">${gColumnBody(q)}</div>`;
   }else{
     body=`<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
       <input class="ginput" id="gInput" placeholder="?" autocomplete="off" autocapitalize="off">
@@ -2480,6 +2525,18 @@ function gRenderQ(){
   if(inp){ inp.focus(); inp.addEventListener('keydown',e=>{ if(e.key==='Enter'){ e.preventDefault(); gSubmit(); } }); }
   if(q.kind==='flash') gStartFlash(q.secs);
   if(q.kind==='dnd') gWireDnd();
+  if(q.kind==='column') gWireColumn();
+}
+function gWireColumn(){
+  const boxes=[...document.querySelectorAll('.col-box')];
+  boxes.forEach((b,idx)=>{
+    b.addEventListener('input',()=>{ b.value=b.value.replace(/[^\d]/g,'').slice(0,1); if(b.value && idx<boxes.length-1) boxes[idx+1].focus(); });
+    b.addEventListener('keydown',e=>{
+      if(e.key==='Backspace' && !b.value && idx>0){ boxes[idx-1].focus(); }
+      else if(e.key==='Enter'){ e.preventDefault(); gSubmit(); }
+    });
+  });
+  if(boxes[0]) boxes[0].focus();
 }
 function gStartFlash(secs){
   const bar=document.getElementById('flashBar'); if(!bar) return;
@@ -2559,6 +2616,12 @@ function gSubmit(){
     ok=(want.size===got.size) && [...want].every(i=>got.has(i));
     document.querySelectorAll('.shp').forEach(b=>{ const i=+b.dataset.i;
       if(q.shapes[i]===q.target) b.classList.add('right'); else if(got.has(i)) b.classList.add('wrong'); b.onclick=null; });
+  }else if(q.kind==='column'){
+    const boxes=[...document.querySelectorAll('.col-box')];
+    if(boxes.every(b=>b.value.trim()==='')) return;   /* chưa điền gì thì chưa chấm */
+    const val=boxes.map(b=>b.value.trim()).join('');
+    ok=boxes.every(b=>/^\d$/.test(b.value.trim())) && Number(val)===q.ans;
+    boxes.forEach(b=>{ b.disabled=true; b.style.borderColor=ok?'#2e7d32':'#d32f2f'; b.style.background=ok?'#e8f5e9':'#ffebee'; });
   }else{
     const inp=document.getElementById('gInput'); if(!inp) return;
     ok=(inp.value.trim()!=='' && q.accept.includes(norm(inp.value)));
