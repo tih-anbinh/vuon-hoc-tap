@@ -140,6 +140,25 @@ nav.main{position:sticky;top:62px;z-index:55;background:transparent}
 .z-green{border-color:var(--green)} .z-green .zi{background:var(--green-l)} .z-green .go{color:var(--green-d)}
 .z-purple{border-color:var(--purple)}.z-purple .zi{background:var(--purple-l)}.z-purple .go{color:var(--purple-d)}
 .z-orange{border-color:var(--orange)}.z-orange .zi{background:var(--orange-l)}.z-orange .go{color:var(--orange-d)}
+.z-metro{border-color:#1e5fa8}.z-metro .zi{background:#deeeff}.z-metro .go{color:#0d3a6b}
+
+/* ── Đoàn Tàu Học Tập banner ── */
+.metro-banner{
+  background:linear-gradient(135deg,#0d1a3a 0%,#1e5fa8 60%,#2a7ad4 100%);
+  border-radius:var(--r-lg);padding:20px 22px;margin:20px 0 6px;
+  display:flex;align-items:center;gap:16px;
+  box-shadow:0 10px 32px rgba(13,58,107,.32);overflow:hidden;position:relative;
+  cursor:pointer;transition:transform .15s,box-shadow .15s;border:3px solid #2a7ad4;
+}
+.metro-banner:hover{transform:translateY(-3px);box-shadow:0 16px 44px rgba(13,58,107,.4)}
+.metro-banner-ico{font-size:2.8rem;flex-shrink:0;animation:metroIcoBob .7s ease-in-out infinite alternate}
+@keyframes metroIcoBob{from{transform:translateY(0)}to{transform:translateY(-5px)}}
+.metro-banner-txt{flex:1;min-width:0;color:#fff}
+.metro-banner-title{font-size:1.32rem;font-weight:800;letter-spacing:.3px;text-shadow:0 2px 8px rgba(0,0,0,.4)}
+.metro-banner-sub{font-size:.82rem;font-weight:700;color:rgba(255,255,255,.75);margin-top:3px}
+.metro-banner-badge{background:#ffc107;color:#0d3a6b;border-radius:999px;padding:4px 14px;font-size:.72rem;font-weight:800;white-space:nowrap;flex-shrink:0;box-shadow:0 4px 12px rgba(255,193,7,.4)}
+.metro-banner-train{position:absolute;bottom:5px;pointer-events:none;animation:metroRun 8s linear infinite}
+@keyframes metroRun{0%{left:-120px;transform:scaleX(1)}49.9%{left:calc(100% + 5px);transform:scaleX(1)}50%{left:calc(100% + 5px);transform:scaleX(-1)}99.9%{left:-120px;transform:scaleX(-1)}}
 
 /* ====================== 6. LƯỚI THẺ NHỎ ====================== */
 .grid{display:grid;gap:12px}
@@ -1629,12 +1648,13 @@ function phanHoi(box, dung, chu){
 const MENU=[
   ["#/","🏠","Trang chủ"],["#/tv","🩷","Tiếng Việt"],["#/toan","💙","Toán"],
   ["#/viet","✏️","Luyện viết"],["#/doc","📚","Đọc sách"],["#/choi","🎮","Vui học"],
-  ["#/nho","⭐","Em cần nhớ"],["#/thuthach","🏆","Thử thách"],["#/co","👩🏻‍🏫",tenGV()]
+  ["#/nho","⭐","Em cần nhớ"],["#/thuthach","🏆","Thử thách"],
+  ["skill-tree.html","🚇","Đoàn Tàu"],["#/co","👩🏻‍🏫",tenGV()]
 ];
 function veMenu(){
-  $("#navMain").innerHTML = MENU.map(([h,i,t])=>`<a href="${h}" data-h="${h}">${i}<span>${t}</span></a>`).join("");
+  $("#navMain").innerHTML = MENU.map(([h,i,t])=>`<a href="${h}" data-h="${h}"${h.startsWith('#')?'':' target="_self"'}>${i}<span>${t}</span></a>`).join("");
 }
-function sangTrang(h){ location.hash=h; }
+function sangTrang(h){ if(h.startsWith('#')) location.hash=h; else window.location.href=h; }
 function danhDauMenu(){
   const h=location.hash||"#/"; const goc="#/"+ (h.split("/")[1]||"");
   $$("#navMain a").forEach(a=>a.classList.toggle("on", a.dataset.h===goc || (goc==="#/"&&a.dataset.h==="#/")));
@@ -1703,7 +1723,8 @@ const ZONES=[
   ["#/viet","z-yellow","💛","LUYỆN VIẾT","Em viết thật đẹp"],
   ["#/doc","z-green","💚","ĐỌC SÁCH","Mỗi ngày một câu chuyện"],
   ["#/choi","z-purple","🧩","VUI HỌC","Chơi mà học – Học mà nhớ"],
-  ["#/thuthach","z-orange","🏆","THỬ THÁCH",`Chinh phục nhiệm vụ của ${tenGV()}`]
+  ["#/thuthach","z-orange","🏆","THỬ THÁCH",`Chinh phục nhiệm vụ của ${tenGV()}`],
+  ["skill-tree.html","z-metro","🚇","ĐOÀN TÀU","Hành trình Suối Tiên → Bến Thành"]
 ];
 function vHome(){
   const hh = BADGES.filter(b=>ST.huyhieu.includes(b.id));
@@ -1723,6 +1744,27 @@ function vHome(){
       <div class="hero-scene" id="heroScene"></div>
     </div>
   </section>
+
+  <div class="metro-banner" onclick="SFX.tap();sangTrang('skill-tree.html')" role="button" aria-label="Đoàn Tàu Học Tập">
+    <div class="metro-banner-ico">🚇</div>
+    <div class="metro-banner-txt">
+      <div class="metro-banner-title">Đoàn Tàu Học Tập An Bình</div>
+      <div class="metro-banner-sub">Metro Line 1 · Suối Tiên ➜ Bến Thành · 10 ga · 45 bài học</div>
+    </div>
+    <div class="metro-banner-badge">MỚI</div>
+    <div class="metro-banner-train">
+      <svg viewBox="0 0 110 30" width="96" height="26" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="1" width="108" height="22" rx="6" fill="rgba(255,255,255,.18)"/>
+        <rect x="1" y="18" width="108" height="5" fill="rgba(255,193,7,.5)"/>
+        <rect x="8" y="5" width="15" height="11" rx="2" fill="rgba(255,255,255,.7)"/>
+        <rect x="29" y="5" width="15" height="11" rx="2" fill="rgba(255,255,255,.7)"/>
+        <rect x="50" y="5" width="15" height="11" rx="2" fill="rgba(255,255,255,.7)"/>
+        <rect x="71" y="5" width="15" height="11" rx="2" fill="rgba(255,255,255,.7)"/>
+        <circle cx="18" cy="26" r="3.5" fill="rgba(255,255,255,.3)"/><circle cx="92" cy="26" r="3.5" fill="rgba(255,255,255,.3)"/>
+        <circle cx="4" cy="11" r="3" fill="#ffc107"/>
+      </svg>
+    </div>
+  </div>
 
   <div class="sec"><h2>Em chọn khu vực nhé</h2><span class="sub">Bấm vào ô em thích</span></div>
   <div class="zones">
