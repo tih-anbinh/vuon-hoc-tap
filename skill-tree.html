@@ -783,7 +783,7 @@ async function loadProgress(){
     const{data:{session}}=await sb.auth.getSession().catch(()=>({data:{session:null}}));
     if(session){
       userId=session.user.id;
-      const{data}=await sb.from('skill_progress').select('node_id,stars').eq('user_id',userId).catch(()=>({data:null}));
+      let data=null;try{const r=await sb.from('skill_progress').select('node_id,stars').eq('user_id',userId);data=r.data;}catch(e){}
       if(data) data.forEach(r=>{progress[r.node_id]=r.stars||1;});
       updateXP(); return;
     }
@@ -794,7 +794,7 @@ async function loadProgress(){
 
 async function saveProgress(nodeId,stars){
   progress[nodeId]=stars;
-  if(sb&&userId){await sb.from('skill_progress').upsert({user_id:userId,node_id:nodeId,stars,completed_at:new Date().toISOString()}).catch(()=>{});}
+  if(sb&&userId){try{await sb.from('skill_progress').upsert({user_id:userId,node_id:nodeId,stars,completed_at:new Date().toISOString()});}catch(e){}}
   else{localStorage.setItem(PK,JSON.stringify(progress));}
   updateXP();
 }
