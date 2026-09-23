@@ -1116,18 +1116,22 @@ const TTS=(function(){
   if(!s) return{speak:()=>{},stop:()=>{}};
   function clean(raw){
     return raw
-      .replace(/(\d)\s+(\d)/g,'$1$2')   /* "11 978" → "11978" để TTS đọc đúng số */
+      .replace(/[\u{1F000}-\u{1FFFF}]|[\u{2300}-\u{27FF}]|️/gu,' ') /* bỏ emoji */
+      .replace(/\r?\n|\r/g,'. ')             /* xuống dòng → ngừng đọc */
+      .replace(/\s*\(\s*[\d\s]+\)\s*/g,' ')  /* "(10)" "(1 000)" → bỏ */
+      .replace(/(\d)\s+(\d)/g,'$1$2')        /* "11 978" → "11978" */
       .replace(/>/g,' lớn hơn ')
       .replace(/</g,' nhỏ hơn ')
       .replace(/=/g,' bằng ')
-      .replace(/\.{2,}/g,' chỗ trống ')  /* "....." → "chỗ trống" */
+      .replace(/\.{2,}/g,' chỗ trống ')      /* "....." → "chỗ trống" */
       .replace(/°C/g,' độ C')
       .replace(/cm²/g,' xăng ti mét vuông')
       .replace(/m²/g,' mét vuông')
       .replace(/km²/g,' km vuông')
       .replace(/×/g,' nhân ').replace(/÷/g,' chia ')
       .replace(/\+/g,' cộng ').replace(/[−–]/g,' trừ ')
-      .replace(/→/g,' thì ').replace(/[()[\]]/g,' ')
+      .replace(/→/g,' thì ')
+      .replace(/[()[\]]/g,' ')               /* ngoặc còn lại → bỏ */
       .replace(/\s+/g,' ').trim();
   }
   return{
