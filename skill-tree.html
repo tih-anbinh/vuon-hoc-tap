@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<!--
+Author: Huy Tran
+Company: Cadence Design Systems Vietnam
+Email: huytran@cadence.com
+Created: 2026-09-22
+-->
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lộ Trình Học Tập - An Bình</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<style>
+:root{
+  --pink:#ff8fb1;--pink-d:#c8365f;--pink-l:#ffe4ec;
+  --blue:#5ba8f5;--blue-d:#2f76c9;--blue-l:#deeeff;
+  --green:#4ecb82;--green-d:#278a52;--green-l:#d8f5e7;
+  --yellow:#ffc94d;--yellow-d:#b87900;--yellow-l:#fff3cc;
+  --purple:#9f7ae8;--purple-d:#6540b8;--purple-l:#ede5ff;
+  --teal:#3ecfcf;--teal-d:#1a9999;--teal-l:#d4f6f6;
+  --orange:#ff8c42;--orange-d:#c05a10;--orange-l:#ffe0cc;
+  --red-c:#f05555;--red-d:#c02020;--red-l:#ffe0e0;
+  --ink:#2e2852;--ink-s:#7068a0;--line:#e8e2f6;
+  --bg:#f8f6ff;
+  --ff:'Baloo 2',system-ui,sans-serif;
+  --r:20px;
+  /* lesson-scoped */
+  --nc:var(--purple);--nd:var(--purple-d);--ns:rgba(159,122,232,.38);--nl:var(--purple-l);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;margin:0;padding:0}
+html{font-size:17px}
+body{font-family:var(--ff);background:var(--bg);color:var(--ink);min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* ── HEADER ── */
+.hdr{position:sticky;top:0;z-index:20;background:rgba(248,246,255,.97);
+  backdrop-filter:blur(16px);border-bottom:2px solid var(--line);
+  padding:10px 16px;display:flex;align-items:center;gap:10px}
+.hdr-logo{height:34px;width:auto}
+.hdr-title{flex:1;font-weight:800;font-size:1.05rem;color:var(--ink);line-height:1.2}
+.hdr-title small{display:block;font-size:.62rem;font-weight:700;color:var(--ink-s);letter-spacing:.6px}
+.hdr-stat{display:flex;align-items:center;gap:5px;background:var(--purple-l);
+  color:var(--purple-d);border-radius:999px;padding:5px 14px;font-weight:800;font-size:.95rem}
+
+/* ── MAP ── */
+.map{max-width:480px;margin:0 auto;padding:20px 16px 100px}
+
+/* ── LEGEND ── */
+.legend{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;
+  padding:10px 0 6px;font-size:.78rem;font-weight:700;color:var(--ink-s)}
+.leg-item{display:flex;align-items:center;gap:5px}
+.leg-dot{width:13px;height:13px;border-radius:50%}
+
+/* ── SECTION BANNER ── */
+.sec{display:flex;align-items:center;gap:14px;padding:15px 22px;
+  border-radius:var(--r);margin:28px 0 20px;font-weight:800;font-size:1.05rem;color:#fff}
+.sec-ico{width:46px;height:46px;border-radius:13px;background:rgba(255,255,255,.25);
+  display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:800;flex-shrink:0}
+.sec-info{line-height:1.25}
+.sec-sub{font-size:.68rem;font-weight:700;opacity:.88;letter-spacing:.6px;margin-top:3px}
+
+/* ── NODE ROW ── */
+.row{display:flex;justify-content:center;margin:6px 0}
+.row.L{transform:translateX(-23%)}
+.row.R{transform:translateX(23%)}
+
+/* ── NODE ── */
+.nd{width:90px;height:90px;border-radius:50%;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;cursor:pointer;
+  border:4px solid transparent;transition:transform .12s, box-shadow .2s;user-select:none}
+.nd:active{transform:scale(.91)!important}
+.nd .ico{font-size:1.15rem;font-weight:800;line-height:1;text-align:center;max-width:74px}
+.nd .lbl{font-size:.55rem;font-weight:700;margin-top:4px;text-align:center;max-width:74px;line-height:1.25;opacity:.95}
+.nw{display:flex;flex-direction:column;align-items:center;gap:6px}
+.nstars{font-size:.95rem;height:19px;line-height:1;letter-spacing:1px}
+.nd.done{color:#fff}
+.nd.active{color:#fff;animation:pulse 2.3s ease-in-out infinite}
+.nd.locked{background:#eae6f5!important;border-color:#d6d0ec!important;color:#c0b8dc;cursor:default;box-shadow:none!important}
+.nd.quiz{width:96px;height:96px}
+@keyframes pulse{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.06);filter:brightness(1.08)}
+}
+
+/* ── CONNECTOR ── */
+.conn{width:5px;border-radius:3px;margin:0 auto;opacity:.3}
+.conn.done{opacity:.6}
+
+/* ── BOTTOM NAV ── */
+.bot{position:fixed;bottom:0;left:0;right:0;z-index:15;
+  background:rgba(248,246,255,.97);backdrop-filter:blur(14px);
+  border-top:2px solid var(--line);display:flex;align-items:center;justify-content:center;
+  padding:10px 16px calc(10px + env(safe-area-inset-bottom))}
+.bot a{display:flex;align-items:center;gap:8px;padding:11px 26px;border-radius:999px;
+  background:var(--purple-l);color:var(--purple-d);font-weight:800;font-size:1rem;text-decoration:none}
+
+/* ════════════ LESSON OVERLAY ════════════ */
+.les-ov{display:none;position:fixed;inset:0;z-index:50;
+  background:#fff;flex-direction:column;overflow:hidden}
+.les-ov.open{display:flex}
+
+/* top bar */
+.les-hdr{display:flex;align-items:center;gap:10px;
+  padding:14px 16px 10px;padding-top:calc(14px + env(safe-area-inset-top));
+  flex-shrink:0}
+.les-exit{width:38px;height:38px;border-radius:50%;border:none;background:var(--line);
+  font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  color:var(--ink-s);flex-shrink:0;font-family:var(--ff);font-weight:800}
+.prog-wrap{flex:1;display:flex;align-items:center;gap:5px}
+.prog-dot{height:12px;flex:1;border-radius:999px;background:var(--line);transition:background .35s}
+.prog-dot.done{background:var(--green)}
+.prog-dot.cur{background:var(--nc)}
+.les-hearts{display:flex;gap:4px;flex-shrink:0;font-size:1.4rem;line-height:1}
+.heart{transition:opacity .3s;display:inline-block}
+.heart.lost{opacity:.18;filter:grayscale(1)}
+
+/* body */
+.les-body{flex:1;overflow-y:auto;padding:14px 20px 10px;display:flex;flex-direction:column;gap:14px}
+
+/* question label */
+.q-label{font-size:.82rem;font-weight:800;color:var(--ink-s);text-transform:uppercase;
+  letter-spacing:.9px;text-align:center}
+
+/* visual showcase card */
+.q-vis{
+  display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:6px;
+  min-height:124px;border-radius:18px;background:var(--nl);
+  border:3px solid var(--nc);padding:14px;
+}
+.vis-char{font-size:3.6rem;font-weight:800;color:var(--nc);
+  letter-spacing:10px;text-align:center;line-height:1.15;font-family:var(--ff)}
+.vis-count{font-size:2.5rem;display:flex;gap:7px;flex-wrap:wrap;justify-content:center;max-width:280px}
+.vis-math{font-size:2.5rem;font-weight:800;color:var(--nc);text-align:center;line-height:1.2;font-family:var(--ff)}
+.vis-word{font-size:3rem;font-weight:800;color:var(--nc);text-align:center;font-family:var(--ff)}
+.vis-shape svg{display:block}
+
+/* question text */
+.q-text{font-size:1.35rem;font-weight:700;text-align:center;line-height:1.4;color:var(--ink)}
+
+/* choices 2x2 */
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:4px}
+.ch-btn{
+  padding:16px 10px;border-radius:16px;border:3px solid var(--line);
+  background:#fff;font-family:var(--ff);font-size:1.1rem;font-weight:700;
+  color:var(--ink);cursor:pointer;text-align:center;line-height:1.3;
+  transition:border-color .15s,background .15s,transform .1s;
+  min-height:72px;display:flex;align-items:center;justify-content:center
+}
+.ch-btn:active{transform:scale(.94)}
+.ch-btn.sel{border-color:var(--nc);background:var(--nl);color:var(--nd)}
+.ch-btn.correct{border-color:var(--green);background:var(--green-l);color:var(--green-d)}
+.ch-btn.wrong{border-color:var(--red-c);background:var(--red-l);color:var(--red-d)}
+.ch-btn:disabled{cursor:default}
+
+/* footer */
+.les-ft{flex-shrink:0;padding:0 20px calc(18px + env(safe-area-inset-bottom))}
+.fb-bar{border-radius:16px 16px 0 0;padding:14px 18px;display:none;margin-bottom:-2px}
+.fb-bar.ok{display:block;background:var(--green-l);border-top:3px solid var(--green)}
+.fb-bar.ng{display:block;background:var(--red-l);border-top:3px solid var(--red-c)}
+.fb-title{font-size:1.05rem;font-weight:800}
+.fb-bar.ok .fb-title{color:var(--green-d)}
+.fb-bar.ng .fb-title{color:var(--red-d)}
+.fb-hint{font-size:.88rem;font-weight:600;color:var(--ink-s);margin-top:4px;line-height:1.4}
+.les-btn{width:100%;padding:17px;border:none;border-radius:var(--r);
+  font-family:var(--ff);font-weight:800;font-size:1.15rem;cursor:pointer;
+  transition:background .2s,transform .1s;letter-spacing:.4px}
+.les-btn:active{transform:scale(.97)}
+.les-btn:disabled{background:var(--line);color:#b8b0d8;cursor:default}
+.les-btn.check{background:var(--nc);color:#fff;box-shadow:0 6px 18px var(--ns)}
+.les-btn.next-ok{background:var(--green);color:#fff;box-shadow:0 6px 18px rgba(78,203,130,.4)}
+.les-btn.next-ng{background:var(--red-c);color:#fff;box-shadow:0 6px 18px rgba(240,85,85,.4)}
+
+/* ── COMPLETE SCREEN ── */
+.comp-ov{display:none;position:fixed;inset:0;z-index:60;
+  background:rgba(46,40,82,.62);backdrop-filter:blur(6px);
+  align-items:center;justify-content:center;padding:24px}
+.comp-ov.open{display:flex}
+.comp-card{background:#fff;border-radius:28px;padding:34px 26px 28px;
+  width:100%;max-width:380px;text-align:center;
+  box-shadow:0 16px 60px rgba(46,40,82,.28)}
+.comp-trophy{font-size:4.5rem;margin-bottom:10px}
+.comp-title{font-size:1.6rem;font-weight:800;color:var(--ink);margin-bottom:6px}
+.comp-sub{font-size:.95rem;color:var(--ink-s);margin-bottom:18px;line-height:1.55}
+.comp-stars{font-size:2.2rem;letter-spacing:5px;margin-bottom:18px}
+.comp-xp{display:inline-block;background:var(--purple-l);color:var(--purple-d);
+  border-radius:999px;padding:7px 22px;font-weight:800;font-size:1rem;margin-bottom:26px}
+.comp-btns{display:flex;gap:12px;justify-content:center}
+.comp-btn{flex:1;max-width:165px;padding:14px;border:none;border-radius:var(--r);
+  font-family:var(--ff);font-weight:800;font-size:1rem;cursor:pointer;transition:transform .1s}
+.comp-btn:active{transform:scale(.95)}
+.comp-btn.home{background:var(--line);color:var(--ink-s)}
+.comp-btn.nxt{color:#fff;box-shadow:0 5px 16px var(--ns)}
+
+@media(max-width:360px){
+  .nd{width:80px;height:80px} .nd.quiz{width:86px;height:86px}
+  .ch-btn{font-size:1rem;min-height:66px}
+}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <img class="hdr-logo" src="logos/ab.png" alt="AB" onerror="this.style.display='none'">
+  <div class="hdr-title">Lộ Trình Học Tập<small>TIỂU HỌC AN BÌNH</small></div>
+  <div class="hdr-stat" id="xpBadge">★ 0</div>
+</header>
+
+<div class="map" id="map">
+  <div class="legend">
+    <span class="leg-item"><span class="leg-dot" style="background:#4ecb82"></span>Đã học</span>
+    <span class="leg-item"><span class="leg-dot" style="background:#9f7ae8;box-shadow:0 0 0 3px #ede5ff"></span>Đang học</span>
+    <span class="leg-item"><span class="leg-dot" style="background:#eae6f5;border:2px solid #d6d0ec"></span>Chưa mở</span>
+  </div>
+</div>
+
+<!-- Lesson overlay -->
+<div class="les-ov" id="lesOv">
+  <div class="les-hdr">
+    <button class="les-exit" onclick="lesExit()">✕</button>
+    <div class="prog-wrap" id="progWrap"></div>
+    <div class="les-hearts" id="lesHearts">
+      <span class="heart" id="h0">❤️</span>
+      <span class="heart" id="h1">❤️</span>
+      <span class="heart" id="h2">❤️</span>
+    </div>
+  </div>
+  <div class="les-body" id="lesBody"></div>
+  <div class="les-ft">
+    <div class="fb-bar" id="fbBar">
+      <div class="fb-title" id="fbTitle"></div>
+      <div class="fb-hint" id="fbHint"></div>
+    </div>
+    <button class="les-btn" id="lesBtn" disabled onclick="lesAction()">KIỂM TRA</button>
+  </div>
+</div>
+
+<!-- Complete screen -->
+<div class="comp-ov" id="compOv">
+  <div class="comp-card">
+    <div class="comp-trophy" id="compTrophy">🏆</div>
+    <div class="comp-title" id="compTitle">Hoàn thành!</div>
+    <div class="comp-sub" id="compSub"></div>
+    <div class="comp-stars" id="compStars"></div>
+    <div class="comp-xp" id="compXP">+3 sao</div>
+    <div class="comp-btns">
+      <button class="comp-btn home" onclick="compClose()">Trở về</button>
+      <button class="comp-btn nxt" id="compNextBtn" onclick="compClose()">Tiếp theo</button>
+    </div>
+  </div>
+</div>
+
+<nav class="bot">
+  <a href="vuon-hoc-tap.html">← Về trang chủ</a>
+</nav>
+
+<script>
+// ══════════════════════════════════════════
+//  SUPABASE
+// ══════════════════════════════════════════
+const SUPA_URL='https://wbcszbyhsvhrkyyvkzfc.supabase.co';
+const SUPA_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndiY3N6Ynloc3Zocmt5eXZremZjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk4OTA1MDcsImV4cCI6MjEwNTQ2NjUwN30.K0uYmd7HjjQTMSjipkTQdxnrzuE0CCby2GeEX872l8I';
+const sb = window.supabase ? supabase.createClient(SUPA_URL,SUPA_KEY) : null;
+
+// ══════════════════════════════════════════
+//  SVG SHAPES helper
+// ══════════════════════════════════════════
+const SHAPES = {
+  square:   (c)=>`<rect x="12" y="12" width="76" height="76" rx="6" fill="${c}22" stroke="${c}" stroke-width="5"/>`,
+  circle:   (c)=>`<circle cx="50" cy="50" r="38" fill="${c}22" stroke="${c}" stroke-width="5"/>`,
+  triangle: (c)=>`<polygon points="50,10 92,90 8,90" fill="${c}22" stroke="${c}" stroke-width="5" stroke-linejoin="round"/>`,
+  rectangle:(c)=>`<rect x="5" y="22" width="90" height="56" rx="6" fill="${c}22" stroke="${c}" stroke-width="5"/>`,
+};
+function svgShape(name,color){
+  const s=SHAPES[name]||SHAPES.circle;
+  return `<svg viewBox="0 0 100 100" width="112" height="112" xmlns="http://www.w3.org/2000/svg">${s(color)}</svg>`;
+}
+
+// ══════════════════════════════════════════
+//  CURRICULUM TREE  (Chương trình lớp 1)
+// ══════════════════════════════════════════
+const TREE=[
+  {id:'tv_cc', label:'Chữ cái', sub:'Tiếng Việt · Học kì 1', ico:'TV',
+   color:'#ff8fb1',dark:'#c8365f',shadow:'rgba(200,54,95,.35)',light:'#ffe4ec',
+   nodes:[
+    {id:'cc_1',ico:'Aa',lbl:'a · ă · â',desc:'Ba dạng của âm A và cách phát âm'},
+    {id:'cc_2',ico:'Bb',lbl:'b · c · d · đ',desc:'Chữ cái có nét cong và nét xuống'},
+    {id:'cc_3',ico:'Ee',lbl:'e · ê · g · h',desc:'Chữ E, Ê, G, H – tập nhìn và đọc'},
+    {id:'cc_4',ico:'Ii',lbl:'i · k · l · m · n',desc:'Năm chữ cái phổ biến – luyện viết'},
+    {id:'cc_5',ico:'Oo',lbl:'o · ô · ơ · p',desc:'Ba dạng của âm O và chữ P'},
+    {id:'cc_6',ico:'Rr',lbl:'r · s · t · u · ư · v · x · y',desc:'Phần cuối bảng chữ cái'},
+    {id:'cc_q',ico:'★',lbl:'Ôn tập chữ cái',desc:'Kiểm tra toàn bộ 29 chữ cái',type:'quiz'},
+  ]},
+  {id:'tv_dt', label:'Dấu thanh', sub:'Tiếng Việt · Học kì 1', ico:'?!',
+   color:'#c97ef0',dark:'#7340b8',shadow:'rgba(159,122,232,.38)',light:'#ede5ff',
+   nodes:[
+    {id:'dt_1',ico:'/ \\',lbl:'Dấu huyền · Sắc',desc:'Dấu huyền (bà) và dấu sắc (bá)'},
+    {id:'dt_2',ico:'? ~.',lbl:'Hỏi · Ngã · Nặng',desc:'Ba dấu còn lại – phân biệt ngữ điệu'},
+    {id:'dt_q',ico:'★',lbl:'Ghép âm + dấu',desc:'Luyện ghép âm với các dấu thanh',type:'quiz'},
+  ]},
+  {id:'tv_ag', label:'Âm ghép', sub:'Tiếng Việt · Học kì 1', ico:'CH',
+   color:'#5ba8f5',dark:'#2f76c9',shadow:'rgba(91,168,245,.38)',light:'#deeeff',
+   nodes:[
+    {id:'ag_1',ico:'ch',lbl:'ch · gh · gi · kh',desc:'Phân biệt: ch, gh, gi, kh'},
+    {id:'ag_2',ico:'ng',lbl:'ng · ngh · nh · ph',desc:'ng/ngh trước e/i; nh, ph'},
+    {id:'ag_3',ico:'qu',lbl:'qu · th · tr',desc:'qu, th, tr – đọc rõ ràng'},
+    {id:'ag_q',ico:'★',lbl:'Ôn tập âm ghép',desc:'Nhận biết âm ghép trong từ',type:'quiz'},
+  ]},
+  {id:'tv_van', label:'Vần cơ bản', sub:'Tiếng Việt · Học kì 1', ico:'an',
+   color:'#4ecb82',dark:'#278a52',shadow:'rgba(78,203,130,.38)',light:'#d8f5e7',
+   nodes:[
+    {id:'v_1',ico:'an',lbl:'an · ăn · ân\nam · ăm · âm',desc:'Vần kết thúc bằng n và m'},
+    {id:'v_2',ico:'ao',lbl:'ao · au · ay · ây',desc:'Vần mở và vần nửa mở'},
+    {id:'v_3',ico:'ang',lbl:'ang · anh · ach',desc:'Vần có âm kết thúc ng/nh/ch'},
+    {id:'v_4',ico:'ong',lbl:'ong · ông · ơng',desc:'Vần on/ong và un/ung'},
+    {id:'v_5',ico:'inh',lbl:'inh · ich · im · ip',desc:'Vần i: bình, bích, tim'},
+    {id:'v_q',ico:'★',lbl:'Ôn tập vần',desc:'Đọc từ có vần: bạn bè, nhà sàn...',type:'quiz'},
+  ]},
+  {id:'tv_vc', label:'Vần phức tạp', sub:'Tiếng Việt · Học kì 2', ico:'oa',
+   color:'#3ecfcf',dark:'#1a9999',shadow:'rgba(62,207,207,.38)',light:'#d4f6f6',
+   nodes:[
+    {id:'vc_1',ico:'oac',lbl:'oac · oam · oan',desc:'Vần có âm đệm o trước âm chính'},
+    {id:'vc_2',ico:'uyn',lbl:'uyn · uyên · uông',desc:'Vần khó: khuyên, thương...'},
+    {id:'vc_3',ico:'iêu',lbl:'iêu · yêu · uôi',desc:'Vần đôi âm: diều, yêu, buổi'},
+    {id:'vc_q',ico:'★',lbl:'Đọc hiểu',desc:'Đọc đoạn văn ngắn và trả lời',type:'quiz'},
+  ]},
+  {id:'tv_vt', label:'Luyện viết', sub:'Tiếng Việt · Học kì 2', ico:'Vt',
+   color:'#9f7ae8',dark:'#6540b8',shadow:'rgba(159,122,232,.38)',light:'#ede5ff',
+   nodes:[
+    {id:'vt_1',ico:'r/d',lbl:'Chính tả\nr · d · gi',desc:'Phân biệt r, d, gi trong chính tả'},
+    {id:'vt_2',ico:'s/x',lbl:'Chính tả\ns · x · ch · tr',desc:'Phân biệt s/x và ch/tr'},
+    {id:'vt_3',ico:'g/gh',lbl:'Chính tả\ng · gh · ng · ngh',desc:'Quy tắc viết g/gh và ng/ngh'},
+    {id:'vt_q',ico:'★',lbl:'Kiểm tra chính tả',desc:'Điền từ và viết đoạn văn',type:'quiz'},
+  ]},
+  {id:'t_s10', label:'Số 0 đến 10', sub:'Toán · Học kì 1', ico:'1-5',
+   color:'#ffc94d',dark:'#b87900',shadow:'rgba(255,201,77,.45)',light:'#fff3cc',
+   nodes:[
+    {id:'t1_1',ico:'0-5',lbl:'Số 0 đến 5',desc:'Đếm vật, nhận biết mặt số, viết số'},
+    {id:'t1_2',ico:'6-10',lbl:'Số 6 đến 10',desc:'Mở rộng lên 10 – tập đếm đồ vật'},
+    {id:'t1_3',ico:'><',lbl:'So sánh số',desc:'Số 7 > 4, số 3 < 8 – điền dấu'},
+    {id:'t1_4',ico:'□',lbl:'Hình phẳng',desc:'Vuông, tròn, tam giác, chữ nhật'},
+    {id:'t1_q',ico:'★',lbl:'Ôn tập số 0–10',desc:'Đếm, so sánh, nhận biết hình',type:'quiz'},
+  ]},
+  {id:'t_pt10', label:'Phép tính ≤10', sub:'Toán · Học kì 1', ico:'+−',
+   color:'#ff8c42',dark:'#c05a10',shadow:'rgba(255,140,66,.4)',light:'#ffe0cc',
+   nodes:[
+    {id:'t2_1',ico:'+',lbl:'Phép cộng\ntrong 10',desc:'Khái niệm gộp lại: 5 + 3 = 8'},
+    {id:'t2_2',ico:'−',lbl:'Phép trừ\ntrong 10',desc:'Khái niệm tách ra: 9 − 4 = 5'},
+    {id:'t2_3',ico:'?',lbl:'Toán có lời văn',desc:'Bình có 4 quả bóng, thêm 2 quả...'},
+    {id:'t2_q',ico:'★',lbl:'Ôn tập phép tính',desc:'15 bài tính cộng + trừ trong 10',type:'quiz'},
+  ]},
+  {id:'t_s100', label:'Số đến 100', sub:'Toán · Học kì 2', ico:'100',
+   color:'#f05555',dark:'#c02020',shadow:'rgba(240,85,85,.38)',light:'#ffe0e0',
+   nodes:[
+    {id:'t3_1',ico:'11-20',lbl:'Số 11 đến 20',desc:'Chục và đơn vị: 15 = 1 chục 5 đv'},
+    {id:'t3_2',ico:'10 20',lbl:'Số tròn chục',desc:'Đếm theo chục: 10, 20, 30... 100'},
+    {id:'t3_3',ico:'100',lbl:'So sánh đến 100',desc:'Sắp xếp: 35, 12, 89, 54 tăng dần'},
+    {id:'t3_4',ico:'cm h',lbl:'Đo dài · Xem giờ',desc:'Thước đo cm; đồng hồ chỉ 8 giờ'},
+    {id:'t3_q',ico:'★',lbl:'Ôn tập đến 100',desc:'Đọc số, so sánh, xếp thứ tự, xem giờ',type:'quiz'},
+  ]},
+  {id:'t_pt100', label:'Phép tính ≤100', sub:'Toán · Học kì 2', ico:'+100',
+   color:'#4ecb82',dark:'#278a52',shadow:'rgba(78,203,130,.38)',light:'#d8f5e7',
+   nodes:[
+    {id:'t4_1',ico:'42+25',lbl:'Cộng không nhớ',desc:'Đặt tính: 42 + 25 = 67'},
+    {id:'t4_2',ico:'88-34',lbl:'Trừ không nhớ',desc:'Đặt tính: 88 − 34 = 54'},
+    {id:'t4_3',ico:'=?',lbl:'Toán có lời văn\n(2 bước)',desc:'Lớp 1A: 32, lớp 1B: 35. Cả hai lớp?'},
+    {id:'t4_q',ico:'★',lbl:'Kiểm tra cuối năm',desc:'Tổng hợp: số, phép tính, đo lường',type:'quiz'},
+  ]},
+];
+
+// ══════════════════════════════════════════
+//  QUESTION BANKS
+//  vis: {t:'ch'|'ct'|'mx'|'sh'|'wd', v:..., e:...}
+//   ch=character, ct=count objects, mx=math expr,
+//   sh=SVG shape, wd=big word
+// ══════════════════════════════════════════
+const QS={
+cc_1:[
+  {vis:{t:'ch',v:'a · ă · â'},q:'Chữ cái nào là "a" thường?',choices:['a','b','o','u'],ans:0,hint:'Chữ "a" là chữ cái đầu tiên trong bảng chữ cái'},
+  {vis:{t:'ch',v:'â'},q:'Chữ nào có dấu mũ (^) bên trên?',choices:['â','a','ă','e'],ans:0,hint:'Dấu mũ ^ xuất hiện trên một số chữ cái'},
+  {vis:{t:'ch',v:'ă'},q:'Chữ "ă" (a-brét) có gì đặc biệt?',choices:['Có cái móc bên phải','Có dấu mũ','Có 2 nét','Không có gì'],ans:0,hint:'Nhìn kỹ phần bên phải chữ ă'},
+  {vis:{t:'wd',v:'ba'},q:'Từ "ba" gồm những âm nào?',choices:['b + a','b + o','p + a','d + a'],ans:0,hint:'Đọc to từng âm trong từ "ba"'},
+  {vis:{t:'ch',v:'a ă â'},q:'Trong 3 chữ a, ă, â — chữ nào KHÔNG có dấu phụ?',choices:['a','â','ă','Cả 3 đều có'],ans:0,hint:'Dấu phụ là dấu thêm vào chữ cơ bản'},
+],
+cc_2:[
+  {vis:{t:'ch',v:'b'},q:'Chữ cái nào là "b"?',choices:['b','d','p','q'],ans:0,hint:'"b" có nét cong quay sang phải phía dưới'},
+  {vis:{t:'wd',v:'cô'},q:'Từ "cô" bắt đầu bằng chữ gì?',choices:['c','g','k','q'],ans:0,hint:'Trước âm "ô" dùng c hay k?'},
+  {vis:{t:'ch',v:'d · đ'},q:'Chữ "đ" khác chữ "d" thế nào?',choices:['đ có nét gạch ngang','Nét cong quay trái','Không có nét cong','Giống nhau'],ans:0,hint:'So sánh hai chữ d và đ'},
+  {vis:{t:'wd',v:'dứa'},q:'Từ "dứa" (trái cây) bắt đầu bằng chữ gì?',choices:['d','b','p','t'],ans:0,hint:'Đọc âm đầu của từ "dứa"'},
+  {vis:{t:'ch',v:'b c d đ'},q:'Chữ nào có nét gạch ngang ở giữa?',choices:['đ','b','c','d'],ans:0,hint:'Chữ đặc biệt trong nhóm b, c, d, đ'},
+],
+cc_3:[
+  {vis:{t:'ch',v:'e · ê'},q:'Chữ "ê" và "e" khác nhau thế nào?',choices:['ê có dấu mũ ^','ê to hơn','ê có thêm nét','Giống nhau'],ans:0,hint:'Nhìn phần trên của hai chữ'},
+  {vis:{t:'wd',v:'gà'},q:'Từ "gà" bắt đầu bằng chữ gì?',choices:['g','j','q','k'],ans:0,hint:'Đọc âm đầu của từ "gà"'},
+  {vis:{t:'ch',v:'h'},q:'Chữ "h" gồm mấy nét chính?',choices:['2 nét','1 nét','3 nét','4 nét'],ans:0,hint:'Đếm số nét cần thiết để viết chữ h'},
+  {vis:{t:'wd',v:'ghế'},q:'Từ "ghế" bắt đầu bằng chữ gì?',choices:['gh','g','k','kh'],ans:0,hint:'Trước âm e dùng g hay gh?'},
+  {vis:{t:'ch',v:'e ê g h'},q:'Trong các chữ e, ê, g, h — chữ nào có dấu mũ?',choices:['ê','e','g','h'],ans:0,hint:'Dấu mũ là dấu ^ trên chữ'},
+],
+cc_4:[
+  {vis:{t:'ch',v:'i'},q:'Chữ "i" ngắn (i) khác "y" dài thế nào?',choices:['i ngắn không có nét dọc dài','y có nét dọc xuống dưới','i ngắn hơn y','Không khác'],ans:0,hint:'So sánh độ dài nét dọc của 2 chữ'},
+  {vis:{t:'wd',v:'kem'},q:'Từ "kem" bắt đầu bằng chữ gì?',choices:['k','c','g','h'],ans:0,hint:'Trước âm "e" dùng k hay c?'},
+  {vis:{t:'ch',v:'l'},q:'Chữ "l" giống nét gì?',choices:['Nét móc quay xuống','Nét thẳng đứng','Nét cong phải','Nét tròn'],ans:0,hint:'Quan sát hình dạng của chữ l'},
+  {vis:{t:'wd',v:'mèo'},q:'Từ "mèo" bắt đầu bằng chữ gì?',choices:['m','n','b','p'],ans:0,hint:'Đọc âm đầu của từ "mèo"'},
+  {vis:{t:'wd',v:'nón'},q:'Từ "nón" bắt đầu bằng chữ gì?',choices:['n','m','l','r'],ans:0,hint:'Đọc âm đầu của từ "nón"'},
+],
+cc_5:[
+  {vis:{t:'ch',v:'o · ô · ơ'},q:'Âm "o" có mấy dạng viết?',choices:['3 dạng: o, ô, ơ','2 dạng','1 dạng','4 dạng'],ans:0,hint:'o thường, o có mũ ^, o có móc'},
+  {vis:{t:'ch',v:'ơ'},q:'Chữ "ơ" (o-móc) đọc là gì?',choices:['ơ (o móc)','o thường','o-mũ','oi'],ans:0,hint:'Cái móc giúp phân biệt ơ với o'},
+  {vis:{t:'wd',v:'pho mát'},q:'Từ "pho mát" bắt đầu bằng chữ gì?',choices:['p','b','d','t'],ans:0,hint:'Phát âm âm p là âm môi, không kêu'},
+  {vis:{t:'ch',v:'o ô ơ p'},q:'Trong các chữ o, ô, ơ, p — chữ nào có cái móc?',choices:['ơ','ô','o','p'],ans:0,hint:'Nhìn bên phải mỗi chữ để tìm cái móc'},
+  {vis:{t:'wd',v:'ông'},q:'Từ "ông" gồm những âm nào?',choices:['ô + ng','o + ng','ơ + ng','o + n'],ans:0,hint:'Đọc to từng phần của từ "ông"'},
+],
+cc_6:[
+  {vis:{t:'wd',v:'rau'},q:'Từ "rau" bắt đầu bằng chữ gì?',choices:['r','d','gi','l'],ans:0,hint:'"Rau" là loại thức ăn phổ biến'},
+  {vis:{t:'wd',v:'sữa'},q:'Từ "sữa" bắt đầu bằng chữ gì?',choices:['s','x','c','t'],ans:0,hint:'"Sữa" đọc là âm s, không phải x'},
+  {vis:{t:'ch',v:'t · th'},q:'Chữ "t" và âm ghép "th" khác nhau thế nào?',choices:['th là âm ghép gồm t+h','Giống nhau','th viết khác','t to hơn th'],ans:0,hint:'Một âm đơn, một âm ghép'},
+  {vis:{t:'ch',v:'u · ư'},q:'Âm "ư" (u-móc) có gì đặc biệt?',choices:['Có cái móc bên phải','Có dấu mũ','To hơn u','Nhỏ hơn u'],ans:0,hint:'Nhìn phần bên phải của chữ ư'},
+  {vis:{t:'ch',v:'a→y'},q:'Bảng chữ cái tiếng Việt có bao nhiêu âm?',choices:['29 âm','26 âm','24 âm','31 âm'],ans:0,hint:'Nhiều hơn bảng Latin vì có các âm có dấu'},
+],
+cc_q:[
+  {vis:{t:'ch',v:'f · j · z'},q:'Chữ nào KHÔNG có trong bảng chữ cái tiếng Việt?',choices:['f','a','b','c'],ans:0,hint:'Một số chữ Latin không dùng trong TV'},
+  {vis:{t:'ch',v:'gi'},q:'Âm "gi" trong từ "gia đình" đọc là gì?',choices:['Tương tự z/y','Giống g đơn','Giống j tiếng Anh','Giống kh'],ans:0,hint:'Nghe người bạn xứ Bắc đọc "gia đình"'},
+  {vis:{t:'ch',v:'y · i'},q:'Chữ "y" và "i" có thể hoán đổi khi nào?',choices:['Cuối vần (mây/mai)','Bắt đầu từ','Sau phụ âm','Không bao giờ'],ans:0,hint:'Ví dụ: thay/thai, ây/ai'},
+  {vis:{t:'ch',v:'A→Z'},q:'Bảng chữ cái TV bắt đầu bằng chữ gì?',choices:['a','b','c','d'],ans:0,hint:'Âm đầu tiên trong bảng chữ cái'},
+  {vis:{t:'ch',v:'29'},q:'Chữ cái TV có nhiều hơn bảng Latin vì lý do gì?',choices:['Có thêm chữ có dấu phụ','Có nhiều phụ âm hơn','Do lịch sử','Không biết'],ans:0,hint:'ă, â, đ, ê, ô, ơ, ư là các chữ thêm'},
+],
+dt_1:[
+  {vis:{t:'wd',v:'ma'},q:'Từ "ma" có dấu gì?',choices:['Không dấu (bằng)','Dấu huyền','Dấu sắc','Dấu nặng'],ans:0,hint:'"ma" là âm phẳng, không có dấu'},
+  {vis:{t:'wd',v:'mà'},q:'Từ "mà" có dấu gì?',choices:['Dấu huyền','Dấu sắc','Không dấu','Dấu hỏi'],ans:0,hint:'Dấu huyền kéo xuống như bước xuống núi'},
+  {vis:{t:'wd',v:'má'},q:'Từ "má" có dấu gì?',choices:['Dấu sắc','Dấu huyền','Không dấu','Dấu nặng'],ans:0,hint:'Dấu sắc kéo lên như leo núi'},
+  {vis:{t:'ch',v:'/ sắc'},q:'Dấu sắc có hình dạng thế nào?',choices:['Nét nghiêng phải lên cao','Nét nghiêng trái xuống','Một chấm','Nét cong'],ans:0,hint:'Nhìn dạng của dấu sắc trên một từ bất kỳ'},
+  {vis:{t:'ch',v:'\\ huyền'},q:'Dấu huyền có hình dạng thế nào?',choices:['Nét nghiêng trái xuống','Nét nghiêng phải lên cao','Một chấm','Nét cong'],ans:0,hint:'Ngược chiều với dấu sắc'},
+],
+dt_2:[
+  {vis:{t:'wd',v:'mả'},q:'Từ "mả" (hỏi về) có dấu gì?',choices:['Dấu hỏi','Dấu ngã','Dấu nặng','Dấu sắc'],ans:0,hint:'Dấu hỏi có hình dạng như dấu hỏi chấm'},
+  {vis:{t:'wd',v:'mã'},q:'Từ "mã" (con ngựa) có dấu gì?',choices:['Dấu ngã','Dấu hỏi','Dấu nặng','Dấu huyền'],ans:0,hint:'Dấu ngã có nét lượn sóng ~'},
+  {vis:{t:'wd',v:'mạ'},q:'Từ "mạ" (lúa mạ) có dấu gì?',choices:['Dấu nặng','Dấu hỏi','Dấu ngã','Dấu sắc'],ans:0,hint:'Dấu nặng là một chấm bên dưới âm chính'},
+  {vis:{t:'ch',v:'6 dấu'},q:'Tiếng Việt có bao nhiêu dấu thanh (kể cả không dấu)?',choices:['6 dấu thanh','5 dấu thanh','4 dấu thanh','7 dấu thanh'],ans:0,hint:'Bằng: không dấu, huyền, sắc, hỏi, ngã, nặng'},
+  {vis:{t:'ch',v:'. nặng'},q:'Dấu thanh nào dùng một chấm ở dưới chữ?',choices:['Dấu nặng','Dấu hỏi','Dấu ngã','Dấu huyền'],ans:0,hint:'Chỉ có một dấu có dạng điểm'},
+],
+dt_q:[
+  {vis:{t:'wd',v:'má'},q:'Ghép đúng: âm "m" + "a" + dấu sắc = ?',choices:['má','mà','mả','mo'],ans:0,hint:'Dấu sắc làm âm cao lên'},
+  {vis:{t:'wd',v:'bằm'},q:'Từ "bằm" có dấu gì?',choices:['Dấu huyền','Không dấu','Dấu sắc','Dấu hỏi'],ans:0,hint:'Đọc to "bằm" và nghe xem ngữ điệu thế nào'},
+  {vis:{t:'wd',v:'bà'},q:'Ghép đúng: "b" + "a" + dấu huyền = ?',choices:['bà','bá','bả','be'],ans:0,hint:'"Bà" (grandmother) có dấu huyền'},
+  {vis:{t:'wd',v:'mà · má'},q:'Từ "mà" và "má" khác nhau thế nào?',choices:['Khác dấu thanh','Khác âm chính','Khác phụ âm đầu','Giống nhau'],ans:0,hint:'Cả hai đều có âm m + a nhưng dấu thanh khác'},
+  {vis:{t:'wd',v:'ngủ'},q:'Âm nào sau đây có dấu hỏi?',choices:['ngủ','ngù','ngú','ngu'],ans:0,hint:'Dấu hỏi tạo ngữ điệu xuống rồi lên'},
+],
+ag_1:[
+  {vis:{t:'ch',v:'ch'},q:'Âm ghép "ch" xuất hiện trong từ nào?',choices:['cha','ga','ta','sa'],ans:0,hint:'"ch" chỉ xuất hiện trước các nguyên âm nhất định'},
+  {vis:{t:'ch',v:'g · gh'},q:'Dùng "g" hay "gh" trong từ "_ế gỗ"?',choices:['gh (ghế gỗ)','g (gế gỗ)','k (khế gỗ)','c (chế gỗ)'],ans:0,hint:'gh dùng trước e, ê, i'},
+  {vis:{t:'wd',v:'gia đình'},q:'Âm "gi" trong từ "gia" đọc là gì?',choices:['Z (giống y/z)','G mạnh','J tiếng Anh','Kh'],ans:0,hint:'Người miền Bắc đọc "gia" gần giống "ya"'},
+  {vis:{t:'wd',v:'khỉ'},q:'Từ "khỉ" (con khỉ) bắt đầu bằng âm ghép gì?',choices:['kh','k','h','ch'],ans:0,hint:'"kh" là âm phát ra từ họng mạnh hơn k'},
+  {vis:{t:'ch',v:'ch · gh · gi · kh'},q:'Chọn từ CÓ âm ghép "ch"?',choices:['chả','gà','bà','tà'],ans:0,hint:'Nghe xem từ nào bắt đầu bằng ch'},
+],
+ag_2:[
+  {vis:{t:'ch',v:'ng · ngh'},q:'"Ng" hay "ngh" dùng trước chữ "e"?',choices:['ngh (nghe)','ng (nge)','nh (nhe)','n (ne)'],ans:0,hint:'ngh dùng trước e, ê, i giống gh'},
+  {vis:{t:'wd',v:'nhà'},q:'Âm "nh" trong từ "nhà" phát âm thế nào?',choices:['Giống n+h nối liền','Giống n đơn','Giống m','Giống n mạnh'],ans:0,hint:'Đặt lưỡi ở vị trí n rồi thêm h'},
+  {vis:{t:'wd',v:'phở'},q:'Từ "phở" bắt đầu bằng âm ghép gì?',choices:['ph','p','f','v'],ans:0,hint:'"ph" trong TV đọc giống "f" tiếng Anh'},
+  {vis:{t:'ch',v:'ng'},q:'Chọn từ bắt đầu bằng "ng"?',choices:['ngon','non','bôn','tôn'],ans:0,hint:'Nghe âm đầu của mỗi từ'},
+  {vis:{t:'wd',v:'nghề'},q:'Từ "nghề" viết đúng là gì?',choices:['nghề','ngề','nghghề','nge'],ans:0,hint:'Trước "ê" ta dùng ngh không dùng ng'},
+],
+ag_3:[
+  {vis:{t:'wd',v:'quả'},q:'"qu" trong tiếng Việt đọc thế nào?',choices:['Giống "kw" tiếng Anh','Giống k đơn','Giống g','Giống c'],ans:0,hint:'"quả" đọc là "kwa" không phải "ga"'},
+  {vis:{t:'wd',v:'thợ'},q:'Từ "thợ" (nghệ sĩ) bắt đầu bằng âm ghép gì?',choices:['th','t','d','tr'],ans:0,hint:'"th" đọc như "t" có thêm hơi thở'},
+  {vis:{t:'wd',v:'trái'},q:'Từ "trái" bắt đầu bằng âm ghép gì?',choices:['tr','t','ch','th'],ans:0,hint:'"tr" đọc như lưỡi cuộn vào trong miệng'},
+  {vis:{t:'ch',v:'qu'},q:'Chọn từ bắt đầu bằng "qu"?',choices:['quả','kua','của','gua'],ans:0,hint:'"qu" luôn đi kèm với "u" phía sau'},
+  {vis:{t:'ch',v:'ch·gh·kh·nh·ng·ngh·ph·qu·th·tr'},q:'Âm ghép nào chỉ có trong tiếng Việt?',choices:['ngh, nh, ng','th, ph','ch','sh'],ans:0,hint:'Một số âm ghép đặc trưng TV không có trong Anh ngữ'},
+],
+ag_q:[
+  {vis:{t:'wd',v:'nhà sàn'},q:'Từ "nhà sàn" có âm ghép nào?',choices:['nh','ng','gh','ngh'],ans:0,hint:'Nhìn âm đầu của từ "nhà"'},
+  {vis:{t:'wd',v:'thủy'},q:'Từ "thủy" bắt đầu bằng âm ghép gì?',choices:['th','tr','kh','ph'],ans:0,hint:'Đọc âm đầu của "thủy"'},
+  {vis:{t:'ch',v:'g · gh'},q:'"g" hay "gh" trong từ "_ế"?',choices:['gh (ghế)','g (gế)','k (kế)','ch (chế)'],ans:0,hint:'Trước "ê" dùng gh hay g?'},
+  {vis:{t:'wd',v:'phở bò'},q:'Chọn từ bắt đầu bằng "ph"?',choices:['phở','bở','tở','mở'],ans:0,hint:'"ph" đọc giống f tiếng Anh'},
+  {vis:{t:'ch',v:'ngh trước e ê i'},q:'Âm ghép "ngh" dùng trước âm gì?',choices:['e, ê, i','a, o, u','Tất cả nguyên âm','Không có quy tắc'],ans:0,hint:'Giống quy tắc của "gh"'},
+],
+// Math
+t1_1:[
+  {vis:{t:'ct',v:3,e:'🍎'},q:'Có mấy quả táo?',choices:['3','2','4','5'],ans:0,hint:'Đếm lần lượt từng quả một'},
+  {vis:{t:'ct',v:2,e:'⭐'},q:'Có mấy ngôi sao?',choices:['2','3','1','4'],ans:0,hint:'Đếm từng ngôi sao'},
+  {vis:{t:'mx',v:'0, 1, 2, __, 4'},q:'Điền số còn thiếu: 0, 1, 2, __, 4',choices:['3','5','6','7'],ans:0,hint:'Dãy số tăng dần, mỗi số tăng 1'},
+  {vis:{t:'ct',v:5,e:'🌟'},q:'Có mấy ngôi sao?',choices:['5','4','6','3'],ans:0,hint:'Đếm từng ngôi sao'},
+  {vis:{t:'ch',v:'3'},q:'Viết số "ba" bằng chữ số:',choices:['3','5','8','2'],ans:0,hint:'Ba vật tương ứng với số 3'},
+],
+t1_2:[
+  {vis:{t:'ct',v:7,e:'🌻'},q:'Có mấy bông hoa?',choices:['7','6','8','9'],ans:0,hint:'Đếm lần lượt từng bông'},
+  {vis:{t:'mx',v:'? + 1 = 10'},q:'Số nào đứng trước số 10?',choices:['9','8','7','6'],ans:0,hint:'10 − 1 = ?'},
+  {vis:{t:'mx',v:'6, 7, __, 9, 10'},q:'Điền số còn thiếu: 6, 7, __, 9, 10',choices:['8','5','11','4'],ans:0,hint:'Dãy số tăng dần mỗi số 1'},
+  {vis:{t:'ct',v:10,e:'🤚'},q:'Hai bàn tay có mấy ngón?',choices:['10','8','6','4'],ans:0,hint:'Mỗi bàn tay có 5 ngón tay'},
+  {vis:{t:'ch',v:'10 = 1 chục'},q:'Số nào biểu thị một "chục"?',choices:['10','9','11','8'],ans:0,hint:'Một chục = 10 đơn vị'},
+],
+t1_3:[
+  {vis:{t:'mx',v:'7 __ 4'},q:'7 __ 4 (điền dấu so sánh)',choices:['> (lớn hơn)','< (bé hơn)','= (bằng)','Không so sánh được'],ans:0,hint:'7 có nhiều đơn vị hơn 4'},
+  {vis:{t:'mx',v:'3 __ 8'},q:'3 __ 8 (điền dấu so sánh)',choices:['< (bé hơn)','> (lớn hơn)','= (bằng)','Không rõ'],ans:0,hint:'3 ít đơn vị hơn 8'},
+  {vis:{t:'mx',v:'5 __ 5'},q:'5 __ 5 (điền dấu so sánh)',choices:['= (bằng)','> (lớn hơn)','< (bé hơn)','Không biết'],ans:0,hint:'Hai số có cùng số đơn vị'},
+  {vis:{t:'mx',v:'6 < ? < 9'},q:'Số nào lớn hơn 6 nhưng bé hơn 9?',choices:['7 hoặc 8','5 hoặc 6','9 hoặc 10','Chỉ có 1 số'],ans:0,hint:'Tìm số nằm giữa 6 và 9'},
+  {vis:{t:'mx',v:'4, 1, 7, 2'},q:'Sắp xếp từ bé đến lớn: 4, 1, 7, 2',choices:['1, 2, 4, 7','4, 1, 7, 2','7, 4, 2, 1','2, 4, 1, 7'],ans:0,hint:'Tìm số nhỏ nhất trước'},
+],
+t1_4:[
+  {vis:{t:'sh',v:'square'},q:'Hình nào CÓ 4 góc vuông và 4 cạnh bằng nhau?',choices:['Hình vuông','Hình tròn','Hình tam giác','Hình thoi'],ans:0,hint:'Góc vuông giống góc của cuốn sách'},
+  {vis:{t:'sh',v:'circle'},q:'Hình nào KHÔNG có góc?',choices:['Hình tròn','Hình vuông','Hình tam giác','Hình chữ nhật'],ans:0,hint:'Một hình có đường biên cong hoàn toàn'},
+  {vis:{t:'sh',v:'triangle'},q:'Hình tam giác có bao nhiêu cạnh?',choices:['3 cạnh','4 cạnh','2 cạnh','6 cạnh'],ans:0,hint:'"Tam" trong tiếng Việt có nghĩa là 3'},
+  {vis:{t:'sh',v:'rectangle'},q:'Mặt bàn học hình gì?',choices:['Hình chữ nhật','Hình tròn','Hình tam giác','Hình thoi'],ans:0,hint:'Mặt bàn thường dài hơn rộng'},
+  {vis:{t:'sh',v:'circle'},q:'Mặt đồng hồ hình gì?',choices:['Hình tròn','Hình vuông','Hình chữ nhật','Hình tam giác'],ans:0,hint:'Kim đồng hồ quay tròn'},
+],
+t1_q:[
+  {vis:{t:'mx',v:'3 + __ = 5'},q:'3 + __ = 5',choices:['2','1','3','4'],ans:0,hint:'Tìm số cần thêm vào 3 để được 5'},
+  {vis:{t:'mx',v:'5 < ? < 8'},q:'Số nào lớn hơn 5 và bé hơn 8?',choices:['6 hoặc 7','8 hoặc 9','4 hoặc 5','1 hoặc 2'],ans:0,hint:'Số nằm giữa 5 và 8'},
+  {vis:{t:'sh',v:'square'},q:'Hình nào có 4 cạnh bằng nhau?',choices:['Hình vuông','Hình chữ nhật','Hình tam giác','Hình tròn'],ans:0,hint:'4 cạnh + bằng nhau → hình gì?'},
+  {vis:{t:'mx',v:'8 - 3 = ?'},q:'Có 8 quả bóng, cho đi 3. Còn lại mấy quả?',choices:['5','4','6','3'],ans:0,hint:'8 − 3 = ?'},
+  {vis:{t:'ch',v:'0→9'},q:'Số lớn nhất có 1 chữ số là số nào?',choices:['9','8','10','7'],ans:0,hint:'Số có 1 chữ số từ 0 đến 9'},
+],
+t2_1:[
+  {vis:{t:'mx',v:'5 + 3 = ?'},q:'5 + 3 = ?',choices:['8','7','9','6'],ans:0,hint:'Đếm tiếp từ 5: 6, 7, 8'},
+  {vis:{t:'mx',v:'4 + 4 = ?'},q:'4 + 4 = ?',choices:['8','6','9','7'],ans:0,hint:'Đếm tiếp từ 4: 5, 6, 7, 8'},
+  {vis:{t:'mx',v:'2 + 7 = ?'},q:'2 + 7 = ?',choices:['9','8','10','7'],ans:0,hint:'2 + 7 = 7 + 2, đếm tiếp từ số lớn hơn'},
+  {vis:{t:'mx',v:'6 + 0 = ?'},q:'6 + 0 = ?',choices:['6','7','5','0'],ans:0,hint:'Cộng với 0 thì không đổi'},
+  {vis:{t:'ct',v:3,e:'🍬'},q:'Bình có 3 cái kẹo, thêm 5 cái. Có tất cả mấy cái?',choices:['8','7','9','6'],ans:0,hint:'3 + 5 = ?'},
+],
+t2_2:[
+  {vis:{t:'mx',v:'9 - 4 = ?'},q:'9 − 4 = ?',choices:['5','4','6','3'],ans:0,hint:'Đếm lui từ 9: 8, 7, 6, 5'},
+  {vis:{t:'mx',v:'7 - 3 = ?'},q:'7 − 3 = ?',choices:['4','3','5','6'],ans:0,hint:'Đếm lui từ 7: 6, 5, 4'},
+  {vis:{t:'mx',v:'8 - 8 = ?'},q:'8 − 8 = ?',choices:['0','1','2','8'],ans:0,hint:'Trừ số bằng chính nó thì kết quả là 0'},
+  {vis:{t:'mx',v:'10 - 6 = ?'},q:'10 − 6 = ?',choices:['4','3','5','6'],ans:0,hint:'Đếm lui từ 10: 9, 8, 7, 6, 5, 4'},
+  {vis:{t:'ct',v:6,e:'🍩'},q:'An có 6 cái bánh, ăn 2 cái. Còn lại mấy cái?',choices:['4','3','5','6'],ans:0,hint:'6 − 2 = ?'},
+],
+t2_3:[
+  {vis:{t:'mx',v:'4 + 3 = ?'},q:'Mai có 4 quả cam, Lan cho thêm 3 quả. Mai có tất cả mấy quả?',choices:['7','6','8','5'],ans:0,hint:'Cho thêm nghĩa là cộng: 4 + 3 = ?'},
+  {vis:{t:'mx',v:'9 - 5 = ?'},q:'Trên cây có 9 con chim, bay đi 5 con. Còn lại mấy con?',choices:['4','3','5','6'],ans:0,hint:'Bay đi nghĩa là trừ: 9 − 5 = ?'},
+  {vis:{t:'mx',v:'6 + 4 = ?'},q:'Lớp có 6 bạn nam và 4 bạn nữ. Có tất cả bao nhiêu bạn?',choices:['10','8','9','7'],ans:0,hint:'Gộp lại: 6 + 4 = ?'},
+  {vis:{t:'mx',v:'10 - 3 = ?'},q:'Có 10 quả bóng, vỡ 3 quả. Còn nguyên mấy quả?',choices:['7','6','8','5'],ans:0,hint:'10 − 3 = ?'},
+  {vis:{t:'mx',v:'3 + 5 = ?'},q:'Phép tính nào sau đây ĐÚNG?',choices:['3 + 5 = 8','3 + 5 = 9','3 + 5 = 7','3 + 5 = 6'],ans:0,hint:'3 + 5 = ?'},
+],
+t2_q:[
+  {vis:{t:'mx',v:'6 + 4 = ?'},q:'6 + 4 = ?',choices:['10','9','8','7'],ans:0,hint:'Đếm tiếp từ 6: 7, 8, 9, 10'},
+  {vis:{t:'mx',v:'10 - 7 = ?'},q:'10 − 7 = ?',choices:['3','4','2','5'],ans:0,hint:'Đếm lui từ 10...'},
+  {vis:{t:'mx',v:'__ + 6 = 9'},q:'__ + 6 = 9',choices:['3','2','4','5'],ans:0,hint:'9 − 6 = ?'},
+  {vis:{t:'mx',v:'8 - 3 = ?'},q:'Có 8 người, đi 3 người. Còn mấy người?',choices:['5','4','6','3'],ans:0,hint:'8 − 3 = ?'},
+  {vis:{t:'mx',v:'? = 7'},q:'Phép tính nào có kết quả là 7?',choices:['3+4','2+4','3+5','4+4'],ans:0,hint:'3 + 4 = ?'},
+],
+t3_1:[
+  {vis:{t:'mx',v:'15 = 1 chục + 5'},q:'Số 15 gồm bao nhiêu chục và đơn vị?',choices:['1 chục 5 đơn vị','5 chục 1 đơn vị','1 chục 1 đơn vị','5 chục 5 đơn vị'],ans:0,hint:'1 chục = 10, nên 15 = 10 + 5'},
+  {vis:{t:'mx',v:'12 + 3 = ?'},q:'12 + 3 = ?',choices:['15','14','16','13'],ans:0,hint:'12 + 3: giữ chục, cộng đơn vị: 2+3=5'},
+  {vis:{t:'mx',v:'17 - 5 = ?'},q:'17 − 5 = ?',choices:['12','11','13','14'],ans:0,hint:'17 − 5: giữ chục, trừ đơn vị: 7−5=2'},
+  {vis:{t:'mx',v:'14 < ? < 17'},q:'Số nào lớn hơn 14 nhưng bé hơn 17?',choices:['15 hoặc 16','13 hoặc 14','17 hoặc 18','12 hoặc 13'],ans:0,hint:'Tìm số nằm giữa 14 và 17'},
+  {vis:{t:'mx',v:'11, 18, 15, 12'},q:'Sắp xếp từ lớn đến bé: 11, 18, 15, 12',choices:['18, 15, 12, 11','11, 12, 15, 18','15, 18, 11, 12','12, 11, 18, 15'],ans:0,hint:'Số lớn nhất trước'},
+],
+t3_2:[
+  {vis:{t:'mx',v:'40, 50, __?'},q:'Số tròn chục nào tiếp theo: 40, 50, __?',choices:['60','70','55','45'],ans:0,hint:'Mỗi số tròn chục cách nhau 10'},
+  {vis:{t:'mx',v:'2 chục = ?'},q:'2 chục bằng bao nhiêu?',choices:['20','12','2','10'],ans:0,hint:'1 chục = 10, 2 chục = ?'},
+  {vis:{t:'mx',v:'30, 40, __, 60'},q:'Điền số còn thiếu: 30, 40, __, 60',choices:['50','45','55','70'],ans:0,hint:'Cách nhau 10 đơn vị'},
+  {vis:{t:'mx',v:'8 chục = ?'},q:'8 chục bằng số nào?',choices:['80','8','18','88'],ans:0,hint:'8 chục = 8 × 10 = ?'},
+  {vis:{t:'mx',v:'10→100'},q:'Có bao nhiêu số tròn chục từ 10 đến 100?',choices:['10 số','9 số','8 số','11 số'],ans:0,hint:'10, 20, 30, 40, 50, 60, 70, 80, 90, 100'},
+],
+t3_3:[
+  {vis:{t:'mx',v:'35, 12, 89, 54'},q:'Sắp xếp từ bé đến lớn: 35, 12, 89, 54',choices:['12, 35, 54, 89','35, 12, 89, 54','89, 54, 35, 12','12, 54, 35, 89'],ans:0,hint:'Số nào bé nhất? Số nào lớn nhất?'},
+  {vis:{t:'mx',v:'47 | 74 | 37 | 73'},q:'Số nào lớn nhất trong các số: 47, 74, 37, 73?',choices:['74','73','47','37'],ans:0,hint:'Số có hàng chục lớn hơn sẽ lớn hơn'},
+  {vis:{t:'mx',v:'45 __ 54'},q:'45 __ 54 (điền dấu so sánh)',choices:['< (bé hơn)','> (lớn hơn)','= (bằng)','Không rõ'],ans:0,hint:'Số ở hàng chục: 4 < 5'},
+  {vis:{t:'mx',v:'6_ = 6 chục + 3'},q:'Số nào có hàng chục là 6 và hàng đơn vị là 3?',choices:['63','36','6','3'],ans:0,hint:'Hàng chục viết trước, hàng đơn vị viết sau'},
+  {vis:{t:'mx',v:'99, 9, 90, 19'},q:'Sắp xếp từ lớn đến bé: 99, 9, 90, 19',choices:['99, 90, 19, 9','9, 19, 90, 99','90, 99, 9, 19','99, 9, 90, 19'],ans:0,hint:'Số hàng chục lớn nhất là 99'},
+],
+t3_4:[
+  {vis:{t:'mx',v:'15cm  vs  12cm'},q:'Cây bút chì dài 15cm, cây bút bi dài 12cm. Cây nào ngắn hơn?',choices:['Bút bi (12cm)','Bút chì (15cm)','Bằng nhau','Không đo được'],ans:0,hint:'15 > 12 nên bút chì dài hơn'},
+  {vis:{t:'mx',v:'🕒 3:00'},q:'Đồng hồ: kim ngắn ở số 3, kim dài ở số 12. Là mấy giờ?',choices:['3 giờ đúng','12 giờ','Nửa tiếng','9 giờ'],ans:0,hint:'Kim ngắn chỉ giờ, kim dài ở 12 = giờ đúng'},
+  {vis:{t:'mx',v:'1 cm = 10 mm'},q:'1 cm bằng mấy mm?',choices:['10 mm','100 mm','1 mm','5 mm'],ans:0,hint:'Xem thước kẻ, đếm các vạch nhỏ trong 1 cm'},
+  {vis:{t:'mx',v:'🕖 7:00'},q:'Đồng hồ chỉ 7 giờ đúng: kim ngắn ở đâu?',choices:['Số 7','Số 12','Số 6','Số 1'],ans:0,hint:'Kim ngắn chỉ số giờ'},
+  {vis:{t:'mx',v:'20 + 25 = ?'},q:'Đo 2 quyển sách: A = 20cm, B = 25cm. Cả hai dài bao nhiêu?',choices:['45 cm','40 cm','50 cm','35 cm'],ans:0,hint:'20 + 25 = ?'},
+],
+t3_q:[
+  {vis:{t:'mx',v:'78 = ?'},q:'Số 78 gồm bao nhiêu chục và đơn vị?',choices:['7 chục 8 đơn vị','8 chục 7 đơn vị','7 chục 7 đơn vị','78 đơn vị'],ans:0,hint:'Hàng chục: 7, hàng đơn vị: 8'},
+  {vis:{t:'mx',v:'65, 56, 66, 55'},q:'Sắp xếp từ bé đến lớn: 65, 56, 66, 55',choices:['55, 56, 65, 66','65, 66, 55, 56','56, 55, 66, 65','66, 65, 56, 55'],ans:0,hint:'So sánh hàng chục trước'},
+  {vis:{t:'mx',v:'🕙 11:00'},q:'Kim ngắn ở số 11, kim dài ở số 12. Là mấy giờ?',choices:['11 giờ đúng','12 giờ','11 giờ 30','10 giờ'],ans:0,hint:'Kim ngắn chỉ số giờ, kim dài ở 12 = giờ đúng'},
+  {vis:{t:'mx',v:'34 - 12 = ?'},q:'Thanh gỗ dài 34cm, cắt đi 12cm. Còn lại bao nhiêu?',choices:['22 cm','23 cm','21 cm','46 cm'],ans:0,hint:'34 − 12 = ?'},
+  {vis:{t:'ch',v:'99'},q:'Số lớn nhất có 2 chữ số là số nào?',choices:['99','98','90','89'],ans:0,hint:'Cả hai chữ số đều lớn nhất là?'},
+],
+t4_1:[
+  {vis:{t:'mx',v:'42 + 25 = ?'},q:'42 + 25 = ?',choices:['67','66','68','57'],ans:0,hint:'Đơn vị: 2+5=7, chục: 4+2=6'},
+  {vis:{t:'mx',v:'31 + 46 = ?'},q:'31 + 46 = ?',choices:['77','76','78','87'],ans:0,hint:'Đơn vị: 1+6=7, chục: 3+4=7'},
+  {vis:{t:'mx',v:'53 + 24 = ?'},q:'Đặt tính rồi tính: 53 + 24',choices:['77','76','78','87'],ans:0,hint:'Đặt thẳng cột, cộng hàng đơn vị trước'},
+  {vis:{t:'mx',v:'32 + 35 = ?'},q:'Lớp A: 32 HS, lớp B: 35 HS. Cả hai lớp bao nhiêu?',choices:['67','66','68','57'],ans:0,hint:'32 + 35 = ?'},
+  {vis:{t:'mx',v:'60 + 30 = ?'},q:'60 + 30 = ?',choices:['90','80','100','70'],ans:0,hint:'6 chục + 3 chục = 9 chục'},
+],
+t4_2:[
+  {vis:{t:'mx',v:'88 - 34 = ?'},q:'88 − 34 = ?',choices:['54','55','53','44'],ans:0,hint:'Đơn vị: 8−4=4, chục: 8−3=5'},
+  {vis:{t:'mx',v:'79 - 45 = ?'},q:'79 − 45 = ?',choices:['34','35','33','44'],ans:0,hint:'Đơn vị: 9−5=4, chục: 7−4=3'},
+  {vis:{t:'mx',v:'96 - 23 = ?'},q:'Đặt tính rồi tính: 96 − 23',choices:['73','74','72','83'],ans:0,hint:'Đặt thẳng cột, trừ hàng đơn vị trước'},
+  {vis:{t:'mx',v:'58 - 25 = ?'},q:'Vườn có 58 quả, hái đi 25 quả. Còn lại mấy quả?',choices:['33','32','34','43'],ans:0,hint:'58 − 25 = ?'},
+  {vis:{t:'mx',v:'80 - 40 = ?'},q:'80 − 40 = ?',choices:['40','30','50','20'],ans:0,hint:'8 chục − 4 chục = 4 chục'},
+],
+t4_3:[
+  {vis:{t:'mx',v:'32 + 35 = ?'},q:'Lớp 1A: 32 HS, lớp 1B: 35 HS. Cả hai lớp bao nhiêu?',choices:['67','66','68','57'],ans:0,hint:'Gộp lại: 32 + 35 = ?'},
+  {vis:{t:'mx',v:'65 - 24 = ?'},q:'Có 65 cái bánh, bán 24 cái. Còn lại mấy cái?',choices:['41','42','43','31'],ans:0,hint:'65 − 24 = ?'},
+  {vis:{t:'mx',v:'23 + 15 = ?'},q:'Tuần trước đọc 23 trang, tuần này đọc thêm 15 trang. Tổng cộng bao nhiêu?',choices:['38','37','39','48'],ans:0,hint:'23 + 15 = ?'},
+  {vis:{t:'mx',v:'80 - 30 = ?'},q:'Có 80 cái kẹo, cho 30 cái. Còn lại mấy cái?',choices:['50','40','60','30'],ans:0,hint:'80 − 30 = ?'},
+  {vis:{t:'mx',v:'? = 55'},q:'Phép tính nào cho kết quả 55?',choices:['33+22','44+22','33+33','22+44'],ans:0,hint:'33 + 22 = ?'},
+],
+t4_q:[
+  {vis:{t:'mx',v:'47 + 32 = ?'},q:'47 + 32 = ?',choices:['79','78','80','69'],ans:0,hint:'Đơn vị: 7+2=9, chục: 4+3=7'},
+  {vis:{t:'mx',v:'85 - 43 = ?'},q:'85 − 43 = ?',choices:['42','43','41','52'],ans:0,hint:'Đơn vị: 5−3=2, chục: 8−4=4'},
+  {vis:{t:'mx',v:'🕕 6:00'},q:'Kim ngắn ở số 6, kim dài ở số 12. Là mấy giờ?',choices:['6 giờ đúng','12 giờ','6 giờ 30','5 giờ'],ans:0,hint:'Kim ngắn chỉ số giờ'},
+  {vis:{t:'mx',v:'62 + 15 = ?'},q:'Cuốn sách A: 62 trang. Cuốn B hơn A 15 trang. Cuốn B có bao nhiêu trang?',choices:['77','76','78','72'],ans:0,hint:'62 + 15 = ?'},
+  {vis:{t:'mx',v:'50 < ? < 80'},q:'Số tròn chục nào nằm giữa 50 và 80?',choices:['60 và 70','50 và 60','70 và 80','40 và 50'],ans:0,hint:'Kể ra các số tròn chục từ 50 đến 80'},
+],
+};
+
+// Fallback: 5 placeholder questions for nodes without a bank
+function getQs(node){
+  if(QS[node.id]) return QS[node.id];
+  return Array.from({length:5},(_,i)=>({
+    vis:{t:'ch',v:(i+1)+''},
+    q:'Câu hỏi '+(i+1)+' cho bài "'+(node.lbl||'').replace(/\n/g,' ')+'"',
+    choices:['Đáp án A','Đáp án B','Đáp án C','Đáp án D'],ans:0,
+    hint:'(Câu hỏi đang được cập nhật – chọn A để tiếp tục)'
+  }));
+}
+
+// ══════════════════════════════════════════
+//  VISUAL SHOWCASE RENDERER
+// ══════════════════════════════════════════
+function renderVis(vis, color){
+  if(!vis) return '';
+  const {t,v,e} = vis;
+  let inner='';
+  if(t==='ch') inner=`<div class="vis-char">${v}</div>`;
+  else if(t==='ct'){
+    const emoji = e||'●';
+    const count = Math.min(Number(v)||3, 10);
+    inner=`<div class="vis-count">${(emoji+' ').repeat(count).trim()}</div>`;
+  }
+  else if(t==='mx') inner=`<div class="vis-math">${v}</div>`;
+  else if(t==='wd') inner=`<div class="vis-word">${v}</div>`;
+  else if(t==='sh') inner=`<div class="vis-shape">${svgShape(v,color)}</div>`;
+  return `<div class="q-vis">${inner}</div>`;
+}
+
+// ══════════════════════════════════════════
+//  PROGRESS STORE
+// ══════════════════════════════════════════
+const PK='vhq_skill_v1';
+let progress={}, userId=null;
+
+async function loadProgress(){
+  if(sb){
+    const {data:{session}}=await sb.auth.getSession().catch(()=>({data:{session:null}}));
+    if(session){
+      userId=session.user.id;
+      const {data}=await sb.from('skill_progress').select('node_id,stars').eq('user_id',userId).catch(()=>({data:null}));
+      if(data) data.forEach(r=>{ progress[r.node_id]=r.stars||1; });
+      updateXP(); return;
+    }
+  }
+  try{ progress=JSON.parse(localStorage.getItem(PK)||'{}'); }catch(e){ progress={}; }
+  updateXP();
+}
+
+async function saveProgress(nodeId,stars){
+  progress[nodeId]=stars;
+  if(sb&&userId){
+    await sb.from('skill_progress').upsert({user_id:userId,node_id:nodeId,stars,completed_at:new Date().toISOString()}).catch(()=>{});
+  } else {
+    localStorage.setItem(PK,JSON.stringify(progress));
+  }
+  updateXP();
+}
+
+function updateXP(){
+  const tot=Object.values(progress).reduce((a,b)=>a+(b||0),0);
+  document.getElementById('xpBadge').textContent='★ '+tot;
+}
+
+function flatNodes(){ return TREE.flatMap(s=>s.nodes); }
+
+function getState(nodeId){
+  if(progress[nodeId]) return 'done';
+  const all=flatNodes(), idx=all.findIndex(n=>n.id===nodeId);
+  if(idx===0) return 'active';
+  if(progress[all[idx-1].id]) return 'active';
+  return 'locked';
+}
+
+function starsText(nodeId){
+  const s=progress[nodeId]||0;
+  return s?'★'.repeat(s)+'☆'.repeat(Math.max(0,3-s)):'';
+}
+
+// ══════════════════════════════════════════
+//  TREE RENDER
+// ══════════════════════════════════════════
+const ZPOS=['C','R','C','L','C','R','C','L'];
+function render(){
+  const map=document.getElementById('map');
+  const leg=map.querySelector('.legend');
+  map.innerHTML=''; map.appendChild(leg);
+  let gi=0;
+  TREE.forEach(sec=>{
+    const banner=document.createElement('div');
+    banner.className='sec';
+    banner.style.cssText=`background:linear-gradient(135deg,${sec.color},${sec.dark});box-shadow:0 8px 24px ${sec.shadow}`;
+    banner.innerHTML=`<div class="sec-ico">${sec.ico}</div><div class="sec-info"><div>${sec.label}</div><div class="sec-sub">${sec.sub}</div></div>`;
+    map.appendChild(banner);
+
+    sec.nodes.forEach((node,ni)=>{
+      const state=getState(node.id);
+      const pos=ZPOS[gi%ZPOS.length]; gi++;
+      const row=document.createElement('div');
+      row.className='row '+pos;
+      const nw=document.createElement('div');
+      nw.className='nw';
+      const nd=document.createElement('div');
+      nd.className='nd '+(node.type==='quiz'?'quiz ':'')+ state;
+      if(state!=='locked'){
+        nd.style.cssText=`background:linear-gradient(145deg,${sec.color},${sec.dark});border-color:${sec.dark};box-shadow:0 8px 22px ${sec.shadow}`;
+        nd.onclick=()=>state==='active'?startLesson(node,sec):confirm('"'+node.lbl.replace(/\n/g,' ')+'" đã có '+starsText(node.id)+'\nHọc lại để có thêm sao?')&&startLesson(node,sec);
+      }
+      nd.innerHTML=`<div class="ico">${state==='locked'?'🔒':node.ico}</div><div class="lbl">${state==='locked'?'':node.lbl.replace(/\n/g,'<br>')}</div>`;
+      const ns=document.createElement('div');
+      ns.className='nstars';
+      ns.textContent=state==='done'?starsText(node.id):state==='active'?'Bắt đầu!':'';
+      nw.appendChild(nd); nw.appendChild(ns); row.appendChild(nw); map.appendChild(row);
+      if(ni<sec.nodes.length-1){
+        const conn=document.createElement('div');
+        conn.className='conn '+(state==='done'?'done':'');
+        conn.style.cssText=`background:linear-gradient(${sec.color},${sec.dark});height:24px`;
+        map.appendChild(conn);
+      }
+    });
+  });
+}
+
+// ══════════════════════════════════════════
+//  LESSON FLOW
+// ══════════════════════════════════════════
+let L={qs:[],idx:0,sel:-1,hearts:3,wrong:0,node:null,sec:null};
+let lesState='pick';
+
+function startLesson(node,sec){
+  const qs=getQs(node).slice();
+  for(let i=qs.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [qs[i],qs[j]]=[qs[j],qs[i]]; }
+  L={qs,idx:0,sel:-1,hearts:3,wrong:0,node,sec};
+  document.documentElement.style.setProperty('--nc',sec.color);
+  document.documentElement.style.setProperty('--nd',sec.dark);
+  document.documentElement.style.setProperty('--ns',sec.shadow);
+  document.documentElement.style.setProperty('--nl',sec.light);
+  document.getElementById('lesOv').classList.add('open');
+  document.body.style.overflow='hidden';
+  renderHearts(); renderProgress(); renderQuestion();
+}
+
+function lesExit(){
+  document.getElementById('lesOv').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+function renderHearts(){
+  for(let i=0;i<3;i++) document.getElementById('h'+i).className='heart'+(i>=L.hearts?' lost':'');
+}
+
+function renderProgress(){
+  const wrap=document.getElementById('progWrap');
+  wrap.innerHTML='';
+  L.qs.forEach((_,i)=>{
+    const d=document.createElement('div');
+    d.className='prog-dot'+(i<L.idx?' done':i===L.idx?' cur':'');
+    if(i===L.idx) d.style.background=L.sec.color;
+    wrap.appendChild(d);
+  });
+}
+
+function renderQuestion(){
+  const q=L.qs[L.idx];
+  const body=document.getElementById('lesBody');
+  body.innerHTML=
+    `<div class="q-label">Chọn đáp án đúng</div>`+
+    renderVis(q.vis,L.sec.color)+
+    `<div class="q-text">${q.q}</div>`+
+    `<div class="choices" id="choicesGrid"></div>`;
+  const grid=document.getElementById('choicesGrid');
+  q.choices.forEach((c,i)=>{
+    const btn=document.createElement('button');
+    btn.className='ch-btn';
+    btn.innerHTML=c;
+    btn.onclick=()=>selectChoice(i);
+    grid.appendChild(btn);
+  });
+  // Reset footer
+  document.getElementById('fbBar').className='fb-bar';
+  const lesBtn=document.getElementById('lesBtn');
+  lesBtn.className='les-btn'; lesBtn.disabled=true; lesBtn.textContent='KIỂM TRA';
+  L.sel=-1; lesState='pick';
+}
+
+function selectChoice(i){
+  if(lesState!=='pick') return;
+  L.sel=i;
+  document.querySelectorAll('.ch-btn').forEach((b,j)=>{ b.className='ch-btn'+(j===i?' sel':''); });
+  const lesBtn=document.getElementById('lesBtn');
+  lesBtn.disabled=false; lesBtn.className='les-btn check';
+}
+
+function lesAction(){
+  if(lesState==='pick') checkAnswer();
+  else nextQuestion();
+}
+
+function checkAnswer(){
+  const q=L.qs[L.idx];
+  const ok=L.sel===q.ans;
+  document.querySelectorAll('.ch-btn').forEach((b,i)=>{
+    b.disabled=true;
+    if(i===q.ans) b.className='ch-btn correct';
+    else if(i===L.sel&&!ok) b.className='ch-btn wrong';
+  });
+  const fb=document.getElementById('fbBar');
+  const lesBtn=document.getElementById('lesBtn');
+  if(ok){
+    fb.className='fb-bar ok';
+    document.getElementById('fbTitle').textContent='✓  Đúng rồi! Giỏi lắm!';
+    document.getElementById('fbHint').textContent='';
+    lesBtn.className='les-btn next-ok';
+  } else {
+    L.wrong++; L.hearts=Math.max(0,L.hearts-1); renderHearts();
+    fb.className='fb-bar ng';
+    document.getElementById('fbTitle').textContent='✗  Chưa đúng!';
+    document.getElementById('fbHint').textContent=q.hint||'';
+    lesBtn.className='les-btn next-ng';
+  }
+  lesBtn.textContent='TIẾP THEO';
+  lesState='checked';
+}
+
+function nextQuestion(){
+  L.idx++;
+  if(L.idx>=L.qs.length){ completeLesson(); return; }
+  renderProgress(); renderQuestion();
+}
+
+function completeLesson(){
+  lesExit();
+  const stars=L.wrong===0?3:L.wrong<=2?2:1;
+  const prev=progress[L.node.id]||0;
+  const best=Math.max(prev,stars);
+  saveProgress(L.node.id,best).then(()=>render());
+  showComplete(stars,best>prev);
+}
+
+// ══════════════════════════════════════════
+//  COMPLETE SCREEN
+// ══════════════════════════════════════════
+function showComplete(stars,improved){
+  document.documentElement.style.setProperty('--nc',L.sec.color);
+  document.documentElement.style.setProperty('--ns',L.sec.shadow);
+  document.getElementById('compTrophy').textContent=stars===3?'🏆':stars===2?'🌟':'💪';
+  document.getElementById('compTitle').textContent=stars===3?'Hoàn hảo!':stars===2?'Rất tốt!':'Cố gắng lên!';
+  document.getElementById('compSub').textContent=
+    L.wrong===0?'Không sai một câu nào! Tuyệt vời!'
+    :L.wrong===1?'Chỉ sai 1 câu – rất giỏi!'
+    :L.wrong===2?'Sai 2 câu – vẫn tốt lắm!'
+    :'Học lại lần nữa nhé, em sẽ làm tốt hơn!';
+  document.getElementById('compStars').textContent='★'.repeat(stars)+'☆'.repeat(3-stars);
+  document.getElementById('compXP').textContent='+'+stars+' sao'+(improved?' (mới!)':'');
+  const all=flatNodes(), ci=all.findIndex(n=>n.id===L.node.id);
+  const nxt=all[ci+1];
+  const nxtBtn=document.getElementById('compNextBtn');
+  if(nxt&&(progress[nxt.id]||getState(nxt.id)==='active')){
+    const ns=TREE.find(s=>s.nodes.find(n=>n.id===nxt.id));
+    nxtBtn.textContent='Tiếp theo';
+    nxtBtn.style.background=(ns||L.sec).color;
+    nxtBtn.onclick=()=>{ compClose(); startLesson(nxt,ns||L.sec); };
+  } else {
+    nxtBtn.textContent='Hoàn thành!';
+    nxtBtn.style.background=L.sec.color;
+    nxtBtn.onclick=compClose;
+  }
+  document.getElementById('compOv').classList.add('open');
+}
+
+function compClose(){
+  document.getElementById('compOv').classList.remove('open');
+}
+
+// ── INIT ──
+(async()=>{ await loadProgress(); render(); })();
+</script>
+</body>
+</html>
