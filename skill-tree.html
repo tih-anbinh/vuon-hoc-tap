@@ -37,23 +37,21 @@ body{font-family:var(--ff);background:var(--bg);color:var(--ink);min-height:100v
   padding:5px 14px;font-weight:800;font-size:.9rem}
 
 /* ── MINI METRO MAP ── */
-.minimap{display:flex;align-items:center;overflow-x:auto;padding:0 4px 8px;
-  scrollbar-width:none;-webkit-overflow-scrolling:touch}
-.minimap::-webkit-scrollbar{display:none}
-.mm-node{display:flex;flex-direction:column;align-items:center;gap:3px;flex-shrink:0;cursor:pointer}
-.mm-dot{width:16px;height:16px;border-radius:50%;border:2.5px solid rgba(255,255,255,.3);
-  background:rgba(255,255,255,.15);position:relative;transition:background .25s}
+.minimap{display:flex;flex-direction:column;gap:5px;padding:2px 8px 10px}
+.mm-row{display:flex;align-items:center;justify-content:center}
+.mm-node{display:flex;flex-direction:column;align-items:center;gap:4px;flex-shrink:0;cursor:pointer}
+.mm-dot{width:38px;height:38px;border-radius:50%;border:3px solid rgba(255,255,255,.3);
+  background:rgba(255,255,255,.15);position:relative;transition:background .25s;display:flex;align-items:center;justify-content:center}
 .mm-dot.done{background:var(--green);border-color:var(--green)}
-.mm-dot.active{background:var(--yellow);border-color:var(--yellow);box-shadow:0 0 0 3px rgba(255,193,7,.4)}
-.mm-label{font-size:.42rem;font-weight:700;color:rgba(255,255,255,.55);
+.mm-dot.active{background:var(--yellow);border-color:var(--yellow);box-shadow:0 0 0 4px rgba(255,193,7,.35)}
+.mm-label{font-size:.72rem;font-weight:800;color:rgba(255,255,255,.6);
   text-align:center;white-space:nowrap}
 .mm-label.done{color:var(--green)}.mm-label.active{color:var(--yellow)}
-.mm-line{height:3px;flex:1;min-width:14px;max-width:36px;
-  background:rgba(255,255,255,.18);border-radius:2px;transition:background .3s}
+.mm-line{height:5px;flex:1;min-width:12px;max-width:40px;
+  background:rgba(255,255,255,.18);border-radius:3px;transition:background .3s}
 .mm-line.done{background:var(--green)}
-.mm-train{position:absolute;top:-7px;left:50%;transform:translateX(-50%);
-  font-size:1rem;animation:trainBob .6s ease-in-out infinite alternate}
-@keyframes trainBob{from{transform:translateX(-50%)}to{transform:translateX(-50%) translateY(-3px)}}
+.mm-train{font-size:1.1rem;line-height:1;animation:trainBob .6s ease-in-out infinite alternate}
+@keyframes trainBob{from{transform:translateY(0)}to{transform:translateY(-3px)}}
 
 /* ── CITY SKYLINE ── */
 .city-wrap{background:linear-gradient(175deg,#060e20 0%,#0f2248 38%,#6b2a08 72%,#d96020 100%);
@@ -74,9 +72,7 @@ body{font-family:var(--ff);background:var(--bg);color:var(--ink);min-height:100v
   background:#fff;overflow:hidden;box-shadow:0 6px 20px rgba(30,95,168,.12)}
 .sta.complete{border-color:var(--green)}
 .sta.locked{border-color:var(--line);opacity:.7;pointer-events:none}
-.sta-hdr{display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer}
-.sta:not(.locked) .sta-hdr{background:linear-gradient(135deg,var(--metro),var(--metro-d))}
-.sta.complete .sta-hdr{background:linear-gradient(135deg,var(--green),var(--green-d))}
+.sta-hdr{display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;position:relative;overflow:hidden}
 .sta.locked .sta-hdr{background:linear-gradient(135deg,#8a9ab5,#5a6a80)}
 .sta-num{width:40px;height:40px;border-radius:50%;
   background:rgba(255,255,255,.22);border:2.5px solid rgba(255,255,255,.5);
@@ -95,17 +91,17 @@ body{font-family:var(--ff);background:var(--bg);color:var(--ink);min-height:100v
 .nd-wrap{display:flex;flex-direction:column;align-items:center;gap:5px}
 
 /* ── NODES ── */
-.nd{width:86px;height:86px;border-radius:50%;display:flex;flex-direction:column;
+.nd{width:160px;height:160px;border-radius:50%;display:flex;flex-direction:column;
   align-items:center;justify-content:center;cursor:pointer;
-  border:3px solid transparent;transition:transform .12s,box-shadow .2s;user-select:none}
+  border:4px solid transparent;transition:transform .12s,box-shadow .2s;user-select:none}
 .nd:active{transform:scale(.91)!important}
-.nd .ico{font-size:1.1rem;font-weight:800;line-height:1;text-align:center;max-width:70px}
-.nd .lbl{font-size:.52rem;font-weight:700;margin-top:4px;text-align:center;max-width:70px;line-height:1.25}
-.nd.done{color:#fff;background:linear-gradient(145deg,#4ecb82,#278a52);border-color:#278a52;box-shadow:0 6px 16px rgba(78,203,130,.38)}
-.nd.active{color:#fff;background:linear-gradient(145deg,var(--metro),var(--metro-d));border-color:var(--metro-d);box-shadow:0 8px 22px rgba(30,95,168,.45);animation:ndPulse 2.3s ease-in-out infinite}
-.nd.locked{background:#e8ecf4!important;border-color:#c8d2e0!important;color:#9aa8be;cursor:default;box-shadow:none!important}
-.nd.quiz{width:92px;height:92px}
-.nstars{font-size:.9rem;height:18px;line-height:1;color:var(--yellow-d)}
+.nd .ico{font-size:1.9rem;font-weight:800;line-height:1.1;text-align:center;max-width:130px}
+.nd .lbl{font-size:.82rem;font-weight:700;margin-top:6px;text-align:center;max-width:130px;line-height:1.3}
+.nd.done{color:#fff;background:linear-gradient(145deg,#4ecb82,#278a52);border-color:#278a52;box-shadow:0 8px 22px rgba(78,203,130,.38)}
+.nd.active{color:#fff;background:linear-gradient(145deg,var(--nc),var(--nd));border-color:var(--nd);box-shadow:0 10px 28px var(--ns);animation:ndPulse 2.3s ease-in-out infinite}
+.nd.locked{background:#e8ecf4!important;border-color:#c8d2e0!important;color:#9aa8be;cursor:default;box-shadow:none!important;font-size:2.2rem}
+.nd.quiz{width:172px;height:172px}
+.nstars{font-size:1.1rem;height:22px;line-height:1;color:var(--yellow-d)}
 @keyframes ndPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.07);filter:brightness(1.1)}}
 
 /* ── TRACK CONNECTOR ── */
@@ -231,7 +227,11 @@ body{font-family:var(--ff);background:var(--bg);color:var(--ink);min-height:100v
 .bot{position:fixed;bottom:0;left:0;right:0;z-index:15;background:rgba(240,245,255,.97);backdrop-filter:blur(14px);border-top:2px solid var(--line);display:flex;align-items:center;justify-content:center;padding:10px 16px calc(10px + env(safe-area-inset-bottom))}
 .bot a{display:flex;align-items:center;gap:8px;padding:11px 26px;border-radius:999px;background:var(--metro-l);color:var(--metro-d);font-weight:800;font-size:.95rem;text-decoration:none}
 
-@media(max-width:360px){.nd{width:76px;height:76px}.nd.quiz{width:82px;height:82px}.ch-btn{font-size:1rem;min-height:66px}}
+/* ── STATION BANNER TRAIN ── */
+.sta-banner-train{position:absolute;bottom:6px;animation:bannerTrain var(--tt,8s) linear infinite;will-change:transform;pointer-events:none}
+@keyframes bannerTrain{0%{left:-120px;transform:scaleX(1)}49.9%{left:calc(100% + 5px);transform:scaleX(1)}50%{left:calc(100% + 5px);transform:scaleX(-1)}99.9%{left:-120px;transform:scaleX(-1)}100%{left:-120px;transform:scaleX(1)}}
+
+@media(max-width:360px){.nd{width:132px;height:132px}.nd.quiz{width:144px;height:144px}.nd .ico{font-size:1.5rem}.nd .lbl{font-size:.72rem}.ch-btn{font-size:1rem;min-height:66px}}
 </style>
 </head>
 <body>
@@ -411,25 +411,25 @@ const SHAPES={
 function svgShape(n,c){return`<svg viewBox="0 0 100 100" width="108" height="108">${(SHAPES[n]||SHAPES.circle)(c)}</svg>`;}
 
 const TREE=[
-  {id:'tv_cc', station:'Suối Tiên',    stNum:'S1', label:'Chữ cái',       sub:'Tiếng Việt · HK1',color:'#ff8fb1',dark:'#c8365f',shadow:'rgba(200,54,95,.35)',light:'#ffe4ec',
+  {id:'tv_cc', station:'Suối Tiên',    stNum:'S1', label:'Chữ cái',       sub:'Tiếng Việt · HK1',color:'#e91e8c',dark:'#880e4f',shadow:'rgba(233,30,140,.38)',light:'#fce4ec',tt:'7s',
    nodes:[{id:'cc_1',ico:'Aa',lbl:'a · ă · â',desc:'Ba dạng của âm A'},{id:'cc_2',ico:'Bb',lbl:'b · c · d · đ',desc:'Chữ có nét cong và nét xuống'},{id:'cc_3',ico:'Ee',lbl:'e · ê · g · h',desc:'Chữ E, Ê, G, H'},{id:'cc_4',ico:'Ii',lbl:'i · k · l · m · n',desc:'Năm chữ phổ biến'},{id:'cc_5',ico:'Oo',lbl:'o · ô · ơ · p',desc:'Ba dạng âm O và chữ P'},{id:'cc_6',ico:'Rr',lbl:'r · s · t · u · ư · v · x · y',desc:'Cuối bảng chữ cái'},{id:'cc_q',ico:'★',lbl:'Ôn tập chữ cái',desc:'Kiểm tra 29 chữ cái',type:'quiz'}]},
-  {id:'tv_dt', station:'Đại học QG',   stNum:'S2', label:'Dấu thanh',     sub:'Tiếng Việt · HK1',color:'#c97ef0',dark:'#7340b8',shadow:'rgba(159,122,232,.38)',light:'#ede5ff',
+  {id:'tv_dt', station:'Đại học QG',   stNum:'S2', label:'Dấu thanh',     sub:'Tiếng Việt · HK1',color:'#8b5cf6',dark:'#4c1d95',shadow:'rgba(139,92,246,.38)',light:'#f5f3ff',tt:'9s',
    nodes:[{id:'dt_1',ico:'/ \\',lbl:'Huyền · Sắc',desc:'Dấu huyền (bà) và sắc (bá)'},{id:'dt_2',ico:'? ~ .',lbl:'Hỏi · Ngã · Nặng',desc:'Ba dấu còn lại'},{id:'dt_q',ico:'★',lbl:'Ghép âm + dấu',desc:'Luyện ghép âm với dấu',type:'quiz'}]},
-  {id:'tv_ag', station:'Khu CNC',      stNum:'S3', label:'Âm ghép',       sub:'Tiếng Việt · HK1',color:'#5ba8f5',dark:'#2f76c9',shadow:'rgba(91,168,245,.38)',light:'#deeeff',
+  {id:'tv_ag', station:'Khu CNC',      stNum:'S3', label:'Âm ghép',       sub:'Tiếng Việt · HK1',color:'#3b82f6',dark:'#1e3a8a',shadow:'rgba(59,130,246,.38)',light:'#eff6ff',tt:'6s',
    nodes:[{id:'ag_1',ico:'ch',lbl:'ch · gh · gi · kh',desc:'Phân biệt ch, gh, gi, kh'},{id:'ag_2',ico:'ng',lbl:'ng · ngh · nh · ph',desc:'ng/ngh trước e/i; nh, ph'},{id:'ag_3',ico:'qu',lbl:'qu · th · tr',desc:'qu, th, tr'},{id:'ag_q',ico:'★',lbl:'Ôn tập âm ghép',desc:'Nhận biết âm ghép',type:'quiz'}]},
-  {id:'tv_van',station:'Thủ Đức',      stNum:'S4', label:'Vần cơ bản',   sub:'Tiếng Việt · HK1',color:'#4ecb82',dark:'#278a52',shadow:'rgba(78,203,130,.38)',light:'#d8f5e7',
+  {id:'tv_van',station:'Thủ Đức',      stNum:'S4', label:'Vần cơ bản',   sub:'Tiếng Việt · HK1',color:'#10b981',dark:'#064e3b',shadow:'rgba(16,185,129,.38)',light:'#ecfdf5',tt:'8s',
    nodes:[{id:'v_1',ico:'an',lbl:'an · ăn · ân\nam · ăm · âm',desc:'Vần kết thúc n và m'},{id:'v_2',ico:'ao',lbl:'ao · au · ay · ây',desc:'Vần mở và nửa mở'},{id:'v_3',ico:'ang',lbl:'ang · anh · ach',desc:'Vần có ng/nh/ch'},{id:'v_4',ico:'ong',lbl:'ong · ông · ơng',desc:'Vần ong và biến thể'},{id:'v_5',ico:'inh',lbl:'inh · ich · im · ip',desc:'Vần i: bình, bích, tim'},{id:'v_q',ico:'★',lbl:'Ôn tập vần',desc:'Đọc từ có vần',type:'quiz'}]},
-  {id:'tv_vc', station:'Bình Thái',    stNum:'S5', label:'Vần phức tạp', sub:'Tiếng Việt · HK2',color:'#3ecfcf',dark:'#1a9999',shadow:'rgba(62,207,207,.38)',light:'#d4f6f6',
+  {id:'tv_vc', station:'Bình Thái',    stNum:'S5', label:'Vần phức tạp', sub:'Tiếng Việt · HK2',color:'#06b6d4',dark:'#164e63',shadow:'rgba(6,182,212,.38)',light:'#ecfeff',tt:'10s',
    nodes:[{id:'vc_1',ico:'oac',lbl:'oac · oam · oan',desc:'Vần có âm đệm o'},{id:'vc_2',ico:'uyn',lbl:'uyên · uông · uyn',desc:'Vần khó: khuyên, cuống'},{id:'vc_3',ico:'iêu',lbl:'iêu · yêu · uôi',desc:'Vần đôi: diều, yêu, buổi'},{id:'vc_q',ico:'★',lbl:'Đọc hiểu',desc:'Đọc đoạn văn ngắn',type:'quiz'}]},
-  {id:'tv_vt', station:'Phước Long',   stNum:'S6', label:'Luyện viết',   sub:'Tiếng Việt · HK2',color:'#9f7ae8',dark:'#6540b8',shadow:'rgba(159,122,232,.38)',light:'#ede5ff',
+  {id:'tv_vt', station:'Phước Long',   stNum:'S6', label:'Luyện viết',   sub:'Tiếng Việt · HK2',color:'#f59e0b',dark:'#78350f',shadow:'rgba(245,158,11,.38)',light:'#fffbeb',tt:'7.5s',
    nodes:[{id:'vt_1',ico:'r/d',lbl:'Chính tả\nr · d · gi',desc:'Phân biệt r, d, gi'},{id:'vt_2',ico:'s/x',lbl:'Chính tả\ns · x · ch · tr',desc:'Phân biệt s/x và ch/tr'},{id:'vt_3',ico:'g/gh',lbl:'Chính tả\ng · gh · ng · ngh',desc:'Quy tắc g/gh và ng/ngh'},{id:'vt_q',ico:'★',lbl:'Kiểm tra chính tả',desc:'Điền từ đúng',type:'quiz'}]},
-  {id:'t_s10',  station:'Rạch Chiếc', stNum:'S7', label:'Số 0 đến 10',  sub:'Toán · HK1',color:'#ffc94d',dark:'#b87900',shadow:'rgba(255,201,77,.45)',light:'#fff3cc',
+  {id:'t_s10',  station:'Rạch Chiếc', stNum:'S7', label:'Số 0 đến 10',  sub:'Toán · HK1',color:'#ef4444',dark:'#7f1d1d',shadow:'rgba(239,68,68,.4)',light:'#fef2f2',tt:'6.5s',
    nodes:[{id:'t1_1',ico:'0-5',lbl:'Số 0 đến 5',desc:'Đếm vật, nhận biết số'},{id:'t1_2',ico:'6-10',lbl:'Số 6 đến 10',desc:'Mở rộng lên 10'},{id:'t1_3',ico:'><',lbl:'So sánh số',desc:'7>4, 3<8 – điền dấu'},{id:'t1_4',ico:'□',lbl:'Hình phẳng',desc:'Vuông, tròn, tam giác'},{id:'t1_q',ico:'★',lbl:'Ôn tập số 0–10',desc:'Đếm, so sánh, hình',type:'quiz'}]},
-  {id:'t_pt10', station:'An Phú',     stNum:'S8', label:'Phép tính ≤10', sub:'Toán · HK1',color:'#ff8c42',dark:'#c05a10',shadow:'rgba(255,140,66,.4)',light:'#ffe0cc',
+  {id:'t_pt10', station:'An Phú',     stNum:'S8', label:'Phép tính ≤10', sub:'Toán · HK1',color:'#f97316',dark:'#7c2d12',shadow:'rgba(249,115,22,.4)',light:'#fff7ed',tt:'9.5s',
    nodes:[{id:'t2_1',ico:'+',lbl:'Phép cộng\ntrong 10',desc:'5+3=8'},{id:'t2_2',ico:'−',lbl:'Phép trừ\ntrong 10',desc:'9−4=5'},{id:'t2_3',ico:'?',lbl:'Toán lời văn',desc:'Bình có 4 quả bóng...'},{id:'t2_q',ico:'★',lbl:'Ôn tập phép tính',desc:'Cộng+trừ trong 10',type:'quiz'}]},
-  {id:'t_s100', station:'Thảo Điền',  stNum:'S9', label:'Số đến 100',   sub:'Toán · HK2',color:'#f05555',dark:'#c02020',shadow:'rgba(240,85,85,.38)',light:'#ffe0e0',
+  {id:'t_s100', station:'Thảo Điền',  stNum:'S9', label:'Số đến 100',   sub:'Toán · HK2',color:'#84cc16',dark:'#365314',shadow:'rgba(132,204,22,.4)',light:'#f7fee7',tt:'8.5s',
    nodes:[{id:'t3_1',ico:'11-20',lbl:'Số 11 đến 20',desc:'Chục và đơn vị'},{id:'t3_2',ico:'10 20',lbl:'Số tròn chục',desc:'10, 20, 30... 100'},{id:'t3_3',ico:'100',lbl:'So sánh đến 100',desc:'Sắp xếp tăng/giảm dần'},{id:'t3_4',ico:'cm h',lbl:'Đo dài · Xem giờ',desc:'Thước cm; đồng hồ'},{id:'t3_q',ico:'★',lbl:'Ôn tập đến 100',desc:'Đọc số, so sánh, xem giờ',type:'quiz'}]},
-  {id:'t_pt100',station:'Bến Thành',  stNum:'S10',label:'Phép tính ≤100',sub:'Toán · HK2',color:'#4ecb82',dark:'#278a52',shadow:'rgba(78,203,130,.38)',light:'#d8f5e7',
+  {id:'t_pt100',station:'Bến Thành',  stNum:'S10',label:'Phép tính ≤100',sub:'Toán · HK2',color:'#ec4899',dark:'#831843',shadow:'rgba(236,72,153,.4)',light:'#fdf2f8',tt:'7s',
    nodes:[{id:'t4_1',ico:'42+25',lbl:'Cộng không nhớ',desc:'42+25=67'},{id:'t4_2',ico:'88-34',lbl:'Trừ không nhớ',desc:'88−34=54'},{id:'t4_3',ico:'=?',lbl:'Toán lời văn\n(2 bước)',desc:'Lớp 1A+1B cả hai lớp?'},{id:'t4_q',ico:'★',lbl:'Kiểm tra cuối năm',desc:'Tổng hợp toàn bộ',type:'quiz'}]},
 ];
 
@@ -822,16 +822,19 @@ function renderMinimap(){
   const cur=currentStationIdx();
   const el=document.getElementById('minimap');
   if(!el) return;
-  let html='';
-  TREE.forEach((sec,i)=>{
-    const done=isSectionDone(sec),active=i===cur;
-    html+=`<div class="mm-node" onclick="scrollToStation('${sec.id}')"><div class="mm-dot ${done?'done':active?'active':''}">
-      ${active?'<div class="mm-train">🚇</div>':''}
-    </div><div class="mm-label ${done?'done':active?'active':''}">${sec.stNum}</div></div>`;
-    if(i<TREE.length-1) html+=`<div class="mm-line ${done?'done':''}"></div>`;
-  });
-  el.innerHTML=html;
-  setTimeout(()=>{const a=el.querySelector('.mm-dot.active');if(a) a.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});},80);
+  function buildRow(slice,offset){
+    let h='<div class="mm-row">';
+    slice.forEach((sec,i)=>{
+      const si=offset+i,done=isSectionDone(sec),active=si===cur;
+      h+=`<div class="mm-node" onclick="scrollToStation('${sec.id}')">
+        <div class="mm-dot ${done?'done':active?'active':''}">${active?'<span class="mm-train">🚇</span>':done?'✓':''}</div>
+        <div class="mm-label ${done?'done':active?'active':''}">${sec.stNum}</div>
+      </div>`;
+      if(i<slice.length-1) h+=`<div class="mm-line ${done?'done':''}"></div>`;
+    });
+    return h+'</div>';
+  }
+  el.innerHTML=buildRow(TREE.slice(0,5),0)+buildRow(TREE.slice(5),5);
 }
 
 function scrollToStation(secId){
@@ -850,7 +853,21 @@ function render(){
     const sta=document.createElement('div');
     sta.id='sta-'+sec.id;
     sta.className='sta '+(done?'complete':allLocked?'locked':'');
-    sta.innerHTML=`<div class="sta-hdr"><div class="sta-num">${sec.stNum}</div><div class="sta-info"><div class="sta-name">${sec.station}</div><div class="sta-sub">${sec.label} · ${sec.sub}</div></div>${done?'<div class="sta-badge">✓ Hoàn thành</div>':''}</div>`;
+    const hdrBg=allLocked?'linear-gradient(135deg,#8a9ab5,#5a6a80)':done?`linear-gradient(135deg,${sec.color},${sec.dark})`:`linear-gradient(135deg,${sec.color},${sec.dark})`;
+    const trainSvg=allLocked?'':
+      `<div class="sta-banner-train" style="--tt:${sec.tt||'8s'}">
+        <svg viewBox="0 0 110 30" width="100" height="27" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="108" height="22" rx="6" fill="rgba(0,0,0,.22)"/>
+          <rect x="1" y="18" width="108" height="5" fill="rgba(255,255,255,.25)"/>
+          <rect x="8" y="5" width="15" height="11" rx="2" fill="rgba(255,255,255,.75)"/>
+          <rect x="29" y="5" width="15" height="11" rx="2" fill="rgba(255,255,255,.75)"/>
+          <rect x="50" y="5" width="15" height="11" rx="2" fill="rgba(255,255,255,.75)"/>
+          <rect x="71" y="5" width="15" height="11" rx="2" fill="rgba(255,255,255,.75)"/>
+          <circle cx="18" cy="26" r="3.5" fill="rgba(0,0,0,.4)"/><circle cx="92" cy="26" r="3.5" fill="rgba(0,0,0,.4)"/>
+          <circle cx="4" cy="11" r="3" fill="rgba(255,255,255,.8)"/>
+        </svg>
+      </div>`;
+    sta.innerHTML=`<div class="sta-hdr" style="background:${hdrBg}"><div class="sta-num">${sec.stNum}</div><div class="sta-info"><div class="sta-name">${sec.station}</div><div class="sta-sub">${sec.label} · ${sec.sub}</div></div>${done?'<div class="sta-badge">✓ Hoàn thành</div>':''}${trainSvg}</div>`;
     const body=document.createElement('div');body.className='sta-body';
     const grid=document.createElement('div');grid.className='nodes-grid';
     sec.nodes.forEach((node)=>{
