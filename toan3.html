@@ -1,0 +1,1779 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toán Lớp 3 – Ba sẽ cùng con</title>
+<!--
+  =====================================================================
+  GIÁO TRÌNH TOÁN LỚP 3 – BẢN TƯƠNG TÁC (Single-file HTML)
+  Author   : Huy Tran
+  Created  : 2026-09-13
+  Revision : 2.0
+  Changelog:
+    v2.0 - Toán có lời văn nay luyện VIẾT BÀI GIẢI CHUẨN:
+           câu lời giải → phép tính → kết quả + đơn vị → Đáp số.
+           Chấm điểm từng ý, có bài giải mẫu theo chuẩn SGK.
+         - Thêm mục "Cách trình bày một bài giải chuẩn".
+    v1.0 - Bản đầu: 4 chuyên đề + mẹo học + kiểm tra tổng hợp.
+  =====================================================================
+-->
+<style>
+:root{
+  --blue:#1565c0; --blue-l:#e3f2fd;
+  --red:#d32f2f;  --red-l:#ffebee;
+  --green:#2e7d32;--green-l:#e8f5e9;
+  --orange:#ef6c00;--orange-l:#fff3e0;
+  --purple:#6a1b9a;--purple-l:#f3e5f5;
+  --ink:#20303f; --muted:#5b7086;
+  --card:#ffffff; --line:#d7e3ee;
+  --shadow:0 4px 14px rgba(21,101,192,.10);
+  --radius:16px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  color:var(--ink); background:
+    radial-gradient(1200px 600px at 10% -10%, #e8f4ff 0%, transparent 60%),
+    radial-gradient(900px 500px at 110% 10%, #fff4e5 0%, transparent 55%),
+    #f6fafd;
+  line-height:1.65; font-size:16.5px;
+}
+.wrap{display:flex; min-height:100vh}
+nav.side{width:280px; flex:0 0 280px; background:#0d47a1; color:#fff;
+  padding:18px 14px 60px; position:sticky; top:0; height:100vh; overflow-y:auto}
+nav.side h1{font-size:19px; margin:0 0 4px; line-height:1.3}
+nav.side .sub{font-size:12.5px; opacity:.8; margin-bottom:14px}
+nav.side a{display:block; color:#dceaff; text-decoration:none; font-size:14.2px;
+  padding:7px 10px; border-radius:9px; margin:2px 0}
+nav.side a:hover{background:rgba(255,255,255,.14); color:#fff}
+nav.side a.head{font-weight:700; color:#ffd54f; margin-top:12px; font-size:14.6px}
+main{flex:1; min-width:0; padding:22px 26px 80px; max-width:1080px; margin:0 auto}
+.burger{display:none}
+
+h2.chapter{background:linear-gradient(90deg,#c62828,#ef6c00 45%,#fbc02d);
+  color:#fff; padding:12px 20px; border-radius:14px; font-size:23px;
+  margin:34px 0 16px; box-shadow:var(--shadow)}
+h2.chapter span.num{background:#fff; color:#c62828; border-radius:50%; width:34px; height:34px;
+  display:inline-flex; align-items:center; justify-content:center; font-weight:800;
+  margin-right:10px; font-size:19px}
+h3{color:var(--blue); border-left:6px solid var(--blue); padding-left:11px; margin:26px 0 10px; font-size:20px}
+h4{color:var(--purple); margin:18px 0 8px; font-size:17.5px}
+.card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:16px 18px; margin:12px 0; box-shadow:var(--shadow)}
+.rule{background:var(--orange-l); border:2px dashed var(--orange); border-radius:14px; padding:13px 16px; margin:12px 0; font-weight:600}
+.rule b{color:var(--red)}
+.tip{background:var(--green-l); border-left:6px solid var(--green); border-radius:10px; padding:12px 16px; margin:12px 0}
+.tip::before{content:"💡 MẸO HỌC NHANH"; display:block; font-weight:800; color:var(--green); margin-bottom:5px; letter-spacing:.4px; font-size:14px}
+.warn{background:var(--red-l); border-left:6px solid var(--red); border-radius:10px; padding:12px 16px; margin:12px 0}
+.warn::before{content:"⚠️ LỖI HAY MẮC"; display:block; font-weight:800; color:var(--red); margin-bottom:5px; font-size:14px}
+.ex{background:var(--blue-l); border-left:6px solid var(--blue); border-radius:10px; padding:12px 16px; margin:12px 0}
+.ex::before{content:"✏️ VÍ DỤ"; display:block; font-weight:800; color:var(--blue); margin-bottom:5px; font-size:14px}
+.grid2{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+.grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
+@media(max-width:900px){.grid2,.grid3{grid-template-columns:1fr}}
+.center{text-align:center}
+.big{font-size:22px; font-weight:800}
+
+table.t{border-collapse:collapse; width:100%; margin:10px 0; font-size:15.5px}
+table.t th{background:var(--blue); color:#fff; padding:8px 6px; border:1px solid #fff}
+table.t td{border:1px solid var(--line); padding:7px 6px; text-align:center; background:#fff}
+table.t tr:nth-child(even) td{background:#f7fbff}
+.mtable{display:grid; grid-template-columns:repeat(8,1fr); gap:5px; font-size:13.6px}
+@media(max-width:760px){.mtable{grid-template-columns:repeat(4,1fr)}}
+.mtable div{padding:5px 3px; border-radius:7px; text-align:center; font-weight:600}
+.c2{background:#ffe0b2}.c3{background:#c8e6c9}.c4{background:#b3e5fc}.c5{background:#dcedc8}
+.c6{background:#f8bbd0}.c7{background:#ffe082}.c8{background:#b2ebf2}.c9{background:#fff59d}
+
+/* ---------- Quiz ---------- */
+.quiz{background:linear-gradient(180deg,#fffdf5,#fff); border:2px solid #ffb300; border-radius:var(--radius); padding:16px 18px; margin:20px 0; box-shadow:var(--shadow)}
+.quiz .qhead{display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:10px}
+.quiz .qhead h4{margin:0; color:#e65100; font-size:18px}
+.quiz .qhead .spacer{flex:1}
+button{font-family:inherit; font-size:15px; font-weight:700; cursor:pointer;
+  border:none; border-radius:11px; padding:9px 16px; color:#fff; background:var(--blue);
+  box-shadow:0 3px 0 rgba(0,0,0,.14); transition:transform .08s}
+button:active{transform:translateY(2px); box-shadow:0 1px 0 rgba(0,0,0,.14)}
+button.grn{background:var(--green)} button.org{background:#ef6c00}
+button.gry{background:#607d8b} button.pur{background:var(--purple)}
+.qitem{border-bottom:1px dashed #e0e0e0; padding:11px 4px; display:flex; gap:10px; align-items:flex-start; flex-wrap:wrap}
+.qitem:last-child{border-bottom:none}
+.qno{flex:0 0 30px; height:30px; border-radius:50%; background:var(--blue); color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center; font-size:14px}
+.qbody{flex:1; min-width:240px}
+.qtext{font-weight:600}
+input.ans{font-family:inherit; font-size:16.5px; font-weight:700; color:#0d47a1;
+  width:150px; padding:7px 10px; border:2px solid var(--blue); border-radius:10px; text-align:center; background:#fff}
+input.ans:focus,.solve input:focus{outline:none; border-color:#ff8f00; box-shadow:0 0 0 3px #ffe082}
+.opts{display:flex; gap:8px; flex-wrap:wrap; margin-top:6px}
+.opts label{background:#fff; border:2px solid var(--line); border-radius:10px; padding:6px 12px; cursor:pointer; font-weight:600}
+.opts label:hover{border-color:var(--blue); background:var(--blue-l)}
+.opts input{margin-right:6px}
+.fb{margin-top:6px; font-weight:700; font-size:14.6px; display:none}
+.fb.ok{color:var(--green); display:block}
+.fb.no{color:var(--red); display:block}
+.fb ul{margin:4px 0 0 18px; padding:0; font-weight:600}
+.score{font-size:19px; font-weight:800; padding:12px 16px; border-radius:12px; margin-top:12px; display:none}
+.score.show{display:block}
+.s-gold{background:#fff8e1; border:2px solid #ffb300; color:#e65100}
+.s-good{background:#e8f5e9; border:2px solid #2e7d32; color:#2e7d32}
+.s-mid{background:#e3f2fd; border:2px solid #1565c0; color:#1565c0}
+.s-low{background:#ffebee; border:2px solid #d32f2f; color:#d32f2f}
+.hintbox{display:none; margin-top:6px; font-size:14.4px; background:#f1f8e9; border-left:4px solid #7cb342; padding:7px 10px; border-radius:8px}
+.hintbox.show{display:block}
+
+/* ---------- Khung BÀI GIẢI ---------- */
+.solve{margin-top:10px; background:#fbfdff; border:2px solid #90caf9; border-radius:14px; padding:12px 14px}
+.solve .bgtitle{display:inline-block; background:#1565c0; color:#fff; font-weight:800;
+  padding:3px 16px; border-radius:8px; font-size:15px; margin-bottom:10px}
+.sstep{margin-bottom:12px; padding-left:10px; border-left:4px solid #bbdefb}
+.slabel{display:inline-block; background:#fff59d; color:#e65100; font-weight:800;
+  font-size:12.5px; padding:1px 10px; border-radius:7px; margin-bottom:4px}
+.solve input{font-family:inherit; font-size:16px; font-weight:700; color:#0d47a1;
+  padding:6px 10px; border:2px solid #90caf9; border-radius:9px; background:#fff}
+.solve input.loi{width:100%; max-width:560px; text-align:left; font-weight:600; color:#1b5e20}
+.calcline{display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-top:6px}
+.solve input.pt{width:180px; text-align:center}
+.solve input.kq{width:110px; text-align:center; color:#c62828}
+.solve .dv{font-weight:700; color:var(--muted)}
+.dsline{margin-top:8px; font-weight:800; color:#c62828; display:flex; align-items:center; gap:8px; flex-wrap:wrap}
+.solve input.ds{width:200px; text-align:left; color:#c62828}
+.model{margin-top:8px; background:#fffde7; border:2px dashed #ffb300; border-radius:12px; padding:10px 14px; font-weight:600; color:#33691e}
+.model .mt{font-weight:800; color:#e65100; display:block; margin-bottom:4px}
+.model .ln{margin-left:6px}
+.model .ds{color:#c62828; font-weight:800}
+svg{max-width:100%; height:auto}
+.svgbox{text-align:center; background:#fff; border:1px solid var(--line); border-radius:14px; padding:10px; margin:10px 0}
+.badge{display:inline-block; background:var(--purple); color:#fff; border-radius:20px; padding:2px 11px; font-size:13px; font-weight:700; margin-right:6px}
+footer{text-align:center; color:var(--muted); font-size:14px; padding:30px 10px}
+@media(max-width:820px){
+  .wrap{flex-direction:column}
+  nav.side{width:100%; flex:none; height:auto; position:static; padding-bottom:16px}
+  nav.side .links{display:none} nav.side .links.open{display:block}
+  .burger{display:inline-block; background:#fff; color:#0d47a1; margin-top:6px}
+  main{padding:14px 14px 60px}
+}
+@media print{nav.side{display:none} .quiz{break-inside:avoid} body{background:#fff}}
+/* --- Tab system --- */
+.tab-bar{display:flex;gap:0;border-bottom:3px solid #1565c0;margin-bottom:20px;position:sticky;top:0;z-index:99;background:#f5f5f5;border-radius:0}
+.tab-btn{flex:1;padding:11px 0;font-size:15.5px;font-weight:800;border:none;background:transparent;cursor:pointer;color:#666;border-bottom:3px solid transparent;margin-bottom:-3px;transition:all .2s}
+.tab-btn.active{color:#1565c0;border-bottom-color:#1565c0;background:#e3f2fd}
+#tab-lt{display:block}
+#tab-bt{display:none}
+body.show-bt #tab-lt{display:none}
+body.show-bt #tab-bt{display:block}
+.bt-section{margin-bottom:28px}
+.bt-section-title{font-size:16px;font-weight:800;color:#0d47a1;background:#e3f2fd;padding:8px 14px;border-radius:8px;margin:16px 0 8px;border-left:4px solid #1565c0}
+.bt-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.bt-grid{grid-template-columns:1fr}}
+/* --- Roman numeral table --- */
+.roman-table{border-collapse:collapse;margin:10px auto;font-size:16px}
+.roman-table td,.roman-table th{border:2px solid #1565c0;padding:6px 14px;text-align:center}
+.roman-table th{background:#1565c0;color:#fff;font-weight:700}
+.roman-table tr:nth-child(even) td{background:#e3f2fd}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="side">
+  <h1>📘 Toán Lớp 3 – Học &amp; Luyện</h1>
+  <div class="sub">Giáo trình tương tác · Bài tập sinh ngẫu nhiên · Luyện viết bài giải · Tự chấm điểm</div>
+  <button class="burger" onclick="document.querySelector('.links').classList.toggle('open')">☰ Mục lục</button>
+  <div class="links">
+    <a class="head" href="#cd1">CHUYÊN ĐỀ 1 · Số trong phạm vi 100 000</a>
+    <a href="#c1-1">1.1 Cấu tạo số có 5 chữ số</a>
+    <a href="#c1-2">1.2 So sánh số</a>
+    <a href="#c1-3">1.3 Làm tròn số</a>
+    <a href="#c1-4">1.4 Chữ số La Mã (I – XII)</a>
+    <a class="head" href="#cd2">CHUYÊN ĐỀ 2 · Bốn phép tính</a>
+    <a href="#c2-1">2.1 Bảng nhân – bảng chia</a>
+    <a href="#c2-2">2.2 Cộng – Trừ</a>
+    <a href="#c2-3">2.3 Nhân – Chia với số 1 chữ số</a>
+    <a href="#c2-4">2.4 Tính giá trị biểu thức</a>
+    <a href="#c2-5">2.5 Tìm thành phần chưa biết</a>
+    <a href="#c2-6">2.6 Một phần mấy</a>
+    <a class="head" href="#cd3">CHUYÊN ĐỀ 3 · Hình học &amp; Đo lường</a>
+    <a href="#c3-1">3.1 Hình phẳng – Hình khối</a>
+    <a href="#c3-2">3.2 Chu vi – Diện tích</a>
+    <a href="#c3-3">3.3 Đơn vị đo</a>
+    <a href="#c3-4">3.4 Xem đồng hồ – Tháng năm</a>
+    <a class="head" href="#cd4">CHUYÊN ĐỀ 4 · Toán có lời văn</a>
+    <a href="#c4-0">📝 Cách trình bày bài giải chuẩn</a>
+    <a href="#c4-1">4.1 Gấp – Giảm – Gấp mấy lần</a>
+    <a href="#c4-2">4.2 Giải bằng hai bước tính</a>
+    <a href="#c4-3">4.3 Toán lời văn về hình học</a>
+    <a class="head" href="#cd5">CHUYÊN ĐỀ 5 · Xác suất cơ bản</a>
+    <a href="#c5-1">5.1 Đọc bảng số liệu</a>
+    <a href="#c5-2">5.2 Có thể – Chắc chắn – Không thể</a>
+    <a class="head" href="#meo">🥋 Bí quyết Cửu chương thần công</a>
+    <a class="head" href="#final">🏆 KIỂM TRA TỔNG HỢP</a>
+  </div>
+</nav>
+<main>
+<div class="tab-bar">
+  <button class="tab-btn active" onclick="switchTab(false,this)">📖 Lý Thuyết</button>
+  <button class="tab-btn" onclick="switchTab(true,this)">✏️ Luyện Tập</button>
+</div>
+<div id="tab-lt">
+<div class="card center" style="background:linear-gradient(135deg,#e3f2fd,#fff3e0)">
+  <div style="font-size:30px;font-weight:900;color:#0d47a1">Cùng con học Toán 3</div>
+</div>
+
+<!-- ================= CHUYÊN ĐỀ 1 ================= -->
+<h2 class="chapter" id="cd1"><span class="num">1</span>Các số trong phạm vi 100 000</h2>
+
+<h3 id="c1-1">1.1 Cấu tạo số có năm chữ số</h3>
+<div class="card">
+<h4>a. Quan hệ giữa các hàng</h4>
+<div class="grid2">
+  <div class="rule">10 đơn vị = <b>1 chục</b> (10)<br>10 chục = <b>1 trăm</b> (100)<br>10 trăm = <b>1 nghìn</b> (1 000)</div>
+  <div class="rule">10 nghìn = <b>1 chục nghìn</b> (10 000)<br>10 chục nghìn = <b>1 trăm nghìn</b> (100 000)<br>
+  <span style="color:#1565c0">Cứ 10 đơn vị của hàng bé = 1 đơn vị của hàng lớn hơn liền kề.</span></div>
+</div>
+
+<h4>b. Số có năm chữ số gồm 5 hàng</h4>
+<div class="svgbox">
+<svg viewBox="0 0 700 260" width="700">
+  <rect x="255" y="8" width="190" height="42" rx="10" fill="#1565c0"/>
+  <text x="350" y="36" text-anchor="middle" fill="#fff" font-size="20" font-weight="bold">Số 56 789</text>
+  <g stroke="#8d6e63" stroke-width="2">
+    <line x1="350" y1="50" x2="80" y2="95"/><line x1="350" y1="50" x2="215" y2="95"/>
+    <line x1="350" y1="50" x2="350" y2="95"/><line x1="350" y1="50" x2="485" y2="95"/>
+    <line x1="350" y1="50" x2="620" y2="95"/>
+  </g>
+  <g font-size="14" font-weight="bold" text-anchor="middle">
+    <rect x="15" y="95" width="130" height="52" rx="9" fill="#fce4ec" stroke="#ad1457" stroke-width="2"/>
+    <text x="80" y="118" fill="#ad1457">Hàng</text><text x="80" y="137" fill="#ad1457">chục nghìn</text>
+    <rect x="150" y="95" width="130" height="52" rx="9" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
+    <text x="215" y="118" fill="#6a1b9a">Hàng</text><text x="215" y="137" fill="#6a1b9a">nghìn</text>
+    <rect x="285" y="95" width="130" height="52" rx="9" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+    <text x="350" y="118" fill="#1565c0">Hàng</text><text x="350" y="137" fill="#1565c0">trăm</text>
+    <rect x="420" y="95" width="130" height="52" rx="9" fill="#ffebee" stroke="#c62828" stroke-width="2"/>
+    <text x="485" y="118" fill="#c62828">Hàng</text><text x="485" y="137" fill="#c62828">chục</text>
+    <rect x="555" y="95" width="130" height="52" rx="9" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+    <text x="620" y="118" fill="#2e7d32">Hàng</text><text x="620" y="137" fill="#2e7d32">đơn vị</text>
+  </g>
+  <g font-size="26" font-weight="bold" text-anchor="middle">
+    <text x="80" y="185" fill="#ad1457">5</text><text x="215" y="185" fill="#6a1b9a">6</text>
+    <text x="350" y="185" fill="#1565c0">7</text><text x="485" y="185" fill="#c62828">8</text>
+    <text x="620" y="185" fill="#2e7d32">9</text>
+  </g>
+  <g font-size="15" font-weight="bold" text-anchor="middle">
+    <text x="80" y="212" fill="#ad1457">50 000</text><text x="215" y="212" fill="#6a1b9a">6 000</text>
+    <text x="350" y="212" fill="#1565c0">700</text><text x="485" y="212" fill="#c62828">80</text>
+    <text x="620" y="212" fill="#2e7d32">9</text>
+  </g>
+  <rect x="120" y="228" width="460" height="30" rx="8" fill="#fff8e1" stroke="#ffb300" stroke-width="2"/>
+  <text x="350" y="249" text-anchor="middle" font-size="17" font-weight="bold" fill="#e65100">56 789 = 50 000 + 6 000 + 700 + 80 + 9</text>
+</svg>
+</div>
+<div class="ex">Số <b>56 789</b> gồm <b style="color:#ad1457">5 chục nghìn</b>, <b style="color:#6a1b9a">6 nghìn</b>, <b style="color:#1565c0">7 trăm</b>, <b style="color:#c62828">8 chục</b>, <b style="color:#2e7d32">9 đơn vị</b>.<br>
+Đọc là: <i>“Năm mươi sáu nghìn bảy trăm tám mươi chín”</i>.</div>
+<div class="tip">
+  <b>Tách 3 chữ số từ phải sang trái.</b> Viết 56789 → gạch nhẹ thành <b>56 | 789</b> → đọc “56 nghìn” rồi “789”.<br>
+  <b>Chữ số 0 là “chỗ trống giữ hàng”</b>: 50 407 = 5 chục nghìn, 0 nghìn, 4 trăm, 0 chục, 7 đơn vị → “năm mươi nghìn bốn trăm linh bảy”.
+</div>
+<div class="warn">Viết “năm mươi nghìn bốn trăm linh bảy” thành <s>5047</s> (thiếu 1 chữ số). Hãy luôn đếm đủ <b>5 ô hàng</b> trước khi điền số.</div>
+</div>
+<div class="quiz" data-gen="cautao" data-n="6"></div>
+
+<h3 id="c1-2">1.2 So sánh các số có năm chữ số</h3>
+<div class="card">
+<div class="rule">Lần lượt so sánh từng cặp chữ số trên cùng một hàng, <b>kể từ trái sang phải</b>, cho đến khi gặp cặp chữ số đầu tiên khác nhau. Số nào chứa chữ số lớn hơn thì <b>số đó lớn hơn</b>.</div>
+<div class="svgbox">
+<svg viewBox="0 0 700 190" width="680">
+  <text x="20" y="40" font-size="19" font-weight="bold" fill="#0d47a1">71 686</text>
+  <text x="20" y="140" font-size="19" font-weight="bold" fill="#0d47a1">71 352</text>
+  <g font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">
+    <rect x="110" y="10" width="100" height="24" fill="#ad1457"/><text x="160" y="27">Chục nghìn</text>
+    <rect x="210" y="10" width="90" height="24" fill="#6a1b9a"/><text x="255" y="27">Nghìn</text>
+    <rect x="300" y="10" width="90" height="24" fill="#1565c0"/><text x="345" y="27">Trăm</text>
+    <rect x="390" y="10" width="90" height="24" fill="#c62828"/><text x="435" y="27">Chục</text>
+    <rect x="480" y="10" width="90" height="24" fill="#2e7d32"/><text x="525" y="27">Đơn vị</text>
+  </g>
+  <g font-size="20" font-weight="bold" text-anchor="middle" fill="#37474f">
+    <rect x="110" y="34" width="100" height="30" fill="#f8e6ef" stroke="#ccc"/><text x="160" y="56">7</text>
+    <rect x="210" y="34" width="90" height="30" fill="#f3e5f5" stroke="#ccc"/><text x="255" y="56">1</text>
+    <rect x="300" y="34" width="90" height="30" fill="#e3f2fd" stroke="#ccc"/><text x="345" y="56" fill="#d32f2f">6</text>
+    <rect x="390" y="34" width="90" height="30" fill="#ffebee" stroke="#ccc"/><text x="435" y="56">8</text>
+    <rect x="480" y="34" width="90" height="30" fill="#e8f5e9" stroke="#ccc"/><text x="525" y="56">6</text>
+    <rect x="110" y="110" width="100" height="30" fill="#f8e6ef" stroke="#ccc"/><text x="160" y="132">7</text>
+    <rect x="210" y="110" width="90" height="30" fill="#f3e5f5" stroke="#ccc"/><text x="255" y="132">1</text>
+    <rect x="300" y="110" width="90" height="30" fill="#e3f2fd" stroke="#ccc"/><text x="345" y="132" fill="#d32f2f">3</text>
+    <rect x="390" y="110" width="90" height="30" fill="#ffebee" stroke="#ccc"/><text x="435" y="132">5</text>
+    <rect x="480" y="110" width="90" height="30" fill="#e8f5e9" stroke="#ccc"/><text x="525" y="132">2</text>
+  </g>
+  <g text-anchor="middle" font-size="17" font-weight="bold">
+    <rect x="140" y="72" width="40" height="28" rx="6" fill="#e0e0e0"/><text x="160" y="92">=</text>
+    <rect x="235" y="72" width="40" height="28" rx="6" fill="#e0e0e0"/><text x="255" y="92">=</text>
+    <rect x="325" y="72" width="40" height="28" rx="6" fill="#ffeb3b" stroke="#f57f17" stroke-width="2"/><text x="345" y="92" fill="#d32f2f">&gt;</text>
+  </g>
+  <rect x="580" y="60" width="115" height="48" rx="9" fill="#fff8e1" stroke="#ffb300" stroke-width="2"/>
+  <text x="637" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#e65100">71 686</text>
+  <text x="637" y="99" text-anchor="middle" font-size="14" font-weight="bold" fill="#e65100">&gt; 71 352</text>
+</svg>
+</div>
+<div class="tip">
+  <b>Mẹo 1 – Đếm chữ số trước:</b> số nào <b>nhiều chữ số hơn</b> thì lớn hơn (9 999 &lt; 10 000).<br>
+  <b>Mẹo 2 – “Dừng ngay khi khác”:</b> gặp cặp đầu tiên khác nhau là kết luận liền, <b>không cần xem tiếp</b>.<br>
+  <b>Mẹo 3 – Dấu &lt; &gt; là “miệng cá sấu”:</b> miệng luôn <b>há về phía số lớn</b> 🐊.
+</div>
+<div class="warn">So sánh từ <b>phải sang trái</b> (sai!). Luôn bắt đầu từ hàng lớn nhất bên trái.</div>
+</div>
+<div class="quiz" data-gen="sosanh" data-n="6"></div>
+
+<h3 id="c1-3">1.3 Làm tròn số</h3>
+<div class="card">
+<div class="rule">
+  <b>Cách 1 – Dựa vào tia số:</b> số đã cho <b>gần</b> số tròn nào thì làm tròn thành số tròn đó.<br>
+  <b>Cách 2 – Nhìn 1 chữ số ngay sau hàng làm tròn:</b> nếu chữ số đó <b>bé hơn 5</b> thì làm tròn <b>xuống</b>; nếu <b>bằng hoặc lớn hơn 5</b> thì làm tròn <b>lên</b>.
+</div>
+<div class="svgbox">
+<svg viewBox="0 0 700 130" width="690">
+  <line x1="40" y1="70" x2="660" y2="70" stroke="#37474f" stroke-width="3"/>
+  <polygon points="660,70 646,63 646,77" fill="#37474f"/>
+  <g stroke="#37474f" stroke-width="3"><line x1="70" y1="58" x2="70" y2="82"/><line x1="630" y1="58" x2="630" y2="82"/></g>
+  <g stroke="#90a4ae" stroke-width="1.5">
+    <line x1="126" y1="62" x2="126" y2="78"/><line x1="182" y1="62" x2="182" y2="78"/>
+    <line x1="238" y1="62" x2="238" y2="78"/><line x1="294" y1="62" x2="294" y2="78"/>
+    <line x1="350" y1="58" x2="350" y2="82" stroke="#d32f2f" stroke-width="3"/>
+    <line x1="406" y1="62" x2="406" y2="78"/><line x1="462" y1="62" x2="462" y2="78"/>
+    <line x1="518" y1="62" x2="518" y2="78"/><line x1="574" y1="62" x2="574" y2="78"/>
+  </g>
+  <g font-size="14" text-anchor="middle" font-weight="bold">
+    <text x="70" y="100" fill="#2e7d32">3 670</text><text x="630" y="100" fill="#2e7d32">3 680</text>
+    <text x="350" y="103" fill="#d32f2f">3 675</text>
+  </g>
+  <text x="200" y="42" text-anchor="middle" font-size="13.5" fill="#1565c0" font-weight="bold">← gần 3 670 hơn: làm tròn xuống</text>
+  <text x="500" y="42" text-anchor="middle" font-size="13.5" fill="#c62828" font-weight="bold">gần 3 680 hơn: làm tròn lên →</text>
+  <text x="350" y="24" text-anchor="middle" font-size="13" fill="#6a1b9a" font-weight="bold">đúng giữa (5) → làm tròn LÊN</text>
+</svg>
+</div>
+<div class="grid2">
+  <div class="ex" style="margin:0"><b>Đến hàng chục</b> – nhìn chữ số hàng đơn vị<br>
+    3 67<u style="color:#d32f2f">2</u> → 3 670 (vì 2 &lt; 5)<br>3 67<u style="color:#d32f2f">7</u> → 3 680 (vì 7 &gt; 5)<br>3 67<u style="color:#d32f2f">5</u> → 3 680 (vì 5 = 5)</div>
+  <div class="ex" style="margin:0"><b>Đến hàng trăm</b> – nhìn chữ số hàng chục<br>
+    7 5<u style="color:#d32f2f">1</u>5 → 7 500 &nbsp; 7 5<u style="color:#d32f2f">7</u>8 → 7 600<br>
+    <b>Đến hàng nghìn</b> – nhìn chữ số hàng trăm<br>72 <u style="color:#d32f2f">2</u>42 → 72 000 &nbsp; 72 <u style="color:#d32f2f">6</u>74 → 73 000<br>
+    <b>Đến hàng chục nghìn</b> – nhìn chữ số hàng nghìn<br>5<u style="color:#d32f2f">4</u> 947 → 50 000 &nbsp; 5<u style="color:#d32f2f">8</u> 593 → 60 000</div>
+</div>
+<div class="tip">
+  <b>Câu thần chú:</b> <span class="big" style="color:#2e7d32">“0–1–2–3–4 thì xuống, 5–6–7–8–9 thì lên”</span>.<br>
+  <b>Quy trình 3 bước:</b> ① Gạch chân hàng cần làm tròn → ② Nhìn <b>đúng một</b> chữ số liền sau → ③ Giữ nguyên (hoặc +1) hàng gạch chân, các chữ số phía sau <b>biến thành 0</b>.
+</div>
+<div class="warn">Chỉ nhìn chữ số <b>ngay sau</b> hàng làm tròn. Làm tròn 3 <u>4</u>96 đến hàng trăm: nhìn chữ số 9 → tròn lên → 3 500 (nhiều bé nhìn nhầm số 6).</div>
+</div>
+<div class="quiz" data-gen="lamtron" data-n="6"></div>
+
+<h3 id="c1-4">1.4 Chữ số La Mã (I – XII)</h3>
+<div class="card">
+<div class="rule">Chữ số La Mã dùng <b>7 ký hiệu cơ bản</b>: I (1), V (5), X (10), L (50), C (100). Lớp 3 chỉ cần học <b>I đến XII</b> (1 đến 12) – dùng trên mặt đồng hồ và tháng trong năm.</div>
+<table class="roman-table">
+<tr><th>La Mã</th><th>Ả Rập</th><th>La Mã</th><th>Ả Rập</th><th>La Mã</th><th>Ả Rập</th></tr>
+<tr><td>I</td><td>1</td><td>V</td><td>5</td><td>IX</td><td>9</td></tr>
+<tr><td>II</td><td>2</td><td>VI</td><td>6</td><td>X</td><td>10</td></tr>
+<tr><td>III</td><td>3</td><td>VII</td><td>7</td><td>XI</td><td>11</td></tr>
+<tr><td>IV</td><td>4</td><td>VIII</td><td>8</td><td>XII</td><td>12</td></tr>
+</table>
+<div class="tip">
+  <b>Quy tắc đọc:</b><br>
+  ① Ký hiệu <b>nhỏ đứng sau</b> ký hiệu lớn → <b>cộng</b>: VI = 5 + 1 = 6; VII = 5 + 2 = 7.<br>
+  ② Ký hiệu <b>nhỏ đứng trước</b> ký hiệu lớn → <b>trừ</b>: IV = 5 − 1 = 4; IX = 10 − 1 = 9.<br>
+  <b>Nhớ nhanh:</b> Chỉ có <b>IV</b> (4) và <b>IX</b> (9) là dùng trừ trong phạm vi I–XII.
+</div>
+<div class="ex"><b>Ứng dụng thực tế:</b> Mặt đồng hồ treo tường thường dùng chữ số La Mã: IV (4 giờ), VIII (8 giờ), XII (12 giờ). Tháng trong năm: Tháng IV = Tháng 4; Tháng IX = Tháng 9.</div>
+<div class="warn">Không được viết IIII thay cho IV, hay VIIII thay cho IX. Tối đa <b>3 ký hiệu giống nhau</b> liên tiếp (III = 3, nhưng không được viết IIII = 4).</div>
+</div>
+<div class="quiz" data-gen="roman" data-n="6"></div>
+
+<!-- ================= CHUYÊN ĐỀ 2 ================= -->
+<h2 class="chapter" id="cd2"><span class="num">2</span>Cộng, trừ, nhân, chia trong phạm vi 100 000</h2>
+
+<h3 id="c2-1">2.1 Bảng nhân – Bảng chia</h3>
+<div class="card">
+<h4 style="color:#c62828">BẢNG NHÂN</h4>
+<div class="mtable" id="mulTable"></div>
+<h4 style="color:#1565c0;margin-top:16px">BẢNG CHIA</h4>
+<div class="mtable" id="divTable"></div>
+<div class="tip">
+  <b>Nhân là phép cộng nhiều lần bằng nhau:</b> 4 × 3 = 4 + 4 + 4 = 12.<br>
+  <b>Đổi chỗ không đổi kết quả:</b> 3 × 7 = 7 × 3 → số phép cần thuộc giảm gần một nửa!<br>
+  <b>Một phép nhân sinh ra 4 phép tính “gia đình”:</b> 7 × 8 = 56 → 8 × 7 = 56 → 56 : 7 = 8 → 56 : 8 = 7.<br>
+  Xem thêm toàn bộ bí kíp ở mục <a href="#meo"><b>Cửu chương thần công</b></a> 🥋
+</div>
+</div>
+<div class="quiz" data-gen="bangnhanchia" data-n="10"></div>
+
+<h3 id="c2-2">2.2 Phép cộng – Phép trừ trong phạm vi 100 000</h3>
+<div class="card">
+<div class="rule">Đặt tính <b>thẳng hàng</b> (đơn vị dưới đơn vị, chục dưới chục…) rồi tính <b>từ phải sang trái</b>.</div>
+<div class="grid2">
+<div class="svgbox">
+<svg viewBox="0 0 320 200" width="300">
+  <text x="160" y="22" text-anchor="middle" font-size="17" font-weight="bold" fill="#c62828">38 259 + 25 436 = ?</text>
+  <g font-size="26" font-weight="bold" font-family="monospace" text-anchor="end" fill="#0d47a1">
+    <text x="250" y="70">38259</text><text x="250" y="108">25436</text></g>
+  <text x="95" y="108" font-size="26" font-weight="bold" fill="#c62828">+</text>
+  <line x1="95" y1="120" x2="255" y2="120" stroke="#37474f" stroke-width="3"/>
+  <text x="250" y="152" text-anchor="end" font-size="26" font-weight="bold" font-family="monospace" fill="#2e7d32">63695</text>
+  <g font-size="13" fill="#ef6c00" font-weight="bold"><text x="150" y="45">nhớ 1</text><text x="60" y="45">nhớ 1</text></g>
+  <text x="160" y="180" text-anchor="middle" font-size="13.5" fill="#5b7086">9+6=15 viết 5 nhớ 1 → 5+1+3=9 → 2+4=6 → 8+5=13 viết 3 nhớ 1 → 3+1+2=6</text>
+</svg>
+</div>
+<div class="svgbox">
+<svg viewBox="0 0 320 200" width="300">
+  <text x="160" y="22" text-anchor="middle" font-size="17" font-weight="bold" fill="#1565c0">62 859 − 35 276 = ?</text>
+  <g font-size="26" font-weight="bold" font-family="monospace" text-anchor="end" fill="#0d47a1">
+    <text x="250" y="70">62859</text><text x="250" y="108">35276</text></g>
+  <text x="95" y="108" font-size="26" font-weight="bold" fill="#1565c0">−</text>
+  <line x1="95" y1="120" x2="255" y2="120" stroke="#37474f" stroke-width="3"/>
+  <text x="250" y="152" text-anchor="end" font-size="26" font-weight="bold" font-family="monospace" fill="#2e7d32">27583</text>
+  <text x="160" y="180" text-anchor="middle" font-size="13.5" fill="#5b7086">9−6=3 → 5 không trừ được 7: lấy 15−7=8 nhớ 1 → 8−1−2=5 → 12−5=7 nhớ 1 → 6−1−3=2</text>
+</svg>
+</div>
+</div>
+<div class="tip">
+  <b>Thử lại cho chắc:</b> Cộng xong lấy <b>tổng − một số hạng</b> phải ra số hạng kia. Trừ xong lấy <b>hiệu + số trừ</b> phải ra số bị trừ.<br>
+  <b>Ước lượng nhanh:</b> 38 259 + 25 436 ≈ 38 000 + 25 000 = 63 000 → đáp án 63 695 là hợp lý ✔
+</div>
+<div class="warn">Quên cộng số nhớ, hoặc đặt tính lệch hàng. Hãy viết các chữ số thành <b>cột thẳng đứng</b> và ghi số nhớ nhỏ phía trên.</div>
+</div>
+<div class="quiz" data-gen="congtru" data-n="6"></div>
+
+<h3 id="c2-3">2.3 Nhân và chia với số có một chữ số</h3>
+<div class="card">
+<div class="grid2">
+<div class="svgbox">
+<svg viewBox="0 0 320 180" width="300">
+  <text x="160" y="22" text-anchor="middle" font-size="17" font-weight="bold" fill="#ef6c00">18 192 × 3 = ?</text>
+  <g font-size="26" font-weight="bold" font-family="monospace" text-anchor="end" fill="#0d47a1">
+    <text x="250" y="66">18192</text><text x="250" y="104">3</text></g>
+  <text x="100" y="104" font-size="24" font-weight="bold" fill="#ef6c00">×</text>
+  <line x1="100" y1="116" x2="255" y2="116" stroke="#37474f" stroke-width="3"/>
+  <text x="250" y="148" text-anchor="end" font-size="26" font-weight="bold" font-family="monospace" fill="#2e7d32">54576</text>
+  <text x="160" y="172" text-anchor="middle" font-size="13" fill="#5b7086">3×2=6 → 3×9=27 viết 7 nhớ 2 → 3×1+2=5 → 3×8=24 viết 4 nhớ 2 → 3×1+2=5</text>
+</svg>
+</div>
+<div class="svgbox">
+<svg viewBox="0 0 320 180" width="300">
+  <text x="160" y="22" text-anchor="middle" font-size="17" font-weight="bold" fill="#6a1b9a">45 789 : 3 = ?</text>
+  <g font-family="monospace" font-size="21" font-weight="bold" fill="#0d47a1">
+    <text x="40" y="55">45789</text><text x="150" y="55">3</text><text x="150" y="85" fill="#2e7d32">15263</text>
+    <text x="40" y="82">15</text><text x="40" y="106">0 7</text><text x="40" y="130">18</text><text x="40" y="154">09</text></g>
+  <line x1="140" y1="35" x2="140" y2="160" stroke="#37474f" stroke-width="2"/>
+  <line x1="140" y1="62" x2="230" y2="62" stroke="#37474f" stroke-width="2"/>
+  <text x="250" y="120" font-size="12" fill="#ef6c00" font-weight="bold">chia</text>
+  <text x="250" y="136" font-size="12" fill="#ef6c00" font-weight="bold">rút gọn</text>
+</svg>
+</div>
+</div>
+<div class="rule" style="background:#fff3e0;border-color:#ef6c00">
+  <b>⭐ PHÉP CHIA CÓ DƯ (quan trọng!)</b><br>
+  Khi số bị chia <b>không chia hết</b> cho số chia, kết quả có <b>thương</b> và <b>số dư</b>.<br>
+  <span style="font-size:17px;color:#e65100">Số bị chia = Thương × Số chia + <b>Số dư</b></span><br>
+  <b style="color:#c62828">Quy tắc vàng: Số dư luôn luôn BÉ HƠN số chia.</b><br>
+  Ví dụ: 17 : 5 = 3 <b>dư 2</b> &nbsp;(vì 3 × 5 + 2 = 17; số dư 2 &lt; số chia 5 ✔)<br>
+  Kiểm tra: 4 × 3 + 2 = 14 ✔ &nbsp;·&nbsp; Nếu số dư ≥ số chia → chia tiếp được → sai!
+</div>
+<div class="rule">Chia: lấy lần lượt từ <b>trái sang phải</b>. Mỗi lần: <b>chia → nhân → trừ → hạ</b>. Số dư luôn phải <b>bé hơn số chia</b>.</div>
+<div class="tip">
+  <b>Nhớ 4 nhịp “Chia – Nhân – Trừ – Hạ”</b> lặp lại tới khi hết chữ số.<br>
+  <b>Thử lại:</b> Thương × Số chia + Số dư = Số bị chia. Ví dụ 15 263 × 3 = 45 789 ✔<br>
+  Nếu lượt chia ra <b>0</b> thì vẫn phải <b>viết 0</b> vào thương rồi hạ tiếp!
+</div>
+<div class="warn">Chú ý (SGK): các phép cộng, trừ, nhân với số có một chữ số trong phạm vi 100 000 <b>có nhớ không quá hai lượt và không liên tiếp</b>.</div>
+</div>
+<div class="quiz" data-gen="nhanchia" data-n="6"></div>
+
+<h3 id="c2-4">2.4 Tính giá trị của biểu thức</h3>
+<div class="card">
+<div class="rule">
+① Chỉ có <b>cộng, trừ</b> → tính <b>từ trái sang phải</b>.<br>
+② Chỉ có <b>nhân, chia</b> → tính <b>từ trái sang phải</b>.<br>
+③ Có đủ <b>cộng trừ nhân chia</b> → làm <b>nhân, chia trước</b>; cộng, trừ sau.<br>
+④ Có dấu <b>ngoặc ( )</b> → làm <b>trong ngoặc trước tiên</b>.
+</div>
+<div class="grid2">
+ <div class="ex" style="margin:0">54 + 29 + 17 = 83 + 17 = <b>100</b><br>45 − 19 + 27 = 26 + 27 = <b>53</b><br>10 × 6 : 2 = 60 : 2 = <b>30</b><br>80 : 4 × 2 = 20 × 2 = <b>40</b></div>
+ <div class="ex" style="margin:0">9 × 6 + 2 = 54 + 2 = <b>56</b><br>12 − 8 : 2 = 12 − 4 = <b>8</b><br>10 × (6 + 2) = 10 × 8 = <b>80</b><br>(12 − 8) : 2 = 4 : 2 = <b>2</b></div>
+</div>
+<div class="tip"><b>Thứ tự vàng:</b> <span class="big" style="color:#c62828">Ngoặc → Nhân/Chia → Cộng/Trừ</span>. Cùng một mức thì đi <b>từ trái sang phải</b>.<br>
+<b>Mẹo trình bày:</b> mỗi dòng chỉ làm <b>một</b> phép tính, viết dấu “=” đầu dòng dưới.</div>
+<div class="warn">12 − 8 : 2 = <s>4 : 2 = 2</s> (sai vì trừ trước). Đúng là chia trước: 12 − 4 = 8.</div>
+</div>
+<div class="quiz" data-gen="bieuthuc" data-n="6"></div>
+
+<h3 id="c2-5">2.5 Tìm thành phần chưa biết</h3>
+<div class="card">
+<div class="grid2">
+ <div class="rule" style="background:#e8f5e9;border-color:#2e7d32">Số hạng = <b>Tổng − Số hạng kia</b><br>Số bị trừ = <b>Hiệu + Số trừ</b><br>Số trừ = <b>Số bị trừ − Hiệu</b></div>
+ <div class="rule" style="background:#e3f2fd;border-color:#1565c0">Thừa số = <b>Tích : Thừa số kia</b><br>Số bị chia = <b>Thương × Số chia</b><br>Số chia = <b>Số bị chia : Thương</b></div>
+</div>
+<div class="tip"><b>Quy tắc “ngược chiều”:</b> muốn tìm số đứng trước phép tính thì làm <b>phép ngược lại</b>. Cộng ↔ Trừ · Nhân ↔ Chia.<br>
+<b>Luôn thử lại:</b> x + 25 = 60 → x = 60 − 25 = 35 → thử: 35 + 25 = 60 ✔</div>
+<div class="warn">Với <b>x − 18 = 7</b> thì x = 7 + 18 = 25, <b>không phải</b> 7 − 18. Hãy nhìn kỹ x nằm ở vị trí nào.</div>
+</div>
+<div class="quiz" data-gen="timx" data-n="6"></div>
+
+<h3 id="c2-6">2.6 Một phần mấy</h3>
+<div class="card">
+<div class="svgbox" id="fracRow"></div>
+<div class="rule">Chia một hình (hoặc một nhóm đồ vật) thành <b>n phần bằng nhau</b>, lấy <b>1 phần</b> thì được <b>1/n</b> của hình đó.<br>
+Muốn tìm <b>1/n của một số</b>, ta lấy <b>số đó chia cho n</b>.</div>
+<div class="ex">1/4 của 20 quả cam = 20 : 4 = <b>5 quả cam</b>.</div>
+<div class="tip"><b>Mẫu số càng lớn thì phần càng nhỏ</b>: 1/2 &gt; 1/3 &gt; 1/4 &gt; … &gt; 1/9. Chia một chiếc bánh cho càng nhiều bạn thì mỗi bạn được càng ít 🍰<br>
+Điều kiện bắt buộc: các phần phải <b>bằng nhau</b>.</div>
+</div>
+<div class="quiz" data-gen="phanmay" data-n="6"></div>
+<!-- ================= CHUYÊN ĐỀ 3 ================= -->
+<h2 class="chapter" id="cd3"><span class="num">3</span>Hình học và Đo lường</h2>
+
+<h3 id="c3-1">3.1 Hình phẳng – Hình khối</h3>
+<div class="card">
+<h4>a. Trung điểm của đoạn thẳng</h4>
+<div class="svgbox">
+<svg viewBox="0 0 520 110" width="500">
+  <line x1="60" y1="45" x2="460" y2="45" stroke="#0d47a1" stroke-width="5"/>
+  <circle cx="60" cy="45" r="7" fill="#d32f2f"/><circle cx="260" cy="45" r="7" fill="#d32f2f"/><circle cx="460" cy="45" r="7" fill="#d32f2f"/>
+  <text x="60" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#c62828">A</text>
+  <text x="260" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#c62828">B</text>
+  <text x="460" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#c62828">C</text>
+  <path d="M60 58 Q160 88 260 58" fill="none" stroke="#8d6e63" stroke-width="2"/>
+  <path d="M260 58 Q360 88 460 58" fill="none" stroke="#8d6e63" stroke-width="2"/>
+  <text x="160" y="102" text-anchor="middle" font-size="15" font-weight="bold" fill="#2e7d32">5 cm</text>
+  <text x="360" y="102" text-anchor="middle" font-size="15" font-weight="bold" fill="#2e7d32">5 cm</text>
+</svg>
+</div>
+<div class="rule">B là <b>trung điểm</b> của đoạn thẳng AC khi: ① A, B, C <b>thẳng hàng</b>, B ở <b>giữa</b> A và C; ② <b>AB = BC</b>. Phải có <b>cả hai</b> điều kiện.</div>
+
+<h4>b. Hình tròn – Tâm, bán kính, đường kính</h4>
+<div class="svgbox">
+<svg viewBox="0 0 340 210" width="320">
+  <circle cx="170" cy="105" r="85" fill="#ffeb3b" stroke="#0d47a1" stroke-width="3"/>
+  <line x1="85" y1="105" x2="255" y2="105" stroke="#c62828" stroke-width="3"/>
+  <line x1="170" y1="105" x2="230" y2="165" stroke="#2e7d32" stroke-width="3"/>
+  <circle cx="170" cy="105" r="5" fill="#c62828"/><circle cx="85" cy="105" r="5" fill="#c62828"/>
+  <circle cx="255" cy="105" r="5" fill="#c62828"/><circle cx="230" cy="165" r="5" fill="#2e7d32"/>
+  <text x="70" y="100" font-size="17" font-weight="bold" fill="#c62828">M</text>
+  <text x="262" y="100" font-size="17" font-weight="bold" fill="#c62828">N</text>
+  <text x="163" y="94" font-size="17" font-weight="bold" fill="#0d47a1">O</text>
+  <text x="236" y="186" font-size="17" font-weight="bold" fill="#2e7d32">P</text>
+  <text x="170" y="203" text-anchor="middle" font-size="13.5" fill="#5b7086">Tâm O · bán kính OP · đường kính MN</text>
+</svg>
+</div>
+<div class="rule">Trong một hình tròn: <b>Đường kính = 2 × bán kính</b> · <b>Bán kính = đường kính : 2</b>. Tâm O là <b>trung điểm</b> của đường kính MN.</div>
+
+<h4>c. Góc vuông – góc không vuông</h4>
+<div class="svgbox">
+<svg viewBox="0 0 560 150" width="540">
+  <g stroke-width="4" fill="none">
+    <path d="M60 120 L60 35" stroke="#0d47a1"/><path d="M60 120 L160 120" stroke="#0d47a1"/>
+    <path d="M230 120 L275 40" stroke="#0d47a1"/><path d="M230 120 L335 112" stroke="#0d47a1"/>
+    <path d="M430 120 L415 35" stroke="#0d47a1"/><path d="M430 120 L535 118" stroke="#0d47a1"/>
+  </g>
+  <rect x="60" y="104" width="16" height="16" fill="none" stroke="#d32f2f" stroke-width="3"/>
+  <path d="M255 118 A28 28 0 0 0 248 100" fill="none" stroke="#d32f2f" stroke-width="3"/>
+  <path d="M455 119 A28 28 0 0 0 425 93" fill="none" stroke="#d32f2f" stroke-width="3"/>
+  <g fill="#c62828"><circle cx="60" cy="120" r="5"/><circle cx="60" cy="35" r="5"/><circle cx="160" cy="120" r="5"/>
+  <circle cx="230" cy="120" r="5"/><circle cx="275" cy="40" r="5"/><circle cx="335" cy="112" r="5"/>
+  <circle cx="430" cy="120" r="5"/><circle cx="415" cy="35" r="5"/><circle cx="535" cy="118" r="5"/></g>
+  <g font-size="16" font-weight="bold" fill="#c62828">
+    <text x="46" y="140">O</text><text x="52" y="26">A</text><text x="166" y="140">B</text>
+    <text x="216" y="140">P</text><text x="272" y="30">M</text><text x="341" y="132">N</text>
+    <text x="416" y="140">E</text><text x="408" y="26">C</text><text x="541" y="132">D</text></g>
+  <g font-size="13.5" text-anchor="middle" fill="#2e7d32" font-weight="bold">
+    <text x="100" y="18">Góc vuông đỉnh O</text><text x="280" y="18">Góc không vuông đỉnh P</text>
+    <text x="480" y="18">Góc không vuông đỉnh E</text></g>
+</svg>
+</div>
+<div class="tip">Dùng <b>ê-ke</b> áp vào đỉnh góc: trùng khít → <b>góc vuông</b>; hở ra → góc không vuông. Ở nhà có thể dùng <b>góc quyển sách</b> hoặc <b>góc tờ giấy</b> thay ê-ke 📐</div>
+
+<h4>d. Nhận biết hình phẳng và hình khối</h4>
+<div class="svgbox" id="shapeRow"></div>
+<table class="t">
+<tr><th>Hình</th><th>Đỉnh</th><th>Cạnh</th><th>Góc</th><th>Đặc điểm riêng</th></tr>
+<tr><td><b>Tam giác</b></td><td>3</td><td>3</td><td>3</td><td>—</td></tr>
+<tr><td><b>Tứ giác</b></td><td>4</td><td>4</td><td>4</td><td>—</td></tr>
+<tr><td><b>Chữ nhật</b></td><td>4</td><td>4</td><td>4 góc vuông</td><td>2 cặp cạnh đối bằng nhau</td></tr>
+<tr><td><b>Hình vuông</b></td><td>4</td><td>4</td><td>4 góc vuông</td><td>4 cạnh bằng nhau</td></tr>
+<tr><td><b>Khối hộp chữ nhật</b></td><td>8</td><td>12</td><td>—</td><td>6 mặt đều là hình chữ nhật</td></tr>
+<tr><td><b>Khối lập phương</b></td><td>8</td><td>12</td><td>—</td><td>6 mặt đều là hình vuông</td></tr>
+</table>
+<div class="tip"><b>Hình vuông là hình chữ nhật đặc biệt</b> (thêm 4 cạnh bằng nhau); <b>khối lập phương là khối hộp chữ nhật đặc biệt</b>. Nhớ bộ ba <b>8 đỉnh – 6 mặt – 12 cạnh</b>.</div>
+</div>
+<div class="quiz" data-gen="hinhhoc" data-n="6"></div>
+
+<h3 id="c3-2">3.2 Chu vi – Diện tích</h3>
+<div class="card">
+<div class="rule">Chu vi tam giác / tứ giác = <b>tổng độ dài các cạnh</b>.<br>
+Chu vi hình chữ nhật = <b>(dài + rộng) × 2</b> · Diện tích hình chữ nhật = <b>dài × rộng</b><br>
+Chu vi hình vuông = <b>cạnh × 4</b> · Diện tích hình vuông = <b>cạnh × cạnh</b></div>
+<div class="svgbox">
+<svg viewBox="0 0 600 190" width="580">
+  <rect x="40" y="45" width="200" height="110" fill="#ffca28" stroke="#e65100" stroke-width="3"/>
+  <text x="140" y="36" text-anchor="middle" font-size="15" font-weight="bold" fill="#c62828">5 cm</text>
+  <text x="22" y="105" font-size="15" font-weight="bold" fill="#c62828" transform="rotate(-90 22 105)" text-anchor="middle">3 cm</text>
+  <text x="140" y="178" text-anchor="middle" font-size="14" fill="#1565c0" font-weight="bold">P = (5+3)×2 = 16 cm · S = 5×3 = 15 cm²</text>
+  <rect x="370" y="45" width="110" height="110" fill="#90caf9" stroke="#0d47a1" stroke-width="3"/>
+  <text x="425" y="36" text-anchor="middle" font-size="15" font-weight="bold" fill="#c62828">3 cm</text>
+  <text x="352" y="105" font-size="15" font-weight="bold" fill="#c62828" transform="rotate(-90 352 105)" text-anchor="middle">3 cm</text>
+  <text x="425" y="178" text-anchor="middle" font-size="14" fill="#1565c0" font-weight="bold">P = 3×4 = 12 cm · S = 3×3 = 9 cm²</text>
+</svg>
+</div>
+<div class="tip">
+  <b>Phân biệt bằng đơn vị:</b> Chu vi là <b>đường viền</b> → đơn vị <b>cm</b>; Diện tích là <b>mặt bên trong</b> → đơn vị <b>cm²</b>.<br>
+  <b>Hình dung:</b> Chu vi = đi bộ <i>quanh hàng rào</i>; Diện tích = <i>lát gạch</i> kín sân.<br>
+  <b>Bắt buộc:</b> đưa các cạnh về <b>cùng một đơn vị đo</b> trước khi tính (1 dm và 6 cm → 10 cm và 6 cm).
+</div>
+<div class=”warn”>Viết đáp số diện tích là “15 cm” (thiếu dấu ²) sẽ bị trừ điểm. Diện tích <b>luôn</b> có đơn vị cm².</div>
+<div class=”tip” style=”background:#e8f5e9;border-color:#2e7d32”>📅 <b>Phân phối theo học kỳ (SGK mới GDPT 2018):</b><br>
+  · <b>Học kỳ 1</b>: Chu vi các hình (hình chữ nhật, hình vuông, tam giác, tứ giác) – đơn vị <b>cm, m</b>.<br>
+  · <b>Học kỳ 2</b>: Diện tích hình chữ nhật và hình vuông (cm²) mới được học chính thức.<br>
+  <i>Phần bài tập diện tích dưới đây dùng ôn trước hoặc học trước nếu con đã sẵn sàng.</i>
+</div>
+</div>
+<div class=”quiz” data-gen=”chuvidt” data-n=”6”></div>
+
+<h3 id="c3-3">3.3 Các đơn vị đo</h3>
+<div class="card">
+<table class="t">
+<tr><th>Ki-lô-mét (km)</th><th>Mét (m)</th><th>Đề-xi-mét (dm)</th><th>Xăng-ti-mét (cm)</th><th>Mi-li-mét (mm)</th></tr>
+<tr><td>1 km = 1 000 m</td><td>1 m = 10 dm<br>1 m = 100 cm<br>1 m = 1 000 mm</td><td>1 dm = 10 cm<br>1 dm = 100 mm</td><td>1 cm = 10 mm</td><td>—</td></tr>
+</table>
+<div class="grid3">
+  <div class="rule" style="background:#e8f5e9;border-color:#2e7d32">⚖️ <b>Khối lượng</b><br>1 kg = 1 000 g<br>1 000 g = 1 kg</div>
+  <div class="rule" style="background:#e3f2fd;border-color:#1565c0">🥤 <b>Dung tích</b><br>1 l = 1 000 ml<br>1 000 ml = 1 l</div>
+  <div class="rule" style="background:#fff3e0;border-color:#ef6c00">🌡️ <b>Nhiệt độ</b><br>Độ xê, viết tắt <b>°C</b><br>Đo bằng <b>nhiệt kế</b></div>
+</div>
+<div class="grid2">
+  <div class="rule" style="background:#f3e5f5;border-color:#6a1b9a">📐 <b>Diện tích</b><br>Xăng-ti-mét vuông (<b>cm²</b>) là diện tích của hình vuông có cạnh dài 1 cm.</div>
+  <div class="rule" style="background:#fce4ec;border-color:#ad1457">💵 <b>Tiền Việt Nam</b><br>Các tờ: 1 000đ, 2 000đ, 5 000đ, 10 000đ, 20 000đ, 50 000đ, 100 000đ…</div>
+</div>
+<div class="tip">
+  <b>Bậc thang đo độ dài:</b> km → m → dm → cm → mm. Xuống <b>một bậc</b> nhân 10; riêng km xuống m là <b>×1 000</b>.<br>
+  <b>Mẹo nhớ nhanh:</b> “k” (kilo) và “m” (mili) luôn đi với <b>1 000</b>: 1 km = 1 000 m, 1 kg = 1 000 g, 1 l = 1 000 ml.<br>
+  <b>Đổi xuôi thì nhân, đổi ngược thì chia:</b> lớn → bé: nhân; bé → lớn: chia.
+</div>
+</div>
+<div class="quiz" data-gen="donvi" data-n="8"></div>
+
+<h3 id="c3-4">3.4 Xem đồng hồ – Tháng, năm</h3>
+<div class="card">
+<div class="grid2">
+  <div class="svgbox" id="clockDemo1"></div>
+  <div class="svgbox" id="clockDemo2"></div>
+</div>
+<div class="rule">Mỗi số trên mặt đồng hồ cách nhau <b>5 phút</b> (60 = 5 × 12). Khi kim phút đã <b>quá số 6</b>, có thể đọc kiểu <b>“giờ kém”</b>: 6 giờ 45 phút = <b>7 giờ kém 15 phút</b>.</div>
+<table class="t">
+<tr><th>T1</th><th>T2</th><th>T3</th><th>T4</th><th>T5</th><th>T6</th><th>T7</th><th>T8</th><th>T9</th><th>T10</th><th>T11</th><th>T12</th></tr>
+<tr><td>31</td><td>28<br>(29)</td><td>31</td><td>30</td><td>31</td><td>30</td><td>31</td><td>31</td><td>30</td><td>31</td><td>30</td><td>31</td></tr>
+</table>
+<div class="tip">
+  <b>Mẹo nắm tay đếm tháng ✊:</b> Nắm bàn tay, đếm từ đốt xương ngón trỏ. <b>Chỗ nhô lên = 31 ngày</b>, <b>chỗ lõm = 30 ngày</b> (riêng tháng 2 có 28 hoặc 29 ngày). Hết bàn tay ở tháng 7 thì quay lại đếm tháng 8 từ đốt đầu → tháng 7 và 8 đều 31 ngày.<br>
+  <b>Mẹo giờ kém:</b> lấy <b>60 − số phút</b>, giờ <b>tăng thêm 1</b>. Ví dụ 12 giờ 42 phút → 60 − 42 = 18 → <b>13 giờ kém 18 phút</b>.<br>
+  <b>Giờ chiều tối:</b> 1 giờ chiều = 13 giờ, 7 giờ tối = 19 giờ (cộng thêm 12).
+</div>
+</div>
+<div class="quiz" data-gen="thoigian" data-n="6"></div>
+
+<!-- ================= CHUYÊN ĐỀ 4 ================= -->
+<h2 class="chapter" id="cd4"><span class="num">4</span>Bài toán có lời văn</h2>
+
+<h3 id="c4-0">📝 Cách trình bày một bài giải chuẩn</h3>
+<div class="card">
+<div class="rule">
+Một bài giải đầy đủ <b>luôn có 3 phần</b>:<br>
+① <b>Câu lời giải</b> – câu văn cho biết ta đang đi tìm cái gì, <b>kết thúc bằng dấu hai chấm “:”</b><br>
+② <b>Phép tính</b> – viết thẳng hàng dưới câu lời giải, có <b>đơn vị đặt trong ngoặc đơn</b><br>
+③ <b>Đáp số</b> – ghi kết quả cuối cùng <b>kèm đơn vị</b>
+</div>
+<div class="grid2">
+<div class="ex" style="margin:0">
+<b>Đề:</b> Tổ Một trồng được 7 cây. Số cây tổ Hai trồng được gấp 3 lần tổ Một. Hỏi tổ Hai trồng được bao nhiêu cây?
+<div class="model" style="margin-top:8px">
+<span class="mt">Bài giải</span>
+<div class="ln">Tổ Hai trồng được số cây là:</div>
+<div class="ln">7 × 3 = 21 (cây)</div>
+<div class="ln ds">Đáp số: 21 cây.</div>
+</div>
+</div>
+<div class="ex" style="margin:0">
+<b>Đề:</b> Lớp 3A có 32 học sinh. Lớp 3B có ít hơn lớp 3A 3 học sinh. Hỏi cả hai lớp có bao nhiêu học sinh?
+<div class="model" style="margin-top:8px">
+<span class="mt">Bài giải</span>
+<div class="ln">Lớp 3B có số học sinh là:</div>
+<div class="ln">32 − 3 = 29 (học sinh)</div>
+<div class="ln">Cả hai lớp có số học sinh là:</div>
+<div class="ln">32 + 29 = 61 (học sinh)</div>
+<div class="ln ds">Đáp số: 61 học sinh.</div>
+</div>
+</div>
+</div>
+<div class="tip">
+  <b>Mẹo viết câu lời giải cực nhanh 🪄:</b> Lấy <b>câu hỏi của đề</b>, bỏ chữ “Hỏi” và “bao nhiêu / mấy”, đổi thành câu kể rồi thêm chữ <b>“là:”</b> ở cuối.<br>
+  “<i>Hỏi tổ Hai trồng được <b>bao nhiêu</b> cây?</i>” → “<b>Tổ Hai trồng được số cây là:</b>”<br>
+  “<i>Hỏi cả hai lớp có <b>bao nhiêu</b> học sinh?</i>” → “<b>Cả hai lớp có số học sinh là:</b>”<br>
+  <b>Bài hai bước:</b> bước 1 viết lời giải cho <b>số trung gian</b>, bước 2 mới trả lời <b>đúng câu hỏi của đề</b>. Chỉ có <b>một dòng Đáp số</b> duy nhất ở cuối.
+</div>
+<div class="warn">
+  Ba lỗi mất điểm phổ biến nhất dù tính đúng:<br>
+  ① Thiếu <b>câu lời giải</b> hoặc quên dấu <b>“:”</b> ở cuối câu.<br>
+  ② Phép tính thiếu <b>đơn vị trong ngoặc đơn</b> – viết “7 × 3 = 21” thay vì “7 × 3 = 21 (cây)”.<br>
+  ③ Thiếu dòng <b>Đáp số</b>, hoặc Đáp số không có đơn vị.
+</div>
+</div>
+
+<h3 id="c4-1">4.1 Gấp một số lần – Giảm một số lần – Gấp mấy lần</h3>
+<div class="card">
+<div class="grid3">
+  <div class="rule" style="background:#e3f2fd;border-color:#1565c0">Muốn <b>gấp</b> một số lên nhiều lần → lấy số đó <b>nhân</b> với số lần.</div>
+  <div class="rule" style="background:#e8f5e9;border-color:#2e7d32">Muốn <b>giảm</b> một số đi nhiều lần → lấy số đó <b>chia</b> cho số lần.</div>
+  <div class="rule" style="background:#fff3e0;border-color:#ef6c00">Muốn biết số lớn <b>gấp mấy lần</b> số bé → lấy <b>số lớn : số bé</b>.</div>
+</div>
+<div class="svgbox">
+<svg viewBox="0 0 620 150" width="600">
+  <rect x="10" y="28" width="88" height="28" rx="6" fill="#1565c0"/><text x="54" y="48" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">Tổ Một</text>
+  <line x1="115" y1="42" x2="235" y2="42" stroke="#c62828" stroke-width="4"/>
+  <line x1="115" y1="32" x2="115" y2="52" stroke="#c62828" stroke-width="4"/><line x1="235" y1="32" x2="235" y2="52" stroke="#c62828" stroke-width="4"/>
+  <text x="175" y="24" text-anchor="middle" font-size="15" font-weight="bold" fill="#c62828">7 cây</text>
+  <rect x="10" y="98" width="88" height="28" rx="6" fill="#1565c0"/><text x="54" y="118" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">Tổ Hai</text>
+  <line x1="115" y1="112" x2="475" y2="112" stroke="#0d47a1" stroke-width="4"/>
+  <g stroke="#0d47a1" stroke-width="4"><line x1="115" y1="102" x2="115" y2="122"/><line x1="235" y1="102" x2="235" y2="122"/><line x1="355" y1="102" x2="355" y2="122"/><line x1="475" y1="102" x2="475" y2="122"/></g>
+  <path d="M115 96 Q295 68 475 96" fill="none" stroke="#8d6e63" stroke-width="2"/>
+  <text x="295" y="84" text-anchor="middle" font-size="15" font-weight="bold" fill="#6a1b9a">? cây</text>
+  <rect x="500" y="58" width="115" height="56" rx="9" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="557" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#2e7d32">7 × 3 = 21</text>
+  <text x="557" y="100" text-anchor="middle" font-size="13" fill="#2e7d32">Đáp số: 21 cây</text>
+</svg>
+</div>
+<div class="tip">
+  <b>Từ khoá là chìa khoá 🔑:</b> “gấp … lần” → <b>×</b> · “giảm … lần” → <b>:</b> · “gấp mấy lần” → <b>:</b><br>
+  “nhiều hơn … đơn vị” → <b>+</b> · “ít hơn … đơn vị” → <b>−</b><br>
+  <b>Vẽ sơ đồ đoạn thẳng</b> trước khi tính: nhìn sơ đồ là biết ngay nên nhân hay chia.
+</div>
+<div class="warn">Nhầm <b>“gấp 3 lần”</b> (× 3) với <b>“nhiều hơn 3”</b> (+ 3). Có chữ <b>“lần”</b> thì mới nhân/chia.</div>
+</div>
+<div class="quiz" data-gen="gapgiam" data-n="4"></div>
+
+<h3 id="c4-2">4.2 Bài toán giải bằng hai bước tính</h3>
+<div class="card">
+<div class="ex">
+<b>Bài toán:</b> Tổ Một trồng được 7 cây. Số cây tổ Hai trồng được gấp 3 lần tổ Một. Hỏi <b>cả hai tổ</b> trồng được bao nhiêu cây?
+<div class="model" style="margin-top:8px">
+<span class="mt">Bài giải</span>
+<div class="ln"><b>Bước 1.</b> Tổ Hai trồng được số cây là:</div>
+<div class="ln">7 × 3 = 21 (cây)</div>
+<div class="ln"><b>Bước 2.</b> Cả hai tổ trồng được số cây là:</div>
+<div class="ln">7 + 21 = 28 (cây)</div>
+<div class="ln ds">Đáp số: 28 cây.</div>
+</div>
+</div>
+<div class="tip">
+  <b>Quy trình 4 bước giải toán có lời văn:</b><br>
+  ① <b>Đọc kỹ</b> đề 2 lần, gạch chân số đã cho và câu hỏi.<br>
+  ② <b>Vẽ sơ đồ</b> đoạn thẳng để thấy quan hệ giữa các số.<br>
+  ③ Tìm <b>bước trung gian</b> – tự hỏi: “Muốn trả lời câu hỏi cuối, mình còn thiếu số nào?” → tính số đó trước.<br>
+  ④ Viết đủ <b>câu lời giải + phép tính + đơn vị + Đáp số</b>. Mỗi bước một câu lời giải riêng.
+</div>
+<div class="warn">Bài hai bước chỉ có <b>một dòng Đáp số</b> ở cuối, không viết Đáp số sau mỗi bước.</div>
+</div>
+<div class="quiz" data-gen="haibuoc" data-n="4"></div>
+
+<h3 id="c4-3">4.3 Toán có lời văn về hình học và đo lường</h3>
+<div class="card">
+<div class="ex">
+<b>Bài toán:</b> Một mảnh vườn hình chữ nhật có chiều dài 8 m, chiều rộng 5 m. Tính chu vi mảnh vườn đó.
+<div class="model" style="margin-top:8px">
+<span class="mt">Bài giải</span>
+<div class="ln">Chu vi mảnh vườn hình chữ nhật là:</div>
+<div class="ln">(8 + 5) × 2 = 26 (m)</div>
+<div class="ln ds">Đáp số: 26 m.</div>
+</div>
+</div>
+<div class="tip">Với toán hình, câu lời giải nên nêu rõ <b>tên hình và đại lượng cần tìm</b>: “Chu vi hình chữ nhật là:”, “Diện tích hình vuông là:”. Nhớ đơn vị: chu vi → <b>cm/m</b>, diện tích → <b>cm²</b>.</div>
+</div>
+<div class="quiz" data-gen="loivanhinh" data-n="4"></div>
+
+<!-- ================= CHUYÊN ĐỀ 5 ================= -->
+<h2 class=”chapter” id=”cd5”><span class=”num”>5</span>Xác suất cơ bản &amp; Thống kê đơn giản</h2>
+
+<h3 id=”c5-1”>5.1 Đọc bảng số liệu</h3>
+<div class=”card”>
+<div class=”rule”>Bảng số liệu gồm các <b>hàng</b> và <b>cột</b>. Đọc bảng: xác định tên hàng → đọc số tương ứng.</div>
+<div class=”ex”>
+<b>Ví dụ:</b> Bảng số lượt khách đến thư viện trong 5 ngày:
+<table class=”t” style=”margin:8px 0”>
+<tr><th>Thứ</th><th>Hai</th><th>Ba</th><th>Tư</th><th>Năm</th><th>Sáu</th></tr>
+<tr><td>Số khách</td><td>24</td><td>30</td><td>18</td><td>35</td><td>27</td></tr>
+</table>
+→ Ngày <b>đông khách nhất</b>: Thứ Năm (35 lượt).<br>
+→ Ngày <b>ít khách nhất</b>: Thứ Tư (18 lượt).<br>
+→ <b>Tổng số</b> lượt khách: 24 + 30 + 18 + 35 + 27 = <b>134</b> lượt.
+</div>
+<div class=”tip”>
+  <b>Các câu hỏi thường gặp về bảng số liệu:</b><br>
+  ① Giá trị lớn nhất / nhỏ nhất → so sánh trực tiếp.<br>
+  ② Tổng / trung bình → cộng hết rồi chia (lớp 3 chưa học trung bình cộng, chỉ cần tính tổng).<br>
+  ③ Hơn / kém bao nhiêu → phép trừ giữa 2 giá trị.<br>
+  ④ Gấp mấy lần → phép chia giữa 2 giá trị.
+</div>
+</div>
+<div class=”quiz” data-gen=”bangsolieu” data-n=”5”></div>
+
+<h3 id=”c5-2”>5.2 Có thể – Chắc chắn – Không thể</h3>
+<div class=”card”>
+<div class=”grid2”>
+  <div class=”rule” style=”background:#e8f5e9;border-color:#2e7d32”>
+    ✅ <b>CHẮC CHẮN</b><br>Sự việc <b>nhất định xảy ra</b>, không có ngoại lệ.<br>
+    <i>Ví dụ: Mặt trời mọc ở hướng Đông. Tháng 12 sau tháng 11. Hòn đá thả vào nước sẽ chìm.</i>
+  </div>
+  <div class=”rule” style=”background:#fff3e0;border-color:#ef6c00”>
+    🟡 <b>CÓ THỂ</b><br>Sự việc <b>có thể xảy ra hoặc không</b> xảy ra.<br>
+    <i>Ví dụ: Tung đồng xu ra mặt ngửa. Ngày mai trời mưa. Rút thẻ đỏ từ hộp có cả thẻ đỏ và xanh.</i>
+  </div>
+</div>
+<div class=”rule” style=”background:#ffebee;border-color:#d32f2f;margin-top:10px”>
+  ❌ <b>KHÔNG THỂ</b><br>Sự việc <b>không bao giờ xảy ra</b>.<br>
+  <i>Ví dụ: Tháng 2 có 31 ngày. Cộng hai số lẻ ra số lẻ. Rút thẻ đỏ từ hộp chỉ có thẻ xanh.</i>
+</div>
+<div class=”tip”>
+  <b>Mẹo phân biệt nhanh:</b><br>
+  · Nếu sự việc là <b>quy luật tự nhiên / toán học luôn đúng</b> → <b>Chắc chắn</b>.<br>
+  · Nếu sự việc <b>phụ thuộc vào may rủi / điều kiện</b> → <b>Có thể</b>.<br>
+  · Nếu sự việc <b>trái với quy luật / logic</b> → <b>Không thể</b>.
+</div>
+<div class=”warn”>Phân biệt “Có thể” và “Chắc chắn”: “Trời sẽ mưa tuần này” = <b>Có thể</b> (không chắc); “Nước đun sôi ở 100°C sẽ bốc hơi” = <b>Chắc chắn</b>.</div>
+</div>
+<div class=”quiz” data-gen=”xacsuatcoban” data-n=”6”></div>
+
+<!-- ================= MẸO ================= -->
+<h2 class=”chapter” id=”meo”>🥋 Bí quyết “Cửu chương thần công”</h2>
+<div class="card">
+<div class="center big" style="color:#c62828">Không cần học thuộc lòng cả bảng – chỉ cần hiểu quy luật!</div>
+<div class="grid2">
+  <div class="tip" style="margin-top:14px"><b>1 · Học theo “nhóm dễ” trước</b><br>
+  ×1 giữ nguyên · ×2 gấp đôi · ×5 đếm 5, 10, 15, 20… (số cuối luôn là 0 hoặc 5) · ×10 thêm một số 0.<br>
+  Thuộc 4 nhóm này xong mới học tiếp ×3, ×4, ×6, ×7, ×8, ×9.</div>
+  <div class="tip"><b>2 · Mẹo bảng 9 cực hay</b><br>
+  Hàng chục <b>tăng dần</b> 0→1→2→3…, hàng đơn vị <b>giảm dần</b> 9→8→7→6…<br>
+  Hoặc: <b>a × 9 = a × 10 − a</b>. Ví dụ 7 × 9 = 70 − 7 = <b>63</b>.</div>
+  <div class="tip"><b>3 · Học cặp đối xứng</b><br>
+  3 × 7 = 7 × 3 → chỉ cần nhớ <b>một</b> kết quả. Số phép cần thuộc giảm gần một nửa!</div>
+  <div class="tip"><b>4 · Học chia cùng lúc với nhân</b><br>
+  Một “gia đình phép tính”: 7 × 8 = 56 → 8 × 7 = 56 → 56 : 7 = 8 → 56 : 8 = 7.</div>
+  <div class="tip"><b>5 · Chơi kiểu “đấu nhanh”</b><br>
+  Level 1: 6 × 7 = ? · Level 2: 42 : 7 = ? · Level 3: ? × 7 = 42.<br>Mỗi câu chỉ <b>3 giây</b>.</div>
+  <div class="tip"><b>6 · Hỏi ngẫu nhiên – tạo phản xạ</b><br>
+  Hỏi linh hoạt: “56 chia 7?”, “7 nhân mấy bằng 56?” → bé chuyển từ <b>đọc thuộc bảng</b> sang <b>phản xạ số học</b>.</div>
+</div>
+<h4>7 · Lịch học 7 ngày – mỗi ngày 10 phút</h4>
+<table class="t">
+<tr><th>Ngày 1</th><th>Ngày 2</th><th>Ngày 3</th><th>Ngày 4</th><th>Ngày 5</th><th>Ngày 6</th><th>Ngày 7</th></tr>
+<tr><td>Nhóm dễ<br>(×1,×2,×5,×10)</td><td>Bảng 3, 4<br>+ cặp đối xứng</td><td>Bảng 6, 7<br>+ cặp đối xứng</td><td>Bảng 8, 9<br>(mẹo hàng chục)</td>
+<td>Luyện nhân–chia<br>“gia đình phép tính”</td><td>Đấu nhanh<br>+ hỏi ngẫu nhiên</td><td>Ôn tổng hợp<br>+ kiểm tra nhỏ</td></tr>
+</table>
+<div class="rule center" style="background:#fff8e1">🌟 <b>Số không khó, chỉ cần đúng cách. Giỏi toán không phải là tài năng, mà là kỹ năng!</b> 🌟</div>
+</div>
+<div class="quiz" data-gen="dauNhanh" data-n="12"></div>
+
+<!-- ================= KIỂM TRA TỔNG HỢP ================= -->
+<h2 class="chapter" id="final">🏆 Kiểm tra tổng hợp cuối khoá</h2>
+<div class="card">
+  <b>Đề gồm 16 câu tính toán + 2 bài toán có lời văn</b> phải trình bày bài giải đầy đủ, trộn đều từ cả 4 chuyên đề.
+  Mỗi lần bấm “Đề mới” là một đề hoàn toàn khác. Mục tiêu: đạt <b>từ 8.0 trở lên</b> 💪
+</div>
+<div class="quiz" data-gen="tonghop" data-n="18"></div>
+
+<footer>
+  📘 <b>Giáo trình Toán lớp 3 tương tác</b> · Huy Trần<br>
+  Bài tập sinh ngẫu nhiên · Luyện viết bài giải chuẩn SGK · Hoạt động offline · Rev 2.1
+</footer>
+</div><!-- /tab-lt -->
+
+<div id="tab-bt">
+<div class="card center" style="background:linear-gradient(135deg,#e8f5e9,#e3f2fd);margin-bottom:20px">
+  <div style="font-size:22px;font-weight:900;color:#0d47a1">✏️ Luyện Tập Toán 3</div>
+  <div style="color:#5b7086;margin-top:4px">Chọn chủ đề để luyện tập – mỗi lần bấm "Đề mới" ra đề hoàn toàn khác!</div>
+</div>
+
+<div class="bt-section">
+<div class="bt-section-title">CHUYÊN ĐỀ 1 · Số trong phạm vi 100 000</div>
+<div class="bt-grid">
+  <div class="quiz" data-gen="cautao" data-n="6"></div>
+  <div class="quiz" data-gen="sosanh" data-n="6"></div>
+  <div class="quiz" data-gen="lamtron" data-n="6"></div>
+  <div class="quiz" data-gen="roman" data-n="6"></div>
+</div>
+</div>
+
+<div class="bt-section">
+<div class="bt-section-title">CHUYÊN ĐỀ 2 · Bốn phép tính</div>
+<div class="bt-grid">
+  <div class="quiz" data-gen="bangnhanchia" data-n="10"></div>
+  <div class="quiz" data-gen="congtru" data-n="6"></div>
+  <div class="quiz" data-gen="nhanchia" data-n="6"></div>
+  <div class="quiz" data-gen="bieuthuc" data-n="6"></div>
+  <div class="quiz" data-gen="timx" data-n="6"></div>
+  <div class="quiz" data-gen="phanmay" data-n="6"></div>
+</div>
+</div>
+
+<div class="bt-section">
+<div class="bt-section-title">CHUYÊN ĐỀ 3 · Hình học &amp; Đo lường</div>
+<div class="bt-grid">
+  <div class="quiz" data-gen="hinhhoc" data-n="6"></div>
+  <div class="quiz" data-gen="chuvidt" data-n="6"></div>
+  <div class="quiz" data-gen="donvi" data-n="6"></div>
+  <div class="quiz" data-gen="thoigian" data-n="6"></div>
+</div>
+</div>
+
+<div class="bt-section">
+<div class="bt-section-title">CHUYÊN ĐỀ 4 · Toán có lời văn</div>
+<div class="bt-grid">
+  <div class="quiz" data-gen="gapgiam" data-n="4"></div>
+  <div class="quiz" data-gen="haibuoc" data-n="4"></div>
+  <div class="quiz" data-gen="loivanhinh" data-n="4"></div>
+</div>
+</div>
+
+<div class="bt-section">
+<div class="bt-section-title">CHUYÊN ĐỀ 5 · Xác suất &amp; Thống kê</div>
+<div class="bt-grid">
+  <div class="quiz" data-gen="bangsolieu" data-n="5"></div>
+  <div class="quiz" data-gen="xacsuatcoban" data-n="6"></div>
+</div>
+</div>
+
+<div class="bt-section">
+<div class="bt-section-title">⚡ Đấu nhanh Cửu chương &amp; 🏆 Kiểm tra tổng hợp</div>
+<div class="bt-grid">
+  <div class="quiz" data-gen="dauNhanh" data-n="12"></div>
+  <div class="quiz" data-gen="tonghop" data-n="18"></div>
+</div>
+</div>
+
+<footer style="margin-top:30px">
+  📘 <b>Giáo trình Toán lớp 3 tương tác</b> · Huy Trần<br>
+  Bài tập sinh ngẫu nhiên · Luyện viết bài giải chuẩn SGK · Hoạt động offline · Rev 2.1
+</footer>
+</div><!-- /tab-bt -->
+</main>
+</div>
+<script>
+/* --- Tab switcher --- */
+function switchTab(showBt, btn){
+  document.body.classList.toggle('show-bt', showBt);
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+/* =====================================================================
+   ENGINE v2.0 : sinh bài tập ngẫu nhiên + chấm điểm
+   - Câu tính toán : nhập đáp án / trắc nghiệm
+   - Câu lời văn   : nhập CÂU LỜI GIẢI + PHÉP TÍNH + KẾT QUẢ + ĐÁP SỐ
+   ===================================================================== */
+const R = (a,b)=> a + Math.floor(Math.random()*(b-a+1));
+const pick = a => a[Math.floor(Math.random()*a.length)];
+const shuffle = a => a.map(v=>[Math.random(),v]).sort((x,y)=>x[0]-y[0]).map(v=>v[1]);
+const fmt = n => String(n).replace(/\B(?=(\d{3})+(?!\d))/g,' ');
+const norm = s => String(s).toLowerCase().trim()
+      .replace(/\s+/g,'').replace(/\./g,'').replace(/,/g,'')
+      .replace(/đ$/,'').replace(/²/g,'2');
+/* bỏ dấu tiếng Việt để so khớp câu lời giải */
+const deacc = s => String(s).toLowerCase()
+      .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+      .replace(/đ/g,'d').replace(/[^a-z0-9\s]/g,' ').replace(/\s+/g,' ').trim();
+const STOP=new Set(['la','so','cua','co','duoc','va','cac','mot','nhung','thi','o','cho','voi','bao','nhieu','hoi','ca','do','nay','tat']);
+/* chuẩn hoá phép tính: 7 × 3 -> 7*3 */
+const normPT = s => String(s).toLowerCase().replace(/\s/g,'')
+      .replace(/[x×]/g,'*').replace(/[:÷]/g,'/').replace(/[−–—]/g,'-');
+
+const HANG = [['chục nghìn',0],['nghìn',1],['trăm',2],['chục',3],['đơn vị',4]];
+const TEN  = ['An','Bình','Cường','Dung','Hà','Khoa','Lan','Minh','Ngọc','Phúc','Quân','Thảo','Bảo','Hùng','Sơn','Mai'];
+const DOVAT= [['quyển vở','quyển'],['viên bi','viên'],['cái bút','cái'],['quả cam','quả'],['bông hoa','bông'],['cây xanh','cây'],['con gà','con'],['chiếc bánh','chiếc'],['quyển sách','quyển'],['quả bóng','quả']];
+
+/* ---------- Bộ dựng câu hỏi dạng BÀI GIẢI ---------- */
+function solveQ(q, steps, dapso, hint){
+  return {type:'solve', q, steps, dapso, hint,
+    sol:`<div class="model"><span class="mt">Bài giải</span>`+
+        steps.map((s,i)=>`<div class="ln">${steps.length>1?`<b>Bước ${i+1}.</b> `:''}${s.loi}</div>`+
+                          `<div class="ln">${s.pt} = ${fmt(s.kq)} (${s.dv})</div>`).join('')+
+        `<div class="ln ds">Đáp số: ${fmt(dapso.val)} ${dapso.dv}.</div></div>`};
+}
+
+/* ---------- SVG helpers ---------- */
+function svgClock(h,m,size=190){
+  const cx=100,cy=100,r=86;
+  let ticks='';
+  for(let i=0;i<60;i++){
+    const a=(i*6-90)*Math.PI/180, big=(i%5===0);
+    const r1=big?r-13:r-6, r2=r-2;
+    ticks+=`<line x1="${cx+r1*Math.cos(a)}" y1="${cy+r1*Math.sin(a)}" x2="${cx+r2*Math.cos(a)}" y2="${cy+r2*Math.sin(a)}" stroke="${big?'#0d47a1':'#90a4ae'}" stroke-width="${big?4:1.8}" stroke-linecap="round"/>`;
+  }
+  let nums='';
+  for(let i=1;i<=12;i++){
+    const a=(i*30-90)*Math.PI/180, rr=r-30;
+    nums+=`<text x="${cx+rr*Math.cos(a)}" y="${cy+rr*Math.sin(a)+6}" text-anchor="middle" font-size="18" font-weight="bold" fill="#37474f">${i}</text>`;
+  }
+  const ah=((h%12)*30+m*0.5-90)*Math.PI/180, am=(m*6-90)*Math.PI/180;
+  return `<svg viewBox="0 0 200 200" width="${size}">
+    <circle cx="${cx}" cy="${cy}" r="${r+6}" fill="#fff" stroke="#c62828" stroke-width="5"/>
+    ${ticks}${nums}
+    <line x1="${cx}" y1="${cy}" x2="${cx+44*Math.cos(ah)}" y2="${cy+44*Math.sin(ah)}" stroke="#c62828" stroke-width="7" stroke-linecap="round"/>
+    <line x1="${cx}" y1="${cy}" x2="${cx+68*Math.cos(am)}" y2="${cy+68*Math.sin(am)}" stroke="#1565c0" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="${cx}" cy="${cy}" r="7" fill="#ef6c00" stroke="#fff" stroke-width="2"/></svg>`;
+}
+function svgFrac(n,shaded=1,size=110,color='#e53935'){
+  const cx=60,cy=60,r=52; let p='';
+  for(let i=0;i<n;i++){
+    const a1=(i*360/n-90)*Math.PI/180, a2=((i+1)*360/n-90)*Math.PI/180;
+    const large = (360/n)>180?1:0;
+    const d = `M ${cx} ${cy} L ${cx+r*Math.cos(a1)} ${cy+r*Math.sin(a1)} A ${r} ${r} 0 ${large} 1 ${cx+r*Math.cos(a2)} ${cy+r*Math.sin(a2)} Z`;
+    p += `<path d="${d}" fill="${i<shaded?color:'#ffffff'}" stroke="#1a237e" stroke-width="2.5"/>`;
+  }
+  return `<svg viewBox="0 0 120 120" width="${size}">${p}</svg>`;
+}
+function svgShapes(){
+  return `<svg viewBox="0 0 700 200" width="690">
+   <polygon points="80,30 20,150 140,150" fill="#42a5f5" stroke="#0d47a1" stroke-width="3"/>
+   <text x="80" y="178" text-anchor="middle" font-size="15" font-weight="bold" fill="#0d47a1">Tam giác</text>
+   <polygon points="205,35 285,55 300,145 180,150" fill="#ec407a" stroke="#ad1457" stroke-width="3"/>
+   <text x="240" y="178" text-anchor="middle" font-size="15" font-weight="bold" fill="#ad1457">Tứ giác</text>
+   <rect x="350" y="55" width="130" height="90" fill="#66bb6a" stroke="#1b5e20" stroke-width="3"/>
+   <text x="415" y="178" text-anchor="middle" font-size="15" font-weight="bold" fill="#1b5e20">Chữ nhật</text>
+   <rect x="545" y="50" width="100" height="100" fill="#ef5350" stroke="#b71c1c" stroke-width="3"/>
+   <text x="595" y="178" text-anchor="middle" font-size="15" font-weight="bold" fill="#b71c1c">Hình vuông</text>
+  </svg>
+  <svg viewBox="0 0 520 190" width="500">
+   <polygon points="40,60 150,60 190,30 80,30" fill="#ffd54f" stroke="#37474f" stroke-width="2.5"/>
+   <rect x="40" y="60" width="110" height="80" fill="#1e88e5" stroke="#37474f" stroke-width="2.5"/>
+   <polygon points="150,60 190,30 190,110 150,140" fill="#1565c0" stroke="#37474f" stroke-width="2.5"/>
+   <text x="115" y="170" text-anchor="middle" font-size="14.5" font-weight="bold" fill="#0d47a1">Khối hộp chữ nhật · 8 đỉnh, 6 mặt, 12 cạnh</text>
+   <polygon points="330,55 420,55 450,28 360,28" fill="#ffb300" stroke="#37474f" stroke-width="2.5"/>
+   <rect x="330" y="55" width="90" height="90" fill="#66bb6a" stroke="#37474f" stroke-width="2.5"/>
+   <polygon points="420,55 450,28 450,118 420,145" fill="#ef5350" stroke="#37474f" stroke-width="2.5"/>
+   <text x="390" y="170" text-anchor="middle" font-size="14.5" font-weight="bold" fill="#1b5e20">Khối lập phương · 6 mặt đều là hình vuông</text>
+  </svg>`;
+}
+
+/* =====================================================================
+   CÁC BỘ SINH CÂU HỎI
+   ===================================================================== */
+const GEN = {};
+
+/* --- 1.1 Cấu tạo số --- */
+GEN.cautao = function(){
+  const d=[R(1,9),R(0,9),R(0,9),R(0,9),R(0,9)];
+  const n=Number(d.join(''));
+  const t=R(1,4);
+  if(t===1){
+    const i=R(0,4);
+    return {q:`Số <b>${fmt(n)}</b> có chữ số hàng <b>${HANG[i][0]}</b> là chữ số nào?`,
+      ans:String(d[i]), hint:'Đếm các hàng từ phải sang trái: đơn vị → chục → trăm → nghìn → chục nghìn.',
+      sol:`${fmt(n)} → hàng ${HANG[i][0]} là chữ số <b>${d[i]}</b>.`};
+  }
+  if(t===2){
+    const parts=[d[0]*10000,d[1]*1000,d[2]*100,d[3]*10,d[4]].filter(x=>x>0);
+    return {q:`Viết số biết: <b>${parts.map(fmt).join(' + ')}</b> = ?`,
+      ans:String(n), hint:'Ghép các giá trị theo đúng hàng, hàng nào thiếu thì viết chữ số 0.',
+      sol:`${parts.map(fmt).join(' + ')} = <b>${fmt(n)}</b>`};
+  }
+  if(t===3){
+    return {q:`Số gồm <b>${d[0]} chục nghìn, ${d[1]} nghìn, ${d[2]} trăm, ${d[3]} chục, ${d[4]} đơn vị</b> là số nào?`,
+      ans:String(n), hint:'Viết đủ 5 chữ số theo thứ tự đã cho, kể cả chữ số 0.',
+      sol:`Số đó là <b>${fmt(n)}</b>.`};
+  }
+  const i=R(0,4), gt=[10000,1000,100,10,1][i], val=gt*d[i];
+  return {q:`Trong số <b>${fmt(n)}</b>, chữ số hàng <b>${HANG[i][0]}</b> có giá trị bằng bao nhiêu?`,
+    ans:String(val), hint:'Giá trị = chữ số × giá trị của hàng (10 000 / 1 000 / 100 / 10 / 1).',
+    sol:`Chữ số ${d[i]} ở hàng ${HANG[i][0]} có giá trị ${d[i]} × ${fmt(gt)} = <b>${fmt(val)}</b>.`};
+};
+
+/* --- 1.2 So sánh --- */
+GEN.sosanh = function(){
+  const t=R(1,3);
+  if(t===3){
+    const arr=[]; while(arr.length<4){const x=R(10000,99999); if(!arr.includes(x))arr.push(x);}
+    const max=Math.max(...arr), min=Math.min(...arr);
+    const askMax=Math.random()<0.5;
+    return {q:`Trong các số <b>${arr.map(fmt).join(' ; ')}</b>, số <b>${askMax?'lớn nhất':'bé nhất'}</b> là số nào?`,
+      ans:String(askMax?max:min), hint:'So sánh lần lượt từ hàng chục nghìn (bên trái) trở đi.',
+      sol:`Số ${askMax?'lớn nhất':'bé nhất'} là <b>${fmt(askMax?max:min)}</b>.`};
+  }
+  let a=R(10000,99999), b;
+  const k=R(1,4);
+  if(k===1) b=a;
+  else if(k===2) b=Number(String(a).slice(0,3)+String(R(0,9))+String(R(0,9)));
+  else if(k===3) b=Number(String(a).slice(0,2)+String(R(0,9))+String(R(0,9))+String(R(0,9)));
+  else b=R(10000,99999);
+  const s = a>b?'>':(a<b?'<':'=');
+  return {q:`Điền dấu thích hợp (&gt; , &lt; , =):&nbsp; <b>${fmt(a)}</b> ..... <b>${fmt(b)}</b>`,
+    ans:s, alt:[s], hint:'So từ trái sang phải, gặp cặp chữ số đầu tiên khác nhau là kết luận ngay.',
+    sol:`${fmt(a)} <b>${s}</b> ${fmt(b)}`};
+};
+
+/* --- 1.3 Làm tròn --- */
+GEN.lamtron = function(){
+  const places=[[10,'hàng chục'],[100,'hàng trăm'],[1000,'hàng nghìn'],[10000,'hàng chục nghìn']];
+  const [p,name]=pick(places);
+  const n=R(p<1000?1000:10000, 99999);
+  const r=Math.floor(n/p+0.5)*p;
+  const look=Math.floor(n/(p/10))%10;
+  return {q:`Làm tròn số <b>${fmt(n)}</b> đến <b>${name}</b>.`,
+    ans:String(r), hint:'Nhìn đúng MỘT chữ số ngay sau hàng cần làm tròn: bé hơn 5 → tròn xuống, từ 5 trở lên → tròn lên.',
+    sol:`Chữ số liền sau ${name} là <b>${look}</b> ${look<5?'&lt; 5 → làm tròn xuống':'≥ 5 → làm tròn lên'} ⇒ <b>${fmt(r)}</b>.`};
+};
+
+/* --- 1.4 Chữ số La Mã --- */
+const ROMAN_MAP=[['I',1],['II',2],['III',3],['IV',4],['V',5],['VI',6],['VII',7],['VIII',8],['IX',9],['X',10],['XI',11],['XII',12]];
+GEN.roman = function(){
+  const t=R(1,4);
+  if(t===1){
+    const [rom,ara]=pick(ROMAN_MAP);
+    return {q:`Chữ số La Mã <b>${rom}</b> có giá trị bằng bao nhiêu?`, ans:String(ara),
+      hint:'I=1, V=5, X=10. Ký hiệu nhỏ đứng trước ký hiệu lớn thì trừ (IV=4, IX=9).',
+      sol:`${rom} = <b>${ara}</b>`};
+  }
+  if(t===2){
+    const [rom,ara]=pick(ROMAN_MAP);
+    return {q:`Viết số <b>${ara}</b> bằng chữ số La Mã.`, ans:rom, alt:[rom],
+      hint:'I=1, V=5, X=10. 4=IV (5−1), 9=IX (10−1). Từ 6–8 viết V+số I.',
+      sol:`${ara} = <b>${rom}</b>`};
+  }
+  if(t===3){
+    const pairs=shuffle(ROMAN_MAP.slice()).slice(0,4);
+    const sorted=[...pairs].sort((a,b)=>a[1]-b[1]);
+    const askMax=Math.random()<0.5;
+    const answer=askMax?sorted[sorted.length-1]:sorted[0];
+    return {q:`Trong các số La Mã <b>${pairs.map(p=>p[0]).join(', ')}</b>, số nào có giá trị <b>${askMax?'lớn nhất':'nhỏ nhất'}</b>?`,
+      ans:answer[0], alt:[answer[0],String(answer[1])],
+      hint:'Đổi tất cả ra số Ả Rập rồi so sánh.',
+      sol:`${answer[0]} = ${answer[1]} → giá trị ${askMax?'lớn':'nhỏ'} nhất.`};
+  }
+  const mc=[
+    ['Đồng hồ treo tường chỉ <b>VIII giờ</b>. Đó là mấy giờ?',['8 giờ','7 giờ','9 giờ','6 giờ'],0,'VIII = 8'],
+    ['Tháng La Mã <b>IV</b> là tháng mấy?',['Tháng 4','Tháng 6','Tháng 9','Tháng 5'],0,'IV = 4 (I trước V → trừ: 5−1=4)'],
+    ['Đồng hồ chỉ <b>IX giờ</b>. Đó là mấy giờ?',['9 giờ','8 giờ','11 giờ','7 giờ'],0,'IX = 9 (I trước X → trừ: 10−1=9)'],
+    ['Số La Mã nào bằng số <b>12</b>?',['XII','XXI','IIIX','IIX'],0,'XII = 10+1+1 = 12'],
+    ['Số La Mã <b>XI</b> bằng bao nhiêu?',['11','9','12','13'],0,'XI = X+I = 10+1 = 11'],
+    ['Cách viết số <b>4</b> bằng La Mã là?',['IV','IIII','VI','IIV'],0,'IV = 5−1 = 4 (không được viết IIII)'],
+  ];
+  const [qq,op,ci,sol]=pick(mc); const idx=shuffle(op.map((_,i)=>i));
+  return {q:qq, type:'mc', opts:idx.map(i=>op[i]), ansIdx:idx.indexOf(ci),
+    hint:'Nhớ: IV=4, IX=9, X=10, XI=11, XII=12.', sol:`<b>${op[ci]}</b> – ${sol}`};
+};
+
+/* --- 2.1 Bảng nhân chia --- */
+GEN.bangnhanchia = function(){
+  const a=R(2,9), b=R(2,10), p=a*b, t=R(1,4);
+  if(t===1) return {q:`<b>${a} × ${b} = ?</b>`, ans:String(p), hint:`${a} × ${b} là ${a} được lấy ${b} lần.`, sol:`${a} × ${b} = <b>${p}</b>`};
+  if(t===2) return {q:`<b>${p} : ${a} = ?</b>`, ans:String(b), hint:`Nghĩ ngược: ${a} nhân mấy bằng ${p}?`, sol:`${p} : ${a} = <b>${b}</b> (vì ${a} × ${b} = ${p})`};
+  if(t===3) return {q:`<b>${a} × ? = ${p}</b>`, ans:String(b), hint:`Lấy tích chia cho thừa số đã biết.`, sol:`${p} : ${a} = <b>${b}</b>`};
+  return {q:`<b>? : ${b} = ${a}</b>`, ans:String(p), hint:`Số bị chia = thương × số chia.`, sol:`${a} × ${b} = <b>${p}</b>`};
+};
+GEN.dauNhanh = GEN.bangnhanchia;
+
+/* --- 2.2 Cộng trừ --- */
+GEN.congtru = function(){
+  if(Math.random()<0.5){
+    const a=R(10000,60000), b=R(1000,99999-a);
+    return {q:`Đặt tính rồi tính:&nbsp; <b>${fmt(a)} + ${fmt(b)} = ?</b>`, ans:String(a+b),
+      hint:'Viết thẳng hàng, cộng từ phải sang trái, nhớ ghi số nhớ.',
+      sol:`${fmt(a)} + ${fmt(b)} = <b>${fmt(a+b)}</b> (thử lại: ${fmt(a+b)} − ${fmt(b)} = ${fmt(a)})`};
+  }
+  const a=R(20000,99999), b=R(1000,a-100);
+  return {q:`Đặt tính rồi tính:&nbsp; <b>${fmt(a)} − ${fmt(b)} = ?</b>`, ans:String(a-b),
+    hint:'Không trừ được thì mượn 1 ở hàng trước, nhớ trả lại 1.',
+    sol:`${fmt(a)} − ${fmt(b)} = <b>${fmt(a-b)}</b> (thử lại: ${fmt(a-b)} + ${fmt(b)} = ${fmt(a)})`};
+};
+
+/* --- 2.3 Nhân chia với số 1 chữ số --- */
+GEN.nhanchia = function(){
+  const t=R(1,3);
+  if(t<=2){
+    const d=R(2,9), a=R(1000, Math.floor(99999/d));
+    return {q:`Đặt tính rồi tính:&nbsp; <b>${fmt(a)} × ${d} = ?</b>`, ans:String(a*d),
+      hint:'Nhân từ hàng đơn vị trở đi, nhớ cộng thêm phần nhớ.', sol:`${fmt(a)} × ${d} = <b>${fmt(a*d)}</b>`};
+  }
+  const d=R(2,9), q0=R(1000,11000), a=q0*d + (Math.random()<0.35?R(1,d-1):0);
+  const th=Math.floor(a/d), du=a%d;
+  return {q:`Đặt tính rồi tính:&nbsp; <b>${fmt(a)} : ${d} = ?</b>${du?' <i>(ghi dạng thương r dư – ví dụ 125r2)</i>':''}`,
+    ans: du? `${th}r${du}` : String(th), alt: du?[`${th}r${du}`,`${th} dư ${du}`,`${th}du${du}`]:[String(th)],
+    hint:'Lặp 4 nhịp: Chia → Nhân → Trừ → Hạ. Số dư luôn bé hơn số chia.',
+    sol:`${fmt(a)} : ${d} = <b>${fmt(th)}</b>${du?` dư <b>${du}</b>`:''} (thử lại: ${fmt(th)} × ${d}${du?` + ${du}`:''} = ${fmt(a)})`};
+};
+
+/* --- 2.4 Biểu thức --- */
+GEN.bieuthuc = function(){
+  const t=R(1,4);
+  if(t===1){
+    const a=R(20,60), b=R(10,40), c=R(10,40);
+    if(Math.random()<0.5) return {q:`Tính giá trị biểu thức:&nbsp; <b>${a} + ${b} + ${c}</b>`, ans:String(a+b+c),
+      hint:'Chỉ có cộng, trừ → làm từ trái sang phải.', sol:`${a} + ${b} = ${a+b}; ${a+b} + ${c} = <b>${a+b+c}</b>`};
+    const A=Math.max(a,b), B=Math.min(a,b);
+    return {q:`Tính giá trị biểu thức:&nbsp; <b>${A} − ${B} + ${c}</b>`, ans:String(A-B+c),
+      hint:'Chỉ có cộng, trừ → làm từ trái sang phải.', sol:`${A} − ${B} = ${A-B}; ${A-B} + ${c} = <b>${A-B+c}</b>`};
+  }
+  if(t===2){
+    const a=R(2,9), b=R(2,9), c=pick([2,3,4,5]);
+    if(Math.random()<0.5) return {q:`Tính giá trị biểu thức:&nbsp; <b>${a} × ${b} : ${b}</b>`, ans:String(a),
+      hint:'Chỉ có nhân, chia → làm từ trái sang phải.', sol:`${a} × ${b} = ${a*b}; ${a*b} : ${b} = <b>${a}</b>`};
+    return {q:`Tính giá trị biểu thức:&nbsp; <b>${a*c*b} : ${c} × 2</b>`, ans:String(a*b*2),
+      hint:'Chỉ có nhân, chia → làm từ trái sang phải.', sol:`${a*c*b} : ${c} = ${a*b}; ${a*b} × 2 = <b>${a*b*2}</b>`};
+  }
+  if(t===3){
+    const a=R(2,9), b=R(2,9), c=R(5,40), k=R(1,3);
+    if(k===1) return {q:`Tính giá trị biểu thức:&nbsp; <b>${a} × ${b} + ${c}</b>`, ans:String(a*b+c),
+      hint:'Có đủ 4 phép → nhân, chia trước; cộng, trừ sau.', sol:`${a} × ${b} = ${a*b}; ${a*b} + ${c} = <b>${a*b+c}</b>`};
+    if(k===2){ const p=a*b, cc=R(1,p-1);
+      return {q:`Tính giá trị biểu thức:&nbsp; <b>${a} × ${b} − ${cc}</b>`, ans:String(p-cc),
+      hint:'Nhân trước, trừ sau.', sol:`${a} × ${b} = ${p}; ${p} − ${cc} = <b>${p-cc}</b>`};}
+    const d=pick([2,3,4,5]), m=d*R(2,9);
+    return {q:`Tính giá trị biểu thức:&nbsp; <b>${c+m} − ${m} : ${d}</b>`, ans:String(c+m-m/d),
+      hint:'Chia trước, trừ sau.', sol:`${m} : ${d} = ${m/d}; ${c+m} − ${m/d} = <b>${c+m-m/d}</b>`};
+  }
+  const k=R(1,3);
+  if(k===1){ const a=pick([2,3,4,5,10]), b=R(2,9), c=R(2,9);
+    return {q:`Tính giá trị biểu thức:&nbsp; <b>${a} × (${b} + ${c})</b>`, ans:String(a*(b+c)),
+      hint:'Có ngoặc → làm trong ngoặc trước.', sol:`${b} + ${c} = ${b+c}; ${a} × ${b+c} = <b>${a*(b+c)}</b>`};}
+  if(k===2){ const d=pick([2,3,4,5]), q=R(2,9), a=d*q, b=R(1,60);
+    return {q:`Tính giá trị biểu thức:&nbsp; <b>(${a+b} − ${b}) : ${d}</b>`, ans:String(q),
+      hint:'Trong ngoặc trước, rồi mới chia.', sol:`${a+b} − ${b} = ${a}; ${a} : ${d} = <b>${q}</b>`};}
+  const a=R(10,40), b=R(5,30), c=pick([2,3,4]);
+  return {q:`Tính giá trị biểu thức:&nbsp; <b>(${a} + ${b}) × ${c}</b>`, ans:String((a+b)*c),
+    hint:'Trong ngoặc trước, rồi nhân.', sol:`${a} + ${b} = ${a+b}; ${a+b} × ${c} = <b>${(a+b)*c}</b>`};
+};
+
+/* --- 2.5 Tìm x --- */
+GEN.timx = function(){
+  const t=R(1,7);
+  if(t===1){const x=R(10,500), a=R(10,400); return {q:`Tìm <b>x</b>:&nbsp; x + ${a} = ${x+a}`, ans:String(x),
+    hint:'Số hạng = Tổng − Số hạng kia.', sol:`x = ${x+a} − ${a} = <b>${x}</b>`};}
+  if(t===2){const x=R(10,500), a=R(10,400); return {q:`Tìm <b>x</b>:&nbsp; ${a} + x = ${x+a}`, ans:String(x),
+    hint:'Số hạng = Tổng − Số hạng kia.', sol:`x = ${x+a} − ${a} = <b>${x}</b>`};}
+  if(t===3){const a=R(10,300), b=R(10,300); return {q:`Tìm <b>x</b>:&nbsp; x − ${a} = ${b}`, ans:String(a+b),
+    hint:'Số bị trừ = Hiệu + Số trừ.', sol:`x = ${b} + ${a} = <b>${a+b}</b>`};}
+  if(t===4){const x=R(10,300), b=R(10,300); return {q:`Tìm <b>x</b>:&nbsp; ${x+b} − x = ${b}`, ans:String(x),
+    hint:'Số trừ = Số bị trừ − Hiệu.', sol:`x = ${x+b} − ${b} = <b>${x}</b>`};}
+  if(t===5){const x=R(2,9), a=R(2,9); return {q:`Tìm <b>x</b>:&nbsp; x × ${a} = ${x*a}`, ans:String(x),
+    hint:'Thừa số = Tích : Thừa số kia.', sol:`x = ${x*a} : ${a} = <b>${x}</b>`};}
+  if(t===6){const a=R(2,9), b=R(2,50); return {q:`Tìm <b>x</b>:&nbsp; x : ${a} = ${b}`, ans:String(a*b),
+    hint:'Số bị chia = Thương × Số chia.', sol:`x = ${b} × ${a} = <b>${a*b}</b>`};}
+  const x=R(2,9), b=R(2,9); return {q:`Tìm <b>x</b>:&nbsp; ${x*b} : x = ${b}`, ans:String(x),
+    hint:'Số chia = Số bị chia : Thương.', sol:`x = ${x*b} : ${b} = <b>${x}</b>`};
+};
+
+/* --- 2.6 Một phần mấy --- */
+GEN.phanmay = function(){
+  const t=R(1,4);
+  if(t===1){const n=R(2,9), k=R(2,12), N=n*k;
+    return {q:`Tìm <b>1/${n}</b> của <b>${N}</b>.`, ans:String(k),
+      hint:'Muốn tìm 1/n của một số, ta lấy số đó chia cho n.', sol:`${N} : ${n} = <b>${k}</b>`};}
+  if(t===2){const n=R(2,9), k=R(2,9), N=n*k, [dv,dvt]=pick(DOVAT);
+    return solveQ(`Mẹ có <b>${N}</b> ${dv}. Mẹ cho em <b>1/${n}</b> số ${dv} đó. Hỏi em được mấy ${dvt}?`,
+      [{loi:`Em được số ${dv} là:`, pt:`${N} : ${n}`, kq:k, dv:dvt}], {val:k,dv:dvt},
+      'Muốn tìm 1/n của một số, ta lấy số đó chia cho n.');}
+  if(t===3){let a=R(2,9),b=R(2,9); while(a===b) b=R(2,9);
+    const s = a<b?'>':'<';
+    return {q:`Điền dấu (&gt; , &lt;):&nbsp; <b>1/${a}</b> ..... <b>1/${b}</b>`, ans:s, alt:[s],
+      hint:'Mẫu số càng lớn thì phần càng nhỏ.', sol:`Vì ${a} ${a<b?'<':'>'} ${b} nên 1/${a} <b>${s}</b> 1/${b}`};}
+  const n=R(2,9);
+  return {q:`Phần đã tô màu của hình dưới đây là một phần mấy của hình tròn? <i>(viết dạng 1/n)</i><br>${svgFrac(n,1,120)}`,
+    ans:`1/${n}`, alt:[`1/${n}`,`1phần${n}`], hint:'Đếm xem hình tròn được chia thành mấy phần bằng nhau.',
+    sol:`Hình được chia thành ${n} phần bằng nhau, tô 1 phần ⇒ <b>1/${n}</b>`};
+};
+
+/* --- 3.1 Hình học --- */
+GEN.hinhhoc = function(){
+  const t=R(1,7);
+  if(t===1){const r=R(3,25); return {q:`Một hình tròn có bán kính <b>${r} cm</b>. Đường kính của hình tròn đó dài bao nhiêu <b>cm</b>?`,
+    ans:String(r*2), hint:'Đường kính = 2 × bán kính.', sol:`${r} × 2 = <b>${r*2}</b> cm`};}
+  if(t===2){const d=R(2,25)*2; return {q:`Một hình tròn có đường kính <b>${d} cm</b>. Bán kính dài bao nhiêu <b>cm</b>?`,
+    ans:String(d/2), hint:'Bán kính = đường kính : 2.', sol:`${d} : 2 = <b>${d/2}</b> cm`};}
+  if(t===3){const L=R(3,30)*2; return {q:`M là <b>trung điểm</b> của đoạn thẳng AB, biết AB = <b>${L} cm</b>. Hỏi AM dài bao nhiêu <b>cm</b>?`,
+    ans:String(L/2), hint:'Trung điểm chia đoạn thẳng thành hai phần bằng nhau.', sol:`${L} : 2 = <b>${L/2}</b> cm`};}
+  if(t===4){const a=R(3,20); return {q:`M là trung điểm của AB. Biết AM = <b>${a} cm</b>. Hỏi đoạn AB dài bao nhiêu <b>cm</b>?`,
+    ans:String(a*2), hint:'AB = AM + MB mà AM = MB.', sol:`${a} × 2 = <b>${a*2}</b> cm`};}
+  if(t===5){
+    const qs=[
+      ['Hình nào có <b>4 cạnh bằng nhau và 4 góc vuông</b>?',['Hình vuông','Hình chữ nhật','Hình tam giác','Hình tứ giác'],0],
+      ['<b>Khối lập phương</b> có bao nhiêu <b>mặt</b>?',['6 mặt','8 mặt','12 mặt','4 mặt'],0],
+      ['<b>Khối hộp chữ nhật</b> có bao nhiêu <b>cạnh</b>?',['12 cạnh','8 cạnh','6 cạnh','10 cạnh'],0],
+      ['Hình tam giác có mấy <b>đỉnh</b>?',['3 đỉnh','4 đỉnh','5 đỉnh','2 đỉnh'],0],
+      ['Các mặt của <b>khối lập phương</b> đều là hình gì?',['Hình vuông','Hình chữ nhật','Hình tròn','Hình tam giác'],0],
+      ['Hình chữ nhật có mấy <b>góc vuông</b>?',['4 góc vuông','2 góc vuông','3 góc vuông','Không có góc vuông'],0],
+      ['Trong hình tròn, tâm O là <b>trung điểm</b> của đoạn nào?',['Đường kính','Bán kính','Một cạnh','Một góc'],0],
+      ['Dụng cụ dùng để kiểm tra <b>góc vuông</b> là gì?',['Ê-ke','Com-pa','Nhiệt kế','Cân'],0]
+    ];
+    const [qq,op,ci]=pick(qs); const idx=shuffle(op.map((v,i)=>i));
+    return {q:qq, type:'mc', opts:idx.map(i=>op[i]), ansIdx:idx.indexOf(ci),
+      hint:'Nhớ lại bảng đặc điểm của các hình.', sol:`Đáp án đúng: <b>${op[ci]}</b>`};
+  }
+  if(t===6){
+    const op=['3 đỉnh, 3 cạnh','4 đỉnh, 4 cạnh','8 đỉnh, 12 cạnh','4 đỉnh, 3 cạnh'];
+    return {q:`<b>Khối hộp chữ nhật</b> có bao nhiêu đỉnh và bao nhiêu cạnh?`, type:'mc',
+      opts:op, ansIdx:2, hint:'Nhớ bộ ba 8 – 6 – 12.', sol:`Khối hộp chữ nhật có <b>8 đỉnh, 6 mặt, 12 cạnh</b>.`};}
+  const op=['Có 3 điểm thẳng hàng và hai đoạn bằng nhau','Chỉ cần nằm giữa hai điểm','Chỉ cần hai đoạn bằng nhau','Nằm ngoài đoạn thẳng'];
+  return {q:`Điểm B là <b>trung điểm</b> của AC khi nào?`, type:'mc', opts:op, ansIdx:0,
+    hint:'Trung điểm cần đủ HAI điều kiện.', sol:`B phải <b>nằm giữa</b> A, C (thẳng hàng) <b>và</b> AB = BC.`};
+};
+
+/* --- 3.2 Chu vi, diện tích (tính nhanh) --- */
+GEN.chuvidt = function(){
+  const t=R(1,6);
+  if(t===1){const a=R(3,20), b=R(2,a-1);
+    return {q:`Một hình chữ nhật có chiều dài <b>${a} cm</b>, chiều rộng <b>${b} cm</b>. Tính <b>chu vi</b> (cm).`,
+      ans:String((a+b)*2), hint:'Chu vi hình chữ nhật = (dài + rộng) × 2.', sol:`(${a} + ${b}) × 2 = <b>${(a+b)*2}</b> cm`};}
+  if(t===2){const a=R(3,20), b=R(2,a-1);
+    return {q:`Một hình chữ nhật có chiều dài <b>${a} cm</b>, chiều rộng <b>${b} cm</b>. Tính <b>diện tích</b> (cm²).`,
+      ans:String(a*b), hint:'Diện tích hình chữ nhật = dài × rộng.', sol:`${a} × ${b} = <b>${a*b}</b> cm²`};}
+  if(t===3){const a=R(2,20);
+    return {q:`Một hình vuông có cạnh <b>${a} cm</b>. Tính <b>chu vi</b> (cm).`,
+      ans:String(a*4), hint:'Chu vi hình vuông = cạnh × 4.', sol:`${a} × 4 = <b>${a*4}</b> cm`};}
+  if(t===4){const a=R(2,20);
+    return {q:`Một hình vuông có cạnh <b>${a} cm</b>. Tính <b>diện tích</b> (cm²).`,
+      ans:String(a*a), hint:'Diện tích hình vuông = cạnh × cạnh.', sol:`${a} × ${a} = <b>${a*a}</b> cm²`};}
+  if(t===5){const a=R(3,15), b=R(3,15), c=R(3,15);
+    return {q:`Tính <b>chu vi</b> hình tam giác có ba cạnh lần lượt là <b>${a} cm, ${b} cm, ${c} cm</b>.`,
+      ans:String(a+b+c), hint:'Chu vi tam giác = tổng ba cạnh.', sol:`${a} + ${b} + ${c} = <b>${a+b+c}</b> cm`};}
+  const a=R(2,12), b=R(2,12), c=R(2,12), d=R(2,12);
+  return {q:`Tính <b>chu vi</b> hình tứ giác có bốn cạnh là <b>${a} cm, ${b} cm, ${c} cm, ${d} cm</b>.`,
+    ans:String(a+b+c+d), hint:'Chu vi tứ giác = tổng bốn cạnh.', sol:`${a} + ${b} + ${c} + ${d} = <b>${a+b+c+d}</b> cm`};
+};
+
+/* --- 3.3 Đơn vị đo --- */
+GEN.donvi = function(){
+  const P=[['km','m',1000],['m','cm',100],['m','dm',10],['dm','cm',10],['cm','mm',10],['m','mm',1000],['dm','mm',100],['kg','g',1000],['l','ml',1000]];
+  const t=R(1,4);
+  if(t===1){const [b,s,k]=pick(P), n=R(2,9);
+    return {q:`Đổi: <b>${n} ${b} = ..... ${s}</b>`, ans:String(n*k),
+      hint:`1 ${b} = ${fmt(k)} ${s}. Đổi từ đơn vị lớn sang bé thì NHÂN.`, sol:`${n} × ${fmt(k)} = <b>${fmt(n*k)}</b> ${s}`};}
+  if(t===2){const [b,s,k]=pick(P), n=R(2,9);
+    return {q:`Đổi: <b>${fmt(n*k)} ${s} = ..... ${b}</b>`, ans:String(n),
+      hint:`1 ${b} = ${fmt(k)} ${s}. Đổi từ đơn vị bé sang lớn thì CHIA.`, sol:`${fmt(n*k)} : ${fmt(k)} = <b>${n}</b> ${b}`};}
+  if(t===3){const [b,s,k]=pick(P), n=R(1,9), r=R(1,k-1);
+    return {q:`Đổi: <b>${n} ${b} ${r} ${s} = ..... ${s}</b>`, ans:String(n*k+r),
+      hint:`Đổi phần ${b} ra ${s} rồi cộng thêm phần lẻ.`, sol:`${n} ${b} = ${fmt(n*k)} ${s}; ${fmt(n*k)} + ${r} = <b>${fmt(n*k+r)}</b> ${s}`};}
+  const [b,s,k]=pick(P); const n=R(2,8); const left=n*k;
+  const delta=pick([0, R(1,Math.min(500,k-1)), -R(1,Math.min(500,k-1))]);
+  const right=left+delta;
+  const sgn = left>right?'>':(left<right?'<':'=');
+  return {q:`Điền dấu (&gt; , &lt; , =):&nbsp; <b>${n} ${b}</b> ..... <b>${fmt(right)} ${s}</b>`, ans:sgn, alt:[sgn],
+    hint:`Đổi cả hai về cùng đơn vị ${s} rồi mới so sánh.`,
+    sol:`${n} ${b} = ${fmt(left)} ${s}; ${fmt(left)} ${sgn} ${fmt(right)} ⇒ <b>${sgn}</b>`};
+};
+
+/* --- 3.4 Thời gian --- */
+GEN.thoigian = function(){
+  const t=R(1,5);
+  if(t===1){
+    const h=R(1,12), m=pick([0,5,10,15,20,25,30,35,40,45,50,55]);
+    const correct=`${h} giờ ${m} phút`;
+    const wrong=new Set();
+    while(wrong.size<3){const hh=R(1,12), mm=pick([0,5,10,15,20,25,30,35,40,45,50,55]); const s=`${hh} giờ ${mm} phút`; if(s!==correct) wrong.add(s);}
+    const op=shuffle([correct,...wrong]);
+    return {q:`Đồng hồ chỉ mấy giờ?<br>${svgClock(h,m)}`, type:'mc', opts:op, ansIdx:op.indexOf(correct),
+      hint:'Kim ngắn chỉ giờ, kim dài chỉ phút. Mỗi số cách nhau 5 phút.', sol:`Đồng hồ chỉ <b>${correct}</b>.`};
+  }
+  if(t===2){
+    const h=R(1,11), m=pick([35,40,45,50,55]);
+    return {q:`<b>${h} giờ ${m} phút</b> còn được đọc là <b>${h+1} giờ kém ..... phút</b>. Điền số phút còn thiếu.`,
+      ans:String(60-m), hint:'Lấy 60 trừ đi số phút, rồi tăng giờ thêm 1.', sol:`60 − ${m} = <b>${60-m}</b> ⇒ ${h+1} giờ kém ${60-m} phút`};
+  }
+  if(t===3){
+    const days={1:31,2:28,3:31,4:30,5:31,6:30,7:31,8:31,9:30,10:31,11:30,12:31};
+    const mth=R(1,12);
+    if(mth===2) return {q:`Tháng 2 của một năm <b>không nhuận</b> có bao nhiêu ngày?`, ans:'28',
+      hint:'Tháng 2 đặc biệt: 28 ngày, năm nhuận thì 29 ngày.', sol:`Tháng 2 có <b>28</b> ngày (năm nhuận là 29 ngày).`};
+    return {q:`<b>Tháng ${mth}</b> có bao nhiêu ngày?`, ans:String(days[mth]),
+      hint:'Dùng mẹo nắm tay: chỗ nhô lên 31 ngày, chỗ lõm 30 ngày.', sol:`Tháng ${mth} có <b>${days[mth]}</b> ngày.`};
+  }
+  if(t===4){
+    const h=R(1,9); return {q:`<b>${h} giờ chiều</b> hay còn gọi là mấy giờ (theo cách nói 24 giờ)?`,
+      ans:String(h+12), hint:'Buổi chiều tối thì cộng thêm 12.', sol:`${h} + 12 = <b>${h+12}</b> giờ`};
+  }
+  const a=R(1,9), m=R(0,25), b=R(5,30);
+  return {q:`Một bộ phim bắt đầu lúc <b>${a} giờ ${m} phút</b> và kéo dài <b>${b} phút</b>. Phim kết thúc lúc <b>${a} giờ ..... phút</b>?`,
+    ans:String(m+b), hint:'Cộng số phút của phim vào số phút lúc bắt đầu.', sol:`${m} + ${b} = <b>${m+b}</b> ⇒ phim kết thúc lúc ${a} giờ ${m+b} phút`};
+};
+
+/* --- 4.1 Gấp, giảm (BÀI GIẢI ĐẦY ĐỦ) --- */
+GEN.gapgiam = function(){
+  const n1=pick(TEN), [dv,dvt]=pick(DOVAT); let n2=pick(TEN); while(n2===n1) n2=pick(TEN);
+  const t=R(1,5);
+  if(t===1){const a=R(3,12), k=R(2,9);
+    return solveQ(`${n1} có <b>${a}</b> ${dv}. Số ${dv} của ${n2} <b>gấp ${k} lần</b> ${n1}. Hỏi ${n2} có bao nhiêu ${dvt}?`,
+      [{loi:`${n2} có số ${dv} là:`, pt:`${a} × ${k}`, kq:a*k, dv:dvt}], {val:a*k,dv:dvt},
+      'Gấp một số lên nhiều lần → lấy số đó NHÂN với số lần.');}
+  if(t===2){const k=R(2,9), b=R(2,12), a=k*b;
+    return solveQ(`${n1} có <b>${a}</b> ${dv}. Số ${dv} của ${n2} bằng số ${dv} của ${n1} <b>giảm đi ${k} lần</b>. Hỏi ${n2} có bao nhiêu ${dvt}?`,
+      [{loi:`${n2} có số ${dv} là:`, pt:`${a} : ${k}`, kq:b, dv:dvt}], {val:b,dv:dvt},
+      'Giảm một số đi nhiều lần → lấy số đó CHIA cho số lần.');}
+  if(t===3){const k=R(2,9), b=R(2,10), a=k*b;
+    return solveQ(`${n1} có <b>${a}</b> ${dv}, ${n2} có <b>${b}</b> ${dv}. Hỏi số ${dv} của ${n1} <b>gấp mấy lần</b> số ${dv} của ${n2}?`,
+      [{loi:`Số ${dv} của ${n1} gấp số ${dv} của ${n2} số lần là:`, pt:`${a} : ${b}`, kq:k, dv:'lần'}], {val:k,dv:'lần'},
+      'Số lớn gấp mấy lần số bé → lấy số lớn CHIA số bé.');}
+  if(t===4){const a=R(5,30), m=R(2,15);
+    return solveQ(`${n1} có <b>${a}</b> ${dv}. ${n2} có <b>nhiều hơn</b> ${n1} <b>${m}</b> ${dv}. Hỏi ${n2} có bao nhiêu ${dvt}?`,
+      [{loi:`${n2} có số ${dv} là:`, pt:`${a} + ${m}`, kq:a+m, dv:dvt}], {val:a+m,dv:dvt},
+      '“Nhiều hơn … đơn vị” (không có chữ “lần”) → phép CỘNG.');}
+  const m=R(2,15), A=R(5,30)+m;
+  return solveQ(`${n1} có <b>${A}</b> ${dv}. ${n2} có <b>ít hơn</b> ${n1} <b>${m}</b> ${dv}. Hỏi ${n2} có bao nhiêu ${dvt}?`,
+    [{loi:`${n2} có số ${dv} là:`, pt:`${A} − ${m}`, kq:A-m, dv:dvt}], {val:A-m,dv:dvt},
+    '“Ít hơn … đơn vị” → phép TRỪ.');
+};
+
+/* --- 4.2 Hai bước tính (BÀI GIẢI ĐẦY ĐỦ) --- */
+GEN.haibuoc = function(){
+  const n1=pick(TEN); let n2=pick(TEN); while(n2===n1) n2=pick(TEN);
+  const [dv,dvt]=pick(DOVAT);
+  const t=R(1,5);
+  if(t===1){const a=R(4,15), k=R(2,5);
+    return solveQ(`${n1} có <b>${a}</b> ${dv}. ${n2} có gấp <b>${k} lần</b> ${n1}. Hỏi <b>cả hai bạn</b> có bao nhiêu ${dvt}?`,
+      [{loi:`${n2} có số ${dv} là:`, pt:`${a} × ${k}`, kq:a*k, dv:dvt},
+       {loi:`Cả hai bạn có số ${dv} là:`, pt:`${a} + ${a*k}`, kq:a+a*k, dv:dvt}],
+      {val:a+a*k,dv:dvt}, 'Bước 1: tìm số của bạn thứ hai. Bước 2: cộng số của cả hai bạn.');}
+  if(t===2){const a=R(20,45), m=R(2,10);
+    return solveQ(`Lớp 3A có <b>${a}</b> học sinh. Lớp 3B có <b>ít hơn</b> lớp 3A <b>${m}</b> học sinh. Hỏi <b>cả hai lớp</b> có bao nhiêu học sinh?`,
+      [{loi:`Lớp 3B có số học sinh là:`, pt:`${a} − ${m}`, kq:a-m, dv:'học sinh'},
+       {loi:`Cả hai lớp có số học sinh là:`, pt:`${a} + ${a-m}`, kq:a+a-m, dv:'học sinh'}],
+      {val:a+a-m,dv:'học sinh'}, 'Bước 1: tính số học sinh lớp 3B. Bước 2: cộng hai lớp.');}
+  if(t===3){const k=R(2,9), n=R(3,9), N=k*n, used=R(2,n-1);
+    return solveQ(`Có <b>${N}</b> ${dv} xếp đều vào <b>${n}</b> hộp. Hỏi <b>${used}</b> hộp như thế có bao nhiêu ${dvt}?`,
+      [{loi:`Mỗi hộp có số ${dv} là:`, pt:`${N} : ${n}`, kq:k, dv:dvt},
+       {loi:`${used} hộp có số ${dv} là:`, pt:`${k} × ${used}`, kq:k*used, dv:dvt}],
+      {val:k*used,dv:dvt}, 'Bước 1: tìm số ở mỗi hộp. Bước 2: nhân với số hộp cần tìm.');}
+  if(t===4){const n=R(2,6), k=R(3,12), N=n*k;
+    return solveQ(`Cửa hàng có <b>${N}</b> ${dv}, đã bán <b>1/${n}</b> số ${dv} đó. Hỏi cửa hàng <b>còn lại</b> bao nhiêu ${dvt}?`,
+      [{loi:`Cửa hàng đã bán số ${dv} là:`, pt:`${N} : ${n}`, kq:k, dv:dvt},
+       {loi:`Cửa hàng còn lại số ${dv} là:`, pt:`${N} − ${k}`, kq:N-k, dv:dvt}],
+      {val:N-k,dv:dvt}, 'Bước 1: tính số đã bán = tổng : n. Bước 2: lấy tổng trừ đi số đã bán.');}
+  const box=R(2,9), num=R(3,9), tot=box*num, used=R(2,Math.min(12,tot-1));
+  return solveQ(`Mẹ mua <b>${num}</b> hộp, mỗi hộp có <b>${box}</b> ${dv}. Mẹ đã dùng hết <b>${used}</b> ${dvt}. Hỏi <b>còn lại</b> bao nhiêu ${dvt}?`,
+    [{loi:`Mẹ mua tất cả số ${dv} là:`, pt:`${box} × ${num}`, kq:tot, dv:dvt},
+     {loi:`Số ${dv} còn lại là:`, pt:`${tot} − ${used}`, kq:tot-used, dv:dvt}],
+    {val:tot-used,dv:dvt}, 'Bước 1: tính tổng số. Bước 2: trừ đi số đã dùng.');
+};
+
+/* --- 4.3 Lời văn hình học (BÀI GIẢI ĐẦY ĐỦ) --- */
+GEN.loivanhinh = function(){
+  const t=R(1,5);
+  const nơi=pick(['mảnh vườn','mảnh đất','tấm bìa','sân chơi','thửa ruộng','khung tranh']);
+  if(t===1){const a=R(4,25), b=R(2,a-1), u=pick(['m','cm']);
+    return solveQ(`Một ${nơi} hình chữ nhật có chiều dài <b>${a} ${u}</b>, chiều rộng <b>${b} ${u}</b>. Tính <b>chu vi</b> ${nơi} đó.`,
+      [{loi:`Chu vi ${nơi} hình chữ nhật là:`, pt:`(${a} + ${b}) × 2`, kq:(a+b)*2, dv:u}], {val:(a+b)*2,dv:u},
+      'Chu vi hình chữ nhật = (dài + rộng) × 2.');}
+  if(t===2){const a=R(4,20), b=R(2,a-1);
+    return solveQ(`Một ${nơi} hình chữ nhật có chiều dài <b>${a} cm</b>, chiều rộng <b>${b} cm</b>. Tính <b>diện tích</b> ${nơi} đó.`,
+      [{loi:`Diện tích ${nơi} hình chữ nhật là:`, pt:`${a} × ${b}`, kq:a*b, dv:'cm²'}], {val:a*b,dv:'cm²'},
+      'Diện tích hình chữ nhật = dài × rộng (cùng đơn vị đo).');}
+  if(t===3){const a=R(3,20), u=pick(['m','cm']);
+    return solveQ(`Một ${nơi} hình vuông có cạnh dài <b>${a} ${u}</b>. Tính <b>chu vi</b> ${nơi} đó.`,
+      [{loi:`Chu vi ${nơi} hình vuông là:`, pt:`${a} × 4`, kq:a*4, dv:u}], {val:a*4,dv:u},
+      'Chu vi hình vuông = cạnh × 4.');}
+  if(t===4){const a=R(3,15);
+    return solveQ(`Một ${nơi} hình vuông có cạnh dài <b>${a} cm</b>. Tính <b>diện tích</b> ${nơi} đó.`,
+      [{loi:`Diện tích ${nơi} hình vuông là:`, pt:`${a} × ${a}`, kq:a*a, dv:'cm²'}], {val:a*a,dv:'cm²'},
+      'Diện tích hình vuông = cạnh × cạnh.');}
+  const a=R(5,20), b=R(3,a-1);
+  return solveQ(`Một ${nơi} hình chữ nhật có chiều dài <b>${a} m</b>, chiều rộng <b>${b} m</b>. Người ta muốn rào xung quanh ${nơi} đó bằng <b>2 vòng dây</b>. Hỏi cần bao nhiêu mét dây?`,
+    [{loi:`Chu vi ${nơi} hình chữ nhật là:`, pt:`(${a} + ${b}) × 2`, kq:(a+b)*2, dv:'m'},
+     {loi:`Số mét dây cần dùng là:`, pt:`${(a+b)*2} × 2`, kq:(a+b)*4, dv:'m'}],
+    {val:(a+b)*4,dv:'m'}, 'Bước 1: tính chu vi. Bước 2: nhân với số vòng dây.');
+};
+
+/* --- 5.1 Bảng số liệu --- */
+const BANG_CHU=['An','Bình','Cường','Dung','Hà'];
+const BANG_LOAI=[
+  ['Số sách đọc trong tuần','quyển',()=>R(2,15)],
+  ['Điểm kiểm tra','điểm',()=>R(5,10)],
+  ['Số bước chân','nghìn bước',()=>R(3,12)],
+  ['Số bông hoa hái','bông',()=>R(10,50)],
+  ['Số câu toán làm đúng','câu',()=>R(5,20)],
+];
+GEN.bangsolieu = function(){
+  const [label,unit,gen]=pick(BANG_LOAI);
+  const names=shuffle([...BANG_CHU]).slice(0,4);
+  const vals=names.map(()=>gen());
+  const total=vals.reduce((a,b)=>a+b,0);
+  const max=Math.max(...vals), min=Math.min(...vals);
+  const maxName=names[vals.indexOf(max)], minName=names[vals.indexOf(min)];
+  const rows=names.map((n,i)=>`<tr><td>${n}</td><td>${vals[i]}</td></tr>`).join('');
+  const table=`<table class="t" style="margin:8px 0"><tr><th>Họ tên</th><th>${label} (${unit})</th></tr>${rows}</table>`;
+  const t=R(1,4);
+  if(t===1) return {q:`Dựa vào bảng số liệu:${table}Bạn nào có <b>số ${unit} nhiều nhất</b>?`, ans:maxName,
+    hint:'So sánh các số trong cột rồi tìm giá trị lớn nhất.',
+    sol:`Lớn nhất là <b>${maxName}</b> (${max} ${unit}).`};
+  if(t===2) return {q:`Dựa vào bảng số liệu:${table}Bạn nào có <b>số ${unit} ít nhất</b>?`, ans:minName,
+    hint:'So sánh các số trong cột rồi tìm giá trị nhỏ nhất.',
+    sol:`Nhỏ nhất là <b>${minName}</b> (${min} ${unit}).`};
+  if(t===3) return {q:`Dựa vào bảng số liệu:${table}<b>Tổng số ${unit}</b> của cả ${names.length} bạn là bao nhiêu?`, ans:String(total),
+    hint:'Cộng tất cả các số trong cột lại với nhau.',
+    sol:`${vals.join(' + ')} = <b>${total}</b> ${unit}.`};
+  const diff=max-min;
+  return {q:`Dựa vào bảng số liệu:${table}Bạn <b>${maxName}</b> nhiều hơn bạn <b>${minName}</b> bao nhiêu ${unit}?`, ans:String(diff),
+    hint:'Lấy số lớn trừ số nhỏ.',
+    sol:`${max} − ${min} = <b>${diff}</b> ${unit}.`};
+};
+
+/* --- 5.2 Có thể – Chắc chắn – Không thể --- */
+GEN.xacsuatcoban = function(){
+  const QS=[
+    // [câu hỏi, đáp án, giải thích]
+    ['Mặt trời mọc ở hướng Đông.','Chắc chắn','Đây là quy luật tự nhiên, không bao giờ thay đổi.'],
+    ['Tháng 11 có 30 ngày.','Chắc chắn','Tháng 11 luôn có 30 ngày.'],
+    ['Tung một đồng xu ra mặt ngửa.','Có thể','Tung xu có thể ra ngửa hoặc sấp – phụ thuộc may rủi.'],
+    ['Ngày mai trời mưa.','Có thể','Thời tiết không thể biết chắc trước.'],
+    ['Tháng 2 (năm thường) có 31 ngày.','Không thể','Tháng 2 năm thường chỉ có 28 ngày, không bao giờ có 31.'],
+    ['Rút được thẻ đỏ từ hộp chỉ có thẻ xanh.','Không thể','Không có thẻ đỏ trong hộp nên không thể rút được.'],
+    ['Hòn đá thả vào nước sẽ chìm.','Chắc chắn','Đá nặng hơn nước nên chắc chắn chìm.'],
+    ['Con lớp 3 đạt điểm 10 môn Toán.','Có thể','Có thể đạt nhưng không chắc chắn – cần nỗ lực học.'],
+    ['Rút thẻ đỏ từ hộp có cả thẻ đỏ lẫn thẻ xanh.','Có thể','Có thẻ đỏ trong hộp nên có thể rút được, nhưng không chắc.'],
+    ['Cộng hai số chẵn được số lẻ.','Không thể','Chẵn + Chẵn luôn = Chẵn, không bao giờ ra số lẻ.'],
+    ['Tháng 1 đến sau tháng 12.','Không thể','Sau tháng 12 là kết thúc năm, tháng 1 của năm sau – không phải trong cùng năm đó.'],
+    ['Gieo xúc xắc ra mặt số 4.','Có thể','Xúc xắc có 6 mặt (1–6), mặt số 4 hoàn toàn có thể xuất hiện.'],
+    ['Nước đun sôi ở 100°C sẽ bốc hơi.','Chắc chắn','Đây là quy luật vật lý, luôn đúng ở áp suất bình thường.'],
+    ['Gieo xúc xắc ra mặt số 7.','Không thể','Xúc xắc chỉ có các mặt 1–6, không có mặt số 7.'],
+    ['Con mèo sinh ra mèo con.','Chắc chắn','Mèo luôn sinh ra mèo con theo quy luật sinh học.'],
+    ['Tuần có 8 ngày.','Không thể','Một tuần chỉ có 7 ngày, không bao giờ có 8.'],
+  ];
+  const [q,ans,sol]=pick(QS);
+  const opts=['Chắc chắn','Có thể','Không thể']; const ansIdx=opts.indexOf(ans);
+  return {q:`Sự việc sau là <b>Chắc chắn</b>, <b>Có thể</b>, hay <b>Không thể</b> xảy ra?<br><div class="ex" style="margin:6px 0">"${q}"</div>`,
+    type:'mc', opts, ansIdx,
+    hint:'Chắc chắn = luôn đúng; Có thể = may rủi; Không thể = không bao giờ đúng.',
+    sol:`<b>${ans}</b> – ${sol}`};
+};
+
+/* --- Tổng hợp: 16 câu tính + 2 bài lời văn --- */
+const MIX_CALC=['cautao','sosanh','lamtron','roman','bangnhanchia','congtru','nhanchia','bieuthuc','timx','phanmay','hinhhoc','chuvidt','donvi','thoigian','xacsuatcoban'];
+const MIX_WORD=['gapgiam','haibuoc','loivanhinh'];
+GEN.tonghop = function(){
+  let o;
+  do{ o = GEN[pick(MIX_CALC)](); } while(o.type==='solve');
+  return o;
+};
+GEN.tonghop._word = ()=> GEN[pick(MIX_WORD)]();
+
+/* =====================================================================
+   RENDER & CHẤM ĐIỂM
+   ===================================================================== */
+const TITLE={
+  roman:'Luyện tập · Chữ số La Mã (I – XII)',
+  bangsolieu:'Luyện tập · Đọc bảng số liệu',
+  xacsuatcoban:'Luyện tập · Có thể – Chắc chắn – Không thể',
+  cautao:'Luyện tập · Cấu tạo số có năm chữ số',
+  sosanh:'Luyện tập · So sánh các số',
+  lamtron:'Luyện tập · Làm tròn số',
+  bangnhanchia:'Luyện tập · Bảng nhân – Bảng chia',
+  congtru:'Luyện tập · Phép cộng – Phép trừ',
+  nhanchia:'Luyện tập · Nhân – Chia với số có một chữ số',
+  bieuthuc:'Luyện tập · Tính giá trị biểu thức',
+  timx:'Luyện tập · Tìm thành phần chưa biết',
+  phanmay:'Luyện tập · Một phần mấy',
+  hinhhoc:'Luyện tập · Hình học',
+  chuvidt:'Luyện tập · Chu vi – Diện tích',
+  donvi:'Luyện tập · Đơn vị đo',
+  thoigian:'Luyện tập · Xem đồng hồ – Tháng, năm',
+  gapgiam:'✍️ Luyện viết bài giải · Gấp – Giảm – Gấp mấy lần',
+  haibuoc:'✍️ Luyện viết bài giải · Bài toán hai bước tính',
+  loivanhinh:'✍️ Luyện viết bài giải · Toán hình học có lời văn',
+  dauNhanh:'⚡ Đấu nhanh cửu chương (3 giây / câu)',
+  tonghop:'🏆 Đề kiểm tra tổng hợp'
+};
+
+function build(box){
+  const gen=box.dataset.gen, n=+box.dataset.n||6;
+  const qs=[]; let guard=0;
+  while(qs.length<n && guard<n*40){
+    guard++;
+    const q=GEN[gen]();
+    if(qs.some(o=>o.q===q.q)) continue;
+    qs.push(q);
+  }
+  if(gen==='tonghop'){            // thêm 2 bài toán có lời văn ở cuối đề
+    let w=0, g2=0;
+    while(w<2 && g2<80){ g2++;
+      const q=GEN.tonghop._word();
+      if(qs.some(o=>o.q===q.q)) continue;
+      qs.push(q); w++;
+    }
+  }
+  box._qs=qs;
+  const hasSolve=qs.some(o=>o.type==='solve');
+  let html=`<div class="qhead"><h4>${TITLE[gen]||'Luyện tập'}</h4>
+    <span class="badge">${qs.length} câu</span><span class="spacer"></span>
+    <button class="grn" data-act="check">✅ Chấm điểm</button>
+    <button class="org" data-act="new">🎲 Đề mới</button>
+    <button class="pur" data-act="hint">💡 Gợi ý</button>
+    <button class="gry" data-act="show">👀 Bài giải mẫu</button></div>`;
+  if(hasSolve) html+=`<div style="background:#e3f2fd;border-radius:10px;padding:8px 12px;margin-bottom:8px;font-size:14.5px;font-weight:600;color:#0d47a1">
+    ✍️ Trình bày đủ <b>câu lời giải</b> (nhớ dấu “:”), <b>phép tính</b>, <b>đơn vị</b> và <b>Đáp số</b> — đúng hết mới được tính điểm câu đó nhé!</div>`;
+  qs.forEach((o,i)=>{
+    html+=`<div class="qitem"><div class="qno">${i+1}</div><div class="qbody">
+      <div class="qtext">${o.q}</div>`;
+    if(o.type==='mc'){
+      html+=`<div class="opts">`+o.opts.map((t,j)=>
+        `<label><input type="radio" name="q_${box._id}_${i}" value="${j}">${t}</label>`).join('')+`</div>`;
+    }else if(o.type==='solve'){
+      html+=`<div class="solve"><span class="bgtitle">Bài giải</span>`;
+      o.steps.forEach((s,k)=>{
+        html+=`<div class="sstep">${o.steps.length>1?`<span class="slabel">Bước ${k+1}</span><br>`:''}
+          <input class="loi" data-k="${k}" placeholder="Câu lời giải… (kết thúc bằng dấu :)" autocomplete="off">
+          <div class="calcline">
+            <input class="pt" data-k="${k}" placeholder="phép tính" autocomplete="off">
+            <span style="font-weight:800">=</span>
+            <input class="kq" data-k="${k}" placeholder="kết quả" autocomplete="off">
+            <span class="dv">(${s.dv})</span>
+          </div></div>`;
+      });
+      html+=`<div class="dsline">Đáp số: <input class="ds" placeholder="ví dụ: 28 ${o.dapso.dv}" autocomplete="off"></div></div>`;
+    }else{
+      html+=`<div style="margin-top:6px"><input class="ans" data-i="${i}" placeholder="Đáp án..." autocomplete="off"></div>`;
+    }
+    html+=`<div class="hintbox">💡 ${o.hint}</div><div class="fb"></div></div></div>`;
+  });
+  html+=`<div class="score"></div>`;
+  box.innerHTML=html;
+  const flow=[...box.querySelectorAll('input.ans, .solve input')];
+  flow.forEach((inp,k)=>inp.addEventListener('keydown',e=>{
+    if(e.key==='Enter'){ e.preventDefault();
+      if(k<flow.length-1) flow[k+1].focus(); else box.querySelector('[data-act=check]').click(); }
+  }));
+}
+
+/* --- chấm câu lời giải bằng từ khoá --- */
+function checkLoi(model,user){
+  const u=deacc(user);
+  if(u.length<6) return false;
+  const keys=[...new Set(deacc(model).split(' ').filter(w=>w.length>1 && !STOP.has(w)))];
+  if(!keys.length) return u.length>5;
+  const hit=keys.filter(k=>u.includes(k)).length;
+  return hit/keys.length >= 0.6;
+}
+/* --- chấm phép tính, chấp nhận đổi chỗ với + và × --- */
+function checkPT(model,user){
+  const m=normPT(model), u=normPT(user);
+  const acc=new Set([m, m.replace(/[()]/g,'')]);
+  const mm=m.match(/^(\d+)([*+])(\d+)$/);
+  if(mm) acc.add(mm[3]+mm[2]+mm[1]);
+  return acc.has(u)||acc.has(u.replace(/[()]/g,''));
+}
+function checkDS(dapso,user){
+  const u=deacc(user);
+  const num=String(dapso.val);
+  const m=u.match(/\d[\d\s]*/);                      // lấy cụm số đầu tiên bé viết
+  const hasNum = !!m && m[0].replace(/\s/g,'')===num; // chấp nhận cả "1250" và "1 250"
+  const unit=deacc(dapso.dv).replace('cm2','cm2');
+  const hasUnit = u.includes(unit) || (dapso.dv==='cm²' && (u.includes('cm2')||u.includes('cm vuong')));
+  return {hasNum, hasUnit, ok: hasNum&&hasUnit};
+}
+
+function check(box){
+  const qs=box._qs; let ok=0;
+  const items=[...box.querySelectorAll('.qitem')];
+  qs.forEach((o,i)=>{
+    const it=items[i], fb=it.querySelector('.fb');
+    if(o.type==='solve'){
+      const notes=[]; let good=true;
+      o.steps.forEach((s,k)=>{
+        const loi=it.querySelector(`input.loi[data-k="${k}"]`);
+        const pt =it.querySelector(`input.pt[data-k="${k}"]`);
+        const kq =it.querySelector(`input.kq[data-k="${k}"]`);
+        const okL=checkLoi(s.loi,loi.value);
+        const hasColon=loi.value.trim().endsWith(':');
+        const okP=checkPT(s.pt,pt.value);
+        const okK=norm(kq.value)===norm(String(s.kq));
+        [[loi,okL&&hasColon],[pt,okP],[kq,okK]].forEach(([el,g])=>{
+          el.style.borderColor=g?'#2e7d32':'#d32f2f'; el.style.background=g?'#e8f5e9':'#ffebee';});
+        const tag=o.steps.length>1?`Bước ${k+1} – `:'';
+        if(!okL) {good=false; notes.push(`${tag}câu lời giải chưa đúng ý`);}
+        else if(!hasColon){good=false; notes.push(`${tag}câu lời giải thiếu dấu “:” ở cuối`);}
+        if(!okP){good=false; notes.push(`${tag}phép tính chưa đúng`);}
+        if(!okK){good=false; notes.push(`${tag}kết quả chưa đúng`);}
+      });
+      const ds=it.querySelector('input.ds'); const r=checkDS(o.dapso,ds.value);
+      ds.style.borderColor=r.ok?'#2e7d32':'#d32f2f'; ds.style.background=r.ok?'#e8f5e9':'#ffebee';
+      if(!r.hasNum){good=false; notes.push('Đáp số chưa đúng số');}
+      else if(!r.hasUnit){good=false; notes.push('Đáp số thiếu <b>đơn vị</b>');}
+      if(good){ok++; fb.className='fb ok'; fb.innerHTML='✔ Bài giải trình bày chuẩn – giỏi lắm! 🎉';}
+      else{ fb.className='fb no';
+        fb.innerHTML=`✘ Cần sửa:<ul>${notes.map(x=>`<li>${x}</li>`).join('')}</ul>${o.sol}`;}
+      return;
+    }
+    let good=false, user='';
+    if(o.type==='mc'){
+      const sel=it.querySelector('input[type=radio]:checked');
+      user = sel? o.opts[sel.value] : '';
+      good = !!sel && (+sel.value===o.ansIdx);
+    }else{
+      const inp=it.querySelector('input.ans'); user=inp.value;
+      const accepted=(o.alt&&o.alt.length?o.alt:[o.ans]).map(norm);
+      good = user.trim()!=='' && accepted.includes(norm(user));
+      inp.style.borderColor = good?'#2e7d32':'#d32f2f';
+      inp.style.background  = good?'#e8f5e9':'#ffebee';
+    }
+    if(good){ ok++; fb.className='fb ok'; fb.innerHTML='✔ Chính xác! Giỏi lắm 🎉'; }
+    else{ fb.className='fb no'; fb.innerHTML=`✘ Chưa đúng${user.trim()?` (con trả lời: ${user})`:' (chưa trả lời)'} → ${o.sol}`; }
+  });
+  const sc=box.querySelector('.score'); const n=qs.length; const p=Math.round(ok/n*100);
+  let cls='s-low', msg='Cố lên nào! Hãy đọc lại phần lý thuyết rồi thử “Đề mới” nhé 💪';
+  if(p===100){cls='s-gold'; msg='TUYỆT VỜI! Đúng hết 100% – con là nhà vô địch 🏆';}
+  else if(p>=80){cls='s-good'; msg='Rất tốt! Chỉ còn vài lỗi nhỏ thôi, làm thêm một đề nữa nhé 🌟';}
+  else if(p>=50){cls='s-mid'; msg='Khá rồi! Xem lại phần Mẹo học rồi luyện tiếp nhé 📘';}
+  sc.className='score show '+cls;
+  sc.innerHTML=`Điểm: <b>${ok}/${n}</b> câu đúng (${p}%) – Quy ra thang 10: <b>${(ok/n*10).toFixed(1)}</b><br><span style="font-weight:600;font-size:15.5px">${msg}</span>`;
+  sc.scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+function showAns(box){
+  const items=[...box.querySelectorAll('.qitem')];
+  box._qs.forEach((o,i)=>{
+    const fb=items[i].querySelector('.fb'); fb.className='fb ok';
+    fb.innerHTML = (o.type==='solve'?'📖 Bài giải mẫu:':'📖 ')+o.sol;
+  });
+}
+
+document.addEventListener('click',e=>{
+  const b=e.target.closest('button[data-act]'); if(!b) return;
+  const box=b.closest('.quiz'), act=b.dataset.act;
+  if(act==='check') check(box);
+  else if(act==='new'){ build(box); box.scrollIntoView({behavior:'smooth',block:'start'}); }
+  else if(act==='show') showAns(box);
+  else if(act==='hint') box.querySelectorAll('.hintbox').forEach(h=>h.classList.toggle('show'));
+});
+
+/* ---------- Khởi tạo trang ---------- */
+(function init(){
+  const mul=[], div=[];
+  for(let row=1;row<=10;row++){
+    for(let a=2;a<=9;a++){
+      mul.push(`<div class="c${a}">${a} × ${row} = ${a*row}</div>`);
+      div.push(`<div class="c${a}">${a*row} : ${a} = ${row}</div>`);
+    }
+  }
+  document.getElementById('mulTable').innerHTML=mul.join('');
+  document.getElementById('divTable').innerHTML=div.join('');
+
+  let fr='';
+  for(let n=2;n<=9;n++){
+    fr+=`<div style="display:inline-block;margin:6px 10px;text-align:center">
+      ${svgFrac(n,1,96,n<6?'#e53935':'#00897b')}
+      <div style="font-size:20px;font-weight:800;color:#0d47a1">1/${n}</div></div>`;
+  }
+  document.getElementById('fracRow').innerHTML=fr;
+  document.getElementById('shapeRow').innerHTML=svgShapes();
+
+  document.getElementById('clockDemo1').innerHTML=svgClock(6,45,200)+
+    `<div style="font-weight:800;color:#0d47a1;font-size:17px">6 giờ 45 phút</div>
+     <div style="color:#c62828;font-weight:700">hoặc 7 giờ kém 15 phút</div>`;
+  document.getElementById('clockDemo2').innerHTML=svgClock(12,42,200)+
+    `<div style="font-weight:800;color:#0d47a1;font-size:17px">12 giờ 42 phút</div>
+     <div style="color:#c62828;font-weight:700">hoặc 13 giờ kém 18 phút</div>`;
+
+  document.querySelectorAll('.quiz').forEach((b,i)=>{ b._id=i; build(b); });
+})();
+</script>
+</body>
+</html>
