@@ -41,14 +41,14 @@ body{
   line-height:1.65; font-size:16.5px;
 }
 .wrap{display:flex; min-height:100vh}
-nav.side{width:280px; flex:0 0 280px; background:#0d47a1; color:#fff;
-  padding:18px 14px 60px; position:sticky; top:0; height:100vh; overflow-y:auto}
-nav.side h1{font-size:19px; margin:0 0 4px; line-height:1.3}
-nav.side .sub{font-size:12.5px; opacity:.8; margin-bottom:14px}
-nav.side a{display:block; color:#dceaff; text-decoration:none; font-size:13px;
-  padding:4px 10px; border-radius:8px; margin:1px 0}
+nav.side{width:258px; flex:0 0 258px; background:#0d47a1; color:#fff;
+  padding:10px 10px 16px; position:sticky; top:0; height:100vh; overflow-y:auto; scrollbar-width:thin; scrollbar-color:#1e88e5 #0d47a1}
+nav.side h1{font-size:15.5px; margin:0 0 2px; line-height:1.3}
+nav.side .sub{font-size:10.5px; opacity:.8; margin-bottom:4px}
+nav.side a{display:block; color:#dceaff; text-decoration:none; font-size:12px;
+  padding:1px 8px; border-radius:6px; margin:0}
 nav.side a:hover{background:rgba(255,255,255,.14); color:#fff}
-nav.side a.head{font-weight:700; color:#ffd54f; margin-top:10px; font-size:13.5px}
+nav.side a.head{font-weight:700; color:#ffd54f; margin-top:4px; font-size:12.5px; padding:1px 8px}
 main{flex:1; min-width:0; padding:22px 26px 80px; max-width:1080px; margin:0 auto}
 .burger{display:none}
 
@@ -153,6 +153,14 @@ footer{text-align:center; color:var(--muted); font-size:14px; padding:30px 10px}
   main{padding:14px 14px 60px}
 }
 @media print{nav.side{display:none} .quiz{break-inside:avoid} body{background:#fff}}
+/* --- TTS speaker buttons --- */
+.tts-btn{background:none;border:1.5px solid rgba(21,101,192,.25);border-radius:12px;
+  padding:0 7px;font-size:11.5px;cursor:pointer;color:#78909c;margin-left:6px;
+  vertical-align:middle;line-height:1.9;font-family:inherit;transition:all .15s}
+.tts-btn:hover{background:#e3f2fd;border-color:#1565c0;color:#1565c0}
+/* --- Shake animation (wrong answer) --- */
+@keyframes shake{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-5px)}40%,80%{transform:translateX(5px)}}
+.shake{animation:shake .35s ease}
 /* --- Tab system --- */
 .tab-bar{display:flex;gap:0;border-bottom:3px solid #1565c0;margin-bottom:20px;position:sticky;top:0;z-index:99;background:#f5f5f5;border-radius:0}
 .tab-btn{flex:1;padding:11px 0;font-size:15.5px;font-weight:800;border:none;background:transparent;cursor:pointer;color:#666;border-bottom:3px solid transparent;margin-bottom:-3px;transition:all .2s}
@@ -1102,6 +1110,22 @@ function switchTab(showBt, btn){
    - Câu tính toán : nhập đáp án / trắc nghiệm
    - Câu lời văn   : nhập CÂU LỜI GIẢI + PHÉP TÍNH + KẾT QUẢ + ĐÁP SỐ
    ===================================================================== */
+/* --- Text-to-Speech (giọng đọc tiếng Việt) --- */
+const TTS=(function(){
+  const s=window.speechSynthesis;
+  if(!s) return{speak:()=>{},stop:()=>{}};
+  return{
+    speak(src,rate){
+      s.cancel();
+      const raw=typeof src==='string'?src:(src.innerText||src.textContent||'');
+      const txt=raw.replace(/×/g,' nhân ').replace(/÷/g,' chia ').replace(/→/g,', ').replace(/\s+/g,' ').trim();
+      const u=new SpeechSynthesisUtterance(txt); u.lang='vi-VN'; u.rate=rate||0.85;
+      s.speak(u);
+    },
+    stop(){ s.cancel(); }
+  };
+})();
+
 const R = (a,b)=> a + Math.floor(Math.random()*(b-a+1));
 const pick = a => a[Math.floor(Math.random()*a.length)];
 const shuffle = a => a.map(v=>[Math.random(),v]).sort((x,y)=>x[0]-y[0]).map(v=>v[1]);
@@ -1893,6 +1917,19 @@ function build(box){
   });
   html+=`<div class="score"></div>`;
   box.innerHTML=html;
+  // TTS: nút đọc câu hỏi và gợi ý
+  box.querySelectorAll('.qtext').forEach(el=>{
+    const txt=el.innerText;
+    const b=Object.assign(document.createElement('button'),{className:'tts-btn',title:'Đọc câu hỏi',textContent:'🔊'});
+    b.addEventListener('click',e=>{e.stopPropagation();TTS.speak(txt);});
+    el.appendChild(b);
+  });
+  box.querySelectorAll('.hintbox').forEach(el=>{
+    const txt=el.innerText;
+    const b=Object.assign(document.createElement('button'),{className:'tts-btn',textContent:'🔊 Nghe'});
+    b.addEventListener('click',e=>{e.stopPropagation();TTS.speak(txt);});
+    el.appendChild(b);
+  });
   const flow=[...box.querySelectorAll('input.ans, .solve input')];
   flow.forEach((inp,k)=>inp.addEventListener('keydown',e=>{
     if(e.key==='Enter'){ e.preventDefault();
@@ -1970,6 +2007,7 @@ function check(box){
       good = user.trim()!=='' && accepted.includes(norm(user));
       inp.style.borderColor = good?'#2e7d32':'#d32f2f';
       inp.style.background  = good?'#e8f5e9':'#ffebee';
+      if(!good){inp.classList.remove('shake');void inp.offsetWidth;inp.classList.add('shake');}
     }
     if(good){ ok++; fb.className='fb ok'; fb.innerHTML='✔ Chính xác! Giỏi lắm 🎉'; }
     else{ fb.className='fb no'; fb.innerHTML=`✘ Chưa đúng${user.trim()?` (con trả lời: ${user})`:' (chưa trả lời)'} → ${o.sol}`; }
@@ -2030,6 +2068,15 @@ document.addEventListener('click',e=>{
      <div style="color:#c62828;font-weight:700">hoặc 13 giờ kém 18 phút</div>`;
 
   document.querySelectorAll('.quiz').forEach((b,i)=>{ b._id=i; build(b); });
+
+  // TTS: nút đọc cho từng khối giải thích bên Lý Thuyết
+  document.querySelectorAll('#tab-lt .rule, #tab-lt .ex, #tab-lt .tip').forEach(el=>{
+    const txt=el.innerText;
+    const b=Object.assign(document.createElement('button'),{className:'tts-btn',title:'Đọc to',textContent:'🔊 Nghe'});
+    b.style.cssText='float:right;margin:-1px 0 4px 8px';
+    b.addEventListener('click',e=>{e.stopPropagation();TTS.speak(txt);});
+    el.insertBefore(b,el.firstChild);
+  });
 })();
 </script>
 </body>
