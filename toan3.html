@@ -305,9 +305,76 @@ nav.side a.active{background:rgba(255,255,255,.22);color:#fff;box-shadow:inset 3
 .fb-owl.sad{animation:owlShake .5s ease}
 @keyframes owlPop{0%{transform:scale(.4) rotate(-15deg)}60%{transform:scale(1.25) rotate(8deg)}100%{transform:scale(1) rotate(0)}}
 @keyframes owlShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+/* ===== Chế độ mắt dịu (warm) — dùng lớp phủ, tránh phá position:fixed ===== */
+#warmLayer{position:fixed;inset:0;background:#ff8f1f;opacity:0;mix-blend-mode:multiply;pointer-events:none;z-index:9998;transition:opacity .3s}
+body.warm #warmLayer{opacity:.13}
+/* ===== Đăng nhập (cổng mềm phía client) ===== */
+.auth-gate{position:fixed;inset:0;z-index:6000;display:flex;align-items:center;justify-content:center;padding:16px;background:linear-gradient(135deg,#bbdefb,#e1f5fe 55%,#fff3e0)}
+.auth-gate.hidden{display:none}
+body.locked{overflow:hidden}
+.auth-card{background:#fff;border-radius:22px;box-shadow:0 20px 60px rgba(13,71,161,.3);padding:24px 22px;max-width:390px;width:100%;text-align:center}
+.auth-card .amasc{font-size:52px;animation:bob 2.4s ease-in-out infinite}
+.auth-card h2{font-family:var(--font-display);color:#0d47a1;margin:4px 0 2px;font-size:24px}
+.auth-card .asub{color:var(--muted);font-size:13.5px;margin-bottom:14px}
+.auth-field{text-align:left;margin:10px 0}
+.auth-field label{display:block;font-weight:700;color:#37474f;font-size:13.5px;margin-bottom:4px}
+.auth-field input{width:100%;font-size:16px;padding:12px 14px;border:2px solid var(--line);border-radius:12px;font-family:inherit;background:#fff;color:var(--ink)}
+.auth-field input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px #bbdefb}
+.auth-remember{display:flex;align-items:center;gap:8px;font-size:13.5px;color:#37474f;margin:8px 0 12px}
+.auth-remember input{width:18px;height:18px}
+.auth-btn{width:100%;font-size:17px;padding:13px;background:var(--green);box-shadow:0 4px 0 #1b5e20}
+.auth-err{display:none;color:#c62828;font-weight:700;font-size:13.5px;margin-bottom:8px;background:#ffebee;border-radius:10px;padding:8px}
+.auth-note{margin-top:14px;font-size:11px;color:#90a4ae;line-height:1.5}
+/* Thẻ tài khoản (góc dưới phải) */
+.acct-chip{position:fixed;bottom:12px;right:12px;z-index:200;display:none;align-items:center;gap:6px;background:rgba(255,255,255,.94);border:1.5px solid var(--line);border-radius:22px;padding:4px 6px 4px 13px;box-shadow:var(--shadow);font-size:13px;font-weight:700;color:#37474f}
+.acct-btn{background:#eceff1;color:#37474f;border:none;border-radius:50%;width:32px;height:32px;font-size:15px;cursor:pointer;padding:0;box-shadow:none;display:flex;align-items:center;justify-content:center}
+.acct-btn:hover{background:#cfd8dc}
+/* Onboarding */
+.intro-ov{position:fixed;inset:0;z-index:5500;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(13,71,161,.35);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.intro-ov.open{display:flex}
+.intro-card{background:#fff;border-radius:22px;max-width:460px;width:100%;padding:22px;box-shadow:0 20px 60px rgba(0,0,0,.3);text-align:center}
+.intro-card h2{font-family:var(--font-display);color:#0d47a1;margin:6px 0}
+.intro-list{text-align:left;margin:14px 0;display:grid;gap:10px}
+.intro-item{display:flex;gap:10px;align-items:flex-start;background:#f5faff;border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:14.5px}
+.intro-item .ic{font-size:22px;line-height:1.2}
 </style>
 </head>
 <body>
+<div id="warmLayer"></div>
+<div class="auth-gate" id="authGate">
+  <form class="auth-card" id="authForm" autocomplete="off">
+    <div class="amasc">🦉</div>
+    <h2>Vườn Toán Phiêu Lưu</h2>
+    <div class="asub">Đăng nhập để cùng con học nhé</div>
+    <div class="auth-err" id="authErr"></div>
+    <div class="auth-field"><label for="authUser">Tên đăng nhập</label>
+      <input id="authUser" type="text" autocomplete="username" autocapitalize="off" spellcheck="false" placeholder="ví dụ: ba"></div>
+    <div class="auth-field"><label for="authPass">Mật khẩu</label>
+      <input id="authPass" type="password" autocomplete="current-password" placeholder="••••••••"></div>
+    <label class="auth-remember"><input type="checkbox" id="authRemember" checked> Ghi nhớ trên máy này</label>
+    <button class="auth-btn" type="submit">Đăng nhập</button>
+    <div class="auth-note">Chỉ tài khoản được cấp mới vào được. Đây là cổng bảo vệ cơ bản phía trình duyệt.</div>
+  </form>
+</div>
+<div class="acct-chip" id="acctChip">
+  <span class="acct-who">👤 <b id="acctName"></b></span>
+  <button class="acct-btn" id="warmBtn" title="Chế độ mắt dịu" onclick="toggleWarm()">🌙</button>
+  <button class="acct-btn" title="Đăng xuất" onclick="authLogout()">⏻</button>
+</div>
+<div class="intro-ov" id="introOverlay">
+  <div class="intro-card">
+    <div style="font-size:46px">🦉</div>
+    <h2>Chào Ba và Con! 🎉</h2>
+    <div style="color:var(--muted)">Cùng phiêu lưu qua 35 trạm Toán lớp 3 nhé!</div>
+    <div class="intro-list">
+      <div class="intro-item"><span class="ic">🗺️</span><div><b>Mỗi tuần là một trạm.</b> Làm đúng để mở trạm tiếp theo.</div></div>
+      <div class="intro-item"><span class="ic">⭐</span><div><b>Gom sao:</b> đúng 100% được 3 sao, ≥80% được 2 sao, ≥60% được 1 sao.</div></div>
+      <div class="intro-item"><span class="ic">❤️</span><div><b>Mỗi trạm có 3 tim.</b> Sai 3 lần thì chơi lại — không sao cả!</div></div>
+      <div class="intro-item"><span class="ic">🔥</span><div><b>Chuỗi ngày:</b> học đều mỗi ngày để giữ lửa nhé.</div></div>
+    </div>
+    <button class="grn gbig" style="width:100%" onclick="closeOnboard()">Bắt đầu thôi! 🚀</button>
+  </div>
+</div>
 <div class="wrap">
 <nav class="side">
   <h1>📘 Toán Lớp 3 – Học &amp; Luyện</h1>
@@ -2821,6 +2888,77 @@ function resetGame(){
       hint.style.opacity=this.scrollHeight-this.scrollTop-this.clientHeight<10?'0':'1';
     });
   })();
+})();
+
+/* =====================================================================
+   ĐĂNG NHẬP (cổng mềm phía client) + ONBOARDING + CHẾ ĐỘ MẮT DỊU
+   ⚠️ Lưu ý: app là file HTML tĩnh, không có server → đây KHÔNG phải bảo mật
+   thật (người rành kỹ thuật có thể xem source / bỏ qua). Nó chỉ chặn người
+   dùng thông thường. Muốn bảo mật thật cần backend xác thực.
+   --- Cách thêm/đổi tài khoản: mở Console gõ:  await hashPw('matkhaumoi')
+       rồi dán chuỗi băm vào ACCOUNTS bên dưới cùng tên đăng nhập. ---
+   ===================================================================== */
+const AUTH_SALT='vuon-toan-3::';
+const AUTH_KEY='toan3_auth';
+const ACCOUNTS=[
+  {u:'ba',  h:'7d439b93488ce2f8e50295a4f68879e72acd9a779c065dc458cfa87e35911cb8'}, /* mật khẩu: bavui@2026 */
+  {u:'con', h:'92196da7e6240047b6cb22f49843532fff655a78c685d566b6975299edd7fc43'}  /* mật khẩu: conhoc@2026 */
+];
+async function hashPw(pw){
+  const data=new TextEncoder().encode(AUTH_SALT+pw);
+  const buf=await crypto.subtle.digest('SHA-256', data);
+  return [...new Uint8Array(buf)].map(b=>b.toString(16).padStart(2,'0')).join('');
+}
+function authUser(){ try{ return JSON.parse(localStorage.getItem(AUTH_KEY)||sessionStorage.getItem(AUTH_KEY)||'null'); }catch(e){ return null; } }
+function authShowGate(show){
+  const g=document.getElementById('authGate'); if(g) g.classList.toggle('hidden',!show);
+  document.body.classList.toggle('locked',show);
+  if(show){ const u=document.getElementById('authUser'); if(u) setTimeout(()=>u.focus(),50); }
+}
+function authRenderChip(){
+  const c=document.getElementById('acctChip'), a=authUser();
+  if(!c) return;
+  if(a){ c.style.display='flex'; const n=document.getElementById('acctName'); if(n) n.textContent=a.u; }
+  else c.style.display='none';
+}
+async function authLogin(e){
+  if(e) e.preventDefault();
+  const u=(document.getElementById('authUser').value||'').trim().toLowerCase();
+  const p=document.getElementById('authPass').value||'';
+  const remember=document.getElementById('authRemember').checked;
+  const err=document.getElementById('authErr');
+  let h=''; try{ h=await hashPw(p); }catch(ex){ h=''; }
+  const acc=ACCOUNTS.find(a=>a.u===u);
+  if(acc && h && acc.h===h){
+    try{ (remember?localStorage:sessionStorage).setItem(AUTH_KEY, JSON.stringify({u:acc.u,t:Date.now()})); }catch(ex){}
+    if(err) err.style.display='none';
+    document.getElementById('authPass').value='';
+    authShowGate(false); authRenderChip(); maybeOnboard();
+  }else{
+    if(err){ err.style.display='block'; err.textContent='Sai tên đăng nhập hoặc mật khẩu 😿'; }
+    document.getElementById('authPass').value='';
+  }
+}
+function authLogout(){
+  try{ localStorage.removeItem(AUTH_KEY); sessionStorage.removeItem(AUTH_KEY); }catch(e){}
+  try{ TTS.stop(); }catch(e){}
+  authRenderChip(); authShowGate(true);
+}
+/* --- Onboarding --- */
+const INTRO_KEY='toan3_seen_intro';
+function maybeOnboard(){ try{ if(!localStorage.getItem(INTRO_KEY)) document.getElementById('introOverlay').classList.add('open'); }catch(e){} }
+function closeOnboard(){ const o=document.getElementById('introOverlay'); if(o) o.classList.remove('open'); try{ localStorage.setItem(INTRO_KEY,'1'); }catch(e){} }
+/* --- Chế độ mắt dịu (warm) --- */
+function warmOn(){ try{ return localStorage.getItem('toan3_warm')==='1'; }catch(e){ return false; } }
+function applyWarm(){ document.body.classList.toggle('warm', warmOn()); const b=document.getElementById('warmBtn'); if(b) b.textContent=warmOn()?'☀️':'🌙'; }
+function toggleWarm(){ try{ localStorage.setItem('toan3_warm', warmOn()?'0':'1'); }catch(e){} applyWarm(); }
+/* --- Khởi động cổng --- */
+(function authInit(){
+  applyWarm();
+  const f=document.getElementById('authForm'); if(f) f.addEventListener('submit', authLogin);
+  if(!(window.crypto && crypto.subtle)){ authShowGate(false); authRenderChip(); return; } /* fail-open nếu trình duyệt quá cũ */
+  if(authUser()){ authShowGate(false); authRenderChip(); maybeOnboard(); }
+  else { authShowGate(true); authRenderChip(); }
 })();
 </script>
 </body>
