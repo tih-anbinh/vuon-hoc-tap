@@ -339,6 +339,13 @@ body.locked{overflow:hidden}
 .intro-list{text-align:left;margin:14px 0;display:grid;gap:10px}
 .intro-item{display:flex;gap:10px;align-items:flex-start;background:#f5faff;border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:14.5px}
 .intro-item .ic{font-size:22px;line-height:1.2}
+/* Bảng Thi đua */
+.dash-tb{width:100%;border-collapse:collapse;font-size:14px}
+.dash-tb th{background:#ede7f6;color:#5e35b1;padding:8px 6px;font-weight:800;position:sticky;top:0}
+.dash-tb td{border-top:1px solid var(--line);padding:9px 6px;text-align:center;font-weight:600;color:var(--ink)}
+.dash-tb tbody tr:nth-child(even) td{background:#faf7ff}
+.dash-tb tr.me td{background:#fff8e1;font-weight:800}
+.dash-tb tr.me td:first-child::after{content:" 👈";}
 </style>
 </head>
 <body>
@@ -382,6 +389,18 @@ body.locked{overflow:hidden}
       <div class="intro-item"><span class="ic">🔥</span><div><b>Chuỗi ngày:</b> học đều mỗi ngày để giữ lửa nhé.</div></div>
     </div>
     <button class="grn gbig" style="width:100%" onclick="closeOnboard()">Bắt đầu thôi! 🚀</button>
+  </div>
+</div>
+<div class="intro-ov" id="dashOv">
+  <div class="intro-card" style="max-width:560px">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+      <div style="font-size:30px">🏆</div>
+      <h2 style="margin:0;flex:1;text-align:left">Bảng Thi Đua</h2>
+      <button class="acct-btn" onclick="openDash()" title="Làm mới">🔄</button>
+      <button class="acct-btn" onclick="closeDash()" title="Đóng">✕</button>
+    </div>
+    <div id="dashBody"></div>
+    <div style="font-size:11.5px;color:#90a4ae;margin-top:10px">⏱️ Thời gian tính khi app đang mở & đang học. Tiến trình tự đồng bộ khi bé chơi.</div>
   </div>
 </div>
 <div class="wrap">
@@ -1318,6 +1337,7 @@ Một bài giải đầy đủ <b>luôn có 3 phần</b>:<br>
     <span class="stat stars" title="Tổng số sao">⭐ <span id="gStars">0</span></span>
     <span class="stat trophy" title="Số trạm đã qua">🏅 <span id="gDone">0</span>/35</span>
     <span class="spacer"></span>
+    <button class="gmute" style="background:#8e24aa;box-shadow:0 3px 0 #6a1b9a" onclick="openDash()">🏆 Thi đua</button>
     <button class="gmute" id="gMuteBtn" onclick="gToggleMute()">🔊 Âm thanh: Bật</button>
     <button class="game-reset" onclick="resetGame()">↺ Chơi lại</button>
   </div>
@@ -2423,10 +2443,10 @@ const WEEKS=[
   {w:35, title:'Thi cuối kì 2 – Lên lớp 4', icon:'👑', gens:['tonghop']}
 ];
 const GKEY='toan3_game_v1';
-let G={unlocked:1, stars:{}, best:{}, streak:0, lastDay:null};
+let G={unlocked:1, stars:{}, best:{}, streak:0, lastDay:null, mins:{}, totalMin:0};
 let GS=null;   /* phiên chơi hiện tại */
-function gLoad(){ try{const s=JSON.parse(localStorage.getItem(GKEY)); if(s) G=Object.assign(G,s);}catch(e){} }
-function gSave(){ try{localStorage.setItem(GKEY,JSON.stringify(G));}catch(e){} }
+function gLoad(){ try{const s=JSON.parse(localStorage.getItem(GKEY)); if(s) G=Object.assign(G,s);}catch(e){} if(!G.mins)G.mins={}; if(!G.totalMin)G.totalMin=0; }
+function gSave(){ try{localStorage.setItem(GKEY,JSON.stringify(G));}catch(e){} progressSyncSoon(); }
 function gTotalStars(){ return Object.values(G.stars).reduce((a,b)=>a+(+b||0),0); }
 function gTouchStreak(){
   const today=new Date().toISOString().slice(0,10);
@@ -2921,6 +2941,7 @@ async function hashPw(pw){
 const SUPA_URL='https://wbcszbyhsvhrkyyvkzfc.supabase.co';
 const SUPA_ANON='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndiY3N6Ynloc3Zocmt5eXZremZjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk4OTA1MDcsImV4cCI6MjEwNTQ2NjUwN30.K0uYmd7HjjQTMSjipkTQdxnrzuE0CCby2GeEX872l8I';   /* anon public key */
 let supa=null;
+let AUTH_ME=null;   /* {id,email,name} khi đăng nhập Supabase */
 function supaReady(){ return !!(SUPA_ANON && window.supabase && window.supabase.createClient); }
 if(supaReady()){ try{ supa=window.supabase.createClient(SUPA_URL, SUPA_ANON); }catch(e){ supa=null; } }
 
@@ -2939,7 +2960,7 @@ function authMsg(kind,text){
   if(err){ err.style.display=kind==='err'?'block':'none'; if(kind==='err') err.textContent=text; }
   if(ok){ ok.style.display=kind==='ok'?'block':'none'; if(kind==='ok') ok.innerHTML=text; }
 }
-function enterApp(name){ authShowGate(false); authRenderChip(name); maybeOnboard(); }
+function enterApp(name){ authShowGate(false); authRenderChip(name); maybeOnboard(); if(AUTH_ME) progressLoad(); startTimeTracker(); }
 
 /* --- Login / Register mode (khi có Supabase) --- */
 let authMode='login';
@@ -2986,7 +3007,8 @@ async function authSubmitSupabase(){
       const {data:prof,error:pe}=await supa.from('toan3_profiles').select('approved,full_name').eq('id',data.user.id).single();
       if(pe || !prof || !prof.approved){ await supa.auth.signOut(); authMsg('err','Tài khoản đang chờ admin duyệt 🕒'); return; }
       document.getElementById('authPass').value='';
-      enterApp(prof.full_name || data.user.email);
+      AUTH_ME={id:data.user.id, email:data.user.email, name:(prof.full_name||data.user.email)};
+      enterApp(AUTH_ME.name);
     }
   }catch(ex){ authMsg('err','Lỗi kết nối. Kiểm tra mạng rồi thử lại.'); }
   finally{ btn.disabled=false; }
@@ -3014,6 +3036,7 @@ async function authLogout(){
   try{ if(supa) await supa.auth.signOut(); }catch(e){}
   try{ localStorage.removeItem(AUTH_KEY); sessionStorage.removeItem(AUTH_KEY); }catch(e){}
   try{ TTS.stop(); }catch(e){}
+  AUTH_ME=null;
   authRenderChip(null); authShowGate(true);
 }
 
@@ -3025,6 +3048,76 @@ function closeOnboard(){ const o=document.getElementById('introOverlay'); if(o) 
 function warmOn(){ try{ return localStorage.getItem('toan3_warm')==='1'; }catch(e){ return false; } }
 function applyWarm(){ document.body.classList.toggle('warm', warmOn()); const b=document.getElementById('warmBtn'); if(b) b.textContent=warmOn()?'☀️':'🌙'; }
 function toggleWarm(){ try{ localStorage.setItem('toan3_warm', warmOn()?'0':'1'); }catch(e){} applyWarm(); }
+
+/* ===== Đồng bộ tiến trình lên Supabase + Thi đua ===== */
+let _syncT=null, _timeTracker=null;
+function progressSyncSoon(){ if(!supa||!AUTH_ME) return; clearTimeout(_syncT); _syncT=setTimeout(progressSync, 4000); }
+async function progressSync(){
+  if(!supa||!AUTH_ME) return;
+  const row={ id:AUTH_ME.id, full_name:AUTH_ME.name||AUTH_ME.email,
+    stars:G.stars||{}, best:G.best||{}, unlocked:G.unlocked||1, streak:G.streak||0,
+    last_day:G.lastDay||null, total_stars:gTotalStars(),
+    total_minutes:G.totalMin||0, daily:G.mins||{}, updated_at:new Date().toISOString() };
+  try{ await supa.from('toan3_progress').upsert(row); }catch(e){}
+}
+async function progressLoad(){
+  if(!supa||!AUTH_ME) return;
+  try{
+    const {data}=await supa.from('toan3_progress').select('*').eq('id',AUTH_ME.id).maybeSingle();
+    if(data){
+      G.stars=data.stars||{}; G.best=data.best||{}; G.unlocked=data.unlocked||1;
+      G.streak=data.streak||0; G.lastDay=data.last_day||null;
+      G.mins=data.daily||{}; G.totalMin=data.total_minutes||0;
+      try{ localStorage.setItem(GKEY,JSON.stringify(G)); }catch(e){}
+      gRenderMap();
+    }else{ progressSync(); }  /* lần đầu: tạo dòng từ tiến trình cục bộ */
+  }catch(e){}
+}
+function startTimeTracker(){
+  if(_timeTracker) return;
+  _timeTracker=setInterval(()=>{
+    if(document.visibilityState!=='visible') return;
+    if(document.body.classList.contains('locked')) return;
+    const t=new Date().toISOString().slice(0,10);
+    G.mins=G.mins||{}; G.mins[t]=(G.mins[t]||0)+1; G.totalMin=(G.totalMin||0)+1;
+    gSave();
+  }, 60000);
+}
+/* --- Bảng Thi đua --- */
+async function openDash(){
+  const ov=document.getElementById('dashOv'), body=document.getElementById('dashBody');
+  if(!ov||!body) return;
+  ov.classList.add('open');
+  body.innerHTML='<div style="text-align:center;padding:22px;color:var(--muted)">Đang tải bảng thi đua… ⏳</div>';
+  if(!supa){ body.innerHTML='<div style="padding:16px;color:#c62828">Cần đăng nhập Supabase để xem thi đua.</div>'; return; }
+  try{ await progressSync(); }catch(e){}
+  try{
+    const {data,error}=await supa.from('toan3_progress').select('*');
+    if(error){ body.innerHTML='<div style="padding:16px;color:#c62828">Không tải được dữ liệu.</div>'; return; }
+    dashRender(data||[]);
+  }catch(e){ body.innerHTML='<div style="padding:16px;color:#c62828">Lỗi kết nối.</div>'; }
+}
+function closeDash(){ const o=document.getElementById('dashOv'); if(o) o.classList.remove('open'); }
+function dashFmtMin(m){ m=+m||0; return m>=60 ? (Math.floor(m/60)+'h'+(m%60?(' '+(m%60)+'p'):'')) : (m+'p'); }
+function dashRender(raw){
+  const today=new Date().toISOString().slice(0,10);
+  const rows=(raw||[]).map(r=>{
+    const stars=r.stars||{}; const done=Object.keys(stars).filter(k=>stars[k]>0).length;
+    const totalStars=Object.values(stars).reduce((a,b)=>a+(+b||0),0);
+    return {name:r.full_name||'(chưa đặt tên)', id:r.id, totalStars, done, week:r.unlocked||1,
+      streak:r.streak||0, totalMin:r.total_minutes||0, todayMin:(r.daily||{})[today]||0};
+  }).sort((a,b)=> b.totalStars-a.totalStars || b.done-a.done || b.totalMin-a.totalMin);
+  const medal=i=> i===0?'🥇':i===1?'🥈':i===2?'🥉':(i+1)+'.';
+  if(!rows.length){ document.getElementById('dashBody').innerHTML='<div style="padding:16px;color:var(--muted)">Chưa có dữ liệu. Vào chơi vài trạm để lên bảng nhé! 🚀</div>'; return; }
+  let html=`<div style="overflow-x:auto"><table class="dash-tb"><thead><tr>
+    <th>#</th><th>Bé</th><th>⭐</th><th>🏅 Trạm</th><th>Tuần</th><th>🔥</th><th>⏱️ Hôm nay</th><th>Tổng giờ</th></tr></thead><tbody>`;
+  rows.forEach((r,i)=>{
+    const me=(AUTH_ME && r.id===AUTH_ME.id)?' class="me"':'';
+    html+=`<tr${me}><td>${medal(i)}</td><td style="text-align:left">${r.name}</td><td><b>${r.totalStars}</b></td><td>${r.done}/35</td><td>${r.week}</td><td>${r.streak}</td><td>${dashFmtMin(r.todayMin)}</td><td>${dashFmtMin(r.totalMin)}</td></tr>`;
+  });
+  html+=`</tbody></table></div>`;
+  document.getElementById('dashBody').innerHTML=html;
+}
 
 /* --- Khởi động cổng --- */
 async function authBoot(){
@@ -3042,7 +3135,7 @@ async function authBoot(){
       const {data}=await supa.auth.getSession();
       if(data && data.session){
         const {data:prof}=await supa.from('toan3_profiles').select('approved,full_name').eq('id',data.session.user.id).single();
-        if(prof && prof.approved){ enterApp(prof.full_name || data.session.user.email); return; }
+        if(prof && prof.approved){ AUTH_ME={id:data.session.user.id, email:data.session.user.email, name:(prof.full_name||data.session.user.email)}; enterApp(AUTH_ME.name); return; }
         await supa.auth.signOut();
       }
     }catch(e){}
