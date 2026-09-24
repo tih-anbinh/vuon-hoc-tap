@@ -1526,18 +1526,40 @@ document.addEventListener('click', function(e){
 const TTS=(function(){
   const s=window.speechSynthesis;
   if(!s) return{speak:()=>{},say:()=>{},stop:()=>{}};
-  let viVoice=null;
+  const isAndroid=/Android/i.test(navigator.userAgent);
+  let viVoice=null, voicesReady=false, unlocked=false;
   function pickVoice(){
     const vs=s.getVoices()||[];
+    if(vs.length) voicesReady=true;
     viVoice = vs.find(v=>/vi[-_]?VN/i.test(v.lang)) || vs.find(v=>/vietnam/i.test(v.name)) || vs.find(v=>/^vi\b/i.test(v.lang)) || null;
   }
   pickVoice();
   try{ s.addEventListener('voiceschanged', pickVoice); }catch(e){ s.onvoiceschanged=pickVoice; }
+  /* Android chặn speak() cho tới khi có 1 lần phát từ cú chạm.
+     Mở khóa engine bằng một utterance rỗng trong lần chạm đầu tiên. */
+  function unlock(){
+    if(unlocked) return;
+    unlocked=true;
+    try{ const u=new SpeechSynthesisUtterance(' '); u.volume=0; s.speak(u); }catch(e){}
+  }
+  try{
+    document.addEventListener('touchstart',unlock,{once:true,passive:true});
+    document.addEventListener('click',unlock,{once:true});
+  }catch(e){}
   function utter(text,rate){
     const u=new SpeechSynthesisUtterance(text);
+    /* Chỉ gán voice khi thực sự có giọng vi; nếu không, để engine tự chọn
+       theo lang để tránh im lặng trên máy thiếu gói giọng vi-VN. */
     if(viVoice) u.voice=viVoice;
     u.lang='vi-VN'; u.rate=rate||0.9; u.pitch=1.05;
     return u;
+  }
+  /* Android hay "kẹt" sau cancel(): đọc sau một nhịp ngắn để queue rảnh. */
+  function say2(u){
+    unlock();
+    s.cancel();
+    if(isAndroid){ setTimeout(()=>{ try{ s.resume(); }catch(e){} s.speak(u); },120); }
+    else s.speak(u);
   }
   function clean(raw){
     return raw
@@ -1567,14 +1589,12 @@ const TTS=(function(){
   }
   return{
     speak(src,rate){
-      s.cancel();
       const raw=typeof src==='string'?src:(src.innerText||src.textContent||'');
-      s.speak(utter(clean(raw), rate||0.85));
+      say2(utter(clean(raw), rate||0.85));
     },
     say(text,rate){   /* đọc lời khen: bỏ emoji, giữ nguyên chữ */
-      s.cancel();
       const t=String(text).replace(/[^\p{L}\p{N}\s,.!?]/gu,' ').replace(/\s+/g,' ').trim();
-      if(t) s.speak(utter(t, rate||0.98));
+      if(t) say2(utter(t, rate||0.98));
     },
     stop(){ s.cancel(); }
   };
