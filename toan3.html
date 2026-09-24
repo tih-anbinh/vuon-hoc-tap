@@ -286,6 +286,53 @@ body.mode-game #tab-game{display:block}
 .col-line{border-top:3px solid #37474f;margin:5px 0 7px}
 .col-box{width:42px;height:46px;font-size:26px;font-weight:800;text-align:center;border:2.5px solid var(--blue);border-radius:9px;color:#c62828;background:#fff;font-family:inherit;padding:0}
 .col-box:focus{outline:none;border-color:#ff8f00;box-shadow:0 0 0 3px #ffe082}
+/* Mini-game: Xây số */
+.build-wrap{margin:6px 0}
+.build-slots{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.build-slot{width:56px;min-height:64px;border:2.5px dashed #90caf9;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#f5faff}
+.build-slot.filled{border-style:solid;border-color:#1565c0;background:#e3f2fd}
+.build-slot.right{border-color:#2e7d32;background:#e8f5e9}
+.build-slot.wrong{border-color:#d32f2f;background:#ffebee}
+.bslot-val{font-size:28px;font-weight:900;color:#0d47a1;min-height:30px}
+.bslot-name{font-size:10.5px;font-weight:700;color:#5b7086;margin-top:2px}
+.build-num{text-align:center;font-size:22px;font-weight:800;color:#0d47a1;margin:10px 0}
+.build-tiles{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.btile{width:46px;height:52px;font-size:26px;font-weight:900;color:#fff;background:linear-gradient(180deg,#4fc3f7,#039be5);border:none;border-radius:12px;box-shadow:0 4px 0 #0277bd;cursor:pointer}
+.btile.used{opacity:.28;box-shadow:none;cursor:default}
+/* Mini-game: Cân so sánh */
+.cmp-wrap{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;margin:14px 0}
+.cmp-num{font-size:30px;font-weight:900;color:#0d47a1;background:#e3f2fd;border-radius:14px;padding:12px 18px;min-width:90px;text-align:center}
+.cmp-signs{display:flex;flex-direction:column;gap:8px}
+.cmp-btn{width:58px;height:48px;font-size:26px;font-weight:900;color:#5b7086;background:#fff;border:2.5px solid #cfd8dc;border-radius:12px;cursor:pointer;line-height:1}
+.cmp-btn.sel{border-color:#1565c0;background:#e3f2fd;color:#0d47a1}
+.cmp-btn.right{border-color:#2e7d32;background:#e8f5e9;color:#2e7d32}
+.cmp-btn.wrong{border-color:#d32f2f;background:#ffebee;color:#c62828}
+/* Mini-game: Chỉnh đồng hồ */
+.clock-wrap{text-align:center;margin:6px 0}
+.clock-read{font-size:20px;font-weight:800;color:#0d47a1;margin:6px 0}
+.clock-ctrls{display:flex;gap:20px;justify-content:center;margin-top:6px}
+.clock-grp{display:flex;align-items:center;gap:6px;font-weight:800;color:#5b7086}
+.clk-b{width:44px;height:44px;font-size:24px;font-weight:900;color:#fff;background:linear-gradient(180deg,#ffb74d,#fb8c00);border:none;border-radius:12px;box-shadow:0 4px 0 #ef6c00;cursor:pointer;line-height:1}
+/* Mini-game: Trả tiền */
+.money-wrap{margin:6px 0}
+.money-tiles{display:flex;gap:9px;justify-content:center;flex-wrap:wrap}
+.money-note{position:relative;min-width:92px;padding:12px 10px;border-radius:12px;border:2px solid #a5d6a7;background:linear-gradient(180deg,#e8f5e9,#c8e6c9);color:#1b5e20;font-weight:900;font-size:16px;cursor:pointer}
+.money-note.on{border-color:#2e7d32;box-shadow:0 0 0 3px #a5d6a7;background:linear-gradient(180deg,#c8e6c9,#a5d6a7)}
+.money-note .mn-cnt{display:block;font-size:12.5px;color:#c62828;margin-top:2px;min-height:15px}
+.money-note.m50000,.money-note.m20000{background:linear-gradient(180deg,#e1f5fe,#b3e5fc);border-color:#81d4fa;color:#01579b}
+.money-total{text-align:center;font-size:18px;font-weight:800;color:#0d47a1;margin-top:12px}
+/* Mini-game: Tia số */
+.nl-wrap{margin:8px 0 4px}
+.nl-target{text-align:center;font-size:16px;font-weight:800;color:#0d47a1;margin-bottom:26px}
+.nl-line{position:relative;height:4px;background:#90a4ae;border-radius:3px;margin:0 30px}
+.nl-tick{position:absolute;top:-10px;transform:translateX(-50%);width:22px;height:22px;border-radius:50%;background:#fff;border:3px solid #90caf9;cursor:pointer;padding:0}
+.nl-tick.big{width:26px;height:26px;top:-12px;border-color:#1565c0}
+.nl-tick.sel{background:#e3f2fd;border-color:#1565c0;box-shadow:0 0 0 4px #bbdefb}
+.nl-tick.right{background:#e8f5e9;border-color:#2e7d32;box-shadow:0 0 0 4px #a5d6a7}
+.nl-tick.wrong{background:#ffebee;border-color:#d32f2f}
+.nl-lab{position:absolute;top:26px;left:50%;transform:translateX(-50%);font-size:12.5px;font-weight:800;color:#37474f;white-space:nowrap}
+.nl-here{position:absolute;top:-34px;transform:translateX(-50%);font-size:12.5px;font-weight:800;color:#ef6c00;white-space:nowrap}
+@media(max-width:600px){.cmp-num{font-size:24px;min-width:70px;padding:10px 12px}.btile{width:40px;height:46px;font-size:22px}.money-note{min-width:78px;font-size:14px}}
 @media(max-width:600px){.col-cell,.col-box{width:34px;height:40px;font-size:22px}.col-op{width:20px;height:40px;font-size:22px}}
 @media(max-width:600px){.map-row{padding:0 5%}.station{width:80px;height:80px;font-size:26px}.dnd-baskets{gap:8px}.gcard{padding:12px 13px}}
 /* --- A11y: tôn trọng "giảm chuyển động" của hệ thống --- */
@@ -2650,6 +2697,12 @@ function gMakeQ(gen){
   if((gen==='hinhhoc'||gen==='chuvidt') && roll<0.4) return gCountShapesQ();
   if(gen==='congtru3'||gen==='congtru') return gColumnQ(gen);      /* đặt tính: điền ô */
   if(gen==='nhanchia' && roll<0.6) return gColumnQ('nhanchia');
+  /* --- các mini-game mới, bám sát chủ đề tuần --- */
+  if(gen==='cautao' && roll<0.55) return gBuildNumberQ();                          /* xây số */
+  if(gen==='sosanh' && roll<0.6)  return gCompareQ(roll<0.3?9999:99999);           /* cân so sánh */
+  if(gen==='thoigian' && roll<0.5) return gClockSetQ();                            /* chỉnh đồng hồ */
+  if(gen==='tientevn' && roll<0.45) return gMoneyPayQ();                           /* trả tiền */
+  if(gen==='lamtron' && roll<0.6) return gNumLineQ();                              /* tia số / làm tròn */
   const o=GEN[gen]();
   if(o.type==='mc') return {kind:'mc', q:o.q, opts:o.opts, ansIdx:o.ansIdx, sol:o.sol};
   if(o.type==='solve'){
@@ -2745,9 +2798,75 @@ function gColumnBody(q){
     ${gColRow(ns, width, '', true)}
   </div>`;
 }
+
+/* Mini-game 6: Xây số theo hàng — chạm thẻ chữ số vào từng hàng (cấu tạo số) */
+const HANG_NAMES=['đơn vị','chục','trăm','nghìn','chục nghìn'];
+function gBuildNumberQ(digits){
+  // digits: 4 hoặc 5 (số có 4/5 chữ số). chữ số đầu ≠ 0
+  const d = digits || pick([4,5]);
+  const arr=[R(1,9)]; for(let i=1;i<d;i++) arr.push(R(0,9));
+  const num=Number(arr.join(''));
+  // mô tả theo cấu tạo hàng để học sinh ghép lại
+  const parts=[];
+  for(let i=0;i<d;i++){ const place=d-1-i; if(arr[i]>0) parts.push(`${arr[i]} ${HANG_NAMES[place]}`); }
+  const desc=parts.join(', ');
+  // các thẻ chữ số cần kéo (đúng thứ tự) + vài thẻ nhiễu
+  const need=arr.slice();
+  const tiles=shuffle([...need, R(0,9), R(0,9)]);
+  return {kind:'build', digits:d, target:num, targetArr:arr, tiles,
+    q:`🔢 Hãy <b>xây số</b> gồm: <b>${desc}</b>.<br><span style="font-size:13px;color:#5b7086">Chạm các thẻ chữ số theo đúng thứ tự từ hàng cao nhất xuống hàng đơn vị.</span>`,
+    sol:`Số cần xây là <b>${fmt(num)}</b> (${desc}).`};
+}
+
+/* Mini-game 7: Cân so sánh — chọn dấu >, <, = giữa hai số (cân thăng bằng) */
+function gCompareQ(maxN){
+  const hi = maxN || pick([9999, 99999]);
+  let a=R(Math.floor(hi/3), hi), b;
+  if(Math.random()<0.28){ b=a; } // thỉnh thoảng bằng nhau
+  else { b=R(Math.floor(hi/3), hi); while(b===a) b=R(Math.floor(hi/3), hi); }
+  const sign = a>b?'>':(a<b?'<':'=');
+  return {kind:'compare', a, b, sign,
+    q:`⚖️ Đặt <b>quả cân đúng</b> vào giữa hai số:`,
+    sol:`${fmt(a)} ${sign} ${fmt(b)} → chọn dấu <b>${sign}</b>.`};
+}
+
+/* Mini-game 8: Chỉnh đồng hồ — bấm +/- để kim chỉ đúng giờ */
+function gClockSetQ(){
+  const h=R(1,12), m=pick([0,5,10,15,20,25,30,35,40,45,50,55]);
+  let startH=R(1,12); while(startH===h) startH=R(1,12);
+  return {kind:'clock', targetH:h, targetM:m, curH:startH, curM:0,
+    q:`⏰ Hãy chỉnh đồng hồ chỉ đúng <b>${h} giờ ${m} phút</b>.<br><span style="font-size:13px;color:#5b7086">Bấm nút để thay đổi giờ và phút cho khớp.</span>`,
+    sol:`Đồng hồ cần chỉ <b>${h} giờ ${m} phút</b>.`};
+}
+
+/* Mini-game 9: Trả tiền — chạm chọn tờ tiền để trả đủ số tiền cần trả */
+const MONEY_UNITS=[1000,2000,5000,10000,20000,50000];
+function gMoneyPayQ(){
+  // sinh số tiền là bội của 1000, trả được bằng các mệnh giá trên
+  const target = pick([2,3,4,5,6,7,8,9,12,15,18,20,25,30,35])*1000 + pick([0,0,0,1000,2000,5000]);
+  return {kind:'money', target, units:MONEY_UNITS,
+    q:`💰 Hãy chạm chọn các tờ tiền để trả <b>đúng ${fmt(target)} đồng</b>.<br><span style="font-size:13px;color:#5b7086">Chạm một tờ để thêm (có thể thêm nhiều tờ cùng loại). Bấm “Xoá hết” để chọn lại.</span>`,
+    sol:`Cần trả tổng cộng <b>${fmt(target)} đồng</b> (có thể ghép nhiều cách từ các tờ tiền).`};
+}
+
+/* Mini-game 10: Tia số — chạm đúng vạch làm tròn số (làm tròn / thứ tự số) */
+function gNumLineQ(){
+  const base=pick([10,100,1000]);
+  const n=R(base+Math.floor(base/5), base*9); // số cần làm tròn
+  const low=Math.floor(n/base)*base, high=low+base;
+  const rounded = (n-low) >= base/2 ? high : low;
+  // vạch: low, low+step..high (chia base thành các đoạn tròn chục/trăm/nghìn)
+  const marks=[low, high];
+  const roundName = base===10?'chục':(base===100?'trăm':'nghìn');
+  return {kind:'numline', n, low, high, base, rounded, marks, roundName,
+    q:`📏 Trên tia số, hãy chạm vào số mà <b>${fmt(n)}</b> được <b>làm tròn đến hàng ${roundName}</b>.`,
+    sol:`${fmt(n)} làm tròn đến hàng ${roundName} là <b>${fmt(rounded)}</b> (gần ${fmt(rounded)} hơn).`};
+}
+
 function gStart(w){
   if(w>G.unlocked) return;
-  GS={w, qs:gBuildQuestions(w), i:0, correct:0, hearts:3, answered:false, picked:null, dndSel:null, countSel:new Set(), dead:false, timer:null};
+  GS={w, qs:gBuildQuestions(w), i:0, correct:0, hearts:3, answered:false, picked:null, dndSel:null, countSel:new Set(),
+      buildSeq:[], cmpSel:null, clockH:null, clockM:null, moneySel:[], numlineSel:null, dead:false, timer:null};
   document.getElementById('gModal').classList.add('open');
   gRenderQ();
 }
@@ -2768,6 +2887,49 @@ function gRenderQ(){
     body=`<div class="count-grid">`+q.shapes.map((t,i)=>`<button class="shp" data-i="${i}" onclick="gCountTap(${i})">${gShapeSVG(t,i)}</button>`).join('')+`</div>`;
   }else if(q.kind==='column'){
     body=`<div style="text-align:center">${gColumnBody(q)}</div>`;
+  }else if(q.kind==='build'){
+    body=`<div class="build-wrap">
+      <div class="build-slots" id="buildSlots">`+q.targetArr.map((_,i)=>{
+        const place=q.digits-1-i;
+        return `<div class="build-slot" data-i="${i}"><span class="bslot-val"></span><span class="bslot-name">${HANG_NAMES[place]}</span></div>`;
+      }).join('')+`</div>
+      <div class="build-num" id="buildNum">= <b>?</b></div>
+      <div class="build-tiles" id="buildTiles">`+q.tiles.map((d,i)=>`<button class="btile" data-d="${d}" data-i="${i}" onclick="gBuildTap(${i},${d})">${d}</button>`).join('')+`</div>
+      <div style="text-align:center;margin-top:6px"><button class="gry" style="padding:6px 12px;font-size:13px" onclick="gBuildUndo()">↩︎ Xoá thẻ cuối</button></div>
+    </div>`;
+  }else if(q.kind==='compare'){
+    body=`<div class="cmp-wrap">
+      <div class="cmp-num">${fmt(q.a)}</div>
+      <div class="cmp-signs">`+['>','<','='].map(s=>`<button class="cmp-btn" data-s="${s}" onclick="gCmpPick('${s}')">${s}</button>`).join('')+`</div>
+      <div class="cmp-num">${fmt(q.b)}</div>
+    </div>`;
+  }else if(q.kind==='clock'){
+    body=`<div class="clock-wrap">
+      <div id="clockFace">${svgClock(q.curH,q.curM,190)}</div>
+      <div class="clock-read" id="clockRead">${q.curH} giờ ${q.curM} phút</div>
+      <div class="clock-ctrls">
+        <div class="clock-grp"><span>Giờ</span><button class="clk-b" onclick="gClockAdj('h',-1)">−</button><button class="clk-b" onclick="gClockAdj('h',1)">+</button></div>
+        <div class="clock-grp"><span>Phút</span><button class="clk-b" onclick="gClockAdj('m',-5)">−</button><button class="clk-b" onclick="gClockAdj('m',5)">+</button></div>
+      </div>
+    </div>`;
+  }else if(q.kind==='money'){
+    body=`<div class="money-wrap">
+      <div class="money-tiles">`+q.units.map(u=>`<button class="money-note m${u}" data-u="${u}" onclick="gMoneyTap(${u})"><span class="mn-val">${fmt(u)}</span><span class="mn-cnt" id="mncnt${u}"></span></button>`).join('')+`</div>
+      <div class="money-total" id="moneyTotal">Đã chọn: <b>0</b> đồng</div>
+      <div style="text-align:center;margin-top:8px"><button class="gry" style="padding:6px 12px;font-size:13px" onclick="gMoneyClear()">🧹 Xoá hết</button></div>
+    </div>`;
+  }else if(q.kind==='numline'){
+    const step=q.base/10, ticks=[];
+    for(let v=q.low; v<=q.high; v+=step) ticks.push(v);
+    body=`<div class="nl-wrap"><div class="nl-target">Số cần làm tròn: <b>${fmt(q.n)}</b></div>
+      <div class="nl-line">`+ticks.map(v=>{
+        const isEnd=(v===q.low||v===q.high);
+        const pctPos=((v-q.low)/(q.high-q.low))*100;
+        const mark=(v===q.n)?`<span class="nl-here" style="left:${((q.n-q.low)/(q.high-q.low))*100}%">▲ ${fmt(q.n)}</span>`:'';
+        return `<button class="nl-tick ${isEnd?'big':''}" data-v="${v}" style="left:${pctPos}%" onclick="gNumlinePick(${v})"><span class="nl-lab">${isEnd?fmt(v):''}</span></button>${mark}`;
+      }).join('')+`</div>
+      <div style="text-align:center;font-size:12.5px;color:#5b7086;margin-top:24px">Chạm vào số tròn ${q.roundName} gần ${fmt(q.n)} nhất.</div>
+    </div>`;
   }else{
     body=`<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
       <input class="ginput" id="gInput" placeholder="?" autocomplete="off" autocapitalize="off">
@@ -2785,11 +2947,60 @@ function gRenderQ(){
     <div class="gfeed" id="gFeed"></div>
     <div class="gbtn-row"><button class="grn gbig" id="gCheck" onclick="gSubmit()">Kiểm tra</button></div>`;
   GS.answered=false; GS.picked=null; GS.dndSel=null; GS.countSel=new Set();
+  GS.buildSeq=[]; GS.cmpSel=null; GS.clockH=(q.kind==='clock'?q.curH:null); GS.clockM=(q.kind==='clock'?q.curM:null); GS.moneySel=[]; GS.numlineSel=null;
   const inp=document.getElementById('gInput');
   if(inp){ inp.focus(); inp.addEventListener('keydown',e=>{ if(e.key==='Enter'){ e.preventDefault(); gSubmit(); } }); }
   if(q.kind==='flash') gStartFlash(q.secs);
   if(q.kind==='dnd') gWireDnd();
   if(q.kind==='column') gWireColumn();
+}
+/* --- Tương tác mini-game mới --- */
+function gBuildTap(i,d){
+  if(GS.answered) return;
+  const q=GS.qs[GS.i]; if(GS.buildSeq.length>=q.digits) return;
+  GS.buildSeq.push({i,d});
+  const btn=document.querySelector('.btile[data-i="'+i+'"]'); if(btn){ btn.disabled=true; btn.classList.add('used'); }
+  gBuildRefresh();
+}
+function gBuildUndo(){
+  if(GS.answered || !GS.buildSeq.length) return;
+  const last=GS.buildSeq.pop();
+  const btn=document.querySelector('.btile[data-i="'+last.i+'"]'); if(btn){ btn.disabled=false; btn.classList.remove('used'); }
+  gBuildRefresh();
+}
+function gBuildRefresh(){
+  const q=GS.qs[GS.i];
+  document.querySelectorAll('#buildSlots .build-slot').forEach((s,idx)=>{
+    const v=GS.buildSeq[idx]; s.querySelector('.bslot-val').textContent = v!=null?v.d:'';
+    s.classList.toggle('filled', v!=null);
+  });
+  const cur=GS.buildSeq.map(x=>x.d).join('');
+  const nEl=document.getElementById('buildNum'); if(nEl) nEl.innerHTML='= <b>'+(cur?fmt(Number(cur)):'?')+'</b>';
+}
+function gCmpPick(s){ if(GS.answered) return; GS.cmpSel=s; document.querySelectorAll('.cmp-btn').forEach(b=>b.classList.toggle('sel',b.dataset.s===s)); }
+function gClockAdj(which,delta){
+  if(GS.answered) return;
+  if(which==='h'){ GS.clockH=((GS.clockH-1+delta+12)%12)+1; }
+  else { GS.clockM=(GS.clockM+delta+60)%60; }
+  const f=document.getElementById('clockFace'); if(f) f.innerHTML=svgClock(GS.clockH,GS.clockM,190);
+  const r=document.getElementById('clockRead'); if(r) r.textContent=`${GS.clockH} giờ ${GS.clockM} phút`;
+}
+function gMoneyTap(u){
+  if(GS.answered) return;
+  GS.moneySel.push(u);
+  gMoneyRefresh();
+}
+function gMoneyClear(){ if(GS.answered) return; GS.moneySel=[]; gMoneyRefresh(); }
+function gMoneyRefresh(){
+  const total=GS.moneySel.reduce((a,b)=>a+b,0);
+  MONEY_UNITS.forEach(u=>{ const c=GS.moneySel.filter(x=>x===u).length; const el=document.getElementById('mncnt'+u); if(el) el.textContent=c>0?('×'+c):''; const note=document.querySelector('.money-note[data-u="'+u+'"]'); if(note) note.classList.toggle('on',c>0); });
+  const q=GS.qs[GS.i];
+  const tEl=document.getElementById('moneyTotal');
+  if(tEl){ const ok=total===q.target; tEl.innerHTML=`Đã chọn: <b>${fmt(total)}</b> đồng`+(ok?' ✅':(total>q.target?' <span style="color:#c62828">(dư rồi!)</span>':'')); }
+}
+function gNumlinePick(v){
+  if(GS.answered) return; GS.numlineSel=v;
+  document.querySelectorAll('.nl-tick').forEach(b=>b.classList.toggle('sel',Number(b.dataset.v)===v));
 }
 function gWireColumn(){
   const boxes=[...document.querySelectorAll('.col-box')];
@@ -2886,6 +3097,28 @@ function gSubmit(){
     const val=boxes.map(b=>b.value.trim()).join('');
     ok=boxes.every(b=>/^\d$/.test(b.value.trim())) && Number(val)===q.ans;
     boxes.forEach(b=>{ b.disabled=true; b.style.borderColor=ok?'#2e7d32':'#d32f2f'; b.style.background=ok?'#e8f5e9':'#ffebee'; });
+  }else if(q.kind==='build'){
+    if(GS.buildSeq.length<q.digits) return;   /* chưa xây đủ chữ số */
+    const val=Number(GS.buildSeq.map(x=>x.d).join(''));
+    ok=(val===q.target);
+    const nEl=document.getElementById('buildNum'); if(nEl){ nEl.innerHTML='= <b>'+fmt(val)+'</b>'; nEl.style.color=ok?'#2e7d32':'#c62828'; }
+    document.querySelectorAll('#buildSlots .build-slot').forEach(s=>{ s.classList.add(ok?'right':'wrong'); });
+  }else if(q.kind==='compare'){
+    if(GS.cmpSel==null) return;
+    ok=(GS.cmpSel===q.sign);
+    document.querySelectorAll('.cmp-btn').forEach(b=>{ if(b.dataset.s===q.sign) b.classList.add('right'); if(b.dataset.s===GS.cmpSel && !ok) b.classList.add('wrong'); b.onclick=null; });
+  }else if(q.kind==='clock'){
+    ok=(GS.clockH===q.targetH && GS.clockM===q.targetM);
+    const r=document.getElementById('clockRead'); if(r){ r.style.color=ok?'#2e7d32':'#c62828'; r.style.fontWeight='800'; }
+  }else if(q.kind==='money'){
+    if(!GS.moneySel.length) return;
+    const total=GS.moneySel.reduce((a,b)=>a+b,0);
+    ok=(total===q.target);
+    const tEl=document.getElementById('moneyTotal'); if(tEl) tEl.style.color=ok?'#2e7d32':'#c62828';
+  }else if(q.kind==='numline'){
+    if(GS.numlineSel==null) return;
+    ok=(GS.numlineSel===q.rounded);
+    document.querySelectorAll('.nl-tick').forEach(b=>{ const v=Number(b.dataset.v); if(v===q.rounded) b.classList.add('right'); if(v===GS.numlineSel && !ok) b.classList.add('wrong'); b.onclick=null; });
   }else{
     const inp=document.getElementById('gInput'); if(!inp) return;
     ok=(inp.value.trim()!=='' && q.accept.includes(norm(inp.value)));
