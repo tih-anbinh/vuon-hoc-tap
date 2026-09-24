@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <!--
   =====================================================================
   GIÁO TRÌNH TOÁN LỚP 3 – BẢN TƯƠNG TÁC (Single-file HTML)
@@ -324,6 +325,7 @@ body.locked{overflow:hidden}
 .auth-remember input{width:18px;height:18px}
 .auth-btn{width:100%;font-size:17px;padding:13px;background:var(--green);box-shadow:0 4px 0 #1b5e20}
 .auth-err{display:none;color:#c62828;font-weight:700;font-size:13.5px;margin-bottom:8px;background:#ffebee;border-radius:10px;padding:8px}
+.auth-ok{display:none;color:#2e7d32;font-weight:700;font-size:13.5px;margin-bottom:8px;background:#e8f5e9;border-radius:10px;padding:8px}
 .auth-note{margin-top:14px;font-size:11px;color:#90a4ae;line-height:1.5}
 /* Thẻ tài khoản (góc dưới phải) */
 .acct-chip{position:fixed;bottom:12px;right:12px;z-index:200;display:none;align-items:center;gap:6px;background:rgba(255,255,255,.94);border:1.5px solid var(--line);border-radius:22px;padding:4px 6px 4px 13px;box-shadow:var(--shadow);font-size:13px;font-weight:700;color:#37474f}
@@ -344,16 +346,23 @@ body.locked{overflow:hidden}
 <div class="auth-gate" id="authGate">
   <form class="auth-card" id="authForm" autocomplete="off">
     <div class="amasc">🦉</div>
-    <h2>Vườn Toán Phiêu Lưu</h2>
-    <div class="asub">Đăng nhập để cùng con học nhé</div>
+    <h2 id="authTitle">Vườn Toán Phiêu Lưu</h2>
+    <div class="asub" id="authSub">Đăng nhập để cùng con học nhé</div>
     <div class="auth-err" id="authErr"></div>
-    <div class="auth-field"><label for="authUser">Tên đăng nhập</label>
-      <input id="authUser" type="text" autocomplete="username" autocapitalize="off" spellcheck="false" placeholder="ví dụ: ba"></div>
+    <div class="auth-ok" id="authOk"></div>
+    <div class="auth-field" id="nameField" style="display:none"><label for="authName">Tên hiển thị</label>
+      <input id="authName" type="text" autocapitalize="words" placeholder="ví dụ: Bé Bo"></div>
+    <div class="auth-field" id="userField"><label for="authUser" id="userLabel">Tên đăng nhập / Email</label>
+      <input id="authUser" type="text" autocomplete="username" autocapitalize="off" spellcheck="false" placeholder="email@vidu.com"></div>
     <div class="auth-field"><label for="authPass">Mật khẩu</label>
       <input id="authPass" type="password" autocomplete="current-password" placeholder="••••••••"></div>
-    <label class="auth-remember"><input type="checkbox" id="authRemember" checked> Ghi nhớ trên máy này</label>
-    <button class="auth-btn" type="submit">Đăng nhập</button>
-    <div class="auth-note">Chỉ tài khoản được cấp mới vào được. Đây là cổng bảo vệ cơ bản phía trình duyệt.</div>
+    <label class="auth-remember" id="rememberRow"><input type="checkbox" id="authRemember" checked> Ghi nhớ trên máy này</label>
+    <button class="auth-btn" type="submit" id="authSubmitBtn">Đăng nhập</button>
+    <div id="authToggleRow" style="margin-top:12px;font-size:13.5px;display:none">
+      <span id="toggleText">Chưa có tài khoản?</span>
+      <a href="#" id="authToggle" style="color:var(--blue);font-weight:700;text-decoration:none">Đăng ký</a>
+    </div>
+    <div class="auth-note" id="authNote">Chỉ tài khoản được cấp mới vào được.</div>
   </form>
 </div>
 <div class="acct-chip" id="acctChip">
@@ -2891,75 +2900,159 @@ function resetGame(){
 })();
 
 /* =====================================================================
-   ĐĂNG NHẬP (cổng mềm phía client) + ONBOARDING + CHẾ ĐỘ MẮT DỊU
-   ⚠️ Lưu ý: app là file HTML tĩnh, không có server → đây KHÔNG phải bảo mật
-   thật (người rành kỹ thuật có thể xem source / bỏ qua). Nó chỉ chặn người
-   dùng thông thường. Muốn bảo mật thật cần backend xác thực.
-   --- Cách thêm/đổi tài khoản: mở Console gõ:  await hashPw('matkhaumoi')
-       rồi dán chuỗi băm vào ACCOUNTS bên dưới cùng tên đăng nhập. ---
+   ĐĂNG NHẬP – Supabase (thật, có admin duyệt) + dự phòng cổng mềm
+   • Cấu hình: dán anon public key vào SUPA_ANON. Bỏ trống = dùng cổng mềm.
+   • Chạy file supabase_setup.sql trong Supabase để tạo bảng + luồng duyệt.
+   ⚠️ anon key là KHÓA CÔNG KHAI (an toàn để nhúng client); RLS bảo vệ dữ liệu.
    ===================================================================== */
-const AUTH_SALT='vuon-toan-3::';
 const AUTH_KEY='toan3_auth';
+const AUTH_SALT='vuon-toan-3::';
+/* Tài khoản dự phòng (chỉ dùng khi CHƯA cấu hình Supabase) */
 const ACCOUNTS=[
-  {u:'ba',  h:'7d439b93488ce2f8e50295a4f68879e72acd9a779c065dc458cfa87e35911cb8'}, /* mật khẩu: bavui@2026 */
-  {u:'con', h:'92196da7e6240047b6cb22f49843532fff655a78c685d566b6975299edd7fc43'}  /* mật khẩu: conhoc@2026 */
+  {u:'ba',  h:'7d439b93488ce2f8e50295a4f68879e72acd9a779c065dc458cfa87e35911cb8'}, /* bavui@2026 */
+  {u:'con', h:'92196da7e6240047b6cb22f49843532fff655a78c685d566b6975299edd7fc43'}  /* conhoc@2026 */
 ];
 async function hashPw(pw){
   const data=new TextEncoder().encode(AUTH_SALT+pw);
   const buf=await crypto.subtle.digest('SHA-256', data);
   return [...new Uint8Array(buf)].map(b=>b.toString(16).padStart(2,'0')).join('');
 }
-function authUser(){ try{ return JSON.parse(localStorage.getItem(AUTH_KEY)||sessionStorage.getItem(AUTH_KEY)||'null'); }catch(e){ return null; } }
+/* ===== Cấu hình Supabase ===== */
+const SUPA_URL='https://wbcszbyhsvhrkyyvkzfc.supabase.co';
+const SUPA_ANON='';   /* ← DÁN anon public key vào đây (Project Settings → API) */
+let supa=null;
+function supaReady(){ return !!(SUPA_ANON && window.supabase && window.supabase.createClient); }
+if(supaReady()){ try{ supa=window.supabase.createClient(SUPA_URL, SUPA_ANON); }catch(e){ supa=null; } }
+
 function authShowGate(show){
   const g=document.getElementById('authGate'); if(g) g.classList.toggle('hidden',!show);
   document.body.classList.toggle('locked',show);
   if(show){ const u=document.getElementById('authUser'); if(u) setTimeout(()=>u.focus(),50); }
 }
-function authRenderChip(){
-  const c=document.getElementById('acctChip'), a=authUser();
-  if(!c) return;
-  if(a){ c.style.display='flex'; const n=document.getElementById('acctName'); if(n) n.textContent=a.u; }
+function authRenderChip(who){
+  const c=document.getElementById('acctChip'); if(!c) return;
+  if(who){ c.style.display='flex'; const n=document.getElementById('acctName'); if(n) n.textContent=who; }
   else c.style.display='none';
 }
-async function authLogin(e){
+function authMsg(kind,text){
+  const err=document.getElementById('authErr'), ok=document.getElementById('authOk');
+  if(err){ err.style.display=kind==='err'?'block':'none'; if(kind==='err') err.textContent=text; }
+  if(ok){ ok.style.display=kind==='ok'?'block':'none'; if(kind==='ok') ok.innerHTML=text; }
+}
+function enterApp(name){ authShowGate(false); authRenderChip(name); maybeOnboard(); }
+
+/* --- Login / Register mode (khi có Supabase) --- */
+let authMode='login';
+function setAuthMode(m){
+  authMode=m; const isReg=(m==='register');
+  document.getElementById('authTitle').textContent = isReg?'Đăng ký tài khoản':'Vườn Toán Phiêu Lưu';
+  document.getElementById('authSub').textContent   = isReg?'Tạo tài khoản mới (cần admin duyệt)':'Đăng nhập để cùng con học nhé';
+  document.getElementById('nameField').style.display = isReg?'block':'none';
+  document.getElementById('authSubmitBtn').textContent = isReg?'Đăng ký':'Đăng nhập';
+  document.getElementById('toggleText').textContent = isReg?'Đã có tài khoản?':'Chưa có tài khoản?';
+  document.getElementById('authToggle').textContent = isReg?'Đăng nhập':'Đăng ký';
+  document.getElementById('rememberRow').style.display = isReg?'none':'flex';
+  authMsg('none');
+}
+
+async function authSubmit(e){
   if(e) e.preventDefault();
+  if(supaReady()) return authSubmitSupabase();
+  return authLoginSoft();
+}
+async function authSubmitSupabase(){
+  const email=(document.getElementById('authUser').value||'').trim();
+  const pass=document.getElementById('authPass').value||'';
+  const name=(document.getElementById('authName').value||'').trim();
+  const btn=document.getElementById('authSubmitBtn');
+  if(!email || !pass){ authMsg('err','Vui lòng nhập email và mật khẩu.'); return; }
+  btn.disabled=true;
+  try{
+    if(authMode==='register'){
+      const {error}=await supa.auth.signUp({email, password:pass, options:{data:{full_name:name}}});
+      if(error){ authMsg('err','Không đăng ký được: '+error.message); return; }
+      document.getElementById('authPass').value='';
+      setAuthMode('login');
+      authMsg('ok','✅ Đăng ký thành công! Tài khoản đang <b>chờ admin duyệt</b>. Khi được duyệt, hãy đăng nhập nhé.');
+    }else{
+      const {data,error}=await supa.auth.signInWithPassword({email, password:pass});
+      if(error){ authMsg('err','Sai email hoặc mật khẩu.'); return; }
+      const {data:prof,error:pe}=await supa.from('profiles').select('approved,full_name').eq('id',data.user.id).single();
+      if(pe || !prof || !prof.approved){ await supa.auth.signOut(); authMsg('err','Tài khoản đang chờ admin duyệt 🕒'); return; }
+      document.getElementById('authPass').value='';
+      enterApp(prof.full_name || data.user.email);
+    }
+  }catch(ex){ authMsg('err','Lỗi kết nối. Kiểm tra mạng rồi thử lại.'); }
+  finally{ btn.disabled=false; }
+}
+
+/* --- Cổng mềm dự phòng --- */
+function softUser(){ try{ return JSON.parse(localStorage.getItem(AUTH_KEY)||sessionStorage.getItem(AUTH_KEY)||'null'); }catch(e){ return null; } }
+async function authLoginSoft(){
   const u=(document.getElementById('authUser').value||'').trim().toLowerCase();
   const p=document.getElementById('authPass').value||'';
   const remember=document.getElementById('authRemember').checked;
-  const err=document.getElementById('authErr');
   let h=''; try{ h=await hashPw(p); }catch(ex){ h=''; }
   const acc=ACCOUNTS.find(a=>a.u===u);
   if(acc && h && acc.h===h){
     try{ (remember?localStorage:sessionStorage).setItem(AUTH_KEY, JSON.stringify({u:acc.u,t:Date.now()})); }catch(ex){}
-    if(err) err.style.display='none';
     document.getElementById('authPass').value='';
-    authShowGate(false); authRenderChip(); maybeOnboard();
+    enterApp(acc.u);
   }else{
-    if(err){ err.style.display='block'; err.textContent='Sai tên đăng nhập hoặc mật khẩu 😿'; }
+    authMsg('err','Sai tên đăng nhập hoặc mật khẩu 😿');
     document.getElementById('authPass').value='';
   }
 }
-function authLogout(){
+
+async function authLogout(){
+  try{ if(supa) await supa.auth.signOut(); }catch(e){}
   try{ localStorage.removeItem(AUTH_KEY); sessionStorage.removeItem(AUTH_KEY); }catch(e){}
   try{ TTS.stop(); }catch(e){}
-  authRenderChip(); authShowGate(true);
+  authRenderChip(null); authShowGate(true);
 }
+
 /* --- Onboarding --- */
 const INTRO_KEY='toan3_seen_intro';
 function maybeOnboard(){ try{ if(!localStorage.getItem(INTRO_KEY)) document.getElementById('introOverlay').classList.add('open'); }catch(e){} }
 function closeOnboard(){ const o=document.getElementById('introOverlay'); if(o) o.classList.remove('open'); try{ localStorage.setItem(INTRO_KEY,'1'); }catch(e){} }
-/* --- Chế độ mắt dịu (warm) --- */
+/* --- Chế độ mắt dịu --- */
 function warmOn(){ try{ return localStorage.getItem('toan3_warm')==='1'; }catch(e){ return false; } }
 function applyWarm(){ document.body.classList.toggle('warm', warmOn()); const b=document.getElementById('warmBtn'); if(b) b.textContent=warmOn()?'☀️':'🌙'; }
 function toggleWarm(){ try{ localStorage.setItem('toan3_warm', warmOn()?'0':'1'); }catch(e){} applyWarm(); }
+
 /* --- Khởi động cổng --- */
-(function authInit(){
+async function authBoot(){
   applyWarm();
-  const f=document.getElementById('authForm'); if(f) f.addEventListener('submit', authLogin);
-  if(!(window.crypto && crypto.subtle)){ authShowGate(false); authRenderChip(); return; } /* fail-open nếu trình duyệt quá cũ */
-  if(authUser()){ authShowGate(false); authRenderChip(); maybeOnboard(); }
-  else { authShowGate(true); authRenderChip(); }
-})();
+  const f=document.getElementById('authForm'); if(f) f.addEventListener('submit', authSubmit);
+  const tg=document.getElementById('authToggle'); if(tg) tg.addEventListener('click',e=>{ e.preventDefault(); setAuthMode(authMode==='login'?'register':'login'); });
+  if(supaReady()){
+    document.getElementById('authToggleRow').style.display='block';
+    document.getElementById('userLabel').textContent='Email';
+    document.getElementById('authUser').setAttribute('type','email');
+    document.getElementById('authUser').setAttribute('placeholder','email@vidu.com');
+    document.getElementById('authNote').textContent='Tài khoản mới cần admin duyệt trước khi vào được.';
+    setAuthMode('login');
+    try{
+      const {data}=await supa.auth.getSession();
+      if(data && data.session){
+        const {data:prof}=await supa.from('profiles').select('approved,full_name').eq('id',data.session.user.id).single();
+        if(prof && prof.approved){ enterApp(prof.full_name || data.session.user.email); return; }
+        await supa.auth.signOut();
+      }
+    }catch(e){}
+    authShowGate(true); authRenderChip(null);
+  }else{
+    document.getElementById('authToggleRow').style.display='none';
+    document.getElementById('userLabel').textContent='Tên đăng nhập';
+    document.getElementById('authUser').setAttribute('placeholder','ví dụ: ba');
+    document.getElementById('authNote').textContent='Chỉ tài khoản được cấp mới vào được (chế độ dự phòng).';
+    if(!(window.crypto && crypto.subtle)){ authShowGate(false); authRenderChip(null); return; }
+    const s=softUser();
+    if(s){ enterApp(s.u); } else { authShowGate(true); authRenderChip(null); }
+  }
+}
+authBoot();
+
 </script>
 </body>
 </html>
