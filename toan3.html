@@ -77,6 +77,9 @@ h4{color:var(--purple); margin:18px 0 8px; font-size:17.5px}
 .warn::before{content:"⚠️ LỖI HAY MẮC"; display:block; font-weight:800; color:var(--red); margin-bottom:5px; font-size:14px}
 .ex{background:var(--blue-l); border-left:6px solid var(--blue); border-radius:10px; padding:12px 16px; margin:12px 0}
 .ex::before{content:"✏️ VÍ DỤ"; display:block; font-weight:800; color:var(--blue); margin-bottom:5px; font-size:14px}
+/* ★ Nhãn NÂNG CAO – dạng bài khó hơn (bài toán ngược, tham khảo) */
+.adv-star{display:inline-block;color:#f57c00;font-weight:900;font-size:.95em;vertical-align:baseline;letter-spacing:.3px}
+.nav-adv{color:#f57c00;font-weight:900;margin-left:3px}
 .grid2{display:grid; grid-template-columns:1fr 1fr; gap:14px}
 .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
 @media(max-width:900px){.grid2,.grid3{grid-template-columns:1fr}}
@@ -523,6 +526,7 @@ body.locked{overflow:hidden}
 <div id="tab-lt">
 <div class="card center" style="background:linear-gradient(135deg,#e3f2fd,#fff3e0)">
   <div style="font-size:30px;font-weight:900;color:#0d47a1">Cùng con học Toán 3</div>
+  <div style="font-size:13px;color:#5b7086;margin-top:6px"><span class="adv-star">★</span> = dạng <b>nâng cao</b> (bài toán ngược / tham khảo) – bé làm được là rất giỏi, không bắt buộc nhé!</div>
 </div>
 
 <!-- ================= CHUYÊN ĐỀ 1 ================= -->
@@ -673,7 +677,7 @@ body.locked{overflow:hidden}
 
 <h3 id="c1-4">1.4 Chữ số La Mã (I – XII)</h3>
 <div class="card">
-<div class="rule">Chữ số La Mã dùng <b>7 ký hiệu cơ bản</b>: I (1), V (5), X (10), L (50), C (100). Lớp 3 chỉ cần học <b>I đến XII</b> (1 đến 12) – dùng trên mặt đồng hồ và tháng trong năm.</div>
+<div class="rule">Lớp 3 chỉ cần học <b>I đến XII</b> (1 đến 12) – dùng trên mặt đồng hồ và tháng trong năm. Có 3 ký hiệu dùng ở phạm vi này: <b>I (1), V (5), X (10)</b>.<br><span class="adv-star">★</span> <i>Tham khảo (nâng cao): còn có L (50), C (100)… nhưng lớp 3 chưa cần dùng.</i></div>
 <table class="roman-table">
 <tr><th>La Mã</th><th>Ả Rập</th><th>La Mã</th><th>Ả Rập</th><th>La Mã</th><th>Ả Rập</th></tr>
 <tr><td>I</td><td>1</td><td>V</td><td>5</td><td>IX</td><td>9</td></tr>
@@ -1558,9 +1562,13 @@ const TEN  = ['An','Bình','Cường','Dung','Hà','Khoa','Lan','Minh','Ngọc',
 const DOVAT= [['quyển vở','quyển'],['viên bi','viên'],['cái bút','cái'],['quả cam','quả'],['bông hoa','bông'],['cây xanh','cây'],['con gà','con'],['chiếc bánh','chiếc'],['quyển sách','quyển'],['quả bóng','quả']];
 
 /* ---------- Bộ dựng câu hỏi dạng BÀI GIẢI ---------- */
-function solveQ(q, steps, dapso, hint){
-  return {type:'solve', q, steps, dapso, hint,
-    sol:`<div class="model"><span class="mt">Bài giải</span>`+
+/* ★ = dạng NÂNG CAO (bài toán ngược / suy luận khó hơn – vẫn trong chương trình).
+   Gắn huy hiệu ★ vào đầu đề bài để bé & phụ huynh nhận biết. */
+function advBadge(){ return `<span class="adv-star" title="Dạng nâng cao">★</span> `; }
+function solveQ(q, steps, dapso, hint, adv){
+  if(adv) q = advBadge()+q;
+  return {type:'solve', q, steps, dapso, hint, adv:!!adv,
+    sol:`<div class="model"><span class="mt">Bài giải${adv?' <span class="adv-star">★ nâng cao</span>':''}</span>`+
         steps.map((s,i)=>`<div class="ln">${steps.length>1?`<b>Bước ${i+1}.</b> `:''}${s.loi}</div>`+
                           `<div class="ln">${s.pt} = ${fmt(s.kq)} (${s.dv})</div>`).join('')+
         `<div class="ln ds">Đáp số: ${fmt(dapso.val)} ${dapso.dv}.</div></div>`};
@@ -1993,7 +2001,7 @@ GEN.gapgiam = function(){
     const a=R(3,12), B=a*k;
     return solveQ(`${n2} có <b>${B}</b> ${dv}. Số ${dv} của ${n2} <b>gấp ${k} lần</b> ${n1}. Hỏi ${n1} có bao nhiêu ${dvt}?`,
       [{loi:`${n1} có số ${dv} là:`, pt:`${B} : ${k}`, kq:a, dv:dvt}], {val:a,dv:dvt},
-      `Vì ${n2} gấp ${k} lần ${n1} nên tìm ${n1} ta lấy số của ${n2} CHIA cho ${k}.`);
+      `Vì ${n2} gấp ${k} lần ${n1} nên tìm ${n1} ta lấy số của ${n2} CHIA cho ${k}.`, true);
   }
   if(t===2){
     const k=R(2,9), b=R(2,12), a=k*b;
@@ -2005,7 +2013,7 @@ GEN.gapgiam = function(){
     // NGƯỢC: biết ${n2}=b (là ${n1} giảm đi k lần) → tìm ${n1}=b×k
     return solveQ(`${n2} có <b>${b}</b> ${dv}. Số ${dv} của ${n2} bằng số ${dv} của ${n1} <b>giảm đi ${k} lần</b>. Hỏi ${n1} có bao nhiêu ${dvt}?`,
       [{loi:`${n1} có số ${dv} là:`, pt:`${b} × ${k}`, kq:a, dv:dvt}], {val:a,dv:dvt},
-      `Vì ${n2} là ${n1} giảm đi ${k} lần nên tìm ${n1} ta lấy số của ${n2} NHÂN với ${k}.`);
+      `Vì ${n2} là ${n1} giảm đi ${k} lần nên tìm ${n1} ta lấy số của ${n2} NHÂN với ${k}.`, true);
   }
   if(t===3){const k=R(2,9), b=R(2,10), a=k*b;
     return solveQ(`${n1} có <b>${a}</b> ${dv}, ${n2} có <b>${b}</b> ${dv}. Hỏi số ${dv} của ${n1} <b>gấp mấy lần</b> số ${dv} của ${n2}?`,
@@ -2022,7 +2030,7 @@ GEN.gapgiam = function(){
     const B=a+m;
     return solveQ(`${n2} có <b>${B}</b> ${dv}. ${n2} có <b>nhiều hơn</b> ${n1} <b>${m}</b> ${dv}. Hỏi ${n1} có bao nhiêu ${dvt}?`,
       [{loi:`${n1} có số ${dv} là:`, pt:`${B} − ${m}`, kq:a, dv:dvt}], {val:a,dv:dvt},
-      `Vì ${n2} nhiều hơn ${n1} là ${m} ${dvt} nên tìm ${n1} ta lấy số của ${n2} TRỪ đi ${m}.`);
+      `Vì ${n2} nhiều hơn ${n1} là ${m} ${dvt} nên tìm ${n1} ta lấy số của ${n2} TRỪ đi ${m}.`, true);
   }
   // t===5: quan hệ “ít hơn”
   const m=R(2,15), A=R(5,30)+m;
@@ -2035,7 +2043,7 @@ GEN.gapgiam = function(){
   const B=A-m;
   return solveQ(`${n2} có <b>${B}</b> ${dv}. ${n2} có <b>ít hơn</b> ${n1} <b>${m}</b> ${dv}. Hỏi ${n1} có bao nhiêu ${dvt}?`,
     [{loi:`${n1} có số ${dv} là:`, pt:`${B} + ${m}`, kq:A, dv:dvt}], {val:A,dv:dvt},
-    `Vì ${n2} ít hơn ${n1} là ${m} ${dvt} nên tìm ${n1} ta lấy số của ${n2} CỘNG thêm ${m}.`);
+    `Vì ${n2} ít hơn ${n1} là ${m} ${dvt} nên tìm ${n1} ta lấy số của ${n2} CỘNG thêm ${m}.`, true);
 };
 
 /* --- 4.2 Hai bước tính (BÀI GIẢI ĐẦY ĐỦ — có cả dạng XUÔI và NGƯỢC) --- */
@@ -2056,7 +2064,7 @@ GEN.haibuoc = function(){
     return solveQ(`${n2} có <b>${B}</b> ${dv} và gấp <b>${k} lần</b> ${n1}. Hỏi <b>cả hai bạn</b> có bao nhiêu ${dvt}?`,
       [{loi:`${n1} có số ${dv} là:`, pt:`${B} : ${k}`, kq:a, dv:dvt},
        {loi:`Cả hai bạn có số ${dv} là:`, pt:`${a} + ${B}`, kq:a+B, dv:dvt}],
-      {val:a+B,dv:dvt}, `Bước 1: vì ${n2} gấp ${k} lần ${n1} nên lấy số của ${n2} CHIA ${k} để tìm ${n1}. Bước 2: cộng số của cả hai bạn.`);}
+      {val:a+B,dv:dvt}, `Bước 1: vì ${n2} gấp ${k} lần ${n1} nên lấy số của ${n2} CHIA ${k} để tìm ${n1}. Bước 2: cộng số của cả hai bạn.`, true);}
   if(t===2){const a=R(20,45), m=R(2,10);
     if(!rev){
       return solveQ(`Lớp 3A có <b>${a}</b> học sinh. Lớp 3B có <b>ít hơn</b> lớp 3A <b>${m}</b> học sinh. Hỏi <b>cả hai lớp</b> có bao nhiêu học sinh?`,
@@ -2069,7 +2077,7 @@ GEN.haibuoc = function(){
     return solveQ(`Lớp 3B có <b>${B}</b> học sinh và <b>ít hơn</b> lớp 3A <b>${m}</b> học sinh. Hỏi <b>cả hai lớp</b> có bao nhiêu học sinh?`,
       [{loi:`Lớp 3A có số học sinh là:`, pt:`${B} + ${m}`, kq:a, dv:'học sinh'},
        {loi:`Cả hai lớp có số học sinh là:`, pt:`${a} + ${B}`, kq:a+B, dv:'học sinh'}],
-      {val:a+B,dv:'học sinh'}, `Bước 1: vì lớp 3B ít hơn lớp 3A là ${m} nên lấy số của 3B CỘNG ${m} để tìm 3A. Bước 2: cộng hai lớp.`);}
+      {val:a+B,dv:'học sinh'}, `Bước 1: vì lớp 3B ít hơn lớp 3A là ${m} nên lấy số của 3B CỘNG ${m} để tìm 3A. Bước 2: cộng hai lớp.`, true);}
   if(t===3){const k=R(2,9), n=R(3,9), N=k*n, used=R(2,n-1);
     return solveQ(`Có <b>${N}</b> ${dv} xếp đều vào <b>${n}</b> hộp. Hỏi <b>${used}</b> hộp như thế có bao nhiêu ${dvt}?`,
       [{loi:`Mỗi hộp có số ${dv} là:`, pt:`${N} : ${n}`, kq:k, dv:dvt},
@@ -2103,7 +2111,7 @@ GEN.loivanhinh = function(){
     return solveQ(`Một ${nơi} hình chữ nhật có <b>chu vi ${P} ${u}</b>, chiều rộng <b>${b} ${u}</b>. Tính <b>chiều dài</b> ${nơi} đó.`,
       [{loi:`Nửa chu vi (chiều dài + chiều rộng) là:`, pt:`${P} : 2`, kq:nua, dv:u},
        {loi:`Chiều dài ${nơi} đó là:`, pt:`${nua} − ${b}`, kq:a, dv:u}], {val:a,dv:u},
-      'Từ chu vi suy ngược: nửa chu vi = chu vi : 2; chiều dài = nửa chu vi − chiều rộng.');}
+      'Từ chu vi suy ngược: nửa chu vi = chu vi : 2; chiều dài = nửa chu vi − chiều rộng.', true);}
   if(t===2){const a=R(4,20), b=R(2,a-1);
     if(!rev){
       return solveQ(`Một ${nơi} hình chữ nhật có chiều dài <b>${a} cm</b>, chiều rộng <b>${b} cm</b>. Tính <b>diện tích</b> ${nơi} đó.`,
@@ -2114,7 +2122,7 @@ GEN.loivanhinh = function(){
     const S=a*b;
     return solveQ(`Một ${nơi} hình chữ nhật có <b>diện tích ${S} cm²</b>, chiều rộng <b>${b} cm</b>. Tính <b>chiều dài</b> ${nơi} đó.`,
       [{loi:`Chiều dài ${nơi} đó là:`, pt:`${S} : ${b}`, kq:a, dv:'cm'}], {val:a,dv:'cm'},
-      'Vì diện tích = dài × rộng nên tìm chiều dài ta lấy diện tích CHIA cho chiều rộng.');}
+      'Vì diện tích = dài × rộng nên tìm chiều dài ta lấy diện tích CHIA cho chiều rộng.', true);}
   if(t===3){const a=R(3,20), u=pick(['m','cm']);
     if(!rev){
       return solveQ(`Một ${nơi} hình vuông có cạnh dài <b>${a} ${u}</b>. Tính <b>chu vi</b> ${nơi} đó.`,
@@ -2125,7 +2133,7 @@ GEN.loivanhinh = function(){
     const P=a*4;
     return solveQ(`Một ${nơi} hình vuông có <b>chu vi ${P} ${u}</b>. Tính <b>độ dài cạnh</b> ${nơi} đó.`,
       [{loi:`Độ dài cạnh ${nơi} hình vuông là:`, pt:`${P} : 4`, kq:a, dv:u}], {val:a,dv:u},
-      'Vì chu vi hình vuông = cạnh × 4 nên tìm cạnh ta lấy chu vi CHIA cho 4.');}
+      'Vì chu vi hình vuông = cạnh × 4 nên tìm cạnh ta lấy chu vi CHIA cho 4.', true);}
   if(t===4){const a=R(3,15);
     return solveQ(`Một ${nơi} hình vuông có cạnh dài <b>${a} cm</b>. Tính <b>diện tích</b> ${nơi} đó.`,
       [{loi:`Diện tích ${nơi} hình vuông là:`, pt:`${a} × ${a}`, kq:a*a, dv:'cm²'}], {val:a*a,dv:'cm²'},
@@ -2194,9 +2202,9 @@ GEN.tientevn = function(){
     }
     // NGƯỢC: biết tổng tiền + giá 1 món → tìm giá món còn lại
     const tong=p1+p2;
-    return {q:`Mua 1 ${it1[0]} và 1 ${it2[0]} hết tổng cộng <b>${fmt(tong)} đồng</b>. Biết 1 ${it1[0]} giá <b>${fmt(p1)} đồng</b>. Hỏi 1 ${it2[0]} giá bao nhiêu đồng?`,
-      ans:String(p2), hint:'Lấy tổng tiền trừ đi giá món đã biết.',
-      sol:`Giá 1 ${it2[0]} là: ${fmt(tong)} − ${fmt(p1)} = <b>${fmt(p2)}</b> đồng.`};
+    return {q:`${advBadge()}Mua 1 ${it1[0]} và 1 ${it2[0]} hết tổng cộng <b>${fmt(tong)} đồng</b>. Biết 1 ${it1[0]} giá <b>${fmt(p1)} đồng</b>. Hỏi 1 ${it2[0]} giá bao nhiêu đồng?`,
+      ans:String(p2), hint:'Lấy tổng tiền trừ đi giá món đã biết.', adv:true,
+      sol:`<span class="adv-star">★ nâng cao</span> Giá 1 ${it2[0]} là: ${fmt(tong)} − ${fmt(p1)} = <b>${fmt(p2)}</b> đồng.`};
   }
   if(t===2){
     const k=R(2,5), tot=p1*k;
@@ -2219,7 +2227,7 @@ GEN.tientevn = function(){
     return solveQ(
       `Mua đồ và đưa tờ <b>${fmt(bill)} đồng</b>, được trả lại <b>${fmt(thua)} đồng</b>. Hỏi số tiền phải trả cho món đồ là bao nhiêu đồng?`,
       [{loi:'Số tiền phải trả là:', pt:`${fmt(bill)} − ${fmt(thua)}`, kq:ptot, dv:'đồng'}],
-      {val:ptot, dv:'đồng'}, 'Vì tiền trả lại = tiền đưa − tiền phải trả nên tiền phải trả = tiền đưa − tiền trả lại.');
+      {val:ptot, dv:'đồng'}, 'Vì tiền trả lại = tiền đưa − tiền phải trả nên tiền phải trả = tiền đưa − tiền trả lại.', true);
   }
   const k=R(2,4), tot2=p1*k;
   const bill2=TK_BILLS.find(b=>b>tot2)||100000;
@@ -2251,7 +2259,7 @@ GEN.rutvedv = function(){
       `<b>${q1}</b> ${dv} giá <b>${fmt(uPrice*q1)} đồng</b>. Hỏi với <b>${fmt(tien)} đồng</b> thì mua được bao nhiêu ${dvt} như thế?`,
       [{loi:`Giá 1 ${dvt} là:`, pt:`${fmt(uPrice*q1)} : ${q1}`, kq:uPrice, dv:'đồng'},
        {loi:`Số ${dvt} mua được là:`, pt:`${fmt(tien)} : ${fmt(uPrice)}`, kq:q2, dv:dvt}],
-      {val:q2, dv:dvt}, 'Bước 1: chia để tìm giá 1 cái. Bước 2: lấy số tiền có CHIA cho giá 1 cái để biết mua được mấy cái.');
+      {val:q2, dv:dvt}, 'Bước 1: chia để tìm giá 1 cái. Bước 2: lấy số tiền có CHIA cho giá 1 cái để biết mua được mấy cái.', true);
   }
   if(t===2){
     const h1=pick([2,3,4]), wage=R(20,50)*1000, h2=h1*R(2,3);
