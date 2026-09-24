@@ -1921,47 +1921,100 @@ GEN.thoigian = function(){
     ans:String(m+b), hint:'Cộng số phút của phim vào số phút lúc bắt đầu.', sol:`${m} + ${b} = <b>${m+b}</b> ⇒ phim kết thúc lúc ${a} giờ ${m+b} phút`};
 };
 
-/* --- 4.1 Gấp, giảm (BÀI GIẢI ĐẦY ĐỦ) --- */
+/* --- 4.1 Gấp, giảm (BÀI GIẢI ĐẦY ĐỦ — có cả dạng XUÔI và NGƯỢC) --- */
 GEN.gapgiam = function(){
   const n1=pick(TEN), [dv,dvt]=pick(DOVAT); let n2=pick(TEN); while(n2===n1) n2=pick(TEN);
   const t=R(1,5);
-  if(t===1){const a=R(3,12), k=R(2,9);
-    return solveQ(`${n1} có <b>${a}</b> ${dv}. Số ${dv} của ${n2} <b>gấp ${k} lần</b> ${n1}. Hỏi ${n2} có bao nhiêu ${dvt}?`,
-      [{loi:`${n2} có số ${dv} là:`, pt:`${a} × ${k}`, kq:a*k, dv:dvt}], {val:a*k,dv:dvt},
-      'Gấp một số lên nhiều lần → lấy số đó NHÂN với số lần.');}
-  if(t===2){const k=R(2,9), b=R(2,12), a=k*b;
-    return solveQ(`${n1} có <b>${a}</b> ${dv}. Số ${dv} của ${n2} bằng số ${dv} của ${n1} <b>giảm đi ${k} lần</b>. Hỏi ${n2} có bao nhiêu ${dvt}?`,
-      [{loi:`${n2} có số ${dv} là:`, pt:`${a} : ${k}`, kq:b, dv:dvt}], {val:b,dv:dvt},
-      'Giảm một số đi nhiều lần → lấy số đó CHIA cho số lần.');}
+  const rev = R(0,1)===1;   // random chọn dạng XUÔI (false) hay NGƯỢC (true)
+  if(t===1){
+    const k=R(2,9);
+    if(!rev){   // XUÔI: biết ${n1}=a và số lần k → tìm ${n2}=a×k
+      const a=R(3,12);
+      return solveQ(`${n1} có <b>${a}</b> ${dv}. Số ${dv} của ${n2} <b>gấp ${k} lần</b> ${n1}. Hỏi ${n2} có bao nhiêu ${dvt}?`,
+        [{loi:`${n2} có số ${dv} là:`, pt:`${a} × ${k}`, kq:a*k, dv:dvt}], {val:a*k,dv:dvt},
+        'Gấp một số lên nhiều lần → lấy số đó NHÂN với số lần.');
+    }
+    // NGƯỢC: biết ${n2}=B (gấp k lần ${n1}) → tìm ${n1}=B÷k
+    const a=R(3,12), B=a*k;
+    return solveQ(`${n2} có <b>${B}</b> ${dv}. Số ${dv} của ${n2} <b>gấp ${k} lần</b> ${n1}. Hỏi ${n1} có bao nhiêu ${dvt}?`,
+      [{loi:`${n1} có số ${dv} là:`, pt:`${B} : ${k}`, kq:a, dv:dvt}], {val:a,dv:dvt},
+      `Vì ${n2} gấp ${k} lần ${n1} nên tìm ${n1} ta lấy số của ${n2} CHIA cho ${k}.`);
+  }
+  if(t===2){
+    const k=R(2,9), b=R(2,12), a=k*b;
+    if(!rev){   // XUÔI: biết ${n1}=a, giảm k lần → tìm ${n2}=a÷k
+      return solveQ(`${n1} có <b>${a}</b> ${dv}. Số ${dv} của ${n2} bằng số ${dv} của ${n1} <b>giảm đi ${k} lần</b>. Hỏi ${n2} có bao nhiêu ${dvt}?`,
+        [{loi:`${n2} có số ${dv} là:`, pt:`${a} : ${k}`, kq:b, dv:dvt}], {val:b,dv:dvt},
+        'Giảm một số đi nhiều lần → lấy số đó CHIA cho số lần.');
+    }
+    // NGƯỢC: biết ${n2}=b (là ${n1} giảm đi k lần) → tìm ${n1}=b×k
+    return solveQ(`${n2} có <b>${b}</b> ${dv}. Số ${dv} của ${n2} bằng số ${dv} của ${n1} <b>giảm đi ${k} lần</b>. Hỏi ${n1} có bao nhiêu ${dvt}?`,
+      [{loi:`${n1} có số ${dv} là:`, pt:`${b} × ${k}`, kq:a, dv:dvt}], {val:a,dv:dvt},
+      `Vì ${n2} là ${n1} giảm đi ${k} lần nên tìm ${n1} ta lấy số của ${n2} NHÂN với ${k}.`);
+  }
   if(t===3){const k=R(2,9), b=R(2,10), a=k*b;
     return solveQ(`${n1} có <b>${a}</b> ${dv}, ${n2} có <b>${b}</b> ${dv}. Hỏi số ${dv} của ${n1} <b>gấp mấy lần</b> số ${dv} của ${n2}?`,
       [{loi:`Số ${dv} của ${n1} gấp số ${dv} của ${n2} số lần là:`, pt:`${a} : ${b}`, kq:k, dv:'lần'}], {val:k,dv:'lần'},
       'Số lớn gấp mấy lần số bé → lấy số lớn CHIA số bé.');}
-  if(t===4){const a=R(5,30), m=R(2,15);
-    return solveQ(`${n1} có <b>${a}</b> ${dv}. ${n2} có <b>nhiều hơn</b> ${n1} <b>${m}</b> ${dv}. Hỏi ${n2} có bao nhiêu ${dvt}?`,
-      [{loi:`${n2} có số ${dv} là:`, pt:`${a} + ${m}`, kq:a+m, dv:dvt}], {val:a+m,dv:dvt},
-      '“Nhiều hơn … đơn vị” (không có chữ “lần”) → phép CỘNG.');}
+  if(t===4){
+    const a=R(5,30), m=R(2,15);
+    if(!rev){   // XUÔI: biết ${n1}=a, ${n2} nhiều hơn m → tìm ${n2}=a+m
+      return solveQ(`${n1} có <b>${a}</b> ${dv}. ${n2} có <b>nhiều hơn</b> ${n1} <b>${m}</b> ${dv}. Hỏi ${n2} có bao nhiêu ${dvt}?`,
+        [{loi:`${n2} có số ${dv} là:`, pt:`${a} + ${m}`, kq:a+m, dv:dvt}], {val:a+m,dv:dvt},
+        '“Nhiều hơn … đơn vị” (không có chữ “lần”) → phép CỘNG.');
+    }
+    // NGƯỢC: biết ${n2}=a+m (nhiều hơn ${n1} là m) → tìm ${n1}=(a+m)−m
+    const B=a+m;
+    return solveQ(`${n2} có <b>${B}</b> ${dv}. ${n2} có <b>nhiều hơn</b> ${n1} <b>${m}</b> ${dv}. Hỏi ${n1} có bao nhiêu ${dvt}?`,
+      [{loi:`${n1} có số ${dv} là:`, pt:`${B} − ${m}`, kq:a, dv:dvt}], {val:a,dv:dvt},
+      `Vì ${n2} nhiều hơn ${n1} là ${m} ${dvt} nên tìm ${n1} ta lấy số của ${n2} TRỪ đi ${m}.`);
+  }
+  // t===5: quan hệ “ít hơn”
   const m=R(2,15), A=R(5,30)+m;
-  return solveQ(`${n1} có <b>${A}</b> ${dv}. ${n2} có <b>ít hơn</b> ${n1} <b>${m}</b> ${dv}. Hỏi ${n2} có bao nhiêu ${dvt}?`,
-    [{loi:`${n2} có số ${dv} là:`, pt:`${A} − ${m}`, kq:A-m, dv:dvt}], {val:A-m,dv:dvt},
-    '“Ít hơn … đơn vị” → phép TRỪ.');
+  if(!rev){   // XUÔI: biết ${n1}=A, ${n2} ít hơn m → tìm ${n2}=A−m
+    return solveQ(`${n1} có <b>${A}</b> ${dv}. ${n2} có <b>ít hơn</b> ${n1} <b>${m}</b> ${dv}. Hỏi ${n2} có bao nhiêu ${dvt}?`,
+      [{loi:`${n2} có số ${dv} là:`, pt:`${A} − ${m}`, kq:A-m, dv:dvt}], {val:A-m,dv:dvt},
+      '“Ít hơn … đơn vị” → phép TRỪ.');
+  }
+  // NGƯỢC: biết ${n2}=A−m (ít hơn ${n1} là m) → tìm ${n1}=(A−m)+m
+  const B=A-m;
+  return solveQ(`${n2} có <b>${B}</b> ${dv}. ${n2} có <b>ít hơn</b> ${n1} <b>${m}</b> ${dv}. Hỏi ${n1} có bao nhiêu ${dvt}?`,
+    [{loi:`${n1} có số ${dv} là:`, pt:`${B} + ${m}`, kq:A, dv:dvt}], {val:A,dv:dvt},
+    `Vì ${n2} ít hơn ${n1} là ${m} ${dvt} nên tìm ${n1} ta lấy số của ${n2} CỘNG thêm ${m}.`);
 };
 
-/* --- 4.2 Hai bước tính (BÀI GIẢI ĐẦY ĐỦ) --- */
+/* --- 4.2 Hai bước tính (BÀI GIẢI ĐẦY ĐỦ — có cả dạng XUÔI và NGƯỢC) --- */
 GEN.haibuoc = function(){
   const n1=pick(TEN); let n2=pick(TEN); while(n2===n1) n2=pick(TEN);
   const [dv,dvt]=pick(DOVAT);
   const t=R(1,5);
+  const rev = R(0,1)===1;
   if(t===1){const a=R(4,15), k=R(2,5);
-    return solveQ(`${n1} có <b>${a}</b> ${dv}. ${n2} có gấp <b>${k} lần</b> ${n1}. Hỏi <b>cả hai bạn</b> có bao nhiêu ${dvt}?`,
-      [{loi:`${n2} có số ${dv} là:`, pt:`${a} × ${k}`, kq:a*k, dv:dvt},
-       {loi:`Cả hai bạn có số ${dv} là:`, pt:`${a} + ${a*k}`, kq:a+a*k, dv:dvt}],
-      {val:a+a*k,dv:dvt}, 'Bước 1: tìm số của bạn thứ hai. Bước 2: cộng số của cả hai bạn.');}
+    if(!rev){
+      return solveQ(`${n1} có <b>${a}</b> ${dv}. ${n2} có gấp <b>${k} lần</b> ${n1}. Hỏi <b>cả hai bạn</b> có bao nhiêu ${dvt}?`,
+        [{loi:`${n2} có số ${dv} là:`, pt:`${a} × ${k}`, kq:a*k, dv:dvt},
+         {loi:`Cả hai bạn có số ${dv} là:`, pt:`${a} + ${a*k}`, kq:a+a*k, dv:dvt}],
+        {val:a+a*k,dv:dvt}, 'Bước 1: tìm số của bạn thứ hai. Bước 2: cộng số của cả hai bạn.');
+    }
+    // NGƯỢC: biết ${n2}=a×k và số lần k → tìm ${n1}, rồi tính tổng cả hai
+    const B=a*k;
+    return solveQ(`${n2} có <b>${B}</b> ${dv} và gấp <b>${k} lần</b> ${n1}. Hỏi <b>cả hai bạn</b> có bao nhiêu ${dvt}?`,
+      [{loi:`${n1} có số ${dv} là:`, pt:`${B} : ${k}`, kq:a, dv:dvt},
+       {loi:`Cả hai bạn có số ${dv} là:`, pt:`${a} + ${B}`, kq:a+B, dv:dvt}],
+      {val:a+B,dv:dvt}, `Bước 1: vì ${n2} gấp ${k} lần ${n1} nên lấy số của ${n2} CHIA ${k} để tìm ${n1}. Bước 2: cộng số của cả hai bạn.`);}
   if(t===2){const a=R(20,45), m=R(2,10);
-    return solveQ(`Lớp 3A có <b>${a}</b> học sinh. Lớp 3B có <b>ít hơn</b> lớp 3A <b>${m}</b> học sinh. Hỏi <b>cả hai lớp</b> có bao nhiêu học sinh?`,
-      [{loi:`Lớp 3B có số học sinh là:`, pt:`${a} − ${m}`, kq:a-m, dv:'học sinh'},
-       {loi:`Cả hai lớp có số học sinh là:`, pt:`${a} + ${a-m}`, kq:a+a-m, dv:'học sinh'}],
-      {val:a+a-m,dv:'học sinh'}, 'Bước 1: tính số học sinh lớp 3B. Bước 2: cộng hai lớp.');}
+    if(!rev){
+      return solveQ(`Lớp 3A có <b>${a}</b> học sinh. Lớp 3B có <b>ít hơn</b> lớp 3A <b>${m}</b> học sinh. Hỏi <b>cả hai lớp</b> có bao nhiêu học sinh?`,
+        [{loi:`Lớp 3B có số học sinh là:`, pt:`${a} − ${m}`, kq:a-m, dv:'học sinh'},
+         {loi:`Cả hai lớp có số học sinh là:`, pt:`${a} + ${a-m}`, kq:a+a-m, dv:'học sinh'}],
+        {val:a+a-m,dv:'học sinh'}, 'Bước 1: tính số học sinh lớp 3B. Bước 2: cộng hai lớp.');
+    }
+    // NGƯỢC: biết lớp 3B (ít hơn 3A là m) → tìm 3A, rồi tính tổng
+    const B=a-m;
+    return solveQ(`Lớp 3B có <b>${B}</b> học sinh và <b>ít hơn</b> lớp 3A <b>${m}</b> học sinh. Hỏi <b>cả hai lớp</b> có bao nhiêu học sinh?`,
+      [{loi:`Lớp 3A có số học sinh là:`, pt:`${B} + ${m}`, kq:a, dv:'học sinh'},
+       {loi:`Cả hai lớp có số học sinh là:`, pt:`${a} + ${B}`, kq:a+B, dv:'học sinh'}],
+      {val:a+B,dv:'học sinh'}, `Bước 1: vì lớp 3B ít hơn lớp 3A là ${m} nên lấy số của 3B CỘNG ${m} để tìm 3A. Bước 2: cộng hai lớp.`);}
   if(t===3){const k=R(2,9), n=R(3,9), N=k*n, used=R(2,n-1);
     return solveQ(`Có <b>${N}</b> ${dv} xếp đều vào <b>${n}</b> hộp. Hỏi <b>${used}</b> hộp như thế có bao nhiêu ${dvt}?`,
       [{loi:`Mỗi hộp có số ${dv} là:`, pt:`${N} : ${n}`, kq:k, dv:dvt},
@@ -1979,22 +2032,45 @@ GEN.haibuoc = function(){
     {val:tot-used,dv:dvt}, 'Bước 1: tính tổng số. Bước 2: trừ đi số đã dùng.');
 };
 
-/* --- 4.3 Lời văn hình học (BÀI GIẢI ĐẦY ĐỦ) --- */
+/* --- 4.3 Lời văn hình học (BÀI GIẢI ĐẦY ĐỦ — có cả dạng XUÔI và NGƯỢC) --- */
 GEN.loivanhinh = function(){
   const t=R(1,5);
+  const rev = R(0,1)===1;
   const nơi=pick(['mảnh vườn','mảnh đất','tấm bìa','sân chơi','thửa ruộng','khung tranh']);
   if(t===1){const a=R(4,25), b=R(2,a-1), u=pick(['m','cm']);
-    return solveQ(`Một ${nơi} hình chữ nhật có chiều dài <b>${a} ${u}</b>, chiều rộng <b>${b} ${u}</b>. Tính <b>chu vi</b> ${nơi} đó.`,
-      [{loi:`Chu vi ${nơi} hình chữ nhật là:`, pt:`(${a} + ${b}) × 2`, kq:(a+b)*2, dv:u}], {val:(a+b)*2,dv:u},
-      'Chu vi hình chữ nhật = (dài + rộng) × 2.');}
+    if(!rev){
+      return solveQ(`Một ${nơi} hình chữ nhật có chiều dài <b>${a} ${u}</b>, chiều rộng <b>${b} ${u}</b>. Tính <b>chu vi</b> ${nơi} đó.`,
+        [{loi:`Chu vi ${nơi} hình chữ nhật là:`, pt:`(${a} + ${b}) × 2`, kq:(a+b)*2, dv:u}], {val:(a+b)*2,dv:u},
+        'Chu vi hình chữ nhật = (dài + rộng) × 2.');
+    }
+    // NGƯỢC: biết chu vi + chiều rộng → tìm chiều dài. dài = chu vi : 2 − rộng
+    const P=(a+b)*2, nua=P/2;
+    return solveQ(`Một ${nơi} hình chữ nhật có <b>chu vi ${P} ${u}</b>, chiều rộng <b>${b} ${u}</b>. Tính <b>chiều dài</b> ${nơi} đó.`,
+      [{loi:`Nửa chu vi (chiều dài + chiều rộng) là:`, pt:`${P} : 2`, kq:nua, dv:u},
+       {loi:`Chiều dài ${nơi} đó là:`, pt:`${nua} − ${b}`, kq:a, dv:u}], {val:a,dv:u},
+      'Từ chu vi suy ngược: nửa chu vi = chu vi : 2; chiều dài = nửa chu vi − chiều rộng.');}
   if(t===2){const a=R(4,20), b=R(2,a-1);
-    return solveQ(`Một ${nơi} hình chữ nhật có chiều dài <b>${a} cm</b>, chiều rộng <b>${b} cm</b>. Tính <b>diện tích</b> ${nơi} đó.`,
-      [{loi:`Diện tích ${nơi} hình chữ nhật là:`, pt:`${a} × ${b}`, kq:a*b, dv:'cm²'}], {val:a*b,dv:'cm²'},
-      'Diện tích hình chữ nhật = dài × rộng (cùng đơn vị đo).');}
+    if(!rev){
+      return solveQ(`Một ${nơi} hình chữ nhật có chiều dài <b>${a} cm</b>, chiều rộng <b>${b} cm</b>. Tính <b>diện tích</b> ${nơi} đó.`,
+        [{loi:`Diện tích ${nơi} hình chữ nhật là:`, pt:`${a} × ${b}`, kq:a*b, dv:'cm²'}], {val:a*b,dv:'cm²'},
+        'Diện tích hình chữ nhật = dài × rộng (cùng đơn vị đo).');
+    }
+    // NGƯỢC: biết diện tích + chiều rộng → tìm chiều dài. dài = diện tích : rộng
+    const S=a*b;
+    return solveQ(`Một ${nơi} hình chữ nhật có <b>diện tích ${S} cm²</b>, chiều rộng <b>${b} cm</b>. Tính <b>chiều dài</b> ${nơi} đó.`,
+      [{loi:`Chiều dài ${nơi} đó là:`, pt:`${S} : ${b}`, kq:a, dv:'cm'}], {val:a,dv:'cm'},
+      'Vì diện tích = dài × rộng nên tìm chiều dài ta lấy diện tích CHIA cho chiều rộng.');}
   if(t===3){const a=R(3,20), u=pick(['m','cm']);
-    return solveQ(`Một ${nơi} hình vuông có cạnh dài <b>${a} ${u}</b>. Tính <b>chu vi</b> ${nơi} đó.`,
-      [{loi:`Chu vi ${nơi} hình vuông là:`, pt:`${a} × 4`, kq:a*4, dv:u}], {val:a*4,dv:u},
-      'Chu vi hình vuông = cạnh × 4.');}
+    if(!rev){
+      return solveQ(`Một ${nơi} hình vuông có cạnh dài <b>${a} ${u}</b>. Tính <b>chu vi</b> ${nơi} đó.`,
+        [{loi:`Chu vi ${nơi} hình vuông là:`, pt:`${a} × 4`, kq:a*4, dv:u}], {val:a*4,dv:u},
+        'Chu vi hình vuông = cạnh × 4.');
+    }
+    // NGƯỢC: biết chu vi hình vuông → tìm cạnh. cạnh = chu vi : 4
+    const P=a*4;
+    return solveQ(`Một ${nơi} hình vuông có <b>chu vi ${P} ${u}</b>. Tính <b>độ dài cạnh</b> ${nơi} đó.`,
+      [{loi:`Độ dài cạnh ${nơi} hình vuông là:`, pt:`${P} : 4`, kq:a, dv:u}], {val:a,dv:u},
+      'Vì chu vi hình vuông = cạnh × 4 nên tìm cạnh ta lấy chu vi CHIA cho 4.');}
   if(t===4){const a=R(3,15);
     return solveQ(`Một ${nơi} hình vuông có cạnh dài <b>${a} cm</b>. Tính <b>diện tích</b> ${nơi} đó.`,
       [{loi:`Diện tích ${nơi} hình vuông là:`, pt:`${a} × ${a}`, kq:a*a, dv:'cm²'}], {val:a*a,dv:'cm²'},
@@ -2052,12 +2128,20 @@ const TK_ITEMS=[
 const TK_BILLS=[10000,20000,50000,100000];
 GEN.tientevn = function(){
   const t=R(1,4);
+  const rev = R(0,1)===1;
   const it1=pick(TK_ITEMS), it2=pick(TK_ITEMS);
   const p1=pick(it1[2])*1000, p2=pick(it2[2])*1000;
   if(t===1){
-    return {q:`Mua 1 ${it1[0]} giá <b>${fmt(p1)} đồng</b> và 1 ${it2[0]} giá <b>${fmt(p2)} đồng</b>. Phải trả tổng cộng bao nhiêu đồng?`,
-      ans:String(p1+p2), hint:'Cộng giá hai thứ lại với nhau.',
-      sol:`${fmt(p1)} + ${fmt(p2)} = <b>${fmt(p1+p2)}</b> đồng.`};
+    if(!rev){
+      return {q:`Mua 1 ${it1[0]} giá <b>${fmt(p1)} đồng</b> và 1 ${it2[0]} giá <b>${fmt(p2)} đồng</b>. Phải trả tổng cộng bao nhiêu đồng?`,
+        ans:String(p1+p2), hint:'Cộng giá hai thứ lại với nhau.',
+        sol:`${fmt(p1)} + ${fmt(p2)} = <b>${fmt(p1+p2)}</b> đồng.`};
+    }
+    // NGƯỢC: biết tổng tiền + giá 1 món → tìm giá món còn lại
+    const tong=p1+p2;
+    return {q:`Mua 1 ${it1[0]} và 1 ${it2[0]} hết tổng cộng <b>${fmt(tong)} đồng</b>. Biết 1 ${it1[0]} giá <b>${fmt(p1)} đồng</b>. Hỏi 1 ${it2[0]} giá bao nhiêu đồng?`,
+      ans:String(p2), hint:'Lấy tổng tiền trừ đi giá món đã biết.',
+      sol:`Giá 1 ${it2[0]} là: ${fmt(tong)} − ${fmt(p1)} = <b>${fmt(p2)}</b> đồng.`};
   }
   if(t===2){
     const k=R(2,5), tot=p1*k;
@@ -2068,11 +2152,19 @@ GEN.tientevn = function(){
   if(t===3){
     const ptot=p1+p2;
     const bill=TK_BILLS.find(b=>b>ptot)||100000;
+    if(!rev){
+      return solveQ(
+        `Mua 1 ${it1[0]} giá <b>${fmt(p1)} đồng</b> và 1 ${it2[0]} giá <b>${fmt(p2)} đồng</b>. Đưa tờ <b>${fmt(bill)} đồng</b>. Được trả lại bao nhiêu đồng?`,
+        [{loi:'Tổng tiền phải trả là:', pt:`${fmt(p1)} + ${fmt(p2)}`, kq:ptot, dv:'đồng'},
+         {loi:'Tiền trả lại là:', pt:`${fmt(bill)} − ${fmt(ptot)}`, kq:bill-ptot, dv:'đồng'}],
+        {val:bill-ptot, dv:'đồng'}, 'Bước 1: cộng tổng. Bước 2: tiền thừa = tiền đưa − tổng phải trả.');
+    }
+    // NGƯỢC: biết tiền đưa + tiền trả lại → tìm tổng tiền phải trả
+    const thua=bill-ptot;
     return solveQ(
-      `Mua 1 ${it1[0]} giá <b>${fmt(p1)} đồng</b> và 1 ${it2[0]} giá <b>${fmt(p2)} đồng</b>. Đưa tờ <b>${fmt(bill)} đồng</b>. Được trả lại bao nhiêu đồng?`,
-      [{loi:'Tổng tiền phải trả là:', pt:`${fmt(p1)} + ${fmt(p2)}`, kq:ptot, dv:'đồng'},
-       {loi:'Tiền trả lại là:', pt:`${fmt(bill)} − ${fmt(ptot)}`, kq:bill-ptot, dv:'đồng'}],
-      {val:bill-ptot, dv:'đồng'}, 'Bước 1: cộng tổng. Bước 2: tiền thừa = tiền đưa − tổng phải trả.');
+      `Mua đồ và đưa tờ <b>${fmt(bill)} đồng</b>, được trả lại <b>${fmt(thua)} đồng</b>. Hỏi số tiền phải trả cho món đồ là bao nhiêu đồng?`,
+      [{loi:'Số tiền phải trả là:', pt:`${fmt(bill)} − ${fmt(thua)}`, kq:ptot, dv:'đồng'}],
+      {val:ptot, dv:'đồng'}, 'Vì tiền trả lại = tiền đưa − tiền phải trả nên tiền phải trả = tiền đưa − tiền trả lại.');
   }
   const k=R(2,4), tot2=p1*k;
   const bill2=TK_BILLS.find(b=>b>tot2)||100000;
@@ -2086,15 +2178,25 @@ GEN.tientevn = function(){
 /* --- 4.4 Rút về đơn vị --- */
 GEN.rutvedv = function(){
   const t=R(1,3);
+  const rev = R(0,1)===1;
   if(t===1){
     const [dv,dvt]=pick(DOVAT);
     const uPrice=R(2,8)*1000, q1=pick([2,3,4,5]);
     const q2=pick([3,4,5,6,7].filter(q=>q!==q1));
+    if(!rev){
+      return solveQ(
+        `<b>${q1}</b> ${dv} giá <b>${fmt(uPrice*q1)} đồng</b>. Hỏi <b>${q2}</b> ${dv} như thế giá bao nhiêu đồng?`,
+        [{loi:`Giá 1 ${dvt} là:`, pt:`${fmt(uPrice*q1)} : ${q1}`, kq:uPrice, dv:'đồng'},
+         {loi:`Giá ${q2} ${dvt} là:`, pt:`${fmt(uPrice)} × ${q2}`, kq:uPrice*q2, dv:'đồng'}],
+        {val:uPrice*q2, dv:'đồng'}, 'Bước 1: chia tổng cho số lượng để tìm giá 1 cái. Bước 2: nhân với số lượng mới.');
+    }
+    // NGƯỢC: biết giá ${q1} món + tổng tiền có → hỏi mua được bao nhiêu món
+    const tien=uPrice*q2;
     return solveQ(
-      `<b>${q1}</b> ${dv} giá <b>${fmt(uPrice*q1)} đồng</b>. Hỏi <b>${q2}</b> ${dv} như thế giá bao nhiêu đồng?`,
+      `<b>${q1}</b> ${dv} giá <b>${fmt(uPrice*q1)} đồng</b>. Hỏi với <b>${fmt(tien)} đồng</b> thì mua được bao nhiêu ${dvt} như thế?`,
       [{loi:`Giá 1 ${dvt} là:`, pt:`${fmt(uPrice*q1)} : ${q1}`, kq:uPrice, dv:'đồng'},
-       {loi:`Giá ${q2} ${dvt} là:`, pt:`${fmt(uPrice)} × ${q2}`, kq:uPrice*q2, dv:'đồng'}],
-      {val:uPrice*q2, dv:'đồng'}, 'Bước 1: chia tổng cho số lượng để tìm giá 1 cái. Bước 2: nhân với số lượng mới.');
+       {loi:`Số ${dvt} mua được là:`, pt:`${fmt(tien)} : ${fmt(uPrice)}`, kq:q2, dv:dvt}],
+      {val:q2, dv:dvt}, 'Bước 1: chia để tìm giá 1 cái. Bước 2: lấy số tiền có CHIA cho giá 1 cái để biết mua được mấy cái.');
   }
   if(t===2){
     const h1=pick([2,3,4]), wage=R(20,50)*1000, h2=h1*R(2,3);
