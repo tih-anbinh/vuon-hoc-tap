@@ -347,6 +347,16 @@ body.locked{overflow:hidden}
 .dash-tb tbody tr:nth-child(even) td{background:#faf7ff}
 .dash-tb tr.me td{background:#fff8e1;font-weight:800}
 .dash-tb tr.me td:first-child::after{content:" 👈";}
+/* Khu vực "của con": mục tiêu + biểu đồ 7 ngày */
+.dash-me{display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:linear-gradient(135deg,#e8f5e9,#e3f2fd);border:1.5px solid #b3e0c2;border-radius:16px;padding:12px 14px;margin-bottom:12px}
+.dash-me-ring{text-align:center;flex:0 0 auto}
+.dash-me-chart{flex:1;min-width:230px}
+.goal-ctl{font-size:13px;font-weight:700;color:#37474f;margin-top:4px;display:flex;align-items:center;gap:6px;justify-content:center}
+.goal-ctl .acct-btn{width:26px;height:26px;font-size:16px}
+.goal-toast{position:fixed;left:50%;top:16px;transform:translateX(-50%);z-index:1300;background:linear-gradient(90deg,#2e7d32,#43a047);color:#fff;font-weight:800;font-size:15px;padding:12px 20px;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.28);transition:opacity .6s;max-width:92vw;text-align:center}
+/* Lấp lánh trong hero (SVG động nhẹ) */
+.twinkle{position:absolute;font-size:14px;opacity:.85;animation:twk 2.4s ease-in-out infinite}
+@keyframes twk{0%,100%{opacity:.25;transform:scale(.7)}50%{opacity:1;transform:scale(1.15)}}
 </style>
 </head>
 <body>
@@ -1331,6 +1341,10 @@ Một bài giải đầy đủ <b>luôn có 3 phần</b>:<br>
     <span class="cloud">☁️</span>
     <span class="cloud" style="top:32px;animation-delay:5s">☁️</span>
     <span class="sun">☀️</span>
+    <span class="twinkle" style="left:18%;top:14px">✨</span>
+    <span class="twinkle" style="left:40%;top:40px;animation-delay:.8s">⭐</span>
+    <span class="twinkle" style="left:72%;top:20px;animation-delay:1.4s">✨</span>
+    <span class="twinkle" style="left:86%;top:52px;animation-delay:.5s">🌟</span>
     <div class="htitle">🎮 Vườn Toán Phiêu Lưu</div>
     <div class="hsub">Mỗi tuần là một trạm · Vượt trạm gom sao ⭐ · Giữ chuỗi ngày 🔥</div>
     <div class="mascot">🦉</div>
@@ -2447,9 +2461,9 @@ const WEEKS=[
   {w:35, title:'Thi cuối kì 2 – Lên lớp 4', icon:'👑', gens:['tonghop']}
 ];
 const GKEY='toan3_game_v1';
-let G={unlocked:1, stars:{}, best:{}, streak:0, lastDay:null, mins:{}, totalMin:0, exCorrect:0};
+let G={unlocked:1, stars:{}, best:{}, streak:0, lastDay:null, mins:{}, totalMin:0, exCorrect:0, goal:15, goalDay:null};
 let GS=null;   /* phiên chơi hiện tại */
-function gLoad(){ try{const s=JSON.parse(localStorage.getItem(GKEY)); if(s) G=Object.assign(G,s);}catch(e){} if(!G.mins)G.mins={}; if(!G.totalMin)G.totalMin=0; if(!G.exCorrect)G.exCorrect=0; }
+function gLoad(){ try{const s=JSON.parse(localStorage.getItem(GKEY)); if(s) G=Object.assign(G,s);}catch(e){} if(!G.mins)G.mins={}; if(!G.totalMin)G.totalMin=0; if(!G.exCorrect)G.exCorrect=0; if(!G.goal)G.goal=15; }
 function gSave(){ try{localStorage.setItem(GKEY,JSON.stringify(G));}catch(e){} progressSyncSoon(); }
 function gTotalStars(){ return Object.values(G.stars).reduce((a,b)=>a+(+b||0),0); }
 function gTouchStreak(){
@@ -3084,8 +3098,22 @@ function startTimeTracker(){
     if(document.body.classList.contains('locked')) return;
     const t=new Date().toISOString().slice(0,10);
     G.mins=G.mins||{}; G.mins[t]=(G.mins[t]||0)+1; G.totalMin=(G.totalMin||0)+1;
+    const goal=G.goal||15;
+    if(G.mins[t]>=goal && G.goalDay!==t){ G.goalDay=t; celebrateGoal(); }
     gSave();
   }, 60000);
+}
+function celebrateGoal(){
+  if(!G.mute){ try{ SFX.win(); }catch(e){} }
+  try{ gConfetti(); }catch(e){}
+  const el=document.createElement('div'); el.className='goal-toast';
+  el.innerHTML='🎯 Đạt mục tiêu học hôm nay rồi! Con giỏi quá, ba tự hào lắm! 🎉';
+  document.body.appendChild(el); setTimeout(()=>{ el.style.opacity='0'; }, 3500); setTimeout(()=>el.remove(), 4200);
+  try{ gSay('Con đạt mục tiêu học hôm nay rồi, giỏi quá!'); }catch(e){}
+}
+function changeGoal(d){
+  G.goal=Math.max(5, Math.min(120, (G.goal||15)+d)); gSave();
+  const me=document.getElementById('dashMe'); if(me) me.innerHTML=dashMeSection();
 }
 /* --- Bảng Thi đua --- */
 async function openDash(){
@@ -3103,6 +3131,60 @@ async function openDash(){
 }
 function closeDash(){ const o=document.getElementById('dashOv'); if(o) o.classList.remove('open'); }
 function dashFmtMin(m){ m=+m||0; return m>=60 ? (Math.floor(m/60)+'h'+(m%60?(' '+(m%60)+'p'):'')) : (m+'p'); }
+/* Vòng tròn mục tiêu (SVG động) */
+function svgGoalRing(done, goal){
+  const r=52, c=2*Math.PI*r, pct=Math.max(0,Math.min(1, goal>0?done/goal:0)), off=(c*(1-pct)).toFixed(1);
+  const col = pct>=1?'#2e7d32':'#1565c0';
+  return `<svg viewBox="0 0 130 130" width="120" height="120">
+    <circle cx="65" cy="65" r="${r}" fill="none" stroke="#e6ecf3" stroke-width="12"/>
+    <circle cx="65" cy="65" r="${r}" fill="none" stroke="${col}" stroke-width="12" stroke-linecap="round"
+      stroke-dasharray="${c.toFixed(1)}" stroke-dashoffset="${c.toFixed(1)}" transform="rotate(-90 65 65)">
+      <animate attributeName="stroke-dashoffset" from="${c.toFixed(1)}" to="${off}" dur="1s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" keyTimes="0;1"/>
+    </circle>
+    <text x="65" y="61" text-anchor="middle" font-size="28" font-weight="800" fill="${col}" font-family="Baloo 2,sans-serif">${done}</text>
+    <text x="65" y="82" text-anchor="middle" font-size="12" fill="#5b7086">/ ${goal} phút</text>
+    ${pct>=1?'<text x="65" y="106" text-anchor="middle" font-size="18">🎉</text>':''}
+  </svg>`;
+}
+/* Biểu đồ 7 ngày (SVG động) */
+function svg7day(mins, goal){
+  const labels=['CN','T2','T3','T4','T5','T6','T7'];
+  const days=[]; for(let i=6;i>=0;i--) days.push(new Date(Date.now()-i*864e5));
+  const vals=days.map(d=> (mins||{})[d.toISOString().slice(0,10)]||0);
+  const W=320,H=126,pad=20,bw=26,maxV=Math.max(goal||0,...vals,10),gap=(W-pad*2-bw*7)/6;
+  let bars='',lbls='',gline='';
+  vals.forEach((v,i)=>{
+    const x=pad+i*(bw+gap), bh=Math.round(v/maxV*(H-42)), y=H-26-bh;
+    const col=(goal>0&&v>=goal)?'#43a047':'#42a5f5';
+    bars+=`<rect x="${x}" y="${H-26}" width="${bw}" height="0" rx="4" fill="${col}"><animate attributeName="height" from="0" to="${bh}" dur="0.6s" begin="${i*0.06}s" fill="freeze"/><animate attributeName="y" from="${H-26}" to="${y}" dur="0.6s" begin="${i*0.06}s" fill="freeze"/></rect>`;
+    if(v>0) lbls+=`<text x="${x+bw/2}" y="${y-4}" text-anchor="middle" font-size="10.5" font-weight="700" fill="#37474f">${v}</text>`;
+    lbls+=`<text x="${x+bw/2}" y="${H-9}" text-anchor="middle" font-size="10.5" fill="#5b7086">${labels[days[i].getDay()]}</text>`;
+  });
+  if(goal>0){ const gy=H-26-Math.round(goal/maxV*(H-42));
+    gline=`<line x1="${pad}" y1="${gy}" x2="${W-pad}" y2="${gy}" stroke="#ef6c00" stroke-width="2" stroke-dasharray="5 4"/>`;
+  }
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%" style="max-width:${W}px">${gline}${bars}${lbls}</svg>`;
+}
+function dashMeSection(){
+  const today=new Date().toISOString().slice(0,10);
+  const done=(G.mins||{})[today]||0, goal=G.goal||15;
+  const hit=goal>0 && done>=goal;
+  return `<div class="dash-me">
+    <div class="dash-me-ring">
+      ${svgGoalRing(done,goal)}
+      <div class="goal-ctl">🎯 Mục tiêu/ngày:
+        <button class="acct-btn" onclick="changeGoal(-5)">−</button>
+        <b style="min-width:36px;display:inline-block;text-align:center">${goal}p</b>
+        <button class="acct-btn" onclick="changeGoal(5)">+</button>
+      </div>
+      <div style="font-size:12.5px;font-weight:700;color:${hit?'#2e7d32':'#5b7086'};margin-top:2px">${hit?'✅ Đạt mục tiêu hôm nay!':'Cố lên, sắp đạt rồi! 💪'}</div>
+    </div>
+    <div class="dash-me-chart">
+      <div style="font-weight:800;color:#0d47a1;margin-bottom:2px">📊 7 ngày gần đây (phút học)</div>
+      ${svg7day(G.mins, goal)}
+    </div>
+  </div>`;
+}
 function dashRender(raw){
   const today=new Date().toISOString().slice(0,10);
   const rows=(raw||[]).map(r=>{
@@ -3112,8 +3194,13 @@ function dashRender(raw){
       streak:r.streak||0, totalMin:r.total_minutes||0, todayMin:(r.daily||{})[today]||0, ex:r.ex_correct||0};
   }).sort((a,b)=> b.totalStars-a.totalStars || b.ex-a.ex || b.done-a.done || b.totalMin-a.totalMin);
   const medal=i=> i===0?'🥇':i===1?'🥈':i===2?'🥉':(i+1)+'.';
-  if(!rows.length){ document.getElementById('dashBody').innerHTML='<div style="padding:16px;color:var(--muted)">Chưa có dữ liệu. Vào chơi vài trạm để lên bảng nhé! 🚀</div>'; return; }
-  let html=`<div style="overflow-x:auto"><table class="dash-tb"><thead><tr>
+  let html=`<div id="dashMe">${dashMeSection()}</div>`;
+  if(!rows.length){
+    html+='<div style="padding:14px;color:var(--muted)">Chưa có bé nào trên bảng. Vào chơi vài trạm để lên bảng nhé! 🚀</div>';
+    document.getElementById('dashBody').innerHTML=html; return;
+  }
+  html+=`<div style="font-weight:800;color:#5e35b1;margin:6px 0 4px">🏅 Bảng xếp hạng</div>
+    <div style="overflow-x:auto"><table class="dash-tb"><thead><tr>
     <th>#</th><th>Bé</th><th>⭐</th><th>🏅 Trạm</th><th>✏️ Câu đúng</th><th>Tuần</th><th>🔥</th><th>⏱️ Hôm nay</th><th>Tổng giờ</th></tr></thead><tbody>`;
   rows.forEach((r,i)=>{
     const me=(AUTH_ME && r.id===AUTH_ME.id)?' class="me"':'';
