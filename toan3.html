@@ -198,6 +198,7 @@ body.mode-game #tab-game{display:block}
 .ps-seg.cur{background:#ffb300;box-shadow:0 0 0 2px #fff59d;animation:psPulse 1.3s ease-in-out infinite}
 @keyframes psPulse{0%,100%{opacity:1}50%{opacity:.5}}
 .ps-info{font-weight:800;color:#1565c0;font-size:13.5px;white-space:nowrap}
+.ps-dash{font-size:12.5px;font-weight:800;padding:6px 11px;background:#8e24aa;box-shadow:0 3px 0 #6a1b9a;white-space:nowrap}
 @media(max-width:640px){.ps-label span.pstx{display:none}}
 .game-hero{position:relative;text-align:center;background:linear-gradient(180deg,#bbdefb,#e1f5fe 70%,#fff);border-radius:18px;padding:12px 10px 6px;margin-bottom:12px;overflow:hidden;border:2px solid #90caf9}
 .game-hero .htitle{font-size:24px;font-weight:900;color:#0d47a1}
@@ -374,6 +375,7 @@ body.locked{overflow:hidden}
 </div>
 <div class="acct-chip" id="acctChip">
   <span class="acct-who">👤 <b id="acctName"></b></span>
+  <button class="acct-btn" title="Bảng thi đua" onclick="openDash()">🏆</button>
   <button class="acct-btn" id="warmBtn" title="Chế độ mắt dịu" onclick="toggleWarm()">🌙</button>
   <button class="acct-btn" title="Đăng xuất" onclick="authLogout()">⏻</button>
 </div>
@@ -451,6 +453,7 @@ body.locked{overflow:hidden}
   <span class="ps-label">🗺️ <span class="pstx">Hành trình</span></span>
   <div class="ps-track" id="psTrack"></div>
   <span class="ps-info">Tuần <b id="psWeek">1</b>/35 · ⭐<span id="psStars">0</span></span>
+  <button class="ps-dash" onclick="event.stopPropagation();openDash()" title="Bảng thi đua">🏆 Thi đua</button>
 </div>
 <div id="tab-lt">
 <div class="card center" style="background:linear-gradient(135deg,#e3f2fd,#fff3e0)">
@@ -2373,6 +2376,7 @@ function check(box){
   sc.className='score show '+cls;
   sc.innerHTML=`Điểm: <b>${ok}/${n}</b> câu đúng (${p}%) – Quy ra thang 10: <b>${(ok/n*10).toFixed(1)}</b><br><span style="font-weight:600;font-size:15.5px">${msg}</span>`;
   sc.scrollIntoView({behavior:'smooth',block:'center'});
+  G.exCorrect=(G.exCorrect||0)+ok; gSave();   /* câu đúng khi luyện tập → tính thi đua */
 }
 
 function showAns(box){
@@ -2443,9 +2447,9 @@ const WEEKS=[
   {w:35, title:'Thi cuối kì 2 – Lên lớp 4', icon:'👑', gens:['tonghop']}
 ];
 const GKEY='toan3_game_v1';
-let G={unlocked:1, stars:{}, best:{}, streak:0, lastDay:null, mins:{}, totalMin:0};
+let G={unlocked:1, stars:{}, best:{}, streak:0, lastDay:null, mins:{}, totalMin:0, exCorrect:0};
 let GS=null;   /* phiên chơi hiện tại */
-function gLoad(){ try{const s=JSON.parse(localStorage.getItem(GKEY)); if(s) G=Object.assign(G,s);}catch(e){} if(!G.mins)G.mins={}; if(!G.totalMin)G.totalMin=0; }
+function gLoad(){ try{const s=JSON.parse(localStorage.getItem(GKEY)); if(s) G=Object.assign(G,s);}catch(e){} if(!G.mins)G.mins={}; if(!G.totalMin)G.totalMin=0; if(!G.exCorrect)G.exCorrect=0; }
 function gSave(){ try{localStorage.setItem(GKEY,JSON.stringify(G));}catch(e){} progressSyncSoon(); }
 function gTotalStars(){ return Object.values(G.stars).reduce((a,b)=>a+(+b||0),0); }
 function gTouchStreak(){
@@ -3057,7 +3061,7 @@ async function progressSync(){
   const row={ id:AUTH_ME.id, full_name:AUTH_ME.name||AUTH_ME.email,
     stars:G.stars||{}, best:G.best||{}, unlocked:G.unlocked||1, streak:G.streak||0,
     last_day:G.lastDay||null, total_stars:gTotalStars(),
-    total_minutes:G.totalMin||0, daily:G.mins||{}, updated_at:new Date().toISOString() };
+    total_minutes:G.totalMin||0, daily:G.mins||{}, ex_correct:G.exCorrect||0, updated_at:new Date().toISOString() };
   try{ await supa.from('toan3_progress').upsert(row); }catch(e){}
 }
 async function progressLoad(){
@@ -3067,7 +3071,7 @@ async function progressLoad(){
     if(data){
       G.stars=data.stars||{}; G.best=data.best||{}; G.unlocked=data.unlocked||1;
       G.streak=data.streak||0; G.lastDay=data.last_day||null;
-      G.mins=data.daily||{}; G.totalMin=data.total_minutes||0;
+      G.mins=data.daily||{}; G.totalMin=data.total_minutes||0; G.exCorrect=data.ex_correct||0;
       try{ localStorage.setItem(GKEY,JSON.stringify(G)); }catch(e){}
       gRenderMap();
     }else{ progressSync(); }  /* lần đầu: tạo dòng từ tiến trình cục bộ */
@@ -3105,15 +3109,15 @@ function dashRender(raw){
     const stars=r.stars||{}; const done=Object.keys(stars).filter(k=>stars[k]>0).length;
     const totalStars=Object.values(stars).reduce((a,b)=>a+(+b||0),0);
     return {name:r.full_name||'(chưa đặt tên)', id:r.id, totalStars, done, week:r.unlocked||1,
-      streak:r.streak||0, totalMin:r.total_minutes||0, todayMin:(r.daily||{})[today]||0};
-  }).sort((a,b)=> b.totalStars-a.totalStars || b.done-a.done || b.totalMin-a.totalMin);
+      streak:r.streak||0, totalMin:r.total_minutes||0, todayMin:(r.daily||{})[today]||0, ex:r.ex_correct||0};
+  }).sort((a,b)=> b.totalStars-a.totalStars || b.ex-a.ex || b.done-a.done || b.totalMin-a.totalMin);
   const medal=i=> i===0?'🥇':i===1?'🥈':i===2?'🥉':(i+1)+'.';
   if(!rows.length){ document.getElementById('dashBody').innerHTML='<div style="padding:16px;color:var(--muted)">Chưa có dữ liệu. Vào chơi vài trạm để lên bảng nhé! 🚀</div>'; return; }
   let html=`<div style="overflow-x:auto"><table class="dash-tb"><thead><tr>
-    <th>#</th><th>Bé</th><th>⭐</th><th>🏅 Trạm</th><th>Tuần</th><th>🔥</th><th>⏱️ Hôm nay</th><th>Tổng giờ</th></tr></thead><tbody>`;
+    <th>#</th><th>Bé</th><th>⭐</th><th>🏅 Trạm</th><th>✏️ Câu đúng</th><th>Tuần</th><th>🔥</th><th>⏱️ Hôm nay</th><th>Tổng giờ</th></tr></thead><tbody>`;
   rows.forEach((r,i)=>{
     const me=(AUTH_ME && r.id===AUTH_ME.id)?' class="me"':'';
-    html+=`<tr${me}><td>${medal(i)}</td><td style="text-align:left">${r.name}</td><td><b>${r.totalStars}</b></td><td>${r.done}/35</td><td>${r.week}</td><td>${r.streak}</td><td>${dashFmtMin(r.todayMin)}</td><td>${dashFmtMin(r.totalMin)}</td></tr>`;
+    html+=`<tr${me}><td>${medal(i)}</td><td style="text-align:left">${r.name}</td><td><b>${r.totalStars}</b></td><td>${r.done}/35</td><td>${r.ex}</td><td>${r.week}</td><td>${r.streak}</td><td>${dashFmtMin(r.todayMin)}</td><td>${dashFmtMin(r.totalMin)}</td></tr>`;
   });
   html+=`</tbody></table></div>`;
   document.getElementById('dashBody').innerHTML=html;
