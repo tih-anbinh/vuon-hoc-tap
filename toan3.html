@@ -3577,10 +3577,12 @@ function dashFmtMin(m){ m=+m||0; return m>=60 ? (Math.floor(m/60)+'h'+(m%60?(' '
 function svgGoalRing(done, goal){
   const r=52, c=2*Math.PI*r, pct=Math.max(0,Math.min(1, goal>0?done/goal:0)), off=(c*(1-pct)).toFixed(1);
   const col = pct>=1?'#2e7d32':'#1565c0';
+  // QUAN TRỌNG: đặt sẵn giá trị CUỐI (stroke-dashoffset=off) làm trạng thái tĩnh, để iOS Safari
+  // (SMIL hay không chạy khi SVG chèn bằng innerHTML) vẫn hiển thị đúng. Animation chỉ là hiệu ứng thêm.
   return `<svg viewBox="0 0 130 130" width="120" height="120">
     <circle cx="65" cy="65" r="${r}" fill="none" stroke="#e6ecf3" stroke-width="12"/>
     <circle cx="65" cy="65" r="${r}" fill="none" stroke="${col}" stroke-width="12" stroke-linecap="round"
-      stroke-dasharray="${c.toFixed(1)}" stroke-dashoffset="${c.toFixed(1)}" transform="rotate(-90 65 65)">
+      stroke-dasharray="${c.toFixed(1)}" stroke-dashoffset="${off}" transform="rotate(-90 65 65)">
       <animate attributeName="stroke-dashoffset" from="${c.toFixed(1)}" to="${off}" dur="1s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1" keyTimes="0;1"/>
     </circle>
     <text x="65" y="61" text-anchor="middle" font-size="28" font-weight="800" fill="${col}" font-family="Baloo 2,sans-serif">${done}</text>
@@ -3598,7 +3600,8 @@ function svg7day(mins, goal){
   vals.forEach((v,i)=>{
     const x=pad+i*(bw+gap), bh=Math.round(v/maxV*(H-42)), y=H-26-bh;
     const col=(goal>0&&v>=goal)?'#43a047':'#42a5f5';
-    bars+=`<rect x="${x}" y="${H-26}" width="${bw}" height="0" rx="4" fill="${col}"><animate attributeName="height" from="0" to="${bh}" dur="0.6s" begin="${i*0.06}s" fill="freeze"/><animate attributeName="y" from="${H-26}" to="${y}" dur="0.6s" begin="${i*0.06}s" fill="freeze"/></rect>`;
+    // Đặt sẵn y/height CUỐI CÙNG (không để height=0) → iOS Safari luôn thấy cột dù SMIL không chạy.
+    bars+=`<rect x="${x}" y="${y}" width="${bw}" height="${bh}" rx="4" fill="${col}"><animate attributeName="height" from="0" to="${bh}" dur="0.6s" begin="${i*0.06}s" fill="freeze"/><animate attributeName="y" from="${H-26}" to="${y}" dur="0.6s" begin="${i*0.06}s" fill="freeze"/></rect>`;
     if(v>0) lbls+=`<text x="${x+bw/2}" y="${y-4}" text-anchor="middle" font-size="10.5" font-weight="700" fill="#37474f">${v}</text>`;
     lbls+=`<text x="${x+bw/2}" y="${H-9}" text-anchor="middle" font-size="10.5" fill="#5b7086">${labels[days[i].getDay()]}</text>`;
   });
