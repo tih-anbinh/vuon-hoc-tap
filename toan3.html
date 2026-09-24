@@ -2919,7 +2919,7 @@ async function hashPw(pw){
 }
 /* ===== Cấu hình Supabase ===== */
 const SUPA_URL='https://wbcszbyhsvhrkyyvkzfc.supabase.co';
-const SUPA_ANON='';   /* ← DÁN anon public key vào đây (Project Settings → API) */
+const SUPA_ANON='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndiY3N6Ynloc3Zocmt5eXZremZjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk4OTA1MDcsImV4cCI6MjEwNTQ2NjUwN30.K0uYmd7HjjQTMSjipkTQdxnrzuE0CCby2GeEX872l8I';   /* anon public key */
 let supa=null;
 function supaReady(){ return !!(SUPA_ANON && window.supabase && window.supabase.createClient); }
 if(supaReady()){ try{ supa=window.supabase.createClient(SUPA_URL, SUPA_ANON); }catch(e){ supa=null; } }
@@ -2976,7 +2976,13 @@ async function authSubmitSupabase(){
       authMsg('ok','✅ Đăng ký thành công! Tài khoản đang <b>chờ admin duyệt</b>. Khi được duyệt, hãy đăng nhập nhé.');
     }else{
       const {data,error}=await supa.auth.signInWithPassword({email, password:pass});
-      if(error){ authMsg('err','Sai email hoặc mật khẩu.'); return; }
+      if(error){
+        const m=(error.message||'').toLowerCase();
+        if(m.includes('not confirmed')||m.includes('confirm'))
+          authMsg('err','Email chưa được xác nhận. Nhờ admin tắt "Confirm email" trong Supabase.');
+        else authMsg('err','Sai email hoặc mật khẩu.');
+        return;
+      }
       const {data:prof,error:pe}=await supa.from('toan3_profiles').select('approved,full_name').eq('id',data.user.id).single();
       if(pe || !prof || !prof.approved){ await supa.auth.signOut(); authMsg('err','Tài khoản đang chờ admin duyệt 🕒'); return; }
       document.getElementById('authPass').value='';
