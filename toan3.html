@@ -2977,7 +2977,7 @@ async function authSubmitSupabase(){
     }else{
       const {data,error}=await supa.auth.signInWithPassword({email, password:pass});
       if(error){ authMsg('err','Sai email hoặc mật khẩu.'); return; }
-      const {data:prof,error:pe}=await supa.from('profiles').select('approved,full_name').eq('id',data.user.id).single();
+      const {data:prof,error:pe}=await supa.from('toan3_profiles').select('approved,full_name').eq('id',data.user.id).single();
       if(pe || !prof || !prof.approved){ await supa.auth.signOut(); authMsg('err','Tài khoản đang chờ admin duyệt 🕒'); return; }
       document.getElementById('authPass').value='';
       enterApp(prof.full_name || data.user.email);
@@ -3035,7 +3035,7 @@ async function authBoot(){
     try{
       const {data}=await supa.auth.getSession();
       if(data && data.session){
-        const {data:prof}=await supa.from('profiles').select('approved,full_name').eq('id',data.session.user.id).single();
+        const {data:prof}=await supa.from('toan3_profiles').select('approved,full_name').eq('id',data.session.user.id).single();
         if(prof && prof.approved){ enterApp(prof.full_name || data.session.user.email); return; }
         await supa.auth.signOut();
       }
