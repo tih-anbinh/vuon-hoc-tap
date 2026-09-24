@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Toán Lớp 3 – Ba sẽ cùng con</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <!--
   =====================================================================
   GIÁO TRÌNH TOÁN LỚP 3 – BẢN TƯƠNG TÁC (Single-file HTML)
@@ -25,21 +28,25 @@
   --green:#2e7d32;--green-l:#e8f5e9;
   --orange:#ef6c00;--orange-l:#fff3e0;
   --purple:#6a1b9a;--purple-l:#f3e5f5;
-  --ink:#20303f; --muted:#5b7086;
+  --ink:#1f2d3d; --muted:#4a5d70;
   --card:#ffffff; --line:#d7e3ee;
-  --shadow:0 4px 14px rgba(21,101,192,.10);
-  --radius:16px;
+  --shadow:0 4px 16px rgba(21,101,192,.10);
+  --shadow-lg:0 10px 30px rgba(21,101,192,.14);
+  --radius:16px; --radius-sm:10px;
+  --font-body:"Be Vietnam Pro","Nunito",system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --font-display:"Baloo 2","Be Vietnam Pro",system-ui,"Segoe UI",Roboto,sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
-  margin:0; font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  margin:0; font-family:var(--font-body);
   color:var(--ink); background:
     radial-gradient(1200px 600px at 10% -10%, #e8f4ff 0%, transparent 60%),
     radial-gradient(900px 500px at 110% 10%, #fff4e5 0%, transparent 55%),
     #f6fafd;
-  line-height:1.65; font-size:16.5px;
+  line-height:1.65; font-size:16.5px; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
 }
+h2.chapter,h3,h4,.big,.game-hero .htitle,.praise,.gstars-big,.bt-section-title{font-family:var(--font-display)}
 .wrap{display:flex; min-height:100vh}
 nav.side{width:284px; flex:0 0 284px; background:#0d47a1; color:#fff;
   padding:10px 10px; position:sticky; top:0; height:100vh; overflow-y:auto; scrollbar-width:thin; scrollbar-color:#1e88e5 #0d47a1}
@@ -279,6 +286,14 @@ body.mode-game #tab-game{display:block}
 .col-box:focus{outline:none;border-color:#ff8f00;box-shadow:0 0 0 3px #ffe082}
 @media(max-width:600px){.col-cell,.col-box{width:34px;height:40px;font-size:22px}.col-op{width:20px;height:40px;font-size:22px}}
 @media(max-width:600px){.map-row{padding:0 5%}.station{width:80px;height:80px;font-size:26px}.dnd-baskets{gap:8px}.gcard{padding:12px 13px}}
+/* --- A11y: tôn trọng "giảm chuyển động" của hệ thống --- */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+}
+/* --- Focus rõ ràng khi dùng bàn phím --- */
+:focus-visible{outline:3px solid #ffb300;outline-offset:2px}
+.card{transition:box-shadow .2s ease}
+.card:hover{box-shadow:var(--shadow-lg)}
 </style>
 </head>
 <body>
@@ -2669,6 +2684,7 @@ function gFinish(){
   gRenderMap();
 }
 function gConfetti(){
+  if(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const em=['🎉','⭐','🎊','🌟','✨','🏅','🎈'];
   for(let k=0;k<28;k++){
     const s=document.createElement('div'); s.className='confetti';
