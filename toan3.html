@@ -279,6 +279,18 @@ body.mode-game #tab-game{display:block}
 .confetti{position:fixed;top:-24px;z-index:1200;pointer-events:none;animation:fall linear forwards}
 @keyframes fall{to{transform:translateY(106vh) rotate(360deg)}}
 .gmute{font-size:12px;padding:6px 10px;background:#7e57c2;box-shadow:0 3px 0 #5e35b1}
+/* XP strip */
+.gxp-strip{display:flex;align-items:center;gap:8px;padding:4px 14px 6px;background:rgba(0,0,0,.18)}
+.glv-name{font-size:11.5px;font-weight:800;color:#ffd54f;white-space:nowrap;min-width:110px}
+.gxp-bar{flex:1;height:10px;background:rgba(255,255,255,.22);border-radius:8px;overflow:hidden}
+.gxp-bar>i{display:block;height:100%;background:linear-gradient(90deg,#ffd54f,#ff8f00);border-radius:8px;transition:width .4s}
+.stat.xu-stat{color:#ffd54f}
+/* Toast XP/xu nhỏ */
+.xp-toast{position:fixed;top:60px;right:14px;z-index:9999;background:#0d47a1;color:#fff;font-weight:800;font-size:14px;padding:6px 14px;border-radius:20px;box-shadow:0 4px 12px rgba(0,0,0,.3);pointer-events:none;animation:xpPop .3s ease,xpFade 1.8s 0.6s forwards}
+@keyframes xpPop{from{transform:scale(.7) translateY(10px);opacity:0}to{transform:scale(1) translateY(0);opacity:1}}
+@keyframes xpFade{from{opacity:1}to{opacity:0;transform:translateY(-18px)}}
+/* Combo badge */
+.combo-badge{display:inline-block;background:linear-gradient(180deg,#ff8f00,#e65100);color:#fff;font-size:13px;font-weight:900;padding:3px 10px;border-radius:14px;margin-left:6px;box-shadow:0 3px 0 #bf360c;animation:xpPop .25s ease}
 /* mini-games */
 .flash-timer{height:13px;background:#ffe0b2;border-radius:8px;overflow:hidden;margin:2px 0 12px;border:1px solid #ffb74d}
 .flash-timer>i{display:block;height:100%;width:100%;background:linear-gradient(90deg,#ff7043,#ef6c00)}
@@ -313,6 +325,12 @@ body.mode-game #tab-game{display:block}
 .carry-dot.on{background:#ffebee;border-style:solid;border-color:#e53935}
 .carry-dot.on:empty::before{content:''}
 .col-hint{margin-top:9px;font-size:12px;color:#5b7086;text-align:center;max-width:320px;line-height:1.45}
+/* Ô điền x trong Tìm x đặt tính */
+.col-box-x{width:42px;height:46px;font-size:26px;font-weight:900;text-align:center;border:2.5px solid #6a1b9a;border-radius:9px;color:#6a1b9a;background:#f3e5f5;font-family:inherit;padding:0}
+.col-box-x:focus{outline:none;border-color:#ab47bc;box-shadow:0 0 0 3px #ce93d8;background:#fce4ec}
+.col-x-label{display:inline-block;font-size:13px;font-weight:700;color:#6a1b9a;background:#f3e5f5;border:2px solid #ce93d8;border-radius:8px;padding:3px 10px;margin-bottom:6px}
+/* Wrapper đặt tính trong quiz */
+.col-quiz-wrap{display:flex;flex-direction:column;align-items:center;margin:8px 0}
 /* Mini-game: Xây số */
 .build-wrap{margin:6px 0}
 .build-slots{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
@@ -1473,10 +1491,15 @@ Một bài giải đầy đủ <b>luôn có 3 phần</b>:<br>
     <span class="stat streak" title="Chuỗi ngày học liên tiếp">🔥 <span id="gStreak">0</span></span>
     <span class="stat stars" title="Tổng số sao">⭐ <span id="gStars">0</span></span>
     <span class="stat trophy" title="Số trạm đã qua">🏅 <span id="gDone">0</span>/35</span>
+    <span class="stat xu-stat" title="Xu tích lũy">🪙 <span id="gXuVal">0</span></span>
     <span class="spacer"></span>
     <button class="gmute" style="background:#8e24aa;box-shadow:0 3px 0 #6a1b9a" onclick="openDash()">🏆 Thi đua</button>
     <button class="gmute" id="gMuteBtn" onclick="gToggleMute()">🔊 Âm thanh: Bật</button>
     <button class="game-reset" onclick="resetGame()">↺ Chơi lại</button>
+  </div>
+  <div class="gxp-strip" title="Kinh nghiệm (XP)">
+    <span class="glv-name" id="gLvName">Chồi non 🌱</span>
+    <div class="gxp-bar" id="gXpBar"><i style="width:0%"></i></div>
   </div>
   <div id="gameMap" class="map"></div>
   <footer>🎮 Học mà chơi · 35 trạm bám sát SGK · Ôn tập xoay vòng · Hoạt động offline · Rev 3.0</footer>
@@ -1831,12 +1854,14 @@ GEN.dauNhanh = GEN.bangnhanchia;
 GEN.congtru = function(){
   if(Math.random()<0.5){
     const a=R(10000,60000), b=R(1000,99999-a);
-    return {q:`Đặt tính rồi tính:&nbsp; <b>${fmt(a)} + ${fmt(b)} = ?</b>`, ans:String(a+b),
+    return {type:'column', a, b, op:'+', ans:a+b,
+      q:`Đặt tính rồi tính:`,
       hint:'Viết thẳng hàng, cộng từ phải sang trái, nhớ ghi số nhớ.',
       sol:`${fmt(a)} + ${fmt(b)} = <b>${fmt(a+b)}</b> (thử lại: ${fmt(a+b)} − ${fmt(b)} = ${fmt(a)})`};
   }
   const a=R(20000,99999), b=R(1000,a-100);
-  return {q:`Đặt tính rồi tính:&nbsp; <b>${fmt(a)} − ${fmt(b)} = ?</b>`, ans:String(a-b),
+  return {type:'column', a, b, op:'−', ans:a-b,
+    q:`Đặt tính rồi tính:`,
     hint:'Không trừ được thì mượn 1 ở hàng trước, nhớ trả lại 1.',
     sol:`${fmt(a)} − ${fmt(b)} = <b>${fmt(a-b)}</b> (thử lại: ${fmt(a-b)} + ${fmt(b)} = ${fmt(a)})`};
 };
@@ -1845,12 +1870,14 @@ GEN.congtru = function(){
 GEN.congtru3 = function(){
   if(Math.random()<0.5){
     const a=R(120,850), b=R(110,1000-a);   /* tổng ≤ 1 000, số có 3 chữ số */
-    return {q:`Đặt tính rồi tính:&nbsp; <b>${a} + ${b} = ?</b>`, ans:String(a+b),
+    return {type:'column', a, b, op:'+', ans:a+b,
+      q:`Đặt tính rồi tính:`,
       hint:'Cộng từ phải sang trái, nếu quá 9 thì nhớ 1 sang hàng bên trái.',
       sol:`${a} + ${b} = <b>${a+b}</b> (thử lại: ${a+b} − ${b} = ${a})`};
   }
   const a=R(300,999), b=R(110,a-40);
-  return {q:`Đặt tính rồi tính:&nbsp; <b>${a} − ${b} = ?</b>`, ans:String(a-b),
+  return {type:'column', a, b, op:'−', ans:a-b,
+    q:`Đặt tính rồi tính:`,
     hint:'Không trừ được thì mượn 1 ở hàng bên trái, nhớ trả lại 1.',
     sol:`${a} − ${b} = <b>${a-b}</b> (thử lại: ${a-b} + ${b} = ${a})`};
 };
@@ -1913,16 +1940,29 @@ GEN.bieuthuc = function(){
 };
 
 /* --- 2.5 Tìm x --- */
+/* Dạng cộng/trừ: hiển thị dưới dạng đặt tính cột dọc, ô x nằm ở hàng kết quả */
 GEN.timx = function(){
   const t=R(1,7);
-  if(t===1){const x=R(10,500), a=R(10,400); return {q:`Tìm <b>x</b>:&nbsp; x + ${a} = ${x+a}`, ans:String(x),
-    hint:'Số hạng = Tổng − Số hạng kia.', sol:`x = ${x+a} − ${a} = <b>${x}</b>`};}
-  if(t===2){const x=R(10,500), a=R(10,400); return {q:`Tìm <b>x</b>:&nbsp; ${a} + x = ${x+a}`, ans:String(x),
-    hint:'Số hạng = Tổng − Số hạng kia.', sol:`x = ${x+a} − ${a} = <b>${x}</b>`};}
-  if(t===3){const a=R(10,300), b=R(10,300); return {q:`Tìm <b>x</b>:&nbsp; x − ${a} = ${b}`, ans:String(a+b),
-    hint:'Số bị trừ = Hiệu + Số trừ.', sol:`x = ${b} + ${a} = <b>${a+b}</b>`};}
-  if(t===4){const x=R(10,300), b=R(10,300); return {q:`Tìm <b>x</b>:&nbsp; ${x+b} − x = ${b}`, ans:String(x),
-    hint:'Số trừ = Số bị trừ − Hiệu.', sol:`x = ${x+b} − ${b} = <b>${x}</b>`};}
+  /* t=1: x + a = s  →  đặt tính cộng, kết quả = s, số hạng 1 = x (điền) */
+  if(t===1){const x=R(10,500), a=R(10,400), s=x+a;
+    return {type:'column_timx', timxLabel:'x + '+a+' = '+s, a:x, b:a, op:'+', ans:x, xRow:0,
+      q:'Tìm <b>x</b>:',
+      hint:'Số hạng = Tổng − Số hạng kia.', sol:`x = ${s} − ${a} = <b>${x}</b>`};}
+  /* t=2: a + x = s  →  đặt tính cộng, x ở hàng số hạng 2 */
+  if(t===2){const x=R(10,500), a=R(10,400), s=x+a;
+    return {type:'column_timx', timxLabel:a+' + x = '+s, a:a, b:x, op:'+', ans:x, xRow:1,
+      q:'Tìm <b>x</b>:',
+      hint:'Số hạng = Tổng − Số hạng kia.', sol:`x = ${s} − ${a} = <b>${x}</b>`};}
+  /* t=3: x − a = b  →  đặt tính trừ, x ở hàng số bị trừ */
+  if(t===3){const a=R(10,300), b=R(10,300), x=a+b;
+    return {type:'column_timx', timxLabel:'x − '+a+' = '+b, a:x, b:a, op:'−', ans:x, xRow:0,
+      q:'Tìm <b>x</b>:',
+      hint:'Số bị trừ = Hiệu + Số trừ.', sol:`x = ${b} + ${a} = <b>${x}</b>`};}
+  /* t=4: s − x = b  →  đặt tính trừ, x ở hàng số trừ */
+  if(t===4){const x=R(10,300), b=R(10,300), s=x+b;
+    return {type:'column_timx', timxLabel:s+' − x = '+b, a:s, b:x, op:'−', ans:x, xRow:1,
+      q:'Tìm <b>x</b>:',
+      hint:'Số trừ = Số bị trừ − Hiệu.', sol:`x = ${s} − ${b} = <b>${x}</b>`};}
   if(t===5){const x=R(2,9), a=R(2,9); return {q:`Tìm <b>x</b>:&nbsp; x × ${a} = ${x*a}`, ans:String(x),
     hint:'Thừa số = Tích : Thừa số kia.', sol:`x = ${x*a} : ${a} = <b>${x}</b>`};}
   if(t===6){const a=R(2,9), b=R(2,50); return {q:`Tìm <b>x</b>:&nbsp; x : ${a} = ${b}`, ans:String(a*b),
@@ -2480,6 +2520,84 @@ const TITLE={
   tonghop:'🏆 Đề kiểm tra tổng hợp'
 };
 
+/* ---- Helper: render cột dọc đặt tính trong Luyện Tập (dùng chung CSS mini-game) ---- */
+function _quizColRow(str, width, opChar, makeInputs, inputClass){
+  let cells=`<span class="col-op">${opChar||''}</span>`;
+  const pad=width-str.length;
+  for(let i=0;i<pad;i++) cells+=`<span class="col-cell empty"></span>`;
+  if(makeInputs){
+    for(let i=0;i<str.length;i++)
+      cells+=`<input class="${inputClass||'col-box'}" maxlength="1" inputmode="numeric" autocomplete="off">`;
+  } else {
+    for(const ch of str) cells+=`<span class="col-cell">${ch}</span>`;
+  }
+  return `<div class="col-row">${cells}</div>`;
+}
+function _quizCarryRow(width){
+  let cells=`<span class="col-op"></span>`;
+  for(let i=0;i<width;i++){
+    if(i===width-1) cells+=`<span class="carry-cell empty"></span>`;
+    else cells+=`<button class="carry-dot" type="button" onclick="this.textContent=(+this.textContent+1)%9||'';this.classList.toggle('on',!!this.textContent)" title="Ghi số nhớ"></button>`;
+  }
+  return `<div class="col-row carry-row">${cells}</div>`;
+}
+function buildColHtml(o){
+  const as=String(o.a), bs=String(o.b), ns=String(o.ans);
+  const width=Math.max(as.length, bs.length, ns.length);
+  return `<div class="col-sum">
+    ${_quizCarryRow(width)}
+    ${_quizColRow(as, width, '')}
+    ${_quizColRow(bs, width, o.op)}
+    <div class="col-line"></div>
+    ${_quizColRow(ns, width, '', true, 'col-box')}
+    <div class="col-hint">💡 Tính từ <b>hàng đơn vị</b> (bên phải) sang trái. Bấm chấm 🔴 để ghi số nhớ.</div>
+  </div>`;
+}
+/* Tìm x dạng cột: o.xRow=0 → x ở hàng trên, o.xRow=1 → x ở hàng dưới, kết quả đã biết */
+function buildColTimxHtml(o){
+  const as=String(o.a), bs=String(o.b), ns=String(o.ans);
+  const resStr = String(o.op==='+'? o.a+o.b : o.a-o.b);
+  const width=Math.max(as.length, bs.length, resStr.length);
+  const xLen = String(o.ans).length;
+  /* Hàng trên: nếu xRow=0 thì điền ô x, ngược lại hiện số */
+  const rowTop = o.xRow===0
+    ? _quizColRow(as, width, '', true, 'col-box-x')
+    : _quizColRow(as, width, '');
+  /* Hàng dưới: nếu xRow=1 thì điền ô x, ngược lại hiện số */
+  const rowBot = o.xRow===1
+    ? _quizColRow(bs, width, o.op, true, 'col-box-x')
+    : _quizColRow(bs, width, o.op);
+  return `<div class="col-sum">
+    <div class="col-x-label">x = ?</div>
+    ${_quizCarryRow(width)}
+    ${rowTop}
+    ${rowBot}
+    <div class="col-line"></div>
+    ${_quizColRow(resStr, width, '')}
+    <div class="col-hint">💡 ${o.xRow===0?'Hàng trên là x, tính từ kết quả ngược lại.':'Hàng dưới là x, tính từ kết quả ngược lại.'}</div>
+  </div>`;
+}
+/* Wire col-box inputs cho quiz (Tab/Enter qua từng ô, focus hàng đơn vị trước) */
+function wireQuizColBoxes(wrap){
+  const boxes=[...wrap.querySelectorAll('.col-box, .col-box-x')];
+  boxes.forEach((b,idx)=>{
+    b.addEventListener('input',()=>{ b.value=b.value.replace(/[^\d]/g,'').slice(0,1); if(b.value && idx>0) boxes[idx-1].focus(); });
+    b.addEventListener('keydown',e=>{
+      if(e.key==='Backspace' && !b.value && idx<boxes.length-1) boxes[idx+1].focus();
+    });
+  });
+  if(boxes.length) boxes[boxes.length-1].focus();
+}
+/* Chấm cột quiz: đọc tất cả col-box trong wrapper, so với ans */
+function checkColWrap(wrap, o){
+  const boxes=[...wrap.querySelectorAll('.col-box, .col-box-x')];
+  if(boxes.every(b=>!b.value.trim())) return null; /* chưa điền */
+  const val=boxes.map(b=>b.value.trim()).join('');
+  const ok=boxes.every(b=>/^\d$/.test(b.value.trim())) && Number(val)===o.ans;
+  boxes.forEach(b=>{ b.disabled=true; b.style.borderColor=ok?'#2e7d32':'#d32f2f'; b.style.background=ok?'#e8f5e9':'#ffebee'; });
+  return ok;
+}
+
 function build(box){
   const gen=box.dataset.gen, n=+box.dataset.n||6;
   const qs=[]; let guard=0;
@@ -2526,6 +2644,12 @@ function build(box){
           </div></div>`;
       });
       html+=`<div class="dsline">Đáp số: <input class="ds" placeholder="ví dụ: 28 ${o.dapso.dv}" autocomplete="off"></div></div>`;
+    }else if(o.type==='column'){
+      /* Đặt tính cộng/trừ — điền kết quả vào từng ô theo hàng */
+      html+=`<div class="col-quiz-wrap">${buildColHtml(o, i)}</div>`;
+    }else if(o.type==='column_timx'){
+      /* Tìm x dạng cột dọc — ô x nằm ở hàng xRow (0=hàng trên, 1=hàng dưới) */
+      html+=`<div class="col-quiz-wrap">${buildColTimxHtml(o, i)}</div>`;
     }else{
       html+=`<div style="margin-top:6px"><input class="ans" data-i="${i}" placeholder="Đáp án..." autocomplete="off"></div>`;
     }
@@ -2533,6 +2657,8 @@ function build(box){
   });
   html+=`<div class="score"></div>`;
   box.innerHTML=html;
+  // Wire cột dọc (col-box) cho mỗi câu dạng column / column_timx
+  box.querySelectorAll('.col-quiz-wrap').forEach(wrap=>wireQuizColBoxes(wrap));
   // TTS: nút đọc câu hỏi và gợi ý
   box.querySelectorAll('.qtext').forEach(el=>{
     const txt=el.innerText;
@@ -2617,6 +2743,11 @@ function check(box){
       const sel=it.querySelector('input[type=radio]:checked');
       user = sel? o.opts[sel.value] : '';
       good = !!sel && (+sel.value===o.ansIdx);
+    }else if(o.type==='column'||o.type==='column_timx'){
+      const wrap=it.querySelector('.col-quiz-wrap');
+      const r=wrap?checkColWrap(wrap, o):null;
+      if(r===null){ fb.className='fb no'; fb.innerHTML='✘ Con chưa điền đáp án vào ô nào hết nhé!'; return; }
+      good=r;
     }else{
       const inp=it.querySelector('input.ans'); user=inp.value;
       const accepted=(o.alt&&o.alt.length?o.alt:[o.ans]).map(norm);
@@ -2642,7 +2773,21 @@ function check(box){
 function showAns(box){
   const items=[...box.querySelectorAll('.qitem')];
   box._qs.forEach((o,i)=>{
-    const fb=items[i].querySelector('.fb'); fb.className='fb ok';
+    const it=items[i], fb=it.querySelector('.fb'); fb.className='fb ok';
+    if(o.type==='column'||o.type==='column_timx'){
+      /* Điền đáp án vào từng ô, disable */
+      const wrap=it.querySelector('.col-quiz-wrap');
+      if(wrap){
+        const boxes=[...wrap.querySelectorAll('.col-box, .col-box-x')];
+        const ansStr=String(o.ans);
+        const pad=boxes.length-ansStr.length;
+        boxes.forEach((b,k)=>{
+          const digit=k<pad?'0':ansStr[k-pad];
+          b.value=digit; b.disabled=true;
+          b.style.borderColor='#2e7d32'; b.style.background='#e8f5e9';
+        });
+      }
+    }
     fb.innerHTML = (o.type==='solve'?'📖 Bài giải mẫu:':'📖 ')+o.sol;
   });
 }
@@ -2707,9 +2852,19 @@ const WEEKS=[
   {w:35, title:'Tổng ôn & Thi cuối kì 2', icon:'👑', gens:['tonghop']}
 ];
 const GKEY='toan3_game_v1';
-let G={unlocked:1, stars:{}, best:{}, streak:0, lastDay:null, mins:{}, totalMin:0, exCorrect:0, goal:15, goalDay:null};
+let G={unlocked:1, stars:{}, best:{}, streak:0, lastDay:null, mins:{}, totalMin:0, exCorrect:0, goal:15, goalDay:null,
+  xp:0, xu:0, level:1, reviewQueue:[]};
+/* Bảng level: [minXP, tên cấp] */
+const GLEVELS=[[0,'Chồi non 🌱'],[80,'Học sinh 📚'],[200,'Tiến sĩ nhí 🔬'],[380,'Nhà thám hiểm 🧭'],[600,'Cao thủ 🏆']];
+function gLevel(xp){ let lv=0; for(let i=0;i<GLEVELS.length;i++) if(xp>=GLEVELS[i][0]) lv=i; return lv; }
+function gNextXP(xp){ const lv=gLevel(xp); return lv<GLEVELS.length-1?GLEVELS[lv+1][0]:null; }
 let GS=null;   /* phiên chơi hiện tại */
-function gLoad(){ try{const s=JSON.parse(localStorage.getItem(GKEY)); if(s) G=Object.assign(G,s);}catch(e){} if(!G.mins)G.mins={}; if(!G.totalMin)G.totalMin=0; if(!G.exCorrect)G.exCorrect=0; if(!G.goal)G.goal=15; }
+function gLoad(){
+  try{const s=JSON.parse(localStorage.getItem(GKEY)); if(s) G=Object.assign(G,s);}catch(e){}
+  if(!G.mins)G.mins={}; if(!G.totalMin)G.totalMin=0; if(!G.exCorrect)G.exCorrect=0;
+  if(!G.goal)G.goal=15; if(!G.xp)G.xp=0; if(!G.xu)G.xu=0; if(!G.level)G.level=1;
+  if(!G.reviewQueue)G.reviewQueue=[];
+}
 function gSave(){ try{localStorage.setItem(GKEY,JSON.stringify(G));}catch(e){} progressSyncSoon(); }
 function gTotalStars(){ return Object.values(G.stars).reduce((a,b)=>a+(+b||0),0); }
 function gTouchStreak(){
@@ -2725,6 +2880,16 @@ function gRenderTop(){
   if(st) st.textContent=gTotalStars();
   if(dn) dn.textContent=Object.keys(G.stars).filter(k=>G.stars[k]>0).length;
   const mb=document.getElementById('gMuteBtn'); if(mb) mb.textContent=G.mute?'🔇 Âm thanh: Tắt':'🔊 Âm thanh: Bật';
+  /* XP bar + xu */
+  const xpEl=document.getElementById('gXpBar'), xuEl=document.getElementById('gXuVal'), lvEl=document.getElementById('gLvName');
+  if(xpEl){
+    const lv=gLevel(G.xp), next=gNextXP(G.xp), base=GLEVELS[lv][0];
+    const pct=next?Math.round((G.xp-base)/(next-base)*100):100;
+    xpEl.innerHTML=`<i style="width:${pct}%"></i>`;
+    xpEl.title=`${G.xp} XP${next?' · cần '+next+' XP lên cấp':''}`;
+  }
+  if(xuEl) xuEl.textContent=G.xu;
+  if(lvEl) lvEl.textContent=GLEVELS[gLevel(G.xp)][1];
 }
 function gRenderProgress(){
   const track=document.getElementById('psTrack'); if(!track) return;
@@ -2760,15 +2925,26 @@ function gRenderMap(){
   gRenderTop();
   gRenderProgress();
 }
-/* --- tạo bộ câu hỏi cho 1 trạm: 65% tuần hiện tại + 35% ôn tuần trước --- */
+/* --- tạo bộ câu hỏi cho 1 trạm ---
+   70% review queue (nếu có) + 65% tuần hiện tại + 35% ôn xoay vòng
+   Mỗi câu sai sẽ bị đưa vào reviewQueue; chỉ xoá khi trả lời đúng không cần gợi ý */
 function gBuildQuestions(w){
   const cur=WEEKS[w-1].gens, pool=[];
   for(let i=0;i<w-1;i++) pool.push(...WEEKS[i].gens);
   const N=8, qs=[]; let guard=0;
+  /* Giữ tối đa 6 câu trong review queue, xoá cũ nếu quá */
+  if(G.reviewQueue && G.reviewQueue.length>6) G.reviewQueue=G.reviewQueue.slice(-6);
   while(qs.length<N && guard<N*30){ guard++;
-    const useCur = qs.length<Math.ceil(N*0.65) || pool.length===0;
-    const gen = useCur ? pick(cur) : pick(pool);
-    const q=gMakeQ(gen);
+    let q;
+    /* 70% lấy từ review queue nếu có */
+    if(G.reviewQueue && G.reviewQueue.length>0 && Math.random()<0.7){
+      const rq=G.reviewQueue[Math.floor(Math.random()*G.reviewQueue.length)];
+      try{ q=gMakeQ(rq); } catch(e){ q=gMakeQ(pick(cur)); }
+    } else {
+      const useCur = qs.length<Math.ceil(N*0.65) || pool.length===0;
+      const gen = useCur ? pick(cur) : pick(pool);
+      q=gMakeQ(gen);
+    }
     if(qs.some(o=>o.q===q.q)) continue;
     qs.push(q);
   }
@@ -2810,14 +2986,24 @@ function gMakeQ(gen){
   const acc=(o.alt&&o.alt.length?o.alt:[o.ans]).map(norm);
   return {kind:'input', q:o.q, accept:acc, sol:o.sol};
 }
-/* Mini-game 1: Flashcard tốc độ (đếm ngược) */
+/* Mini-game 1: Flashcard tốc độ (đếm ngược) – dùng neighbor distractors để bắt lỗi lệch hàng */
 function gFlashQ(){
   const a=R(2,9), b=R(2,9), p=a*b, mul=Math.random()<0.55;
   const q = mul ? `${a} × ${b} = ?` : `${p} : ${a} = ?`;
   const ans = mul ? p : b;
-  const opts=[ans]; let guard=0;
-  while(opts.length<4 && guard<40){ guard++; const d=ans+pick([-3,-2,-1,1,2,3,a,-a,b,-b]); if(d>0 && !opts.includes(d)) opts.push(d); }
-  const sarr=shuffle(opts);
+  /* Neighbor distractors: ±1 hàng trong bảng cửu chương (bắt đúng lỗi bé hay mắc) */
+  const neighbors=[];
+  if(mul){ /* a×(b-1) và a×(b+1) */
+    if(b>1) neighbors.push(a*(b-1));
+    if(b<10) neighbors.push(a*(b+1));
+  } else { /* (b-1) và (b+1) */
+    if(b>1) neighbors.push(b-1);
+    if(b<10) neighbors.push(b+1);
+  }
+  const opts=[ans, ...neighbors.filter(x=>x>0 && x!==ans)];
+  let guard=0;
+  while(opts.length<4 && guard<40){ guard++; const d=ans+pick([-2,-1,1,2,a,-a]); if(d>0 && !opts.includes(d)) opts.push(d); }
+  const sarr=shuffle(opts.slice(0,4));
   return {kind:'flash', secs:8, q:`⚡ <b>${q}</b> <span style="font-size:13px;color:#ef6c00;font-weight:700">(nhanh lên nào!)</span>`,
     opts:sarr.map(String), ansIdx:sarr.indexOf(ans), sol:`Đáp án đúng: <b>${ans}</b>.`};
 }
@@ -2983,7 +3169,8 @@ function gNumLineQ(){
 function gStart(w){
   if(w>G.unlocked) return;
   GS={w, qs:gBuildQuestions(w), i:0, correct:0, hearts:3, answered:false, picked:null, dndSel:null, countSel:new Set(),
-      buildSeq:[], cmpSel:null, clockH:null, clockM:null, moneySel:[], numlineSel:null, dead:false, timer:null};
+      buildSeq:[], cmpSel:null, clockH:null, clockM:null, moneySel:[], numlineSel:null, dead:false, timer:null,
+      combo:0, usedHint:false, wrongInSession:new Set()};
   document.getElementById('gModal').classList.add('open');
   gRenderQ();
 }
@@ -3181,11 +3368,64 @@ function gCountTap(i){
   if(GS.countSel.has(i)) GS.countSel.delete(i); else GS.countSel.add(i);
   const el=document.querySelector('.shp[data-i="'+i+'"]'); if(el) el.classList.toggle('sel',GS.countSel.has(i));
 }
+function gShowXpToast(xpGain, xuGain, combo){
+  const el=document.createElement('div'); el.className='xp-toast';
+  let msg=`+${xpGain} XP`;
+  if(xuGain) msg+=` · +${xuGain} xu`;
+  if(combo>=3) msg+=` <span class="combo-badge">x${combo} combo!</span>`;
+  el.innerHTML=msg;
+  document.body.appendChild(el);
+  setTimeout(()=>el.remove(), 2600);
+}
 function gAfterAnswer(ok, headline){
   GS.answered=true; gClearTimer();
   const q=GS.qs[GS.i], fb=document.getElementById('gFeed');
-  if(ok){ GS.correct++; const m=pick(GPRAISE); fb.className='gfeed ok'; fb.innerHTML='<span class="fb-owl">🦉</span> ✅ <b>'+m+'</b>'; gSay(m); if(!G.mute) SFX.correct(); gVibe(35); }
-  else{ GS.hearts--; fb.className='gfeed no'; fb.innerHTML='<span class="fb-owl sad">🦉</span> '+(headline||'❌ Chưa đúng nhé.')+'<br>'+q.sol; if(!G.mute) SFX.wrong(); gVibe([30,30,30]); }
+  const curGen=WEEKS[GS.w-1].gens[0]; /* genre của câu → dùng cho review queue */
+  if(ok){
+    GS.correct++;
+    GS.combo=(GS.combo||0)+1;
+    /* Xoá khỏi review queue nếu đúng mà không dùng gợi ý */
+    if(!GS.usedHint && G.reviewQueue){
+      G.reviewQueue=G.reviewQueue.filter(g=>g!==curGen);
+    }
+    /* XP: 8 cơ bản + 2 mỗi combo streak ≥3, tối đa +10 bonus */
+    const comboBonus = GS.combo>=3 ? Math.min(2*(GS.combo-2),10) : 0;
+    const xpGain=8+comboBonus;
+    const xuGain=5;
+    const oldLv=gLevel(G.xp);
+    G.xp=(G.xp||0)+xpGain; G.xu=(G.xu||0)+xuGain;
+    const newLv=gLevel(G.xp);
+    gSave();
+    gRenderTop();
+    gShowXpToast(xpGain, xuGain, GS.combo);
+    if(newLv>oldLv){
+      /* Level up! */
+      setTimeout(()=>{
+        const t=document.createElement('div'); t.className='goal-toast';
+        t.innerHTML=`⬆️ Lên cấp! Con đạt cấp <b>${GLEVELS[newLv][1]}</b> – xuất sắc! 🎉`;
+        document.body.appendChild(t); if(!G.mute) SFX.win();
+        setTimeout(()=>{t.style.opacity='0';}, 3200); setTimeout(()=>t.remove(),4000);
+      }, 400);
+    }
+    const comboStr=GS.combo>=3?` <span class="combo-badge">x${GS.combo} liên tiếp!</span>`:'';
+    const m=pick(GPRAISE);
+    fb.className='gfeed ok';
+    fb.innerHTML=`<span class="fb-owl">🦉</span> ✅ <b>${m}</b>${comboStr}`;
+    gSay(m); if(!G.mute) SFX.correct(); gVibe(35);
+  }else{
+    GS.hearts--;
+    GS.combo=0;
+    /* Đưa gen vào review queue nếu chưa có */
+    if(G.reviewQueue && !G.reviewQueue.includes(curGen)){
+      G.reviewQueue.push(curGen);
+      if(G.reviewQueue.length>6) G.reviewQueue.shift();
+    }
+    gSave();
+    fb.className='gfeed no';
+    fb.innerHTML='<span class="fb-owl sad">🦉</span> '+(headline||'❌ Chưa đúng nhé.')+'<br>'+q.sol;
+    if(!G.mute) SFX.wrong(); gVibe([30,30,30]);
+  }
+  GS.usedHint=false; /* reset cho câu kế */
   const he=document.querySelector('#gCard .ghearts'); if(he) he.textContent='❤️'.repeat(Math.max(0,GS.hearts))+'🤍'.repeat(3-Math.max(0,GS.hearts));
   const btn=document.getElementById('gCheck');
   if(btn){ if(!ok && GS.hearts<=0){ GS.dead=true; btn.textContent='Xem kết quả →'; } else btn.textContent=(GS.i>=GS.qs.length-1)?'Xem kết quả →':'Câu tiếp →'; }
@@ -3256,23 +3496,31 @@ function gFinish(){
   const total=GS.qs.length, pct=Math.round(GS.correct/total*100);
   let stars=0; if(pct>=100) stars=3; else if(pct>=80) stars=2; else if(pct>=60) stars=1;
   const passed=stars>=1;
+  let bonusXP=0, bonusXu=0;
   if(passed){
     G.stars[GS.w]=Math.max(G.stars[GS.w]||0, stars);
     G.best[GS.w]=Math.max(G.best[GS.w]||0, pct);
     if(GS.w===G.unlocked && GS.w<WEEKS.length) G.unlocked=GS.w+1;
     gTouchStreak();
+    /* Bonus hoàn thành trạm: 30 XP + 10 xu; perfect = thêm 20 XP */
+    bonusXP=30+(pct===100?20:0); bonusXu=10;
+    G.xp=(G.xp||0)+bonusXP; G.xu=(G.xu||0)+bonusXu;
     gSave();
-  }
+    gRenderTop();
+  } else { gSave(); }
   const endMsg=pick(passed?GPRAISE_PASS:GPRAISE_FAIL);
   const starHtml=[0,1,2].map(k=>`<span class="star-pop" style="animation-delay:${k*0.18}s">${k<stars?'⭐':'☆'}</span>`).join('');
   const nextBtn=(passed && GS.w<WEEKS.length)
     ? `<button class="pur gbig" onclick="gClose();gStart(${GS.w+1})">Trạm sau →</button>` : '';
+  const lv=gLevel(G.xp);
+  const xpLine=passed?`<div style="color:#ef6c00;font-weight:700;margin-top:4px">+${bonusXP} XP · +${bonusXu} xu · Cấp: <b>${GLEVELS[lv][1]}</b></div>`:'';
   document.getElementById('gCard').innerHTML=`<div class="gresult">
     <div style="font-size:42px">${passed?'🏆':'🌱'}</div>
     <div class="gstars-big">${starHtml}</div>
     <div class="praise" style="color:${passed?'#2e7d32':'#ef6c00'}">${endMsg}</div>
     <div style="font-size:17px;font-weight:800;color:#0d47a1">Đúng ${GS.correct}/${total} câu (${pct}%)</div>
-    <div style="color:#5b7086;margin:8px 0 2px;font-weight:600">🔥 Chuỗi ngày: <b>${G.streak}</b> &nbsp;·&nbsp; ⭐ Tổng sao: <b>${gTotalStars()}</b></div>
+    <div style="color:#5b7086;margin:8px 0 2px;font-weight:600">🔥 Chuỗi ngày: <b>${G.streak}</b> &nbsp;·&nbsp; ⭐ Tổng sao: <b>${gTotalStars()}</b> &nbsp;·&nbsp; 🪙 <b>${G.xu}</b> xu</div>
+    ${xpLine}
     ${passed?'':'<div style="color:#c62828;font-weight:600;margin-top:4px">Cần đúng ít nhất 60% để mở trạm sau nhé.</div>'}
     <div class="gbtn-row" style="margin-top:16px">
       <button class="org gbig" onclick="gStart(${GS.w})">🔁 Chơi lại</button>
@@ -3300,9 +3548,11 @@ function gConfetti(){
 }
 function gClose(){ gClearTimer(); const m=document.getElementById('gModal'); if(m) m.classList.remove('open'); GS=null; gRenderMap(); }
 function resetGame(){
-  if(!confirm('Xoá toàn bộ tiến trình (sao, chuỗi ngày, trạm đã mở) và chơi lại từ Tuần 1?')) return;
-  const mute=G.mute;
-  G={unlocked:1, stars:{}, best:{}, streak:0, lastDay:null, mute:mute};
+  if(!confirm('Xoá toàn bộ tiến trình (sao, chuỗi ngày, XP, xu, trạm đã mở) và chơi lại từ Tuần 1?')) return;
+  const mute=G.mute, goal=G.goal||15;
+  G={unlocked:1, stars:{}, best:{}, streak:0, lastDay:null, mute:mute,
+     mins:{}, totalMin:0, exCorrect:0, goal, goalDay:null,
+     xp:0, xu:0, level:1, reviewQueue:[]};
   gSave(); gRenderMap();
 }
 
@@ -3537,7 +3787,8 @@ async function progressSync(){
   const row={ id:AUTH_ME.id, full_name:AUTH_ME.name||AUTH_ME.email,
     stars:G.stars||{}, best:G.best||{}, unlocked:G.unlocked||1, streak:G.streak||0,
     last_day:G.lastDay||null, total_stars:gTotalStars(),
-    total_minutes:G.totalMin||0, daily:G.mins||{}, ex_correct:G.exCorrect||0, updated_at:new Date().toISOString() };
+    total_minutes:G.totalMin||0, daily:G.mins||{}, ex_correct:G.exCorrect||0,
+    xp:G.xp||0, xu:G.xu||0, updated_at:new Date().toISOString() };
   try{ await supa.from('toan3_progress').upsert(row); }catch(e){}
 }
 async function progressLoad(){
@@ -3548,6 +3799,7 @@ async function progressLoad(){
       G.stars=data.stars||{}; G.best=data.best||{}; G.unlocked=data.unlocked||1;
       G.streak=data.streak||0; G.lastDay=data.last_day||null;
       G.mins=data.daily||{}; G.totalMin=data.total_minutes||0; G.exCorrect=data.ex_correct||0;
+      if(data.xp!=null) G.xp=data.xp; if(data.xu!=null) G.xu=data.xu;
       try{ localStorage.setItem(GKEY,JSON.stringify(G)); }catch(e){}
       gRenderMap();
     }else{ progressSync(); }  /* lần đầu: tạo dòng từ tiến trình cục bộ */
