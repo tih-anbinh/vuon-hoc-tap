@@ -234,6 +234,19 @@ body.mode-game #tab-game{display:block}
 .game-top .stat.streak{color:#ef6c00}.game-top .stat.stars{color:#f9a825}.game-top .stat.trophy{color:#8e24aa}
 .game-top .spacer{flex:1}
 .game-reset{font-size:12px;padding:6px 10px;background:#90a4ae;box-shadow:0 3px 0 #607d8b}
+.kingdom-panel{margin:12px 0 16px;background:linear-gradient(135deg,#e8f5e9,#e3f2fd 52%,#fff8e1);border:2px solid #90caf9;border-radius:18px;padding:14px;box-shadow:var(--shadow)}
+.kingdom-title{display:flex;align-items:center;gap:10px;flex-wrap:wrap;color:#0d47a1;font-family:var(--font-display);font-size:20px;font-weight:900}
+.kingdom-title span{font-family:var(--font-body);font-size:13px;font-weight:600;color:#455a64}
+.kingdom-note{margin:5px 0 12px;font-size:13px;color:#455a64;font-weight:600}
+.realm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.realm{position:relative;min-height:128px;border:2px solid var(--realm);border-radius:15px;padding:11px;background:linear-gradient(145deg,#fff,var(--realm-bg));text-align:left;box-shadow:0 4px 0 color-mix(in srgb,var(--realm) 42%,#78909c);overflow:hidden}
+.realm::after{content:"";position:absolute;width:74px;height:74px;border-radius:50%;right:-20px;top:-24px;background:var(--realm);opacity:.15}
+.realm.locked{filter:grayscale(.75);opacity:.72}
+.realm-head{position:relative;z-index:1;display:flex;align-items:center;gap:7px;color:var(--realm);font-family:var(--font-display);font-size:17px;font-weight:900}.realm-icon{font-size:26px}
+.realm p{position:relative;z-index:1;margin:5px 0 9px;font-size:12.5px;line-height:1.4;color:#37474f;font-weight:600}.realm button{position:relative;z-index:1;padding:7px 10px;font-size:13px;box-shadow:0 2px 0 rgba(0,0,0,.18)}
+.realm-progress{position:relative;z-index:1;display:block;margin-top:7px;font-size:11.5px;color:#455a64;font-weight:700}
+@media(max-width:760px){.realm-grid{grid-template-columns:1fr 1fr}.kingdom-title{font-size:18px}}
+@media(max-width:390px){.realm-grid{grid-template-columns:1fr}.realm{min-height:112px}}
 .map{position:relative;padding:8px 0 40px}
 .map::before{content:"";position:absolute;left:50%;top:8px;bottom:44px;width:0;border-left:5px dashed #b3c7db;transform:translateX(-50%);z-index:0}
 .phase-band{position:relative;z-index:1;margin:22px 0 8px;padding:9px 15px;border-radius:12px;font-weight:800;color:#fff;font-size:15.5px;box-shadow:var(--shadow)}
@@ -1529,6 +1542,11 @@ Một bài giải đầy đủ <b>luôn có 3 phần</b>:<br>
     <span class="glv-name" id="gLvName">Chồi non 🌱</span>
     <div class="gxp-bar" id="gXpBar"><i style="width:0%"></i></div>
   </div>
+  <section class="kingdom-panel" aria-labelledby="kingdomTitle">
+    <div class="kingdom-title" id="kingdomTitle">Bản đồ Vương quốc Toán <span>Chọn một vùng để luyện 6 câu ngắn</span></div>
+    <p class="kingdom-note">Mỗi vùng mở dần theo hành trình. Sai không bị trừ sao; câu chưa vững sẽ quay lại ở lần học sau. Không cần tài khoản, không có trò chuyện hay quảng cáo.</p>
+    <div class="realm-grid" id="realmGrid"></div>
+  </section>
   <div id="gameMap" class="map"></div>
   <details style="margin:12px 14px 0;background:rgba(255,255,255,.92);border-radius:14px;padding:0 2px"><summary style="cursor:pointer;font-weight:800;color:#0d47a1;font-size:14px;padding:10px 12px">📖 Sổ cửu chương</summary>
   <div class="cc-panel" id="ccGame" style="border:none;box-shadow:none"></div>
@@ -2889,6 +2907,16 @@ const WEEKS=[
   {w:34, title:'Tổng ôn Hình học & Thống kê', icon:'📐', gens:['hinhhoc','chuvidt','donvi','bangsolieu','xacsuatcoban']},
   {w:35, title:'Tổng ôn & Thi cuối kì 2', icon:'👑', gens:['tonghop']}
 ];
+/* Vương quốc Toán: lộ trình theo năng lực, lấy cảm hứng từ game phiêu lưu 3D
+   nhưng giữ bản 2D nhẹ, chạy được offline trên điện thoại và có đường học thay thế rõ ràng. */
+const GREALMS=[
+  {id:'number',name:'Đồi Số học',icon:'🔢',color:'#00838f',bg:'#e0f2f1',need:1,gens:['cautao','sosanh','lamtron','roman'],desc:'Xây số, so sánh và làm tròn.'},
+  {id:'calc',name:'Xưởng Phép tính',icon:'🧮',color:'#1565c0',bg:'#e3f2fd',need:1,gens:['congtru3','congtru','bieuthuc','timx'],desc:'Cộng trừ, biểu thức và tìm x.'},
+  {id:'tables',name:'Cầu Nhân chia',icon:'✖️',color:'#c62828',bg:'#ffebee',need:2,gens:['bangnhanchia','dauNhanh','nhanchia'],desc:'Luyện phản xạ và đặt tính.'},
+  {id:'measure',name:'Thung lũng Đo lường',icon:'📏',color:'#ef6c00',bg:'#fff3e0',need:10,gens:['donvi','thoigian','tientevn'],desc:'Đơn vị, thời gian và tiền Việt.'},
+  {id:'shape',name:'Rừng Hình học',icon:'📐',color:'#2e7d32',bg:'#e8f5e9',need:6,gens:['phanmay','hinhhoc','chuvidt'],desc:'Phân số, hình, chu vi và diện tích.'},
+  {id:'story',name:'Thư viện Tư duy',icon:'📚',color:'#6a1b9a',bg:'#f3e5f5',need:11,gens:['gapgiam','haibuoc','loivanhinh','rutvedv','bangsolieu','xacsuatcoban','bieudocot'],desc:'Bài toán lời văn, dữ liệu và xác suất.'}
+];
 const GKEY='toan3_game_v1';
 let G={unlocked:1, stars:{}, best:{}, streak:0, lastDay:null, mins:{}, totalMin:0, exCorrect:0, goal:15, goalDay:null,
   xp:0, xu:0, level:1, reviewQueue:[]};
@@ -2940,6 +2968,20 @@ function gRenderProgress(){
   if(w) w.textContent=Math.min(G.unlocked,WEEKS.length);
   if(s) s.textContent=gTotalStars();
 }
+function gRealmAvailable(realm){ return G.unlocked>=realm.need; }
+function gRenderRealms(){
+  const grid=document.getElementById('realmGrid'); if(!grid) return;
+  grid.innerHTML=GREALMS.map(realm=>{
+    const open=gRealmAvailable(realm);
+    const attempted=(G.realmPlays&&G.realmPlays[realm.id])||0;
+    return `<article class="realm${open?'':' locked'}" style="--realm:${realm.color};--realm-bg:${realm.bg}">
+      <div class="realm-head"><span class="realm-icon">${realm.icon}</span>${realm.name}</div>
+      <p>${open?realm.desc:`Mở sau khi đến Trạm ${realm.need}. Con cứ đi từng trạm nhé.`}</p>
+      <button ${open?'':'disabled'} onclick="gStartRealm('${realm.id}')">${open?'Bắt đầu nhiệm vụ':'Chưa mở'}</button>
+      <span class="realm-progress">${open?(attempted?`Đã luyện ${attempted} lượt`:'Chưa luyện — bắt đầu từ 6 câu'):`Cần mở Trạm ${realm.need}`}</span>
+    </article>`;
+  }).join('');
+}
 function gRenderMap(){
   const map=document.getElementById('gameMap'); if(!map) return;
   let html='', curPh=-1;
@@ -2963,6 +3005,7 @@ function gRenderMap(){
   map.innerHTML=html;
   gRenderTop();
   gRenderProgress();
+  gRenderRealms();
 }
 /* --- tạo bộ câu hỏi cho 1 trạm ---
    70% review queue (nếu có) + 65% tuần hiện tại + 35% ôn xoay vòng
@@ -2978,13 +3021,26 @@ function gBuildQuestions(w){
     /* 70% lấy từ review queue nếu có */
     if(G.reviewQueue && G.reviewQueue.length>0 && Math.random()<0.7){
       const rq=G.reviewQueue[Math.floor(Math.random()*G.reviewQueue.length)];
-      try{ q=gMakeQ(rq); } catch(e){ q=gMakeQ(pick(cur)); }
+      try{ q=gMakeQ(rq); q._gen=rq; } catch(e){ const gen=pick(cur); q=gMakeQ(gen); q._gen=gen; }
     } else {
       const useCur = qs.length<Math.ceil(N*0.65) || pool.length===0;
       const gen = useCur ? pick(cur) : pick(pool);
-      q=gMakeQ(gen);
+      q=gMakeQ(gen); q._gen=gen;
     }
     if(qs.some(o=>qKey(o)===qKey(q))) continue;
+    qs.push(q);
+  }
+  return qs;
+}
+function gBuildRealmQuestions(realm){
+  const choices=realm.gens.filter(gen=>typeof GEN[gen]==='function');
+  const N=6, qs=[]; let guard=0;
+  while(qs.length<N && guard<N*40){
+    guard++;
+    const review=(G.reviewQueue||[]).filter(gen=>choices.includes(gen));
+    const gen=review.length && Math.random()<.65 ? pick(review) : pick(choices);
+    const q=gMakeQ(gen); q._gen=gen;
+    if(qs.some(old=>qKey(old)===qKey(q))) continue;
     qs.push(q);
   }
   return qs;
@@ -3330,6 +3386,20 @@ function gStart(w){
   document.getElementById('gModal').classList.add('open');
   gRenderQ();
 }
+function gStartRealm(id){
+  const realm=GREALMS.find(x=>x.id===id);
+  if(!realm || !gRealmAvailable(realm)) return;
+  const qs=gBuildRealmQuestions(realm);
+  if(qs.length<6){ alert('Chưa tạo đủ câu hỏi cho vùng này. Con thử lại nhé.'); return; }
+  G.realmPlays=G.realmPlays||{};
+  G.realmPlays[id]=(G.realmPlays[id]||0)+1;
+  gSave();
+  GS={w:G.unlocked, realm, qs, i:0, correct:0, hearts:3, answered:false, picked:null,dndSel:null,countSel:new Set(),
+    buildSeq:[],cmpSel:null,clockH:null,clockM:null,moneySel:[],numlineSel:null,dead:false,timer:null,
+    combo:0,usedHint:false,wrongInSession:new Set(),hintStep:0,warmupCount:0,isBoss:false,isRealm:true};
+  document.getElementById('gModal').classList.add('open');
+  gRenderQ();
+}
 function gClearTimer(){ if(GS && GS.timer){ clearInterval(GS.timer); GS.timer=null; } }
 function gRenderQ(){
   gClearTimer();
@@ -3403,7 +3473,7 @@ function gRenderQ(){
       <div class="gbar" style="flex:1"><i style="width:${pct}%"></i></div>
       <span class="ghearts">${hearts}</span>
     </div>
-    <div style="text-align:right;font-size:12px;color:#5b7086;font-weight:700;margin-top:3px">${q._warmup?'<span style="color:#ef6c00">Khởi động</span>':'Câu '+(GS.i+1-GS.warmupCount)+'/'+(GS.qs.length-GS.warmupCount)} · ${GS.isBoss?'Boss':'Tuần '+GS.w}</div>
+    <div style="text-align:right;font-size:12px;color:#5b7086;font-weight:700;margin-top:3px">${q._warmup?'<span style="color:#ef6c00">Khởi động</span>':'Câu '+(GS.i+1-GS.warmupCount)+'/'+(GS.qs.length-GS.warmupCount)} · ${GS.isBoss?'Boss':(GS.isRealm?GS.realm.name:'Tuần '+GS.w)}</div>
     ${q._warmup?'<div style="background:#fff3e0;border-radius:10px;padding:6px 12px;margin-bottom:6px;font-size:13px;font-weight:700;color:#e65100;text-align:center">🔥 Khởi động — không mất tim, không tính điểm</div>':''}
     <div class="gqtext">${q.q}</div>
     ${body}
@@ -3542,7 +3612,7 @@ function gShowXpToast(xpGain, xuGain, combo){
 function gAfterAnswer(ok, headline){
   GS.answered=true; gClearTimer();
   const q=GS.qs[GS.i], fb=document.getElementById('gFeed');
-  const curGen=WEEKS[GS.w-1].gens[0]; /* genre của câu → dùng cho review queue */
+  const curGen=q._gen||WEEKS[GS.w-1].gens[0]; /* genre thực tế của câu → dùng cho ôn tập thích ứng */
   const isWarm=!!q._warmup; /* F5: warm-up câu → không tính điểm, không mất tim */
   const xpMul=GS.isBoss?3:1; /* F7: boss → x3 XP */
   if(ok){
@@ -3705,7 +3775,7 @@ function gFinish(){
   if(passed){
     G.stars[GS.w]=Math.max(G.stars[GS.w]||0, stars);
     G.best[GS.w]=Math.max(G.best[GS.w]||0, pct);
-    if(GS.w===G.unlocked && GS.w<WEEKS.length) G.unlocked=GS.w+1;
+    if(!GS.isRealm && GS.w===G.unlocked && GS.w<WEEKS.length) G.unlocked=GS.w+1;
     gTouchStreak();
     /* Bonus hoàn thành trạm: 30 XP + 10 xu; perfect = thêm 20 XP */
     bonusXP=30+(pct===100?20:0); bonusXu=10;
@@ -3715,7 +3785,7 @@ function gFinish(){
   } else { gSave(); }
   const endMsg=pick(passed?GPRAISE_PASS:GPRAISE_FAIL);
   const starHtml=[0,1,2].map(k=>`<span class="star-pop" style="animation-delay:${k*0.18}s">${k<stars?'⭐':'☆'}</span>`).join('');
-  const nextBtn=(passed && GS.w<WEEKS.length)
+  const nextBtn=(!GS.isRealm && passed && GS.w<WEEKS.length)
     ? `<button class="pur gbig" onclick="gClose();gStart(${GS.w+1})">Trạm sau →</button>` : '';
   const lv=gLevel(G.xp);
   const xpLine=passed?`<div style="color:#ef6c00;font-weight:700;margin-top:4px">+${bonusXP} XP · +${bonusXu} xu · Cấp: <b>${GLEVELS[lv][1]}</b></div>`:'';
@@ -3726,7 +3796,7 @@ function gFinish(){
     <div style="font-size:17px;font-weight:800;color:#0d47a1">Đúng ${GS.correct}/${total} câu (${pct}%)</div>
     <div style="color:#5b7086;margin:8px 0 2px;font-weight:600">🔥 Chuỗi ngày: <b>${G.streak}</b> &nbsp;·&nbsp; ⭐ Tổng sao: <b>${gTotalStars()}</b> &nbsp;·&nbsp; 🪙 <b>${G.xu}</b> xu</div>
     ${xpLine}
-    ${passed?'':'<div style="color:#c62828;font-weight:600;margin-top:4px">Cần đúng ít nhất 60% để mở trạm sau nhé.</div>'}
+    ${passed?(GS.isRealm?'<div style="color:#2e7d32;font-weight:600;margin-top:4px">Nhiệm vụ hoàn thành! Câu chưa vững sẽ được ưu tiên ôn lại.</div>':''):'<div style="color:#c62828;font-weight:600;margin-top:4px">Cần đúng ít nhất 60% để mở trạm sau nhé.</div>'}
     <div class="gbtn-row" style="margin-top:16px">
       <button class="org gbig" onclick="gStart(${GS.w})">🔁 Chơi lại</button>
       ${nextBtn}
