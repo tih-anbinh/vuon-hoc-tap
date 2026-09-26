@@ -1948,22 +1948,22 @@ GEN.timx = function(){
   /* t=1: x + a = s  →  đặt tính cộng, kết quả = s, số hạng 1 = x (điền) */
   if(t===1){const x=R(10,500), a=R(10,400), s=x+a;
     return {type:'column_timx', timxLabel:'x + '+a+' = '+s, a:x, b:a, op:'+', ans:x, xRow:0,
-      q:'Tìm <b>x</b>:',
+      q:`Tìm <b>x</b>, biết: &nbsp;<b>x + ${a} = ${s}</b>`,
       hint:'Số hạng = Tổng − Số hạng kia.', sol:`x = ${s} − ${a} = <b>${x}</b>`};}
   /* t=2: a + x = s  →  đặt tính cộng, x ở hàng số hạng 2 */
   if(t===2){const x=R(10,500), a=R(10,400), s=x+a;
     return {type:'column_timx', timxLabel:a+' + x = '+s, a:a, b:x, op:'+', ans:x, xRow:1,
-      q:'Tìm <b>x</b>:',
+      q:`Tìm <b>x</b>, biết: &nbsp;<b>${a} + x = ${s}</b>`,
       hint:'Số hạng = Tổng − Số hạng kia.', sol:`x = ${s} − ${a} = <b>${x}</b>`};}
   /* t=3: x − a = b  →  đặt tính trừ, x ở hàng số bị trừ */
   if(t===3){const a=R(10,300), b=R(10,300), x=a+b;
     return {type:'column_timx', timxLabel:'x − '+a+' = '+b, a:x, b:a, op:'−', ans:x, xRow:0,
-      q:'Tìm <b>x</b>:',
+      q:`Tìm <b>x</b>, biết: &nbsp;<b>x − ${a} = ${b}</b>`,
       hint:'Số bị trừ = Hiệu + Số trừ.', sol:`x = ${b} + ${a} = <b>${x}</b>`};}
   /* t=4: s − x = b  →  đặt tính trừ, x ở hàng số trừ */
   if(t===4){const x=R(10,300), b=R(10,300), s=x+b;
     return {type:'column_timx', timxLabel:s+' − x = '+b, a:s, b:x, op:'−', ans:x, xRow:1,
-      q:'Tìm <b>x</b>:',
+      q:`Tìm <b>x</b>, biết: &nbsp;<b>${s} − x = ${b}</b>`,
       hint:'Số trừ = Số bị trừ − Hiệu.', sol:`x = ${s} − ${b} = <b>${x}</b>`};}
   if(t===5){const x=R(2,9), a=R(2,9); return {q:`Tìm <b>x</b>:&nbsp; x × ${a} = ${x*a}`, ans:String(x),
     hint:'Thừa số = Tích : Thừa số kia.', sol:`x = ${x*a} : ${a} = <b>${x}</b>`};}
@@ -2570,13 +2570,13 @@ function buildColTimxHtml(o){
     ? _quizColRow(bs, width, o.op, true, 'col-box-x')
     : _quizColRow(bs, width, o.op);
   return `<div class="col-sum">
-    <div class="col-x-label">x = ?</div>
+    <div class="col-x-label">${o.timxLabel||'x = ?'}</div>
     ${_quizCarryRow(width)}
     ${rowTop}
     ${rowBot}
     <div class="col-line"></div>
     ${_quizColRow(resStr, width, '')}
-    <div class="col-hint">💡 ${o.xRow===0?'Hàng trên là x, tính từ kết quả ngược lại.':'Hàng dưới là x, tính từ kết quả ngược lại.'}</div>
+    <div class="col-hint">💡 Điền giá trị <b>x</b> vào các ô tím. ${o.xRow===0?'x ở hàng trên — tính ngược từ kết quả.':'x ở hàng dưới — tính ngược từ kết quả.'}</div>
   </div>`;
 }
 /* Wire col-box inputs cho quiz (Tab/Enter qua từng ô, focus hàng đơn vị trước) */
@@ -3312,7 +3312,8 @@ function gNumlinePick(v){
   document.querySelectorAll('.nl-tick').forEach(b=>b.classList.toggle('sel',Number(b.dataset.v)===v));
 }
 function gWireColumn(){
-  const boxes=[...document.querySelectorAll('.col-box')];
+  const card=document.getElementById('gCard');
+  const boxes=[...card.querySelectorAll('.col-box')];
   // Dạy tính từ hàng ĐƠN VỊ (ô ngoài cùng bên phải) trước → nhảy dần sang trái (chục, trăm...)
   boxes.forEach((b,idx)=>{
     b.addEventListener('input',()=>{ b.value=b.value.replace(/[^\d]/g,'').slice(0,1); if(b.value && idx>0) boxes[idx-1].focus(); });
@@ -3455,7 +3456,8 @@ function gSubmit(){
     document.querySelectorAll('.shp').forEach(b=>{ const i=+b.dataset.i;
       if(q.shapes[i]===q.target) b.classList.add('right'); else if(got.has(i)) b.classList.add('wrong'); b.onclick=null; });
   }else if(q.kind==='column'){
-    const boxes=[...document.querySelectorAll('.col-box')];
+    const card=document.getElementById('gCard');
+    const boxes=[...card.querySelectorAll('.col-box')];
     if(boxes.every(b=>b.value.trim()==='')) return;   /* chưa điền gì thì chưa chấm */
     const val=boxes.map(b=>b.value.trim()).join('');
     ok=boxes.every(b=>/^\d$/.test(b.value.trim())) && Number(val)===q.ans;
