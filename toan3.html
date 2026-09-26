@@ -1646,6 +1646,8 @@ const SFX=(function(){
 function gVibe(p){ try{ if(!G.mute && navigator.vibrate) navigator.vibrate(p); }catch(e){} }
 
 const R = (a,b)=> a + Math.floor(Math.random()*(b-a+1));
+/* Key duy nhất cho dedupe câu hỏi — dùng a,b,op cho dạng column để tránh trùng */
+function qKey(q){ return (q.type==='column'||q.type==='column_timx') ? `col:${q.a}${q.op}${q.b}` : q.q; }
 const pick = a => a[Math.floor(Math.random()*a.length)];
 const shuffle = a => a.map(v=>[Math.random(),v]).sort((x,y)=>x[0]-y[0]).map(v=>v[1]);
 const fmt = n => String(n).replace(/\B(?=(\d{3})+(?!\d))/g,' ');
@@ -2579,14 +2581,17 @@ function buildColTimxHtml(o){
 }
 /* Wire col-box inputs cho quiz (Tab/Enter qua từng ô, focus hàng đơn vị trước) */
 function wireQuizColBoxes(wrap){
+  /* Không auto-focus (nhiều câu trên trang) — chỉ wire navigation giữa các ô */
   const boxes=[...wrap.querySelectorAll('.col-box, .col-box-x')];
   boxes.forEach((b,idx)=>{
-    b.addEventListener('input',()=>{ b.value=b.value.replace(/[^\d]/g,'').slice(0,1); if(b.value && idx>0) boxes[idx-1].focus(); });
+    b.addEventListener('input',()=>{
+      b.value=b.value.replace(/[^\d]/g,'').slice(0,1);
+      if(b.value && idx>0) boxes[idx-1].focus();   // nhảy sang trái
+    });
     b.addEventListener('keydown',e=>{
-      if(e.key==='Backspace' && !b.value && idx<boxes.length-1) boxes[idx+1].focus();
+      if(e.key==='Backspace' && !b.value && idx<boxes.length-1) boxes[idx+1].focus(); // lùi phải
     });
   });
-  if(boxes.length) boxes[boxes.length-1].focus();
 }
 /* Chấm cột quiz: đọc tất cả col-box trong wrapper, so với ans */
 function checkColWrap(wrap, o){
@@ -2604,14 +2609,14 @@ function build(box){
   while(qs.length<n && guard<n*40){
     guard++;
     const q=GEN[gen]();
-    if(qs.some(o=>o.q===q.q)) continue;
+    if(qs.some(o=>qKey(o)===qKey(q))) continue;
     qs.push(q);
   }
   if(gen==='tonghop'){            // thêm 2 bài toán có lời văn ở cuối đề
     let w=0, g2=0;
     while(w<2 && g2<80){ g2++;
       const q=GEN.tonghop._word();
-      if(qs.some(o=>o.q===q.q)) continue;
+      if(qs.some(o=>qKey(o)===qKey(q))) continue;
       qs.push(q); w++;
     }
   }
@@ -2945,7 +2950,7 @@ function gBuildQuestions(w){
       const gen = useCur ? pick(cur) : pick(pool);
       q=gMakeQ(gen);
     }
-    if(qs.some(o=>o.q===q.q)) continue;
+    if(qs.some(o=>qKey(o)===qKey(q))) continue;
     qs.push(q);
   }
   return qs;
