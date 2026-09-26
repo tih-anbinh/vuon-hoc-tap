@@ -291,6 +291,29 @@ body.mode-game #tab-game{display:block}
 @keyframes xpFade{from{opacity:1}to{opacity:0;transform:translateY(-18px)}}
 /* Combo badge */
 .combo-badge{display:inline-block;background:linear-gradient(180deg,#ff8f00,#e65100);color:#fff;font-size:13px;font-weight:900;padding:3px 10px;border-radius:14px;margin-left:6px;box-shadow:0 3px 0 #bf360c;animation:xpPop .25s ease}
+/* Gợi ý 3 bậc leo thang */
+.ghint-btn{background:linear-gradient(180deg,#fff176,#ffd54f);color:#5d4037;border:2px solid #fbc02d;font-weight:800;font-size:13px;padding:6px 14px;border-radius:14px;cursor:pointer;box-shadow:0 3px 0 #f9a825;transition:all .12s;margin-right:6px}
+.ghint-btn:hover{transform:translateY(-1px);box-shadow:0 4px 0 #f9a825}
+.ghint-btn:active{transform:translateY(1px);box-shadow:0 1px 0 #f9a825}
+.ghint-btn:disabled{opacity:.5;cursor:default;transform:none}
+.ghint-area{margin:8px 0;padding:10px 14px;background:#fff8e1;border-left:4px solid #ffa000;border-radius:0 12px 12px 0;font-size:14px;line-height:1.6;color:#5d4037;animation:hintSlide .25s ease}
+@keyframes hintSlide{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.ghint-area .dot-grid{display:flex;flex-wrap:wrap;gap:4px;margin:6px 0}
+.ghint-area .dot-group{display:flex;gap:3px;padding:3px 6px;background:#fff3e0;border:1.5px solid #ffcc80;border-radius:8px}
+.ghint-area .dot{width:12px;height:12px;background:#ff7043;border-radius:50%;display:inline-block}
+.ghint-area .add-chain{font-weight:800;color:#e65100;font-size:15px;margin:4px 0}
+.ghint-area .hint-ans{font-weight:900;color:#2e7d32;font-size:16px;margin:4px 0}
+/* Sổ cửu chương */
+.cc-panel{background:#fff;border-radius:16px;padding:14px;margin:12px 0;box-shadow:0 4px 12px rgba(0,0,0,.08);border:2px solid #e0e0e0}
+.cc-panel h3{margin:0 0 8px;font-size:16px;color:#0d47a1}
+.cc-grid{display:grid;grid-template-columns:auto repeat(10,1fr);gap:0;font-size:12px;text-align:center}
+.cc-grid .cc-hdr{background:#e3f2fd;font-weight:800;color:#0d47a1;padding:4px 2px;border:1px solid #bbdefb}
+.cc-grid .cc-row-hdr{background:#e8eaf6;font-weight:800;color:#283593;padding:4px 6px;border:1px solid #c5cae9}
+.cc-cell{padding:4px 2px;border:1px solid #e0e0e0;position:relative;transition:all .15s}
+.cc-cell.mastered{background:#e8f5e9;color:#2e7d32;font-weight:700}
+.cc-cell.mastered::after{content:'\\2713';position:absolute;top:-1px;right:1px;font-size:9px;color:#2e7d32;font-weight:900}
+.cc-pct{font-size:13px;font-weight:800;color:#5b7086;margin-top:6px}
+.cc-pct b{color:#2e7d32}
 /* mini-games */
 .flash-timer{height:13px;background:#ffe0b2;border-radius:8px;overflow:hidden;margin:2px 0 12px;border:1px solid #ffb74d}
 .flash-timer>i{display:block;height:100%;width:100%;background:linear-gradient(90deg,#ff7043,#ef6c00)}
@@ -787,9 +810,12 @@ body.locked{overflow:hidden}
 <div class="tip">
   <b>Nhân là phép cộng nhiều lần bằng nhau:</b> 4 × 3 = 4 + 4 + 4 = 12.<br>
   <b>Đổi chỗ không đổi kết quả:</b> 3 × 7 = 7 × 3 → số phép cần thuộc giảm gần một nửa!<br>
-  <b>Một phép nhân sinh ra 4 phép tính “gia đình”:</b> 7 × 8 = 56 → 8 × 7 = 56 → 56 : 7 = 8 → 56 : 8 = 7.<br>
+  <b>Một phép nhân sinh ra 4 phép tính "gia đình":</b> 7 × 8 = 56 → 8 × 7 = 56 → 56 : 7 = 8 → 56 : 8 = 7.<br>
   Xem thêm toàn bộ bí kíp ở mục <a href="#meo"><b>Cửu chương thần công</b></a> 🥋
 </div>
+<details style="margin-top:12px"><summary style="cursor:pointer;font-weight:800;color:#0d47a1;font-size:15px">📖 Sổ cửu chương — Con đã thuộc bao nhiêu phép?</summary>
+<div class="cc-panel" id="ccLT"></div>
+</details>
 </div>
 <div class="quiz" data-gen="bangnhanchia" data-n="10"></div>
 
@@ -1502,6 +1528,9 @@ Một bài giải đầy đủ <b>luôn có 3 phần</b>:<br>
     <div class="gxp-bar" id="gXpBar"><i style="width:0%"></i></div>
   </div>
   <div id="gameMap" class="map"></div>
+  <details style="margin:12px 14px 0;background:rgba(255,255,255,.92);border-radius:14px;padding:0 2px"><summary style="cursor:pointer;font-weight:800;color:#0d47a1;font-size:14px;padding:10px 12px">📖 Sổ cửu chương</summary>
+  <div class="cc-panel" id="ccGame" style="border:none;box-shadow:none"></div>
+  </details>
   <footer>🎮 Học mà chơi · 35 trạm bám sát SGK · Ôn tập xoay vòng · Hoạt động offline · Rev 3.0</footer>
 </div>
 <div class="gmodal" id="gModal"><div class="gcard" id="gCard"></div></div>
@@ -1845,10 +1874,10 @@ GEN.roman = function(){
 /* --- 2.1 Bảng nhân chia --- */
 GEN.bangnhanchia = function(){
   const a=R(2,9), b=R(2,10), p=a*b, t=R(1,4);
-  if(t===1) return {q:`<b>${a} × ${b} = ?</b>`, ans:String(p), hint:`${a} × ${b} là ${a} được lấy ${b} lần.`, sol:`${a} × ${b} = <b>${p}</b>`};
-  if(t===2) return {q:`<b>${p} : ${a} = ?</b>`, ans:String(b), hint:`Nghĩ ngược: ${a} nhân mấy bằng ${p}?`, sol:`${p} : ${a} = <b>${b}</b> (vì ${a} × ${b} = ${p})`};
-  if(t===3) return {q:`<b>${a} × ? = ${p}</b>`, ans:String(b), hint:`Lấy tích chia cho thừa số đã biết.`, sol:`${p} : ${a} = <b>${b}</b>`};
-  return {q:`<b>? : ${b} = ${a}</b>`, ans:String(p), hint:`Số bị chia = thương × số chia.`, sol:`${a} × ${b} = <b>${p}</b>`};
+  if(t===1) return {q:`<b>${a} × ${b} = ?</b>`, ans:String(p), hint:`${a} × ${b} là ${a} được lấy ${b} lần.`, sol:`${a} × ${b} = <b>${p}</b>`, _a:a, _b:b, _p:p, _mul:true};
+  if(t===2) return {q:`<b>${p} : ${a} = ?</b>`, ans:String(b), hint:`Nghĩ ngược: ${a} nhân mấy bằng ${p}?`, sol:`${p} : ${a} = <b>${b}</b> (vì ${a} × ${b} = ${p})`, _a:a, _b:b, _p:p, _mul:false};
+  if(t===3) return {q:`<b>${a} × ? = ${p}</b>`, ans:String(b), hint:`Lấy tích chia cho thừa số đã biết.`, sol:`${p} : ${a} = <b>${b}</b>`, _a:a, _b:b, _p:p, _mul:true};
+  return {q:`<b>? : ${b} = ${a}</b>`, ans:String(p), hint:`Số bị chia = thương × số chia.`, sol:`${a} × ${b} = <b>${p}</b>`, _a:a, _b:b, _p:p, _mul:false};
 };
 GEN.dauNhanh = GEN.bangnhanchia;
 
@@ -2761,7 +2790,9 @@ function check(box){
       inp.style.background  = good?'#e8f5e9':'#ffebee';
       if(!good){inp.classList.remove('shake');void inp.offsetWidth;inp.classList.add('shake');}
     }
-    if(good){ ok++; fb.className='fb ok'; fb.innerHTML='✔ Chính xác! Giỏi lắm 🎉'; }
+    if(good){ ok++; fb.className='fb ok'; fb.innerHTML='✔ Chính xác! Giỏi lắm 🎉';
+      if(o._a!=null) ccMark(o._a, o._b); /* Sổ cửu chương */
+    }
     else{ fb.className='fb no'; fb.innerHTML=`✘ Chưa đúng${user.trim()?` (con trả lời: ${user})`:' (chưa trả lời)'} → ${o.sol}`; }
   });
   const sc=box.querySelector('.score'); const n=qs.length; const p=Math.round(ok/n*100);
@@ -2989,7 +3020,10 @@ function gMakeQ(gen){
       accept:acc, unit:o.dapso.dv, sol:o.sol};
   }
   const acc=(o.alt&&o.alt.length?o.alt:[o.ans]).map(norm);
-  return {kind:'input', q:o.q, accept:acc, sol:o.sol};
+  const result={kind:'input', q:o.q, accept:acc, sol:o.sol};
+  /* Gắn dữ liệu nhân/chia để hỗ trợ gợi ý 3 bậc */
+  if(o._a!=null){ result._a=o._a; result._b=o._b; result._p=o._p; result._mul=o._mul; }
+  return result;
 }
 /* Mini-game 1: Flashcard tốc độ (đếm ngược) – dùng neighbor distractors để bắt lỗi lệch hàng */
 function gFlashQ(){
@@ -3010,7 +3044,8 @@ function gFlashQ(){
   while(opts.length<4 && guard<40){ guard++; const d=ans+pick([-2,-1,1,2,a,-a]); if(d>0 && !opts.includes(d)) opts.push(d); }
   const sarr=shuffle(opts.slice(0,4));
   return {kind:'flash', secs:8, q:`⚡ <b>${q}</b> <span style="font-size:13px;color:#ef6c00;font-weight:700">(nhanh lên nào!)</span>`,
-    opts:sarr.map(String), ansIdx:sarr.indexOf(ans), sol:`Đáp án đúng: <b>${ans}</b>.`};
+    opts:sarr.map(String), ansIdx:sarr.indexOf(ans), sol:`Đáp án đúng: <b>${ans}</b>.`,
+    _mul:mul, _a:a, _b:b, _p:p};
 }
 /* Mini-game 2: Kéo–thả phân số vào rổ đúng */
 function gDndFractionQ(){
@@ -3171,11 +3206,99 @@ function gNumLineQ(){
     sol:`${fmt(n)} làm tròn đến hàng ${roundName} là <b>${fmt(rounded)}</b> (gần ${fmt(rounded)} hơn).`};
 }
 
+/* ============ Gợi ý 3 bậc leo thang (nhân / chia) ============
+   Bậc 1: Hình ảnh chấm tròn nhóm · mô tả ý nghĩa phép tính
+   Bậc 2: Phép cộng lặp (a + a + a = ?)
+   Bậc 3: Hiện đáp án + "Thử lại nhé!"
+   Mỗi lần bấm gợi ý → GS.usedHint=true → review queue không xoá */
+function gHintData(q){
+  if(q._a==null) return null;
+  const a=q._a, b=q._b, p=q._p;
+  /* Luôn dùng cặp nhỏ×lớn để tạo nhóm chấm tròn dễ nhìn */
+  const sm=Math.min(a,b), lg=Math.max(a,b);
+  /* Bậc 1: nhóm chấm tròn */
+  let dots='<div class="dot-grid">';
+  for(let g=0;g<sm;g++){
+    dots+='<span class="dot-group">';
+    for(let d=0;d<lg;d++) dots+='<span class="dot"></span>';
+    dots+='</span>';
+  }
+  dots+='</div>';
+  const h1=q._mul
+    ? `<b>${a} × ${b}</b> nghĩa là <b>${sm} nhóm</b>, mỗi nhóm <b>${lg}</b> viên — đếm thử nhé!${dots}`
+    : `<b>${p} : ${a}</b> — hãy nghĩ: <b>${a}</b> nhân mấy bằng <b>${p}</b>? Đếm nhóm chấm:${dots}`;
+  /* Bậc 2: phép cộng lặp */
+  const chain=Array(sm).fill(lg).join(' + ')+' = ?';
+  const h2=`<div class="add-chain">${chain}</div>Cộng dồn: ${Array.from({length:sm},(_,i)=>lg*(i+1)).join(' → ')}`;
+  /* Bậc 3: đáp án */
+  const h3=q._mul
+    ? `<div class="hint-ans">${a} × ${b} = ${p} — Thử lại nhé con!</div>`
+    : `<div class="hint-ans">${p} : ${a} = ${b} (vì ${a} × ${b} = ${p}) — Thử lại nhé!</div>`;
+  return [h1,h2,h3];
+}
+function gHint(){
+  if(!GS || GS.answered) return;
+  const q=GS.qs[GS.i], hints=gHintData(q);
+  if(!hints) return;
+  GS.usedHint=true;
+  GS.hintStep=(GS.hintStep||0)+1;
+  const step=Math.min(GS.hintStep, hints.length);
+  const area=document.getElementById('gHintArea');
+  if(!area) return;
+  area.innerHTML=hints.slice(0,step).map((h,i)=>`<div class="ghint-area" style="animation-delay:${i*0.08}s">${'💡'.repeat(i+1)} <b>Gợi ý ${i+1}:</b> ${h}</div>`).join('');
+  const btn=document.getElementById('gHintBtn');
+  if(btn){
+    if(step>=hints.length){ btn.disabled=true; btn.textContent='Hết gợi ý'; }
+    else btn.textContent=`💡 Gợi ý (${step}/${hints.length})`;
+  }
+}
+
+/* ============ Sổ cửu chương — theo dõi từng phép nhân đã thuộc ============
+   Key: 'toan3_cc_v1', lưu object { "2x1":1, "2x2":1, ... }  (1=mastered)
+   Đánh dấu khi trả lời đúng phép a×b không cần gợi ý.
+   Hiển thị bảng 2-9 × 1-10 với dấu ✓ ở ô đã thuộc. */
+const CCKEY='toan3_cc_v1';
+let CC={}; /* { "2x3":1, ... } */
+function ccLoad(){ try{ const s=JSON.parse(localStorage.getItem(CCKEY)); if(s) CC=s; }catch(e){} }
+function ccSave(){ try{ localStorage.setItem(CCKEY,JSON.stringify(CC)); }catch(e){} }
+function ccMark(a,b){
+  const k=`${Math.min(a,b)}x${Math.max(a,b)}`;
+  if(!CC[k]){ CC[k]=1; ccSave(); ccRenderGrid('ccLT'); ccRenderGrid('ccGame'); }
+}
+function ccCount(){ return Object.keys(CC).length; }
+function ccTotal(){ return 36; /* C(8,2)+8 = unique pairs 2..9 × 2..9, nhưng ta track 2..9 × 1..10 = 80 cells, unique = 8*10-dupes; dùng grid đủ 80 ô */ }
+function ccRenderGrid(containerId){
+  const el=document.getElementById(containerId); if(!el) return;
+  let html='<div class="cc-grid"><div class="cc-hdr"></div>';
+  for(let b=1;b<=10;b++) html+=`<div class="cc-hdr">×${b}</div>`;
+  for(let a=2;a<=9;a++){
+    html+=`<div class="cc-row-hdr">${a}</div>`;
+    for(let b=1;b<=10;b++){
+      const k=`${Math.min(a,b)}x${Math.max(a,b)}`;
+      const m=CC[k]?'mastered':'';
+      html+=`<div class="cc-cell ${m}" title="${a}×${b}=${a*b}">${a*b}</div>`;
+    }
+  }
+  html+='</div>';
+  const total=80, done=Object.keys(CC).reduce((n,k)=>{
+    const [x,y]=k.split('x').map(Number);
+    /* Đếm bao nhiêu ô trong grid 2-9 × 1-10 được cover bởi key này */
+    let c=0;
+    for(let a=2;a<=9;a++) for(let b=1;b<=10;b++){
+      if(`${Math.min(a,b)}x${Math.max(a,b)}`===k) c++;
+    }
+    return n+c;
+  },0);
+  const pct=Math.round(done/total*100);
+  html+=`<div class="cc-pct">Tiến độ: <b>${done}/${total}</b> phép tính (${pct}%) ${'⬜'.repeat(10).split('').map((_,i)=>i<Math.round(pct/10)?'🟩':'⬜').join('')}</div>`;
+  el.innerHTML=html;
+}
+
 function gStart(w){
   if(w>G.unlocked) return;
   GS={w, qs:gBuildQuestions(w), i:0, correct:0, hearts:3, answered:false, picked:null, dndSel:null, countSel:new Set(),
       buildSeq:[], cmpSel:null, clockH:null, clockM:null, moneySel:[], numlineSel:null, dead:false, timer:null,
-      combo:0, usedHint:false, wrongInSession:new Set()};
+      combo:0, usedHint:false, wrongInSession:new Set(), hintStep:0};
   document.getElementById('gModal').classList.add('open');
   gRenderQ();
 }
@@ -3253,10 +3376,11 @@ function gRenderQ(){
     <div style="text-align:right;font-size:12px;color:#5b7086;font-weight:700;margin-top:3px">Câu ${GS.i+1}/${GS.qs.length} · Tuần ${GS.w}</div>
     <div class="gqtext">${q.q}</div>
     ${body}
+    <div id="gHintArea"></div>
     <div class="gfeed" id="gFeed"></div>
-    <div class="gbtn-row"><button class="grn gbig" id="gCheck" onclick="gSubmit()">Kiểm tra</button></div>`;
+    <div class="gbtn-row">${gHintData(q)?'<button class="ghint-btn" id="gHintBtn" onclick="gHint()">💡 Gợi ý</button>':''}<button class="grn gbig" id="gCheck" onclick="gSubmit()">Kiểm tra</button></div>`;
   GS.answered=false; GS.picked=null; GS.dndSel=null; GS.countSel=new Set();
-  GS.buildSeq=[]; GS.cmpSel=null; GS.clockH=(q.kind==='clock'?q.curH:null); GS.clockM=(q.kind==='clock'?q.curM:null); GS.moneySel=[]; GS.numlineSel=null;
+  GS.buildSeq=[]; GS.cmpSel=null; GS.clockH=(q.kind==='clock'?q.curH:null); GS.clockM=(q.kind==='clock'?q.curM:null); GS.moneySel=[]; GS.numlineSel=null; GS.hintStep=0;
   const inp=document.getElementById('gInput');
   if(inp){ inp.focus(); inp.addEventListener('keydown',e=>{ if(e.key==='Enter'){ e.preventDefault(); gSubmit(); } }); }
   if(q.kind==='flash') gStartFlash(q.secs);
@@ -3394,6 +3518,8 @@ function gAfterAnswer(ok, headline){
     if(!GS.usedHint && G.reviewQueue){
       G.reviewQueue=G.reviewQueue.filter(g=>g!==curGen);
     }
+    /* Sổ cửu chương: đánh dấu phép nhân đã thuộc (đúng + không dùng gợi ý) */
+    if(!GS.usedHint && q._a!=null) ccMark(q._a, q._b);
     /* XP: 8 cơ bản + 2 mỗi combo streak ≥3, tối đa +10 bonus */
     const comboBonus = GS.combo>=3 ? Math.min(2*(GS.combo-2),10) : 0;
     const xpGain=8+comboBonus;
@@ -3431,7 +3557,8 @@ function gAfterAnswer(ok, headline){
     fb.innerHTML='<span class="fb-owl sad">🦉</span> '+(headline||'❌ Chưa đúng nhé.')+'<br>'+q.sol;
     if(!G.mute) SFX.wrong(); gVibe([30,30,30]);
   }
-  GS.usedHint=false; /* reset cho câu kế */
+  GS.usedHint=false; GS.hintStep=0; /* reset cho câu kế */
+  const hb=document.getElementById('gHintBtn'); if(hb){ hb.disabled=true; }
   const he=document.querySelector('#gCard .ghearts'); if(he) he.textContent='❤️'.repeat(Math.max(0,GS.hearts))+'🤍'.repeat(3-Math.max(0,GS.hearts));
   const btn=document.getElementById('gCheck');
   if(btn){ if(!ok && GS.hearts<=0){ GS.dead=true; btn.textContent='Xem kết quả →'; } else btn.textContent=(GS.i>=GS.qs.length-1)?'Xem kết quả →':'Câu tiếp →'; }
@@ -3601,6 +3728,9 @@ function resetGame(){
     tb.parentNode.insertBefore(wrap, tb);
     wrap.appendChild(tb);
   });
+
+  // Sổ cửu chương: nạp dữ liệu + vẽ bảng
+  ccLoad(); ccRenderGrid('ccLT'); ccRenderGrid('ccGame');
 
   // Học mà chơi: nạp tiến trình + vẽ bản đồ
   gLoad(); gRenderMap();
