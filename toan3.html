@@ -245,8 +245,12 @@ body.mode-game #tab-game{display:block}
 .realm-head{position:relative;z-index:1;display:flex;align-items:center;gap:7px;color:var(--realm);font-family:var(--font-display);font-size:17px;font-weight:900}.realm-icon{font-size:26px}
 .realm p{position:relative;z-index:1;margin:5px 0 9px;font-size:12.5px;line-height:1.4;color:#37474f;font-weight:600}.realm button{position:relative;z-index:1;padding:7px 10px;font-size:13px;box-shadow:0 2px 0 rgba(0,0,0,.18)}
 .realm-progress{position:relative;z-index:1;display:block;margin-top:7px;font-size:11.5px;color:#455a64;font-weight:700}
+.coach-panel{margin:12px 0;background:#fff;border:2px solid #ce93d8;border-radius:18px;padding:14px;box-shadow:var(--shadow)}
+.coach-head{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.coach-head h3{margin:0;color:#6a1b9a;font-size:19px}.coach-head p{margin:2px 0;color:#5b7086;font-size:13.5px;font-weight:600}.coach-actions{margin-left:auto;display:flex;gap:7px;flex-wrap:wrap}.coach-actions button,.skill-card button{border:0;border-radius:10px;padding:8px 10px;font-weight:800;cursor:pointer;background:#6a1b9a;color:#fff}.coach-actions .daily{background:#00838f}.skill-list{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:11px}.skill-card{border:1px solid #e1bee7;border-radius:12px;padding:9px;background:#fcf8fd}.skill-card b{display:block;color:#4a148c;font-size:13px}.skill-card span{display:block;color:#5b7086;font-size:12px;margin:3px 0 7px}.skill-card button{font-size:12px;padding:6px 8px}.skill-empty{margin-top:10px;padding:10px;border-radius:10px;background:#e8f5e9;color:#2e7d32;font-weight:700;font-size:13px}
 @media(max-width:760px){.realm-grid{grid-template-columns:1fr 1fr}.kingdom-title{font-size:18px}}
+@media(max-width:760px){.skill-list{grid-template-columns:1fr 1fr}.coach-actions{margin-left:0}}
 @media(max-width:390px){.realm-grid{grid-template-columns:1fr}.realm{min-height:112px}}
+@media(max-width:390px){.skill-list{grid-template-columns:1fr}}
 .map{position:relative;padding:8px 0 40px}
 .map::before{content:"";position:absolute;left:50%;top:8px;bottom:44px;width:0;border-left:5px dashed #b3c7db;transform:translateX(-50%);z-index:0}
 .phase-band{position:relative;z-index:1;margin:22px 0 8px;padding:9px 15px;border-radius:12px;font-weight:800;color:#fff;font-size:15.5px;box-shadow:var(--shadow)}
@@ -1547,6 +1551,10 @@ Một bài giải đầy đủ <b>luôn có 3 phần</b>:<br>
     <p class="kingdom-note">Mỗi vùng mở dần theo hành trình. Sai không bị trừ sao; câu chưa vững sẽ quay lại ở lần học sau. Không cần tài khoản, không có trò chuyện hay quảng cáo.</p>
     <div class="realm-grid" id="realmGrid"></div>
   </section>
+  <section class="coach-panel" aria-labelledby="coachTitle">
+    <div class="coach-head"><div><h3 id="coachTitle">Luyện điều con đang học</h3><p>Không gọi là “lỗi”. Mỗi câu chưa đúng sẽ đổi thành câu mới, cùng cách làm, để con hiểu thật.</p></div><div class="coach-actions"><button class="daily" onclick="gDailyStart()">Học 5 phút hôm nay</button><button onclick="gStartSkillPractice()">Luyện phần cần ôn</button></div></div>
+    <div id="skillList"></div>
+  </section>
   <div id="gameMap" class="map"></div>
   <details style="margin:12px 14px 0;background:rgba(255,255,255,.92);border-radius:14px;padding:0 2px"><summary style="cursor:pointer;font-weight:800;color:#0d47a1;font-size:14px;padding:10px 12px">📖 Sổ cửu chương</summary>
   <div class="cc-panel" id="ccGame" style="border:none;box-shadow:none"></div>
@@ -2570,6 +2578,10 @@ const TITLE={
   dauNhanh:'⚡ Đấu nhanh cửu chương (3 giây / câu)',
   tonghop:'🏆 Đề kiểm tra tổng hợp'
 };
+/* Liên kết nhẹ giữa câu hỏi và phần đọc lại; chỉ dùng khi bé chủ động bấm xem. */
+const GEN_SUPPORT={
+  cautao:{tip:'đếm đủ các hàng của số',anchor:'c1-1'},sosanh:{tip:'so sánh từ hàng bên trái',anchor:'c1-2'},lamtron:{tip:'nhìn chữ số ngay sau hàng làm tròn',anchor:'c1-3'},roman:{tip:'đọc chữ số La Mã',anchor:'c1-4'},bangnhanchia:{tip:'ý nghĩa nhóm bằng nhau',anchor:'c2-1'},dauNhanh:{tip:'bảng nhân – chia',anchor:'c2-1'},congtru:{tip:'cộng, trừ theo hàng',anchor:'c2-2'},congtru3:{tip:'cộng, trừ theo hàng',anchor:'c2-2'},nhanchia:{tip:'nhân, chia theo hàng',anchor:'c2-3'},bieuthuc:{tip:'thứ tự thực hiện phép tính',anchor:'c2-4'},timx:{tip:'tìm thành phần chưa biết',anchor:'c2-5'},phanmay:{tip:'một phần mấy',anchor:'c2-6'},hinhhoc:{tip:'nhận biết hình',anchor:'cd3'},chuvidt:{tip:'chu vi và diện tích',anchor:'cd3'},donvi:{tip:'đổi đơn vị đo',anchor:'cd3'},thoigian:{tip:'xem thời gian',anchor:'cd3'},gapgiam:{tip:'bài toán gấp – giảm',anchor:'c2-3'},haibuoc:{tip:'bài toán hai bước',anchor:'c2-4'},loivanhinh:{tip:'bài toán hình học',anchor:'cd3'},tientevn:{tip:'tiền Việt Nam',anchor:'cd3'},rutvedv:{tip:'rút về đơn vị',anchor:'c2-3'},bangsolieu:{tip:'đọc bảng số liệu',anchor:'cd3'},xacsuatcoban:{tip:'nhận biết khả năng',anchor:'cd3'},bieudocot:{tip:'đọc biểu đồ cột',anchor:'cd3'}
+};
 
 /* ---- Helper: render cột dọc đặt tính trong Luyện Tập (dùng chung CSS mini-game) ---- */
 function _quizColRow(str, width, opChar, makeInputs, inputClass){
@@ -2823,7 +2835,12 @@ function check(box){
   sc.className='score show '+cls;
   sc.innerHTML=`Điểm: <b>${ok}/${n}</b> câu đúng (${p}%) – Quy ra thang 10: <b>${(ok/n*10).toFixed(1)}</b><br><span style="font-weight:600;font-size:15.5px">${msg}</span>`;
   sc.scrollIntoView({behavior:'smooth',block:'center'});
-  G.exCorrect=(G.exCorrect||0)+ok; gSave();   /* câu đúng khi luyện tập → tính thi đua */
+  G.exCorrect=(G.exCorrect||0)+ok;
+  if(!box._skillRecorded){
+    qs.forEach((o,i)=>gRecordSkill(box.dataset.gen,items[i].querySelector('.fb').classList.contains('ok'),{source:'practice'}));
+    box._skillRecorded=true;
+  }
+  gSave();   /* câu đúng khi luyện tập → tính thi đua */
 }
 
 function showAns(box){
@@ -2919,7 +2936,7 @@ const GREALMS=[
 ];
 const GKEY='toan3_game_v1';
 let G={unlocked:1, stars:{}, best:{}, streak:0, lastDay:null, mins:{}, totalMin:0, exCorrect:0, goal:15, goalDay:null,
-  xp:0, xu:0, level:1, reviewQueue:[]};
+  xp:0, xu:0, level:1, reviewQueue:[], skills:{}, daily:{}};
 /* Bảng level: [minXP, tên cấp] */
 const GLEVELS=[[0,'Chồi non 🌱'],[80,'Học sinh 📚'],[200,'Tiến sĩ nhí 🔬'],[380,'Nhà thám hiểm 🧭'],[600,'Cao thủ 🏆']];
 function gLevel(xp){ let lv=0; for(let i=0;i<GLEVELS.length;i++) if(xp>=GLEVELS[i][0]) lv=i; return lv; }
@@ -2930,9 +2947,33 @@ function gLoad(){
   if(!G.mins)G.mins={}; if(!G.totalMin)G.totalMin=0; if(!G.exCorrect)G.exCorrect=0;
   if(!G.goal)G.goal=15; if(!G.xp)G.xp=0; if(!G.xu)G.xu=0; if(!G.level)G.level=1;
   if(!G.reviewQueue)G.reviewQueue=[];
+  if(!G.skills)G.skills={}; if(!G.daily)G.daily={};
   if(!G.bossWins)G.bossWins=0; /* F7: boss challenge */
 }
 function gSave(){ try{localStorage.setItem(GKEY,JSON.stringify(G));}catch(e){} progressSyncSoon(); }
+function gSkill(gen){
+  G.skills=G.skills||{};
+  if(!G.skills[gen]) G.skills[gen]={attempts:0,correct:0,wrong:0,hints:0,independent:0,lastSeen:null};
+  return G.skills[gen];
+}
+function gRecordSkill(gen,ok,meta={}){
+  if(!gen||!TITLE[gen]) return;
+  const s=gSkill(gen); s.attempts++; s.lastSeen=Date.now();
+  if(ok){s.correct++;if(!meta.hinted)s.independent++;}else s.wrong++;
+  if(meta.hinted)s.hints++;
+}
+function gWeakSkills(){
+  return Object.entries(G.skills||{}).filter(([gen,s])=>TITLE[gen]&&s.attempts>0)
+    .map(([gen,s])=>({gen,s,score:s.wrong*3+s.hints*1.4+Math.max(0,2-s.independent)}))
+    .filter(x=>x.score>0).sort((a,b)=>b.score-a.score||a.s.independent-b.s.independent);
+}
+function gRenderSkillCoach(){
+  const el=document.getElementById('skillList');if(!el)return;
+  const weak=gWeakSkills().slice(0,3);
+  if(!weak.length){el.innerHTML='<div class="skill-empty">Mỗi lần con làm bài, Vườn Toán sẽ gợi ý phần nên luyện ở đây. Con cứ làm từng câu, không cần vội nhé.</div>';return;}
+  el.innerHTML='<div class="skill-list">'+weak.map(({gen,s})=>{const support=GEN_SUPPORT[gen]||{tip:'cách làm của dạng bài này',anchor:'meo'};return `<article class="skill-card"><b>${TITLE[gen].replace(/^Luyện tập · |^✍️ Luyện viết bài giải · /,'')}</b><span>Cùng ôn: ${support.tip}. Đã tự làm đúng ${s.independent} câu.</span><button onclick="gStartSkillPractice('${gen}')">Luyện 3 câu mới</button> <button onclick="gReadTheory('${support.anchor}')" style="background:#1565c0">Xem cách làm</button></article>`;}).join('')+'</div>';
+}
+function gReadTheory(anchor){gClose();document.body.classList.remove('mode-game','mode-bt');const target=document.getElementById(anchor);if(target)target.scrollIntoView({behavior:'smooth',block:'start'});}
 function gTotalStars(){ return Object.values(G.stars).reduce((a,b)=>a+(+b||0),0); }
 function gTouchStreak(){
   const today=new Date().toISOString().slice(0,10);
@@ -3006,6 +3047,7 @@ function gRenderMap(){
   gRenderTop();
   gRenderProgress();
   gRenderRealms();
+  gRenderSkillCoach();
 }
 /* --- tạo bộ câu hỏi cho 1 trạm ---
    70% review queue (nếu có) + 65% tuần hiện tại + 35% ôn xoay vòng
@@ -3043,6 +3085,11 @@ function gBuildRealmQuestions(realm){
     if(qs.some(old=>qKey(old)===qKey(q))) continue;
     qs.push(q);
   }
+  return qs;
+}
+function gBuildSkillQuestions(gens,n){
+  const usable=gens.filter(gen=>typeof GEN[gen]==='function'),qs=[];let guard=0;
+  while(qs.length<n&&guard<n*50){guard++;const gen=pick(usable),q=gMakeQ(gen);q._gen=gen;if(!qs.some(old=>qKey(old)===qKey(q)))qs.push(q);}
   return qs;
 }
 /* --- Lời khen của Ba dành cho con --- */
@@ -3400,6 +3447,18 @@ function gStartRealm(id){
   document.getElementById('gModal').classList.add('open');
   gRenderQ();
 }
+function gStartSkillPractice(gen){
+  const selected=gen?[gen]:gWeakSkills().slice(0,3).map(x=>x.gen),fallback=WEEKS[Math.max(0,G.unlocked-1)].gens,qs=gBuildSkillQuestions(selected.length?selected:fallback,3);
+  if(qs.length<3){alert('Chưa tạo đủ câu mới. Con thử lại nhé.');return;}
+  GS={w:G.unlocked,qs,i:0,correct:0,hearts:3,answered:false,picked:null,dndSel:null,countSel:new Set(),buildSeq:[],cmpSel:null,clockH:null,clockM:null,moneySel:[],numlineSel:null,dead:false,timer:null,combo:0,usedHint:false,wrongInSession:new Set(),hintStep:0,warmupCount:0,isBoss:false,isSkillPractice:true};
+  document.getElementById('gModal').classList.add('open');gRenderQ();
+}
+function gDailyStart(){
+  const today=new Date().toISOString().slice(0,10),weak=gWeakSkills().slice(0,3).map(x=>x.gen),current=WEEKS[Math.max(0,G.unlocked-1)].gens,qs=gBuildSkillQuestions(weak.length?weak:current,5);
+  if(qs.length<5){alert('Chưa tạo đủ câu hôm nay. Con thử lại nhé.');return;}
+  GS={w:G.unlocked,qs,i:0,correct:0,hearts:3,answered:false,picked:null,dndSel:null,countSel:new Set(),buildSeq:[],cmpSel:null,clockH:null,clockM:null,moneySel:[],numlineSel:null,dead:false,timer:null,combo:0,usedHint:false,wrongInSession:new Set(),hintStep:0,warmupCount:0,isBoss:false,isDaily:true,dailyDay:today};
+  document.getElementById('gModal').classList.add('open');gRenderQ();
+}
 function gClearTimer(){ if(GS && GS.timer){ clearInterval(GS.timer); GS.timer=null; } }
 function gRenderQ(){
   gClearTimer();
@@ -3616,6 +3675,7 @@ function gAfterAnswer(ok, headline){
   const isWarm=!!q._warmup; /* F5: warm-up câu → không tính điểm, không mất tim */
   const xpMul=GS.isBoss?3:1; /* F7: boss → x3 XP */
   if(ok){
+    gRecordSkill(curGen,true,{hinted:GS.usedHint});
     if(!isWarm) GS.correct++;
     GS.combo=(GS.combo||0)+1;
     /* Xoá khỏi review queue nếu đúng mà không dùng gợi ý */
@@ -3680,6 +3740,7 @@ function gAfterAnswer(ok, headline){
       if(he2) he2.textContent='❤️'.repeat(Math.max(0,Math.ceil(GS.hearts)))+'🤍'.repeat(3-Math.max(0,Math.ceil(GS.hearts)));
       return; /* không chạy tiếp — chờ bé chọn lại */
     }
+    gRecordSkill(curGen,false,{hinted:GS.usedHint});
     if(!isWarm) GS.hearts=Math.floor(GS.hearts)-1+(GS.hearts%1); /* trừ 1 tim (giữ phần lẻ nếu có) */
     GS.combo=0;
     /* Đưa gen vào review queue nếu chưa có */
@@ -3691,7 +3752,9 @@ function gAfterAnswer(ok, headline){
     if(q._a!=null) ccWrong(q._a, q._b);
     gSave();
     fb.className='gfeed no';
-    fb.innerHTML='<span class="fb-owl sad">🦉</span> '+(headline||'❌ Chưa đúng nhé.')+'<br>'+q.sol+(isWarm?' <span style="color:#ef6c00;font-size:12px">(khởi động — không mất tim)</span>':'');
+    const support=GEN_SUPPORT[curGen];
+    const help=support?`<div style="margin-top:8px"><button class="grn" onclick="gStartSkillPractice('${curGen}')">Luyện 3 câu dễ hơn</button> <button class="pur" onclick="gReadTheory('${support.anchor}')">Xem lại cách làm</button></div>`:'';
+    fb.innerHTML='<span class="fb-owl sad">🦉</span> '+(headline||'❌ Chưa đúng nhé.')+'<br>'+q.sol+help+(isWarm?' <span style="color:#ef6c00;font-size:12px">(khởi động — không mất tim)</span>':'');
     if(!G.mute) SFX.wrong(); gVibe([30,30,30]);
   }
   GS.usedHint=false; GS.hintStep=0; GS.retried=false; /* reset cho câu kế */
@@ -3768,6 +3831,13 @@ function gNext(){
 function gFinish(){
   gClearTimer();
   if(GS.isBoss){ gBossFinish(); return; }
+  if(GS.isDaily){
+    const total=GS.qs.length,pct=Math.round(GS.correct/total*100),day=GS.dailyDay;
+    G.daily=G.daily||{};G.daily[day]={completed:true,attempted:total,correct:GS.correct};
+    G.xp=(G.xp||0)+20;G.xu=(G.xu||0)+5;gTouchStreak();gSave();gRenderMap();
+    document.getElementById('gCard').innerHTML=`<div class="gresult"><div style="font-size:42px">🌿</div><div class="praise" style="color:#00838f">Con đã hoàn thành buổi học hôm nay!</div><div style="font-weight:800;color:#0d47a1">Đúng ${GS.correct}/${total} câu (${pct}%)</div><div style="color:#5b7086;margin-top:7px">Cảm ơn con đã kiên trì. Ngày mai mình học tiếp một ít nhé.</div><div style="color:#ef6c00;font-weight:700;margin-top:6px">+20 XP · +5 xu vì đã hoàn thành</div><div class="gbtn-row" style="margin-top:16px"><button class="grn gbig" onclick="gClose()">✓ Xong</button></div></div>`;
+    if(!G.mute)SFX.win();return;
+  }
   const total=GS.qs.length-(GS.warmupCount||0), pct=Math.round(GS.correct/total*100);
   let stars=0; if(pct>=100) stars=3; else if(pct>=80) stars=2; else if(pct>=60) stars=1;
   const passed=stars>=1;
@@ -3887,7 +3957,7 @@ function resetGame(){
   const mute=G.mute, goal=G.goal||15;
   G={unlocked:1, stars:{}, best:{}, streak:0, lastDay:null, mute:mute,
      mins:{}, totalMin:0, exCorrect:0, goal, goalDay:null,
-     xp:0, xu:0, level:1, reviewQueue:[], bossWins:0, bossDay:null};
+      xp:0, xu:0, level:1, reviewQueue:[], skills:{}, daily:{}, bossWins:0, bossDay:null};
   gSave(); gRenderMap();
 }
 
