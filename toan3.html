@@ -310,8 +310,9 @@ body.mode-game #tab-game{display:block}
 .cc-grid .cc-hdr{background:#e3f2fd;font-weight:800;color:#0d47a1;padding:4px 2px;border:1px solid #bbdefb}
 .cc-grid .cc-row-hdr{background:#e8eaf6;font-weight:800;color:#283593;padding:4px 6px;border:1px solid #c5cae9}
 .cc-cell{padding:4px 2px;border:1px solid #e0e0e0;position:relative;transition:all .15s}
-.cc-cell.mastered{background:#e8f5e9;color:#2e7d32;font-weight:700}
+.cc-cell.mastered{background:#c8e6c9;color:#1b5e20;font-weight:700}
 .cc-cell.mastered::after{content:'\\2713';position:absolute;top:-1px;right:1px;font-size:9px;color:#2e7d32;font-weight:900}
+.cc-cell.learning{background:#fff9c4;color:#f57f17;font-weight:600}
 .cc-pct{font-size:13px;font-weight:800;color:#5b7086;margin-top:6px}
 .cc-pct b{color:#2e7d32}
 /* mini-games */
@@ -1519,6 +1520,7 @@ Một bài giải đầy đủ <b>luôn có 3 phần</b>:<br>
     <span class="stat trophy" title="Số trạm đã qua">🏅 <span id="gDone">0</span>/35</span>
     <span class="stat xu-stat" title="Xu tích lũy">🪙 <span id="gXuVal">0</span></span>
     <span class="spacer"></span>
+    <button class="gmute" style="background:#c62828;box-shadow:0 3px 0 #8e0000" onclick="gBossStart()" id="gBossBtn" title="Thử sức Boss hàng ngày!">👹 Boss</button>
     <button class="gmute" style="background:#8e24aa;box-shadow:0 3px 0 #6a1b9a" onclick="openDash()">🏆 Thi đua</button>
     <button class="gmute" id="gMuteBtn" onclick="gToggleMute()">🔊 Âm thanh: Bật</button>
     <button class="game-reset" onclick="resetGame()">↺ Chơi lại</button>
@@ -2900,6 +2902,7 @@ function gLoad(){
   if(!G.mins)G.mins={}; if(!G.totalMin)G.totalMin=0; if(!G.exCorrect)G.exCorrect=0;
   if(!G.goal)G.goal=15; if(!G.xp)G.xp=0; if(!G.xu)G.xu=0; if(!G.level)G.level=1;
   if(!G.reviewQueue)G.reviewQueue=[];
+  if(!G.bossWins)G.bossWins=0; /* F7: boss challenge */
 }
 function gSave(){ try{localStorage.setItem(GKEY,JSON.stringify(G));}catch(e){} progressSyncSoon(); }
 function gTotalStars(){ return Object.values(G.stars).reduce((a,b)=>a+(+b||0),0); }
@@ -3258,47 +3261,72 @@ function gHint(){
    Đánh dấu khi trả lời đúng phép a×b không cần gợi ý.
    Hiển thị bảng 2-9 × 1-10 với dấu ✓ ở ô đã thuộc. */
 const CCKEY='toan3_cc_v1';
-let CC={}; /* { "2x3":1, ... } */
-function ccLoad(){ try{ const s=JSON.parse(localStorage.getItem(CCKEY)); if(s) CC=s; }catch(e){} }
+let CC={}; /* { "2x3":{ok:N,ng:N}, ... }  — backward compat: old {key:1} → {ok:1,ng:0} */
+function ccLoad(){
+  try{ const s=JSON.parse(localStorage.getItem(CCKEY)); if(s){
+    /* backward compat: migrate {key:1} → {key:{ok:1,ng:0}} */
+    for(const k in s){ if(typeof s[k]==='number') s[k]={ok:s[k],ng:0}; }
+    CC=s;
+  }}catch(e){}
+}
 function ccSave(){ try{ localStorage.setItem(CCKEY,JSON.stringify(CC)); }catch(e){} }
 function ccMark(a,b){
   const k=`${Math.min(a,b)}x${Math.max(a,b)}`;
-  if(!CC[k]){ CC[k]=1; ccSave(); ccRenderGrid('ccLT'); ccRenderGrid('ccGame'); }
+  if(!CC[k]) CC[k]={ok:0,ng:0};
+  CC[k].ok++; ccSave(); ccRenderGrid('ccLT'); ccRenderGrid('ccGame');
 }
-function ccCount(){ return Object.keys(CC).length; }
-function ccTotal(){ return 36; /* C(8,2)+8 = unique pairs 2..9 × 2..9, nhưng ta track 2..9 × 1..10 = 80 cells, unique = 8*10-dupes; dùng grid đủ 80 ô */ }
+function ccWrong(a,b){
+  const k=`${Math.min(a,b)}x${Math.max(a,b)}`;
+  if(!CC[k]) CC[k]={ok:0,ng:0};
+  CC[k].ng++; ccSave();
+}
+function ccStatus(k){
+  /* 'mastered' (≥80% accuracy, ≥2 attempts), 'learning' (attempted, <80%), '' (never) */
+  const d=CC[k]; if(!d) return '';
+  const total=d.ok+d.ng; if(total<1) return '';
+  return (d.ok/total>=0.8 && d.ok>=2)?'mastered':'learning';
+}
 function ccRenderGrid(containerId){
   const el=document.getElementById(containerId); if(!el) return;
   let html='<div class="cc-grid"><div class="cc-hdr"></div>';
-  for(let b=1;b<=10;b++) html+=`<div class="cc-hdr">×${b}</div>`;
+  for(let b=1;b<=10;b++) html+=`<div class="cc-hdr">\u00d7${b}</div>`;
+  let mastered=0, learning=0;
   for(let a=2;a<=9;a++){
     html+=`<div class="cc-row-hdr">${a}</div>`;
     for(let b=1;b<=10;b++){
       const k=`${Math.min(a,b)}x${Math.max(a,b)}`;
-      const m=CC[k]?'mastered':'';
-      html+=`<div class="cc-cell ${m}" title="${a}×${b}=${a*b}">${a*b}</div>`;
+      const st=ccStatus(k);
+      const d=CC[k];
+      const tip=d?`${a}\u00d7${b}=${a*b} · ${d.ok}\u2713 ${d.ng}\u2717`:`${a}\u00d7${b}=${a*b}`;
+      if(st==='mastered') mastered++; else if(st==='learning') learning++;
+      html+=`<div class="cc-cell ${st}" title="${tip}">${a*b}</div>`;
     }
   }
   html+='</div>';
-  const total=80, done=Object.keys(CC).reduce((n,k)=>{
-    const [x,y]=k.split('x').map(Number);
-    /* Đếm bao nhiêu ô trong grid 2-9 × 1-10 được cover bởi key này */
-    let c=0;
-    for(let a=2;a<=9;a++) for(let b=1;b<=10;b++){
-      if(`${Math.min(a,b)}x${Math.max(a,b)}`===k) c++;
-    }
-    return n+c;
-  },0);
-  const pct=Math.round(done/total*100);
-  html+=`<div class="cc-pct">Tiến độ: <b>${done}/${total}</b> phép tính (${pct}%) ${'⬜'.repeat(10).split('').map((_,i)=>i<Math.round(pct/10)?'🟩':'⬜').join('')}</div>`;
+  const total=80, notStarted=total-mastered-learning;
+  const pct=Math.round(mastered/total*100);
+  html+=`<div class="cc-pct">🟩 Thuộc: <b>${mastered}</b> · 🟨 Đang học: <b>${learning}</b> · 🟥 Chưa: <b>${notStarted}</b> &nbsp; (${pct}% hoàn thành)</div>`;
   el.innerHTML=html;
 }
 
 function gStart(w){
   if(w>G.unlocked) return;
-  GS={w, qs:gBuildQuestions(w), i:0, correct:0, hearts:3, answered:false, picked:null, dndSel:null, countSel:new Set(),
+  /* F5: Warm-up 3 câu không tính điểm — lấy từ review queue (nếu có) hoặc tuần hiện tại */
+  const warmQs=[];
+  const cur=WEEKS[w-1].gens;
+  let wg=0;
+  while(warmQs.length<3 && wg<60){ wg++;
+    let q;
+    if(G.reviewQueue && G.reviewQueue.length>0 && Math.random()<0.7){
+      try{ q=gMakeQ(pick(G.reviewQueue)); }catch(e){ q=gMakeQ(pick(cur)); }
+    } else { q=gMakeQ(pick(cur)); }
+    if(warmQs.some(o=>qKey(o)===qKey(q))) continue;
+    q._warmup=true; warmQs.push(q);
+  }
+  const mainQs=gBuildQuestions(w);
+  GS={w, qs:[...warmQs,...mainQs], i:0, correct:0, hearts:3, answered:false, picked:null, dndSel:null, countSel:new Set(),
       buildSeq:[], cmpSel:null, clockH:null, clockM:null, moneySel:[], numlineSel:null, dead:false, timer:null,
-      combo:0, usedHint:false, wrongInSession:new Set(), hintStep:0};
+      combo:0, usedHint:false, wrongInSession:new Set(), hintStep:0, warmupCount:warmQs.length, isBoss:false};
   document.getElementById('gModal').classList.add('open');
   gRenderQ();
 }
@@ -3306,7 +3334,9 @@ function gClearTimer(){ if(GS && GS.timer){ clearInterval(GS.timer); GS.timer=nu
 function gRenderQ(){
   gClearTimer();
   const q=GS.qs[GS.i], pct=Math.round(GS.i/GS.qs.length*100);
-  const hearts='❤️'.repeat(Math.max(0,GS.hearts))+'🤍'.repeat(3-Math.max(0,GS.hearts));
+  const maxH=GS.isBoss?2:3;
+  const hF=Math.floor(Math.max(0,GS.hearts)), hH=(GS.hearts%1>=0.5)?1:0;
+  const hearts='❤️'.repeat(hF)+(hH?'💔':'')+'🤍'.repeat(Math.max(0,maxH-hF-hH));
   let body='';
   if(q.kind==='mc'||q.kind==='flash'){
     if(q.kind==='flash') body+=`<div class="flash-timer"><i id="flashBar"></i></div>`;
@@ -3373,14 +3403,16 @@ function gRenderQ(){
       <div class="gbar" style="flex:1"><i style="width:${pct}%"></i></div>
       <span class="ghearts">${hearts}</span>
     </div>
-    <div style="text-align:right;font-size:12px;color:#5b7086;font-weight:700;margin-top:3px">Câu ${GS.i+1}/${GS.qs.length} · Tuần ${GS.w}</div>
+    <div style="text-align:right;font-size:12px;color:#5b7086;font-weight:700;margin-top:3px">${q._warmup?'<span style="color:#ef6c00">Khởi động</span>':'Câu '+(GS.i+1-GS.warmupCount)+'/'+(GS.qs.length-GS.warmupCount)} · ${GS.isBoss?'Boss':'Tuần '+GS.w}</div>
+    ${q._warmup?'<div style="background:#fff3e0;border-radius:10px;padding:6px 12px;margin-bottom:6px;font-size:13px;font-weight:700;color:#e65100;text-align:center">🔥 Khởi động — không mất tim, không tính điểm</div>':''}
     <div class="gqtext">${q.q}</div>
     ${body}
     <div id="gHintArea"></div>
     <div class="gfeed" id="gFeed"></div>
-    <div class="gbtn-row">${gHintData(q)?'<button class="ghint-btn" id="gHintBtn" onclick="gHint()">💡 Gợi ý</button>':''}<button class="grn gbig" id="gCheck" onclick="gSubmit()">Kiểm tra</button></div>`;
+    <div class="gbtn-row">${gHintData(q)&&!GS.isBoss?'<button class="ghint-btn" id="gHintBtn" onclick="gHint()">💡 Gợi ý</button>':''}<button class="grn gbig" id="gCheck" onclick="gSubmit()">Kiểm tra</button></div>`;
   GS.answered=false; GS.picked=null; GS.dndSel=null; GS.countSel=new Set();
   GS.buildSeq=[]; GS.cmpSel=null; GS.clockH=(q.kind==='clock'?q.curH:null); GS.clockM=(q.kind==='clock'?q.curM:null); GS.moneySel=[]; GS.numlineSel=null; GS.hintStep=0;
+  GS.qStart=performance.now(); /* F3: response-time tracking */
   const inp=document.getElementById('gInput');
   if(inp){ inp.focus(); inp.addEventListener('keydown',e=>{ if(e.key==='Enter'){ e.preventDefault(); gSubmit(); } }); }
   if(q.kind==='flash') gStartFlash(q.secs);
@@ -3511,8 +3543,10 @@ function gAfterAnswer(ok, headline){
   GS.answered=true; gClearTimer();
   const q=GS.qs[GS.i], fb=document.getElementById('gFeed');
   const curGen=WEEKS[GS.w-1].gens[0]; /* genre của câu → dùng cho review queue */
+  const isWarm=!!q._warmup; /* F5: warm-up câu → không tính điểm, không mất tim */
+  const xpMul=GS.isBoss?3:1; /* F7: boss → x3 XP */
   if(ok){
-    GS.correct++;
+    if(!isWarm) GS.correct++;
     GS.combo=(GS.combo||0)+1;
     /* Xoá khỏi review queue nếu đúng mà không dùng gợi ý */
     if(!GS.usedHint && G.reviewQueue){
@@ -3520,46 +3554,82 @@ function gAfterAnswer(ok, headline){
     }
     /* Sổ cửu chương: đánh dấu phép nhân đã thuộc (đúng + không dùng gợi ý) */
     if(!GS.usedHint && q._a!=null) ccMark(q._a, q._b);
-    /* XP: 8 cơ bản + 2 mỗi combo streak ≥3, tối đa +10 bonus */
-    const comboBonus = GS.combo>=3 ? Math.min(2*(GS.combo-2),10) : 0;
-    const xpGain=8+comboBonus;
-    const xuGain=5;
-    const oldLv=gLevel(G.xp);
-    G.xp=(G.xp||0)+xpGain; G.xu=(G.xu||0)+xuGain;
-    const newLv=gLevel(G.xp);
-    gSave();
-    gRenderTop();
-    gShowXpToast(xpGain, xuGain, GS.combo);
-    if(newLv>oldLv){
-      /* Level up! */
-      setTimeout(()=>{
-        const t=document.createElement('div'); t.className='goal-toast';
-        t.innerHTML=`⬆️ Lên cấp! Con đạt cấp <b>${GLEVELS[newLv][1]}</b> – xuất sắc! 🎉`;
-        document.body.appendChild(t); if(!G.mute) SFX.win();
-        setTimeout(()=>{t.style.opacity='0';}, 3200); setTimeout(()=>t.remove(),4000);
-      }, 400);
+    /* F3: response-time — đúng nhưng chậm > 15s = chưa thật sự thuộc → giữ trong review queue */
+    const respTime=GS.qStart?((performance.now()-GS.qStart)/1000):0;
+    if(respTime>15 && q._a!=null && G.reviewQueue && !G.reviewQueue.includes(curGen)){
+      G.reviewQueue.push(curGen);
+      if(G.reviewQueue.length>6) G.reviewQueue.shift();
+    }
+    if(!isWarm){
+      /* XP: 8 cơ bản + 2 mỗi combo streak ≥3, tối đa +10 bonus; boss x3 */
+      const comboBonus = GS.combo>=3 ? Math.min(2*(GS.combo-2),10) : 0;
+      const xpGain=(8+comboBonus)*xpMul;
+      const xuGain=5*xpMul;
+      const oldLv=gLevel(G.xp);
+      G.xp=(G.xp||0)+xpGain; G.xu=(G.xu||0)+xuGain;
+      const newLv=gLevel(G.xp);
+      gSave();
+      gRenderTop();
+      gShowXpToast(xpGain, xuGain, GS.combo);
+      if(newLv>oldLv){
+        setTimeout(()=>{
+          const t=document.createElement('div'); t.className='goal-toast';
+          t.innerHTML=`⬆️ Lên cấp! Con đạt cấp <b>${GLEVELS[newLv][1]}</b> – xuất sắc! 🎉`;
+          document.body.appendChild(t); if(!G.mute) SFX.win();
+          setTimeout(()=>{t.style.opacity='0';}, 3200); setTimeout(()=>t.remove(),4000);
+        }, 400);
+      }
     }
     const comboStr=GS.combo>=3?` <span class="combo-badge">x${GS.combo} liên tiếp!</span>`:'';
     const m=pick(GPRAISE);
     fb.className='gfeed ok';
-    fb.innerHTML=`<span class="fb-owl">🦉</span> ✅ <b>${m}</b>${comboStr}`;
+    fb.innerHTML=`<span class="fb-owl">🦉</span> ✅ <b>${m}</b>${comboStr}${isWarm?' <span style="color:#ef6c00;font-size:12px">(khởi động)</span>':''}`;
     gSay(m); if(!G.mute) SFX.correct(); gVibe(35);
   }else{
-    GS.hearts--;
+    /* F4: Retry-on-wrong — lần sai đầu tiên ở MC/flash có hint data → cho thử lại */
+    const canRetry = !GS.retried && !isWarm && !GS.isBoss && (q.kind==='mc'||q.kind==='flash') && gHintData(q);
+    if(canRetry){
+      GS.retried=true;
+      GS.hearts-=0.5; /* nửa tim */
+      GS.usedHint=true;
+      GS.combo=0;
+      /* Disable nút sai, giữ các nút khác */
+      if(GS.picked!=null){
+        const wrongBtn=document.querySelector('.gopt[data-j="'+GS.picked+'"]');
+        if(wrongBtn){ wrongBtn.classList.add('wrong'); wrongBtn.disabled=true; wrongBtn.onclick=null; }
+      }
+      /* Tự động hiện gợi ý bậc 1 */
+      const hints=gHintData(q);
+      const area=document.getElementById('gHintArea');
+      if(area && hints) area.innerHTML=`<div class="ghint-area">💡 <b>Gợi ý:</b> ${hints[0]}</div>`;
+      fb.className='gfeed no';
+      fb.innerHTML='<span class="fb-owl sad">🦉</span> Chưa đúng — thử lại nhé! 💪';
+      if(!G.mute) SFX.wrong(); gVibe([30,30,30]);
+      GS.answered=false; GS.picked=null; /* cho phép chọn lại */
+      const he2=document.querySelector('#gCard .ghearts');
+      if(he2) he2.textContent='❤️'.repeat(Math.max(0,Math.ceil(GS.hearts)))+'🤍'.repeat(3-Math.max(0,Math.ceil(GS.hearts)));
+      return; /* không chạy tiếp — chờ bé chọn lại */
+    }
+    if(!isWarm) GS.hearts=Math.floor(GS.hearts)-1+(GS.hearts%1); /* trừ 1 tim (giữ phần lẻ nếu có) */
     GS.combo=0;
     /* Đưa gen vào review queue nếu chưa có */
     if(G.reviewQueue && !G.reviewQueue.includes(curGen)){
       G.reviewQueue.push(curGen);
       if(G.reviewQueue.length>6) G.reviewQueue.shift();
     }
+    /* Sổ cửu chương: ghi lại lần sai */
+    if(q._a!=null) ccWrong(q._a, q._b);
     gSave();
     fb.className='gfeed no';
-    fb.innerHTML='<span class="fb-owl sad">🦉</span> '+(headline||'❌ Chưa đúng nhé.')+'<br>'+q.sol;
+    fb.innerHTML='<span class="fb-owl sad">🦉</span> '+(headline||'❌ Chưa đúng nhé.')+'<br>'+q.sol+(isWarm?' <span style="color:#ef6c00;font-size:12px">(khởi động — không mất tim)</span>':'');
     if(!G.mute) SFX.wrong(); gVibe([30,30,30]);
   }
-  GS.usedHint=false; GS.hintStep=0; /* reset cho câu kế */
+  GS.usedHint=false; GS.hintStep=0; GS.retried=false; /* reset cho câu kế */
   const hb=document.getElementById('gHintBtn'); if(hb){ hb.disabled=true; }
-  const he=document.querySelector('#gCard .ghearts'); if(he) he.textContent='❤️'.repeat(Math.max(0,GS.hearts))+'🤍'.repeat(3-Math.max(0,GS.hearts));
+  const maxH2=GS.isBoss?2:3;
+  const hFull=Math.floor(Math.max(0,GS.hearts)), hHalf=(GS.hearts%1>=0.5)?1:0;
+  const he=document.querySelector('#gCard .ghearts');
+  if(he) he.textContent='❤️'.repeat(hFull)+(hHalf?'💔':'')+'🤍'.repeat(Math.max(0,maxH2-hFull-hHalf));
   const btn=document.getElementById('gCheck');
   if(btn){ if(!ok && GS.hearts<=0){ GS.dead=true; btn.textContent='Xem kết quả →'; } else btn.textContent=(GS.i>=GS.qs.length-1)?'Xem kết quả →':'Câu tiếp →'; }
 }
@@ -3627,7 +3697,8 @@ function gNext(){
 }
 function gFinish(){
   gClearTimer();
-  const total=GS.qs.length, pct=Math.round(GS.correct/total*100);
+  if(GS.isBoss){ gBossFinish(); return; }
+  const total=GS.qs.length-(GS.warmupCount||0), pct=Math.round(GS.correct/total*100);
   let stars=0; if(pct>=100) stars=3; else if(pct>=80) stars=2; else if(pct>=60) stars=1;
   const passed=stars>=1;
   let bonusXP=0, bonusXu=0;
@@ -3681,12 +3752,72 @@ function gConfetti(){
   }
 }
 function gClose(){ gClearTimer(); const m=document.getElementById('gModal'); if(m) m.classList.remove('open'); GS=null; gRenderMap(); }
+
+/* ============ F7: Daily Boss Challenge ============
+   5 câu khó hỗn hợp từ tất cả tuần đã mở, flash timer ngắn hơn (5s),
+   không có warm-up, không hint, x3 XP. Mỗi ngày chỉ chơi 1 lần. */
+function gBossToday(){ return new Date().toISOString().slice(0,10); }
+function gBossStart(){
+  const today=gBossToday();
+  if(G.bossDay===today){
+    alert('Hôm nay con đã thử Boss rồi! Quay lại vào ngày mai nhé 💪');
+    return;
+  }
+  if(G.unlocked<2){
+    alert('Cần mở ít nhất Tuần 2 để thử Boss nhé!');
+    return;
+  }
+  /* Lấy câu từ tất cả tuần đã mở, ưu tiên gen khó */
+  const allGens=[];
+  for(let i=0;i<G.unlocked && i<WEEKS.length;i++) allGens.push(...WEEKS[i].gens);
+  const unique=[...new Set(allGens)];
+  const qs=[]; let guard=0;
+  while(qs.length<5 && guard<120){ guard++;
+    const gen=pick(unique);
+    let q=gMakeQ(gen);
+    /* Flash card: timer ngắn hơn (5s) */
+    if(q.kind==='flash') q.secs=5;
+    if(qs.some(o=>qKey(o)===qKey(q))) continue;
+    qs.push(q);
+  }
+  GS={w:G.unlocked, qs, i:0, correct:0, hearts:2, answered:false, picked:null, dndSel:null, countSel:new Set(),
+      buildSeq:[], cmpSel:null, clockH:null, clockM:null, moneySel:[], numlineSel:null, dead:false, timer:null,
+      combo:0, usedHint:false, wrongInSession:new Set(), hintStep:0, warmupCount:0, isBoss:true};
+  document.getElementById('gModal').classList.add('open');
+  gRenderQ();
+}
+function gBossFinish(){
+  /* Ghi nhận boss đã chơi hôm nay */
+  G.bossDay=gBossToday();
+  const pct=Math.round(GS.correct/GS.qs.length*100);
+  const won=pct>=80;
+  let bonusXP=0, bonusXu=0;
+  if(won){ bonusXP=90; bonusXu=30; }
+  else { bonusXP=20; bonusXu=5; }
+  G.xp=(G.xp||0)+bonusXP; G.xu=(G.xu||0)+bonusXu;
+  if(!G.bossWins) G.bossWins=0;
+  if(won) G.bossWins++;
+  gSave(); gRenderTop();
+  const lv=gLevel(G.xp);
+  document.getElementById('gCard').innerHTML=`<div class="gresult">
+    <div style="font-size:42px">${won?'👹🏆':'👹🌱'}</div>
+    <div class="praise" style="color:${won?'#c62828':'#ef6c00'}">${won?'Con đã hạ Boss! Xuất sắc!':'Boss quá mạnh, ngày mai thử lại nhé!'}</div>
+    <div style="font-size:17px;font-weight:800;color:#0d47a1">Đúng ${GS.correct}/${GS.qs.length} câu (${pct}%)</div>
+    <div style="color:#ef6c00;font-weight:700;margin-top:4px">+${bonusXP} XP · +${bonusXu} xu · Cấp: <b>${GLEVELS[lv][1]}</b></div>
+    <div style="color:#5b7086;font-weight:600;margin-top:4px">👹 Boss đã thắng: <b>${G.bossWins}</b> lần</div>
+    <div class="gbtn-row" style="margin-top:16px">
+      <button class="grn gbig" onclick="gClose()">✓ Xong</button>
+    </div></div>`;
+  if(won) gConfetti();
+  if(!G.mute && won) SFX.win();
+}
+
 function resetGame(){
   if(!confirm('Xoá toàn bộ tiến trình (sao, chuỗi ngày, XP, xu, trạm đã mở) và chơi lại từ Tuần 1?')) return;
   const mute=G.mute, goal=G.goal||15;
   G={unlocked:1, stars:{}, best:{}, streak:0, lastDay:null, mute:mute,
      mins:{}, totalMin:0, exCorrect:0, goal, goalDay:null,
-     xp:0, xu:0, level:1, reviewQueue:[]};
+     xp:0, xu:0, level:1, reviewQueue:[], bossWins:0, bossDay:null};
   gSave(); gRenderMap();
 }
 
