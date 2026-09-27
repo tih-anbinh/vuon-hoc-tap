@@ -136,9 +136,18 @@ input.ans:focus,textarea.ans:focus{outline:none; border-color:#ff8f00; box-shado
 .tok.wrong{background:#ffebee;border-color:#d32f2f;color:#b71c1c}
 .buildzone{min-height:44px;border:2px dashed #80cbc4;border-radius:10px;padding:6px 8px;margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;background:#fbfffe}
 .buildzone:empty::before{content:"Chạm các thẻ bên dưới để xếp thành câu…";color:#90a4ae;font-weight:500;font-size:14px}
-.pairwrap{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
-@media(max-width:560px){.pairwrap{grid-template-columns:1fr}}
-.paircol .tok{display:flex;width:100%;justify-content:center;margin-bottom:7px}
+.pairwrap{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px;position:relative}
+.pairwrap.has-lines{gap:56px}
+@media(max-width:560px){.pairwrap{grid-template-columns:1fr}.pairwrap.has-lines{grid-template-columns:1fr 1fr;gap:34px}}
+.paircol .tok{display:flex;width:100%;justify-content:center;margin-bottom:10px;position:relative;min-height:44px;text-align:center}
+.pair-lines{position:absolute;inset:0;width:100%;pointer-events:none;overflow:visible;z-index:1}
+.paircol{position:relative;z-index:2}
+.tok.linked{border-color:var(--pc,#00838f);box-shadow:0 0 0 2px var(--pc,#00838f) inset;background:#fff}
+.pnum{position:absolute;left:-12px;top:50%;transform:translateY(-50%);width:22px;height:22px;border-radius:50%;background:#cfd8dc;color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.tok.linked .pnum{background:var(--pc,#00838f)}
+.pnum-r{left:auto;right:-12px;background:transparent}
+.tok.linked .pnum-r{background:var(--pc,#00838f)}
+.tok.pL.sel{background:#fff3e0;border-color:#ef6c00;box-shadow:0 0 0 3px #ffe0b2;animation:pulse 1.2s infinite}
 .blankline{display:inline-block;min-width:96px;border-bottom:2px solid var(--teal);text-align:center;font-weight:700;color:#00695c}
 .fb{margin-top:8px; font-weight:700; font-size:14.6px; display:none}
 .fb.ok{color:var(--green); display:block}
@@ -320,6 +329,21 @@ body.mode-game #tab-game{display:block}
   .station{width:56px;height:56px;font-size:19px}
 }
 @media print{nav.side{display:none} .quiz{break-inside:avoid} body{background:#fff}}
+/* --- Thu gọn menu trái (tablet/desktop) — thêm không gian cho luyện tập/viết (giống toan3) --- */
+@media(min-width:821px){
+  nav.side{transition:transform .28s ease, margin-left .28s ease}
+  body.nav-collapsed nav.side{transform:translateX(-100%); margin-left:-288px}
+  body.nav-collapsed main{max-width:1200px}
+  #navToggle{position:fixed; top:12px; left:12px; z-index:190;
+    width:42px; height:42px; border-radius:12px; border:none; cursor:pointer;
+    background:#00838f; color:#fff; font-size:20px; font-weight:900; padding:0;
+    box-shadow:0 6px 16px rgba(0,105,92,.28); display:flex; align-items:center; justify-content:center;
+    transition:left .28s ease, transform .18s}
+  #navToggle:hover{transform:scale(1.06)}
+  body:not(.nav-collapsed) #navToggle{left:250px; background:#fff; color:#00838f; border:1.5px solid #80cbc4}
+  body.locked #navToggle{display:none}
+}
+@media(max-width:820px){ #navToggle{display:none} }
 .hidden{display:none !important}
 /* ===== Chế độ mắt dịu (warm) ===== */
 #warmLayer{position:fixed;inset:0;background:#ff8f1f;opacity:0;mix-blend-mode:multiply;pointer-events:none;z-index:9998;transition:opacity .3s}
@@ -424,6 +448,54 @@ body.mode-viet #tab-viet{display:block}
 .fc-ex{font-size:16px;margin-top:10px;color:#004d40;background:rgba(255,255,255,.6);border-radius:12px;padding:8px 12px;line-height:1.5}
 @media(max-width:560px){.fc-word{font-size:28px}.fc-meaning{font-size:18px}.fc-card{min-height:240px}}
 @media(prefers-reduced-motion:reduce){.fc-card{transition:none}}
+/* ===== VỞ Ô LI + FONT CHỮ VIẾT TIỂU HỌC (HP001 4 hàng, 1 ô li) =====
+   Học từ vuon-hoc-tap.html (FontFace + lưới ô li + đường kẻ đậm), cải tiến:
+   - Lưới bằng CSS (sắc nét mọi DPR, in được, chọn/đọc được), không cần canvas.
+   - Cỡ chữ "khớp ô li": 1 ô li = --oli; thân chữ (x-height) = 2 ô li; chữ cao = 5 ô li → 1 dòng = 6 ô li.
+   - 3 chế độ: .mode-mau (chữ mẫu đậm) · .mode-to (chữ mờ để tô theo) · .mode-trong (dòng trống để viết).
+   ===================================================================== */
+:root{--oli:14px;--hw:'HP001VHQ','HP001 4 hang','HP001 4 Hàng','Patrick Hand','Segoe Print','Comic Sans MS',cursive}
+.oli{
+  --line:#cfe0f2; --bold:#e77a99; --paper:#fffdf8;
+  position:relative; background-color:var(--paper);
+  background-image:
+    linear-gradient(to right, var(--line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--line) 1px, transparent 1px),
+    repeating-linear-gradient(to bottom, transparent 0, transparent calc(var(--oli)*6 - 2px), var(--bold) calc(var(--oli)*6 - 2px), var(--bold) calc(var(--oli)*6));
+  background-size: var(--oli) var(--oli), var(--oli) var(--oli), 100% calc(var(--oli)*6);
+  background-position: 0 0, 0 0, 0 calc(var(--oli)*4);  /* đường kẻ đậm = baseline, nằm ở ô thứ 4 từ trên (chữ cao chiếm 5 ô: 3 ô trên + 2 ô thân) */
+  border:1px solid #bcd0ea; border-radius:12px; overflow:hidden;
+  padding:0 calc(var(--oli)*1);
+  font-family:var(--hw); color:#2e263d;
+  -webkit-font-smoothing:antialiased;
+}
+.oli .oli-row{
+  display:block; height:calc(var(--oli)*6); line-height:calc(var(--oli)*6);
+  white-space:nowrap; overflow:hidden; text-overflow:clip;
+  /* chữ HP001: thân chữ ≈ 0.5em, chữ cao ≈ 1.25em → để thân = 2 ô li thì font-size ≈ 4 ô li */
+  font-size:calc(var(--oli)*4);
+  padding-left:calc(var(--oli)*0.5);
+  /* baseline được hiệu chỉnh TỰ ĐỘNG lúc chạy (hwCalibrate) để trùng đường kẻ đậm; --oli-shift tính bằng px */
+  transform:translateY(var(--oli-shift,0px));
+  will-change:transform;
+}
+.oli.mode-mau .oli-row{color:#2e263d}
+.oli.mode-to .oli-row{color:rgba(98,82,130,.32)}
+.oli.mode-trong .oli-row{color:transparent}
+.oli.mode-to .oli-row.solid{color:#2e263d}          /* dòng đầu đậm làm mẫu, các dòng sau mờ để tô */
+.oli.print-safe{border-color:#999}
+.oli-wrap{margin:12px 0}
+.oli-tools{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:6px 0 4px;font-size:13px;color:var(--muted)}
+.oli-tools button{padding:5px 10px;font-size:12.5px}
+.oli-tools .seg{display:inline-flex;border:1.5px solid #b2dfdb;border-radius:10px;overflow:hidden}
+.oli-tools .seg button{border-radius:0;box-shadow:none;background:#fff;color:#00695c;padding:5px 10px}
+.oli-tools .seg button.on{background:#00838f;color:#fff}
+.oli-status{font-size:12px;color:#78909c}
+.oli-status.ok{color:#2e7d32}
+.oli-caption{font-size:13px;color:var(--muted);margin-top:4px}
+/* cỡ chữ theo thiết bị: điện thoại nhỏ hơn để đủ chữ trên 1 dòng */
+@media(max-width:560px){:root{--oli:11px}}
+@media print{.oli{break-inside:avoid;background-color:#fff}.oli-tools{display:none}}
 /* build tokens (used state) + open-the-box animation */
 .tok.used{visibility:hidden}
 .box-anim{font-size:64px;margin:14px 0;display:inline-block;transition:transform .4s}
@@ -488,7 +560,7 @@ body.mode-viet #tab-viet{display:block}
     <div style="font-size:11.5px;color:#90a4ae;margin-top:10px">⏱️ Thời gian tính khi app đang mở &amp; đang học. Tiến trình tự đồng bộ khi bé học.</div>
   </div>
 </div>
-<button id="navToggle" type="button" aria-label="Thu gọn / mở mục lục" title="Mục lục" onclick="document.querySelector('.links').classList.toggle('open')" style="display:none">☰</button>
+<button id="navToggle" type="button" aria-label="Thu gọn / mở mục lục" title="Thu gọn / mở mục lục" onclick="toggleSideNav()">⟨</button>
 <button id="backTopBtn" type="button" aria-label="Lên đầu trang" title="Lên đầu trang" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;right:12px;bottom:64px;z-index:180;width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#4dd0e1,#00838f);font-size:22px;display:none">⬆</button>
 
 <div class="wrap">
@@ -1143,10 +1215,12 @@ function validate(q){
     if(!Array.isArray(q.acceptOrders)||!q.acceptOrders.length) return false;
   } else if(q.type==='unscramble'){
     if(!q.target||!Array.isArray(q.pieces)||q.pieces.length<2) return false;
-    /* các mảnh (bỏ dấu cách) phải ghép lại đúng bằng từ đích (bỏ dấu cách) */
-    const joined=normNFC(q.pieces.join('')).toLowerCase().replace(/\s+/g,'');
-    const tgt=normNFC(q.target).toLowerCase().replace(/\s+/g,'');
-    if(joined!==tgt) return false;
+    /* các mảnh ĐÃ XÁO TRỘN → so sánh theo TẬP (multiset) tiếng, không theo thứ tự */
+    const canon=s=>normNFC(s).toLowerCase();
+    const a=q.pieces.map(canon).sort().join('|');
+    const b=canon(q.target).split(/\s+/).sort().join('|');
+    if(a!==b) return false;
+    /* hai mảnh giống hệt nhau thì vẫn chấm được (ghép theo tiếng), nhưng cần ≥1 thứ tự đúng — luôn đúng */
   } else return false;
   return true;
 }
@@ -1192,8 +1266,10 @@ function gradeReorder(q,seqIdx){
 }
 /* unscramble: seq là mảng chỉ số mảnh (âm tiết/chữ) theo thứ tự bé xếp; ghép lại = từ đích */
 function gradeUnscramble(q,seqIdx){
-  const built=seqIdx.map(i=>q.pieces[i]).join('');
-  return normNFC(built).toLowerCase()===normNFC(q.target).toLowerCase();
+  /* so sánh KHÔNG phân biệt khoảng trắng (mảnh là tiếng; từ đích viết có dấu cách) */
+  const built=seqIdx.map(i=>q.pieces[i]).join(' ');
+  const canon=s=>normNFC(s).toLowerCase().replace(/\s+/g,'');
+  return canon(built)===canon(q.target);
 }
 
 /* =====================================================================
@@ -1292,7 +1368,8 @@ GEN.UNSCRAMBLE=function(prefSkill){
    8. LÝ THUYẾT – nội dung ôn tập (9 chuyên đề) + mẹo SGV
    Dùng textContent/escape cho phần động; nội dung tĩnh do dự án biên soạn.
    ===================================================================== */
-const THEORY_HTML=`
+/* Hàm (không phải hằng) để có thể gọi oliBlock/escAttr được định nghĩa ở khối script sau; render trong boot() */
+function buildTheoryHTML(){return `
 <h2 class="chapter" id="gioithieu"><span class="num">🌱</span>Giới thiệu &amp; cách dùng</h2>
 <div class="card">
   <p>Đây là góc <b>ôn tập tại nhà</b> giúp con hiểu và nhớ kiến thức Tiếng Việt lớp 3, <b>bám chủ điểm bộ sách Kết nối tri thức với cuộc sống</b>. Trang này <b>không thay thế</b> sách giáo khoa hay lịch dạy chính thức.</p>
@@ -1306,6 +1383,8 @@ const THEORY_HTML=`
   <div class="rule">• <b>Sự vật</b>: người, con vật, đồ vật, cây cối, hiện tượng (cái mắt thấy, tay sờ, gọi được tên).<br>• <b>Hoạt động</b>: việc làm, di chuyển (chạy, đọc, nấu…).<br>• <b>Đặc điểm</b>: màu sắc, hình dáng, kích thước, âm thanh, hương vị, tính cách.</div>
   <div class="tip"><b>Sự vật</b> → “Gọi tên &amp; Chạm vào”. <b>Hoạt động</b> → “Thử làm động tác”. <b>Đặc điểm</b> → “Thêm <i>rất</i>/<i>thật</i>”: rất đẹp, thật cao.</div>
   <div class="ex">Bạn Lan (sự vật) <b>tưới cây</b> (hoạt động); bông hoa <b>thơm ngát</b> (đặc điểm).</div>
+  <h4>✒️ Nhìn – chép vào vở ô li</h4>
+  ${oliBlock('Bạn Lan tưới cây trong vườn.',{mode:'chep',caption:'Dòng 1 là chữ mẫu; dòng 2 con tô theo; dòng 3 con tự viết. Bấm “In trang tập viết” để in ra giấy.'})}
 </div>
 <h3 id="c03">1.2 Từ gần nghĩa – trái nghĩa</h3>
 <div class="card">
@@ -1343,6 +1422,8 @@ const THEORY_HTML=`
   <div class="rule">Công thức: <b>[A] + [từ so sánh: như, tựa, giống] + [B]</b> dựa trên một <b>nét giống nhau</b>.</div>
   <div class="warn">Có “<b>như</b>” chưa chắc là so sánh! “Em làm đúng <b>như</b> cô dặn.” — “như” nghĩa là “theo đúng”, không so sánh hai sự vật.</div>
   <div class="ex">“Mặt hồ phẳng như tấm gương.” → A=mặt hồ, nét giống=phẳng, B=tấm gương.</div>
+  <h4>✒️ Chép câu so sánh</h4>
+  ${oliBlock('Mặt hồ phẳng như tấm gương.',{mode:'chep'})}
 </div>
 
 <h2 class="chapter" id="cd3"><span class="num">3</span>Chính tả &amp; Viết hoa</h2>
@@ -1350,6 +1431,10 @@ const THEORY_HTML=`
 <div class="card">
   <div class="tip"><b>“Anh em đi cùng i, e, ê”</b>: <b>k, gh, ngh</b> đứng trước <b>i, e, ê</b>; còn <b>c, g, ng</b> đứng trước các âm khác (a, o, ô, u, ư…).</div>
   <div class="rule">Viết hoa: chữ đầu câu; tên riêng người, địa danh Việt Nam (sông Đồng Nai); tên nước ngoài phiên âm có gạch nối (Ma-ri-a).</div>
+  <h4>✒️ Tập viết các tiếng dễ nhầm</h4>
+  ${oliBlock('cái kéo, ghế gỗ, nghỉ hè, con gà, ngô',{mode:'chep',caption:'k – gh – ngh đi với i, e, ê; c – g – ng đi với các âm còn lại.'})}
+  <h4>✒️ Tập viết hoa tên riêng</h4>
+  ${oliBlock('sông Đồng Nai, bạn Lan, Ma-ri-a',{mode:'chep'})}
 </div>
 
 <h2 class="chapter" id="cd4"><span class="num">4</span>Viết đoạn văn</h2>
@@ -1373,8 +1458,7 @@ const THEORY_HTML=`
 </table></div>
 <div class="note"><b>Nguồn:</b> bảng tuần này do dự án lập từ bản tóm tắt SGK/SGV Tiếng Việt 3 (Kết nối tri thức) mà phụ huynh cung cấp (${esc(WEEKS_SOURCE)}); <b>chưa đối chiếu từng ô</b> với số trang sách. Nếu tuần trên lớp lệch so với bảng, ba/mẹ cứ chọn tuần phù hợp ở Góc phụ huynh — tiến độ lưu theo kĩ năng, không theo số tuần. Con có thể bắt đầu từ bất cứ tuần nào; nghỉ hoặc lặp lại không mất tiến độ.</div>
 </div>
-`;
-document.getElementById('theoryRoot').innerHTML=THEORY_HTML;
+`;}
 
 /* =====================================================================
    9. LUYỆN TẬP – dựng khối theo kĩ năng, chấm điểm, giải thích
@@ -1461,9 +1545,13 @@ function wireQuizItems(box){
       const j=selL.dataset.j;
       /* gỡ nối cũ của right này */
       pw.querySelectorAll('.pR').forEach(x=>{if(x.dataset.pair===j)delete x.dataset.pair;});
+      /* gỡ nối cũ của trái này */
+      pw.querySelectorAll('.pR').forEach(x=>{if(x.dataset.pair===j&&x!==r)delete x.dataset.pair;});
       r.dataset.pair=j; selL.dataset.match=r.dataset.v;
-      selL.textContent=selL.textContent.replace(/ →.*$/,'')+' → '+r.dataset.v;
       selL.classList.remove('sel'); selL=null;
+      /* tô cùng màu + số cặp hai bên để thấy rõ đã nối */
+      pw.querySelectorAll('.pL').forEach(l=>{const on=!!l.dataset.match;l.classList.toggle('linked',on);l.style.setProperty('--pc',PAIR_COLORS[+l.dataset.j%PAIR_COLORS.length]);l.querySelector('.pnum')||l.insertAdjacentHTML('afterbegin',`<span class="pnum">${+l.dataset.j+1}</span>`);});
+      pw.querySelectorAll('.pR').forEach(x=>{const on=x.dataset.pair!=null;x.classList.toggle('linked',on);let n=x.querySelector('.pnum-r');if(!n){x.insertAdjacentHTML('beforeend','<span class="pnum pnum-r"></span>');n=x.querySelector('.pnum-r');}n.textContent=on?String(+x.dataset.pair+1):'';if(on)x.style.setProperty('--pc',PAIR_COLORS[+x.dataset.pair%PAIR_COLORS.length]);});
     }));
   });
   /* rubric buttons */
@@ -1515,8 +1603,10 @@ function checkQuiz(box){
       good=gradeMatch(q,mapping);
       pw.querySelectorAll('.pL').forEach(l=>{const correct=normNFC(l.dataset.match||'')===normNFC(q.pairs[l.dataset.j][1]);l.classList.add(correct?'right':'wrong');});
     }
-    if(good){ok++;fb.className='fb ok';fb.innerHTML='✔ Chính xác! Giỏi lắm 🎉<div class="expl">'+esc(q.explanation||'')+'</div>';}
-    else{fb.className='fb no';fb.innerHTML=(answered?'✘ Chưa đúng.':'✘ Con chưa trả lời câu này.')+'<div class="expl">'+esc(q.explanation||'')+'</div>';}
+    const copyText=q.stimulus&&/[.!?]$/.test(normNFC(q.stimulus))?q.stimulus:null;
+    const copyUI=copyText?`<details style="margin-top:6px"><summary style="cursor:pointer;font-weight:700;color:#00695c">✒️ Chép câu này vào vở ô li</summary>${oliBlock(copyText,{mode:'chep'})}</details>`:'';
+    if(good){ok++;fb.className='fb ok';fb.innerHTML='✔ Chính xác! Giỏi lắm 🎉<div class="expl">'+esc(q.explanation||'')+'</div>'+copyUI;}
+    else{fb.className='fb no';fb.innerHTML=(answered?'✘ Chưa đúng.':'✘ Con chưa trả lời câu này.')+'<div class="expl">'+esc(q.explanation||'')+'</div>'+copyUI;}
     /* #3: chỉ lần NỘP HỢP LỆ ĐẦU TIÊN mới ghi thống kê; câu đã xem đáp án không tính */
     if(q._state==='unanswered' && answered){ q._state='submitted'; recordSkill(q.skill, good, false); }
     else if(q._state==='unanswered' && !answered){ /* chưa trả lời: không ghi, cho phép nộp lại */ }
@@ -1546,7 +1636,9 @@ function showQuizAns(box){
     if(q.type==='single_choice')ansText='Đáp án: <b>'+esc(q.options[q.answer])+'</b>. ';
     else if(q.type==='select_span'){ansText='Đáp án: <b>'+esc(q.tokens[q.answer])+'</b>. ';const row=it.querySelector('.tokrow');if(row){row.querySelectorAll('.tok').forEach((t,j)=>{if(j===q.answer)t.classList.add('right');});row.dataset.locked='1';}}
     else if(q.type==='match_pairs')ansText='Đáp án: '+q.pairs.map(p=>esc(p[0])+'–'+esc(p[1])).join('; ')+'. ';
-    fb.innerHTML='📖 '+ansText+'<div class="expl">'+esc(q.explanation||'')+'</div>';
+    /* Nếu câu có ngữ liệu là một CÂU hoàn chỉnh → cho con chép lại vào vở ô li (nhìn – chép) */
+    const copyText=q.stimulus&&/[.!?]$/.test(normNFC(q.stimulus))?q.stimulus:null;
+    fb.innerHTML='📖 '+ansText+'<div class="expl">'+esc(q.explanation||'')+'</div>'+(copyText?`<details style="margin-top:6px"><summary style="cursor:pointer;font-weight:700;color:#00695c">✒️ Chép câu này vào vở ô li</summary>${oliBlock(copyText,{mode:'chep',tools:true})}</details>`:'');
   });
 }
 
@@ -1956,8 +2048,9 @@ function gRenderQ(){
     body+=`<div class="tokrow">`+q.tokens.map((t,j)=>`<span class="tok" data-j="${j}" onclick="gPickTok(${j})">${esc(t)}</span>`).join('')+`</div>`;
   } else if(q.type==='match_pairs'){
     const rights=shuffle(q.pairs.map(p=>p[1]));GS._rights=rights;
-    body+=`<div class="pairwrap"><div class="paircol">`+q.pairs.map((p,j)=>`<div class="tok pL" data-j="${j}" onclick="gPairL(${j})">${esc(p[0])}</div>`).join('')+
-      `</div><div class="paircol">`+rights.map((r,k)=>`<div class="tok pR" data-v="${esc(r)}" onclick="gPairR(this)">${esc(r)}</div>`).join('')+`</div></div>`;
+    body+=`<div class="pairwrap has-lines" id="gPairWrap"><svg class="pair-lines" id="gPairSvg" aria-hidden="true"></svg><div class="paircol">`+q.pairs.map((p,j)=>`<div class="tok pL" data-j="${j}" onclick="gPairL(${j})"><span class="pnum">${j+1}</span>${esc(p[0])}</div>`).join('')+
+      `</div><div class="paircol">`+rights.map((r,k)=>`<div class="tok pR" data-v="${esc(r)}" onclick="gPairR(this)">${esc(r)}<span class="pnum pnum-r"></span></div>`).join('')+`</div></div>
+      <div class="ws-count">Chạm một từ bên trái, rồi chạm từ bên phải để nối. Chạm lại cặp đã nối để gỡ.</div>`;
     GS._map={};GS._selL=null;
   } else if(q.type==='guided_writing'){
     body+=`<textarea id="gWrite" class="ans" placeholder="Con viết ở đây… (nói trước rồi hãy viết)"></textarea>
@@ -1965,7 +2058,7 @@ function gRenderQ(){
   } else if(q.type==='reorder_tokens'||q.type==='unscramble'){
     GS._seq=[];
     const src=q.type==='reorder_tokens'?q.tokens:q.pieces;
-    const sep=q.type==='unscramble'?'':' ';
+    const sep=' ';   /* tiếng Việt: các tiếng cách nhau bằng dấu cách, kể cả khi ghép từ */
     body+=`<div class="buildzone" id="gBuild" data-sep="${sep}"></div>
       <div class="tokrow" id="gBank">`+src.map((t,j)=>`<span class="tok" data-j="${j}" onclick="gBuildTap(${j})">${esc(t)}</span>`).join('')+`</div>
       <div style="margin-top:8px"><button class="gry" style="padding:6px 12px;font-size:13px" onclick="gBuildUndo()">↩︎ Bỏ thẻ cuối</button></div>`;
@@ -1983,14 +2076,58 @@ function gRenderQ(){
   const ttsBtn=document.getElementById('gTtsBtn');
   if(ttsBtn)ttsBtn.addEventListener('click',()=>TTS.speak(q.prompt+(q.stimulus?'. '+q.stimulus:'')));
   GS.answered=false;GS.picked=null;GS.tok=null;GS.usedHint=false;GS.retried=false;GS.qStart=performance.now();
+  if(q.type==='match_pairs'){setTimeout(()=>gPairPaint(),60);const gc=document.getElementById('gCard');if(gc&&!gc._pairScroll){gc._pairScroll=true;gc.addEventListener('scroll',()=>{if(GS&&GS._map)gPairPaint();},{passive:true});}}
   /* #17: đưa focus vào lựa chọn đầu tiên trong modal (quản lí focus cơ bản, hỗ trợ bàn phím) */
   const first=document.querySelector('#gCard .gopt, #gCard .tok, #gCard textarea, #gCard input');
   if(first)setTimeout(()=>{try{first.focus({preventScroll:true});}catch(e){}},30);
 }
 function gPick(j){if(GS.answered)return;GS.picked=j;document.querySelectorAll('.gopt').forEach(b=>b.classList.toggle('sel',+b.dataset.j===j));}
 function gPickTok(j){if(GS.answered)return;GS.tok=j;document.querySelectorAll('#gCard .tok').forEach(t=>t.classList.toggle('sel',+t.dataset.j===j));}
-function gPairL(j){if(GS.answered)return;GS._selL=j;document.querySelectorAll('.pL').forEach(l=>l.classList.toggle('sel',+l.dataset.j===j));}
-function gPairR(el){if(GS.answered||GS._selL==null)return;const j=GS._selL;document.querySelectorAll('.pR').forEach(x=>{if(x.dataset.pair==j)delete x.dataset.pair;});el.dataset.pair=j;GS._map[j]=el.dataset.v;const l=document.querySelector('.pL[data-j="'+j+'"]');if(l){l.textContent=l.textContent.replace(/ →.*$/,'')+' → '+el.dataset.v;l.classList.remove('sel');}GS._selL=null;}
+/* Nối cặp: chọn trái → chọn phải; vẽ ĐƯỜNG NỐI + gắn số cặp hai bên; chạm lại để gỡ */
+const PAIR_COLORS=['#00838f','#ef6c00','#6a1b9a','#2e7d32','#c62828','#1565c0'];
+function gPairL(j){
+  if(GS.answered)return;
+  /* chạm lại thẻ trái đã nối → gỡ cặp đó */
+  if(GS._map[j]!=null&&GS._selL!==j){gPairUnlink(j);return;}
+  GS._selL=(GS._selL===j)?null:j;
+  document.querySelectorAll('.pL').forEach(l=>l.classList.toggle('sel',+l.dataset.j===GS._selL));
+}
+function gPairR(el){
+  if(GS.answered)return;
+  /* chạm thẻ phải đã nối khi chưa chọn trái → gỡ cặp đó */
+  if(GS._selL==null){if(el.dataset.pair!=null)gPairUnlink(+el.dataset.pair);return;}
+  const j=GS._selL;
+  /* gỡ liên kết cũ của thẻ phải này (nếu có) và của thẻ trái này */
+  if(el.dataset.pair!=null&&+el.dataset.pair!==j)gPairUnlink(+el.dataset.pair,true);
+  if(GS._map[j]!=null)gPairUnlink(j,true);
+  el.dataset.pair=j;GS._map[j]=el.dataset.v;
+  const l=document.querySelector('.pL[data-j="'+j+'"]');if(l)l.classList.remove('sel');
+  GS._selL=null;gPairPaint();
+}
+function gPairUnlink(j,silent){
+  delete GS._map[j];
+  document.querySelectorAll('.pR').forEach(x=>{if(+x.dataset.pair===j)delete x.dataset.pair;});
+  if(!silent)gPairPaint();
+}
+/* tô màu cặp đã nối (số + viền cùng màu hai bên) và vẽ đường nối bằng SVG */
+function gPairPaint(graded){
+  const wrap=document.getElementById('gPairWrap'),svg=document.getElementById('gPairSvg');if(!wrap||!svg)return;
+  if(!graded){
+    document.querySelectorAll('.pL').forEach(l=>{const j=+l.dataset.j;const on=GS._map[j]!=null;l.classList.toggle('linked',on);l.style.setProperty('--pc',PAIR_COLORS[j%PAIR_COLORS.length]);});
+    document.querySelectorAll('.pR').forEach(r=>{const on=r.dataset.pair!=null;r.classList.toggle('linked',on);const n=r.querySelector('.pnum-r');if(n)n.textContent=on?String(+r.dataset.pair+1):'';if(on)r.style.setProperty('--pc',PAIR_COLORS[+r.dataset.pair%PAIR_COLORS.length]);});
+  }
+  const W=wrap.clientWidth,H=wrap.scrollHeight;svg.setAttribute('viewBox',`0 0 ${W} ${H}`);svg.style.height=H+'px';
+  const wr=wrap.getBoundingClientRect();let d='';
+  Object.keys(GS._map).forEach(j=>{
+    const l=document.querySelector('.pL[data-j="'+j+'"]'),r=document.querySelector('.pR[data-pair="'+j+'"]');if(!l||!r)return;
+    const col=getComputedStyle(l).getPropertyValue('--pc').trim()||PAIR_COLORS[j%PAIR_COLORS.length];
+    const a=l.getBoundingClientRect(),b=r.getBoundingClientRect();
+    const x1=a.right-wr.left,y1=a.top+a.height/2-wr.top,x2=b.left-wr.left,y2=b.top+b.height/2-wr.top;const cx=(x1+x2)/2;
+    d+=`<path d="M${x1},${y1} C${cx},${y1} ${cx},${y2} ${x2},${y2}" stroke="${col}" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="${x1}" cy="${y1}" r="4" fill="${col}"/><circle cx="${x2}" cy="${y2}" r="4" fill="${col}"/>`;
+  });
+  svg.innerHTML=d;
+}
+window.addEventListener('resize',()=>{if(GS&&GS._map)gPairPaint();});
 function gHint(){const q=GS.qs[GS.i];const area=document.getElementById('gHintArea');if(!area)return;GS.usedHint=true;const tip=(SKILL_BY_ID[q._skill||q.skill]||{}).tip||'Đọc kĩ câu và loại dần đáp án chưa hợp lí nhé.';area.innerHTML=`<div class="ghint-area">💡 <b>Gợi ý:</b> ${esc(tip)}</div>`;}
 /* Xếp câu / ghép từ: chạm thẻ ở kho → thêm vào vùng xếp (tap-to-select, không kéo thả) */
 function gBuildTap(j){
@@ -2007,10 +2144,17 @@ function gBuildUndo(){
 }
 function gBuildRefresh(){
   const q=GS.qs[GS.i],zone=document.getElementById('gBuild');if(!zone)return;
-  const sep=zone.dataset.sep;const src=q.type==='reorder_tokens'?q.tokens:q.pieces;
-  zone.innerHTML=GS._seq.map(j=>`<span class="tok" style="cursor:default">${esc(src[j])}</span>`).join(sep===''?'':'');
-  /* dùng khoảng cách CSS gap cho reorder; unscramble ghép liền */
-  zone.style.gap=sep===''?'0':'6px';
+  const src=q.type==='reorder_tokens'?q.tokens:q.pieces;
+  zone.innerHTML=GS._seq.map(j=>`<span class="tok" style="cursor:default">${esc(src[j])}</span>`).join('');
+  zone.style.gap='6px';
+  /* cho phép chạm vào thẻ trong vùng xếp để lấy ra (không chỉ "bỏ thẻ cuối") */
+  zone.querySelectorAll('.tok').forEach((t,k)=>{t.style.cursor='pointer';t.title='Chạm để bỏ thẻ này';t.addEventListener('click',()=>gBuildRemove(k));});
+}
+function gBuildRemove(k){
+  if(GS.answered||!GS._seq||k<0||k>=GS._seq.length)return;
+  const j=GS._seq.splice(k,1)[0];const bank=document.getElementById('gBank');
+  const t=bank&&bank.querySelector('.tok[data-j="'+j+'"]');if(t){t.classList.remove('used');t.style.visibility='';}
+  gBuildRefresh();
 }
 
 function gSubmit(){
@@ -2022,7 +2166,14 @@ function gSubmit(){
     if(ok||!canRetry){document.querySelectorAll('.gopt').forEach(b=>{const j=+b.dataset.j;if(j===q.answer)b.classList.add('right');if(j===GS.picked&&!ok)b.classList.add('wrong');b.onclick=null;});}}
   else if(q.type==='select_span'){if(GS.tok==null)return;ok=GS.tok===q.answer;
     if(ok||!canRetry){document.querySelectorAll('#gCard .tok').forEach(t=>{const j=+t.dataset.j;if(j===q.answer)t.classList.add('right');if(j===GS.tok&&!ok)t.classList.add('wrong');t.onclick=null;});}}
-  else if(q.type==='match_pairs'){answered=Object.keys(GS._map).length>0;ok=q.pairs.every((p,i)=>normNFC(GS._map[i]||'')===normNFC(p[1]));document.querySelectorAll('.pL').forEach(l=>{const correct=normNFC(GS._map[l.dataset.j]||'')===normNFC(q.pairs[l.dataset.j][1]);l.classList.add(correct?'right':'wrong');});}
+  else if(q.type==='match_pairs'){
+    answered=Object.keys(GS._map).length>=q.pairs.length;
+    if(!answered){toast('Con nối hết các cặp rồi bấm Kiểm tra nhé.');return;}
+    ok=q.pairs.every((p,i)=>normNFC(GS._map[i]||'')===normNFC(p[1]));
+    document.querySelectorAll('.pL').forEach(l=>{const correct=normNFC(GS._map[l.dataset.j]||'')===normNFC(q.pairs[l.dataset.j][1]);l.classList.add(correct?'right':'wrong');l.style.setProperty('--pc',correct?'#2e7d32':'#d32f2f');});
+    document.querySelectorAll('.pR').forEach(r=>{const j=r.dataset.pair;if(j==null)return;const correct=normNFC(GS._map[j]||'')===normNFC(q.pairs[j][1]);r.classList.add(correct?'right':'wrong');r.style.setProperty('--pc',correct?'#2e7d32':'#d32f2f');});
+    gPairPaint(true);   /* vẽ lại đường nối: xanh = đúng, đỏ = sai */
+  }
   else if(q.type==='reorder_tokens'){if(!GS._seq||GS._seq.length<q.tokens.length){toast('Con xếp đủ các thẻ rồi bấm Kiểm tra nhé.');return;}ok=gradeReorder(q,GS._seq);}
   else if(q.type==='unscramble'){if(!GS._seq||GS._seq.length<q.pieces.length){toast('Con ghép đủ các mảnh rồi bấm Kiểm tra nhé.');return;}ok=gradeUnscramble(q,GS._seq);}
   else if(q.type==='guided_writing'){const t=document.getElementById('gWrite');const txt=t?normNFC(t.value):'';if(!txt){toast('Con viết vài câu rồi bấm Kiểm tra nhé.');return;}saveWriting(q.skill,q.prompt,txt,'draft');gWritingFeedback();return;}
@@ -2125,6 +2276,7 @@ function openParent(){const ov=document.getElementById('pcOverlay');ov.classList
 function closeParent(){document.getElementById('pcOverlay').classList.remove('open');}
 function renderParent(){
   const body=document.getElementById('pcBody');
+  setTimeout(hwRefreshStatus,0);
   /* thống kê */
   const autoAttempts=Object.entries(G.skills).filter(([id])=>id!=='C10_VIET').reduce((a,[,s])=>a+s.attempts,0);
   const autoCorrect=Object.entries(G.skills).filter(([id])=>id!=='C10_VIET').reduce((a,[,s])=>a+s.correct,0);
@@ -2161,6 +2313,16 @@ function renderParent(){
       <div style="margin-top:12px;padding-top:10px;border-top:1px dashed var(--line)">
         <label style="display:flex;gap:8px;align-items:flex-start;font-size:14px"><input type="checkbox" id="pcStt" ${G.sttEnabled?'checked':''} onchange="G.sttEnabled=this.checked;saveAll();toast(this.checked?'Đã bật đọc-để-máy-gõ ở Góc viết.':'Đã tắt đọc-để-máy-gõ.')"><span><b>🎤 Cho phép “đọc để máy gõ” ở Góc viết</b><br><span style="color:var(--muted);font-size:12.5px">Dùng nhận dạng giọng nói của trình duyệt (Chrome/Edge). Âm thanh có thể được gửi tới máy chủ của nhà cung cấp trình duyệt để xử lí; cần mạng. Tắt mặc định để bảo vệ riêng tư.</span></span></label>
         <label style="display:flex;gap:8px;align-items:flex-start;font-size:14px;margin-top:8px"><input type="checkbox" id="pcAdv" ${G.advUnlocked?'checked':''} onchange="G.advUnlocked=this.checked;saveAll();toast(this.checked?'Đã mở nội dung Nâng cao.':'Đã ẩn nội dung Nâng cao.')"><span><b>🌟 Mở nội dung “Nâng cao” (từ ghép, so sánh, bài tham khảo mở rộng)</b><br><span style="color:var(--muted);font-size:12.5px">Tự mở khi con đạt ≥ 6 kĩ năng ở mức practicing/stable; ba/mẹ có thể bật sớm nếu con muốn thử thách.</span></span></label>
+      </div>
+      <div style="margin-top:12px;padding-top:10px;border-top:1px dashed var(--line)">
+        <b>✒️ Font chữ viết tiểu học (vở ô li)</b>
+        <div class="oli-status" style="margin:4px 0"></div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+          <button class="teal" onclick="document.getElementById('hwFile').click()">📥 Nhập font .ttf khác</button>
+          <input type="file" id="hwFile" accept=".ttf,.otf,font/ttf,font/otf" style="display:none" onchange="hwImport(this.files[0]);this.value=''">
+          <button class="gry" onclick="hwClearCache()">Xoá font đã nhập</button>
+        </div>
+        <div style="font-size:12px;color:var(--muted);margin-top:4px">Mặc định app tự nạp <b>HP001_4_hang_1_o_ly.ttf</b> đặt cùng thư mục và lưu vào bộ nhớ trình duyệt để dùng offline. Font nhập tay chỉ lưu trên máy này.</div>
       </div>
       <div style="margin-top:12px;padding-top:10px;border-top:1px dashed var(--line)">
         <button class="gry" onclick="resetGame()">↺ Đặt lại toàn bộ tiến độ trò chơi</button>
@@ -2208,6 +2370,20 @@ document.addEventListener('visibilitychange',()=>{const ov=document.getElementBy
     if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('tok')){e.preventDefault();e.target.click();}
   });
 })();
+/* --- Thu gọn mục lục bên trái (iPad/máy tính; mobile dùng burger) --- */
+function toggleSideNav(){
+  if(window.matchMedia('(max-width:820px)').matches){document.querySelector('.links')?.classList.toggle('open');return;}
+  const collapsed=document.body.classList.toggle('nav-collapsed');
+  try{localStorage.setItem('tv3_navCollapsed',collapsed?'1':'0');}catch(e){}
+  const btn=document.getElementById('navToggle');if(btn)btn.textContent=collapsed?'☰':'⟨';
+  /* vẽ lại đường nối (nếu đang chơi Nối cặp) sau khi layout đổi */
+  setTimeout(()=>{if(GS&&GS._map)gPairPaint();},320);
+}
+try{
+  if(localStorage.getItem('tv3_navCollapsed')==='1'&&!window.matchMedia('(max-width:820px)').matches)document.body.classList.add('nav-collapsed');
+  const _nt=document.getElementById('navToggle');if(_nt)_nt.textContent=document.body.classList.contains('nav-collapsed')?'☰':'⟨';
+}catch(e){}
+
 /* back-to-top */
 window.addEventListener('scroll',()=>{const b=document.getElementById('backTopBtn');if(!b)return;const modal=document.getElementById('gModal').classList.contains('open')||document.getElementById('pcOverlay').classList.contains('open');b.style.display=(!modal&&window.scrollY>400)?'flex':'none';},{passive:true});
 
@@ -2441,6 +2617,119 @@ async function authBoot(){
     if(!(window.crypto&&crypto.subtle)){authShowGate(false);authRenderChip(null);return;}
     const s=softUser();if(s){enterApp(s.u);}else{authShowGate(true);authRenderChip(null);}
   }
+}
+
+/* =====================================================================
+   13b'. FONT CHỮ VIẾT TIỂU HỌC + VỞ Ô LI (học từ vuon-hoc-tap.html, cải tiến)
+   - Tự nạp HP001_4_hang_1_o_ly.ttf cùng thư mục bằng FontFace; cache vào IndexedDB
+     để lần sau mở offline (file://) vẫn có font, kể cả khi fetch bị chặn.
+   - Cho phép phụ huynh nhập .ttf khác (Góc phụ huynh) — lưu cùng cache.
+   - oliBlock(text, opts) → HTML vở ô li 3 chế độ: mẫu / tô / trống; tự ngắt dòng theo độ rộng.
+   ===================================================================== */
+const HW={family:'HP001VHQ',file:'HP001_4_hang_1_o_ly.ttf',loaded:false,source:'',db:'tv3_font_db',store:'fonts'};
+function hwIdb(){return new Promise((ok,no)=>{const r=indexedDB.open(HW.db,1);r.onupgradeneeded=()=>r.result.createObjectStore(HW.store);r.onsuccess=()=>ok(r.result);r.onerror=()=>no(r.error);});}
+async function hwCachePut(buf,name){try{const db=await hwIdb();await new Promise((ok,no)=>{const t=db.transaction(HW.store,'readwrite');t.objectStore(HW.store).put({buf,name},'primary');t.oncomplete=ok;t.onerror=()=>no(t.error);});}catch(e){}}
+async function hwCacheGet(){try{const db=await hwIdb();return await new Promise((ok,no)=>{const r=db.transaction(HW.store).objectStore(HW.store).get('primary');r.onsuccess=()=>ok(r.result||null);r.onerror=()=>no(r.error);});}catch(e){return null;}}
+async function hwLoadBuffer(buf,name){
+  try{const ff=new FontFace(HW.family,buf);await ff.load();document.fonts.add(ff);HW.loaded=true;HW.source=name||'font đã nhập';hwRefreshStatus();return true;}
+  catch(e){console.warn('HW font',e);return false;}
+}
+async function hwBoot(){
+  /* 1) cache trước (offline) → 2) fetch file cùng thư mục → 3) thử tên font hệ thống */
+  const c=await hwCacheGet();
+  if(c&&c.buf){if(await hwLoadBuffer(c.buf,c.name))return;}
+  try{const r=await fetch(HW.file);if(r.ok){const buf=await r.arrayBuffer();if(await hwLoadBuffer(buf,HW.file)){hwCachePut(buf,HW.file);return;}}}catch(e){}
+  /* file:// trên một số trình duyệt chặn fetch → thử FontFace(url) trực tiếp */
+  try{const ff=new FontFace(HW.family,`url(${HW.file})`);await ff.load();document.fonts.add(ff);HW.loaded=true;HW.source=HW.file;hwRefreshStatus();return;}catch(e){}
+  HW.loaded=false;HW.source='';hwRefreshStatus();
+}
+async function hwImport(file){if(!file)return;const buf=await file.arrayBuffer();if(await hwLoadBuffer(buf,file.name)){await hwCachePut(buf,file.name);toast('✅ Đã nạp font chữ viết: '+file.name);document.querySelectorAll('.oli').forEach(el=>el.style.fontFamily='');}else toast('Không đọc được font này (.ttf/.otf).');}
+async function hwClearCache(){try{const db=await hwIdb();const t=db.transaction(HW.store,'readwrite');t.objectStore(HW.store).delete('primary');t.oncomplete=()=>{toast('Đã xoá font đã nhập. Tải lại trang để dùng font mặc định.');};}catch(e){}}
+function hwRefreshStatus(){
+  document.querySelectorAll('.oli-status').forEach(el=>{el.textContent=HW.loaded?('✒️ Font chữ viết: '+HW.source):'✒️ Chưa có font HP001 — đang dùng chữ dự phòng (đặt HP001_4_hang_1_o_ly.ttf cùng thư mục hoặc nhập ở Góc phụ huynh).';el.classList.toggle('ok',HW.loaded);});
+  hwCalibrate();
+}
+/* CẢI TIẾN so với vuon-hoc-tap: đo metric thật của font (x-height, baseline) rồi tự căn
+   - font-size sao cho THÂN CHỮ (x-height) = đúng 2 ô li
+   - dịch dọc sao cho BASELINE trùng đường kẻ đậm (ô thứ 4 từ trên trong dòng 6 ô)
+   Không phụ thuộc số "150px/0.28em" cứng như bản canvas cũ. */
+function hwCalibrate(){
+  try{
+    const oli=parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--oli'))||14;
+    const fam=getComputedStyle(document.documentElement).getPropertyValue('--hw');
+    const cv=document.createElement('canvas');const ctx=cv.getContext('2d');
+    const probe=100;ctx.font=`${probe}px ${fam}`;
+    const mx=ctx.measureText('x');const mH=ctx.measureText('H');
+    const xh=mx.actualBoundingBoxAscent||probe*0.5;          /* chiều cao thân chữ ở 100px */
+    const capH=mH.actualBoundingBoxAscent||probe*0.7;
+    /* font-size để x-height = 2 ô li */
+    let fs=(2*oli)/(xh/probe);
+    /* nếu chữ hoa vượt quá 5 ô li (3 trên + 2 thân) thì thu lại cho vừa */
+    const capAt=capH/probe*fs;if(capAt>5*oli)fs=fs*(5*oli)/capAt;
+    /* baseline: với line-height = 6 ô, text "alphabetic baseline" của dòng nằm ở
+       top + (6oli - (ascent+descent)*fs/probe)/2 + ascent*fs/probe  (theo font ascent/descent) */
+    const mA=ctx.measureText('Hg');
+    const asc=(mA.fontBoundingBoxAscent||probe*0.95)/probe*fs, desc=(mA.fontBoundingBoxDescent||probe*0.25)/probe*fs;
+    const baselineY=(6*oli-(asc+desc))/2+asc;         /* vị trí baseline hiện tại trong dòng */
+    const targetY=4*oli;                                /* đường kẻ đậm */
+    const shift=targetY-baselineY;
+    document.documentElement.style.setProperty('--oli-fs',fs.toFixed(2)+'px');
+    document.documentElement.style.setProperty('--oli-shift',shift.toFixed(2)+'px');
+    document.querySelectorAll('.oli .oli-row').forEach(r=>{r.style.fontSize='var(--oli-fs)';});
+  }catch(e){}
+}
+window.addEventListener('resize',()=>{clearTimeout(window._hwT);window._hwT=setTimeout(hwCalibrate,150);});
+try{document.fonts&&document.fonts.addEventListener&&document.fonts.addEventListener('loadingdone',hwCalibrate);}catch(e){}
+
+/* Ngắt dòng theo số kí tự ước lượng (font viết tay rộng ≈ 0.6em/kí tự). rows = số dòng tối thiểu. */
+function oliWrap(text,maxChars){
+  const words=normNFC(text).split(/\s+/).filter(Boolean);const lines=[];let cur='';
+  for(const w of words){if((cur+' '+w).trim().length>maxChars&&cur){lines.push(cur);cur=w;}else cur=(cur+' '+w).trim();}
+  if(cur)lines.push(cur);return lines;
+}
+/* mode: 'mau' | 'to' | 'trong' | 'chep' (dòng 1 mẫu đậm, các dòng sau mờ để tô, thêm 1 dòng trống) */
+function oliBlock(text,opts){
+  opts=opts||{};const mode=opts.mode||'mau';
+  const maxChars=opts.maxChars||(window.matchMedia('(max-width:560px)').matches?18:30);
+  const lines=oliWrap(text,maxChars);
+  let rows='';
+  if(mode==='chep'){
+    lines.forEach(l=>{rows+=`<span class="oli-row solid">${esc(l)}</span>`;});
+    lines.forEach(l=>{rows+=`<span class="oli-row">${esc(l)}</span>`;});
+    rows+=`<span class="oli-row" style="color:transparent">${esc(lines[0]||'')}</span>`;
+  }else{
+    lines.forEach(l=>{rows+=`<span class="oli-row">${esc(l)}</span>`;});
+    const extra=Math.max(0,(opts.rows||0)-lines.length);for(let i=0;i<extra;i++)rows+=`<span class="oli-row">&nbsp;</span>`;
+  }
+  const cls='oli mode-'+(mode==='chep'?'to':mode)+(opts.print?' print-safe':'');
+  const id='oli'+Math.random().toString(36).slice(2,7);
+  const tools=opts.tools===false?'':`<div class="oli-tools">
+      <span class="seg"><button class="${mode==='mau'?'on':''}" data-oli="${id}" data-mode="mau">Chữ mẫu</button><button class="${mode==='to'||mode==='chep'?'on':''}" data-oli="${id}" data-mode="chep">Tô theo</button><button class="${mode==='trong'?'on':''}" data-oli="${id}" data-mode="trong">Dòng trống</button></span>
+      <button class="teal" data-oliread="${id}">🔊 Nghe</button>
+      <button class="gry" data-oliprint="${id}">🖨️ In trang tập viết</button>
+      <span class="oli-status"></span></div>`;
+  const html=`<div class="oli-wrap" data-text="${escAttr(text)}"><div class="${cls}" id="${id}" aria-label="Vở ô li: ${escAttr(text)}">${rows}</div>${tools}${opts.caption?`<div class="oli-caption">${esc(opts.caption)}</div>`:''}</div>`;
+  setTimeout(hwRefreshStatus,0);
+  return html;
+}
+/* Delegation cho nút của vở ô li */
+document.addEventListener('click',e=>{
+  const m=e.target.closest('[data-oli]');
+  if(m){const wrap=m.closest('.oli-wrap');const text=wrap.dataset.text;const mode=m.dataset.mode;
+    const maxChars=window.matchMedia('(max-width:560px)').matches?18:30;
+    wrap.outerHTML=oliBlock(text,{mode:mode,maxChars,caption:wrap.querySelector('.oli-caption')?.textContent||''});return;}
+  const r=e.target.closest('[data-oliread]');if(r){const wrap=r.closest('.oli-wrap');TTS.speak(wrap.dataset.text,0.9);return;}
+  const p=e.target.closest('[data-oliprint]');if(p){const wrap=p.closest('.oli-wrap');oliPrint(wrap.dataset.text);return;}
+});
+/* In trang tập viết: 1 dòng mẫu + 3 dòng tô + 3 dòng trống, khổ A4 */
+function oliPrint(text){
+  const sheet=document.getElementById('printSheet');
+  const lines=oliWrap(text,32);
+  const row=(t,cls)=>`<span class="oli-row ${cls||''}">${esc(t||'')}</span>`;
+  let rows='';lines.forEach(l=>rows+=row(l,'solid'));for(let k=0;k<3;k++)lines.forEach(l=>rows+=row(l));for(let k=0;k<3;k++)rows+=row('','');
+  sheet.innerHTML=`<div class="ps-frame"><h1>✒️ Trang tập viết</h1><div class="ps-meta">${new Date().toLocaleDateString('vi-VN')} · Dòng 1: chữ mẫu · Dòng tiếp: tô theo · Dòng cuối: tự viết</div>
+    <div class="oli mode-to print-safe" style="--oli:18px">${rows}</div></div>`;
+  window.print();
 }
 
 /* =====================================================================
@@ -2725,6 +3014,7 @@ function wsStep4(t,g){
       <button class="chip" data-ws="rev" data-v="repeat">Hai câu có kể cùng một ý không?</button>
       <button class="chip" data-ws="rev" data-v="word">Chọn một từ đúng ý hơn</button>
       <button class="chip" data-ws="rev" data-v="order">Người đọc có biết việc nào trước không?</button></div></div>
+    ${sents.length?`<h4 style="margin-top:12px">✒️ Bài của con trên vở ô li</h4>${oliBlock(WS.text,{mode:'mau',caption:'Con thấy chữ mình khi viết vào vở sẽ thế này. Bấm “Tô theo” để tập chép lại bài của chính mình, hoặc “In trang tập viết”.'})}`:''}
     <div class="gbtn-row" style="justify-content:flex-start;margin-top:10px">
       <button class="grn gbig" data-ws="save">💾 Lưu bản nháp${status?' (cập nhật)':''}</button>
       <button class="teal" data-ws="read">🔊 Nghe máy đọc bài của con</button>
@@ -2835,6 +3125,8 @@ function mergeVocabIntoContexts(){
 function boot(){
   mergeVocabIntoContexts();
   gLoad();wsLoad();
+  try{ document.getElementById('theoryRoot').innerHTML=buildTheoryHTML(); }catch(e){ console.error('theory',e); }
+  hwBoot();   /* nạp font chữ viết HP001 (không chặn UI) */
   try{ buildPracticeIndex(); }catch(e){ console.error('practice build',e); }
   try{ gRenderMap(); }catch(e){ console.error('map',e); }
   gRenderTop();
