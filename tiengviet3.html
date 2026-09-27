@@ -365,6 +365,65 @@ body.locked{overflow:hidden}
 .goal-ctl{font-size:13px;font-weight:700;color:#37474f;margin-top:4px;display:flex;align-items:center;gap:6px;justify-content:center}
 .goal-ctl .acct-btn{width:26px;height:26px;font-size:16px}
 body.locked #backTopBtn{display:none !important}
+/* ===== GÓC VIẾT (Writing Workshop) ===== */
+#tab-viet{display:none}
+body.mode-viet #tab-lt{display:none}
+body.mode-viet #tab-viet{display:block}
+.ws-steps{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.ws-step{flex:1;min-width:130px;padding:9px 8px;border-radius:12px;background:#fff;color:#00695c;border:2px solid #b2dfdb;box-shadow:none;font-size:13.5px}
+.ws-step.on{background:#00838f;color:#fff;border-color:#00838f}
+.ws-step.done{border-color:#2e7d32}
+.chip{display:inline-flex;align-items:center;gap:4px;background:#fff;border:2px solid #b2dfdb;border-radius:20px;padding:6px 12px;margin:4px 4px 0 0;cursor:pointer;font-weight:600;font-size:14.5px;color:var(--ink);box-shadow:none}
+.chip.on{background:#e0f2f1;border-color:#00838f}
+.chip.book{border-style:dashed;background:#fffde7}
+.chip.con{background:#fff8e1;border-color:#ffd54f}
+.ws-editor{width:100%;min-height:220px;font-size:17.5px;line-height:1.8;padding:14px;border:2px solid var(--teal);border-radius:14px;font-family:inherit;resize:vertical;color:var(--ink)}
+.ws-editor:focus{outline:none;border-color:#ff8f00;box-shadow:0 0 0 3px #ffe082}
+.ws-tip{display:flex;gap:8px;align-items:flex-start;background:#fffde7;border:1px solid #ffe082;border-radius:12px;padding:8px 12px;margin-top:8px;font-size:14px}
+.ws-tip .owl{font-size:22px;line-height:1}
+.ws-tip.info{background:#e3f2fd;border-color:#90caf9}
+.hl-a{background:#c8e6c9;border-radius:4px;padding:0 3px;cursor:pointer}
+.hl-s{background:#bbdefb;border-radius:4px;padding:0 3px;cursor:pointer}
+.hl-c{background:#fff59d;border-radius:4px;padding:0 3px;cursor:pointer}
+.hl-e{background:#e1bee7;border-radius:4px;padding:0 3px;cursor:pointer}
+.ws-legend span{display:inline-block;margin:0 10px 4px 0;font-size:12.5px}
+.ws-ex{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:10px 0;line-height:1.85;font-size:16.5px}
+.ws-ex h4{margin:0 0 6px}
+.ws-sent{display:block;width:100%;text-align:left;background:#fff;color:var(--ink);border:2px solid var(--line);box-shadow:none;margin:4px 0;padding:8px 10px;font-weight:500;font-size:15px}
+.ws-sent.fav{border-color:#f9a825;background:#fff8e1}
+.ws-count{font-size:12.5px;color:var(--muted);margin-top:4px}
+.ws-idea textarea{width:100%;min-height:54px;font-family:inherit;font-size:15.5px;padding:8px 10px;border:2px solid #b2dfdb;border-radius:10px;resize:vertical}
+.cloze-blank select{font-family:inherit;font-size:15px;padding:3px 6px;border:2px dashed #00838f;border-radius:8px;background:#fff;color:#00695c;font-weight:700;max-width:100%}
+.cloze-blank.ok select{border-style:solid;border-color:#2e7d32;background:#e8f5e9}
+.cloze-blank.no select{border-color:#d32f2f;background:#ffebee}
+.ws-status{display:inline-block;border-radius:12px;padding:2px 10px;font-size:12.5px;font-weight:700;background:#ede7f6;color:#5e35b1}
+#printSheet{display:none}
+@media print{
+  body *{visibility:hidden !important}
+  #printSheet,#printSheet *{visibility:visible !important}
+  #printSheet{display:block !important;position:absolute;left:0;top:0;width:100%;padding:24px;font-family:"Be Vietnam Pro",system-ui,sans-serif}
+  #printSheet .ps-frame{border:6px double #26a69a;border-radius:18px;padding:24px 28px}
+  #printSheet h1{font-size:22px;color:#00695c;margin:0 0 4px}
+  #printSheet .ps-meta{font-size:12px;color:#666;margin-bottom:14px}
+  #printSheet .ps-text{font-size:17px;line-height:2;white-space:pre-wrap}
+}
+/* ===== Thẻ kiến thức lật 3D (Flashcard) — chữ to, bo góc 20px, màu tươi, tương phản cao ===== */
+.fc-scene{perspective:1200px;width:100%;max-width:440px;margin:6px auto 0;cursor:pointer;outline:none}
+.fc-scene:focus-visible .fc-card{box-shadow:0 0 0 4px #ffd54f}
+.fc-card{position:relative;width:100%;min-height:260px;transition:transform .6s cubic-bezier(.2,.8,.2,1);transform-style:preserve-3d;border-radius:20px;box-shadow:0 12px 30px rgba(0,80,90,.18)}
+.fc-card.flipped{transform:rotateY(180deg)}
+.fc-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:20px;padding:22px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.fc-front{background:linear-gradient(160deg,#fff9c4,#ffe0b2 60%,#ffccbc);color:#3e2723;border:3px solid #ffb300}
+.fc-back{background:linear-gradient(160deg,#e0f7fa,#b2ebf2 60%,#c8e6c9);color:#00363a;border:3px solid #26a69a;transform:rotateY(180deg)}
+.fc-emoji{font-size:52px;line-height:1;margin-bottom:6px}
+.fc-word{font-family:var(--font-display);font-size:34px;font-weight:800;line-height:1.2;word-break:break-word}
+.fc-sub{font-size:15px;color:#6d4c41;margin-top:8px;font-weight:600}
+.fc-hint{position:absolute;bottom:10px;right:14px;font-size:12px;color:#8d6e63;font-weight:700}
+.fc-kind{font-size:13px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;color:#00695c;background:#fff;border-radius:14px;padding:3px 12px;margin-bottom:10px}
+.fc-meaning{font-size:20px;font-weight:700;line-height:1.5}
+.fc-ex{font-size:16px;margin-top:10px;color:#004d40;background:rgba(255,255,255,.6);border-radius:12px;padding:8px 12px;line-height:1.5}
+@media(max-width:560px){.fc-word{font-size:28px}.fc-meaning{font-size:18px}.fc-card{min-height:240px}}
+@media(prefers-reduced-motion:reduce){.fc-card{transition:none}}
 /* build tokens (used state) + open-the-box animation */
 .tok.used{visibility:hidden}
 .box-anim{font-size:64px;margin:14px 0;display:inline-block;transition:transform .4s}
@@ -460,6 +519,7 @@ body.locked #backTopBtn{display:none !important}
 <div class="tab-bar" role="tablist">
   <button class="tab-btn active" role="tab" onclick="switchTab('lt',this)">📖 Lý Thuyết</button>
   <button class="tab-btn" role="tab" onclick="switchTab('bt',this)">✏️ Luyện Tập</button>
+  <button class="tab-btn" role="tab" onclick="switchTab('viet',this)">📝 Góc viết</button>
   <button class="tab-btn" role="tab" onclick="switchTab('game',this)">🎮 Học mà chơi</button>
 </div>
 <div class="progress-strip" id="progStrip" title="Bấm để vào Học mà chơi" onclick="switchTab('game',document.querySelectorAll('.tab-btn')[2])">
@@ -489,6 +549,17 @@ body.locked #backTopBtn{display:none !important}
 <div id="practiceRoot"></div>
 <footer>📗 Ôn tập Tiếng Việt 3 · Câu sinh có ràng buộc + kiểm tra + ngân hàng câu đã duyệt · Offline · Rev 1.0</footer>
 </div><!-- /tab-bt -->
+
+<!-- ================= TAB: GÓC VIẾT (Writing Workshop) ================= -->
+<div id="tab-viet">
+  <div class="card" style="background:linear-gradient(135deg,#ede7f6,#e0f2f1)">
+    <b style="color:#5e35b1;font-size:17px">📝 Góc viết của Tác giả nhí</b>
+    <div style="font-size:13.5px;color:var(--muted);margin-top:4px">Bốn bước nhỏ, bước nào cũng có thể <b>bỏ qua</b>: gom từ → tìm ý → viết → đọc lại. Không có điểm đúng/sai, không có tim. Bài của con là <b>tiếng nói của con</b>; bài tham khảo chỉ mở <b>sau khi</b> con đã viết.</div>
+  </div>
+  <div id="wsRoot"></div>
+  <footer>📝 Góc viết · Bản nháp tự lưu trên máy · Ba/mẹ đọc cùng con ở Góc phụ huynh · Rev 1.0</footer>
+</div>
+<div id="printSheet" aria-hidden="true"></div>
 
 <!-- ================= TAB: HỌC MÀ CHƠI ================= -->
 <div id="tab-game">
@@ -616,19 +687,21 @@ function gVibe(p){try{if(!G.mute&&navigator.vibrate)navigator.vibrate(p);}catch(
    2. TAB SWITCHER
    ===================================================================== */
 function switchTab(mode,btn){
-  document.body.classList.remove('mode-bt','mode-game');
+  document.body.classList.remove('mode-bt','mode-game','mode-viet');
   if(mode==='bt')document.body.classList.add('mode-bt');
   else if(mode==='game')document.body.classList.add('mode-game');
+  else if(mode==='viet')document.body.classList.add('mode-viet');
   document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
   if(btn)btn.classList.add('active');
   window.scrollTo({top:0,behavior:'smooth'});
   if(mode==='game'&&typeof gRenderMap==='function')gRenderMap();
+  if(mode==='viet'&&typeof wsRender==='function')wsRender();
 }
 /* nav links: auto về tab Lý Thuyết */
 document.addEventListener('click',function(e){
   const link=e.target.closest('nav.side a[href^="#"]');if(!link)return;
   const linksDiv=document.querySelector('.links');if(linksDiv)linksDiv.classList.remove('open');
-  if(document.body.classList.contains('mode-bt')||document.body.classList.contains('mode-game')){
+  if(document.body.classList.contains('mode-bt')||document.body.classList.contains('mode-game')||document.body.classList.contains('mode-viet')){
     e.preventDefault();switchTab('lt',document.querySelectorAll('.tab-btn')[0]);
     setTimeout(()=>{const el=document.getElementById(link.getAttribute('href').slice(1));if(el)el.scrollIntoView({behavior:'smooth',block:'start'});},80);
   }
@@ -974,6 +1047,31 @@ GEN.C03_TRAINGHIA=function(){
   return {skill:'C03_TRAINGHIA', type:'match_pairs', prompt:'Nối mỗi từ với TỪ TRÁI NGHĨA của nó:',
     pairs:chosen.map(p=>[p[0],p[1]]), explanation:'Cặp trái nghĩa xét trên cùng một tiêu chí.', difficulty:1, _sig:'c03tn:'+chosen.map(p=>p[0]).join(',')};
 };
+/* --- Nối cặp đa dạng cho trò "Nối cặp" (tv3_game.txt: từ–nghĩa, câu–kiểu câu, câu hỏi–bộ phận trả lời) --- */
+GEN.MATCH_VOCAB=function(){
+  const kind=pick(['loaitu','kieucau','hoidap','gannghia']);
+  if(kind==='loaitu'){
+    const ctx=pickContext();
+    const pairs=shuffle([[pick(ctx.entities),'từ chỉ sự vật'],[pick(ctx.actions),'từ chỉ hoạt động'],[pick(ctx.attrs),'từ chỉ đặc điểm']]);
+    return {skill:'C02_DACDIEM',type:'match_pairs',prompt:'Nối mỗi từ với LOẠI TỪ của nó:',pairs,explanation:'Sự vật: gọi tên được; hoạt động: làm được bằng động tác; đặc điểm: thêm được “rất”.',difficulty:1,_sig:'mv:lt:'+pairs.map(p=>p[0]).join(',')};
+  }
+  if(kind==='kieucau'){
+    const fr=pickFrame();const a=fr.actor,act=fr.action;
+    const all=[[`${cap(a)} ${act}.`,'Câu kể'],[`${cap(a)} ${act} ${fr.place?'ở đâu':'khi nào'}?`,'Câu hỏi'],[`Ôi, ${a} ${fr.attr} quá!`,'Câu cảm']];
+    if(isPersonActor(a))all.push([`${cap(a)} hãy ${act} nhé!`,'Câu khiến']);
+    const pairs=shuffle(all).slice(0,3);
+    return {skill:'C06_MUCDICH',type:'match_pairs',prompt:'Nối mỗi câu với KIỂU CÂU của nó:',pairs,explanation:'Nhìn mục đích nói và dấu cuối câu (. ? !).',difficulty:1,_sig:'mv:kc:'+pairs.map(p=>p[1]).join(',')};
+  }
+  if(kind==='hoidap'){
+    const fr=pickFrame();const pairs=[];
+    if(fr.place)pairs.push(['Ở đâu?',fr.place]);if(fr.time)pairs.push(['Khi nào?',fr.time]);if(fr.tool)pairs.push(['Bằng gì?',fr.tool]);if(fr.purpose)pairs.push(['Để làm gì?',fr.purpose]);
+    if(pairs.length<2)return GEN.C03_TRAINGHIA();
+    const use=shuffle(pairs).slice(0,3);
+    return {skill:'C07_BOPHAN',type:'match_pairs',prompt:`Trong câu “${cap(fr.actor)} ${fr.action}…”, nối câu hỏi với BỘ PHẬN TRẢ LỜI:`,pairs:use,explanation:'Thời gian → Khi nào? · Nơi chốn → Ở đâu? · Phương tiện → Bằng gì? · Mục đích → Để làm gì?',difficulty:2,_sig:'mv:hd:'+use.map(p=>p[0]).join(',')};
+  }
+  const chosen=shuffle(GAN_NGHIA).slice(0,3);
+  return {skill:'C03_GANNGHIA',type:'match_pairs',prompt:'Nối mỗi từ với từ GẦN NGHĨA:',pairs:chosen.map(p=>[p[0],p[1]]),explanation:'Gần nghĩa: nghĩa gần nhau — nhưng không phải lúc nào cũng thay được cho nhau.',difficulty:2,_sig:'mv:gn:'+chosen.map(p=>p[0]).join(',')};
+};
 /* --- C03 gần nghĩa (kèm cảnh báo giới hạn thay thế) --- */
 const GAN_NGHIA=[['siêng năng','chăm chỉ'],['vui','vui vẻ'],['xinh','đẹp'],['to','lớn'],['nhanh nhẹn','lanh lợi']];
 GEN.C03_GANNGHIA=function(){
@@ -1109,11 +1207,31 @@ const REORDER_BANK=[
   {skill:'C05_CAU',   parts:['Các bạn','đọc sách','trong thư viện'],   why:'Ai – làm gì – ở đâu.'},
   {skill:'C07_BOPHAN',parts:['Sáng thứ bảy,','bé','đến thư viện'],     why:'Trạng ngữ thời gian đứng đầu câu, có dấu phẩy.'},
   {skill:'C05_CAU',   parts:['Bông hoa','trong vườn','rất thơm'],      why:'Sự vật – bổ nghĩa nơi chốn – đặc điểm.'},
-  {skill:'C06_MUCDICH',parts:['Xin bạn','giữ trật tự','trong lớp nhé'],why:'Câu khiến lịch sự: lời đề nghị – việc – nơi chốn.'}
+  {skill:'C06_MUCDICH',parts:['Xin bạn','giữ trật tự','trong lớp nhé'],why:'Câu khiến lịch sự: lời đề nghị – việc – nơi chốn.'},
+  {skill:'C07_BOPHAN',parts:['Giờ ra chơi,','các bạn','đọc sách','trong thư viện'],why:'Thời gian – ai – làm gì – ở đâu.'},
+  {skill:'C08_SOSANH',parts:['Mặt hồ','phẳng','như','tấm gương'],why:'Câu so sánh: A – nét giống – từ so sánh – B.'},
+  {skill:'C08_SOSANH',parts:['Đôi mắt bé','tròn','như','hạt nhãn'],why:'Câu so sánh: A – nét giống – từ so sánh – B.'},
+  {skill:'C04_DAUCAU',parts:['Trong cặp có ba thứ:','sách,','bút','và thước'],why:'Sau dấu hai chấm là phần liệt kê; các thứ cách nhau bằng dấu phẩy, cuối cùng dùng “và”.'},
+  {skill:'C05_CAU',   parts:['Cô giáo','viết bảng','bằng phấn'],why:'Ai – làm gì – bằng gì.'},
+  {skill:'C05_CAU',   parts:['Chú ong','đậu','trên cành hoa','để hút mật'],why:'Ai – làm gì – ở đâu – để làm gì.'},
+  {skill:'C06_MUCDICH',parts:['Ôi,','bông hoa','thơm quá!'],why:'Câu cảm: “Ôi … quá!” bộc lộ cảm xúc.'}
 ];
+/* Bổ sung tự động từ FRAMES đã duyệt: actor – action – (place) để ngân hàng xếp câu luôn đủ */
+function reorderPool(){
+  const extra=[];
+  if(typeof FRAMES!=='undefined'){
+    Object.values(FRAMES).forEach(list=>list.forEach(fr=>{
+      if(fr.place){extra.push({skill:'C05_CAU',parts:[cap(fr.actor),fr.action,fr.place],why:'Ai – làm gì – ở đâu.'});}
+      if(fr.time&&fr.place){extra.push({skill:'C07_BOPHAN',parts:[cap(fr.time)+',',fr.actor,fr.action,fr.place],why:'Thời gian đứng đầu (có dấu phẩy) – ai – làm gì – ở đâu.'});}
+    }));
+  }
+  /* loại khung có 2 thẻ trùng nhau (validate sẽ chặn, nhưng lọc sớm cho hiệu quả) */
+  return REORDER_BANK.concat(extra).filter(x=>new Set(x.parts.map(normNFC)).size===x.parts.length);
+}
 GEN.REORDER=function(prefSkill){
-  const pool=prefSkill?REORDER_BANK.filter(x=>x.skill===prefSkill):REORDER_BANK;
-  const it=pick(pool.length?pool:REORDER_BANK);
+  const all=reorderPool();
+  const pool=prefSkill?all.filter(x=>x.skill===prefSkill):all;
+  const it=pick(pool.length?pool:all);
   const order=it.parts.slice();                 // thứ tự đúng
   let tokens=shuffle(order.slice());
   // đảm bảo có xáo trộn (không trùng thứ tự gốc khi >1 phần)
@@ -1133,17 +1251,40 @@ const UNSCRAMBLE_BANK=[
   {skill:'C02_SUVAT', word:'bông hoa',  syl:['bông','hoa'],  hint:'Sự vật đẹp, thơm, nở trong vườn.'},
   {skill:'C09_VONTU', word:'quê hương', syl:['quê','hương'], hint:'Nơi em sinh ra và lớn lên.'},
   {skill:'C02_DACDIEM',word:'chăm chỉ', syl:['chăm','chỉ'],  hint:'Đặc điểm của người siêng học.'},
-  {skill:'C09_VONTU', word:'lễ hội',    syl:['lễ','hội'],    hint:'Ngày vui của cộng đồng, có múa lân, rước đèn.'}
+  {skill:'C09_VONTU', word:'lễ hội',    syl:['lễ','hội'],    hint:'Ngày vui của cộng đồng, có múa lân, rước đèn.'},
+  /* 3 tiếng — nhiều cách xếp hơn, thử thách hơn */
+  {skill:'C09_VONTU', word:'góc học tập',   syl:['góc','học','tập'],   hint:'Nơi em ngồi học ở nhà.'},
+  {skill:'C09_VONTU', word:'cô thủ thư',    syl:['cô','thủ','thư'],    hint:'Người trông coi thư viện.'},
+  {skill:'C09_VONTU', word:'cơn mưa rào',   syl:['cơn','mưa','rào'],   hint:'Mưa to, đến nhanh, tạnh nhanh trong mùa hè.'},
+  {skill:'C02_DACDIEM',word:'xanh trong veo',syl:['xanh','trong','veo'],hint:'Tả nước rất trong và xanh.'},
+  {skill:'C09_VONTU', word:'đoàn múa lân',  syl:['đoàn','múa','lân'],  hint:'Nhóm biểu diễn trong ngày hội.'},
+  {skill:'C09_VONTU', word:'bảo vệ môi trường',syl:['bảo','vệ','môi','trường'],hint:'Giữ cho Trái Đất xanh, sạch.'},
+  {skill:'C02_HOATDONG',word:'thả diều',   syl:['thả','diều'],        hint:'Hoạt động ngoài trời khi có gió.'},
+  {skill:'C02_DACDIEM',word:'mênh mông',   syl:['mênh','mông'],       hint:'Rộng lớn, nhìn không thấy bờ.'},
+  {skill:'C09_VONTU', word:'danh lam thắng cảnh',syl:['danh','lam','thắng','cảnh'],hint:'Nơi có cảnh đẹp nổi tiếng của đất nước.'}
 ];
+/* Bổ sung tự động từ kho VOCAB_BANK (từ ≥2 tiếng, mức Cơ bản) để ngân hàng không cạn */
+function unscramblePool(){
+  const extra=[];
+  if(typeof VOCAB_BANK!=='undefined'){
+    Object.values(VOCAB_BANK).forEach(th=>{
+      [['nouns','C02_SUVAT'],['adjs','C02_DACDIEM'],['verbs','C02_HOATDONG']].forEach(([k,skill])=>{
+        (th.std[k]||[]).forEach(w=>{const syl=w.split(/\s+/);if(syl.length>=2&&!UNSCRAMBLE_BANK.some(x=>x.word===w))extra.push({skill,word:w,syl,hint:'Chủ đề: '+th.title+'.'});});
+      });
+    });
+  }
+  return UNSCRAMBLE_BANK.concat(extra);
+}
 GEN.UNSCRAMBLE=function(prefSkill){
-  const pool=prefSkill?UNSCRAMBLE_BANK.filter(x=>x.skill===prefSkill):UNSCRAMBLE_BANK;
-  const it=pick(pool.length?pool:UNSCRAMBLE_BANK);
+  const all=unscramblePool();
+  const pool=prefSkill?all.filter(x=>x.skill===prefSkill):all;
+  const it=pick(pool.length?pool:all);
   let pieces=shuffle(it.syl.slice());
   let g=0; while(it.syl.length>1 && pieces.join('|')===it.syl.join('|') && g<10){pieces=shuffle(it.syl.slice());g++;}
   return {skill:it.skill, type:'unscramble', target:it.word, pieces,
     prompt:'Ghép các mảnh thành từ đúng: '+ (it.hint?('('+it.hint+')'):''),
     explanation:'Từ đúng là “'+it.word+'”. '+(it.hint||''),
-    difficulty:1, _sig:'unscramble:'+it.word};
+    difficulty:it.syl.length>=3?2:1, _sig:'unscramble:'+it.word};
 };
 </script>
 <script>
@@ -1581,7 +1722,7 @@ function gStart(w){
 function gStartRealm(id){
   const r=GREALMS.find(x=>x.id===id);if(!r||G.unlocked<r.need)return;
   const qs=gBuildFromSkills(r.skills,6);
-  if(qs.length<5){toast('Chưa đủ câu cho vùng này.');return;}
+  if(qs.length<GAME_MIN_ITEMS){toast(`${r.name}: Chưa đủ câu cho vùng này. Mình thử vùng khác nhé!`);return;}
   G.realmPlays[id]=(G.realmPlays[id]||0)+1;saveAll();
   GS=gNewSession({w:G.unlocked,qs,mode:'realm'});
   document.getElementById('gModal').classList.add('open');gRenderQ();
@@ -1621,6 +1762,12 @@ const GAMES=[
   {id:'chain',  name:'Nối từ (chuỗi từ)', icon:'⛓️', color:'#5e35b1', bg:'#ede7f6', special:'chain', desc:'Xây vốn từ theo một quy tắc nối rõ ràng.'},
   {id:'info',   name:'Thẻ kiến thức',     icon:'💡', color:'#f9a825', bg:'#fffde7', special:'info', desc:'Khái niệm · ví dụ · phản ví dụ.'}
 ];
+/* Ngưỡng tối thiểu số câu để mở một trò (Code Polish: min_items = 5) + thông báo trạng thái trống theo trò */
+const GAME_MIN_ITEMS=5;
+function emptyStateMsg(game){
+  const name={match:'Nối cặp',scramble:'Ghép chữ',order:'Xếp câu',best:'Chọn đáp án',quiz:'Đấu trí',random:'Rút thẻ',box:'Mở hộp',chain:'Nối từ',info:'Thẻ kiến thức'}[game.id]||game.name;
+  return `${name}: Chưa đủ câu cho trò này. Mình thử trò khác nhé!`;
+}
 function gRenderGames(){
   const grid=document.getElementById('gamesGrid');if(!grid)return;
   grid.innerHTML=GAMES.map(g=>`<article class="realm" style="--realm:${g.color};--realm-bg:${g.bg}">
@@ -1633,24 +1780,32 @@ function gRenderGames(){
 /* xây bộ câu cho một trò theo type cho phép, ưu tiên kĩ năng đã học + review queue */
 function gBuildGameQuestions(game,N){
   N=N||(game.id==='random'?7:6);
-  const learned=reviewPoolUpTo(G.unlocked); const skills=learned.length?learned:WEEKS[0].primary;
-  const sigs=new Set(),qs=[];let guard=0;
   const wantTypes=game.types||['single_choice'];
+  const sigs=new Set(),qs=[];let guard=0;
+  /* Kĩ năng ưu tiên = đã học tới tuần hiện tại; nhưng với trò CHUYÊN DẠNG (match/reorder/unscramble)
+     thì lấy thêm MỌI kĩ năng có generator ra đúng dạng — trò chơi là lớp trình bày, việc khoá theo tuần
+     thuộc về Trạm. Nếu không, "Nối cặp" ở tuần 1 sẽ không có câu vì C03 (nối cặp) chỉ mở ở tuần 13. */
+  const learned=reviewPoolUpTo(G.unlocked);
+  const producers={match_pairs:['C03_TRAINGHIA'],select_span:['C07_BOPHAN','C08_SOSANH'],single_choice:Object.keys(GEN).filter(k=>/^C0[1-9]/.test(k)&&k!=='C03_TRAINGHIA'&&k!=='C07_BOPHAN')};
+  let skills=[...new Set([...learned,...wantTypes.flatMap(t=>producers[t]||[])])];
+  if(!skills.length)skills=WEEKS[0].primary;
+  /* 1) generator theo kĩ năng (ưu tiên review queue) */
   while(qs.length<N && guard<N*60){guard++;
-    /* ưu tiên review queue */
-    let skill;
     const rq=G.reviewQueue.filter(s=>skills.includes(s));
-    skill = (rq.length && Math.random()<0.5)?pick(rq):pick(skills);
+    const skill=(rq.length&&Math.random()<0.5)?pick(rq):pick(skills);
     const q=makeQ(skill,null,sigs);if(!q)continue;
-    if(!wantTypes.includes(q.type))continue;          /* chỉ nhận đúng type của trò */
+    if(!wantTypes.includes(q.type))continue;
     q._skill=skill;sigs.add(q._sig||q.prompt);qs.push(q);
   }
-  /* nếu thiếu (vì lọc type), bơm thêm bằng generator chuyên dạng nếu có */
+  /* 2) generator chuyên dạng (xếp câu / ghép chữ / nối cặp từ kho từ) */
   if(qs.length<N){
-    const genMap={reorder_tokens:'REORDER',unscramble:'UNSCRAMBLE'};
-    for(const t of wantTypes){const gname=genMap[t];if(!gname||!GEN[gname])continue;
-      let g2=0;while(qs.length<N&&g2<N*10){g2++;const q=GEN[gname]();if(q&&validate(q)&&!sigs.has(q._sig)){q._skill=q.skill;sigs.add(q._sig);qs.push(q);} }
-    }
+    const genMap={reorder_tokens:['REORDER'],unscramble:['UNSCRAMBLE'],match_pairs:['MATCH_VOCAB']};
+    for(const t of wantTypes){for(const gname of (genMap[t]||[])){if(!GEN[gname])continue;
+      let g2=0;while(qs.length<N&&g2<N*15){g2++;const q=GEN[gname]();if(q&&validate(q)&&!sigs.has(q._sig)){q._skill=q.skill;sigs.add(q._sig);qs.push(q);}}}}
+  }
+  /* 3) cuối cùng: câu đã duyệt đúng dạng */
+  if(qs.length<N){
+    for(const a of shuffle(APPROVED.filter(x=>wantTypes.includes(x.type)))){if(qs.length>=N)break;const q=Object.assign({},a);q._sig='approved:'+q.prompt;if(validate(q)&&!sigs.has(q._sig)){q._skill=q.skill;sigs.add(q._sig);qs.push(q);}}
   }
   return qs;
 }
@@ -1659,7 +1814,8 @@ function gStartGame(id){
   if(game.special==='chain'){return gStartChain();}
   if(game.special==='info'){return gStartInfo();}
   const qs=gBuildGameQuestions(game);
-  if(qs.length<3){toast('Chưa đủ câu cho trò này. Con thử trò khác nhé.');return;}
+  /* min_items = 5 cho MỌI trò; thông báo trạng thái trống theo từng trò (ref_docs/enhance.md Part 1) */
+  if(qs.length<GAME_MIN_ITEMS){toast(emptyStateMsg(game));return;}
   GS=gNewSession({w:G.unlocked,qs,mode:'game',game:id,openBox:(id==='box')});
   document.getElementById('gModal').classList.add('open');
   if(id==='box')gRenderBox();else gRenderQ();
@@ -1738,23 +1894,54 @@ const INFO_CARDS=[
   {skill:'C06_MUCDICH', title:'Bốn kiểu câu', concept:'Kể (.), Hỏi (? có từ hỏi), Cảm (! có “quá/lắm”), Khiến (! có “hãy/nhé”).', ex:'Bạn hãy giữ trật tự nhé! (câu khiến)', counter:'Có dấu ! chưa chắc là câu cảm — “Hãy đi nhé!” là câu khiến.', anchor:'c06'},
   {skill:'C01_CHINHTA', title:'c/k · g/gh · ng/ngh', concept:'Mẹo “Anh em đi cùng i, e, ê”: k, gh, ngh đứng trước i, e, ê.', ex:'kéo, ghế, nghỉ (trước e/ê/i).', counter:'Trước a/o/ô/u dùng c, g, ng: cá, gà, ngô — không viết “ké, ghà”.', anchor:'c01'}
 ];
-function gStartInfo(){GS=gNewSession({w:G.unlocked,mode:'info',cards:shuffle(INFO_CARDS.slice()),i:0});document.getElementById('gModal').classList.add('open');gRenderInfo();}
+/* Thẻ kiến thức = 2 loại thẻ lật 3D:
+   (a) thẻ KHÁI NIỆM (INFO_CARDS): mặt trước = tên + ví dụ; mặt sau = khái niệm + phản ví dụ
+   (b) thẻ TỪ VỰNG (vocabFlashcards): mặt trước = từ; mặt sau = loại từ + ví dụ dùng
+   Cơ bản luôn hiện; Nâng cao (từ ghép/so sánh/thành ngữ) chỉ khi advOpen(). */
+function gStartInfo(){
+  const lvl=advOpen()?2:1;
+  const concept=INFO_CARDS.map(c=>({type:'concept',title:c.title,emoji:'💡',front:c.title,frontSub:c.ex,back:c.concept,backSub:c.counter,skill:c.skill,anchor:c.anchor}));
+  const vocab=shuffle(vocabFlashcards(lvl)).slice(0,10).map(v=>({type:'vocab',title:v.kind,emoji:v.emoji,front:v.front,frontSub:v.theme,back:v.back,backSub:v.ex,skill:v.skill,adv:!!v.adv}));
+  const cards=shuffle([...concept,...vocab]);
+  if(cards.length<GAME_MIN_ITEMS){toast('Thẻ kiến thức: Chưa đủ thẻ. Mình thử trò khác nhé!');return;}
+  GS=gNewSession({w:G.unlocked,mode:'info',cards,i:0,flipped:false,learned:0});
+  document.getElementById('gModal').classList.add('open');gRenderInfo();
+}
 function gRenderInfo(){
   const c=GS.cards[GS.i];
-  document.getElementById('gCard').innerHTML=`<div class="gtopbar"><span class="gqno">💡 Thẻ ${GS.i+1}/${GS.cards.length}: ${esc(c.title)}</span><span class="spacer" style="flex:1"></span></div>
-    <div class="rule">${esc(c.concept)}</div>
-    <div class="ex">${esc(c.ex)}</div>
-    <div class="warn">${esc(c.counter)}</div>
-    <div class="gbtn-row" style="margin-top:8px">
+  document.getElementById('gCard').innerHTML=`<div class="gtopbar"><span class="gqno">🃏 Thẻ ${GS.i+1}/${GS.cards.length} · ${esc(c.title)}${c.adv?' 🌟':''}</span><span class="spacer" style="flex:1"></span></div>
+    <div class="fc-scene" id="fcScene" role="button" tabindex="0" aria-label="Chạm để lật thẻ">
+      <div class="fc-card${GS.flipped?' flipped':''}" id="fcCard">
+        <div class="fc-face fc-front"><div class="fc-emoji">${c.emoji}</div><div class="fc-word">${esc(c.front)}</div><div class="fc-sub">${esc(c.frontSub||'')}</div><div class="fc-hint">Chạm để lật ↻</div></div>
+        <div class="fc-face fc-back"><div class="fc-kind">${esc(c.title)}</div><div class="fc-meaning">${esc(c.back)}</div><div class="fc-ex">${esc(c.backSub||'')}</div></div>
+      </div>
+    </div>
+    <div class="gbtn-row" style="margin-top:10px">
       <button class="teal" id="infoTts">🔊 Nghe</button>
-      <button class="pur" onclick="gReadTheory('${c.anchor}')">Xem bài</button>
+      ${c.anchor?`<button class="pur" onclick="gReadTheory('${c.anchor}')">Xem bài</button>`:''}
       <button class="grn" onclick="gInfoPractice('${c.skill}')">Luyện 3 câu</button>
-      ${GS.i<GS.cards.length-1?`<button class="org gbig" onclick="gInfoNext()">Thẻ sau →</button>`:`<button class="grn gbig" onclick="gClose()">✓ Xong</button>`}
+      <button class="gry" onclick="gInfoMark(false)">Chưa nhớ</button>
+      <button class="org gbig" onclick="gInfoMark(true)">Đã hiểu ✓</button>
     </div>`;
+  const scene=document.getElementById('fcScene');
+  const flip=()=>{GS.flipped=!GS.flipped;document.getElementById('fcCard').classList.toggle('flipped',GS.flipped);};
+  scene.addEventListener('click',flip);
+  scene.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();flip();}});
   const tb=document.getElementById('infoTts');
-  if(tb)tb.addEventListener('click',()=>TTS.speak(c.concept+'. Ví dụ: '+c.ex));
+  if(tb)tb.addEventListener('click',e=>{e.stopPropagation();TTS.speak(GS.flipped?(c.back+'. '+(c.backSub||'')):(c.front+'. '+(c.frontSub||'')));});
 }
-function gInfoNext(){GS.i++;gRenderInfo();}
+/* "Đã hiểu / Chưa nhớ" chỉ là tự đánh giá để xếp lịch ôn; KHÔNG tính đúng/sai */
+function gInfoMark(got){
+  const c=GS.cards[GS.i];
+  if(got){GS.learned++;}else{GS.cards.push(c);} /* chưa nhớ → lặp lại cuối bộ */
+  if(!got&&c.skill&&!G.reviewQueue.includes(c.skill)){G.reviewQueue.push(c.skill);if(G.reviewQueue.length>6)G.reviewQueue.shift();saveAll();}
+  GS.i++;GS.flipped=false;
+  if(GS.i>=GS.cards.length){GS.finished=true;
+    document.getElementById('gCard').innerHTML=`<div class="gresult"><div style="font-size:42px">🃏</div><div class="praise" style="color:#00695c">Con đã xem xong bộ thẻ!</div><div style="color:#5b7086">Đã hiểu: <b>${GS.learned}</b> thẻ. Thẻ “chưa nhớ” sẽ quay lại ở lần ôn sau.</div><div class="gbtn-row" style="margin-top:14px"><button class="org gbig" onclick="gStartInfo()">Bộ thẻ khác</button><button class="grn gbig" onclick="gClose()">✓ Xong</button></div></div>`;
+    if(!G.mute)SFX.win();return;}
+  gRenderInfo();
+}
+function gInfoNext(){gInfoMark(true);}
 function gInfoPractice(skill){gClose();gStartSkillPractice(skill);}
 
 /* render 1 câu trong modal */
@@ -1971,6 +2158,10 @@ function renderParent(){
         <input type="file" id="importFile" accept="application/json" style="display:none" onchange="importData(this)">
       </div>
       <div style="font-size:12px;color:var(--muted);margin-top:6px">Xuất/nhập do phụ huynh thao tác. Không tự đồng bộ ra ngoài, không thu thập thông tin cá nhân của trẻ.</div>
+      <div style="margin-top:12px;padding-top:10px;border-top:1px dashed var(--line)">
+        <label style="display:flex;gap:8px;align-items:flex-start;font-size:14px"><input type="checkbox" id="pcStt" ${G.sttEnabled?'checked':''} onchange="G.sttEnabled=this.checked;saveAll();toast(this.checked?'Đã bật đọc-để-máy-gõ ở Góc viết.':'Đã tắt đọc-để-máy-gõ.')"><span><b>🎤 Cho phép “đọc để máy gõ” ở Góc viết</b><br><span style="color:var(--muted);font-size:12.5px">Dùng nhận dạng giọng nói của trình duyệt (Chrome/Edge). Âm thanh có thể được gửi tới máy chủ của nhà cung cấp trình duyệt để xử lí; cần mạng. Tắt mặc định để bảo vệ riêng tư.</span></span></label>
+        <label style="display:flex;gap:8px;align-items:flex-start;font-size:14px;margin-top:8px"><input type="checkbox" id="pcAdv" ${G.advUnlocked?'checked':''} onchange="G.advUnlocked=this.checked;saveAll();toast(this.checked?'Đã mở nội dung Nâng cao.':'Đã ẩn nội dung Nâng cao.')"><span><b>🌟 Mở nội dung “Nâng cao” (từ ghép, so sánh, bài tham khảo mở rộng)</b><br><span style="color:var(--muted);font-size:12.5px">Tự mở khi con đạt ≥ 6 kĩ năng ở mức practicing/stable; ba/mẹ có thể bật sớm nếu con muốn thử thách.</span></span></label>
+      </div>
       <div style="margin-top:12px;padding-top:10px;border-top:1px dashed var(--line)">
         <button class="gry" onclick="resetGame()">↺ Đặt lại toàn bộ tiến độ trò chơi</button>
         <div style="font-size:12px;color:var(--muted);margin-top:4px">Thao tác không hoàn tác được (bài viết của con vẫn được giữ). Hãy xuất tiến độ trước nếu cần.</div>
@@ -2253,10 +2444,397 @@ async function authBoot(){
 }
 
 /* =====================================================================
+   13c. GÓC VIẾT — Writing Workshop (offline, không AI, không chấm điểm)
+   Dữ liệu: WRITING_TASKS (theo tuần & thể loại) + EXEMPLARS (bài tham khảo
+   do dự án tự viết, KHÔNG chép sách) + CONNECTORS + rule-based checker.
+   Nguyên tắc: (1) mọi bước bỏ qua được; (2) không tự sinh đoạn văn cho trẻ;
+   (3) bài tham khảo chỉ mở SAU KHI trẻ đã viết; (4) không gửi văn bản ra ngoài;
+   (5) lưu nháp tự động (debounce + pagehide), giữ lịch sử bản.
+   ===================================================================== */
+const GENRES={
+  experience:{name:'Kể một việc',   icon:'🏃', ideas:['Chuyện gì xảy ra? Con đã làm gì?','Việc nào trước, việc nào sau?','Chi tiết nào con nhớ nhất?'], rubric:['Kể được việc gì đã xảy ra','Có thứ tự trước – sau rõ','Có một chi tiết cụ thể']},
+  description:{name:'Tả đồ vật / nơi chốn', icon:'🔍', ideas:['Nó là gì? Chi tiết nào khiến con nhận ra ngay?','Con nhìn thấy / nghe thấy / sờ thấy gì?','Con dùng nó lúc nào? Vì sao con thích?'], rubric:['Nêu được vật/nơi đang tả','Có từ chỉ đặc điểm (màu, hình, âm thanh…)','Có một chi tiết riêng, không chung chung']},
+  feeling:{name:'Nêu tình cảm',     icon:'💛', ideas:['Người ấy đã làm điều gì khiến con nhớ?','Con muốn nói gì với người ấy?','Con sẽ làm gì cho người ấy?'], rubric:['Nói rõ tình cảm với ai','Có một việc cụ thể cho thấy tình cảm ấy','Câu rõ ràng, tự nhiên']},
+  opinion:{name:'Nêu ý kiến',       icon:'💬', ideas:['Con nghĩ gì về việc đó?','Vì sao con nghĩ vậy?','Có việc nhỏ nào cho thấy điều đó?'], rubric:['Có ý kiến rõ ràng','Có ít nhất một lí do hoặc ví dụ','Câu đọc dễ hiểu']},
+  message:{name:'Viết tin nhắn',    icon:'📱', ideas:['Con nhắn cho ai? Việc gì?','Khi nào? Ở đâu?','Con kí tên chưa?'], rubric:['Có người nhận và người gửi','Nói đúng việc cần nhắn (ngắn gọn)','Có thời gian/địa điểm nếu cần']},
+  instructions:{name:'Các bước làm', icon:'🍳', ideas:['Cần chuẩn bị gì?','Bước 1, bước 2, bước 3 là gì?','Cần lưu ý điều gì?'], rubric:['Có phần chuẩn bị','Các bước theo đúng thứ tự','Dùng từ chỉ thứ tự (đầu tiên, tiếp theo, cuối cùng)']},
+  letter:{name:'Viết thư ngắn',     icon:'✉️', ideas:['Con viết cho ai? Hỏi thăm điều gì?','Con muốn kể chuyện gì?','Lời chúc và kí tên'], rubric:['Có lời chào/xưng hô phù hợp','Có nội dung hỏi thăm hoặc kể','Có lời chúc và kí tên']},
+  notice:{name:'Thông báo ngắn',    icon:'📢', ideas:['Thông báo về việc gì?','Khi nào? Ở đâu? Ai tham gia?','Cần chuẩn bị gì?'], rubric:['Nêu rõ việc gì','Đủ thời gian, địa điểm','Ngắn gọn, dễ hiểu']}
+};
+const CONNECTORS={
+  experience:['Sáng hôm ấy,','Đầu tiên,','Sau đó,','Một lúc sau,','Cuối cùng,','Em nhớ mãi'],
+  description:['Nhìn từ xa,','Đến gần,','Đặc biệt là','Mỗi khi','Em thích nhất là'],
+  feeling:['Em nhớ nhất là','Có lần,','Em muốn nói với','Em sẽ'],
+  opinion:['Em nghĩ rằng','Vì','Chẳng hạn,','Vì vậy,'],
+  message:['Mẹ ơi,','Con đi','Con sẽ về lúc','Con của mẹ,'],
+  instructions:['Chuẩn bị:','Bước 1:','Bước 2:','Bước 3:','Lưu ý:'],
+  letter:['Ông bà kính mến,','Dạo này','Cháu kể ông bà nghe','Cháu chúc','Cháu của ông bà,'],
+  notice:['THÔNG BÁO','Thời gian:','Địa điểm:','Các bạn nhớ']
+};
+/* Nhiệm vụ viết theo tuần (bám cột "Chính tả / Viết đoạn văn" trong bản trích SGK). wordBank = từ gợi ý (không bắt buộc dùng). */
+const WRITING_TASKS=[
+  {id:'W01_MSG', week:1,  genre:'message',     ctx:'home',    prompt:'Viết một tin nhắn ngắn cho mẹ báo con đi học nhóm ở nhà bạn.', wordBank:['học nhóm','nhà bạn Lan','về lúc 5 giờ','con của mẹ']},
+  {id:'W02_EXP', week:2,  genre:'experience',  ctx:'home',    prompt:'Kể một việc con đã làm cùng người thân.', wordBank:['cùng bố','tưới cây','vun đất','giữ cây cho thẳng','sáng hôm sau']},
+  {id:'W03_INS', week:3,  genre:'instructions',ctx:'home',    prompt:'Viết các bước làm một món ăn đơn giản (ví dụ: pha nước cam).', wordBank:['một quả cam','vắt lấy nước','thêm đường','khuấy đều','thưởng thức']},
+  {id:'W04_FEEL',week:4,  genre:'feeling',     ctx:'school',  prompt:'Nêu tình cảm của con với một người bạn.', wordBank:['bạn thân','cho mượn bút','cùng chơi','hay cười','em quý bạn']},
+  {id:'W05_FEEL',week:5,  genre:'feeling',     ctx:'home',    prompt:'Nêu tình cảm với một người con yêu quý.', wordBank:['bà','áo mưa','tận cổng trường','vuốt lại cổ áo','em nhớ mãi']},
+  {id:'W07_DESC',week:7,  genre:'description', ctx:'school',  prompt:'Giới thiệu về bản thân con (tên, sở thích, điều con làm tốt).', wordBank:['em tên là','lớp 3','thích vẽ','giỏi nhảy dây','mong muốn']},
+  {id:'W08_NOT', week:8,  genre:'notice',      ctx:'library', prompt:'Viết một thông báo ngắn về buổi đọc sách của lớp.', wordBank:['buổi đọc sách','thứ sáu','thư viện','mang theo','đúng giờ']},
+  {id:'W10_DESC',week:10, genre:'description', ctx:'school',  prompt:'Tả một đồ dùng học tập con yêu thích.', wordBank:['hộp bút','khóa nhỏ màu xanh','tiếng “tách”','ngăn bên trái','bút chì ngắn nhất']},
+  {id:'W11_DESC',week:11, genre:'description', ctx:'home',    prompt:'Tả ngôi nhà của con (một góc con thích nhất).', wordBank:['góc học tập','cửa sổ','nắng buổi sáng','giá sách','yên tĩnh']},
+  {id:'W12_DESC',week:12, genre:'description', ctx:'home',    prompt:'Tả một đồ vật trong nhà.', wordBank:['chiếc đồng hồ','tròn như','tiếng tích tắc','trên tường','mỗi sáng']},
+  {id:'W13_OPI', week:13, genre:'opinion',     ctx:'story',   prompt:'Nêu lí do con thích (hoặc không thích) một nhân vật trong truyện đã đọc.', wordBank:['nhân vật','em thích vì','dũng cảm','biết giúp bạn','chẳng hạn']},
+  {id:'W15_LET', week:15, genre:'letter',      ctx:'home',    prompt:'Viết một bức thư ngắn hỏi thăm ông bà.', wordBank:['ông bà kính mến','dạo này','cháu được điểm tốt','cháu chúc','cháu của ông bà']},
+  {id:'W19_DESC',week:19, genre:'description', ctx:'nature',  prompt:'Tả một cảnh thiên nhiên con từng thấy (bầu trời, cơn mưa, dòng sông…).', wordBank:['bầu trời','xanh biếc','đám mây trắng xốp','như','gió mát']},
+  {id:'W20_FEEL',week:20, genre:'feeling',     ctx:'story',   prompt:'Nêu cảm nghĩ về một nhân vật trong bài đọc.', wordBank:['em cảm phục','vì','việc làm','em học được']},
+  {id:'W22_FEEL',week:22, genre:'feeling',     ctx:'nature',  prompt:'Nêu tình cảm với quê hương hoặc thiên nhiên.', wordBank:['quê em','cánh đồng','mùi lúa','tiếng chim','em yêu']},
+  {id:'W23_OPI', week:23, genre:'opinion',     ctx:'home',    prompt:'Nêu ý kiến về một việc làm giúp giữ sức khỏe.', wordBank:['tập thể dục','đều đặn','buổi sáng','khỏe mạnh','em sẽ']},
+  {id:'W24_EXP', week:24, genre:'experience',  ctx:'story',   prompt:'Kể lại ngắn gọn một câu chuyện con đã học.', wordBank:['ngày xưa','một hôm','bỗng','cuối cùng','câu chuyện dạy em']},
+  {id:'W25_EXP', week:25, genre:'experience',  ctx:'school',  prompt:'Thuật lại một việc tốt con đã làm hoặc chứng kiến.', wordBank:['giờ ra chơi','bạn bị ngã','đỡ bạn dậy','cô khen','em thấy vui']},
+  {id:'W26_MSG', week:26, genre:'message',     ctx:'school',  prompt:'Viết một đoạn hội thoại hoặc tin nhắn ngắn với bạn.', wordBank:['cậu ơi','chiều nay','sân trường','nhớ mang','tớ chờ']},
+  {id:'W28_FEEL',week:28, genre:'feeling',     ctx:'nature',  prompt:'Nêu cảm nghĩ về quê hương.', wordBank:['quê nội','con đường làng','bến sông','em nhớ','em tự hào']},
+  {id:'W29_DESC',week:29, genre:'description', ctx:'nature',  prompt:'Tả một cảnh đẹp của đất nước (con đã đến hoặc xem ảnh).', wordBank:['vịnh Hạ Long','những hòn đảo','mặt nước','xanh như ngọc','thuyền']},
+  {id:'W30_DESC',week:30, genre:'description', ctx:'festival',prompt:'Giới thiệu ngắn một nét văn hóa (lễ hội, trang phục, nhà ở).', wordBank:['Tết','bánh chưng','áo dài','chúc Tết','lì xì']},
+  {id:'W31_FEEL',week:31, genre:'feeling',     ctx:'story',   prompt:'Viết vài câu thể hiện lòng biết ơn một vị anh hùng dân tộc.', wordBank:['Hai Bà Trưng','dũng cảm','em biết ơn','em sẽ cố gắng']},
+  {id:'W32_DESC',week:32, genre:'description', ctx:'school',  prompt:'Tả một món đồ công nghệ hoặc rô-bốt con thích.', wordBank:['rô-bốt','màu bạc','đèn nhấp nháy','biết nói','giúp em']},
+  {id:'W33_OPI', week:33, genre:'opinion',     ctx:'nature',  prompt:'Nêu ý kiến về một việc làm bảo vệ môi trường.', wordBank:['không xả rác','trồng cây','tiết kiệm nước','Trái Đất xanh','em sẽ']},
+  {id:'W35_FREE',week:35, genre:'experience',  ctx:'home',    prompt:'Viết về một kỉ niệm đáng nhớ trong năm học lớp 3.', wordBank:['năm học','em nhớ nhất','cô giáo','các bạn','lên lớp 4']}
+];
+/* =====================================================================
+   KHO TỪ NGỮ THEO CHỦ ĐỀ × MỨC (Vocabulary & Expression Bank — ref_docs/enhance.md)
+   level 1 = Cơ bản (mọi bé); level 2 = Nâng cao (mở khi đủ điều kiện hoặc phụ huynh bật).
+   Dùng cho: chip Gom từ ở Góc viết, Thẻ kiến thức (flashcard), Nối từ, gợi ý bài tham khảo.
+   ===================================================================== */
+const VOCAB_BANK={
+  nature:{title:'Mùa hè & Thiên nhiên',emoji:'🌊',ctx:['nature','garden'],
+    std:{nouns:['bãi biển','dòng sông','rặng dừa','cơn mưa rào','ánh nắng'],adjs:['xanh ngắt','trong lành','mát rượi','rực rỡ','mênh mông'],verbs:['bơi lội','thả diều','leo núi','lắng nghe']},
+    adv:{adjs:['xanh trong veo','vàng óng ả','lung linh huyền ảo'],
+         similes:[{s:'Nước biển xanh trong như một tấm gương khổng lồ.',a:'Nước biển',b:'tấm gương khổng lồ',net:'xanh trong'},{s:'Mặt trời đỏ rực như quả bóng khổng lồ.',a:'Mặt trời',b:'quả bóng khổng lồ',net:'đỏ rực'}]}},
+  school:{title:'Trường học & Bạn bè',emoji:'🏫',ctx:['school','library'],
+    std:{nouns:['lớp học','mái trường','thầy cô','cuốn sách','hộp bút'],adjs:['ngăn nắp','sạch sẽ','chăm chỉ','vui vẻ','thân thiết'],verbs:['đọc sách','lắng nghe','thảo luận','giúp đỡ']},
+    adv:{expressions:['Trường học như ngôi nhà thứ hai.','Giọng nói của cô ấm áp như tiếng hát.'],
+         idioms:[{s:'Chăm chỉ như kiến',why:'Kiến làm việc suốt ngày → chỉ người siêng năng.'},{s:'Thân thiết như hình với bóng',why:'Hình và bóng luôn đi cùng nhau → bạn bè luôn ở bên nhau.'}],
+         similes:[{s:'Trường học như ngôi nhà thứ hai.',a:'Trường học',b:'ngôi nhà thứ hai',net:'thân quen, ấm áp'},{s:'Giọng nói của cô ấm áp như tiếng hát.',a:'Giọng nói của cô',b:'tiếng hát',net:'ấm áp'}]}},
+  home:{title:'Gia đình & Mái ấm',emoji:'🏠',ctx:['home'],
+    std:{nouns:['ông bà','cha mẹ','căn nhà','góc học tập','bữa cơm'],adjs:['ấm áp','dịu dàng','hiền hậu','gọn gàng','yêu thương'],verbs:['nấu cơm','kể chuyện','dọn dẹp','chăm sóc']},
+    adv:{similes:[{s:'Bàn tay mẹ êm ái như ru.',a:'Bàn tay mẹ',b:'lời ru',net:'êm ái'},{s:'Mái tóc ông bạc trắng như mây.',a:'Mái tóc ông',b:'mây',net:'bạc trắng'}]}}
+};
+/* Cổng mức: Nâng cao mở khi phụ huynh bật HOẶC con có ≥6 kĩ năng ở practicing/stable */
+function advOpen(){
+  if(G.advUnlocked)return true;
+  const n=Object.values(G.skills||{}).filter(s=>s.state==='practicing'||s.state==='stable').length;
+  return n>=6;
+}
+/* Lấy từ theo bối cảnh + mức (dùng cho chip Gom từ / Nối từ) */
+function vocabFor(ctxId,level){
+  const out=[];Object.values(VOCAB_BANK).forEach(th=>{if(!th.ctx.includes(ctxId))return;
+    out.push(...th.std.nouns,...th.std.adjs,...th.std.verbs);
+    if(level>=2&&th.adv.adjs)out.push(...th.adv.adjs);});
+  return [...new Set(out)];
+}
+/* Thẻ kiến thức (flashcard 2 mặt) sinh từ kho từ: mặt trước = từ; mặt sau = loại từ + ví dụ */
+function vocabFlashcards(level){
+  const cards=[];
+  Object.values(VOCAB_BANK).forEach(th=>{
+    th.std.nouns.forEach(w=>cards.push({front:w,kind:'Từ chỉ sự vật',theme:th.title,emoji:th.emoji,back:`“${w}” là từ chỉ sự vật (gọi tên được, chỉ vào được).`,ex:`Ví dụ: ${cap(w)} ${th===VOCAB_BANK.nature?'thật đẹp.':'rất gần gũi với em.'}`,skill:'C02_SUVAT'}));
+    th.std.adjs.forEach(w=>cards.push({front:w,kind:'Từ chỉ đặc điểm',theme:th.title,emoji:th.emoji,back:`“${w}” là từ chỉ đặc điểm — thử thêm “rất”: rất ${w}.`,ex:`Ví dụ: ${cap(th.std.nouns[0])} ${w}.`,skill:'C02_DACDIEM'}));
+    th.std.verbs.forEach(w=>cards.push({front:w,kind:'Từ chỉ hoạt động',theme:th.title,emoji:th.emoji,back:`“${w}” là từ chỉ hoạt động — làm được bằng động tác.`,ex:`Ví dụ: Em ${w} cùng bạn.`,skill:'C02_HOATDONG'}));
+    if(level>=2){
+      (th.adv.adjs||[]).forEach(w=>cards.push({front:w,kind:'Từ ghép chỉ đặc điểm 🌟',theme:th.title,emoji:th.emoji,back:`“${w}” ghép nhiều tiếng để tả kĩ hơn.`,ex:`Ví dụ: Mặt hồ ${w}.`,skill:'C02_DACDIEM',adv:true}));
+      (th.adv.similes||[]).forEach(x=>cards.push({front:x.s,kind:'Phép so sánh 🪞',theme:th.title,emoji:th.emoji,back:`A = ${x.a} · nét giống = ${x.net} · B = ${x.b}.`,ex:'So sánh cần HAI sự vật và một nét giống nhau.',skill:'C08_SOSANH',adv:true}));
+      (th.adv.idioms||[]).forEach(x=>cards.push({front:x.s,kind:'Thành ngữ so sánh 🌟',theme:th.title,emoji:th.emoji,back:x.why,ex:`Đặt câu: Bạn Lan ${x.s.toLowerCase()}.`,skill:'C08_SOSANH',adv:true}));
+    }
+  });
+  return cards;
+}
+
+/* Bài tham khảo (mentor texts) — do dự án tự viết, ngắn 4–7 câu, có gắn thẻ để tô màu.
+   Thẻ: [a]…[/a]=từ chỉ đặc điểm/hình ảnh; [s]…[/s]=so sánh; [c]…[/c]=từ nối/thứ tự; [e]…[/e]=câu cảm xúc.
+   Lưu ý: CHỈ mở sau khi bé đã viết; hiển thị như "bạn cùng lớp viết", không phải đáp án.
+   level 1 = Cơ bản (luôn hiện); level 2 = Nâng cao (chỉ khi advOpen()). */
+const EXEMPLARS={
+  /* --- Từ ref_docs/enhance.md (SampleEssays) — chuyển sang định dạng thẻ --- */
+  W10_DESC_ENH:[{level:1,title:'Chiếc thước kẻ thân thiết',text:'[c]Nhân dịp[/c] đầu năm học mới, mẹ mua cho em một chiếc thước kẻ [a]rất đẹp[/a]. Thước được làm bằng nhựa dẻo [a]màu xanh lam mát mắt[/a]. Chiếc thước dài khoảng hai mươi xăng-ti-mét, [a]phẳng lỳ[/a] và [a]thẳng tắp[/a]. [c]Trên bề mặt[/c] thước có in các vạch chia cm màu đen rất rõ ràng. [c]Nhờ có[/c] thước, em vẽ được những đường thẳng [a]ngay ngắn[/a] trong vở. [e]Em xem chiếc thước kẻ [s]như một người bạn nhỏ[/s] đồng hành mỗi ngày đi học.[/e]'},
+    {level:2,title:'Người bạn đồng hành – Chiếc hộp bút chì',text:'Món quà sinh nhật mà em [a]trân trọng nhất[/a] là chiếc hộp bút chì do bố tặng. Hộp bút làm bằng kim loại nhẹ, mang chiếc áo màu xanh da trời [a]mát rượi[/a]. [c]Bên ngoài[/c] nắp hộp in hình chú rồng con [a]vui nhộn[/a] đang mỉm cười. [c]Mở nắp ra,[/c] bên trong được chia làm hai ngăn [a]rộng rãi[/a] và [a]ngăn nắp[/a]. Một ngăn em xếp gọn những chiếc bút chì [a]thẳng tắp[/a], ngăn còn lại đựng tẩy và thước kẻ. Chiếc hộp bút [s]giống như một ngôi nhà nhỏ[/s] giữ gìn cẩn thận các đồ dùng cho em. [c]Mỗi khi[/c] học bài xong, em đều lau chùi hộp bút sạch sẽ và cất vào cặp.'}],
+  W02_EXP_ENH:[{level:1,title:'Buổi chiều thả diều cùng bố',text:'[c]Cuối tuần vừa rồi,[/c] bố đưa em ra triền đê sau nhà để thả diều. Chiếc diều của em có hình con bướm [a]rực rỡ sắc màu[/a]. Bố dạy em cầm dây diều, còn bố cầm diều chạy đà. [c]Khi gặp[/c] cơn gió [a]mát[/a], chiếc diều cất cánh bay cao lên bầu trời [a]xanh[/a]. [e]Em cảm thấy vô cùng sung sướng khi ngắm nhìn diều chao đảo trong gió.[/e] [c]Đó là[/c] một buổi chiều thật [a]vui vẻ[/a] và [a]đáng nhớ[/a] của em.'},
+    {level:2,title:'Trải nghiệm làm bánh trôi cùng mẹ',text:'[c]Vào ngày[/c] Tết Hàn Thực, em được cùng mẹ làm những chiếc bánh trôi [a]thơm ngon[/a]. Mẹ chuẩn bị sẵn bột nếp [a]trắng mịn[/a] và những viên đường phên màu nâu [a]ngọt ngào[/a]. Em [a]khéo léo[/a] viên từng viên bột nhỏ, đặt nhân đường vào giữa rồi xoay tròn trong lòng bàn tay. [c]Nhìn những[/c] viên bánh [a]tròn xoe[/a], [s]trắng trong như những viên ngọc nhỏ[/s], em cảm thấy vô cùng thích thú. [c]Khi bánh chín[/c] vớt ra bát, em rắc thêm chút vừng rang [a]thơm phức[/a]. [c]Cả gia đình[/c] cùng thưởng thức thành quả của hai mẹ con trong không khí [a]ấm áp[/a]. [e]Em rất yêu những khoảng thời gian đầm ấm bên mẹ.[/e]'}],
+  W02_EXP:[{level:1,title:'Trồng cây ớt cùng bố',text:'[c]Chiều thứ bảy,[/c] em cùng bố trồng một cây ớt. Em giữ cây cho thẳng, còn bố vun đất quanh gốc. [c]Sáng hôm sau,[/c] em chạy ra xem cây đã đứng vững chưa. [e]Em mong cây mau lớn để có ớt cho mẹ nấu ăn.[/e]'},
+           {level:2,title:'Gói bánh với bà',text:'[c]Tết năm ngoái,[/c] em được gói bánh chưng cùng bà. Lá dong [a]xanh mướt[/a], gạo nếp [a]trắng ngần[/a] [s]như hạt ngọc[/s]. Bà cầm tay em gấp lá, buộc lạt [a]thật chặt[/a]. [c]Cuối cùng,[/c] chiếc bánh của em hơi méo nhưng bà bảo là đẹp nhất. [e]Em thấy Tết ấm hơn khi được ngồi bên bà.[/e]'}],
+  W10_DESC:[{level:1,title:'Chiếc hộp bút của em',text:'Chiếc hộp bút của em có chiếc khóa nhỏ [a]màu xanh[/a]. Mỗi lần mở hộp, em nghe tiếng “tách” [a]rất khẽ[/a]. Em để chiếc bút chì ngắn nhất ở ngăn bên trái. [e]Em giữ hộp bút cẩn thận vì đó là quà của mẹ.[/e]'},
+            {level:2,title:'Cây thước kẻ',text:'Cây thước của em [a]trong suốt[/a], dài bằng gang tay. Các vạch số [a]đen nhỏ[/a] xếp đều [s]như hàng kiến đi[/s]. [c]Đặc biệt,[/c] một góc thước bị mẻ từ hôm em làm rơi. [c]Mỗi khi[/c] kẻ bài, em vẫn thích dùng nó nhất. [e]Cây thước cũ mà em không nỡ đổi.[/e]'}],
+  W05_FEEL:[{level:1,title:'Bà của em',text:'Hôm em quên áo mưa, bà mang áo đến tận cổng trường. Bà còn vuốt lại chiếc cổ áo bị gấp của em. [e]Em nhớ mãi việc nhỏ ấy.[/e] Em sẽ nhắc bà uống thuốc đúng giờ.'},
+            {level:2,title:'Mẹ',text:'Mẹ em không hay nói lời ngọt ngào. [c]Nhưng[/c] mỗi sáng, hộp cơm của em luôn có thêm một quả quýt. Tay mẹ [a]thô ráp[/a] [s]như vỏ cây[/s], vậy mà xoa đầu em thì [a]êm[/a] lắm. [e]Em muốn nói: “Con cảm ơn mẹ.”[/e]'}],
+  W23_OPI:[{level:1,title:'Tập thể dục buổi sáng',text:'Em nghĩ tập thể dục buổi sáng rất tốt. [c]Vì[/c] sau khi tập, em thấy người [a]nhẹ nhõm[/a] và học bài dễ hơn. [c]Chẳng hạn,[/c] hôm nào nhảy dây xong em ăn sáng ngon miệng hơn. [e]Em sẽ rủ bố cùng tập mỗi ngày.[/e]'}],
+  W19_DESC:[{level:1,title:'Bầu trời sau cơn mưa',text:'Sau cơn mưa, bầu trời [a]trong xanh[/a] trở lại. Vài đám mây [a]trắng xốp[/a] trôi [a]chậm chậm[/a] [s]như đàn cừu[/s]. Nắng chiếu xuống sân, vũng nước [a]lấp lánh[/a]. [e]Em hít một hơi thật sâu, không khí mát ơi là mát.[/e]'}],
+  W15_LET:[{level:1,title:'Thư gửi ông bà',text:'Ông bà kính mến, dạo này ông bà có khỏe không ạ? Cháu vừa được cô khen vì đọc bài [a]to, rõ[/a]. Cuối tuần, cháu và bố sẽ về thăm ông bà. [e]Cháu chúc ông bà luôn vui khỏe.[/e] Cháu của ông bà, Bo.'}],
+  W03_INS:[{level:1,title:'Pha nước cam',text:'[c]Chuẩn bị:[/c] một quả cam, một cái cốc, một thìa đường. [c]Bước 1:[/c] rửa cam rồi cắt đôi. [c]Bước 2:[/c] vắt lấy nước vào cốc. [c]Bước 3:[/c] thêm đường, khuấy đều. [c]Lưu ý:[/c] nhờ người lớn giúp khi dùng dao.'}],
+  W01_MSG:[{level:1,title:'Tin nhắn cho mẹ',text:'Mẹ ơi, con sang nhà bạn Lan học nhóm. Con sẽ về lúc 5 giờ chiều. Con của mẹ, Bo.'}],
+  W29_DESC:[{level:2,title:'Vịnh Hạ Long trong ảnh',text:'Trong bức ảnh, mặt nước vịnh [a]xanh như ngọc[/a]. Những hòn đảo đá [a]nhấp nhô[/a] [s]như đàn rồng đang bơi[/s]. Một chiếc thuyền buồm [a]nâu đỏ[/a] lướt qua [a]nhẹ tênh[/a]. [e]Em ước một lần được đứng trên thuyền ấy.[/e]'}],
+  W33_OPI:[{level:1,title:'Không xả rác',text:'Em nghĩ không xả rác bừa bãi là việc ai cũng làm được. [c]Vì[/c] rác làm bẩn đường và tắc cống khi mưa. [c]Chẳng hạn,[/c] lớp em để một túi riêng đựng vỏ hộp sữa. [e]Em sẽ nhắc em trai bỏ rác đúng chỗ.[/e]'}]
+};
+/* Điền từ (cloze) cho bé mới bắt đầu — mỗi chỗ trống có 3 lựa chọn, đúng 1 */
+const CLOZE={
+  description:{text:'Chiếc hộp bút của em có chiếc khóa nhỏ màu {0}. Mỗi lần mở hộp, em nghe tiếng “tách” rất {1}. Em để chiếc bút chì {2} ở ngăn bên trái. Em {3} hộp bút vì đó là quà của mẹ.',
+    blanks:[{ans:'xanh',opts:['xanh','chạy','buồn']},{ans:'khẽ',opts:['khẽ','to đùng','nhanh']},{ans:'ngắn nhất',opts:['ngắn nhất','đọc sách','vui vẻ']},{ans:'giữ gìn',opts:['giữ gìn','ném','ăn']}]},
+  experience:{text:'{0}, em cùng bố trồng một cây ớt. Em {1} cây cho thẳng, còn bố vun đất quanh gốc. {2}, em chạy ra xem cây đã đứng vững chưa. Em mong cây {3} để có ớt cho mẹ nấu ăn.',
+    blanks:[{ans:'Chiều thứ bảy',opts:['Chiều thứ bảy','Màu đỏ','Rất to']},{ans:'giữ',opts:['giữ','ăn','hát']},{ans:'Sáng hôm sau',opts:['Sáng hôm sau','Vì vậy','Rất đẹp']},{ans:'mau lớn',opts:['mau lớn','đọc bài','xanh lè']}]},
+  feeling:{text:'Hôm em quên áo mưa, {0} mang áo đến tận cổng trường. Bà còn {1} chiếc cổ áo bị gấp của em. Em {2} việc nhỏ ấy. Em sẽ nhắc bà {3} đúng giờ.',
+    blanks:[{ans:'bà',opts:['bà','cái bàn','con mèo']},{ans:'vuốt lại',opts:['vuốt lại','ném đi','hát']},{ans:'nhớ mãi',opts:['nhớ mãi','quên ngay','ăn']},{ans:'uống thuốc',opts:['uống thuốc','chạy nhảy','xem phim']}]},
+  opinion:{text:'Em nghĩ tập thể dục buổi sáng rất {0}. {1} sau khi tập, em thấy người nhẹ nhõm và học bài dễ hơn. {2}, hôm nào nhảy dây xong em ăn sáng ngon hơn. Em sẽ rủ bố {3} mỗi ngày.',
+    blanks:[{ans:'tốt',opts:['tốt','xanh','tròn']},{ans:'Vì',opts:['Vì','Màu','Cái']},{ans:'Chẳng hạn',opts:['Chẳng hạn','Rất to','Buồn quá']},{ans:'cùng tập',opts:['cùng tập','đi ngủ','ăn kem']}]}
+};
+
+/* ---- Trạng thái Góc viết ---- */
+const WS_KEY='tv3:ws:v1';
+let WS={taskId:null, step:0, bank:[], ideas:{}, text:'', showRef:false, sttOn:false, notebook:[]};
+function wsLoad(){try{const s=JSON.parse(localStorage.getItem(WS_KEY));if(s)WS=Object.assign(WS,s);}catch(e){}WS.bank=WS.bank||[];WS.ideas=WS.ideas||{};WS.notebook=WS.notebook||[];}
+let _wsSaveT=null;
+function wsSave(){try{localStorage.setItem(WS_KEY,JSON.stringify(WS));}catch(e){}}
+function wsSaveSoon(){clearTimeout(_wsSaveT);_wsSaveT=setTimeout(wsSave,500);}
+window.addEventListener('pagehide',wsSave);
+document.addEventListener('visibilitychange',()=>{if(document.hidden)wsSave();});
+
+function wsTask(){return WRITING_TASKS.find(t=>t.id===WS.taskId)||null;}
+function wsSuggestTask(){
+  /* gợi ý theo tuần đang mở: nhiệm vụ gần nhất ≤ tuần hiện tại; nếu không có thì tuần 1 */
+  const w=G.unlocked||1;const cands=WRITING_TASKS.filter(t=>t.week<=w);return (cands.length?cands[cands.length-1]:WRITING_TASKS[0]).id;
+}
+function wsDraftId(){return 'ws:'+WS.taskId;}
+function wsRender(){
+  const root=document.getElementById('wsRoot');if(!root)return;
+  if(!WS.taskId)WS.taskId=wsSuggestTask();
+  const t=wsTask(),g=GENRES[t.genre];
+  const steps=['1 · Gom từ','2 · Tìm ý','3 · Viết','4 · Đọc lại'];
+  let html=`<div class="card">
+    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+      <label style="font-weight:700;color:#5e35b1">Đề bài:</label>
+      <select id="wsTaskSel" style="font-family:inherit;font-size:14.5px;padding:7px 10px;border:2px solid #b2dfdb;border-radius:10px;flex:1;min-width:240px">
+        ${WRITING_TASKS.map(x=>`<option value="${x.id}" ${x.id===WS.taskId?'selected':''}>Tuần ${x.week} · ${esc(GENRES[x.genre].icon+' '+x.prompt)}</option>`).join('')}
+      </select>
+      <span class="ws-status">${esc(g.icon+' '+g.name)}</span>
+    </div>
+    <div class="ws-steps">${steps.map((s,i)=>`<button class="ws-step${WS.step===i?' on':''}${i<WS.step?' done':''}" onclick="wsGo(${i})">${s}</button>`).join('')}</div>
+    <div id="wsStep"></div>
+  </div>`;
+  root.innerHTML=html;
+  document.getElementById('wsTaskSel').addEventListener('change',e=>{wsSelectTask(e.target.value);});
+  wsRenderStep();
+}
+function wsSelectTask(id){
+  if(WS.text&&WS.taskId!==id&&!confirm('Đổi đề bài? Bản nháp hiện tại vẫn được giữ trong Góc phụ huynh và có thể quay lại.'))return;
+  if(WS.text)wsPersistDraft('draft');
+  WS.taskId=id;WS.step=0;WS.bank=[];WS.ideas={};WS.text='';WS.showRef=false;
+  /* khôi phục nháp cũ của đề này nếu có */
+  const old=G.writings.find(w=>w.draftId===wsDraftId());if(old){WS.text=old.text||'';}
+  wsSave();wsRender();
+}
+function wsGo(i){WS.step=i;wsSave();wsRender();}
+function wsRenderStep(){
+  const el=document.getElementById('wsStep');const t=wsTask(),g=GENRES[t.genre];
+  if(WS.step===0)el.innerHTML=wsStep1(t,g);
+  else if(WS.step===1)el.innerHTML=wsStep2(t,g);
+  else if(WS.step===2){el.innerHTML=wsStep3(t,g);wsWireEditor();}
+  else el.innerHTML=wsStep4(t,g);
+  el.querySelectorAll('[data-ws]').forEach(b=>b.addEventListener('click',()=>wsAction(b.dataset.ws,b.dataset.v)));
+}
+/* ---- Bước 1: gom từ (chip từ ngân hàng + từ vựng bối cảnh + sổ tay) ---- */
+function wsStep1(t,g){
+  const ctx=CONTEXTS[t.ctx]||CONTEXTS.home;
+  const ctxId=CONTEXTS[t.ctx]?t.ctx:'home';
+  const lvl=advOpen()?2:1;
+  const themeWords=vocabFor(ctxId,1);
+  const advWords=lvl>=2?vocabFor(ctxId,2).filter(w=>!themeWords.includes(w)):[];
+  const advSimiles=lvl>=2?Object.values(VOCAB_BANK).filter(th=>th.ctx.includes(ctxId)).flatMap(th=>(th.adv.similes||[]).map(x=>x.s)):[];
+  const ctxWords=[...new Set([...(ctx.attrs||[]),...(ctx.actions||[]).slice(0,4),...(ctx.entities||[]).slice(0,4)])].filter(w=>!themeWords.includes(w));
+  const chip=(w,cls)=>`<button class="chip ${cls||''}${WS.bank.includes(w)?' on':''}" data-ws="bank" data-v="${escAttr(w)}">${WS.bank.includes(w)?'✓ ':''}${esc(w)}</button>`;
+  return `<div class="ws-tip"><span class="owl">🦉</span><div><b>Đề:</b> ${esc(t.prompt)}<br>Chạm để <b>gom từ</b> con thấy hợp. Không bắt buộc dùng hết — chỉ để lúc viết đỡ “bí từ”. Có thể <b>bỏ qua</b> bước này.</div></div>
+    <h4 style="margin-top:12px">Từ gợi ý cho đề này</h4><div>${t.wordBank.map(w=>chip(w)).join('')}</div>
+    ${themeWords.length?`<h4>Kho từ theo chủ đề <span class="ws-status">Cơ bản</span></h4><div>${themeWords.map(w=>chip(w)).join('')}</div>`:''}
+    ${ctxWords.length?`<h4>Từ theo bối cảnh: ${esc(ctx.title)}</h4><div>${ctxWords.map(w=>chip(w)).join('')}</div>`:''}
+    ${advWords.length||advSimiles.length?`<h4>🌟 Nâng cao <span class="ws-status">đã mở</span></h4><div>${advWords.map(w=>chip(w,'book')).join('')}${advSimiles.map(w=>chip(w,'book')).join('')}</div><div class="ws-count">Câu so sánh chỉ là <b>gợi ý cách nói</b> — con nên tự nghĩ hình ảnh của riêng mình.</div>`:''}
+    ${WS.notebook.length?`<h4>📒 Sổ tay tác giả nhí (từ con đã gom từ bài tham khảo)</h4><div>${WS.notebook.slice(-20).map(w=>chip(w,'book')).join('')}</div>`:''}
+    <div style="margin-top:8px"><input id="wsOwnWord" class="ans" style="max-width:260px" placeholder="Thêm từ của riêng con…"> <button class="teal" data-ws="addown">＋ Thêm</button></div>
+    <div class="ws-count">Đã gom: <b>${WS.bank.length}</b> từ</div>
+    <div class="gbtn-row" style="justify-content:flex-start"><button class="grn" data-ws="go" data-v="1">Tiếp: Tìm ý →</button><button class="gry" data-ws="go" data-v="2">Bỏ qua, viết luôn</button></div>`;
+}
+/* ---- Bước 2: tìm ý (2–3 câu hỏi theo thể loại; trả lời tuỳ ý) ---- */
+function wsStep2(t,g){
+  return `<div class="ws-tip"><span class="owl">🦉</span><div>Con trả lời <b>vài chữ</b> thôi cũng được, hoặc kể miệng cho ba/mẹ nghe. Không cần đủ cả ba câu.</div></div>
+    ${g.ideas.map((q,i)=>`<div class="ws-idea" style="margin-top:10px"><b style="color:#00695c">${i+1}. ${esc(q)}</b><textarea data-idea="${i}" placeholder="…">${esc(WS.ideas[i]||'')}</textarea></div>`).join('')}
+    <div class="gbtn-row" style="justify-content:flex-start"><button class="grn" data-ws="go" data-v="2">Tiếp: Viết →</button><button class="gry" data-ws="go" data-v="0">← Quay lại</button></div>`;
+}
+/* ---- Bước 3: viết (editor + chip chèn + từ nối + STT tuỳ chọn + kiểm tra nhẹ) ---- */
+function wsStep3(t,g){
+  const cons=CONNECTORS[t.genre]||[];
+  const ideas=Object.values(WS.ideas).filter(x=>x&&x.trim());
+  const sttUI=(G.sttEnabled&&('webkitSpeechRecognition' in window||'SpeechRecognition' in window))
+    ?`<button class="org" id="wsStt" data-ws="stt">🎤 ${WS.sttOn?'Dừng đọc':'Đọc để máy gõ'}</button>`:'';
+  return `<div class="ws-tip"><span class="owl">🦉</span><div><b>Đề:</b> ${esc(t.prompt)}<br>Viết theo cách của con. Chạm chip để chèn từ. Muốn sửa gì cứ sửa — bản nháp <b>tự lưu</b>.</div></div>
+    ${ideas.length?`<div class="ws-tip info"><span class="owl">💭</span><div><b>Ý con đã ghi:</b> ${ideas.map(esc).join(' · ')}</div></div>`:''}
+    <div style="margin-top:10px"><b style="font-size:13.5px;color:#5e35b1">Từ nối gợi ý:</b><br>${cons.map(c=>`<button class="chip con" data-ws="ins" data-v="${escAttr(c)}">${esc(c)}</button>`).join('')}</div>
+    ${WS.bank.length?`<div style="margin-top:6px"><b style="font-size:13.5px;color:#00695c">Từ con đã gom:</b><br>${WS.bank.map(w=>`<button class="chip" data-ws="ins" data-v="${escAttr(w)}">${esc(w)}</button>`).join('')}</div>`:''}
+    <textarea id="wsEditor" class="ws-editor" style="margin-top:10px" placeholder="Con bắt đầu từ một ý cũng được…">${esc(WS.text)}</textarea>
+    <div class="ws-count" id="wsCount"></div>
+    <div id="wsInline"></div>
+    <div class="gbtn-row" style="justify-content:flex-start;margin-top:10px">
+      ${sttUI}
+      <button class="pur" data-ws="cloze">🧩 Tập điền từ trước</button>
+      <button class="grn" data-ws="go" data-v="3">Tiếp: Đọc lại →</button>
+      <button class="gry" data-ws="go" data-v="1">← Quay lại</button>
+    </div>
+    <div id="wsClozeArea"></div>`;
+}
+function wsWireEditor(){
+  const ed=document.getElementById('wsEditor');if(!ed)return;
+  const upd=()=>{WS.text=ed.value;wsSaveSoon();wsUpdateCount();wsInlineCheck();};
+  ed.addEventListener('input',upd);upd();
+  document.querySelectorAll('#wsStep textarea[data-idea]').forEach(ta=>ta.addEventListener('input',()=>{WS.ideas[ta.dataset.idea]=ta.value;wsSaveSoon();}));
+}
+function wsUpdateCount(){const c=document.getElementById('wsCount');if(!c)return;const s=wsSentences(WS.text);c.textContent=`${s.length} câu · ${WS.text.trim()?WS.text.trim().split(/\s+/).length:0} chữ`;}
+function wsSentences(text){return normNFC(text).split(/(?<=[.!?…])\s+|\n+/).map(x=>x.trim()).filter(Boolean);}
+/* Kiểm tra nhẹ bằng LUẬT (không AI): thiếu dấu cuối câu, chưa viết hoa đầu câu, từ lặp liền, câu quá dài. Chỉ nhắc, không chấm. */
+function wsRuleCheck(text){
+  const tips=[];const t=normNFC(text);if(!t)return tips;
+  const sents=wsSentences(t);
+  if(t.length>12&&!/[.!?…]\s*$/.test(t))tips.push('Câu cuối chưa có dấu kết thúc (. ! ?). Con thử đọc lại xem ý đã trọn chưa nhé.');
+  sents.forEach(s=>{const first=s.replace(/^[“"'(\s]+/,'').charAt(0);if(first&&first===first.toLowerCase()&&first!==first.toUpperCase())tips.push(`Đầu câu “${s.slice(0,18)}…” nên viết hoa.`);});
+  const words=t.toLowerCase().split(/\s+/);for(let i=1;i<words.length;i++){if(words[i]===words[i-1]&&words[i].length>1&&!/^(xa|xanh|nhỏ|to|chầm|chậm|từ)$/.test(words[i])){tips.push(`Có từ lặp liền nhau: “${words[i]} ${words[i]}”. Con kiểm tra lại nhé.`);break;}}
+  sents.forEach(s=>{if(s.split(/\s+/).length>28)tips.push('Có một câu khá dài. Có thể tách thành hai câu cho dễ đọc.');});
+  return [...new Set(tips)].slice(0,3);
+}
+function wsInlineCheck(){
+  const box=document.getElementById('wsInline');if(!box)return;
+  const tips=wsRuleCheck(WS.text);
+  box.innerHTML=tips.length?`<div class="ws-tip"><span class="owl">🦉</span><div>${tips.map(esc).join('<br>')}</div></div>`:'';
+}
+/* ---- Bước 4: đọc lại (đánh dấu câu thích, tự soi 3 mục, lưu, mở bài tham khảo, in) ---- */
+function wsStep4(t,g){
+  const sents=wsSentences(WS.text);
+  const tips=wsRuleCheck(WS.text);
+  const hasNhu=/\b(như|giống như|tựa như|là)\b/i.test(WS.text);
+  const rec=G.writings.find(w=>w.draftId===wsDraftId());
+  const status=rec?rec.status:'';
+  return `<div class="ws-tip"><span class="owl">🦉</span><div>Con <b>đọc lại một lượt</b> (đọc thành tiếng càng tốt). Chạm vào <b>một câu con thích nhất</b>. Sau đó tự soi 3 mục gợi ý — không có điểm.</div></div>
+    ${sents.length?`<div style="margin-top:8px">${sents.map((s,i)=>`<button class="ws-sent${WS.fav===i?' fav':''}" data-ws="fav" data-v="${i}">${WS.fav===i?'⭐ ':''}${esc(s)}</button>`).join('')}</div>`:'<div class="ws-tip info"><span class="owl">✍️</span><div>Con chưa viết gì. Quay lại bước Viết nhé.</div></div>'}
+    <div class="rubric" style="margin-top:10px"><b>Tự soi cùng ba/mẹ (thể loại: ${esc(g.name)}):</b>${g.rubric.map(r=>`<div class="rubric-item">▢ ${esc(r)}</div>`).join('')}
+      ${hasNhu?`<div class="rubric-item">🪞 Con có dùng “như / giống như / là”. <b>Đó có phải phép so sánh không?</b> (Chỉ là so sánh khi có hai sự vật và một nét giống nhau.)</div>`:''}
+      ${tips.length?`<div class="rubric-item" style="color:#8d4e00">🔎 Kiểm tra sau cùng: ${tips.map(esc).join(' · ')}</div>`:''}
+    </div>
+    <div class="ws-tip info"><span class="owl">🔁</span><div><b>Sửa một chỗ thôi:</b> chọn 1 thẻ → quay lại Viết.<br>
+      <button class="chip" data-ws="rev" data-v="detail">＋ Thêm một chi tiết nhìn/nghe thấy</button>
+      <button class="chip" data-ws="rev" data-v="repeat">Hai câu có kể cùng một ý không?</button>
+      <button class="chip" data-ws="rev" data-v="word">Chọn một từ đúng ý hơn</button>
+      <button class="chip" data-ws="rev" data-v="order">Người đọc có biết việc nào trước không?</button></div></div>
+    <div class="gbtn-row" style="justify-content:flex-start;margin-top:10px">
+      <button class="grn gbig" data-ws="save">💾 Lưu bản nháp${status?' (cập nhật)':''}</button>
+      <button class="teal" data-ws="read">🔊 Nghe máy đọc bài của con</button>
+      <button class="pur" data-ws="print">📖 In / Lưu PDF “Trang sách của con”</button>
+      <button class="gry" data-ws="go" data-v="2">← Sửa tiếp</button>
+    </div>
+    ${status?`<div class="ws-count">Trạng thái: <span class="ws-status">${esc({draft:'Bản nháp đã lưu',reviewed_ok:'Ba/mẹ đã đọc cùng con',reviewed_revise:'Ba/mẹ gợi ý sửa một chỗ'}[status]||status)}</span> · ${rec.versions&&rec.versions.length?rec.versions.length+' bản trước':'bản đầu'}</div>`:''}
+    ${wsRefSection(t)}`;
+}
+/* Bài tham khảo: chỉ mở khi đã LƯU bản nháp có nội dung */
+function wsRefSection(t){
+  const rec=G.writings.find(w=>w.draftId===wsDraftId());
+  const unlocked=!!(rec&&rec.text&&rec.text.trim().length>=20);
+  /* Lớp truy cập dữ liệu: Cơ bản luôn; Nâng cao chỉ khi advOpen() hoặc bé chủ động xin thử thách */
+  const baseId=t.id.replace(/_(STD|ENH)$/,'');
+  const ownKeys=Object.keys(EXEMPLARS).filter(k=>k===baseId||k.startsWith(baseId+'_'));
+  let pool=ownKeys.flatMap(k=>EXEMPLARS[k]);
+  if(!pool.length){
+    pool=Object.entries(EXEMPLARS).filter(([id])=>{const tk=WRITING_TASKS.find(x=>id===x.id||id.startsWith(x.id+'_'));return tk&&tk.genre===t.genre;}).flatMap(([,v])=>v);
+  }
+  const canAdv=advOpen()||WS.advRequested;
+  const std=pool.filter(x=>x.level===1).slice(0,2);
+  const adv=canAdv?pool.filter(x=>x.level===2).slice(0,1):[];
+  const all=[...std,...adv];
+  const advTeaser=(!canAdv&&pool.some(x=>x.level===2))?`<div class="ws-tip info" style="margin-top:8px"><span class="owl">🌟</span><div>Có một bài <b>Nâng cao</b> cho đề này. <button class="chip" data-ws="advreq">Con muốn thử thách!</button></div></div>`:'';
+  if(!all.length)return '';
+  if(!unlocked)return `<div class="card" style="margin-top:12px;background:#fafafa"><b>🔒 Góc tham khảo</b><div style="font-size:13.5px;color:var(--muted)">Mở sau khi con <b>lưu bản nháp</b> của mình (để con tự nghĩ trước, tham khảo sau).</div></div>`;
+  if(!WS.showRef)return `<div class="card" style="margin-top:12px"><b>📚 Góc tham khảo đã mở</b><div style="font-size:13.5px;color:var(--muted)">Đây là bài của <b>“bạn cùng lớp”</b> do dự án viết — <b>không phải đáp án</b>, không chép lại. Con đọc để xem bạn ấy đã dùng chi tiết và từ ngữ thế nào, rồi chạm vào từ hay để cất vào Sổ tay.</div>
+    <div class="gbtn-row" style="justify-content:flex-start"><button class="pur" data-ws="showref">Xem 1–2 bài tham khảo</button></div></div>`;
+  return `<div class="card" style="margin-top:12px"><b>📚 Góc tham khảo</b>
+    <div class="ws-legend" style="margin:6px 0"><span><i class="hl-a">&nbsp;&nbsp;</i> từ chỉ đặc điểm / hình ảnh</span><span><i class="hl-s">&nbsp;&nbsp;</i> có thể là so sánh 🪞</span><span><i class="hl-c">&nbsp;&nbsp;</i> từ nối / thứ tự</span><span><i class="hl-e">&nbsp;&nbsp;</i> câu cảm xúc</span></div>
+    ${all.map(ex=>`<div class="ws-ex"><h4>${ex.level===2?'🌟 ':''}${esc(ex.title)} <span class="ws-status">${ex.level===2?'Nâng cao':'Cơ bản'}</span></h4>${wsMarkup(ex.text)}</div>`).join('')}
+    ${advTeaser}
+    <div class="ws-count">Chạm vào phần tô màu để cất từ vào 📒 Sổ tay. Sổ tay hiện ở bước Gom từ lần sau.</div></div>`;
+}
+function wsMarkup(txt){
+  const map={a:'hl-a',s:'hl-s',c:'hl-c',e:'hl-e'};
+  return esc(txt).replace(/\[(a|s|c|e)\](.*?)\[\/\1\]/g,(m,k,inner)=>`<span class="${map[k]}" data-ws="harvest" data-v="${escAttr(inner)}" title="Cất vào sổ tay">${inner}</span>`);
+}
+/* Điền từ (cloze) — dựng bên dưới editor */
+function wsCloze(t){
+  const cz=CLOZE[t.genre]||CLOZE.description;
+  const area=document.getElementById('wsClozeArea');if(!area)return;
+  let i=0;const html=esc(cz.text).replace(/\{(\d+)\}/g,(m,k)=>{const b=cz.blanks[+k];const opts=shuffle(b.opts.slice());return `<span class="cloze-blank" data-k="${k}"><select><option value="">…</option>${opts.map(o=>`<option>${esc(o)}</option>`).join('')}</select></span>`;});
+  area.innerHTML=`<div class="card" style="margin-top:10px;background:#f6fffb"><b>🧩 Tập điền từ (làm quen cấu trúc đoạn)</b><div style="line-height:2.1;margin-top:6px">${html}</div>
+    <div class="gbtn-row" style="justify-content:flex-start"><button class="grn" id="czCheck">Kiểm tra</button><button class="gry" id="czClose">Đóng</button></div><div id="czFb" class="fb"></div></div>`;
+  document.getElementById('czClose').onclick=()=>{area.innerHTML='';};
+  document.getElementById('czCheck').onclick=()=>{
+    let ok=0;area.querySelectorAll('.cloze-blank').forEach(sp=>{const b=cz.blanks[+sp.dataset.k];const v=sp.querySelector('select').value;const good=normNFC(v)===normNFC(b.ans);sp.classList.toggle('ok',good);sp.classList.toggle('no',!good&&!!v);if(good)ok++;});
+    const fb=document.getElementById('czFb');fb.className='fb '+(ok===cz.blanks.length?'ok':'no');
+    fb.textContent=ok===cz.blanks.length?'✔ Đủ cả rồi! Con thấy đoạn có mở – thân – kết chưa? Giờ viết bài của con nhé.':`Đúng ${ok}/${cz.blanks.length}. Ô đỏ con chọn lại nhé — đọc cả câu để chọn từ hợp nghĩa.`;
+    /* cloze = luyện cấu trúc; ghi nhận nhẹ vào C05_CAU (câu), không vào C10_VIET */
+    if(!area.dataset.recorded){area.dataset.recorded='1';recordSkill('C05_CAU',ok===cz.blanks.length,false);saveAll();}
+  };
+}
+function wsPersistDraft(status){
+  const txt=normNFC(WS.text);if(!txt)return false;
+  const t=wsTask();saveWriting('C10_VIET',t.prompt,txt,status||'draft',wsDraftId());
+  const rec=G.writings.find(w=>w.draftId===wsDraftId());if(rec){rec.taskId=t.id;rec.genre=t.genre;rec.week=t.week;}
+  saveAll();return true;
+}
+/* STT tuỳ chọn (phụ huynh bật trong Góc phụ huynh) — dùng Web Speech API của trình duyệt */
+let _rec=null;
+function wsToggleStt(){
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR)return;
+  if(WS.sttOn){try{_rec&&_rec.stop();}catch(e){}WS.sttOn=false;wsRender();return;}
+  _rec=new SR();_rec.lang='vi-VN';_rec.continuous=true;_rec.interimResults=false;
+  _rec.onresult=e=>{const ed=document.getElementById('wsEditor');if(!ed)return;let s='';for(let i=e.resultIndex;i<e.results.length;i++)if(e.results[i].isFinal)s+=e.results[i][0].transcript+' ';if(s){ed.value=(ed.value.trimEnd()+' '+s.trim()+' ').replace(/^\s+/,'');ed.dispatchEvent(new Event('input'));}};
+  _rec.onend=()=>{if(WS.sttOn){try{_rec.start();}catch(e){}}};
+  _rec.onerror=()=>{WS.sttOn=false;toast('Không nghe được. Con thử lại hoặc gõ nhé.');wsRender();};
+  try{_rec.start();WS.sttOn=true;toast('🎤 Đang nghe… con nói chậm, rõ nhé.');}catch(e){WS.sttOn=false;}
+  wsRender();
+}
+function wsPrint(){
+  const t=wsTask();const txt=normNFC(WS.text);if(!txt){toast('Con viết rồi hãy in nhé.');return;}
+  const sheet=document.getElementById('printSheet');
+  sheet.innerHTML=`<div class="ps-frame"><h1>📖 ${esc(t.prompt)}</h1><div class="ps-meta">Tuần ${t.week} · ${esc(GENRES[t.genre].name)} · ${new Date().toLocaleDateString('vi-VN')} · Bài của con</div><div class="ps-text">${esc(WS.text)}</div></div>`;
+  window.print();
+}
+function wsAction(act,v){
+  const ed=document.getElementById('wsEditor');
+  if(act==='go'){WS.step=+v;if(ed)WS.text=ed.value;wsSave();wsRender();}
+  else if(act==='bank'){const i=WS.bank.indexOf(v);if(i>=0)WS.bank.splice(i,1);else WS.bank.push(v);wsSave();wsRender();}
+  else if(act==='addown'){const inp=document.getElementById('wsOwnWord');const w=normNFC(inp?inp.value:'');if(w&&!WS.bank.includes(w)){WS.bank.push(w);wsSave();wsRender();}}
+  else if(act==='ins'){if(!ed)return;const a=ed.selectionStart,b=ed.selectionEnd;const before=ed.value.slice(0,a),after=ed.value.slice(b);const sp=(before&&!/\s$/.test(before))?' ':'';ed.value=before+sp+v+' '+after;ed.focus();ed.selectionStart=ed.selectionEnd=(before+sp+v+' ').length;ed.dispatchEvent(new Event('input'));}
+  else if(act==='cloze'){wsCloze(wsTask());}
+  else if(act==='stt'){wsToggleStt();}
+  else if(act==='fav'){WS.fav=+v;wsSave();wsRender();}
+  else if(act==='rev'){const msg={detail:'Thêm một chi tiết con NHÌN hoặc NGHE thấy vào câu con thích.',repeat:'Tìm hai câu đang kể cùng một ý — gộp lại hoặc bỏ một câu.',word:'Chọn một từ chưa “đúng ý” và thay bằng từ con thấy đúng hơn.',order:'Kiểm tra: việc nào xảy ra trước thì kể trước.'}[v];WS.revHint=msg;WS.step=2;wsSave();wsRender();setTimeout(()=>toast('🔁 '+msg),100);}
+  else if(act==='save'){if(wsPersistDraft('draft')){toast('💾 Đã lưu bản nháp. Ba/mẹ xem ở Góc phụ huynh.');if(!G.mute)SFX.correct();wsRender();}else toast('Con viết một ý trước nhé.');}
+  else if(act==='read'){if(WS.text.trim())TTS.speak(WS.text,0.95);}
+  else if(act==='print'){wsPrint();}
+  else if(act==='showref'){WS.showRef=true;wsSave();wsRender();}
+  else if(act==='advreq'){WS.advRequested=true;wsSave();wsRender();toast('🌟 Đã mở bài Nâng cao cho đề này.');}
+  else if(act==='harvest'){const w=normNFC(v);if(w&&!WS.notebook.includes(w)){WS.notebook.push(w);if(WS.notebook.length>60)WS.notebook.shift();wsSave();toast('📒 Đã cất “'+w+'” vào Sổ tay.');}}
+}
+
+/* =====================================================================
    14. BOOT
    ===================================================================== */
+/* Hợp nhất kho từ Cơ bản (VOCAB_BANK.std) vào CONTEXTS để máy sinh C02/C09/Nối từ dùng chung một nguồn.
+   (Nâng cao KHÔNG trộn vào generator để câu hỏi cho mọi bé vẫn ở mức chuẩn.) */
+function mergeVocabIntoContexts(){
+  Object.values(VOCAB_BANK).forEach(th=>th.ctx.forEach(id=>{const c=CONTEXTS[id];if(!c)return;
+    const add=(arr,items)=>items.forEach(w=>{if(!arr.includes(w))arr.push(w);});
+    add(c.entities,th.std.nouns);add(c.attrs,th.std.adjs);add(c.actions,th.std.verbs);}));
+}
 function boot(){
-  gLoad();
+  mergeVocabIntoContexts();
+  gLoad();wsLoad();
   try{ buildPracticeIndex(); }catch(e){ console.error('practice build',e); }
   try{ gRenderMap(); }catch(e){ console.error('map',e); }
   gRenderTop();
