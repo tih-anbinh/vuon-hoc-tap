@@ -1,0 +1,2272 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<title>Tiếng Việt Lớp 3 – Ba cùng con ôn tập</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<!--
+  =====================================================================
+  ÔN TẬP TIẾNG VIỆT LỚP 3 – BẢN TƯƠNG TÁC (Single-file HTML)
+  Author   : Huy Tran
+  Company  : Cadence Design Systems Vietnam
+  Email    : huytran@cadence.com
+  Created  : 2026-09-26
+  Revision : 1.0
+  Mục tiêu : Ôn (không thay sách) kiến thức Tiếng Việt 3 (Kết nối tri thức),
+             35 tuần, bám chủ điểm SGK; máy sinh câu có RÀNG BUỘC +
+             validator + ngân hàng câu đã duyệt (fallback); câu viết tự do
+             chấm theo RUBRIC, không so khớp chuỗi cứng.
+  Nguyên tắc an toàn (theo đặc tả):
+     - Không hiển thị câu chưa qua validator.
+     - Không dùng eval; văn bản động vào DOM bằng textContent/escape.
+     - Chạy offline, lưu tiến độ cục bộ (tv3: keys).
+     - "như" chưa chắc là so sánh; gần nghĩa phụ thuộc ngữ cảnh.
+  =====================================================================
+-->
+<style>
+:root{
+  --blue:#1565c0; --blue-l:#e3f2fd;
+  --red:#d32f2f;  --red-l:#ffebee;
+  --green:#2e7d32;--green-l:#e8f5e9;
+  --orange:#ef6c00;--orange-l:#fff3e0;
+  --purple:#6a1b9a;--purple-l:#f3e5f5;
+  --teal:#00838f;--teal-l:#e0f2f1;
+  --ink:#1f2d3d; --muted:#4a5d70;
+  --card:#ffffff; --line:#d7e3ee;
+  --shadow:0 4px 16px rgba(21,101,192,.10);
+  --shadow-lg:0 10px 30px rgba(21,101,192,.14);
+  --radius:16px; --radius-sm:10px;
+  --font-body:"Be Vietnam Pro","Nunito",system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --font-display:"Baloo 2","Be Vietnam Pro",system-ui,"Segoe UI",Roboto,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; -webkit-text-size-adjust:100%; text-size-adjust:100%}
+html,body{overflow-x:hidden; max-width:100%}
+body{
+  margin:0; font-family:var(--font-body);
+  color:var(--ink); background:
+    radial-gradient(1200px 600px at 10% -10%, #e8f4ff 0%, transparent 60%),
+    radial-gradient(900px 500px at 110% 10%, #fff4e5 0%, transparent 55%),
+    #f6fafd;
+  line-height:1.65; font-size:16.5px; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+img,svg,video,canvas{max-width:100%; height:auto}
+table{max-width:100%}
+h2.chapter,h3,h4,.big,.game-hero .htitle,.praise,.gstars-big,.bt-section-title{font-family:var(--font-display)}
+.wrap{display:flex; min-height:100vh; min-height:100dvh}
+nav.side{width:288px; flex:0 0 288px; background:#0d47a1; color:#fff;
+  padding:10px 10px; padding-left:max(10px,env(safe-area-inset-left));
+  position:sticky; top:0; height:100vh; height:100dvh; overflow-y:auto; scrollbar-width:thin; scrollbar-color:#1e88e5 #0d47a1}
+nav.side h1{font-size:17px; margin:0 0 3px; line-height:1.3}
+nav.side .sub{font-size:11.5px; opacity:.85; margin-bottom:6px; line-height:1.45}
+nav.side a{display:block; color:#dceaff; text-decoration:none; font-size:14px;
+  padding:3px 9px; border-radius:6px; margin:0; line-height:1.55}
+nav.side a:hover{background:rgba(255,255,255,.15); color:#fff}
+nav.side a.head{font-weight:700; color:#ffd54f; margin-top:8px; font-size:15px; padding:4px 9px; line-height:1.5}
+main{flex:1; min-width:0; width:100%; padding:22px 26px 80px; max-width:1080px; margin:0 auto}
+.burger{display:none}
+
+h2.chapter{background:linear-gradient(90deg,#00838f,#1565c0 45%,#6a1b9a);
+  color:#fff; padding:12px 20px; border-radius:14px; font-size:23px;
+  margin:34px 0 16px; box-shadow:var(--shadow)}
+h2.chapter span.num{background:#fff; color:#00838f; border-radius:50%; width:34px; height:34px;
+  display:inline-flex; align-items:center; justify-content:center; font-weight:800;
+  margin-right:10px; font-size:19px}
+h3{color:var(--blue); border-left:6px solid var(--blue); padding-left:11px; margin:26px 0 10px; font-size:20px}
+h4{color:var(--purple); margin:18px 0 8px; font-size:17.5px}
+.card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:16px 18px; margin:12px 0; box-shadow:var(--shadow)}
+.rule{background:var(--orange-l); border:2px dashed var(--orange); border-radius:14px; padding:13px 16px; margin:12px 0; font-weight:600}
+.rule b{color:var(--red)}
+.tip{background:var(--green-l); border-left:6px solid var(--green); border-radius:10px; padding:12px 16px; margin:12px 0}
+.tip::before{content:"💡 MẸO HỌC NHANH"; display:block; font-weight:800; color:var(--green); margin-bottom:5px; letter-spacing:.3px; font-size:14px}
+.warn{background:var(--red-l); border-left:6px solid var(--red); border-radius:10px; padding:12px 16px; margin:12px 0}
+.warn::before{content:"⚠️ LƯU Ý – DỄ NHẦM"; display:block; font-weight:800; color:var(--red); margin-bottom:5px; font-size:14px}
+.ex{background:var(--blue-l); border-left:6px solid var(--blue); border-radius:10px; padding:12px 16px; margin:12px 0}
+.ex::before{content:"✏️ VÍ DỤ"; display:block; font-weight:800; color:var(--blue); margin-bottom:5px; font-size:14px}
+.note{background:#fffde7;border:1px dashed #ffb300;border-radius:10px;padding:10px 14px;margin:12px 0;font-size:14px;color:#5d4037}
+.grid2{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+.grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
+@media(max-width:900px){.grid2,.grid3{grid-template-columns:1fr}}
+.center{text-align:center}
+.big{font-size:22px; font-weight:800}
+table.t{border-collapse:collapse; width:100%; margin:10px 0; font-size:15px}
+.tbl-scroll{max-width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; margin:10px 0}
+table.t th{background:var(--blue); color:#fff; padding:8px 6px; border:1px solid #fff}
+table.t td{border:1px solid var(--line); padding:7px 8px; background:#fff; vertical-align:top}
+table.t tr:nth-child(even) td{background:#f7fbff}
+
+/* ---------- Quiz (Luyện tập) ---------- */
+.quiz{background:linear-gradient(180deg,#f6fffb,#fff); border:2px solid #26a69a; border-radius:var(--radius); padding:16px 18px; margin:20px 0; box-shadow:var(--shadow)}
+.quiz .qhead{display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:10px}
+.quiz .qhead h4{margin:0; color:#00695c; font-size:18px}
+.quiz .qhead .spacer{flex:1}
+button{font-family:inherit; font-size:15px; font-weight:700; cursor:pointer;
+  border:none; border-radius:11px; padding:9px 16px; color:#fff; background:var(--blue);
+  box-shadow:0 3px 0 rgba(0,0,0,.14); transition:transform .08s}
+button:active{transform:translateY(2px); box-shadow:0 1px 0 rgba(0,0,0,.14)}
+button:focus-visible{outline:3px solid #ffd54f; outline-offset:2px}
+button.grn{background:var(--green)} button.org{background:#ef6c00}
+button.gry{background:#607d8b} button.pur{background:var(--purple)} button.teal{background:var(--teal)}
+.qitem{border-bottom:1px dashed #e0e0e0; padding:12px 4px; display:flex; gap:10px; align-items:flex-start; flex-wrap:wrap}
+.qitem:last-child{border-bottom:none}
+.qno{flex:0 0 30px; height:30px; border-radius:50%; background:var(--teal); color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center; font-size:14px}
+.qbody{flex:1; min-width:240px}
+.qtext{font-weight:600}
+.qstim{margin:8px 0;background:#f1f8f6;border-left:4px solid #26a69a;border-radius:8px;padding:8px 12px;font-size:16px}
+input.ans,textarea.ans{font-family:inherit; font-size:16.5px; font-weight:600; color:#0d47a1;
+  width:100%; max-width:520px; padding:8px 12px; border:2px solid var(--teal); border-radius:10px; background:#fff}
+textarea.ans{min-height:74px;line-height:1.55;resize:vertical}
+input.ans:focus,textarea.ans:focus{outline:none; border-color:#ff8f00; box-shadow:0 0 0 3px #ffe082}
+.opts{display:flex; gap:8px; flex-wrap:wrap; margin-top:8px}
+.opts label{background:#fff; border:2px solid var(--line); border-radius:10px; padding:8px 14px; cursor:pointer; font-weight:600; min-height:40px; display:inline-flex; align-items:center}
+.opts label:hover{border-color:var(--teal); background:var(--teal-l)}
+.opts input{margin-right:6px}
+/* token picker (select_span, group, reorder, build) */
+.tokrow{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}
+.tok{background:#fff;border:2px solid #b2dfdb;border-radius:10px;padding:7px 12px;cursor:pointer;font-weight:600;user-select:none;min-height:38px;display:inline-flex;align-items:center}
+.tok:hover{border-color:var(--teal);background:var(--teal-l)}
+.tok.sel{background:#00838f;color:#fff;border-color:#00838f}
+.tok.right{background:#e8f5e9;border-color:#2e7d32;color:#1b5e20}
+.tok.wrong{background:#ffebee;border-color:#d32f2f;color:#b71c1c}
+.buildzone{min-height:44px;border:2px dashed #80cbc4;border-radius:10px;padding:6px 8px;margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;background:#fbfffe}
+.buildzone:empty::before{content:"Chạm các thẻ bên dưới để xếp thành câu…";color:#90a4ae;font-weight:500;font-size:14px}
+.pairwrap{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+@media(max-width:560px){.pairwrap{grid-template-columns:1fr}}
+.paircol .tok{display:flex;width:100%;justify-content:center;margin-bottom:7px}
+.blankline{display:inline-block;min-width:96px;border-bottom:2px solid var(--teal);text-align:center;font-weight:700;color:#00695c}
+.fb{margin-top:8px; font-weight:700; font-size:14.6px; display:none}
+.fb.ok{color:var(--green); display:block}
+.fb.no{color:var(--red); display:block}
+.fb ul{margin:4px 0 0 18px; padding:0; font-weight:600}
+.expl{margin-top:5px;font-weight:600;color:#37474f;background:#fff8e1;border-radius:8px;padding:6px 10px;font-size:14px}
+.rubric{margin-top:8px;background:#f3e5f5;border:1px solid #ce93d8;border-radius:10px;padding:10px 12px}
+.rubric b{color:#6a1b9a}
+.rubric-item{display:flex;align-items:center;gap:8px;margin:5px 0;font-size:14.5px}
+.rubric-item button{padding:4px 10px;font-size:13px}
+.score{font-size:19px; font-weight:800; padding:12px 16px; border-radius:12px; margin-top:12px; display:none}
+.score.show{display:block}
+.s-gold{background:#fff8e1; border:2px solid #ffb300; color:#e65100}
+.s-good{background:#e8f5e9; border:2px solid #2e7d32; color:#2e7d32}
+.s-mid{background:#e3f2fd; border:2px solid #1565c0; color:#1565c0}
+.s-low{background:#ffebee; border:2px solid #d32f2f; color:#d32f2f}
+.hintbox{display:none; margin-top:6px; font-size:14.4px; background:#f1f8e9; border-left:4px solid #7cb342; padding:7px 10px; border-radius:8px}
+.hintbox.show{display:block}
+.badge{display:inline-block; background:var(--purple); color:#fff; border-radius:20px; padding:2px 11px; font-size:13px; font-weight:700; margin-right:6px}
+.tts-btn{background:none;border:1.5px solid rgba(0,131,143,.3);border-radius:12px;
+  padding:0 7px;font-size:11.5px;cursor:pointer;color:#00838f;margin-left:6px;
+  vertical-align:middle;line-height:1.9;font-family:inherit;transition:all .15s}
+.tts-btn:hover{background:#e0f2f1;border-color:#00838f}
+footer{text-align:center; color:var(--muted); font-size:14px; padding:30px 10px}
+
+/* Practice section grouping */
+.bt-section{margin:22px 0}
+.bt-section-title{background:linear-gradient(90deg,#00838f,#26a69a);color:#fff;font-weight:800;padding:9px 16px;border-radius:12px;font-size:16.5px;box-shadow:var(--shadow)}
+.bt-grid{display:grid;grid-template-columns:1fr;gap:4px}
+
+@keyframes shake{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-5px)}40%,80%{transform:translateX(5px)}}
+.shake{animation:shake .35s ease}
+
+/* --- Tabs --- */
+.tab-bar{display:flex;border-bottom:3px solid #00838f;margin-bottom:20px;position:sticky;top:0;z-index:99;background:#f5f5f5}
+.tab-btn{flex:1;padding:11px 0;font-size:15.5px;font-weight:800;border:none;background:transparent;cursor:pointer;color:#666;border-bottom:3px solid transparent;margin-bottom:-3px;transition:all .2s;box-shadow:none;border-radius:0}
+.tab-btn.active{color:#00838f;border-bottom-color:#00838f;background:#e0f2f1}
+#tab-lt{display:block}
+#tab-bt,#tab-game{display:none}
+body.mode-bt #tab-lt{display:none}
+body.mode-bt #tab-bt{display:block}
+body.mode-game #tab-lt{display:none}
+body.mode-game #tab-game{display:block}
+
+/* --- Progress strip --- */
+.progress-strip{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px 12px;margin-bottom:16px;cursor:pointer;box-shadow:var(--shadow)}
+.ps-label{font-weight:800;color:#00695c;font-size:14px;white-space:nowrap}
+.ps-track{flex:1;display:flex;gap:2px;min-width:0;overflow:hidden}
+.ps-seg{flex:1;height:10px;border-radius:3px;background:#e0e0e0;min-width:3px}
+.ps-seg.done{background:#26a69a}
+.ps-seg.cur{background:#ffb300}
+.ps-info{font-size:13px;color:var(--muted);white-space:nowrap}
+
+/* ===================== GAME ===================== */
+.game-hero{position:relative;overflow:hidden;background:linear-gradient(160deg,#4dd0e1,#0097a7 70%);border-radius:18px;padding:22px 18px 26px;text-align:center;color:#fff;margin-bottom:14px;box-shadow:var(--shadow-lg)}
+.game-hero .htitle{font-size:26px;font-weight:800;text-shadow:0 2px 6px rgba(0,0,0,.2)}
+.game-hero .hsub{font-size:13.5px;opacity:.95;margin-top:4px}
+.game-hero .mascot{font-size:44px;margin-top:8px}
+.game-hero .cloud{position:absolute;top:16px;left:-40px;font-size:30px;opacity:.8;animation:drift 22s linear infinite}
+@keyframes drift{from{transform:translateX(0)}to{transform:translateX(140vw)}}
+.game-hero .sun{position:absolute;right:16px;top:10px;font-size:34px}
+.game-hero .twinkle{position:absolute;font-size:15px;animation:tw 2.2s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.3;transform:scale(.8)}50%{opacity:1;transform:scale(1.15)}}
+.game-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.game-top .stat{background:#fff;border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-weight:800;font-size:14px;box-shadow:var(--shadow)}
+.game-top .streak{color:#ef6c00}.game-top .stars{color:#f9a825}.game-top .trophy{color:#00838f}.game-top .xu-stat{color:#8d6e63}
+.game-top .spacer{flex:1}
+.gmute{background:#26a69a;box-shadow:0 3px 0 #00695c;font-size:13.5px;padding:7px 12px}
+.game-reset{background:#90a4ae;box-shadow:0 3px 0 #607d8b;font-size:13.5px;padding:7px 12px}
+.gxp-strip{display:flex;align-items:center;gap:10px;margin:0 4px 12px}
+.glv-name{font-weight:800;color:#00695c;font-size:14px;white-space:nowrap}
+.gxp-bar{flex:1;height:12px;background:#e0f2f1;border-radius:8px;overflow:hidden;border:1px solid #b2dfdb}
+.gxp-bar i{display:block;height:100%;background:linear-gradient(90deg,#26a69a,#00838f);transition:width .5s}
+.kingdom-panel,.coach-panel{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 16px;margin:0 4px 14px;box-shadow:var(--shadow)}
+.kingdom-title{font-weight:800;color:#00695c;font-size:17px;display:flex;flex-direction:column}
+.kingdom-title span{font-size:12px;font-weight:600;color:var(--muted)}
+.kingdom-note{font-size:12.5px;color:var(--muted);margin:6px 0 10px}
+.realm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+.realm{border-radius:14px;padding:12px;border:2px solid var(--realm,#00838f);background:var(--realm-bg,#e0f2f1);display:flex;flex-direction:column;gap:6px}
+.realm.locked{opacity:.55;filter:grayscale(.4)}
+.realm-head{font-weight:800;color:var(--realm,#00838f);display:flex;align-items:center;gap:6px;font-size:15px}
+.realm-icon{font-size:20px}
+.realm p{margin:0;font-size:12.5px;color:#455a64;flex:1}
+.realm button{width:100%;padding:7px;font-size:13.5px}
+.realm-progress{font-size:11.5px;color:var(--muted)}
+.coach-head{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-start;margin-bottom:8px}
+.coach-head h3{margin:0;border:none;padding:0;color:#00695c;font-size:17px}
+.coach-head p{margin:2px 0 0;font-size:12.5px;color:var(--muted)}
+.coach-actions{display:flex;gap:6px;flex-wrap:wrap}
+.coach-actions button{padding:8px 12px;font-size:13px}
+.coach-actions .daily{background:#00838f}
+.skill-list{display:grid;gap:8px}
+.skill-card{background:#f6fffb;border:1px solid #b2dfdb;border-radius:12px;padding:10px 12px;display:flex;flex-direction:column;gap:4px}
+.skill-card b{color:#00695c}
+.skill-card span{font-size:12.5px;color:var(--muted)}
+.skill-card button{align-self:flex-start;padding:6px 12px;font-size:13px;margin-top:4px}
+.skill-empty{font-size:13px;color:var(--muted);padding:8px}
+.map{padding:0 4px 8px}
+.phase-band{color:#fff;font-weight:800;padding:8px 14px;border-radius:10px;margin:16px 0 10px;font-size:14.5px}
+.map-row{display:flex;margin:2px 0}
+.station{width:64px;height:64px;border-radius:18px;border:none;color:#fff;font-weight:800;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;position:relative;font-size:22px;line-height:1}
+.station .wk{font-size:11px;margin-top:2px}
+.station.locked{background:#cfd8dc !important;box-shadow:0 6px 0 #b0bec5 !important;cursor:not-allowed;color:#78909c}
+.station.current{animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.ministars{position:absolute;top:-10px;font-size:11px;white-space:nowrap}
+.medal{position:absolute;bottom:-8px;right:-6px;font-size:18px}
+.map-cap{font-size:12px;color:var(--muted);align-self:center;margin:0 8px;flex:1;min-width:0}
+
+/* Game modal */
+.gmodal{position:fixed;inset:0;background:rgba(0,40,50,.5);display:none;align-items:center;justify-content:center;z-index:200;padding:14px}
+.gmodal.open{display:flex}
+.gcard-outer{position:relative;width:100%;max-width:560px}
+.gclose{position:absolute;top:-6px;right:-6px;z-index:5;width:40px;height:40px;border-radius:50%;
+  background:#fff;color:#00695c;font-size:18px;font-weight:900;border:2px solid #b2dfdb;
+  box-shadow:0 4px 12px rgba(0,40,50,.25);display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
+.gclose:hover{background:#e0f2f1;color:#c62828;border-color:#c62828}
+.gclose:focus-visible{outline:3px solid #ffd54f;outline-offset:2px}
+@media(max-width:820px){.gclose{top:2px;right:2px;width:38px;height:38px}}
+.gcard{background:#fff;border-radius:20px;max-width:560px;width:100%;max-height:92vh;overflow-y:auto;padding:18px 18px 22px;box-shadow:var(--shadow-lg)}
+.gprog{height:8px;background:#e0f2f1;border-radius:6px;overflow:hidden;margin-bottom:8px}
+.gprog i{display:block;height:100%;background:#26a69a;transition:width .4s}
+.gtopbar{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.ghearts{font-size:18px}
+.gqno{font-weight:800;color:#00695c}
+.gq{font-size:18px;font-weight:700;color:#1f2d3d;margin:6px 0 10px}
+.gstim{background:#f1f8f6;border-left:4px solid #26a69a;border-radius:8px;padding:8px 12px;margin-bottom:10px;font-size:16.5px}
+.gopts{display:grid;gap:8px}
+.gopt{background:#fff;border:2px solid var(--line);border-radius:12px;padding:12px 14px;text-align:left;color:#1f2d3d;font-weight:600;box-shadow:none;cursor:pointer}
+.gopt:hover{border-color:var(--teal);background:var(--teal-l)}
+.gopt.sel{border-color:#00838f;background:#e0f2f1}
+.gopt.right{border-color:#2e7d32;background:#e8f5e9;color:#1b5e20}
+.gopt.wrong{border-color:#d32f2f;background:#ffebee;color:#b71c1c}
+.gfeed{margin-top:12px;font-weight:700;border-radius:12px;padding:10px 14px;display:none}
+.gfeed.ok{display:block;background:#e8f5e9;color:#1b5e20}
+.gfeed.no{display:block;background:#fff3e0;color:#8d4e00}
+.fb-owl{font-size:20px;margin-right:4px}
+.ghint-area{margin-top:8px;background:#f1f8e9;border-left:4px solid #7cb342;border-radius:8px;padding:7px 10px;font-size:14px}
+.gbtn-row{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:14px}
+.gbig{font-size:16px;padding:12px 18px}
+.gresult{text-align:center}
+.gstars-big{font-size:38px;margin:6px 0}
+.star-pop{display:inline-block;animation:starPop .5s ease both}
+@keyframes starPop{0%{transform:scale(0) rotate(-30deg);opacity:0}70%{transform:scale(1.3)}100%{transform:scale(1);opacity:1}}
+.praise{font-size:19px;font-weight:800;margin:6px 0}
+.combo-badge{background:#ef6c00;color:#fff;border-radius:12px;padding:1px 8px;font-size:12px}
+.gp-overlay{position:fixed;inset:0;background:rgba(0,40,50,.55);display:none;align-items:center;justify-content:center;z-index:210}
+.gp-overlay.open{display:flex}
+.gp-card{background:#fff;border-radius:18px;padding:24px;text-align:center;max-width:340px}
+.gp-icon{font-size:40px}.gp-title{font-weight:800;color:#00695c;font-size:18px;margin:6px 0}
+.gp-reason{color:var(--muted);font-size:14px}.gp-hint{color:#90a4ae;font-size:12.5px;margin-top:8px}
+.goal-toast{position:fixed;left:50%;top:18%;transform:translateX(-50%);background:#00695c;color:#fff;font-weight:700;padding:12px 20px;border-radius:14px;box-shadow:var(--shadow-lg);z-index:230;transition:opacity .5s;max-width:90vw;text-align:center}
+.xp-toast{position:fixed;left:50%;top:30%;transform:translateX(-50%);background:#ef6c00;color:#fff;font-weight:800;padding:8px 16px;border-radius:20px;z-index:230;animation:xpFloat 1.1s ease forwards;pointer-events:none}
+@keyframes xpFloat{0%{opacity:0;transform:translate(-50%,10px)}20%{opacity:1}100%{opacity:0;transform:translate(-50%,-30px)}}
+
+/* Parent corner */
+.parent-toggle{background:#5e35b1;box-shadow:0 3px 0 #4527a0}
+.pc-overlay{position:fixed;inset:0;background:rgba(0,40,50,.5);display:none;align-items:center;justify-content:center;z-index:205;padding:14px}
+.pc-overlay.open{display:flex}
+.pc-card{background:#fff;border-radius:18px;max-width:640px;width:100%;max-height:92vh;overflow-y:auto;padding:18px}
+.pc-card h2{margin:0 0 8px;color:#5e35b1}
+.matrix{border-collapse:collapse;font-size:12px;width:100%}
+.matrix th,.matrix td{border:1px solid var(--line);padding:4px 5px;text-align:center}
+.matrix th{background:#ede7f6}
+.mx-0{background:#fafafa}.mx-1{background:#fff9c4}.mx-2{background:#dcedc8}.mx-3{background:#a5d6a7}
+.writing-log{background:#f6fffb;border:1px solid #b2dfdb;border-radius:10px;padding:8px 10px;margin:6px 0;font-size:14px}
+.reported{background:#ffebee;border:1px solid #ef9a9a;border-radius:10px;padding:8px 10px;margin:6px 0;font-size:13.5px}
+
+@media(max-width:820px){
+  .wrap{flex-direction:column}
+  nav.side{width:100%; flex:none; height:auto; position:static; padding-bottom:16px;
+    padding-top:max(10px,env(safe-area-inset-top))}
+  nav.side .links{display:none} nav.side .links.open{display:block}
+  .burger{display:inline-block; background:#fff; color:#0d47a1; margin-top:6px}
+  main{padding:14px 14px 60px;
+    padding-left:max(14px,env(safe-area-inset-left));
+    padding-right:max(14px,env(safe-area-inset-right));
+    padding-bottom:max(60px,env(safe-area-inset-bottom))}
+  .station{width:56px;height:56px;font-size:19px}
+}
+@media print{nav.side{display:none} .quiz{break-inside:avoid} body{background:#fff}}
+.hidden{display:none !important}
+/* ===== Chế độ mắt dịu (warm) ===== */
+#warmLayer{position:fixed;inset:0;background:#ff8f1f;opacity:0;mix-blend-mode:multiply;pointer-events:none;z-index:9998;transition:opacity .3s}
+body.warm #warmLayer{opacity:.13}
+/* ===== Đăng nhập (dùng chung kiểu với toan3.html) ===== */
+.auth-gate{position:fixed;inset:0;z-index:6000;display:flex;align-items:center;justify-content:center;padding:16px;background:linear-gradient(135deg,#b2dfdb,#e0f7fa 55%,#fff3e0)}
+.auth-gate.hidden{display:none}
+body.locked{overflow:hidden}
+.auth-card{background:#fff;border-radius:22px;box-shadow:0 20px 60px rgba(0,105,92,.3);padding:24px 22px;max-width:390px;width:100%;text-align:center}
+.auth-card .amasc{font-size:52px;animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.auth-card h2{font-family:var(--font-display);color:#00695c;margin:4px 0 2px;font-size:24px}
+.auth-card .asub{color:var(--muted);font-size:13.5px;margin-bottom:14px}
+.auth-field{text-align:left;margin:10px 0}
+.auth-field label{display:block;font-weight:700;color:#37474f;font-size:13.5px;margin-bottom:4px}
+.auth-field input{width:100%;font-size:16px;padding:12px 14px;border:2px solid var(--line);border-radius:12px;font-family:inherit;background:#fff;color:var(--ink)}
+.auth-field input:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px #b2dfdb}
+.auth-remember{display:flex;align-items:center;gap:8px;font-size:13.5px;color:#37474f;margin:8px 0 12px}
+.auth-remember input{width:18px;height:18px}
+.auth-btn{width:100%;font-size:17px;padding:13px;background:var(--green);box-shadow:0 4px 0 #1b5e20}
+.auth-err{display:none;color:#c62828;font-weight:700;font-size:13.5px;margin-bottom:8px;background:#ffebee;border-radius:10px;padding:8px}
+.auth-ok{display:none;color:#2e7d32;font-weight:700;font-size:13.5px;margin-bottom:8px;background:#e8f5e9;border-radius:10px;padding:8px}
+.auth-note{margin-top:14px;font-size:11px;color:#90a4ae;line-height:1.5}
+.acct-chip{position:fixed;bottom:12px;right:12px;z-index:200;display:none;align-items:center;gap:6px;background:rgba(255,255,255,.94);border:1.5px solid var(--line);border-radius:22px;padding:4px 6px 4px 13px;box-shadow:var(--shadow);font-size:13px;font-weight:700;color:#37474f}
+.acct-btn{background:#eceff1;color:#37474f;border:none;border-radius:50%;width:32px;height:32px;font-size:15px;cursor:pointer;padding:0;box-shadow:none;display:flex;align-items:center;justify-content:center}
+.acct-btn:hover{background:#cfd8dc}
+.intro-ov{position:fixed;inset:0;z-index:5500;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(0,105,92,.35);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.intro-ov.open{display:flex}
+.intro-card{background:#fff;border-radius:22px;max-width:460px;width:100%;padding:22px;box-shadow:0 20px 60px rgba(0,0,0,.3);text-align:center;max-height:92vh;overflow-y:auto}
+.intro-card h2{font-family:var(--font-display);color:#00695c;margin:6px 0}
+.intro-list{text-align:left;margin:14px 0;display:grid;gap:10px}
+.intro-item{display:flex;gap:10px;align-items:flex-start;background:#f5fffd;border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:14.5px}
+.intro-item .ic{font-size:22px;line-height:1.2}
+.dash-tb{width:100%;border-collapse:collapse;font-size:14px}
+.dash-tb th{background:#ede7f6;color:#5e35b1;padding:8px 6px;font-weight:800;position:sticky;top:0}
+.dash-tb td{border-top:1px solid var(--line);padding:9px 6px;text-align:center;font-weight:600;color:var(--ink)}
+.dash-tb tbody tr:nth-child(even) td{background:#faf7ff}
+.dash-tb tr.me td{background:#fff8e1;font-weight:800}
+.dash-tb tr.me td:first-child::after{content:" 👈";}
+.dash-me{display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:linear-gradient(135deg,#e8f5e9,#e0f2f1);border:1.5px solid #b3e0c2;border-radius:16px;padding:12px 14px;margin-bottom:12px}
+.dash-me-ring{text-align:center;flex:0 0 auto}
+.dash-me-chart{flex:1;min-width:230px}
+.goal-ctl{font-size:13px;font-weight:700;color:#37474f;margin-top:4px;display:flex;align-items:center;gap:6px;justify-content:center}
+.goal-ctl .acct-btn{width:26px;height:26px;font-size:16px}
+body.locked #backTopBtn{display:none !important}
+/* build tokens (used state) + open-the-box animation */
+.tok.used{visibility:hidden}
+.box-anim{font-size:64px;margin:14px 0;display:inline-block;transition:transform .4s}
+.box-anim.box-open{animation:boxPop .5s ease}
+@keyframes boxPop{0%{transform:scale(1) rotate(0)}40%{transform:scale(1.3) rotate(-8deg)}70%{transform:scale(1.1) rotate(6deg)}100%{transform:scale(1) rotate(0)}}
+</style>
+</head>
+<body>
+<div id="warmLayer"></div>
+<!-- ===== Cổng đăng nhập (dùng chung Supabase project với toan3; bảng riêng tv3_*) ===== -->
+<div class="auth-gate" id="authGate">
+  <form class="auth-card" id="authForm" autocomplete="off">
+    <div class="amasc">🦉</div>
+    <h2 id="authTitle">Vườn Tiếng Việt Phiêu Lưu</h2>
+    <div class="asub" id="authSub">Đăng nhập để cùng con học nhé</div>
+    <div class="auth-err" id="authErr"></div>
+    <div class="auth-ok" id="authOk"></div>
+    <div class="auth-field" id="nameField" style="display:none"><label for="authName">Tên hiển thị</label>
+      <input id="authName" type="text" autocapitalize="words" placeholder="ví dụ: Bé Bo"></div>
+    <div class="auth-field" id="userField"><label for="authUser" id="userLabel">Tên đăng nhập / Email</label>
+      <input id="authUser" type="text" autocomplete="username" autocapitalize="off" spellcheck="false" placeholder="email@vidu.com"></div>
+    <div class="auth-field"><label for="authPass">Mật khẩu</label>
+      <input id="authPass" type="password" autocomplete="current-password" placeholder="••••••••"></div>
+    <label class="auth-remember" id="rememberRow"><input type="checkbox" id="authRemember" checked> Ghi nhớ trên máy này</label>
+    <button class="auth-btn" type="submit" id="authSubmitBtn">Đăng nhập</button>
+    <div id="authToggleRow" style="margin-top:12px;font-size:13.5px;display:none">
+      <span id="toggleText">Chưa có tài khoản?</span>
+      <a href="#" id="authToggle" style="color:var(--teal);font-weight:700;text-decoration:none">Đăng ký</a>
+    </div>
+    <div class="auth-note" id="authNote">Chỉ tài khoản được cấp mới vào được.</div>
+  </form>
+</div>
+<div class="acct-chip" id="acctChip">
+  <span class="acct-who">👤 <b id="acctName"></b></span>
+  <button class="acct-btn" title="Bảng thi đua" onclick="openDash()">🏆</button>
+  <button class="acct-btn" id="warmBtn" title="Chế độ mắt dịu" onclick="toggleWarm()">🌙</button>
+  <button class="acct-btn" title="Đăng xuất" onclick="authLogout()">⏻</button>
+</div>
+<div class="intro-ov" id="introOverlay">
+  <div class="intro-card">
+    <div style="font-size:46px">🦉</div>
+    <h2>Chào Ba và Con! 🎉</h2>
+    <div style="color:var(--muted)">Cùng phiêu lưu qua 35 trạm Tiếng Việt lớp 3 nhé!</div>
+    <div class="intro-list">
+      <div class="intro-item"><span class="ic">🗺️</span><div><b>Mỗi tuần là một trạm.</b> Đúng từ 60% để mở trạm tiếp theo.</div></div>
+      <div class="intro-item"><span class="ic">⭐</span><div><b>Gom sao:</b> 100% được 3 sao, ≥80% được 2 sao, ≥60% được 1 sao.</div></div>
+      <div class="intro-item"><span class="ic">💡</span><div><b>Sai không bị phạt.</b> Mỗi câu đều có giải thích và có thể thử lại.</div></div>
+      <div class="intro-item"><span class="ic">✍️</span><div><b>Bài viết</b> không chấm đúng/sai — ba/mẹ đọc cùng con ở Góc phụ huynh.</div></div>
+    </div>
+    <button class="grn gbig" style="width:100%" onclick="closeOnboard()">Bắt đầu thôi! 🚀</button>
+  </div>
+</div>
+<div class="intro-ov" id="dashOv">
+  <div class="intro-card" style="max-width:560px">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+      <div style="font-size:30px">🏆</div>
+      <h2 style="margin:0;flex:1;text-align:left">Bảng Thi Đua</h2>
+      <button class="acct-btn" onclick="openDash()" title="Làm mới">🔄</button>
+      <button class="acct-btn" onclick="closeDash()" title="Đóng">✕</button>
+    </div>
+    <div id="dashBody"></div>
+    <div style="font-size:11.5px;color:#90a4ae;margin-top:10px">⏱️ Thời gian tính khi app đang mở &amp; đang học. Tiến trình tự đồng bộ khi bé học.</div>
+  </div>
+</div>
+<button id="navToggle" type="button" aria-label="Thu gọn / mở mục lục" title="Mục lục" onclick="document.querySelector('.links').classList.toggle('open')" style="display:none">☰</button>
+<button id="backTopBtn" type="button" aria-label="Lên đầu trang" title="Lên đầu trang" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;right:12px;bottom:64px;z-index:180;width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#4dd0e1,#00838f);font-size:22px;display:none">⬆</button>
+
+<div class="wrap">
+<nav class="side">
+  <h1>📗 Tiếng Việt Lớp 3 – Ôn tập</h1>
+  <div class="sub">Bám chủ điểm bộ <b>Kết nối tri thức</b> · 35 tuần · Ôn để hiểu, không thay sách · Lưu trên máy này<br><span id="ttsNote" style="opacity:.8">🔊 Đọc bài: tuỳ chọn, phụ thuộc giọng đọc trên thiết bị</span></div>
+  <button class="burger" onclick="document.querySelector('.links').classList.toggle('open')">☰ Mục lục</button>
+  <div class="links">
+    <a class="head" href="#gioithieu">🌱 Giới thiệu &amp; cách dùng</a>
+    <a class="head" href="#cd1">1 · Từ ngữ &amp; Vốn từ</a>
+    <a href="#c02">1.1 Sự vật – Hoạt động – Đặc điểm</a>
+    <a href="#c03">1.2 Gần nghĩa – Trái nghĩa</a>
+    <a href="#c09">1.3 Mở rộng vốn từ theo chủ điểm</a>
+    <a class="head" href="#cd2">2 · Câu &amp; Dấu câu</a>
+    <a href="#c05">2.1 Câu giới thiệu – hoạt động – đặc điểm</a>
+    <a href="#c06">2.2 Câu kể – hỏi – cảm – khiến</a>
+    <a href="#c07">2.3 Khi nào? Ở đâu? Bằng gì? Để làm gì?</a>
+    <a href="#c04">2.4 Dấu câu</a>
+    <a href="#c08">2.5 Biện pháp so sánh</a>
+    <a class="head" href="#cd3">3 · Chính tả &amp; Viết hoa</a>
+    <a href="#c01">3.1 c/k · g/gh · ng/ngh · viết hoa</a>
+    <a class="head" href="#cd4">4 · Viết đoạn văn</a>
+    <a href="#viet">4.1 Một cách tìm ý (gợi ý)</a>
+    <a class="head" href="#lotrinh">🗺️ Lộ trình 35 tuần</a>
+  </div>
+</nav>
+<main>
+<div class="tab-bar" role="tablist">
+  <button class="tab-btn active" role="tab" onclick="switchTab('lt',this)">📖 Lý Thuyết</button>
+  <button class="tab-btn" role="tab" onclick="switchTab('bt',this)">✏️ Luyện Tập</button>
+  <button class="tab-btn" role="tab" onclick="switchTab('game',this)">🎮 Học mà chơi</button>
+</div>
+<div class="progress-strip" id="progStrip" title="Bấm để vào Học mà chơi" onclick="switchTab('game',document.querySelectorAll('.tab-btn')[2])">
+  <span class="ps-label">🗺️ Hành trình</span>
+  <div class="ps-track" id="psTrack"></div>
+  <span class="ps-info">Tuần <b id="psWeek">1</b>/35 · ⭐<span id="psStars">0</span></span>
+  <button class="pur" style="padding:6px 12px;font-size:13px;background:#8e24aa" onclick="event.stopPropagation();openDash()">🏆 Thi đua</button>
+  <button class="pur parent-toggle" style="padding:6px 12px;font-size:13px" onclick="event.stopPropagation();openParent()">👨‍👩‍👧 Góc phụ huynh</button>
+</div>
+
+<!-- ================= TAB: LÝ THUYẾT ================= -->
+<div id="tab-lt">
+<div class="card center" style="background:linear-gradient(135deg,#e0f2f1,#e3f2fd)">
+  <div class="big" style="color:#00695c">Ba cùng con ôn Tiếng Việt 3 📗</div>
+  <div style="font-size:13.5px;color:var(--muted);margin-top:6px">Đây là <b>góc ôn tập tại nhà</b> để con hiểu và nhớ bài, <b>không thay thế sách giáo khoa</b>. Bài tập do dự án tự biên soạn, bám chủ điểm bộ Kết nối tri thức.</div>
+</div>
+
+<div id="theoryRoot"></div>
+</div><!-- /tab-lt -->
+
+<!-- ================= TAB: LUYỆN TẬP ================= -->
+<div id="tab-bt">
+<div class="card" style="background:linear-gradient(135deg,#fff3e0,#e0f2f1)">
+  <b style="color:#00695c;font-size:17px">✏️ Luyện tập theo kĩ năng</b>
+  <div style="font-size:13.5px;color:var(--muted);margin-top:4px">Mỗi câu đều có <b>giải thích</b>. Câu <b>viết tự do</b> chấm theo <b>gợi ý 3 mục</b> (đúng ý – đúng kiểu câu – viết rõ &amp; dấu câu), phụ huynh xác nhận “đạt / cần luyện thêm”. Sai không bị phạt điểm — con làm lại một câu tương đương.</div>
+</div>
+<div id="practiceRoot"></div>
+<footer>📗 Ôn tập Tiếng Việt 3 · Câu sinh có ràng buộc + kiểm tra + ngân hàng câu đã duyệt · Offline · Rev 1.0</footer>
+</div><!-- /tab-bt -->
+
+<!-- ================= TAB: HỌC MÀ CHƠI ================= -->
+<div id="tab-game">
+  <div class="game-hero">
+    <span class="cloud">☁️</span>
+    <span class="cloud" style="top:32px;animation-delay:7s">☁️</span>
+    <span class="sun">🌤️</span>
+    <span class="twinkle" style="left:20%;top:14px">✨</span>
+    <span class="twinkle" style="left:46%;top:40px;animation-delay:.8s">⭐</span>
+    <span class="twinkle" style="left:78%;top:22px;animation-delay:1.4s">✨</span>
+    <div class="htitle">🌿 Vườn Tiếng Việt Phiêu Lưu</div>
+    <div class="hsub">Mỗi tuần một trạm · Gom sao ⭐ · Giữ chuỗi ngày 🔥 · Ôn xoay vòng theo điều con hay nhầm</div>
+    <div class="mascot">🦉</div>
+  </div>
+  <div class="game-top">
+    <span class="stat streak" title="Chuỗi ngày học">🔥 <span id="gStreak">0</span></span>
+    <span class="stat stars" title="Tổng sao">⭐ <span id="gStars">0</span></span>
+    <span class="stat trophy" title="Số trạm đã qua">🏅 <span id="gDone">0</span>/35</span>
+    <span class="stat xu-stat" title="Hạt giống tích lũy">🌰 <span id="gXuVal">0</span></span>
+    <span class="spacer"></span>
+    <button class="gmute" id="gMuteBtn" onclick="gToggleMute()">🔊 Âm thanh: Bật</button>
+  </div>
+  <div class="gxp-strip" title="Kinh nghiệm (XP)">
+    <span class="glv-name" id="gLvName">Chồi non 🌱</span>
+    <div class="gxp-bar" id="gXpBar"><i style="width:0%"></i></div>
+  </div>
+  <section class="coach-panel" aria-labelledby="coachTitle">
+    <div class="coach-head"><div><h3 id="coachTitle">Luyện điều con đang học</h3><p>Không gọi là “lỗi”. Mỗi câu chưa đúng sẽ đổi thành câu mới cùng cách làm, để con hiểu thật.</p></div>
+    <div class="coach-actions"><button class="daily" onclick="gDailyStart()">Học 5 phút hôm nay</button><button class="pur" onclick="gStartSkillPractice()">Luyện phần cần ôn</button></div></div>
+    <div id="skillList"></div>
+  </section>
+  <section class="kingdom-panel" aria-labelledby="gamesTitle">
+    <div class="kingdom-title" id="gamesTitle">🎲 Trò chơi ôn tập <span>9 cách chơi cho cùng một kho câu đã duyệt</span></div>
+    <p class="kingdom-note">Mỗi trò chơi chỉ là một <b>cách trình bày</b> — dùng chung kho câu, cách chấm và lời giải thích. Không đếm giờ bắt buộc, không phạt điểm, không thưởng chỉ vì nhanh. Tiến độ lưu theo <b>kĩ năng</b>, không theo trò chơi.</p>
+    <div class="realm-grid" id="gamesGrid"></div>
+  </section>
+  <section class="kingdom-panel" aria-labelledby="kingdomTitle">
+    <div class="kingdom-title" id="kingdomTitle">Bản đồ Vườn Tiếng Việt <span>Chọn một vùng để luyện 6 câu ngắn</span></div>
+    <p class="kingdom-note">Mỗi vùng mở dần theo hành trình. Sai không bị trừ sao; câu chưa vững sẽ quay lại lần sau. Không cần tài khoản, không quảng cáo, không trò chuyện mở.</p>
+    <div class="realm-grid" id="realmGrid"></div>
+  </section>
+  <div id="gameMap" class="map"></div>
+  <footer>🎮 Học mà chơi · 35 trạm bám chủ điểm SGK · Ôn xoay vòng · Offline · Rev 1.0</footer>
+</div>
+<div class="gmodal" id="gModal"><div class="gcard-outer"><button class="gclose" id="gCloseBtn" type="button" aria-label="Đóng trò chơi" title="Đóng" onclick="gClose()">✕</button><div class="gcard" id="gCard"></div></div></div>
+<div class="gp-overlay" id="gPauseOverlay">
+  <div class="gp-card">
+    <div class="gp-icon">⏸️</div>
+    <div class="gp-title">Tạm dừng nhé</div>
+    <div class="gp-reason">Ba chờ con quay lại nhé!</div>
+    <div class="gp-hint">Chạm màn hình hoặc bấm phím bất kỳ để tiếp tục.</div>
+  </div>
+</div>
+
+<!-- Parent corner -->
+<div class="pc-overlay" id="pcOverlay">
+  <div class="pc-card">
+    <div style="display:flex;align-items:center;gap:8px">
+      <h2 style="flex:1">👨‍👩‍👧 Góc phụ huynh</h2>
+      <button class="gry" onclick="closeParent()">✕ Đóng</button>
+    </div>
+    <div id="pcBody"></div>
+  </div>
+</div>
+
+</main>
+</div>
+
+<script>
+/* =====================================================================
+   0. TIỆN ÍCH CHUNG (an toàn: đưa text vào DOM bằng textContent/escape)
+   ===================================================================== */
+const R=(a,b)=>a+Math.floor(Math.random()*(b-a+1));
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+const shuffle=a=>a.map(v=>[Math.random(),v]).sort((x,y)=>x[0]-y[0]).map(v=>v[1]);
+/* escape an toàn cho nội dung động (chống chèn HTML) */
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+/* chuẩn hoá so khớp: NFC, gộp khoảng trắng, giữ dấu tiếng Việt (mặc định) */
+function normNFC(s){return String(s).normalize('NFC').replace(/\s+/g,' ').trim();}
+/* bỏ dấu để so khớp lỏng (KHÔNG dùng cho chính tả) */
+const deacc=s=>String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').replace(/[^a-z0-9\s]/g,' ').replace(/\s+/g,' ').trim();
+
+/* =====================================================================
+   1. TEXT-TO-SPEECH (giọng đọc tiếng Việt) + SFX (WebAudio, offline)
+   ===================================================================== */
+const TTS=(function(){
+  const s=window.speechSynthesis;
+  if(!s) return{speak:()=>{},say:()=>{},stop:()=>{}};
+  const isAndroid=/Android/i.test(navigator.userAgent);
+  let viVoice=null, unlocked=false;
+  function pickVoice(){const vs=s.getVoices()||[];viVoice=vs.find(v=>/vi[-_]?VN/i.test(v.lang))||vs.find(v=>/vietnam/i.test(v.name))||vs.find(v=>/^vi\b/i.test(v.lang))||null;}
+  pickVoice();
+  try{s.addEventListener('voiceschanged',pickVoice);}catch(e){s.onvoiceschanged=pickVoice;}
+  function unlock(){if(unlocked)return;unlocked=true;try{const u=new SpeechSynthesisUtterance(' ');u.volume=0;s.speak(u);}catch(e){}}
+  try{document.addEventListener('touchstart',unlock,{once:true,passive:true});document.addEventListener('click',unlock,{once:true});}catch(e){}
+  function utter(t,rate){const u=new SpeechSynthesisUtterance(t);if(viVoice)u.voice=viVoice;u.lang='vi-VN';u.rate=rate||0.92;u.pitch=1.03;return u;}
+  function say2(u){unlock();s.cancel();if(isAndroid){setTimeout(()=>{try{s.resume();}catch(e){}s.speak(u);},120);}else s.speak(u);}
+  function clean(raw){return raw
+    .replace(/[\u{1F000}-\u{1FFFF}]|[\u{2300}-\u{27FF}]|️/gu,' ')
+    .replace(/…/g,' ').replace(/\.{3,}/g,' chỗ trống ')
+    .replace(/\r?\n|\r/g,'. ').replace(/[()[\]"“”]/g,' ')
+    .replace(/\s+/g,' ').trim();}
+  return{
+    /* #16: có giọng Việt CỤC BỘ không? (không hứa đọc offline nếu chỉ có giọng qua mạng) */
+    hasLocalVi(){return !!(viVoice&&viVoice.localService);},
+    hasVi(){return !!viVoice;},
+    speak(src,rate){const raw=typeof src==='string'?src:(src.innerText||src.textContent||'');say2(utter(clean(raw),rate||0.9));},
+    say(t,rate){const x=String(t).replace(/[^\p{L}\p{N}\s,.!?]/gu,' ').replace(/\s+/g,' ').trim();if(x)say2(utter(x,rate||0.98));},
+    stop(){s.cancel();}
+  };
+})();
+const SFX=(function(){
+  let ctx=null;
+  function ac(){try{if(!ctx)ctx=new(window.AudioContext||window.webkitAudioContext)();if(ctx.state==='suspended')ctx.resume();}catch(e){}return ctx;}
+  function tone(f,d,t,v,w){const c=ac();if(!c)return;const t0=c.currentTime+(w||0),o=c.createOscillator(),g=c.createGain();o.type=t||'sine';o.frequency.value=f;g.gain.setValueAtTime(.0001,t0);g.gain.exponentialRampToValueAtTime(v||.2,t0+.02);g.gain.exponentialRampToValueAtTime(.0001,t0+d);o.connect(g).connect(c.destination);o.start(t0);o.stop(t0+d+.03);}
+  return{
+    correct(){tone(660,.13,'sine',.25,0);tone(880,.15,'sine',.25,.1);tone(1320,.22,'sine',.2,.22);},
+    wrong(){tone(220,.2,'sine',.14,0);tone(180,.24,'sine',.12,.08);},
+    win(){[523,659,784,1047,1319].forEach((f,i)=>tone(f,.24,'triangle',.22,i*.12));}
+  };
+})();
+function gVibe(p){try{if(!G.mute&&navigator.vibrate)navigator.vibrate(p);}catch(e){}}
+
+/* =====================================================================
+   2. TAB SWITCHER
+   ===================================================================== */
+function switchTab(mode,btn){
+  document.body.classList.remove('mode-bt','mode-game');
+  if(mode==='bt')document.body.classList.add('mode-bt');
+  else if(mode==='game')document.body.classList.add('mode-game');
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  if(btn)btn.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+  if(mode==='game'&&typeof gRenderMap==='function')gRenderMap();
+}
+/* nav links: auto về tab Lý Thuyết */
+document.addEventListener('click',function(e){
+  const link=e.target.closest('nav.side a[href^="#"]');if(!link)return;
+  const linksDiv=document.querySelector('.links');if(linksDiv)linksDiv.classList.remove('open');
+  if(document.body.classList.contains('mode-bt')||document.body.classList.contains('mode-game')){
+    e.preventDefault();switchTab('lt',document.querySelectorAll('.tab-btn')[0]);
+    setTimeout(()=>{const el=document.getElementById(link.getAttribute('href').slice(1));if(el)el.scrollIntoView({behavior:'smooth',block:'start'});},80);
+  }
+});
+</script>
+<script>
+/* =====================================================================
+   3. DỮ LIỆU CHƯƠNG TRÌNH (tách khỏi thuật toán)
+   - SKILLS  : C01–C09 (ID kĩ năng ổn định)
+   - CONTEXTS: bối cảnh có từ vựng đã kiểm soát
+   - WEEKS   : 35 tuần bám CHỦ ĐIỂM bộ "Kết nối tri thức" (theo trích SGK/SGV)
+   - TEMPLATES + APPROVED: máy sinh có ràng buộc + ngân hàng câu đã duyệt
+   Nguyên tắc: chỉ hiển thị câu ĐÃ QUA VALIDATOR; free-writing chấm RUBRIC.
+   ===================================================================== */
+const SCHEMA_VERSION=1, CONTENT_VERSION='1.0.0';
+
+/* ---- 3.1 Kĩ năng ---- */
+const SKILLS=[
+  {id:'C02_SUVAT',   topic:'C02', title:'Từ chỉ sự vật',        tip:'Mẹo “Gọi tên & Chạm vào”: nhìn thấy, sờ được, gọi được tên → là sự vật.', anchor:'c02'},
+  {id:'C02_HOATDONG',topic:'C02', title:'Từ chỉ hoạt động',     tip:'Mẹo “Thử làm động tác”: từ nào diễn tả được bằng tay chân → là hoạt động.', anchor:'c02'},
+  {id:'C02_DACDIEM', topic:'C02', title:'Từ chỉ đặc điểm',      tip:'Mẹo “Thêm rất / thật”: rất đẹp, thật cao → là đặc điểm.', anchor:'c02'},
+  {id:'C03_TRAINGHIA',topic:'C03',title:'Từ trái nghĩa',        tip:'Hai từ nghĩa đối l. Xét cùng một tiêu chí (cao–thấp, vui–buồn).', anchor:'c03'},
+  {id:'C03_GANNGHIA', topic:'C03',title:'Từ gần nghĩa',         tip:'Nghĩa gần nhau nhưng KHÔNG luôn thay được nhau — phải xét câu.', anchor:'c03'},
+  {id:'C05_CAU',     topic:'C05', title:'Câu giới thiệu / hoạt động / đặc điểm', tip:'Giới thiệu: A là B. Hoạt động: A làm gì. Đặc điểm: A thế nào.', anchor:'c05'},
+  {id:'C06_MUCDICH', topic:'C06', title:'Câu kể / hỏi / cảm / khiến', tip:'Nhìn mục đích nói + dấu cuối câu (. ? !).', anchor:'c06'},
+  {id:'C07_BOPHAN',  topic:'C07', title:'Khi nào? Ở đâu? Bằng gì? Để làm gì?', tip:'Tìm cụm trả lời đúng loại câu hỏi (thời gian / nơi chốn / phương tiện / mục đích).', anchor:'c07'},
+  {id:'C04_DAUCAU',  topic:'C04', title:'Dấu câu',              tip:'Hai chấm báo liệt kê/giải thích/lời nói. Phẩy tách các phần.', anchor:'c04'},
+  {id:'C08_SOSANH',  topic:'C08', title:'Biện pháp so sánh',    tip:'A – từ so sánh – B, dựa trên NÉT GIỐNG. Có “như” chưa chắc là so sánh!', anchor:'c08'},
+  {id:'C01_CHINHTA', topic:'C01', title:'Chính tả c/k · g/gh · ng/ngh · viết hoa', tip:'Mẹo “Anh em đi cùng i, e, ê”: k, gh, ngh đứng trước i/e/ê.', anchor:'c01'},
+  {id:'C09_VONTU',   topic:'C09', title:'Mở rộng vốn từ theo chủ điểm', tip:'Gom từ theo chủ điểm rồi dùng từ đặt câu.', anchor:'c09'},
+  {id:'C10_VIET',    topic:'C10', title:'Viết đoạn văn (đọc cùng ba/mẹ)', tip:'Con có thể kể miệng, ghi từ khóa hoặc viết ngay — cách nào giúp con dễ bắt đầu nhất. Xem “Một cách tìm ý”.', anchor:'viet'}
+];
+const SKILL_BY_ID={};SKILLS.forEach(s=>SKILL_BY_ID[s.id]=s);
+
+/* ---- 3.2 Bối cảnh (từ vựng đã kiểm soát, phân theo vai nghĩa) ---- */
+const CONTEXTS={
+  school:  {title:'Trường học', entities:['bạn Lan','bạn Nam','cô giáo','học sinh','quyển sách','cái bảng','cây bút'], actions:['đọc bài','viết chữ','giơ tay','xếp hàng','quét lớp'], attrs:['chăm chỉ','sạch sẽ','ngay ngắn','yên tĩnh'], places:['trong lớp học','ở sân trường','trong thư viện'], times:['sáng thứ hai','giờ ra chơi','đầu giờ học'], tools:['bằng bút chì','bằng phấn'], purposes:['để học giỏi','để giữ lớp sạch']},
+  home:    {title:'Gia đình', entities:['mẹ','bố','bà','em bé','cái bàn','chiếc ghế','bát cơm'], actions:['nấu cơm','quét nhà','tưới cây','rửa bát','kể chuyện'], attrs:['ấm áp','gọn gàng','thơm ngon','vui vẻ'], places:['trong bếp','ở ngoài vườn','trong nhà'], times:['buổi tối','cuối tuần','sáng sớm'], tools:['bằng chổi','bằng tay'], purposes:['để nhà sạch','để cả nhà vui']},
+  nature:  {title:'Thiên nhiên', entities:['dòng sông','ngọn núi','bầu trời','đám mây','cơn mưa','cánh rừng'], actions:['chảy','trôi','rơi','lấp lánh'], attrs:['xanh biếc','trong veo','mát rượi','hùng vĩ'], places:['trên bầu trời','giữa cánh rừng','bên dòng sông'], times:['buổi sáng','mùa hè','sau cơn mưa'], tools:[], purposes:[]},
+  garden:  {title:'Khu vườn', entities:['bông hoa','cây xanh','con bướm','quả cam','chú ong'], actions:['nở','bay','đậu','tỏa hương'], attrs:['rực rỡ','thơm ngát','tươi tốt','xanh mướt'], places:['trong vườn','trên cành cây','giữa luống hoa'], times:['buổi sáng','mùa xuân'], tools:['bằng vòi nước'], purposes:['để vườn thêm đẹp']},
+  library: {title:'Thư viện', entities:['các bạn','quyển sách','cô thủ thư','chiếc kệ'], actions:['đọc sách','mượn sách','tìm sách'], attrs:['yên tĩnh','ngăn nắp'], places:['trong thư viện'], times:['giờ ra chơi','chiều thứ sáu'], tools:['bằng phiếu mượn'], purposes:['để đọc truyện','để tìm hiểu bài']},
+  festival:{title:'Lễ hội', entities:['đoàn múa lân','chiếc đèn lồng','tiếng trống','đám đông'], actions:['múa','rước đèn','đánh trống','reo hò'], attrs:['tưng bừng','rộn ràng','náo nhiệt'], places:['ở sân đình','trên đường phố'], times:['đêm rằm','ngày hội'], tools:[], purposes:['để mừng ngày hội']}
+};
+const CONTEXT_IDS=Object.keys(CONTEXTS);
+
+/* ---- 3.2b KHUNG CẢNH ĐÃ DUYỆT (scenario frames) ----
+   Câu được SINH CHỈ TỪ các khung này (chủ thể – hoạt động – nơi/thời gian/phương tiện/mục đích
+   đã kiểm tra hợp nghĩa), không ghép tự do các danh sách từ (#4).
+   actor phải là chủ thể có thể thực hiện action; place/time/tool/purpose chỉ ghi khi tự nhiên. */
+const FRAMES={
+  school:[
+    {actor:'bạn Lan',   action:'đọc bài',  place:'trong lớp học',   time:'đầu giờ học',   tool:null,             purpose:'để hiểu bài hơn', attr:'chăm chỉ'},
+    {actor:'bạn Nam',   action:'viết chữ', place:'trong lớp học',   time:'sáng thứ hai',  tool:'bằng bút chì',   purpose:'để chữ đẹp hơn',  attr:'cẩn thận'},
+    {actor:'cô giáo',   action:'viết bảng',place:'trong lớp học',   time:'đầu giờ học',   tool:'bằng phấn',      purpose:'để cả lớp cùng xem', attr:'dịu dàng'},
+    {actor:'các bạn',   action:'xếp hàng', place:'ở sân trường',    time:'giờ ra chơi',   tool:null,             purpose:'để vào lớp trật tự', attr:'ngay ngắn'},
+    {actor:'chúng em',  action:'quét lớp', place:'trong lớp học',   time:'cuối buổi học', tool:'bằng chổi',      purpose:'để lớp sạch sẽ', attr:'sạch sẽ'}
+  ],
+  home:[
+    {actor:'mẹ',        action:'nấu cơm',   place:'trong bếp',      time:'buổi tối',      tool:null,             purpose:'để cả nhà ăn tối', attr:'thơm ngon'},
+    {actor:'em',        action:'quét nhà',  place:'trong nhà',      time:'sáng sớm',      tool:'bằng chổi',      purpose:'để nhà sạch',      attr:'gọn gàng'},
+    {actor:'bố',        action:'tưới cây',  place:'ở ngoài vườn',   time:'cuối tuần',     tool:'bằng vòi nước',  purpose:'để cây tươi tốt',  attr:'xanh tốt'},
+    {actor:'bà',        action:'kể chuyện', place:'trong nhà',      time:'buổi tối',      tool:null,             purpose:'để em dễ ngủ',     attr:'ấm áp'},
+    {actor:'em bé',     action:'chơi bóng', place:'trong sân',      time:'buổi chiều',    tool:null,             purpose:null,               attr:'vui vẻ'}
+  ],
+  nature:[
+    {actor:'dòng sông', action:'chảy',      place:'giữa cánh đồng', time:'mùa hè',        tool:null, purpose:null, attr:'trong veo'},
+    {actor:'đám mây',   action:'trôi',      place:'trên bầu trời',  time:'buổi sáng',     tool:null, purpose:null, attr:'trắng xốp'},
+    {actor:'cơn mưa',   action:'rơi',       place:'trên mái nhà',   time:'buổi chiều',    tool:null, purpose:null, attr:'mát rượi'},
+    {actor:'ngọn núi',  action:'đứng sừng sững', place:'phía xa',  time:null,            tool:null, purpose:null, attr:'hùng vĩ'}
+  ],
+  garden:[
+    {actor:'bông hoa',  action:'nở',        place:'trong vườn',     time:'buổi sáng',     tool:null, purpose:null, attr:'rực rỡ'},
+    {actor:'con bướm',  action:'bay',       place:'giữa luống hoa', time:'buổi sáng',     tool:null, purpose:null, attr:'xinh xắn'},
+    {actor:'chú ong',   action:'đậu',       place:'trên cành hoa',  time:'mùa xuân',      tool:null, purpose:'để hút mật', attr:'chăm chỉ'},
+    {actor:'em',        action:'tưới hoa',  place:'trong vườn',     time:'buổi chiều',    tool:'bằng vòi nước', purpose:'để vườn thêm đẹp', attr:'tươi tốt'}
+  ],
+  library:[
+    {actor:'các bạn',   action:'đọc sách',  place:'trong thư viện', time:'giờ ra chơi',   tool:null, purpose:'để đọc truyện', attr:'yên tĩnh'},
+    {actor:'em',        action:'mượn sách', place:'ở thư viện',     time:'chiều thứ sáu', tool:'bằng phiếu mượn', purpose:'để đọc ở nhà', attr:'ngăn nắp'},
+    {actor:'cô thủ thư',action:'xếp sách',  place:'lên kệ',         time:'đầu giờ',       tool:null, purpose:'để các bạn dễ tìm', attr:'ngăn nắp'}
+  ],
+  festival:[
+    {actor:'đoàn múa lân', action:'múa',    place:'ở sân đình',     time:'đêm rằm',       tool:null, purpose:'để mừng ngày hội', attr:'tưng bừng'},
+    {actor:'các bạn nhỏ', action:'rước đèn',place:'trên đường phố', time:'đêm Trung thu', tool:null, purpose:'để đón trăng', attr:'rộn ràng'},
+    {actor:'bác trống',   action:'đánh trống', place:'ở sân đình',  time:'ngày hội',      tool:null, purpose:null, attr:'náo nhiệt'}
+  ]
+};
+/* lấy khung theo bối cảnh (ưu tiên) — luôn có ít nhất 1 khung */
+function pickFrame(prefer){
+  let ids=(prefer&&prefer.length)?prefer.filter(id=>FRAMES[id]&&FRAMES[id].length):[];
+  if(!ids.length)ids=Object.keys(FRAMES).filter(id=>FRAMES[id].length);
+  const id=pick(ids);const fr=pick(FRAMES[id]);
+  return Object.assign({ctxId:id,ctx:CONTEXTS[id]},fr);
+}
+
+/* ---- 3.3 Lộ trình 35 tuần bám CHỦ ĐIỂM Kết nối tri thức ----
+   primary = kĩ năng trọng tâm; review = ôn; contexts = bối cảnh gợi ý
+   PROVENANCE (#12): lập từ bản trích SGK/SGV do phụ huynh cung cấp trong
+   ref_docs/tiengviet3_plan.md (mục "PHẦN 2: TIMEFRAME 35 TUẦN"). Chưa đối chiếu
+   từng ô với số trang. Ghi chú đối chiếu: bản trích ghi tuần 13 = "Cộng đồng gắn bó",
+   tuần 17–18 = "Ôn tập cuối HK1"; một bản kế hoạch trước đó ghi khác (13 = Mái nhà
+   yêu thương, 17 = tuần bài mới). Giữ theo bản trích SGK; cần xác minh bằng sách in. */
+const WEEKS_SOURCE='bản trích SGK/SGV trong tiengviet3_plan.md, chưa xác minh số trang';
+const WEEKS=[
+  {w:1, chudiem:'Những trải nghiệm thú vị', title:'Sự vật & hoạt động', primary:['C02_SUVAT','C02_HOATDONG'], review:[], contexts:['home','school'], out:'Chọn từ đúng loại trong câu', ltc:'Từ chỉ sự vật, hoạt động; câu giới thiệu'},
+  {w:2, chudiem:'Những trải nghiệm thú vị', title:'Đặc điểm: màu sắc, hình dáng', primary:['C02_DACDIEM'], review:['C02_SUVAT'], contexts:['nature','garden'], out:'2 câu miêu tả', ltc:'Từ chỉ đặc điểm'},
+  {w:3, chudiem:'Những trải nghiệm thú vị', title:'Hoạt động di chuyển & nấu ăn', primary:['C02_HOATDONG'], review:['C02_DACDIEM'], contexts:['home','nature'], out:'Nhóm từ hoạt động', ltc:'Từ chỉ hoạt động'},
+  {w:4, chudiem:'Những trải nghiệm thú vị', title:'Dấu chấm & dấu hai chấm', primary:['C04_DAUCAU'], review:['C02_DACDIEM'], contexts:['home','garden'], out:'Câu có phần liệt kê', ltc:'Dấu chấm, dấu hai chấm; MRVT mùa hè'},
+  {w:5, chudiem:'Cổng trường rộng mở', title:'Đặc điểm của cảnh vật', primary:['C02_DACDIEM'], review:['C04_DAUCAU'], contexts:['school','nature'], out:'2 câu tả cảnh', ltc:'Từ chỉ đặc điểm sự vật, cảnh vật'},
+  {w:6, chudiem:'Cổng trường rộng mở', title:'Câu hỏi & dấu hỏi', primary:['C06_MUCDICH'], review:['C02_SUVAT'], contexts:['school','library'], out:'3 câu hỏi phù hợp', ltc:'MRVT nhà trường; câu hỏi'},
+  {w:7, chudiem:'Cổng trường rộng mở', title:'Câu kể & dấu kết thúc câu', primary:['C06_MUCDICH'], review:['C04_DAUCAU'], contexts:['school','home'], out:'Đoạn 3 câu kể', ltc:'Câu kể; dấu chấm/hỏi/chấm than'},
+  {w:8, chudiem:'Cổng trường rộng mở', title:'Câu cảm & MRVT thư viện', primary:['C06_MUCDICH','C09_VONTU'], review:['C06_MUCDICH'], contexts:['library','school'], out:'Câu bộc lộ cảm xúc', ltc:'MRVT thư viện; câu cảm'},
+  {w:9, chudiem:'Ôn tập giữa HK1', title:'Ôn từ loại, kiểu câu, dấu câu', primary:['C02_SUVAT','C06_MUCDICH','C04_DAUCAU'], review:['C02_HOATDONG','C02_DACDIEM'], contexts:['school','home'], out:'Bộ câu hỗn hợp', ltc:'Ôn tập giữa học kì 1'},
+  {w:10, chudiem:'Mái nhà yêu thương', title:'Đặc điểm & câu khiến', primary:['C06_MUCDICH','C02_DACDIEM'], review:['C04_DAUCAU'], contexts:['home'], out:'Lời đề nghị lịch sự', ltc:'Từ chỉ đặc điểm; câu khiến'},
+  {w:11, chudiem:'Mái nhà yêu thương', title:'MRVT người thân & dấu hai chấm', primary:['C09_VONTU','C04_DAUCAU'], review:['C02_SUVAT'], contexts:['home'], out:'Câu giải thích có dấu hai chấm', ltc:'MRVT người thân; dấu hai chấm'},
+  {w:12, chudiem:'Mái nhà yêu thương', title:'Biện pháp so sánh (bước đầu)', primary:['C08_SOSANH'], review:['C02_DACDIEM'], contexts:['home','nature'], out:'Đánh dấu cấu phần so sánh', ltc:'MRVT anh chị em; biện pháp so sánh'},
+  {w:13, chudiem:'Cộng đồng gắn bó', title:'Từ trái nghĩa & câu khiến', primary:['C03_TRAINGHIA'], review:['C06_MUCDICH'], contexts:['school','home'], out:'Nối cặp & đặt câu', ltc:'Từ trái nghĩa; câu khiến'},
+  {w:14, chudiem:'Cộng đồng gắn bó', title:'MRVT nghề nghiệp & câu hỏi', primary:['C09_VONTU','C06_MUCDICH'], review:['C03_TRAINGHIA'], contexts:['home','school'], out:'Hỏi–đáp về nghề nghiệp', ltc:'MRVT nghề nghiệp; câu hỏi'},
+  {w:15, chudiem:'Cộng đồng gắn bó', title:'Sự vật – hoạt động; hỏi–đáp', primary:['C07_BOPHAN'], review:['C02_HOATDONG'], contexts:['nature','garden'], out:'Hỏi–đáp về sự vật/hoạt động', ltc:'Từ chỉ sự vật, hoạt động; hỏi–đáp'},
+  {w:16, chudiem:'Cộng đồng gắn bó', title:'MRVT thành thị/nông thôn & so sánh', primary:['C08_SOSANH','C09_VONTU'], review:['C08_SOSANH'], contexts:['nature','garden'], out:'Viết 2 câu so sánh', ltc:'MRVT thành thị, nông thôn; so sánh'},
+  {w:17, chudiem:'Ôn tập cuối HK1', title:'Ôn tổng hợp Tập một (1)', primary:['C08_SOSANH','C04_DAUCAU'], review:['C06_MUCDICH','C09_VONTU'], contexts:['school','home','nature'], out:'Chấm dấu đoạn ngắn', ltc:'Ôn tập cuối học kì 1'},
+  {w:18, chudiem:'Ôn tập cuối HK1', title:'Ôn tổng hợp Tập một (2)', primary:['C02_DACDIEM','C03_TRAINGHIA'], review:['C08_SOSANH','C07_BOPHAN'], contexts:['school','home','garden'], out:'Sản phẩm viết ngắn', ltc:'Đánh giá cuối học kì 1'},
+  {w:19, chudiem:'Những sắc màu thiên nhiên', title:'MRVT thiên nhiên & so sánh', primary:['C08_SOSANH','C09_VONTU'], review:['C02_DACDIEM'], contexts:['nature'], out:'2 câu so sánh về thiên nhiên', ltc:'MRVT thiên nhiên; so sánh'},
+  {w:20, chudiem:'Những sắc màu thiên nhiên', title:'Hiện tượng thiên nhiên & dấu câu', primary:['C04_DAUCAU'], review:['C08_SOSANH'], contexts:['nature'], out:'Sửa dấu câu', ltc:'Từ chỉ hiện tượng thiên nhiên; dấu câu'},
+  {w:21, chudiem:'Những sắc màu thiên nhiên', title:'Muôn thú, cây cối & so sánh', primary:['C08_SOSANH'], review:['C09_VONTU'], contexts:['garden','nature'], out:'Đoạn tả cây cối ngắn', ltc:'Từ chỉ muôn thú, cây cối; phép so sánh'},
+  {w:22, chudiem:'Những sắc màu thiên nhiên', title:'MRVT cảnh đẹp & bảo vệ môi trường', primary:['C09_VONTU'], review:['C08_SOSANH','C04_DAUCAU'], contexts:['nature','garden'], out:'Đoạn nêu tình cảm với thiên nhiên', ltc:'MRVT cảnh đẹp, bảo vệ môi trường'},
+  {w:23, chudiem:'Bài học từ cuộc sống', title:'Sức khỏe; câu khiến & câu cảm', primary:['C06_MUCDICH'], review:['C09_VONTU'], contexts:['home','school'], out:'Câu khiến/cảm về sức khỏe', ltc:'Từ ngữ rèn luyện sức khỏe; câu khiến, câu cảm'},
+  {w:24, chudiem:'Bài học từ cuộc sống', title:'Từ trái nghĩa & đặc điểm', primary:['C03_TRAINGHIA','C02_DACDIEM'], review:['C06_MUCDICH'], contexts:['home','school'], out:'Chọn từ phù hợp ngữ cảnh', ltc:'Từ trái nghĩa; từ chỉ đặc điểm'},
+  {w:25, chudiem:'Bài học từ cuộc sống', title:'MRVT tính nết, thói quen', primary:['C09_VONTU','C03_GANNGHIA'], review:['C03_TRAINGHIA'], contexts:['home','school'], out:'Sửa từ trong câu', ltc:'MRVT tính nết, thói quen tốt/xấu'},
+  {w:26, chudiem:'Bài học từ cuộc sống', title:'MRVT giao tiếp & dấu câu', primary:['C04_DAUCAU','C09_VONTU'], review:['C03_GANNGHIA'], contexts:['home','school'], out:'Đoạn hội thoại có dấu đúng', ltc:'MRVT giao tiếp; dấu câu'},
+  {w:27, chudiem:'Ôn tập giữa HK2', title:'Ôn thích ứng (thiên nhiên & bài học)', primary:['C08_SOSANH','C03_TRAINGHIA'], review:['C09_VONTU','C04_DAUCAU'], contexts:['nature','home','school'], out:'Bộ câu hỗn hợp', ltc:'Ôn tập giữa học kì 2'},
+  {w:28, chudiem:'Đất nước ngàn năm', title:'MRVT đất nước, quê hương', primary:['C09_VONTU'], review:['C08_SOSANH'], contexts:['nature'], out:'Đoạn cảm nghĩ về quê hương', ltc:'MRVT đất nước, quê hương'},
+  {w:29, chudiem:'Đất nước ngàn năm', title:'Danh lam thắng cảnh & viết hoa', primary:['C01_CHINHTA','C09_VONTU'], review:['C09_VONTU'], contexts:['nature'], out:'Viết câu có địa danh', ltc:'Từ chỉ danh lam thắng cảnh; viết hoa địa danh'},
+  {w:30, chudiem:'Đất nước ngàn năm', title:'Dân tộc, trang phục, nhà ở', primary:['C09_VONTU'], review:['C01_CHINHTA'], contexts:['festival','nature'], out:'Đoạn giới thiệu nét văn hóa', ltc:'Từ chỉ dân tộc, trang phục, nhà ở truyền thống'},
+  {w:31, chudiem:'Đất nước ngàn năm', title:'Lịch sử, anh hùng & tên riêng', primary:['C01_CHINHTA'], review:['C09_VONTU'], contexts:['festival'], out:'Sửa viết hoa tên riêng', ltc:'MRVT lịch sử; tên riêng nước ngoài phiên âm'},
+  {w:32, chudiem:'Trái Đất của chúng mình', title:'Thể thao, tri thức, công nghệ', primary:['C09_VONTU'], review:['C01_CHINHTA'], contexts:['school'], out:'4 câu theo chủ điểm', ltc:'MRVT thể thao, tri thức, công nghệ'},
+  {w:33, chudiem:'Trái Đất của chúng mình', title:'Trái Đất & bảo vệ môi trường', primary:['C09_VONTU'], review:['C08_SOSANH'], contexts:['nature','garden'], out:'Đoạn về bảo vệ môi trường', ltc:'MRVT Trái Đất, bảo vệ môi trường'},
+  {w:34, chudiem:'Ôn tập cuối HK2', title:'Tổng ôn Luyện từ & câu (1)', primary:['C08_SOSANH','C06_MUCDICH','C04_DAUCAU'], review:['C02_DACDIEM','C09_VONTU'], contexts:['school','home','nature'], out:'Bộ câu hỗn hợp', ltc:'Hệ thống hóa Luyện từ & câu cả năm'},
+  {w:35, chudiem:'Ôn tập cuối HK2', title:'Tổng ôn & lên lớp 4 (2)', primary:['C08_SOSANH','C07_BOPHAN','C03_TRAINGHIA'], review:['C01_CHINHTA','C10_VIET'], contexts:['school','home','nature','festival'], out:'Sản phẩm viết & hồ sơ tiến bộ', ltc:'Đánh giá cuối học kì 2'}
+];
+
+/* ---- 3.4 Giai đoạn (theo chủ điểm SGK) cho bản đồ game ---- */
+const GPHASES=[
+  {from:1,to:4,  name:'Những trải nghiệm thú vị', color:'#00838f', emoji:'🌞'},
+  {from:5,to:9,  name:'Cổng trường rộng mở',       color:'#1565c0', emoji:'🏫'},
+  {from:10,to:12,name:'Mái nhà yêu thương',        color:'#ad1457', emoji:'🏠'},
+  {from:13,to:18,name:'Cộng đồng gắn bó · Ôn HK1', color:'#6a1b9a', emoji:'🤝'},
+  {from:19,to:22,name:'Những sắc màu thiên nhiên', color:'#2e7d32', emoji:'🌿'},
+  {from:23,to:27,name:'Bài học từ cuộc sống',      color:'#ef6c00', emoji:'💡'},
+  {from:28,to:31,name:'Đất nước ngàn năm',         color:'#c62828', emoji:'🇻🇳'},
+  {from:32,to:35,name:'Trái Đất của chúng mình',   color:'#4527a0', emoji:'🌍'}
+];
+
+/* ---- 3.5 Vùng luyện tập (realm) theo nhóm kĩ năng ---- */
+const GREALMS=[
+  {id:'tu',   name:'Đồi Từ ngữ',   icon:'🔤', color:'#00838f', bg:'#e0f2f1', need:1,  skills:['C02_SUVAT','C02_HOATDONG','C02_DACDIEM','C09_VONTU'], desc:'Nhận biết & mở rộng vốn từ.'},
+  {id:'nghia',name:'Hồ Nghĩa từ',  icon:'⚖️', color:'#1565c0', bg:'#e3f2fd', need:13, skills:['C03_TRAINGHIA','C03_GANNGHIA'], desc:'Trái nghĩa, gần nghĩa theo ngữ cảnh.'},
+  {id:'cau',  name:'Cầu Câu văn',  icon:'💬', color:'#6a1b9a', bg:'#f3e5f5', need:5,  skills:['C05_CAU','C06_MUCDICH','C07_BOPHAN'], desc:'Kiểu câu & bộ phận trả lời.'},
+  {id:'dau',  name:'Vườn Dấu câu', icon:'✒️', color:'#ef6c00', bg:'#fff3e0', need:4,  skills:['C04_DAUCAU'], desc:'Dùng dấu câu đúng chỗ.'},
+  {id:'sosanh',name:'Rừng So sánh', icon:'🪞', color:'#2e7d32', bg:'#e8f5e9', need:12, skills:['C08_SOSANH'], desc:'Nhận biết & viết câu so sánh.'},
+  {id:'chinhta',name:'Suối Chính tả',icon:'✏️',color:'#c62828', bg:'#ffebee', need:29, skills:['C01_CHINHTA'], desc:'c/k, g/gh, ng/ngh & viết hoa.'}
+];
+
+/* =====================================================================
+   4. NGÂN HÀNG MẪU + CÂU ĐÃ DUYỆT (fallback khi máy sinh thiếu)
+   - Mỗi item: {skill, type, prompt, stimulus?, options?, answer, explanation, difficulty}
+   - Đây là DỮ LIỆU (không thực thi). Tất cả đã "duyệt tay".
+   ===================================================================== */
+/* danh sách "như" KHÔNG dùng để so sánh (bẫy học thuật của đặc tả) */
+const NHU_NOT_COMPARE=[
+  {s:'Em làm bài đúng như cô đã dặn.', why:'“như” ở đây nghĩa là “theo đúng”, không so sánh hai sự vật.'},
+  {s:'Mọi việc diễn ra như dự định.',  why:'“như” nghĩa là “đúng theo”, không phải phép so sánh.'},
+  {s:'Bạn ấy học giỏi như thường lệ.', why:'“như thường lệ” chỉ thói quen, không so sánh hai sự vật.'}
+];
+const NHU_COMPARE=[
+  {s:'Mặt hồ phẳng như tấm gương.', a:'Mặt hồ', b:'tấm gương', net:'phẳng'},
+  {s:'Ông em hiền như Bụt.',        a:'Ông em', b:'Bụt',       net:'hiền'},
+  {s:'Đôi mắt bé tròn như hạt nhãn.',a:'Đôi mắt bé', b:'hạt nhãn', net:'tròn'}
+];
+/* ngân hàng câu đã duyệt (rút gọn nhưng phủ mọi kĩ năng — mở rộng dần) */
+const APPROVED=[
+  {skill:'C02_SUVAT', type:'single_choice', prompt:'Từ nào là TỪ CHỈ SỰ VẬT?', options:['chạy','quyển sách','nhanh nhẹn','vui vẻ'], answer:1, explanation:'“quyển sách” gọi được tên, sờ được → là sự vật.', difficulty:1},
+  {skill:'C02_HOATDONG', type:'single_choice', prompt:'Từ nào là TỪ CHỈ HOẠT ĐỘNG?', options:['bông hoa','xanh tươi','quét nhà','cái bàn'], answer:2, explanation:'“quét nhà” làm được bằng động tác → hoạt động.', difficulty:1},
+  {skill:'C02_DACDIEM', type:'single_choice', prompt:'Từ nào là TỪ CHỈ ĐẶC ĐIỂM?', options:['con mèo','đỏ tươi','đọc bài','dòng sông'], answer:1, explanation:'Thêm “rất” hợp lí: rất đỏ tươi → đặc điểm.', difficulty:1},
+  {skill:'C03_TRAINGHIA', type:'match_pairs', prompt:'Nối mỗi từ với từ TRÁI NGHĨA của nó:', pairs:[['cao','thấp'],['vui','buồn'],['sạch','bẩn']], explanation:'Các cặp đối nghĩa cùng một tiêu chí.', difficulty:1},
+  {skill:'C08_SOSANH', type:'select_span', prompt:'Chọn cụm chỉ SỰ VẬT ĐƯỢC SO SÁNH VỚI (đối tượng B):', stimulus:'Mặt hồ phẳng như tấm gương.', tokens:['Mặt hồ','phẳng','như','tấm gương'], answer:3, explanation:'A = Mặt hồ, nét giống = phẳng, từ so sánh = như, B = tấm gương.', difficulty:1},
+  {skill:'C04_DAUCAU', type:'single_choice', prompt:'Chọn dấu điền vào chỗ trống: “Trong giỏ có ba thứ___ táo, lê và cam.”', options:[': (hai chấm)','. (chấm)','? (hỏi)','! (than)'], answer:0, explanation:'Dấu hai chấm báo hiệu phần liệt kê phía sau.', difficulty:1},
+  {skill:'C06_MUCDICH', type:'single_choice', prompt:'Câu “Bạn đọc quyển nào?” là kiểu câu gì?', options:['Câu kể','Câu hỏi','Câu cảm','Câu khiến'], answer:1, explanation:'Có từ hỏi “nào” và dấu ? ở cuối → câu hỏi.', difficulty:1},
+  {skill:'C07_BOPHAN', type:'select_span', prompt:'Bộ phận nào trả lời câu hỏi “Ở đâu?”', stimulus:'Các bạn đọc sách trong thư viện.', tokens:['Các bạn','đọc sách','trong thư viện'], answer:2, explanation:'“trong thư viện” cho biết nơi diễn ra hoạt động.', difficulty:1},
+  {skill:'C01_CHINHTA', type:'single_choice', prompt:'Chọn phụ âm đầu đúng cho tiếng “___ỉ” (trong “nghỉ hè”):', options:['ngh','ng'], answer:0, explanation:'Trước “i” dùng “ngh” → “nghỉ”. Mẹo: k, gh, ngh đi với i, e, ê.', difficulty:1},
+  {skill:'C09_VONTU', type:'single_choice', prompt:'Từ nào KHÔNG thuộc chủ điểm “trường học”?', options:['bảng','phấn','xoong nồi','cô giáo'], answer:2, explanation:'“xoong nồi” thuộc chủ điểm gia đình/bếp núc.', difficulty:1}
+];
+
+/* =====================================================================
+   5. TEMPLATES – máy sinh câu CÓ RÀNG BUỘC theo bối cảnh
+   Mỗi generator trả về "candidate"; phải qua validate() mới được dùng.
+   ===================================================================== */
+const GEN={};
+
+/* helper: lấy ngẫu nhiên bối cảnh hợp lệ cho một kĩ năng, theo tuần */
+function pickContext(prefer){
+  if(prefer&&prefer.length){const c=prefer.filter(id=>CONTEXTS[id]);if(c.length)return CONTEXTS[pick(c)];}
+  return CONTEXTS[pick(CONTEXT_IDS)];
+}
+
+/* --- C02: nhận biết loại từ (sự vật / hoạt động / đặc điểm) --- */
+function genLoaiTu(kind, ctx){
+  ctx=ctx||pickContext();
+  const pools={sv:ctx.entities,hd:ctx.actions,dd:ctx.attrs};
+  const labels={sv:'SỰ VẬT',hd:'HOẠT ĐỘNG',dd:'ĐẶC ĐIỂM'};
+  const correct=pick(pools[kind]);
+  const others=shuffle(['sv','hd','dd'].filter(k=>k!==kind)).slice(0,3);
+  const distract=[];
+  for(const k of ['sv','hd','dd']){ if(k!==kind && pools[k] && pools[k].length){ const w=pick(pools[k]); if(w!==correct) distract.push(w);} }
+  const opts=shuffle([correct,...distract.slice(0,3)]);
+  return {skill:kind==='sv'?'C02_SUVAT':kind==='hd'?'C02_HOATDONG':'C02_DACDIEM', type:'single_choice',
+    prompt:`Từ nào là TỪ CHỈ ${labels[kind]}?`, options:opts, answer:opts.indexOf(correct),
+    explanation:`“${correct}” là từ chỉ ${labels[kind].toLowerCase()} trong bối cảnh ${ctx.title.toLowerCase()}.`,
+    difficulty:1, _sig:'loaitu:'+kind+':'+correct};
+}
+GEN.C02_SUVAT   =ctx=>genLoaiTu('sv',ctx);
+GEN.C02_HOATDONG=ctx=>genLoaiTu('hd',ctx);
+GEN.C02_DACDIEM =ctx=>genLoaiTu('dd',ctx);
+
+/* --- C05: hoàn chỉnh / nhận biết kiểu câu --- */
+GEN.C05_CAU=function(ctx){
+  const fr=pickFrame(ctxIdOf(ctx));
+  const forms=[
+    {kind:'nêu hoạt động', s:`${cap(fr.actor)} ${fr.action}.`, why:'Câu nêu hoạt động: cho biết ai làm gì.'},
+    {kind:'nêu đặc điểm', s:`${cap(fr.actor)} rất ${fr.attr}.`, why:'Câu nêu đặc điểm: cho biết sự vật thế nào.'}
+  ];
+  /* "Đây là em / chúng em" không tự nhiên → chỉ giới thiệu danh từ chỉ người/vật cụ thể */
+  if(!/^(em|chúng em|các bạn|các bạn nhỏ)$/i.test(fr.actor)) forms.push({kind:'giới thiệu', s:`Đây là ${fr.actor}.`, why:'Câu giới thiệu: nêu tên/loại của sự vật.'});
+  const f=pick(forms);
+  const opts=shuffle(['Câu giới thiệu','Câu nêu hoạt động','Câu nêu đặc điểm']);
+  const label='Câu '+f.kind;
+  return {skill:'C05_CAU', type:'single_choice', prompt:'Câu dưới đây thuộc kiểu câu nào?', stimulus:f.s,
+    options:opts, answer:opts.indexOf(label), explanation:f.why, difficulty:1, _sig:'c05:'+f.s};
+};
+function cap(s){return s.charAt(0).toUpperCase()+s.slice(1);}
+/* map object bối cảnh → id (để chọn khung đúng bối cảnh) */
+function ctxIdOf(ctx){if(!ctx)return null;const id=CONTEXT_IDS.find(k=>CONTEXTS[k]===ctx);return id?[id]:null;}
+
+/* --- C06: kiểu câu theo mục đích nói (từ khung đã duyệt) --- */
+GEN.C06_MUCDICH=function(ctx){
+  const fr=pickFrame(ctxIdOf(ctx));
+  const a=fr.actor, act=fr.action;
+  /* câu hỏi: chỉ hỏi về thành phần khung thực sự có (nơi chốn/thời gian) để tự nhiên */
+  const qWord=fr.place?'ở đâu':(fr.time?'khi nào':'thế nào');
+  const forms=[
+    {s:`${cap(a)} ${act}.`, label:'Câu kể', why:'Kể lại một việc, kết thúc bằng dấu chấm.'},
+    {s:`${cap(a)} ${act} ${qWord}?`, label:'Câu hỏi', why:'Có từ hỏi và dấu ? → câu hỏi.'},
+    {s:`Ôi, ${a} ${fr.attr} quá!`, label:'Câu cảm', why:'Bộc lộ cảm xúc, có “quá”, dấu ! → câu cảm.'}
+  ];
+  /* câu khiến chỉ hợp khi chủ thể là NGƯỜI (khung có purpose hoặc actor là người) */
+  if(isPersonActor(a)) forms.push({s:`${cap(a)} hãy ${act} nhé!`, label:'Câu khiến', why:'Yêu cầu/đề nghị, có “hãy … nhé” → câu khiến.'});
+  const f=pick(forms);
+  const opts=['Câu kể','Câu hỏi','Câu cảm','Câu khiến'];
+  return {skill:'C06_MUCDICH', type:'single_choice', prompt:'Câu dưới đây dùng để làm gì (kiểu câu)?', stimulus:f.s,
+    options:opts, answer:opts.indexOf(f.label), explanation:f.why, difficulty:1, _sig:'c06:'+f.s};
+};
+const PERSON_WORDS=['bạn','cô','thầy','mẹ','bố','bà','ông','em','các bạn','chúng em','cô thủ thư','bác','anh','chị','học sinh'];
+function isPersonActor(a){const x=normNFC(a).toLowerCase();return PERSON_WORDS.some(p=>x===p||x.startsWith(p+' ')||x.includes(' '+p));}
+
+/* --- C07: tìm bộ phận trả lời Khi nào/Ở đâu/Bằng gì/Để làm gì (từ khung) --- */
+GEN.C07_BOPHAN=function(ctx){
+  const fr=pickFrame(ctxIdOf(ctx));
+  const a=fr.actor, act=fr.action;
+  const variants=[];
+  if(fr.place)   variants.push({q:'Ở đâu?',     part:fr.place,   build:p=>`${cap(a)} ${act} ${p}.`});
+  if(fr.time)    variants.push({q:'Khi nào?',   part:fr.time,    build:p=>`${cap(p)}, ${a} ${act}.`});
+  if(fr.tool)    variants.push({q:'Bằng gì?',   part:fr.tool,    build:p=>`${cap(a)} ${act} ${p}.`});
+  if(fr.purpose) variants.push({q:'Để làm gì?', part:fr.purpose, build:p=>`${cap(a)} ${act} ${p}.`});
+  if(!variants.length) return genLoaiTu('sv',ctx); /* an toàn: đổi dạng khác */
+  const v=pick(variants);
+  const stim=v.build(v.part);
+  /* tokenize theo cụm đã biết để select_span chính xác */
+  const tokens=tokenizeByParts(stim, [v.part]);
+  const idx=tokens.findIndex(t=>normNFC(t)===normNFC(stripPunc(v.part))||normNFC(t).includes(normNFC(stripPunc(v.part))));
+  return {skill:'C07_BOPHAN', type:'select_span', prompt:`Bộ phận nào trả lời câu hỏi “${v.q}”`, stimulus:stim,
+    tokens, answer:idx>=0?idx:0, explanation:`Cụm “${stripPunc(v.part)}” trả lời câu hỏi ${v.q}`, difficulty:1, _sig:'c07:'+stim};
+};
+function stripPunc(s){return String(s).replace(/[.,!?]/g,'').trim();}
+/* tách câu thành các token là "cụm" (giữ nguyên các cụm cho trước) */
+function tokenizeByParts(sentence, parts){
+  let s=' '+sentence.replace(/[.,!?]/g,'').replace(/\s+/g,' ').trim()+' ';
+  const holders=[];
+  parts.forEach((p,i)=>{const pp=stripPunc(p);const key=`__P${i}__`;const re=new RegExp(pp.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'i');if(re.test(s)){s=s.replace(re,' '+key+' ');holders.push([key,pp]);}});
+  const raw=s.trim().split(/\s+/);
+  /* gộp lại: cụm holder giữ nguyên; còn lại gộp thành cụm 2-3 từ tự nhiên */
+  const out=[];let buf=[];
+  const flush=()=>{if(buf.length){out.push(buf.join(' '));buf=[];}};
+  for(const w of raw){const h=holders.find(x=>x[0]===w);if(h){flush();out.push(h[1]);}else buf.push(w);}
+  flush();
+  return out;
+}
+
+/* --- C08: nhận biết so sánh (dùng ngân hàng đã duyệt để đảm bảo tự nhiên) --- */
+GEN.C08_SOSANH=function(){
+  /* 30% ra bẫy "như" không so sánh để rèn phân biệt */
+  if(Math.random()<0.3){
+    const t=pick(NHU_NOT_COMPARE);
+    const good=pick(NHU_COMPARE);
+    const opts=shuffle([t.s, good.s]);
+    return {skill:'C08_SOSANH', type:'single_choice', prompt:'Câu nào CÓ dùng biện pháp so sánh?', options:opts,
+      answer:opts.indexOf(good.s), explanation:`“${good.s}” so sánh ${good.a} với ${good.b}. Còn “${t.s}” — ${t.why}`, difficulty:2, _sig:'c08trap:'+t.s};
+  }
+  const c=pick(NHU_COMPARE);
+  const tokens=[c.a, c.net, 'như', c.b];
+  return {skill:'C08_SOSANH', type:'select_span', prompt:'Chọn ĐỐI TƯỢNG được đem ra so sánh (đối tượng B):', stimulus:c.s,
+    tokens, answer:3, explanation:`A = ${c.a}, nét giống = ${c.net}, từ so sánh = như, B = ${c.b}.`, difficulty:1, _sig:'c08:'+c.s};
+};
+
+/* --- C04: dấu câu (chọn dấu) --- */
+/* Danh sách liệt kê ĐÃ DUYỆT (vật đếm được, tự nhiên trong một chỗ chứa) */
+const LIST_FRAMES=[
+  {holder:'Trong cặp',    items:['sách','bút','thước']},
+  {holder:'Trong giỏ',    items:['táo','lê','cam']},
+  {holder:'Trên bàn học', items:['vở','bút chì','tẩy']},
+  {holder:'Trong vườn',   items:['hoa hồng','hoa cúc','hoa lan']},
+  {holder:'Trong bếp',    items:['nồi','chảo','bát']}
+];
+GEN.C04_DAUCAU=function(ctx){
+  const fr=pickFrame(ctxIdOf(ctx));
+  const lf=pick(LIST_FRAMES);
+  const qWord=fr.place?'ở đâu':'khi nào';
+  const forms=[
+    {stim:`${lf.holder} có ba thứ___ ${lf.items.join(', ')}.`, ans:': (hai chấm)', why:'Dấu hai chấm báo hiệu phần liệt kê.'},
+    {stim:`${cap(fr.actor)} ${fr.action}${fr.place?' '+fr.place:''}___`, ans:'. (chấm)', why:'Câu kể trọn ý kết thúc bằng dấu chấm.'},
+    {stim:`${cap(fr.actor)} ${fr.action} ${qWord}___`, ans:'? (hỏi)', why:'Câu hỏi kết thúc bằng dấu chấm hỏi.'}
+  ];
+  forms.push({stim:`Ôi, ${fr.actor} ${fr.attr} quá___`, ans:'! (than)', why:'Câu cảm (bộc lộ cảm xúc, có “Ôi … quá”) kết thúc bằng dấu chấm than.'});
+  const f=pick(forms);
+  const opts=[': (hai chấm)','. (chấm)','? (hỏi)','! (than)'];
+  return {skill:'C04_DAUCAU', type:'single_choice', prompt:'Chọn dấu câu điền vào chỗ trống:', stimulus:f.stim,
+    options:opts, answer:opts.indexOf(f.ans), explanation:f.why, difficulty:1, _sig:'c04:'+f.stim};
+};
+
+/* --- C03 trái nghĩa: nối cặp --- */
+const TRAI_NGHIA=[['cao','thấp'],['vui','buồn'],['sạch','bẩn'],['nhanh','chậm'],['to','nhỏ'],['nóng','lạnh'],['sáng','tối'],['mới','cũ'],['khỏe','yếu'],['ngoan','hư']];
+GEN.C03_TRAINGHIA=function(){
+  const chosen=shuffle(TRAI_NGHIA).slice(0,3);
+  return {skill:'C03_TRAINGHIA', type:'match_pairs', prompt:'Nối mỗi từ với TỪ TRÁI NGHĨA của nó:',
+    pairs:chosen.map(p=>[p[0],p[1]]), explanation:'Cặp trái nghĩa xét trên cùng một tiêu chí.', difficulty:1, _sig:'c03tn:'+chosen.map(p=>p[0]).join(',')};
+};
+/* --- C03 gần nghĩa (kèm cảnh báo giới hạn thay thế) --- */
+const GAN_NGHIA=[['siêng năng','chăm chỉ'],['vui','vui vẻ'],['xinh','đẹp'],['to','lớn'],['nhanh nhẹn','lanh lợi']];
+GEN.C03_GANNGHIA=function(){
+  const p=pick(GAN_NGHIA);const other=pick(TRAI_NGHIA);
+  const opts=shuffle([p[1], other[1], pick(['con mèo','quét nhà','dòng sông'])]);
+  return {skill:'C03_GANNGHIA', type:'single_choice', prompt:`Từ nào GẦN NGHĨA với “${p[0]}”?`, options:opts,
+    answer:opts.indexOf(p[1]), explanation:`“${p[0]}” gần nghĩa với “${p[1]}”. Lưu ý: gần nghĩa không có nghĩa thay được nhau trong MỌI câu.`, difficulty:2, _sig:'c03gn:'+p[0]};
+};
+
+/* --- C09 vốn từ theo chủ điểm: chọn từ lạc nhóm --- */
+GEN.C09_VONTU=function(ctx){
+  ctx=ctx||pickContext();
+  const inGroup=shuffle(ctx.entities).slice(0,3).map(stripPunc);
+  const otherCtx=CONTEXTS[pick(CONTEXT_IDS.filter(id=>CONTEXTS[id]!==ctx))];
+  const outWord=stripPunc(pick(otherCtx.entities));
+  const opts=shuffle([...inGroup,outWord]);
+  return {skill:'C09_VONTU', type:'single_choice', prompt:`Từ nào KHÔNG thuộc chủ điểm “${ctx.title}”?`, options:opts,
+    answer:opts.indexOf(outWord), explanation:`“${outWord}” thuộc chủ điểm ${otherCtx.title.toLowerCase()}, không nằm trong nhóm ${ctx.title.toLowerCase()}.`, difficulty:1, _sig:'c09:'+ctx.title+':'+outWord};
+};
+
+/* --- C01 chính tả: c/k, g/gh, ng/ngh --- */
+const CHINHTA=[
+  {word:'kéo', pre:'k', alt:'c', rest:'éo', rule:'Trước “e” dùng “k” (kéo).'},
+  {word:'kim', pre:'k', alt:'c', rest:'im', rule:'Trước “i” dùng “k” (kim).'},
+  {word:'cá',  pre:'c', alt:'k', rest:'á',  rule:'Trước “a” dùng “c” (cá).'},
+  {word:'cò',  pre:'c', alt:'k', rest:'ò',  rule:'Trước “o” dùng “c” (cò).'},
+  {word:'ghế', pre:'gh',alt:'g', rest:'ế',  rule:'Trước “ê” dùng “gh” (ghế).'},
+  {word:'gà',  pre:'g', alt:'gh',rest:'à',  rule:'Trước “a” dùng “g” (gà).'},
+  {word:'nghỉ',pre:'ngh',alt:'ng',rest:'ỉ', rule:'Trước “i” dùng “ngh” (nghỉ).'},
+  {word:'ngô', pre:'ng',alt:'ngh',rest:'ô', rule:'Trước “ô” dùng “ng” (ngô).'}
+];
+GEN.C01_CHINHTA=function(){
+  const it=pick(CHINHTA);
+  const opts=shuffle([it.pre,it.alt]);
+  return {skill:'C01_CHINHTA', type:'single_choice', prompt:`Điền đúng để được từ “${it.word}”: “___${it.rest}”`, options:opts,
+    answer:opts.indexOf(it.pre), explanation:it.rule+' Mẹo: k, gh, ngh đi cùng i, e, ê.', difficulty:1, _sig:'c01:'+it.word};
+};
+
+/* --- C10 viết đoạn (rubric, không chấm chuỗi cứng) --- */
+const VIET_PROMPTS=[
+  {skill:'C10_VIET', prompt:'Viết 2–3 câu giới thiệu về một người bạn của em (tên, đặc điểm đáng quý, một kỉ niệm).', rubric:['Có giới thiệu tên bạn','Nêu được đặc điểm/tính cách','Viết rõ ý, có dấu câu']},
+  {skill:'C10_VIET', prompt:'Viết 2–3 câu tả một đồ vật em yêu thích (nó là gì, màu sắc/hình dáng, vì sao em thích).', rubric:['Nêu được đồ vật','Có từ chỉ đặc điểm','Câu rõ ràng, đúng dấu câu']},
+  {skill:'C10_VIET', prompt:'Viết 2–3 câu kể một việc em đã làm cùng người thân cuối tuần.', rubric:['Kể được việc làm','Có từ chỉ hoạt động','Trình bày rõ, đúng dấu câu']}
+];
+GEN.C10_VIET=function(){const p=pick(VIET_PROMPTS);return {skill:'C10_VIET', type:'guided_writing', prompt:p.prompt, rubric:p.rubric, explanation:'Con nói thành lời trước rồi hãy viết. Ba/mẹ cùng con xem lại 3 mục gợi ý.', difficulty:2, _sig:'c10:'+p.prompt};};
+
+/* =====================================================================
+   6. VALIDATOR – chỉ cho hiển thị candidate hợp lệ
+   ===================================================================== */
+function validate(q){
+  if(!q||!q.skill||!q.type) return false;
+  if(!q.prompt||!normNFC(q.prompt)) return false;
+  if(q.type==='single_choice'){
+    if(!Array.isArray(q.options)||q.options.length<2) return false;
+    if(new Set(q.options.map(normNFC)).size!==q.options.length) return false; /* không trùng đáp án */
+    if(typeof q.answer!=='number'||q.answer<0||q.answer>=q.options.length) return false;
+  } else if(q.type==='select_span'){
+    if(!Array.isArray(q.tokens)||q.tokens.length<2) return false;
+    if(typeof q.answer!=='number'||q.answer<0||q.answer>=q.tokens.length) return false;
+    if(!q.stimulus) return false;
+  } else if(q.type==='match_pairs'){
+    if(!Array.isArray(q.pairs)||q.pairs.length<2) return false;
+    if(q.pairs.some(p=>!p[0]||!p[1])) return false;
+  } else if(q.type==='guided_writing'){
+    if(!Array.isArray(q.rubric)||q.rubric.length<2) return false;
+  } else if(q.type==='reorder_tokens'){
+    if(!Array.isArray(q.tokens)||q.tokens.length<2) return false;
+    if(new Set(q.tokens.map(normNFC)).size!==q.tokens.length) return false; /* thẻ không trùng → không mơ hồ */
+    if(!Array.isArray(q.acceptOrders)||!q.acceptOrders.length) return false;
+  } else if(q.type==='unscramble'){
+    if(!q.target||!Array.isArray(q.pieces)||q.pieces.length<2) return false;
+    /* các mảnh (bỏ dấu cách) phải ghép lại đúng bằng từ đích (bỏ dấu cách) */
+    const joined=normNFC(q.pieces.join('')).toLowerCase().replace(/\s+/g,'');
+    const tgt=normNFC(q.target).toLowerCase().replace(/\s+/g,'');
+    if(joined!==tgt) return false;
+  } else return false;
+  return true;
+}
+/* sinh 1 câu hợp lệ cho 1 kĩ năng: thử tối đa N lần rồi fallback APPROVED */
+function makeQ(skill, ctxIds, sessionSigs){
+  sessionSigs=sessionSigs||new Set();
+  const gen=GEN[skill];
+  if(gen){
+    for(let i=0;i<20;i++){
+      let q; try{ q=gen(ctxIds?pickContext(ctxIds):undefined); }catch(e){ q=null; }
+      if(q&&validate(q)&&!sessionSigs.has(q._sig||q.prompt+JSON.stringify(q.options||q.tokens||''))){
+        return q;
+      }
+    }
+  }
+  /* fallback: ngân hàng đã duyệt cùng kĩ năng — vẫn phải qua validate() và không trùng phiên (#13) */
+  const pool=shuffle(APPROVED.filter(a=>a.skill===skill));
+  for(const src of pool){
+    const a=Object.assign({},src);a._sig='approved:'+a.prompt;
+    if(validate(a)&&!sessionSigs.has(a._sig))return a;
+  }
+  /* mọi câu duyệt đều đã dùng trong phiên: cho phép lặp câu duyệt hợp lệ (vẫn không bao giờ trả câu chưa validate) */
+  for(const src of pool){const a=Object.assign({},src);a._sig='approved:'+a.prompt;if(validate(a))return a;}
+  /* fallback cuối: bất kì kĩ năng gần (không bao giờ trả câu chưa validate) */
+  return null;
+}
+
+/* =====================================================================
+   7. ĐÁNH GIÁ ĐÁP ÁN (deterministic cho câu tự chấm; rubric cho viết)
+   ===================================================================== */
+function gradeChoice(q,pickedIdx){return pickedIdx===q.answer;}
+function gradeSpan(q,pickedIdx){return pickedIdx===q.answer;}
+function gradeMatch(q,mapping){ /* mapping: {leftIndex:rightValue} phải khớp pairs */
+  return q.pairs.every((p,i)=>normNFC(mapping[i]||'')===normNFC(p[1]));
+}
+/* reorder_tokens: seq là mảng chỉ số theo thứ tự bé xếp; đúng khi khớp thứ tự gốc.
+   Chấp nhận NHIỀU đáp án đúng nếu template cung cấp q.acceptOrders (mảng các chuỗi câu hợp lệ). */
+function gradeReorder(q,seqIdx){
+  const built=seqIdx.map(i=>q.tokens[i]).join(' ');
+  const canon=s=>normNFC(s).toLowerCase();
+  const accepts=(q.acceptOrders&&q.acceptOrders.length?q.acceptOrders:[q.tokens.join(' ')]).map(canon);
+  return accepts.includes(canon(built));
+}
+/* unscramble: seq là mảng chỉ số mảnh (âm tiết/chữ) theo thứ tự bé xếp; ghép lại = từ đích */
+function gradeUnscramble(q,seqIdx){
+  const built=seqIdx.map(i=>q.pieces[i]).join('');
+  return normNFC(built).toLowerCase()===normNFC(q.target).toLowerCase();
+}
+
+/* =====================================================================
+   7b. GENERATORS cho 2 dạng mới — vẫn qua validate() như mọi dạng khác
+   ===================================================================== */
+/* Câu ngắn tự nhiên, MỘT thứ tự đúng, để "Xếp lại câu" không mơ hồ.
+   Tách theo CỤM (không tách lẻ từng tiếng) để tránh nhiều cách ghép. */
+const REORDER_BANK=[
+  {skill:'C05_CAU',   parts:['Bạn Lan','tưới cây','trong vườn'],       why:'Trật tự tự nhiên: chủ ngữ – hoạt động – nơi chốn.'},
+  {skill:'C05_CAU',   parts:['Mẹ','nấu cơm','trong bếp'],              why:'Ai – làm gì – ở đâu.'},
+  {skill:'C05_CAU',   parts:['Các bạn','đọc sách','trong thư viện'],   why:'Ai – làm gì – ở đâu.'},
+  {skill:'C07_BOPHAN',parts:['Sáng thứ bảy,','bé','đến thư viện'],     why:'Trạng ngữ thời gian đứng đầu câu, có dấu phẩy.'},
+  {skill:'C05_CAU',   parts:['Bông hoa','trong vườn','rất thơm'],      why:'Sự vật – bổ nghĩa nơi chốn – đặc điểm.'},
+  {skill:'C06_MUCDICH',parts:['Xin bạn','giữ trật tự','trong lớp nhé'],why:'Câu khiến lịch sự: lời đề nghị – việc – nơi chốn.'}
+];
+GEN.REORDER=function(prefSkill){
+  const pool=prefSkill?REORDER_BANK.filter(x=>x.skill===prefSkill):REORDER_BANK;
+  const it=pick(pool.length?pool:REORDER_BANK);
+  const order=it.parts.slice();                 // thứ tự đúng
+  let tokens=shuffle(order.slice());
+  // đảm bảo có xáo trộn (không trùng thứ tự gốc khi >1 phần)
+  let g=0; while(order.length>1 && tokens.join('|')===order.join('|') && g<10){tokens=shuffle(order.slice());g++;}
+  return {skill:it.skill, type:'reorder_tokens',
+    prompt:'Xếp các thẻ thành câu đúng:', tokens,
+    acceptOrders:[order.join(' ')],
+    answerSeq:order.map(p=>tokens.indexOf(p)),  // gợi ý/hiện đáp án
+    explanation:(it.why||'')+' Câu đúng: “'+order.join(' ')+'.”',
+    difficulty:2, _sig:'reorder:'+order.join('|')};
+};
+
+/* Ghép âm tiết thành TỪ đích (dùng từ đã duyệt, tách theo tiếng). */
+const UNSCRAMBLE_BANK=[
+  {skill:'C09_VONTU', word:'thư viện',  syl:['thư','viện'],  hint:'Nơi có nhiều sách để đọc.'},
+  {skill:'C09_VONTU', word:'trường học',syl:['trường','học'],hint:'Nơi em đến để học mỗi ngày.'},
+  {skill:'C02_SUVAT', word:'bông hoa',  syl:['bông','hoa'],  hint:'Sự vật đẹp, thơm, nở trong vườn.'},
+  {skill:'C09_VONTU', word:'quê hương', syl:['quê','hương'], hint:'Nơi em sinh ra và lớn lên.'},
+  {skill:'C02_DACDIEM',word:'chăm chỉ', syl:['chăm','chỉ'],  hint:'Đặc điểm của người siêng học.'},
+  {skill:'C09_VONTU', word:'lễ hội',    syl:['lễ','hội'],    hint:'Ngày vui của cộng đồng, có múa lân, rước đèn.'}
+];
+GEN.UNSCRAMBLE=function(prefSkill){
+  const pool=prefSkill?UNSCRAMBLE_BANK.filter(x=>x.skill===prefSkill):UNSCRAMBLE_BANK;
+  const it=pick(pool.length?pool:UNSCRAMBLE_BANK);
+  let pieces=shuffle(it.syl.slice());
+  let g=0; while(it.syl.length>1 && pieces.join('|')===it.syl.join('|') && g<10){pieces=shuffle(it.syl.slice());g++;}
+  return {skill:it.skill, type:'unscramble', target:it.word, pieces,
+    prompt:'Ghép các mảnh thành từ đúng: '+ (it.hint?('('+it.hint+')'):''),
+    explanation:'Từ đúng là “'+it.word+'”. '+(it.hint||''),
+    difficulty:1, _sig:'unscramble:'+it.word};
+};
+</script>
+<script>
+/* =====================================================================
+   8. LÝ THUYẾT – nội dung ôn tập (9 chuyên đề) + mẹo SGV
+   Dùng textContent/escape cho phần động; nội dung tĩnh do dự án biên soạn.
+   ===================================================================== */
+const THEORY_HTML=`
+<h2 class="chapter" id="gioithieu"><span class="num">🌱</span>Giới thiệu &amp; cách dùng</h2>
+<div class="card">
+  <p>Đây là góc <b>ôn tập tại nhà</b> giúp con hiểu và nhớ kiến thức Tiếng Việt lớp 3, <b>bám chủ điểm bộ sách Kết nối tri thức với cuộc sống</b>. Trang này <b>không thay thế</b> sách giáo khoa hay lịch dạy chính thức.</p>
+  <div class="note">Học qua <b>hiểu nghĩa và viết câu</b>, không chỉ trắc nghiệm. Trả lời chưa đúng sẽ được giải thích và luyện lại bằng một câu tương đương — <b>không phạt điểm</b>. Câu viết tự do chấm theo <b>gợi ý (rubric)</b>, ba/mẹ cùng con xem lại.</div>
+  <div class="tip">Khi viết, con có thể <b>kể miệng, ghi vài từ khóa, hoặc viết ngay</b> — cách nào giúp con dễ bắt đầu nhất. Ba/mẹ đọc cùng con và gợi ý <b>sửa một chỗ</b>, không chấm đúng/sai.</div>
+</div>
+
+<h2 class="chapter" id="cd1"><span class="num">1</span>Từ ngữ &amp; Vốn từ</h2>
+<h3 id="c02">1.1 Từ chỉ sự vật – hoạt động – đặc điểm</h3>
+<div class="card">
+  <div class="rule">• <b>Sự vật</b>: người, con vật, đồ vật, cây cối, hiện tượng (cái mắt thấy, tay sờ, gọi được tên).<br>• <b>Hoạt động</b>: việc làm, di chuyển (chạy, đọc, nấu…).<br>• <b>Đặc điểm</b>: màu sắc, hình dáng, kích thước, âm thanh, hương vị, tính cách.</div>
+  <div class="tip"><b>Sự vật</b> → “Gọi tên &amp; Chạm vào”. <b>Hoạt động</b> → “Thử làm động tác”. <b>Đặc điểm</b> → “Thêm <i>rất</i>/<i>thật</i>”: rất đẹp, thật cao.</div>
+  <div class="ex">Bạn Lan (sự vật) <b>tưới cây</b> (hoạt động); bông hoa <b>thơm ngát</b> (đặc điểm).</div>
+</div>
+<h3 id="c03">1.2 Từ gần nghĩa – trái nghĩa</h3>
+<div class="card">
+  <div class="rule"><b>Trái nghĩa</b>: nghĩa đối lập, xét cùng một tiêu chí (cao–thấp, vui–buồn). <b>Gần nghĩa</b>: nghĩa gần nhau (siêng năng–chăm chỉ).</div>
+  <div class="warn">“Gần nghĩa” <b>không</b> có nghĩa thay được nhau trong mọi câu — phải xét ngữ cảnh.</div>
+</div>
+<h3 id="c09">1.3 Mở rộng vốn từ theo chủ điểm</h3>
+<div class="card">
+  <p>Gom từ theo chủ điểm rồi dùng từ đặt câu: <b>trường học, gia đình, nghề nghiệp, thành thị/nông thôn, thiên nhiên, lễ hội, đất nước, Trái Đất…</b></p>
+  <div class="tip">Trò chơi “giải mã từ vựng”: phân loại từ theo nhóm (ví dụ: chạy bộ, bơi → hoạt động thể thao; khỏe mạnh, dẻo dai → trạng thái cơ thể).</div>
+</div>
+
+<h2 class="chapter" id="cd2"><span class="num">2</span>Câu &amp; Dấu câu</h2>
+<h3 id="c05">2.1 Câu giới thiệu – nêu hoạt động – nêu đặc điểm</h3>
+<div class="card">
+  <div class="rule">• Giới thiệu: <b>A là B</b> — “Đây là thư viện.”<br>• Nêu hoạt động: <b>A làm gì</b> — “Bé đọc sách.”<br>• Nêu đặc điểm: <b>A thế nào</b> — “Quyển sách rất hay.”</div>
+</div>
+<h3 id="c06">2.2 Câu kể – hỏi – cảm – khiến</h3>
+<div class="card">
+  <div class="rule">• Kể → dấu <b>.</b> &nbsp;• Hỏi → có từ hỏi + dấu <b>?</b> &nbsp;• Cảm → có “quá, lắm, chao ôi” + dấu <b>!</b> &nbsp;• Khiến → có “hãy, đừng, chớ, nhé, đi” + dấu <b>!</b> hoặc <b>.</b></div>
+  <div class="tip">“Thi chuyển đổi kiểu câu”: từ “Bé tập thể dục.” → cảm: “Bé tập thể dục chăm quá!” → khiến: “Bé hãy tập thể dục hằng ngày nhé!”</div>
+</div>
+<h3 id="c07">2.3 Khi nào? Ở đâu? Bằng gì? Để làm gì?</h3>
+<div class="card">
+  <div class="rule">Tìm bộ phận trả lời: <b>thời gian</b> (Khi nào?), <b>nơi chốn</b> (Ở đâu?), <b>phương tiện</b> (Bằng gì?), <b>mục đích</b> (Để làm gì?).</div>
+  <div class="ex">“Sáng thứ bảy, bé đến thư viện bằng xe buýt để mượn sách.”</div>
+</div>
+<h3 id="c04">2.4 Dấu câu</h3>
+<div class="card">
+  <div class="rule">Hai chấm <b>:</b> báo liệt kê/giải thích/lời nói. Phẩy <b>,</b> tách các phần. Chấm <b>.</b> hết câu kể. Hỏi <b>?</b> hết câu hỏi. Than <b>!</b> hết câu cảm/khiến.</div>
+  <div class="ex">“Trong giỏ có ba thứ: táo, lê và cam.”</div>
+</div>
+<h3 id="c08">2.5 Biện pháp so sánh</h3>
+<div class="card">
+  <div class="rule">Công thức: <b>[A] + [từ so sánh: như, tựa, giống] + [B]</b> dựa trên một <b>nét giống nhau</b>.</div>
+  <div class="warn">Có “<b>như</b>” chưa chắc là so sánh! “Em làm đúng <b>như</b> cô dặn.” — “như” nghĩa là “theo đúng”, không so sánh hai sự vật.</div>
+  <div class="ex">“Mặt hồ phẳng như tấm gương.” → A=mặt hồ, nét giống=phẳng, B=tấm gương.</div>
+</div>
+
+<h2 class="chapter" id="cd3"><span class="num">3</span>Chính tả &amp; Viết hoa</h2>
+<h3 id="c01">3.1 c/k · g/gh · ng/ngh · viết hoa</h3>
+<div class="card">
+  <div class="tip"><b>“Anh em đi cùng i, e, ê”</b>: <b>k, gh, ngh</b> đứng trước <b>i, e, ê</b>; còn <b>c, g, ng</b> đứng trước các âm khác (a, o, ô, u, ư…).</div>
+  <div class="rule">Viết hoa: chữ đầu câu; tên riêng người, địa danh Việt Nam (sông Đồng Nai); tên nước ngoài phiên âm có gạch nối (Ma-ri-a).</div>
+</div>
+
+<h2 class="chapter" id="cd4"><span class="num">4</span>Viết đoạn văn</h2>
+<h3 id="viet">4.1 Một cách tìm ý (gợi ý, không bắt buộc)</h3>
+<div class="card">
+  <p>Không cần viết cả bài ngay. Con có thể chọn <b>2–3 câu hỏi gợi ý</b> phù hợp với điều mình muốn viết:</p>
+  <div class="grid2">
+    <div class="rule"><b>Kể một việc nhỏ</b><br>• Chuyện gì xảy ra? Con đã làm gì?<br>• Việc nào trước, việc nào sau?<br>• Chi tiết nào con nhớ nhất?</div>
+    <div class="rule"><b>Tả một đồ vật / nơi chốn</b><br>• Nó là gì? Có chi tiết nào khiến con nhận ra ngay?<br>• Con nhìn thấy / nghe thấy gì?<br>• Con dùng nó lúc nào?</div>
+    <div class="rule"><b>Nêu tình cảm</b><br>• Người ấy đã làm điều gì khiến con nhớ?<br>• Con muốn nói gì với người ấy?</div>
+    <div class="rule"><b>Nêu ý kiến</b><br>• Con nghĩ gì? Vì sao?<br>• Có việc nhỏ nào cho thấy điều đó?</div>
+  </div>
+  <div class="tip">Mẹo đọc lại: chọn <b>một</b> câu con thích nhất; hỏi “thêm một chi tiết nhỏ có giúp người đọc hình dung rõ hơn không?”; hai câu có đang kể cùng một ý không? Dấu câu kiểm tra <b>sau cùng</b>.</div>
+  <div class="warn">Không có “đoạn văn mẫu” để chép. Bài của con là tiếng nói của con — ba/mẹ chỉ gợi ý sửa <b>một chỗ</b> mỗi lần.</div>
+</div>
+
+<h2 class="chapter" id="lotrinh"><span class="num">🗺️</span>Lộ trình 35 tuần</h2>
+<div class="card"><div class="tbl-scroll"><table class="t">
+  <tr><th>Tuần</th><th>Chủ điểm</th><th>Trọng tâm Luyện từ &amp; Câu</th><th>Sản phẩm</th></tr>
+  ${WEEKS.map(w=>`<tr><td><b>${w.w}</b></td><td>${esc(w.chudiem)}</td><td style="text-align:left">${esc(w.ltc)}</td><td style="text-align:left">${esc(w.out)}</td></tr>`).join('')}
+</table></div>
+<div class="note"><b>Nguồn:</b> bảng tuần này do dự án lập từ bản tóm tắt SGK/SGV Tiếng Việt 3 (Kết nối tri thức) mà phụ huynh cung cấp (${esc(WEEKS_SOURCE)}); <b>chưa đối chiếu từng ô</b> với số trang sách. Nếu tuần trên lớp lệch so với bảng, ba/mẹ cứ chọn tuần phù hợp ở Góc phụ huynh — tiến độ lưu theo kĩ năng, không theo số tuần. Con có thể bắt đầu từ bất cứ tuần nào; nghỉ hoặc lặp lại không mất tiến độ.</div>
+</div>
+`;
+document.getElementById('theoryRoot').innerHTML=THEORY_HTML;
+
+/* =====================================================================
+   9. LUYỆN TẬP – dựng khối theo kĩ năng, chấm điểm, giải thích
+   ===================================================================== */
+function buildPracticeIndex(){
+  const groups=[
+    {title:'CHUYÊN ĐỀ 1 · Từ ngữ &amp; Vốn từ', skills:['C02_SUVAT','C02_HOATDONG','C02_DACDIEM','C03_TRAINGHIA','C03_GANNGHIA','C09_VONTU']},
+    {title:'CHUYÊN ĐỀ 2 · Câu &amp; Dấu câu', skills:['C05_CAU','C06_MUCDICH','C07_BOPHAN','C04_DAUCAU','C08_SOSANH']},
+    {title:'CHUYÊN ĐỀ 3 · Chính tả &amp; Viết hoa', skills:['C01_CHINHTA']},
+    {title:'CHUYÊN ĐỀ 4 · Viết đoạn (chấm theo gợi ý)', skills:['C10_VIET']}
+  ];
+  let html='';
+  groups.forEach(g=>{
+    html+=`<div class="bt-section"><div class="bt-section-title">${g.title}</div><div class="bt-grid">`;
+    g.skills.forEach(sk=>{ html+=`<div class="quiz" data-skill="${sk}" data-n="${sk==='C10_VIET'?2:6}"></div>`; });
+    html+=`</div></div>`;
+  });
+  document.getElementById('practiceRoot').innerHTML=html;
+  document.querySelectorAll('#practiceRoot .quiz').forEach((box,idx)=>{box._id='p'+idx;buildQuiz(box);});
+}
+
+function buildQuiz(box){
+  const skill=box.dataset.skill, n=+box.dataset.n||6;
+  const sigs=new Set(), qs=[];
+  let guard=0;
+  while(qs.length<n && guard<n*30){guard++;const q=makeQ(skill,null,sigs);if(!q)break;sigs.add(q._sig||q.prompt);q._state='unanswered';qs.push(q);}
+  box._qs=qs;
+  const sk=SKILL_BY_ID[skill];
+  let html=`<div class="qhead"><h4>${esc(sk?sk.title:skill)}</h4>
+    <span class="badge">${qs.length} câu</span><span class="spacer"></span>
+    <button class="grn" data-act="check">✅ Chấm điểm</button>
+    <button class="org" data-act="new">🎲 Đề mới</button>
+    <button class="pur" data-act="hint">💡 Gợi ý</button>
+    <button class="gry" data-act="show">👀 Đáp án &amp; giải thích</button></div>`;
+  qs.forEach((q,i)=>{ html+=renderQuizItem(q,i,box._id); });
+  html+=`<div class="score"></div>`;
+  box.innerHTML=html;
+  wireQuizItems(box);
+}
+
+/* render một item theo type */
+function renderQuizItem(q,i,boxId){
+  let inner=`<div class="qtext">${esc(q.prompt)}</div>`;
+  if(q.stimulus) inner+=`<div class="qstim">${esc(q.stimulus)}</div>`;
+  if(q.type==='single_choice'){
+    inner+=`<div class="opts">`+q.options.map((t,j)=>`<label><input type="radio" name="q_${boxId}_${i}" value="${j}"> ${esc(t)}</label>`).join('')+`</div>`;
+  } else if(q.type==='select_span'){
+    inner+=`<div class="tokrow" data-role="span">`+q.tokens.map((t,j)=>`<span class="tok" data-j="${j}">${esc(t)}</span>`).join('')+`</div>`;
+  } else if(q.type==='match_pairs'){
+    const rights=shuffle(q.pairs.map(p=>p[1]));
+    inner+=`<div class="pairwrap"><div class="paircol left">`+
+      q.pairs.map((p,j)=>`<div class="tok pL" data-j="${j}">${esc(p[0])}</div>`).join('')+
+      `</div><div class="paircol right">`+
+      rights.map((r,k)=>`<div class="tok pR" data-v="${esc(r)}">${esc(r)}</div>`).join('')+
+      `</div></div><div style="font-size:12.5px;color:#78909c;margin-top:4px">Chạm 1 từ bên trái rồi chạm từ bên phải để nối.</div>`;
+  } else if(q.type==='guided_writing'){
+    inner+=`<textarea class="ans" data-i="${i}" placeholder="Con viết ở đây… (nói thành lời trước rồi hãy viết nhé)"></textarea>`;
+    inner+=`<div class="rubric"><b>Gợi ý chấm cùng ba/mẹ (3 mục):</b>`+
+      q.rubric.map((r,k)=>`<div class="rubric-item"><span>▢ ${esc(r)}</span></div>`).join('')+
+      `<div style="margin-top:6px;display:flex;gap:8px;flex-wrap:wrap"><button class="grn" data-act="rubric-ok">👍 Đạt</button><button class="org" data-act="rubric-more">✍️ Cần luyện thêm</button></div></div>`;
+  }
+  inner+=`<div class="hintbox">💡 ${esc((SKILL_BY_ID[q.skill]||{}).tip||'Đọc kĩ câu rồi chọn/viết nhé.')}</div><div class="fb"></div>`;
+  return `<div class="qitem" data-type="${q.type}"><div class="qno">${i+1}</div><div class="qbody">${inner}</div></div>`;
+}
+
+function wireQuizItems(box){
+  /* TTS cho câu hỏi + stimulus */
+  box.querySelectorAll('.qtext').forEach(el=>{
+    const txt=el.textContent;const b=document.createElement('button');b.className='tts-btn';b.title='Đọc';b.textContent='🔊';
+    b.addEventListener('click',e=>{e.stopPropagation();const it=el.closest('.qbody');const st=it.querySelector('.qstim');TTS.speak(txt+(st?'. '+st.textContent:''));});el.appendChild(b);
+  });
+  /* select_span: chọn 1 token */
+  box.querySelectorAll('.tokrow[data-role="span"]').forEach(row=>{
+    row.querySelectorAll('.tok').forEach(t=>t.addEventListener('click',()=>{
+      if(row.dataset.locked)return;row.querySelectorAll('.tok').forEach(x=>x.classList.remove('sel'));t.classList.add('sel');
+    }));
+  });
+  /* match_pairs: nối trái–phải */
+  box.querySelectorAll('.pairwrap').forEach(pw=>{
+    let selL=null;
+    pw.querySelectorAll('.pL').forEach(l=>l.addEventListener('click',()=>{if(pw.dataset.locked)return;pw.querySelectorAll('.pL').forEach(x=>x.classList.remove('sel'));l.classList.add('sel');selL=l;}));
+    pw.querySelectorAll('.pR').forEach(r=>r.addEventListener('click',()=>{
+      if(pw.dataset.locked||!selL)return;
+      const j=selL.dataset.j;
+      /* gỡ nối cũ của right này */
+      pw.querySelectorAll('.pR').forEach(x=>{if(x.dataset.pair===j)delete x.dataset.pair;});
+      r.dataset.pair=j; selL.dataset.match=r.dataset.v;
+      selL.textContent=selL.textContent.replace(/ →.*$/,'')+' → '+r.dataset.v;
+      selL.classList.remove('sel'); selL=null;
+    }));
+  });
+  /* rubric buttons */
+  box.querySelectorAll('[data-act="rubric-ok"],[data-act="rubric-more"]').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const item=btn.closest('.qitem');const fb=item.querySelector('.fb');const act=btn.dataset.act;
+      const ta=item.querySelector('textarea.ans');const text=ta?normNFC(ta.value):'';
+      /* #2: phải có bài viết mới được đánh giá */
+      if(!text){fb.className='fb no';fb.textContent='Con viết một ý trước nhé. Khi sẵn sàng, mình cùng xem lại.';return;}
+      /* #2: mỗi bản nháp chỉ một lượt đánh giá; cùng văn bản → cập nhật, không thêm bản ghi */
+      const prevText=item.dataset.reviewedText||'';
+      if(prevText && prevText===text){fb.className='fb ok';fb.textContent='Bản này đã được ba/mẹ đọc rồi. Con sửa thêm rồi bấm lại nếu muốn.';return;}
+      item.dataset.reviewedText=text;
+      const prompt=item.querySelector('.qtext').textContent;
+      const status=act==='rubric-ok'?'reviewed_ok':'reviewed_revise';
+      saveWriting(item.closest('.quiz').dataset.skill, prompt, text, status, item.dataset.draftId||(item.dataset.draftId='d'+Date.now()+Math.random().toString(36).slice(2,6)));
+      fb.className='fb ok';
+      fb.innerHTML=act==='rubric-ok'
+        ?'📖 Ba/mẹ đã đọc cùng con. Bài được lưu ở Góc phụ huynh.'
+        :'✍️ Ba/mẹ gợi ý sửa một chỗ. Con đọc lại, sửa rồi bấm lại nhé — bản cũ vẫn được giữ.';
+      /* "Cần luyện thêm" KHÔNG phải câu sai → không ghi wrong; chỉ đánh dấu đã luyện viết */
+      const s=skillState('C10_VIET');s.attempts++;s.lastSeen=Date.now();if(act==='rubric-ok')s.correct++;
+      s.state=s.attempts>=6?'practicing':'learning';
+      saveAll();
+    });
+  });
+}
+
+/* chấm cả khối */
+function checkQuiz(box){
+  const qs=box._qs, items=[...box.querySelectorAll('.qitem')]; let ok=0, auto=0;
+  qs.forEach((q,i)=>{
+    const it=items[i], fb=it.querySelector('.fb');
+    if(q.type==='guided_writing'){ /* không tự chấm; đã có nút rubric */ return; }
+    auto++;
+    let good=false, answered=true;
+    if(q.type==='single_choice'){
+      const sel=it.querySelector('input[type=radio]:checked');answered=!!sel;
+      good=sel&&gradeChoice(q,+sel.value);
+      it.querySelectorAll('.opts label').forEach((l,j)=>{const inp=l.querySelector('input');if(j===q.answer)l.style.cssText='border-color:#2e7d32;background:#e8f5e9';else if(inp.checked)l.style.cssText='border-color:#d32f2f;background:#ffebee';});
+    } else if(q.type==='select_span'){
+      const row=it.querySelector('.tokrow');const sel=row.querySelector('.tok.sel');answered=!!sel;
+      good=sel&&gradeSpan(q,+sel.dataset.j);row.dataset.locked='1';
+      row.querySelectorAll('.tok').forEach((t,j)=>{if(j===q.answer)t.classList.add('right');else if(t.classList.contains('sel'))t.classList.add('wrong');});
+    } else if(q.type==='match_pairs'){
+      const pw=it.querySelector('.pairwrap');pw.dataset.locked='1';
+      const mapping={};pw.querySelectorAll('.pL').forEach(l=>{mapping[l.dataset.j]=l.dataset.match||'';});
+      answered=Object.values(mapping).some(v=>v);
+      good=gradeMatch(q,mapping);
+      pw.querySelectorAll('.pL').forEach(l=>{const correct=normNFC(l.dataset.match||'')===normNFC(q.pairs[l.dataset.j][1]);l.classList.add(correct?'right':'wrong');});
+    }
+    if(good){ok++;fb.className='fb ok';fb.innerHTML='✔ Chính xác! Giỏi lắm 🎉<div class="expl">'+esc(q.explanation||'')+'</div>';}
+    else{fb.className='fb no';fb.innerHTML=(answered?'✘ Chưa đúng.':'✘ Con chưa trả lời câu này.')+'<div class="expl">'+esc(q.explanation||'')+'</div>';}
+    /* #3: chỉ lần NỘP HỢP LỆ ĐẦU TIÊN mới ghi thống kê; câu đã xem đáp án không tính */
+    if(q._state==='unanswered' && answered){ q._state='submitted'; recordSkill(q.skill, good, false); }
+    else if(q._state==='unanswered' && !answered){ /* chưa trả lời: không ghi, cho phép nộp lại */ }
+  });
+  if(auto>0){
+    const revealed=qs.filter(q=>q._state==='revealed').length;
+    const sc=box.querySelector('.score');const p=Math.round(ok/auto*100);
+    let cls='s-low',msg='Cố lên nào! Đọc lại phần lý thuyết rồi thử “Đề mới” nhé 💪';
+    if(p===100){cls='s-gold';msg='TUYỆT VỜI! Đúng hết – con giỏi quá 🏆';}
+    else if(p>=80){cls='s-good';msg='Rất tốt! Chỉ còn vài lỗi nhỏ thôi 🌟';}
+    else if(p>=50){cls='s-mid';msg='Khá rồi! Xem lại phần Mẹo rồi luyện tiếp nhé 📘';}
+    sc.className='score show '+cls;
+    sc.innerHTML=`Đúng <b>${ok}/${auto}</b> câu (${p}%)${revealed?` · <span style="font-size:13px;font-weight:600;color:#78909c">${revealed} câu đã xem đáp án — không tính vào thống kê</span>`:''}<br><span style="font-weight:600;font-size:15px">${msg}</span>`;
+    sc.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+  saveAll();
+}
+
+function showQuizAns(box){
+  const items=[...box.querySelectorAll('.qitem')];
+  box._qs.forEach((q,i)=>{
+    const it=items[i],fb=it.querySelector('.fb');
+    if(q.type==='guided_writing'){fb.className='fb ok';fb.innerHTML='📖 '+esc(q.explanation);return;}
+    if(q._state==='unanswered') q._state='revealed';   /* #3: xem đáp án trước khi nộp → loại khỏi thống kê */
+    fb.className='fb ok';
+    let ansText='';
+    if(q.type==='single_choice')ansText='Đáp án: <b>'+esc(q.options[q.answer])+'</b>. ';
+    else if(q.type==='select_span'){ansText='Đáp án: <b>'+esc(q.tokens[q.answer])+'</b>. ';const row=it.querySelector('.tokrow');if(row){row.querySelectorAll('.tok').forEach((t,j)=>{if(j===q.answer)t.classList.add('right');});row.dataset.locked='1';}}
+    else if(q.type==='match_pairs')ansText='Đáp án: '+q.pairs.map(p=>esc(p[0])+'–'+esc(p[1])).join('; ')+'. ';
+    fb.innerHTML='📖 '+ansText+'<div class="expl">'+esc(q.explanation||'')+'</div>';
+  });
+}
+
+/* click delegation cho các nút trong quiz */
+document.addEventListener('click',e=>{
+  const b=e.target.closest('button[data-act]');if(!b)return;
+  const box=b.closest('.quiz');if(!box)return;const act=b.dataset.act;
+  if(act==='check')checkQuiz(box);
+  else if(act==='new'){buildQuiz(box);box.scrollIntoView({behavior:'smooth',block:'start'});}
+  else if(act==='show')showQuizAns(box);
+  else if(act==='hint')box.querySelectorAll('.hintbox').forEach(h=>h.classList.toggle('show'));
+});
+</script>
+<script>
+/* =====================================================================
+   10. TRẠNG THÁI + LƯU TRỮ (tv3: keys, phiên bản + migration nhẹ)
+   ===================================================================== */
+const GKEY='tv3:profile:v1';
+let G={
+  schemaVersion:SCHEMA_VERSION, contentVersion:CONTENT_VERSION,
+  unlocked:1, stars:{}, best:{}, streak:0, lastDay:null, mute:false,
+  xp:0, xu:0, reviewQueue:[], skills:{}, daily:{}, realmPlays:{},
+  writings:[], reported:[], mins:{}, totalMin:0
+};
+function gLoad(){
+  try{const s=JSON.parse(localStorage.getItem(GKEY));if(s)G=Object.assign(G,s);}catch(e){}
+  gNormalize();
+}
+/* Điền mặc định + đồng bộ phiên bản, KHÔNG đọc lại localStorage (để import an toàn) */
+function gNormalize(){
+  /* đổi contentVersion không mất tiến độ: giữ trạng thái theo skillId */
+  G.schemaVersion=SCHEMA_VERSION;G.contentVersion=CONTENT_VERSION;
+  G.stars=G.stars||{};G.best=G.best||{};G.skills=G.skills||{};G.reviewQueue=G.reviewQueue||[];
+  G.writings=G.writings||[];G.reported=G.reported||[];G.realmPlays=G.realmPlays||{};G.daily=G.daily||{};
+  if(typeof G.unlocked!=='number'||G.unlocked<1)G.unlocked=1;
+  if(typeof G.xp!=='number')G.xp=0;if(typeof G.xu!=='number')G.xu=0;if(typeof G.streak!=='number')G.streak=0;
+}
+let _saveWarned=false;
+function saveAll(){
+  try{localStorage.setItem(GKEY,JSON.stringify(G));}catch(e){if(!_saveWarned){_saveWarned=true;toast('⚠️ Máy đã đầy bộ nhớ — con vẫn học được, nhưng tiến độ có thể không lưu.');}}
+  if(typeof progressSyncSoon==='function')progressSyncSoon();   /* đồng bộ Supabase (nếu đã đăng nhập) */
+}
+function skillState(id){if(!G.skills[id])G.skills[id]={attempts:0,correct:0,wrong:0,hints:0,independent:0,ctxSeen:{},lastSeen:null,state:'new'};return G.skills[id];}
+function recordSkill(id,ok,hinted){
+  if(!SKILL_BY_ID[id])return;const s=skillState(id);s.attempts++;s.lastSeen=Date.now();
+  if(ok){s.correct++;if(!hinted)s.independent++;}else s.wrong++;if(hinted)s.hints++;
+  /* trạng thái: new→learning→practicing→stable */
+  if(s.independent>=6)s.state='stable';else if(s.independent>=3)s.state='practicing';else if(s.attempts>0)s.state='learning';
+}
+function weakSkills(){
+  return Object.entries(G.skills).filter(([id,s])=>SKILL_BY_ID[id]&&s.attempts>0)
+    .map(([id,s])=>({id,s,score:s.wrong*3+s.hints*1.4+Math.max(0,2-s.independent)}))
+    .filter(x=>x.score>0).sort((a,b)=>b.score-a.score);
+}
+/* Bản nháp viết: status ∈ draft | reviewed_ok | reviewed_revise. Cùng draftId → cập nhật & lưu lịch sử bản. */
+function saveWriting(skill,prompt,text,status,draftId){
+  status=status||'draft';
+  let rec=draftId?G.writings.find(w=>w.draftId===draftId):null;
+  if(rec){
+    if(rec.text!==text){rec.versions=rec.versions||[];rec.versions.push({text:rec.text,t:rec.t});if(rec.versions.length>5)rec.versions.shift();}
+    rec.text=text;rec.status=status;rec.t=Date.now();
+  }else{
+    G.writings.unshift({draftId:draftId||('d'+Date.now()),t:Date.now(),skill,prompt,text,status,versions:[]});
+    if(G.writings.length>50)G.writings.pop();
+  }
+}
+function toast(msg){const el=document.createElement('div');el.className='goal-toast';el.textContent=msg;document.body.appendChild(el);setTimeout(()=>el.style.opacity='0',3200);setTimeout(()=>el.remove(),3800);}
+
+/* XP levels */
+const GLEVELS=[[0,'Chồi non 🌱'],[80,'Học trò nhỏ 📖'],[200,'Cây bút vàng ✒️'],[380,'Nhà thơ nhí 🎋'],[600,'Bậc thầy chữ nghĩa 🏆']];
+function gLevel(xp){let lv=0;for(let i=0;i<GLEVELS.length;i++)if(xp>=GLEVELS[i][0])lv=i;return lv;}
+function gNextXP(xp){const lv=gLevel(xp);return lv<GLEVELS.length-1?GLEVELS[lv+1][0]:null;}
+
+/* =====================================================================
+   11. GAME – bản đồ, render top, review queue, skill coach
+   ===================================================================== */
+let GS=null;
+function gToggleMute(){G.mute=!G.mute;saveAll();const b=document.getElementById('gMuteBtn');if(b)b.textContent=G.mute?'🔇 Âm thanh: Tắt':'🔊 Âm thanh: Bật';if(G.mute)TTS.stop();}
+function gSay(t){if(!G.mute)TTS.say(t);}
+function resetGame(){
+  if(!confirm('Đặt lại TOÀN BỘ tiến độ trò chơi (sao, XP, kĩ năng)? Bài viết của con vẫn được giữ.'))return;
+  if(prompt('Để xác nhận, gõ chữ: XOA')!=='XOA'){toast('Đã huỷ.');return;}
+  try{localStorage.setItem(GKEY+':backup:'+Date.now(),localStorage.getItem(GKEY)||'');}catch(e){}
+  G.unlocked=1;G.stars={};G.best={};G.xp=0;G.xu=0;G.streak=0;G.lastDay=null;G.reviewQueue=[];G.skills={};G.realmPlays={};G.daily={};
+  saveAll();gRenderMap();if(document.getElementById('pcOverlay').classList.contains('open'))renderParent();toast('Đã đặt lại tiến độ.');
+}
+function gTotalStars(){return Object.values(G.stars).reduce((a,b)=>a+(+b||0),0);}
+function gTouchStreak(){const t=new Date().toISOString().slice(0,10);if(G.lastDay===t)return;const y=new Date(Date.now()-864e5).toISOString().slice(0,10);G.streak=(G.lastDay===y)?G.streak+1:1;G.lastDay=t;}
+function gRenderTop(){
+  const set=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v;};
+  set('gStreak',G.streak);set('gStars',gTotalStars());set('gDone',Object.keys(G.stars).filter(k=>G.stars[k]>0).length);set('gXuVal',G.xu);
+  const mb=document.getElementById('gMuteBtn');if(mb)mb.textContent=G.mute?'🔇 Âm thanh: Tắt':'🔊 Âm thanh: Bật';
+  const xpEl=document.getElementById('gXpBar'),lvEl=document.getElementById('gLvName');
+  if(xpEl){const lv=gLevel(G.xp),next=gNextXP(G.xp),base=GLEVELS[lv][0];const pct=next?Math.round((G.xp-base)/(next-base)*100):100;xpEl.innerHTML=`<i style="width:${pct}%"></i>`;xpEl.title=`${G.xp} XP`;}
+  if(lvEl)lvEl.textContent=GLEVELS[gLevel(G.xp)][1];
+  /* progress strip */
+  const track=document.getElementById('psTrack');
+  if(track){track.innerHTML=WEEKS.map(wk=>{const st=G.stars[wk.w]||0,cur=wk.w===G.unlocked;return `<span class="ps-seg${st>0?' done':''}${cur?' cur':''}" title="Tuần ${wk.w}: ${esc(wk.title)}"></span>`;}).join('');}
+  set('psWeek',Math.min(G.unlocked,WEEKS.length));set('psStars',gTotalStars());
+}
+function gRenderRealms(){
+  const grid=document.getElementById('realmGrid');if(!grid)return;
+  grid.innerHTML=GREALMS.map(r=>{const open=G.unlocked>=r.need;const plays=G.realmPlays[r.id]||0;
+    return `<article class="realm${open?'':' locked'}" style="--realm:${r.color};--realm-bg:${r.bg}">
+      <div class="realm-head"><span class="realm-icon">${r.emoji||r.icon}</span>${esc(r.name)}</div>
+      <p>${open?esc(r.desc):'Mở sau khi đến Trạm '+r.need+'.'}</p>
+      <button ${open?'':'disabled'} onclick="gStartRealm('${r.id}')">${open?'Bắt đầu':'Chưa mở'}</button>
+      <span class="realm-progress">${open?(plays?'Đã luyện '+plays+' lượt':'Chưa luyện — 6 câu'):'Cần Trạm '+r.need}</span>
+    </article>`;}).join('');
+}
+function gRenderSkillCoach(){
+  const el=document.getElementById('skillList');if(!el)return;
+  const weak=weakSkills().slice(0,3);
+  if(!weak.length){el.innerHTML='<div class="skill-empty">Mỗi lần con làm bài, Vườn Tiếng Việt sẽ gợi ý phần nên ôn ở đây. Con cứ làm từng câu nhé.</div>';return;}
+  el.innerHTML='<div class="skill-list">'+weak.map(({id,s})=>{const sk=SKILL_BY_ID[id];
+    return `<article class="skill-card"><b>${esc(sk.title)}</b><span>${esc(sk.tip)} · Đã tự làm đúng ${s.independent} câu.</span>
+      <div style="display:flex;gap:6px;flex-wrap:wrap"><button onclick="gStartSkillPractice('${id}')">Luyện 3 câu mới</button>
+      <button class="teal" onclick="gReadTheory('${sk.anchor}')">Xem cách làm</button></div></article>`;}).join('')+'</div>';
+}
+function gReadTheory(anchor){gClose();document.body.classList.remove('mode-game','mode-bt');document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));document.querySelectorAll('.tab-btn')[0].classList.add('active');const t=document.getElementById(anchor);if(t)t.scrollIntoView({behavior:'smooth',block:'start'});}
+function gRenderMap(){
+  const map=document.getElementById('gameMap');if(!map)return;
+  let html='',curPh=-1;
+  WEEKS.forEach((wk,idx)=>{
+    const ph=GPHASES.findIndex(p=>wk.w>=p.from&&wk.w<=p.to),p=GPHASES[ph];
+    if(ph!==curPh){curPh=ph;html+=`<div class="phase-band" style="background:linear-gradient(90deg,${p.color},${p.color}bb)">${p.emoji} ${esc(p.name)} <span style="opacity:.85;font-weight:600">· Tuần ${p.from}–${p.to}</span></div>`;}
+    const st=G.stars[wk.w]||0,locked=wk.w>G.unlocked,isCur=wk.w===G.unlocked;
+    const cls='station'+(locked?' locked':'')+(isCur&&!locked?' current':'');
+    const bg=locked?'':`background:linear-gradient(180deg,${p.color},${p.color}cc);box-shadow:0 6px 0 ${p.color}99`;
+    const side=(idx%2===0)?'flex-start':'flex-end';
+    const stars=st>0?`<span class="ministars">${'⭐'.repeat(st)}</span>`:'';
+    const medal=st===3?'<span class="medal">👑</span>':'';
+    html+=`<div class="map-row" style="justify-content:${side}">
+      <button class="${cls}" style="${bg}" ${locked?'disabled':''} onclick="gStart(${wk.w})" title="Tuần ${wk.w}: ${esc(wk.title)}">
+        <span>${locked?'🔒':'📗'}</span><span class="wk">T${wk.w}</span>${stars}${medal}
+      </button></div><div class="map-cap">${esc(wk.title)}</div>`;
+  });
+  map.innerHTML=html;gRenderTop();gRenderGames();gRenderRealms();gRenderSkillCoach();
+}
+
+/* --- xây bộ câu cho 1 trạm: ưu tiên review queue + trọng tâm tuần + ôn --- */
+function weekSkills(w){const wk=WEEKS[w-1];return [...new Set([...wk.primary,...wk.review])];}
+function reviewPoolUpTo(w){const set=new Set();for(let i=0;i<w;i++){WEEKS[i].primary.forEach(s=>set.add(s));WEEKS[i].review.forEach(s=>set.add(s));}return [...set];}
+function gBuildQuestions(w,N){
+  N=N||8;const wk=WEEKS[w-1];const cur=wk.primary.length?wk.primary:weekSkills(w);
+  const pool=reviewPoolUpTo(w-1);const sigs=new Set(),qs=[];let guard=0;
+  if(G.reviewQueue.length>6)G.reviewQueue=G.reviewQueue.slice(-6);
+  while(qs.length<N&&guard<N*40){guard++;
+    let skill;
+    const allowedReview=G.reviewQueue.filter(s=>cur.includes(s)||pool.includes(s));
+    if(allowedReview.length&&Math.random()<0.6)skill=pick(allowedReview);
+    else if(qs.length<Math.ceil(N*0.6)||!pool.length)skill=pick(cur);
+    else skill=pick(pool.concat(cur));
+    const q=makeQ(skill,wk.contexts,sigs);if(!q)continue;q._skill=skill;sigs.add(q._sig||q.prompt);qs.push(q);
+  }
+  return qs;
+}
+function gBuildFromSkills(skills,N){const sigs=new Set(),qs=[];let guard=0;const usable=skills.filter(s=>GEN[s]||APPROVED.some(a=>a.skill===s));while(qs.length<N&&guard<N*40){guard++;const s=pick(usable.length?usable:skills);const q=makeQ(s,null,sigs);if(!q)continue;q._skill=s;sigs.add(q._sig||q.prompt);qs.push(q);}return qs;}
+
+const GPRAISE=['Con giỏi quá, ba vui lắm!','Chính xác rồi, con thông minh ghê!','Tuyệt vời, con của ba!','Con siêu quá đi!','Đúng rồi, hoan hô con!','Xuất sắc, con yêu của ba!'];
+const GPRAISE_PASS=['Con làm tốt lắm, ba rất tự hào về con!','Xuất sắc! Ba thấy con tiến bộ nhiều rồi đó!','Con giỏi quá, ba thương con thật nhiều!'];
+const GPRAISE_FAIL=['Không sao đâu con, thử lại nhé, ba tin con!','Con cố thêm chút nữa thôi, ba luôn ở bên con!','Sai một chút xíu thôi, lần sau con sẽ giỏi hơn!'];
+
+function gNewSession(extra){return Object.assign({i:0,correct:0,hearts:3,answered:false,combo:0,usedHint:false,dead:false,warmupCount:0,retried:false},extra);}
+function gStart(w){
+  if(w>G.unlocked)return;const wk=WEEKS[w-1];
+  const warm=gBuildFromSkills(wk.primary.length?wk.primary:weekSkills(w),2).map(q=>{q._warmup=true;return q;});
+  const main=gBuildQuestions(w,8);
+  if(main.length<4){toast('Chưa tạo đủ câu cho trạm này. Con thử lại nhé.');return;}
+  GS=gNewSession({w,qs:[...warm,...main],warmupCount:warm.length,mode:'week'});
+  document.getElementById('gModal').classList.add('open');gRenderQ();
+}
+function gStartRealm(id){
+  const r=GREALMS.find(x=>x.id===id);if(!r||G.unlocked<r.need)return;
+  const qs=gBuildFromSkills(r.skills,6);
+  if(qs.length<5){toast('Chưa đủ câu cho vùng này.');return;}
+  G.realmPlays[id]=(G.realmPlays[id]||0)+1;saveAll();
+  GS=gNewSession({w:G.unlocked,qs,mode:'realm'});
+  document.getElementById('gModal').classList.add('open');gRenderQ();
+}
+function gStartSkillPractice(id){
+  const skills=id?[id]:weakSkills().slice(0,3).map(x=>x.id);
+  const use=skills.length?skills:WEEKS[Math.max(0,G.unlocked-1)].primary;
+  const qs=gBuildFromSkills(use,3);
+  if(qs.length<3){toast('Chưa đủ câu mới. Con thử lại nhé.');return;}
+  GS=gNewSession({w:G.unlocked,qs,mode:'skill'});
+  document.getElementById('gModal').classList.add('open');gRenderQ();
+}
+function gDailyStart(){
+  const today=new Date().toISOString().slice(0,10);
+  const weak=weakSkills().slice(0,3).map(x=>x.id);const cur=WEEKS[Math.max(0,G.unlocked-1)].primary;
+  const qs=gBuildFromSkills(weak.length?weak:cur,5);
+  if(qs.length<5){toast('Chưa đủ câu hôm nay.');return;}
+  GS=gNewSession({w:G.unlocked,qs,mode:'daily',dailyDay:today});
+  document.getElementById('gModal').classList.add('open');gRenderQ();
+}
+
+/* =====================================================================
+   11b. TRÒ CHƠI ÔN TẬP (9 chế độ) — LỚP TRÌNH BÀY trên cùng engine
+   Mọi chế độ: makeQ()/validate() → evaluator → giải thích → recordSkill().
+   Không tạo đáp án riêng cho từng trò (Rule 1). Fallback approved (Rule 2).
+   Tap-to-select + bàn phím, không kéo-thả (Rule 3). Có giải thích, không
+   bắt buộc đếm giờ / phạt / thưởng theo tốc độ (Rule 4). Lưu theo kĩ năng (Rule 5).
+   ===================================================================== */
+const GAMES=[
+  {id:'best',   name:'Chọn đáp án đúng',  icon:'✅', color:'#00838f', bg:'#e0f2f1', types:['single_choice'], desc:'Chọn từ/câu/dấu câu phù hợp nhất.'},
+  {id:'quiz',   name:'Đấu trí tổng hợp',  icon:'🧠', color:'#1565c0', bg:'#e3f2fd', types:['single_choice','select_span','match_pairs'], desc:'Trộn câu từ các kĩ năng đã học.'},
+  {id:'match',  name:'Nối cặp',           icon:'🔗', color:'#6a1b9a', bg:'#f3e5f5', types:['match_pairs'], desc:'Nối từ – nghĩa, câu – kiểu câu.'},
+  {id:'order',  name:'Xếp lại câu',       icon:'🔢', color:'#ef6c00', bg:'#fff3e0', types:['reorder_tokens'], desc:'Sắp các thẻ thành câu đúng.'},
+  {id:'scramble',name:'Ghép chữ thành từ',icon:'🧩', color:'#2e7d32', bg:'#e8f5e9', types:['unscramble'], desc:'Ghép các mảnh thành từ đúng.'},
+  {id:'random', name:'Rút thẻ may mắn',   icon:'🎴', color:'#00695c', bg:'#e0f2f1', types:['single_choice','select_span','reorder_tokens','unscramble','match_pairs'], desc:'Rút ngẫu nhiên, không lặp gần nhau.'},
+  {id:'box',    name:'Mở hộp bí mật',     icon:'📦', color:'#ad1457', bg:'#fce4ec', types:['single_choice','select_span','match_pairs','reorder_tokens'], desc:'Mở hộp để lộ một nhiệm vụ.'},
+  {id:'chain',  name:'Nối từ (chuỗi từ)', icon:'⛓️', color:'#5e35b1', bg:'#ede7f6', special:'chain', desc:'Xây vốn từ theo một quy tắc nối rõ ràng.'},
+  {id:'info',   name:'Thẻ kiến thức',     icon:'💡', color:'#f9a825', bg:'#fffde7', special:'info', desc:'Khái niệm · ví dụ · phản ví dụ.'}
+];
+function gRenderGames(){
+  const grid=document.getElementById('gamesGrid');if(!grid)return;
+  grid.innerHTML=GAMES.map(g=>`<article class="realm" style="--realm:${g.color};--realm-bg:${g.bg}">
+    <div class="realm-head"><span class="realm-icon">${g.icon}</span>${esc(g.name)}</div>
+    <p>${esc(g.desc)}</p>
+    <button onclick="gStartGame('${g.id}')">Chơi</button>
+    <span class="realm-progress">Dùng chung kho câu &amp; cách chấm</span>
+  </article>`).join('');
+}
+/* xây bộ câu cho một trò theo type cho phép, ưu tiên kĩ năng đã học + review queue */
+function gBuildGameQuestions(game,N){
+  N=N||(game.id==='random'?7:6);
+  const learned=reviewPoolUpTo(G.unlocked); const skills=learned.length?learned:WEEKS[0].primary;
+  const sigs=new Set(),qs=[];let guard=0;
+  const wantTypes=game.types||['single_choice'];
+  while(qs.length<N && guard<N*60){guard++;
+    /* ưu tiên review queue */
+    let skill;
+    const rq=G.reviewQueue.filter(s=>skills.includes(s));
+    skill = (rq.length && Math.random()<0.5)?pick(rq):pick(skills);
+    const q=makeQ(skill,null,sigs);if(!q)continue;
+    if(!wantTypes.includes(q.type))continue;          /* chỉ nhận đúng type của trò */
+    q._skill=skill;sigs.add(q._sig||q.prompt);qs.push(q);
+  }
+  /* nếu thiếu (vì lọc type), bơm thêm bằng generator chuyên dạng nếu có */
+  if(qs.length<N){
+    const genMap={reorder_tokens:'REORDER',unscramble:'UNSCRAMBLE'};
+    for(const t of wantTypes){const gname=genMap[t];if(!gname||!GEN[gname])continue;
+      let g2=0;while(qs.length<N&&g2<N*10){g2++;const q=GEN[gname]();if(q&&validate(q)&&!sigs.has(q._sig)){q._skill=q.skill;sigs.add(q._sig);qs.push(q);} }
+    }
+  }
+  return qs;
+}
+function gStartGame(id){
+  const game=GAMES.find(x=>x.id===id);if(!game)return;
+  if(game.special==='chain'){return gStartChain();}
+  if(game.special==='info'){return gStartInfo();}
+  const qs=gBuildGameQuestions(game);
+  if(qs.length<3){toast('Chưa đủ câu cho trò này. Con thử trò khác nhé.');return;}
+  GS=gNewSession({w:G.unlocked,qs,mode:'game',game:id,openBox:(id==='box')});
+  document.getElementById('gModal').classList.add('open');
+  if(id==='box')gRenderBox();else gRenderQ();
+}
+/* --- Mở hộp bí mật: animation KHÔNG ảnh hưởng đúng/sai (Rule) --- */
+function gRenderBox(){
+  const card=document.getElementById('gCard');
+  card.innerHTML=`<div class="gresult"><div style="font-size:16px;color:#00695c;font-weight:800;margin-bottom:6px">📦 Hộp bí mật #${GS.i+1}/${GS.qs.length}</div>
+    <div class="box-anim" id="boxAnim">📦</div>
+    <p style="color:#5b7086">Chạm vào hộp để mở nhiệm vụ nhé!</p>
+    <div class="gbtn-row"><button class="grn gbig" onclick="gOpenBox()">Mở hộp 🎁</button></div></div>`;
+  const box=document.getElementById('boxAnim');if(box)box.onclick=gOpenBox;
+}
+function gOpenBox(){const box=document.getElementById('boxAnim');if(box){box.textContent='🎁';box.classList.add('box-open');}setTimeout(gRenderQ,420);}
+
+/* --- Nối từ (Word Chain): quy tắc nối RÕ RÀNG = cùng chủ điểm --- */
+function gStartChain(){
+  const ctxId=pick(CONTEXT_IDS);const ctx=CONTEXTS[ctxId];
+  const bank=[...new Set([...ctx.entities,...ctx.actions,...ctx.attrs].map(stripPunc))];
+  GS=gNewSession({w:G.unlocked,mode:'chain',chainCtx:ctxId,chainBank:bank,chainUsed:[],qs:[{skill:'C09_VONTU'}]});
+  document.getElementById('gModal').classList.add('open');gRenderChain('');
+}
+function gRenderChain(msg){
+  const ctx=CONTEXTS[GS.chainCtx];
+  const used=GS.chainUsed;
+  const remaining=GS.chainBank.filter(w=>!used.includes(w));
+  const done=remaining.length===0;
+  const card=`<div class="gtopbar"><span class="gqno">⛓️ Nối từ · chủ điểm: <b>${esc(ctx.title)}</b></span><span class="spacer" style="flex:1"></span></div>
+    <div class="gq">Quy tắc: chỉ chọn từ <b>thuộc chủ điểm “${esc(ctx.title)}”</b>. Mỗi từ đúng nối thêm một mắt xích! 🔗</div>
+    <div class="gstim" id="chainStrip">${used.length?used.map(esc).join(' → '):'<span style="color:#90a4ae">(chưa có mắt xích nào)</span>'}</div>
+    ${msg?`<div class="gfeed no" style="display:block">${esc(msg)}</div>`:''}
+    ${done?`<div class="gfeed ok" style="display:block">🎉 Con đã gom hết từ của chủ điểm này! Chuỗi dài ${used.length} từ.</div>`
+      :`<p style="font-weight:700;color:#00695c">Chọn một từ đúng chủ điểm:</p>
+        <div class="tokrow" id="chainChoices">${gChainChoices().map(w=>`<span class="tok" data-w="${escAttr(w)}">${esc(w)}</span>`).join('')}</div>`}
+    <div class="gbtn-row">${done?`<button class="grn gbig" onclick="gChainFinish()">✓ Xong</button>`:`<button class="gry" onclick="gChainFinish()">Kết thúc chuỗi</button>`}</div>`;
+  document.getElementById('gCard').innerHTML=card;
+  const cc=document.getElementById('chainChoices');
+  if(cc)cc.querySelectorAll('.tok').forEach(t=>t.addEventListener('click',()=>gChainPick(t.dataset.w)));
+}
+function escAttr(s){return String(s).replace(/'/g,'&#39;').replace(/"/g,'&quot;');}
+/* trộn 2 từ đúng chủ điểm + 2 từ chủ điểm khác (nhiễu) để bé phải phân biệt */
+function gChainChoices(){
+  const ctx=CONTEXTS[GS.chainCtx];
+  const remaining=GS.chainBank.filter(w=>!GS.chainUsed.includes(w));
+  const good=shuffle(remaining).slice(0,2);
+  const otherCtx=CONTEXTS[pick(CONTEXT_IDS.filter(id=>id!==GS.chainCtx))];
+  const bad=shuffle([...otherCtx.entities,...otherCtx.actions].map(stripPunc)).slice(0,2);
+  GS._chainGood=good.map(normNFC);
+  return shuffle([...good,...bad]);
+}
+function gChainPick(w){
+  const good=GS._chainGood.includes(normNFC(w));
+  if(good){
+    GS.chainUsed.push(w);recordSkill('C09_VONTU',true,false);G.xp+=4;G.xu+=2;saveAll();gRenderTop();
+    if(!G.mute)SFX.correct();gSay(pick(GPRAISE));gRenderChain('');
+  } else {
+    recordSkill('C09_VONTU',false,false);if(!G.mute)SFX.wrong();
+    gRenderChain('“'+w+'” không thuộc chủ điểm '+CONTEXTS[GS.chainCtx].title.toLowerCase()+'. Con thử từ khác nhé!');
+  }
+}
+function gChainFinish(){
+  GS.finished=true;
+  const n=GS.chainUsed.length;gTouchStreak();G.xp+=n*2;saveAll();gRenderTop();
+  document.getElementById('gCard').innerHTML=`<div class="gresult"><div style="font-size:40px">⛓️</div>
+    <div class="praise" style="color:#5e35b1">Chuỗi từ dài ${n} mắt xích!</div>
+    <div style="color:#5b7086">Con đã gom được: ${GS.chainUsed.map(esc).join(' → ')||'(chưa có)'} </div>
+    <div class="gbtn-row" style="margin-top:14px"><button class="org gbig" onclick="gStartChain()">Chơi chủ điểm khác</button><button class="grn gbig" onclick="gClose()">✓ Xong</button></div></div>`;
+  if(!G.mute)SFX.win();
+}
+
+/* --- Thẻ kiến thức (Info Cards): khái niệm + ví dụ + phản ví dụ --- */
+const INFO_CARDS=[
+  {skill:'C08_SOSANH', title:'Biện pháp so sánh', concept:'So sánh: A – từ so sánh (như, tựa, giống) – B, dựa trên một nét giống nhau.', ex:'Mặt hồ phẳng như tấm gương.', counter:'Em làm đúng như cô dặn. → “như” nghĩa là “theo đúng”, KHÔNG so sánh.', anchor:'c08'},
+  {skill:'C02_DACDIEM', title:'Từ chỉ đặc điểm', concept:'Từ chỉ đặc điểm: màu sắc, hình dáng, tính cách… Mẹo: thêm “rất/thật”.', ex:'bông hoa rất thơm; bạn ấy thật chăm chỉ.', counter:'“quét nhà” không phải đặc điểm — đó là hoạt động.', anchor:'c02'},
+  {skill:'C04_DAUCAU', title:'Dấu hai chấm', concept:'Dấu hai chấm báo hiệu phần liệt kê, giải thích hoặc lời nói.', ex:'Trong giỏ có ba thứ: táo, lê và cam.', counter:'Câu kể trọn ý thì kết thúc bằng dấu chấm, không phải dấu hai chấm.', anchor:'c04'},
+  {skill:'C06_MUCDICH', title:'Bốn kiểu câu', concept:'Kể (.), Hỏi (? có từ hỏi), Cảm (! có “quá/lắm”), Khiến (! có “hãy/nhé”).', ex:'Bạn hãy giữ trật tự nhé! (câu khiến)', counter:'Có dấu ! chưa chắc là câu cảm — “Hãy đi nhé!” là câu khiến.', anchor:'c06'},
+  {skill:'C01_CHINHTA', title:'c/k · g/gh · ng/ngh', concept:'Mẹo “Anh em đi cùng i, e, ê”: k, gh, ngh đứng trước i, e, ê.', ex:'kéo, ghế, nghỉ (trước e/ê/i).', counter:'Trước a/o/ô/u dùng c, g, ng: cá, gà, ngô — không viết “ké, ghà”.', anchor:'c01'}
+];
+function gStartInfo(){GS=gNewSession({w:G.unlocked,mode:'info',cards:shuffle(INFO_CARDS.slice()),i:0});document.getElementById('gModal').classList.add('open');gRenderInfo();}
+function gRenderInfo(){
+  const c=GS.cards[GS.i];
+  document.getElementById('gCard').innerHTML=`<div class="gtopbar"><span class="gqno">💡 Thẻ ${GS.i+1}/${GS.cards.length}: ${esc(c.title)}</span><span class="spacer" style="flex:1"></span></div>
+    <div class="rule">${esc(c.concept)}</div>
+    <div class="ex">${esc(c.ex)}</div>
+    <div class="warn">${esc(c.counter)}</div>
+    <div class="gbtn-row" style="margin-top:8px">
+      <button class="teal" id="infoTts">🔊 Nghe</button>
+      <button class="pur" onclick="gReadTheory('${c.anchor}')">Xem bài</button>
+      <button class="grn" onclick="gInfoPractice('${c.skill}')">Luyện 3 câu</button>
+      ${GS.i<GS.cards.length-1?`<button class="org gbig" onclick="gInfoNext()">Thẻ sau →</button>`:`<button class="grn gbig" onclick="gClose()">✓ Xong</button>`}
+    </div>`;
+  const tb=document.getElementById('infoTts');
+  if(tb)tb.addEventListener('click',()=>TTS.speak(c.concept+'. Ví dụ: '+c.ex));
+}
+function gInfoNext(){GS.i++;gRenderInfo();}
+function gInfoPractice(skill){gClose();gStartSkillPractice(skill);}
+
+/* render 1 câu trong modal */
+function gRenderQ(){
+  const q=GS.qs[GS.i],pct=Math.round(GS.i/GS.qs.length*100);
+  const hearts='❤️'.repeat(Math.max(0,GS.hearts))+'🤍'.repeat(Math.max(0,3-GS.hearts));
+  let body='';
+  if(q.stimulus)body+=`<div class="gstim">${esc(q.stimulus)}</div>`;
+  if(q.type==='single_choice'){
+    body+=`<div class="gopts">`+q.options.map((t,j)=>`<button class="gopt" data-j="${j}" onclick="gPick(${j})">${esc(t)}</button>`).join('')+`</div>`;
+  } else if(q.type==='select_span'){
+    body+=`<div class="tokrow">`+q.tokens.map((t,j)=>`<span class="tok" data-j="${j}" onclick="gPickTok(${j})">${esc(t)}</span>`).join('')+`</div>`;
+  } else if(q.type==='match_pairs'){
+    const rights=shuffle(q.pairs.map(p=>p[1]));GS._rights=rights;
+    body+=`<div class="pairwrap"><div class="paircol">`+q.pairs.map((p,j)=>`<div class="tok pL" data-j="${j}" onclick="gPairL(${j})">${esc(p[0])}</div>`).join('')+
+      `</div><div class="paircol">`+rights.map((r,k)=>`<div class="tok pR" data-v="${esc(r)}" onclick="gPairR(this)">${esc(r)}</div>`).join('')+`</div></div>`;
+    GS._map={};GS._selL=null;
+  } else if(q.type==='guided_writing'){
+    body+=`<textarea id="gWrite" class="ans" placeholder="Con viết ở đây… (nói trước rồi hãy viết)"></textarea>
+      <div class="rubric"><b>Gợi ý (ba/mẹ cùng con):</b>${q.rubric.map(r=>`<div class="rubric-item">▢ ${esc(r)}</div>`).join('')}</div>`;
+  } else if(q.type==='reorder_tokens'||q.type==='unscramble'){
+    GS._seq=[];
+    const src=q.type==='reorder_tokens'?q.tokens:q.pieces;
+    const sep=q.type==='unscramble'?'':' ';
+    body+=`<div class="buildzone" id="gBuild" data-sep="${sep}"></div>
+      <div class="tokrow" id="gBank">`+src.map((t,j)=>`<span class="tok" data-j="${j}" onclick="gBuildTap(${j})">${esc(t)}</span>`).join('')+`</div>
+      <div style="margin-top:8px"><button class="gry" style="padding:6px 12px;font-size:13px" onclick="gBuildUndo()">↩︎ Bỏ thẻ cuối</button></div>`;
+  } else { body+=`<input id="gInput" class="ans" placeholder="Con trả lời…">`; }
+  const skTip=(SKILL_BY_ID[q._skill||q.skill]||{}).tip||'';
+  const card=`<div class="gprog"><i style="width:${pct}%"></i></div>
+    <div class="gtopbar"><span class="ghearts">${hearts}</span><span class="gqno">Câu ${GS.i+1}/${GS.qs.length}${q._warmup?' · khởi động':''}</span><span class="spacer" style="flex:1"></span>
+    <button class="gry" id="gHintBtn" onclick="gHint()" style="padding:6px 10px;font-size:13px">💡 Gợi ý</button></div>
+    <div class="gq">${esc(q.prompt)} <button class="tts-btn" id="gTtsBtn">🔊</button></div>
+    ${body}
+    <div id="gHintArea"></div>
+    <div class="gfeed" id="gFeed"></div>
+    <div class="gbtn-row"><button class="grn gbig" id="gCheck" onclick="gSubmit()">Kiểm tra ✓</button></div>`;
+  document.getElementById('gCard').innerHTML=card;
+  const ttsBtn=document.getElementById('gTtsBtn');
+  if(ttsBtn)ttsBtn.addEventListener('click',()=>TTS.speak(q.prompt+(q.stimulus?'. '+q.stimulus:'')));
+  GS.answered=false;GS.picked=null;GS.tok=null;GS.usedHint=false;GS.retried=false;GS.qStart=performance.now();
+  /* #17: đưa focus vào lựa chọn đầu tiên trong modal (quản lí focus cơ bản, hỗ trợ bàn phím) */
+  const first=document.querySelector('#gCard .gopt, #gCard .tok, #gCard textarea, #gCard input');
+  if(first)setTimeout(()=>{try{first.focus({preventScroll:true});}catch(e){}},30);
+}
+function gPick(j){if(GS.answered)return;GS.picked=j;document.querySelectorAll('.gopt').forEach(b=>b.classList.toggle('sel',+b.dataset.j===j));}
+function gPickTok(j){if(GS.answered)return;GS.tok=j;document.querySelectorAll('#gCard .tok').forEach(t=>t.classList.toggle('sel',+t.dataset.j===j));}
+function gPairL(j){if(GS.answered)return;GS._selL=j;document.querySelectorAll('.pL').forEach(l=>l.classList.toggle('sel',+l.dataset.j===j));}
+function gPairR(el){if(GS.answered||GS._selL==null)return;const j=GS._selL;document.querySelectorAll('.pR').forEach(x=>{if(x.dataset.pair==j)delete x.dataset.pair;});el.dataset.pair=j;GS._map[j]=el.dataset.v;const l=document.querySelector('.pL[data-j="'+j+'"]');if(l){l.textContent=l.textContent.replace(/ →.*$/,'')+' → '+el.dataset.v;l.classList.remove('sel');}GS._selL=null;}
+function gHint(){const q=GS.qs[GS.i];const area=document.getElementById('gHintArea');if(!area)return;GS.usedHint=true;const tip=(SKILL_BY_ID[q._skill||q.skill]||{}).tip||'Đọc kĩ câu và loại dần đáp án chưa hợp lí nhé.';area.innerHTML=`<div class="ghint-area">💡 <b>Gợi ý:</b> ${esc(tip)}</div>`;}
+/* Xếp câu / ghép từ: chạm thẻ ở kho → thêm vào vùng xếp (tap-to-select, không kéo thả) */
+function gBuildTap(j){
+  if(GS.answered)return;const bank=document.getElementById('gBank');if(!bank)return;
+  const t=bank.querySelector('.tok[data-j="'+j+'"]');if(!t||t.classList.contains('used'))return;
+  t.classList.add('used');t.style.visibility='hidden';
+  GS._seq.push(j);gBuildRefresh();
+}
+function gBuildUndo(){
+  if(GS.answered||!GS._seq||!GS._seq.length)return;
+  const j=GS._seq.pop();const bank=document.getElementById('gBank');
+  const t=bank&&bank.querySelector('.tok[data-j="'+j+'"]');if(t){t.classList.remove('used');t.style.visibility='';}
+  gBuildRefresh();
+}
+function gBuildRefresh(){
+  const q=GS.qs[GS.i],zone=document.getElementById('gBuild');if(!zone)return;
+  const sep=zone.dataset.sep;const src=q.type==='reorder_tokens'?q.tokens:q.pieces;
+  zone.innerHTML=GS._seq.map(j=>`<span class="tok" style="cursor:default">${esc(src[j])}</span>`).join(sep===''?'':'');
+  /* dùng khoảng cách CSS gap cho reorder; unscramble ghép liền */
+  zone.style.gap=sep===''?'0':'6px';
+}
+
+function gSubmit(){
+  if(GS.answered){gNext();return;}
+  const q=GS.qs[GS.i];let ok=false,answered=true;
+  /* #14: nếu còn lượt thử lại, KHÔNG lộ đáp án đúng và KHÔNG khoá các lựa chọn còn lại */
+  const canRetry=!GS.retried && !q._warmup && (q.type==='single_choice'||q.type==='select_span');
+  if(q.type==='single_choice'){if(GS.picked==null)return;ok=GS.picked===q.answer;
+    if(ok||!canRetry){document.querySelectorAll('.gopt').forEach(b=>{const j=+b.dataset.j;if(j===q.answer)b.classList.add('right');if(j===GS.picked&&!ok)b.classList.add('wrong');b.onclick=null;});}}
+  else if(q.type==='select_span'){if(GS.tok==null)return;ok=GS.tok===q.answer;
+    if(ok||!canRetry){document.querySelectorAll('#gCard .tok').forEach(t=>{const j=+t.dataset.j;if(j===q.answer)t.classList.add('right');if(j===GS.tok&&!ok)t.classList.add('wrong');t.onclick=null;});}}
+  else if(q.type==='match_pairs'){answered=Object.keys(GS._map).length>0;ok=q.pairs.every((p,i)=>normNFC(GS._map[i]||'')===normNFC(p[1]));document.querySelectorAll('.pL').forEach(l=>{const correct=normNFC(GS._map[l.dataset.j]||'')===normNFC(q.pairs[l.dataset.j][1]);l.classList.add(correct?'right':'wrong');});}
+  else if(q.type==='reorder_tokens'){if(!GS._seq||GS._seq.length<q.tokens.length){toast('Con xếp đủ các thẻ rồi bấm Kiểm tra nhé.');return;}ok=gradeReorder(q,GS._seq);}
+  else if(q.type==='unscramble'){if(!GS._seq||GS._seq.length<q.pieces.length){toast('Con ghép đủ các mảnh rồi bấm Kiểm tra nhé.');return;}ok=gradeUnscramble(q,GS._seq);}
+  else if(q.type==='guided_writing'){const t=document.getElementById('gWrite');const txt=t?normNFC(t.value):'';if(!txt){toast('Con viết vài câu rồi bấm Kiểm tra nhé.');return;}saveWriting(q.skill,q.prompt,txt,'draft');gWritingFeedback();return;}
+  else {const inp=document.getElementById('gInput');ok=inp&&q.accept&&q.accept.includes(normNFC(inp.value));}
+  if(!answered){toast('Con nối hết các cặp rồi bấm Kiểm tra nhé.');return;}
+  gAfterAnswer(ok);
+}
+/* câu viết: không tự chấm đúng/sai — ghi nhận đã làm, hiện rubric, đi tiếp */
+function gWritingFeedback(){
+  /* Bản nháp: KHÔNG tính đúng/sai, KHÔNG cộng vào correct/độ chính xác/kĩ năng.
+     Chỉ ghi nhận "đã có bản nháp" (writingCount) để không kéo tụt tỉ lệ đúng của phiên. */
+  GS.answered=true;const fb=document.getElementById('gFeed');
+  GS.writingCount=(GS.writingCount||0)+1;
+  fb.className='gfeed ok';fb.innerHTML='<span class="fb-owl">🦉</span> Con đã có bản nháp rồi. Bài được lưu ở <b>Góc phụ huynh</b> để ba/mẹ đọc cùng con. Phần viết không có điểm đúng/sai của máy.';
+  saveAll();
+  const btn=document.getElementById('gCheck');if(btn)btn.textContent=(GS.i>=GS.qs.length-1)?'Xem kết quả →':'Câu tiếp →';
+  if(!G.mute)SFX.correct();
+}
+function gAfterAnswer(ok){
+  GS.answered=true;const q=GS.qs[GS.i],fb=document.getElementById('gFeed');const gen=q._skill||q.skill;const isWarm=!!q._warmup;
+  if(ok){
+    recordSkill(gen,true,GS.usedHint);if(!isWarm)GS.correct++;GS.combo++;
+    if(!GS.usedHint)G.reviewQueue=G.reviewQueue.filter(s=>s!==gen);
+    if(!isWarm){const bonus=GS.combo>=3?Math.min(2*(GS.combo-2),10):0;const xp=8+bonus;G.xp+=xp;G.xu+=5;const oldLv=gLevel(G.xp-xp),newLv=gLevel(G.xp);saveAll();gRenderTop();gXpToast(xp,5,GS.combo);if(newLv>oldLv)setTimeout(()=>toast('⬆️ Lên cấp! Con đạt '+GLEVELS[newLv][1]+' 🎉'),400);}
+    const combo=GS.combo>=3?` <span class="combo-badge">x${GS.combo} liên tiếp!</span>`:'';const m=pick(GPRAISE);
+    fb.className='gfeed ok';fb.innerHTML=`<span class="fb-owl">🦉</span> ✅ <b>${esc(m)}</b>${combo}<div style="margin-top:6px;font-weight:600">${esc(q.explanation||'')}</div>`;
+    gSay(m);if(!G.mute)SFX.correct();gVibe(35);
+  } else {
+    /* thử lại 1 lần cho single_choice/select_span nếu chưa dùng gợi ý */
+    if(!GS.retried&&!isWarm&&(q.type==='single_choice'||q.type==='select_span')){
+      GS.retried=true;GS.usedHint=true;GS.combo=0;
+      fb.className='gfeed no';fb.innerHTML='<span class="fb-owl">🦉</span> Chưa đúng — con thử lại một lần nữa nhé! 💪';
+      gHint();GS.answered=false;
+      if(q.type==='single_choice'&&GS.picked!=null){const wb=document.querySelector('.gopt[data-j="'+GS.picked+'"]');if(wb){wb.classList.add('wrong');wb.disabled=true;wb.onclick=null;}GS.picked=null;}
+      if(q.type==='select_span'&&GS.tok!=null){const wt=document.querySelector('#gCard .tok[data-j="'+GS.tok+'"]');if(wt){wt.classList.remove('sel');wt.classList.add('wrong');wt.onclick=null;}GS.tok=null;}
+      if(!G.mute)SFX.wrong();gVibe([30,30]);return;
+    }
+    recordSkill(gen,false,GS.usedHint);if(!isWarm)GS.hearts--;GS.combo=0;
+    if(!G.reviewQueue.includes(gen)){G.reviewQueue.push(gen);if(G.reviewQueue.length>6)G.reviewQueue.shift();}
+    saveAll();
+    const sk=SKILL_BY_ID[gen];const help=sk?`<div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap"><button class="grn" onclick="gStartSkillPractice('${gen}')">Luyện 3 câu</button><button class="teal" onclick="gReadTheory('${sk.anchor}')">Xem cách làm</button></div>`:'';
+    fb.className='gfeed no';fb.innerHTML=`<span class="fb-owl">🦉</span> ❌ Chưa đúng nhé.<div style="margin-top:6px;font-weight:600">${esc(q.explanation||'')}</div>${help}${isWarm?'<div style="color:#ef6c00;font-size:12px">(khởi động — không mất tim)</div>':''}`;
+    if(!G.mute)SFX.wrong();gVibe([30,30,30]);
+  }
+  const he=document.querySelector('#gCard .ghearts');if(he)he.textContent='❤️'.repeat(Math.max(0,GS.hearts))+'🤍'.repeat(Math.max(0,3-GS.hearts));
+  const btn=document.getElementById('gCheck');
+  if(btn){if(!ok&&GS.hearts<=0&&!isWarm){GS.dead=true;btn.textContent='Xem kết quả →';}else btn.textContent=(GS.i>=GS.qs.length-1)?'Xem kết quả →':'Câu tiếp →';}
+}
+function gXpToast(xp,xu,combo){const el=document.createElement('div');el.className='xp-toast';el.textContent=`+${xp} XP · +${xu} 🌰`+(combo>=3?` · x${combo}!`:'');document.body.appendChild(el);setTimeout(()=>el.remove(),1200);}
+function gNext(){if(GS.dead){gFinish();return;}GS.i++;if(GS.i>=GS.qs.length){gFinish();return;}if(GS.openBox){gRenderBox();return;}gRenderQ();}
+function gFinish(){
+  GS.finished=true;
+  if(GS.mode==='daily'){const total=GS.qs.length,pct=Math.round(GS.correct/total*100);G.daily[GS.dailyDay]={completed:true,attempted:total,correct:GS.correct};G.xp+=20;G.xu+=5;gTouchStreak();saveAll();gRenderMap();
+    document.getElementById('gCard').innerHTML=`<div class="gresult"><div style="font-size:42px">🌿</div><div class="praise" style="color:#00838f">Con hoàn thành buổi học hôm nay!</div><div style="font-weight:800;color:#0d47a1">Đúng ${GS.correct}/${total} câu (${pct}%)</div><div style="color:#5b7086;margin-top:7px">Cảm ơn con đã kiên trì. Mai mình học tiếp một ít nhé.</div><div style="color:#ef6c00;font-weight:700;margin-top:6px">+20 XP · +5 🌰</div><div class="gbtn-row" style="margin-top:16px"><button class="grn gbig" onclick="gClose()">✓ Xong</button></div></div>`;
+    if(!G.mute)SFX.win();return;}
+  /* Mẫu số = câu TỰ CHẤM (loại khởi động và bản nháp viết) */
+  const total=Math.max(1,GS.qs.length-(GS.warmupCount||0)-(GS.writingCount||0)),pct=Math.round(GS.correct/total*100);
+  let stars=0;if(pct>=100)stars=3;else if(pct>=80)stars=2;else if(pct>=60)stars=1;
+  const passed=stars>=1;let bonusXP=0,bonusXu=0;
+  if(passed){
+    /* Sao & mở trạm CHỈ dành cho phiên trạm tuần (#15); luyện vùng/kĩ năng/trò chơi không ghi sao tuần */
+    if(GS.mode==='week'){G.stars[GS.w]=Math.max(G.stars[GS.w]||0,stars);G.best[GS.w]=Math.max(G.best[GS.w]||0,pct);if(GS.w===G.unlocked&&GS.w<WEEKS.length)G.unlocked=GS.w+1;}
+    gTouchStreak();bonusXP=(GS.mode==='week'?30:12)+(pct===100?(GS.mode==='week'?20:6):0);bonusXu=GS.mode==='week'?10:4;G.xp+=bonusXP;G.xu+=bonusXu;}
+  saveAll();gRenderTop();
+  const endMsg=pick(passed?GPRAISE_PASS:GPRAISE_FAIL);
+  const starHtml=[0,1,2].map(k=>`<span class="star-pop" style="animation-delay:${k*0.18}s">${k<stars?'⭐':'☆'}</span>`).join('');
+  const nextBtn=(GS.mode==='week'&&passed&&GS.w<WEEKS.length)?`<button class="pur gbig" onclick="gClose();gStart(${GS.w+1})">Trạm sau →</button>`:'';
+  const xpLine=passed?`<div style="color:#ef6c00;font-weight:700;margin-top:4px">+${bonusXP} XP · +${bonusXu} 🌰 · Cấp: <b>${GLEVELS[gLevel(G.xp)][1]}</b></div>`:'';
+  const isWeek=GS.mode==='week';
+  const writingNote=GS.writingCount?`<div style="color:#5e35b1;font-weight:600;margin-top:4px">✍️ ${GS.writingCount} bản nháp viết đã lưu — ba/mẹ xem ở Góc phụ huynh (không tính vào tỉ lệ đúng).</div>`:'';
+  const replayBtn=isWeek?`<button class="org gbig" onclick="gStart(${GS.w})">🔁 Chơi lại</button>`:'';
+  document.getElementById('gCard').innerHTML=`<div class="gresult">
+    <div style="font-size:42px">${passed?'🏆':'🌱'}</div>${isWeek?`<div class="gstars-big">${starHtml}</div>`:''}
+    <div class="praise" style="color:${passed?'#2e7d32':'#ef6c00'}">${esc(endMsg)}</div>
+    <div style="font-size:17px;font-weight:800;color:#0d47a1">Đúng ${GS.correct}/${total} câu tự chấm (${pct}%)</div>
+    ${writingNote}
+    <div style="color:#5b7086;margin:8px 0 2px;font-weight:600">🔥 Chuỗi: <b>${G.streak}</b> · ⭐ Tổng: <b>${gTotalStars()}</b> · 🌰 <b>${G.xu}</b></div>${xpLine}
+    ${(!passed&&isWeek)?'<div style="color:#c62828;font-weight:600;margin-top:4px">Cần đúng ít nhất 60% để mở trạm sau nhé. Không sao — con thử lại khi sẵn sàng.</div>':''}
+    ${(!isWeek)?'<div style="color:#5b7086;font-size:13px;margin-top:4px">Đây là lượt luyện tập: không ghi sao trạm, chỉ ghi nhận kĩ năng con đã luyện.</div>':''}
+    <div class="gbtn-row" style="margin-top:16px">${replayBtn}${nextBtn}<button class="grn gbig" onclick="gClose()">✓ Xong</button></div></div>`;
+  gSay(endMsg);if(!G.mute&&passed)SFX.win();gVibe(passed?[20,40,20]:20);gRenderMap();
+}
+function gClose(force){
+  /* Xác nhận nếu đang giữa phiên (chưa xem kết quả) để tránh mất tiến độ do bấm nhầm */
+  const inProgress = GS && GS.qs && !GS.finished && (GS.mode!=='info') && (GS.mode!=='chain') && (GS.i<(GS.qs.length||0) || !GS.answered);
+  if(inProgress && force!==true){
+    if(!confirm('Con muốn thoát trò chơi bây giờ? Tiến độ câu đúng đã làm vẫn được lưu, nhưng phiên này sẽ kết thúc.')) return;
+  }
+  const m=document.getElementById('gModal');if(m)m.classList.remove('open');
+  TTS.stop();GS=null;gRenderMap();
+}
+/* Escape để đóng; click nền (ngoài thẻ) để đóng — đều đi qua gClose() có xác nhận */
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.getElementById('gModal').classList.contains('open'))gClose();});
+document.getElementById('gModal').addEventListener('click',e=>{if(e.target.id==='gModal')gClose();});
+
+/* =====================================================================
+   12. GÓC PHỤ HUYNH – ma trận kĩ năng, bài viết, báo lỗi, xuất/nhập
+   ===================================================================== */
+function openParent(){const ov=document.getElementById('pcOverlay');ov.classList.add('open');renderParent();}
+function closeParent(){document.getElementById('pcOverlay').classList.remove('open');}
+function renderParent(){
+  const body=document.getElementById('pcBody');
+  /* thống kê */
+  const autoAttempts=Object.entries(G.skills).filter(([id])=>id!=='C10_VIET').reduce((a,[,s])=>a+s.attempts,0);
+  const autoCorrect=Object.entries(G.skills).filter(([id])=>id!=='C10_VIET').reduce((a,[,s])=>a+s.correct,0);
+  const acc=autoAttempts?Math.round(autoCorrect/autoAttempts*100):0;
+  /* ma trận kĩ năng × trạng thái */
+  let matrix=`<div class="tbl-scroll"><table class="matrix"><tr><th>Kĩ năng</th><th>Đã làm</th><th>Tự làm đúng</th><th>Trạng thái</th></tr>`;
+  SKILLS.forEach(sk=>{const s=G.skills[sk.id];const st=s?s.state:'new';const lvl={'new':0,'learning':1,'practicing':2,'stable':3}[st];
+    matrix+=`<tr><td style="text-align:left">${esc(sk.title)}</td><td class="mx-${lvl}">${s?s.attempts:0}</td><td>${s?s.independent:0}</td><td>${st}</td></tr>`;});
+  matrix+=`</table></div>`;
+  /* bài viết */
+  const stLabel={draft:'📝 Bản nháp (chưa đọc cùng con)',reviewed_ok:'📖 Đã đọc cùng con',reviewed_revise:'✍️ Đã gợi ý sửa một chỗ'};
+  let writings=G.writings.length?G.writings.slice(0,10).map(w=>`<div class="writing-log"><b>${esc((SKILL_BY_ID[w.skill]||{}).title||w.skill)}</b> · ${new Date(w.t).toLocaleDateString('vi-VN')} · <span style="color:#5e35b1">${stLabel[w.status]||(w.ok===true?'📖 Đã đọc cùng con':'📝 Bản nháp')}</span>${(w.versions&&w.versions.length)?` · ${w.versions.length} bản trước`:''}<br><span style="color:#455a64">${esc(w.prompt)}</span><br><span style="white-space:pre-wrap">“${esc(w.text)}”</span></div>`).join(''):'<div style="color:var(--muted);font-size:14px">Chưa có bài viết nào.</div>';
+  /* báo lỗi câu */
+  let reported=G.reported.length?G.reported.map(r=>`<div class="reported">⚠️ ${esc(r)}</div>`).join(''):'<div style="color:var(--muted);font-size:14px">Chưa có câu nào bị báo lỗi.</div>';
+  body.innerHTML=`
+    <div class="note">Cơ chế góc phụ huynh chỉ ngăn thao tác vô ý, <b>không phải bảo mật máy chủ</b>. Mọi dữ liệu lưu cục bộ trên máy này.</div>
+    <h3 style="margin-top:6px">📊 Báo cáo học tập</h3>
+    <div class="card" style="margin-top:6px">Số lượt câu tự chấm: <b>${autoAttempts}</b> · Tỉ lệ đúng: <b>${acc}%</b> (cỡ mẫu ${autoAttempts}) · Sao: <b>${gTotalStars()}</b> · Trạm đã qua: <b>${Object.keys(G.stars).filter(k=>G.stars[k]>0).length}/35</b>
+    <div style="font-size:12.5px;color:var(--muted);margin-top:4px">Tỉ lệ đúng KHÔNG tính câu viết tự do (câu viết chấm theo gợi ý). Cỡ mẫu nhỏ thì đừng vội kết luận.</div></div>
+    <h3>🧩 Ma trận kĩ năng</h3>${matrix}
+    <div style="font-size:12px;color:var(--muted)">Trạng thái: new → learning → practicing → stable (không dùng nhãn năng lực tuyệt đối cho trẻ).</div>
+    <h3>✍️ Bài viết của con (gần đây)</h3>${writings}
+    <h3>🚩 Câu bị báo “chưa ổn”</h3>${reported}
+    <h3>⚙️ Lịch &amp; dữ liệu</h3>
+    <div class="card">
+      <div style="margin-bottom:8px">Trạm hiện mở: <b>${G.unlocked}</b>/35.
+        <button class="teal" onclick="parentSetUnlock()">Đặt tuần bắt đầu</button></div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="grn" onclick="exportData()">⬇️ Xuất tiến độ (JSON)</button>
+        <button class="org" onclick="document.getElementById('importFile').click()">⬆️ Nhập tiến độ</button>
+        <input type="file" id="importFile" accept="application/json" style="display:none" onchange="importData(this)">
+      </div>
+      <div style="font-size:12px;color:var(--muted);margin-top:6px">Xuất/nhập do phụ huynh thao tác. Không tự đồng bộ ra ngoài, không thu thập thông tin cá nhân của trẻ.</div>
+      <div style="margin-top:12px;padding-top:10px;border-top:1px dashed var(--line)">
+        <button class="gry" onclick="resetGame()">↺ Đặt lại toàn bộ tiến độ trò chơi</button>
+        <div style="font-size:12px;color:var(--muted);margin-top:4px">Thao tác không hoàn tác được (bài viết của con vẫn được giữ). Hãy xuất tiến độ trước nếu cần.</div>
+      </div>
+    </div>`;
+}
+function parentSetUnlock(){const v=prompt('Cho con bắt đầu từ tuần nào? (1–35)',G.unlocked);if(v==null)return;const n=parseInt(v,10);if(n>=1&&n<=35){G.unlocked=n;saveAll();gRenderMap();renderParent();toast('Đã đặt tuần bắt đầu: '+n);}else{toast('Số tuần phải từ 1 đến 35.');}}
+function exportData(){const blob=new Blob([JSON.stringify(G,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='tiengviet3-tiendo-'+new Date().toISOString().slice(0,10)+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);}
+function importData(input){
+  const f=input.files&&input.files[0];if(!f)return;
+  if(f.size>2*1024*1024){toast('File quá lớn.');return;}
+  const r=new FileReader();
+  r.onload=()=>{
+    try{
+      const d=JSON.parse(r.result);
+      if(typeof d!=='object'||d===null||d.schemaVersion==null){toast('File không hợp lệ.');return;}
+      if(!confirm('Nhập sẽ GHI ĐÈ tiến độ hiện tại. Tiếp tục? (Bản cũ sẽ được sao lưu.)')){input.value='';return;}
+      /* Sao lưu bản cũ trước khi ghi đè */
+      try{localStorage.setItem(GKEY+':backup:'+Date.now(),localStorage.getItem(GKEY)||'');}catch(e){}
+      /* Thay TOÀN BỘ bằng dữ liệu nhập (không merge state cũ), rồi chuẩn hoá trong bộ nhớ */
+      G=d; gNormalize();
+      saveAll();          /* lưu atomically bản đã nhập */
+      gRenderMap();renderParent();
+      toast('✅ Đã nhập tiến độ.');
+    }catch(e){toast('Không đọc được file.');}
+    finally{input.value='';}   /* cho phép nhập lại cùng file nếu cần */
+  };
+  r.readAsText(f);
+}
+
+/* =====================================================================
+   13. FAIR-PLAY PAUSE (tạm dừng khi rời máy) + đếm phút học
+   ===================================================================== */
+document.addEventListener('visibilitychange',()=>{const ov=document.getElementById('gPauseOverlay');if(document.hidden&&GS&&!GS.answered){if(ov)ov.classList.add('open');}else if(ov)ov.classList.remove('open');});
+['pointerdown','keydown','touchstart'].forEach(t=>document.addEventListener(t,()=>{const ov=document.getElementById('gPauseOverlay');if(ov&&ov.classList.contains('open')&&!document.hidden)ov.classList.remove('open');},{passive:true}));
+/* (đếm phút học: xem startTimeTracker() ở mục 13b — chạy sau khi vào app, không đếm khi còn ở cổng đăng nhập) */
+
+/* #17: bàn phím cho thẻ chạm (.tok): tự gắn role=button + tabindex; Enter/Space = click */
+(function a11yTokens(){
+  const upgrade=root=>root.querySelectorAll('.tok:not([tabindex])').forEach(t=>{t.setAttribute('role','button');t.setAttribute('tabindex','0');});
+  const mo=new MutationObserver(ms=>ms.forEach(m=>m.addedNodes.forEach(n=>{if(n.nodeType===1)upgrade(n);})));
+  mo.observe(document.body,{childList:true,subtree:true});upgrade(document);
+  document.addEventListener('keydown',e=>{
+    if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('tok')){e.preventDefault();e.target.click();}
+  });
+})();
+/* back-to-top */
+window.addEventListener('scroll',()=>{const b=document.getElementById('backTopBtn');if(!b)return;const modal=document.getElementById('gModal').classList.contains('open')||document.getElementById('pcOverlay').classList.contains('open');b.style.display=(!modal&&window.scrollY>400)?'flex':'none';},{passive:true});
+
+/* =====================================================================
+   13b. ĐĂNG NHẬP + ĐỒNG BỘ SUPABASE + THI ĐUA (dùng chung với toan3.html)
+   - Cùng project Supabase; TÀI KHOẢN dùng chung bảng toan3_profiles
+     (duyệt 1 lần → vào được cả Toán lẫn Tiếng Việt).
+   - TIẾN TRÌNH lưu bảng riêng: tv3_progress (xem supabase_tv3.sql).
+   - Cục bộ: mọi thứ vẫn lưu localStorage (offline). Supabase chỉ đồng bộ
+     phần tổng hợp (sao, XP, kĩ năng, phút học, số bản nháp) để xem thi đua.
+   - KHÔNG gửi nội dung bài viết của con lên máy chủ.
+   ===================================================================== */
+const AUTH_KEY='tv3_auth';
+const AUTH_SALT='vuon-toan-3::';           /* cùng salt với toan3 → tài khoản dự phòng dùng chung */
+const ACCOUNTS=[
+  {u:'ba',  h:'7d439b93488ce2f8e50295a4f68879e72acd9a779c065dc458cfa87e35911cb8'}, /* bavui@2026 */
+  {u:'con', h:'92196da7e6240047b6cb22f49843532fff655a78c685d566b6975299edd7fc43'}  /* conhoc@2026 */
+];
+async function hashPw(pw){const data=new TextEncoder().encode(AUTH_SALT+pw);const buf=await crypto.subtle.digest('SHA-256',data);return [...new Uint8Array(buf)].map(b=>b.toString(16).padStart(2,'0')).join('');}
+const SUPA_URL='https://wbcszbyhsvhrkyyvkzfc.supabase.co';
+const SUPA_ANON='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndiY3N6Ynloc3Zocmt5eXZremZjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk4OTA1MDcsImV4cCI6MjEwNTQ2NjUwN30.K0uYmd7HjjQTMSjipkTQdxnrzuE0CCby2GeEX872l8I';
+const PROFILE_TABLE='toan3_profiles';     /* dùng chung tài khoản với Toán */
+const PROGRESS_TABLE='tv3_progress';      /* tiến trình riêng của Tiếng Việt */
+let supa=null, AUTH_ME=null, authMode='login';
+function supaReady(){return !!(SUPA_ANON&&window.supabase&&window.supabase.createClient);}
+if(supaReady()){try{supa=window.supabase.createClient(SUPA_URL,SUPA_ANON);}catch(e){supa=null;}}
+
+function authShowGate(show){const g=document.getElementById('authGate');if(g)g.classList.toggle('hidden',!show);document.body.classList.toggle('locked',show);if(show){const u=document.getElementById('authUser');if(u)setTimeout(()=>u.focus(),50);}}
+function authRenderChip(who){const c=document.getElementById('acctChip');if(!c)return;if(who){c.style.display='flex';const n=document.getElementById('acctName');if(n)n.textContent=who;}else c.style.display='none';}
+function authMsg(kind,text){const err=document.getElementById('authErr'),ok=document.getElementById('authOk');if(err){err.style.display=kind==='err'?'block':'none';if(kind==='err')err.textContent=text;}if(ok){ok.style.display=kind==='ok'?'block':'none';if(kind==='ok')ok.innerHTML=text;}}
+function enterApp(name){authShowGate(false);authRenderChip(name);maybeOnboard();if(AUTH_ME)progressLoad();startTimeTracker();}
+function setAuthMode(m){
+  authMode=m;const isReg=(m==='register');
+  document.getElementById('authTitle').textContent=isReg?'Đăng ký tài khoản':'Vườn Tiếng Việt Phiêu Lưu';
+  document.getElementById('authSub').textContent=isReg?'Tạo tài khoản mới (cần admin duyệt)':'Đăng nhập để cùng con học nhé';
+  document.getElementById('nameField').style.display=isReg?'block':'none';
+  document.getElementById('authSubmitBtn').textContent=isReg?'Đăng ký':'Đăng nhập';
+  document.getElementById('toggleText').textContent=isReg?'Đã có tài khoản?':'Chưa có tài khoản?';
+  document.getElementById('authToggle').textContent=isReg?'Đăng nhập':'Đăng ký';
+  document.getElementById('rememberRow').style.display=isReg?'none':'flex';
+  authMsg('none');
+}
+async function authSubmit(e){if(e)e.preventDefault();if(supaReady())return authSubmitSupabase();return authLoginSoft();}
+async function authSubmitSupabase(){
+  const email=(document.getElementById('authUser').value||'').trim();
+  const pass=document.getElementById('authPass').value||'';
+  const name=(document.getElementById('authName').value||'').trim();
+  const btn=document.getElementById('authSubmitBtn');
+  if(!email||!pass){authMsg('err','Vui lòng nhập email và mật khẩu.');return;}
+  btn.disabled=true;
+  try{
+    if(authMode==='register'){
+      const {error}=await supa.auth.signUp({email,password:pass,options:{data:{full_name:name}}});
+      if(error){authMsg('err','Không đăng ký được: '+error.message);return;}
+      document.getElementById('authPass').value='';setAuthMode('login');
+      authMsg('ok','✅ Đăng ký thành công! Tài khoản đang <b>chờ admin duyệt</b>. Khi được duyệt, hãy đăng nhập nhé.');
+    }else{
+      const {data,error}=await supa.auth.signInWithPassword({email,password:pass});
+      if(error){const m=(error.message||'').toLowerCase();authMsg('err',(m.includes('confirm'))?'Email chưa được xác nhận. Nhờ admin tắt "Confirm email" trong Supabase.':'Sai email hoặc mật khẩu.');return;}
+      const {data:prof,error:pe}=await supa.from(PROFILE_TABLE).select('approved,full_name').eq('id',data.user.id).single();
+      if(pe||!prof||!prof.approved){await supa.auth.signOut();authMsg('err','Tài khoản đang chờ admin duyệt 🕒');return;}
+      document.getElementById('authPass').value='';
+      AUTH_ME={id:data.user.id,email:data.user.email,name:(prof.full_name||data.user.email)};
+      enterApp(AUTH_ME.name);
+    }
+  }catch(ex){authMsg('err','Lỗi kết nối. Kiểm tra mạng rồi thử lại.');}
+  finally{btn.disabled=false;}
+}
+function softUser(){try{return JSON.parse(localStorage.getItem(AUTH_KEY)||sessionStorage.getItem(AUTH_KEY)||'null');}catch(e){return null;}}
+async function authLoginSoft(){
+  const u=(document.getElementById('authUser').value||'').trim().toLowerCase();
+  const p=document.getElementById('authPass').value||'';
+  const remember=document.getElementById('authRemember').checked;
+  let h='';try{h=await hashPw(p);}catch(ex){h='';}
+  const acc=ACCOUNTS.find(a=>a.u===u);
+  if(acc&&h&&acc.h===h){try{(remember?localStorage:sessionStorage).setItem(AUTH_KEY,JSON.stringify({u:acc.u,t:Date.now()}));}catch(ex){}document.getElementById('authPass').value='';enterApp(acc.u);}
+  else{authMsg('err','Sai tên đăng nhập hoặc mật khẩu 😿');document.getElementById('authPass').value='';}
+}
+async function authLogout(){
+  try{if(supa)await supa.auth.signOut();}catch(e){}
+  try{localStorage.removeItem(AUTH_KEY);sessionStorage.removeItem(AUTH_KEY);}catch(e){}
+  try{TTS.stop();}catch(e){}
+  AUTH_ME=null;authRenderChip(null);authShowGate(true);
+}
+/* Onboarding + mắt dịu */
+const INTRO_KEY='tv3_seen_intro';
+function maybeOnboard(){try{if(!localStorage.getItem(INTRO_KEY))document.getElementById('introOverlay').classList.add('open');}catch(e){}}
+function closeOnboard(){const o=document.getElementById('introOverlay');if(o)o.classList.remove('open');try{localStorage.setItem(INTRO_KEY,'1');}catch(e){}}
+function warmOn(){try{return localStorage.getItem('tv3_warm')==='1';}catch(e){return false;}}
+function applyWarm(){document.body.classList.toggle('warm',warmOn());const b=document.getElementById('warmBtn');if(b)b.textContent=warmOn()?'☀️':'🌙';}
+function toggleWarm(){try{localStorage.setItem('tv3_warm',warmOn()?'0':'1');}catch(e){}applyWarm();}
+
+/* ---- Đồng bộ tiến trình (chỉ phần tổng hợp; không gửi văn bản bài viết) ---- */
+let _syncT=null,_timeTracker=null;
+function progressSyncSoon(){if(!supa||!AUTH_ME)return;clearTimeout(_syncT);_syncT=setTimeout(progressSync,4000);}
+function skillSummary(){
+  /* rút gọn: {skillId:{a,c,i,st}} — attempts / correct / independent / state */
+  const out={};Object.entries(G.skills||{}).forEach(([id,s])=>{out[id]={a:s.attempts||0,c:s.correct||0,i:s.independent||0,st:s.state||'new'};});return out;
+}
+function autoStats(){
+  const ents=Object.entries(G.skills||{}).filter(([id])=>id!=='C10_VIET');
+  return {attempted:ents.reduce((a,[,s])=>a+(s.attempts||0),0),correct:ents.reduce((a,[,s])=>a+(s.correct||0),0)};
+}
+async function progressSync(){
+  if(!supa||!AUTH_ME)return;
+  const st=autoStats();
+  const row={id:AUTH_ME.id,full_name:AUTH_ME.name||AUTH_ME.email,
+    stars:G.stars||{},best:G.best||{},unlocked:G.unlocked||1,streak:G.streak||0,
+    last_day:G.lastDay||null,total_stars:gTotalStars(),
+    total_minutes:G.totalMin||0,daily:G.mins||{},
+    ex_attempted:st.attempted,ex_correct:st.correct,
+    xp:G.xp||0,xu:G.xu||0,
+    skills:skillSummary(),writing_count:(G.writings||[]).length,
+    updated_at:new Date().toISOString()};
+  try{await supa.from(PROGRESS_TABLE).upsert(row);}catch(e){}
+}
+async function progressLoad(){
+  if(!supa||!AUTH_ME)return;
+  try{
+    const {data}=await supa.from(PROGRESS_TABLE).select('*').eq('id',AUTH_ME.id).maybeSingle();
+    if(data){
+      /* Hợp nhất THẬN TRỌNG: lấy giá trị lớn hơn giữa máy và server để không mất tiến độ ở máy nào */
+      const mx=(a,b)=>Math.max(+a||0,+b||0);
+      const mergeMap=(a,b)=>{const o=Object.assign({},a||{});Object.entries(b||{}).forEach(([k,v])=>{o[k]=mx(o[k],v);});return o;};
+      G.stars=mergeMap(G.stars,data.stars);G.best=mergeMap(G.best,data.best);
+      G.unlocked=mx(G.unlocked,data.unlocked)||1;G.streak=mx(G.streak,data.streak);
+      if(!G.lastDay||(data.last_day&&data.last_day>G.lastDay))G.lastDay=data.last_day||G.lastDay;
+      G.mins=mergeMap(G.mins,data.daily);G.totalMin=mx(G.totalMin,data.total_minutes);
+      G.xp=mx(G.xp,data.xp);G.xu=mx(G.xu,data.xu);
+      /* kĩ năng: chỉ bổ sung skill chưa có ở máy (không ghi đè chi tiết local) */
+      if(data.skills&&typeof data.skills==='object'){Object.entries(data.skills).forEach(([id,s])=>{if(!G.skills[id]&&SKILL_BY_ID[id])G.skills[id]={attempts:s.a||0,correct:s.c||0,wrong:Math.max(0,(s.a||0)-(s.c||0)),hints:0,independent:s.i||0,ctxSeen:{},lastSeen:null,state:s.st||'learning'};});}
+      try{localStorage.setItem(GKEY,JSON.stringify(G));}catch(e){}
+      gRenderMap();progressSync();
+    }else{progressSync();}
+  }catch(e){}
+}
+function startTimeTracker(){
+  if(_timeTracker)return;
+  _timeTracker=setInterval(()=>{
+    if(document.visibilityState!=='visible')return;
+    if(document.body.classList.contains('locked'))return;
+    const t=new Date().toISOString().slice(0,10);
+    G.mins=G.mins||{};G.mins[t]=(G.mins[t]||0)+1;G.totalMin=(G.totalMin||0)+1;
+    const goal=G.goal||15;
+    if(G.mins[t]>=goal&&G.goalDay!==t){G.goalDay=t;celebrateGoal();}
+    saveAll();
+  },60000);
+}
+function celebrateGoal(){if(!G.mute){try{SFX.win();}catch(e){}}toast('🎯 Đạt mục tiêu học hôm nay rồi! Con giỏi quá, ba tự hào lắm! 🎉');try{gSay('Con đạt mục tiêu học hôm nay rồi, giỏi quá!');}catch(e){}}
+function changeGoal(d){G.goal=Math.max(5,Math.min(120,(G.goal||15)+d));saveAll();const me=document.getElementById('dashMe');if(me)me.innerHTML=dashMeSection();}
+
+/* ---- Bảng thi đua ---- */
+async function openDash(){
+  const ov=document.getElementById('dashOv'),body=document.getElementById('dashBody');if(!ov||!body)return;
+  ov.classList.add('open');
+  body.innerHTML='<div style="text-align:center;padding:22px;color:var(--muted)">Đang tải bảng thi đua… ⏳</div>';
+  if(!supa||!AUTH_ME){body.innerHTML=`<div id="dashMe">${dashMeSection()}</div><div style="padding:10px;color:#78909c;font-size:13.5px">Bảng xếp hạng cần đăng nhập tài khoản Supabase. Phần “của con” ở trên vẫn hoạt động offline.</div>`;return;}
+  try{await progressSync();}catch(e){}
+  try{const {data,error}=await supa.from(PROGRESS_TABLE).select('*');if(error){body.innerHTML='<div style="padding:16px;color:#c62828">Không tải được dữ liệu.</div>';return;}dashRender(data||[]);}
+  catch(e){body.innerHTML='<div style="padding:16px;color:#c62828">Lỗi kết nối.</div>';}
+}
+function closeDash(){const o=document.getElementById('dashOv');if(o)o.classList.remove('open');}
+function dashFmtMin(m){m=+m||0;return m>=60?(Math.floor(m/60)+'h'+(m%60?(' '+(m%60)+'p'):'')):(m+'p');}
+function svgGoalRing(done,goal){
+  const r=52,c=2*Math.PI*r,pct=Math.max(0,Math.min(1,goal>0?done/goal:0)),off=(c*(1-pct)).toFixed(1);const col=pct>=1?'#2e7d32':'#00838f';
+  return `<svg viewBox="0 0 130 130" width="120" height="120"><circle cx="65" cy="65" r="${r}" fill="none" stroke="#e6ecf3" stroke-width="12"/>
+    <circle cx="65" cy="65" r="${r}" fill="none" stroke="${col}" stroke-width="12" stroke-linecap="round" stroke-dasharray="${c.toFixed(1)}" stroke-dashoffset="${off}" transform="rotate(-90 65 65)"><animate attributeName="stroke-dashoffset" from="${c.toFixed(1)}" to="${off}" dur="1s" fill="freeze"/></circle>
+    <text x="65" y="61" text-anchor="middle" font-size="28" font-weight="800" fill="${col}" font-family="Baloo 2,sans-serif">${done}</text>
+    <text x="65" y="82" text-anchor="middle" font-size="12" fill="#5b7086">/ ${goal} phút</text>${pct>=1?'<text x="65" y="106" text-anchor="middle" font-size="18">🎉</text>':''}</svg>`;
+}
+function svg7day(mins,goal){
+  const labels=['CN','T2','T3','T4','T5','T6','T7'];const days=[];for(let i=6;i>=0;i--)days.push(new Date(Date.now()-i*864e5));
+  const vals=days.map(d=>(mins||{})[d.toISOString().slice(0,10)]||0);
+  const W=320,H=126,pad=20,bw=26,maxV=Math.max(goal||0,...vals,10),gap=(W-pad*2-bw*7)/6;let bars='',lbls='',gline='';
+  vals.forEach((v,i)=>{const x=pad+i*(bw+gap),bh=Math.round(v/maxV*(H-42)),y=H-26-bh;const col=(goal>0&&v>=goal)?'#43a047':'#26a69a';
+    bars+=`<rect x="${x}" y="${y}" width="${bw}" height="${bh}" rx="4" fill="${col}"/>`;
+    if(v>0)lbls+=`<text x="${x+bw/2}" y="${y-4}" text-anchor="middle" font-size="10.5" font-weight="700" fill="#37474f">${v}</text>`;
+    lbls+=`<text x="${x+bw/2}" y="${H-9}" text-anchor="middle" font-size="10.5" fill="#5b7086">${labels[days[i].getDay()]}</text>`;});
+  if(goal>0){const gy=H-26-Math.round(goal/maxV*(H-42));gline=`<line x1="${pad}" y1="${gy}" x2="${W-pad}" y2="${gy}" stroke="#ef6c00" stroke-width="2" stroke-dasharray="5 4"/>`;}
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%" style="max-width:${W}px">${gline}${bars}${lbls}</svg>`;
+}
+function dashMeSection(){
+  const today=new Date().toISOString().slice(0,10);const done=(G.mins||{})[today]||0,goal=G.goal||15;const hit=goal>0&&done>=goal;
+  return `<div class="dash-me"><div class="dash-me-ring">${svgGoalRing(done,goal)}
+    <div class="goal-ctl">🎯 Mục tiêu/ngày: <button class="acct-btn" onclick="changeGoal(-5)">−</button><b style="min-width:36px;display:inline-block;text-align:center">${goal}p</b><button class="acct-btn" onclick="changeGoal(5)">+</button></div>
+    <div style="font-size:12.5px;font-weight:700;color:${hit?'#2e7d32':'#5b7086'};margin-top:2px">${hit?'✅ Đạt mục tiêu hôm nay!':'Cố lên, sắp đạt rồi! 💪'}</div></div>
+    <div class="dash-me-chart"><div style="font-weight:800;color:#00695c;margin-bottom:2px">📊 7 ngày gần đây (phút học)</div>${svg7day(G.mins,goal)}</div></div>`;
+}
+function dashRender(raw){
+  const today=new Date().toISOString().slice(0,10);
+  const rows=(raw||[]).map(r=>{const stars=r.stars||{};const done=Object.keys(stars).filter(k=>stars[k]>0).length;const totalStars=Object.values(stars).reduce((a,b)=>a+(+b||0),0);
+    const acc=r.ex_attempted?Math.round((r.ex_correct||0)/r.ex_attempted*100):null;
+    return {name:r.full_name||'(chưa đặt tên)',id:r.id,totalStars,done,week:r.unlocked||1,streak:r.streak||0,totalMin:r.total_minutes||0,todayMin:(r.daily||{})[today]||0,ex:r.ex_correct||0,att:r.ex_attempted||0,acc,writing:r.writing_count||0};})
+    .sort((a,b)=>b.totalStars-a.totalStars||b.ex-a.ex||b.done-a.done||b.totalMin-a.totalMin);
+  const medal=i=>i===0?'🥇':i===1?'🥈':i===2?'🥉':(i+1)+'.';
+  let html=`<div id="dashMe">${dashMeSection()}</div>`;
+  if(!rows.length){html+='<div style="padding:14px;color:var(--muted)">Chưa có bé nào trên bảng. Vào chơi vài trạm để lên bảng nhé! 🚀</div>';document.getElementById('dashBody').innerHTML=html;return;}
+  html+=`<div style="font-weight:800;color:#5e35b1;margin:6px 0 4px">🏅 Bảng xếp hạng</div>
+    <div style="overflow-x:auto"><table class="dash-tb"><thead><tr><th>#</th><th>Bé</th><th>⭐</th><th>🏅 Trạm</th><th>✏️ Đúng</th><th>Tuần</th><th>🔥</th><th>✍️</th><th>⏱️ Hôm nay</th><th>Tổng giờ</th></tr></thead><tbody>`;
+  rows.forEach((r,i)=>{const me=(AUTH_ME&&r.id===AUTH_ME.id)?' class="me"':'';
+    html+=`<tr${me}><td>${medal(i)}</td><td style="text-align:left">${esc(r.name)}</td><td><b>${r.totalStars}</b></td><td>${r.done}/35</td><td title="${r.ex}/${r.att} câu tự chấm">${r.ex}${r.acc!=null?` <span style="color:#78909c;font-size:12px">(${r.acc}%)</span>`:''}</td><td>${r.week}</td><td>${r.streak}</td><td>${r.writing}</td><td>${dashFmtMin(r.todayMin)}</td><td>${dashFmtMin(r.totalMin)}</td></tr>`;});
+  html+=`</tbody></table></div><div style="font-size:11.5px;color:#90a4ae;margin-top:6px">✏️ Đúng = câu tự chấm (không gồm bài viết). ✍️ = số bản nháp viết đã lưu trên máy (chỉ đếm, không gửi nội dung).</div>`;
+  document.getElementById('dashBody').innerHTML=html;
+}
+/* ---- Khởi động cổng đăng nhập ---- */
+async function authBoot(){
+  applyWarm();
+  const f=document.getElementById('authForm');if(f)f.addEventListener('submit',authSubmit);
+  const tg=document.getElementById('authToggle');if(tg)tg.addEventListener('click',e=>{e.preventDefault();setAuthMode(authMode==='login'?'register':'login');});
+  if(supaReady()){
+    document.getElementById('authToggleRow').style.display='block';
+    document.getElementById('userLabel').textContent='Email';
+    document.getElementById('authUser').setAttribute('type','email');
+    document.getElementById('authUser').setAttribute('placeholder','email@vidu.com');
+    document.getElementById('authNote').textContent='Tài khoản dùng chung với Vườn Toán. Tài khoản mới cần admin duyệt.';
+    setAuthMode('login');
+    try{
+      const {data}=await supa.auth.getSession();
+      if(data&&data.session){
+        const {data:prof}=await supa.from(PROFILE_TABLE).select('approved,full_name').eq('id',data.session.user.id).single();
+        if(prof&&prof.approved){AUTH_ME={id:data.session.user.id,email:data.session.user.email,name:(prof.full_name||data.session.user.email)};enterApp(AUTH_ME.name);return;}
+        await supa.auth.signOut();
+      }
+    }catch(e){}
+    authShowGate(true);authRenderChip(null);
+  }else{
+    document.getElementById('authToggleRow').style.display='none';
+    document.getElementById('userLabel').textContent='Tên đăng nhập';
+    document.getElementById('authUser').setAttribute('placeholder','ví dụ: ba');
+    document.getElementById('authNote').textContent='Chỉ tài khoản được cấp mới vào được (chế độ dự phòng, không có mạng).';
+    if(!(window.crypto&&crypto.subtle)){authShowGate(false);authRenderChip(null);return;}
+    const s=softUser();if(s){enterApp(s.u);}else{authShowGate(true);authRenderChip(null);}
+  }
+}
+
+/* =====================================================================
+   14. BOOT
+   ===================================================================== */
+function boot(){
+  gLoad();
+  try{ buildPracticeIndex(); }catch(e){ console.error('practice build',e); }
+  try{ gRenderMap(); }catch(e){ console.error('map',e); }
+  gRenderTop();
+  /* #16: ghi rõ tình trạng giọng đọc sau khi trình duyệt nạp danh sách giọng */
+  const updTts=()=>{const n=document.getElementById('ttsNote');if(!n)return;
+    n.textContent=TTS.hasLocalVi()?'🔊 Đọc bài: có giọng Việt trên máy (dùng được offline)':TTS.hasVi()?'🔊 Đọc bài: có giọng Việt (có thể cần mạng)':'🔇 Đọc bài: máy này chưa có giọng tiếng Việt';};
+  setTimeout(updTts,600);try{speechSynthesis.addEventListener('voiceschanged',updTts);}catch(e){}
+  authBoot();
+}
+boot();
+</script>
+</body>
+</html>
