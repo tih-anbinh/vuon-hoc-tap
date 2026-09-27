@@ -369,6 +369,9 @@ body.mode-game #tab-game{display:block}
 .carry-dot:empty::before{content:'•';color:#ef9a9a;font-size:22px}
 .carry-dot.on{background:#ffebee;border-style:solid;border-color:#e53935}
 .carry-dot.on:empty::before{content:''}
+.borrow-row .carry-dot{color:#6a1b9a;border-color:#ce93d8;background:#faf5ff}
+.borrow-row .carry-dot:empty::before{content:'↙';color:#ab47bc;font-size:17px}
+.borrow-row .carry-dot.on{background:#f3e5f5;border-color:#7b1fa2}
 .col-hint{margin-top:9px;font-size:12px;color:#5b7086;text-align:center;max-width:320px;line-height:1.45}
 /* Ô điền x trong Tìm x đặt tính */
 .col-box-x{width:42px;height:46px;font-size:26px;font-weight:900;text-align:center;border:2.5px solid #6a1b9a;border-radius:9px;color:#6a1b9a;background:#f3e5f5;font-family:inherit;padding:0}
@@ -1967,7 +1970,7 @@ GEN.roman = function(){
 
 /* --- 2.1 Bảng nhân chia --- */
 GEN.bangnhanchia = function(){
-  const a=R(2,9), b=R(2,10), p=a*b, t=R(1,4);
+  const a=R(2,9), b=R(2,9), p=a*b, t=R(1,4);
   if(t===1) return {q:`<b>${a} × ${b} = ?</b>`, ans:String(p), hint:`${a} × ${b} là ${a} được lấy ${b} lần.`, sol:`${a} × ${b} = <b>${p}</b>`, _a:a, _b:b, _p:p, _mul:true};
   if(t===2) return {q:`<b>${p} : ${a} = ?</b>`, ans:String(b), hint:`Nghĩ ngược: ${a} nhân mấy bằng ${p}?`, sol:`${p} : ${a} = <b>${b}</b> (vì ${a} × ${b} = ${p})`, _a:a, _b:b, _p:p, _mul:false};
   if(t===3) return {q:`<b>${a} × ? = ${p}</b>`, ans:String(b), hint:`Lấy tích chia cho thừa số đã biết.`, sol:`${p} : ${a} = <b>${b}</b>`, _a:a, _b:b, _p:p, _mul:true};
@@ -2090,7 +2093,7 @@ GEN.timx = function(){
       hint:'Số trừ = Số bị trừ − Hiệu.', sol:`x = ${s} − ${b} = <b>${x}</b>`};}
   if(t===5){const x=R(2,9), a=R(2,9); return {q:`Tìm <b>x</b>:&nbsp; x × ${a} = ${x*a}`, ans:String(x),
     hint:'Thừa số = Tích : Thừa số kia.', sol:`x = ${x*a} : ${a} = <b>${x}</b>`};}
-  if(t===6){const a=R(2,9), b=R(2,50); return {q:`Tìm <b>x</b>:&nbsp; x : ${a} = ${b}`, ans:String(a*b),
+  if(t===6){const a=R(2,9), b=R(2,9); return {q:`Tìm <b>x</b>:&nbsp; x : ${a} = ${b}`, ans:String(a*b),
     hint:'Số bị chia = Thương × Số chia.', sol:`x = ${b} × ${a} = <b>${a*b}</b>`};}
   const x=R(2,9), b=R(2,9); return {q:`Tìm <b>x</b>:&nbsp; ${x*b} : x = ${b}`, ans:String(x),
     hint:'Số chia = Số bị chia : Thương.', sol:`x = ${x*b} : ${b} = <b>${x}</b>`};
@@ -2662,24 +2665,24 @@ function _quizColRow(str, width, opChar, makeInputs, inputClass){
   }
   return `<div class="col-row">${cells}</div>`;
 }
-function _quizCarryRow(width){
+function _quizCarryRow(width, op){
   let cells=`<span class="col-op"></span>`;
   for(let i=0;i<width;i++){
     if(i===width-1) cells+=`<span class="carry-cell empty"></span>`;
-    else cells+=`<button class="carry-dot" type="button" onclick="this.textContent=(+this.textContent+1)%9||'';this.classList.toggle('on',!!this.textContent)" title="Ghi số nhớ"></button>`;
+    else cells+=`<button class="carry-dot" type="button" onclick="this.textContent=(+this.textContent+1)%9||'';this.classList.toggle('on',!!this.textContent)" title="${op==='−'?'Mượn từ hàng bên trái':'Ghi số nhớ'}"></button>`;
   }
-  return `<div class="col-row carry-row">${cells}</div>`;
+  return `<div class="col-row carry-row ${op==='−'?'borrow-row':''}">${cells}</div>`;
 }
 function buildColHtml(o){
   const as=String(o.a), bs=String(o.b), ns=String(o.ans);
   const width=Math.max(as.length, bs.length, ns.length);
   return `<div class="col-sum">
-    ${_quizCarryRow(width)}
+    ${_quizCarryRow(width, o.op)}
     ${_quizColRow(as, width, '')}
     ${_quizColRow(bs, width, o.op)}
     <div class="col-line"></div>
     ${_quizColRow(ns, width, '', true, 'col-box')}
-    <div class="col-hint">💡 Tính từ <b>hàng đơn vị</b> (bên phải) sang trái. Bấm chấm 🔴 để ghi số nhớ.</div>
+    <div class="col-hint">💡 Tính từ <b>hàng đơn vị</b> (bên phải) sang trái. ${o.op==='−'?'Nếu không trừ được, bấm ô ↙ để nhắc mình <b>mượn 1</b> từ hàng bên trái.':'Bấm chấm 🔴 để ghi số nhớ sang hàng bên trái.'}</div>
   </div>`;
 }
 /* Tìm x dạng cột: o.xRow=0 → x ở hàng trên, o.xRow=1 → x ở hàng dưới, kết quả đã biết */
@@ -2698,7 +2701,7 @@ function buildColTimxHtml(o){
     : _quizColRow(bs, width, o.op);
   return `<div class="col-sum">
     <div class="col-x-label">${o.timxLabel||'x = ?'}</div>
-    ${_quizCarryRow(width)}
+    ${_quizCarryRow(width, o.op)}
     ${rowTop}
     ${rowBot}
     <div class="col-line"></div>
@@ -3127,8 +3130,9 @@ function gBuildQuestions(w){
   while(qs.length<N && guard<N*30){ guard++;
     let q;
     /* 70% lấy từ review queue nếu có */
-    if(G.reviewQueue && G.reviewQueue.length>0 && Math.random()<0.7){
-      const rq=G.reviewQueue[Math.floor(Math.random()*G.reviewQueue.length)];
+    const allowedReview=(G.reviewQueue||[]).filter(gen=>cur.includes(gen)||pool.includes(gen));
+    if(allowedReview.length>0 && Math.random()<0.7){
+      const rq=pick(allowedReview);
       try{ q=gMakeQ(rq); q._gen=rq; } catch(e){ const gen=pick(cur); q=gMakeQ(gen); q._gen=gen; }
     } else {
       const useCur = qs.length<Math.ceil(N*0.65) || pool.length===0;
@@ -3141,7 +3145,9 @@ function gBuildQuestions(w){
   return qs;
 }
 function gBuildRealmQuestions(realm){
-  const choices=realm.gens.filter(gen=>typeof GEN[gen]==='function');
+  /* Bốn tuần đầu chỉ luyện nội dung đã học; đặc biệt không đưa phép nhân/chia nhiều chữ số vào Cầu Nhân chia. */
+  const earlyAllowed=new Set(WEEKS.slice(0,Math.min(G.unlocked,4)).flatMap(w=>w.gens));
+  const choices=realm.gens.filter(gen=>typeof GEN[gen]==='function' && (G.unlocked>4 || earlyAllowed.has(gen)));
   const N=6, qs=[]; let guard=0;
   while(qs.length<N && guard<N*40){
     guard++;
@@ -3273,7 +3279,8 @@ function gColumnQ(gen){
   }else{ const d=R(2,9); a=R(1000, Math.floor(99999/d)); b=d; op='×'; ans=a*b; }
   return {kind:'column', a, b, op, ans,
     q:`📝 Đặt tính rồi tính — điền kết quả vào <b>từng ô</b> (đơn vị bên phải):`,
-    sol:`${fmt(a)} ${op} ${fmt(b)} = <b>${fmt(ans)}</b>.`};
+    sol:`${fmt(a)} ${op} ${fmt(b)} = <b>${fmt(ans)}</b>.`,
+    workHint:op==='−'?'Nếu hàng trên bé hơn hàng dưới, mượn 1 ở hàng bên trái. Ô ↙ chỉ để nhắc con đã mượn, không phải số để trừ thêm.':'Nếu tổng ở một hàng từ 10 trở lên, ghi số nhớ ở ô đỏ phía trên.'};
 }
 function gColRow(str, width, opChar, inputs){
   let cells=`<span class="col-op">${opChar||''}</span>`;
@@ -3283,26 +3290,26 @@ function gColRow(str, width, opChar, inputs){
   else { for(const ch of str) cells+=`<span class="col-cell">${ch}</span>`; }
   return `<div class="col-row">${cells}</div>`;
 }
-function gCarryRow(width){
+function gCarryRow(width, op){
   // hàng "chấm nhớ": mỗi cột (trừ hàng đơn vị ngoài cùng phải) có 1 ô bấm để ghi số nhớ
   let cells=`<span class="col-op"></span>`;
   for(let i=0;i<width;i++){
     const isUnits=(i===width-1);   // cột ngoài cùng bên phải = hàng đơn vị, không có nhớ sang
     if(isUnits) cells+=`<span class="carry-cell empty"></span>`;
-    else cells+=`<button class="carry-dot" type="button" data-c="${i}" onclick="gCarryTap(${i})" title="Bấm để ghi số nhớ"></button>`;
+    else cells+=`<button class="carry-dot" type="button" data-c="${i}" onclick="gCarryTap(${i})" title="${op==='−'?'Mượn từ hàng bên trái':'Ghi số nhớ'}"></button>`;
   }
-  return `<div class="col-row carry-row">${cells}</div>`;
+  return `<div class="col-row carry-row ${op==='−'?'borrow-row':''}">${cells}</div>`;
 }
 function gColumnBody(q){
   const as=String(q.a), bs=String(q.b), ns=String(q.ans);
   const width=Math.max(as.length, bs.length, ns.length);
   return `<div class="col-sum">
-    ${gCarryRow(width)}
+    ${gCarryRow(width, q.op)}
     ${gColRow(as, width, '')}
     ${gColRow(bs, width, q.op)}
     <div class="col-line"></div>
     ${gColRow(ns, width, '', true)}
-    <div class="col-hint">💡 Tính từ <b>hàng đơn vị</b> (bên phải) trước. Nếu có nhớ, bấm chấm 🔴 phía trên để ghi số nhớ nhé!</div>
+    <div class="col-hint">💡 Tính từ <b>hàng đơn vị</b> (bên phải) trước. ${q.workHint||''}</div>
   </div>`;
 }
 /* Chấm nhớ: chưa ghi → rỗng; bấm lần 1 → "1"; bấm tiếp → "2"; ... → tối đa 8; rồi về rỗng */
@@ -3486,8 +3493,9 @@ function gStart(w){
   let wg=0;
   while(warmQs.length<3 && wg<60){ wg++;
     let q;
-    if(G.reviewQueue && G.reviewQueue.length>0 && Math.random()<0.7){
-      try{ q=gMakeQ(pick(G.reviewQueue)); }catch(e){ q=gMakeQ(pick(cur)); }
+    const allowedReview=(G.reviewQueue||[]).filter(gen=>cur.includes(gen));
+    if(allowedReview.length>0 && Math.random()<0.7){
+      try{ q=gMakeQ(pick(allowedReview)); }catch(e){ q=gMakeQ(pick(cur)); }
     } else { q=gMakeQ(pick(cur)); }
     if(warmQs.some(o=>qKey(o)===qKey(q))) continue;
     q._warmup=true; warmQs.push(q);
@@ -3514,13 +3522,14 @@ function gStartRealm(id){
   gRenderQ();
 }
 function gStartSkillPractice(gen){
-  const selected=gen?[gen]:gWeakSkills().slice(0,3).map(x=>x.gen),fallback=WEEKS[Math.max(0,G.unlocked-1)].gens,qs=gBuildSkillQuestions(selected.length?selected:fallback,3);
+  const earlyAllowed=new Set(WEEKS.slice(0,Math.min(G.unlocked,4)).flatMap(w=>w.gens));
+  const selected=(gen?[gen]:gWeakSkills().slice(0,3).map(x=>x.gen)).filter(x=>G.unlocked>4||earlyAllowed.has(x)),fallback=WEEKS[Math.max(0,G.unlocked-1)].gens,qs=gBuildSkillQuestions(selected.length?selected:fallback,3);
   if(qs.length<3){alert('Chưa tạo đủ câu mới. Con thử lại nhé.');return;}
   GS={w:G.unlocked,qs,i:0,correct:0,hearts:3,answered:false,picked:null,dndSel:null,countSel:new Set(),buildSeq:[],cmpSel:null,clockH:null,clockM:null,moneySel:[],numlineSel:null,dead:false,timer:null,combo:0,usedHint:false,wrongInSession:new Set(),hintStep:0,warmupCount:0,isBoss:false,isSkillPractice:true};
   document.getElementById('gModal').classList.add('open');gRenderQ();
 }
 function gDailyStart(){
-  const today=new Date().toISOString().slice(0,10),weak=gWeakSkills().slice(0,3).map(x=>x.gen),current=WEEKS[Math.max(0,G.unlocked-1)].gens,qs=gBuildSkillQuestions(weak.length?weak:current,5);
+  const today=new Date().toISOString().slice(0,10),earlyAllowed=new Set(WEEKS.slice(0,Math.min(G.unlocked,4)).flatMap(w=>w.gens)),weak=gWeakSkills().slice(0,3).map(x=>x.gen).filter(x=>G.unlocked>4||earlyAllowed.has(x)),current=WEEKS[Math.max(0,G.unlocked-1)].gens,qs=gBuildSkillQuestions(weak.length?weak:current,5);
   if(qs.length<5){alert('Chưa tạo đủ câu hôm nay. Con thử lại nhé.');return;}
   GS={w:G.unlocked,qs,i:0,correct:0,hearts:3,answered:false,picked:null,dndSel:null,countSel:new Set(),buildSeq:[],cmpSel:null,clockH:null,clockM:null,moneySel:[],numlineSel:null,dead:false,timer:null,combo:0,usedHint:false,wrongInSession:new Set(),hintStep:0,warmupCount:0,isBoss:false,isDaily:true,dailyDay:today};
   document.getElementById('gModal').classList.add('open');gRenderQ();
