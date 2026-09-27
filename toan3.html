@@ -273,6 +273,13 @@ body.mode-game #tab-game{display:block}
 /* modal */
 .gmodal{position:fixed;inset:0;background:rgba(13,71,161,.30);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);z-index:1000;display:none;align-items:center;justify-content:center;padding:12px}
 .gmodal.open{display:flex}
+.gp-overlay{position:fixed;inset:0;background:rgba(13,71,161,.55);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);z-index:1200;display:none;align-items:center;justify-content:center;padding:16px}
+.gp-overlay.open{display:flex}
+.gp-card{background:#fff;border-radius:20px;max-width:420px;width:100%;padding:26px 22px;text-align:center;box-shadow:0 18px 50px rgba(0,0,0,.35)}
+.gp-icon{font-size:52px;line-height:1;margin-bottom:8px}
+.gp-title{font-size:22px;font-weight:800;color:#1565c0;margin-bottom:6px}
+.gp-reason{font-size:16px;color:#37474f;margin-bottom:10px}
+.gp-hint{font-size:13px;color:#78909c}
 .gcard{background:#fff;border-radius:20px;max-width:640px;width:100%;max-height:94vh;max-height:94dvh;overflow:auto;-webkit-overflow-scrolling:touch;box-shadow:0 18px 50px rgba(0,0,0,.32);padding:14px 18px;position:relative}
 .gbar{height:14px;background:#e0e0e0;border-radius:10px;overflow:hidden}
 .gbar>i{display:block;height:100%;width:0;background:linear-gradient(90deg,#66bb6a,#43a047);border-radius:10px;transition:width .35s}
@@ -1631,6 +1638,14 @@ Một bài giải đầy đủ <b>luôn có 3 phần</b>:<br>
   <footer>🎮 Học mà chơi · 35 trạm bám sát SGK · Ôn tập xoay vòng · Hoạt động offline · Rev 3.0</footer>
 </div>
 <div class="gmodal" id="gModal"><div class="gcard" id="gCard"></div></div>
+<div class="gp-overlay" id="gPauseOverlay">
+  <div class="gp-card">
+    <div class="gp-icon">⏸️</div>
+    <div class="gp-title">Tạm dừng đếm giờ</div>
+    <div class="gp-reason">Ba chờ con quay lại nhé!</div>
+    <div class="gp-hint">Chạm màn hình hoặc bấm phím bất kỳ để tiếp tục.</div>
+  </div>
+</div>
 
 </main>
 </div>
@@ -3560,6 +3575,49 @@ function gDailyStart(){
   document.getElementById('gModal').classList.add('open');gRenderQ();
 }
 function gClearTimer(){ if(GS && GS.timer){ clearInterval(GS.timer); GS.timer=null; } }
+/* --- Đồng hồ thi đua "fair play": tạm dừng khi bé rời máy --- */
+const G_INACTIVITY_MS=30000; /* Không thao tác 30 giây thì tạm dừng đếm thời gian */
+function gPauseTiming(reason){
+  if(!GS || GS.answered) return;
+  if(GS.timingPaused) return;
+  GS.timingPaused=true; GS.timingPauseStarted=performance.now();
+  if(GS.flashRunning){
+    const now=performance.now();
+    GS.flashRemaining=Math.max(0, GS.flashRemaining-(now-GS.flashLastTick));
+    GS.flashLastTick=now;
+    if(GS.timer){ clearInterval(GS.timer); GS.timer=null; }
+  }
+  const ov=document.getElementById('gPauseOverlay');
+  if(ov){ ov.classList.add('open'); const r=ov.querySelector('.gp-reason'); if(r) r.textContent = reason || 'Đang tạm dừng vì con chưa thao tác…'; }
+}
+function gResumeTiming(){
+  if(!GS || GS.answered) return;
+  if(!GS.timingPaused) return;
+  if(document.hidden || !document.hasFocus()) return;
+  const now=performance.now();
+  GS.qPausedMs=(GS.qPausedMs||0)+(now-GS.timingPauseStarted);
+  GS.timingPaused=false; GS.timingPauseStarted=0;
+  const ov=document.getElementById('gPauseOverlay'); if(ov) ov.classList.remove('open');
+  if(GS.flashRunning && GS.flashRemaining>0){ GS.flashLastTick=performance.now(); gRunFlashInterval(); }
+}
+function gTimingActivity(){
+  if(!GS || GS.answered) return;
+  if(document.hidden || !document.hasFocus()) return;
+  if(GS.timingPaused) gResumeTiming();
+  if(GS.activityTimer) clearTimeout(GS.activityTimer);
+  GS.activityTimer=setTimeout(()=>gPauseTiming('Ba không thấy con thao tác — tạm dừng đếm giờ nhé!'), G_INACTIVITY_MS);
+}
+function gStopActivityWatch(){
+  if(GS && GS.activityTimer){ clearTimeout(GS.activityTimer); GS.activityTimer=null; }
+}
+/* Lắng nghe toàn cục 1 lần */
+document.addEventListener('visibilitychange',()=>{
+  if(document.hidden) gPauseTiming('Ba không thấy con trên màn hình — tạm dừng nhé!');
+});
+window.addEventListener('blur',()=>gPauseTiming('Con qua ứng dụng khác — tạm dừng nhé!'));
+['pointerdown','keydown','input','touchstart'].forEach(t=>{
+  document.addEventListener(t, gTimingActivity, {passive:true});
+});
 function gRenderQ(){
   gClearTimer();
   const q=GS.qs[GS.i], pct=Math.round(GS.i/GS.qs.length*100);
@@ -3642,6 +3700,11 @@ function gRenderQ(){
   GS.answered=false; GS.picked=null; GS.dndSel=null; GS.countSel=new Set();
   GS.buildSeq=[]; GS.cmpSel=null; GS.clockH=(q.kind==='clock'?q.curH:null); GS.clockM=(q.kind==='clock'?q.curM:null); GS.moneySel=[]; GS.numlineSel=null; GS.hintStep=0;
   GS.qStart=performance.now(); /* F3: response-time tracking */
+  GS.qPausedMs=0; GS.timingPaused=false; GS.timingPauseStarted=0;
+  GS.flashRunning=false; GS.flashRemaining=0; GS.flashTotal=0;
+  const povl=document.getElementById('gPauseOverlay'); if(povl) povl.classList.remove('open');
+  gStopActivityWatch();
+  gTimingActivity(); /* bắt đầu theo dõi hoạt động ngay khi render câu hỏi */
   const inp=document.getElementById('gInput');
   if(inp){ inp.focus(); inp.addEventListener('keydown',e=>{ if(e.key==='Enter'){ e.preventDefault(); gSubmit(); } }); }
   if(q.kind==='flash') gStartFlash(q.secs);
@@ -3711,12 +3774,22 @@ function gWireColumn(){
 }
 function gStartFlash(secs){
   const bar=document.getElementById('flashBar'); if(!bar) return;
-  const total=(secs||8)*1000, start=Date.now();
+  GS.flashTotal=(secs||8)*1000;
+  GS.flashRemaining=GS.flashTotal;
+  GS.flashLastTick=performance.now();
+  GS.flashRunning=true;
+  gRunFlashInterval();
+}
+function gRunFlashInterval(){
   gClearTimer();
+  const bar=document.getElementById('flashBar');
   GS.timer=setInterval(()=>{
-    const left=total-(Date.now()-start);
-    bar.style.width=Math.max(0,left/total*100)+'%';
-    if(left<=0){ gClearTimer(); gFlashTimeout(); }
+    if(!GS || GS.answered || GS.timingPaused){ return; }
+    const now=performance.now();
+    GS.flashRemaining=Math.max(0, GS.flashRemaining-(now-GS.flashLastTick));
+    GS.flashLastTick=now;
+    if(bar) bar.style.width=(GS.flashRemaining/GS.flashTotal*100)+'%';
+    if(GS.flashRemaining<=0){ gClearTimer(); GS.flashRunning=false; gFlashTimeout(); }
   },90);
 }
 function gFlashTimeout(){
@@ -3725,7 +3798,7 @@ function gFlashTimeout(){
   document.querySelectorAll('.gopt').forEach(b=>{ const j=+b.dataset.j; if(j===q.ansIdx) b.classList.add('right'); b.disabled=true; b.onclick=null; });
   gAfterAnswer(false, '⏱️ Hết giờ rồi!');
 }
-function gPick(j){ if(GS.answered) return; GS.picked=j; document.querySelectorAll('.gopt').forEach(b=>b.classList.toggle('sel',+b.dataset.j===j)); }
+function gPick(j){ if(GS.answered||GS.timingPaused) return; GS.picked=j; document.querySelectorAll('.gopt').forEach(b=>b.classList.toggle('sel',+b.dataset.j===j)); }
 function gDndSelect(i){ if(GS.answered) return; GS.dndSel=i; document.querySelectorAll('.basket').forEach(b=>b.classList.toggle('sel',+b.dataset.i===i)); }
 function gBasketAt(x,y){ return [...document.querySelectorAll('.basket')].find(b=>{ const r=b.getBoundingClientRect(); return x>=r.left&&x<=r.right&&y>=r.top&&y<=r.bottom; })||null; }
 function gWireDnd(){
@@ -3769,7 +3842,7 @@ function gShowXpToast(xpGain, xuGain, combo){
   setTimeout(()=>el.remove(), 2600);
 }
 function gAfterAnswer(ok, headline){
-  GS.answered=true; gClearTimer();
+  GS.answered=true; gClearTimer(); gStopActivityWatch();
   const q=GS.qs[GS.i], fb=document.getElementById('gFeed');
   const curGen=q._gen||WEEKS[GS.w-1].gens[0]; /* genre thực tế của câu → dùng cho ôn tập thích ứng */
   const isWarm=!!q._warmup; /* F5: warm-up câu → không tính điểm, không mất tim */
@@ -3785,7 +3858,9 @@ function gAfterAnswer(ok, headline){
     /* Sổ cửu chương: đánh dấu phép nhân đã thuộc (đúng + không dùng gợi ý) */
     if(!GS.usedHint && q._a!=null) ccMark(q._a, q._b);
     /* F3: response-time — đúng nhưng chậm > 15s = chưa thật sự thuộc → giữ trong review queue */
-    const respTime=GS.qStart?((performance.now()-GS.qStart)/1000):0;
+    const _now=performance.now();
+    const _pausedMs=(GS.qPausedMs||0)+(GS.timingPaused&&GS.timingPauseStarted?(_now-GS.timingPauseStarted):0);
+    const respTime=GS.qStart?((_now-GS.qStart-_pausedMs)/1000):0;
     if(respTime>15 && q._a!=null && G.reviewQueue && !G.reviewQueue.includes(curGen)){
       G.reviewQueue.push(curGen);
       if(G.reviewQueue.length>6) G.reviewQueue.shift();
@@ -3868,6 +3943,7 @@ function gAfterAnswer(ok, headline){
 }
 function gSubmit(){
   if(GS.answered){ gNext(); return; }
+  if(GS.timingPaused) return; /* fair-play: chờ bé thao tác lại rồi mới chấm */
   const q=GS.qs[GS.i]; let ok=false;
   if(q.kind==='mc'||q.kind==='flash'){
     if(GS.picked==null) return;
@@ -3922,14 +3998,16 @@ function gSubmit(){
   gAfterAnswer(ok);
 }
 function gNext(){
-  gClearTimer();
+  gClearTimer(); gStopActivityWatch();
+  const ov=document.getElementById('gPauseOverlay'); if(ov) ov.classList.remove('open');
   if(GS.dead){ gFinish(); return; }
   GS.i++;
   if(GS.i>=GS.qs.length){ gFinish(); return; }
   gRenderQ();
 }
 function gFinish(){
-  gClearTimer();
+  gClearTimer(); gStopActivityWatch();
+  const _ov=document.getElementById('gPauseOverlay'); if(_ov) _ov.classList.remove('open');
   if(GS.isBoss){ gBossFinish(); return; }
   if(GS.isDaily){
     const total=GS.qs.length,pct=Math.round(GS.correct/total*100),day=GS.dailyDay;
@@ -3991,7 +4069,7 @@ function gConfetti(){
     setTimeout(()=>s.remove(),3600);
   }
 }
-function gClose(){ gClearTimer(); const m=document.getElementById('gModal'); if(m) m.classList.remove('open'); GS=null; gRenderMap(); }
+function gClose(){ gClearTimer(); gStopActivityWatch(); const m=document.getElementById('gModal'); if(m) m.classList.remove('open'); const ov=document.getElementById('gPauseOverlay'); if(ov) ov.classList.remove('open'); GS=null; gRenderMap(); }
 
 /* ============ F7: Daily Boss Challenge ============
    5 câu khó hỗn hợp từ tất cả tuần đã mở, flash timer ngắn hơn (5s),
