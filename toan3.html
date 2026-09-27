@@ -184,6 +184,31 @@ footer{text-align:center; color:var(--muted); font-size:14px; padding:30px 10px}
     padding-bottom:max(60px,env(safe-area-inset-bottom))}
 }
 @media print{nav.side{display:none} .quiz{break-inside:avoid} body{background:#fff}}
+/* --- Thu gọn menu (tablet/desktop) — thêm không gian cho phần luyện tập --- */
+@media(min-width:821px){
+  nav.side{transition:transform .28s ease, margin-left .28s ease, width .28s ease}
+  body.nav-collapsed nav.side{transform:translateX(-100%); margin-left:-284px}
+  body.nav-collapsed main{max-width:1200px}
+  #navToggle{position:fixed; top:12px; left:12px; z-index:190;
+    width:42px; height:42px; border-radius:12px; border:none; cursor:pointer;
+    background:#1565c0; color:#fff; font-size:20px; font-weight:900;
+    box-shadow:0 6px 16px rgba(13,71,161,.28); display:flex; align-items:center; justify-content:center;
+    transition:left .28s ease, transform .18s}
+  #navToggle:hover{transform:scale(1.06)}
+  body:not(.nav-collapsed) #navToggle{left:246px; background:#fff; color:#1565c0; border:1.5px solid #90caf9}
+}
+@media(max-width:820px){ #navToggle{display:none} }
+/* --- Nút bóng "lên đầu trang" --- */
+#backTopBtn{position:fixed; right:12px; bottom:64px; z-index:180;
+  width:48px; height:48px; border-radius:50%; border:none; cursor:pointer;
+  background:linear-gradient(135deg,#42a5f5,#1565c0); color:#fff; font-size:22px; font-weight:900;
+  box-shadow:0 8px 20px rgba(13,71,161,.32); display:none; align-items:center; justify-content:center;
+  transition:transform .18s, opacity .2s}
+#backTopBtn.show{display:flex; animation:btPop .28s ease}
+#backTopBtn:hover{transform:translateY(-3px) scale(1.05)}
+body.locked #backTopBtn, body.gmodal-open #backTopBtn{display:none !important}
+@keyframes btPop{from{opacity:0; transform:translateY(10px)} to{opacity:1; transform:translateY(0)}}
+@media(max-width:820px){ #backTopBtn{right:10px; bottom:70px; width:44px; height:44px; font-size:20px} }
 /* --- TTS speaker buttons --- */
 .tts-btn{background:none;border:1.5px solid rgba(21,101,192,.25);border-radius:12px;
   padding:0 7px;font-size:11.5px;cursor:pointer;color:#78909c;margin-left:6px;
@@ -607,6 +632,8 @@ body.locked{overflow:hidden}
     <div style="font-size:11.5px;color:#90a4ae;margin-top:10px">⏱️ Thời gian tính khi app đang mở & đang học. Tiến trình tự đồng bộ khi bé chơi.</div>
   </div>
 </div>
+<button id="navToggle" type="button" aria-label="Thu gọn / mở mục lục" title="Thu gọn / mở mục lục" onclick="toggleSideNav()">☰</button>
+<button id="backTopBtn" type="button" aria-label="Lên đầu trang" title="Lên đầu trang" onclick="scrollToTop()">⬆</button>
 <div class="wrap">
 <nav class="side">
   <h1>📘 Toán Lớp 3 – Học &amp; Luyện</h1>
@@ -4545,6 +4572,49 @@ async function authBoot(){
   }
 }
 authBoot();
+
+/* --- Thu gọn mục lục bên trái (chỉ áp dụng cho iPad/máy tính, mobile đã có burger riêng) --- */
+function toggleSideNav(){
+  if(window.matchMedia('(max-width:820px)').matches){
+    /* Trên mobile, dùng cơ chế burger có sẵn */
+    document.querySelector('.links')?.classList.toggle('open');
+    return;
+  }
+  const collapsed=document.body.classList.toggle('nav-collapsed');
+  try{ localStorage.setItem('navCollapsed', collapsed?'1':'0'); }catch(e){}
+  const btn=document.getElementById('navToggle');
+  if(btn) btn.textContent = collapsed ? '☰' : '⟨';
+}
+/* Khôi phục trạng thái đã chọn lần trước */
+try{
+  if(localStorage.getItem('navCollapsed')==='1' && !window.matchMedia('(max-width:820px)').matches){
+    document.body.classList.add('nav-collapsed');
+  }
+  const _nt=document.getElementById('navToggle');
+  if(_nt) _nt.textContent = document.body.classList.contains('nav-collapsed') ? '☰' : '⟨';
+}catch(e){}
+
+/* --- Nút bóng "lên đầu trang" --- */
+function scrollToTop(){ window.scrollTo({top:0, behavior:'smooth'}); }
+(function initBackTop(){
+  const btn=document.getElementById('backTopBtn'); if(!btn) return;
+  let ticking=false;
+  function update(){
+    ticking=false;
+    const modalOpen = document.getElementById('gModal')?.classList.contains('open')
+      || document.getElementById('gPauseOverlay')?.classList.contains('open')
+      || document.getElementById('introOverlay')?.classList.contains('open')
+      || document.getElementById('dashOv')?.classList.contains('open');
+    if(modalOpen || document.body.classList.contains('locked')){ btn.classList.remove('show'); return; }
+    if(window.scrollY > 400) btn.classList.add('show'); else btn.classList.remove('show');
+  }
+  window.addEventListener('scroll', ()=>{
+    if(!ticking){ requestAnimationFrame(update); ticking=true; }
+  }, {passive:true});
+  /* Cập nhật lại khi modal đóng/mở (poll nhẹ 1 lần/giây là đủ) */
+  setInterval(update, 1000);
+  update();
+})();
 
 </script>
 </body>
