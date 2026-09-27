@@ -3197,6 +3197,31 @@ function gMakeQ(gen){
     return {kind:'input', q:o.q+'<br><span style="font-size:14px;color:#5b7086;font-weight:600">👉 Chỉ cần nhập ĐÁP SỐ (con số).</span>',
       accept:acc, unit:o.dapso.dv, sol:o.sol};
   }
+  /* Tìm x dạng cộng/trừ: dùng phép tính ngược và đặt tính dọc, thay vì chỉ nhập đáp án. */
+  if(o.type==='column_timx'){
+    let a,b,op,workHint;
+    if(o.op==='+'){
+      /* Số hạng chưa biết = tổng − số hạng đã biết. */
+      a=o.a+o.b;
+      b=o.xRow===0 ? o.b : o.a;
+      op='−';
+      workHint='Muốn tìm số hạng chưa biết, lấy tổng trừ số hạng đã biết. Hãy đặt tính phép trừ này.';
+    }else if(o.xRow===0){
+      /* Số bị trừ chưa biết = hiệu + số trừ. */
+      a=o.a-o.b;
+      b=o.b;
+      op='+';
+      workHint='Muốn tìm số bị trừ, lấy hiệu cộng số trừ. Hãy đặt tính phép cộng này.';
+    }else{
+      /* Số trừ chưa biết = số bị trừ − hiệu. */
+      a=o.a;
+      b=o.a-o.b;
+      op='−';
+      workHint='Muốn tìm số trừ, lấy số bị trừ trừ hiệu. Hãy đặt tính phép trừ này.';
+    }
+    return {kind:'column',a,b,op,ans:o.ans,q:o.q,
+      sol:o.sol,workHint};
+  }
   const acc=(o.alt&&o.alt.length?o.alt:[o.ans]).map(norm);
   const result={kind:'input', q:o.q, accept:acc, sol:o.sol};
   /* Gắn dữ liệu nhân/chia để hỗ trợ gợi ý 3 bậc */
