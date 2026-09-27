@@ -429,7 +429,7 @@ body.mode-viet #tab-viet{display:block}
   #printSheet .ps-frame{border:6px double #26a69a;border-radius:18px;padding:24px 28px}
   #printSheet h1{font-size:22px;color:#00695c;margin:0 0 4px}
   #printSheet .ps-meta{font-size:12px;color:#666;margin-bottom:14px}
-  #printSheet .ps-text{font-size:17px;line-height:2;white-space:pre-wrap}
+  #printSheet .ps-text{font-family:var(--hw);font-size:22px;line-height:2;white-space:pre-wrap;color:#2e263d}
 }
 /* ===== Thẻ kiến thức lật 3D (Flashcard) — chữ to, bo góc 20px, màu tươi, tương phản cao ===== */
 .fc-scene{perspective:1200px;width:100%;max-width:440px;margin:6px auto 0;cursor:pointer;outline:none}
@@ -493,6 +493,28 @@ body.mode-viet #tab-viet{display:block}
 .oli-status{font-size:12px;color:#78909c}
 .oli-status.ok{color:#2e7d32}
 .oli-caption{font-size:13px;color:var(--muted);margin-top:4px}
+/* ===== Chữ viết inline (không lưới): dùng cho MỌI ví dụ/từ/câu mà trẻ sẽ đọc-chép.
+   Nguyên tắc: ngữ liệu (câu mẫu, từ, bài của con) = chữ viết HP001; lời giải thích/UI = font thường. ===== */
+.hw{font-family:var(--hw);font-size:1.28em;line-height:1.35;color:#2e263d;font-weight:400;letter-spacing:.01em}
+.hw b,.hw strong{font-weight:400;color:#c62828}                 /* nhấn bằng màu, không bôi đậm (font viết tay không có bold) */
+.hw.big{font-size:1.6em}
+.hw.lined{background:linear-gradient(transparent calc(100% - 2px),#e77a99 calc(100% - 2px));background-size:100% 1.35em;padding:0 .15em}
+.qstim .hw,.gstim .hw{font-size:1.3em}
+/* ngữ liệu trong khung ví dụ / câu hỏi / thẻ đáp án */
+.qstim,.gstim{font-family:var(--hw);font-size:1.45em;line-height:1.5;color:#2e263d;font-weight:400}
+.qstim.plain,.gstim.plain{font-family:var(--font-body);font-size:16px}
+.opts label .hw,.gopt .hw,.tok .hw{font-size:1.25em}
+.gopt.hwopt,.opts label.hwopt,.tok.hwtok{font-family:var(--hw);font-size:1.3em;font-weight:400;color:#2e263d}
+.ws-ex{font-family:var(--hw);font-size:1.45em;line-height:1.9;color:#2e263d}
+.ws-ex h4{font-family:var(--font-display);font-size:17px}
+.ws-sent{font-family:var(--hw);font-size:1.35em;font-weight:400;color:#2e263d}
+.ws-editor{font-family:var(--hw);font-size:1.6em;line-height:1.7;color:#2e263d;font-weight:400}
+.chip.hwchip{font-family:var(--hw);font-size:1.25em;font-weight:400;color:#2e263d}
+.fc-word{font-family:var(--hw) !important;font-weight:400 !important;font-size:44px !important;color:#3e2723}
+.fc-ex .hw{font-size:1.2em}
+.ws-idea textarea{font-family:var(--hw);font-size:1.35em;font-weight:400}
+.cloze-blank select{font-family:var(--hw);font-size:1.15em}
+.ws-count,.oli-caption,.expl,.rubric,.ws-tip{font-family:var(--font-body)}
 /* cỡ chữ theo thiết bị: điện thoại nhỏ hơn để đủ chữ trên 1 dòng */
 @media(max-width:560px){:root{--oli:11px}}
 @media print{.oli{break-inside:avoid;background-color:#fff}.oli-tools{display:none}}
@@ -1079,12 +1101,12 @@ GEN.C08_SOSANH=function(){
     const good=pick(NHU_COMPARE);
     const opts=shuffle([t.s, good.s]);
     return {skill:'C08_SOSANH', type:'single_choice', prompt:'Câu nào CÓ dùng biện pháp so sánh?', options:opts,
-      answer:opts.indexOf(good.s), explanation:`“${good.s}” so sánh ${good.a} với ${good.b}. Còn “${t.s}” — ${t.why}`, difficulty:2, _sig:'c08trap:'+t.s};
+      answer:opts.indexOf(good.s), explanation:`“${good.s}” so sánh “${good.a}” với “${good.b}”. Còn “${t.s}” — ${t.why}`, difficulty:2, _sig:'c08trap:'+t.s};
   }
   const c=pick(NHU_COMPARE);
   const tokens=[c.a, c.net, 'như', c.b];
   return {skill:'C08_SOSANH', type:'select_span', prompt:'Chọn ĐỐI TƯỢNG được đem ra so sánh (đối tượng B):', stimulus:c.s,
-    tokens, answer:3, explanation:`A = ${c.a}, nét giống = ${c.net}, từ so sánh = như, B = ${c.b}.`, difficulty:1, _sig:'c08:'+c.s};
+    tokens, answer:3, explanation:`A = “${c.a}”, nét giống = “${c.net}”, từ so sánh = “như”, B = “${c.b}”.`, difficulty:1, _sig:'c08:'+c.s};
 };
 
 /* --- C04: dấu câu (chọn dấu) --- */
@@ -1381,47 +1403,53 @@ function buildTheoryHTML(){return `
 <h3 id="c02">1.1 Từ chỉ sự vật – hoạt động – đặc điểm</h3>
 <div class="card">
   <div class="rule">• <b>Sự vật</b>: người, con vật, đồ vật, cây cối, hiện tượng (cái mắt thấy, tay sờ, gọi được tên).<br>• <b>Hoạt động</b>: việc làm, di chuyển (chạy, đọc, nấu…).<br>• <b>Đặc điểm</b>: màu sắc, hình dáng, kích thước, âm thanh, hương vị, tính cách.</div>
-  <div class="tip"><b>Sự vật</b> → “Gọi tên &amp; Chạm vào”. <b>Hoạt động</b> → “Thử làm động tác”. <b>Đặc điểm</b> → “Thêm <i>rất</i>/<i>thật</i>”: rất đẹp, thật cao.</div>
-  <div class="ex">Bạn Lan (sự vật) <b>tưới cây</b> (hoạt động); bông hoa <b>thơm ngát</b> (đặc điểm).</div>
+  <div class="tip"><b>Sự vật</b> → “Gọi tên &amp; Chạm vào”. <b>Hoạt động</b> → “Thử làm động tác”. <b>Đặc điểm</b> → “Thêm <i>rất</i>/<i>thật</i>”: <span class="hw">rất đẹp, thật cao</span>.</div>
+  <div class="ex"><span class="hw">Bạn Lan</span> (sự vật) <span class="hw"><b>tưới cây</b></span> (hoạt động); <span class="hw">bông hoa <b>thơm ngát</b></span> (đặc điểm).</div>
   <h4>✒️ Nhìn – chép vào vở ô li</h4>
   ${oliBlock('Bạn Lan tưới cây trong vườn.',{mode:'chep',caption:'Dòng 1 là chữ mẫu; dòng 2 con tô theo; dòng 3 con tự viết. Bấm “In trang tập viết” để in ra giấy.'})}
 </div>
 <h3 id="c03">1.2 Từ gần nghĩa – trái nghĩa</h3>
 <div class="card">
-  <div class="rule"><b>Trái nghĩa</b>: nghĩa đối lập, xét cùng một tiêu chí (cao–thấp, vui–buồn). <b>Gần nghĩa</b>: nghĩa gần nhau (siêng năng–chăm chỉ).</div>
+  <div class="rule"><b>Trái nghĩa</b>: nghĩa đối lập, xét cùng một tiêu chí (<span class="hw">cao – thấp, vui – buồn</span>). <b>Gần nghĩa</b>: nghĩa gần nhau (<span class="hw">siêng năng – chăm chỉ</span>).</div>
   <div class="warn">“Gần nghĩa” <b>không</b> có nghĩa thay được nhau trong mọi câu — phải xét ngữ cảnh.</div>
 </div>
 <h3 id="c09">1.3 Mở rộng vốn từ theo chủ điểm</h3>
 <div class="card">
   <p>Gom từ theo chủ điểm rồi dùng từ đặt câu: <b>trường học, gia đình, nghề nghiệp, thành thị/nông thôn, thiên nhiên, lễ hội, đất nước, Trái Đất…</b></p>
-  <div class="tip">Trò chơi “giải mã từ vựng”: phân loại từ theo nhóm (ví dụ: chạy bộ, bơi → hoạt động thể thao; khỏe mạnh, dẻo dai → trạng thái cơ thể).</div>
+  <div class="tip">Trò chơi “giải mã từ vựng”: phân loại từ theo nhóm (ví dụ: <span class="hw">chạy bộ, bơi</span> → hoạt động thể thao; <span class="hw">khỏe mạnh, dẻo dai</span> → trạng thái cơ thể).</div>
 </div>
 
 <h2 class="chapter" id="cd2"><span class="num">2</span>Câu &amp; Dấu câu</h2>
 <h3 id="c05">2.1 Câu giới thiệu – nêu hoạt động – nêu đặc điểm</h3>
 <div class="card">
-  <div class="rule">• Giới thiệu: <b>A là B</b> — “Đây là thư viện.”<br>• Nêu hoạt động: <b>A làm gì</b> — “Bé đọc sách.”<br>• Nêu đặc điểm: <b>A thế nào</b> — “Quyển sách rất hay.”</div>
+  <div class="rule">• Giới thiệu: <b>A là B</b> — <span class="hw">Đây là thư viện.</span><br>• Nêu hoạt động: <b>A làm gì</b> — <span class="hw">Bé đọc sách.</span><br>• Nêu đặc điểm: <b>A thế nào</b> — <span class="hw">Quyển sách rất hay.</span></div>
+  <h4>✒️ Chép ba kiểu câu</h4>
+  ${oliBlock('Đây là thư viện. Bé đọc sách. Quyển sách rất hay.',{mode:'chep'})}
 </div>
 <h3 id="c06">2.2 Câu kể – hỏi – cảm – khiến</h3>
 <div class="card">
-  <div class="rule">• Kể → dấu <b>.</b> &nbsp;• Hỏi → có từ hỏi + dấu <b>?</b> &nbsp;• Cảm → có “quá, lắm, chao ôi” + dấu <b>!</b> &nbsp;• Khiến → có “hãy, đừng, chớ, nhé, đi” + dấu <b>!</b> hoặc <b>.</b></div>
-  <div class="tip">“Thi chuyển đổi kiểu câu”: từ “Bé tập thể dục.” → cảm: “Bé tập thể dục chăm quá!” → khiến: “Bé hãy tập thể dục hằng ngày nhé!”</div>
+  <div class="rule">• Kể → dấu <b>.</b> &nbsp;• Hỏi → có từ hỏi + dấu <b>?</b> &nbsp;• Cảm → có <span class="hw">quá, lắm, chao ôi</span> + dấu <b>!</b> &nbsp;• Khiến → có <span class="hw">hãy, đừng, chớ, nhé, đi</span> + dấu <b>!</b> hoặc <b>.</b></div>
+  <div class="tip">“Thi chuyển đổi kiểu câu”: từ <span class="hw">Bé tập thể dục.</span> → cảm: <span class="hw">Bé tập thể dục chăm quá!</span> → khiến: <span class="hw">Bé hãy tập thể dục hằng ngày nhé!</span></div>
+  <h4>✒️ Chép ba câu vừa chuyển</h4>
+  ${oliBlock('Bé tập thể dục. Bé tập thể dục chăm quá! Bé hãy tập thể dục hằng ngày nhé!',{mode:'chep'})}
 </div>
 <h3 id="c07">2.3 Khi nào? Ở đâu? Bằng gì? Để làm gì?</h3>
 <div class="card">
   <div class="rule">Tìm bộ phận trả lời: <b>thời gian</b> (Khi nào?), <b>nơi chốn</b> (Ở đâu?), <b>phương tiện</b> (Bằng gì?), <b>mục đích</b> (Để làm gì?).</div>
-  <div class="ex">“Sáng thứ bảy, bé đến thư viện bằng xe buýt để mượn sách.”</div>
+  <div class="ex"><span class="hw">Sáng thứ bảy, bé đến thư viện bằng xe buýt để mượn sách.</span><br><span style="font-size:13.5px;color:var(--muted)">Khi nào? → <span class="hw">Sáng thứ bảy</span> · Ở đâu? → <span class="hw">thư viện</span> · Bằng gì? → <span class="hw">bằng xe buýt</span> · Để làm gì? → <span class="hw">để mượn sách</span></span></div>
+  ${oliBlock('Sáng thứ bảy, bé đến thư viện bằng xe buýt để mượn sách.',{mode:'chep'})}
 </div>
 <h3 id="c04">2.4 Dấu câu</h3>
 <div class="card">
   <div class="rule">Hai chấm <b>:</b> báo liệt kê/giải thích/lời nói. Phẩy <b>,</b> tách các phần. Chấm <b>.</b> hết câu kể. Hỏi <b>?</b> hết câu hỏi. Than <b>!</b> hết câu cảm/khiến.</div>
-  <div class="ex">“Trong giỏ có ba thứ: táo, lê và cam.”</div>
+  <div class="ex"><span class="hw">Trong giỏ có ba thứ: táo, lê và cam.</span></div>
+  ${oliBlock('Trong giỏ có ba thứ: táo, lê và cam.',{mode:'chep'})}
 </div>
 <h3 id="c08">2.5 Biện pháp so sánh</h3>
 <div class="card">
   <div class="rule">Công thức: <b>[A] + [từ so sánh: như, tựa, giống] + [B]</b> dựa trên một <b>nét giống nhau</b>.</div>
-  <div class="warn">Có “<b>như</b>” chưa chắc là so sánh! “Em làm đúng <b>như</b> cô dặn.” — “như” nghĩa là “theo đúng”, không so sánh hai sự vật.</div>
-  <div class="ex">“Mặt hồ phẳng như tấm gương.” → A=mặt hồ, nét giống=phẳng, B=tấm gương.</div>
+  <div class="warn">Có “<b>như</b>” chưa chắc là so sánh! <span class="hw">Em làm đúng <b>như</b> cô dặn.</span> — “như” nghĩa là “theo đúng”, không so sánh hai sự vật.</div>
+  <div class="ex"><span class="hw">Mặt hồ phẳng như tấm gương.</span> → A = <span class="hw">mặt hồ</span>, nét giống = <span class="hw">phẳng</span>, B = <span class="hw">tấm gương</span>.</div>
   <h4>✒️ Chép câu so sánh</h4>
   ${oliBlock('Mặt hồ phẳng như tấm gương.',{mode:'chep'})}
 </div>
@@ -1429,8 +1457,8 @@ function buildTheoryHTML(){return `
 <h2 class="chapter" id="cd3"><span class="num">3</span>Chính tả &amp; Viết hoa</h2>
 <h3 id="c01">3.1 c/k · g/gh · ng/ngh · viết hoa</h3>
 <div class="card">
-  <div class="tip"><b>“Anh em đi cùng i, e, ê”</b>: <b>k, gh, ngh</b> đứng trước <b>i, e, ê</b>; còn <b>c, g, ng</b> đứng trước các âm khác (a, o, ô, u, ư…).</div>
-  <div class="rule">Viết hoa: chữ đầu câu; tên riêng người, địa danh Việt Nam (sông Đồng Nai); tên nước ngoài phiên âm có gạch nối (Ma-ri-a).</div>
+  <div class="tip"><b>“Anh em đi cùng i, e, ê”</b>: <b>k, gh, ngh</b> đứng trước <b>i, e, ê</b> (<span class="hw">kéo, ghế, nghỉ</span>); còn <b>c, g, ng</b> đứng trước các âm khác (<span class="hw">cá, gà, ngô</span>).</div>
+  <div class="rule">Viết hoa: chữ đầu câu; tên riêng người, địa danh Việt Nam (<span class="hw">sông Đồng Nai</span>); tên nước ngoài phiên âm có gạch nối (<span class="hw">Ma-ri-a</span>).</div>
   <h4>✒️ Tập viết các tiếng dễ nhầm</h4>
   ${oliBlock('cái kéo, ghế gỗ, nghỉ hè, con gà, ngô',{mode:'chep',caption:'k – gh – ngh đi với i, e, ê; c – g – ng đi với các âm còn lại.'})}
   <h4>✒️ Tập viết hoa tên riêng</h4>
@@ -1499,20 +1527,36 @@ function buildQuiz(box){
   wireQuizItems(box);
 }
 
+/* Ngữ liệu hay nhãn? Nhãn (tên loại từ/kiểu câu/dấu câu/câu hỏi Khi nào…) → font thường;
+   còn lại (từ, cụm, câu mà trẻ sẽ đọc-chép) → chữ viết HP001. */
+const LABEL_RE=/^(Câu (kể|hỏi|cảm|khiến|giới thiệu|nêu hoạt động|nêu đặc điểm)$|[Tt]ừ chỉ (sự vật|hoạt động|đặc điểm)$|[:.?!] \(|Khi nào\?$|Ở đâu\?$|Bằng gì\?$|Để làm gì\?$)/;
+function isLabel(t){return LABEL_RE.test(normNFC(t));}
+/* Lời giải thích / đề bài: phần trong ngoặc kép “…” là NGỮ LIỆU → chữ viết; phần còn lại → font thường.
+   (Mọi explanation/prompt trong app đặt từ/câu mẫu trong “ ”.) */
+function explHTML(s){
+  return esc(s||'').replace(/“([^”]+)”/g,(m,inner)=>`“<span class="hw">${inner}</span>”`);
+}
+/* "Ví dụ: <câu>" / "Đặt câu: <câu>" → nhãn giữ font thường, câu chuyển chữ viết */
+function hwExample(s){
+  const m=normNFC(s).match(/^((?:Ví dụ|Đặt câu|Mẫu)\s*:\s*)(.+)$/i);
+  if(m)return esc(m[1])+`<span class="hw">${esc(m[2])}</span>`;
+  return /[.!?…]$/.test(normNFC(s))?`<span class="hw">${esc(s)}</span>`:esc(s);
+}
+function hwOrPlain(t){return isLabel(t)?esc(t):`<span class="hw">${esc(t)}</span>`;}
 /* render một item theo type */
 function renderQuizItem(q,i,boxId){
-  let inner=`<div class="qtext">${esc(q.prompt)}</div>`;
+  let inner=`<div class="qtext">${explHTML(q.prompt)}</div>`;
   if(q.stimulus) inner+=`<div class="qstim">${esc(q.stimulus)}</div>`;
   if(q.type==='single_choice'){
-    inner+=`<div class="opts">`+q.options.map((t,j)=>`<label><input type="radio" name="q_${boxId}_${i}" value="${j}"> ${esc(t)}</label>`).join('')+`</div>`;
+    inner+=`<div class="opts">`+q.options.map((t,j)=>`<label><input type="radio" name="q_${boxId}_${i}" value="${j}"> ${hwOrPlain(t)}</label>`).join('')+`</div>`;
   } else if(q.type==='select_span'){
-    inner+=`<div class="tokrow" data-role="span">`+q.tokens.map((t,j)=>`<span class="tok" data-j="${j}">${esc(t)}</span>`).join('')+`</div>`;
+    inner+=`<div class="tokrow" data-role="span">`+q.tokens.map((t,j)=>`<span class="tok hwtok" data-j="${j}">${esc(t)}</span>`).join('')+`</div>`;
   } else if(q.type==='match_pairs'){
     const rights=shuffle(q.pairs.map(p=>p[1]));
     inner+=`<div class="pairwrap"><div class="paircol left">`+
-      q.pairs.map((p,j)=>`<div class="tok pL" data-j="${j}">${esc(p[0])}</div>`).join('')+
+      q.pairs.map((p,j)=>`<div class="tok pL${isLabel(p[0])?'':' hwtok'}" data-j="${j}">${esc(p[0])}</div>`).join('')+
       `</div><div class="paircol right">`+
-      rights.map((r,k)=>`<div class="tok pR" data-v="${esc(r)}">${esc(r)}</div>`).join('')+
+      rights.map((r,k)=>`<div class="tok pR${isLabel(r)?'':' hwtok'}" data-v="${esc(r)}">${esc(r)}</div>`).join('')+
       `</div></div><div style="font-size:12.5px;color:#78909c;margin-top:4px">Chạm 1 từ bên trái rồi chạm từ bên phải để nối.</div>`;
   } else if(q.type==='guided_writing'){
     inner+=`<textarea class="ans" data-i="${i}" placeholder="Con viết ở đây… (nói thành lời trước rồi hãy viết nhé)"></textarea>`;
@@ -1605,8 +1649,8 @@ function checkQuiz(box){
     }
     const copyText=q.stimulus&&/[.!?]$/.test(normNFC(q.stimulus))?q.stimulus:null;
     const copyUI=copyText?`<details style="margin-top:6px"><summary style="cursor:pointer;font-weight:700;color:#00695c">✒️ Chép câu này vào vở ô li</summary>${oliBlock(copyText,{mode:'chep'})}</details>`:'';
-    if(good){ok++;fb.className='fb ok';fb.innerHTML='✔ Chính xác! Giỏi lắm 🎉<div class="expl">'+esc(q.explanation||'')+'</div>'+copyUI;}
-    else{fb.className='fb no';fb.innerHTML=(answered?'✘ Chưa đúng.':'✘ Con chưa trả lời câu này.')+'<div class="expl">'+esc(q.explanation||'')+'</div>'+copyUI;}
+    if(good){ok++;fb.className='fb ok';fb.innerHTML='✔ Chính xác! Giỏi lắm 🎉<div class="expl">'+explHTML(q.explanation)+'</div>'+copyUI;}
+    else{fb.className='fb no';fb.innerHTML=(answered?'✘ Chưa đúng.':'✘ Con chưa trả lời câu này.')+'<div class="expl">'+explHTML(q.explanation)+'</div>'+copyUI;}
     /* #3: chỉ lần NỘP HỢP LỆ ĐẦU TIÊN mới ghi thống kê; câu đã xem đáp án không tính */
     if(q._state==='unanswered' && answered){ q._state='submitted'; recordSkill(q.skill, good, false); }
     else if(q._state==='unanswered' && !answered){ /* chưa trả lời: không ghi, cho phép nộp lại */ }
@@ -1638,7 +1682,7 @@ function showQuizAns(box){
     else if(q.type==='match_pairs')ansText='Đáp án: '+q.pairs.map(p=>esc(p[0])+'–'+esc(p[1])).join('; ')+'. ';
     /* Nếu câu có ngữ liệu là một CÂU hoàn chỉnh → cho con chép lại vào vở ô li (nhìn – chép) */
     const copyText=q.stimulus&&/[.!?]$/.test(normNFC(q.stimulus))?q.stimulus:null;
-    fb.innerHTML='📖 '+ansText+'<div class="expl">'+esc(q.explanation||'')+'</div>'+(copyText?`<details style="margin-top:6px"><summary style="cursor:pointer;font-weight:700;color:#00695c">✒️ Chép câu này vào vở ô li</summary>${oliBlock(copyText,{mode:'chep',tools:true})}</details>`:'');
+    fb.innerHTML='📖 '+ansText+'<div class="expl">'+explHTML(q.explanation)+'</div>'+(copyText?`<details style="margin-top:6px"><summary style="cursor:pointer;font-weight:700;color:#00695c">✒️ Chép câu này vào vở ô li</summary>${oliBlock(copyText,{mode:'chep',tools:true})}</details>`:'');
   });
 }
 
@@ -1937,11 +1981,11 @@ function gRenderChain(msg){
   const done=remaining.length===0;
   const card=`<div class="gtopbar"><span class="gqno">⛓️ Nối từ · chủ điểm: <b>${esc(ctx.title)}</b></span><span class="spacer" style="flex:1"></span></div>
     <div class="gq">Quy tắc: chỉ chọn từ <b>thuộc chủ điểm “${esc(ctx.title)}”</b>. Mỗi từ đúng nối thêm một mắt xích! 🔗</div>
-    <div class="gstim" id="chainStrip">${used.length?used.map(esc).join(' → '):'<span style="color:#90a4ae">(chưa có mắt xích nào)</span>'}</div>
+    <div class="gstim" id="chainStrip">${used.length?used.map(esc).join(' → '):'<span class="plain" style="color:#90a4ae;font-family:var(--font-body);font-size:14px">(chưa có mắt xích nào)</span>'}</div>
     ${msg?`<div class="gfeed no" style="display:block">${esc(msg)}</div>`:''}
     ${done?`<div class="gfeed ok" style="display:block">🎉 Con đã gom hết từ của chủ điểm này! Chuỗi dài ${used.length} từ.</div>`
       :`<p style="font-weight:700;color:#00695c">Chọn một từ đúng chủ điểm:</p>
-        <div class="tokrow" id="chainChoices">${gChainChoices().map(w=>`<span class="tok" data-w="${escAttr(w)}">${esc(w)}</span>`).join('')}</div>`}
+        <div class="tokrow" id="chainChoices">${gChainChoices().map(w=>`<span class="tok hwtok" data-w="${escAttr(w)}">${esc(w)}</span>`).join('')}</div>`}
     <div class="gbtn-row">${done?`<button class="grn gbig" onclick="gChainFinish()">✓ Xong</button>`:`<button class="gry" onclick="gChainFinish()">Kết thúc chuỗi</button>`}</div>`;
   document.getElementById('gCard').innerHTML=card;
   const cc=document.getElementById('chainChoices');
@@ -2004,8 +2048,8 @@ function gRenderInfo(){
   document.getElementById('gCard').innerHTML=`<div class="gtopbar"><span class="gqno">🃏 Thẻ ${GS.i+1}/${GS.cards.length} · ${esc(c.title)}${c.adv?' 🌟':''}</span><span class="spacer" style="flex:1"></span></div>
     <div class="fc-scene" id="fcScene" role="button" tabindex="0" aria-label="Chạm để lật thẻ">
       <div class="fc-card${GS.flipped?' flipped':''}" id="fcCard">
-        <div class="fc-face fc-front"><div class="fc-emoji">${c.emoji}</div><div class="fc-word">${esc(c.front)}</div><div class="fc-sub">${esc(c.frontSub||'')}</div><div class="fc-hint">Chạm để lật ↻</div></div>
-        <div class="fc-face fc-back"><div class="fc-kind">${esc(c.title)}</div><div class="fc-meaning">${esc(c.back)}</div><div class="fc-ex">${esc(c.backSub||'')}</div></div>
+        <div class="fc-face fc-front"><div class="fc-emoji">${c.emoji}</div><div class="fc-word">${esc(c.front)}</div><div class="fc-sub">${c.type==='concept'?`<span class="hw">${esc(c.frontSub||'')}</span>`:esc(c.frontSub||'')}</div><div class="fc-hint">Chạm để lật ↻</div></div>
+        <div class="fc-face fc-back"><div class="fc-kind">${esc(c.title)}</div><div class="fc-meaning">${esc(c.back)}</div><div class="fc-ex">${hwExample(c.backSub||'')}</div></div>
       </div>
     </div>
     <div class="gbtn-row" style="margin-top:10px">
@@ -2043,13 +2087,13 @@ function gRenderQ(){
   let body='';
   if(q.stimulus)body+=`<div class="gstim">${esc(q.stimulus)}</div>`;
   if(q.type==='single_choice'){
-    body+=`<div class="gopts">`+q.options.map((t,j)=>`<button class="gopt" data-j="${j}" onclick="gPick(${j})">${esc(t)}</button>`).join('')+`</div>`;
+    body+=`<div class="gopts">`+q.options.map((t,j)=>`<button class="gopt${isLabel(t)?'':' hwopt'}" data-j="${j}" onclick="gPick(${j})">${esc(t)}</button>`).join('')+`</div>`;
   } else if(q.type==='select_span'){
-    body+=`<div class="tokrow">`+q.tokens.map((t,j)=>`<span class="tok" data-j="${j}" onclick="gPickTok(${j})">${esc(t)}</span>`).join('')+`</div>`;
+    body+=`<div class="tokrow">`+q.tokens.map((t,j)=>`<span class="tok hwtok" data-j="${j}" onclick="gPickTok(${j})">${esc(t)}</span>`).join('')+`</div>`;
   } else if(q.type==='match_pairs'){
     const rights=shuffle(q.pairs.map(p=>p[1]));GS._rights=rights;
-    body+=`<div class="pairwrap has-lines" id="gPairWrap"><svg class="pair-lines" id="gPairSvg" aria-hidden="true"></svg><div class="paircol">`+q.pairs.map((p,j)=>`<div class="tok pL" data-j="${j}" onclick="gPairL(${j})"><span class="pnum">${j+1}</span>${esc(p[0])}</div>`).join('')+
-      `</div><div class="paircol">`+rights.map((r,k)=>`<div class="tok pR" data-v="${esc(r)}" onclick="gPairR(this)">${esc(r)}<span class="pnum pnum-r"></span></div>`).join('')+`</div></div>
+    body+=`<div class="pairwrap has-lines" id="gPairWrap"><svg class="pair-lines" id="gPairSvg" aria-hidden="true"></svg><div class="paircol">`+q.pairs.map((p,j)=>`<div class="tok pL${isLabel(p[0])?'':' hwtok'}" data-j="${j}" onclick="gPairL(${j})"><span class="pnum">${j+1}</span>${esc(p[0])}</div>`).join('')+
+      `</div><div class="paircol">`+rights.map((r,k)=>`<div class="tok pR${isLabel(r)?'':' hwtok'}" data-v="${esc(r)}" onclick="gPairR(this)">${esc(r)}<span class="pnum pnum-r"></span></div>`).join('')+`</div></div>
       <div class="ws-count">Chạm một từ bên trái, rồi chạm từ bên phải để nối. Chạm lại cặp đã nối để gỡ.</div>`;
     GS._map={};GS._selL=null;
   } else if(q.type==='guided_writing'){
@@ -2060,14 +2104,14 @@ function gRenderQ(){
     const src=q.type==='reorder_tokens'?q.tokens:q.pieces;
     const sep=' ';   /* tiếng Việt: các tiếng cách nhau bằng dấu cách, kể cả khi ghép từ */
     body+=`<div class="buildzone" id="gBuild" data-sep="${sep}"></div>
-      <div class="tokrow" id="gBank">`+src.map((t,j)=>`<span class="tok" data-j="${j}" onclick="gBuildTap(${j})">${esc(t)}</span>`).join('')+`</div>
+      <div class="tokrow" id="gBank">`+src.map((t,j)=>`<span class="tok hwtok" data-j="${j}" onclick="gBuildTap(${j})">${esc(t)}</span>`).join('')+`</div>
       <div style="margin-top:8px"><button class="gry" style="padding:6px 12px;font-size:13px" onclick="gBuildUndo()">↩︎ Bỏ thẻ cuối</button></div>`;
   } else { body+=`<input id="gInput" class="ans" placeholder="Con trả lời…">`; }
   const skTip=(SKILL_BY_ID[q._skill||q.skill]||{}).tip||'';
   const card=`<div class="gprog"><i style="width:${pct}%"></i></div>
     <div class="gtopbar"><span class="ghearts">${hearts}</span><span class="gqno">Câu ${GS.i+1}/${GS.qs.length}${q._warmup?' · khởi động':''}</span><span class="spacer" style="flex:1"></span>
     <button class="gry" id="gHintBtn" onclick="gHint()" style="padding:6px 10px;font-size:13px">💡 Gợi ý</button></div>
-    <div class="gq">${esc(q.prompt)} <button class="tts-btn" id="gTtsBtn">🔊</button></div>
+    <div class="gq">${explHTML(q.prompt)} <button class="tts-btn" id="gTtsBtn">🔊</button></div>
     ${body}
     <div id="gHintArea"></div>
     <div class="gfeed" id="gFeed"></div>
@@ -2145,7 +2189,7 @@ function gBuildUndo(){
 function gBuildRefresh(){
   const q=GS.qs[GS.i],zone=document.getElementById('gBuild');if(!zone)return;
   const src=q.type==='reorder_tokens'?q.tokens:q.pieces;
-  zone.innerHTML=GS._seq.map(j=>`<span class="tok" style="cursor:default">${esc(src[j])}</span>`).join('');
+  zone.innerHTML=GS._seq.map(j=>`<span class="tok hwtok" style="cursor:default">${esc(src[j])}</span>`).join('');
   zone.style.gap='6px';
   /* cho phép chạm vào thẻ trong vùng xếp để lấy ra (không chỉ "bỏ thẻ cuối") */
   zone.querySelectorAll('.tok').forEach((t,k)=>{t.style.cursor='pointer';t.title='Chạm để bỏ thẻ này';t.addEventListener('click',()=>gBuildRemove(k));});
@@ -2199,7 +2243,7 @@ function gAfterAnswer(ok){
     if(!GS.usedHint)G.reviewQueue=G.reviewQueue.filter(s=>s!==gen);
     if(!isWarm){const bonus=GS.combo>=3?Math.min(2*(GS.combo-2),10):0;const xp=8+bonus;G.xp+=xp;G.xu+=5;const oldLv=gLevel(G.xp-xp),newLv=gLevel(G.xp);saveAll();gRenderTop();gXpToast(xp,5,GS.combo);if(newLv>oldLv)setTimeout(()=>toast('⬆️ Lên cấp! Con đạt '+GLEVELS[newLv][1]+' 🎉'),400);}
     const combo=GS.combo>=3?` <span class="combo-badge">x${GS.combo} liên tiếp!</span>`:'';const m=pick(GPRAISE);
-    fb.className='gfeed ok';fb.innerHTML=`<span class="fb-owl">🦉</span> ✅ <b>${esc(m)}</b>${combo}<div style="margin-top:6px;font-weight:600">${esc(q.explanation||'')}</div>`;
+    fb.className='gfeed ok';fb.innerHTML=`<span class="fb-owl">🦉</span> ✅ <b>${esc(m)}</b>${combo}<div style="margin-top:6px;font-weight:600">${explHTML(q.explanation)}</div>`;
     gSay(m);if(!G.mute)SFX.correct();gVibe(35);
   } else {
     /* thử lại 1 lần cho single_choice/select_span nếu chưa dùng gợi ý */
@@ -2215,7 +2259,7 @@ function gAfterAnswer(ok){
     if(!G.reviewQueue.includes(gen)){G.reviewQueue.push(gen);if(G.reviewQueue.length>6)G.reviewQueue.shift();}
     saveAll();
     const sk=SKILL_BY_ID[gen];const help=sk?`<div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap"><button class="grn" onclick="gStartSkillPractice('${gen}')">Luyện 3 câu</button><button class="teal" onclick="gReadTheory('${sk.anchor}')">Xem cách làm</button></div>`:'';
-    fb.className='gfeed no';fb.innerHTML=`<span class="fb-owl">🦉</span> ❌ Chưa đúng nhé.<div style="margin-top:6px;font-weight:600">${esc(q.explanation||'')}</div>${help}${isWarm?'<div style="color:#ef6c00;font-size:12px">(khởi động — không mất tim)</div>':''}`;
+    fb.className='gfeed no';fb.innerHTML=`<span class="fb-owl">🦉</span> ❌ Chưa đúng nhé.<div style="margin-top:6px;font-weight:600">${explHTML(q.explanation)}</div>${help}${isWarm?'<div style="color:#ef6c00;font-size:12px">(khởi động — không mất tim)</div>':''}`;
     if(!G.mute)SFX.wrong();gVibe([30,30,30]);
   }
   const he=document.querySelector('#gCard .ghearts');if(he)he.textContent='❤️'.repeat(Math.max(0,GS.hearts))+'🤍'.repeat(Math.max(0,3-GS.hearts));
@@ -2288,7 +2332,7 @@ function renderParent(){
   matrix+=`</table></div>`;
   /* bài viết */
   const stLabel={draft:'📝 Bản nháp (chưa đọc cùng con)',reviewed_ok:'📖 Đã đọc cùng con',reviewed_revise:'✍️ Đã gợi ý sửa một chỗ'};
-  let writings=G.writings.length?G.writings.slice(0,10).map(w=>`<div class="writing-log"><b>${esc((SKILL_BY_ID[w.skill]||{}).title||w.skill)}</b> · ${new Date(w.t).toLocaleDateString('vi-VN')} · <span style="color:#5e35b1">${stLabel[w.status]||(w.ok===true?'📖 Đã đọc cùng con':'📝 Bản nháp')}</span>${(w.versions&&w.versions.length)?` · ${w.versions.length} bản trước`:''}<br><span style="color:#455a64">${esc(w.prompt)}</span><br><span style="white-space:pre-wrap">“${esc(w.text)}”</span></div>`).join(''):'<div style="color:var(--muted);font-size:14px">Chưa có bài viết nào.</div>';
+  let writings=G.writings.length?G.writings.slice(0,10).map(w=>`<div class="writing-log"><b>${esc((SKILL_BY_ID[w.skill]||{}).title||w.skill)}</b> · ${new Date(w.t).toLocaleDateString('vi-VN')} · <span style="color:#5e35b1">${stLabel[w.status]||(w.ok===true?'📖 Đã đọc cùng con':'📝 Bản nháp')}</span>${(w.versions&&w.versions.length)?` · ${w.versions.length} bản trước`:''}<br><span style="color:#455a64">${esc(w.prompt)}</span><br><span class="hw" style="white-space:pre-wrap;display:block;margin-top:4px">${esc(w.text)}</span></div>`).join(''):'<div style="color:var(--muted);font-size:14px">Chưa có bài viết nào.</div>';
   /* báo lỗi câu */
   let reported=G.reported.length?G.reported.map(r=>`<div class="reported">⚠️ ${esc(r)}</div>`).join(''):'<div style="color:var(--muted);font-size:14px">Chưa có câu nào bị báo lỗi.</div>';
   body.innerHTML=`
@@ -2935,8 +2979,8 @@ function wsStep1(t,g){
   const advWords=lvl>=2?vocabFor(ctxId,2).filter(w=>!themeWords.includes(w)):[];
   const advSimiles=lvl>=2?Object.values(VOCAB_BANK).filter(th=>th.ctx.includes(ctxId)).flatMap(th=>(th.adv.similes||[]).map(x=>x.s)):[];
   const ctxWords=[...new Set([...(ctx.attrs||[]),...(ctx.actions||[]).slice(0,4),...(ctx.entities||[]).slice(0,4)])].filter(w=>!themeWords.includes(w));
-  const chip=(w,cls)=>`<button class="chip ${cls||''}${WS.bank.includes(w)?' on':''}" data-ws="bank" data-v="${escAttr(w)}">${WS.bank.includes(w)?'✓ ':''}${esc(w)}</button>`;
-  return `<div class="ws-tip"><span class="owl">🦉</span><div><b>Đề:</b> ${esc(t.prompt)}<br>Chạm để <b>gom từ</b> con thấy hợp. Không bắt buộc dùng hết — chỉ để lúc viết đỡ “bí từ”. Có thể <b>bỏ qua</b> bước này.</div></div>
+  const chip=(w,cls)=>`<button class="chip hwchip ${cls||''}${WS.bank.includes(w)?' on':''}" data-ws="bank" data-v="${escAttr(w)}">${WS.bank.includes(w)?'✓ ':''}${esc(w)}</button>`;
+  return `<div class="ws-tip"><span class="owl">🦉</span><div><b>Đề:</b> <span class="hw">${esc(t.prompt)}</span><br>Chạm để <b>gom từ</b> con thấy hợp. Không bắt buộc dùng hết — chỉ để lúc viết đỡ “bí từ”. Có thể <b>bỏ qua</b> bước này.</div></div>
     <h4 style="margin-top:12px">Từ gợi ý cho đề này</h4><div>${t.wordBank.map(w=>chip(w)).join('')}</div>
     ${themeWords.length?`<h4>Kho từ theo chủ đề <span class="ws-status">Cơ bản</span></h4><div>${themeWords.map(w=>chip(w)).join('')}</div>`:''}
     ${ctxWords.length?`<h4>Từ theo bối cảnh: ${esc(ctx.title)}</h4><div>${ctxWords.map(w=>chip(w)).join('')}</div>`:''}
@@ -2948,7 +2992,7 @@ function wsStep1(t,g){
 }
 /* ---- Bước 2: tìm ý (2–3 câu hỏi theo thể loại; trả lời tuỳ ý) ---- */
 function wsStep2(t,g){
-  return `<div class="ws-tip"><span class="owl">🦉</span><div>Con trả lời <b>vài chữ</b> thôi cũng được, hoặc kể miệng cho ba/mẹ nghe. Không cần đủ cả ba câu.</div></div>
+  return `<div class="ws-tip"><span class="owl">🦉</span><div><b>Đề:</b> <span class="hw">${esc(t.prompt)}</span><br>Con trả lời <b>vài chữ</b> thôi cũng được, hoặc kể miệng cho ba/mẹ nghe. Không cần đủ cả ba câu.</div></div>
     ${g.ideas.map((q,i)=>`<div class="ws-idea" style="margin-top:10px"><b style="color:#00695c">${i+1}. ${esc(q)}</b><textarea data-idea="${i}" placeholder="…">${esc(WS.ideas[i]||'')}</textarea></div>`).join('')}
     <div class="gbtn-row" style="justify-content:flex-start"><button class="grn" data-ws="go" data-v="2">Tiếp: Viết →</button><button class="gry" data-ws="go" data-v="0">← Quay lại</button></div>`;
 }
@@ -2958,10 +3002,11 @@ function wsStep3(t,g){
   const ideas=Object.values(WS.ideas).filter(x=>x&&x.trim());
   const sttUI=(G.sttEnabled&&('webkitSpeechRecognition' in window||'SpeechRecognition' in window))
     ?`<button class="org" id="wsStt" data-ws="stt">🎤 ${WS.sttOn?'Dừng đọc':'Đọc để máy gõ'}</button>`:'';
-  return `<div class="ws-tip"><span class="owl">🦉</span><div><b>Đề:</b> ${esc(t.prompt)}<br>Viết theo cách của con. Chạm chip để chèn từ. Muốn sửa gì cứ sửa — bản nháp <b>tự lưu</b>.</div></div>
-    ${ideas.length?`<div class="ws-tip info"><span class="owl">💭</span><div><b>Ý con đã ghi:</b> ${ideas.map(esc).join(' · ')}</div></div>`:''}
-    <div style="margin-top:10px"><b style="font-size:13.5px;color:#5e35b1">Từ nối gợi ý:</b><br>${cons.map(c=>`<button class="chip con" data-ws="ins" data-v="${escAttr(c)}">${esc(c)}</button>`).join('')}</div>
-    ${WS.bank.length?`<div style="margin-top:6px"><b style="font-size:13.5px;color:#00695c">Từ con đã gom:</b><br>${WS.bank.map(w=>`<button class="chip" data-ws="ins" data-v="${escAttr(w)}">${esc(w)}</button>`).join('')}</div>`:''}
+  return `<div class="ws-tip"><span class="owl">🦉</span><div><b>Đề:</b> <span class="hw">${esc(t.prompt)}</span><br>Viết theo cách của con. Chạm chip để chèn từ. Muốn sửa gì cứ sửa — bản nháp <b>tự lưu</b>.</div></div>
+    ${ideas.length?`<div class="ws-tip info"><span class="owl">💭</span><div><b>Ý con đã ghi:</b> <span class="hw">${ideas.map(esc).join(' · ')}</span></div></div>`:''}
+    ${WS.revHint?`<div class="ws-tip info"><span class="owl">🔁</span><div><b>Sửa một chỗ:</b> ${esc(WS.revHint)}</div></div>`:''}
+    <div style="margin-top:10px"><b style="font-size:13.5px;color:#5e35b1">Từ nối gợi ý:</b><br>${cons.map(c=>`<button class="chip con hwchip" data-ws="ins" data-v="${escAttr(c)}">${esc(c)}</button>`).join('')}</div>
+    ${WS.bank.length?`<div style="margin-top:6px"><b style="font-size:13.5px;color:#00695c">Từ con đã gom:</b><br>${WS.bank.map(w=>`<button class="chip hwchip" data-ws="ins" data-v="${escAttr(w)}">${esc(w)}</button>`).join('')}</div>`:''}
     <textarea id="wsEditor" class="ws-editor" style="margin-top:10px" placeholder="Con bắt đầu từ một ý cũng được…">${esc(WS.text)}</textarea>
     <div class="ws-count" id="wsCount"></div>
     <div id="wsInline"></div>
@@ -3003,7 +3048,7 @@ function wsStep4(t,g){
   const hasNhu=/\b(như|giống như|tựa như|là)\b/i.test(WS.text);
   const rec=G.writings.find(w=>w.draftId===wsDraftId());
   const status=rec?rec.status:'';
-  return `<div class="ws-tip"><span class="owl">🦉</span><div>Con <b>đọc lại một lượt</b> (đọc thành tiếng càng tốt). Chạm vào <b>một câu con thích nhất</b>. Sau đó tự soi 3 mục gợi ý — không có điểm.</div></div>
+  return `<div class="ws-tip"><span class="owl">🦉</span><div><b>Đề:</b> <span class="hw">${esc(t.prompt)}</span><br>Con <b>đọc lại một lượt</b> (đọc thành tiếng càng tốt). Chạm vào <b>một câu con thích nhất</b>. Sau đó tự soi 3 mục gợi ý — không có điểm.</div></div>
     ${sents.length?`<div style="margin-top:8px">${sents.map((s,i)=>`<button class="ws-sent${WS.fav===i?' fav':''}" data-ws="fav" data-v="${i}">${WS.fav===i?'⭐ ':''}${esc(s)}</button>`).join('')}</div>`:'<div class="ws-tip info"><span class="owl">✍️</span><div>Con chưa viết gì. Quay lại bước Viết nhé.</div></div>'}
     <div class="rubric" style="margin-top:10px"><b>Tự soi cùng ba/mẹ (thể loại: ${esc(g.name)}):</b>${g.rubric.map(r=>`<div class="rubric-item">▢ ${esc(r)}</div>`).join('')}
       ${hasNhu?`<div class="rubric-item">🪞 Con có dùng “như / giống như / là”. <b>Đó có phải phép so sánh không?</b> (Chỉ là so sánh khi có hai sự vật và một nét giống nhau.)</div>`:''}
@@ -3059,7 +3104,7 @@ function wsCloze(t){
   const cz=CLOZE[t.genre]||CLOZE.description;
   const area=document.getElementById('wsClozeArea');if(!area)return;
   let i=0;const html=esc(cz.text).replace(/\{(\d+)\}/g,(m,k)=>{const b=cz.blanks[+k];const opts=shuffle(b.opts.slice());return `<span class="cloze-blank" data-k="${k}"><select><option value="">…</option>${opts.map(o=>`<option>${esc(o)}</option>`).join('')}</select></span>`;});
-  area.innerHTML=`<div class="card" style="margin-top:10px;background:#f6fffb"><b>🧩 Tập điền từ (làm quen cấu trúc đoạn)</b><div style="line-height:2.1;margin-top:6px">${html}</div>
+  area.innerHTML=`<div class="card" style="margin-top:10px;background:#f6fffb"><b>🧩 Tập điền từ (làm quen cấu trúc đoạn)</b><div class="hw" style="line-height:2.2;margin-top:6px;font-size:1.4em">${html}</div>
     <div class="gbtn-row" style="justify-content:flex-start"><button class="grn" id="czCheck">Kiểm tra</button><button class="gry" id="czClose">Đóng</button></div><div id="czFb" class="fb"></div></div>`;
   document.getElementById('czClose').onclick=()=>{area.innerHTML='';};
   document.getElementById('czCheck').onclick=()=>{
