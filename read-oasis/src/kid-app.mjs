@@ -11,6 +11,7 @@ import { ProgressStore } from './progress-store.mjs';
 import { isPublishable } from './schema.mjs';
 import { h, btn, icon, applySettings, toast, narrator, BreakTimer, shuffle, loadJSON, assetUrl, isBundled, isFileProtocol } from './ui.mjs';
 import { attachSync } from './sync.mjs';
+import { requireAuth } from './auth-gate.mjs';
 
 // All module state is declared before any store listener can fire (save() notifies synchronously).
 const store = new ProgressStore(window.localStorage);
@@ -55,10 +56,10 @@ window.addEventListener('pagehide', () => { store.endSession(session.id); store.
 document.addEventListener('visibilitychange', () => { if (document.hidden) { narrator.stop(); store.save(); } });
 if ('serviceWorker' in navigator && !isBundled && !isFileProtocol) navigator.serviceWorker.register('sw.js').catch(() => { /* offline optional */ });
 
-// Cloud sync only if a parent enabled it (src/sync.mjs); never blocks the child app.
-if (S.settings.cloud_sync_enabled && !isFileProtocol) attachSync(store).then(ok => { if (ok && route.view === 'library') render(); }).catch(() => {});
-
-loadLibrary().then(() => {
+// Family login gate (src/auth-gate.mjs) runs first; the library loads in parallel and renders once the account
+// is verified. Cloud sync only if a parent enabled it (src/sync.mjs); never blocks the child app.
+Promise.all([requireAuth({ page: 'kid' }), loadLibrary()]).then(() => {
+  if (S.settings.cloud_sync_enabled && !isFileProtocol) attachSync(store).then(ok => { if (ok && route.view === 'library') render(); }).catch(() => {});
   const last = store.lastOpened();
   renderStars();
   if (last && library.some(b => b.book_id === last.book_id && b.revision === last.revision) && last.completed_reads === 0) {
