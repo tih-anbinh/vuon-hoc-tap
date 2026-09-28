@@ -11,19 +11,25 @@ import { isPublishable } from './schema.mjs';
 import { h, btn, icon, applySettings, toast, narrator, BreakTimer, shuffle, loadJSON, assetUrl, isBundled, isFileProtocol } from './ui.mjs';
 import { attachSync } from './sync.mjs';
 
+// All module state is declared before any store listener can fire (save() notifies synchronously).
 const store = new ProgressStore(window.localStorage);
 const S = store.load();
 applySettings(S.settings);
-store.onChange(d => { applySettings(d.settings); renderStars(); });
 
 const app = document.getElementById('app');
 const titleEl = document.getElementById('titleText') || document.getElementById('title');
 let library = [];                      // published book summaries
 const bookCache = new Map();           // book_id -> full book
-let session = store.startSession();
-let breakTimer = new BreakTimer({ minutes: S.settings.break_minutes, onCue: showBreak });
 let route = { view: 'library' };
+const history = [];                    // in-app back stack
 let audioUsedThisBook = false;
+let lastStars = null;
+let session = null;
+let breakTimer = null;
+
+store.onChange(d => { applySettings(d.settings); renderStars(); if (breakTimer && breakTimer.minutes !== d.settings.break_minutes) breakTimer.setMinutes(d.settings.break_minutes); });
+session = store.startSession();
+breakTimer = new BreakTimer({ minutes: S.settings.break_minutes, onCue: showBreak });
 
 // ---------- boot
 document.getElementById('btnHome').onclick = () => go({ view: 'library' });
@@ -63,7 +69,6 @@ async function loadBook(id) {
 }
 
 // ---------- routing
-const history = [];
 function go(r, push = true) { if (push && route) history.push(route); route = r; render(); }
 function back() { narrator.stop(); const prev = history.pop(); if (prev) { route = prev; render(); } else go({ view: 'library' }, false); }
 function stopNow() {
@@ -74,7 +79,6 @@ function stopNow() {
     btn('Back to library', () => { session = store.startSession(); go({ view: 'library' }); }, { primary: true })));
   titleEl.textContent = 'Read Oasis';
 }
-let lastStars = null;
 function renderStars() {
   const el = document.getElementById('stars'); el.replaceChildren();
   if (!S.settings.rewards_enabled) return;
@@ -378,4 +382,3 @@ function maybeAward(x) {
 // ---------- break cue (A07)
 function showBreak() { document.getElementById('breakBanner').classList.remove('hidden'); store.noteBreak(session.id, false); document.getElementById('breakOk').focus(); }
 function hideBreak(dismissed) { document.getElementById('breakBanner').classList.add('hidden'); if (dismissed) { const s = S.sessions.find(x => x.id === session.id); if (s) { s.breaks_dismissed++; store.save(); } } }
-store.onChange(d => { if (breakTimer.minutes !== d.settings.break_minutes) breakTimer.setMinutes(d.settings.break_minutes); });

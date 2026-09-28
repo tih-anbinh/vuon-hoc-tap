@@ -9,6 +9,7 @@ cd "$(dirname "$0")/.."
 echo "== JS bracket/import sanity";   python3 tools/js_bracket_check.py
 echo "== Content gate + index";       python3 tools/validate_content.py --index
 echo "== Gate A unit tests";          python3 test/test_validate_content.py 2>&1 | tail -3
+echo "== Sanity-tool regression";     python3 test/test_js_sanity_tool.py 2>&1 | tail -1
 echo "== A03 contrast";               python3 tools/contrast_check.py | tail -1
 echo "== Single-file build";          python3 tools/build_single_file.py
 echo "== dist sanity"

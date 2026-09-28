@@ -34,6 +34,39 @@ def exports_of(path):
     return names
 
 
+def tdz_check(s):
+    """Flag top-level `let/const X` that is referenced by an earlier top-level statement that runs at load
+    (a call, `.onX =`, `new`, or a listener registration). Catches 'Cannot access X before initialization'
+    when store.onChange(...) fires synchronously during module evaluation. Heuristic, top-level only."""
+    lines = s.split('\n')
+    decl_line = {}
+    for i, ln in enumerate(lines):
+        m = re.match(r'^(?:let|const)\s+([A-Za-z_$][\w$]*)\s*=', ln)
+        if m:
+            decl_line[m.group(1)] = i
+    # function bodies referencing the names, keyed by function name
+    func_refs = {}
+    for m in re.finditer(r'^(?:async\s+)?function\s+([A-Za-z_$][\w$]*)\s*\([^)]*\)\s*\{', s, re.M):
+        start = m.end(); depth = 1; j = start
+        while j < len(s) and depth:
+            depth += {'{': 1, '}': -1}.get(s[j], 0); j += 1
+        body = s[start:j]
+        func_refs[m.group(1)] = {n for n in decl_line if re.search(r'\b' + re.escape(n) + r'\b', body)}
+    problems = []
+    for i, ln in enumerate(lines):
+        if not re.match(r'^[A-Za-z_$][\w$.]*\s*(\(|=|\.)', ln) or re.match(r'^(let|const|function|class|async|import|export|if|for|while|return|switch)\b', ln):
+            continue
+        # names used directly on this line, or via functions called on this line
+        used = {n for n in decl_line if re.search(r'\b' + re.escape(n) + r'\b', ln)}
+        for fn, refs in func_refs.items():
+            if re.search(r'\b' + re.escape(fn) + r'\b', ln):
+                used |= refs
+        for n in sorted(used):
+            if decl_line[n] > i and not re.match(r'^(?:let|const)\s+' + re.escape(n) + r'\b', ln):
+                problems.append(f'line {i + 1}: uses "{n}" before its declaration on line {decl_line[n] + 1} (TDZ risk)')
+    return problems
+
+
 def main():
     files = sorted(glob.glob(os.path.join(ROOT, 'src', '*.mjs')) + glob.glob(os.path.join(ROOT, 'test', '*.mjs')) + [os.path.join(ROOT, 'sw.js')])
     bad = 0
@@ -50,6 +83,7 @@ def main():
             for name in (x.strip().split(' as ')[0] for x in m.group(1).split(',') if x.strip()):
                 if name not in exp:
                     problems.append(f'{name} not exported by {os.path.basename(target)}')
+        problems += tdz_check(s)
         rel = os.path.relpath(f, ROOT)
         print(('FAIL ' if problems else 'OK   ') + rel + ('  ' + '; '.join(problems) if problems else ''))
         bad += bool(problems)

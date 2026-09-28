@@ -89,6 +89,11 @@ def build_page(html_name, entry):
     bundle_json = json.dumps(bundle_content(), ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
     html = html.replace('<link rel="stylesheet" href="assets/app.css">', '<style>\n' + css + '\n</style>')
     html = html.replace('  <link rel="manifest" href="manifest.webmanifest">\n', '')
+    icon_path = os.path.join(ROOT, 'assets', 'icons', 'mascot.svg')
+    if os.path.isfile(icon_path):
+        with open(icon_path, 'rb') as f:
+            icon_uri = 'data:image/svg+xml;base64,' + base64.b64encode(f.read()).decode('ascii')
+        html = html.replace('href="assets/icons/mascot.svg"', f'href="{icon_uri}"')
     html = re.sub(r'<script type="module" src="src/[\w-]+\.mjs"></script>',
                   lambda m: '<script>window.__RO_BUNDLE__=' + bundle_json + ';</script>\n  <script>\n' + js.replace('</script', '<\\/script') + '</script>',
                   html)
