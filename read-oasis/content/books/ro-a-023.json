@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-a-023",
+  "revision": 1,
+  "status": "DRAFT",
+  "title": "Wet, Wet, Dry",
+  "language": "en",
+  "level": "A",
+  "reading_mode": "independent_reading",
+  "topic": "weather",
+  "genre": "fiction",
+  "learning_objectives": ["Read a short book alone with a repeating frame", "Explain what made the ground dry again"],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": { "text": "low", "conceptual": "low", "visual_support": "medium" },
+  "rights": { "text_author": "Huy Tran for Read Oasis (original)", "text_license": "family-use, all rights reserved", "media_license": "family-use, original SVG", "original": true },
+  "parent_prompts": [
+    "Let the child read alone. Help only if asked.",
+    "After reading: What dried the puddle? What would happen if the sun did not come out?"
+  ],
+  "pages": [
+    { "page_id": "p01", "text": "Rain, rain, rain.", "illustration_brief": "Heavy rain lines over a yard with a fence; grey sky.", "audio_script": "Rain, rain, rain.", "timing_segments": [] },
+    { "page_id": "p02", "text": "The path is wet.", "illustration_brief": "A stone path shining with water.", "audio_script": "The path is wet.", "timing_segments": [] },
+    { "page_id": "p03", "text": "The mat is wet.", "illustration_brief": "A doormat dark with water outside a door.", "audio_script": "The mat is wet.", "timing_segments": [] },
+    { "page_id": "p04", "text": "Mo is wet!", "illustration_brief": "Mo standing in a puddle, feathers flat and dripping, unhappy.", "audio_script": "Mo is wet!", "timing_segments": [] },
+    { "page_id": "p05", "text": "Then the sun comes out.", "illustration_brief": "Clouds parting, a big yellow sun; the puddle is smaller.", "audio_script": "Then the sun comes out.", "timing_segments": [],
+      "vocabulary": [{ "word": "then", "definition": "After that; the next thing that happens.", "example": "I put on my shoes. Then I go out." }] },
+    { "page_id": "p06", "text": "The path is dry. The mat is dry. Mo is dry!", "illustration_brief": "Same yard, bright; Mo fluffy and happy on the dry path.", "audio_script": "The path is dry. The mat is dry. Mo is dry!", "timing_segments": [],
+      "vocabulary": [{ "word": "dry", "definition": "Not wet; no water on it.", "example": "The towel is dry now." }] }
+  ],
+  "quiz": [
+    { "question_id": "q01", "skill": "explicit_detail", "difficulty": "easy", "prompt": "What is wet at the start?", "options": [ { "id": "path", "text": "The path and the mat" }, { "id": "sun", "text": "The sun" }, { "id": "book", "text": "A book" } ], "correct_option_id": "path", "evidence_page_ids": ["p02", "p03"], "explanation": "Page 2: The path is wet. Page 3: The mat is wet.", "distractors_reviewed": true },
+    { "question_id": "q02", "skill": "cause_effect", "difficulty": "medium", "prompt": "What makes everything dry?", "options": [ { "id": "sun", "text": "The sun comes out" }, { "id": "wind", "text": "Mo shakes" }, { "id": "towel", "text": "A towel" } ], "correct_option_id": "sun", "evidence_page_ids": ["p05", "p06"], "explanation": "Page 5: Then the sun comes out. Page 6: everything is dry.", "distractors_reviewed": true },
+    { "question_id": "q03", "skill": "word_knowledge", "difficulty": "easy", "prompt": "What does dry mean?", "options": [ { "id": "notwet", "text": "Not wet" }, { "id": "cold", "text": "Very cold" }, { "id": "loud", "text": "Very loud" } ], "correct_option_id": "notwet", "evidence_page_ids": ["p06"], "explanation": "On page 6 the sun has come out and the wet things are dry, which means not wet any more.", "distractors_reviewed": true },
+    { "question_id": "q04", "skill": "expression", "difficulty": "easy", "response_type": "open", "prompt": "Tell a grown-up: what was wet, what happened next, and how it ended.", "rubric": "not yet: says wet only; with support: names the sun with prompting; independent: wet things, then the sun came out, then dry", "explanation": "A three-step retell shows the child connected cause and effect." }
+  ],
+  "activities": [
+    { "activity_id": "a01", "type": "sequence_events", "skill": "sequence", "prompt": "Put the story in order.", "items": [ { "id": "s1", "text": "Rain falls and things get wet.", "page_id": "p01" }, { "id": "s2", "text": "The sun comes out.", "page_id": "p05" }, { "id": "s3", "text": "Everything is dry.", "page_id": "p06" } ], "correct_order": ["s1", "s2", "s3"] },
+    { "activity_id": "a02", "type": "choose_evidence", "skill": "inference", "claim": "Mo did not like being wet.", "prompt": "Which page shows this?", "correct_page_ids": ["p04"] }
+  ],
+  "off_screen_prompt": "Wet a small cloth and put it in the sun. Check it later. Tell someone what happened.",
+  "review": { "content_approved": false, "media_approved": false, "parent_approved": false }
+}

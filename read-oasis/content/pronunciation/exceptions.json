@@ -1,0 +1,34 @@
+{
+  "_about": "Exception dictionary: per-provider (and optionally per-voice) overrides applied BEFORE the lexicon when a renderer mis-says a word. Shape: word -> provider|'*' -> voice|'*' -> {ipa} or {substitute}. 'ipa' is used by providers that honour <phoneme>; 'substitute' is a respelling for providers that cannot (OpenAI, ElevenLabs without a dictionary). Add entries only after hearing the problem in a benchmark run and note the date.",
+
+  "schedule": {
+    "*":      { "*": { "ipa": "ˈʃed.juːl" } },
+    "openai": { "*": { "substitute": "shed-yule" } },
+    "elevenlabs": { "*": { "substitute": "shed-yule" } }
+  },
+  "advertisement": {
+    "*":      { "*": { "ipa": "ədˈvɜː.tɪs.mənt" } },
+    "openai": { "*": { "substitute": "ad-VER-tiss-ment" } },
+    "elevenlabs": { "*": { "substitute": "ad-VER-tiss-ment" } }
+  },
+  "vitamin": {
+    "*":      { "*": { "ipa": "ˈvɪt.ə.mɪn" } },
+    "openai": { "*": { "substitute": "VIT-a-min" } },
+    "elevenlabs": { "*": { "substitute": "VIT-a-min" } }
+  },
+  "tomato": {
+    "*":      { "*": { "ipa": "təˈmɑː.təʊ" } },
+    "openai": { "*": { "substitute": "to-MAH-toe" } },
+    "elevenlabs": { "*": { "substitute": "to-MAH-toe" } }
+  },
+  "garage": {
+    "*":      { "*": { "ipa": "ˈɡær.ɑːʒ" } },
+    "openai": { "*": { "substitute": "GA-rahzh" } },
+    "elevenlabs": { "*": { "substitute": "GA-rahzh" } }
+  },
+  "yuki": {
+    "*":      { "*": { "ipa": "ˈjuː.ki" } },
+    "openai": { "*": { "substitute": "Yoo-kee" } },
+    "elevenlabs": { "*": { "substitute": "Yoo-kee" } }
+  }
+}

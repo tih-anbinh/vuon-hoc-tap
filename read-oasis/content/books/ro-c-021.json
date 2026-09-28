@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-c-021",
+  "revision": 1,
+  "status": "DRAFT",
+  "title": "Where Does the Puddle Go?",
+  "language": "en",
+  "level": "C",
+  "reading_mode": "independent_reading",
+  "topic": "water",
+  "genre": "nonfiction",
+  "learning_objectives": ["Learn that water from a puddle goes into the air (evaporates) and into the ground", "Use the word evaporate in context"],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": { "text": "low", "conceptual": "medium", "visual_support": "medium" },
+  "rights": { "text_author": "Huy Tran for Read Oasis (original)", "text_license": "family-use, all rights reserved", "media_license": "family-use, original SVG", "original": true },
+  "factual_claims": [
+    { "claim": "Some puddle water soaks down into the soil.", "source": "USGS Water Science School, 'Infiltration and the Water Cycle' (usgs.gov)", "reviewed": false },
+    { "claim": "Some puddle water turns into water vapor and goes into the air; this is called evaporation.", "source": "USGS Water Science School, 'Evaporation and the Water Cycle' (usgs.gov); NASA Climate Kids, 'What is the water cycle?'", "reviewed": false },
+    { "claim": "Water vapor is invisible; you cannot see it in the air.", "source": "USGS Water Science School, 'Evaporation and the Water Cycle' (water vapor is a gas, invisible)", "reviewed": false },
+    { "claim": "Warmth from the sun makes water evaporate faster.", "source": "NASA Climate Kids, 'What is the water cycle?' (heat from the sun causes evaporation); USGS, 'Evaporation and the Water Cycle'", "reviewed": false },
+    { "claim": "Water vapor in the air can form clouds and fall again as rain.", "source": "NASA Climate Kids, 'What is the water cycle?'", "reviewed": false }
+  ],
+  "parent_prompts": [
+    "After reading: Where did the puddle water go? Two places. Which one can we not see?"
+  ],
+  "pages": [
+    { "page_id": "p01", "text": "After the rain, there is a puddle on the path.", "illustration_brief": "A wide puddle on a dirt path reflecting grey sky; drips from a leaf.", "audio_script": "After the rain, there is a puddle on the path.", "timing_segments": [],
+      "vocabulary": [{ "word": "puddle", "definition": "A small pool of rain water on the ground.", "example": "I jumped over the puddle." }] },
+    { "page_id": "p02", "text": "The next day the puddle is smaller. Where did the water go?", "illustration_brief": "Same path, a smaller puddle with a damp ring around it; sun out.", "audio_script": "The next day the puddle is smaller. Where did the water go?", "timing_segments": [] },
+    { "page_id": "p03", "text": "Some water soaks down into the soil. The ground drinks it.", "illustration_brief": "Cross-section: the puddle on top, blue arrows pointing down into brown soil.", "audio_script": "Some water soaks down into the soil. The ground drinks it.", "timing_segments": [],
+      "vocabulary": [{ "word": "soaks", "definition": "Goes slowly into something, like water into a sponge.", "example": "The rain soaks into my socks." }] },
+    { "page_id": "p04", "text": "Some water goes up into the air. It turns into water vapor. You cannot see it.", "illustration_brief": "The puddle with faint wavy arrows rising into empty air; nothing visible above.", "audio_script": "Some water goes up into the air. It turns into water vapor. You cannot see it.", "timing_segments": [],
+      "vocabulary": [{ "word": "vapor", "definition": "Water that has turned into a gas and floats in the air.", "example": "Steam from a hot cup is water vapor you can just see." }] },
+    { "page_id": "p05", "text": "This is called evaporation. The warm sun makes it happen faster.", "illustration_brief": "A bright sun over the shrinking puddle; more rising arrows on the sunny side.", "audio_script": "This is called evaporation. The warm sun makes it happen faster.", "timing_segments": [],
+      "vocabulary": [{ "word": "evaporation", "definition": "When water turns into vapor and goes into the air.", "example": "Wet clothes dry because of evaporation." }] },
+    { "page_id": "p06", "text": "Up high, the vapor can make clouds. One day it will fall as rain and make a new puddle.", "illustration_brief": "A small cloud above the now-dry path; a single raindrop falling from it.", "audio_script": "Up high, the vapor can make clouds. One day it will fall as rain and make a new puddle.", "timing_segments": [] }
+  ],
+  "quiz": [
+    { "question_id": "q01", "skill": "explicit_detail", "difficulty": "easy", "prompt": "Where are the two places the puddle water goes?", "options": [ { "id": "both", "text": "Into the soil and into the air" }, { "id": "river", "text": "Into a river and a lake" }, { "id": "pipe", "text": "Into a pipe" } ], "correct_option_id": "both", "evidence_page_ids": ["p03", "p04"], "explanation": "Page 3: some soaks into the soil. Page 4: some goes up into the air.", "distractors_reviewed": true },
+    { "question_id": "q02", "skill": "word_knowledge", "difficulty": "medium", "prompt": "What is evaporation?", "options": [ { "id": "vapor", "text": "Water turning into vapor and going into the air" }, { "id": "soak", "text": "Water soaking into the ground" }, { "id": "freeze", "text": "Water turning into ice" } ], "correct_option_id": "vapor", "evidence_page_ids": ["p04", "p05"], "explanation": "Page 4 explains water going into the air as vapor; page 5 names this evaporation.", "distractors_reviewed": true },
+    { "question_id": "q03", "skill": "cause_effect", "difficulty": "medium", "prompt": "What makes the puddle dry up faster?", "options": [ { "id": "sun", "text": "The warm sun" }, { "id": "night", "text": "The cold night" }, { "id": "cloud", "text": "A big cloud" } ], "correct_option_id": "sun", "evidence_page_ids": ["p05"], "explanation": "Page 5 says: The warm sun makes it happen faster.", "distractors_reviewed": true },
+    { "question_id": "q04", "skill": "main_idea", "difficulty": "hard", "prompt": "What is this book mostly about?", "options": [ { "id": "go", "text": "Where puddle water goes" }, { "id": "jump", "text": "How to jump over puddles" }, { "id": "clouds", "text": "What clouds look like" } ], "correct_option_id": "go", "evidence_page_ids": ["p02", "p06"], "explanation": "Page 2 asks where the water went. The rest of the book, up to page 6, answers it.", "distractors_reviewed": true },
+    { "question_id": "q05", "skill": "summary", "difficulty": "hard", "response_type": "open", "prompt": "In your own words, tell a grown-up where puddle water goes. Try to use the word evaporation.", "rubric": "not yet: says it dries; with support: names the ground or the air with prompting; independent: soil and air, uses evaporation, mentions sun or clouds", "explanation": "A two-place explanation with the key word shows the concept was understood, not memorized." }
+  ],
+  "activities": [
+    { "activity_id": "a01", "type": "sequence_events", "skill": "sequence", "prompt": "Put the water's journey in order.", "items": [ { "id": "s1", "text": "Rain makes a puddle.", "page_id": "p01" }, { "id": "s2", "text": "Water soaks into the soil and evaporates into the air.", "page_id": "p04" }, { "id": "s3", "text": "Vapor makes clouds.", "page_id": "p06" }, { "id": "s4", "text": "Rain falls and makes a new puddle.", "page_id": "p06" } ], "correct_order": ["s1", "s2", "s3", "s4"] },
+    { "activity_id": "a02", "type": "choose_evidence", "skill": "inference", "claim": "You cannot see water vapor.", "prompt": "Which page says this?", "correct_page_ids": ["p04"] },
+    { "activity_id": "a03", "type": "word_to_meaning", "skill": "word_knowledge", "prompt": "Match the word to its meaning.", "pairs": [ { "left": "puddle", "right": "a small pool of rain water" }, { "left": "soaks", "right": "goes slowly into something" }, { "left": "evaporation", "right": "water turning into vapor" } ] }
+  ],
+  "off_screen_prompt": "Put a spoon of water on a plate in the sun and another in the shade. Check them after lunch. Which one went first?",
+  "review": { "content_approved": false, "media_approved": false, "parent_approved": false }
+}

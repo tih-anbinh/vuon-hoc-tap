@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-a-022",
+  "revision": 1,
+  "status": "DRAFT",
+  "title": "Pam the Cat",
+  "language": "en",
+  "level": "A",
+  "reading_mode": "decodable",
+  "topic": "home",
+  "genre": "fiction",
+  "learning_objectives": ["Decode CVC words with short a", "Read the sight words the, a, is, in, on by sight"],
+  "prerequisite_skills": [],
+  "target_phonics": ["cvc_short_a"],
+  "irregular_words": ["the", "a", "is", "in", "on", "has", "and", "I", "my", "no"],
+  "difficulty": { "text": "low", "conceptual": "low", "visual_support": "low" },
+  "rights": { "text_author": "Huy Tran for Read Oasis (original)", "text_license": "family-use, all rights reserved", "media_license": "family-use, original SVG", "original": true },
+  "parent_prompts": [
+    "Point under each word. Let the child sound out c-a-t, b-a-g, n-a-p before you say anything.",
+    "If the child guesses from the picture, cover the picture and try the word again.",
+    "After reading: Where did Pam nap? Was that a good place?"
+  ],
+  "pages": [
+    { "page_id": "p01", "text": "Sam has a cat. The cat is Pam.", "illustration_brief": "Sam sitting on a mat; a grey cat beside Sam. Do not show a bag yet.", "audio_script": "Sam has a cat. The cat is Pam.", "timing_segments": [] },
+    { "page_id": "p02", "text": "Sam has a bag. The bag is on the mat.", "illustration_brief": "A blue school bag lying open on a striped mat; Sam packing a book into it.", "audio_script": "Sam has a bag. The bag is on the mat.", "timing_segments": [] },
+    { "page_id": "p03", "text": "Pam naps in the bag.", "illustration_brief": "Only the cat's tail and one ear stick out of the bag; Sam is looking the other way.", "audio_script": "Pam naps in the bag.", "timing_segments": [] },
+    { "page_id": "p04", "text": "Sam taps the bag. Pat, pat.", "illustration_brief": "Sam's hand on the bag, puzzled face; a bulge in the bag.", "audio_script": "Sam taps the bag. Pat, pat.", "timing_segments": [] },
+    { "page_id": "p05", "text": "Pam! No nap in my bag!", "illustration_brief": "Pam's head pops out of the bag, eyes wide; Sam laughing.", "audio_script": "Pam! No nap in my bag!", "timing_segments": [] },
+    { "page_id": "p06", "text": "Pam naps on the mat. Sam has the bag.", "illustration_brief": "Pam curled on the mat asleep; Sam walking away with the bag on one shoulder.", "audio_script": "Pam naps on the mat. Sam has the bag.", "timing_segments": [] }
+  ],
+  "quiz": [
+    { "question_id": "q01", "skill": "decoding", "difficulty": "easy", "prompt": "Which word says nap?", "options": [ { "id": "nap", "text": "nap" }, { "id": "map", "text": "map" }, { "id": "nag", "text": "nag" } ], "correct_option_id": "nap", "evidence_page_ids": ["p03"], "explanation": "n-a-p. It starts with n and ends with p.", "distractors_reviewed": true },
+    { "question_id": "q02", "skill": "explicit_detail", "difficulty": "easy", "prompt": "Where does Pam nap first?", "options": [ { "id": "bag", "text": "In the bag" }, { "id": "mat", "text": "On the mat" }, { "id": "hat", "text": "In a hat" } ], "correct_option_id": "bag", "evidence_page_ids": ["p03"], "explanation": "Page 3 says: Pam naps in the bag.", "distractors_reviewed": true },
+    { "question_id": "q03", "skill": "cause_effect", "difficulty": "medium", "prompt": "Why does Sam tap the bag?", "options": [ { "id": "pam", "text": "Something is in it" }, { "id": "music", "text": "To make music" }, { "id": "dirty", "text": "It is dirty" } ], "correct_option_id": "pam", "evidence_page_ids": ["p03", "p04"], "explanation": "Pam napped in the bag (page 3), so the bag looked strange and Sam tapped it (page 4).", "distractors_reviewed": true },
+    { "question_id": "q04", "skill": "expression", "difficulty": "easy", "response_type": "open", "prompt": "Tell a grown-up where Pam napped first and where Pam napped at the end.", "rubric": "not yet: points at the cat only; with support: names one place with prompting; independent: says in the bag, then on the mat, and why Sam moved her", "explanation": "Naming both places shows the child tracked the change, not just the picture." }
+  ],
+  "activities": [
+    { "activity_id": "a01", "type": "word_to_meaning", "skill": "word_knowledge", "prompt": "Match the word to its meaning.", "pairs": [ { "left": "nap", "right": "a short sleep" }, { "left": "bag", "right": "you carry things in it" }, { "left": "mat", "right": "a small rug on the floor" } ] }
+  ],
+  "off_screen_prompt": "Find three things at home whose names have the a sound like cat. Say them to someone.",
+  "review": { "content_approved": false, "media_approved": false, "parent_approved": false, "decodability_reviewed": true, "decodability_note": "Pam, Sam, cat, bag, mat, nap(s), tap(s), pat are short-a CVC; 'naps'/'taps' carry an -s ending, accepted after review. All other words are on the irregular list." }
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-c-023",
+  "revision": 1,
+  "status": "DRAFT",
+  "title": "Grandma's Market List",
+  "language": "en",
+  "level": "C",
+  "reading_mode": "read_aloud",
+  "topic": "neighbourhood",
+  "genre": "fiction",
+  "learning_objectives": ["Listen to a longer story and keep track of a list", "Explain why the last item was hard to find and how the problem was solved"],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": { "text": "medium", "conceptual": "medium", "visual_support": "medium" },
+  "rights": { "text_author": "Huy Tran for Read Oasis (original)", "text_license": "family-use, all rights reserved", "media_license": "family-use, original SVG", "original": true },
+  "parent_prompts": [
+    "Before reading: Grandma gives Lan a list of four things. Let's see if we can remember them all.",
+    "After page 3: What has Lan found so far? What is left?",
+    "After page 5: Nobody has limes. What could Lan do?",
+    "After reading: Was the fruit seller's idea a good swap? Why?"
+  ],
+  "pages": [
+    { "page_id": "p01", "text": "Grandma gave Lan a list and a basket. \"Four things,\" she said. \"Eggs, a bunch of herbs, a fish, and three limes for the soup.\"", "illustration_brief": "Grandma at a doorway handing a folded paper and a woven basket to Lan; morning light.", "audio_script": "Grandma gave Lan a list and a basket. Four things, she said. Eggs, a bunch of herbs, a fish, and three limes for the soup.", "timing_segments": [],
+      "vocabulary": [{ "word": "list", "definition": "Words written one under another so you remember them.", "example": "Dad wrote a list before the shop." }] },
+    { "page_id": "p02", "text": "The market was loud and bright. Lan found the egg seller first. Six brown eggs went into the basket. One thing done.", "illustration_brief": "A busy market lane with awnings; a seller handing Lan eggs in a paper cone.", "audio_script": "The market was loud and bright. Lan found the egg seller first. Six brown eggs went into the basket. One thing done.", "timing_segments": [] },
+    { "page_id": "p03", "text": "Next, the herb stall. Lan sniffed. Mint, basil, and something like lemon. \"That one,\" said Lan. Two things done.", "illustration_brief": "Bundles of green herbs on a table; Lan leaning in to smell one.", "audio_script": "Next, the herb stall. Lan sniffed. Mint, basil, and something like lemon. That one, said Lan. Two things done.", "timing_segments": [],
+      "vocabulary": [{ "word": "stall", "definition": "A small open shop or table at a market.", "example": "The fruit stall had big yellow mangoes." }] },
+    { "page_id": "p04", "text": "The fish seller wrapped a silver fish in a leaf. It was cold and a little slippery. Three things done.", "illustration_brief": "A fish on ice being wrapped in a banana leaf; Lan holding the basket open.", "audio_script": "The fish seller wrapped a silver fish in a leaf. It was cold and a little slippery. Three things done.", "timing_segments": [] },
+    { "page_id": "p05", "text": "But there were no limes. Not at the first fruit stall. Not at the second. \"The lime truck is late,\" a seller said. Lan looked at the list and frowned.", "illustration_brief": "A fruit stall with oranges and mangoes but an empty crate; Lan looking at the paper list.", "audio_script": "But there were no limes. Not at the first fruit stall. Not at the second. The lime truck is late, a seller said. Lan looked at the list and frowned.", "timing_segments": [] },
+    { "page_id": "p06", "text": "\"What is the lime for?\" asked the seller. \"Sour soup,\" said Lan. The seller held up a small green fruit. \"Tamarind is sour too. Try it.\"", "illustration_brief": "The seller holding up a brown tamarind pod; Lan curious.", "audio_script": "What is the lime for? asked the seller. Sour soup, said Lan. The seller held up a small green fruit. Tamarind is sour too. Try it.", "timing_segments": [],
+      "vocabulary": [{ "word": "sour", "definition": "A sharp taste, like lemon or lime.", "example": "The green mango was so sour my face squeezed up." }] },
+    { "page_id": "p07", "text": "Lan carried the basket home. Eggs, herbs, fish, and tamarind. Grandma read the list, then looked in the basket, then laughed. \"Not on the list. But it will do.\"", "illustration_brief": "Grandma peering into the basket, smiling; Lan a little nervous.", "audio_script": "Lan carried the basket home. Eggs, herbs, fish, and tamarind. Grandma read the list, then looked in the basket, then laughed. Not on the list. But it will do.", "timing_segments": [] },
+    { "page_id": "p08", "text": "The soup was hot and sour and good. \"Next time,\" said Grandma, \"you write the list.\"", "illustration_brief": "A steaming pot of soup on the table; Grandma and Lan with bowls.", "audio_script": "The soup was hot and sour and good. Next time, said Grandma, you write the list.", "timing_segments": [] }
+  ],
+  "quiz": [
+    { "question_id": "q01", "skill": "listening_comprehension", "difficulty": "easy", "prompt": "What four things were on the list?", "options": [ { "id": "list", "text": "Eggs, herbs, fish, limes" }, { "id": "wrong1", "text": "Eggs, rice, fish, mangoes" }, { "id": "wrong2", "text": "Bread, herbs, chicken, limes" } ], "correct_option_id": "list", "evidence_page_ids": ["p01"], "explanation": "Page 1: Eggs, a bunch of herbs, a fish, and three limes.", "distractors_reviewed": true },
+    { "question_id": "q02", "skill": "cause_effect", "difficulty": "medium", "prompt": "Why were there no limes at the market?", "options": [ { "id": "truck", "text": "The lime truck was late" }, { "id": "sold", "text": "Grandma bought them all" }, { "id": "season", "text": "Limes do not grow there" } ], "correct_option_id": "truck", "evidence_page_ids": ["p05"], "explanation": "Page 5: The lime truck is late, a seller said.", "distractors_reviewed": true },
+    { "question_id": "q03", "skill": "inference", "difficulty": "hard", "prompt": "Why was tamarind a good swap for lime?", "options": [ { "id": "sour", "text": "Both are sour, and the soup needed sour" }, { "id": "green", "text": "Both are green" }, { "id": "cheap", "text": "Tamarind was cheaper" } ], "correct_option_id": "sour", "evidence_page_ids": ["p06", "p08"], "explanation": "Lan said the lime was for sour soup, and the seller said tamarind is sour too (page 6). The soup came out sour and good (page 8).", "distractors_reviewed": true },
+    { "question_id": "q04", "skill": "sequence", "difficulty": "medium", "prompt": "Which thing did Lan find second?", "options": [ { "id": "herbs", "text": "The herbs" }, { "id": "eggs", "text": "The eggs" }, { "id": "fish", "text": "The fish" } ], "correct_option_id": "herbs", "evidence_page_ids": ["p02", "p03"], "explanation": "Eggs were first (page 2), then the herb stall (page 3).", "distractors_reviewed": true },
+    { "question_id": "q05", "skill": "expression", "difficulty": "medium", "response_type": "open", "prompt": "Tell a grown-up about Lan's trip: what was easy to find, what was missing, and what Lan brought home instead.", "rubric": "not yet: names one item; with support: mentions no limes with prompting; independent: three items found, limes missing because the truck was late, tamarind instead because it is sour", "explanation": "A retell that includes the problem and the reasoning behind the swap shows listening comprehension beyond the list." }
+  ],
+  "activities": [
+    { "activity_id": "a01", "type": "sequence_events", "skill": "sequence", "prompt": "Put Lan's market trip in order.", "items": [ { "id": "s1", "text": "Lan gets the list and basket.", "page_id": "p01" }, { "id": "s2", "text": "Eggs, herbs, and fish go in the basket.", "page_id": "p04" }, { "id": "s3", "text": "No limes anywhere.", "page_id": "p05" }, { "id": "s4", "text": "The seller offers tamarind.", "page_id": "p06" } ], "correct_order": ["s1", "s2", "s3", "s4"] },
+    { "activity_id": "a02", "type": "discussion", "skill": "listening_comprehension", "prompts": ["Why did Grandma laugh at the end?", "If you could not find something on a list, what would you do?", "What did Grandma mean by 'next time you write the list'?"] }
+  ],
+  "off_screen_prompt": "Write or draw a list of three things for someone to find in your home. See if they find them all.",
+  "review": { "content_approved": false, "media_approved": false, "parent_approved": false }
+}

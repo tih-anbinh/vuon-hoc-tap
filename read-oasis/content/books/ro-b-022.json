@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-b-022",
+  "revision": 1,
+  "status": "DRAFT",
+  "title": "Who Ate the Rice?",
+  "language": "en",
+  "level": "B",
+  "reading_mode": "independent_reading",
+  "topic": "family",
+  "genre": "fiction",
+  "learning_objectives": ["Follow clues across pages to answer a question", "Use evidence in the text, not the picture, to say who did it"],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": { "text": "low", "conceptual": "medium", "visual_support": "medium" },
+  "rights": { "text_author": "Huy Tran for Read Oasis (original)", "text_license": "family-use, all rights reserved", "media_license": "family-use, original SVG", "original": true },
+  "parent_prompts": [
+    "Let the child read alone first. Then ask: who do you think ate the rice, and which page told you?"
+  ],
+  "pages": [
+    { "page_id": "p01", "text": "Lan left a bowl of rice on the step.", "illustration_brief": "Lan (green shirt) setting a small bowl of rice on a stone doorstep; a yard beyond.", "audio_script": "Lan left a bowl of rice on the step.", "timing_segments": [] },
+    { "page_id": "p02", "text": "Now the bowl is empty. Who ate the rice?", "illustration_brief": "The empty bowl on the step; a few grains scattered; Lan with hands on hips.", "audio_script": "Now the bowl is empty. Who ate the rice?", "timing_segments": [],
+      "vocabulary": [{ "word": "empty", "definition": "With nothing inside.", "example": "My cup is empty. May I have more?" }] },
+    { "page_id": "p03", "text": "Was it the dog? No. The dog was asleep in the shed.", "illustration_brief": "A dog curled asleep inside a wooden shed doorway.", "audio_script": "Was it the dog? No. The dog was asleep in the shed.", "timing_segments": [] },
+    { "page_id": "p04", "text": "Was it Grandpa? No. Grandpa was at the market.", "illustration_brief": "Grandpa in a conical hat walking back along a path with a basket.", "audio_script": "Was it Grandpa? No. Grandpa was at the market.", "timing_segments": [] },
+    { "page_id": "p05", "text": "Lan looked down. Tiny footprints. Tiny grains of rice. They led to the tree.", "illustration_brief": "A trail of small three-toed prints and rice grains from the step toward a tree.", "audio_script": "Lan looked down. Tiny footprints. Tiny grains of rice. They led to the tree.", "timing_segments": [],
+      "vocabulary": [{ "word": "led", "definition": "Went in a line toward a place; showed the way.", "example": "The path led to the gate." }] },
+    { "page_id": "p06", "text": "Up in the tree sat six fat sparrows. Cheep! Lan laughed. \"You ate the rice!\"", "illustration_brief": "Six round little brown birds on a branch, one with a grain in its beak; Lan laughing below.", "audio_script": "Up in the tree sat six fat sparrows. Cheep! Lan laughed. You ate the rice!", "timing_segments": [] }
+  ],
+  "quiz": [
+    { "question_id": "q01", "skill": "explicit_detail", "difficulty": "easy", "prompt": "Where was the dog?", "options": [ { "id": "shed", "text": "Asleep in the shed" }, { "id": "tree", "text": "Up the tree" }, { "id": "market", "text": "At the market" } ], "correct_option_id": "shed", "evidence_page_ids": ["p03"], "explanation": "Page 3 says: The dog was asleep in the shed.", "distractors_reviewed": true },
+    { "question_id": "q02", "skill": "inference", "difficulty": "medium", "prompt": "How did Lan know where to look?", "options": [ { "id": "prints", "text": "Footprints and rice led to the tree" }, { "id": "bark", "text": "The dog barked" }, { "id": "grandpa", "text": "Grandpa told her" } ], "correct_option_id": "prints", "evidence_page_ids": ["p05"], "explanation": "Page 5: tiny footprints and grains of rice led to the tree.", "distractors_reviewed": true },
+    { "question_id": "q03", "skill": "cause_effect", "difficulty": "medium", "prompt": "Why could Grandpa not have eaten the rice?", "options": [ { "id": "away", "text": "He was away at the market" }, { "id": "full", "text": "He was not hungry" }, { "id": "sleep", "text": "He was asleep" } ], "correct_option_id": "away", "evidence_page_ids": ["p04"], "explanation": "Page 4 says Grandpa was at the market, so he was not at home.", "distractors_reviewed": true },
+    { "question_id": "q04", "skill": "main_idea", "difficulty": "hard", "prompt": "What is this story mostly about?", "options": [ { "id": "mystery", "text": "Lan finding out who ate the rice" }, { "id": "cook", "text": "How to cook rice" }, { "id": "dog", "text": "A dog that likes to sleep" } ], "correct_option_id": "mystery", "evidence_page_ids": ["p02", "p06"], "explanation": "Page 2 asks the question, who ate the rice? Page 6 answers it: the sparrows.", "distractors_reviewed": true },
+    { "question_id": "q05", "skill": "expression", "difficulty": "medium", "response_type": "open", "prompt": "Tell a grown-up who ate the rice and how Lan worked it out.", "rubric": "not yet: says birds only; with support: mentions the footprints with prompting; independent: names the sparrows and explains the footprints and rice grains as clues", "explanation": "Explaining the clue shows reasoning from text evidence, not picture spotting." }
+  ],
+  "activities": [
+    { "activity_id": "a01", "type": "choose_evidence", "skill": "inference", "claim": "The sparrows ate the rice.", "prompt": "Which page gives the clue that points to the tree?", "correct_page_ids": ["p05"] },
+    { "activity_id": "a02", "type": "sequence_events", "skill": "sequence", "prompt": "Put Lan's search in order.", "items": [ { "id": "s1", "text": "The bowl is empty.", "page_id": "p02" }, { "id": "s2", "text": "Not the dog, not Grandpa.", "page_id": "p04" }, { "id": "s3", "text": "Footprints lead to the tree.", "page_id": "p05" }, { "id": "s4", "text": "Six sparrows in the tree.", "page_id": "p06" } ], "correct_order": ["s1", "s2", "s3", "s4"] }
+  ],
+  "off_screen_prompt": "Hide a small toy and leave three clues for someone to find it. Then swap.",
+  "review": { "content_approved": false, "media_approved": false, "parent_approved": false }
+}
