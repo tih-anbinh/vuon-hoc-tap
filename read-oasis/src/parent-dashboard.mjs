@@ -10,6 +10,7 @@ import { ProgressStore, evidenceSummary, suggestLevelChange, DEFAULT_SETTINGS } 
 import { validateBook, nextStatus, isPublishable, STATUSES, SKILL_TO_STRAND, STRANDS } from './schema.mjs';
 import { h, btn, applySettings, toast, fmtDate, loadJSON, isFileProtocol, narrator } from './ui.mjs';
 import { syncState, onSyncChange, attachSync, signIn, signUp, signOut, push, pull, cachedSessionUser } from './sync.mjs';
+import { requireAuth, signOutAndReload } from './auth-gate.mjs';
 
 const store = new ProgressStore(window.localStorage);
 const S = store.load();
@@ -24,6 +25,16 @@ let tab = 'evidence';
 
 document.getElementById('btnLock').onclick = () => { sessionStorage.removeItem('ro.parent.unlocked'); unlocked = false; render(); };
 
+/** Small "signed in as … · Sign out" chip next to the Lock button. */
+function renderAccountChip(account) {
+  const lock = document.getElementById('btnLock'); if (!lock || !account) return;
+  document.getElementById('acctChip')?.remove();
+  const chip = h('span', { class: 'acct-chip', id: 'acctChip', title: account.email },
+    h('span', { class: 'acct-name', text: account.name || account.email }),
+    btn('Sign out', () => { if (confirm('Sign out of the family account on this device?')) signOutAndReload(); }, { quiet: true, attrs: { class: 'quiet acct-out' } }));
+  lock.before(chip);
+}
+
 async function hashPin(pin) {
   const buf = new TextEncoder().encode('read-oasis|' + pin);
   if (crypto?.subtle) { const d = await crypto.subtle.digest('SHA-256', buf); return [...new Uint8Array(d)].map(b => b.toString(16).padStart(2, '0')).join(''); }
@@ -31,7 +42,10 @@ async function hashPin(pin) {
 }
 
 (async function boot() {
-  try { published = (await loadJSON('index.json')).books || []; } catch { published = []; }
+  // Family login first (same account check as index.html; seamless when arriving from the child app),
+  // then the local PIN gate as before.
+  const [account] = await Promise.all([requireAuth({ page: 'parent' }), loadJSON('index.json').then(i => { published = i.books || []; }).catch(() => { published = []; })]);
+  renderAccountChip(account);
   render();
   onSyncChange(() => { if (unlocked && tab === 'cloud') render(); });
   if (S.settings.cloud_sync_enabled && !isFileProtocol) attachSync(store).then(ok => { if (ok) render(); }).catch(() => {});
@@ -113,7 +127,7 @@ function renderCloud() {
             h('div', { class: 'row' },
               btn('Push now', () => busy(async () => { if (!(await push(store))) throw new Error(st.error || 'push failed'); toast('Pushed.'); }), { primary: true, attrs: { disabled: !enabled } }),
               btn('Pull and merge', () => busy(async () => { await pull(store); toast('Merged.'); }), { attrs: { disabled: !enabled } }),
-              btn('Sign out', () => busy(async () => { await signOut(); store.setSettings({ cloud_sync_enabled: false }); }), { quiet: true })))
+              btn('Sign out', () => busy(async () => { store.setSettings({ cloud_sync_enabled: false }); await signOutAndReload(); }), { quiet: true })))
         : h('div', {}, lab('Email', email), lab('Password', pass),
             h('div', { class: 'row' },
               btn('Sign in', () => busy(async () => { await signIn(email.value.trim(), pass.value); toast('Signed in.'); }), { primary: true }),
