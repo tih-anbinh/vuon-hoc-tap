@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">A sprout reaches for light</title>
+  <desc id="d">A green shoot with two small leaves rises above the soil toward a sun.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <circle cx="330" cy="60" r="26" fill="#F7D154" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="0" y="190" width="400" height="110" fill="#8B5E3C"/>
+  <g transform="translate(200 230) scale(1.1)">
+    <ellipse cx="0" cy="0" rx="34" ry="24" fill="#A0522D" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-10 -22 q6 22 0 44" fill="none" stroke="#F5E6D3" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <path d="M200 208 L200 130" fill="none" stroke="#6AB04C" stroke-width="8" stroke-linecap="round"/>
+  <path d="M200 140 q-40 -10 -44 -40 q34 2 44 40 Z M200 140 q40 -10 44 -40 q-34 2 -44 40 Z" fill="#6AB04C" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M200 250 q-8 20 0 40" fill="none" stroke="#F5E6D3" stroke-width="7" stroke-linecap="round"/>
+
+</svg>
