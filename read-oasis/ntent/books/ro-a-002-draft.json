@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-a-002",
+  "revision": 1,
+  "status": "CONTENT_REVIEW",
+  "title": "Pip Finds a Leaf (draft, not yet approved)",
+  "language": "en",
+  "level": "A",
+  "reading_mode": "shared_reading",
+  "topic": "nature",
+  "genre": "fiction",
+  "learning_objectives": ["Retell two events in order"],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": { "text": "low", "conceptual": "low", "visual_support": "high" },
+  "rights": { "text_author": "Read Oasis (original)", "text_license": "family-use, all rights reserved", "media_license": "family-use, original SVG", "original": true },
+  "pages": [
+    { "page_id": "p01", "text": "Pip sees a leaf.", "audio_script": "Pip sees a leaf.", "timing_segments": [] },
+    { "page_id": "p02", "text": "The leaf is red.", "audio_script": "The leaf is red.", "timing_segments": [] }
+  ],
+  "quiz": [
+    { "question_id": "q01", "skill": "explicit_detail", "difficulty": "easy", "prompt": "What does Pip see?", "options": [ { "id": "leaf", "text": "A leaf" }, { "id": "boat", "text": "A boat" } ], "correct_option_id": "leaf", "evidence_page_ids": ["p01"], "explanation": "The page says Pip sees a leaf.", "distractors_reviewed": true }
+  ],
+  "review": { "content_approved": false, "media_approved": false, "parent_approved": false }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Read Oasis",
+  "short_name": "Read Oasis",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#FCFCF9",
+  "theme_color": "#2F5F9E",
+  "icons": [{ "src": "assets/icons/mascot.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

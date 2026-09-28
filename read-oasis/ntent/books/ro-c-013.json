@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-c-013",
+  "revision": 1,
+  "status": "DRAFT",
+  "title": "Gus and the Bus",
+  "language": "en",
+  "level": "C",
+  "reading_mode": "decodable",
+  "topic": "neighbourhood",
+  "genre": "fiction",
+  "learning_objectives": [
+    "Find a detail stated in the text",
+    "Retell or summarize ideas in order"
+  ],
+  "prerequisite_skills": [
+    "cvc_short_a",
+    "cvc_short_i",
+    "cvc_short_o",
+    "cvc_short_e"
+  ],
+  "target_phonics": [
+    "cvc_short_u"
+  ],
+  "irregular_words": [
+    "has",
+    "the"
+  ],
+  "difficulty": {
+    "text": "low",
+    "conceptual": "low",
+    "visual_support": "high"
+  },
+  "rights": {
+    "text_author": "AzureOpenAI GPT-5.6 for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
+  "pair_id": null,
+  "reserved_for_unseen_check": false,
+  "parent_prompts": [
+    "Before reading: What do you predict from the title?",
+    "During reading: Which words support your idea?",
+    "After reading: Why did the result happen, or how do you know the main idea?"
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "Sam has fun.",
+      "illustration_brief": "Show the characters acting in a simple room; avoid depicting the target noun as a picture clue.",
+      "audio_script": "Sam has fun.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p02",
+      "text": "Sam has fun.",
+      "illustration_brief": "Show the characters acting in a simple room; avoid depicting the target noun as a picture clue.",
+      "audio_script": "Sam has fun.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p03",
+      "text": "The pup can hum.",
+      "illustration_brief": "Show the characters acting in a simple room; avoid depicting the target noun as a picture clue.",
+      "audio_script": "The pup can hum.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p04",
+      "text": "The pup can hum.",
+      "illustration_brief": "Show the characters acting in a simple room; avoid depicting the target noun as a picture clue.",
+      "audio_script": "The pup can hum.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p05",
+      "text": "Sam can run.",
+      "illustration_brief": "Show the characters acting in a simple room; avoid depicting the target noun as a picture clue.",
+      "audio_script": "Sam can run.",
+      "timing_segments": []
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "explicit_detail",
+      "difficulty": "easy",
+      "prompt": "Which sentence does the text state on the first page?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Sam has fun."
+        },
+        {
+          "id": "b",
+          "text": "Sam has fun."
+        },
+        {
+          "id": "c",
+          "text": "Everyone leaves before anything can be observed."
+        }
+      ],
+      "correct_option_id": "a",
+      "evidence_page_ids": [
+        "p01"
+      ],
+      "explanation": "Page 1 says: Sam has fun.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "sequence",
+      "difficulty": "medium",
+      "prompt": "Which sentence does the text state at the end?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The pup can hum."
+        },
+        {
+          "id": "b",
+          "text": "Sam can run."
+        },
+        {
+          "id": "c",
+          "text": "The final test is skipped and no result is recorded."
+        }
+      ],
+      "correct_option_id": "b",
+      "evidence_page_ids": [
+        "p05"
+      ],
+      "explanation": "The final page states: Sam can run.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "expression",
+      "difficulty": "easy",
+      "response_type": "open",
+      "prompt": "Tell the main events or ideas in your own words.",
+      "rubric": "not yet: names one picture only; with support: gives two linked details after prompting; independent: gives the main events or ideas in order with evidence",
+      "explanation": "An ordered retell or summary shows understanding beyond recognizing an illustration."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "prompt": "Put the text events or ideas in order.",
+      "items": [
+        {
+          "id": "s1",
+          "text": "Sam has fun.",
+          "page_id": "p01"
+        },
+        {
+          "id": "s2",
+          "text": "Sam has fun.",
+          "page_id": "p02"
+        },
+        {
+          "id": "s3",
+          "text": "The pup can hum.",
+          "page_id": "p03"
+        }
+      ],
+      "correct_order": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "discussion",
+      "skill": "listening_comprehension",
+      "prompts": [
+        "Which detail mattered most?",
+        "How do you know from the words?"
+      ]
+    }
+  ],
+  "off_screen_prompt": "Tell someone one detail you learned, then draw or act out the sequence without looking at the book.",
+  "review": {
+    "content_approved": false,
+    "media_approved": false,
+    "parent_approved": false,
+    "decodability_reviewed": false
+  },
+  "collection_wave": 1
+}

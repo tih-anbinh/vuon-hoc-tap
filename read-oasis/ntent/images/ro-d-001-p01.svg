@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">A seed underground</title>
+  <desc id="d">Cross-section: a brown seed in dark soil with a tiny curled plant inside.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="120" width="400" height="180" fill="#8B5E3C"/>
+  <g transform="translate(200 200) scale(1.6)">
+    <ellipse cx="0" cy="0" rx="34" ry="24" fill="#A0522D" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <path d="M180 200 q20 -30 40 0 q-20 -10 -30 10" fill="none" stroke="#6AB04C" stroke-width="5" stroke-linecap="round"/>
+
+</svg>

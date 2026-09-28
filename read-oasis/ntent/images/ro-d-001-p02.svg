@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Rain soaks the seed</title>
+  <desc id="d">Blue rain drops fall on the soil. The seed is bigger and its coat is splitting.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <path d="M60 30 q6 14 0 26" fill="none" stroke="#5DADE2" stroke-width="6" stroke-linecap="round"/>
+  <path d="M130 60 q6 14 0 26" fill="none" stroke="#5DADE2" stroke-width="6" stroke-linecap="round"/>
+  <path d="M200 20 q6 14 0 26" fill="none" stroke="#5DADE2" stroke-width="6" stroke-linecap="round"/>
+  <path d="M270 55 q6 14 0 26" fill="none" stroke="#5DADE2" stroke-width="6" stroke-linecap="round"/>
+  <path d="M340 30 q6 14 0 26" fill="none" stroke="#5DADE2" stroke-width="6" stroke-linecap="round"/>
+  <rect x="0" y="140" width="400" height="160" fill="#8B5E3C"/>
+  <g transform="translate(200 210) scale(1.8)">
+    <ellipse cx="0" cy="0" rx="34" ry="24" fill="#A0522D" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-10 -22 q6 22 0 44" fill="none" stroke="#F5E6D3" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+</svg>

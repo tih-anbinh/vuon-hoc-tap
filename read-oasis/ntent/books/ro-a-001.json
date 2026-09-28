@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-a-001",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "Mo and the Red Kite",
+  "language": "en",
+  "level": "A",
+  "reading_mode": "shared_reading",
+  "topic": "play",
+  "genre": "fiction",
+  "learning_objectives": ["Retell two events in order", "Answer a who/what question from the text"],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": { "text": "low", "conceptual": "low", "visual_support": "high" },
+  "rights": { "text_author": "Read Oasis (original)", "text_license": "family-use, all rights reserved", "media_license": "family-use, original SVG", "original": true },
+  "parent_prompts": [
+    "Before reading: What do you think Mo will do with the kite?",
+    "After page 3: Why did the kite go up? What helped it?",
+    "After reading: Tell me the story in your own words. What happened first?"
+  ],
+  "pages": [
+    { "page_id": "p01", "text": "Mo has a red kite.", "image_asset": "images/ro-a-001-p01.svg", "image_alt": "Mo, a small round bird, holds the string of a red kite that rests on the grass.", "image_provenance": "original SVG by Read Oasis, 2026-09-27", "audio_script": "Mo has a red kite.", "timing_segments": [],
+      "vocabulary": [{ "word": "kite", "definition": "A light toy you fly in the wind on a string.", "example": "The kite went up in the wind." }] },
+    { "page_id": "p02", "text": "The wind is still. The kite sits.", "image_asset": "images/ro-a-001-p02.svg", "image_alt": "The kite lies flat on the grass. Mo looks at the sky.", "image_provenance": "original SVG by Read Oasis, 2026-09-27", "audio_script": "The wind is still. The kite sits.", "timing_segments": [],
+      "vocabulary": [{ "word": "still", "definition": "Not moving.", "example": "The pond was still." }] },
+    { "page_id": "p03", "text": "Then the wind blows. Up goes the kite!", "image_asset": "images/ro-a-001-p03.svg", "image_alt": "Lines show wind. The red kite rises high over Mo.", "image_provenance": "original SVG by Read Oasis, 2026-09-27", "audio_script": "Then the wind blows. Up goes the kite!", "timing_segments": [] },
+    { "page_id": "p04", "text": "Mo runs. The kite runs too.", "image_asset": "images/ro-a-001-p04.svg", "image_alt": "Mo runs across the grass with the kite flying behind.", "image_provenance": "original SVG by Read Oasis, 2026-09-27", "audio_script": "Mo runs. The kite runs too.", "timing_segments": [] },
+    { "page_id": "p05", "text": "The sun goes down. Mo takes the kite home.", "image_asset": "images/ro-a-001-p05.svg", "image_alt": "An orange sun sits low. Mo walks home holding the kite.", "image_provenance": "original SVG by Read Oasis, 2026-09-27", "audio_script": "The sun goes down. Mo takes the kite home.", "timing_segments": [] }
+  ],
+  "quiz": [
+    { "question_id": "q01", "skill": "explicit_detail", "difficulty": "easy", "prompt": "What does Mo have?", "options": [ { "id": "kite", "text": "A red kite" }, { "id": "ball", "text": "A blue ball" }, { "id": "hat", "text": "A green hat" } ], "correct_option_id": "kite", "evidence_page_ids": ["p01"], "explanation": "Page 1 says: Mo has a red kite.", "distractors_reviewed": true },
+    { "question_id": "q02", "skill": "cause_effect", "difficulty": "medium", "prompt": "Why does the kite go up?", "options": [ { "id": "wind", "text": "The wind blows." }, { "id": "sun", "text": "The sun goes down." }, { "id": "mo", "text": "Mo throws it." } ], "correct_option_id": "wind", "evidence_page_ids": ["p02", "p03"], "explanation": "On page 2 the wind is still and the kite sits. On page 3 the wind blows and the kite goes up.", "distractors_reviewed": true },
+    { "question_id": "q03", "skill": "sequence", "difficulty": "medium", "prompt": "What happens last?", "options": [ { "id": "home", "text": "Mo takes the kite home." }, { "id": "sits", "text": "The kite sits." }, { "id": "runs", "text": "Mo runs." } ], "correct_option_id": "home", "evidence_page_ids": ["p05"], "explanation": "The last page says the sun goes down and Mo takes the kite home.", "distractors_reviewed": true },
+    { "question_id": "q04", "skill": "expression", "difficulty": "easy", "response_type": "open", "prompt": "Tell the story to a grown-up. What happened first, next, and last?", "rubric": "not yet: names one picture only; with support: two events with prompting; independent: three events in order in own words", "explanation": "A retell in order shows the child followed the story, not just the pictures." }
+  ],
+  "activities": [
+    { "activity_id": "a01", "type": "sequence_events", "skill": "sequence", "prompt": "Put the story in order.",
+      "items": [ { "id": "s1", "text": "The kite sits still.", "page_id": "p02" }, { "id": "s2", "text": "The wind blows and the kite goes up.", "page_id": "p03" }, { "id": "s3", "text": "Mo takes the kite home.", "page_id": "p05" } ],
+      "correct_order": ["s1", "s2", "s3"] },
+    { "activity_id": "a02", "type": "discussion", "skill": "listening_comprehension", "prompts": ["What would you do if the wind stopped?", "Where do you think Mo lives?"] }
+  ],
+  "off_screen_prompt": "Draw the kite going up. Tell someone what made it fly.",
+  "review": { "content_approved": true, "media_approved": true, "parent_approved": true, "published_at": "2026-09-27T00:00:00Z", "reviewer": "parent (baseline sample pack)", "review_date": "2026-09-27" }
+}
