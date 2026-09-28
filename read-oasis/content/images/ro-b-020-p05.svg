@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">The chick hatches</title>
+  <desc id="d">A wet chick half out of the broken shell, beak first.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <ellipse cx="200" cy="260" rx="150" ry="30" fill="#D4A373" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M150 250 q0 -40 50 -40 q50 0 50 40 Z" fill="#F5E6D3" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M150 210 l14 -12 l12 12 l12 -12 l12 12 l12 -12 l12 12 l12 -12 l14 12" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(200 190) scale(1.4)">
+    <circle cx="0" cy="4" r="16" fill="#E9D36A" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="-12" r="10" fill="#E9D36A" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="11" cy="-14" r="2.2" fill="#2B2B2B"/><path d="M17 -11 L24 -9 L17 -7 Z" fill="#F2A541" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-6 20 L-6 28 M6 20 L6 28" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+</svg>

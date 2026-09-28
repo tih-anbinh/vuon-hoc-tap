@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Water soaks into the soil</title>
+  <desc id="d">Cross-section: the puddle on top, blue arrows pointing down into brown soil.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="0" width="400" height="120" fill="#EAF4FB"/>
+  <rect x="0" y="120" width="400" height="180" fill="#8B5E3C"/>
+  <ellipse cx="200" cy="120" rx="120" ry="18" fill="#9CCBE8" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M120 150 L120 230 M110 216 L120 232 L130 216" fill="none" stroke="#5DADE2" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M160 150 L160 230 M150 216 L160 232 L170 216" fill="none" stroke="#5DADE2" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M200 150 L200 230 M190 216 L200 232 L210 216" fill="none" stroke="#5DADE2" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M240 150 L240 230 M230 216 L240 232 L250 216" fill="none" stroke="#5DADE2" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M280 150 L280 230 M270 216 L280 232 L290 216" fill="none" stroke="#5DADE2" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">The puddle is smaller</title>
+  <desc id="d">Same path, a smaller puddle with a damp ring around it; sun out.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <circle cx="330" cy="60" r="30" fill="#F7D154" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="0" y="190" width="400" height="110" fill="#8B5E3C"/>
+  <ellipse cx="200" cy="230" rx="120" ry="26" fill="#6E4A2E" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="200" cy="230" rx="70" ry="16" fill="#9CCBE8" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+</svg>

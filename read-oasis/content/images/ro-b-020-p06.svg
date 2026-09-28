@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">A fluffy chick</title>
+  <desc id="d">A fluffy yellow chick beside the hen; broken shell pieces nearby.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="210" width="400" height="90" fill="#BFE3B4"/>
+  <g transform="translate(130 170) scale(1.0)">
+    <ellipse cx="0" cy="0" rx="36" ry="28" fill="#A0522D" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M-10 26 L-10 42 M10 26 L10 42" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="30" cy="-24" r="14" fill="#A0522D" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M24 -40 q6 -12 12 0 q6 -12 12 0" fill="#D9534F" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="34" cy="-26" r="3" fill="#2B2B2B"/><path d="M42 -22 L54 -18 L42 -14 Z" fill="#F2A541" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(270 210) scale(1.4)">
+    <circle cx="0" cy="4" r="16" fill="#F7D154" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="-12" r="10" fill="#F7D154" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="11" cy="-14" r="2.2" fill="#2B2B2B"/><path d="M17 -11 L24 -9 L17 -7 Z" fill="#F2A541" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-6 20 L-6 28 M6 20 L6 28" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <path d="M320 232 l12 -10 l10 10 Z M340 240 l10 -12 l12 12 Z" fill="#F5E6D3" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+</svg>

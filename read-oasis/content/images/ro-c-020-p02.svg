@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">A tail of bottle caps</title>
+  <desc id="d">A long string tail hung with metal bottle caps dangling from the kite.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="240" width="400" height="60" fill="#BFE3B4"/>
+  <g transform="translate(220 110) rotate(0) scale(0.9)">
+    <path d="M0 -40 L30 0 L0 40 L-30 0 Z" fill="#A0522D" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 -40 L0 40 M-30 0 L30 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="-8" cy="48" r="6" fill="#8E9AA3" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="-4" cy="62" r="6" fill="#8E9AA3" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="0" cy="76" r="6" fill="#8E9AA3" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="90" r="6" fill="#8E9AA3" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(80 200) scale(0.9)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#2B2B2B"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -30 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#5B8DEF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-52 0 M24 0 L52 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+</svg>

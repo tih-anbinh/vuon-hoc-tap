@@ -54,7 +54,7 @@ loadLibrary().then(() => {
 async function loadLibrary() {
   try {
     const idx = await loadJSON('index.json');
-    library = idx.books || [];
+    library = (idx.books || []).filter(b => !store.isBookHidden(b.book_id));   // parent veto applied here
   } catch {
     library = [];
     toast(isFileProtocol ? 'This copy needs the single-file build (dist/index.html) or a local web server. See README.' : 'Could not load the library. If you are offline, open the app once while online first.', 8000);
@@ -64,7 +64,7 @@ async function loadBook(id) {
   if (bookCache.has(id)) return bookCache.get(id);
   const meta = library.find(b => b.book_id === id); if (!meta) return null;
   const book = await loadJSON(meta.file);
-  if (!isPublishable(book)) return null;                 // C02 defense in depth
+  if (!isPublishable(book) || store.isBookHidden(id)) return null;   // C02 defense in depth + parent veto
   bookCache.set(id, book); return book;
 }
 

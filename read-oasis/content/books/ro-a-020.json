@@ -45,42 +45,60 @@
           "definition": "Hits something very gently, once or twice.",
           "example": "She taps the door with one finger."
         }
-      ]
+      ],
+      "image_asset": "images/ro-a-020-p01.svg",
+      "image_alt": "Mo beside a grey pot; sound lines.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set2.py), 2026-09-28"
     },
     {
       "page_id": "p02",
       "text": "Mo taps the cup. Ting!",
       "illustration_brief": "Mo beside a small white cup on a table; sound lines.",
       "audio_script": "Mo taps the cup. Ting!",
-      "timing_segments": []
+      "timing_segments": [],
+      "image_asset": "images/ro-a-020-p02.svg",
+      "image_alt": "Mo beside a small white cup on a table.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set2.py), 2026-09-28"
     },
     {
       "page_id": "p03",
       "text": "Mo taps the drum. Boom!",
       "illustration_brief": "Mo on top of a red drum; bigger sound lines.",
       "audio_script": "Mo taps the drum. Boom!",
-      "timing_segments": []
+      "timing_segments": [],
+      "image_asset": "images/ro-a-020-p03.svg",
+      "image_alt": "Mo on top of a red drum; big sound lines.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set2.py), 2026-09-28"
     },
     {
       "page_id": "p04",
       "text": "Mo taps the box. Tok!",
       "illustration_brief": "Mo beside a brown cardboard box.",
       "audio_script": "Mo taps the box. Tok!",
-      "timing_segments": []
+      "timing_segments": [],
+      "image_asset": "images/ro-a-020-p04.svg",
+      "image_alt": "Mo beside a brown cardboard box.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set2.py), 2026-09-28"
     },
     {
       "page_id": "p05",
       "text": "Mo taps the cat.",
       "illustration_brief": "Mo beside a sleeping grey cat, beak just touching its back; the cat's eye is opening.",
       "audio_script": "Mo taps the cat.",
-      "timing_segments": []
+      "timing_segments": [],
+      "image_asset": "images/ro-a-020-p05.svg",
+      "image_alt": "Mo beside a sleeping grey cat, beak just touching its back.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set2.py), 2026-09-28"
     },
     {
       "page_id": "p06",
       "text": "Meow! The cat runs. Mo runs too!",
       "illustration_brief": "The cat dashes off to the right with fur up; Mo flaps after it, both moving.",
       "audio_script": "Meow! The cat runs. Mo runs too!",
-      "timing_segments": []
+      "timing_segments": [],
+      "image_asset": "images/ro-a-020-p06.svg",
+      "image_alt": "The cat dashes right with tail up; Mo flaps after it.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set2.py), 2026-09-28"
     }
   ],
   "quiz": [

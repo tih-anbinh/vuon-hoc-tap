@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Mo taps the cup</title>
+  <desc id="d">Mo beside a small white cup on a table.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="220" width="400" height="80" fill="#BFE3B4"/>
+  <rect x="150" y="210" width="200" height="12" rx="4" fill="#A0522D" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M166 222 L166 280 M334 222 L334 280" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(250 176)"><path d="M-16 0 L-12 30 L12 30 L16 0 Z" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 6 q14 6 0 18" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g transform="translate(110 190) scale(0.9)">
+    <ellipse cx="0" cy="0" rx="34" ry="30" fill="#F7D154" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="12" cy="-8" r="5" fill="#2B2B2B"/>
+    <path d="M30 -2 L46 4 L30 10 Z" fill="#F2A541" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-30 6 Q-48 -4 -34 -18" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-10 30 L-10 44 M10 30 L10 44" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <path d="M280 150 q8 -6 16 0 M284 136 q12 -8 24 0 M288 122 q16 -10 32 0" fill="none" stroke="#6C8EBF" stroke-width="5" stroke-linecap="round"/>
+
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Evaporation</title>
+  <desc id="d">The shrinking puddle from above with faint rising arrows; a plain warm sky.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="0" width="400" height="300" fill="#FFF2D6"/>
+  <rect x="0" y="190" width="400" height="110" fill="#8B5E3C"/>
+  <ellipse cx="200" cy="236" rx="60" ry="12" fill="#9CCBE8" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M150 210 q-8 -16 0 -32 q8 -16 0 -32" fill="none" stroke="#B0BEC5" stroke-width="5" stroke-linecap="round"/>
+  <path d="M180 210 q-8 -16 0 -32 q8 -16 0 -32" fill="none" stroke="#B0BEC5" stroke-width="5" stroke-linecap="round"/>
+  <path d="M210 210 q-8 -16 0 -32 q8 -16 0 -32" fill="none" stroke="#B0BEC5" stroke-width="5" stroke-linecap="round"/>
+
+</svg>

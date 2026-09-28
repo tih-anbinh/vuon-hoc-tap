@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">The frog hops to a pot</title>
+  <desc id="d">The dog balancing on the rock; the frog on an upturned clay pot on the bank.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="220" width="400" height="80" fill="#BFE3B4"/>
+  <ellipse cx="200" cy="260" rx="170" ry="34" fill="#7FB7D9" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path transform="translate(160 240) scale(1.0)" d="M-30 10 q-6 -30 26 -30 q34 0 30 28 Z" fill="#8E9AA3" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(160 212) scale(0.8)">
+    <path d="M-30 26 q0 -34 30 -34 q30 0 30 34 Z" fill="#F5E6D3" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="26" cy="-10" r="16" fill="#F5E6D3" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M14 -20 q-10 10 -6 22" fill="#A0522D" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="30" cy="-12" r="3" fill="#2B2B2B"/><circle cx="40" cy="-6" r="4" fill="#2B2B2B"/>
+    <circle cx="-10" cy="2" r="6" fill="#A0522D"/><circle cx="8" cy="12" r="5" fill="#A0522D"/>
+    <path d="M-34 4 q-16 -10 -10 -26" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    
+  </g>
+  <path d="M300 200 L290 236 L350 236 L340 200 Z" fill="#C46A3A" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(320 190) scale(0.9)">
+    <ellipse cx="0" cy="4" rx="18" ry="12" fill="#6AB04C" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="-8" cy="-8" r="6" fill="#6AB04C" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="-8" r="6" fill="#6AB04C" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="-8" cy="-8" r="2.5" fill="#2B2B2B"/><circle cx="8" cy="-8" r="2.5" fill="#2B2B2B"/>
+    <path d="M-18 14 l-8 8 M18 14 l8 8" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+</svg>

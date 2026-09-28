@@ -31,8 +31,16 @@ Every book passed the schema validator and every book was rejected on review. Th
 | T2 | Same six sentences reused across books with the name swapped ("The first try does not work. X changes one small thing.") | **Each book has its own concrete plot or topic content.** No sentence templates |
 | T6 | Identical `parent_prompts`, rubric, `off_screen_prompt` across all 48 | **Prompts refer to this book's events, words, and ideas** |
 
-**Delivery gate:** `python3 tools/validate_content.py` → `0 error(s)` **and** `python3 tools/review_batch.py`
-→ `0 REJECT, 0 REVISE`. Paste both outputs in `BATCH_NOTES.md`. First delivery is capped at
+**Delivery gate (three tools, all must be clean):** `python3 tools/validate_content.py` → `0 error(s)`;
+`python3 tools/review_batch.py` → `0 REJECT, 0 REVISE`; `python3 tools/verify_book.py <ids>` → `PASS`
+(or `HOLD` only for nonfiction fact-check). Paste all three outputs in `BATCH_NOTES.md`.
+
+**Publishing policy (agreed 2026-09-28):** the maintainer agent may publish without waiting for the parent
+when a book was (1) authored from this brief, (2) verified by an *independent* pass — `verify_book.py` plus
+a second-agent read when available, and (3) recorded in `review.reviewer` as AI-authored. Nonfiction
+publishes with `factual_claims[].reviewed_by = "... parent fact-check pending"`; the parent area shows
+this badge. The parent keeps a veto at any time: **parent.html → Library → untick** (immediate, per child)
+or `tools/approve.py --reject <id>` (permanent, all devices). First delivery is capped at
 **10 books, Wave 1, bands A–C** (see §2). The reference set to match is the ten maintainer-written
 books `ro-a-020, ro-a-022, ro-a-023, ro-b-020, ro-b-021, ro-b-022, ro-b-023, ro-c-020, ro-c-021,
 ro-c-022, ro-c-023` in `content/books/`: read all of them before writing. Continue numbering from

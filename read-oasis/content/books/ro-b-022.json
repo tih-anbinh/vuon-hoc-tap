@@ -36,7 +36,10 @@
       "text": "Lan left a bowl of rice on the step.",
       "illustration_brief": "Lan (green shirt) setting a small bowl of rice on a stone doorstep; a yard beyond.",
       "audio_script": "Lan left a bowl of rice on the step.",
-      "timing_segments": []
+      "timing_segments": [],
+      "image_asset": "images/ro-b-022-p01.svg",
+      "image_alt": "Lan setting a small bowl of rice on a stone doorstep.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set2.py), 2026-09-28"
     },
     {
       "page_id": "p02",
@@ -50,26 +53,35 @@
           "definition": "With nothing inside.",
           "example": "My cup is empty. May I have more?"
         }
-      ]
+      ],
+      "image_asset": "images/ro-b-022-p02.svg",
+      "image_alt": "The empty bowl on the step, a few grains scattered; Lan with hands on hips.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set2.py), 2026-09-28"
     },
     {
       "page_id": "p03",
       "text": "Was it the dog? No. The dog was asleep in the shed.",
       "illustration_brief": "A dog curled asleep inside a wooden shed doorway.",
       "audio_script": "Was it the dog? No. The dog was asleep in the shed.",
-      "timing_segments": []
+      "timing_segments": [],
+      "image_asset": "images/ro-b-022-p03.svg",
+      "image_alt": "A dog curled asleep inside a wooden shed doorway.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set2.py), 2026-09-28"
     },
     {
       "page_id": "p04",
       "text": "Was it Grandpa? No. Grandpa was at the market.",
       "illustration_brief": "Grandpa in a conical hat walking back along a path with a basket.",
       "audio_script": "Was it Grandpa? No. Grandpa was at the market.",
-      "timing_segments": []
+      "timing_segments": [],
+      "image_asset": "images/ro-b-022-p04.svg",
+      "image_alt": "Grandpa in a conical hat walking along a path with a basket.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set2.py), 2026-09-28"
     },
     {
       "page_id": "p05",
       "text": "Lan looked down. Tiny footprints. Tiny grains of rice. They led to the tree.",
-      "illustration_brief": "A trail of small three-toed prints and rice grains from the step toward a tree.",
+      "illustration_brief": "Lan crouching low on the step, looking closely at the ground; the yard and tree in the background. Do not draw the footprints or grains clearly; the text carries the clue.",
       "audio_script": "Lan looked down. Tiny footprints. Tiny grains of rice. They led to the tree.",
       "timing_segments": [],
       "vocabulary": [
@@ -78,14 +90,20 @@
           "definition": "Went in a line toward a place; showed the way.",
           "example": "The path led to the gate."
         }
-      ]
+      ],
+      "image_asset": "images/ro-b-022-p05.svg",
+      "image_alt": "Lan crouching low on the step, looking closely at the ground; a tree in the background.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set2.py), 2026-09-28"
     },
     {
       "page_id": "p06",
       "text": "Up in the tree sat six fat sparrows. Cheep! Lan laughed. \"You ate the rice!\"",
       "illustration_brief": "Six round little brown birds on a branch, one with a grain in its beak; Lan laughing below.",
       "audio_script": "Up in the tree sat six fat sparrows. Cheep! Lan laughed. You ate the rice!",
-      "timing_segments": []
+      "timing_segments": [],
+      "image_asset": "images/ro-b-022-p06.svg",
+      "image_alt": "Six round brown birds on a branch; Lan laughing below.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set2.py), 2026-09-28"
     }
   ],
   "quiz": [

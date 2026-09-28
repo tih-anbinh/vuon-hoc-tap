@@ -42,6 +42,7 @@ export const DEFAULT_SETTINGS = Object.freeze({
   mascot_enabled: true,
   parent_pin_hash: null,
   cloud_sync_enabled: false,       // parent opt-in; see src/sync.mjs
+  hidden_books: [],                // parent veto: book_ids removed from the child library on this profile (synced)
 });
 
 export function emptyStore(profileId = 'child-1') {
@@ -91,6 +92,14 @@ export class ProgressStore {
 
   // ---------- settings
   setSettings(patch) { this.data.settings = { ...this.data.settings, ...patch }; this.save(); return this.data.settings; }
+  /** Parent veto (L04-style): hide/show a published book for this child without touching content files. */
+  setBookHidden(bookId, hidden) {
+    const set = new Set(this.data.settings.hidden_books || []);
+    hidden ? set.add(bookId) : set.delete(bookId);
+    this.setSettings({ hidden_books: [...set] });
+    this.addObservation({ text: `${hidden ? 'Hid' : 'Restored'} book ${bookId} in the child library`, kind: 'library', bookId });
+  }
+  isBookHidden(bookId) { return (this.data.settings.hidden_books || []).includes(bookId); }
 
   // ---------- book progress (keyed by revision; D06 never overwrites history)
   bookProgress(bookId, revision, create = true) {
@@ -217,7 +226,8 @@ export function validateBackup(payload) {
 /** Merge without duplicates: ledger/attempts/observations by id; books by (id, revision) keep the latest last_seen_at. */
 export function mergeStores(a, b) {
   const out = structuredCloneSafe(a);
-  out.settings = { ...DEFAULT_SETTINGS, ...a.settings, ...b.settings, parent_pin_hash: a.settings?.parent_pin_hash || b.settings?.parent_pin_hash || null };
+  out.settings = { ...DEFAULT_SETTINGS, ...a.settings, ...b.settings, parent_pin_hash: a.settings?.parent_pin_hash || b.settings?.parent_pin_hash || null,
+    hidden_books: [...new Set([...(a.settings?.hidden_books || []), ...(b.settings?.hidden_books || [])])] };
   out.baseline = out.baseline || b.baseline;
   const byKey = (arr, k) => new Set(arr.map(x => x[k]));
   const dedupPush = (target, src, k) => { const seen = byKey(target, k); for (const x of src) if (!seen.has(x[k])) { target.push(x); seen.add(x[k]); } };

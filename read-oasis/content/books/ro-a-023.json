@@ -37,28 +37,40 @@
       "text": "Rain, rain, rain.",
       "illustration_brief": "Heavy rain lines over a yard with a fence; grey sky.",
       "audio_script": "Rain, rain, rain.",
-      "timing_segments": []
+      "timing_segments": [],
+      "image_asset": "images/ro-a-023-p01.svg",
+      "image_alt": "Heavy rain over a yard with a fence; grey sky.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set2.py), 2026-09-28"
     },
     {
       "page_id": "p02",
       "text": "The path is wet.",
       "illustration_brief": "A stone path shining with water.",
       "audio_script": "The path is wet.",
-      "timing_segments": []
+      "timing_segments": [],
+      "image_asset": "images/ro-a-023-p02.svg",
+      "image_alt": "A stone path shining with water.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set2.py), 2026-09-28"
     },
     {
       "page_id": "p03",
       "text": "The mat is wet.",
       "illustration_brief": "A doormat dark with water outside a door.",
       "audio_script": "The mat is wet.",
-      "timing_segments": []
+      "timing_segments": [],
+      "image_asset": "images/ro-a-023-p03.svg",
+      "image_alt": "A doormat dark with water outside a door.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set2.py), 2026-09-28"
     },
     {
       "page_id": "p04",
       "text": "Mo is wet!",
       "illustration_brief": "Mo standing in a puddle, feathers flat and dripping, unhappy.",
       "audio_script": "Mo is wet!",
-      "timing_segments": []
+      "timing_segments": [],
+      "image_asset": "images/ro-a-023-p04.svg",
+      "image_alt": "Mo standing in a puddle, feathers flat and dripping, unhappy.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set2.py), 2026-09-28"
     },
     {
       "page_id": "p05",
@@ -72,7 +84,10 @@
           "definition": "After that; the next thing that happens.",
           "example": "I put on my shoes. Then I go out."
         }
-      ]
+      ],
+      "image_asset": "images/ro-a-023-p05.svg",
+      "image_alt": "Clouds parting and a big yellow sun; the puddle is smaller.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set2.py), 2026-09-28"
     },
     {
       "page_id": "p06",
@@ -86,7 +101,10 @@
           "definition": "Not wet; no water on it.",
           "example": "The towel is dry now."
         }
-      ]
+      ],
+      "image_asset": "images/ro-a-023-p06.svg",
+      "image_alt": "Same yard, bright; Mo fluffy and happy on the dry path.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set2.py), 2026-09-28"
     }
   ],
   "quiz": [

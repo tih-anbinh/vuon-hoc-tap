@@ -32,28 +32,28 @@
       "claim": "A hen sits on her eggs to keep them warm.",
       "source": "RSPCA (UK), 'Chickens: breeding and incubation' (rspca.org.uk); Britannica Kids, 'Chicken'",
       "reviewed": true,
-      "reviewed_by": "parent",
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
       "reviewed_at": "2026-09-28"
     },
     {
       "claim": "A chick uses its beak to break out of the egg; this is called hatching.",
       "source": "Britannica Kids, 'Chicken' (hatching); Mississippi State University Extension, 'Hatching eggs' (egg tooth on the beak)",
       "reviewed": true,
-      "reviewed_by": "parent",
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
       "reviewed_at": "2026-09-28"
     },
     {
       "claim": "Chicken eggs hatch after about three weeks (21 days) of warmth.",
       "source": "Mississippi State University Extension, 'Incubating and hatching chicken eggs' (21-day incubation)",
       "reviewed": true,
-      "reviewed_by": "parent",
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
       "reviewed_at": "2026-09-28"
     },
     {
       "claim": "A newly hatched chick is wet and dries into soft fluffy down.",
       "source": "Mississippi State University Extension, 'Incubating and hatching chicken eggs'",
       "reviewed": true,
-      "reviewed_by": "parent",
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
       "reviewed_at": "2026-09-28"
     }
   ],
@@ -75,28 +75,40 @@
           "definition": "A mother chicken.",
           "example": "The hen has soft brown feathers."
         }
-      ]
+      ],
+      "image_asset": "images/ro-b-020-p01.svg",
+      "image_alt": "A brown hen standing over a nest with four cream eggs.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set2.py), 2026-09-28"
     },
     {
       "page_id": "p02",
       "text": "The hen sits on the eggs. She keeps them warm.",
       "illustration_brief": "The hen settled down on the nest, feathers puffed, eyes half closed.",
       "audio_script": "The hen sits on the eggs. She keeps them warm.",
-      "timing_segments": []
+      "timing_segments": [],
+      "image_asset": "images/ro-b-020-p02.svg",
+      "image_alt": "The hen settled on the nest, feathers puffed, eyes half closed.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set2.py), 2026-09-28"
     },
     {
       "page_id": "p03",
       "text": "She sits for many days. Day and night.",
       "illustration_brief": "Two small scenes side by side: the hen on the nest under a sun, and under a moon.",
       "audio_script": "She sits for many days. Day and night.",
-      "timing_segments": []
+      "timing_segments": [],
+      "image_asset": "images/ro-b-020-p03.svg",
+      "image_alt": "Two scenes side by side: the hen on the nest under a sun, and under a moon.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set2.py), 2026-09-28"
     },
     {
       "page_id": "p04",
       "text": "Tap, tap. Something is inside!",
       "illustration_brief": "Close-up of one egg with a small crack; tiny tap marks.",
       "audio_script": "Tap, tap. Something is inside!",
-      "timing_segments": []
+      "timing_segments": [],
+      "image_asset": "images/ro-b-020-p04.svg",
+      "image_alt": "Close-up of one egg with a small crack.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set2.py), 2026-09-28"
     },
     {
       "page_id": "p05",
@@ -115,14 +127,20 @@
           "definition": "A baby chicken.",
           "example": "The chick says peep."
         }
-      ]
+      ],
+      "image_asset": "images/ro-b-020-p05.svg",
+      "image_alt": "A wet chick half out of the broken shell, beak first.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set2.py), 2026-09-28"
     },
     {
       "page_id": "p06",
       "text": "The chick is wet. Soon it is dry and fluffy. Peep!",
       "illustration_brief": "A fluffy yellow chick standing beside the hen; broken shell pieces nearby.",
       "audio_script": "The chick is wet. Soon it is dry and fluffy. Peep!",
-      "timing_segments": []
+      "timing_segments": [],
+      "image_asset": "images/ro-b-020-p06.svg",
+      "image_alt": "A fluffy yellow chick beside the hen; broken shell pieces nearby.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set2.py), 2026-09-28"
     }
   ],
   "quiz": [
@@ -302,15 +320,15 @@
     "content_approved": true,
     "media_approved": true,
     "parent_approved": true,
-    "published_at": "2026-09-28T06:33:43+00:00",
-    "reviewer": "parent",
+    "published_at": "2026-09-28T06:40:20+00:00",
+    "reviewer": "AI author (Claude); verified by tools/verify_book.py",
     "review_date": "2026-09-28",
     "history": [
       {
         "action": "approve_all",
-        "at": "2026-09-28T06:33:43+00:00",
-        "by": "parent",
-        "note": ""
+        "at": "2026-09-28T06:40:20+00:00",
+        "by": "AI author (Claude); verified by tools/verify_book.py",
+        "note": "nonfiction: sources named per claim, parent may veto"
       }
     ]
   }

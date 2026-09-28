@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">The dog asleep in the shed</title>
+  <desc id="d">A dog curled asleep inside a wooden shed doorway.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="200" width="400" height="100" fill="#BFE3B4"/>
+  <g transform="translate(200 170)"><rect x="-60" y="-40" width="120" height="80" fill="#B08968" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M-70 -40 L0 -84 L70 -40 Z" fill="#7F5539" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="-24" y="-16" width="48" height="56" fill="#3E2C1F" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g transform="translate(200 210) scale(0.8)">
+    <ellipse cx="0" cy="8" rx="34" ry="18" fill="#F5E6D3" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="26" cy="-10" r="16" fill="#F5E6D3" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M14 -20 q-10 10 -6 22" fill="#A0522D" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="30" cy="-12" r="3" fill="#2B2B2B"/><circle cx="40" cy="-6" r="4" fill="#2B2B2B"/>
+    <circle cx="-10" cy="2" r="6" fill="#A0522D"/><circle cx="8" cy="12" r="5" fill="#A0522D"/>
+    <path d="M-34 4 q-16 -10 -10 -26" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    
+  </g>
+
+</svg>

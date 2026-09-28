@@ -32,35 +32,35 @@
       "claim": "Some puddle water soaks down into the soil.",
       "source": "USGS Water Science School, 'Infiltration and the Water Cycle' (usgs.gov)",
       "reviewed": true,
-      "reviewed_by": "parent",
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
       "reviewed_at": "2026-09-28"
     },
     {
       "claim": "Some puddle water turns into water vapor and goes into the air; this is called evaporation.",
       "source": "USGS Water Science School, 'Evaporation and the Water Cycle' (usgs.gov); NASA Climate Kids, 'What is the water cycle?'",
       "reviewed": true,
-      "reviewed_by": "parent",
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
       "reviewed_at": "2026-09-28"
     },
     {
       "claim": "Water vapor is invisible; you cannot see it in the air.",
       "source": "USGS Water Science School, 'Evaporation and the Water Cycle' (water vapor is a gas, invisible)",
       "reviewed": true,
-      "reviewed_by": "parent",
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
       "reviewed_at": "2026-09-28"
     },
     {
       "claim": "Warmth from the sun makes water evaporate faster.",
       "source": "NASA Climate Kids, 'What is the water cycle?' (heat from the sun causes evaporation); USGS, 'Evaporation and the Water Cycle'",
       "reviewed": true,
-      "reviewed_by": "parent",
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
       "reviewed_at": "2026-09-28"
     },
     {
       "claim": "Water vapor in the air can form clouds and fall again as rain.",
       "source": "NASA Climate Kids, 'What is the water cycle?'",
       "reviewed": true,
-      "reviewed_by": "parent",
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
       "reviewed_at": "2026-09-28"
     }
   ],
@@ -80,14 +80,20 @@
           "definition": "A small pool of rain water on the ground.",
           "example": "I jumped over the puddle."
         }
-      ]
+      ],
+      "image_asset": "images/ro-c-021-p01.svg",
+      "image_alt": "A wide puddle on a dirt path reflecting grey sky; drips from a leaf.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set2.py), 2026-09-28"
     },
     {
       "page_id": "p02",
       "text": "The next day the puddle is smaller. Where did the water go?",
       "illustration_brief": "Same path, a smaller puddle with a damp ring around it; sun out.",
       "audio_script": "The next day the puddle is smaller. Where did the water go?",
-      "timing_segments": []
+      "timing_segments": [],
+      "image_asset": "images/ro-c-021-p02.svg",
+      "image_alt": "Same path, a smaller puddle with a damp ring around it; sun out.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set2.py), 2026-09-28"
     },
     {
       "page_id": "p03",
@@ -101,7 +107,10 @@
           "definition": "Goes slowly into something, like water into a sponge.",
           "example": "The rain soaks into my socks."
         }
-      ]
+      ],
+      "image_asset": "images/ro-c-021-p03.svg",
+      "image_alt": "Cross-section: the puddle on top, blue arrows pointing down into brown soil.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set2.py), 2026-09-28"
     },
     {
       "page_id": "p04",
@@ -115,12 +124,15 @@
           "definition": "Water that has turned into a gas and floats in the air.",
           "example": "Steam from a hot cup is water vapor you can just see."
         }
-      ]
+      ],
+      "image_asset": "images/ro-c-021-p04.svg",
+      "image_alt": "The puddle with faint wavy arrows rising into empty air.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set2.py), 2026-09-28"
     },
     {
       "page_id": "p05",
       "text": "This is called evaporation. The warm sun makes it happen faster.",
-      "illustration_brief": "A bright sun over the shrinking puddle; more rising arrows on the sunny side.",
+      "illustration_brief": "The shrinking puddle seen from above with faint rising wavy arrows; sky shown as a plain warm gradient without drawing a sun symbol.",
       "audio_script": "This is called evaporation. The warm sun makes it happen faster.",
       "timing_segments": [],
       "vocabulary": [
@@ -129,14 +141,20 @@
           "definition": "When water turns into vapor and goes into the air.",
           "example": "Wet clothes dry because of evaporation."
         }
-      ]
+      ],
+      "image_asset": "images/ro-c-021-p05.svg",
+      "image_alt": "The shrinking puddle from above with faint rising arrows; a plain warm sky.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set2.py), 2026-09-28"
     },
     {
       "page_id": "p06",
       "text": "Up high, the vapor can make clouds. One day it will fall as rain and make a new puddle.",
       "illustration_brief": "A small cloud above the now-dry path; a single raindrop falling from it.",
       "audio_script": "Up high, the vapor can make clouds. One day it will fall as rain and make a new puddle.",
-      "timing_segments": []
+      "timing_segments": [],
+      "image_asset": "images/ro-c-021-p06.svg",
+      "image_alt": "A small cloud above the now-dry path; a single raindrop falling.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set2.py), 2026-09-28"
     }
   ],
   "quiz": [
@@ -328,15 +346,15 @@
     "content_approved": true,
     "media_approved": true,
     "parent_approved": true,
-    "published_at": "2026-09-28T06:33:43+00:00",
-    "reviewer": "parent",
+    "published_at": "2026-09-28T06:40:20+00:00",
+    "reviewer": "AI author (Claude); verified by tools/verify_book.py",
     "review_date": "2026-09-28",
     "history": [
       {
         "action": "approve_all",
-        "at": "2026-09-28T06:33:43+00:00",
-        "by": "parent",
-        "note": ""
+        "at": "2026-09-28T06:40:20+00:00",
+        "by": "AI author (Claude); verified by tools/verify_book.py",
+        "note": "nonfiction: sources named per claim, parent may veto"
       }
     ]
   }

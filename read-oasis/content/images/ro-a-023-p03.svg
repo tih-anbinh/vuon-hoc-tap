@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">A wet mat</title>
+  <desc id="d">A doormat dark with water outside a door.</desc>
+  <rect width="400" height="300" fill="#D8DEE6"/>
+  <rect x="0" y="0" width="400" height="190" fill="#F0E6D2"/>
+  <rect x="140" y="20" width="120" height="170" fill="#A87C5A" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="100" y="190" width="200" height="26" rx="4" fill="#8E9AA3" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="0" y="216" width="400" height="84" fill="#BFE3B4"/>
+  <rect x="130" y="236" width="140" height="18" rx="4" fill="#5C6B73" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M40 10 q6 14 0 26" fill="none" stroke="#5DADE2" stroke-width="6" stroke-linecap="round"/>
+  <path d="M84 40 q6 14 0 26" fill="none" stroke="#5DADE2" stroke-width="6" stroke-linecap="round"/>
+  <path d="M128 70 q6 14 0 26" fill="none" stroke="#5DADE2" stroke-width="6" stroke-linecap="round"/>
+  <path d="M172 10 q6 14 0 26" fill="none" stroke="#5DADE2" stroke-width="6" stroke-linecap="round"/>
+
+</svg>

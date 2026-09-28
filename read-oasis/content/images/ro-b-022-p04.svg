@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Grandpa at the market</title>
+  <desc id="d">Grandpa in a conical hat walking along a path with a basket.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="200" width="400" height="100" fill="#BFE3B4"/>
+  <path d="M0 260 q200 -40 400 -10" stroke="#D9D2C5" stroke-width="30" fill="none"/>
+  <g transform="translate(200 200) scale(1.0)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#DDD"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -30 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#6C757D" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-36 30 M24 0 L36 30" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(200 200) scale(1.0)"><path d="M-44 -50 L0 -84 L44 -50 Z" fill="#E9C46A" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g transform="translate(250 210) scale(0.7)"><path d="M-36 0 L-28 40 L28 40 L36 0 Z" fill="#D4A373" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M-20 0 q20 -40 40 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M-20 0 l-6 -18 M-20 0 l6 -18 M-20 0 l0 -22" stroke="#3E7C3A" stroke-width="4" stroke-linecap="round"/></g>
+
+</svg>

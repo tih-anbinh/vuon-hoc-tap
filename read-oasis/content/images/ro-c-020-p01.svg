@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Making a kite</title>
+  <desc id="d">Sam at a table with a paper bag stretched over crossed sticks; glue and string nearby.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="240" width="400" height="60" fill="#BFE3B4"/>
+  <rect x="100" y="200" width="220" height="12" rx="4" fill="#A0522D" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M116 212 L116 270 M304 212 L304 270" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(210 160) rotate(0) scale(0.7)">
+    <path d="M0 -40 L30 0 L0 40 L-30 0 Z" fill="#A0522D" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 -40 L0 40 M-30 0 L30 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-6 50 l10 6 l-10 6" fill="none" stroke="#F4A6C1" stroke-width="4"/><path d="M6 64 l10 6 l-10 6" fill="none" stroke="#F4A6C1" stroke-width="4"/><path d="M-6 78 l10 6 l-10 6" fill="none" stroke="#F4A6C1" stroke-width="4"/><path d="M6 92 l10 6 l-10 6" fill="none" stroke="#F4A6C1" stroke-width="4"/>
+  </g>
+  <g transform="translate(80 200) scale(0.9)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#2B2B2B"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -30 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#5B8DEF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-52 0 M24 0 L52 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+</svg>

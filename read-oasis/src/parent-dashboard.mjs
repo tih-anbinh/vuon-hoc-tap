@@ -41,10 +41,49 @@ function render() {
   if (!unlocked) return renderGate();
   app.replaceChildren(h('div', { class: 'parent-shell' },
     h('nav', { class: 'tabs', role: 'tablist' }, [
-      ['evidence', 'Evidence'], ['answers', 'Answers to review'], ['baseline', 'Baseline'], ['settings', 'Display & sound'],
+      ['evidence', 'Evidence'], ['library', 'Library'], ['answers', 'Answers to review'], ['baseline', 'Baseline'], ['settings', 'Display & sound'],
       ['studio', 'Content studio'], ['cloud', 'Cloud sync'], ['data', 'Data'],
     ].map(([id, label]) => btn(label, () => { tab = id; render(); }, { quiet: tab !== id, attrs: { role: 'tab', 'aria-selected': String(tab === id) } }))),
-    h('div', {}, ({ evidence: renderEvidence, answers: renderAnswers, baseline: renderBaseline, settings: renderSettings, studio: renderStudio, cloud: renderCloud, data: renderData })[tab]())));
+    h('div', {}, ({ evidence: renderEvidence, library: renderLibraryTab, answers: renderAnswers, baseline: renderBaseline, settings: renderSettings, studio: renderStudio, cloud: renderCloud, data: renderData })[tab]())));
+}
+
+// ---------- library veto: every published book, show/hide per child, with review provenance
+const bookDetail = new Map();
+function renderLibraryTab() {
+  const hidden = new Set(S.settings.hidden_books || []);
+  const rows = published.map(b => {
+    const isHidden = hidden.has(b.book_id);
+    const t = h('input', { type: 'checkbox', checked: !isHidden, 'aria-label': `Show ${b.title} to the child` });
+    t.onchange = () => { store.setBookHidden(b.book_id, !t.checked); toast(t.checked ? 'Shown in the child library.' : 'Hidden from the child library.'); render(); };
+    const prov = h('span', { class: 'muted', text: '…' });
+    const d = bookDetail.get(b.book_id);
+    const fill = (bk) => {
+      const rv = bk.review || {}; const fc = bk.factual_claims || [];
+      const pending = fc.filter(c => /pending/i.test(c.reviewed_by || '') || !c.reviewed).length;
+      prov.replaceChildren(h('span', { text: `by ${rv.reviewer || 'unknown'} on ${rv.review_date || (rv.published_at || '').slice(0, 10)}` }),
+        bk.genre === 'nonfiction' ? h('span', { class: pending ? 'badge-warn' : 'badge-ok', text: pending ? `  · ${pending} fact(s) await your check` : '  · facts checked' }) : null);
+      if (!bk.pages.some(p => p.image_asset)) prov.append(h('span', { class: 'muted', text: '  · no pictures yet' }));
+      if (!bk.pages.some(p => p.audio_asset)) prov.append(h('span', { class: 'muted', text: '  · device voice (no built audio)' }));
+    };
+    if (d) fill(d); else loadJSON(b.file).then(bk => { bookDetail.set(b.book_id, bk); fill(bk); }).catch(() => { prov.textContent = 'could not load'; });
+    const p = store.bookProgress(b.book_id, b.revision, false);
+    return h('tr', { style: isHidden ? 'opacity:.55' : '' },
+      h('td', {}, h('label', { class: 'check' }, t, h('span', { text: isHidden ? 'Hidden' : 'Shown' }))),
+      h('td', {}, h('b', { text: b.title }), h('br'), h('span', { class: 'chip', text: b.level }), h('span', { class: 'chip', text: b.reading_mode.replace('_', ' ') }), h('span', { class: 'chip', text: b.genre })),
+      h('td', {}, prov),
+      h('td', { class: 'muted', text: p?.completed_reads ? `read ${p.completed_reads}x` : p?.page_index ? `page ${p.page_index + 1}` : 'not opened' }),
+      h('td', {}, btn('Mark facts checked', () => markFactsChecked(b), { quiet: true, attrs: { disabled: b.genre !== 'nonfiction' } })));
+  });
+  return h('section', { class: 'fade' },
+    h('div', { class: 'card' }, h('h3', { text: `Child library (${published.length - hidden.size} of ${published.length} shown)` }),
+      h('p', { class: 'muted', text: 'Books are authored and verified automatically, then published. You keep the veto: untick a book to hide it from the child on this profile immediately (no rebuild). Hidden books keep their progress and can be shown again. Your choices sync with the cloud store if enabled.' }),
+      h('table', {}, h('thead', {}, h('tr', {}, h('th', { text: 'Visible' }), h('th', { text: 'Book' }), h('th', { text: 'Reviewed' }), h('th', { text: 'Child progress' }), h('th', {}))), h('tbody', {}, rows))),
+    h('div', { class: 'card' }, h('h3', { text: 'Permanent removal' }), h('p', { class: 'muted', text: 'To remove a book for every device, run: python tools/approve.py --reject <book_id> -m "reason", then update_content.cmd. It returns to DRAFT and leaves the library index.' })));
+}
+function markFactsChecked(b) {
+  // Records the parent's fact-check in the local store (content files are read-only in the browser).
+  store.addObservation({ text: `Parent checked the factual claims of ${b.book_id} (${b.title})`, kind: 'fact_check', bookId: b.book_id });
+  toast('Recorded. To stamp the book file itself: python tools/approve.py --facts ' + b.book_id + ' --reviewer parent');
 }
 
 // ---------- cloud sync (opt-in; same Supabase project/accounts as the other family apps)

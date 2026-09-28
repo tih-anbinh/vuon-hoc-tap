@@ -1,7 +1,7 @@
 {
   "index_version": 1,
   "generated_by": "tools/validate_content.py",
-  "content_hash": "ab8ac9da9e56",
+  "content_hash": "e5c51b445e74",
   "books": [
     {
       "book_id": "ro-a-001",
@@ -13,7 +13,7 @@
       "topic": "play",
       "genre": "fiction",
       "pages": 5,
-      "sha256": "13dcc61a49911fae9f2842b42a78029b7f928b91b30fd82fcc73a2ebcdde412c",
+      "sha256": "9715418bfc2e2d479de84a8742eb69971deb2a9c647481a3626feb90c26e61c4",
       "assets": [
         "images/ro-a-001-p01.svg",
         "images/ro-a-001-p02.svg",
@@ -32,8 +32,15 @@
       "topic": "sounds",
       "genre": "fiction",
       "pages": 6,
-      "sha256": "bd4d3b621ea134bf8660bcf072bd52bc0092739f5f24c0effa29d3f0526f346a",
-      "assets": []
+      "sha256": "e307daa5deb22fcd6227f72f13381db6119e891e9454a46cc8d1d585cd0f880a",
+      "assets": [
+        "images/ro-a-020-p01.svg",
+        "images/ro-a-020-p02.svg",
+        "images/ro-a-020-p03.svg",
+        "images/ro-a-020-p04.svg",
+        "images/ro-a-020-p05.svg",
+        "images/ro-a-020-p06.svg"
+      ]
     },
     {
       "book_id": "ro-a-022",
@@ -45,8 +52,15 @@
       "topic": "home",
       "genre": "fiction",
       "pages": 6,
-      "sha256": "afb7d14b2897c066c85063e8e5aa778520718c4251745ec99233ef91b735c3bb",
-      "assets": []
+      "sha256": "bbcb9a96cc00c740470b643766ca8ff30d75224f64b14df7145ba792892579b5",
+      "assets": [
+        "images/ro-a-022-p01.svg",
+        "images/ro-a-022-p02.svg",
+        "images/ro-a-022-p03.svg",
+        "images/ro-a-022-p04.svg",
+        "images/ro-a-022-p05.svg",
+        "images/ro-a-022-p06.svg"
+      ]
     },
     {
       "book_id": "ro-a-023",
@@ -58,8 +72,15 @@
       "topic": "weather",
       "genre": "fiction",
       "pages": 6,
-      "sha256": "47d79f7da0105fcbfa5a4d3abe03b35c55f3cdd75258a0587560974da904c45e",
-      "assets": []
+      "sha256": "bdf35cb25fbc1cab39ceb5a83b2c0104d8f8b509c136426d699ff797be196e87",
+      "assets": [
+        "images/ro-a-023-p01.svg",
+        "images/ro-a-023-p02.svg",
+        "images/ro-a-023-p03.svg",
+        "images/ro-a-023-p04.svg",
+        "images/ro-a-023-p05.svg",
+        "images/ro-a-023-p06.svg"
+      ]
     },
     {
       "book_id": "ro-b-001",
@@ -89,8 +110,15 @@
       "topic": "animals",
       "genre": "nonfiction",
       "pages": 6,
-      "sha256": "3c12838e81d13ef31b1d87862a3134860cdd7f3961381d211eb58f769f6fe9ae",
-      "assets": []
+      "sha256": "801db7e4536d36d79fa66139f70da500cfb31dfc7da37666205e496fe6075230",
+      "assets": [
+        "images/ro-b-020-p01.svg",
+        "images/ro-b-020-p02.svg",
+        "images/ro-b-020-p03.svg",
+        "images/ro-b-020-p04.svg",
+        "images/ro-b-020-p05.svg",
+        "images/ro-b-020-p06.svg"
+      ]
     },
     {
       "book_id": "ro-b-021",
@@ -102,8 +130,15 @@
       "topic": "home",
       "genre": "fiction",
       "pages": 6,
-      "sha256": "7376e6ef2ea7b66d288b26a6aafb2bf270bd4d038d17a620353f36755ff5e011",
-      "assets": []
+      "sha256": "a6f71650e2ea60b3a7b0883e3480698f8127afe844e05a48f024762d372a043c",
+      "assets": [
+        "images/ro-b-021-p01.svg",
+        "images/ro-b-021-p02.svg",
+        "images/ro-b-021-p03.svg",
+        "images/ro-b-021-p04.svg",
+        "images/ro-b-021-p05.svg",
+        "images/ro-b-021-p06.svg"
+      ]
     },
     {
       "book_id": "ro-b-022",
@@ -115,8 +150,15 @@
       "topic": "family",
       "genre": "fiction",
       "pages": 6,
-      "sha256": "5232fce51076e20cdea16a9a2cf1760f46ea8f1a33bd13c5b178cfb5081c323c",
-      "assets": []
+      "sha256": "c876c624e44c09f38a4e93b9e21b5882d41d1157d2f4fab56ea409811cd60e51",
+      "assets": [
+        "images/ro-b-022-p01.svg",
+        "images/ro-b-022-p02.svg",
+        "images/ro-b-022-p03.svg",
+        "images/ro-b-022-p04.svg",
+        "images/ro-b-022-p05.svg",
+        "images/ro-b-022-p06.svg"
+      ]
     },
     {
       "book_id": "ro-b-023",
@@ -128,8 +170,15 @@
       "topic": "home",
       "genre": "fiction",
       "pages": 6,
-      "sha256": "a18ada9a7bc24b6c25918222ec1a1c15349238a38ceec25a6ffd04a61445b90a",
-      "assets": []
+      "sha256": "d6850f5435406b630bf7d81bac1846206b6a8b99b173abc843a087080a40d9d4",
+      "assets": [
+        "images/ro-b-023-p01.svg",
+        "images/ro-b-023-p02.svg",
+        "images/ro-b-023-p03.svg",
+        "images/ro-b-023-p04.svg",
+        "images/ro-b-023-p05.svg",
+        "images/ro-b-023-p06.svg"
+      ]
     },
     {
       "book_id": "ro-c-020",
@@ -141,8 +190,15 @@
       "topic": "making",
       "genre": "fiction",
       "pages": 6,
-      "sha256": "5ff2eb0520dff71f4d35aab8556f5c46e750a780c4f690e05c5e2a17509b105a",
-      "assets": []
+      "sha256": "7471df60dfa06ba6fd995025b0932c789e9f25a0a353cad8968a158b85404bd1",
+      "assets": [
+        "images/ro-c-020-p01.svg",
+        "images/ro-c-020-p02.svg",
+        "images/ro-c-020-p03.svg",
+        "images/ro-c-020-p04.svg",
+        "images/ro-c-020-p05.svg",
+        "images/ro-c-020-p06.svg"
+      ]
     },
     {
       "book_id": "ro-c-021",
@@ -154,8 +210,15 @@
       "topic": "water",
       "genre": "nonfiction",
       "pages": 6,
-      "sha256": "6dc7498d2d12a6c1b3d34d84b38a995aa7dc74d93e85036cfc3d067179b41e71",
-      "assets": []
+      "sha256": "94f4ece6e76b137e3c235cc36f135fbc668a8d29c910a9de15ea510077f95ec6",
+      "assets": [
+        "images/ro-c-021-p01.svg",
+        "images/ro-c-021-p02.svg",
+        "images/ro-c-021-p03.svg",
+        "images/ro-c-021-p04.svg",
+        "images/ro-c-021-p05.svg",
+        "images/ro-c-021-p06.svg"
+      ]
     },
     {
       "book_id": "ro-c-022",
@@ -167,8 +230,15 @@
       "topic": "animals",
       "genre": "fiction",
       "pages": 6,
-      "sha256": "a973ca11f14c25aab2e190faeb8a0c461f89f0ae452f30d7771383faf58fed9f",
-      "assets": []
+      "sha256": "b7684e76ce4b6673bce479bb2f69a89941f6f991faf1623060b44aa5a908e3de",
+      "assets": [
+        "images/ro-c-022-p01.svg",
+        "images/ro-c-022-p02.svg",
+        "images/ro-c-022-p03.svg",
+        "images/ro-c-022-p04.svg",
+        "images/ro-c-022-p05.svg",
+        "images/ro-c-022-p06.svg"
+      ]
     },
     {
       "book_id": "ro-c-023",
@@ -180,8 +250,17 @@
       "topic": "neighbourhood",
       "genre": "fiction",
       "pages": 8,
-      "sha256": "6d8bedae7b94b42fda065bcf1ce5f7dfbb3a731fab70af65695df0e3284626e6",
-      "assets": []
+      "sha256": "c46f1df4c942c3a064314faa54d9f16386ef1ac6749bdf27dfe0539118e57741",
+      "assets": [
+        "images/ro-c-023-p01.svg",
+        "images/ro-c-023-p02.svg",
+        "images/ro-c-023-p03.svg",
+        "images/ro-c-023-p04.svg",
+        "images/ro-c-023-p05.svg",
+        "images/ro-c-023-p06.svg",
+        "images/ro-c-023-p07.svg",
+        "images/ro-c-023-p08.svg"
+      ]
     },
     {
       "book_id": "ro-d-001",
