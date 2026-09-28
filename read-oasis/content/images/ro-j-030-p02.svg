@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Water spills from a full bath</title>
+  <desc id="d">A child stepping into a full bath as water spills over the edge.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="0" width="400" height="300" fill="#F3EBDD"/><rect x="0" y="210" width="400" height="90" fill="#C8A27A"/>
+  <g transform="translate(200 190)"><path d="M-90 0 L-80 70 L80 70 L90 0 Z" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="0" cy="0" rx="90" ry="16" fill="#9CCBE8" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M-100 0 l-8 30 M100 0 l8 30" stroke="#9CCBE8" stroke-width="6" stroke-linecap="round"/><path d="M-70 -30 q0 -20 20 -20 l0 20" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g transform="translate(200 175) scale(0.7)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#2B2B2B"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -30 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#EAF4FB" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-42 -30 M24 0 L42 -30" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <path d="M110 200 q-10 30 -4 60 M290 200 q10 30 4 60" fill="none" stroke="#9CCBE8" stroke-width="6" stroke-linecap="round"/>
+
+</svg>

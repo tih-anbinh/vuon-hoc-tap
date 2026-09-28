@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">The footbridge is closed</title>
+  <desc id="d">An old arched footbridge over a canal with a yellow barrier across it and an engineer in a yellow jacket.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="0" width="400" height="300" fill="#EAF4FB"/><rect x="0" y="200" width="400" height="100" fill="#7FB7D9"/><path d="M0 200 L60 200 L60 300 L0 300 Z M400 200 L340 200 L340 300 L400 300 Z" fill="#BFE3B4" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M60 200 Q200 90 340 200" fill="none" stroke="#8E9AA3" stroke-width="14"/><path d="M40 150 L360 150" stroke="#A0522D" stroke-width="12"/><path d="M70 150 L70 160" stroke="#8E9AA3" stroke-width="6"/><path d="M100 150 L100 170" stroke="#8E9AA3" stroke-width="6"/><path d="M130 150 L130 180" stroke="#8E9AA3" stroke-width="6"/><path d="M160 150 L160 190" stroke="#8E9AA3" stroke-width="6"/><path d="M190 150 L190 200" stroke="#8E9AA3" stroke-width="6"/><path d="M220 150 L220 210" stroke="#8E9AA3" stroke-width="6"/><path d="M250 150 L250 200" stroke="#8E9AA3" stroke-width="6"/><path d="M280 150 L280 190" stroke="#8E9AA3" stroke-width="6"/><path d="M310 150 L310 180" stroke="#8E9AA3" stroke-width="6"/><path d="M340 150 L340 170" stroke="#8E9AA3" stroke-width="6"/><rect x="60" y="120" width="280" height="14" fill="#F7D154" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M60 120 L340 134 M60 134 L340 120" stroke="#2B2B2B" stroke-width="3"/>
+  <g transform="translate(340 250) scale(0.9199999999999999)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#2B2B2B"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -30 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#F7D154" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-40 26 M24 0 L40 26" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Water pushes back up</title>
+  <desc id="d">A tank of water with an object inside and arrows showing water pushing upward beneath it.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="40" y="120" width="320" height="150" rx="8" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="42" y="150" width="316" height="118" rx="6" fill="#9CCBE8"/>
+  <rect transform="translate(200 170) scale(1.8)" x="-14" y="-14" width="28" height="28" rx="3" fill="#A0522D" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M170 250 L170 200" stroke="#5B8DEF" stroke-width="5" stroke-linecap="round"/><path d="M170 200 L175.8 210.5 M170 200 L164.2 210.5" stroke="#5B8DEF" stroke-width="5" stroke-linecap="round"/>
+  <path d="M200 250 L200 200" stroke="#5B8DEF" stroke-width="5" stroke-linecap="round"/><path d="M200 200 L205.8 210.5 M200 200 L194.2 210.5" stroke="#5B8DEF" stroke-width="5" stroke-linecap="round"/>
+  <path d="M230 250 L230 200" stroke="#5B8DEF" stroke-width="5" stroke-linecap="round"/><path d="M230 200 L235.8 210.5 M230 200 L224.2 210.5" stroke="#5B8DEF" stroke-width="5" stroke-linecap="round"/>
+  <path d="M200 110 L200 140" stroke="#D9534F" stroke-width="5" stroke-linecap="round"/><path d="M200 140 L194.2 129.5 M200 140 L205.8 129.5" stroke="#D9534F" stroke-width="5" stroke-linecap="round"/>
+
+</svg>

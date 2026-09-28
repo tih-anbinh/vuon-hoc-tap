@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Clay ball sinks, clay bowl floats</title>
+  <desc id="d">Two tanks: a clay ball on the bottom of one and a clay bowl floating in the other.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="20" y="100" width="170" height="170" rx="8" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="22" y="130" width="166" height="138" rx="6" fill="#9CCBE8"/>
+  <circle cx="105" cy="250" r="22.0" fill="#B0714E" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="210" y="100" width="170" height="170" rx="8" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="212" y="130" width="166" height="138" rx="6" fill="#9CCBE8"/>
+  <path transform="translate(295 140) scale(1.0)" d="M-46 -10 q0 26 46 26 q46 0 46 -26 Z" fill="#B0714E" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="295" cy="130.0" rx="46.0" ry="10.0" fill="#C8956F" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+</svg>

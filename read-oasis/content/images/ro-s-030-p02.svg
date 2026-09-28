@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Running out of things to observe</title>
+  <desc id="d">Two hot cloudless days with the thermometer high; a few thin clouds appear.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="0" width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="220" width="400" height="80" fill="#BFE3B4"/>
+  <circle cx="90" cy="70" r="30" fill="#F7D154" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M129 70 L141 70" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M117 97 L125 105" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M90 109 L90 121" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M63 97 L55 105" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M51 70 L39 70" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M63 43 L55 35" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M90 31 L90 19" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M117 43 L125 35" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M200 60 q40 -10 80 0 M240 90 q40 -10 90 0" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+  <g transform="translate(340 190)"><rect x="-8" y="-70" width="16" height="80" rx="8" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="-4" y="-51.0" width="8" height="55.0" fill="#D9534F"/><circle cx="0" cy="18" r="12" fill="#D9534F" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g transform="translate(120 210) scale(0.9)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#2B2B2B"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -26 q8 -8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#6AB04C" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-40 26 M24 0 L40 26" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(180 235) rotate(-6) scale(0.6)"><rect x="-50" y="-60" width="100" height="120" rx="4" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M-50 -60 L-50 60" stroke="#D9534F" stroke-width="6"/><path d="M-36 -44 l60 0" stroke="#8E9AA3" stroke-width="3" stroke-linecap="round"/><path d="M-36 -26 l44 0" stroke="#8E9AA3" stroke-width="3" stroke-linecap="round"/><path d="M-36 -8 l60 0" stroke="#8E9AA3" stroke-width="3" stroke-linecap="round"/><path d="M-36 10 l44 0" stroke="#8E9AA3" stroke-width="3" stroke-linecap="round"/><path d="M-36 28 l60 0" stroke="#8E9AA3" stroke-width="3" stroke-linecap="round"/></g>
+
+</svg>

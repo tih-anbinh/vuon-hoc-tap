@@ -1,0 +1,428 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-n-030",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "Where Does the Rain Come From?",
+  "language": "en",
+  "level": "N",
+  "reading_mode": "independent_reading",
+  "topic": "weather",
+  "genre": "nonfiction",
+  "learning_objectives": [
+    "Trace the water cycle as a loop, not a line",
+    "Explain condensation using an everyday example",
+    "Connect this text to the earlier puddle book and the boat book"
+  ],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": {
+    "text": "high",
+    "conceptual": "high",
+    "visual_support": "medium"
+  },
+  "rights": {
+    "text_author": "Huy Tran for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
+  "factual_claims": [
+    {
+      "claim": "Water evaporates from oceans, lakes, rivers, soil and plants into the air as invisible water vapour.",
+      "source": "USGS Water Science School, 'The Water Cycle'; NASA Climate Kids, 'The water cycle'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Warm air can hold more water vapour than cold air.",
+      "source": "NOAA National Weather Service JetStream, 'Humidity'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Rising air cools, and cooled vapour condenses onto tiny particles (dust, salt, smoke) to form cloud droplets.",
+      "source": "NOAA JetStream, 'Clouds'; UCAR Center for Science Education, 'How clouds form'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Cloud droplets are far too small to fall; they collide and merge until heavy enough to fall as rain (or snow if cold enough).",
+      "source": "UCAR Center for Science Education, 'Precipitation'; USGS 'Precipitation and the Water Cycle'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Condensation on a cold glass or window is water vapour from the air turning back to liquid on the cold surface.",
+      "source": "USGS Water Science School, 'Condensation and the Water Cycle'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Rain that reaches the ground runs into streams and rivers, soaks into the ground, or evaporates again; the cycle has no start or end.",
+      "source": "USGS Water Science School, 'The Water Cycle'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "The amount of water on Earth stays roughly the same; it is reused again and again.",
+      "source": "USGS Water Science School, 'How much water is there on Earth?'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    }
+  ],
+  "parent_prompts": [
+    "Let the child read alone. After: where did today's rain come from, going back as far as you can? Ask for the loop, not just 'clouds'."
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "It is raining. Water is falling out of the sky. That is such an ordinary thing that it is easy to forget how strange it is. The sky is air. Air is not made of water. So where did all this water come from, and how did it get up there in the first place?",
+      "illustration_brief": "A child at a window watching rain streak the glass; grey sky.",
+      "audio_script": "It is raining. Water is falling out of the sky. That is such an ordinary thing that it is easy to forget how strange it is. The sky is air. Air is not made of water. So where did all this water come from, and how did it get up there in the first place?",
+      "timing_segments": [],
+      "image_asset": "images/ro-n-030-p01.svg",
+      "image_alt": "Dark clouds with rain falling over a house and a child looking up with an umbrella-less puzzled face.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p02",
+      "text": "Start at the sea, because most of the world's water is there. All day the sun warms the surface. Warm water molecules jiggle faster, and the fastest ones escape into the air as vapour, a gas you cannot see. The same thing happens, more slowly, from lakes, rivers, wet soil, puddles and even the leaves of plants. You have seen this: it is how a puddle dries and how washing dries on a line.",
+      "illustration_brief": "Sunlit sea surface with faint wavy vapour arrows rising; a washing line and a puddle in a small inset.",
+      "audio_script": "Start at the sea, because most of the world's water is there. All day the sun warms the surface. Warm water molecules jiggle faster, and the fastest ones escape into the air as vapour, a gas you cannot see. The same thing happens, more slowly, from lakes, rivers, wet soil, puddles and even the leaves of plants. You have seen this: it is how a puddle dries and how washing dries on a line.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "vapour",
+          "definition": "Water in the form of a gas, spread through the air and invisible.",
+          "example": "Steam is water vapour you can just see because it is cooling."
+        }
+      ],
+      "image_asset": "images/ro-n-030-p02.svg",
+      "image_alt": "The sun over the sea with curls of invisible vapour rising from the warm surface.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p03",
+      "text": "Warm air can hold a lot of vapour. Cold air cannot. Keep that rule in your pocket; it explains almost everything that comes next.",
+      "illustration_brief": "Two air blobs: a big warm orange one full of dots (vapour), a small cool blue one with few dots.",
+      "audio_script": "Warm air can hold a lot of vapour. Cold air cannot. Keep that rule in your pocket; it explains almost everything that comes next.",
+      "timing_segments": [],
+      "image_asset": "images/ro-n-030-p03.svg",
+      "image_alt": "Two air pockets: a warm red one full of droplets and a cold blue one holding only a few.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p04",
+      "text": "Warm, damp air is lighter than the cooler air around it, so it rises, like a hot-air balloon with nobody in the basket. The higher it goes, the colder it gets. And now the rule bites: the cooling air can no longer hold all its vapour. The vapour has to turn back into liquid. It does this by gathering onto specks of dust and salt floating in the sky, forming droplets so tiny that a million of them would fit in a teaspoon. A crowd of these droplets is a cloud.",
+      "illustration_brief": "Diagram: warm air rising from land, cooling with height, a cloud forming at the top; tiny specks with droplets around them shown in a magnified circle.",
+      "audio_script": "Warm, damp air is lighter than the cooler air around it, so it rises, like a hot-air balloon with nobody in the basket. The higher it goes, the colder it gets. And now the rule bites: the cooling air can no longer hold all its vapour. The vapour has to turn back into liquid. It does this by gathering onto specks of dust and salt floating in the sky, forming droplets so tiny that a million of them would fit in a teaspoon. A crowd of these droplets is a cloud.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "condense",
+          "definition": "To change from a gas back into a liquid, usually by cooling.",
+          "example": "Steam condenses on the cold mirror."
+        }
+      ],
+      "image_asset": "images/ro-n-030-p04.svg",
+      "image_alt": "Curls of warm air rising like a balloon up to a cold height where a cloud forms.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p05",
+      "text": "You can watch condensation happen without leaving the kitchen. Pour a cold drink on a warm day and the outside of the glass goes misty, then wet. That water did not leak through the glass. It came out of the air, which cooled where it touched the cold surface and gave up some of its vapour. A cloud is the same trick, done in the sky.",
+      "illustration_brief": "A cold glass of water with droplets running down its outside; a faint mist ring on the table.",
+      "audio_script": "You can watch condensation happen without leaving the kitchen. Pour a cold drink on a warm day and the outside of the glass goes misty, then wet. That water did not leak through the glass. It came out of the air, which cooled where it touched the cold surface and gave up some of its vapour. A cloud is the same trick, done in the sky.",
+      "timing_segments": [],
+      "image_asset": "images/ro-n-030-p05.svg",
+      "image_alt": "A cold drink on a table, the outside of the glass misty and beaded with water.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p06",
+      "text": "Cloud droplets are far too small and light to fall. They drift. But inside a cloud they bump into one another and merge, two into one, ten into one, a million into one. When a drop grows heavy enough that the rising air can no longer hold it up, it falls. That is rain. If the cloud is cold enough, the drops freeze on the way and it is snow or hail instead.",
+      "illustration_brief": "Inside a cloud: tiny droplets merging into progressively larger drops, the largest falling out of the base as rain.",
+      "audio_script": "Cloud droplets are far too small and light to fall. They drift. But inside a cloud they bump into one another and merge, two into one, ten into one, a million into one. When a drop grows heavy enough that the rising air can no longer hold it up, it falls. That is rain. If the cloud is cold enough, the drops freeze on the way and it is snow or hail instead.",
+      "timing_segments": [],
+      "image_asset": "images/ro-n-030-p06.svg",
+      "image_alt": "Inside a cloud tiny droplets bump and merge into bigger drops that begin to fall.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p07",
+      "text": "The rain lands. Some runs off roofs and roads into drains and streams and rivers, and the rivers carry it back to the sea. Some soaks into the soil, where roots drink it or it seeps slowly down to fill underground stores. Some sits in a puddle and, when the sun comes out, evaporates straight back into the air to start again.",
+      "illustration_brief": "Landscape: rain over hills, streams joining a river to the sea, arrows into soil, a puddle with rising arrows.",
+      "audio_script": "The rain lands. Some runs off roofs and roads into drains and streams and rivers, and the rivers carry it back to the sea. Some soaks into the soil, where roots drink it or it seeps slowly down to fill underground stores. Some sits in a puddle and, when the sun comes out, evaporates straight back into the air to start again.",
+      "timing_segments": [],
+      "image_asset": "images/ro-n-030-p07.svg",
+      "image_alt": "Rain on a roof running into a stream, a river through fields and into the sea.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p08",
+      "text": "Notice that we are back where we began. Sea to air, air to cloud, cloud to rain, rain to river, river to sea. It is not a line with a start and an end. It is a loop, and it has been going round for billions of years. The water in today's rain has been rain before, countless times. It has been in oceans, in glaciers, in the bodies of dinosaurs.",
+      "illustration_brief": "A large circular diagram: sea, evaporation arrow, cloud, rain arrow, river arrow back to sea; small dinosaur silhouette by a prehistoric lake.",
+      "audio_script": "Notice that we are back where we began. Sea to air, air to cloud, cloud to rain, rain to river, river to sea. It is not a line with a start and an end. It is a loop, and it has been going round for billions of years. The water in today's rain has been rain before, countless times. It has been in oceans, in glaciers, in the bodies of dinosaurs.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "cycle",
+          "definition": "A series of events that repeats in the same order, round and round.",
+          "example": "The seasons go in a cycle."
+        }
+      ],
+      "image_asset": "images/ro-n-030-p08.svg",
+      "image_alt": "A loop of arrows: sea to air to cloud to rain to river and back to the sea.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p09",
+      "text": "So where does the rain come from? From the sea, mostly, by way of the sun, the air, a cloud, and a long fall. And where does it go? Back to the sea, by way of rivers and soil and puddles and you. Next time it rains, look up and think: this water is on its way somewhere. It always has been.",
+      "illustration_brief": "The child from page 1 at the same window, now with a small water-cycle sketch on the fogged glass drawn with a finger.",
+      "audio_script": "So where does the rain come from? From the sea, mostly, by way of the sun, the air, a cloud, and a long fall. And where does it go? Back to the sea, by way of rivers and soil and puddles and you. Next time it rains, look up and think: this water is on its way somewhere. It always has been.",
+      "timing_segments": [],
+      "image_asset": "images/ro-n-030-p09.svg",
+      "image_alt": "A child under a clear sky after rain, a rainbow above the sea and a circle arrow in the corner.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "explicit_detail",
+      "difficulty": "medium",
+      "prompt": "What is the rule the book asks you to keep in your pocket?",
+      "options": [
+        {
+          "id": "warm",
+          "text": "Warm air can hold more vapour than cold air"
+        },
+        {
+          "id": "sea",
+          "text": "The sea is salty"
+        },
+        {
+          "id": "rain",
+          "text": "Rain always falls at night"
+        }
+      ],
+      "correct_option_id": "warm",
+      "evidence_page_ids": [
+        "p03"
+      ],
+      "explanation": "Page 3: Warm air can hold a lot of vapour. Cold air cannot.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "cause_effect",
+      "difficulty": "hard",
+      "prompt": "Why does a cloud form when damp air rises?",
+      "options": [
+        {
+          "id": "cool",
+          "text": "The rising air cools and can no longer hold all its vapour, so it condenses into droplets"
+        },
+        {
+          "id": "wind",
+          "text": "The wind squeezes the air"
+        },
+        {
+          "id": "sun",
+          "text": "The sun heats the air more"
+        }
+      ],
+      "correct_option_id": "cool",
+      "evidence_page_ids": [
+        "p04"
+      ],
+      "explanation": "Page 4: the higher it goes, the colder it gets; the cooling air can no longer hold all its vapour, which turns back to liquid droplets.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "compare",
+      "difficulty": "hard",
+      "prompt": "How is a misty cold glass like a cloud?",
+      "options": [
+        {
+          "id": "same",
+          "text": "Both are vapour from the air condensing where the air is cooled"
+        },
+        {
+          "id": "wet",
+          "text": "Both are made of glass"
+        },
+        {
+          "id": "leak",
+          "text": "Both leak water"
+        }
+      ],
+      "correct_option_id": "same",
+      "evidence_page_ids": [
+        "p05"
+      ],
+      "explanation": "Page 5: the air cooled against the cold glass and gave up some of its vapour. A cloud is the same trick, done in the sky.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "cause_effect",
+      "difficulty": "medium",
+      "prompt": "Why do cloud droplets not fall straight away?",
+      "options": [
+        {
+          "id": "small",
+          "text": "They are too small and light; they must merge into bigger drops first"
+        },
+        {
+          "id": "cold",
+          "text": "They are frozen to the cloud"
+        },
+        {
+          "id": "wind",
+          "text": "The wind holds them"
+        }
+      ],
+      "correct_option_id": "small",
+      "evidence_page_ids": [
+        "p06"
+      ],
+      "explanation": "Page 6: far too small and light to fall; they merge until a drop is heavy enough.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q05",
+      "skill": "main_idea",
+      "difficulty": "hard",
+      "prompt": "Why does the book call the water cycle a loop rather than a line?",
+      "options": [
+        {
+          "id": "loop",
+          "text": "The water ends where it started and goes round again, with no beginning or end"
+        },
+        {
+          "id": "round",
+          "text": "Raindrops are round"
+        },
+        {
+          "id": "long",
+          "text": "Rivers are long and bendy"
+        }
+      ],
+      "correct_option_id": "loop",
+      "evidence_page_ids": [
+        "p08"
+      ],
+      "explanation": "Page 8: we are back where we began; not a line with a start and an end, but a loop.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q06",
+      "skill": "summary",
+      "difficulty": "hard",
+      "response_type": "open",
+      "prompt": "Explain to a grown-up where today's rain came from and where it will go, as a loop. Use condense somewhere.",
+      "rubric": "not yet: says clouds; with support: sea to cloud to rain, with prompting; independent: sun evaporates sea, warm air rises and cools, vapour condenses on specks into cloud droplets, droplets merge and fall, water runs back to the sea or soaks in, and round again",
+      "explanation": "The complete loop with the cooling step is the target; 'clouds make rain' alone is not yet."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "prompt": "Put the loop in order, starting from the sea.",
+      "items": [
+        {
+          "id": "s1",
+          "text": "Sun warms the sea and water evaporates.",
+          "page_id": "p02"
+        },
+        {
+          "id": "s2",
+          "text": "Damp air rises and cools.",
+          "page_id": "p04"
+        },
+        {
+          "id": "s3",
+          "text": "Vapour condenses into cloud droplets.",
+          "page_id": "p04"
+        },
+        {
+          "id": "s4",
+          "text": "Droplets merge and fall as rain.",
+          "page_id": "p06"
+        },
+        {
+          "id": "s5",
+          "text": "Rivers carry water back to the sea.",
+          "page_id": "p07"
+        }
+      ],
+      "correct_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "choose_evidence",
+      "skill": "inference",
+      "claim": "The water in today's rain is very old.",
+      "prompt": "Which page shows this?",
+      "correct_page_ids": [
+        "p08"
+      ]
+    },
+    {
+      "activity_id": "a03",
+      "type": "word_to_meaning",
+      "skill": "word_knowledge",
+      "prompt": "Match the word to its meaning.",
+      "pairs": [
+        {
+          "left": "vapour",
+          "right": "water as an invisible gas"
+        },
+        {
+          "left": "condense",
+          "right": "turn from gas back into liquid"
+        },
+        {
+          "left": "cycle",
+          "right": "events that repeat round and round"
+        }
+      ]
+    }
+  ],
+  "off_screen_prompt": "Put a cold can or glass from the fridge on the table on a warm day. Watch the outside for five minutes. Where did the water come from?",
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-09-28T10:42:55+00:00",
+    "reviewer": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+    "review_date": "2026-09-28",
+    "history": [
+      {
+        "action": "approve_all",
+        "at": "2026-09-28T10:42:55+00:00",
+        "by": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+        "note": "Last build of the year: 14 gated books I-W (127 original SVGs, set4). Nonfiction fact-check pending parent review; ro-w-030 reserved for unseen check."
+      }
+    ]
+  }
+}

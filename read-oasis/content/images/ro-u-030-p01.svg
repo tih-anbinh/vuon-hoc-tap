@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">How many are there?</title>
+  <desc id="d">A sparrow, a tiger and a fish each with a question mark.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="220" width="400" height="80" fill="#BFE3B4"/>
+  <g transform="translate(80 150) scale(2.0)"><ellipse cx="0" cy="0" rx="12" ry="9" fill="#A0522D" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="-5" r="6" fill="#A0522D" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 -4 L21 -2 L15 0 Z" fill="#F2A541"/></g>
+  <g transform="translate(220 190) scale(0.9)"><ellipse cx="0" cy="0" rx="40" ry="22" fill="#F2A541" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="-38" cy="-14" r="16" fill="#F2A541" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M-20 -14 l0 26 M-6 -18 l0 34 M8 -18 l0 34 M22 -14 l0 26" stroke="#2B2B2B" stroke-width="4"/><circle cx="-44" cy="-18" r="2.5" fill="#2B2B2B"/><path d="M-30 12 l0 22 M-10 18 l0 18 M10 18 l0 18 M30 12 l0 22" stroke="#F2A541" stroke-width="7" stroke-linecap="round"/><path d="M38 -6 q22 -10 20 -26" fill="none" stroke="#F2A541" stroke-width="6" stroke-linecap="round"/></g>
+  <ellipse cx="340" cy="230" rx="50" ry="20" fill="#7FB7D9" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(340 230) scale(0.8)"><ellipse cx="0" cy="0" rx="18" ry="10" fill="#E9C46A" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 0 l12 -10 l0 20 Z" fill="#E9C46A" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="-8" cy="-3" r="2" fill="#2B2B2B"/></g>
+  <g transform="translate(80 80) scale(0.7)"><path d="M-14 -20 q0 -22 16 -22 q16 0 16 16 q0 12 -14 18 q-4 2 -4 12" fill="none" stroke="#2B2B2B" stroke-width="6" stroke-linecap="round"/><circle cx="0" cy="20" r="5" fill="#2B2B2B"/></g>
+  <g transform="translate(220 80) scale(0.7)"><path d="M-14 -20 q0 -22 16 -22 q16 0 16 16 q0 12 -14 18 q-4 2 -4 12" fill="none" stroke="#2B2B2B" stroke-width="6" stroke-linecap="round"/><circle cx="0" cy="20" r="5" fill="#2B2B2B"/></g>
+  <g transform="translate(340 120) scale(0.7)"><path d="M-14 -20 q0 -22 16 -22 q16 0 16 16 q0 12 -14 18 q-4 2 -4 12" fill="none" stroke="#2B2B2B" stroke-width="6" stroke-linecap="round"/><circle cx="0" cy="20" r="5" fill="#2B2B2B"/></g>
+
+</svg>

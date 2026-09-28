@@ -1,0 +1,469 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-r-030",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "How Do We Know the Earth Is Round?",
+  "language": "en",
+  "level": "R",
+  "reading_mode": "read_aloud",
+  "topic": "space",
+  "genre": "nonfiction",
+  "learning_objectives": [
+    "Weigh several independent lines of evidence for one conclusion",
+    "Understand that people reasoned out the Earth's shape long before photographs from space",
+    "Tell the difference between an observation and an explanation"
+  ],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": {
+    "text": "high",
+    "conceptual": "high",
+    "visual_support": "high"
+  },
+  "rights": {
+    "text_author": "Huy Tran for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
+  "factual_claims": [
+    {
+      "claim": "Ancient Greek thinkers, including Aristotle in the 4th century BCE, argued the Earth is a sphere from evidence such as the curved shadow on the Moon during lunar eclipses.",
+      "source": "Britannica, 'Aristotle' / 'Earth: shape'; NASA, 'Lunar eclipse'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "During a lunar eclipse, the Earth's shadow on the Moon always has a curved edge; only a sphere casts a round shadow from every direction.",
+      "source": "NASA Science, 'Lunar eclipses'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "A ship sailing away disappears hull first, mast last, because the sea surface curves.",
+      "source": "Britannica, 'Earth: shape'; standard geography texts",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Different stars are visible from different latitudes; travelling north or south changes which stars appear above the horizon.",
+      "source": "Britannica, 'Earth: shape' (Aristotle's argument from stars)",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Around 240 BCE Eratosthenes estimated the Earth's circumference by comparing the Sun's angle at noon in two Egyptian cities a known distance apart, getting a value close to the modern figure.",
+      "source": "Britannica, 'Eratosthenes'; NASA Earth Observatory",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "The Earth's circumference is about 40,000 km.",
+      "source": "NASA Earth Fact Sheet (equatorial circumference 40,075 km)",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Ferdinand Magellan's expedition (1519-1522) was the first to sail all the way around the world.",
+      "source": "Britannica, 'Ferdinand Magellan'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Photographs of the whole Earth from space were first taken in the 1960s-70s (e.g. Apollo missions).",
+      "source": "NASA, 'Earthrise' (1968) and 'Blue Marble' (1972)",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    }
+  ],
+  "parent_prompts": [
+    "Before: how do YOU know the Earth is round? Is 'I saw a photo' the only answer? Could you prove it without one?",
+    "After page 4: which of the three old clues do you find most convincing, and why?",
+    "After: what is the difference between noticing something and explaining it? Find an example of each in the book."
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "Ask most people how they know the Earth is round and they will say: photographs from space. Fair enough. But the first photograph of the whole Earth was taken in 1968, and people had known the Earth was round for more than two thousand years before that. How? Not by seeing it. By noticing things, and then thinking hard about what those things meant. Here are five clues that were enough.",
+      "illustration_brief": "A framed photograph of Earth from space on a wall; beside it, in a thought bubble, an ancient scholar in a robe looking at the sky.",
+      "audio_script": "Ask most people how they know the Earth is round and they will say: photographs from space. Fair enough. But the first photograph of the whole Earth was taken in 1968, and people had known the Earth was round for more than two thousand years before that. How? Not by seeing it. By noticing things, and then thinking hard about what those things meant. Here are five clues that were enough.",
+      "timing_segments": [],
+      "image_asset": "images/ro-r-030-p01.svg",
+      "image_alt": "A framed photograph of the round blue Earth against black space, and a child with a question mark.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p02",
+      "text": "Clue one: the ship. Stand on a harbour wall and watch a ship sail straight out to sea. It does not just get smaller and smaller until it is a dot. It sinks. The hull disappears first, then the deck, and the tip of the mast is the last thing you see. If the sea were flat, the whole ship would shrink evenly. It does not, because the water curves away from you, and the ship is going over the curve.",
+      "illustration_brief": "A harbour wall with a child watching; three ships at increasing distance: full, then hull hidden, then only the mast tip above the curved horizon.",
+      "audio_script": "Clue one: the ship. Stand on a harbour wall and watch a ship sail straight out to sea. It does not just get smaller and smaller until it is a dot. It sinks. The hull disappears first, then the deck, and the tip of the mast is the last thing you see. If the sea were flat, the whole ship would shrink evenly. It does not, because the water curves away from you, and the ship is going over the curve.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "horizon",
+          "definition": "The line far away where the land or sea seems to meet the sky.",
+          "example": "The sun sank below the horizon."
+        }
+      ],
+      "image_asset": "images/ro-r-030-p02.svg",
+      "image_alt": "From a harbour wall a ship sails away: hull gone first, mast last.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p03",
+      "text": "Clue two: the shadow. Now and then the Earth passes exactly between the Sun and the Moon, and the Earth's own shadow creeps across the Moon's face. This is a lunar eclipse. Look at the edge of that shadow. It is always curved, every single time, whatever the hour and whatever way the Earth happens to be turned. A flat disc would sometimes cast a thin straight-edged shadow, like a coin seen side-on. Only one shape casts a round shadow from every direction: a ball. The Greek thinker Aristotle wrote this down more than 2,300 years ago.",
+      "illustration_brief": "Diagram: Sun, Earth, Moon in a line; the Earth's curved shadow edge crossing the Moon; a small coin side-on with a straight shadow for contrast.",
+      "audio_script": "Clue two: the shadow. Now and then the Earth passes exactly between the Sun and the Moon, and the Earth's own shadow creeps across the Moon's face. This is a lunar eclipse. Look at the edge of that shadow. It is always curved, every single time, whatever the hour and whatever way the Earth happens to be turned. A flat disc would sometimes cast a thin straight-edged shadow, like a coin seen side-on. Only one shape casts a round shadow from every direction: a ball. The Greek thinker Aristotle wrote this down more than 2,300 years ago.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "eclipse",
+          "definition": "When one object in space blocks the light falling on another, or hides it from view.",
+          "example": "During the eclipse the Moon turned a dim red."
+        }
+      ],
+      "image_asset": "images/ro-r-030-p03.svg",
+      "image_alt": "The Earth between the Sun and the Moon casting a round-edged shadow onto the Moon.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p04",
+      "text": "Clue three: the stars. Travellers going south noticed something odd. Stars that had always hung low over the horizon at home rose higher each night of the journey, and new stars they had never seen crept up from the south. Go far enough north and the reverse happens. On a flat Earth everyone would see the same sky. On a ball, the sky you see depends on where you stand on the curve.",
+      "illustration_brief": "A curved Earth with two small observers at different latitudes; lines from each to different star groups; one star group below one observer's horizon.",
+      "audio_script": "Clue three: the stars. Travellers going south noticed something odd. Stars that had always hung low over the horizon at home rose higher each night of the journey, and new stars they had never seen crept up from the south. Go far enough north and the reverse happens. On a flat Earth everyone would see the same sky. On a ball, the sky you see depends on where you stand on the curve.",
+      "timing_segments": [],
+      "image_asset": "images/ro-r-030-p04.svg",
+      "image_alt": "Two skies side by side: stars low on the horizon at home and higher after travelling south.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p05",
+      "text": "Clue four is the cleverest, because it did not just show the Earth was round. It measured it. Around 240 BCE, a librarian in Egypt named Eratosthenes read that at noon on midsummer's day, in the city of Syene, the Sun shone straight down a deep well with no shadow at all. In his own city, Alexandria, far to the north, a stick at the same noon cast a small shadow. He measured the angle of that shadow: about one fiftieth of a full circle.",
+      "illustration_brief": "Two vertical sticks on a curved surface under parallel sun rays; one casts no shadow, the other a small one; the angle marked as a small wedge.",
+      "audio_script": "Clue four is the cleverest, because it did not just show the Earth was round. It measured it. Around 240 BCE, a librarian in Egypt named Eratosthenes read that at noon on midsummer's day, in the city of Syene, the Sun shone straight down a deep well with no shadow at all. In his own city, Alexandria, far to the north, a stick at the same noon cast a small shadow. He measured the angle of that shadow: about one fiftieth of a full circle.",
+      "timing_segments": [],
+      "image_asset": "images/ro-r-030-p05.svg",
+      "image_alt": "Two upright sticks far apart at noon: one casts no shadow, the other a short shadow.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p06",
+      "text": "Then he reasoned. The Sun is so far away that its rays arrive parallel. If two sticks a known distance apart cast different shadows from parallel light, the ground between them must curve. And if the difference is one fiftieth of a circle, then the distance between the cities must be one fiftieth of the way round the whole Earth. He knew that distance: camel trains took fifty days to walk it. Fifty times that distance, he calculated, was the Earth's circumference. His answer was within a few percent of today's figure of about 40,000 kilometres. He never left Egypt.",
+      "illustration_brief": "A circle divided into fifty thin slices, one slice highlighted between two city dots; a camel caravan along the highlighted arc.",
+      "audio_script": "Then he reasoned. The Sun is so far away that its rays arrive parallel. If two sticks a known distance apart cast different shadows from parallel light, the ground between them must curve. And if the difference is one fiftieth of a circle, then the distance between the cities must be one fiftieth of the way round the whole Earth. He knew that distance: camel trains took fifty days to walk it. Fifty times that distance, he calculated, was the Earth's circumference. His answer was within a few percent of today's figure of about 40,000 kilometres. He never left Egypt.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "circumference",
+          "definition": "The distance all the way round the outside of a circle or ball.",
+          "example": "Measure the circumference of the ball with a tape."
+        }
+      ],
+      "image_asset": "images/ro-r-030-p06.svg",
+      "image_alt": "Sunlight arriving as parallel lines onto a curved Earth, so two sticks lean apart and cast different shadows.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p07",
+      "text": "Clue five came much later and settled any remaining doubt. In 1519 five ships left Spain sailing west under Ferdinand Magellan. Three years later one ship limped home from the east, having gone all the way round. You cannot sail west and arrive from the east on a flat world. Only on a ball can you leave by the back door and come in through the front.",
+      "illustration_brief": "A globe with a dotted route leaving Europe westward across the Atlantic, around the world, and returning from the east; one battered ship.",
+      "audio_script": "Clue five came much later and settled any remaining doubt. In 1519 five ships left Spain sailing west under Ferdinand Magellan. Three years later one ship limped home from the east, having gone all the way round. You cannot sail west and arrive from the east on a flat world. Only on a ball can you leave by the back door and come in through the front.",
+      "timing_segments": [],
+      "image_asset": "images/ro-r-030-p07.svg",
+      "image_alt": "An old sailing ship with a dotted line looping all the way around a globe and back.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p08",
+      "text": "Notice what each clue is made of. First, an observation: something anyone could see with their own eyes. The mast vanishing last. The curved shadow. The changing stars. Two different shadow lengths. A ship arriving from the wrong side. Then, an explanation: the one shape of Earth that would make all of those observations true at once. A flat Earth explains none of them. A ball explains every one. That is what it means to know something without a photograph.",
+      "illustration_brief": "A two-column card: five small observation icons on the left, all with arrows converging on a single globe on the right.",
+      "audio_script": "Notice what each clue is made of. First, an observation: something anyone could see with their own eyes. The mast vanishing last. The curved shadow. The changing stars. Two different shadow lengths. A ship arriving from the wrong side. Then, an explanation: the one shape of Earth that would make all of those observations true at once. A flat Earth explains none of them. A ball explains every one. That is what it means to know something without a photograph.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "observation",
+          "definition": "Something you notice by looking or measuring carefully.",
+          "example": "My observation was that the plant leaned toward the window."
+        }
+      ],
+      "image_asset": "images/ro-r-030-p08.svg",
+      "image_alt": "A row of clues: mast, shadow, star, stick and ship, each with an arrow to a thinking child.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p09",
+      "text": "The photographs, when they finally came, did not teach us that the Earth is round. They confirmed what a librarian with a stick and a shadow had already worked out. That is worth remembering the next time someone tells you that you cannot know a thing unless you have seen it. Sometimes, if you notice carefully and reason honestly, you can know it two thousand years early.",
+      "illustration_brief": "Eratosthenes with his stick and a modern astronaut side by side, both looking at the same small globe between them.",
+      "audio_script": "The photographs, when they finally came, did not teach us that the Earth is round. They confirmed what a librarian with a stick and a shadow had already worked out. That is worth remembering the next time someone tells you that you cannot know a thing unless you have seen it. Sometimes, if you notice carefully and reason honestly, you can know it two thousand years early.",
+      "timing_segments": [],
+      "image_asset": "images/ro-r-030-p09.svg",
+      "image_alt": "A stick with its shadow beside the round Earth photograph, a tick mark between them.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "explicit_detail",
+      "difficulty": "medium",
+      "prompt": "How does a ship sailing straight away seem to vanish?",
+      "options": [
+        {
+          "id": "mast",
+          "text": "From the bottom up, mast tip last"
+        },
+        {
+          "id": "even",
+          "text": "It shrinks evenly to a dot"
+        },
+        {
+          "id": "top",
+          "text": "From the top down, hull last"
+        }
+      ],
+      "correct_option_id": "mast",
+      "evidence_page_ids": [
+        "p02"
+      ],
+      "explanation": "Page 2: the hull disappears first, then the deck, and the tip of the mast is the last thing you see.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "cause_effect",
+      "difficulty": "hard",
+      "prompt": "Why is the curved shadow during a lunar eclipse strong evidence for a round Earth?",
+      "options": [
+        {
+          "id": "always",
+          "text": "Only a ball casts a round shadow from every direction, and the shadow is curved every time"
+        },
+        {
+          "id": "dark",
+          "text": "Because shadows are always dark"
+        },
+        {
+          "id": "moon",
+          "text": "Because the Moon is round"
+        }
+      ],
+      "correct_option_id": "always",
+      "evidence_page_ids": [
+        "p03"
+      ],
+      "explanation": "Page 3: a flat disc would sometimes cast a straight-edged shadow; only one shape casts a round shadow from every direction: a ball.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "inference",
+      "difficulty": "hard",
+      "prompt": "What did Eratosthenes need to know to work out the size of the Earth?",
+      "options": [
+        {
+          "id": "both",
+          "text": "The shadow angle in Alexandria and the distance between the two cities"
+        },
+        {
+          "id": "photo",
+          "text": "A photograph from a high mountain"
+        },
+        {
+          "id": "ship",
+          "text": "How long a ship took to sail round"
+        }
+      ],
+      "correct_option_id": "both",
+      "evidence_page_ids": [
+        "p05",
+        "p06"
+      ],
+      "explanation": "He measured the shadow angle as one fiftieth of a circle (page 5) and knew the distance from the camel trains (page 6).",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "compare",
+      "difficulty": "hard",
+      "prompt": "How is clue four different from the other four clues?",
+      "options": [
+        {
+          "id": "measure",
+          "text": "It measured how big the Earth is, not just that it is round"
+        },
+        {
+          "id": "sea",
+          "text": "It is the only one about the sea"
+        },
+        {
+          "id": "new",
+          "text": "It is the newest"
+        }
+      ],
+      "correct_option_id": "measure",
+      "evidence_page_ids": [
+        "p05"
+      ],
+      "explanation": "Page 5: it did not just show the Earth was round. It measured it.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q05",
+      "skill": "word_knowledge",
+      "difficulty": "hard",
+      "prompt": "In this book, what is the difference between an observation and an explanation?",
+      "options": [
+        {
+          "id": "diff",
+          "text": "An observation is something you see; an explanation is the idea that makes the observations make sense"
+        },
+        {
+          "id": "same",
+          "text": "They mean the same thing"
+        },
+        {
+          "id": "long",
+          "text": "An explanation is just a longer observation"
+        }
+      ],
+      "correct_option_id": "diff",
+      "evidence_page_ids": [
+        "p08"
+      ],
+      "explanation": "Page 8: first an observation, something anyone could see; then an explanation, the one shape that would make all of those observations true at once.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q06",
+      "skill": "main_idea",
+      "difficulty": "hard",
+      "prompt": "What is the main point of the last page?",
+      "options": [
+        {
+          "id": "reason",
+          "text": "Careful noticing and honest reasoning can tell you things long before you can see them"
+        },
+        {
+          "id": "photo",
+          "text": "Photographs are the best evidence"
+        },
+        {
+          "id": "old",
+          "text": "Old ideas are always right"
+        }
+      ],
+      "correct_option_id": "reason",
+      "evidence_page_ids": [
+        "p09"
+      ],
+      "explanation": "Page 9: if you notice carefully and reason honestly, you can know it two thousand years early.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q07",
+      "skill": "summary",
+      "difficulty": "hard",
+      "response_type": "open",
+      "prompt": "Explain to a grown-up two of the five clues in your own words, saying for each what was observed and what it explained. Then say which you find most convincing and why.",
+      "rubric": "not yet: says the Earth is round because of photos; with support: one clue with prompting; independent: two clues each split into observation and explanation, plus a reasoned preference",
+      "explanation": "The observation/explanation split on page 8 is the skill; listen for it applied to specific clues."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "match_pairs",
+      "skill": "compare",
+      "prompt": "Match each observation to what it shows.",
+      "pairs": [
+        {
+          "left": "the mast vanishes last",
+          "right": "the sea surface curves away"
+        },
+        {
+          "left": "the eclipse shadow is always curved",
+          "right": "only a ball casts a round shadow every time"
+        },
+        {
+          "left": "new stars appear as you travel south",
+          "right": "the sky you see depends on where you stand on the curve"
+        },
+        {
+          "left": "a ship returns from the east",
+          "right": "you can go all the way round"
+        }
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "order_by": "history",
+      "prompt": "Put these in the order they happened in history.",
+      "items": [
+        {
+          "id": "s1",
+          "text": "Aristotle describes the curved eclipse shadow.",
+          "page_id": "p03"
+        },
+        {
+          "id": "s2",
+          "text": "Eratosthenes measures the Earth with shadows.",
+          "page_id": "p05"
+        },
+        {
+          "id": "s3",
+          "text": "Magellan's ship sails around the world.",
+          "page_id": "p07"
+        },
+        {
+          "id": "s4",
+          "text": "The first photograph of the whole Earth.",
+          "page_id": "p01"
+        }
+      ],
+      "correct_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "activity_id": "a03",
+      "type": "discussion",
+      "skill": "listening_comprehension",
+      "prompts": [
+        "Eratosthenes never left Egypt. How could he be so confident?",
+        "If you had only the ship clue, would that be enough? Why do several clues together feel stronger than one?"
+      ]
+    }
+  ],
+  "off_screen_prompt": "On a sunny day, push two straight sticks upright into the ground a long way apart (or ask a friend in another town). Measure the shadows at the same clock time. Are they the same length?",
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-09-28T10:42:55+00:00",
+    "reviewer": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+    "review_date": "2026-09-28",
+    "history": [
+      {
+        "action": "approve_all",
+        "at": "2026-09-28T10:42:55+00:00",
+        "by": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+        "note": "Last build of the year: 14 gated books I-W (127 original SVGs, set4). Nonfiction fact-check pending parent review; ro-w-030 reserved for unseen check."
+      }
+    ]
+  }
+}

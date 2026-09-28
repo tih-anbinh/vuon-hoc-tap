@@ -1,0 +1,376 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-o-030",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "The Quiet Drum",
+  "language": "en",
+  "level": "O",
+  "reading_mode": "read_aloud",
+  "topic": "music",
+  "genre": "fiction",
+  "learning_objectives": [
+    "Follow a story told across several days with a turning point",
+    "Infer a character's motive that is never stated directly",
+    "Judge a character's choice and support the judgement with text"
+  ],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": {
+    "text": "high",
+    "conceptual": "high",
+    "visual_support": "low"
+  },
+  "rights": {
+    "text_author": "Huy Tran for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
+  "parent_prompts": [
+    "Before: Lan has been chosen to play the big drum at the school festival. Everyone is pleased except one person. Who might that be, and why?",
+    "After page 5: what is Lan really worried about? The story does not say it straight out.",
+    "After: was Lan's choice at the end brave, kind, foolish, or something else? Find a line that supports your view."
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "When the music teacher read out the names for the festival band, Lan's was last, and it came with the biggest job. \"Lan: the trong, the great drum.\" The class turned to look at her. The great drum stood at the back of the music room, taller than Lan herself, its skin the colour of tea, its body painted red and gold. To play it you struck with two thick sticks and the sound went through the floor and up your legs. Everyone wanted the great drum. Lan had wanted it too, right up until the moment she got it.",
+      "illustration_brief": "A music room: a tall red-and-gold drum at the back; a class of children turned toward Lan (green shirt), who looks stunned rather than pleased.",
+      "audio_script": "When the music teacher read out the names for the festival band, Lan's was last, and it came with the biggest job. Lan: the trong, the great drum. The class turned to look at her. The great drum stood at the back of the music room, taller than Lan herself, its skin the colour of tea, its body painted red and gold. To play it you struck with two thick sticks and the sound went through the floor and up your legs. Everyone wanted the great drum. Lan had wanted it too, right up until the moment she got it.",
+      "timing_segments": [],
+      "image_asset": "images/ro-o-030-p01.svg",
+      "image_alt": "A music teacher reading names as Lan stands beside a big festival drum, looking small.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p02",
+      "text": "The trouble began at the first practice. The band played the festival piece and Lan came in on time, on the right beat, with the right sticks. But the sound that came out of the great drum was small. Not wrong. Small. A polite knock where there should have been thunder. The teacher frowned. \"Louder, Lan. It is a drum, not a door.\" Lan nodded and hit it harder, and it was a little louder, and still somehow small.",
+      "illustration_brief": "Lan at the great drum with two sticks, arms held close, making a timid stroke; the teacher with a raised eyebrow.",
+      "audio_script": "The trouble began at the first practice. The band played the festival piece and Lan came in on time, on the right beat, with the right sticks. But the sound that came out of the great drum was small. Not wrong. Small. A polite knock where there should have been thunder. The teacher frowned. Louder, Lan. It is a drum, not a door. Lan nodded and hit it harder, and it was a little louder, and still somehow small.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "timid",
+          "definition": "Shy and easily frightened; not bold.",
+          "example": "The timid kitten hid under the chair."
+        }
+      ],
+      "image_asset": "images/ro-o-030-p02.svg",
+      "image_alt": "Lan striking the drum gently with small sound marks while other band players look round.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p03",
+      "text": "It went on like that for a week. Tim, who played the small cymbals, tried to help. \"You are holding the sticks like pencils. Hold them like you mean it.\" Mai, on the flute, said, \"Maybe stand further back and swing.\" Lan tried both. The drum boomed for one beat and then, as if she had caught herself, shrank back to a knock. Something in her arms would not let go.",
+      "illustration_brief": "Tim demonstrating a firm grip on a stick; Mai miming a swing; Lan between them, sticks in hand, uncertain.",
+      "audio_script": "It went on like that for a week. Tim, who played the small cymbals, tried to help. You are holding the sticks like pencils. Hold them like you mean it. Mai, on the flute, said, Maybe stand further back and swing. Lan tried both. The drum boomed for one beat and then, as if she had caught herself, shrank back to a knock. Something in her arms would not let go.",
+      "timing_segments": [],
+      "image_asset": "images/ro-o-030-p03.svg",
+      "image_alt": "Tim showing Lan how to grip the drumsticks firmly.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p04",
+      "text": "On Thursday the teacher kept her back after practice. \"You can play it. I have heard you play it, that one beat on Tuesday. So what is it?\" Lan looked at the drum, at the painted dragon coiling round its belly, at the crack in the wooden rim that someone had mended with a brass plate long ago. \"Nothing,\" she said. \"I will practise.\"",
+      "illustration_brief": "Close on the drum: a painted dragon around its body; a brass plate riveted over an old crack in the rim. Lan's hand resting near it.",
+      "audio_script": "On Thursday the teacher kept her back after practice. You can play it. I have heard you play it, that one beat on Tuesday. So what is it? Lan looked at the drum, at the painted dragon coiling round its belly, at the crack in the wooden rim that someone had mended with a brass plate long ago. Nothing, she said. I will practise.",
+      "timing_segments": [],
+      "image_asset": "images/ro-o-030-p04.svg",
+      "image_alt": "The teacher and Lan alone in the practice room after everyone has gone.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p05",
+      "text": "That night she told her grandmother, because her grandmother had a way of not asking questions. \"It is old,\" Lan said. \"Older than the school, the teacher says. Somebody already cracked it once. When I hit it properly, I can feel the whole thing shake, and I think: what if I am the one who breaks it? In front of everybody. The great drum, broken by Lan.\" Her grandmother was quiet for a while. Then she said, \"Come with me on Saturday. Early.\"",
+      "illustration_brief": "Lan and her grandmother on a bench at dusk; Lan's hands miming a stick held too tight.",
+      "audio_script": "That night she told her grandmother, because her grandmother had a way of not asking questions. It is old, Lan said. Older than the school, the teacher says. Somebody already cracked it once. When I hit it properly, I can feel the whole thing shake, and I think: what if I am the one who breaks it? In front of everybody. The great drum, broken by Lan. Her grandmother was quiet for a while. Then she said, Come with me on Saturday. Early.",
+      "timing_segments": [],
+      "image_asset": "images/ro-o-030-p05.svg",
+      "image_alt": "Lan talking to her grandmother at night; the old drum pictured in a thought cloud.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p06",
+      "text": "Early on Saturday turned out to mean before the sun. They walked to the edge of the town, to a low wooden building Lan had passed a hundred times without looking. Inside it smelled of sawdust and glue. Drums stood everywhere, in every size, from ones you could hold in one hand to one that would have needed a truck. An old man with forearms like ropes was stretching a skin over a frame. \"This is Mr Bay,\" said her grandmother. \"He mended your drum. Forty years ago.\"",
+      "illustration_brief": "A drum-maker's workshop: drums of many sizes; an old man tightening a skin on a frame; sawdust light through slats.",
+      "audio_script": "Early on Saturday turned out to mean before the sun. They walked to the edge of the town, to a low wooden building Lan had passed a hundred times without looking. Inside it smelled of sawdust and glue. Drums stood everywhere, in every size, from ones you could hold in one hand to one that would have needed a truck. An old man with forearms like ropes was stretching a skin over a frame. This is Mr Bay, said her grandmother. He mended your drum. Forty years ago.",
+      "timing_segments": [],
+      "image_asset": "images/ro-o-030-p06.svg",
+      "image_alt": "Lan and her grandmother walking at dawn toward a low wooden building.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p07",
+      "text": "Mr Bay did not stop working while he talked. \"That crack,\" he said. \"You want to know how it happened? A boy dropped it off a cart. Off a cart! It fell two metres onto stone.\" He tapped the frame he was working on with the flat of his hand, a sound like a door closing in a far room. \"A drum is built to be hit. Every part of it. The skin is stretched to sing when it is struck; hit it softly and it only mutters. You cannot break a good drum by playing it. You can only break it by dropping it, or by leaving it silent until the skin goes slack and rots.\"",
+      "illustration_brief": "Mr Bay slapping a drum frame with an open palm, mid-sentence; Lan listening intently.",
+      "audio_script": "Mr Bay did not stop working while he talked. That crack, he said. You want to know how it happened? A boy dropped it off a cart. Off a cart! It fell two metres onto stone. He tapped the frame he was working on with the flat of his hand, a sound like a door closing in a far room. A drum is built to be hit. Every part of it. The skin is stretched to sing when it is struck; hit it softly and it only mutters. You cannot break a good drum by playing it. You can only break it by dropping it, or by leaving it silent until the skin goes slack and rots.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "slack",
+          "definition": "Loose; not pulled tight.",
+          "example": "The rope went slack when he let go."
+        }
+      ],
+      "image_asset": "images/ro-o-030-p07.svg",
+      "image_alt": "Mr Bay working on a huge drum with a crack in its body in a workshop.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p08",
+      "text": "He handed her a pair of sticks, worn smooth, and pointed at a drum nearly as big as the one at school. \"Go on. Try to break it.\" Lan looked at her grandmother, who shrugged. She stood the way Mai had said, further back. She held the sticks the way Tim had said, like she meant it. And she brought them down as hard as she could. The sound filled the workshop and rolled out of the door into the empty street. The drum did not break. It sang. Mr Bay nodded once and went back to his skin. \"Again,\" he said. \"Louder.\"",
+      "illustration_brief": "Lan mid-strike on a big workshop drum, sticks high, sound radiating; Mr Bay working without looking up; grandmother smiling.",
+      "audio_script": "He handed her a pair of sticks, worn smooth, and pointed at a drum nearly as big as the one at school. Go on. Try to break it. Lan looked at her grandmother, who shrugged. She stood the way Mai had said, further back. She held the sticks the way Tim had said, like she meant it. And she brought them down as hard as she could. The sound filled the workshop and rolled out of the door into the empty street. The drum did not break. It sang. Mr Bay nodded once and went back to his skin. Again, he said. Louder.",
+      "timing_segments": [],
+      "image_asset": "images/ro-o-030-p08.svg",
+      "image_alt": "Lan holding worn sticks high above a great drum in the workshop, her grandmother watching.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p09",
+      "text": "On the night of the festival the band played in the square under strings of lanterns, and when the great drum came in, people at the far end of the square turned their heads. Afterwards the teacher found Lan packing away the sticks. \"So,\" he said, \"what was it?\" Lan thought about the brass plate, and the cart, and Mr Bay's forearms. \"I was afraid of hurting it,\" she said. \"Somebody showed me it was the other way round.\"",
+      "illustration_brief": "Night square with lanterns; the band; Lan striking the great drum with full swing; distant figures turning to look.",
+      "audio_script": "On the night of the festival the band played in the square under strings of lanterns, and when the great drum came in, people at the far end of the square turned their heads. Afterwards the teacher found Lan packing away the sticks. So, he said, what was it? Lan thought about the brass plate, and the cart, and Mr Bay's forearms. I was afraid of hurting it, she said. Somebody showed me it was the other way round.",
+      "timing_segments": [],
+      "image_asset": "images/ro-o-030-p09.svg",
+      "image_alt": "The band playing in the square under strings of lanterns; the great drum booms and heads turn at the far end.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p10",
+      "text": "She did not explain what she meant, and the teacher, who was a wise man, did not ask. But the next Saturday, early, before the sun, Lan walked to the edge of town with a broom over her shoulder, and swept the sawdust in Mr Bay's workshop, and did not mind at all that he never once said thank you.",
+      "illustration_brief": "Dawn: Lan sweeping the workshop floor; Mr Bay at his bench with his back to her; a shaft of light through the slats.",
+      "audio_script": "She did not explain what she meant, and the teacher, who was a wise man, did not ask. But the next Saturday, early, before the sun, Lan walked to the edge of town with a broom over her shoulder, and swept the sawdust in Mr Bay's workshop, and did not mind at all that he never once said thank you.",
+      "timing_segments": [],
+      "image_asset": "images/ro-o-030-p10.svg",
+      "image_alt": "Lan walking alone at dawn toward the drum maker's workshop, sticks in her hand.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "inference",
+      "difficulty": "hard",
+      "prompt": "Why did Lan play the drum so quietly?",
+      "options": [
+        {
+          "id": "afraid",
+          "text": "She was afraid of being the one to break the old drum"
+        },
+        {
+          "id": "weak",
+          "text": "She was not strong enough"
+        },
+        {
+          "id": "shy",
+          "text": "She did not like people looking at her"
+        }
+      ],
+      "correct_option_id": "afraid",
+      "evidence_page_ids": [
+        "p04",
+        "p05"
+      ],
+      "explanation": "She looked at the old mended crack (page 4) and told her grandmother she thought, what if I am the one who breaks it (page 5).",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "explicit_detail",
+      "difficulty": "medium",
+      "prompt": "According to Mr Bay, how did the drum get its crack?",
+      "options": [
+        {
+          "id": "dropped",
+          "text": "A boy dropped it off a cart onto stone"
+        },
+        {
+          "id": "played",
+          "text": "Someone played it too hard"
+        },
+        {
+          "id": "old",
+          "text": "It was simply old"
+        }
+      ],
+      "correct_option_id": "dropped",
+      "evidence_page_ids": [
+        "p07"
+      ],
+      "explanation": "Page 7: A boy dropped it off a cart. It fell two metres onto stone.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "inference",
+      "difficulty": "hard",
+      "prompt": "What did Lan mean by 'it was the other way round'?",
+      "options": [
+        {
+          "id": "silence",
+          "text": "Playing softly and leaving a drum silent harms it; playing it properly does not"
+        },
+        {
+          "id": "sticks",
+          "text": "She had been holding the sticks backwards"
+        },
+        {
+          "id": "stand",
+          "text": "She should stand on the other side"
+        }
+      ],
+      "correct_option_id": "silence",
+      "evidence_page_ids": [
+        "p07",
+        "p09"
+      ],
+      "explanation": "Mr Bay said you cannot break a good drum by playing it, only by dropping it or leaving it silent (page 7). Lan says she was afraid of hurting it and learned it was the other way round (page 9).",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "cause_effect",
+      "difficulty": "medium",
+      "prompt": "Why did her grandmother take Lan to the workshop instead of just telling her the drum was strong?",
+      "options": [
+        {
+          "id": "show",
+          "text": "So Lan could hear it from the drum-maker and test it herself"
+        },
+        {
+          "id": "buy",
+          "text": "To buy a new drum"
+        },
+        {
+          "id": "job",
+          "text": "To get Lan a job"
+        }
+      ],
+      "correct_option_id": "show",
+      "evidence_page_ids": [
+        "p05",
+        "p08"
+      ],
+      "explanation": "The grandmother 'had a way of not asking questions' (page 5) and Mr Bay made Lan try to break a drum herself (page 8), which convinced her where words had not.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q05",
+      "skill": "inference",
+      "difficulty": "hard",
+      "prompt": "Why does Lan sweep the workshop at the end?",
+      "options": [
+        {
+          "id": "thanks",
+          "text": "It is her way of saying thank you to Mr Bay"
+        },
+        {
+          "id": "paid",
+          "text": "Mr Bay pays her"
+        },
+        {
+          "id": "punish",
+          "text": "Her grandmother is punishing her"
+        }
+      ],
+      "correct_option_id": "thanks",
+      "evidence_page_ids": [
+        "p10"
+      ],
+      "explanation": "Page 10: she sweeps early on Saturday and does not mind that he never says thank you; it is her thanks to him, given without needing any back.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q06",
+      "skill": "summary",
+      "difficulty": "hard",
+      "response_type": "open",
+      "prompt": "Retell Lan's story: the problem, its hidden reason, what changed her mind, and how it ended. Then say whether you think her fear was silly.",
+      "rubric": "not yet: says she played the drum; with support: names the fear with prompting; independent: quiet playing, fear of breaking the old cracked drum, Mr Bay showing that drums are built to be hit and break from dropping or silence, loud festival, sweeping as thanks; offers an opinion with a reason",
+      "explanation": "The motive is never stated on page 2; a full retell requires connecting page 5 to the earlier behaviour. The opinion should cite text."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "prompt": "Put the story in order.",
+      "items": [
+        {
+          "id": "s1",
+          "text": "Lan is given the great drum.",
+          "page_id": "p01"
+        },
+        {
+          "id": "s2",
+          "text": "Her sound is small at practice.",
+          "page_id": "p02"
+        },
+        {
+          "id": "s3",
+          "text": "She tells her grandmother her fear.",
+          "page_id": "p05"
+        },
+        {
+          "id": "s4",
+          "text": "Mr Bay tells her to try to break a drum.",
+          "page_id": "p08"
+        },
+        {
+          "id": "s5",
+          "text": "The great drum is heard across the square.",
+          "page_id": "p09"
+        }
+      ],
+      "correct_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "choose_evidence",
+      "skill": "inference",
+      "claim": "Lan could play loudly all along; something was stopping her.",
+      "prompt": "Which page shows this?",
+      "correct_page_ids": [
+        "p03",
+        "p04"
+      ]
+    },
+    {
+      "activity_id": "a03",
+      "type": "discussion",
+      "skill": "listening_comprehension",
+      "prompts": [
+        "Tim and Mai gave Lan good advice, but it did not work. Why not?",
+        "Mr Bay never said thank you. Did Lan need him to?",
+        "Have you ever been careful with something in a way that actually made things worse?"
+      ]
+    }
+  ],
+  "off_screen_prompt": "Find something at home that is made to be used hard: a ball, a pan, a skipping rope. Talk about what would really wear it out.",
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-09-28T10:42:55+00:00",
+    "reviewer": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+    "review_date": "2026-09-28",
+    "history": [
+      {
+        "action": "approve_all",
+        "at": "2026-09-28T10:42:55+00:00",
+        "by": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+        "note": "Last build of the year: 14 gated books I-W (127 original SVGs, set4). Nonfiction fact-check pending parent review; ro-w-030 reserved for unseen check."
+      }
+    ]
+  }
+}

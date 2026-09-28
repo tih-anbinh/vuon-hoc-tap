@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Stars change as you travel south</title>
+  <desc id="d">Two skies side by side: stars low on the horizon at home and higher after travelling south.</desc>
+  <rect width="400" height="300" fill="#2B3A55"/>
+  <rect x="0" y="0" width="400" height="300" fill="#2B3A55"/><circle cx="23" cy="11" r="2" fill="#F4F1DE"/><circle cx="120" cy="64" r="3" fill="#F4F1DE"/><circle cx="217" cy="117" r="2" fill="#F4F1DE"/><circle cx="314" cy="20" r="3" fill="#F4F1DE"/><circle cx="11" cy="73" r="2" fill="#F4F1DE"/><circle cx="108" cy="126" r="3" fill="#F4F1DE"/>
+  <rect x="0" y="200" width="400" height="100" fill="#1B2B34"/><path d="M200 0 L200 300" stroke="#F4F1DE" stroke-width="3" stroke-dasharray="8 8"/>
+  <path transform="translate(40 185)" d="M0 -8 L2 -2 L8 0 L2 2 L0 8 L-2 2 L-8 0 L-2 -2 Z" fill="#F4F1DE"/>
+  <path transform="translate(80 173)" d="M0 -8 L2 -2 L8 0 L2 2 L0 8 L-2 2 L-8 0 L-2 -2 Z" fill="#F4F1DE"/>
+  <path transform="translate(120 185)" d="M0 -8 L2 -2 L8 0 L2 2 L0 8 L-2 2 L-8 0 L-2 -2 Z" fill="#F4F1DE"/>
+  <path transform="translate(160 173)" d="M0 -8 L2 -2 L8 0 L2 2 L0 8 L-2 2 L-8 0 L-2 -2 Z" fill="#F4F1DE"/>
+  <path transform="translate(240 100)" d="M0 -8 L2 -2 L8 0 L2 2 L0 8 L-2 2 L-8 0 L-2 -2 Z" fill="#F4F1DE"/>
+  <path transform="translate(280 88)" d="M0 -8 L2 -2 L8 0 L2 2 L0 8 L-2 2 L-8 0 L-2 -2 Z" fill="#F4F1DE"/>
+  <path transform="translate(320 100)" d="M0 -8 L2 -2 L8 0 L2 2 L0 8 L-2 2 L-8 0 L-2 -2 Z" fill="#F4F1DE"/>
+  <path transform="translate(360 88)" d="M0 -8 L2 -2 L8 0 L2 2 L0 8 L-2 2 L-8 0 L-2 -2 Z" fill="#F4F1DE"/>
+  <path d="M120 250 L280 250" stroke="#F7D154" stroke-width="5" stroke-linecap="round"/><path d="M280 250 L269.5 255.8 M280 250 L269.5 244.2" stroke="#F7D154" stroke-width="5" stroke-linecap="round"/>
+
+</svg>

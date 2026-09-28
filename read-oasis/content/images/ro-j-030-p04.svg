@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">A small heavy stone goes down</title>
+  <desc id="d">A tank with a small stone sinking to the bottom, only a little water pushed aside.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="40" y="120" width="320" height="150" rx="8" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="42" y="150" width="316" height="118" rx="6" fill="#9CCBE8"/>
+  <ellipse cx="200" cy="255" rx="9" ry="6" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="193" cy="240" r="4" fill="none" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="207" cy="224" r="5" fill="none" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="193" cy="208" r="6" fill="none" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M200 160 L200 230" stroke="#D9534F" stroke-width="5" stroke-linecap="round"/><path d="M200 230 L194.2 219.5 M200 230 L205.8 219.5" stroke="#D9534F" stroke-width="5" stroke-linecap="round"/>
+  <path d="M240 250 L240 235" stroke="#5B8DEF" stroke-width="4" stroke-linecap="round"/><path d="M240 235 L245.8 245.5 M240 235 L234.2 245.5" stroke="#5B8DEF" stroke-width="4" stroke-linecap="round"/>
+
+</svg>

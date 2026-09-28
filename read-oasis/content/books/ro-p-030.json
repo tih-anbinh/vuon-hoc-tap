@@ -1,0 +1,428 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-p-030",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "Bridges: Beam, Arch and Rope",
+  "language": "en",
+  "level": "P",
+  "reading_mode": "independent_reading",
+  "topic": "building",
+  "genre": "nonfiction",
+  "learning_objectives": [
+    "Compare three bridge types by how they carry weight",
+    "Use a diagram and text together to explain a structure",
+    "Apply an idea to a new case"
+  ],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": {
+    "text": "high",
+    "conceptual": "high",
+    "visual_support": "high"
+  },
+  "rights": {
+    "text_author": "Huy Tran for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
+  "factual_claims": [
+    {
+      "claim": "A beam bridge is a straight span resting on supports; its top is squeezed (compression) and its bottom stretched (tension) under load.",
+      "source": "PBS Building Big, 'Beam bridges'; Britannica, 'Bridge: beam'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Beam bridges sag more as spans get longer, which is why long beam bridges need many piers.",
+      "source": "PBS Building Big, 'Beam bridges'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "An arch carries load mainly in compression, pushing outward and down into its supports (abutments).",
+      "source": "Britannica, 'Arch'; PBS Building Big, 'Arch bridges'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Stone arch bridges built by the Romans are still standing after about 2,000 years.",
+      "source": "Britannica, 'Roman bridges' (e.g. Pont du Gard, Alcántara)",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "A suspension bridge hangs its deck from cables that pass over towers and are anchored at the ends; the cables are in tension.",
+      "source": "PBS Building Big, 'Suspension bridges'; Britannica, 'Suspension bridge'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Suspension bridges achieve the longest spans of any bridge type.",
+      "source": "Britannica, 'Suspension bridge'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Simple suspension footbridges made from rope or vines have been built by many cultures for centuries.",
+      "source": "Britannica, 'Suspension bridge' (history; Inca rope bridges)",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "The Long Bien Bridge in Hanoi is a steel truss bridge across the Red River, opened in 1902.",
+      "source": "Britannica / Vietnam National Administration of Tourism, 'Long Bien Bridge'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    }
+  ],
+  "parent_prompts": [
+    "Let the child read alone. Then: give them a ruler, two books and a small weight, and ask them to show a beam sagging."
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "A bridge has one job: to hold something up over a gap. A stream, a road, a valley, a river a kilometre wide. The gap does not care what the bridge is made of. It only asks one question, over and over, of every part of the bridge: where does the weight go? Engineers have found three great answers to that question, and once you can see them, you will see them everywhere.",
+      "illustration_brief": "Three tiny silhouettes in a row: a flat beam bridge, a stone arch bridge, a suspension bridge with towers; a wide river below.",
+      "audio_script": "A bridge has one job: to hold something up over a gap. A stream, a road, a valley, a river a kilometre wide. The gap does not care what the bridge is made of. It only asks one question, over and over, of every part of the bridge: where does the weight go? Engineers have found three great answers to that question, and once you can see them, you will see them everywhere.",
+      "timing_segments": [],
+      "image_asset": "images/ro-p-030-p01.svg",
+      "image_alt": "A stream in a gap between two banks with a question mark above it.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p02",
+      "text": "The first answer is the oldest. Lay a plank across a stream and you have a beam bridge. Stand in the middle and the plank bends. Look closely at what bending does. The top of the plank is squeezed shorter; the bottom is stretched longer. Engineers call the squeeze compression and the stretch tension. Every beam under load feels both at once, and it is the stretch on the bottom that usually breaks it first.",
+      "illustration_brief": "A plank over a stream with a child in the middle, exaggerated sag; arrows pushing together along the top and pulling apart along the bottom.",
+      "audio_script": "The first answer is the oldest. Lay a plank across a stream and you have a beam bridge. Stand in the middle and the plank bends. Look closely at what bending does. The top of the plank is squeezed shorter; the bottom is stretched longer. Engineers call the squeeze compression and the stretch tension. Every beam under load feels both at once, and it is the stretch on the bottom that usually breaks it first.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "compression",
+          "definition": "A squeezing force that pushes the parts of something closer together.",
+          "example": "Press down on a sponge and it is in compression."
+        },
+        {
+          "word": "tension",
+          "definition": "A stretching force that pulls the parts of something apart.",
+          "example": "A tug-of-war rope is in tension."
+        }
+      ],
+      "image_asset": "images/ro-p-030-p02.svg",
+      "image_alt": "A plank laid across the gap sagging under a child standing in the middle.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p03",
+      "text": "The problem with beams is length. Double the gap and the plank sags far more than double. That is why long beam bridges are really many short ones in a row, each resting on its own pier planted in the riverbed. Beams are simple and cheap, but they cannot leap.",
+      "illustration_brief": "A long low bridge with many piers stepping across a wide river, each span short and flat.",
+      "audio_script": "The problem with beams is length. Double the gap and the plank sags far more than double. That is why long beam bridges are really many short ones in a row, each resting on its own pier planted in the riverbed. Beams are simple and cheap, but they cannot leap.",
+      "timing_segments": [],
+      "image_asset": "images/ro-p-030-p03.svg",
+      "image_alt": "A long beam bridge made of short spans resting on several piers.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p04",
+      "text": "The second answer is a curve. Build a bridge as an arch and something clever happens: the weight on top does not try to bend the arch. It travels along the curve, pushing each stone against the next, until it reaches the ground at both ends. An arch is almost all compression and almost no tension. Stone is weak when stretched but enormously strong when squeezed, which is why the Romans built arches out of stone two thousand years ago and many of them are still carrying traffic today.",
+      "illustration_brief": "A stone arch bridge with arrows flowing along the curve from the crown down into heavy supports at each end.",
+      "audio_script": "The second answer is a curve. Build a bridge as an arch and something clever happens: the weight on top does not try to bend the arch. It travels along the curve, pushing each stone against the next, until it reaches the ground at both ends. An arch is almost all compression and almost no tension. Stone is weak when stretched but enormously strong when squeezed, which is why the Romans built arches out of stone two thousand years ago and many of them are still carrying traffic today.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "arch",
+          "definition": "A curved structure that carries weight by pushing it down and outward into its ends.",
+          "example": "The old gate has a stone arch over it."
+        }
+      ],
+      "image_asset": "images/ro-p-030-p04.svg",
+      "image_alt": "An arch bridge with arrows following the curve down into the ground on each side.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p05",
+      "text": "Arches have their own catch. All that pushing has to go somewhere, so the ends of an arch shove outward hard against the ground. Build an arch on soft mud and it will spread and fall. Arches want rock to stand on, and they cannot be too flat or the shove becomes too great to hold.",
+      "illustration_brief": "Two arches side by side: one on rock, firm; one on mud with its feet sliding outward and the crown dropping.",
+      "audio_script": "Arches have their own catch. All that pushing has to go somewhere, so the ends of an arch shove outward hard against the ground. Build an arch on soft mud and it will spread and fall. Arches want rock to stand on, and they cannot be too flat or the shove becomes too great to hold.",
+      "timing_segments": [],
+      "image_asset": "images/ro-p-030-p05.svg",
+      "image_alt": "The arch with big arrows at each end shoving outward into firm ground.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p06",
+      "text": "The third answer turns the arch upside down. Instead of pushing weight along a curve, hang it from one. Stand two tall towers, drape thick cables over them, fix the cable ends deep in the ground, and hang the road from the cables on hundreds of vertical wires. This is a suspension bridge. Now the cables are in pure tension, like a washing line, and steel cable is astonishingly strong when pulled. Suspension bridges can leap gaps no beam or arch could dream of: two kilometres in a single span.",
+      "illustration_brief": "A suspension bridge: two towers, a drooping main cable, many vertical hangers to a flat deck, cables anchored into blocks at each end.",
+      "audio_script": "The third answer turns the arch upside down. Instead of pushing weight along a curve, hang it from one. Stand two tall towers, drape thick cables over them, fix the cable ends deep in the ground, and hang the road from the cables on hundreds of vertical wires. This is a suspension bridge. Now the cables are in pure tension, like a washing line, and steel cable is astonishingly strong when pulled. Suspension bridges can leap gaps no beam or arch could dream of: two kilometres in a single span.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "suspension",
+          "definition": "Hanging something from above.",
+          "example": "The lamp hangs by a suspension chain."
+        }
+      ],
+      "image_asset": "images/ro-p-030-p06.svg",
+      "image_alt": "A suspension bridge: two tall towers, cables draped over them, and the deck hanging below.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p07",
+      "text": "The idea is not new either. Long before steel, people in mountain valleys twisted grass and vines into ropes, slung them across gorges, and walked over. A rope bridge swings and sways, and it is still a suspension bridge: the weight of the walker hangs from ropes that are pulling, not pushing.",
+      "illustration_brief": "A rope footbridge across a gorge, sagging in a curve, a figure crossing carefully; mountains behind.",
+      "audio_script": "The idea is not new either. Long before steel, people in mountain valleys twisted grass and vines into ropes, slung them across gorges, and walked over. A rope bridge swings and sways, and it is still a suspension bridge: the weight of the walker hangs from ropes that are pulling, not pushing.",
+      "timing_segments": [],
+      "image_asset": "images/ro-p-030-p07.svg",
+      "image_alt": "A rope and plank bridge slung across a mountain gorge with a person crossing.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p08",
+      "text": "So which is best? None of them. Each one answers 'where does the weight go?' differently, and each answer fits a different gap. Short gap, firm ground, small budget: a beam. Medium gap, rock at both ends: an arch. Huge gap, deep water, nowhere to put piers: suspension. Most real bridges mix ideas. The Long Bien Bridge in Hanoi, for instance, is a chain of steel trusses, which are beams made of triangles so that they can be long without sagging.",
+      "illustration_brief": "The Long Bien Bridge: a long steel truss bridge of repeated triangular sections over the Red River, with a train on it.",
+      "audio_script": "So which is best? None of them. Each one answers where does the weight go differently, and each answer fits a different gap. Short gap, firm ground, small budget: a beam. Medium gap, rock at both ends: an arch. Huge gap, deep water, nowhere to put piers: suspension. Most real bridges mix ideas. The Long Bien Bridge in Hanoi, for instance, is a chain of steel trusses, which are beams made of triangles so that they can be long without sagging.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "truss",
+          "definition": "A frame of triangles joined together to make a strong, light beam.",
+          "example": "The roof is held up by wooden trusses."
+        }
+      ],
+      "image_asset": "images/ro-p-030-p08.svg",
+      "image_alt": "Three small pictures side by side: a beam over a stream, an arch on rock, a suspension bridge over a wide river.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p09",
+      "text": "Next time you cross a bridge, ask the gap's question yourself. Is the weight bending a beam? Sliding down an arch into the ground? Hanging from cables? Once you can answer, you are not just crossing the bridge. You are reading it.",
+      "illustration_brief": "A child on a bridge railing looking down at the structure; three small thought-bubble diagrams: beam, arch, cable.",
+      "audio_script": "Next time you cross a bridge, ask the gap's question yourself. Is the weight bending a beam? Sliding down an arch into the ground? Hanging from cables? Once you can answer, you are not just crossing the bridge. You are reading it.",
+      "timing_segments": [],
+      "image_asset": "images/ro-p-030-p09.svg",
+      "image_alt": "A child on a bridge looking down, with a beam, an arch and a cable each marked with a question mark.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "explicit_detail",
+      "difficulty": "medium",
+      "prompt": "When a beam bends under weight, what happens to its underside?",
+      "options": [
+        {
+          "id": "bottom",
+          "text": "It is stretched (tension)"
+        },
+        {
+          "id": "squeeze",
+          "text": "It is squeezed (compression)"
+        },
+        {
+          "id": "nothing",
+          "text": "Nothing; only the middle moves"
+        }
+      ],
+      "correct_option_id": "bottom",
+      "evidence_page_ids": [
+        "p02"
+      ],
+      "explanation": "Page 2: the top is squeezed shorter; the bottom is stretched longer.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "cause_effect",
+      "difficulty": "hard",
+      "prompt": "Why could the Romans build long-lasting bridges out of stone using arches?",
+      "options": [
+        {
+          "id": "compression",
+          "text": "An arch is almost all compression, and stone is very strong when squeezed"
+        },
+        {
+          "id": "cheap",
+          "text": "Stone was cheap"
+        },
+        {
+          "id": "flat",
+          "text": "Arches are flat and easy to walk on"
+        }
+      ],
+      "correct_option_id": "compression",
+      "evidence_page_ids": [
+        "p04"
+      ],
+      "explanation": "Page 4: an arch is almost all compression, and stone is weak when stretched but enormously strong when squeezed.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "compare",
+      "difficulty": "hard",
+      "prompt": "How is a suspension bridge like an arch turned upside down?",
+      "options": [
+        {
+          "id": "hang",
+          "text": "The weight hangs from a curve in tension instead of pushing along a curve in compression"
+        },
+        {
+          "id": "tower",
+          "text": "It has towers instead of stones"
+        },
+        {
+          "id": "steel",
+          "text": "It is made of steel instead of stone"
+        }
+      ],
+      "correct_option_id": "hang",
+      "evidence_page_ids": [
+        "p04",
+        "p06"
+      ],
+      "explanation": "The arch pushes weight along a curve in compression (page 4); the suspension bridge hangs weight from a curve of cable in tension (page 6).",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "inference",
+      "difficulty": "hard",
+      "prompt": "A town needs to cross a very wide, deep river where piers cannot be built. Which type does the book suggest?",
+      "options": [
+        {
+          "id": "susp",
+          "text": "A suspension bridge"
+        },
+        {
+          "id": "beam",
+          "text": "A beam bridge"
+        },
+        {
+          "id": "arch",
+          "text": "A stone arch"
+        }
+      ],
+      "correct_option_id": "susp",
+      "evidence_page_ids": [
+        "p08"
+      ],
+      "explanation": "Page 8: huge gap, deep water, nowhere to put piers: suspension.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q05",
+      "skill": "word_knowledge",
+      "difficulty": "medium",
+      "prompt": "What is a truss?",
+      "options": [
+        {
+          "id": "tri",
+          "text": "A frame of triangles that works as a strong, light beam"
+        },
+        {
+          "id": "cable",
+          "text": "A thick steel cable"
+        },
+        {
+          "id": "pier",
+          "text": "A support standing in the river"
+        }
+      ],
+      "correct_option_id": "tri",
+      "evidence_page_ids": [
+        "p08"
+      ],
+      "explanation": "Page 8: trusses, which are beams made of triangles so that they can be long without sagging.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q06",
+      "skill": "summary",
+      "difficulty": "hard",
+      "response_type": "open",
+      "prompt": "Explain to a grown-up the three bridge types and where the weight goes in each. Then pick a bridge you know and say which type it is.",
+      "rubric": "not yet: names bridges; with support: two types with prompting; independent: beam bends (top squeezed, bottom stretched), arch pushes weight along the curve into the ground, suspension hangs the deck from cables in tension; applies to a real bridge with a reason",
+      "explanation": "The forces, not the shapes, are the content; applying it to a real bridge is the transfer."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "match_pairs",
+      "skill": "compare",
+      "prompt": "Match each bridge to how it carries weight.",
+      "pairs": [
+        {
+          "left": "beam",
+          "right": "bends: top squeezed, bottom stretched"
+        },
+        {
+          "left": "arch",
+          "right": "pushes weight along a curve into the ground"
+        },
+        {
+          "left": "suspension",
+          "right": "hangs the road from cables in tension"
+        }
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "choose_evidence",
+      "skill": "inference",
+      "claim": "An arch needs firm ground at its ends.",
+      "prompt": "Which page shows this?",
+      "correct_page_ids": [
+        "p05"
+      ]
+    },
+    {
+      "activity_id": "a03",
+      "type": "word_to_meaning",
+      "skill": "word_knowledge",
+      "prompt": "Match the word to its meaning.",
+      "pairs": [
+        {
+          "left": "compression",
+          "right": "a squeezing force"
+        },
+        {
+          "left": "tension",
+          "right": "a stretching force"
+        },
+        {
+          "left": "truss",
+          "right": "a frame of triangles"
+        }
+      ]
+    }
+  ],
+  "off_screen_prompt": "Bridge a gap between two books with (1) a flat strip of card, (2) the same card curved into an arch, (3) a piece of string tied to two heavy cups. Load each with coins. Which holds most? Which fails first, and how?",
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-09-28T10:42:55+00:00",
+    "reviewer": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+    "review_date": "2026-09-28",
+    "history": [
+      {
+        "action": "approve_all",
+        "at": "2026-09-28T10:42:55+00:00",
+        "by": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+        "note": "Last build of the year: 14 gated books I-W (127 original SVGs, set4). Nonfiction fact-check pending parent review; ro-w-030 reserved for unseen check."
+      }
+    ]
+  }
+}

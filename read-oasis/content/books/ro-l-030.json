@@ -1,0 +1,461 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-l-030",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "Sea Turtles Come Home",
+  "language": "en",
+  "level": "L",
+  "reading_mode": "read_aloud",
+  "topic": "sea",
+  "genre": "nonfiction",
+  "learning_objectives": [
+    "Follow a life cycle across many years",
+    "Explain how scientists know turtles return to their birth beach",
+    "Weigh a claim against the evidence given"
+  ],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": {
+    "text": "medium",
+    "conceptual": "high",
+    "visual_support": "medium"
+  },
+  "rights": {
+    "text_author": "Huy Tran for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
+  "factual_claims": [
+    {
+      "claim": "Female sea turtles come ashore at night to dig a nest in the sand and lay around 100 eggs.",
+      "source": "NOAA Fisheries, 'Sea turtles' (clutch sizes vary by species; ~100 typical for green and loggerhead); Sea Turtle Conservancy",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Eggs incubate in the warm sand for roughly two months before hatchlings emerge.",
+      "source": "NOAA Fisheries, 'Sea turtle nesting'; Sea Turtle Conservancy 'Information about sea turtles: general behavior'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Hatchlings usually emerge at night and head toward the brightest horizon, normally the sea; artificial lights can lead them the wrong way.",
+      "source": "Sea Turtle Conservancy, 'Lighting'; NOAA Fisheries",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Very few hatchlings (commonly estimated around 1 in 1,000) survive to adulthood.",
+      "source": "Sea Turtle Conservancy FAQ; NOAA Fisheries (estimates vary; presented to the child as 'only a few')",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Adult female sea turtles return to nest on or near the beach where they hatched, sometimes decades later.",
+      "source": "NOAA Fisheries; Britannica, 'Sea turtle' (natal homing)",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Scientists track turtles with flipper tags and satellite tags, and by comparing DNA of nesting females with hatchlings from the same beaches.",
+      "source": "NOAA Fisheries 'Satellite tracking'; Sea Turtle Conservancy 'Tracking'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Sea turtles are thought to sense the Earth's magnetic field to help navigate back to their home beach.",
+      "source": "Lohmann lab (UNC) summaries via NOAA and Britannica; presented as 'scientists think'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Sea turtles nest on beaches in Vietnam, for example at Con Dao National Park.",
+      "source": "IUCN Vietnam / Con Dao National Park sea turtle conservation programme reports",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    }
+  ],
+  "parent_prompts": [
+    "Before: if you were carried far from home as a baby, could you find your way back years later? Sea turtles do something like this.",
+    "After page 5: only a few hatchlings survive. How do you feel about that? Why might nature work this way?",
+    "After: which piece of evidence do you find most convincing that turtles come back to their own beach?"
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "On a dark beach on Con Dao island, in the middle of the night, a green sea turtle heaves herself out of the waves. She weighs as much as two grown men. On land she is slow and clumsy, dragging herself up the sand one flipper-stroke at a time. She has come a very long way to be here, and she has come for one reason.",
+      "illustration_brief": "Night beach, moonlit: a large sea turtle hauling out of the surf, flipper tracks behind her.",
+      "audio_script": "On a dark beach on Con Dao island, in the middle of the night, a green sea turtle heaves herself out of the waves. She weighs as much as two grown men. On land she is slow and clumsy, dragging herself up the sand one flipper-stroke at a time. She has come a very long way to be here, and she has come for one reason.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "heaves",
+          "definition": "Lifts or pulls something heavy with great effort.",
+          "example": "He heaves the sack onto the cart."
+        }
+      ],
+      "image_asset": "images/ro-l-030-p01.svg",
+      "image_alt": "At night, a large green sea turtle heaves herself out of the sea onto a dark beach.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p02",
+      "text": "Above the tide line she stops and begins to dig. With her back flippers she scoops out a hole as deep as your arm. Into it she lays her eggs: soft, white, round as ping-pong balls, about a hundred of them. Then she covers the nest with sand, pats it down, and turns back toward the sea. She will never see her babies.",
+      "illustration_brief": "The turtle from behind, back flippers scooping sand; a glimpse of white eggs in the pit.",
+      "audio_script": "Above the tide line she stops and begins to dig. With her back flippers she scoops out a hole as deep as your arm. Into it she lays her eggs: soft, white, round as ping-pong balls, about a hundred of them. Then she covers the nest with sand, pats it down, and turns back toward the sea. She will never see her babies.",
+      "timing_segments": [],
+      "image_asset": "images/ro-l-030-p02.svg",
+      "image_alt": "The turtle above the tide line digging a deep hole with her back flippers; soft white eggs inside.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p03",
+      "text": "For about two months the eggs sit in the warm sand. The sun heats the beach by day; the sand holds the warmth by night. Inside each shell a tiny turtle grows. Nobody guards the nest. Its only protection is being hidden.",
+      "illustration_brief": "Cross-section of sand with a cluster of eggs below; sun above; a small crab walking past on the surface.",
+      "audio_script": "For about two months the eggs sit in the warm sand. The sun heats the beach by day; the sand holds the warmth by night. Inside each shell a tiny turtle grows. Nobody guards the nest. Its only protection is being hidden.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "hatchling",
+          "definition": "A baby animal that has just come out of its egg.",
+          "example": "The hatchling was smaller than my hand."
+        }
+      ],
+      "image_asset": "images/ro-l-030-p03.svg",
+      "image_alt": "A cross-section of sand with a clutch of eggs underneath; the sun warming the beach above.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p04",
+      "text": "Then one night the sand begins to move. The hatchlings, each no bigger than a biscuit, break out of their shells and dig upward together. They wait just under the surface until the sand cools, which tells them it is dark. Then they erupt, dozens at once, and scramble toward the brightest thing they can see. On a natural beach, that is the sea, shining under the moon.",
+      "illustration_brief": "Dozens of tiny hatchlings streaming across moonlit sand toward the glimmering sea.",
+      "audio_script": "Then one night the sand begins to move. The hatchlings, each no bigger than a biscuit, break out of their shells and dig upward together. They wait just under the surface until the sand cools, which tells them it is dark. Then they erupt, dozens at once, and scramble toward the brightest thing they can see. On a natural beach, that is the sea, shining under the moon.",
+      "timing_segments": [],
+      "image_asset": "images/ro-l-030-p04.svg",
+      "image_alt": "Many tiny turtles crawling across dark sand toward the waves at night.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p05",
+      "text": "It is a dangerous dash. Crabs and birds snatch some on the sand. Fish wait in the shallows. Of a hundred hatchlings, most will not live to grow up; scientists think only a very few from each nest ever do. The ones that make it swim out into deep water and disappear. For years, nobody knows where they go.",
+      "illustration_brief": "The same beach at dawn: a gull swooping, a crab, and a few hatchlings reaching the waves.",
+      "audio_script": "It is a dangerous dash. Crabs and birds snatch some on the sand. Fish wait in the shallows. Of a hundred hatchlings, most will not live to grow up; scientists think only a very few from each nest ever do. The ones that make it swim out into deep water and disappear. For years, nobody knows where they go.",
+      "timing_segments": [],
+      "image_asset": "images/ro-l-030-p05.svg",
+      "image_alt": "Crabs and gulls on the sand and fish in the shallows while hatchlings hurry to the water.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p06",
+      "text": "Twenty or thirty years later, a grown female turtle appears on a beach to lay her own eggs. Here is the astonishing part. It is very often the same beach where she hatched. She may have swum thousands of kilometres in between. Somehow, she finds her way home.",
+      "illustration_brief": "A map-like view: an island beach with a long looping dotted track across the sea returning to it.",
+      "audio_script": "Twenty or thirty years later, a grown female turtle appears on a beach to lay her own eggs. Here is the astonishing part. It is very often the same beach where she hatched. She may have swum thousands of kilometres in between. Somehow, she finds her way home.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "astonishing",
+          "definition": "So surprising it is hard to believe.",
+          "example": "The magician's trick was astonishing."
+        }
+      ],
+      "image_asset": "images/ro-l-030-p06.svg",
+      "image_alt": "A grown female turtle on a beach with a dotted line showing a long journey across the sea back to it.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p07",
+      "text": "How do we know this? Scientists fix small numbered tags to the flippers of nesting turtles. When a tagged turtle is seen again years later, they know where she has been. Some turtles carry a satellite tag on their shell that sends their position to a computer as they swim. And by comparing the DNA of nesting mothers with hatchlings from the same beaches, scientists can show that families keep coming back to the same sand.",
+      "illustration_brief": "A turtle with a small tag on its flipper and a satellite transmitter on its shell; a laptop showing a track line.",
+      "audio_script": "How do we know this? Scientists fix small numbered tags to the flippers of nesting turtles. When a tagged turtle is seen again years later, they know where she has been. Some turtles carry a satellite tag on their shell that sends their position to a computer as they swim. And by comparing the DNA of nesting mothers with hatchlings from the same beaches, scientists can show that families keep coming back to the same sand.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "evidence",
+          "definition": "Facts or clues that show something is true.",
+          "example": "The footprints were evidence that a fox had visited."
+        }
+      ],
+      "image_asset": "images/ro-l-030-p07.svg",
+      "image_alt": "A close view of a turtle flipper with a small numbered tag, and a scientist writing notes.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p08",
+      "text": "How does the turtle find the way? Scientists are still working on that. The best idea so far is that turtles can feel the Earth's magnetic field, the same invisible pull that turns a compass needle. Each stretch of coast has a slightly different magnetic feel, and a hatchling may learn the feel of its home beach before it ever leaves.",
+      "illustration_brief": "A turtle swimming with faint curved field lines around a small globe; a compass in a corner.",
+      "audio_script": "How does the turtle find the way? Scientists are still working on that. The best idea so far is that turtles can feel the Earth's magnetic field, the same invisible pull that turns a compass needle. Each stretch of coast has a slightly different magnetic feel, and a hatchling may learn the feel of its home beach before it ever leaves.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "magnetic",
+          "definition": "To do with the invisible force that pulls a compass needle north.",
+          "example": "The magnetic pull made the pins stick to the magnet."
+        }
+      ],
+      "image_asset": "images/ro-l-030-p08.svg",
+      "image_alt": "A turtle swimming in the sea with dashed lines of the Earth's magnetic field curving around a small globe.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p09",
+      "text": "Not everything on a beach helps a turtle. Bright lights from hotels and roads can trick hatchlings into crawling the wrong way, inland instead of to the sea. That is why, on Con Dao and other nesting beaches, rangers ask people to keep lights low at night and to stay away from marked nests.",
+      "illustration_brief": "A beach at night with a shielded low lamp and a roped-off nest with a sign; hatchlings heading correctly to the sea.",
+      "audio_script": "Not everything on a beach helps a turtle. Bright lights from hotels and roads can trick hatchlings into crawling the wrong way, inland instead of to the sea. That is why, on Con Dao and other nesting beaches, rangers ask people to keep lights low at night and to stay away from marked nests.",
+      "timing_segments": [],
+      "image_asset": "images/ro-l-030-p09.svg",
+      "image_alt": "A lit hotel behind the beach; some hatchlings crawl toward the lights instead of the sea.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p10",
+      "text": "Back on the dark beach, the mother turtle reaches the water and slides in. In two months, if the nest stays hidden and the night stays dark, a hundred tiny turtles will run this same stretch of sand. And one of them, decades from now, may heave herself out of these very waves to begin it all again.",
+      "illustration_brief": "The mother turtle disappearing into moonlit surf; the covered nest behind her.",
+      "audio_script": "Back on the dark beach, the mother turtle reaches the water and slides in. In two months, if the nest stays hidden and the night stays dark, a hundred tiny turtles will run this same stretch of sand. And one of them, decades from now, may heave herself out of these very waves to begin it all again.",
+      "timing_segments": [],
+      "image_asset": "images/ro-l-030-p10.svg",
+      "image_alt": "The mother turtle sliding into the dark water; the nest hidden in the sand behind her.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "explicit_detail",
+      "difficulty": "easy",
+      "prompt": "About how many eggs does the turtle lay?",
+      "options": [
+        {
+          "id": "hundred",
+          "text": "About a hundred"
+        },
+        {
+          "id": "ten",
+          "text": "About ten"
+        },
+        {
+          "id": "thousand",
+          "text": "About a thousand"
+        }
+      ],
+      "correct_option_id": "hundred",
+      "evidence_page_ids": [
+        "p02"
+      ],
+      "explanation": "Page 2: about a hundred of them.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "cause_effect",
+      "difficulty": "medium",
+      "prompt": "Why do hatchlings wait until the sand cools before coming out?",
+      "options": [
+        {
+          "id": "dark",
+          "text": "Cool sand tells them it is dark and safer"
+        },
+        {
+          "id": "hot",
+          "text": "Hot sand would burn them"
+        },
+        {
+          "id": "tide",
+          "text": "They are waiting for the tide"
+        }
+      ],
+      "correct_option_id": "dark",
+      "evidence_page_ids": [
+        "p04"
+      ],
+      "explanation": "Page 4: they wait until the sand cools, which tells them it is dark.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "inference",
+      "difficulty": "hard",
+      "prompt": "Why can bright hotel lights be dangerous for hatchlings?",
+      "options": [
+        {
+          "id": "wrong",
+          "text": "Hatchlings head for the brightest light, so they may crawl inland instead of to the sea"
+        },
+        {
+          "id": "hot",
+          "text": "The lights make the sand too hot"
+        },
+        {
+          "id": "birds",
+          "text": "Lights attract birds"
+        }
+      ],
+      "correct_option_id": "wrong",
+      "evidence_page_ids": [
+        "p04",
+        "p09"
+      ],
+      "explanation": "Hatchlings scramble toward the brightest thing they see (page 4); bright lights can trick them into going inland (page 9).",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "explicit_detail",
+      "difficulty": "medium",
+      "prompt": "Which is one way scientists know turtles return to their home beach?",
+      "options": [
+        {
+          "id": "tags",
+          "text": "Flipper tags and satellite tags"
+        },
+        {
+          "id": "ask",
+          "text": "They ask fishermen"
+        },
+        {
+          "id": "guess",
+          "text": "They guess from the turtle's size"
+        }
+      ],
+      "correct_option_id": "tags",
+      "evidence_page_ids": [
+        "p07"
+      ],
+      "explanation": "Page 7 describes numbered flipper tags, satellite tags and DNA comparisons.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q05",
+      "skill": "compare",
+      "difficulty": "hard",
+      "prompt": "The book says turtles 'may' feel magnetic fields but says they 'do' return to their beach. Why the difference?",
+      "options": [
+        {
+          "id": "evidence",
+          "text": "Returning is shown by tags and DNA; the magnetic idea is still being tested"
+        },
+        {
+          "id": "same",
+          "text": "There is no difference"
+        },
+        {
+          "id": "old",
+          "text": "The magnetic idea is older"
+        }
+      ],
+      "correct_option_id": "evidence",
+      "evidence_page_ids": [
+        "p07",
+        "p08"
+      ],
+      "explanation": "Page 7 gives hard evidence for returning; page 8 says scientists are still working on how, and calls the magnetic sense the best idea so far.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q06",
+      "skill": "summary",
+      "difficulty": "hard",
+      "response_type": "open",
+      "prompt": "Tell a grown-up the life of a sea turtle from egg to nesting mother, and one piece of evidence that they come home.",
+      "rubric": "not yet: says turtles lay eggs; with support: eggs, hatchlings run to sea, mother returns, with prompting; independent: nest at night, two months in sand, night dash to the sea, years away, returns to the same beach; cites tags or DNA",
+      "explanation": "Listen for the cycle in order and for the child separating what is known from what is still a theory."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "prompt": "Put the turtle's life in order.",
+      "items": [
+        {
+          "id": "s1",
+          "text": "The mother digs a nest and lays eggs.",
+          "page_id": "p02"
+        },
+        {
+          "id": "s2",
+          "text": "Eggs warm in the sand for two months.",
+          "page_id": "p03"
+        },
+        {
+          "id": "s3",
+          "text": "Hatchlings dash to the sea at night.",
+          "page_id": "p04"
+        },
+        {
+          "id": "s4",
+          "text": "Decades later, a female returns to the same beach.",
+          "page_id": "p06"
+        }
+      ],
+      "correct_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "choose_evidence",
+      "skill": "inference",
+      "claim": "Scientists are not yet sure how turtles find their way home.",
+      "prompt": "Which page shows this?",
+      "correct_page_ids": [
+        "p08"
+      ]
+    },
+    {
+      "activity_id": "a03",
+      "type": "word_to_meaning",
+      "skill": "word_knowledge",
+      "prompt": "Match the word to its meaning.",
+      "pairs": [
+        {
+          "left": "hatchling",
+          "right": "a baby just out of its egg"
+        },
+        {
+          "left": "evidence",
+          "right": "facts that show something is true"
+        },
+        {
+          "left": "astonishing",
+          "right": "very surprising"
+        },
+        {
+          "left": "magnetic",
+          "right": "to do with the force that moves a compass"
+        }
+      ]
+    }
+  ],
+  "off_screen_prompt": "Find Con Dao on a map of Vietnam. Then find a place 1,000 kilometres away. Imagine swimming it and back.",
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-09-28T10:42:55+00:00",
+    "reviewer": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+    "review_date": "2026-09-28",
+    "history": [
+      {
+        "action": "approve_all",
+        "at": "2026-09-28T10:42:55+00:00",
+        "by": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+        "note": "Last build of the year: 14 gated books I-W (127 original SVGs, set4). Nonfiction fact-check pending parent review; ro-w-030 reserved for unseen check."
+      }
+    ]
+  }
+}

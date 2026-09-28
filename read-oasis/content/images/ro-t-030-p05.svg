@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Four rules inside the cover</title>
+  <desc id="d">The inside cover of the maths book with four numbered rule lines, a clock showing seven.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="0" width="400" height="300" fill="#F3EBDD"/><rect x="0" y="210" width="400" height="90" fill="#C8A27A"/>
+  <g transform="translate(200 150) rotate(0)"><rect x="-60" y="-40" width="120" height="80" rx="3" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M-46 -26 l60 0" stroke="#8E9AA3" stroke-width="3" stroke-linecap="round"/><path d="M-46 -14 l72 0" stroke="#8E9AA3" stroke-width="3" stroke-linecap="round"/><path d="M-46 -2 l84 0" stroke="#8E9AA3" stroke-width="3" stroke-linecap="round"/><path d="M-46 10 l60 0" stroke="#8E9AA3" stroke-width="3" stroke-linecap="round"/><path d="M-46 22 l72 0" stroke="#8E9AA3" stroke-width="3" stroke-linecap="round"/><path d="M-46 34 l84 0" stroke="#8E9AA3" stroke-width="3" stroke-linecap="round"/></g>
+  <circle cx="150" cy="128" r="6" fill="#2B2B2B"/><circle cx="150" cy="140" r="6" fill="#2B2B2B"/><circle cx="150" cy="152" r="6" fill="#2B2B2B"/><circle cx="150" cy="164" r="6" fill="#2B2B2B"/>
+  <g transform="translate(320 80) scale(1.0)"><circle cx="0" cy="0" r="22" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 0 L0 -14 M0 0 L10 0" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round"/></g>
+  <g transform="translate(80 260) scale(0.7)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#8B4513"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -30 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#F08A7E" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-40 26 M24 0 L40 26" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+</svg>

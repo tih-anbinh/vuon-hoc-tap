@@ -4,6 +4,7 @@ Author: Huy Tran
 Company: Cadence Design Systems Vietnam
 Email: huytran@cadence.com
 Created: 2026-09-27
+Revision: 2.0 - warm visual redesign, original application IDs preserved
 Read Oasis - parent area: baseline, settings, evidence dashboard, content studio (review/approve), data management.
 Local PIN gate only. NOT sufficient for a shared/online deployment (see README "Security scope").
 -->
@@ -16,10 +17,10 @@ Local PIN gate only. NOT sufficient for a shared/online deployment (see README "
   <link rel="icon" href="assets/icons/mascot.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/app.css">
 </head>
-<body>
+<body class="parent-page">
   <header class="topbar">
-    <a href="index.html" class="quiet" style="text-decoration:none"><button class="quiet" type="button">Child app</button></a>
-    <h1><svg class="ic" aria-hidden="true" style="width:1.5em;height:1.5em"><use href="#i-mascot"/></svg><span>Parent area</span></h1>
+    <a href="index.html" class="quiet app-link">Child app</a>
+    <h1><span class="brand-mark" aria-hidden="true"><svg class="ic"><use href="#i-mascot"/></svg></span><span class="brand-type"><span>Parent area</span><small>A thoughtful space for grown-ups</small></span></h1>
     <button id="btnLock" class="quiet" type="button">Lock</button>
   </header>
   <main id="app" class="parent-main"></main>

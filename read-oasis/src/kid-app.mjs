@@ -2,6 +2,7 @@
 // Company: Cadence Design Systems Vietnam
 // Email: huytran@cadence.com
 // Created: 2026-09-27
+// Revision: 2.0 - richer library/reader/quiz presentation; learning logic preserved
 //
 // Read Oasis child app. Flow: Choose -> Preview -> Listen/Read -> Pause & Think ->
 // Discuss -> Quiz -> Celebrate -> Stop or Continue. Only PUBLISHED books from content/index.json.
@@ -186,6 +187,7 @@ function tile(b) {
   return h('button', { class: 'book-tile', dataset: { fit }, onclick: () => go({ view: 'preview', bookId: b.book_id }), 'aria-label': `${b.title}. ${modeLabel(b.reading_mode)}. ${fitChip[0] ? fitChip[0] + '.' : ''} ${inProgress ? 'In progress.' : p?.completed_reads ? 'Read before.' : 'New.'}` },
     cover,
     h('span', { class: 't', text: b.title }),
+    h('span', { class: 'tile-invite', text: inProgress ? 'Pick up your story  →' : p?.completed_reads ? 'Read it again  →' : 'Open this book  →' }),
     h('span', {}, h('span', { class: 'chip primary', text: modeLabel(b.reading_mode) }), fitChip[0] ? h('span', { class: 'chip ' + fitChip[1], text: fitChip[0] }) : null, h('span', { class: 'chip', text: 'Level ' + b.level })),
     h('span', { class: 'progress', 'aria-hidden': 'true' }, h('span', { style: `width:${pct}%` })));
 }
@@ -210,15 +212,21 @@ function renderLibrary() {
   const continueBook = last && !last.completed_reads && last.page_index > 0 ? library.find(b => b.book_id === last.book_id) : null;
   app.replaceChildren(
     h('section', { class: 'fade' },
-      h('div', { class: 'hero' }, mascot,
-        h('div', {}, h('h2', { text: `${greeting()}, ${S.profile.display_name || 'Reader'}!` }),
-          h('p', { class: 'sub', text: continueBook ? `Your book "${continueBook.title}" is waiting where you left it.` : 'Pick a book. Read, listen, and tell someone about it.' }),
-          h('div', { class: 'row', style: 'margin-top:.5rem' },
+      h('div', { class: mascot ? 'hero' : 'hero hero-no-art' },
+        h('div', { class: 'hero-copy' },
+          h('span', { class: 'hero-eyebrow', text: 'WELCOME TO YOUR STORY GARDEN' }),
+          h('h2', { text: `${greeting()}, ${S.profile.display_name || 'Reader'}!` }),
+          h('p', { class: 'sub', text: continueBook ? `Your book "${continueBook.title}" is waiting where you left it.` : 'A lovely new story is waiting for you. Pick a book and let’s explore together.' }),
+          h('div', { class: 'row hero-actions' },
             continueBook ? btn('Continue', () => go({ view: 'preview', bookId: continueBook.book_id }), { primary: true, ic: 'play' }) : null,
             btn('Hear that again', speakGreetingAgain, { quiet: true, ic: 'ear' }),
-            hasBand ? h('span', { class: 'chip accent', text: 'Your level: ' + S.settings.independent_track_band + (S.settings.read_aloud_track_band && S.settings.read_aloud_track_band !== S.settings.independent_track_band ? ' · listening ' + S.settings.read_aloud_track_band : '') }) : h('span', { class: 'chip', text: 'Level not set yet: a grown-up sets it in the parent area' })))),
+            hasBand ? h('span', { class: 'chip accent', text: 'Your level: ' + S.settings.independent_track_band + (S.settings.read_aloud_track_band && S.settings.read_aloud_track_band !== S.settings.independent_track_band ? ' · listening ' + S.settings.read_aloud_track_band : '') }) : h('span', { class: 'chip', text: 'A grown-up can set your reading level' }))),
+        mascot ? h('div', { class: 'hero-art', 'aria-hidden': 'true' },
+          h('span', { class: 'hero-sun' }), h('span', { class: 'hero-cloud cloud-one' }), h('span', { class: 'hero-cloud cloud-two' }),
+          h('span', { class: 'hero-book' }, h('span'), h('span')),
+          h('span', { class: 'hero-mascot' }, mascot), h('span', { class: 'hero-hill' })) : null),
       ...groups.map(([title, sub, arr]) => h('div', { class: 'shelf' },
-        h('div', { class: 'row between' }, h('h2', { style: 'margin:.2em 0', text: title }), sub ? h('span', { class: 'muted', text: sub }) : null),
+        h('div', { class: 'shelf-heading' }, h('div', {}, h('span', { class: 'shelf-kicker', text: 'YOUR BOOKS' }), h('h2', { text: title })), sub ? h('p', { class: 'muted', text: sub }) : null),
         h('div', { class: 'grid stagger' }, arr.map(tile)))),
       library.length ? null : h('p', { class: 'card', text: 'No approved books yet. Ask a grown-up to approve a book in the parent area.' })));
   speakGreeting();
@@ -233,7 +241,16 @@ function renderPreview(book) {
   const p = store.bookProgress(book.book_id, book.revision);
   audioUsedThisBook = false;
   const resumeAt = p.page_index > 0 && p.page_index < book.pages.length ? p.page_index : 0;
-  app.replaceChildren(h('section', { class: 'card fade' },
+  const previewArt = h('div', { class: 'preview-art', 'aria-hidden': 'true' });
+  if (S.settings.illustration_size !== 'hidden' && book.pages[0]?.image_asset) {
+    const image = h('img', { src: assetUrl(book.pages[0].image_asset), alt: '' });
+    image.onerror = () => previewArt.replaceChildren(icon('book', ''));
+    previewArt.append(image);
+  } else previewArt.append(icon('book', ''));
+  app.replaceChildren(h('section', { class: 'card fade book-preview' },
+    previewArt,
+    h('div', { class: 'preview-copy' },
+    h('span', { class: 'shelf-kicker', text: 'A STORY FOR YOU' }),
     h('h2', { text: book.title }),
     h('p', {}, h('span', { class: 'chip', text: modeLabel(book.reading_mode) }), h('span', { class: 'chip', text: book.topic }), h('span', { class: 'chip', text: book.pages.length + ' pages' })),
     p.migrated_from_revision ? h('p', { class: 'explain', text: `This book was updated since you last read it. Your earlier reading is kept; this is a fresh copy.` }) : null,
@@ -243,7 +260,7 @@ function renderPreview(book) {
       resumeAt ? btn(`Continue from page ${resumeAt + 1}`, () => go({ view: 'read', bookId: book.book_id, page: resumeAt }), { primary: true, ic: 'play' }) : null,
       btn(resumeAt ? 'Start again' : 'Read', () => go({ view: 'read', bookId: book.book_id, page: 0 }), { primary: !resumeAt, ic: 'next' }),
       narrator.supported || book.pages.some(pg => pg.audio_asset) ? btn('Listen', () => go({ view: 'read', bookId: book.book_id, page: resumeAt, listen: true }), { ic: 'ear' }) : null,
-      p.completed_reads > 0 && book.quiz?.length ? btn('Questions', () => go({ view: 'quiz', bookId: book.book_id, index: 0 })) : null)));
+      p.completed_reads > 0 && book.quiz?.length ? btn('Questions', () => go({ view: 'quiz', bookId: book.book_id, index: 0 })) : null))));
 }
 
 // ---------- reader (Listen / Read)
@@ -282,7 +299,7 @@ function renderReader(book) {
         ? btn('Next', () => { i++; draw(); }, { primary: true, ic: 'next' })
         : btn('Done', () => { store.completeRead(book.book_id, book.revision); store.setPage(book.book_id, book.revision, 0); go({ view: 'think', bookId: book.book_id }); }, { primary: true, ic: 'check' }));
     wrap.replaceChildren(
-      h('div', { class: 'reader' }, illus, h('div', {}, h('div', { class: 'story-card fade' }, story, listenBar), vocabBox, parentPrompt && i > 0 ? h('p', { class: 'parent-prompt', text: 'Grown-up: ' + parentPrompt }) : null)),
+      h('div', { class: 'reader' }, illus, h('div', { class: 'reader-copy' }, h('div', { class: 'story-card fade' }, h('span', { class: 'story-eyebrow', text: 'PAGE ' + (i + 1) + ' · ' + book.title }), story, listenBar), vocabBox, parentPrompt && i > 0 ? h('p', { class: 'parent-prompt', text: 'Grown-up: ' + parentPrompt }) : null)),
       dots, nav);
     narrator.onstart = () => { srcTag.textContent = narrator.lastSource === 'built' ? 'British English' : 'device voice'; srcTag.classList.remove('hidden'); };
     if (listenMode && S.settings.narration) setTimeout(() => togglePlay(pg, playBtn), 150);
@@ -441,7 +458,7 @@ function renderQuiz(book, idx) {
   setTitle(`Question ${idx + 1} of ${book.quiz.length}`);
   const next = () => go({ view: 'quiz', bookId: book.book_id, index: idx + 1 });
   const fb = h('div', { 'aria-live': 'polite' });
-  const sec = h('section', { class: 'card fade' }, h('h2', { class: 'quiz-prompt', text: q.prompt }), h('div', { class: 'row' }, S.settings.narration && narrator.supported ? btn('Read it to me', () => narrator.speak(q.prompt + '. ' + (q.options || []).map(o => o.text).join('. '), { speed: 'normal' }), { quiet: true, ic: 'ear' }) : null));
+  const sec = h('section', { class: 'card fade quiz-panel' }, h('span', { class: 'shelf-kicker', text: `QUESTION ${idx + 1} OF ${book.quiz.length}` }), h('h2', { class: 'quiz-prompt', text: q.prompt }), h('div', { class: 'row' }, S.settings.narration && narrator.supported ? btn('Read it to me', () => narrator.speak(q.prompt + '. ' + (q.options || []).map(o => o.text).join('. '), { speed: 'normal' }), { quiet: true, ic: 'ear' }) : null));
   app.replaceChildren(sec);
   if (q.response_type === 'open') {
     const ta = h('textarea', { 'aria-label': 'Your answer (a grown-up can also type what you say)' });

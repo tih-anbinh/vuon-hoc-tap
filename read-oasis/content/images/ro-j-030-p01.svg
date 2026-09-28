@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">A stone sinks, a ship floats</title>
+  <desc id="d">A stone sinking in a pond beside a large steel ship sailing on the sea.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="120" width="400" height="180" fill="#5B8DEF"/><path d="M0 140 q25 -10 50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-opacity=".7"/>
+  <ellipse cx="90" cy="230" rx="9" ry="6" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="83" cy="210" r="4" fill="none" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="97" cy="194" r="5" fill="none" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="83" cy="178" r="6" fill="none" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="97" cy="162" r="4" fill="none" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(260 130) rotate(0) scale(1.0)"><path d="M-80 0 L-60 40 L60 40 L90 0 Z" fill="#8E9AA3" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="-30" y="-36" width="60" height="36" rx="4" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="-10" y="-60" width="20" height="24" rx="3" fill="#D9534F" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g transform="translate(340 60) scale(1.0)"><path d="M-14 -20 q0 -22 16 -22 q16 0 16 16 q0 12 -14 18 q-4 2 -4 12" fill="none" stroke="#2B2B2B" stroke-width="6" stroke-linecap="round"/><circle cx="0" cy="20" r="5" fill="#2B2B2B"/></g>
+
+</svg>

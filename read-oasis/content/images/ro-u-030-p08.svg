@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">A snapshot is not a trend</title>
+  <desc id="d">A single dot on one graph beside a second graph with many dots forming a line over years.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="0" width="400" height="300" fill="#F3EBDD"/><rect x="0" y="210" width="400" height="90" fill="#C8A27A"/>
+  <g transform="translate(100 150) rotate(0)"><rect x="-60" y="-40" width="120" height="80" rx="3" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M-48 28 L-48 -28 M-48 28 L48 28" stroke="#2B2B2B" stroke-width="3"/></g>
+  <circle cx="100" cy="153" r="6" fill="#5B8DEF"/>
+  <g transform="translate(290 150) rotate(0)"><rect x="-60" y="-40" width="120" height="80" rx="3" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M-48 28 L-48 -28 M-48 28 L48 28" stroke="#2B2B2B" stroke-width="3"/><path d="M-40.0 -7.0 L-20.0 -3.0 L0.0 0.49999999999999645 L20.0 3.0 L40.0 8.0" fill="none" stroke="#5B8DEF" stroke-width="4" stroke-linecap="round"/></g>
+  <path d="M170 150 L220 150" stroke="#2B2B2B" stroke-width="5" stroke-linecap="round"/><path d="M220 150 L209.5 155.8 M220 150 L209.5 144.2" stroke="#2B2B2B" stroke-width="5" stroke-linecap="round"/>
+
+</svg>

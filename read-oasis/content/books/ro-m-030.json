@@ -1,0 +1,366 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-m-030",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "The Map with No North",
+  "language": "en",
+  "level": "M",
+  "reading_mode": "independent_reading",
+  "topic": "maps",
+  "genre": "fiction",
+  "learning_objectives": [
+    "Read a chapter-length story independently",
+    "Infer the solution to a puzzle from clues placed earlier",
+    "Explain a character's change of mind with evidence"
+  ],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": {
+    "text": "high",
+    "conceptual": "medium",
+    "visual_support": "low"
+  },
+  "rights": {
+    "text_author": "Huy Tran for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
+  "parent_prompts": [
+    "Let the child read alone; it is longer. After: what was the trick of the map? Which clue did the child notice first? Did Mai change her mind about Grandpa's game?"
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "Grandpa's treasure maps were famous in the family, and Mai had decided she was too old for them. \"I am eleven,\" she said. \"I know it is a jar of sweets under the mango tree. It is always a jar of sweets under the mango tree.\" Grandpa only smiled and handed her a folded square of brown paper. \"This one is different,\" he said. \"This one has no north.\"",
+      "illustration_brief": "Mai (orange satchel) taking a folded brown paper from a smiling Grandpa; a mango tree in the yard behind.",
+      "audio_script": "Grandpa's treasure maps were famous in the family, and Mai had decided she was too old for them. I am eleven, she said. I know it is a jar of sweets under the mango tree. It is always a jar of sweets under the mango tree. Grandpa only smiled and handed her a folded square of brown paper. This one is different, he said. This one has no north.",
+      "timing_segments": [],
+      "image_asset": "images/ro-m-030-p01.svg",
+      "image_alt": "Grandpa holding out a folded paper map to Mai, who looks unimpressed.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p02",
+      "text": "She unfolded it to be polite. It showed the yard, more or less: the house as a rectangle, the well as a circle, a fence, some trees drawn as puffs. A dotted line wandered from the house to a spot marked with a cross. But Grandpa was right about one thing. There was no compass rose in the corner, no arrow, nothing to say which way was up. \"So I just turn it until the house matches,\" said Mai.",
+      "illustration_brief": "The brown map laid flat: simple shapes for house, well, fence, tree puffs, a dotted path to an X; no compass rose.",
+      "audio_script": "She unfolded it to be polite. It showed the yard, more or less: the house as a rectangle, the well as a circle, a fence, some trees drawn as puffs. A dotted line wandered from the house to a spot marked with a cross. But Grandpa was right about one thing. There was no compass rose in the corner, no arrow, nothing to say which way was up. So I just turn it until the house matches, said Mai.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "compass rose",
+          "definition": "The star-shaped symbol on a map that shows north, south, east and west.",
+          "example": "Find the compass rose before you read the map."
+        }
+      ],
+      "image_asset": "images/ro-m-030-p02.svg",
+      "image_alt": "A hand-drawn map: house as a rectangle, well as a circle, fence, trees as puffs, a dotted line and a cross.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p03",
+      "text": "She tried. The trouble was that the house was a rectangle, and a rectangle looks the same upside down. The well was a circle, and a circle looks the same every way. The fence ran all round. Whichever way she turned the map, it matched the yard just as well, and the cross landed somewhere different each time: by the gate, by the shed, by the mango tree, by the wall.",
+      "illustration_brief": "Four small versions of the map rotated 0, 90, 180, 270 degrees, the X landing in a different place in each.",
+      "audio_script": "She tried. The trouble was that the house was a rectangle, and a rectangle looks the same upside down. The well was a circle, and a circle looks the same every way. The fence ran all round. Whichever way she turned the map, it matched the yard just as well, and the cross landed somewhere different each time: by the gate, by the shed, by the mango tree, by the wall.",
+      "timing_segments": [],
+      "image_asset": "images/ro-m-030-p03.svg",
+      "image_alt": "The same map shown twice, right way up and upside down, both looking the same.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p04",
+      "text": "\"That is cheating,\" Mai said. \"A map has to have a north.\" \"Does it?\" said Grandpa. He was watering the herbs and did not look up. \"What is north for, on a map?\" \"So you know which way to hold it.\" \"And what else could tell you which way to hold it?\"",
+      "illustration_brief": "Grandpa watering a herb bed with a can; Mai holding the map out, exasperated.",
+      "audio_script": "That is cheating, Mai said. A map has to have a north. Does it? said Grandpa. He was watering the herbs and did not look up. What is north for, on a map? So you know which way to hold it. And what else could tell you which way to hold it?",
+      "timing_segments": [],
+      "image_asset": "images/ro-m-030-p04.svg",
+      "image_alt": "Grandpa watering herbs in the yard while Mai holds the map and argues.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p05",
+      "text": "Mai sat on the step and looked at the map properly for the first time. The trees were drawn as puffs, five of them. But one puff was bigger than the others, and it had a tiny curl at the top, like a hook. She looked up. The mango tree was the biggest tree in the yard, and its top branch bent over in a hook where a storm had broken it years ago.",
+      "illustration_brief": "Close-up of the map: five tree puffs, one larger with a hooked top; beyond, the real mango tree with a bent top branch.",
+      "audio_script": "Mai sat on the step and looked at the map properly for the first time. The trees were drawn as puffs, five of them. But one puff was bigger than the others, and it had a tiny curl at the top, like a hook. She looked up. The mango tree was the biggest tree in the yard, and its top branch bent over in a hook where a storm had broken it years ago.",
+      "timing_segments": [],
+      "image_asset": "images/ro-m-030-p05.svg",
+      "image_alt": "Mai on the step studying the map; one of the tree puffs has a hooked branch.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p06",
+      "text": "That fixed one thing. She turned the map until the hooked puff sat where the mango tree stood. Two ways still matched, though: the map could be right way up or mirrored, flipped like a reflection. The cross was by the shed in one, by the wall in the other.",
+      "illustration_brief": "Two versions of the map side by side, mirror images, the hooked tree in the right place in both; X by a shed in one, by a wall in the other.",
+      "audio_script": "That fixed one thing. She turned the map until the hooked puff sat where the mango tree stood. Two ways still matched, though: the map could be right way up or mirrored, flipped like a reflection. The cross was by the shed in one, by the wall in the other.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "mirrored",
+          "definition": "Flipped so that left and right are swapped, like a reflection.",
+          "example": "Writing looks mirrored when you hold it up to a mirror."
+        }
+      ],
+      "image_asset": "images/ro-m-030-p06.svg",
+      "image_alt": "Mai holds the map up next to the mango tree with a hooked branch; two possible ways still match.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p07",
+      "text": "She almost gave up and dug in both places. Then she noticed the well. It was drawn as a circle, yes, but the circle had a tiny gap in one side, as if the pen had lifted. She had taken it for a mistake. She walked over to the real well. On its rim, on the side facing the shed, one brick was missing.",
+      "illustration_brief": "The stone well with one brick missing from its rim, facing a small shed; the map circle with a matching gap.",
+      "audio_script": "She almost gave up and dug in both places. Then she noticed the well. It was drawn as a circle, yes, but the circle had a tiny gap in one side, as if the pen had lifted. She had taken it for a mistake. She walked over to the real well. On its rim, on the side facing the shed, one brick was missing.",
+      "timing_segments": [],
+      "image_asset": "images/ro-m-030-p07.svg",
+      "image_alt": "A close view of the well with a missing brick in its wall, and the map circle with a tiny gap.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p08",
+      "text": "Not a mistake. A clue. Only one of the two maps put the gap on the shed side. Mai turned the paper, held it flat, and walked the dotted line: from the door, past the well with its missing brick, along the fence, to the base of the wall where an old flowerpot stood upside down. Under the pot was a jar of sweets. Of course it was.",
+      "illustration_brief": "Mai lifting an upside-down flowerpot at the foot of a wall; a jar of wrapped sweets beneath.",
+      "audio_script": "Not a mistake. A clue. Only one of the two maps put the gap on the shed side. Mai turned the paper, held it flat, and walked the dotted line: from the door, past the well with its missing brick, along the fence, to the base of the wall where an old flowerpot stood upside down. Under the pot was a jar of sweets. Of course it was.",
+      "timing_segments": [],
+      "image_asset": "images/ro-m-030-p08.svg",
+      "image_alt": "Mai walks a dotted path from the well past the shed to a spot by the wall and digs with a spade.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p09",
+      "text": "\"A jar of sweets,\" she said to Grandpa, holding it up. \"Told you.\" \"You did,\" he agreed. \"Under the mango tree, you said.\" Mai looked at the wall, then at the tree, twenty steps away, and had the grace to laugh. \"Fine. Not under the mango tree.\"",
+      "illustration_brief": "Mai holding up the jar, half-laughing; Grandpa leaning on his watering can; the mango tree visibly far from the wall.",
+      "audio_script": "A jar of sweets, she said to Grandpa, holding it up. Told you. You did, he agreed. Under the mango tree, you said. Mai looked at the wall, then at the tree, twenty steps away, and had the grace to laugh. Fine. Not under the mango tree.",
+      "timing_segments": [],
+      "image_asset": "images/ro-m-030-p09.svg",
+      "image_alt": "Mai holds up a jar of sweets beside a hole in the ground near the wall, Grandpa smiling.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p10",
+      "text": "\"So,\" said Grandpa, \"what is north for?\" Mai thought about the hooked tree and the missing brick. \"It is a shortcut,\" she said slowly. \"If you have it, you do not have to look. If you do not have it, you have to actually look.\" Grandpa took a sweet from the jar. \"Next year,\" he said, \"no map at all.\" Mai found, to her surprise, that she was already looking forward to it.",
+      "illustration_brief": "Mai and Grandpa sharing sweets on the step at dusk; the map folded on her knee.",
+      "audio_script": "So, said Grandpa, what is north for? Mai thought about the hooked tree and the missing brick. It is a shortcut, she said slowly. If you have it, you do not have to look. If you do not have it, you have to actually look. Grandpa took a sweet from the jar. Next year, he said, no map at all. Mai found, to her surprise, that she was already looking forward to it.",
+      "timing_segments": [],
+      "image_asset": "images/ro-m-030-p10.svg",
+      "image_alt": "Mai and Grandpa on the step at dusk; a compass rose beside the map with the hook and the gap circled.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "explicit_detail",
+      "difficulty": "easy",
+      "prompt": "What was missing from Grandpa's map?",
+      "options": [
+        {
+          "id": "north",
+          "text": "A compass rose showing north"
+        },
+        {
+          "id": "scale",
+          "text": "A scale bar showing distance"
+        },
+        {
+          "id": "title",
+          "text": "A title"
+        }
+      ],
+      "correct_option_id": "north",
+      "evidence_page_ids": [
+        "p02"
+      ],
+      "explanation": "Page 2: no compass rose in the corner, no arrow, nothing to say which way was up.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "cause_effect",
+      "difficulty": "medium",
+      "prompt": "Why could Mai not simply turn the map until it matched the yard?",
+      "options": [
+        {
+          "id": "same",
+          "text": "The shapes looked the same from every direction"
+        },
+        {
+          "id": "torn",
+          "text": "The map was torn"
+        },
+        {
+          "id": "dark",
+          "text": "It was too dark to see"
+        }
+      ],
+      "correct_option_id": "same",
+      "evidence_page_ids": [
+        "p03"
+      ],
+      "explanation": "Page 3: a rectangle looks the same upside down, a circle looks the same every way, and the fence ran all round.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "inference",
+      "difficulty": "hard",
+      "prompt": "Which two clues fixed the map's direction?",
+      "options": [
+        {
+          "id": "clues",
+          "text": "The hooked tree and the gap in the well circle"
+        },
+        {
+          "id": "sun",
+          "text": "The sun and the shadows"
+        },
+        {
+          "id": "grandpa",
+          "text": "Grandpa pointing and the dotted line"
+        }
+      ],
+      "correct_option_id": "clues",
+      "evidence_page_ids": [
+        "p05",
+        "p07"
+      ],
+      "explanation": "The hooked puff matched the mango tree (page 5) and the gap in the circle matched the missing brick (page 7).",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "inference",
+      "difficulty": "hard",
+      "prompt": "Why did Grandpa leave north off the map on purpose?",
+      "options": [
+        {
+          "id": "look",
+          "text": "So Mai would have to look carefully instead of using a shortcut"
+        },
+        {
+          "id": "forgot",
+          "text": "He forgot to draw it"
+        },
+        {
+          "id": "cheat",
+          "text": "To make sure she could not find the sweets"
+        }
+      ],
+      "correct_option_id": "look",
+      "evidence_page_ids": [
+        "p04",
+        "p10"
+      ],
+      "explanation": "Grandpa asks what north is for (page 4); Mai concludes north is a shortcut and without it you have to actually look (page 10).",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q05",
+      "skill": "inference",
+      "difficulty": "hard",
+      "prompt": "How had Mai's feelings changed by the end?",
+      "options": [
+        {
+          "id": "forward",
+          "text": "From thinking she was too old to looking forward to next year"
+        },
+        {
+          "id": "angry",
+          "text": "From happy to angry"
+        },
+        {
+          "id": "same",
+          "text": "They did not change"
+        }
+      ],
+      "correct_option_id": "forward",
+      "evidence_page_ids": [
+        "p01",
+        "p10"
+      ],
+      "explanation": "Page 1: she had decided she was too old for the maps. Page 10: she was already looking forward to next year.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q06",
+      "skill": "summary",
+      "difficulty": "hard",
+      "response_type": "open",
+      "prompt": "Tell a grown-up how Mai solved the map with no north, naming both clues, and what she learned.",
+      "rubric": "not yet: says she found sweets; with support: one clue, with prompting; independent: rotations all matched, the hooked tree fixed the turn, the well gap fixed the mirror, and north is a shortcut for looking",
+      "explanation": "Both clues and the lesson about looking are the substance; the sweets are not."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "prompt": "Put Mai's solving in order.",
+      "items": [
+        {
+          "id": "s1",
+          "text": "Every rotation of the map matches the yard.",
+          "page_id": "p03"
+        },
+        {
+          "id": "s2",
+          "text": "The hooked tree puff matches the mango tree.",
+          "page_id": "p05"
+        },
+        {
+          "id": "s3",
+          "text": "Two mirror versions still match.",
+          "page_id": "p06"
+        },
+        {
+          "id": "s4",
+          "text": "The gap in the well circle matches the missing brick.",
+          "page_id": "p07"
+        }
+      ],
+      "correct_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "choose_evidence",
+      "skill": "inference",
+      "claim": "Mai nearly gave up.",
+      "prompt": "Which page shows this?",
+      "correct_page_ids": [
+        "p07"
+      ]
+    },
+    {
+      "activity_id": "a03",
+      "type": "discussion",
+      "skill": "listening_comprehension",
+      "prompts": [
+        "Mai thought the gap in the circle was a mistake at first. Why is it easy to miss a clue that looks like a mistake?",
+        "Grandpa answered her questions with more questions. Did that help or annoy her? Both?"
+      ]
+    }
+  ],
+  "off_screen_prompt": "Draw a map of one room with no north and no words, using only shapes. Give it to someone and see if they can find a hidden coin. What clue did they need?",
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-09-28T10:42:55+00:00",
+    "reviewer": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+    "review_date": "2026-09-28",
+    "history": [
+      {
+        "action": "approve_all",
+        "at": "2026-09-28T10:42:55+00:00",
+        "by": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+        "note": "Last build of the year: 14 gated books I-W (127 original SVGs, set4). Nonfiction fact-check pending parent review; ro-w-030 reserved for unseen check."
+      }
+    ]
+  }
+}

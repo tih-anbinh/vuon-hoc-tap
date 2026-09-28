@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">The numbers settle into a range</title>
+  <desc id="d">A graph in the notebook: dots mostly between eight and fourteen with the odd high and low day.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="0" width="400" height="300" fill="#F3EBDD"/><rect x="0" y="210" width="400" height="90" fill="#C8A27A"/>
+  <g transform="translate(200 150) rotate(0)"><rect x="-60" y="-40" width="120" height="80" rx="3" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M-48 28 L-48 -28 M-48 28 L48 28" stroke="#2B2B2B" stroke-width="3"/><path d="M-40.0 8.0 L-31.11111111111111 3.0 L-22.22222222222222 10.5 L-13.333333333333332 0.49999999999999645 L-4.444444444444443 23.0 L4.444444444444443 5.5 L13.333333333333336 3.0 L22.22222222222223 -17.0 L31.111111111111114 8.0 L40.0 3.0" fill="none" stroke="#5B8DEF" stroke-width="4" stroke-linecap="round"/></g>
+  <g transform="translate(340 250) scale(0.7)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#8B4513"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -30 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#F08A7E" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-42 -30 M24 0 L42 -30" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+</svg>

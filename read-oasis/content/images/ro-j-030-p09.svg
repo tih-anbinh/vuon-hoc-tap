@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">The same rule for stone and ship</title>
+  <desc id="d">A balance scale weighing an object against the water it pushed aside.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="220" width="400" height="80" fill="#BFE3B4"/>
+  <g transform="translate(200 240)"><path d="M0 0 L0 -80" stroke="#2B2B2B" stroke-width="6"/><path d="M-30 0 L30 0" stroke="#2B2B2B" stroke-width="6" stroke-linecap="round"/><g transform="rotate(-8)"><path d="M-90 -80 L90 -80" stroke="#2B2B2B" stroke-width="6" stroke-linecap="round"/><path d="M-90 -80 L-110 -30 L-70 -30 Z M90 -80 L70 -30 L110 -30 Z" fill="#E9C46A" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+  <ellipse cx="110" cy="165" rx="9" ry="6" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M270 150 q20 -10 40 0 l-4 14 l-32 0 Z" fill="#9CCBE8" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(330 70) rotate(0) scale(0.4)"><path d="M-80 0 L-60 40 L60 40 L90 0 Z" fill="#8E9AA3" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="-30" y="-36" width="60" height="36" rx="4" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="-10" y="-60" width="20" height="24" rx="3" fill="#D9534F" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+
+</svg>

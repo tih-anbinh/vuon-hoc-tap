@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Rain runs back to the sea</title>
+  <desc id="d">Rain on a roof running into a stream, a river through fields and into the sea.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <path d="M0 200 L80 90 L150 170 L230 60 L320 180 L400 120 L400 300 L0 300 Z" fill="#9BB39B" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M0 200 q80 -40 160 10 q80 50 240 -20 L400 300 L0 300 Z" fill="#7FB7D9" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(30 160)"><rect x="0" y="0" width="90" height="60" fill="#F5E6D3" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M-10 0 L45.0 -50 L100 0 Z" fill="#7F5539" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="31.0" y="16" width="28" height="44" fill="#A0522D" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g transform="translate(80 60) scale(0.8)"><ellipse cx="0" cy="0" rx="50" ry="22" fill="#8E9AA3" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="-20" cy="-14" r="22" fill="#8E9AA3" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="-18" r="26" fill="#8E9AA3" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="0" cy="2" rx="50" ry="20" fill="#8E9AA3"/></g>
+  <path d="M40.0 95 l-4 18" stroke="#6C8EBF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M56.0 95 l-4 18" stroke="#6C8EBF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M72.0 95 l-4 18" stroke="#6C8EBF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M88.0 95 l-4 18" stroke="#6C8EBF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M104.0 95 l-4 18" stroke="#6C8EBF" stroke-width="4" stroke-linecap="round"/>
+  <rect x="0" y="250" width="400" height="50" fill="#5B8DEF"/><path d="M0 270 q25 -10 50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-opacity=".7"/>
+
+</svg>

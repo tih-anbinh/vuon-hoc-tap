@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">A lantern is not a box</title>
+  <desc id="d">Grandpa and Tim side by side; a closed box next to a lantern with air arrows flowing through.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="0" width="400" height="300" fill="#F3EBDD"/><rect x="0" y="210" width="400" height="90" fill="#C8A27A"/>
+  <g transform="translate(90 190) scale(1.2)"><rect x="-40" y="-30" width="80" height="60" rx="4" fill="#C8A27A" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M-40 -30 L0 -46 L40 -30" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g transform="translate(290 140) scale(0.9)"><polygon points="0.0 -50.0 11.0 -19.1 43.3 -25.0 22.0 0.0 43.3 25.0 11.0 19.1 0.0 50.0 -11.0 19.1 -43.3 25.0 -22.0 0.0 -43.3 -25.0 -11.0 -19.1" fill="#FFD166" fill-opacity=".95" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="0" cy="8" r="12" fill="#F7D154" fill-opacity=".9"/><circle cx="0" cy="8" r="24" fill="#F7D154" fill-opacity=".35"/><circle cx="-22" cy="38" r="2.5" fill="#2B2B2B"/><circle cx="-11" cy="38" r="2.5" fill="#2B2B2B"/><circle cx="0" cy="38" r="2.5" fill="#2B2B2B"/><circle cx="11" cy="38" r="2.5" fill="#2B2B2B"/><circle cx="22" cy="38" r="2.5" fill="#2B2B2B"/><circle cx="0" cy="-42" r="4" fill="#2B2B2B"/><path d="M0 -50 L0 -80" stroke="#A0522D" stroke-width="4"/></g>
+  <path d="M290 230 L290 195" stroke="#5B8DEF" stroke-width="4" stroke-linecap="round"/><path d="M290 195 L295.8 205.5 M290 195 L284.2 205.5" stroke="#5B8DEF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M290 95 L290 60" stroke="#F2A541" stroke-width="4" stroke-linecap="round"/><path d="M290 60 L295.8 70.5 M290 60 L284.2 70.5" stroke="#F2A541" stroke-width="4" stroke-linecap="round"/>
+  <g transform="translate(200 250) scale(0.7)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#DDD"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -30 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#6C757D" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-36 30 M24 0 L36 30" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(150 255) scale(0.6)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#2B2B2B"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -30 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#D9534F" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-40 26 M24 0 L40 26" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-28 -56 q28 -26 56 0 L56 -56 L28 -50" fill="#D9534F" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+</svg>

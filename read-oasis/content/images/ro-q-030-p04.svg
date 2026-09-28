@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">The pile grows</title>
+  <desc id="d">A drawer stuffed with letters, month after month, Nia looking worried.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="0" width="400" height="300" fill="#F3EBDD"/><rect x="0" y="180" width="400" height="120" fill="#A87C5A"/><rect x="0" y="170" width="400" height="14" fill="#C68B59" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(200 110)"><rect x="0" y="0" width="160" height="110" fill="#A87C5A" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="10" y="50" width="140" height="40" fill="#C68B59" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="80" cy="70" r="5" fill="#2B2B2B"/><rect x="20" y="32" width="26" height="20" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="42" y="24" width="26" height="20" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="64" y="32" width="26" height="20" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="86" y="24" width="26" height="20" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="108" y="32" width="26" height="20" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="130" y="24" width="26" height="20" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g transform="translate(80 240) scale(1.0)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#2B2B2B"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -26 q8 -8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#9B59B6" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-40 26 M24 0 L40 26" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <circle cx="300" cy="60" r="4" fill="#2B2B2B"/>
+  <circle cx="314" cy="60" r="4" fill="#2B2B2B"/>
+  <circle cx="328" cy="60" r="4" fill="#2B2B2B"/>
+
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">One page about nothing much</title>
+  <desc id="d">Nia writing a short letter at her desk in the evening and sealing an envelope.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="0" width="400" height="300" fill="#E8DFCC"/><rect x="0" y="180" width="400" height="120" fill="#A87C5A"/><rect x="0" y="170" width="400" height="14" fill="#C68B59" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(130 240) scale(1.0)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#2B2B2B"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -30 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#9B59B6" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-36 30 M24 0 L36 30" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(200 140) rotate(0) scale(1.0)"><rect x="-30" y="-40" width="60" height="80" rx="2" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M-20 -28 l40 0" stroke="#8E9AA3" stroke-width="3" stroke-linecap="round"/><path d="M-20 -17 l32 0" stroke="#8E9AA3" stroke-width="3" stroke-linecap="round"/><path d="M-20 -6 l24 0" stroke="#8E9AA3" stroke-width="3" stroke-linecap="round"/></g>
+  <g transform="translate(300 150) rotate(0) scale(1.0)"><rect x="-40" y="-26" width="80" height="52" rx="3" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M-40 -26 L0 4 L40 -26" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g transform="translate(340 250) scale(0.5)">
+    <path d="M-30 26 q0 -34 30 -34 q30 0 30 34 Z" fill="#F5E6D3" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="26" cy="-10" r="16" fill="#F5E6D3" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M14 -20 q-10 10 -6 22" fill="#A0522D" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="30" cy="-12" r="3" fill="#2B2B2B"/><circle cx="40" cy="-6" r="4" fill="#2B2B2B"/>
+    <circle cx="-10" cy="2" r="6" fill="#A0522D"/><circle cx="8" cy="12" r="5" fill="#A0522D"/>
+    <path d="M-34 4 q-16 -10 -10 -26" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    
+  </g>
+  <circle cx="360" cy="40" r="16" fill="#3C4A66" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M360 24 a16 16 0 0 1 0 32 a9.6 16 0 0 0 0 -32 Z" fill="#F4F1DE"/>
+
+</svg>

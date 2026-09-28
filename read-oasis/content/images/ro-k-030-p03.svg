@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">The big candle scorches the paper</title>
+  <desc id="d">A large candle burning hot inside the lantern; the top point turning brown with a curl of smoke.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="0" width="400" height="300" fill="#F3EBDD"/><rect x="0" y="210" width="400" height="90" fill="#C8A27A"/>
+  <rect x="100" y="190" width="200" height="12" rx="4" fill="#A0522D" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M116 202 L116 260 M284 202 L284 260" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(200 130) scale(0.9)"><polygon points="0.0 -50.0 11.0 -19.1 43.3 -25.0 22.0 0.0 43.3 25.0 11.0 19.1 0.0 50.0 -11.0 19.1 -43.3 25.0 -22.0 0.0 -43.3 -25.0 -11.0 -19.1" fill="#FFD166" fill-opacity=".95" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="0" cy="8" r="12" fill="#F7D154" fill-opacity=".9"/><circle cx="0" cy="8" r="24" fill="#F7D154" fill-opacity=".35"/><path d="M-6 -46 q6 -8 12 0 q-6 6 -12 0 Z" fill="#4A3A2A"/><path d="M0 -52 q6 -12 -2 -22" fill="none" stroke="#8E9AA3" stroke-width="3"/><path d="M0 -50 L0 -80" stroke="#A0522D" stroke-width="4"/></g>
+  <g transform="translate(200 165) scale(0.8)"><rect x="-7.0" y="-30" width="14" height="30" rx="2" fill="#F5E6D3" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 -34 q-7 -12 0 -22 q7 10 0 22 Z" fill="#F2A541" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <path d="M200 76 q-8 -14 2 -26 q-8 -12 4 -24" fill="none" stroke="#8E9AA3" stroke-width="4" stroke-linecap="round"/>
+  <g transform="translate(70 240) scale(0.9)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#2B2B2B"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-5 -30 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#D9534F" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-40 26 M24 0 L40 26" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-28 -56 q28 -26 56 0 L56 -56 L28 -50" fill="#D9534F" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+</svg>

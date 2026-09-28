@@ -4,6 +4,7 @@ Author: Huy Tran
 Company: Cadence Design Systems Vietnam
 Email: huytran@cadence.com
 Created: 2026-09-27
+Revision: 2.0 - warm visual redesign, original application IDs preserved
 Read Oasis - child app (library, reader, activities, quiz). Local-first; no network calls except same-origin content.
 -->
 <html lang="en" data-theme="light">
@@ -17,10 +18,10 @@ Read Oasis - child app (library, reader, activities, quiz). Local-first; no netw
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="assets/app.css">
 </head>
-<body>
+<body class="kid-page">
   <header class="topbar">
     <button id="btnBack" class="quiet" aria-label="Back"><svg class="ic" aria-hidden="true"><use href="#i-back"/></svg><span>Back</span></button>
- P    <h1 id="title" title="Grown-ups: double-tap or hold to open the parent area"><svg class="ic" aria-hidden="true" style="width:1.5em;height:1.5em"><use href="#i-mascot"/></svg><span id="titleText">Read Oasis</span></h1>
+    <h1 id="title" title="Grown-ups: double-tap or hold to open the parent area"><span class="brand-mark" aria-hidden="true"><svg class="ic"><use href="#i-mascot"/></svg></span><span class="brand-type"><span id="titleText">Read Oasis</span><small>Little stories, big discoveries</small></span></h1>
     <span class="stars" id="stars" aria-live="polite"></span>
     <button id="btnHome" class="quiet" aria-label="Library"><svg class="ic" aria-hidden="true"><use href="#i-home"/></svg><span>Library</span></button>
     <button id="btnExit" class="quiet" aria-label="Stop for now"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg><span>Stop</span></button>

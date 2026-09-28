@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Numbered flipper tags</title>
+  <desc id="d">A close view of a turtle flipper with a small numbered tag, and a scientist writing notes.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="150" width="400" height="150" fill="#F1E3C4"/>
+  <g transform="translate(140 200) rotate(0) scale(1.1)"><path d="M-40 10 q-20 -6 -34 8 q14 10 34 4 M40 10 q20 -6 34 8 q-14 10 -34 4 M-30 30 q-10 12 -20 18 q16 4 30 -8 M30 30 q10 12 20 18 q-16 4 -30 -8" fill="#3E7C3A" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="0" cy="16" rx="52" ry="34" fill="#4F7F4F" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M-30 6 L-10 -6 L14 -6 L32 8 M-10 -6 L-16 30 M14 -6 L18 30 M-16 30 L18 30" fill="none" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="0" cy="-22" r="14" fill="#3E7C3A" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="-5" cy="-25" r="2.5" fill="#2B2B2B"/><circle cx="5" cy="-25" r="2.5" fill="#2B2B2B"/></g>
+  <rect x="70" y="194" width="22" height="14" rx="3" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M75 198 l4 0 M83 198 l4 0 M75 204 l12 0" stroke="#2B2B2B" stroke-width="2"/>
+  <g transform="translate(96 188)"><circle cx="0" cy="0" r="22" fill="#D6ECF8" fill-opacity=".8" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 16 L40 40" stroke="#2B2B2B" stroke-width="8" stroke-linecap="round"/></g>
+  <g transform="translate(320 220) scale(0.9)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#3B2A20"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -30 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-36 30 M24 0 L36 30" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(320 130) rotate(-6)"><rect x="-60" y="-40" width="120" height="80" rx="3" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M-46 -26 l60 0" stroke="#8E9AA3" stroke-width="3" stroke-linecap="round"/><path d="M-46 -14 l72 0" stroke="#8E9AA3" stroke-width="3" stroke-linecap="round"/><path d="M-46 -2 l84 0" stroke="#8E9AA3" stroke-width="3" stroke-linecap="round"/><path d="M-46 10 l60 0" stroke="#8E9AA3" stroke-width="3" stroke-linecap="round"/><path d="M-46 22 l72 0" stroke="#8E9AA3" stroke-width="3" stroke-linecap="round"/><path d="M-46 34 l84 0" stroke="#8E9AA3" stroke-width="3" stroke-linecap="round"/></g>
+
+</svg>

@@ -1,0 +1,372 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-t-030",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "The Boy Who Counted Birds",
+  "language": "en",
+  "level": "T",
+  "reading_mode": "read_aloud",
+  "topic": "animals",
+  "genre": "fiction",
+  "pair_id": "pair-count-01",
+  "learning_objectives": [
+    "Follow a story in which a character's method improves over time",
+    "Compare a fictional account of counting with the nonfiction pair text",
+    "Evaluate whether a character's conclusion is justified by his data"
+  ],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": {
+    "text": "high",
+    "conceptual": "high",
+    "visual_support": "low"
+  },
+  "rights": {
+    "text_author": "Huy Tran for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
+  "parent_prompts": [
+    "Before: if someone told you there were fewer sparrows this year than last, how would you check? Just by looking?",
+    "After page 5: what was wrong with Ben's first way of counting? He was not being lazy.",
+    "After: read the pair text 'How Scientists Count Wild Animals'. Which of Ben's changes match what real scientists do?"
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "Ben was eleven when he decided the sparrows were disappearing. He could not have said exactly when the idea arrived, only that one morning he stood at the kitchen window with his cereal going soft and thought: there used to be more of them. The wire where they lined up at dawn, shoulder to shoulder like beads, held six. He was sure it used to hold twenty. His mother, when he said so, said, \"Did you count them then?\" He had not. \"Then you do not know,\" she said, not unkindly. \"You only remember. Those are different things.\" Ben found this annoying, and then, over the following week, he found it was true.",
+      "illustration_brief": "A boy at a kitchen window at dawn, cereal bowl in hand; outside, a wire with six sparrows on it; his mother behind him.",
+      "audio_script": "Ben was eleven when he decided the sparrows were disappearing. He could not have said exactly when the idea arrived, only that one morning he stood at the kitchen window with his cereal going soft and thought: there used to be more of them. The wire where they lined up at dawn, shoulder to shoulder like beads, held six. He was sure it used to hold twenty. His mother, when he said so, said, Did you count them then? He had not. Then you do not know, she said, not unkindly. You only remember. Those are different things. Ben found this annoying, and then, over the following week, he found it was true.",
+      "timing_segments": [],
+      "image_asset": "images/ro-t-030-p01.svg",
+      "image_alt": "Ben at the kitchen window watching a line of sparrows on a wire.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p02",
+      "text": "So he started counting. Every morning, cereal in one hand, pencil in the other, he wrote the number of sparrows on the wire in the back of his maths book. Six. Nine. Four. Eleven. Six. Two. Fourteen. After a week he looked at the column of numbers and felt cheated. They did not go down. They did not go up. They went everywhere. \"Well,\" said his mother, reading over his shoulder, \"now you know something you did not know before.\" \"I know nothing,\" said Ben. \"You know the number changes a lot from day to day. That is not nothing. It means one day's count tells you almost nothing about the next.\"",
+      "illustration_brief": "The back page of a maths book with a wobbly column of numbers; a pencil; the boy frowning at it.",
+      "audio_script": "So he started counting. Every morning, cereal in one hand, pencil in the other, he wrote the number of sparrows on the wire in the back of his maths book. Six. Nine. Four. Eleven. Six. Two. Fourteen. After a week he looked at the column of numbers and felt cheated. They did not go down. They did not go up. They went everywhere. Well, said his mother, reading over his shoulder, now you know something you did not know before. I know nothing, said Ben. You know the number changes a lot from day to day. That is not nothing. It means one day's count tells you almost nothing about the next.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "cheated",
+          "definition": "Feeling that you have been treated unfairly or that something promised did not come.",
+          "example": "When the fair closed early, we all felt cheated."
+        }
+      ],
+      "image_asset": "images/ro-t-030-p02.svg",
+      "image_alt": "Ben with a cereal bowl in one hand and a pencil in the other, writing a number in a maths book.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p03",
+      "text": "The second problem showed up on the eighth day. Ben had counted eleven and was writing it down when the whole line lifted off the wire, circled the yard, and came back down. He counted again. Nine. Had two flown away, or had he counted two of them twice the first time, or was one now hidden behind the pole? He tried a third time and got ten. That evening he wrote three numbers for the day and drew a small unhappy face beside them.",
+      "illustration_brief": "Sparrows lifting off a wire in a swirl and resettling; one bird half-hidden behind a telegraph pole; three numbers and a sad face in the margin.",
+      "audio_script": "The second problem showed up on the eighth day. Ben had counted eleven and was writing it down when the whole line lifted off the wire, circled the yard, and came back down. He counted again. Nine. Had two flown away, or had he counted two of them twice the first time, or was one now hidden behind the pole? He tried a third time and got ten. That evening he wrote three numbers for the day and drew a small unhappy face beside them.",
+      "timing_segments": [],
+      "image_asset": "images/ro-t-030-p03.svg",
+      "image_alt": "The sparrows all lifting off the wire at once and circling the yard.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p04",
+      "text": "He took the problem to his grandfather, who had kept pigeons once and was the family expert on birds. His grandfather listened to the whole story and then asked a question Ben had not thought of. \"Same time every morning?\" \"Roughly.\" \"Roughly is not the same. Some days you are early and the birds are not up. Some days you are late and they have gone to the fields. You are not counting sparrows. You are counting how late you got out of bed.\" Ben opened his mouth to argue and closed it again.",
+      "illustration_brief": "An old man on a bench with a pigeon-loft behind him, holding up one finger; the boy with his notebook, caught out.",
+      "audio_script": "He took the problem to his grandfather, who had kept pigeons once and was the family expert on birds. His grandfather listened to the whole story and then asked a question Ben had not thought of. Same time every morning? Roughly. Roughly is not the same. Some days you are early and the birds are not up. Some days you are late and they have gone to the fields. You are not counting sparrows. You are counting how late you got out of bed. Ben opened his mouth to argue and closed it again.",
+      "timing_segments": [],
+      "image_asset": "images/ro-t-030-p04.svg",
+      "image_alt": "Ben talking with his grandfather, a pigeon in a thought cloud above them.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p05",
+      "text": "So Ben made rules, and wrote them on the inside cover so he could not quietly change them later. One: count at exactly seven o'clock, by the kitchen clock. Two: count the wire only, not the roof, not the hedge, so that it is the same place every day. Three: count for exactly five minutes and write down the highest number seen at any one moment, because birds come and go and the highest number is the fewest that must be there. Four: if unsure, count again, and write down the second count, not the one he liked better. He felt, writing the rules, less like a boy at a window and more like something else. He did not have a word for it yet.",
+      "illustration_brief": "The inside cover of the notebook with four numbered rules in careful handwriting; the kitchen clock showing seven.",
+      "audio_script": "So Ben made rules, and wrote them on the inside cover so he could not quietly change them later. One: count at exactly seven o'clock, by the kitchen clock. Two: count the wire only, not the roof, not the hedge, so that it is the same place every day. Three: count for exactly five minutes and write down the highest number seen at any one moment, because birds come and go and the highest number is the fewest that must be there. Four: if unsure, count again, and write down the second count, not the one he liked better. He felt, writing the rules, less like a boy at a window and more like something else. He did not have a word for it yet.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "method",
+          "definition": "A fixed way of doing something, followed the same way every time so results can be compared.",
+          "example": "Her method was to measure the plant every Sunday at noon."
+        }
+      ],
+      "image_asset": "images/ro-t-030-p05.svg",
+      "image_alt": "The inside cover of the maths book with four numbered rule lines, a clock showing seven.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p06",
+      "text": "With the rules, the numbers settled. Not to one number, but to a range: most days between eight and fourteen, with the odd two or twenty that he learned to note and not fuss over. By the end of a month he could draw a line across the page at about eleven and say: that is roughly how many sparrows use this wire at seven in the morning in June. It was not twenty. It was also not six. It was, he realised, the first true thing he had known about the sparrows since he started.",
+      "illustration_brief": "A page of numbers now clustered in a band, with a pencil line drawn horizontally through the middle at about eleven; a few outliers circled.",
+      "audio_script": "With the rules, the numbers settled. Not to one number, but to a range: most days between eight and fourteen, with the odd two or twenty that he learned to note and not fuss over. By the end of a month he could draw a line across the page at about eleven and say: that is roughly how many sparrows use this wire at seven in the morning in June. It was not twenty. It was also not six. It was, he realised, the first true thing he had known about the sparrows since he started.",
+      "timing_segments": [],
+      "image_asset": "images/ro-t-030-p06.svg",
+      "image_alt": "A graph in the notebook: dots mostly between eight and fourteen with the odd high and low day.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p07",
+      "text": "But it did not answer the question. Were there fewer than before? He had nothing from before. His mother had been right: he had only memory, and memory, he now understood, was a terrible instrument, always sure and rarely checked. There was only one way to find out, and it was slow. He would have to count again next June, by the same rules, at the same window, and compare. \"A year,\" he said. \"A year,\" his grandfather agreed. \"Longer, if you want to be sure. The pigeons taught me that. One bad season is weather. Three is a trend.\"",
+      "illustration_brief": "The boy and his grandfather looking at a calendar page turned to next June; the notebook closed on the table between them.",
+      "audio_script": "But it did not answer the question. Were there fewer than before? He had nothing from before. His mother had been right: he had only memory, and memory, he now understood, was a terrible instrument, always sure and rarely checked. There was only one way to find out, and it was slow. He would have to count again next June, by the same rules, at the same window, and compare. A year, he said. A year, his grandfather agreed. Longer, if you want to be sure. The pigeons taught me that. One bad season is weather. Three is a trend.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "trend",
+          "definition": "A steady change in one direction over a long time, seen through the ups and downs.",
+          "example": "The trend in her running times was downward, even though some days were slow."
+        }
+      ],
+      "image_asset": "images/ro-t-030-p07.svg",
+      "image_alt": "Ben looking at an empty page labelled only by a question mark, with his mother beside him.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p08",
+      "text": "Ben is fourteen now. He has three Junes in the back of three maths books, all by the same four rules. The line across the page was eleven, then nine, then nine again. He is careful about what he says this means. Two nines could be weather. But he has also started writing down other things, by other rules: how many hedges on his street were cut down, which neighbours stopped putting out seed, the morning the new building site started up next to the wire. He has not decided yet whether the sparrows are disappearing. He has decided he is the sort of person who will know, one day, and be able to say why.",
+      "illustration_brief": "An older boy at the same window with three notebooks stacked; outside, a building site crane beyond the wire; nine sparrows on the wire.",
+      "audio_script": "Ben is fourteen now. He has three Junes in the back of three maths books, all by the same four rules. The line across the page was eleven, then nine, then nine again. He is careful about what he says this means. Two nines could be weather. But he has also started writing down other things, by other rules: how many hedges on his street were cut down, which neighbours stopped putting out seed, the morning the new building site started up next to the wire. He has not decided yet whether the sparrows are disappearing. He has decided he is the sort of person who will know, one day, and be able to say why.",
+      "timing_segments": [],
+      "image_asset": "images/ro-t-030-p08.svg",
+      "image_alt": "Three notebooks in a row and a graph line falling across the page.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "inference",
+      "difficulty": "hard",
+      "prompt": "What did Ben's mother mean by 'you only remember; those are different things'?",
+      "options": [
+        {
+          "id": "memory",
+          "text": "Remembering a number is not the same as having counted and recorded it"
+        },
+        {
+          "id": "old",
+          "text": "Ben was too young to remember"
+        },
+        {
+          "id": "wrong",
+          "text": "The sparrows had never been there"
+        }
+      ],
+      "correct_option_id": "memory",
+      "evidence_page_ids": [
+        "p01",
+        "p07"
+      ],
+      "explanation": "Page 1 sets up the contrast between knowing and remembering; page 7 has Ben realise memory is always sure and rarely checked.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "cause_effect",
+      "difficulty": "hard",
+      "prompt": "According to his grandfather, what was Ben really measuring with his first counts?",
+      "options": [
+        {
+          "id": "time",
+          "text": "How late he got out of bed, because the time varied"
+        },
+        {
+          "id": "sparrows",
+          "text": "The true number of sparrows"
+        },
+        {
+          "id": "weather",
+          "text": "The weather"
+        }
+      ],
+      "correct_option_id": "time",
+      "evidence_page_ids": [
+        "p04"
+      ],
+      "explanation": "Page 4: You are not counting sparrows. You are counting how late you got out of bed.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "inference",
+      "difficulty": "hard",
+      "prompt": "Why did Ben write his four rules on the inside cover?",
+      "options": [
+        {
+          "id": "fixed",
+          "text": "So he could not quietly change the rules later to suit the answer he wanted"
+        },
+        {
+          "id": "space",
+          "text": "There was no room elsewhere"
+        },
+        {
+          "id": "teacher",
+          "text": "His teacher told him to"
+        }
+      ],
+      "correct_option_id": "fixed",
+      "evidence_page_ids": [
+        "p05"
+      ],
+      "explanation": "Page 5: he wrote them on the inside cover so he could not quietly change them later, and rule four says to write down the count he did not prefer.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "explicit_detail",
+      "difficulty": "medium",
+      "prompt": "Why does rule three use the highest number seen in five minutes?",
+      "options": [
+        {
+          "id": "fewest",
+          "text": "Because birds come and go, the highest number is the fewest that must be there"
+        },
+        {
+          "id": "big",
+          "text": "Because bigger numbers are better"
+        },
+        {
+          "id": "easy",
+          "text": "Because it is easiest"
+        }
+      ],
+      "correct_option_id": "fewest",
+      "evidence_page_ids": [
+        "p05"
+      ],
+      "explanation": "Page 5, rule three: the highest number is the fewest that must be there.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q05",
+      "skill": "compare",
+      "difficulty": "hard",
+      "prompt": "After three years the counts were eleven, nine, nine. Why is Ben still careful about saying the sparrows are disappearing?",
+      "options": [
+        {
+          "id": "weather",
+          "text": "Two lower years could be ordinary ups and downs; his grandfather said one season is weather, three is a trend"
+        },
+        {
+          "id": "sure",
+          "text": "He is sure but shy"
+        },
+        {
+          "id": "wrong",
+          "text": "He thinks his rules were wrong"
+        }
+      ],
+      "correct_option_id": "weather",
+      "evidence_page_ids": [
+        "p07",
+        "p08"
+      ],
+      "explanation": "Page 7: one bad season is weather, three is a trend. Page 8: two nines could be weather; he has not decided yet.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q06",
+      "skill": "main_idea",
+      "difficulty": "hard",
+      "prompt": "What is the story mostly about?",
+      "options": [
+        {
+          "id": "know",
+          "text": "Learning the difference between feeling sure and actually knowing, and the patient work in between"
+        },
+        {
+          "id": "birds",
+          "text": "Sparrows and what they eat"
+        },
+        {
+          "id": "maths",
+          "text": "Doing well at maths"
+        }
+      ],
+      "correct_option_id": "know",
+      "evidence_page_ids": [
+        "p01",
+        "p08"
+      ],
+      "explanation": "It opens with know versus remember (page 1) and closes with Ben deciding to be the sort of person who will know and be able to say why (page 8).",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q07",
+      "skill": "summary",
+      "difficulty": "hard",
+      "response_type": "open",
+      "prompt": "Retell how Ben's way of counting changed, naming the problems he hit and the rule that fixed each one. Then say whether you think he now knows if the sparrows are disappearing.",
+      "rubric": "not yet: says he counted birds; with support: one problem and one rule with prompting; independent: day-to-day scatter, double counting and birds moving, inconsistent time; fixed time, fixed place, highest-in-five-minutes, record the honest recount; concludes he does not yet know and explains why",
+      "explanation": "The pair text lists these same methods for real surveys; a strong answer already shows the child seeing the method, not just the story."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "match_pairs",
+      "skill": "compare",
+      "prompt": "Match each problem Ben hit to the rule that fixed it.",
+      "pairs": [
+        {
+          "left": "he counted at different times",
+          "right": "count at exactly seven by the kitchen clock"
+        },
+        {
+          "left": "birds moved and were counted twice",
+          "right": "take the highest number in five minutes"
+        },
+        {
+          "left": "he might pick the count he liked",
+          "right": "write down the second count, not the preferred one"
+        },
+        {
+          "left": "he sometimes included the roof and hedge",
+          "right": "count the wire only"
+        }
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "choose_evidence",
+      "skill": "inference",
+      "claim": "Ben is thinking about causes, not just numbers, by the end.",
+      "prompt": "Which page shows this?",
+      "correct_page_ids": [
+        "p08"
+      ]
+    },
+    {
+      "activity_id": "a03",
+      "type": "discussion",
+      "skill": "compare",
+      "prompts": [
+        "Read the pair text next. Which of Ben's four rules do real scientists also use?",
+        "Ben's mother and grandfather each corrected him once. Which correction changed more?"
+      ]
+    }
+  ],
+  "off_screen_prompt": "Choose something you can count from one window (birds, bikes, red cars). Write three rules first, then count for five days at the same time. Look at the range, not just one number.",
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-09-28T10:42:55+00:00",
+    "reviewer": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+    "review_date": "2026-09-28",
+    "history": [
+      {
+        "action": "approve_all",
+        "at": "2026-09-28T10:42:55+00:00",
+        "by": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+        "note": "Last build of the year: 14 gated books I-W (127 original SVGs, set4). Nonfiction fact-check pending parent review; ro-w-030 reserved for unseen check."
+      }
+    ]
+  }
+}

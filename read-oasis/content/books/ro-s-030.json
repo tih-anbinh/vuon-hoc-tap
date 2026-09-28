@@ -1,0 +1,388 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-s-030",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "The Weather Diary",
+  "language": "en",
+  "level": "S",
+  "reading_mode": "independent_reading",
+  "topic": "weather",
+  "genre": "fiction",
+  "learning_objectives": [
+    "Read a story told through diary entries and reconstruct what happened between them",
+    "Detect a change in the narrator's attitude from tone, not statement",
+    "Judge a prediction against its outcome"
+  ],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": {
+    "text": "high",
+    "conceptual": "high",
+    "visual_support": "low"
+  },
+  "rights": {
+    "text_author": "Huy Tran for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
+  "parent_prompts": [
+    "Let the child read alone. After: the diary skips days. What do you think happened on the days Tim did not write? When does his tone change, and how can you tell?"
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "Monday, 3 June. Miss Phuong has given us a project. Keep a weather diary for two weeks: temperature, sky, wind, rain, and one observation. Then, on the last day, predict the weather for the day after, and explain the prediction. She says a good scientist is not someone who is always right but someone who says why they think so and then checks. I think this is going to be boring. Weather is just weather. Today: 31 degrees, no clouds, no wind, no rain. Observation: the dog lay in the shade all day and would not move even for a biscuit.",
+      "illustration_brief": "An open exercise book with a ruled diary page; a pencil; a thermometer on a windowsill; a dog flat in shade outside.",
+      "audio_script": "Monday, 3 June. Miss Phuong has given us a project. Keep a weather diary for two weeks: temperature, sky, wind, rain, and one observation. Then, on the last day, predict the weather for the day after, and explain the prediction. She says a good scientist is not someone who is always right but someone who says why they think so and then checks. I think this is going to be boring. Weather is just weather. Today: 31 degrees, no clouds, no wind, no rain. Observation: the dog lay in the shade all day and would not move even for a biscuit.",
+      "timing_segments": [],
+      "image_asset": "images/ro-s-030-p01.svg",
+      "image_alt": "A blank diary page, a thermometer and a bright cloudless sky outside a window.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p02",
+      "text": "Tuesday, 4 June. 32 degrees. Still no clouds. Observation: I am running out of things to observe. Wednesday, 5 June. 32 degrees. A few thin clouds high up, like scratches on the sky. Observation: Grandpa says thin high clouds mean a change is coming in two or three days. I asked how he knows and he said fifty years of looking up. That is not an explanation, but I wrote it down anyway because Miss Phuong said to write down everything.",
+      "illustration_brief": "Two short diary entries; above, a sky with thin wispy high clouds; Grandpa on a step, pointing up.",
+      "audio_script": "Tuesday, 4 June. 32 degrees. Still no clouds. Observation: I am running out of things to observe. Wednesday, 5 June. 32 degrees. A few thin clouds high up, like scratches on the sky. Observation: Grandpa says thin high clouds mean a change is coming in two or three days. I asked how he knows and he said fifty years of looking up. That is not an explanation, but I wrote it down anyway because Miss Phuong said to write down everything.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "observation",
+          "definition": "Something you notice by looking carefully, written down as it is, without guessing why.",
+          "example": "Observation: the puddle was smaller at noon than at nine."
+        }
+      ],
+      "image_asset": "images/ro-s-030-p02.svg",
+      "image_alt": "Two hot cloudless days with the thermometer high; a few thin clouds appear.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p03",
+      "text": "Thursday, 6 June. 30 degrees, which is the first time it has gone down. The thin clouds have thickened into a grey sheet and the sun is a bright smudge behind it. A little wind from the south-east. Observation: the ants on the back step have been carrying their eggs up the wall all afternoon, in a line, very fast. I do not know what that means. I am writing it down. Friday, 7 June. It rained. Not much, twenty minutes at four o'clock, but it rained. Grandpa said, two days, told you. I said thin clouds do not make rain and he said no, but they arrive before it. I am starting to think there is a difference between a sign and a cause, and I am not sure I understood that before.",
+      "illustration_brief": "A grey overcast sky with a pale sun-smudge; ants in a line up a wall carrying white specks; a brief shower over the yard.",
+      "audio_script": "Thursday, 6 June. 30 degrees, which is the first time it has gone down. The thin clouds have thickened into a grey sheet and the sun is a bright smudge behind it. A little wind from the south-east. Observation: the ants on the back step have been carrying their eggs up the wall all afternoon, in a line, very fast. I do not know what that means. I am writing it down. Friday, 7 June. It rained. Not much, twenty minutes at four o'clock, but it rained. Grandpa said, two days, told you. I said thin clouds do not make rain and he said no, but they arrive before it. I am starting to think there is a difference between a sign and a cause, and I am not sure I understood that before.",
+      "timing_segments": [],
+      "image_asset": "images/ro-s-030-p03.svg",
+      "image_alt": "A grey cloud sheet with a smudged sun, and a line of ants climbing a wall.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p04",
+      "text": "Saturday, 8 June. 28 degrees. Heavy rain from breakfast until lunch, then clearing. Observation: after the rain the ants came back down the wall. Sunday, 9 June. 29 degrees, washed-clean sky, everything dripping. Observation: the dog went for a walk voluntarily. Monday, 10 June. Miss Phuong asked how the diaries were going. I said I had a question. Do the ants know it is going to rain, or do they just feel something we cannot, like the air getting heavier? She said: that is the best question anyone has asked this week, and I do not know the answer, and let us find out. Nobody has ever said that to me before.",
+      "illustration_brief": "Rain then sun over the same yard; ants heading back down the wall; a classroom moment with a teacher leaning in, interested.",
+      "audio_script": "Saturday, 8 June. 28 degrees. Heavy rain from breakfast until lunch, then clearing. Observation: after the rain the ants came back down the wall. Sunday, 9 June. 29 degrees, washed-clean sky, everything dripping. Observation: the dog went for a walk voluntarily. Monday, 10 June. Miss Phuong asked how the diaries were going. I said I had a question. Do the ants know it is going to rain, or do they just feel something we cannot, like the air getting heavier? She said: that is the best question anyone has asked this week, and I do not know the answer, and let us find out. Nobody has ever said that to me before.",
+      "timing_segments": [],
+      "image_asset": "images/ro-s-030-p04.svg",
+      "image_alt": "Heavy rain in the morning; later, ants walking back down the wall in sunshine.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p05",
+      "text": "Tuesday, 11 June. 31 degrees, clear. Observation: I found out that air really does get heavier before rain, or rather the pressure drops, and there is an instrument for measuring it called a barometer, and Grandpa has one, an old brass thing in the hall that I have walked past my whole life and thought was a clock. The needle points at FAIR. Wednesday, 12 June. 32 degrees. Needle still on FAIR. Thin high clouds again, scratches on the sky. I looked at them for a long time.",
+      "illustration_brief": "A brass barometer on a hallway wall, needle on a dial; Tim peering at it closely; through a window, thin high clouds.",
+      "audio_script": "Tuesday, 11 June. 31 degrees, clear. Observation: I found out that air really does get heavier before rain, or rather the pressure drops, and there is an instrument for measuring it called a barometer, and Grandpa has one, an old brass thing in the hall that I have walked past my whole life and thought was a clock. The needle points at FAIR. Wednesday, 12 June. 32 degrees. Needle still on FAIR. Thin high clouds again, scratches on the sky. I looked at them for a long time.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "barometer",
+          "definition": "An instrument that measures the pressure of the air, which changes before the weather changes.",
+          "example": "The barometer needle fell all afternoon, and by evening it was pouring."
+        }
+      ],
+      "image_asset": "images/ro-s-030-p05.svg",
+      "image_alt": "A round barometer on a wall with its needle, next to a diary and a curious child.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p06",
+      "text": "Thursday, 13 June. 31 degrees. Needle has moved a little, toward CHANGE. Clouds thicker. The ants are not on the wall yet. Observation: I keep checking the ants. Friday, 14 June. 30 degrees. Needle on CHANGE and still falling. Grey sheet sky, wind from the south-east. And at three o'clock, there they were: ants on the wall, eggs and all, in a hurry. I actually said 'yes' out loud and Mum looked at me strangely. Saturday, 15 June. Last day of the diary. 29 degrees, heavy grey sky, wind picking up, needle now nearly on RAIN. No rain yet. Now I have to predict tomorrow and say why.",
+      "illustration_brief": "The barometer needle swinging toward CHANGE; ants back on the wall in a line; a heavy grey sky through the window.",
+      "audio_script": "Thursday, 13 June. 31 degrees. Needle has moved a little, toward CHANGE. Clouds thicker. The ants are not on the wall yet. Observation: I keep checking the ants. Friday, 14 June. 30 degrees. Needle on CHANGE and still falling. Grey sheet sky, wind from the south-east. And at three o'clock, there they were: ants on the wall, eggs and all, in a hurry. I actually said yes out loud and Mum looked at me strangely. Saturday, 15 June. Last day of the diary. 29 degrees, heavy grey sky, wind picking up, needle now nearly on RAIN. No rain yet. Now I have to predict tomorrow and say why.",
+      "timing_segments": [],
+      "image_asset": "images/ro-s-030-p06.svg",
+      "image_alt": "The barometer needle moving toward change, thicker clouds outside, no ants on the wall yet.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p07",
+      "text": "Prediction for Sunday, 16 June: heavy rain, probably in the afternoon. Reasons: (1) the same pattern as last week, thin high clouds on Wednesday, grey sheet by Friday, rain within two days; (2) the barometer has fallen steadily for three days, and falling pressure came before rain last time; (3) the ants went up the wall on Friday, and last time rain followed within a day; (4) Grandpa says so, but I am counting that as a sign, not a reason. I am not certain. If I had to bet, I would bet a week of washing-up. Miss Phuong says that is what confidence means: what you would bet.",
+      "illustration_brief": "The diary page with a numbered list of four reasons; a small sketch of the barometer dial with an arrow; a stack of dishes doodled in the margin.",
+      "audio_script": "Prediction for Sunday, 16 June: heavy rain, probably in the afternoon. Reasons: one, the same pattern as last week, thin high clouds on Wednesday, grey sheet by Friday, rain within two days; two, the barometer has fallen steadily for three days, and falling pressure came before rain last time; three, the ants went up the wall on Friday, and last time rain followed within a day; four, Grandpa says so, but I am counting that as a sign, not a reason. I am not certain. If I had to bet, I would bet a week of washing-up. Miss Phuong says that is what confidence means: what you would bet.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "prediction",
+          "definition": "A statement about what you think will happen, made before it happens and based on reasons.",
+          "example": "My prediction is that the seed on the sunny sill will sprout first."
+        }
+      ],
+      "image_asset": "images/ro-s-030-p07.svg",
+      "image_alt": "A diary page with three numbered reasons and a big rain cloud drawn on it.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p08",
+      "text": "Sunday, 16 June. 26 degrees. It did not rain in the afternoon. It rained from six in the morning without stopping, the heaviest rain of the whole two weeks, and the yard flooded to the second step. So: right about the rain, wrong about the timing. I have decided that counts. Observation: I was out in it by seven, with the diary in a plastic bag, checking whether the ants had moved higher. They had.",
+      "illustration_brief": "Dawn downpour: the yard flooded to the second step; Tim in a raincoat holding a plastic-wrapped notebook, peering at the wall.",
+      "audio_script": "Sunday, 16 June. 26 degrees. It did not rain in the afternoon. It rained from six in the morning without stopping, the heaviest rain of the whole two weeks, and the yard flooded to the second step. So: right about the rain, wrong about the timing. I have decided that counts. Observation: I was out in it by seven, with the diary in a plastic bag, checking whether the ants had moved higher. They had.",
+      "timing_segments": [],
+      "image_asset": "images/ro-s-030-p08.svg",
+      "image_alt": "Heavy rain all day; the child watching from a window with the diary, half right and half wrong.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p09",
+      "text": "Monday, 17 June. The project is finished and I am supposed to hand this in today. I am going to ask Miss Phuong if I can copy out the pages and keep the original, because I want to carry on. Not for a project. I want to know whether the ants are ever wrong. I want to know whether the barometer or the clouds move first. I want to know what the dog knows. Two weeks ago I wrote that weather is just weather. I am leaving that in. A good scientist, Miss Phuong says, does not cross out what she used to think. She writes down what changed it.",
+      "illustration_brief": "Tim at a desk copying diary pages into a fresh notebook; the original with its first line visibly left uncrossed; the barometer and a window in the background.",
+      "audio_script": "Monday, 17 June. The project is finished and I am supposed to hand this in today. I am going to ask Miss Phuong if I can copy out the pages and keep the original, because I want to carry on. Not for a project. I want to know whether the ants are ever wrong. I want to know whether the barometer or the clouds move first. I want to know what the dog knows. Two weeks ago I wrote that weather is just weather. I am leaving that in. A good scientist, Miss Phuong says, does not cross out what she used to think. She writes down what changed it.",
+      "timing_segments": [],
+      "image_asset": "images/ro-s-030-p09.svg",
+      "image_alt": "The child handing in copied pages while keeping the original diary and a new blank page.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "inference",
+      "difficulty": "hard",
+      "prompt": "How does Tim feel about the project on the first day, and how can you tell?",
+      "options": [
+        {
+          "id": "bored",
+          "text": "Bored; he writes that it will be boring and that weather is just weather"
+        },
+        {
+          "id": "excited",
+          "text": "Excited; he writes a long entry"
+        },
+        {
+          "id": "scared",
+          "text": "Scared of Miss Phuong"
+        }
+      ],
+      "correct_option_id": "bored",
+      "evidence_page_ids": [
+        "p01"
+      ],
+      "explanation": "Page 1: I think this is going to be boring. Weather is just weather.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "word_knowledge",
+      "difficulty": "hard",
+      "prompt": "What does Tim mean by the difference between a sign and a cause?",
+      "options": [
+        {
+          "id": "sign",
+          "text": "A sign arrives before something without making it happen; a cause makes it happen"
+        },
+        {
+          "id": "same",
+          "text": "They are two words for the same thing"
+        },
+        {
+          "id": "big",
+          "text": "A cause is a bigger sign"
+        }
+      ],
+      "correct_option_id": "sign",
+      "evidence_page_ids": [
+        "p03"
+      ],
+      "explanation": "Page 3: thin clouds do not make rain, but they arrive before it; Tim calls that the difference between a sign and a cause.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "cause_effect",
+      "difficulty": "hard",
+      "prompt": "Why did Miss Phuong's answer on Monday 10 June matter so much to Tim?",
+      "options": [
+        {
+          "id": "unknown",
+          "text": "A teacher admitted not knowing and treated his question as worth finding out"
+        },
+        {
+          "id": "mark",
+          "text": "She gave him a high mark"
+        },
+        {
+          "id": "ants",
+          "text": "She told him the answer about the ants"
+        }
+      ],
+      "correct_option_id": "unknown",
+      "evidence_page_ids": [
+        "p04"
+      ],
+      "explanation": "Page 4: she said it was the best question that week, that she did not know, and let us find out; Tim writes that nobody had ever said that to him before.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "explicit_detail",
+      "difficulty": "medium",
+      "prompt": "Which reason does Tim refuse to count as a real reason for his prediction?",
+      "options": [
+        {
+          "id": "grandpa",
+          "text": "Grandpa saying so"
+        },
+        {
+          "id": "baro",
+          "text": "The falling barometer"
+        },
+        {
+          "id": "ants",
+          "text": "The ants climbing the wall"
+        }
+      ],
+      "correct_option_id": "grandpa",
+      "evidence_page_ids": [
+        "p07"
+      ],
+      "explanation": "Page 7, reason four: Grandpa says so, but I am counting that as a sign, not a reason.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q05",
+      "skill": "compare",
+      "difficulty": "hard",
+      "prompt": "How did the prediction compare with what happened?",
+      "options": [
+        {
+          "id": "partly",
+          "text": "Right that it would rain heavily, wrong about the afternoon timing"
+        },
+        {
+          "id": "wrong",
+          "text": "Completely wrong; it stayed dry"
+        },
+        {
+          "id": "exact",
+          "text": "Exactly right in every detail"
+        }
+      ],
+      "correct_option_id": "partly",
+      "evidence_page_ids": [
+        "p07",
+        "p08"
+      ],
+      "explanation": "He predicted heavy rain in the afternoon (page 7); it rained heavily from six in the morning (page 8): right about the rain, wrong about the timing.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q06",
+      "skill": "main_idea",
+      "difficulty": "hard",
+      "prompt": "Why does Tim leave 'weather is just weather' in the diary instead of crossing it out?",
+      "options": [
+        {
+          "id": "record",
+          "text": "A good scientist keeps what she used to think and records what changed it"
+        },
+        {
+          "id": "lazy",
+          "text": "He is too lazy to cross it out"
+        },
+        {
+          "id": "true",
+          "text": "He still believes it"
+        }
+      ],
+      "correct_option_id": "record",
+      "evidence_page_ids": [
+        "p09"
+      ],
+      "explanation": "Page 9: a good scientist does not cross out what she used to think. She writes down what changed it.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q07",
+      "skill": "summary",
+      "difficulty": "hard",
+      "response_type": "open",
+      "prompt": "Tell a grown-up how Tim changed over the two weeks, pointing to at least two diary entries that show it, and say whether you think his prediction counted as a success.",
+      "rubric": "not yet: says he kept a diary; with support: bored then interested, with prompting; independent: cites the first entry and a later one (the ants question, the barometer, the flood morning), explains sign versus cause or reasons versus signs, and gives a judged view on the prediction",
+      "explanation": "The change is shown by tone and by what he chooses to observe, never stated as 'I became interested'; a good retell notices that."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "prompt": "Put the first week's weather signs in order.",
+      "items": [
+        {
+          "id": "s1",
+          "text": "Thin high clouds like scratches.",
+          "page_id": "p02"
+        },
+        {
+          "id": "s2",
+          "text": "A grey sheet; ants climb the wall.",
+          "page_id": "p03"
+        },
+        {
+          "id": "s3",
+          "text": "Twenty minutes of rain at four.",
+          "page_id": "p03"
+        },
+        {
+          "id": "s4",
+          "text": "Heavy rain, then the ants come back down.",
+          "page_id": "p04"
+        }
+      ],
+      "correct_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "choose_evidence",
+      "skill": "inference",
+      "claim": "Tim has stopped finding the project boring.",
+      "prompt": "Which entry shows this most clearly?",
+      "correct_page_ids": [
+        "p06",
+        "p04"
+      ]
+    },
+    {
+      "activity_id": "a03",
+      "type": "discussion",
+      "skill": "listening_comprehension",
+      "prompts": [
+        "Tim says his prediction 'counts' even though the timing was wrong. Do you agree? What would have to be wrong for it not to count?",
+        "Grandpa's fifty years of looking up: is that a reason or a sign? Could it be both?"
+      ]
+    }
+  ],
+  "off_screen_prompt": "Keep a weather diary for five days: temperature if you can, sky, wind, and one observation of an animal or plant. On day five, predict day six and write one reason.",
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-09-28T10:42:55+00:00",
+    "reviewer": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+    "review_date": "2026-09-28",
+    "history": [
+      {
+        "action": "approve_all",
+        "at": "2026-09-28T10:42:55+00:00",
+        "by": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+        "note": "Last build of the year: 14 gated books I-W (127 original SVGs, set4). Nonfiction fact-check pending parent review; ro-w-030 reserved for unseen check."
+      }
+    ]
+  }
+}

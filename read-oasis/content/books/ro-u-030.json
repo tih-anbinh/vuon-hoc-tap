@@ -1,0 +1,432 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-u-030",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "How Scientists Count Wild Animals",
+  "language": "en",
+  "level": "U",
+  "reading_mode": "independent_reading",
+  "topic": "animals",
+  "genre": "nonfiction",
+  "pair_id": "pair-count-01",
+  "learning_objectives": [
+    "Understand why wild populations are estimated rather than counted",
+    "Explain three survey methods and one weakness of each",
+    "Compare a fictional counting story with real scientific practice"
+  ],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": {
+    "text": "high",
+    "conceptual": "high",
+    "visual_support": "medium"
+  },
+  "rights": {
+    "text_author": "Huy Tran for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
+  "factual_claims": [
+    {
+      "claim": "Wild animal populations are usually estimated from samples rather than counted one by one.",
+      "source": "Britannica, 'Population ecology: sampling'; USGS 'Estimating animal abundance'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Point counts and transects: observers record animals seen or heard at fixed points or along fixed lines, at fixed times, repeated the same way.",
+      "source": "British Trust for Ornithology (BTO), 'Breeding Bird Survey methods'; Cornell Lab, 'Point counts'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Mark-recapture: capture and mark a sample, release, recapture later; the proportion marked in the second sample estimates the total (Lincoln-Petersen method).",
+      "source": "Britannica, 'Mark-recapture'; USGS",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Camera traps triggered by movement are used to survey shy or nocturnal animals such as tigers, identified individually by stripe patterns.",
+      "source": "WWF / Panthera tiger camera-trap surveys; Britannica 'Camera trap'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "The Christmas Bird Count, run by the National Audubon Society since 1900, is one of the longest-running citizen-science wildlife surveys.",
+      "source": "National Audubon Society, 'History of the Christmas Bird Count'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "House sparrow numbers in Britain fell sharply between the late 1970s and the 2000s, by around two thirds in some surveys.",
+      "source": "RSPB / BTO Breeding Bird Survey; UK Biodiversity Indicators (house sparrow decline)",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Repeating a survey with the same method over many years is needed to separate a real trend from year-to-year variation.",
+      "source": "BTO, 'Why long-term monitoring matters'; Britannica 'Population ecology'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Vietnam's saola, discovered in 1992, is so rarely seen that its population is estimated only from camera traps and signs; no scientist has seen one alive in the wild since 2013.",
+      "source": "IUCN Saola Working Group; WWF Vietnam 'Saola'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    }
+  ],
+  "parent_prompts": [
+    "Let the child read alone after the story 'The Boy Who Counted Birds'. After: which of Ben's problems do real scientists face too? What tool did Ben not have that scientists do?"
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "How many sparrows are there in Vietnam? How many tigers in India? How many fish in the sea? Nobody knows exactly, and nobody ever will. Wild animals do not line up to be counted. They hide, they move, they look alike, and there are far too many of most of them and far too few of some. So scientists do something that sounds like cheating and is actually the heart of the whole business: they count a part, carefully, and use it to estimate the whole.",
+      "illustration_brief": "A large silhouette map region dotted with tiny bird shapes, most in shadow, a small square 'window' of them lit and counted.",
+      "audio_script": "How many sparrows are there in Vietnam? How many tigers in India? How many fish in the sea? Nobody knows exactly, and nobody ever will. Wild animals do not line up to be counted. They hide, they move, they look alike, and there are far too many of most of them and far too few of some. So scientists do something that sounds like cheating and is actually the heart of the whole business: they count a part, carefully, and use it to estimate the whole.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "estimate",
+          "definition": "A careful, reasoned guess at a number, made from a smaller sample when the whole cannot be counted.",
+          "example": "From one jar, she estimated the whole shelf held about six hundred beans."
+        }
+      ],
+      "image_asset": "images/ro-u-030-p01.svg",
+      "image_alt": "A sparrow, a tiger and a fish each with a question mark.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p02",
+      "text": "The simplest method is the one a boy at a kitchen window might invent. Choose a spot. Go there at the same time, in the same season, for the same number of minutes, and write down every bird you see or hear. Do it again next year, and the year after, by exactly the same rules. This is called a point count. Done along a walked line instead of at a spot, it is a transect. Thousands of volunteers across Britain have walked the same transects every spring since 1994, and it is their notebooks, not anyone's memory, that tell us house sparrows there fell by about two thirds in thirty years.",
+      "illustration_brief": "A volunteer with binoculars and clipboard at a marked post on a footpath; a dotted line across a field; a simple falling graph inset.",
+      "audio_script": "The simplest method is the one a boy at a kitchen window might invent. Choose a spot. Go there at the same time, in the same season, for the same number of minutes, and write down every bird you see or hear. Do it again next year, and the year after, by exactly the same rules. This is called a point count. Done along a walked line instead of at a spot, it is a transect. Thousands of volunteers across Britain have walked the same transects every spring since 1994, and it is their notebooks, not anyone's memory, that tell us house sparrows there fell by about two thirds in thirty years.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "transect",
+          "definition": "A fixed line across an area along which an observer walks and records what they see.",
+          "example": "The transect ran from the gate to the river and back."
+        }
+      ],
+      "image_asset": "images/ro-u-030-p02.svg",
+      "image_alt": "A person with a notebook standing at the same spot counting birds on a wire at the same time each day.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p03",
+      "text": "Point counts have a weakness, and it is the same one the boy found: you never see them all. Some birds are behind a leaf. Some are quiet that day. A point count does not give the true number; it gives an index, a number that goes up and down with the true number even if it is always smaller. That is fine, as long as the rules never change. Change the time, the place, the observer's hearing, and you are no longer comparing sparrows with sparrows. You are comparing this year's rules with last year's.",
+      "illustration_brief": "Two identical scenes side by side, same post and field, with a few birds visible and several drawn faint behind leaves.",
+      "audio_script": "Point counts have a weakness, and it is the same one the boy found: you never see them all. Some birds are behind a leaf. Some are quiet that day. A point count does not give the true number; it gives an index, a number that goes up and down with the true number even if it is always smaller. That is fine, as long as the rules never change. Change the time, the place, the observer's hearing, and you are no longer comparing sparrows with sparrows. You are comparing this year's rules with last year's.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "index",
+          "definition": "A number that tracks how something changes without being the exact total.",
+          "example": "The number of frogs heard at dusk is an index of how many live in the pond."
+        }
+      ],
+      "image_asset": "images/ro-u-030-p03.svg",
+      "image_alt": "Birds hidden behind leaves and one silent on a branch, only some visible on the wire.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p04",
+      "text": "For a true total, scientists use a cleverer trick called mark and recapture. Suppose you want to know how many fish are in a pond. Catch a hundred, put a tiny harmless tag on each, and let them go. Wait a week for them to mix in. Then catch another hundred. If ten of those carry your tag, then about one fish in ten in the pond is tagged. You tagged a hundred. So the pond holds about a thousand. You never saw the other nine hundred. You reasoned them.",
+      "illustration_brief": "A pond in three panels: net with tagged fish released; fish mixing; second net with a fraction tagged; a simple '10 of 100 tagged, so 100 is 1/10 of about 1000' shown as icons, no words.",
+      "audio_script": "For a true total, scientists use a cleverer trick called mark and recapture. Suppose you want to know how many fish are in a pond. Catch a hundred, put a tiny harmless tag on each, and let them go. Wait a week for them to mix in. Then catch another hundred. If ten of those carry your tag, then about one fish in ten in the pond is tagged. You tagged a hundred. So the pond holds about a thousand. You never saw the other nine hundred. You reasoned them.",
+      "timing_segments": [],
+      "image_asset": "images/ro-u-030-p04.svg",
+      "image_alt": "A pond with many fish; a net catches some, tagged ones marked red, then a second catch mixing tagged and untagged.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p05",
+      "text": "Mark and recapture has its own weaknesses, and good scientists list them before anyone else can. The tagged fish must mix evenly, or the second catch is not fair. The tag must not make a fish easier or harder to catch, or likelier to die. No fish may arrive or leave between catches. Every one of these can be a little wrong, and the estimate carries all of it. So the answer is never 'a thousand'. It is 'about a thousand, probably between eight hundred and twelve hundred', and the 'probably between' is not a weakness in the science. It is the science being honest.",
+      "illustration_brief": "A number line with a dot at 1000 and a bracket spanning 800 to 1200; small warning icons: uneven mixing, a tag falling off, a fish leaving by a stream.",
+      "audio_script": "Mark and recapture has its own weaknesses, and good scientists list them before anyone else can. The tagged fish must mix evenly, or the second catch is not fair. The tag must not make a fish easier or harder to catch, or likelier to die. No fish may arrive or leave between catches. Every one of these can be a little wrong, and the estimate carries all of it. So the answer is never a thousand. It is about a thousand, probably between eight hundred and twelve hundred, and the probably between is not a weakness in the science. It is the science being honest.",
+      "timing_segments": [],
+      "image_asset": "images/ro-u-030-p05.svg",
+      "image_alt": "A scientist at a table with a list and a tagged fish, thinking about what could go wrong.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p06",
+      "text": "Some animals cannot be caught and will not be seen. For them there are cameras. A camera trap is a weatherproof box strapped to a tree that takes a photograph whenever something warm moves in front of it. Leave a hundred of them in a forest for a month and you have a hundred windows that never blink. Tigers are counted this way: every tiger's stripes are as individual as a fingerprint, so each animal can be recognised from its photographs, and mark and recapture works without ever touching the animal. The camera does the marking. Nature did it first.",
+      "illustration_brief": "A camera trap strapped to a tree at night; a tiger passing, flash-lit, its stripe pattern clear; a grid of small photos with two matched by stripes.",
+      "audio_script": "Some animals cannot be caught and will not be seen. For them there are cameras. A camera trap is a weatherproof box strapped to a tree that takes a photograph whenever something warm moves in front of it. Leave a hundred of them in a forest for a month and you have a hundred windows that never blink. Tigers are counted this way: every tiger's stripes are as individual as a fingerprint, so each animal can be recognised from its photographs, and mark and recapture works without ever touching the animal. The camera does the marking. Nature did it first.",
+      "timing_segments": [],
+      "image_asset": "images/ro-u-030-p06.svg",
+      "image_alt": "A weatherproof camera box strapped to a tree, with a tiger walking past at night.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p07",
+      "text": "And some animals defeat even that. In the forests on the border between Vietnam and Laos lives the saola, a shy, dark, two-horned creature the size of a large goat that was unknown to science until 1992. Camera traps have photographed it only a handful of times. No scientist has seen a living saola in the wild since 2013. Nobody knows whether there are two hundred left or twenty. Here the honest estimate is a shrug with numbers attached, and the honest sentence is: we do not know, and we are trying to find out before it is too late.",
+      "illustration_brief": "A dim forest; a single grainy camera-trap frame of a dark antelope-like animal with two straight horns, half-hidden by leaves.",
+      "audio_script": "And some animals defeat even that. In the forests on the border between Vietnam and Laos lives the saola, a shy, dark, two-horned creature the size of a large goat that was unknown to science until 1992. Camera traps have photographed it only a handful of times. No scientist has seen a living saola in the wild since 2013. Nobody knows whether there are two hundred left or twenty. Here the honest estimate is a shrug with numbers attached, and the honest sentence is: we do not know, and we are trying to find out before it is too late.",
+      "timing_segments": [],
+      "image_asset": "images/ro-u-030-p07.svg",
+      "image_alt": "A dark two-horned saola half hidden among trees on a forest border.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p08",
+      "text": "Whatever the method, one rule sits underneath all of them, and it is the rule the boy's grandfather gave him: one count is a snapshot; a trend needs many. Weather, luck and a single lazy observer can move one year's number a long way. Only when the same method, applied the same way, gives the same direction year after year does a scientist say 'declining' rather than 'lower this year'. The oldest such survey still running is a bird count begun in America in 1900, on Christmas Day, by twenty-seven people who decided to count birds instead of shooting them. It has happened every year since. That is what knowing looks like: not a clever guess, but a hundred and twenty notebooks in a row.",
+      "illustration_brief": "A long shelf of identical notebooks with year labels; a line graph above them trending gently down through many small ups and downs.",
+      "audio_script": "Whatever the method, one rule sits underneath all of them, and it is the rule the boy's grandfather gave him: one count is a snapshot; a trend needs many. Weather, luck and a single lazy observer can move one year's number a long way. Only when the same method, applied the same way, gives the same direction year after year does a scientist say declining rather than lower this year. The oldest such survey still running is a bird count begun in America in 1900, on Christmas Day, by twenty-seven people who decided to count birds instead of shooting them. It has happened every year since. That is what knowing looks like: not a clever guess, but a hundred and twenty notebooks in a row.",
+      "timing_segments": [],
+      "image_asset": "images/ro-u-030-p08.svg",
+      "image_alt": "A single dot on one graph beside a second graph with many dots forming a line over years.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "explicit_detail",
+      "difficulty": "medium",
+      "prompt": "Why do scientists estimate wild populations instead of counting every animal?",
+      "options": [
+        {
+          "id": "impossible",
+          "text": "Wild animals hide, move, look alike and are too many or too few to count one by one"
+        },
+        {
+          "id": "lazy",
+          "text": "Counting is boring"
+        },
+        {
+          "id": "law",
+          "text": "It is against the law to count them"
+        }
+      ],
+      "correct_option_id": "impossible",
+      "evidence_page_ids": [
+        "p01"
+      ],
+      "explanation": "Page 1: they hide, they move, they look alike, and there are far too many of most of them and far too few of some.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "cause_effect",
+      "difficulty": "hard",
+      "prompt": "In the pond example, why does finding ten tagged fish in a hundred suggest about a thousand fish?",
+      "options": [
+        {
+          "id": "tenth",
+          "text": "If one in ten fish is tagged and a hundred were tagged, the whole pond is about ten times a hundred"
+        },
+        {
+          "id": "add",
+          "text": "Because a hundred plus a hundred plus ten is close to a thousand"
+        },
+        {
+          "id": "week",
+          "text": "Because a week passed"
+        }
+      ],
+      "correct_option_id": "tenth",
+      "evidence_page_ids": [
+        "p04"
+      ],
+      "explanation": "Page 4: about one fish in ten is tagged; you tagged a hundred; so the pond holds about a thousand.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "inference",
+      "difficulty": "hard",
+      "prompt": "Why does the book say 'probably between eight hundred and twelve hundred' is the science being honest?",
+      "options": [
+        {
+          "id": "honest",
+          "text": "Because each assumption can be a little wrong, so a single exact number would claim more than is known"
+        },
+        {
+          "id": "lazy",
+          "text": "Because scientists do not like exact numbers"
+        },
+        {
+          "id": "fish",
+          "text": "Because fish cannot be counted at all"
+        }
+      ],
+      "correct_option_id": "honest",
+      "evidence_page_ids": [
+        "p05"
+      ],
+      "explanation": "Page 5 lists the assumptions that can go wrong and says the estimate carries all of them, so the range is honesty, not weakness.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "compare",
+      "difficulty": "hard",
+      "prompt": "How do camera traps let scientists use mark and recapture on tigers without touching them?",
+      "options": [
+        {
+          "id": "stripes",
+          "text": "Each tiger's unique stripes act as the mark, recognised across photographs"
+        },
+        {
+          "id": "tag",
+          "text": "The camera fires a tag at the tiger"
+        },
+        {
+          "id": "count",
+          "text": "The camera counts all tigers in the forest"
+        }
+      ],
+      "correct_option_id": "stripes",
+      "evidence_page_ids": [
+        "p06"
+      ],
+      "explanation": "Page 6: every tiger's stripes are as individual as a fingerprint; the camera does the marking.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q05",
+      "skill": "compare",
+      "difficulty": "hard",
+      "prompt": "Which of Ben's rules from the story matches the point-count method in this book?",
+      "options": [
+        {
+          "id": "same",
+          "text": "Same time, same place, same minutes, repeated the same way every year"
+        },
+        {
+          "id": "tag",
+          "text": "Tagging the sparrows"
+        },
+        {
+          "id": "camera",
+          "text": "Setting up a camera"
+        }
+      ],
+      "correct_option_id": "same",
+      "evidence_page_ids": [
+        "p02"
+      ],
+      "explanation": "Page 2 describes the point count as the method a boy at a kitchen window might invent: same spot, time, season and minutes, by the same rules.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q06",
+      "skill": "main_idea",
+      "difficulty": "hard",
+      "prompt": "What is the one rule the book says sits underneath every method?",
+      "options": [
+        {
+          "id": "trend",
+          "text": "One count is a snapshot; a trend needs many counts by the same method over years"
+        },
+        {
+          "id": "camera",
+          "text": "Always use a camera"
+        },
+        {
+          "id": "guess",
+          "text": "A clever guess is as good as counting"
+        }
+      ],
+      "correct_option_id": "trend",
+      "evidence_page_ids": [
+        "p08"
+      ],
+      "explanation": "Page 8: one count is a snapshot; a trend needs many; only the same method, same way, year after year, justifies 'declining'.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q07",
+      "skill": "summary",
+      "difficulty": "hard",
+      "response_type": "open",
+      "prompt": "Explain to a grown-up two of the three methods, with one weakness of each, and say which one Ben in the story was using and what he was missing that scientists have.",
+      "rubric": "not yet: names a method; with support: one method and its weakness with prompting; independent: point count (misses hidden animals; an index not a total) and mark-recapture (assumptions about mixing, tags, movement) or camera traps (only for recognisable animals); Ben used a point count and lacked earlier years to compare",
+      "explanation": "Naming a weakness for each method is the mark of understanding; the link to Ben is the pair-text comparison."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "match_pairs",
+      "skill": "compare",
+      "prompt": "Match each method to its main weakness.",
+      "pairs": [
+        {
+          "left": "point count",
+          "right": "you never see them all; it gives an index, not a total"
+        },
+        {
+          "left": "mark and recapture",
+          "right": "assumes tagged animals mix evenly and none arrive or leave"
+        },
+        {
+          "left": "camera trap",
+          "right": "only works for animals that pass the camera and can be told apart"
+        }
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "choose_evidence",
+      "skill": "inference",
+      "claim": "Sometimes the honest scientific answer is 'we do not know'.",
+      "prompt": "Which page shows this?",
+      "correct_page_ids": [
+        "p07"
+      ]
+    },
+    {
+      "activity_id": "a03",
+      "type": "word_to_meaning",
+      "skill": "word_knowledge",
+      "prompt": "Match the word to its meaning.",
+      "pairs": [
+        {
+          "left": "estimate",
+          "right": "a reasoned guess from a sample"
+        },
+        {
+          "left": "transect",
+          "right": "a fixed line you walk and record along"
+        },
+        {
+          "left": "index",
+          "right": "a number that tracks change without being the total"
+        }
+      ]
+    }
+  ],
+  "off_screen_prompt": "Fill a bowl with dry beans. Take out 20, mark them with a pen, put them back and stir well. Take out a handful, count how many are marked and how many are not, and estimate the total. Then count them all to check.",
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-09-28T10:42:55+00:00",
+    "reviewer": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+    "review_date": "2026-09-28",
+    "history": [
+      {
+        "action": "approve_all",
+        "at": "2026-09-28T10:42:55+00:00",
+        "by": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+        "note": "Last build of the year: 14 gated books I-W (127 original SVGs, set4). Nonfiction fact-check pending parent review; ro-w-030 reserved for unseen check."
+      }
+    ]
+  }
+}

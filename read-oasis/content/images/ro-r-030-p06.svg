@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Parallel rays on a curved ground</title>
+  <desc id="d">Sunlight arriving as parallel lines onto a curved Earth, so two sticks lean apart and cast different shadows.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="0" width="400" height="300" fill="#EAF4FB"/><circle cx="200" cy="420" r="260" fill="#BFE3B4" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M0 -5.0 L400 -5.0" stroke="#F7D154" stroke-width="4" stroke-linecap="round"/>
+  <path d="M0 21.0 L400 21.0" stroke="#F7D154" stroke-width="4" stroke-linecap="round"/>
+  <path d="M0 47.0 L400 47.0" stroke="#F7D154" stroke-width="4" stroke-linecap="round"/>
+  <path d="M0 73.0 L400 73.0" stroke="#F7D154" stroke-width="4" stroke-linecap="round"/>
+  <path d="M0 99.0 L400 99.0" stroke="#F7D154" stroke-width="4" stroke-linecap="round"/>
+  <path d="M200 160 L200 100" stroke="#A0522D" stroke-width="8" stroke-linecap="round"/><path d="M300 180 L318 122" stroke="#A0522D" stroke-width="8" stroke-linecap="round"/><path d="M300 182 L326 176" stroke="#2B2B2B" stroke-width="6" stroke-linecap="round"/>
+
+</svg>

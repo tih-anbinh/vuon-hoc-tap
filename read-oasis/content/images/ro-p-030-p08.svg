@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Three answers, three gaps</title>
+  <desc id="d">Three small pictures side by side: a beam over a stream, an arch on rock, a suspension bridge over a wide river.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="0" width="400" height="300" fill="#EAF4FB"/>
+  <rect x="12" y="60" width="116" height="180" rx="8" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="142" y="60" width="116" height="180" rx="8" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="272" y="60" width="116" height="180" rx="8" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M30 170 L110 170" stroke="#A0522D" stroke-width="8"/><rect x="40" y="180" width="60" height="30" fill="#7FB7D9"/>
+  <path d="M160 190 Q200 110 240 190" fill="none" stroke="#8E9AA3" stroke-width="8"/><path d="M155 150 L245 150" stroke="#8E9AA3" stroke-width="6"/>
+  <rect x="290" y="110" width="8" height="90" fill="#8E9AA3"/><rect x="350" y="110" width="8" height="90" fill="#8E9AA3"/><path d="M280 170 L294 110 Q324 190 354 110 L368 170" fill="none" stroke="#2B2B2B" stroke-width="3"/><path d="M280 170 L368 170" stroke="#A0522D" stroke-width="6"/>
+
+</svg>

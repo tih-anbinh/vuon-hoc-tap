@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">A stick with no shadow, a stick with a shadow</title>
+  <desc id="d">Two upright sticks far apart at noon: one casts no shadow, the other a short shadow.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="0" width="400" height="300" fill="#EAF4FB"/><rect x="0" y="200" width="400" height="100" fill="#F1E3C4"/>  <path d="M0 -26.0 L400 -26.0" stroke="#F7D154" stroke-width="4" stroke-linecap="round"/>
+  <path d="M0 -4.0 L400 -4.0" stroke="#F7D154" stroke-width="4" stroke-linecap="round"/>
+  <path d="M0 18.0 L400 18.0" stroke="#F7D154" stroke-width="4" stroke-linecap="round"/>
+  <path d="M0 40.0 L400 40.0" stroke="#F7D154" stroke-width="4" stroke-linecap="round"/>
+  <path d="M0 62.0 L400 62.0" stroke="#F7D154" stroke-width="4" stroke-linecap="round"/>
+  <path d="M0 84.0 L400 84.0" stroke="#F7D154" stroke-width="4" stroke-linecap="round"/>
+  <path d="M100 200 L100 120" stroke="#A0522D" stroke-width="8" stroke-linecap="round"/><path d="M300 200 L300 120" stroke="#A0522D" stroke-width="8" stroke-linecap="round"/><path d="M300 204 L340 204" stroke="#2B2B2B" stroke-width="6" stroke-linecap="round"/>
+  <path d="M40 60 q80 -30 160 0" fill="none" stroke="#2B2B2B" stroke-width="3" stroke-dasharray="6 6"/>
+
+</svg>

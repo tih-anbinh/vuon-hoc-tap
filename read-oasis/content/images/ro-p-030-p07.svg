@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">A rope bridge across a gorge</title>
+  <desc id="d">A rope and plank bridge slung across a mountain gorge with a person crossing.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="0" width="400" height="300" fill="#EAF4FB"/><path d="M0 100 L120 120 L140 300 L0 300 Z M400 100 L280 120 L260 300 L400 300 Z" fill="#9BB39B" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="140" y="260" width="120" height="40" fill="#7FB7D9"/>
+  <path d="M120 150 q80 50 160 0" fill="none" stroke="#A0522D" stroke-width="5"/><path d="M120 120 q80 50 160 0" fill="none" stroke="#A0522D" stroke-width="4"/><path d="M135 124 L135 154" stroke="#A0522D" stroke-width="3"/><rect x="130" y="152" width="12" height="6" fill="#A0522D"/><path d="M150 128 L150 158" stroke="#A0522D" stroke-width="3"/><rect x="145" y="156" width="12" height="6" fill="#A0522D"/><path d="M165 132 L165 162" stroke="#A0522D" stroke-width="3"/><rect x="160" y="160" width="12" height="6" fill="#A0522D"/><path d="M180 136 L180 166" stroke="#A0522D" stroke-width="3"/><rect x="175" y="164" width="12" height="6" fill="#A0522D"/><path d="M195 140 L195 170" stroke="#A0522D" stroke-width="3"/><rect x="190" y="168" width="12" height="6" fill="#A0522D"/><path d="M210 144 L210 174" stroke="#A0522D" stroke-width="3"/><rect x="205" y="172" width="12" height="6" fill="#A0522D"/><path d="M225 140 L225 170" stroke="#A0522D" stroke-width="3"/><rect x="220" y="168" width="12" height="6" fill="#A0522D"/><path d="M240 136 L240 166" stroke="#A0522D" stroke-width="3"/><rect x="235" y="164" width="12" height="6" fill="#A0522D"/><path d="M255 132 L255 162" stroke="#A0522D" stroke-width="3"/><rect x="250" y="160" width="12" height="6" fill="#A0522D"/><path d="M270 128 L270 158" stroke="#A0522D" stroke-width="3"/><rect x="265" y="156" width="12" height="6" fill="#A0522D"/><path d="M285 124 L285 154" stroke="#A0522D" stroke-width="3"/><rect x="280" y="152" width="12" height="6" fill="#A0522D"/>
+  <g transform="translate(200 168) scale(0.55)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#2B2B2B"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -30 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#6AB04C" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-40 26 M24 0 L40 26" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+</svg>

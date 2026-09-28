@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Walking the dotted line</title>
+  <desc id="d">Mai walks a dotted path from the well past the shed to a spot by the wall and digs with a spade.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="220" width="400" height="80" fill="#BFE3B4"/>
+  <g transform="translate(70 200)"><rect x="-30" y="-20" width="60" height="40" fill="#8E9AA3" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="0" cy="-20" rx="30" ry="10" fill="#6C757D" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M-24 -30 L-24 -70 L24 -70 L24 -30" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M-34 -70 L0 -92 L34 -70 Z" fill="#A0522D" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g transform="translate(160 150)"><rect x="0" y="0" width="70" height="60" fill="#A87C5A" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M-6 0 L35 -26 L76 0 Z" fill="#A0522D" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <rect x="0" y="215" width="400" height="60" fill="#C9B8A8" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 235 l50 0 M25 255 l50 0" stroke="#A38B78" stroke-width="3"/><path d="M50 235 l50 0 M75 255 l50 0" stroke="#A38B78" stroke-width="3"/><path d="M100 235 l50 0 M125 255 l50 0" stroke="#A38B78" stroke-width="3"/><path d="M150 235 l50 0 M175 255 l50 0" stroke="#A38B78" stroke-width="3"/><path d="M200 235 l50 0 M225 255 l50 0" stroke="#A38B78" stroke-width="3"/><path d="M250 235 l50 0 M275 255 l50 0" stroke="#A38B78" stroke-width="3"/><path d="M300 235 l50 0 M325 255 l50 0" stroke="#A38B78" stroke-width="3"/><path d="M350 235 l50 0 M375 255 l50 0" stroke="#A38B78" stroke-width="3"/>
+  <path d="M90 230 L170 235 L250 230 L330 240" fill="none" stroke="#2B2B2B" stroke-width="3" stroke-dasharray="6 6"/>
+  <g transform="translate(300 200) scale(1.0)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#3B2A20"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -30 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#F7D154" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-36 30 M24 0 L36 30" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(300 200) scale(1.0)"><path d="M-26 -40 q-6 20 0 34 M26 -40 q6 20 0 34" stroke="#3B2A20" stroke-width="6" stroke-linecap="round"/></g>
+  <g transform="translate(330 220) rotate(-20)"><path d="M0 0 L0 -60" stroke="#A0522D" stroke-width="6"/><path d="M-12 0 L12 0 L10 26 q-10 10 -20 0 Z" fill="#8E9AA3" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+
+</svg>

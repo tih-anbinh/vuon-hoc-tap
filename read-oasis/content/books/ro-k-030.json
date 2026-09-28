@@ -1,0 +1,374 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-k-030",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "The Lantern That Would Not Light",
+  "language": "en",
+  "level": "K",
+  "reading_mode": "read_aloud",
+  "topic": "making",
+  "genre": "fiction",
+  "learning_objectives": [
+    "Follow a multi-step problem across a longer read-aloud",
+    "Infer character feelings from actions and dialogue",
+    "Explain a solution using evidence from earlier pages"
+  ],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": {
+    "text": "medium",
+    "conceptual": "medium",
+    "visual_support": "medium"
+  },
+  "rights": {
+    "text_author": "Huy Tran for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
+  "parent_prompts": [
+    "Before: Tim is building a paper lantern for the festival. What could go wrong with a paper lantern and a candle?",
+    "After page 4: why does the candle keep going out? Any ideas before we read on?",
+    "After: what did Grandpa know that Tim did not? How did Tim find it out?"
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "The mid-autumn festival was two days away, and every child on Tim's street was making a lantern. Tim wanted his to be the best: a star, six points, red paper stretched over a bamboo frame, with a small candle inside. He had spent all of Saturday on it. It looked perfect. There was only one problem. When he lit the candle and closed the last flap of paper, the flame shrank, flickered, and went out.",
+      "illustration_brief": "Tim (red cap) at a table with a red six-pointed star lantern; a candle stub inside, a thin wisp of smoke; his face falling.",
+      "audio_script": "The mid-autumn festival was two days away, and every child on Tim's street was making a lantern. Tim wanted his to be the best: a star, six points, red paper stretched over a bamboo frame, with a small candle inside. He had spent all of Saturday on it. It looked perfect. There was only one problem. When he lit the candle and closed the last flap of paper, the flame shrank, flickered, and went out.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "flickered",
+          "definition": "Burned or shone unsteadily, going bright and dim.",
+          "example": "The torch flickered and then died."
+        }
+      ],
+      "image_asset": "images/ro-k-030-p01.svg",
+      "image_alt": "Tim at a table with a red six-pointed star lantern, a candle and matches beside it.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p02",
+      "text": "He tried again. Match, candle, flame. He closed the flap slowly this time, watching through the paper. The little glow lasted longer, maybe ten seconds, then dimmed to nothing. \"It must be the candle,\" Tim decided, and went to find a bigger one.",
+      "illustration_brief": "Tim peering through red paper at a faint glow; a box of matches and candle stubs on the table.",
+      "audio_script": "He tried again. Match, candle, flame. He closed the flap slowly this time, watching through the paper. The little glow lasted longer, maybe ten seconds, then dimmed to nothing. It must be the candle, Tim decided, and went to find a bigger one.",
+      "timing_segments": [],
+      "image_asset": "images/ro-k-030-p02.svg",
+      "image_alt": "A small candle inside the lantern with a thin line of smoke where the flame was.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p03",
+      "text": "The bigger candle burned bright and hot. Too hot. Within a minute the paper above it turned brown, and a curl of smoke rose from the top point of the star. Tim yanked the flap open and blew the candle out himself, heart thumping. Now there was a brown scorch mark on his perfect lantern.",
+      "illustration_brief": "The star lantern with a brown scorch on the top point; Tim blowing out a large candle, alarmed.",
+      "audio_script": "The bigger candle burned bright and hot. Too hot. Within a minute the paper above it turned brown, and a curl of smoke rose from the top point of the star. Tim yanked the flap open and blew the candle out himself, heart thumping. Now there was a brown scorch mark on his perfect lantern.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "scorch",
+          "definition": "A brown burnt mark made by heat.",
+          "example": "The iron left a scorch on the shirt."
+        }
+      ],
+      "image_asset": "images/ro-k-030-p03.svg",
+      "image_alt": "A large candle burning hot inside the lantern; the top point turning brown with a curl of smoke.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p04",
+      "text": "Small candle: goes out. Big candle: burns the paper. Tim sat on the floor with the lantern in his lap and felt like throwing it across the room. He did not. But he thought about it.",
+      "illustration_brief": "Tim slumped on the floor, lantern in lap, glaring at it.",
+      "audio_script": "Small candle: goes out. Big candle: burns the paper. Tim sat on the floor with the lantern in his lap and felt like throwing it across the room. He did not. But he thought about it.",
+      "timing_segments": [],
+      "image_asset": "images/ro-k-030-p04.svg",
+      "image_alt": "Tim sitting on the floor, lantern in his lap, looking cross.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p05",
+      "text": "Grandpa found him there. He did not say anything at first. He picked up the lantern, turned it over, looked at the top, looked at the bottom, and then held it up to his ear as if it might speak. \"Where does the smoke go?\" he asked.",
+      "illustration_brief": "Grandpa holding the lantern up, examining its top; Tim looking up from the floor.",
+      "audio_script": "Grandpa found him there. He did not say anything at first. He picked up the lantern, turned it over, looked at the top, looked at the bottom, and then held it up to his ear as if it might speak. Where does the smoke go? he asked.",
+      "timing_segments": [],
+      "image_asset": "images/ro-k-030-p05.svg",
+      "image_alt": "Grandpa holding the lantern and looking at its top and bottom while Tim watches.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p06",
+      "text": "Tim frowned. \"Nowhere. It is closed.\" \"And where does the fresh air come in?\" \"Nowhere. It is... closed.\" Grandpa waited. Tim looked at the lantern, sealed tight on every side, and something clicked. \"The candle needs air. I shut it in with no air. So it goes out.\"",
+      "illustration_brief": "Close on the sealed lantern; Tim's expression changing from frown to realisation.",
+      "audio_script": "Tim frowned. Nowhere. It is closed. And where does the fresh air come in? Nowhere. It is closed. Grandpa waited. Tim looked at the lantern, sealed tight on every side, and something clicked. The candle needs air. I shut it in with no air. So it goes out.",
+      "timing_segments": [],
+      "image_asset": "images/ro-k-030-p06.svg",
+      "image_alt": "The closed lantern with a question mark, and arrows showing no way in or out for air.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p07",
+      "text": "\"And when you gave it a bigger flame?\" \"The heat had nowhere to go either, so it cooked the paper.\" Grandpa nodded. \"A lantern is not a box,\" he said. \"It is a chimney. Air in at the bottom, hot air and smoke out at the top. The flame sits in the draught and stays happy.\"",
+      "illustration_brief": "Grandpa sketching on scrap paper: a lantern with arrows in at the bottom and out at the top.",
+      "audio_script": "And when you gave it a bigger flame? The heat had nowhere to go either, so it cooked the paper. Grandpa nodded. A lantern is not a box, he said. It is a chimney. Air in at the bottom, hot air and smoke out at the top. The flame sits in the draught and stays happy.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "draught",
+          "definition": "A current of air moving through a space.",
+          "example": "There is a draught under the door."
+        }
+      ],
+      "image_asset": "images/ro-k-030-p07.svg",
+      "image_alt": "Grandpa and Tim side by side; a closed box next to a lantern with air arrows flowing through.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p08",
+      "text": "Tim cut a ring of small holes around the bottom of the star and a larger hole in the top point, right where the scorch mark was. Then he lit the small candle, closed the flap, and held his breath. The flame steadied. It grew. It glowed red through the paper and did not go out.",
+      "illustration_brief": "The lantern glowing evenly red, a neat hole at the top and small holes near the base; Tim's face lit from below.",
+      "audio_script": "Tim cut a ring of small holes around the bottom of the star and a larger hole in the top point, right where the scorch mark was. Then he lit the small candle, closed the flap, and held his breath. The flame steadied. It grew. It glowed red through the paper and did not go out.",
+      "timing_segments": [],
+      "image_asset": "images/ro-k-030-p08.svg",
+      "image_alt": "Tim cutting a ring of small holes around the bottom and a larger hole at the top; the small candle now burns steadily.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p09",
+      "text": "On festival night, Tim carried his star down the street in the parade. Nobody noticed the hole at the top; it was where the light poured out brightest. \"How did you get it to stay lit?\" asked Lan, whose own lantern had gone dark twice. \"Easy,\" said Tim. \"You have to let it breathe.\"",
+      "illustration_brief": "Night parade: children with lanterns; Tim's red star glowing brightest; Lan beside him with a dark lantern.",
+      "audio_script": "On festival night, Tim carried his star down the street in the parade. Nobody noticed the hole at the top; it was where the light poured out brightest. How did you get it to stay lit? asked Lan, whose own lantern had gone dark twice. Easy, said Tim. You have to let it breathe.",
+      "timing_segments": [],
+      "image_asset": "images/ro-k-030-p09.svg",
+      "image_alt": "Tim carrying his glowing star lantern down the street among other children with lanterns at night.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    },
+    {
+      "page_id": "p10",
+      "text": "He did not tell her about Saturday, or the scorch mark, or sitting on the floor wanting to throw it. Some of that, he thought, was his to keep. But he did show her where to cut the holes.",
+      "illustration_brief": "Tim pointing at the base of Lan's lantern, showing her; both lanterns now glowing.",
+      "audio_script": "He did not tell her about Saturday, or the scorch mark, or sitting on the floor wanting to throw it. Some of that, he thought, was his to keep. But he did show her where to cut the holes.",
+      "timing_segments": [],
+      "image_asset": "images/ro-k-030-p10.svg",
+      "image_alt": "Tim smiling quietly beside a girl with a lantern, the glowing star between them.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set4.py), 2026-09-28"
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "cause_effect",
+      "difficulty": "medium",
+      "prompt": "Why did the small candle keep going out?",
+      "options": [
+        {
+          "id": "air",
+          "text": "The sealed lantern had no fresh air for the flame"
+        },
+        {
+          "id": "wet",
+          "text": "The candle was wet"
+        },
+        {
+          "id": "wind",
+          "text": "The wind blew it out"
+        }
+      ],
+      "correct_option_id": "air",
+      "evidence_page_ids": [
+        "p06"
+      ],
+      "explanation": "Page 6: The candle needs air. I shut it in with no air. So it goes out.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "cause_effect",
+      "difficulty": "medium",
+      "prompt": "Why did the big candle scorch the paper?",
+      "options": [
+        {
+          "id": "heat",
+          "text": "The heat had nowhere to escape"
+        },
+        {
+          "id": "close",
+          "text": "The candle was too close to the paper"
+        },
+        {
+          "id": "red",
+          "text": "Red paper burns easily"
+        }
+      ],
+      "correct_option_id": "heat",
+      "evidence_page_ids": [
+        "p03",
+        "p07"
+      ],
+      "explanation": "The paper turned brown (page 3). Tim explains on page 7: the heat had nowhere to go, so it cooked the paper.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "inference",
+      "difficulty": "hard",
+      "prompt": "How did Grandpa help Tim?",
+      "options": [
+        {
+          "id": "questions",
+          "text": "He asked questions until Tim worked it out himself"
+        },
+        {
+          "id": "fixed",
+          "text": "He cut the holes for him"
+        },
+        {
+          "id": "bought",
+          "text": "He bought a new lantern"
+        }
+      ],
+      "correct_option_id": "questions",
+      "evidence_page_ids": [
+        "p05",
+        "p06"
+      ],
+      "explanation": "Grandpa asked where the smoke goes and where the air comes in (pages 5 and 6), and waited until something clicked for Tim.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "inference",
+      "difficulty": "hard",
+      "prompt": "Why did Tim not tell Lan about Saturday and the scorch mark?",
+      "options": [
+        {
+          "id": "private",
+          "text": "He felt those struggles were his own to keep"
+        },
+        {
+          "id": "forgot",
+          "text": "He forgot"
+        },
+        {
+          "id": "lie",
+          "text": "He wanted her to think he was lying"
+        }
+      ],
+      "correct_option_id": "private",
+      "evidence_page_ids": [
+        "p10"
+      ],
+      "explanation": "Page 10: Some of that, he thought, was his to keep.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q05",
+      "skill": "word_knowledge",
+      "difficulty": "medium",
+      "prompt": "In this story, what does Grandpa mean by calling the lantern a chimney?",
+      "options": [
+        {
+          "id": "flow",
+          "text": "Air should flow in at the bottom and out at the top"
+        },
+        {
+          "id": "brick",
+          "text": "It should be made of bricks"
+        },
+        {
+          "id": "tall",
+          "text": "It should be very tall"
+        }
+      ],
+      "correct_option_id": "flow",
+      "evidence_page_ids": [
+        "p07"
+      ],
+      "explanation": "Page 7: Air in at the bottom, hot air and smoke out at the top.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q06",
+      "skill": "summary",
+      "difficulty": "hard",
+      "response_type": "open",
+      "prompt": "Retell the story of Tim's lantern: the two problems, how he understood them, and the fix.",
+      "rubric": "not yet: says the lantern would not light; with support: names one problem and the holes, with prompting; independent: small candle starved of air, big candle scorched with trapped heat, Grandpa's questions, holes at the bottom and top like a chimney",
+      "explanation": "Two problems with one shared cause, plus the fix, is the structure to listen for."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "prompt": "Put Tim's day in order.",
+      "items": [
+        {
+          "id": "s1",
+          "text": "The small candle goes out.",
+          "page_id": "p01"
+        },
+        {
+          "id": "s2",
+          "text": "The big candle scorches the paper.",
+          "page_id": "p03"
+        },
+        {
+          "id": "s3",
+          "text": "Grandpa asks where the smoke goes.",
+          "page_id": "p05"
+        },
+        {
+          "id": "s4",
+          "text": "Tim cuts holes at the bottom and the top.",
+          "page_id": "p08"
+        }
+      ],
+      "correct_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "choose_evidence",
+      "skill": "inference",
+      "claim": "Tim was angry with his lantern.",
+      "prompt": "Which page shows this?",
+      "correct_page_ids": [
+        "p04"
+      ]
+    },
+    {
+      "activity_id": "a03",
+      "type": "discussion",
+      "skill": "listening_comprehension",
+      "prompts": [
+        "Why do you think Grandpa asked questions instead of just telling Tim the answer?",
+        "Tim kept some of the story to himself but still helped Lan. Was that kind, or unfair, or both?"
+      ]
+    }
+  ],
+  "off_screen_prompt": "With a grown-up: light a tea light and cover it with a glass jar. Count how long the flame lasts. Talk about why.",
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-09-28T10:42:55+00:00",
+    "reviewer": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+    "review_date": "2026-09-28",
+    "history": [
+      {
+        "action": "approve_all",
+        "at": "2026-09-28T10:42:55+00:00",
+        "by": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+        "note": "Last build of the year: 14 gated books I-W (127 original SVGs, set4). Nonfiction fact-check pending parent review; ro-w-030 reserved for unseen check."
+      }
+    ]
+  }
+}

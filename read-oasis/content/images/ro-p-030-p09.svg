@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Ask the gap's question</title>
+  <desc id="d">A child on a bridge looking down, with a beam, an arch and a cable each marked with a question mark.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="0" width="400" height="300" fill="#EAF4FB"/><path d="M0 160 L120 160 L150 300 L0 300 Z M400 160 L280 160 L250 300 L400 300 Z" fill="#BFE3B4" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="150" y="240" width="100" height="60" fill="#7FB7D9"/>
+  <path d="M120 170 Q200 30 280 170" fill="none" stroke="#8E9AA3" stroke-width="12"/><path d="M110 140 L290 140" stroke="#8E9AA3" stroke-width="10"/><path d="M140 140 L140 154" stroke="#8E9AA3" stroke-width="6"/><path d="M170 140 L170 162" stroke="#8E9AA3" stroke-width="6"/><path d="M200 140 L200 170" stroke="#8E9AA3" stroke-width="6"/><path d="M230 140 L230 162" stroke="#8E9AA3" stroke-width="6"/><path d="M260 140 L260 154" stroke="#8E9AA3" stroke-width="6"/>
+  <g transform="translate(200 128) scale(0.7)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#2B2B2B"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-5 -30 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#5B8DEF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-40 26 M24 0 L40 26" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(90 90) scale(0.6)"><path d="M-14 -20 q0 -22 16 -22 q16 0 16 16 q0 12 -14 18 q-4 2 -4 12" fill="none" stroke="#2B2B2B" stroke-width="6" stroke-linecap="round"/><circle cx="0" cy="20" r="5" fill="#2B2B2B"/></g>
+  <g transform="translate(310 90) scale(0.6)"><path d="M-14 -20 q0 -22 16 -22 q16 0 16 16 q0 12 -14 18 q-4 2 -4 12" fill="none" stroke="#2B2B2B" stroke-width="6" stroke-linecap="round"/><circle cx="0" cy="20" r="5" fill="#2B2B2B"/></g>
+  <g transform="translate(200 230) scale(0.6)"><path d="M-14 -20 q0 -22 16 -22 q16 0 16 16 q0 12 -14 18 q-4 2 -4 12" fill="none" stroke="#2B2B2B" stroke-width="6" stroke-linecap="round"/><circle cx="0" cy="20" r="5" fill="#2B2B2B"/></g>
+
+</svg>
