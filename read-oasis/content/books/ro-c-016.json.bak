@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-c-016",
+  "revision": 1,
+  "status": "DRAFT",
+  "title": "Clouds Carry Water",
+  "language": "en",
+  "level": "C",
+  "reading_mode": "independent_reading",
+  "topic": "weather",
+  "genre": "nonfiction",
+  "learning_objectives": [
+    "Find a detail stated in the text",
+    "Retell or summarize ideas in order"
+  ],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": {
+    "text": "low",
+    "conceptual": "low",
+    "visual_support": "high"
+  },
+  "rights": {
+    "text_author": "AzureOpenAI GPT-5.6 for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
+  "pair_id": null,
+  "reserved_for_unseen_check": false,
+  "parent_prompts": [],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "Clouds hold tiny water drops.",
+      "illustration_brief": "Diagram or scene about weather without printed labels; do not reveal the page's exact wording.",
+      "audio_script": "Clouds hold tiny water drops.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p02",
+      "text": "Warm air can rise.",
+      "illustration_brief": "Diagram or scene about weather without printed labels; do not reveal the page's exact wording.",
+      "audio_script": "Warm air can rise.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p03",
+      "text": "Rising air can cool.",
+      "illustration_brief": "Diagram or scene about weather without printed labels; do not reveal the page's exact wording.",
+      "audio_script": "Rising air can cool.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p04",
+      "text": "Water drops gather in clouds.",
+      "illustration_brief": "Diagram or scene about weather without printed labels; do not reveal the page's exact wording.",
+      "audio_script": "Water drops gather in clouds.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p05",
+      "text": "Heavy drops fall as rain.",
+      "illustration_brief": "Diagram or scene about weather without printed labels; do not reveal the page's exact wording.",
+      "audio_script": "Heavy drops fall as rain.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p06",
+      "text": "Water begins the trip again.",
+      "illustration_brief": "Diagram or scene about weather without printed labels; do not reveal the page's exact wording.",
+      "audio_script": "Water begins the trip again.",
+      "timing_segments": []
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "explicit_detail",
+      "difficulty": "easy",
+      "prompt": "Which action or idea does the text describe first?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The action stated on page 1"
+        },
+        {
+          "id": "b",
+          "text": "The result stated on the last page"
+        },
+        {
+          "id": "c",
+          "text": "An event the text never states"
+        }
+      ],
+      "correct_option_id": "a",
+      "evidence_page_ids": [
+        "p01"
+      ],
+      "explanation": "Page 1 says: Clouds hold tiny water drops.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "word_knowledge",
+      "difficulty": "medium",
+      "prompt": "In this text, what does hold mean?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The meaning supported by the sentence"
+        },
+        {
+          "id": "b",
+          "text": "An unrelated object or action"
+        },
+        {
+          "id": "c",
+          "text": "The opposite of the sentence's meaning"
+        }
+      ],
+      "correct_option_id": "a",
+      "evidence_page_ids": [
+        "p01"
+      ],
+      "explanation": "The cited page uses hold in a sentence that supplies its context.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "expression",
+      "difficulty": "easy",
+      "response_type": "open",
+      "prompt": "Tell the main events or ideas in your own words.",
+      "rubric": "not yet: names one picture only; with support: gives two linked details after prompting; independent: gives the main events or ideas in order with evidence",
+      "explanation": "An ordered retell or summary shows understanding beyond recognizing an illustration."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "prompt": "Put the text events or ideas in order.",
+      "items": [
+        {
+          "id": "s1",
+          "text": "Clouds hold tiny water drops.",
+          "page_id": "p01"
+        },
+        {
+          "id": "s2",
+          "text": "Warm air can rise.",
+          "page_id": "p02"
+        },
+        {
+          "id": "s3",
+          "text": "Water drops gather in clouds.",
+          "page_id": "p04"
+        }
+      ],
+      "correct_order": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "discussion",
+      "skill": "listening_comprehension",
+      "prompts": [
+        "Which detail mattered most?",
+        "How do you know from the words?"
+      ]
+    }
+  ],
+  "off_screen_prompt": "Tell someone one detail you learned, then draw or act out the sequence without looking at the book.",
+  "review": {
+    "content_approved": false,
+    "media_approved": false,
+    "parent_approved": false
+  },
+  "collection_wave": 1,
+  "factual_claims": [
+    {
+      "claim": "Clouds hold tiny water drops.",
+      "source": "NOAA SciJinks, Clouds and Wind, https://scijinks.gov/",
+      "reviewed": false
+    },
+    {
+      "claim": "Warm air can rise.",
+      "source": "NOAA SciJinks, Clouds and Wind, https://scijinks.gov/",
+      "reviewed": false
+    },
+    {
+      "claim": "Rising air can cool.",
+      "source": "NOAA SciJinks, Clouds and Wind, https://scijinks.gov/",
+      "reviewed": false
+    },
+    {
+      "claim": "Water drops gather in clouds.",
+      "source": "NOAA SciJinks, Clouds and Wind, https://scijinks.gov/",
+      "reviewed": false
+    },
+    {
+      "claim": "Heavy drops fall as rain.",
+      "source": "NOAA SciJinks, Clouds and Wind, https://scijinks.gov/",
+      "reviewed": false
+    },
+    {
+      "claim": "Water begins the trip again.",
+      "source": "NOAA SciJinks, Clouds and Wind, https://scijinks.gov/",
+      "reviewed": false
+    }
+  ]
+}

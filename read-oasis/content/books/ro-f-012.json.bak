@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-f-012",
+  "revision": 1,
+  "status": "DRAFT",
+  "title": "The Missing Blue Tile",
+  "language": "en",
+  "level": "F",
+  "reading_mode": "independent_reading",
+  "topic": "building",
+  "genre": "fiction",
+  "learning_objectives": [
+    "Find a detail stated in the text",
+    "Retell or summarize ideas in order"
+  ],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": {
+    "text": "medium",
+    "conceptual": "medium",
+    "visual_support": "medium"
+  },
+  "rights": {
+    "text_author": "AzureOpenAI GPT-5.6 for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
+  "pair_id": null,
+  "reserved_for_unseen_check": false,
+  "parent_prompts": [],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "Mo noticed the tile before breakfast and wrote one quiet question in a notebook. No one else had seen the problem yet.",
+      "illustration_brief": "Show Mo in a calm building setting; support the scene but do not reveal the sentence's key reason or sequence word.",
+      "audio_script": "Mo noticed the tile before breakfast and wrote one quiet question in a notebook. No one else had seen the problem yet.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p02",
+      "text": "At the building table, Mo tested the simplest idea first. The result was useful, but it did not solve everything.",
+      "illustration_brief": "Show Mo in a calm building setting; support the scene but do not reveal the sentence's key reason or sequence word.",
+      "audio_script": "At the building table, Mo tested the simplest idea first. The result was useful, but it did not solve everything.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p03",
+      "text": "A friend suggested rushing. Mo chose to watch carefully instead, because a small detail might explain what was happening.",
+      "illustration_brief": "Show Mo in a calm building setting; support the scene but do not reveal the sentence's key reason or sequence word.",
+      "audio_script": "A friend suggested rushing. Mo chose to watch carefully instead, because a small detail might explain what was happening.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p04",
+      "text": "The next test revealed a pattern. Each time the same change was made, the tile behaved in the same surprising way.",
+      "illustration_brief": "Show Mo in a calm building setting; support the scene but do not reveal the sentence's key reason or sequence word.",
+      "audio_script": "The next test revealed a pattern. Each time the same change was made, the tile behaved in the same surprising way.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "pattern",
+          "definition": "Something that repeats in a regular way.",
+          "example": "The marks made a pattern."
+        }
+      ]
+    },
+    {
+      "page_id": "p05",
+      "text": "Mo explained the pattern aloud. The friend asked a sharp question, and together they found a gap in the explanation.",
+      "illustration_brief": "Show Mo in a calm building setting; support the scene but do not reveal the sentence's key reason or sequence word.",
+      "audio_script": "Mo explained the pattern aloud. The friend asked a sharp question, and together they found a gap in the explanation.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p06",
+      "text": "They changed only one part of the plan. This made it possible to tell which idea had actually helped.",
+      "illustration_brief": "Show Mo in a calm building setting; support the scene but do not reveal the sentence's key reason or sequence word.",
+      "audio_script": "They changed only one part of the plan. This made it possible to tell which idea had actually helped.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p07",
+      "text": "The final test worked for the reason they predicted. Mo recorded both the success and the earlier mistake.",
+      "illustration_brief": "Show Mo in a calm building setting; support the scene but do not reveal the sentence's key reason or sequence word.",
+      "audio_script": "The final test worked for the reason they predicted. Mo recorded both the success and the earlier mistake.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p08",
+      "text": "By evening, the tile was ready. More importantly, Mo had learned that careful questions can improve a good idea.",
+      "illustration_brief": "Show Mo in a calm building setting; support the scene but do not reveal the sentence's key reason or sequence word.",
+      "audio_script": "By evening, the tile was ready. More importantly, Mo had learned that careful questions can improve a good idea.",
+      "timing_segments": []
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "explicit_detail",
+      "difficulty": "easy",
+      "prompt": "Which action or idea does the text describe first?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The action stated on page 1"
+        },
+        {
+          "id": "b",
+          "text": "The result stated on the last page"
+        },
+        {
+          "id": "c",
+          "text": "An event the text never states"
+        }
+      ],
+      "correct_option_id": "a",
+      "evidence_page_ids": [
+        "p01"
+      ],
+      "explanation": "Page 1 says: Mo noticed the tile before breakfast and wrote one quiet question in a notebook. No one else had seen the problem yet.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "sequence",
+      "difficulty": "medium",
+      "prompt": "Which statement belongs at the end of the text?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The opening observation"
+        },
+        {
+          "id": "b",
+          "text": "The final result or summary"
+        },
+        {
+          "id": "c",
+          "text": "A detail not included"
+        }
+      ],
+      "correct_option_id": "b",
+      "evidence_page_ids": [
+        "p08"
+      ],
+      "explanation": "The final page states: By evening, the tile was ready. More importantly, Mo had learned that careful questions can improve a good idea.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "main_idea",
+      "difficulty": "hard",
+      "prompt": "What idea connects the beginning and ending?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Careful observation leads to a clearer result"
+        },
+        {
+          "id": "b",
+          "text": "The setting matters more than every action"
+        },
+        {
+          "id": "c",
+          "text": "The first guess is always correct"
+        }
+      ],
+      "correct_option_id": "a",
+      "evidence_page_ids": [
+        "p01",
+        "p08"
+      ],
+      "explanation": "The opening introduces an observation or problem, and the final page explains the result.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "summary",
+      "difficulty": "hard",
+      "response_type": "open",
+      "prompt": "Tell the main events or ideas in your own words.",
+      "rubric": "not yet: names one picture only; with support: gives two linked details after prompting; independent: gives the main events or ideas in order with evidence",
+      "explanation": "An ordered retell or summary shows understanding beyond recognizing an illustration."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "prompt": "Put the text events or ideas in order.",
+      "items": [
+        {
+          "id": "s1",
+          "text": "Mo noticed the tile before breakfast and wrote one quiet question in a notebook. No one else had seen the problem yet.",
+          "page_id": "p01"
+        },
+        {
+          "id": "s2",
+          "text": "At the building table, Mo tested the simplest idea first. The result was useful, but it did not solve everything.",
+          "page_id": "p02"
+        },
+        {
+          "id": "s3",
+          "text": "Mo explained the pattern aloud. The friend asked a sharp question, and together they found a gap in the explanation.",
+          "page_id": "p05"
+        },
+        {
+          "id": "s4",
+          "text": "By evening, the tile was ready. More importantly, Mo had learned that careful questions can improve a good idea.",
+          "page_id": "p08"
+        }
+      ],
+      "correct_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "discussion",
+      "skill": "listening_comprehension",
+      "prompts": [
+        "Which detail mattered most?",
+        "How do you know from the words?"
+      ]
+    }
+  ],
+  "off_screen_prompt": "Tell someone one detail you learned, then draw or act out the sequence without looking at the book.",
+  "review": {
+    "content_approved": false,
+    "media_approved": false,
+    "parent_approved": false
+  },
+  "collection_wave": 2
+}
