@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Sam naps</title>
+  <desc id="d">The lid covers the pot. Sam rests on a mat with closed eyes.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="230" width="400" height="70" fill="#BFE3B4"/>
+  <g transform="translate(300 170)">
+    <rect x="-50" y="0" width="100" height="60" rx="12" fill="#7F8C8D" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-50 14 L-70 14 M50 14 L70 14" fill="none" stroke="#2B2B2B" stroke-width="8" stroke-linecap="round"/>
+    <path d="M-52 0 q52 -30 104 0 Z" fill="#95A5A6" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="0" cy="-16" r="7" fill="#2B2B2B"/>
+  </g>
+  <rect x="30" y="236" width="180" height="20" rx="8" fill="#9B59B6" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(90 214)"><circle cx="0" cy="0" r="24" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M-24 -8 q24 -28 48 0" fill="#2B2B2B"/><path d="M-10 4 q4 3 8 0 M6 4 q4 3 8 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <rect x="112" y="200" width="80" height="34" rx="10" fill="#5B8DEF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+</svg>
