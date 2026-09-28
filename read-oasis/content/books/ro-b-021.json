@@ -2,42 +2,262 @@
   "schema_version": 1,
   "book_id": "ro-b-021",
   "revision": 1,
-  "status": "DRAFT",
+  "status": "PUBLISHED",
   "title": "Tim and the Big Bin",
   "language": "en",
   "level": "B",
   "reading_mode": "decodable",
   "topic": "home",
   "genre": "fiction",
-  "learning_objectives": ["Decode CVC words with short i", "Keep reading short-a words from the earlier book"],
-  "prerequisite_skills": ["cvc_short_a"],
-  "target_phonics": ["cvc_short_i"],
-  "irregular_words": ["the", "a", "is", "in", "on", "it", "and", "to", "I", "my", "no", "of", "puts", "has", "will", "not", "full", "up", "gets", "he"],
-  "difficulty": { "text": "low", "conceptual": "low", "visual_support": "low" },
-  "rights": { "text_author": "Huy Tran for Read Oasis (original)", "text_license": "family-use, all rights reserved", "media_license": "family-use, original SVG", "original": true },
+  "learning_objectives": [
+    "Decode CVC words with short i",
+    "Keep reading short-a words from the earlier book"
+  ],
+  "prerequisite_skills": [
+    "cvc_short_a"
+  ],
+  "target_phonics": [
+    "cvc_short_i"
+  ],
+  "irregular_words": [
+    "the",
+    "a",
+    "is",
+    "in",
+    "on",
+    "it",
+    "and",
+    "to",
+    "I",
+    "my",
+    "no",
+    "of",
+    "puts",
+    "has",
+    "will",
+    "not",
+    "full",
+    "up",
+    "gets",
+    "he"
+  ],
+  "difficulty": {
+    "text": "low",
+    "conceptual": "low",
+    "visual_support": "low"
+  },
+  "rights": {
+    "text_author": "Huy Tran for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
   "parent_prompts": [
     "New sound: short i as in tin, lid, big. Let the child stretch it: t-i-n.",
     "Cover the picture if the child guesses. The words carry the story.",
     "After reading: What did Tim do when the lid did not fit? Was that a good idea?"
   ],
   "pages": [
-    { "page_id": "p01", "text": "Tim has a big bin.", "illustration_brief": "Tim (new: child with a red cap) standing next to a tall green bin taller than his waist; nothing in the bin visible.", "audio_script": "Tim has a big bin.", "timing_segments": [] },
-    { "page_id": "p02", "text": "Tim puts a tin in the bin. Tin, tin, tin.", "illustration_brief": "Tim dropping small cans into the bin one by one.", "audio_script": "Tim puts a tin in the bin. Tin, tin, tin.", "timing_segments": [] },
-    { "page_id": "p03", "text": "The bin is full. The lid will not fit!", "illustration_brief": "The bin heaped over the top; the lid perched crooked on the pile.", "audio_script": "The bin is full. The lid will not fit!", "timing_segments": [] },
-    { "page_id": "p04", "text": "Tim sits on the lid. It dips. It tips!", "illustration_brief": "Tim sitting on the lid, bin leaning to one side, cans starting to spill.", "audio_script": "Tim sits on the lid. It dips. It tips!", "timing_segments": [] },
-    { "page_id": "p05", "text": "Tin, tin, tin. Tim gets the tins. He bins the tins.", "illustration_brief": "Cans on the floor, Tim gathering them into his arms.", "audio_script": "Tin, tin, tin. Tim gets the tins. He bins the tins.", "timing_segments": [] },
-    { "page_id": "p06", "text": "Tim gets a bag. Six tins in the bin, six tins in the bag. The lid fits!", "illustration_brief": "Tim with the lid flat on the bin and a full cloth bag beside it, thumbs up.", "audio_script": "Tim gets a bag. Six tins in the bin, six tins in the bag. The lid fits!", "timing_segments": [] }
+    {
+      "page_id": "p01",
+      "text": "Tim has a big bin.",
+      "illustration_brief": "Tim (new: child with a red cap) standing next to a tall green bin taller than his waist; nothing in the bin visible.",
+      "audio_script": "Tim has a big bin.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p02",
+      "text": "Tim puts a tin in the bin. Tin, tin, tin.",
+      "illustration_brief": "Tim dropping small cans into the bin one by one.",
+      "audio_script": "Tim puts a tin in the bin. Tin, tin, tin.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p03",
+      "text": "The bin is full. The lid will not fit!",
+      "illustration_brief": "The bin heaped over the top; the lid perched crooked on the pile.",
+      "audio_script": "The bin is full. The lid will not fit!",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p04",
+      "text": "Tim sits on the lid. It dips. It tips!",
+      "illustration_brief": "Tim sitting on the lid, bin leaning to one side, cans starting to spill.",
+      "audio_script": "Tim sits on the lid. It dips. It tips!",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p05",
+      "text": "Tin, tin, tin. Tim gets the tins. He bins the tins.",
+      "illustration_brief": "Cans on the floor, Tim gathering them into his arms.",
+      "audio_script": "Tin, tin, tin. Tim gets the tins. He bins the tins.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p06",
+      "text": "Tim gets a bag. Six tins in the bin, six tins in the bag. The lid fits!",
+      "illustration_brief": "Tim with the lid flat on the bin and a full cloth bag beside it, thumbs up.",
+      "audio_script": "Tim gets a bag. Six tins in the bin, six tins in the bag. The lid fits!",
+      "timing_segments": []
+    }
   ],
   "quiz": [
-    { "question_id": "q01", "skill": "decoding", "difficulty": "easy", "prompt": "Which word says lid?", "options": [ { "id": "lid", "text": "lid" }, { "id": "lad", "text": "lad" }, { "id": "lip", "text": "lip" } ], "correct_option_id": "lid", "evidence_page_ids": ["p03"], "explanation": "l-i-d. The middle sound is short i, and the last sound is d.", "distractors_reviewed": true },
-    { "question_id": "q02", "skill": "cause_effect", "difficulty": "medium", "prompt": "Why will the lid not fit?", "options": [ { "id": "full", "text": "The bin is too full" }, { "id": "small", "text": "The lid is too small" }, { "id": "lost", "text": "Tim lost the lid" } ], "correct_option_id": "full", "evidence_page_ids": ["p03"], "explanation": "Page 3 says: The bin is full. The lid will not fit!", "distractors_reviewed": true },
-    { "question_id": "q03", "skill": "inference", "difficulty": "medium", "prompt": "Why does Tim get a bag at the end?", "options": [ { "id": "share", "text": "To hold some of the tins" }, { "id": "shop", "text": "To go to the shop" }, { "id": "hide", "text": "To hide the lid" } ], "correct_option_id": "share", "evidence_page_ids": ["p04", "p06"], "explanation": "Sitting on the lid made the bin tip (page 4). Putting half the tins in a bag let the lid fit (page 6).", "distractors_reviewed": true },
-    { "question_id": "q04", "skill": "expression", "difficulty": "easy", "response_type": "open", "prompt": "Tell a grown-up what Tim tried first and what worked in the end.", "rubric": "not yet: says bin or tin only; with support: says he sat on it, with prompting; independent: sat on the lid, it tipped, then used a bag so the lid fit", "explanation": "Naming the failed try and the fix shows the child followed the problem and solution." }
+    {
+      "question_id": "q01",
+      "skill": "decoding",
+      "difficulty": "easy",
+      "prompt": "Which word says lid?",
+      "options": [
+        {
+          "id": "lid",
+          "text": "lid"
+        },
+        {
+          "id": "lad",
+          "text": "lad"
+        },
+        {
+          "id": "lip",
+          "text": "lip"
+        }
+      ],
+      "correct_option_id": "lid",
+      "evidence_page_ids": [
+        "p03"
+      ],
+      "explanation": "l-i-d. The middle sound is short i, and the last sound is d.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "cause_effect",
+      "difficulty": "medium",
+      "prompt": "Why will the lid not fit?",
+      "options": [
+        {
+          "id": "full",
+          "text": "The bin is too full"
+        },
+        {
+          "id": "small",
+          "text": "The lid is too small"
+        },
+        {
+          "id": "lost",
+          "text": "Tim lost the lid"
+        }
+      ],
+      "correct_option_id": "full",
+      "evidence_page_ids": [
+        "p03"
+      ],
+      "explanation": "Page 3 says: The bin is full. The lid will not fit!",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "inference",
+      "difficulty": "medium",
+      "prompt": "Why does Tim get a bag at the end?",
+      "options": [
+        {
+          "id": "share",
+          "text": "To hold some of the tins"
+        },
+        {
+          "id": "shop",
+          "text": "To go to the shop"
+        },
+        {
+          "id": "hide",
+          "text": "To hide the lid"
+        }
+      ],
+      "correct_option_id": "share",
+      "evidence_page_ids": [
+        "p04",
+        "p06"
+      ],
+      "explanation": "Sitting on the lid made the bin tip (page 4). Putting half the tins in a bag let the lid fit (page 6).",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "expression",
+      "difficulty": "easy",
+      "response_type": "open",
+      "prompt": "Tell a grown-up what Tim tried first and what worked in the end.",
+      "rubric": "not yet: says bin or tin only; with support: says he sat on it, with prompting; independent: sat on the lid, it tipped, then used a bag so the lid fit",
+      "explanation": "Naming the failed try and the fix shows the child followed the problem and solution."
+    }
   ],
   "activities": [
-    { "activity_id": "a01", "type": "sequence_events", "skill": "sequence", "prompt": "Put the story in order.", "items": [ { "id": "s1", "text": "Tim fills the bin with tins.", "page_id": "p02" }, { "id": "s2", "text": "Tim sits on the lid and it tips.", "page_id": "p04" }, { "id": "s3", "text": "Tim puts some tins in a bag.", "page_id": "p06" } ], "correct_order": ["s1", "s2", "s3"] },
-    { "activity_id": "a02", "type": "word_to_meaning", "skill": "word_knowledge", "prompt": "Match the word to its meaning.", "pairs": [ { "left": "bin", "right": "a big box for things" }, { "left": "tin", "right": "a metal can" }, { "left": "tips", "right": "leans and falls over" } ] }
+    {
+      "activity_id": "a01",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "prompt": "Put the story in order.",
+      "items": [
+        {
+          "id": "s1",
+          "text": "Tim fills the bin with tins.",
+          "page_id": "p02"
+        },
+        {
+          "id": "s2",
+          "text": "Tim sits on the lid and it tips.",
+          "page_id": "p04"
+        },
+        {
+          "id": "s3",
+          "text": "Tim puts some tins in a bag.",
+          "page_id": "p06"
+        }
+      ],
+      "correct_order": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "word_to_meaning",
+      "skill": "word_knowledge",
+      "prompt": "Match the word to its meaning.",
+      "pairs": [
+        {
+          "left": "bin",
+          "right": "a big box for things"
+        },
+        {
+          "left": "tin",
+          "right": "a metal can"
+        },
+        {
+          "left": "tips",
+          "right": "leans and falls over"
+        }
+      ]
+    }
   ],
   "off_screen_prompt": "Find something at home with a lid. Take it off and put it back. Say lid, l-i-d.",
-  "review": { "content_approved": false, "media_approved": false, "parent_approved": false, "decodability_reviewed": true, "decodability_note": "Short-i CVC: Tim, big, bin, tin(s), lid, fit(s), sit(s), dip(s), tip(s), six, bins (verb); short-a: bag. Sight words added to the irregular list for this book: puts, has, will, not, full, up, gets (each appears in the story; introduce before reading). Checker flags nothing further." }
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "decodability_reviewed": true,
+    "decodability_note": "Short-i CVC: Tim, big, bin, tin(s), lid, fit(s), sit(s), dip(s), tip(s), six, bins (verb); short-a: bag. Sight words added to the irregular list for this book: puts, has, will, not, full, up, gets (each appears in the story; introduce before reading). Checker flags nothing further.",
+    "published_at": "2026-09-28T06:29:02+00:00",
+    "reviewer": "parent",
+    "review_date": "2026-09-28",
+    "history": [
+      {
+        "action": "approve_all",
+        "at": "2026-09-28T06:29:02+00:00",
+        "by": "parent",
+        "note": "reference set, fiction"
+      }
+    ]
+  }
 }

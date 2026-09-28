@@ -2,42 +2,266 @@
   "schema_version": 1,
   "book_id": "ro-c-022",
   "revision": 1,
-  "status": "DRAFT",
+  "status": "PUBLISHED",
   "title": "Dot on the Log",
   "language": "en",
   "level": "C",
   "reading_mode": "decodable",
   "topic": "animals",
   "genre": "fiction",
-  "learning_objectives": ["Decode CVC words with short o", "Read mixed short-a, short-i and short-o words in one story"],
-  "prerequisite_skills": ["cvc_short_a", "cvc_short_i"],
-  "target_phonics": ["cvc_short_o"],
-  "irregular_words": ["the", "a", "is", "in", "on", "it", "and", "to", "said", "up", "frog", "pond", "rock", "wet", "mud", "big", "ribbit"],
-  "difficulty": { "text": "low", "conceptual": "low", "visual_support": "low" },
-  "rights": { "text_author": "Huy Tran for Read Oasis (original)", "text_license": "family-use, all rights reserved", "media_license": "family-use, original SVG", "original": true },
+  "learning_objectives": [
+    "Decode CVC words with short o",
+    "Read mixed short-a, short-i and short-o words in one story"
+  ],
+  "prerequisite_skills": [
+    "cvc_short_a",
+    "cvc_short_i"
+  ],
+  "target_phonics": [
+    "cvc_short_o"
+  ],
+  "irregular_words": [
+    "the",
+    "a",
+    "is",
+    "in",
+    "on",
+    "it",
+    "and",
+    "to",
+    "said",
+    "up",
+    "frog",
+    "pond",
+    "rock",
+    "wet",
+    "mud",
+    "big",
+    "ribbit"
+  ],
+  "difficulty": {
+    "text": "low",
+    "conceptual": "low",
+    "visual_support": "low"
+  },
+  "rights": {
+    "text_author": "Huy Tran for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
   "parent_prompts": [
     "New sound: short o as in dog, log, hop. Stretch it: d-o-g.",
     "This story mixes a, i and o words. If the child swaps a vowel (dig for dog), point to the middle letter.",
     "After reading: Why did Dot hop off the log? Who was on it?"
   ],
   "pages": [
-    { "page_id": "p01", "text": "Dot is a dog. Dot naps on a big log.", "illustration_brief": "A small spotted dog lying on a thick fallen log by a pond; keep the frog hidden.", "audio_script": "Dot is a dog. Dot naps on a big log.", "timing_segments": [] },
-    { "page_id": "p02", "text": "Hop! A frog is on the log.", "illustration_brief": "A green frog mid-hop landing on the far end of the log; Dot's eye opening.", "audio_script": "Hop! A frog is on the log.", "timing_segments": [] },
-    { "page_id": "p03", "text": "Dot sits up. The frog hops to a rock.", "illustration_brief": "Dot sitting up alert; the frog on a grey rock in the pond.", "audio_script": "Dot sits up. The frog hops to a rock.", "timing_segments": [] },
-    { "page_id": "p04", "text": "Dot hops to the rock. The frog hops to a pot.", "illustration_brief": "Dot balancing on the rock; the frog now on an upturned clay pot on the bank.", "audio_script": "Dot hops to the rock. The frog hops to a pot.", "timing_segments": [] },
-    { "page_id": "p05", "text": "Dot hops to the pot. Tip! Dot is in the pond. Dot is wet.", "illustration_brief": "The pot tipped over; Dot splashing in shallow water, surprised; frog on the log again.", "audio_script": "Dot hops to the pot. Tip! Dot is in the pond. Dot is wet.", "timing_segments": [] },
-    { "page_id": "p06", "text": "The frog sits on the log. Dot sits in the mud. \"Rib-bit,\" said the frog.", "illustration_brief": "Frog calm on the log; muddy Dot sitting below looking up at it.", "audio_script": "The frog sits on the log. Dot sits in the mud. Rib-bit, said the frog.", "timing_segments": [] }
+    {
+      "page_id": "p01",
+      "text": "Dot is a dog. Dot naps on a big log.",
+      "illustration_brief": "A small spotted dog lying on a thick fallen log by a pond; keep the frog hidden.",
+      "audio_script": "Dot is a dog. Dot naps on a big log.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p02",
+      "text": "Hop! A frog is on the log.",
+      "illustration_brief": "A green frog mid-hop landing on the far end of the log; Dot's eye opening.",
+      "audio_script": "Hop! A frog is on the log.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p03",
+      "text": "Dot sits up. The frog hops to a rock.",
+      "illustration_brief": "Dot sitting up alert; the frog on a grey rock in the pond.",
+      "audio_script": "Dot sits up. The frog hops to a rock.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p04",
+      "text": "Dot hops to the rock. The frog hops to a pot.",
+      "illustration_brief": "Dot balancing on the rock; the frog now on an upturned clay pot on the bank.",
+      "audio_script": "Dot hops to the rock. The frog hops to a pot.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p05",
+      "text": "Dot hops to the pot. Tip! Dot is in the pond. Dot is wet.",
+      "illustration_brief": "The pot tipped over; Dot splashing in shallow water, surprised; frog on the log again.",
+      "audio_script": "Dot hops to the pot. Tip! Dot is in the pond. Dot is wet.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p06",
+      "text": "The frog sits on the log. Dot sits in the mud. \"Rib-bit,\" said the frog.",
+      "illustration_brief": "Frog calm on the log; muddy Dot sitting below looking up at it.",
+      "audio_script": "The frog sits on the log. Dot sits in the mud. Rib-bit, said the frog.",
+      "timing_segments": []
+    }
   ],
   "quiz": [
-    { "question_id": "q01", "skill": "decoding", "difficulty": "easy", "prompt": "Which word says log?", "options": [ { "id": "log", "text": "log" }, { "id": "lag", "text": "lag" }, { "id": "lot", "text": "lot" } ], "correct_option_id": "log", "evidence_page_ids": ["p01"], "explanation": "l-o-g. The middle sound is short o and the last sound is g.", "distractors_reviewed": true },
-    { "question_id": "q02", "skill": "sequence", "difficulty": "medium", "prompt": "Where does the frog hop right after the rock?", "options": [ { "id": "pot", "text": "To a pot" }, { "id": "log", "text": "To the log" }, { "id": "mud", "text": "Into the mud" } ], "correct_option_id": "pot", "evidence_page_ids": ["p03", "p04"], "explanation": "Page 3: the frog hops to a rock. Page 4: the frog hops to a pot.", "distractors_reviewed": true },
-    { "question_id": "q03", "skill": "cause_effect", "difficulty": "medium", "prompt": "Why does Dot end up in the pond?", "options": [ { "id": "tip", "text": "The pot tips when Dot hops on it" }, { "id": "push", "text": "The frog pushes Dot" }, { "id": "swim", "text": "Dot wants to swim" } ], "correct_option_id": "tip", "evidence_page_ids": ["p05"], "explanation": "Page 5: Dot hops to the pot. Tip! Dot is in the pond.", "distractors_reviewed": true },
-    { "question_id": "q04", "skill": "expression", "difficulty": "easy", "response_type": "open", "prompt": "Tell a grown-up where the frog went and where Dot ended up.", "rubric": "not yet: says dog or frog only; with support: two places with prompting; independent: log, rock, pot in order and Dot fell in the pond", "explanation": "Tracking the chase in order shows the child read the words, not the pictures." }
+    {
+      "question_id": "q01",
+      "skill": "decoding",
+      "difficulty": "easy",
+      "prompt": "Which word says log?",
+      "options": [
+        {
+          "id": "log",
+          "text": "log"
+        },
+        {
+          "id": "lag",
+          "text": "lag"
+        },
+        {
+          "id": "lot",
+          "text": "lot"
+        }
+      ],
+      "correct_option_id": "log",
+      "evidence_page_ids": [
+        "p01"
+      ],
+      "explanation": "l-o-g. The middle sound is short o and the last sound is g.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "sequence",
+      "difficulty": "medium",
+      "prompt": "Where does the frog hop right after the rock?",
+      "options": [
+        {
+          "id": "pot",
+          "text": "To a pot"
+        },
+        {
+          "id": "log",
+          "text": "To the log"
+        },
+        {
+          "id": "mud",
+          "text": "Into the mud"
+        }
+      ],
+      "correct_option_id": "pot",
+      "evidence_page_ids": [
+        "p03",
+        "p04"
+      ],
+      "explanation": "Page 3: the frog hops to a rock. Page 4: the frog hops to a pot.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "cause_effect",
+      "difficulty": "medium",
+      "prompt": "Why does Dot end up in the pond?",
+      "options": [
+        {
+          "id": "tip",
+          "text": "The pot tips when Dot hops on it"
+        },
+        {
+          "id": "push",
+          "text": "The frog pushes Dot"
+        },
+        {
+          "id": "swim",
+          "text": "Dot wants to swim"
+        }
+      ],
+      "correct_option_id": "tip",
+      "evidence_page_ids": [
+        "p05"
+      ],
+      "explanation": "Page 5: Dot hops to the pot. Tip! Dot is in the pond.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "expression",
+      "difficulty": "easy",
+      "response_type": "open",
+      "prompt": "Tell a grown-up where the frog went and where Dot ended up.",
+      "rubric": "not yet: says dog or frog only; with support: two places with prompting; independent: log, rock, pot in order and Dot fell in the pond",
+      "explanation": "Tracking the chase in order shows the child read the words, not the pictures."
+    }
   ],
   "activities": [
-    { "activity_id": "a01", "type": "sequence_events", "skill": "sequence", "prompt": "Put the chase in order.", "items": [ { "id": "s1", "text": "The frog hops on the log.", "page_id": "p02" }, { "id": "s2", "text": "The frog hops to a rock.", "page_id": "p03" }, { "id": "s3", "text": "The frog hops to a pot.", "page_id": "p04" }, { "id": "s4", "text": "Dot tips into the pond.", "page_id": "p05" } ], "correct_order": ["s1", "s2", "s3", "s4"] },
-    { "activity_id": "a02", "type": "match_pairs", "skill": "decoding", "prompt": "Match the words that have the same middle sound.", "pairs": [ { "left": "dog", "right": "log" }, { "left": "sit", "right": "tip" }, { "left": "nap", "right": "sat" } ] }
+    {
+      "activity_id": "a01",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "prompt": "Put the chase in order.",
+      "items": [
+        {
+          "id": "s1",
+          "text": "The frog hops on the log.",
+          "page_id": "p02"
+        },
+        {
+          "id": "s2",
+          "text": "The frog hops to a rock.",
+          "page_id": "p03"
+        },
+        {
+          "id": "s3",
+          "text": "The frog hops to a pot.",
+          "page_id": "p04"
+        },
+        {
+          "id": "s4",
+          "text": "Dot tips into the pond.",
+          "page_id": "p05"
+        }
+      ],
+      "correct_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "match_pairs",
+      "skill": "decoding",
+      "prompt": "Match the words that have the same middle sound.",
+      "pairs": [
+        {
+          "left": "dog",
+          "right": "log"
+        },
+        {
+          "left": "sit",
+          "right": "tip"
+        },
+        {
+          "left": "nap",
+          "right": "sat"
+        }
+      ]
+    }
   ],
   "off_screen_prompt": "Hop like a frog to three places in the room. Say where you land: rug, mat, box...",
-  "review": { "content_approved": false, "media_approved": false, "parent_approved": false, "decodability_reviewed": true, "decodability_note": "Short-o CVC: Dot, dog, log, hop(s), pot, on; short-i: sit(s), in, tip; short-a: nap(s). Words beyond the three taught patterns are placed on the irregular list so the parent introduces them first: frog, pond (blends), rock (ck), big, wet, mud, up (other short vowels), rib-bit, said, up. Step 7 (mixed review) may retire most of these." }
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "decodability_reviewed": true,
+    "decodability_note": "Short-o CVC: Dot, dog, log, hop(s), pot, on; short-i: sit(s), in, tip; short-a: nap(s). Words beyond the three taught patterns are placed on the irregular list so the parent introduces them first: frog, pond (blends), rock (ck), big, wet, mud, up (other short vowels), rib-bit, said, up. Step 7 (mixed review) may retire most of these.",
+    "published_at": "2026-09-28T06:29:02+00:00",
+    "reviewer": "parent",
+    "review_date": "2026-09-28",
+    "history": [
+      {
+        "action": "approve_all",
+        "at": "2026-09-28T06:29:02+00:00",
+        "by": "parent",
+        "note": "reference set, fiction"
+      }
+    ]
+  }
 }

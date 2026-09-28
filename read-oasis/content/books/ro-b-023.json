@@ -2,43 +2,243 @@
   "schema_version": 1,
   "book_id": "ro-b-023",
   "revision": 1,
-  "status": "DRAFT",
+  "status": "PUBLISHED",
   "title": "Too Big, Too Small",
   "language": "en",
   "level": "B",
   "reading_mode": "shared_reading",
   "topic": "home",
   "genre": "fiction",
-  "learning_objectives": ["Use the words big, small and just right to compare", "Retell the three tries in order"],
+  "learning_objectives": [
+    "Use the words big, small and just right to compare",
+    "Retell the three tries in order"
+  ],
   "prerequisite_skills": [],
   "target_phonics": [],
   "irregular_words": [],
-  "difficulty": { "text": "low", "conceptual": "low", "visual_support": "high" },
-  "rights": { "text_author": "Huy Tran for Read Oasis (original)", "text_license": "family-use, all rights reserved", "media_license": "family-use, original SVG", "original": true },
+  "difficulty": {
+    "text": "low",
+    "conceptual": "low",
+    "visual_support": "high"
+  },
+  "rights": {
+    "text_author": "Huy Tran for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
   "parent_prompts": [
     "Before reading: It is a sunny day and Sam needs a hat. Whose hats might be in the house?",
     "After page 2: Why does Dad's hat fall over Sam's eyes?",
     "After reading: Which hat was just right? How did Sam know?"
   ],
   "pages": [
-    { "page_id": "p01", "text": "Sam needs a hat. The sun is hot.", "illustration_brief": "Sam (blue shirt) at an open door, bright sun outside, hand shading eyes.", "audio_script": "Sam needs a hat. The sun is hot.", "timing_segments": [] },
-    { "page_id": "p02", "text": "Dad's hat is too big. It slips down.", "illustration_brief": "A big straw hat sits over Sam's eyes and nose; only the smile shows.", "audio_script": "Dad's hat is too big. It slips down.", "timing_segments": [],
-      "vocabulary": [{ "word": "slips", "definition": "Slides down or away by itself.", "example": "The wet soap slips out of my hand." }] },
-    { "page_id": "p03", "text": "The doll's hat is too small. It pops off.", "illustration_brief": "A tiny pink hat balanced on top of Sam's head, tipping.", "audio_script": "The doll's hat is too small. It pops off.", "timing_segments": [] },
-    { "page_id": "p04", "text": "Sam looks in the box.", "illustration_brief": "Sam kneels by an open box of clothes; a green cap corner is visible.", "audio_script": "Sam looks in the box.", "timing_segments": [] },
-    { "page_id": "p05", "text": "A green cap! It is just right.", "illustration_brief": "Sam wearing a green cap that fits, arms out, happy.", "audio_script": "A green cap! It is just right.", "timing_segments": [] },
-    { "page_id": "p06", "text": "Now Sam can go out in the sun.", "illustration_brief": "Sam outside under the sun in the green cap, walking on grass.", "audio_script": "Now Sam can go out in the sun.", "timing_segments": [] }
+    {
+      "page_id": "p01",
+      "text": "Sam needs a hat. The sun is hot.",
+      "illustration_brief": "Sam (blue shirt) at an open door, bright sun outside, hand shading eyes.",
+      "audio_script": "Sam needs a hat. The sun is hot.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p02",
+      "text": "Dad's hat is too big. It slips down.",
+      "illustration_brief": "A big straw hat sits over Sam's eyes and nose; only the smile shows.",
+      "audio_script": "Dad's hat is too big. It slips down.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "slips",
+          "definition": "Slides down or away by itself.",
+          "example": "The wet soap slips out of my hand."
+        }
+      ]
+    },
+    {
+      "page_id": "p03",
+      "text": "The doll's hat is too small. It pops off.",
+      "illustration_brief": "A tiny pink hat balanced on top of Sam's head, tipping.",
+      "audio_script": "The doll's hat is too small. It pops off.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p04",
+      "text": "Sam looks in the box.",
+      "illustration_brief": "Sam kneels by an open box of clothes; a green cap corner is visible.",
+      "audio_script": "Sam looks in the box.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p05",
+      "text": "A green cap! It is just right.",
+      "illustration_brief": "Sam wearing a green cap that fits, arms out, happy.",
+      "audio_script": "A green cap! It is just right.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p06",
+      "text": "Now Sam can go out in the sun.",
+      "illustration_brief": "Sam outside under the sun in the green cap, walking on grass.",
+      "audio_script": "Now Sam can go out in the sun.",
+      "timing_segments": []
+    }
   ],
   "quiz": [
-    { "question_id": "q01", "skill": "explicit_detail", "difficulty": "easy", "prompt": "Why does Sam need a hat?", "options": [ { "id": "sun", "text": "The sun is hot" }, { "id": "rain", "text": "It is raining" }, { "id": "party", "text": "It is a party" } ], "correct_option_id": "sun", "evidence_page_ids": ["p01"], "explanation": "Page 1 says: The sun is hot.", "distractors_reviewed": true },
-    { "question_id": "q02", "skill": "cause_effect", "difficulty": "medium", "prompt": "Why does Dad's hat slip down?", "options": [ { "id": "big", "text": "It is too big" }, { "id": "small", "text": "It is too small" }, { "id": "wet", "text": "It is wet" } ], "correct_option_id": "big", "evidence_page_ids": ["p02"], "explanation": "Page 2 says: Dad's hat is too big. It slips down.", "distractors_reviewed": true },
-    { "question_id": "q03", "skill": "sequence", "difficulty": "medium", "prompt": "Which hat does Sam try last?", "options": [ { "id": "cap", "text": "The green cap" }, { "id": "dad", "text": "Dad's hat" }, { "id": "doll", "text": "The doll's hat" } ], "correct_option_id": "cap", "evidence_page_ids": ["p02", "p03", "p05"], "explanation": "First Dad's hat (page 2), then the doll's hat (page 3), then the green cap (page 5).", "distractors_reviewed": true },
-    { "question_id": "q04", "skill": "expression", "difficulty": "easy", "response_type": "open", "prompt": "Tell a grown-up about the three hats. What was wrong with the first two?", "rubric": "not yet: names one hat; with support: two hats and one problem with prompting; independent: three hats in order, says too big / too small / just right", "explanation": "Using the comparison words shows the child understood why each hat did or did not work." }
+    {
+      "question_id": "q01",
+      "skill": "explicit_detail",
+      "difficulty": "easy",
+      "prompt": "Why does Sam need a hat?",
+      "options": [
+        {
+          "id": "sun",
+          "text": "The sun is hot"
+        },
+        {
+          "id": "rain",
+          "text": "It is raining"
+        },
+        {
+          "id": "party",
+          "text": "It is a party"
+        }
+      ],
+      "correct_option_id": "sun",
+      "evidence_page_ids": [
+        "p01"
+      ],
+      "explanation": "Page 1 says: The sun is hot.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "cause_effect",
+      "difficulty": "medium",
+      "prompt": "Why does Dad's hat slip down?",
+      "options": [
+        {
+          "id": "big",
+          "text": "It is too big"
+        },
+        {
+          "id": "small",
+          "text": "It is too small"
+        },
+        {
+          "id": "wet",
+          "text": "It is wet"
+        }
+      ],
+      "correct_option_id": "big",
+      "evidence_page_ids": [
+        "p02"
+      ],
+      "explanation": "Page 2 says: Dad's hat is too big. It slips down.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "sequence",
+      "difficulty": "medium",
+      "prompt": "Which hat does Sam try last?",
+      "options": [
+        {
+          "id": "cap",
+          "text": "The green cap"
+        },
+        {
+          "id": "dad",
+          "text": "Dad's hat"
+        },
+        {
+          "id": "doll",
+          "text": "The doll's hat"
+        }
+      ],
+      "correct_option_id": "cap",
+      "evidence_page_ids": [
+        "p02",
+        "p03",
+        "p05"
+      ],
+      "explanation": "First Dad's hat (page 2), then the doll's hat (page 3), then the green cap (page 5).",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "expression",
+      "difficulty": "easy",
+      "response_type": "open",
+      "prompt": "Tell a grown-up about the three hats. What was wrong with the first two?",
+      "rubric": "not yet: names one hat; with support: two hats and one problem with prompting; independent: three hats in order, says too big / too small / just right",
+      "explanation": "Using the comparison words shows the child understood why each hat did or did not work."
+    }
   ],
   "activities": [
-    { "activity_id": "a01", "type": "sequence_events", "skill": "sequence", "prompt": "Put the hats in the order Sam tried them.", "items": [ { "id": "s1", "text": "Dad's big hat slips down.", "page_id": "p02" }, { "id": "s2", "text": "The doll's small hat pops off.", "page_id": "p03" }, { "id": "s3", "text": "The green cap is just right.", "page_id": "p05" } ], "correct_order": ["s1", "s2", "s3"] },
-    { "activity_id": "a02", "type": "word_to_meaning", "skill": "word_knowledge", "prompt": "Match the word to what it means.", "pairs": [ { "left": "too big", "right": "slips down over your eyes" }, { "left": "too small", "right": "pops off your head" }, { "left": "just right", "right": "fits and stays on" } ] }
+    {
+      "activity_id": "a01",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "prompt": "Put the hats in the order Sam tried them.",
+      "items": [
+        {
+          "id": "s1",
+          "text": "Dad's big hat slips down.",
+          "page_id": "p02"
+        },
+        {
+          "id": "s2",
+          "text": "The doll's small hat pops off.",
+          "page_id": "p03"
+        },
+        {
+          "id": "s3",
+          "text": "The green cap is just right.",
+          "page_id": "p05"
+        }
+      ],
+      "correct_order": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "word_to_meaning",
+      "skill": "word_knowledge",
+      "prompt": "Match the word to what it means.",
+      "pairs": [
+        {
+          "left": "too big",
+          "right": "slips down over your eyes"
+        },
+        {
+          "left": "too small",
+          "right": "pops off your head"
+        },
+        {
+          "left": "just right",
+          "right": "fits and stays on"
+        }
+      ]
+    }
   ],
   "off_screen_prompt": "Find one thing at home that is too big for you and one that is just right. Show someone.",
-  "review": { "content_approved": false, "media_approved": false, "parent_approved": false }
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-09-28T06:29:02+00:00",
+    "reviewer": "parent",
+    "review_date": "2026-09-28",
+    "history": [
+      {
+        "action": "approve_all",
+        "at": "2026-09-28T06:29:02+00:00",
+        "by": "parent",
+        "note": "reference set, fiction"
+      }
+    ]
+  }
 }

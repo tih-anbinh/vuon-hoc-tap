@@ -1,7 +1,7 @@
 {
   "index_version": 1,
   "generated_by": "tools/validate_content.py",
-  "content_hash": "08761e327b9b",
+  "content_hash": "ab8ac9da9e56",
   "books": [
     {
       "book_id": "ro-a-001",
@@ -23,6 +23,45 @@
       ]
     },
     {
+      "book_id": "ro-a-020",
+      "revision": 1,
+      "file": "books/ro-a-020.json",
+      "title": "Mo Taps",
+      "level": "A",
+      "reading_mode": "shared_reading",
+      "topic": "sounds",
+      "genre": "fiction",
+      "pages": 6,
+      "sha256": "bd4d3b621ea134bf8660bcf072bd52bc0092739f5f24c0effa29d3f0526f346a",
+      "assets": []
+    },
+    {
+      "book_id": "ro-a-022",
+      "revision": 1,
+      "file": "books/ro-a-022.json",
+      "title": "Pam the Cat",
+      "level": "A",
+      "reading_mode": "decodable",
+      "topic": "home",
+      "genre": "fiction",
+      "pages": 6,
+      "sha256": "afb7d14b2897c066c85063e8e5aa778520718c4251745ec99233ef91b735c3bb",
+      "assets": []
+    },
+    {
+      "book_id": "ro-a-023",
+      "revision": 1,
+      "file": "books/ro-a-023.json",
+      "title": "Wet, Wet, Dry",
+      "level": "A",
+      "reading_mode": "independent_reading",
+      "topic": "weather",
+      "genre": "fiction",
+      "pages": 6,
+      "sha256": "47d79f7da0105fcbfa5a4d3abe03b35c55f3cdd75258a0587560974da904c45e",
+      "assets": []
+    },
+    {
       "book_id": "ro-b-001",
       "revision": 1,
       "file": "books/ro-b-001.json",
@@ -39,6 +78,110 @@
         "images/ro-b-001-p03.svg",
         "images/ro-b-001-p04.svg"
       ]
+    },
+    {
+      "book_id": "ro-b-020",
+      "revision": 1,
+      "file": "books/ro-b-020.json",
+      "title": "A Hen Has Eggs",
+      "level": "B",
+      "reading_mode": "shared_reading",
+      "topic": "animals",
+      "genre": "nonfiction",
+      "pages": 6,
+      "sha256": "3c12838e81d13ef31b1d87862a3134860cdd7f3961381d211eb58f769f6fe9ae",
+      "assets": []
+    },
+    {
+      "book_id": "ro-b-021",
+      "revision": 1,
+      "file": "books/ro-b-021.json",
+      "title": "Tim and the Big Bin",
+      "level": "B",
+      "reading_mode": "decodable",
+      "topic": "home",
+      "genre": "fiction",
+      "pages": 6,
+      "sha256": "7376e6ef2ea7b66d288b26a6aafb2bf270bd4d038d17a620353f36755ff5e011",
+      "assets": []
+    },
+    {
+      "book_id": "ro-b-022",
+      "revision": 1,
+      "file": "books/ro-b-022.json",
+      "title": "Who Ate the Rice?",
+      "level": "B",
+      "reading_mode": "independent_reading",
+      "topic": "family",
+      "genre": "fiction",
+      "pages": 6,
+      "sha256": "5232fce51076e20cdea16a9a2cf1760f46ea8f1a33bd13c5b178cfb5081c323c",
+      "assets": []
+    },
+    {
+      "book_id": "ro-b-023",
+      "revision": 1,
+      "file": "books/ro-b-023.json",
+      "title": "Too Big, Too Small",
+      "level": "B",
+      "reading_mode": "shared_reading",
+      "topic": "home",
+      "genre": "fiction",
+      "pages": 6,
+      "sha256": "a18ada9a7bc24b6c25918222ec1a1c15349238a38ceec25a6ffd04a61445b90a",
+      "assets": []
+    },
+    {
+      "book_id": "ro-c-020",
+      "revision": 1,
+      "file": "books/ro-c-020.json",
+      "title": "The Kite That Would Not Fly",
+      "level": "C",
+      "reading_mode": "shared_reading",
+      "topic": "making",
+      "genre": "fiction",
+      "pages": 6,
+      "sha256": "5ff2eb0520dff71f4d35aab8556f5c46e750a780c4f690e05c5e2a17509b105a",
+      "assets": []
+    },
+    {
+      "book_id": "ro-c-021",
+      "revision": 1,
+      "file": "books/ro-c-021.json",
+      "title": "Where Does the Puddle Go?",
+      "level": "C",
+      "reading_mode": "independent_reading",
+      "topic": "water",
+      "genre": "nonfiction",
+      "pages": 6,
+      "sha256": "6dc7498d2d12a6c1b3d34d84b38a995aa7dc74d93e85036cfc3d067179b41e71",
+      "assets": []
+    },
+    {
+      "book_id": "ro-c-022",
+      "revision": 1,
+      "file": "books/ro-c-022.json",
+      "title": "Dot on the Log",
+      "level": "C",
+      "reading_mode": "decodable",
+      "topic": "animals",
+      "genre": "fiction",
+      "pages": 6,
+      "sha256": "a973ca11f14c25aab2e190faeb8a0c461f89f0ae452f30d7771383faf58fed9f",
+      "assets": []
+    },
+    {
+      "book_id": "ro-c-023",
+      "revision": 1,
+      "file": "books/ro-c-023.json",
+      "title": "Grandma's Market List",
+      "level": "C",
+      "reading_mode": "read_aloud",
+      "topic": "neighbourhood",
+      "genre": "fiction",
+      "pages": 8,
+      "sha256": "6d8bedae7b94b42fda065bcf1ce5f7dfbb3a731fab70af65695df0e3284626e6",
+      "assets": []
     },
     {
       "book_id": "ro-d-001",

@@ -1,0 +1,21 @@
+{
+  "_about": "Standard pronunciation benchmark (brief §8-9). Same inputs for every provider. Words tagged 'vn' are difficult sounds for Vietnamese speakers; 'ukus' differ between British and American English and must come out British.",
+  "words": [
+    { "w": "apple" }, { "w": "banana", "tags": ["ukus"] }, { "w": "water", "tags": ["ukus"] }, { "w": "school" }, { "w": "teacher" },
+    { "w": "three", "tags": ["vn"] }, { "w": "think", "tags": ["vn"] }, { "w": "this", "tags": ["vn"] }, { "w": "that", "tags": ["vn"] },
+    { "w": "world", "tags": ["vn"] }, { "w": "girl", "tags": ["vn"] }, { "w": "bird", "tags": ["vn"] },
+    { "w": "computer" }, { "w": "because", "tags": ["ukus"] }, { "w": "beautiful" },
+    { "w": "schedule", "tags": ["ukus"] }, { "w": "garage", "tags": ["ukus"] }, { "w": "tomato", "tags": ["ukus"] },
+    { "w": "advertisement", "tags": ["ukus"] }, { "w": "vitamin", "tags": ["ukus"] },
+    { "w": "very", "tags": ["vn"] }, { "w": "vegetable", "tags": ["vn"] }, { "w": "comfortable", "tags": ["vn"] }
+  ],
+  "sentences": [
+    { "id": "yuki", "text": "My name is Yuki. I go to school every day. I like reading books and playing football with my friends." },
+    { "id": "th", "text": "I think that this is the third thing on the shelf." },
+    { "id": "ukus", "text": "The schedule says the tomato advertisement is in the garage." },
+    { "id": "story", "text": "Then the wind blows. Up goes the kite!" }
+  ],
+  "speeds": ["normal", "slow"],
+  "rubric": ["pronunciation", "british_authenticity", "naturalness", "stress", "intonation", "rhythm", "clarity", "child_suitability"],
+  "rubric_note": "Score 1-5 per row by listening. Weight: pronunciation and british_authenticity x3, clarity x2, others x1. Naturalness never outranks accuracy for this project."
+}

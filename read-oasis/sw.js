@@ -6,7 +6,7 @@
 // Read Oasis service worker: cache app shell + published content for offline use (R07).
 // Same-origin only. No analytics, no external requests.
 // VERSION is stamped automatically by tools/validate_content.py --index (content hash + shell hash); do not edit by hand.
-const VERSION = 'ro-08761e327b9b-48b3498e';
+const VERSION = 'ro-ab8ac9da9e56-48b3498e';
 const SHELL = ['./', 'index.html', 'parent.html', 'manifest.webmanifest', 'assets/app.css',
   'src/kid-app.mjs', 'src/parent-dashboard.mjs', 'src/progress-store.mjs', 'src/schema.mjs', 'src/ui.mjs', 'src/sync.mjs', 'src/config.mjs', 'content/index.json'];
 

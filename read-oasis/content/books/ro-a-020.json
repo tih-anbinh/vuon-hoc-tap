@@ -2,43 +2,228 @@
   "schema_version": 1,
   "book_id": "ro-a-020",
   "revision": 1,
-  "status": "DRAFT",
+  "status": "PUBLISHED",
   "title": "Mo Taps",
   "language": "en",
   "level": "A",
   "reading_mode": "shared_reading",
   "topic": "sounds",
   "genre": "fiction",
-  "learning_objectives": ["Notice a repeating pattern and predict the next page", "Explain the surprise on the last page"],
+  "learning_objectives": [
+    "Notice a repeating pattern and predict the next page",
+    "Explain the surprise on the last page"
+  ],
   "prerequisite_skills": [],
   "target_phonics": [],
   "irregular_words": [],
-  "difficulty": { "text": "low", "conceptual": "low", "visual_support": "high" },
-  "rights": { "text_author": "Huy Tran for Read Oasis (original)", "text_license": "family-use, all rights reserved", "media_license": "family-use, original SVG", "original": true },
+  "difficulty": {
+    "text": "low",
+    "conceptual": "low",
+    "visual_support": "high"
+  },
+  "rights": {
+    "text_author": "Huy Tran for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
   "parent_prompts": [
     "Before reading: Mo likes to tap things. What sound does a pot make when you tap it?",
     "After page 3: What do you think Mo will tap next?",
     "After reading: Why did the cat run? Was the cat a good thing to tap?"
   ],
   "pages": [
-    { "page_id": "p01", "text": "Mo taps the pot. Bong!", "illustration_brief": "Mo (yellow round bird) beside a grey pot, beak touching it; small sound lines, no letters.", "audio_script": "Mo taps the pot. Bong!", "timing_segments": [],
-      "vocabulary": [{ "word": "taps", "definition": "Hits something very gently, once or twice.", "example": "She taps the door with one finger." }] },
-    { "page_id": "p02", "text": "Mo taps the cup. Ting!", "illustration_brief": "Mo beside a small white cup on a table; sound lines.", "audio_script": "Mo taps the cup. Ting!", "timing_segments": [] },
-    { "page_id": "p03", "text": "Mo taps the drum. Boom!", "illustration_brief": "Mo on top of a red drum; bigger sound lines.", "audio_script": "Mo taps the drum. Boom!", "timing_segments": [] },
-    { "page_id": "p04", "text": "Mo taps the box. Tok!", "illustration_brief": "Mo beside a brown cardboard box.", "audio_script": "Mo taps the box. Tok!", "timing_segments": [] },
-    { "page_id": "p05", "text": "Mo taps the cat.", "illustration_brief": "Mo beside a sleeping grey cat, beak just touching its back; the cat's eye is opening.", "audio_script": "Mo taps the cat.", "timing_segments": [] },
-    { "page_id": "p06", "text": "Meow! The cat runs. Mo runs too!", "illustration_brief": "The cat dashes off to the right with fur up; Mo flaps after it, both moving.", "audio_script": "Meow! The cat runs. Mo runs too!", "timing_segments": [] }
+    {
+      "page_id": "p01",
+      "text": "Mo taps the pot. Bong!",
+      "illustration_brief": "Mo (yellow round bird) beside a grey pot, beak touching it; small sound lines, no letters.",
+      "audio_script": "Mo taps the pot. Bong!",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "taps",
+          "definition": "Hits something very gently, once or twice.",
+          "example": "She taps the door with one finger."
+        }
+      ]
+    },
+    {
+      "page_id": "p02",
+      "text": "Mo taps the cup. Ting!",
+      "illustration_brief": "Mo beside a small white cup on a table; sound lines.",
+      "audio_script": "Mo taps the cup. Ting!",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p03",
+      "text": "Mo taps the drum. Boom!",
+      "illustration_brief": "Mo on top of a red drum; bigger sound lines.",
+      "audio_script": "Mo taps the drum. Boom!",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p04",
+      "text": "Mo taps the box. Tok!",
+      "illustration_brief": "Mo beside a brown cardboard box.",
+      "audio_script": "Mo taps the box. Tok!",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p05",
+      "text": "Mo taps the cat.",
+      "illustration_brief": "Mo beside a sleeping grey cat, beak just touching its back; the cat's eye is opening.",
+      "audio_script": "Mo taps the cat.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p06",
+      "text": "Meow! The cat runs. Mo runs too!",
+      "illustration_brief": "The cat dashes off to the right with fur up; Mo flaps after it, both moving.",
+      "audio_script": "Meow! The cat runs. Mo runs too!",
+      "timing_segments": []
+    }
   ],
   "quiz": [
-    { "question_id": "q01", "skill": "explicit_detail", "difficulty": "easy", "prompt": "What sound does the drum make?", "options": [ { "id": "boom", "text": "Boom" }, { "id": "ting", "text": "Ting" }, { "id": "meow", "text": "Meow" } ], "correct_option_id": "boom", "evidence_page_ids": ["p03"], "explanation": "Page 3 says: Mo taps the drum. Boom!", "distractors_reviewed": true },
-    { "question_id": "q02", "skill": "cause_effect", "difficulty": "medium", "prompt": "Why does the cat run?", "options": [ { "id": "tap", "text": "Mo taps it" }, { "id": "drum", "text": "It hears the drum" }, { "id": "food", "text": "It wants food" } ], "correct_option_id": "tap", "evidence_page_ids": ["p05", "p06"], "explanation": "Page 5: Mo taps the cat. Page 6: Meow! The cat runs. The tap made the cat run.", "distractors_reviewed": true },
-    { "question_id": "q03", "skill": "inference", "difficulty": "medium", "prompt": "Which thing was not a good thing to tap?", "options": [ { "id": "cat", "text": "The cat" }, { "id": "pot", "text": "The pot" }, { "id": "box", "text": "The box" } ], "correct_option_id": "cat", "evidence_page_ids": ["p05", "p06"], "explanation": "The pot, cup, drum and box just made sounds. The cat woke up and ran away.", "distractors_reviewed": true },
-    { "question_id": "q04", "skill": "expression", "difficulty": "easy", "response_type": "open", "prompt": "Tell a grown-up all the things Mo tapped, in order. What happened at the end?", "rubric": "not yet: names one object; with support: three objects with prompting; independent: four objects in order and says the cat ran", "explanation": "Recalling the list in order and the ending shows the child followed the pattern and the twist." }
+    {
+      "question_id": "q01",
+      "skill": "explicit_detail",
+      "difficulty": "easy",
+      "prompt": "What sound does the drum make?",
+      "options": [
+        {
+          "id": "boom",
+          "text": "Boom"
+        },
+        {
+          "id": "ting",
+          "text": "Ting"
+        },
+        {
+          "id": "meow",
+          "text": "Meow"
+        }
+      ],
+      "correct_option_id": "boom",
+      "evidence_page_ids": [
+        "p03"
+      ],
+      "explanation": "Page 3 says: Mo taps the drum. Boom!",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "cause_effect",
+      "difficulty": "medium",
+      "prompt": "Why does the cat run?",
+      "options": [
+        {
+          "id": "tap",
+          "text": "Mo taps it"
+        },
+        {
+          "id": "drum",
+          "text": "It hears the drum"
+        },
+        {
+          "id": "food",
+          "text": "It wants food"
+        }
+      ],
+      "correct_option_id": "tap",
+      "evidence_page_ids": [
+        "p05",
+        "p06"
+      ],
+      "explanation": "Page 5: Mo taps the cat. Page 6: Meow! The cat runs. The tap made the cat run.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "inference",
+      "difficulty": "medium",
+      "prompt": "Which thing was not a good thing to tap?",
+      "options": [
+        {
+          "id": "cat",
+          "text": "The cat"
+        },
+        {
+          "id": "pot",
+          "text": "The pot"
+        },
+        {
+          "id": "box",
+          "text": "The box"
+        }
+      ],
+      "correct_option_id": "cat",
+      "evidence_page_ids": [
+        "p05",
+        "p06"
+      ],
+      "explanation": "The pot, cup, drum and box just made sounds. The cat woke up and ran away.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "expression",
+      "difficulty": "easy",
+      "response_type": "open",
+      "prompt": "Tell a grown-up all the things Mo tapped, in order. What happened at the end?",
+      "rubric": "not yet: names one object; with support: three objects with prompting; independent: four objects in order and says the cat ran",
+      "explanation": "Recalling the list in order and the ending shows the child followed the pattern and the twist."
+    }
   ],
   "activities": [
-    { "activity_id": "a01", "type": "match_pairs", "skill": "word_knowledge", "prompt": "Match the thing to its sound.", "pairs": [ { "left": "pot", "right": "Bong" }, { "left": "cup", "right": "Ting" }, { "left": "drum", "right": "Boom" }, { "left": "cat", "right": "Meow" } ] },
-    { "activity_id": "a02", "type": "discussion", "skill": "listening_comprehension", "prompts": ["What would you tap to make a loud sound? A soft sound?", "How do you think the cat felt?"] }
+    {
+      "activity_id": "a01",
+      "type": "match_pairs",
+      "skill": "word_knowledge",
+      "prompt": "Match the thing to its sound.",
+      "pairs": [
+        {
+          "left": "pot",
+          "right": "Bong"
+        },
+        {
+          "left": "cup",
+          "right": "Ting"
+        },
+        {
+          "left": "drum",
+          "right": "Boom"
+        },
+        {
+          "left": "cat",
+          "right": "Meow"
+        }
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "discussion",
+      "skill": "listening_comprehension",
+      "prompts": [
+        "What would you tap to make a loud sound? A soft sound?",
+        "How do you think the cat felt?"
+      ]
+    }
   ],
   "off_screen_prompt": "Tap three things at home very gently. Tell someone which one was loudest.",
-  "review": { "content_approved": false, "media_approved": false, "parent_approved": false }
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-09-28T06:29:02+00:00",
+    "reviewer": "parent",
+    "review_date": "2026-09-28",
+    "history": [
+      {
+        "action": "approve_all",
+        "at": "2026-09-28T06:29:02+00:00",
+        "by": "parent",
+        "note": "reference set, fiction"
+      }
+    ]
+  }
 }
