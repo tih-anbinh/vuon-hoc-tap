@@ -19,3 +19,4 @@ for f in dist/index.html dist/parent.html; do
   echo "OK   $f ($(wc -c < "$f") bytes)"
 done
 if command -v node >/dev/null 2>&1; then echo "== node --test"; node --test test/; else echo "== node --test: NOT RUN (node not installed)"; fi
+echo "== Tidy (move backups/scratch to bak/)"; sh tools/tidy.sh | tail -1

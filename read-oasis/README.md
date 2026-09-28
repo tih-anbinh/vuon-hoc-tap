@@ -77,10 +77,14 @@ error), which is why the dev layout `index.html` cannot be opened directly.
 
 Rebuild after any change to `src/`, `assets/app.css`, or content:
 ```
-sh tools/check_all.sh        # sanity + content gate + Gate A tests + A03 contrast + build dist/
+update_content.cmd           # Windows one-click: validate + index + stamp sw.js + build dist/
+sh tools/check_all.sh        # Linux/WSL: the same plus sanity checks, Gate A tests, A03 contrast
 # or step by step:
 python3 tools/validate_content.py --index && python3 tools/build_single_file.py
 ```
+`validate_content.py --index` also **stamps `sw.js`** with `VERSION = ro-<content_hash>-<shell_hash>`,
+so offline caches on returning devices refresh automatically; never edit that line by hand. The service
+worker fetches `content/index.json` network-first, so a new push is visible on the next load, not the one after.
 `dist/` is generated; edit sources, not `dist/`. Progress in the `dist/` copy is stored per file path
 (browser origin rules), so keep the file in one place or export a backup before moving it.
 

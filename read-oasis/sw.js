@@ -4,8 +4,9 @@
 // Created: 2026-09-27
 //
 // Read Oasis service worker: cache app shell + published content for offline use (R07).
-// Same-origin only. No analytics, no external requests. Bump VERSION when content/index.json changes.
-const VERSION = 'ro-v2';
+// Same-origin only. No analytics, no external requests.
+// VERSION is stamped automatically by tools/validate_content.py --index (content hash + shell hash); do not edit by hand.
+const VERSION = 'ro-08761e327b9b-94875bfa';
 const SHELL = ['./', 'index.html', 'parent.html', 'manifest.webmanifest', 'assets/app.css',
   'src/kid-app.mjs', 'src/parent-dashboard.mjs', 'src/progress-store.mjs', 'src/schema.mjs', 'src/ui.mjs', 'src/sync.mjs', 'src/config.mjs', 'content/index.json'];
 
@@ -32,7 +33,10 @@ self.addEventListener('fetch', e => {
     const c = await caches.open(VERSION);
     const cached = await c.match(e.request, { ignoreSearch: true });
     const net = fetch(e.request).then(r => { if (r.ok) c.put(e.request, r.clone()); return r; }).catch(() => null);
-    if (cached) { e.waitUntil(net); return cached; }       // cache-first for stability; refresh in background
+    // Network-first for the library index and the SW itself so a new content push shows up on the very next
+    // load (falls back to cache offline). Everything else is cache-first for stability.
+    if (/\/(content\/index\.json|sw\.js)$/.test(url.pathname)) { const r = await net; return r || cached || new Response('Offline', { status: 503 }); }
+    if (cached) { e.waitUntil(net); return cached; }
     const r = await net;
     return r || new Response('Offline and not cached', { status: 503, headers: { 'Content-Type': 'text/plain' } });
   })());

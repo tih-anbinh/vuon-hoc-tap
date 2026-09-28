@@ -257,11 +257,46 @@ def main():
             })
     print(f'\n{len(published)} publishable book(s); {total_err} error(s); {total_warn} warning(s)')
     if args.index:
-        idx = {'index_version': 1, 'generated_by': 'tools/validate_content.py', 'books': published}
+        # content_hash covers every published book file + every referenced asset, so any content change
+        # (text, SVG, approval flip) yields a new hash. sw.js derives its cache VERSION from it (see stamp_sw).
+        h = hashlib.sha256()
+        for b in published:
+            h.update(b['sha256'].encode())
+            for rel in b['assets']:
+                p = os.path.join(CONTENT, rel)
+                if os.path.isfile(p):
+                    h.update(sha256(p).encode())
+        content_hash = h.hexdigest()[:12]
+        idx = {'index_version': 1, 'generated_by': 'tools/validate_content.py', 'content_hash': content_hash, 'books': published}
         with open(os.path.join(CONTENT, 'index.json'), 'w', encoding='utf-8', newline='\n') as f:
             json.dump(idx, f, indent=2, ensure_ascii=False); f.write('\n')
-        print(f'wrote content/index.json with {len(published)} PUBLISHED book(s) (drafts excluded)')
+        print(f'wrote content/index.json with {len(published)} PUBLISHED book(s) (drafts excluded); content_hash={content_hash}')
+        stamp_sw(content_hash)
     return 1 if total_err or (args.strict and total_warn) else 0
+
+
+def stamp_sw(content_hash):
+    """Rewrite the VERSION line in sw.js so returning visitors get a fresh cache whenever content
+    or app code changes. Version = ro-<content_hash>-<hash of shell files>."""
+    sw_path = os.path.join(ROOT, 'sw.js')
+    if not os.path.isfile(sw_path):
+        return
+    h = hashlib.sha256()
+    for rel in ('index.html', 'parent.html', 'manifest.webmanifest', 'assets/app.css',
+                *sorted('src/' + f for f in os.listdir(os.path.join(ROOT, 'src')) if f.endswith('.mjs'))):
+        p = os.path.join(ROOT, rel)
+        if os.path.isfile(p):
+            h.update(sha256(p).encode())
+    version = f'ro-{content_hash}-{h.hexdigest()[:8]}'
+    with open(sw_path, encoding='utf-8') as f:
+        src = f.read()
+    new = re.sub(r"const VERSION = '[^']*';", f"const VERSION = '{version}';", src, count=1)
+    if new != src:
+        with open(sw_path, 'w', encoding='utf-8', newline='\n') as f:
+            f.write(new)
+        print(f'stamped sw.js VERSION={version}')
+    else:
+        print(f'sw.js VERSION unchanged ({version})')
 
 
 if __name__ == '__main__':
