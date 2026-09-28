@@ -1,0 +1,317 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-d-030",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "The Broken Umbrella",
+  "language": "en",
+  "level": "D",
+  "reading_mode": "read_aloud",
+  "topic": "weather",
+  "genre": "fiction",
+  "learning_objectives": [
+    "Listen to a longer story and explain a character's plan",
+    "Identify cause and effect across pages"
+  ],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": {
+    "text": "medium",
+    "conceptual": "medium",
+    "visual_support": "medium"
+  },
+  "rights": {
+    "text_author": "Huy Tran for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
+  "parent_prompts": [
+    "Before: Tim's umbrella breaks on the way to school. What could he use instead?",
+    "After page 4: Why did the plastic bag not work well?",
+    "After: Which idea was best? Why do you think so?"
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "Rain drummed on the roof. Tim grabbed his umbrella and ran for the bus. Halfway down the lane, the wind caught it. Snap! One of the metal arms broke.",
+      "illustration_brief": "Tim (red cap) in a lane in heavy rain, umbrella inside-out with one bent spoke.",
+      "audio_script": "Rain drummed on the roof. Tim grabbed his umbrella and ran for the bus. Halfway down the lane, the wind caught it. Snap! One of the metal arms broke.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "umbrella",
+          "definition": "A cloth roof on a stick that you hold over your head in the rain.",
+          "example": "Take an umbrella, it might rain."
+        }
+      ],
+      "image_asset": "images/ro-d-030-p01.svg",
+      "image_alt": "Tim in a lane in heavy rain, umbrella inside-out with one bent spoke.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p02",
+      "text": "Now the umbrella flopped to one side. Rain ran down Tim's neck. \"I need a new plan,\" he said.",
+      "illustration_brief": "Tim under a sagging umbrella, one shoulder soaked.",
+      "audio_script": "Now the umbrella flopped to one side. Rain ran down Tim's neck. I need a new plan, he said.",
+      "timing_segments": [],
+      "image_asset": "images/ro-d-030-p02.svg",
+      "image_alt": "Tim under a sagging umbrella, one shoulder soaked.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p03",
+      "text": "Plan one: a big leaf from the banana tree. It was wide and green. But it was heavy, and it dripped straight onto his head.",
+      "illustration_brief": "Tim holding a huge banana leaf over himself, water pouring off its tip onto his cap.",
+      "audio_script": "Plan one: a big leaf from the banana tree. It was wide and green. But it was heavy, and it dripped straight onto his head.",
+      "timing_segments": [],
+      "image_asset": "images/ro-d-030-p03.svg",
+      "image_alt": "Tim holding a huge banana leaf over himself, water pouring off its tip.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p04",
+      "text": "Plan two: a plastic bag from his pocket. It kept his hair dry. But it crackled, and it blew away at the first gust.",
+      "illustration_brief": "A white plastic bag flying off Tim's head into the wind.",
+      "audio_script": "Plan two: a plastic bag from his pocket. It kept his hair dry. But it crackled, and it blew away at the first gust.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "gust",
+          "definition": "A sudden strong push of wind.",
+          "example": "A gust blew my hat off."
+        }
+      ],
+      "image_asset": "images/ro-d-030-p04.svg",
+      "image_alt": "A white plastic bag flying off Tim's head into the wind.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p05",
+      "text": "Plan three: Tim looked at the broken umbrella again. Two arms were fine. He folded the broken side down and held the good side up, over his head, like a shield.",
+      "illustration_brief": "Tim holding the half-folded umbrella tilted over his head against slanting rain.",
+      "audio_script": "Plan three: Tim looked at the broken umbrella again. Two arms were fine. He folded the broken side down and held the good side up, over his head, like a shield.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "shield",
+          "definition": "Something you hold up to keep things from hitting you.",
+          "example": "She used the book as a shield from the sun."
+        }
+      ],
+      "image_asset": "images/ro-d-030-p05.svg",
+      "image_alt": "Tim holding the half-folded umbrella tilted over his head against slanting rain.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p06",
+      "text": "It was not perfect. His left arm got wet. But his head stayed dry all the way to the bus stop.",
+      "illustration_brief": "Tim at a bus stop shelter, half-umbrella in hand, one wet sleeve, grinning.",
+      "audio_script": "It was not perfect. His left arm got wet. But his head stayed dry all the way to the bus stop.",
+      "timing_segments": [],
+      "image_asset": "images/ro-d-030-p06.svg",
+      "image_alt": "Tim under a bus shelter, half-umbrella in hand, one wet sleeve, grinning.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p07",
+      "text": "On the bus, a girl looked at his strange umbrella. \"It broke,\" said Tim. \"So I made it half an umbrella.\" She laughed. \"Half is better than none.\"",
+      "illustration_brief": "Inside a bus, Tim showing the half-umbrella to a girl with plaits, both smiling.",
+      "audio_script": "On the bus, a girl looked at his strange umbrella. It broke, said Tim. So I made it half an umbrella. She laughed. Half is better than none.",
+      "timing_segments": [],
+      "image_asset": "images/ro-d-030-p07.svg",
+      "image_alt": "Inside a bus, Tim showing the half-umbrella to a girl with plaits.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p08",
+      "text": "That night, Dad fixed the broken arm with tape. But Tim kept the half-umbrella trick in his head, just in case.",
+      "illustration_brief": "Dad at a table taping the umbrella spoke; Tim watching.",
+      "audio_script": "That night, Dad fixed the broken arm with tape. But Tim kept the half-umbrella trick in his head, just in case.",
+      "timing_segments": [],
+      "image_asset": "images/ro-d-030-p08.svg",
+      "image_alt": "Dad at a table taping the umbrella spoke; Tim watching.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "cause_effect",
+      "difficulty": "medium",
+      "prompt": "Why did the plastic bag not work?",
+      "options": [
+        {
+          "id": "blew",
+          "text": "The wind blew it away"
+        },
+        {
+          "id": "heavy",
+          "text": "It was too heavy"
+        },
+        {
+          "id": "hole",
+          "text": "It had a hole"
+        }
+      ],
+      "correct_option_id": "blew",
+      "evidence_page_ids": [
+        "p04"
+      ],
+      "explanation": "Page 4 says it blew away at the first gust.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "listening_comprehension",
+      "difficulty": "medium",
+      "prompt": "What was wrong with the banana leaf?",
+      "options": [
+        {
+          "id": "drip",
+          "text": "It was heavy and dripped on his head"
+        },
+        {
+          "id": "small",
+          "text": "It was too small"
+        },
+        {
+          "id": "tore",
+          "text": "It tore in half"
+        }
+      ],
+      "correct_option_id": "drip",
+      "evidence_page_ids": [
+        "p03"
+      ],
+      "explanation": "Page 3 says it was heavy and dripped straight onto his head.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "inference",
+      "difficulty": "hard",
+      "prompt": "Why did Tim keep the half-umbrella trick in his head?",
+      "options": [
+        {
+          "id": "again",
+          "text": "In case an umbrella breaks again"
+        },
+        {
+          "id": "dad",
+          "text": "Because Dad told him to"
+        },
+        {
+          "id": "school",
+          "text": "For a school project"
+        }
+      ],
+      "correct_option_id": "again",
+      "evidence_page_ids": [
+        "p08"
+      ],
+      "explanation": "Page 8 says he kept the trick in his head just in case, meaning in case it happens again.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "main_idea",
+      "difficulty": "hard",
+      "prompt": "What is this story mostly about?",
+      "options": [
+        {
+          "id": "fix",
+          "text": "Trying plan after plan until one works"
+        },
+        {
+          "id": "bus",
+          "text": "Riding the bus"
+        },
+        {
+          "id": "tape",
+          "text": "How to use tape"
+        }
+      ],
+      "correct_option_id": "fix",
+      "evidence_page_ids": [
+        "p02",
+        "p05"
+      ],
+      "explanation": "Tim says he needs a plan (page 2) and tries three plans until the third works (page 5).",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q05",
+      "skill": "summary",
+      "difficulty": "hard",
+      "response_type": "open",
+      "prompt": "Tell a grown-up Tim's three plans and which one worked.",
+      "rubric": "not yet: says umbrella broke only; with support: two plans with prompting; independent: leaf dripped, bag blew away, half-umbrella worked",
+      "explanation": "Naming all three plans in order with their results shows the problem-solving structure was followed."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "prompt": "Put Tim's plans in order.",
+      "items": [
+        {
+          "id": "s1",
+          "text": "The umbrella arm snaps.",
+          "page_id": "p01"
+        },
+        {
+          "id": "s2",
+          "text": "The banana leaf drips.",
+          "page_id": "p03"
+        },
+        {
+          "id": "s3",
+          "text": "The bag blows away.",
+          "page_id": "p04"
+        },
+        {
+          "id": "s4",
+          "text": "The half-umbrella works.",
+          "page_id": "p05"
+        }
+      ],
+      "correct_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "discussion",
+      "skill": "listening_comprehension",
+      "prompts": [
+        "What would you have tried?",
+        "Why did the girl say half is better than none?",
+        "Have you ever fixed something in a funny way?"
+      ]
+    }
+  ],
+  "off_screen_prompt": "Find three things at home that could keep your head dry in the rain. Which would work best?",
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-09-28T07:36:45+00:00",
+    "reviewer": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+    "review_date": "2026-09-28",
+    "history": [
+      {
+        "action": "approve_all",
+        "at": "2026-09-28T07:36:45+00:00",
+        "by": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+        "note": "batch 030: phonics e/u/ll, D-H readers, shadow pair, unseen check"
+      }
+    ]
+  }
+}

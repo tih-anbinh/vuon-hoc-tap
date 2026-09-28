@@ -1,0 +1,310 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-e-031",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "The Night Market",
+  "language": "en",
+  "level": "E",
+  "reading_mode": "independent_reading",
+  "topic": "neighbourhood",
+  "genre": "fiction",
+  "learning_objectives": [
+    "Read a longer story independently and follow one character's feelings",
+    "Find evidence for how a character feels"
+  ],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": {
+    "text": "medium",
+    "conceptual": "medium",
+    "visual_support": "medium"
+  },
+  "rights": {
+    "text_author": "Huy Tran for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
+  "parent_prompts": [
+    "Let the child read alone. After: how did Sam feel at the start, and at the end? Which words told you?"
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "Sam had never been to the night market. When the sun went down, Dad said, \"Coat on. We are going.\" Sam's tummy did a small flip.",
+      "illustration_brief": "Sam pulling on a coat in a doorway at dusk; Dad waiting with a torch.",
+      "audio_script": "Sam had never been to the night market. When the sun went down, Dad said, Coat on. We are going. Sam's tummy did a small flip.",
+      "timing_segments": [],
+      "image_asset": "images/ro-e-031-p01.svg",
+      "image_alt": "Sam pulling on a coat in a doorway at dusk; Dad waiting with a torch.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p02",
+      "text": "The street was strung with lights, red and gold. Music came from somewhere. So many people! Sam held Dad's hand tightly and stayed close.",
+      "illustration_brief": "A street with strings of lanterns; a crowd; Sam pressed against Dad's side.",
+      "audio_script": "The street was strung with lights, red and gold. Music came from somewhere. So many people! Sam held Dad's hand tightly and stayed close.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "tightly",
+          "definition": "Holding firmly, not letting go.",
+          "example": "She held the rope tightly."
+        }
+      ],
+      "image_asset": "images/ro-e-031-p02.svg",
+      "image_alt": "A street with strings of lanterns; a crowd; Sam pressed against Dad's side.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p03",
+      "text": "A man was making sugar into shapes over a small fire. A fish. A dragon. A bird. Sam stopped, and forgot to be nervous.",
+      "illustration_brief": "A vendor pouring golden sugar into a bird shape on a board; Sam watching wide-eyed.",
+      "audio_script": "A man was making sugar into shapes over a small fire. A fish. A dragon. A bird. Sam stopped, and forgot to be nervous.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "nervous",
+          "definition": "A little bit scared or worried about what will happen.",
+          "example": "I feel nervous before a test."
+        }
+      ],
+      "image_asset": "images/ro-e-031-p03.svg",
+      "image_alt": "A vendor pouring golden sugar into a bird shape on a board; Sam watching wide-eyed.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p04",
+      "text": "\"Which one?\" the man asked. Sam pointed at the bird. It came on a stick, thin as glass and warm.",
+      "illustration_brief": "Sam holding a golden sugar bird on a stick up to the lantern light.",
+      "audio_script": "Which one? the man asked. Sam pointed at the bird. It came on a stick, thin as glass and warm.",
+      "timing_segments": [],
+      "image_asset": "images/ro-e-031-p04.svg",
+      "image_alt": "Sam holding a golden sugar bird on a stick up to the lantern light.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p05",
+      "text": "Further on, a woman played a wooden flute. Children clapped. Sam let go of Dad's hand to clap too.",
+      "illustration_brief": "A flute player under lanterns; children clapping; Sam clapping with both hands, Dad beside.",
+      "audio_script": "Further on, a woman played a wooden flute. Children clapped. Sam let go of Dad's hand to clap too.",
+      "timing_segments": [],
+      "image_asset": "images/ro-e-031-p05.svg",
+      "image_alt": "A flute player under lanterns; children clapping; Sam clapping with both hands.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p06",
+      "text": "They shared a paper cone of hot corn. They watched a boy spin a top the size of a plate. Sam did not want to go home.",
+      "illustration_brief": "Sam and Dad sharing corn; a big spinning top on the ground in front of a boy.",
+      "audio_script": "They shared a paper cone of hot corn. They watched a boy spin a top the size of a plate. Sam did not want to go home.",
+      "timing_segments": [],
+      "image_asset": "images/ro-e-031-p06.svg",
+      "image_alt": "Sam and Dad sharing corn; a big spinning top on the ground in front of a boy.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p07",
+      "text": "On the way back, the lights got smaller behind them. Sam's tummy did another flip, but a happy one this time.",
+      "illustration_brief": "Sam and Dad walking away, the lit market small behind; Sam looking back smiling.",
+      "audio_script": "On the way back, the lights got smaller behind them. Sam's tummy did another flip, but a happy one this time.",
+      "timing_segments": [],
+      "image_asset": "images/ro-e-031-p07.svg",
+      "image_alt": "Sam and Dad walking away, the lit market small behind; Sam looking back smiling.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p08",
+      "text": "\"Same time next week?\" asked Dad. Sam nodded so hard the sugar bird nearly fell off its stick.",
+      "illustration_brief": "Sam nodding hard; the sugar bird wobbling on its stick; Dad laughing.",
+      "audio_script": "Same time next week? asked Dad. Sam nodded so hard the sugar bird nearly fell off its stick.",
+      "timing_segments": [],
+      "image_asset": "images/ro-e-031-p08.svg",
+      "image_alt": "Sam nodding hard; the sugar bird wobbling on its stick; Dad laughing.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "inference",
+      "difficulty": "medium",
+      "prompt": "How did Sam feel at the start of the market?",
+      "options": [
+        {
+          "id": "nervous",
+          "text": "Nervous"
+        },
+        {
+          "id": "bored",
+          "text": "Bored"
+        },
+        {
+          "id": "angry",
+          "text": "Angry"
+        }
+      ],
+      "correct_option_id": "nervous",
+      "evidence_page_ids": [
+        "p01",
+        "p02"
+      ],
+      "explanation": "Sam's tummy did a flip (page 1) and Sam held Dad's hand tightly and stayed close (page 2). Those are signs of feeling nervous.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "cause_effect",
+      "difficulty": "medium",
+      "prompt": "What made Sam forget to be nervous?",
+      "options": [
+        {
+          "id": "sugar",
+          "text": "Watching the man make sugar shapes"
+        },
+        {
+          "id": "corn",
+          "text": "Eating hot corn"
+        },
+        {
+          "id": "dad",
+          "text": "Dad telling a joke"
+        }
+      ],
+      "correct_option_id": "sugar",
+      "evidence_page_ids": [
+        "p03"
+      ],
+      "explanation": "Page 3: Sam stopped to watch the sugar shapes, and forgot to be nervous.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "inference",
+      "difficulty": "hard",
+      "prompt": "What shows that Sam felt braver later?",
+      "options": [
+        {
+          "id": "letgo",
+          "text": "Sam let go of Dad's hand to clap"
+        },
+        {
+          "id": "coat",
+          "text": "Sam put on a coat"
+        },
+        {
+          "id": "point",
+          "text": "Sam pointed at the bird"
+        }
+      ],
+      "correct_option_id": "letgo",
+      "evidence_page_ids": [
+        "p02",
+        "p05"
+      ],
+      "explanation": "On page 2 Sam held Dad's hand tightly. On page 5 Sam let go to clap. That change shows more confidence.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "explicit_detail",
+      "difficulty": "easy",
+      "prompt": "What did Sam and Dad share?",
+      "options": [
+        {
+          "id": "corn",
+          "text": "A cone of hot corn"
+        },
+        {
+          "id": "fish",
+          "text": "A sugar fish"
+        },
+        {
+          "id": "flute",
+          "text": "A wooden flute"
+        }
+      ],
+      "correct_option_id": "corn",
+      "evidence_page_ids": [
+        "p06"
+      ],
+      "explanation": "Page 6: They shared a paper cone of hot corn.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q05",
+      "skill": "expression",
+      "difficulty": "medium",
+      "response_type": "open",
+      "prompt": "Tell a grown-up how Sam's feelings changed from the start to the end, and what changed them.",
+      "rubric": "not yet: says Sam went to a market; with support: nervous then happy, with prompting; independent: nervous at first (tight hand), the sugar shapes and music helped, happy at the end and wants to go again",
+      "explanation": "Tracking a feeling across the story with evidence is the target skill."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "choose_evidence",
+      "skill": "inference",
+      "claim": "Sam was nervous at the start.",
+      "prompt": "Which page gives the best clue?",
+      "correct_page_ids": [
+        "p02",
+        "p01"
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "prompt": "Put the evening in order.",
+      "items": [
+        {
+          "id": "s1",
+          "text": "Sam holds Dad's hand tightly.",
+          "page_id": "p02"
+        },
+        {
+          "id": "s2",
+          "text": "The sugar bird.",
+          "page_id": "p04"
+        },
+        {
+          "id": "s3",
+          "text": "Clapping to the flute.",
+          "page_id": "p05"
+        },
+        {
+          "id": "s4",
+          "text": "Same time next week?",
+          "page_id": "p08"
+        }
+      ],
+      "correct_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    }
+  ],
+  "off_screen_prompt": "Draw two faces: how Sam felt at the start and at the end. Tell someone what changed.",
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-09-28T07:36:45+00:00",
+    "reviewer": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+    "review_date": "2026-09-28",
+    "history": [
+      {
+        "action": "approve_all",
+        "at": "2026-09-28T07:36:45+00:00",
+        "by": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+        "note": "batch 030: phonics e/u/ll, D-H readers, shadow pair, unseen check"
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Counting steps</title>
+  <desc id="d">Mai walking along the puddle edge beside the boat, counting on fingers.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="200" width="400" height="100" fill="#BFE3B4"/>
+  <path d="M0 250 q100 -30 200 0 q100 30 200 0 L400 300 L0 300 Z" fill="#9CCBE8" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(280 244) scale(0.8)"><path d="M-40 0 L-25 20 L25 20 L40 0 Z" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 -30 L20 0 L-20 0 Z" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g transform="translate(180 200) scale(0.9)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#2B2B2B"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -30 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#F08A7E" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-42 -30 M24 0 L42 -30" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+</svg>

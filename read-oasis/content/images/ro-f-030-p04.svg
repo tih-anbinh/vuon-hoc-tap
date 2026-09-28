@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">The Moon goes round</title>
+  <desc id="d">Earth in the centre, the Moon at several positions on a circle, the Sun far to one side.</desc>
+  <rect width="400" height="300" fill="#2B3A55"/>
+  <circle cx="220" cy="150" r="100" fill="none" stroke="#F4F1DE" stroke-width="3" stroke-dasharray="6 8"/>
+  <circle cx="220" cy="150" r="26" fill="#5B8DEF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M206 144 q10 -12 22 -2 q-6 12 -22 2 Z M216 158 q8 -4 16 4 q-8 8 -16 -4 Z" fill="#6AB04C"/>
+  <circle cx="30" cy="150" r="24" fill="#F7D154" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M61 150 L70 150" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M51 171 L58 178" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M30 181 L30 190" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M9 171 L2 178" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M-1 150 L-10 150" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M9 129 L2 122" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M30 119 L30 110" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M51 129 L58 122" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="320" cy="150" r="14" fill="#F4F1DE" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="220" cy="250" r="14" fill="#F4F1DE" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="120" cy="150" r="14" fill="#F4F1DE" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="220" cy="50" r="14" fill="#F4F1DE" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+</svg>

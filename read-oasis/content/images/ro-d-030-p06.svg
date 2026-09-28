@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Dry head at the bus stop</title>
+  <desc id="d">Tim under a bus shelter, half-umbrella in hand, one wet sleeve, grinning.</desc>
+  <rect width="400" height="300" fill="#D8DEE6"/>
+  <path d="M40 20 q6 14 0 26" fill="none" stroke="#5DADE2" stroke-width="6" stroke-linecap="round"/>
+  <path d="M84 50 q6 14 0 26" fill="none" stroke="#5DADE2" stroke-width="6" stroke-linecap="round"/>
+  <path d="M128 80 q6 14 0 26" fill="none" stroke="#5DADE2" stroke-width="6" stroke-linecap="round"/>
+  <path d="M172 20 q6 14 0 26" fill="none" stroke="#5DADE2" stroke-width="6" stroke-linecap="round"/>
+  <rect x="0" y="230" width="400" height="70" fill="#BFE3B4"/>
+  <g transform="translate(200 200)"><rect x="-60" y="-90" width="120" height="8" fill="#8E9AA3" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M-50 -82 L-50 40 M50 -82 L50 40" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="-40" y="-40" width="80" height="30" rx="4" fill="#2A9D8F" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g transform="translate(200 210) scale(0.9)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#2B2B2B"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-10 -32 q10 14 20 0 Z" fill="#2B2B2B" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#F08A7E" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-36 30 M24 0 L36 30" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-28 -56 q28 -26 56 0 L56 -56 L28 -50" fill="#D9534F" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(250 150) scale(0.6)"><path d="M-50 0 q50 -50 50 -50 L0 0 Z" fill="#5B8DEF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 -50 q20 0 30 30" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 0 L0 50 q0 10 10 10" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+
+</svg>

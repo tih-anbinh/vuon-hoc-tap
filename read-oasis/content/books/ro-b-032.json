@@ -1,0 +1,286 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-b-032",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "Ten Red Hens",
+  "language": "en",
+  "level": "B",
+  "reading_mode": "decodable",
+  "topic": "animals",
+  "genre": "fiction",
+  "learning_objectives": [
+    "Decode CVC words with short e",
+    "Keep reading short a, i and o words"
+  ],
+  "prerequisite_skills": [
+    "cvc_short_a",
+    "cvc_short_i",
+    "cvc_short_o"
+  ],
+  "target_phonics": [
+    "cvc_short_e"
+  ],
+  "irregular_words": [
+    "the",
+    "a",
+    "is",
+    "in",
+    "on",
+    "it",
+    "and",
+    "to",
+    "I",
+    "no",
+    "of",
+    "are",
+    "one",
+    "all",
+    "go",
+    "said",
+    "has",
+    "he",
+    "hay",
+    "too",
+    "dry",
+    "glad",
+    "peck",
+    "pecks"
+  ],
+  "difficulty": {
+    "text": "low",
+    "conceptual": "low",
+    "visual_support": "low"
+  },
+  "rights": {
+    "text_author": "Huy Tran for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
+  "parent_prompts": [
+    "New sound: short e as in hen, pen, wet. Stretch it: h-e-n.",
+    "Count the hens on each page with the child after reading the words, not before."
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "Ten red hens sit in a pen.",
+      "illustration_brief": "A wooden pen with a row of ten small red hens; Sam leaning on the fence.",
+      "audio_script": "Ten red hens sit in a pen.",
+      "timing_segments": [],
+      "image_asset": "images/ro-b-032-p01.svg",
+      "image_alt": "A wooden pen with a row of small red hens; Sam leaning on the fence.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p02",
+      "text": "Ben has a net. He gets one hen.",
+      "illustration_brief": "A boy with a small net gently lifting one hen; nine remain.",
+      "audio_script": "Ben has a net. He gets one hen.",
+      "timing_segments": [],
+      "image_asset": "images/ro-b-032-p02.svg",
+      "image_alt": "A boy with a small net gently lifting one hen.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p03",
+      "text": "The hen pecks Ben. Peck! Ben lets it go.",
+      "illustration_brief": "The hen pecking at Ben's sleeve; Ben pulling back.",
+      "audio_script": "The hen pecks Ben. Peck! Ben lets it go.",
+      "timing_segments": [],
+      "image_asset": "images/ro-b-032-p03.svg",
+      "image_alt": "The hen pecking at Ben's sleeve; Ben pulling back.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p04",
+      "text": "It is wet. The hens get wet. The pen is wet.",
+      "illustration_brief": "Rain over the pen; the hens huddled; wet ground.",
+      "audio_script": "It is wet. The hens get wet. The pen is wet.",
+      "timing_segments": [],
+      "image_asset": "images/ro-b-032-p04.svg",
+      "image_alt": "Rain over the pen; the hens huddled; wet ground.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p05",
+      "text": "Ben gets a big red bed of hay. The hens hop in.",
+      "illustration_brief": "A heap of hay under a little roof; hens hopping into it.",
+      "audio_script": "Ben gets a big red bed of hay. The hens hop in.",
+      "timing_segments": [],
+      "image_asset": "images/ro-b-032-p05.svg",
+      "image_alt": "A heap of hay under a little roof; hens hopping into it.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p06",
+      "text": "Ten red hens nap in the hay. Ben naps too. All are dry. All are glad.",
+      "illustration_brief": "Hens settled in hay; Ben sitting beside them under the roof.",
+      "audio_script": "Ten red hens nap in the hay. Ben naps too. All are dry. All are glad.",
+      "timing_segments": [],
+      "image_asset": "images/ro-b-032-p06.svg",
+      "image_alt": "Hens settled in hay; Ben sitting beside them under the roof.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "decoding",
+      "difficulty": "easy",
+      "prompt": "Which word says pen?",
+      "options": [
+        {
+          "id": "pen",
+          "text": "pen"
+        },
+        {
+          "id": "pin",
+          "text": "pin"
+        },
+        {
+          "id": "pan",
+          "text": "pan"
+        }
+      ],
+      "correct_option_id": "pen",
+      "evidence_page_ids": [
+        "p01"
+      ],
+      "explanation": "p-e-n. The middle sound is short e.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "cause_effect",
+      "difficulty": "medium",
+      "prompt": "Why does Ben let the hen go?",
+      "options": [
+        {
+          "id": "peck",
+          "text": "It pecks him"
+        },
+        {
+          "id": "rain",
+          "text": "It starts to rain"
+        },
+        {
+          "id": "tired",
+          "text": "He is tired"
+        }
+      ],
+      "correct_option_id": "peck",
+      "evidence_page_ids": [
+        "p03"
+      ],
+      "explanation": "Page 3 says: The hen pecks Ben. Peck, peck! Ben lets it go.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "inference",
+      "difficulty": "medium",
+      "prompt": "Why does Ben get the bed of hay?",
+      "options": [
+        {
+          "id": "dry",
+          "text": "So the wet hens can get dry"
+        },
+        {
+          "id": "sleep",
+          "text": "So he can sleep"
+        },
+        {
+          "id": "sell",
+          "text": "To sell the hay"
+        }
+      ],
+      "correct_option_id": "dry",
+      "evidence_page_ids": [
+        "p04",
+        "p06"
+      ],
+      "explanation": "The hens got wet (page 4). After the hay, all are dry and glad (page 6).",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "expression",
+      "difficulty": "easy",
+      "response_type": "open",
+      "prompt": "Tell a grown-up what the hen did to Ben, and what Ben did for the hens at the end.",
+      "rubric": "not yet: says hen only; with support: pecked, with prompting; independent: hen pecked Ben, rain made them wet, Ben gave them a hay bed",
+      "explanation": "Two linked events show the child read across pages."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "match_pairs",
+      "skill": "decoding",
+      "prompt": "Match the words with the same middle sound.",
+      "pairs": [
+        {
+          "left": "hen",
+          "right": "pen"
+        },
+        {
+          "left": "wet",
+          "right": "net"
+        },
+        {
+          "left": "hop",
+          "right": "pot"
+        }
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "prompt": "Put the story in order.",
+      "items": [
+        {
+          "id": "s1",
+          "text": "Ben gets one hen with a net.",
+          "page_id": "p02"
+        },
+        {
+          "id": "s2",
+          "text": "Rain makes the hens wet.",
+          "page_id": "p04"
+        },
+        {
+          "id": "s3",
+          "text": "The hens rest in the hay.",
+          "page_id": "p06"
+        }
+      ],
+      "correct_order": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    }
+  ],
+  "off_screen_prompt": "Say five words with the e sound like hen. Clap for each one.",
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "decodability_reviewed": true,
+    "decodability_note": "Short-e CVC: ten, red, hen(s), pen, Ben, net, get(s), let(s), wet, bed, rest(s) (rest = blend, kept), peck(s) (ck), yet; earlier patterns: sit, has, big, hop, in. 'hay', 'glad', 'dry', 'too' are on the irregular list or accepted as review words.",
+    "published_at": "2026-09-28T07:36:45+00:00",
+    "reviewer": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+    "review_date": "2026-09-28",
+    "history": [
+      {
+        "action": "approve_all",
+        "at": "2026-09-28T07:36:45+00:00",
+        "by": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+        "note": "batch 030: phonics e/u/ll, D-H readers, shadow pair, unseen check"
+      }
+    ]
+  }
+}

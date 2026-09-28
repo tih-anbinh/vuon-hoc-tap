@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Long, short, long</title>
+  <desc id="d">Three-panel strip: morning long shadow left, midday short, evening long shadow right.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <path d="M133 0 L133 300 M266 0 L266 300" stroke="#2B2B2B" stroke-width="3"/>
+  <circle cx="120" cy="60" r="14" fill="#F7D154" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M66 228 L11 238 L11 250 L66 246 Z" fill="#1B2B34" fill-opacity=".35"/>
+  <g transform="translate(66 200) scale(0.6)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#2B2B2B"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -30 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#6AB04C" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-40 26 M24 0 L40 26" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <circle cx="200" cy="30" r="14" fill="#F7D154" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="200" cy="232" rx="14" ry="5" fill="#1B2B34" fill-opacity=".35"/>
+  <g transform="translate(200 200) scale(0.6)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#2B2B2B"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -30 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#6AB04C" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-40 26 M24 0 L40 26" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <circle cx="280" cy="60" r="14" fill="#F7D154" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M333 228 L388 238 L388 250 L333 246 Z" fill="#1B2B34" fill-opacity=".35"/>
+  <g transform="translate(333 200) scale(0.6)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#2B2B2B"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -30 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#6AB04C" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-40 26 M24 0 L40 26" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <rect x="0" y="222" width="400" height="78" fill="#BFE3B4" fill-opacity=".6"/>
+
+</svg>

@@ -1,0 +1,348 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-f-030",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "Why the Moon Changes Shape",
+  "language": "en",
+  "level": "F",
+  "reading_mode": "shared_reading",
+  "topic": "sky",
+  "genre": "nonfiction",
+  "learning_objectives": [
+    "Learn that the Moon does not make its own light and that we see the sunlit part",
+    "Name the four main Moon phases in order"
+  ],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": {
+    "text": "medium",
+    "conceptual": "high",
+    "visual_support": "high"
+  },
+  "rights": {
+    "text_author": "Huy Tran for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
+  "factual_claims": [
+    {
+      "claim": "The Moon does not make its own light; it reflects light from the Sun.",
+      "source": "NASA Space Place, 'What are the Moon's phases?' (spaceplace.nasa.gov/moon-phases)",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "The Moon travels around the Earth about once a month.",
+      "source": "NASA Science, 'Moon Phases' (science.nasa.gov/moon/moon-phases) - one orbit takes about 27 days; the phase cycle about 29.5 days",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "We see different amounts of the Moon's lit half as it moves around Earth, which is why its shape seems to change.",
+      "source": "NASA Space Place, 'What are the Moon's phases?'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "The main phases in order are new moon, first quarter (half), full moon, last quarter (half).",
+      "source": "NASA Science, 'Moon Phases'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "The whole Moon is always there, even when we can only see a thin part of it.",
+      "source": "NASA Space Place, 'What are the Moon's phases?'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    }
+  ],
+  "parent_prompts": [
+    "Before: what shape was the Moon last night? Does it always look like that?",
+    "Try it: in a dark room, shine a torch (the Sun) on a ball (the Moon) and walk the ball around the child's head (the Earth).",
+    "After: is part of the Moon really missing when it looks thin?"
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "Some nights the Moon is a round white plate. Some nights it is a thin curved slice. Does the Moon really change shape?",
+      "illustration_brief": "Night sky split in two: a full round Moon on the left, a thin crescent on the right.",
+      "audio_script": "Some nights the Moon is a round white plate. Some nights it is a thin curved slice. Does the Moon really change shape?",
+      "timing_segments": [],
+      "image_asset": "images/ro-f-030-p01.svg",
+      "image_alt": "Night sky split in two: a full round Moon on the left, a thin crescent on the right.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p02",
+      "text": "No. The Moon is always a whole ball. What changes is how much of it we can see lit up.",
+      "illustration_brief": "A grey ball (Moon) with one half brightly lit, the other half in shadow.",
+      "audio_script": "No. The Moon is always a whole ball. What changes is how much of it we can see lit up.",
+      "timing_segments": [],
+      "image_asset": "images/ro-f-030-p02.svg",
+      "image_alt": "A grey ball with one half brightly lit, the other half in shadow.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p03",
+      "text": "The Moon makes no light of its own. It shines because sunlight bounces off it, the way a mirror shines when you hold it in the sun.",
+      "illustration_brief": "The Sun on the left, light rays hitting the Moon, bouncing toward a small Earth.",
+      "audio_script": "The Moon makes no light of its own. It shines because sunlight bounces off it, the way a mirror shines when you hold it in the sun.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "reflects",
+          "definition": "Bounces light back instead of making it.",
+          "example": "The lake reflects the sky."
+        }
+      ],
+      "image_asset": "images/ro-f-030-p03.svg",
+      "image_alt": "The Sun on the left, light rays hitting the Moon, bouncing toward a small Earth.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p04",
+      "text": "The Moon travels around the Earth. One trip takes about a month. As it moves, we see its sunny side from different angles.",
+      "illustration_brief": "Diagram: Earth in the centre, the Moon at several positions on a circle around it, the Sun far to one side.",
+      "audio_script": "The Moon travels around the Earth. One trip takes about a month. As it moves, we see its sunny side from different angles.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "orbit",
+          "definition": "The path something takes as it goes round and round another thing in space.",
+          "example": "The Moon's orbit goes around the Earth."
+        }
+      ],
+      "image_asset": "images/ro-f-030-p04.svg",
+      "image_alt": "Earth in the centre, the Moon at several positions on a circle, the Sun far to one side.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p05",
+      "text": "When the Moon is between us and the Sun, its lit side faces away. We see almost nothing. That is a new moon.",
+      "illustration_brief": "Diagram position: Moon between Earth and Sun, dark side toward Earth; a tiny dark disc in a corner sky.",
+      "audio_script": "When the Moon is between us and the Sun, its lit side faces away. We see almost nothing. That is a new moon.",
+      "timing_segments": [],
+      "image_asset": "images/ro-f-030-p05.svg",
+      "image_alt": "The Moon between Earth and Sun, dark side toward Earth; a tiny dark disc in a corner sky.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p06",
+      "text": "A week later we see half of the lit side. That is a first quarter moon. It looks like a letter D.",
+      "illustration_brief": "A half-lit Moon, right side bright, like a D.",
+      "audio_script": "A week later we see half of the lit side. That is a first quarter moon. It looks like a letter D.",
+      "timing_segments": [],
+      "image_asset": "images/ro-f-030-p06.svg",
+      "image_alt": "A half-lit Moon, right side bright, like a D.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p07",
+      "text": "Another week, and the Moon is on the far side of the Earth from the Sun. Now its whole lit face points at us. Full moon!",
+      "illustration_brief": "Diagram: Sun, Earth, Moon in a line with the Moon furthest; a big full Moon.",
+      "audio_script": "Another week, and the Moon is on the far side of the Earth from the Sun. Now its whole lit face points at us. Full moon!",
+      "timing_segments": [],
+      "image_asset": "images/ro-f-030-p07.svg",
+      "image_alt": "Sun, Earth, Moon in a line with the Moon furthest; a big full Moon.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p08",
+      "text": "Then it shrinks again: half, then a slice, then new moon, and the month starts over. New, half, full, half. Watch for a month and you will see it.",
+      "illustration_brief": "A row of eight Moon phases from new to full and back, arranged in a gentle arc.",
+      "audio_script": "Then it shrinks again: half, then a slice, then new moon, and the month starts over. New, half, full, half. Watch for a month and you will see it.",
+      "timing_segments": [],
+      "image_asset": "images/ro-f-030-p08.svg",
+      "image_alt": "A row of Moon phases from new to full and back, arranged in a gentle arc.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "explicit_detail",
+      "difficulty": "medium",
+      "prompt": "Where does the Moon's light come from?",
+      "options": [
+        {
+          "id": "sun",
+          "text": "Sunlight bouncing off it"
+        },
+        {
+          "id": "fire",
+          "text": "Fire inside the Moon"
+        },
+        {
+          "id": "earth",
+          "text": "Lights from Earth"
+        }
+      ],
+      "correct_option_id": "sun",
+      "evidence_page_ids": [
+        "p03"
+      ],
+      "explanation": "Page 3: It shines because sunlight bounces off it.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "cause_effect",
+      "difficulty": "hard",
+      "prompt": "Why does the Moon look like it changes shape?",
+      "options": [
+        {
+          "id": "angle",
+          "text": "We see different amounts of its lit side as it moves around Earth"
+        },
+        {
+          "id": "cloud",
+          "text": "Clouds cover part of it"
+        },
+        {
+          "id": "grow",
+          "text": "It really grows and shrinks"
+        }
+      ],
+      "correct_option_id": "angle",
+      "evidence_page_ids": [
+        "p02",
+        "p04"
+      ],
+      "explanation": "Page 2: what changes is how much of it we see lit up. Page 4: as it moves, we see its sunny side from different angles.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "sequence",
+      "difficulty": "medium",
+      "prompt": "Which phase comes about a week after new moon?",
+      "options": [
+        {
+          "id": "half",
+          "text": "First quarter, a half moon"
+        },
+        {
+          "id": "full",
+          "text": "Full moon"
+        },
+        {
+          "id": "new",
+          "text": "Another new moon"
+        }
+      ],
+      "correct_option_id": "half",
+      "evidence_page_ids": [
+        "p05",
+        "p06"
+      ],
+      "explanation": "Page 5 is new moon; page 6 says a week later we see half, the first quarter.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "word_knowledge",
+      "difficulty": "medium",
+      "prompt": "What does reflects mean?",
+      "options": [
+        {
+          "id": "bounce",
+          "text": "Bounces light back"
+        },
+        {
+          "id": "make",
+          "text": "Makes its own light"
+        },
+        {
+          "id": "hide",
+          "text": "Hides in the dark"
+        }
+      ],
+      "correct_option_id": "bounce",
+      "evidence_page_ids": [
+        "p03"
+      ],
+      "explanation": "Page 3 explains the Moon shines because sunlight bounces off it.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q05",
+      "skill": "summary",
+      "difficulty": "hard",
+      "response_type": "open",
+      "prompt": "Explain to a grown-up why the Moon looks thin some nights, using the torch and ball if you did it.",
+      "rubric": "not yet: says the Moon changes; with support: mentions the Sun lighting it, with prompting; independent: Moon is always whole, Sun lights one half, we see more or less of that half as it goes round Earth",
+      "explanation": "The misconception that the Moon actually changes shape is the key thing to hear corrected."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "prompt": "Put the phases in order, starting from new moon.",
+      "items": [
+        {
+          "id": "s1",
+          "text": "New moon (almost nothing)",
+          "page_id": "p05"
+        },
+        {
+          "id": "s2",
+          "text": "First quarter (half, like a D)",
+          "page_id": "p06"
+        },
+        {
+          "id": "s3",
+          "text": "Full moon",
+          "page_id": "p07"
+        },
+        {
+          "id": "s4",
+          "text": "Shrinking back to half",
+          "page_id": "p08"
+        }
+      ],
+      "correct_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "choose_evidence",
+      "skill": "inference",
+      "claim": "The Moon is always a whole ball.",
+      "prompt": "Which page says this?",
+      "correct_page_ids": [
+        "p02"
+      ]
+    }
+  ],
+  "off_screen_prompt": "Draw the Moon tonight. Draw it again in a week. Compare your two drawings.",
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-09-28T07:36:45+00:00",
+    "reviewer": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+    "review_date": "2026-09-28",
+    "history": [
+      {
+        "action": "approve_all",
+        "at": "2026-09-28T07:36:45+00:00",
+        "by": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+        "note": "batch 030: phonics e/u/ll, D-H readers, shadow pair, unseen check"
+      }
+    ]
+  }
+}

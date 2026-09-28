@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Tim's face goes hot</title>
+  <desc id="d">Tim looking at the bell on his handlebars, cheeks red.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="220" width="400" height="80" fill="#BFE3B4"/>
+  <g transform="translate(200 210) scale(1.0)"><circle cx="-40" cy="20" r="24" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="40" cy="20" r="24" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M-40 20 L-10 -20 L30 -20 L40 20 M-10 -20 L10 20 L-40 20 M30 -20 L26 -34 M-10 -20 L-20 -34" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><g transform="translate(28 -40) scale(0.5)"><path d="M-18 10 q0 -30 18 -30 q18 0 18 30 Z" fill="#E9C46A" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="-22" y="10" width="44" height="6" rx="3" fill="#E9C46A" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="0" cy="20" r="4" fill="#2B2B2B"/></g></g>
+  <g transform="translate(200 150) scale(0.85)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#2B2B2B"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -26 q8 -8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#F08A7E" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-40 26 M24 0 L40 26" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-28 -56 q28 -26 56 0 L56 -56 L28 -50" fill="#D9534F" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <circle cx="186" cy="118" r="6" fill="#F08A7E" opacity=".7"/><circle cx="214" cy="118" r="6" fill="#F08A7E" opacity=".7"/>
+
+</svg>

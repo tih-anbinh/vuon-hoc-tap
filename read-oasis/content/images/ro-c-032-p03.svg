@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Behind the door</title>
+  <desc id="d">Nia swinging a door open; a coat and a bag on hooks behind it.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="0" width="400" height="300" fill="#F7F1E3"/>
+  <g transform="translate(120 60)"><rect x="0" y="0" width="90" height="170" fill="#A87C5A" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M90 0 L140 30 L140 200 L90 170 Z" fill="#8B6242" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <path transform="translate(300 90)" d="M0 0 L-22 10 L-18 70 L18 70 L22 10 Z" fill="#F08A7E" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(340 150) scale(0.6)"><path d="M-30 -10 L-26 40 L26 40 L30 -10 Z" fill="#5B8DEF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M-30 -10 q30 6 60 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M-12 -12 q12 -28 24 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g transform="translate(70 200) scale(0.9)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#2B2B2B"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -30 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#9B59B6" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-52 0 M24 0 L52 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+</svg>

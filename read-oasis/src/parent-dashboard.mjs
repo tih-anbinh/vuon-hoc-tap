@@ -53,8 +53,14 @@ function renderLibraryTab() {
   const hidden = new Set(S.settings.hidden_books || []);
   const rows = published.map(b => {
     const isHidden = hidden.has(b.book_id);
-    const t = h('input', { type: 'checkbox', checked: !isHidden, 'aria-label': `Show ${b.title} to the child` });
-    t.onchange = () => { store.setBookHidden(b.book_id, !t.checked); toast(t.checked ? 'Shown in the child library.' : 'Hidden from the child library.'); render(); };
+    const reserved = !!b.reserved_for_unseen_check;
+    const unlocked = S.settings.unseen_unlocked === b.book_id;
+    const t = h('input', { type: 'checkbox', checked: reserved ? unlocked : !isHidden, 'aria-label': reserved ? `Unlock ${b.title} for an unseen check` : `Show ${b.title} to the child` });
+    t.onchange = () => {
+      if (reserved) { store.setSettings({ unseen_unlocked: t.checked ? b.book_id : null }); toast(t.checked ? 'Unlocked for one check session. Lock it again afterwards.' : 'Locked again.'); }
+      else { store.setBookHidden(b.book_id, !t.checked); toast(t.checked ? 'Shown in the child library.' : 'Hidden from the child library.'); }
+      render();
+    };
     const prov = h('span', { class: 'muted', text: '…' });
     const d = bookDetail.get(b.book_id);
     const fill = (bk) => {
@@ -67,9 +73,9 @@ function renderLibraryTab() {
     };
     if (d) fill(d); else loadJSON(b.file).then(bk => { bookDetail.set(b.book_id, bk); fill(bk); }).catch(() => { prov.textContent = 'could not load'; });
     const p = store.bookProgress(b.book_id, b.revision, false);
-    return h('tr', { style: isHidden ? 'opacity:.55' : '' },
-      h('td', {}, h('label', { class: 'check' }, t, h('span', { text: isHidden ? 'Hidden' : 'Shown' }))),
-      h('td', {}, h('b', { text: b.title }), h('br'), h('span', { class: 'chip', text: b.level }), h('span', { class: 'chip', text: b.reading_mode.replace('_', ' ') }), h('span', { class: 'chip', text: b.genre })),
+    return h('tr', { style: (reserved ? !unlocked : isHidden) ? 'opacity:.55' : '' },
+      h('td', {}, h('label', { class: 'check' }, t, h('span', { text: reserved ? (unlocked ? 'Unlocked' : 'Reserved') : isHidden ? 'Hidden' : 'Shown' }))),
+      h('td', {}, h('b', { text: b.title }), h('br'), h('span', { class: 'chip', text: b.level }), h('span', { class: 'chip', text: b.reading_mode.replace('_', ' ') }), h('span', { class: 'chip', text: b.genre }), reserved ? h('span', { class: 'chip accent', text: 'unseen-check text' }) : null, b.pair_id ? h('span', { class: 'chip primary', text: 'pair: ' + b.pair_id }) : null),
       h('td', {}, prov),
       h('td', { class: 'muted', text: p?.completed_reads ? `read ${p.completed_reads}x` : p?.page_index ? `page ${p.page_index + 1}` : 'not opened' }),
       h('td', {}, btn('Mark facts checked', () => markFactsChecked(b), { quiet: true, attrs: { disabled: b.genre !== 'nonfiction' } })));
@@ -237,7 +243,7 @@ function renderSettings() {
       h('p', { class: 'muted', text: 'No theme is medically superior; pick what the child finds comfortable. Follow your eye-care professional for vision advice.' })),
     h('div', { class: 'card', style: 'margin-top:1rem' }, h('h3', { text: 'Session' }), num('break_minutes', 0, 60, 5), num('session_minutes', 5, 60, 5), h('p', { class: 'muted', text: 'Break cue is a dismissible reminder, never a lock. 0 disables it.' })),
     h('div', { class: 'card', style: 'margin-top:1rem' }, h('h3', { text: 'Sound and pronunciation' }),
-      check('narration'), check('sound_effects'),
+      check('narration'), check('greeting_audio'), check('sound_effects'),
       choice('accent', ['en-GB', 'en-US']), choice('default_speed', ['normal', 'slow']), check('allow_device_tts'),
       h('p', { class: 'explain' }, h('b', { text: 'How narration works. ' }), 'Books with built audio play studio-rendered British English clips (made from the pronunciation lexicon with the configured TTS provider, see README §TTS). Pages without built audio fall back to this device\'s voice: ',
         h('b', { text: narratorDescribe(s.accent || 'en-GB') }), '. Turn the fallback off if that voice is poor; the child can still read.'),
@@ -247,7 +253,7 @@ function renderSettings() {
     h('div', { class: 'card', style: 'margin-top:1rem' }, btn('Reset display defaults', () => { const d = {}; for (const k of ['font_family', 'story_font_px', 'control_font_px', 'line_height', 'column_ch', 'illustration_size', 'theme', 'reduced_motion']) d[k] = DEFAULT_SETTINGS[k]; store.setSettings(d); render(); }, { quiet: true })));
 }
 function narratorDescribe(accent) { try { return narrator.describe(accent); } catch { return 'unknown'; } }
-const labelOf = k => ({ accent: 'Preferred accent for words', default_speed: 'Starting narration speed', allow_device_tts: 'Allow device voice when a page has no built audio', story_font_px: 'Story text size (px)', control_font_px: 'Button text size (px)', line_height: 'Line spacing', column_ch: 'Line width (characters)', font_family: 'Font', theme: 'Theme', illustration_size: 'Illustration size', reduced_motion: 'Reduce motion', break_minutes: 'Break cue every (minutes)', session_minutes: 'Suggested session length (minutes)', sound_effects: 'Sound effects', narration: 'Narration / read-aloud button', rewards_enabled: 'Stars enabled', mascot_enabled: 'Mascot shown' }[k] || k);
+const labelOf = k => ({ greeting_audio: 'Spoken greeting when the library opens', accent: 'Preferred accent for words', default_speed: 'Starting narration speed', allow_device_tts: 'Allow device voice when a page has no built audio', story_font_px: 'Story text size (px)', control_font_px: 'Button text size (px)', line_height: 'Line spacing', column_ch: 'Line width (characters)', font_family: 'Font', theme: 'Theme', illustration_size: 'Illustration size', reduced_motion: 'Reduce motion', break_minutes: 'Break cue every (minutes)', session_minutes: 'Suggested session length (minutes)', sound_effects: 'Sound effects', narration: 'Narration / read-aloud button', rewards_enabled: 'Stars enabled', mascot_enabled: 'Mascot shown' }[k] || k);
 
 // ---------- content studio (pipeline; only PUBLISHED reaches content/index.json via tools/validate_content.py)
 function loadStudio() { try { return JSON.parse(localStorage.getItem(STUDIO_KEY)) || { drafts: [] }; } catch { return { drafts: [] }; } }

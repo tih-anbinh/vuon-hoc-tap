@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">The month starts over</title>
+  <desc id="d">A row of Moon phases from new to full and back, arranged in a gentle arc.</desc>
+  <rect width="400" height="300" fill="#2B3A55"/>
+  <circle cx="40" cy="150" r="18" fill="#3C4A66" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="86" cy="132" r="18" fill="#3C4A66" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M86 114 a18 18 0 0 1 0 36 a10.799999999999999 18 0 0 0 0 -36 Z" fill="#F4F1DE"/>
+  <circle cx="132" cy="118" r="18" fill="#3C4A66" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M132 100 a18 18 0 0 1 0 36 Z" fill="#F4F1DE"/>
+  <circle cx="178" cy="111" r="18" fill="#F4F1DE" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="224" cy="111" r="18" fill="#F4F1DE" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="270" cy="118" r="18" fill="#3C4A66" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M270 100 a18 18 0 0 1 0 36 Z" fill="#F4F1DE"/>
+  <circle cx="316" cy="132" r="18" fill="#3C4A66" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M316 114 a18 18 0 0 1 0 36 a10.799999999999999 18 0 0 0 0 -36 Z" fill="#F4F1DE"/>
+  <circle cx="362" cy="150" r="18" fill="#3C4A66" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+</svg>

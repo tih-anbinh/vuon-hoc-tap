@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">The banana leaf</title>
+  <desc id="d">Tim holding a huge banana leaf over himself, water pouring off its tip.</desc>
+  <rect width="400" height="300" fill="#D8DEE6"/>
+  <path d="M40 20 q6 14 0 26" fill="none" stroke="#5DADE2" stroke-width="6" stroke-linecap="round"/>
+  <path d="M84 50 q6 14 0 26" fill="none" stroke="#5DADE2" stroke-width="6" stroke-linecap="round"/>
+  <path d="M128 80 q6 14 0 26" fill="none" stroke="#5DADE2" stroke-width="6" stroke-linecap="round"/>
+  <path d="M172 20 q6 14 0 26" fill="none" stroke="#5DADE2" stroke-width="6" stroke-linecap="round"/>
+  <path d="M216 50 q6 14 0 26" fill="none" stroke="#5DADE2" stroke-width="6" stroke-linecap="round"/>
+  <path d="M260 80 q6 14 0 26" fill="none" stroke="#5DADE2" stroke-width="6" stroke-linecap="round"/>
+  <rect x="0" y="230" width="400" height="70" fill="#BFE3B4"/>
+  <g transform="translate(200 200) scale(1.0)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#2B2B2B"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-5 -30 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#F08A7E" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-42 -30 M24 0 L42 -30" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-28 -56 q28 -26 56 0 L56 -56 L28 -50" fill="#D9534F" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <path transform="translate(200 110) scale(1.0)" d="M0 0 q-40 -30 -90 -10 q40 40 90 10 Z M0 0 q40 -30 90 -10 q-40 40 -90 10 Z" fill="#6AB04C" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M290 110 q6 30 0 60" stroke="#5DADE2" stroke-width="6" fill="none" stroke-linecap="round"/>
+
+</svg>

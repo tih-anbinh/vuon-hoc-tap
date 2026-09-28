@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Low sun, long shadow</title>
+  <desc id="d">Low sun near the horizon; long stretched shadow.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <circle cx="360" cy="170" r="26" fill="#F7D154" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M393 170 L404 170" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M383 193 L390 200" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M360 203 L360 214" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M337 193 L330 200" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M327 170 L316 170" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M337 147 L330 140" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M360 137 L360 126" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M383 147 L390 140" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <rect x="0" y="200" width="400" height="100" fill="#BFE3B4"/>
+  <path d="M200 228 L20 238 L20 250 L200 246 Z" fill="#1B2B34" fill-opacity=".35"/>
+  <g transform="translate(200 200) scale(1.0)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#2B2B2B"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -30 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#6AB04C" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-40 26 M24 0 L40 26" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+</svg>

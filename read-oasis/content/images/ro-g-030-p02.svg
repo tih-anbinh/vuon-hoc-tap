@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">A stone at the tip</title>
+  <desc id="d">Nia placing a white stone at the far end of the shadow.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <circle cx="360" cy="90" r="26" fill="#F7D154" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M393 90 L404 90" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M383 113 L390 120" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M360 123 L360 134" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M337 113 L330 120" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M327 90 L316 90" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M337 67 L330 60" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M360 57 L360 46" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M383 67 L390 60" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <rect x="0" y="200" width="400" height="100" fill="#BFE3B4"/>
+  <path d="M0 212 L400 212" stroke="#A0522D" stroke-width="8"/><path d="M30 190 L30 238" stroke="#A0522D" stroke-width="8" stroke-linecap="round"/><path d="M90 190 L90 238" stroke="#A0522D" stroke-width="8" stroke-linecap="round"/><path d="M150 190 L150 238" stroke="#A0522D" stroke-width="8" stroke-linecap="round"/><path d="M210 190 L210 238" stroke="#A0522D" stroke-width="8" stroke-linecap="round"/><path d="M270 190 L270 238" stroke="#A0522D" stroke-width="8" stroke-linecap="round"/><path d="M330 190 L330 238" stroke="#A0522D" stroke-width="8" stroke-linecap="round"/><path d="M390 190 L390 238" stroke="#A0522D" stroke-width="8" stroke-linecap="round"/>
+  <path d="M200 228 L30 238 L30 250 L200 246 Z" fill="#1B2B34" fill-opacity=".35"/>
+  <ellipse cx="30" cy="236" rx="9" ry="6" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(80 230) scale(0.8)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#2B2B2B"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -30 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#9B59B6" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-52 0 M24 0 L52 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+</svg>

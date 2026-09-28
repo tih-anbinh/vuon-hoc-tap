@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Jill has a bell</title>
+  <desc id="d">A girl with plaits holding a small brass bell; a doll with a tiny bell.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="230" width="400" height="70" fill="#BFE3B4"/>
+  <g transform="translate(160 200) scale(1.0)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#3B2A20"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -30 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#F7D154" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-42 -30 M24 0 L42 -30" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(160 200) scale(1.0)"><path d="M-26 -40 q-6 20 0 34 M26 -40 q6 20 0 34" stroke="#3B2A20" stroke-width="6" stroke-linecap="round"/></g>
+  <g transform="translate(200 120) scale(0.8)"><path d="M-18 10 q0 -30 18 -30 q18 0 18 30 Z" fill="#E9C46A" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="-22" y="10" width="44" height="6" rx="3" fill="#E9C46A" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="0" cy="20" r="4" fill="#2B2B2B"/></g>
+  <g transform="translate(300 220) scale(0.5)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#8B4513"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -30 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#F4A6C1" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-40 26 M24 0 L40 26" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-10 -66 q10 -14 20 0 Z" fill="#F4A6C1" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+</svg>

@@ -1,0 +1,374 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-d-031",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "Ants Work Together",
+  "language": "en",
+  "level": "D",
+  "reading_mode": "read_aloud",
+  "topic": "animals",
+  "genre": "nonfiction",
+  "learning_objectives": [
+    "Learn that ants live in groups with different jobs",
+    "Explain how ants find food using a scent trail"
+  ],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": {
+    "text": "medium",
+    "conceptual": "medium",
+    "visual_support": "medium"
+  },
+  "rights": {
+    "text_author": "Huy Tran for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
+  "factual_claims": [
+    {
+      "claim": "Ants live together in large groups called colonies.",
+      "source": "Smithsonian National Museum of Natural History, 'Ants' (naturalhistory.si.edu); Britannica Kids, 'Ant'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Most ants in a colony are workers; one or a few queens lay the eggs.",
+      "source": "Britannica Kids, 'Ant'; Arizona State University 'Ask A Biologist: Ant colony'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Ants leave a chemical scent (pheromone) trail that other ants follow to food.",
+      "source": "ASU Ask A Biologist, 'Ants and pheromones'; Britannica, 'Pheromone'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Ants can carry objects many times their own body weight.",
+      "source": "Britannica Kids, 'Ant' (ants lift many times their weight); Smithsonian 'Ants'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Ants use their antennae to touch and smell.",
+      "source": "Britannica Kids, 'Ant' (antennae used for smell and touch)",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    }
+  ],
+  "parent_prompts": [
+    "Before: have you seen a line of ants? Where were they going?",
+    "After page 4: how do the other ants know where the food is?",
+    "After: what job would you want in an ant colony?"
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "Look down at a crack in the path. A line of ants is marching. Where are they going, and how do they know the way?",
+      "illustration_brief": "Close view of a stone path crack with a line of small black ants.",
+      "audio_script": "Look down at a crack in the path. A line of ants is marching. Where are they going, and how do they know the way?",
+      "timing_segments": [],
+      "image_asset": "images/ro-d-031-p01.svg",
+      "image_alt": "Close view of a stone path crack with a line of small black ants.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p02",
+      "text": "Ants do not live alone. They live in a big group called a colony. A colony can have thousands of ants in one nest.",
+      "illustration_brief": "Cross-section of an ant nest underground with tunnels and chambers full of ants.",
+      "audio_script": "Ants do not live alone. They live in a big group called a colony. A colony can have thousands of ants in one nest.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "colony",
+          "definition": "A big group of animals of one kind living together.",
+          "example": "The ant colony lives under the tree."
+        }
+      ],
+      "image_asset": "images/ro-d-031-p02.svg",
+      "image_alt": "Cross-section of an ant nest underground with tunnels and chambers.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p03",
+      "text": "Every ant has a job. The queen lays the eggs. Worker ants find food, dig tunnels and look after the babies.",
+      "illustration_brief": "One larger ant beside a pile of tiny eggs; smaller ants carrying crumbs and digging.",
+      "audio_script": "Every ant has a job. The queen lays the eggs. Worker ants find food, dig tunnels and look after the babies.",
+      "timing_segments": [],
+      "image_asset": "images/ro-d-031-p03.svg",
+      "image_alt": "One larger ant beside a pile of tiny eggs; smaller ants carrying crumbs and digging.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p04",
+      "text": "When a worker finds food, she walks home and leaves a smell on the ground. Other ants follow the smell trail, all the way to the food.",
+      "illustration_brief": "An ant walking from a crumb back toward the nest with a faint dotted trail behind it; other ants starting to follow.",
+      "audio_script": "When a worker finds food, she walks home and leaves a smell on the ground. Other ants follow the smell trail, all the way to the food.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "trail",
+          "definition": "A line of marks or smells that shows which way to go.",
+          "example": "We followed the trail through the park."
+        }
+      ],
+      "image_asset": "images/ro-d-031-p04.svg",
+      "image_alt": "An ant walking from a crumb back toward the nest with a faint dotted trail; others following.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p05",
+      "text": "Ants smell and touch with two feelers on their heads. They are called antennae. Ants tap antennae to say hello.",
+      "illustration_brief": "Two ants face to face, antennae touching.",
+      "audio_script": "Ants smell and touch with two feelers on their heads. They are called antennae. Ants tap antennae to say hello.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "antennae",
+          "definition": "The two thin feelers on an insect's head.",
+          "example": "The ant waved its antennae."
+        }
+      ],
+      "image_asset": "images/ro-d-031-p05.svg",
+      "image_alt": "Two ants face to face, antennae touching.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p06",
+      "text": "Ants are small but strong. One ant can carry a crumb many times heavier than itself. Many ants can carry a whole leaf together.",
+      "illustration_brief": "Several ants carrying a leaf piece far bigger than themselves.",
+      "audio_script": "Ants are small but strong. One ant can carry a crumb many times heavier than itself. Many ants can carry a whole leaf together.",
+      "timing_segments": [],
+      "image_asset": "images/ro-d-031-p06.svg",
+      "image_alt": "Several ants carrying a leaf piece far bigger than themselves.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p07",
+      "text": "That is why the line marches. One ant found food, left a trail, and the whole colony is helping to bring it home.",
+      "illustration_brief": "The ant line again, now with crumbs being carried toward a hole.",
+      "audio_script": "That is why the line marches. One ant found food, left a trail, and the whole colony is helping to bring it home.",
+      "timing_segments": [],
+      "image_asset": "images/ro-d-031-p07.svg",
+      "image_alt": "The ant line again, now with crumbs being carried toward a hole.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p08",
+      "text": "Next time you see a line of ants, watch where it starts and where it ends. You are watching a team at work.",
+      "illustration_brief": "A child crouched watching the ant line with a magnifying glass.",
+      "audio_script": "Next time you see a line of ants, watch where it starts and where it ends. You are watching a team at work.",
+      "timing_segments": [],
+      "image_asset": "images/ro-d-031-p08.svg",
+      "image_alt": "A child crouched watching the ant line with a magnifying glass.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "explicit_detail",
+      "difficulty": "easy",
+      "prompt": "What is a colony?",
+      "options": [
+        {
+          "id": "group",
+          "text": "A big group of ants living together"
+        },
+        {
+          "id": "food",
+          "text": "The food ants eat"
+        },
+        {
+          "id": "leaf",
+          "text": "A leaf ants carry"
+        }
+      ],
+      "correct_option_id": "group",
+      "evidence_page_ids": [
+        "p02"
+      ],
+      "explanation": "Page 2: They live in a big group called a colony.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "cause_effect",
+      "difficulty": "medium",
+      "prompt": "How do other ants find the food?",
+      "options": [
+        {
+          "id": "smell",
+          "text": "They follow a smell trail"
+        },
+        {
+          "id": "see",
+          "text": "They see it from far away"
+        },
+        {
+          "id": "queen",
+          "text": "The queen shows them"
+        }
+      ],
+      "correct_option_id": "smell",
+      "evidence_page_ids": [
+        "p04"
+      ],
+      "explanation": "Page 4: Other ants follow the smell trail, all the way to the food.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "word_knowledge",
+      "difficulty": "medium",
+      "prompt": "What are antennae?",
+      "options": [
+        {
+          "id": "feelers",
+          "text": "The two feelers on an insect's head"
+        },
+        {
+          "id": "legs",
+          "text": "An insect's back legs"
+        },
+        {
+          "id": "wings",
+          "text": "Small wings"
+        }
+      ],
+      "correct_option_id": "feelers",
+      "evidence_page_ids": [
+        "p05"
+      ],
+      "explanation": "Page 5: two feelers on their heads. They are called antennae.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "main_idea",
+      "difficulty": "hard",
+      "prompt": "What is this book mostly about?",
+      "options": [
+        {
+          "id": "team",
+          "text": "How ants work together as a team"
+        },
+        {
+          "id": "path",
+          "text": "Cracks in paths"
+        },
+        {
+          "id": "leaf",
+          "text": "How leaves fall"
+        }
+      ],
+      "correct_option_id": "team",
+      "evidence_page_ids": [
+        "p01",
+        "p08"
+      ],
+      "explanation": "Page 1 asks how ants know the way; page 8 answers that you are watching a team at work.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q05",
+      "skill": "summary",
+      "difficulty": "hard",
+      "response_type": "open",
+      "prompt": "Explain to a grown-up how a whole colony ends up at one crumb. Use the word trail.",
+      "rubric": "not yet: says ants like food; with support: mentions smell with prompting; independent: one worker finds food, leaves a smell trail home, others follow it, many carry together",
+      "explanation": "Linking finder, trail and followers shows the process was understood."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "prompt": "Put the steps in order.",
+      "items": [
+        {
+          "id": "s1",
+          "text": "A worker ant finds food.",
+          "page_id": "p04"
+        },
+        {
+          "id": "s2",
+          "text": "She walks home leaving a smell trail.",
+          "page_id": "p04"
+        },
+        {
+          "id": "s3",
+          "text": "Other ants follow the trail.",
+          "page_id": "p04"
+        },
+        {
+          "id": "s4",
+          "text": "The colony carries the food home.",
+          "page_id": "p07"
+        }
+      ],
+      "correct_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "word_to_meaning",
+      "skill": "word_knowledge",
+      "prompt": "Match the word to its meaning.",
+      "pairs": [
+        {
+          "left": "colony",
+          "right": "a big group living together"
+        },
+        {
+          "left": "trail",
+          "right": "a line of smells or marks to follow"
+        },
+        {
+          "left": "antennae",
+          "right": "feelers on an insect's head"
+        }
+      ]
+    },
+    {
+      "activity_id": "a03",
+      "type": "choose_evidence",
+      "skill": "inference",
+      "claim": "Ants are stronger than they look.",
+      "prompt": "Which page shows this?",
+      "correct_page_ids": [
+        "p06"
+      ]
+    }
+  ],
+  "off_screen_prompt": "Find an ant line outside. Without touching, follow it with your eyes from start to end. Tell someone what was at each end.",
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-09-28T07:36:45+00:00",
+    "reviewer": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+    "review_date": "2026-09-28",
+    "history": [
+      {
+        "action": "approve_all",
+        "at": "2026-09-28T07:36:45+00:00",
+        "by": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+        "note": "batch 030: phonics e/u/ll, D-H readers, shadow pair, unseen check"
+      }
+    ]
+  }
+}

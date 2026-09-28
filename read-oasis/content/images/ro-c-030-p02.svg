@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Hiss, hiss</title>
+  <desc id="d">The girl on a grassy hill, grass bending in the wind.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <path d="M0 300 Q200 90 400 300 Z" fill="#BFE3B4"/>
+  <path d="M40 60 q30 -14 60 0 M50 82 q40 -14 80 0 M40 104 q30 -14 60 0" fill="none" stroke="#6C8EBF" stroke-width="5" stroke-linecap="round"/>
+  <path d="M40 250 q10 -30 20 -10" fill="none" stroke="#3E7C3A" stroke-width="4" stroke-linecap="round"/>
+  <path d="M80 250 q10 -30 20 -10" fill="none" stroke="#3E7C3A" stroke-width="4" stroke-linecap="round"/>
+  <path d="M120 250 q10 -30 20 -10" fill="none" stroke="#3E7C3A" stroke-width="4" stroke-linecap="round"/>
+  <path d="M160 250 q10 -30 20 -10" fill="none" stroke="#3E7C3A" stroke-width="4" stroke-linecap="round"/>
+  <path d="M200 250 q10 -30 20 -10" fill="none" stroke="#3E7C3A" stroke-width="4" stroke-linecap="round"/>
+  <path d="M240 250 q10 -30 20 -10" fill="none" stroke="#3E7C3A" stroke-width="4" stroke-linecap="round"/>
+  <path d="M280 250 q10 -30 20 -10" fill="none" stroke="#3E7C3A" stroke-width="4" stroke-linecap="round"/>
+  <path d="M320 250 q10 -30 20 -10" fill="none" stroke="#3E7C3A" stroke-width="4" stroke-linecap="round"/>
+  <path d="M360 250 q10 -30 20 -10" fill="none" stroke="#3E7C3A" stroke-width="4" stroke-linecap="round"/>
+  <g transform="translate(200 200) scale(0.9)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#3B2A20"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -30 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#F7D154" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-40 26 M24 0 L40 26" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(200 200) scale(0.9)"><path d="M-26 -40 q-6 20 0 34 M26 -40 q6 20 0 34" stroke="#3B2A20" stroke-width="6" stroke-linecap="round"/></g>
+
+</svg>

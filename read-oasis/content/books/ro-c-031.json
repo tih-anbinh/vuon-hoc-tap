@@ -1,0 +1,289 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-c-031",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "Gus and the Mud",
+  "language": "en",
+  "level": "C",
+  "reading_mode": "decodable",
+  "topic": "home",
+  "genre": "fiction",
+  "learning_objectives": [
+    "Decode CVC words with short u",
+    "Read a story that mixes all five short vowels"
+  ],
+  "prerequisite_skills": [
+    "cvc_short_a",
+    "cvc_short_i",
+    "cvc_short_o",
+    "cvc_short_e"
+  ],
+  "target_phonics": [
+    "cvc_short_u"
+  ],
+  "irregular_words": [
+    "the",
+    "a",
+    "is",
+    "in",
+    "on",
+    "it",
+    "and",
+    "to",
+    "I",
+    "no",
+    "of",
+    "was",
+    "said",
+    "he",
+    "his",
+    "into",
+    "Gus",
+    "gone",
+    "out"
+  ],
+  "difficulty": {
+    "text": "low",
+    "conceptual": "low",
+    "visual_support": "low"
+  },
+  "rights": {
+    "text_author": "Huy Tran for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
+  "parent_prompts": [
+    "New sound: short u as in mud, tub, run. Stretch it: m-u-d.",
+    "After reading: what did Gus do that made a mess? What fixed it?"
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "Gus is a pup. Gus can run.",
+      "illustration_brief": "A small brown puppy running in a yard, ears flapping.",
+      "audio_script": "Gus is a pup. Gus can run.",
+      "timing_segments": [],
+      "image_asset": "images/ro-c-031-p01.svg",
+      "image_alt": "A small brown puppy running in a yard.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p02",
+      "text": "Gus runs to the mud. He digs in the mud. Dig, dig, dig!",
+      "illustration_brief": "The puppy digging at a muddy patch, dirt flying.",
+      "audio_script": "Gus runs to the mud. He digs in the mud. Dig, dig, dig!",
+      "timing_segments": [],
+      "image_asset": "images/ro-c-031-p02.svg",
+      "image_alt": "The puppy digging at a muddy patch, dirt flying.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p03",
+      "text": "Gus runs in. Mud on the rug! Mud on the mat! Mud on Mum!",
+      "illustration_brief": "Muddy paw prints across a rug toward a woman holding up her hands.",
+      "audio_script": "Gus runs in. Mud on the rug! Mud on the mat! Mud on Mum!",
+      "timing_segments": [],
+      "image_asset": "images/ro-c-031-p03.svg",
+      "image_alt": "Muddy paw prints across a rug toward Mum with her hands up.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p04",
+      "text": "\"Gus! Into the tub!\" said Mum.",
+      "illustration_brief": "A big tub with bubbles; Mum pointing; Gus looking guilty.",
+      "audio_script": "Gus! Into the tub! said Mum.",
+      "timing_segments": [],
+      "image_asset": "images/ro-c-031-p04.svg",
+      "image_alt": "A big tub with bubbles; Mum pointing; Gus looking guilty.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p05",
+      "text": "Gus sits in the tub. Rub, rub, rub. The mud is gone.",
+      "illustration_brief": "Gus in the tub covered in bubbles; Mum scrubbing.",
+      "audio_script": "Gus sits in the tub. Rub, rub, rub. The mud is gone.",
+      "timing_segments": [],
+      "image_asset": "images/ro-c-031-p05.svg",
+      "image_alt": "Gus in the tub covered in bubbles; Mum scrubbing.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p06",
+      "text": "Gus hops out. He is wet. He runs to the mud! \"Gus, no!\"",
+      "illustration_brief": "Gus leaping from the tub toward the door, trailing water; Mum reaching after him.",
+      "audio_script": "Gus hops out. He is wet. He runs to the mud! Gus, no!",
+      "timing_segments": [],
+      "image_asset": "images/ro-c-031-p06.svg",
+      "image_alt": "Gus leaping from the tub toward the door, trailing water; Mum reaching after him.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "decoding",
+      "difficulty": "easy",
+      "prompt": "Which word says tub?",
+      "options": [
+        {
+          "id": "tub",
+          "text": "tub"
+        },
+        {
+          "id": "tab",
+          "text": "tab"
+        },
+        {
+          "id": "tug",
+          "text": "tug"
+        }
+      ],
+      "correct_option_id": "tub",
+      "evidence_page_ids": [
+        "p04"
+      ],
+      "explanation": "t-u-b. The middle sound is short u and the last sound is b.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "cause_effect",
+      "difficulty": "medium",
+      "prompt": "Why is there mud on the rug?",
+      "options": [
+        {
+          "id": "dig",
+          "text": "Gus dug in the mud and ran in"
+        },
+        {
+          "id": "rain",
+          "text": "Rain came in the window"
+        },
+        {
+          "id": "mum",
+          "text": "Mum dropped a plant"
+        }
+      ],
+      "correct_option_id": "dig",
+      "evidence_page_ids": [
+        "p02",
+        "p03"
+      ],
+      "explanation": "Gus dug in the mud (page 2) and then ran inside (page 3).",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "inference",
+      "difficulty": "medium",
+      "prompt": "At the end, what do you think will happen next?",
+      "options": [
+        {
+          "id": "muddy",
+          "text": "Gus will get muddy again"
+        },
+        {
+          "id": "sleep",
+          "text": "Gus will go to sleep"
+        },
+        {
+          "id": "eat",
+          "text": "Gus will eat his dinner"
+        }
+      ],
+      "correct_option_id": "muddy",
+      "evidence_page_ids": [
+        "p02",
+        "p06"
+      ],
+      "explanation": "On page 6 Gus runs back to the mud, the same mud he dug in on page 2.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "expression",
+      "difficulty": "easy",
+      "response_type": "open",
+      "prompt": "Tell a grown-up where the mud went and how Mum got Gus clean.",
+      "rubric": "not yet: says mud only; with support: names the tub with prompting; independent: rug, mat and Mum got muddy; tub and rubbing cleaned him; he ran back to the mud",
+      "explanation": "Retelling the mess, the fix and the funny ending shows full comprehension."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "prompt": "Put the story in order.",
+      "items": [
+        {
+          "id": "s1",
+          "text": "Gus digs in the mud.",
+          "page_id": "p02"
+        },
+        {
+          "id": "s2",
+          "text": "Mud gets on the rug and on Mum.",
+          "page_id": "p03"
+        },
+        {
+          "id": "s3",
+          "text": "Gus gets rubbed clean in the tub.",
+          "page_id": "p05"
+        },
+        {
+          "id": "s4",
+          "text": "Gus runs back to the mud.",
+          "page_id": "p06"
+        }
+      ],
+      "correct_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "match_pairs",
+      "skill": "decoding",
+      "prompt": "Match the words with the same middle sound.",
+      "pairs": [
+        {
+          "left": "mud",
+          "right": "tub"
+        },
+        {
+          "left": "dig",
+          "right": "sit"
+        },
+        {
+          "left": "mat",
+          "right": "can"
+        }
+      ]
+    }
+  ],
+  "off_screen_prompt": "Find three things at home with the u sound like tub: cup, bus, rug... Say them slowly.",
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "decodability_reviewed": true,
+    "decodability_note": "Short-u CVC: Gus, pup, run(s), mud, rug, Mum, tub, rub, dug; earlier: can, dig(s), sit(s), mat, hop(s), wet, in, on. 'out', 'gone' on review; kept for story sense.",
+    "published_at": "2026-09-28T07:36:45+00:00",
+    "reviewer": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+    "review_date": "2026-09-28",
+    "history": [
+      {
+        "action": "approve_all",
+        "at": "2026-09-28T07:36:45+00:00",
+        "by": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+        "note": "batch 030: phonics e/u/ll, D-H readers, shadow pair, unseen check"
+      }
+    ]
+  }
+}

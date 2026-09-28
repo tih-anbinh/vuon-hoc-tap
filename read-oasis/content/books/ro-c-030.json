@@ -1,0 +1,277 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-c-030",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "Jill and the Bell",
+  "language": "en",
+  "level": "C",
+  "reading_mode": "decodable",
+  "topic": "sounds",
+  "genre": "fiction",
+  "learning_objectives": [
+    "Decode words ending in ll, ss, ff, zz",
+    "Review all five short vowels in one story"
+  ],
+  "prerequisite_skills": [
+    "cvc_short_a",
+    "cvc_short_i",
+    "cvc_short_o",
+    "cvc_short_e",
+    "cvc_short_u"
+  ],
+  "target_phonics": [
+    "double_final_consonant"
+  ],
+  "irregular_words": [
+    "the",
+    "a",
+    "is",
+    "in",
+    "on",
+    "it",
+    "and",
+    "to",
+    "I",
+    "no",
+    "of",
+    "was",
+    "said",
+    "he",
+    "she",
+    "her",
+    "for",
+    "up",
+    "at",
+    "has",
+    "bee",
+    "ding",
+    "go",
+    "then",
+    "too",
+    "wind",
+    "Mum"
+  ],
+  "difficulty": {
+    "text": "low",
+    "conceptual": "low",
+    "visual_support": "low"
+  },
+  "rights": {
+    "text_author": "Huy Tran for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
+  "parent_prompts": [
+    "New pattern: two letters at the end make one sound: bell, hiss, puff, buzz.",
+    "After reading: what did the bee sit on? Why did Jill keep still?"
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "Jill has a bell. Ding! Jill has a doll. The doll has a bell too.",
+      "illustration_brief": "A girl with plaits holding a small brass bell; a cloth doll with a tiny bell on its hat.",
+      "audio_script": "Jill has a bell. Ding! Jill has a doll. The doll has a bell too.",
+      "timing_segments": [],
+      "image_asset": "images/ro-c-030-p01.svg",
+      "image_alt": "A girl with plaits holding a small brass bell; a doll with a tiny bell.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p02",
+      "text": "Jill sits on the hill. Hiss, hiss. It is the wind.",
+      "illustration_brief": "The girl on a grassy hill, grass bending in the wind.",
+      "audio_script": "Jill sits on the hill. Hiss, hiss. It is the wind.",
+      "timing_segments": [],
+      "image_asset": "images/ro-c-030-p02.svg",
+      "image_alt": "The girl on a grassy hill, grass bending in the wind.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p03",
+      "text": "Jill puffs. Puff, puff! Off go the bits of fluff.",
+      "illustration_brief": "The girl blowing a dandelion clock; white seeds drifting off.",
+      "audio_script": "Jill puffs. Puff, puff! Off go the bits of fluff.",
+      "timing_segments": [],
+      "image_asset": "images/ro-c-030-p03.svg",
+      "image_alt": "The girl blowing a dandelion clock; white seeds drifting off.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p04",
+      "text": "Buzz! A bee. It buzzes at the bell. It buzzes at the doll.",
+      "illustration_brief": "A round bee circling the bell in the girl's hand.",
+      "audio_script": "Buzz! A bee. It buzzes at the bell. It buzzes at the doll.",
+      "timing_segments": [],
+      "image_asset": "images/ro-c-030-p04.svg",
+      "image_alt": "A round bee circling the bell in the girl's hand.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p05",
+      "text": "Jill is still. The bee sits on the bell. Then it is off.",
+      "illustration_brief": "The bee resting on the bell; the girl frozen with a careful face.",
+      "audio_script": "Jill is still. The bee sits on the bell. Then it is off.",
+      "timing_segments": [],
+      "image_asset": "images/ro-c-030-p05.svg",
+      "image_alt": "The bee resting on the bell; the girl frozen with a careful face.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p06",
+      "text": "Ding, hiss, puff, buzz. Jill tells Mum all of it.",
+      "illustration_brief": "The girl at home, arms wide, talking to Mum; four small sound motifs above.",
+      "audio_script": "Ding, hiss, puff, buzz. Jill tells Mum all of it.",
+      "timing_segments": [],
+      "image_asset": "images/ro-c-030-p06.svg",
+      "image_alt": "The girl at home, arms wide, talking to Mum; four small sound motifs above.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "decoding",
+      "difficulty": "easy",
+      "prompt": "Which word says puff?",
+      "options": [
+        {
+          "id": "puff",
+          "text": "puff"
+        },
+        {
+          "id": "pull",
+          "text": "pull"
+        },
+        {
+          "id": "puss",
+          "text": "puss"
+        }
+      ],
+      "correct_option_id": "puff",
+      "evidence_page_ids": [
+        "p03"
+      ],
+      "explanation": "p-u-ff. The two f letters at the end make one f sound.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "explicit_detail",
+      "difficulty": "easy",
+      "prompt": "What makes the hiss sound?",
+      "options": [
+        {
+          "id": "wind",
+          "text": "The wind"
+        },
+        {
+          "id": "bee",
+          "text": "The bee"
+        },
+        {
+          "id": "bell",
+          "text": "The bell"
+        }
+      ],
+      "correct_option_id": "wind",
+      "evidence_page_ids": [
+        "p02"
+      ],
+      "explanation": "Page 2 says: Hiss, hiss. It is the wind.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "cause_effect",
+      "difficulty": "medium",
+      "prompt": "Why does Jill keep still?",
+      "options": [
+        {
+          "id": "bee",
+          "text": "A bee is on her bell"
+        },
+        {
+          "id": "wind",
+          "text": "The wind is strong"
+        },
+        {
+          "id": "game",
+          "text": "She is playing a game"
+        }
+      ],
+      "correct_option_id": "bee",
+      "evidence_page_ids": [
+        "p04",
+        "p05"
+      ],
+      "explanation": "The bee buzzes at the bell (page 4), Jill is still and the bee sits on the bell, then goes (page 5).",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "expression",
+      "difficulty": "easy",
+      "response_type": "open",
+      "prompt": "Tell a grown-up the four sounds Jill heard and what made each one.",
+      "rubric": "not yet: one sound; with support: two sounds with prompting; independent: ding bell, hiss wind, puff fluff, buzz bee",
+      "explanation": "Pairing each sound with its source shows the child tracked all four pages."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "match_pairs",
+      "skill": "word_knowledge",
+      "prompt": "Match the sound to what made it.",
+      "pairs": [
+        {
+          "left": "ding",
+          "right": "the bell"
+        },
+        {
+          "left": "hiss",
+          "right": "the wind"
+        },
+        {
+          "left": "puff",
+          "right": "Jill blowing the fluff"
+        },
+        {
+          "left": "buzz",
+          "right": "the bee"
+        }
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "choose_evidence",
+      "skill": "inference",
+      "claim": "Keeping still let the bee leave on its own.",
+      "prompt": "Which page shows this?",
+      "correct_page_ids": [
+        "p05"
+      ]
+    }
+  ],
+  "off_screen_prompt": "Go outside or open a window. Listen for one minute. Tell someone three sounds you heard.",
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "decodability_reviewed": true,
+    "decodability_note": "Double-final: Jill, bell, doll, hill, hiss, puff(s), off, fluff, buzz(es), all, tell(s), still. Short vowels: sits, wind, bits, Mum, then, go. 'ding', 'too', 'go', 'then', 'wind' are decodable by letter-sound but outside the taught list; introduce first.",
+    "published_at": "2026-09-28T07:36:45+00:00",
+    "reviewer": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+    "review_date": "2026-09-28",
+    "history": [
+      {
+        "action": "approve_all",
+        "at": "2026-09-28T07:36:45+00:00",
+        "by": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+        "note": "batch 030: phonics e/u/ll, D-H readers, shadow pair, unseen check"
+      }
+    ]
+  }
+}

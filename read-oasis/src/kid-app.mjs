@@ -19,6 +19,7 @@ applySettings(S.settings);
 const app = document.getElementById('app');
 const titleEl = document.getElementById('titleText') || document.getElementById('title');
 let library = [];                      // published book summaries
+let libraryIndex = null;               // full content/index.json (greeting clips etc.)
 const bookCache = new Map();           // book_id -> full book
 let route = { view: 'library' };
 const history = [];                    // in-app back stack
@@ -32,6 +33,19 @@ session = store.startSession();
 breakTimer = new BreakTimer({ minutes: S.settings.break_minutes, onCue: showBreak });
 
 // ---------- boot
+// Hidden parent gate: double-tap (or press-and-hold 1.2 s) on the title/mascot opens parent.html.
+// No visible link for the child; the PIN gate still applies on the other side.
+(() => {
+  const t = document.getElementById('title'); if (!t) return;
+  let taps = 0, tapTimer = null, holdTimer = null;
+  const open = () => { narrator.stop(); location.href = 'parent.html'; };
+  t.style.cursor = 'default'; t.style.userSelect = 'none';
+  t.addEventListener('pointerdown', () => { holdTimer = setTimeout(open, 1200); });
+  const cancel = () => { clearTimeout(holdTimer); };
+  t.addEventListener('pointerup', cancel); t.addEventListener('pointerleave', cancel); t.addEventListener('pointercancel', cancel);
+  t.addEventListener('click', () => { taps++; clearTimeout(tapTimer); if (taps >= 2) { taps = 0; open(); } else tapTimer = setTimeout(() => { taps = 0; }, 450); });
+  t.addEventListener('dblclick', e => e.preventDefault());
+})();
 document.getElementById('btnHome').onclick = () => go({ view: 'library' });
 document.getElementById('btnBack').onclick = back;
 document.getElementById('btnExit').onclick = stopNow;
@@ -54,7 +68,10 @@ loadLibrary().then(() => {
 async function loadLibrary() {
   try {
     const idx = await loadJSON('index.json');
-    library = (idx.books || []).filter(b => !store.isBookHidden(b.book_id));   // parent veto applied here
+    libraryIndex = idx;
+    // Parent veto applied here; unseen-check texts (C06) are never in the child's shelf unless the parent unlocks one
+    // for a check session from parent.html (settings.unseen_unlocked = book_id).
+    library = (idx.books || []).filter(b => !store.isBookHidden(b.book_id) && (!b.reserved_for_unseen_check || S.settings.unseen_unlocked === b.book_id));
   } catch {
     library = [];
     toast(isFileProtocol ? 'This copy needs the single-file build (dist/index.html) or a local web server. See README.' : 'Could not load the library. If you are offline, open the app once while online first.', 8000);
@@ -87,9 +104,54 @@ function renderStars() {
   if (lastStars != null && n > lastStars) { el.classList.remove('bump'); void el.offsetWidth; el.classList.add('bump'); }
   lastStars = n;
 }
+// Greetings: short, varied, spoken once per visit. Built clips live in content/audio/greetings/ (rendered by
+// tools/build_audio.py --greetings); otherwise the device en-GB voice says the same text.
+const GREETINGS = [
+  { id: 'g01', text: 'Hello! Which book shall we read today?' },
+  { id: 'g02', text: 'Welcome back. Your books are ready.' },
+  { id: 'g03', text: 'Hello, reader! Pick a story and off we go.' },
+  { id: 'g04', text: 'Good to see you. Shall we listen, or read it ourselves?' },
+  { id: 'g05', text: 'Ready for a story? Choose one you like.' },
+  { id: 'g06', text: 'Hello again! Let us find out what happens next.' },
+];
 function greeting() {
   const hr = new Date().getHours();
   return hr < 12 ? 'Good morning' : hr < 18 ? 'Good afternoon' : 'Good evening';
+}
+let greeted = false;
+function speakGreeting() {
+  if (greeted || !S.settings.narration || S.settings.greeting_audio === false) return;
+  greeted = true;
+  const g = GREETINGS[Math.floor(Math.random() * GREETINGS.length)];
+  const name = S.profile.display_name && S.profile.display_name !== 'Reader' ? `${greeting()}, ${S.profile.display_name}. ` : `${greeting()}. `;
+  const clips = { normal: greetingClipUrl(g.id) };
+  // Autoplay may be blocked until the first tap; if so, the first pointer interaction plays it.
+  const tryPlay = () => narrator.speak(name + g.text, { clips, speed: 'normal' });
+  const ok = tryPlay();
+  if (ok) {
+    const audio = narrator.audio;
+    if (audio) audio.play().catch(() => armOnFirstTap(tryPlay));
+  } else armOnFirstTap(tryPlay);
+}
+function greetingClipUrl(id) {
+  const idx = libraryIndex; if (!idx?.greetings?.[id]) return null;
+  return assetUrl(idx.greetings[id]);
+}
+function armOnFirstTap(fn) {
+  const once = () => { document.removeEventListener('pointerdown', once, true); document.removeEventListener('keydown', once, true); setTimeout(fn, 50); };
+  document.addEventListener('pointerdown', once, true); document.addEventListener('keydown', once, true);
+}
+
+// Level model (spec 3.2/3.3): bands are internal labels; two tracks (independent, read-aloud). "Just right" for
+// the library = independent band for read-myself/sound-it-out modes, read-aloud band for listen/together modes.
+const BAND_ORDER = ['A-C', 'D-J', 'K-P', 'Q-Z'];
+function bandOfLevel(l) { return l <= 'C' ? 'A-C' : l <= 'J' ? 'D-J' : l <= 'P' ? 'K-P' : 'Q-Z'; }
+function fitFor(book) {
+  const ind = S.settings.independent_track_band, ra = S.settings.read_aloud_track_band || ind;
+  const target = (book.reading_mode === 'read_aloud' || book.reading_mode === 'shared_reading') ? ra : ind;
+  if (!target) return 'unknown';
+  const d = BAND_ORDER.indexOf(bandOfLevel(book.level)) - BAND_ORDER.indexOf(target);
+  return d === 0 ? 'just_right' : d < 0 ? 'easy' : d === 1 ? 'stretch' : 'later';
 }
 function setTitle(t) { titleEl.textContent = t; document.title = t + ' - Read Oasis'; }
 
@@ -109,36 +171,59 @@ async function render() {
 }
 
 // ---------- library (Choose)
+function tile(b) {
+  const p = store.bookProgress(b.book_id, b.revision, false);
+  const cover = h('div', { class: 'cover' });
+  const img = b.assets?.find(a => a.startsWith('images/'));
+  if (img && S.settings.illustration_size !== 'hidden') { const im = h('img', { src: assetUrl(img), alt: '' }); im.onerror = () => cover.replaceChildren(icon('book', '')); cover.append(im); }
+  else cover.append(icon('book'));
+  const inProgress = p && !p.completed_reads && p.page_index > 0;
+  if (inProgress) cover.append(h('span', { class: 'ribbon', text: 'Continue' }));
+  else if (p?.completed_reads) cover.append(h('span', { class: 'ribbon', text: 'Read ' + p.completed_reads + 'x' }));
+  const fit = fitFor(b);
+  const fitChip = { just_right: ['Just right', 'accent'], easy: ['Easy', ''], stretch: ['A stretch', 'primary'], later: ['For later', ''], unknown: [null, ''] }[fit];
+  const pct = p ? Math.round(100 * (p.completed_reads ? 1 : p.page_index / Math.max(1, b.pages - 1))) : 0;
+  return h('button', { class: 'book-tile', dataset: { fit }, onclick: () => go({ view: 'preview', bookId: b.book_id }), 'aria-label': `${b.title}. ${modeLabel(b.reading_mode)}. ${fitChip[0] ? fitChip[0] + '.' : ''} ${inProgress ? 'In progress.' : p?.completed_reads ? 'Read before.' : 'New.'}` },
+    cover,
+    h('span', { class: 't', text: b.title }),
+    h('span', {}, h('span', { class: 'chip primary', text: modeLabel(b.reading_mode) }), fitChip[0] ? h('span', { class: 'chip ' + fitChip[1], text: fitChip[0] }) : null, h('span', { class: 'chip', text: 'Level ' + b.level })),
+    h('span', { class: 'progress', 'aria-hidden': 'true' }, h('span', { style: `width:${pct}%` })));
+}
 function renderLibrary() {
   setTitle('Choose a book');
-  const bandFilter = S.settings.independent_track_band;
   const last = store.lastOpened();
-  const tiles = library.map(b => {
-    const p = store.bookProgress(b.book_id, b.revision, false);
-    const cover = h('div', { class: 'cover' });
-    const img = b.assets?.find(a => a.startsWith('images/'));
-    if (img && S.settings.illustration_size !== 'hidden') { const im = h('img', { src: assetUrl(img), alt: '' }); im.onerror = () => cover.replaceChildren(icon('book', '')); cover.append(im); }
-    else cover.append(icon('book'));
-    const inProgress = p && !p.completed_reads && p.page_index > 0;
-    if (inProgress) cover.append(h('span', { class: 'ribbon', text: 'Continue' }));
-    else if (p?.completed_reads) cover.append(h('span', { class: 'ribbon', text: 'Read ' + p.completed_reads + 'x' }));
-    const pct = p ? Math.round(100 * (p.completed_reads ? 1 : p.page_index / Math.max(1, b.pages - 1))) : 0;
-    return h('button', { class: 'book-tile', onclick: () => go({ view: 'preview', bookId: b.book_id }), 'aria-label': `${b.title}. ${modeLabel(b.reading_mode)}. ${inProgress ? 'In progress.' : p?.completed_reads ? 'Read before.' : 'New.'}` },
-      cover,
-      h('span', { class: 't', text: b.title }),
-      h('span', {}, h('span', { class: 'chip primary', text: modeLabel(b.reading_mode) }), h('span', { class: 'chip', text: b.genre })),
-      h('span', { class: 'progress', 'aria-hidden': 'true' }, h('span', { style: `width:${pct}%` })));
-  });
+  const hasBand = !!S.settings.independent_track_band;
   const mascot = S.settings.mascot_enabled ? icon('mascot', 'mascot') : null;
+  // Group by fit when a band is set; otherwise by reading mode so the child still sees a structure.
+  const groups = [];
+  if (hasBand) {
+    const by = { just_right: [], stretch: [], easy: [], later: [] };
+    for (const b of library) by[fitFor(b)]?.push(b);
+    if (by.just_right.length) groups.push(['Just right for you', 'Read on your own or together.', by.just_right]);
+    if (by.stretch.length) groups.push(['A little stretch', 'Try with a grown-up or the Listen button.', by.stretch]);
+    if (by.easy.length) groups.push(['Easy and fun', 'Good for reading fast and smooth.', by.easy]);
+    if (by.later.length) groups.push(['For later', 'Listen if you like; reading these comes later.', by.later]);
+  } else {
+    const modes = [['independent_reading', 'Read myself'], ['decodable', 'Sound it out'], ['shared_reading', 'Read together'], ['read_aloud', 'Listen']];
+    for (const [m, label] of modes) { const arr = library.filter(b => b.reading_mode === m); if (arr.length) groups.push([label, '', arr]); }
+  }
+  const continueBook = last && !last.completed_reads && last.page_index > 0 ? library.find(b => b.book_id === last.book_id) : null;
   app.replaceChildren(
     h('section', { class: 'fade' },
       h('div', { class: 'hero' }, mascot,
         h('div', {}, h('h2', { text: `${greeting()}, ${S.profile.display_name || 'Reader'}!` }),
-          h('p', { class: 'sub', text: last && !last.completed_reads && last.page_index > 0 ? 'Your book is waiting where you left it.' : 'Pick a book. Read, listen, and tell someone about it.' }))),
-      h('div', { class: 'row between' }, h('h2', { style: 'margin:.2em 0', text: 'Books ready for you' }), bandFilter ? h('span', { class: 'chip accent', text: 'Band ' + bandFilter }) : null),
-      library.length ? h('div', { class: 'grid stagger' }, tiles) : h('p', { class: 'card', text: 'No approved books yet. Ask a grown-up to approve a book in the parent area.' }),
-      h('p', { class: 'muted', style: 'margin-top:1.5rem' }, 'Grown-ups: ', h('a', { href: 'parent.html', text: 'parent area' }))));
+          h('p', { class: 'sub', text: continueBook ? `Your book "${continueBook.title}" is waiting where you left it.` : 'Pick a book. Read, listen, and tell someone about it.' }),
+          h('div', { class: 'row', style: 'margin-top:.5rem' },
+            continueBook ? btn('Continue', () => go({ view: 'preview', bookId: continueBook.book_id }), { primary: true, ic: 'play' }) : null,
+            btn('Hear that again', speakGreetingAgain, { quiet: true, ic: 'ear' }),
+            hasBand ? h('span', { class: 'chip accent', text: 'Your level: ' + S.settings.independent_track_band + (S.settings.read_aloud_track_band && S.settings.read_aloud_track_band !== S.settings.independent_track_band ? ' · listening ' + S.settings.read_aloud_track_band : '') }) : h('span', { class: 'chip', text: 'Level not set yet: a grown-up sets it in the parent area' })))),
+      ...groups.map(([title, sub, arr]) => h('div', { class: 'shelf' },
+        h('div', { class: 'row between' }, h('h2', { style: 'margin:.2em 0', text: title }), sub ? h('span', { class: 'muted', text: sub }) : null),
+        h('div', { class: 'grid stagger' }, arr.map(tile)))),
+      library.length ? null : h('p', { class: 'card', text: 'No approved books yet. Ask a grown-up to approve a book in the parent area.' })));
+  speakGreeting();
 }
+function speakGreetingAgain() { greeted = false; speakGreeting(); }
 function modeLabel(m) { return { read_aloud: 'Listen', shared_reading: 'Read together', decodable: 'Sound it out', independent_reading: 'Read myself' }[m] || m; }
 
 // ---------- preview

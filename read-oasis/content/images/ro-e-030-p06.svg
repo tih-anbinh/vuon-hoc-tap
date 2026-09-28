@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Shiny paper</title>
+  <desc id="d">Mai holding up a shiny magazine page that reflects light.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="230" width="400" height="70" fill="#BFE3B4"/>
+  <g transform="translate(200 200) scale(1.0)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#2B2B2B"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -30 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#F08A7E" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-42 -30 M24 0 L42 -30" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <rect transform="translate(240 110) rotate(-8)" x="-30" y="-40" width="60" height="80" rx="3" fill="#EAF6FF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path transform="translate(240 110) rotate(-8)" d="M-20 -30 l14 -6 M-20 -18 l30 -12" stroke="#FFFFFF" stroke-width="4"/>
+
+</svg>

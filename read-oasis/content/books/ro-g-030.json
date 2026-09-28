@@ -1,0 +1,304 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-g-030",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "Nia and the Runaway Shadow",
+  "language": "en",
+  "level": "G",
+  "reading_mode": "read_aloud",
+  "topic": "sky",
+  "genre": "fiction",
+  "pair_id": "pair-shadow-01",
+  "learning_objectives": [
+    "Follow a character's investigation across a day",
+    "Compare this story with the nonfiction text about shadows"
+  ],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": {
+    "text": "medium",
+    "conceptual": "medium",
+    "visual_support": "medium"
+  },
+  "rights": {
+    "text_author": "Huy Tran for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
+  "parent_prompts": [
+    "Before: where is your shadow right now? Will it stay there?",
+    "After page 4: what does Nia think is happening? What do you think?",
+    "After: read the pair book 'Shadows Move' and compare. Which part of Nia's story does it explain?"
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "At breakfast time, Nia stood in the yard and looked down. Her shadow stretched long and thin across the grass, all the way to the fence. \"You are very tall today,\" she told it.",
+      "illustration_brief": "Early morning: Nia (purple overalls) with a very long shadow reaching the fence; low sun behind her.",
+      "audio_script": "At breakfast time, Nia stood in the yard and looked down. Her shadow stretched long and thin across the grass, all the way to the fence. You are very tall today, she told it.",
+      "timing_segments": [],
+      "image_asset": "images/ro-g-030-p01.svg",
+      "image_alt": "Early morning: Nia with a very long shadow reaching the fence; low sun behind her.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p02",
+      "text": "She marked the tip of the shadow with a stone. \"Stay there,\" she said, and went inside to eat.",
+      "illustration_brief": "Nia placing a white stone at the far end of the shadow.",
+      "audio_script": "She marked the tip of the shadow with a stone. Stay there, she said, and went inside to eat.",
+      "timing_segments": [],
+      "image_asset": "images/ro-g-030-p02.svg",
+      "image_alt": "Nia placing a white stone at the far end of the shadow.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p03",
+      "text": "An hour later she came back. The shadow had moved! It was shorter now, and it pointed away from the stone. \"Who moved my shadow?\" said Nia.",
+      "illustration_brief": "Mid-morning: shorter shadow at a different angle; the stone now sits off to one side.",
+      "audio_script": "An hour later she came back. The shadow had moved! It was shorter now, and it pointed away from the stone. Who moved my shadow? said Nia.",
+      "timing_segments": [],
+      "image_asset": "images/ro-g-030-p03.svg",
+      "image_alt": "Mid-morning: shorter shadow at a different angle; the stone now off to one side.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p04",
+      "text": "She put down a second stone and kept watch from the step. Nobody came. Nothing touched it. Yet slowly, so slowly she could not see it happen, the shadow crept on.",
+      "illustration_brief": "Nia sitting on the step, chin in hands, staring at two stones and her shadow.",
+      "audio_script": "She put down a second stone and kept watch from the step. Nobody came. Nothing touched it. Yet slowly, so slowly she could not see it happen, the shadow crept on.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "crept",
+          "definition": "Moved very slowly and quietly.",
+          "example": "The cat crept toward the bird."
+        }
+      ],
+      "image_asset": "images/ro-g-030-p04.svg",
+      "image_alt": "Nia sitting on the step, chin in hands, staring at two stones and her shadow.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p05",
+      "text": "At lunchtime the shadow was a tiny puddle at her feet. \"Now you are very short,\" said Nia. She put down a third stone, right next to her shoe.",
+      "illustration_brief": "Noon: sun high, shadow a small blob under Nia; third stone by her shoe.",
+      "audio_script": "At lunchtime the shadow was a tiny puddle at her feet. Now you are very short, said Nia. She put down a third stone, right next to her shoe.",
+      "timing_segments": [],
+      "image_asset": "images/ro-g-030-p05.svg",
+      "image_alt": "Noon: sun high, shadow a small blob under Nia; third stone by her shoe.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p06",
+      "text": "By teatime the shadow was long again, but on the other side of her, stretching toward the house. Four stones now made a curve on the grass.",
+      "illustration_brief": "Late afternoon: long shadow pointing the opposite way toward the house; four stones in an arc.",
+      "audio_script": "By teatime the shadow was long again, but on the other side of her, stretching toward the house. Four stones now made a curve on the grass.",
+      "timing_segments": [],
+      "image_asset": "images/ro-g-030-p06.svg",
+      "image_alt": "Late afternoon: long shadow pointing the opposite way toward the house; four stones in an arc.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p07",
+      "text": "Nia looked at the stones. Then she looked up, shading her eyes. The sun had moved across the sky all day, from the fence side to the house side. \"It was you,\" she said.",
+      "illustration_brief": "Nia squinting up at the low western sun, the arc of stones at her feet.",
+      "audio_script": "Nia looked at the stones. Then she looked up, shading her eyes. The sun had moved across the sky all day, from the fence side to the house side. It was you, she said.",
+      "timing_segments": [],
+      "image_asset": "images/ro-g-030-p07.svg",
+      "image_alt": "Nia squinting up at the low western sun, the arc of stones at her feet.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p08",
+      "text": "The next morning she checked. The shadow was back by the fence, long and thin, exactly where the first stone lay. \"Same time tomorrow?\" said Nia, and went in for breakfast.",
+      "illustration_brief": "Next morning: the long shadow again ending at the first stone; Nia grinning.",
+      "audio_script": "The next morning she checked. The shadow was back by the fence, long and thin, exactly where the first stone lay. Same time tomorrow? said Nia, and went in for breakfast.",
+      "timing_segments": [],
+      "image_asset": "images/ro-g-030-p08.svg",
+      "image_alt": "Next morning: the long shadow again ending at the first stone; Nia grinning.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "explicit_detail",
+      "difficulty": "easy",
+      "prompt": "What did Nia use to mark her shadow?",
+      "options": [
+        {
+          "id": "stones",
+          "text": "Stones"
+        },
+        {
+          "id": "chalk",
+          "text": "Chalk"
+        },
+        {
+          "id": "sticks",
+          "text": "Sticks"
+        }
+      ],
+      "correct_option_id": "stones",
+      "evidence_page_ids": [
+        "p02"
+      ],
+      "explanation": "Page 2: She marked the tip of the shadow with a stone.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "sequence",
+      "difficulty": "medium",
+      "prompt": "When was the shadow shortest?",
+      "options": [
+        {
+          "id": "lunch",
+          "text": "At lunchtime"
+        },
+        {
+          "id": "breakfast",
+          "text": "At breakfast time"
+        },
+        {
+          "id": "tea",
+          "text": "At teatime"
+        }
+      ],
+      "correct_option_id": "lunch",
+      "evidence_page_ids": [
+        "p05"
+      ],
+      "explanation": "Page 5: At lunchtime the shadow was a tiny puddle at her feet.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "inference",
+      "difficulty": "hard",
+      "prompt": "What really moved Nia's shadow?",
+      "options": [
+        {
+          "id": "sun",
+          "text": "The sun moving across the sky"
+        },
+        {
+          "id": "wind",
+          "text": "The wind"
+        },
+        {
+          "id": "person",
+          "text": "Someone sneaking in"
+        }
+      ],
+      "correct_option_id": "sun",
+      "evidence_page_ids": [
+        "p04",
+        "p07"
+      ],
+      "explanation": "Nobody touched it (page 4). Nia saw the sun had moved across the sky all day and said, it was you (page 7).",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "cause_effect",
+      "difficulty": "hard",
+      "prompt": "Why was the shadow back by the fence the next morning?",
+      "options": [
+        {
+          "id": "same",
+          "text": "The sun was in the same place as the morning before"
+        },
+        {
+          "id": "nia",
+          "text": "Nia moved the stone"
+        },
+        {
+          "id": "rain",
+          "text": "It rained in the night"
+        }
+      ],
+      "correct_option_id": "same",
+      "evidence_page_ids": [
+        "p01",
+        "p08"
+      ],
+      "explanation": "At breakfast the sun was low on the fence side (page 1); next morning the shadow was exactly at the first stone again (page 8).",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q05",
+      "skill": "summary",
+      "difficulty": "hard",
+      "response_type": "open",
+      "prompt": "Tell a grown-up how Nia worked out what moved her shadow.",
+      "rubric": "not yet: says the shadow moved; with support: mentions stones or sun with prompting; independent: marked with stones through the day, saw a curve, looked up and saw the sun had moved, checked the next morning",
+      "explanation": "Describing the method (marking, watching, checking) shows understanding of the investigation, not just the answer."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "prompt": "Put the day in order.",
+      "items": [
+        {
+          "id": "s1",
+          "text": "Long shadow to the fence at breakfast.",
+          "page_id": "p01"
+        },
+        {
+          "id": "s2",
+          "text": "Tiny shadow at lunchtime.",
+          "page_id": "p05"
+        },
+        {
+          "id": "s3",
+          "text": "Long shadow toward the house at teatime.",
+          "page_id": "p06"
+        },
+        {
+          "id": "s4",
+          "text": "Nia looks up at the sun.",
+          "page_id": "p07"
+        }
+      ],
+      "correct_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "discussion",
+      "skill": "compare",
+      "prompts": [
+        "Read 'Shadows Move' next. Which page of that book explains why Nia's shadow was shortest at lunch?",
+        "Nia's story is made up. Which parts could really happen?"
+      ]
+    }
+  ],
+  "off_screen_prompt": "On a sunny day, mark your shadow with a stone in the morning and again after lunch. Which way did it move?",
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-09-28T07:36:45+00:00",
+    "reviewer": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+    "review_date": "2026-09-28",
+    "history": [
+      {
+        "action": "approve_all",
+        "at": "2026-09-28T07:36:45+00:00",
+        "by": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+        "note": "batch 030: phonics e/u/ll, D-H readers, shadow pair, unseen check"
+      }
+    ]
+  }
+}

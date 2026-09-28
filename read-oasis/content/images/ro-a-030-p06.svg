@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">The bird stays in the tree</title>
+  <desc id="d">The bird perched high in a tree; Mo waving from the grass.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="220" width="400" height="80" fill="#BFE3B4"/>
+  <g transform="translate(300 210) scale(1.1)">
+    <rect x="-10" y="-20" width="20" height="70" rx="6" fill="#A0522D" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="0" cy="-50" r="44" fill="#6AB04C" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="-36" cy="-30" r="30" fill="#6AB04C" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="36" cy="-30" r="30" fill="#6AB04C" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(290 110) scale(1.1)"><ellipse cx="0" cy="0" rx="12" ry="9" fill="#A0522D" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="-5" r="6" fill="#A0522D" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 -4 L21 -2 L15 0 Z" fill="#F2A541"/></g>
+  <g transform="translate(110 190) scale(1.0)">
+    <ellipse cx="0" cy="0" rx="34" ry="30" fill="#F7D154" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="12" cy="-8" r="5" fill="#2B2B2B"/>
+    <path d="M30 -2 L46 4 L30 10 Z" fill="#F2A541" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-30 6 Q-48 -4 -34 -18" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-10 30 L-10 44 M10 30 L10 44" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <path d="M140 160 q10 -20 20 -6" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+</svg>

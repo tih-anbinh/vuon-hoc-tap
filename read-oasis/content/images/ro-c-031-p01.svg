@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Gus can run</title>
+  <desc id="d">A small brown puppy running in a yard.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="220" width="400" height="80" fill="#BFE3B4"/>
+  <g transform="translate(200 200) scale(1.0)">
+    <ellipse cx="0" cy="8" rx="34" ry="18" fill="#F5E6D3" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="26" cy="-10" r="16" fill="#F5E6D3" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M14 -20 q-10 10 -6 22" fill="#A0522D" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="30" cy="-12" r="3" fill="#2B2B2B"/><circle cx="40" cy="-6" r="4" fill="#2B2B2B"/>
+    <circle cx="-10" cy="2" r="6" fill="#A0522D"/><circle cx="8" cy="12" r="5" fill="#A0522D"/>
+    <path d="M-34 4 q-16 -10 -10 -26" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    
+  </g>
+  <path d="M120 200 l0 18" stroke="#6C8EBF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M130 200 l0 18" stroke="#6C8EBF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M140 200 l0 18" stroke="#6C8EBF" stroke-width="4" stroke-linecap="round"/>
+
+</svg>

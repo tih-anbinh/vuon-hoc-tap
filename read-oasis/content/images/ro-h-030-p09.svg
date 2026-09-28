@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Seed to bowl</title>
+  <desc id="d">A row of small icons: seed, seedling, paddy, golden head, grain pile, bowl; a child eating rice.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="0" width="400" height="300" fill="#F7F1E3"/>
+  <ellipse cx="40" cy="120" rx="10" ry="7" fill="#F5E6D3" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M100 130 l-6 -26 M100 130 l6 -26 M100 130 l0 -32" stroke="#6AB04C" stroke-width="4" stroke-linecap="round"/>
+  <rect x="140" y="110" width="40" height="20" fill="#8FC9E8" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M220 130 q0 -30 10 -40" stroke="#C9A227" stroke-width="4" fill="none"/>
+  <path d="M265.0 130 q25.0 -50 50 0 Z" fill="#E9C46A" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(350 118)"><path d="M-30 0 q0 26 30 26 q30 0 30 -26 Z" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="0" cy="0" rx="30" ry="8" fill="#F5E6D3" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g transform="translate(200 230) scale(0.8)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#2B2B2B"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -30 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#6AB04C" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-36 30 M24 0 L36 30" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(230 210)"><path d="M-30 0 q0 26 30 26 q30 0 30 -26 Z" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="0" cy="0" rx="30" ry="8" fill="#F5E6D3" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+
+</svg>

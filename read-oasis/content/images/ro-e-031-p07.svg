@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Walking home</title>
+  <desc id="d">Sam and Dad walking away, the lit market small behind; Sam looking back smiling.</desc>
+  <rect width="400" height="300" fill="#2B3A55"/>
+  <rect x="0" y="230" width="400" height="70" fill="#3A4763"/>
+  <ellipse cx="300" cy="120" rx="5" ry="6" fill="#D9534F"/>
+  <ellipse cx="314" cy="128" rx="5" ry="6" fill="#E9C46A"/>
+  <ellipse cx="328" cy="120" rx="5" ry="6" fill="#D9534F"/>
+  <ellipse cx="342" cy="128" rx="5" ry="6" fill="#E9C46A"/>
+  <ellipse cx="356" cy="120" rx="5" ry="6" fill="#D9534F"/>
+  <ellipse cx="370" cy="128" rx="5" ry="6" fill="#E9C46A"/>
+  <g transform="translate(120 200) scale(1.2)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#222"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -30 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#4A6FA5" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-40 26 M24 0 L40 26" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(180 205) scale(0.9)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#2B2B2B"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -30 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#5B8DEF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-36 30 M24 0 L36 30" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+</svg>

@@ -43,6 +43,8 @@ export const DEFAULT_SETTINGS = Object.freeze({
   parent_pin_hash: null,
   cloud_sync_enabled: false,       // parent opt-in; see src/sync.mjs
   hidden_books: [],                // parent veto: book_ids removed from the child library on this profile (synced)
+  greeting_audio: true,            // spoken greeting when the library opens
+  unseen_unlocked: null,           // book_id of a reserved unseen-check text temporarily shown to the child (C06)
 });
 
 export function emptyStore(profileId = 'child-1') {

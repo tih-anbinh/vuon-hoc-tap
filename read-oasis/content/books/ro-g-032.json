@@ -1,0 +1,317 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-g-032",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "The Bicycle Bell",
+  "language": "en",
+  "level": "G",
+  "reading_mode": "independent_reading",
+  "topic": "friendship",
+  "genre": "fiction",
+  "learning_objectives": [
+    "Read independently and infer a character's motive from actions",
+    "Explain a misunderstanding and how it was cleared up"
+  ],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": {
+    "text": "medium",
+    "conceptual": "medium",
+    "visual_support": "low"
+  },
+  "rights": {
+    "text_author": "Huy Tran for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
+  "parent_prompts": [
+    "Let the child read alone. After: why did Tim think Lan was cross? What was really going on?"
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "Tim's bicycle had a silver bell that went ting-a-ling. He rang it at dogs, at pigeons, and at his friend Lan every morning on the way to school. Lan always waved back.",
+      "illustration_brief": "Tim (red cap) on a bike ringing a bell; Lan waving from a gate.",
+      "audio_script": "Tim's bicycle had a silver bell that went ting-a-ling. He rang it at dogs, at pigeons, and at his friend Lan every morning on the way to school. Lan always waved back.",
+      "timing_segments": [],
+      "image_asset": "images/ro-g-032-p01.svg",
+      "image_alt": "Tim on a bike ringing a bell; Lan waving from a gate.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p02",
+      "text": "On Monday, Lan did not wave. She was looking at the ground. Tim rang the bell twice. Nothing.",
+      "illustration_brief": "Lan at the gate looking down; Tim on the bike, bell hand raised, puzzled.",
+      "audio_script": "On Monday, Lan did not wave. She was looking at the ground. Tim rang the bell twice. Nothing.",
+      "timing_segments": [],
+      "image_asset": "images/ro-g-032-p02.svg",
+      "image_alt": "Lan at the gate looking down; Tim on the bike, bell hand raised, puzzled.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p03",
+      "text": "On Tuesday, the same. Wednesday too. Tim stopped ringing. \"She is cross with me,\" he decided. But he could not think what he had done.",
+      "illustration_brief": "Tim cycling past, not ringing, glancing back over his shoulder; Lan still looking down.",
+      "audio_script": "On Tuesday, the same. Wednesday too. Tim stopped ringing. She is cross with me, he decided. But he could not think what he had done.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "cross",
+          "definition": "A little bit angry.",
+          "example": "Mum was cross when I spilled the juice."
+        }
+      ],
+      "image_asset": "images/ro-g-032-p03.svg",
+      "image_alt": "Tim cycling past, not ringing, glancing back; Lan still looking down.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p04",
+      "text": "On Thursday he got off the bike and walked it up to the gate. Lan was crouched down by the wall. In front of her, in a shoebox lined with a scarf, was a very small bird.",
+      "illustration_brief": "Lan crouched by a wall; a shoebox with a scarf and a tiny bird inside; Tim leaning the bike, looking over her shoulder.",
+      "audio_script": "On Thursday he got off the bike and walked it up to the gate. Lan was crouched down by the wall. In front of her, in a shoebox lined with a scarf, was a very small bird.",
+      "timing_segments": [],
+      "image_asset": "images/ro-g-032-p04.svg",
+      "image_alt": "Lan crouched by a wall; a shoebox with a scarf and a tiny bird; Tim looking over her shoulder.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p05",
+      "text": "\"It fell out of the nest,\" Lan whispered. \"I have been keeping it warm until Mum can take it to the vet. I did not wave because I did not want to scare it. And your bell...\"",
+      "illustration_brief": "Close on the shoebox: a fledgling nestled in the scarf; Lan's finger to her lips.",
+      "audio_script": "It fell out of the nest, Lan whispered. I have been keeping it warm until Mum can take it to the vet. I did not wave because I did not want to scare it. And your bell.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "whispered",
+          "definition": "Spoke very quietly.",
+          "example": "She whispered a secret in my ear."
+        }
+      ],
+      "image_asset": "images/ro-g-032-p05.svg",
+      "image_alt": "Close on the shoebox: a fledgling nestled in the scarf; Lan's finger to her lips.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p06",
+      "text": "Tim looked at his silver bell. Ting-a-ling, every morning, right next to a frightened bird. His face went hot. \"I thought you were cross,\" he said.",
+      "illustration_brief": "Tim looking at the bell on his handlebars, cheeks red.",
+      "audio_script": "Tim looked at his silver bell. Ting-a-ling, every morning, right next to a frightened bird. His face went hot. I thought you were cross, he said.",
+      "timing_segments": [],
+      "image_asset": "images/ro-g-032-p06.svg",
+      "image_alt": "Tim looking at the bell on his handlebars, cheeks red.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p07",
+      "text": "\"Cross? No!\" Lan almost laughed, then remembered and whispered it instead. \"I just could not shout across the road.\"",
+      "illustration_brief": "Lan with a hand over her mouth, eyes smiling; Tim relieved.",
+      "audio_script": "Cross? No! Lan almost laughed, then remembered and whispered it instead. I just could not shout across the road.",
+      "timing_segments": [],
+      "image_asset": "images/ro-g-032-p07.svg",
+      "image_alt": "Lan with a hand over her mouth, eyes smiling; Tim relieved.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p08",
+      "text": "On Friday, Tim rode past the gate without a sound. Lan looked up and gave a tiny wave. The bird was gone to the vet, but the quiet stayed for one more day, just to be safe.",
+      "illustration_brief": "Tim gliding past silently; Lan giving a small wave; the empty shoebox by the wall.",
+      "audio_script": "On Friday, Tim rode past the gate without a sound. Lan looked up and gave a tiny wave. The bird was gone to the vet, but the quiet stayed for one more day, just to be safe.",
+      "timing_segments": [],
+      "image_asset": "images/ro-g-032-p08.svg",
+      "image_alt": "Tim gliding past silently; Lan giving a small wave; the empty shoebox by the wall.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "inference",
+      "difficulty": "medium",
+      "prompt": "Why did Tim think Lan was cross?",
+      "options": [
+        {
+          "id": "nowave",
+          "text": "She stopped waving back"
+        },
+        {
+          "id": "shout",
+          "text": "She shouted at him"
+        },
+        {
+          "id": "bike",
+          "text": "She broke his bike"
+        }
+      ],
+      "correct_option_id": "nowave",
+      "evidence_page_ids": [
+        "p02",
+        "p03"
+      ],
+      "explanation": "Lan did not wave on Monday, Tuesday or Wednesday (pages 2 and 3), so Tim decided she was cross.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "cause_effect",
+      "difficulty": "medium",
+      "prompt": "Why did Lan really stop waving?",
+      "options": [
+        {
+          "id": "bird",
+          "text": "She did not want to scare the baby bird"
+        },
+        {
+          "id": "angry",
+          "text": "She was angry with Tim"
+        },
+        {
+          "id": "sick",
+          "text": "She was ill"
+        }
+      ],
+      "correct_option_id": "bird",
+      "evidence_page_ids": [
+        "p05"
+      ],
+      "explanation": "Page 5: I did not wave because I did not want to scare it.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "inference",
+      "difficulty": "hard",
+      "prompt": "Why did Tim's face go hot?",
+      "options": [
+        {
+          "id": "embarrassed",
+          "text": "He felt bad about ringing the bell near the frightened bird"
+        },
+        {
+          "id": "sun",
+          "text": "The sun was hot"
+        },
+        {
+          "id": "ride",
+          "text": "He had cycled fast"
+        }
+      ],
+      "correct_option_id": "embarrassed",
+      "evidence_page_ids": [
+        "p06"
+      ],
+      "explanation": "Page 6: he thought of the bell ringing next to a frightened bird, and his face went hot. That is embarrassment.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "explicit_detail",
+      "difficulty": "easy",
+      "prompt": "Where was the bird kept?",
+      "options": [
+        {
+          "id": "box",
+          "text": "In a shoebox lined with a scarf"
+        },
+        {
+          "id": "nest",
+          "text": "Back in its nest"
+        },
+        {
+          "id": "cage",
+          "text": "In a cage"
+        }
+      ],
+      "correct_option_id": "box",
+      "evidence_page_ids": [
+        "p04"
+      ],
+      "explanation": "Page 4: in a shoebox lined with a scarf, was a very small bird.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q05",
+      "skill": "expression",
+      "difficulty": "medium",
+      "response_type": "open",
+      "prompt": "Tell a grown-up what Tim thought was happening, what was really happening, and how he found out.",
+      "rubric": "not yet: says a bird; with support: Tim thought Lan was cross, with prompting; independent: thought she was cross because no wave, really she was protecting a fallen bird, he found out by walking up to the gate",
+      "explanation": "Separating the wrong guess from the real reason shows the child followed the misunderstanding."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "prompt": "Put the week in order.",
+      "items": [
+        {
+          "id": "s1",
+          "text": "Lan stops waving.",
+          "page_id": "p02"
+        },
+        {
+          "id": "s2",
+          "text": "Tim decides she is cross.",
+          "page_id": "p03"
+        },
+        {
+          "id": "s3",
+          "text": "Tim finds the bird in the shoebox.",
+          "page_id": "p04"
+        },
+        {
+          "id": "s4",
+          "text": "Tim rides past quietly.",
+          "page_id": "p08"
+        }
+      ],
+      "correct_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "choose_evidence",
+      "skill": "inference",
+      "claim": "Tim was wrong about Lan.",
+      "prompt": "Which page shows he was wrong?",
+      "correct_page_ids": [
+        "p07"
+      ]
+    },
+    {
+      "activity_id": "a03",
+      "type": "discussion",
+      "skill": "listening_comprehension",
+      "prompts": [
+        "Have you ever thought someone was cross when they were not?",
+        "What could Tim have done on Monday instead of guessing?"
+      ]
+    }
+  ],
+  "off_screen_prompt": "Next time someone seems quiet, ask them one kind question before you guess why.",
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-09-28T07:36:45+00:00",
+    "reviewer": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+    "review_date": "2026-09-28",
+    "history": [
+      {
+        "action": "approve_all",
+        "at": "2026-09-28T07:36:45+00:00",
+        "by": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+        "note": "batch 030: phonics e/u/ll, D-H readers, shadow pair, unseen check"
+      }
+    ]
+  }
+}

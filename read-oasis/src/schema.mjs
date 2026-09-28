@@ -243,7 +243,7 @@ const PATTERN_RULES = {
   cvc_short_e: /^[bcdfghjklmnprstvwz]e[bdgmnptx]$/,
   cvc_short_u: /^[bcdfghjklmnprstvwz]u[bdgmnptx]$/,
   vc_short: /^[aeiou][bdgmnptx]$/,
-  double_final_consonant: /^[bcdfghjklmnprstvwz][aeiou](ll|ss|ff|zz)$/,
+  double_final_consonant: /^[bcdfghjklmnprstvwz]{0,2}[aeiou](ll|ss|ff|zz)(es|s)?$/,   // bell, still, off, all, fluff, buzzes
 };
 function matchesPattern(word, ...lists) {
   for (const list of lists) for (const pat of list || []) { const re = PATTERN_RULES[pat]; if (re && re.test(word)) return true; }

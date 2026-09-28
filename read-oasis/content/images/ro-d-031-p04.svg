@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">The smell trail</title>
+  <desc id="d">An ant walking from a crumb back toward the nest with a faint dotted trail; others following.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="160" width="400" height="140" fill="#BFE3B4"/>
+  <path d="M340 220 q-120 -30 -260 10" fill="none" stroke="#F2A541" stroke-width="4" stroke-dasharray="6 8"/>
+  <path transform="translate(340 214) scale(1.0)" d="M-12 6 l6 -14 l14 -2 l8 10 l-6 8 Z" fill="#E9C46A" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(120 226) rotate(10) scale(1.0)"><circle cx="-12" cy="0" r="6" fill="#2B2B2B"/><circle cx="0" cy="0" r="5" fill="#2B2B2B"/><circle cx="11" cy="0" r="7" fill="#2B2B2B"/><path d="M-4 -4 l-6 -10 M0 -5 l0 -12 M4 -4 l6 -10 M-4 4 l-6 10 M0 5 l0 12 M4 4 l6 10 M14 -5 l6 -8 M16 -4 l8 -4" stroke="#2B2B2B" stroke-width="2" stroke-linecap="round"/></g>
+  <g transform="translate(170 216) rotate(10) scale(0.9)"><circle cx="-12" cy="0" r="6" fill="#2B2B2B"/><circle cx="0" cy="0" r="5" fill="#2B2B2B"/><circle cx="11" cy="0" r="7" fill="#2B2B2B"/><path d="M-4 -4 l-6 -10 M0 -5 l0 -12 M4 -4 l6 -10 M-4 4 l-6 10 M0 5 l0 12 M4 4 l6 10 M14 -5 l6 -8 M16 -4 l8 -4" stroke="#2B2B2B" stroke-width="2" stroke-linecap="round"/></g>
+  <g transform="translate(220 210) rotate(10) scale(0.9)"><circle cx="-12" cy="0" r="6" fill="#2B2B2B"/><circle cx="0" cy="0" r="5" fill="#2B2B2B"/><circle cx="11" cy="0" r="7" fill="#2B2B2B"/><path d="M-4 -4 l-6 -10 M0 -5 l0 -12 M4 -4 l6 -10 M-4 4 l-6 10 M0 5 l0 12 M4 4 l6 10 M14 -5 l6 -8 M16 -4 l8 -4" stroke="#2B2B2B" stroke-width="2" stroke-linecap="round"/></g>
+  <ellipse cx="60" cy="236" rx="22" ry="10" fill="#5A3A22" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+</svg>

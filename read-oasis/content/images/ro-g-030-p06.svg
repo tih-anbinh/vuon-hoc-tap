@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Long again, the other way</title>
+  <desc id="d">Late afternoon: long shadow pointing the opposite way toward the house; four stones in an arc.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <circle cx="40" cy="90" r="26" fill="#F7D154" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M73 90 L84 90" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M63 113 L70 120" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M40 123 L40 134" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M17 113 L10 120" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M7 90 L-4 90" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M17 67 L10 60" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M40 57 L40 46" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M63 67 L70 60" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <rect x="0" y="200" width="400" height="100" fill="#BFE3B4"/>
+  <rect x="330" y="120" width="70" height="100" fill="#A87C5A" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M200 228 L330 238 L330 250 L200 246 Z" fill="#1B2B34" fill-opacity=".35"/>
+  <ellipse cx="60" cy="236" rx="9" ry="6" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="110" cy="240" rx="9" ry="6" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="170" cy="244" rx="9" ry="6" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="250" cy="240" rx="9" ry="6" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(200 200) scale(1.0)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#2B2B2B"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -30 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#9B59B6" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-40 26 M24 0 L40 26" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+</svg>

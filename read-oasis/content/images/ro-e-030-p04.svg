@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">The paper darkens</title>
+  <desc id="d">The boat with a grey soggy bottom and drooping sides, lower in the water.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="200" width="400" height="100" fill="#BFE3B4"/>
+  <path d="M0 250 q100 -30 200 0 q100 30 200 0 L400 300 L0 300 Z" fill="#9CCBE8" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(220 250) scale(1.1)"><path d="M-40 0 L-25 20 L25 20 L40 0 Z" fill="#BEBEBE" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 -30 L20 0 L-20 0 Z" fill="#BEBEBE" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M-30 0 q30 8 60 0" fill="none" stroke="#8E9AA3" stroke-width="3"/></g>
+
+</svg>

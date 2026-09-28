@@ -1,0 +1,250 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-e-032",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "The Wrong Bus",
+  "language": "en",
+  "level": "E",
+  "reading_mode": "independent_reading",
+  "topic": "neighbourhood",
+  "genre": "fiction",
+  "reserved_for_unseen_check": true,
+  "learning_objectives": [
+    "Unseen transfer check: read a new text alone and answer without practice",
+    "Infer feelings and reasons from text evidence"
+  ],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": {
+    "text": "low",
+    "conceptual": "medium",
+    "visual_support": "low"
+  },
+  "rights": {
+    "text_author": "Huy Tran for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
+  "parent_prompts": [
+    "UNSEEN CHECK: do not preview this book with the child. Let them read it once, alone, then ask the questions. Record the result in parent.html > Evidence > Unseen-text check, not as a practice quiz."
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "Ben got on the number four bus with his grandma. He liked the seat at the back, so he ran to it and sat down.",
+      "illustration_brief": "A boy running down the aisle of a bus toward the back seat; an older woman paying the driver.",
+      "audio_script": "Ben got on the number four bus with his grandma. He liked the seat at the back, so he ran to it and sat down.",
+      "timing_segments": [],
+      "image_asset": "images/ro-e-032-p01.svg",
+      "image_alt": "A boy running down the aisle of a bus toward the back seat; an older woman paying the driver.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p02",
+      "text": "The bus pulled away. Ben looked out of the window. The shops went past. The park went past. Then a street he did not know went past.",
+      "illustration_brief": "View through a bus window: shops, then a park, then an unfamiliar street with tall houses.",
+      "audio_script": "The bus pulled away. Ben looked out of the window. The shops went past. The park went past. Then a street he did not know went past.",
+      "timing_segments": [],
+      "image_asset": "images/ro-e-032-p02.svg",
+      "image_alt": "View through a bus window: shops, then a park, then an unfamiliar street with tall houses.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p03",
+      "text": "Ben turned round. The seat next to him was empty. Grandma was not on the bus.",
+      "illustration_brief": "Ben on the back seat, looking at the empty seat beside him, eyes wide.",
+      "audio_script": "Ben turned round. The seat next to him was empty. Grandma was not on the bus.",
+      "timing_segments": [],
+      "image_asset": "images/ro-e-032-p03.svg",
+      "image_alt": "Ben on the back seat, looking at the empty seat beside him, eyes wide.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p04",
+      "text": "His hands felt cold. He walked to the front, holding the poles. \"Please,\" he said to the driver, \"I think I lost my grandma.\"",
+      "illustration_brief": "Ben walking carefully down the aisle holding a pole, approaching the driver.",
+      "audio_script": "His hands felt cold. He walked to the front, holding the poles. Please, he said to the driver, I think I lost my grandma.",
+      "timing_segments": [],
+      "image_asset": "images/ro-e-032-p04.svg",
+      "image_alt": "Ben walking carefully down the aisle holding a pole, approaching the driver.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p05",
+      "text": "The driver smiled. \"You did not lose her. You lost the bus. This is the number fourteen. Your grandma is on the number four, and I think she is looking for you right now.\"",
+      "illustration_brief": "The driver turning with a kind smile, pointing at a sign showing 14.",
+      "audio_script": "The driver smiled. You did not lose her. You lost the bus. This is the number fourteen. Your grandma is on the number four, and I think she is looking for you right now.",
+      "timing_segments": [],
+      "image_asset": "images/ro-e-032-p05.svg",
+      "image_alt": "The driver turning with a kind smile, pointing at a sign showing 14.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p06",
+      "text": "The driver stopped the bus and made a phone call. Ben sat on the front seat this time, right where the driver could see him.",
+      "illustration_brief": "The bus stopped at a kerb; the driver on a phone; Ben on the front seat.",
+      "audio_script": "The driver stopped the bus and made a phone call. Ben sat on the front seat this time, right where the driver could see him.",
+      "timing_segments": [],
+      "image_asset": "images/ro-e-032-p06.svg",
+      "image_alt": "The bus stopped at a kerb; the driver on a phone; Ben on the front seat.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p07",
+      "text": "Ten minutes later a number four bus pulled up behind them. Grandma got off, walking very fast. Ben had never been so glad to see anyone.",
+      "illustration_brief": "Grandma stepping quickly off a second bus; Ben running toward her.",
+      "audio_script": "Ten minutes later a number four bus pulled up behind them. Grandma got off, walking very fast. Ben had never been so glad to see anyone.",
+      "timing_segments": [],
+      "image_asset": "images/ro-e-032-p07.svg",
+      "image_alt": "Grandma stepping quickly off a second bus; Ben running toward her.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p08",
+      "text": "\"Next time,\" said Grandma, hugging him, \"we sit together. And we both read the number.\" \"Four,\" said Ben. \"Not fourteen.\"",
+      "illustration_brief": "Grandma hugging Ben beside the bus; a 4 and a 14 sign visible on the two buses.",
+      "audio_script": "Next time, said Grandma, hugging him, we sit together. And we both read the number. Four, said Ben. Not fourteen.",
+      "timing_segments": [],
+      "image_asset": "images/ro-e-032-p08.svg",
+      "image_alt": "Grandma hugging Ben beside the bus; a 4 and a 14 sign visible on the two buses.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "explicit_detail",
+      "difficulty": "easy",
+      "prompt": "What was the number of the bus Ben got on by mistake?",
+      "options": [
+        {
+          "id": "fourteen",
+          "text": "Fourteen"
+        },
+        {
+          "id": "forty",
+          "text": "Forty"
+        },
+        {
+          "id": "one",
+          "text": "One"
+        }
+      ],
+      "correct_option_id": "fourteen",
+      "evidence_page_ids": [
+        "p05"
+      ],
+      "explanation": "Page 5: This is the number fourteen.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "inference",
+      "difficulty": "medium",
+      "prompt": "How did Ben feel when he saw the empty seat?",
+      "options": [
+        {
+          "id": "scared",
+          "text": "Scared"
+        },
+        {
+          "id": "happy",
+          "text": "Happy"
+        },
+        {
+          "id": "sleepy",
+          "text": "Sleepy"
+        }
+      ],
+      "correct_option_id": "scared",
+      "evidence_page_ids": [
+        "p03",
+        "p04"
+      ],
+      "explanation": "Grandma was not on the bus (page 3) and his hands felt cold (page 4). Cold hands are a sign of being scared.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "cause_effect",
+      "difficulty": "medium",
+      "prompt": "Why was Grandma not on the bus?",
+      "options": [
+        {
+          "id": "wrong",
+          "text": "Ben got on a different bus from her"
+        },
+        {
+          "id": "shop",
+          "text": "She went into a shop"
+        },
+        {
+          "id": "late",
+          "text": "She was late"
+        }
+      ],
+      "correct_option_id": "wrong",
+      "evidence_page_ids": [
+        "p05"
+      ],
+      "explanation": "Page 5: You lost the bus. Your grandma is on the number four.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "inference",
+      "difficulty": "hard",
+      "prompt": "Why did Ben sit at the front the second time?",
+      "options": [
+        {
+          "id": "seen",
+          "text": "So the driver could see him and he would be safe"
+        },
+        {
+          "id": "view",
+          "text": "The view was better"
+        },
+        {
+          "id": "full",
+          "text": "The back was full"
+        }
+      ],
+      "correct_option_id": "seen",
+      "evidence_page_ids": [
+        "p06"
+      ],
+      "explanation": "Page 6: right where the driver could see him.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q05",
+      "skill": "expression",
+      "difficulty": "medium",
+      "response_type": "open",
+      "prompt": "Tell a grown-up what went wrong and what Ben did that was sensible.",
+      "rubric": "not yet: says he lost grandma; with support: wrong bus, with prompting; independent: got on 14 not 4, noticed she was missing, told the driver politely, sat where he could be seen",
+      "explanation": "For an unseen check, note how much help was needed and whether the child cited the text."
+    }
+  ],
+  "activities": [],
+  "off_screen_prompt": "Next time you take a bus or a lift, read the number out loud before you get on.",
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-09-28T07:36:45+00:00",
+    "reviewer": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+    "review_date": "2026-09-28",
+    "history": [
+      {
+        "action": "approve_all",
+        "at": "2026-09-28T07:36:45+00:00",
+        "by": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+        "note": "batch 030: phonics e/u/ll, D-H readers, shadow pair, unseen check"
+      }
+    ]
+  }
+}

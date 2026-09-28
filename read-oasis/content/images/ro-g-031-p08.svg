@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">A sundial</title>
+  <desc id="d">A stick casting a shadow onto marks arranged in an arc on the ground.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <circle cx="320" cy="60" r="26" fill="#F7D154" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M353 60 L364 60" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M343 83 L350 90" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M320 93 L320 104" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M297 83 L290 90" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M287 60 L276 60" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M297 37 L290 30" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M320 27 L320 16" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M343 37 L350 30" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <rect x="0" y="170" width="400" height="130" fill="#BFE3B4"/>
+  <path d="M200 230 L200 120" stroke="#A0522D" stroke-width="8" stroke-linecap="round"/>
+  <path d="M200 226 L110 236 L110 248 L200 244 Z" fill="#1B2B34" fill-opacity=".35"/>
+  <ellipse cx="307" cy="230" rx="9" ry="6" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="284" cy="216" rx="9" ry="6" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="239" cy="208" rx="9" ry="6" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="200" cy="206" rx="9" ry="6" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="164" cy="207" rx="9" ry="6" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="118" cy="215" rx="9" ry="6" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="93" cy="228" rx="9" ry="6" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+</svg>

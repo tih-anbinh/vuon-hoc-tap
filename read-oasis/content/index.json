@@ -1,7 +1,8 @@
 {
   "index_version": 1,
   "generated_by": "tools/validate_content.py",
-  "content_hash": "e5c51b445e74",
+  "content_hash": "e0488ee5b348",
+  "greetings": {},
   "books": [
     {
       "book_id": "ro-a-001",
@@ -14,6 +15,8 @@
       "genre": "fiction",
       "pages": 5,
       "sha256": "9715418bfc2e2d479de84a8742eb69971deb2a9c647481a3626feb90c26e61c4",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
       "assets": [
         "images/ro-a-001-p01.svg",
         "images/ro-a-001-p02.svg",
@@ -33,6 +36,8 @@
       "genre": "fiction",
       "pages": 6,
       "sha256": "e307daa5deb22fcd6227f72f13381db6119e891e9454a46cc8d1d585cd0f880a",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
       "assets": [
         "images/ro-a-020-p01.svg",
         "images/ro-a-020-p02.svg",
@@ -53,6 +58,8 @@
       "genre": "fiction",
       "pages": 6,
       "sha256": "bbcb9a96cc00c740470b643766ca8ff30d75224f64b14df7145ba792892579b5",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
       "assets": [
         "images/ro-a-022-p01.svg",
         "images/ro-a-022-p02.svg",
@@ -73,6 +80,8 @@
       "genre": "fiction",
       "pages": 6,
       "sha256": "bdf35cb25fbc1cab39ceb5a83b2c0104d8f8b509c136426d699ff797be196e87",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
       "assets": [
         "images/ro-a-023-p01.svg",
         "images/ro-a-023-p02.svg",
@@ -80,6 +89,28 @@
         "images/ro-a-023-p04.svg",
         "images/ro-a-023-p05.svg",
         "images/ro-a-023-p06.svg"
+      ]
+    },
+    {
+      "book_id": "ro-a-030",
+      "revision": 1,
+      "file": "books/ro-a-030.json",
+      "title": "Up, Up, Down",
+      "level": "A",
+      "reading_mode": "independent_reading",
+      "topic": "play",
+      "genre": "fiction",
+      "pages": 6,
+      "sha256": "7a2400e852d8bccefe466b37fdb3d76db31b6d7b098abd0f24e639019f903da6",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
+      "assets": [
+        "images/ro-a-030-p01.svg",
+        "images/ro-a-030-p02.svg",
+        "images/ro-a-030-p03.svg",
+        "images/ro-a-030-p04.svg",
+        "images/ro-a-030-p05.svg",
+        "images/ro-a-030-p06.svg"
       ]
     },
     {
@@ -93,6 +124,8 @@
       "genre": "fiction",
       "pages": 4,
       "sha256": "35131667fc56a89232d19dee4f14d2972e01bd8093a11cd3ac5a3d0a62818658",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
       "assets": [
         "images/ro-b-001-p01.svg",
         "images/ro-b-001-p02.svg",
@@ -111,6 +144,8 @@
       "genre": "nonfiction",
       "pages": 6,
       "sha256": "801db7e4536d36d79fa66139f70da500cfb31dfc7da37666205e496fe6075230",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
       "assets": [
         "images/ro-b-020-p01.svg",
         "images/ro-b-020-p02.svg",
@@ -131,6 +166,8 @@
       "genre": "fiction",
       "pages": 6,
       "sha256": "a6f71650e2ea60b3a7b0883e3480698f8127afe844e05a48f024762d372a043c",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
       "assets": [
         "images/ro-b-021-p01.svg",
         "images/ro-b-021-p02.svg",
@@ -151,6 +188,8 @@
       "genre": "fiction",
       "pages": 6,
       "sha256": "c876c624e44c09f38a4e93b9e21b5882d41d1157d2f4fab56ea409811cd60e51",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
       "assets": [
         "images/ro-b-022-p01.svg",
         "images/ro-b-022-p02.svg",
@@ -171,6 +210,8 @@
       "genre": "fiction",
       "pages": 6,
       "sha256": "d6850f5435406b630bf7d81bac1846206b6a8b99b173abc843a087080a40d9d4",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
       "assets": [
         "images/ro-b-023-p01.svg",
         "images/ro-b-023-p02.svg",
@@ -178,6 +219,28 @@
         "images/ro-b-023-p04.svg",
         "images/ro-b-023-p05.svg",
         "images/ro-b-023-p06.svg"
+      ]
+    },
+    {
+      "book_id": "ro-b-032",
+      "revision": 1,
+      "file": "books/ro-b-032.json",
+      "title": "Ten Red Hens",
+      "level": "B",
+      "reading_mode": "decodable",
+      "topic": "animals",
+      "genre": "fiction",
+      "pages": 6,
+      "sha256": "0f0e48a9ec7f799ba42a78cfd5d83c1fdc0091c505a71a7fbe8fde4532f40797",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
+      "assets": [
+        "images/ro-b-032-p01.svg",
+        "images/ro-b-032-p02.svg",
+        "images/ro-b-032-p03.svg",
+        "images/ro-b-032-p04.svg",
+        "images/ro-b-032-p05.svg",
+        "images/ro-b-032-p06.svg"
       ]
     },
     {
@@ -191,6 +254,8 @@
       "genre": "fiction",
       "pages": 6,
       "sha256": "7471df60dfa06ba6fd995025b0932c789e9f25a0a353cad8968a158b85404bd1",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
       "assets": [
         "images/ro-c-020-p01.svg",
         "images/ro-c-020-p02.svg",
@@ -211,6 +276,8 @@
       "genre": "nonfiction",
       "pages": 6,
       "sha256": "94f4ece6e76b137e3c235cc36f135fbc668a8d29c910a9de15ea510077f95ec6",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
       "assets": [
         "images/ro-c-021-p01.svg",
         "images/ro-c-021-p02.svg",
@@ -231,6 +298,8 @@
       "genre": "fiction",
       "pages": 6,
       "sha256": "b7684e76ce4b6673bce479bb2f69a89941f6f991faf1623060b44aa5a908e3de",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
       "assets": [
         "images/ro-c-022-p01.svg",
         "images/ro-c-022-p02.svg",
@@ -251,6 +320,8 @@
       "genre": "fiction",
       "pages": 8,
       "sha256": "c46f1df4c942c3a064314faa54d9f16386ef1ac6749bdf27dfe0539118e57741",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
       "assets": [
         "images/ro-c-023-p01.svg",
         "images/ro-c-023-p02.svg",
@@ -260,6 +331,72 @@
         "images/ro-c-023-p06.svg",
         "images/ro-c-023-p07.svg",
         "images/ro-c-023-p08.svg"
+      ]
+    },
+    {
+      "book_id": "ro-c-030",
+      "revision": 1,
+      "file": "books/ro-c-030.json",
+      "title": "Jill and the Bell",
+      "level": "C",
+      "reading_mode": "decodable",
+      "topic": "sounds",
+      "genre": "fiction",
+      "pages": 6,
+      "sha256": "fb14d63b74e5a3518288418192d60614447be992213cd5f0a96bdb2f1362c016",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
+      "assets": [
+        "images/ro-c-030-p01.svg",
+        "images/ro-c-030-p02.svg",
+        "images/ro-c-030-p03.svg",
+        "images/ro-c-030-p04.svg",
+        "images/ro-c-030-p05.svg",
+        "images/ro-c-030-p06.svg"
+      ]
+    },
+    {
+      "book_id": "ro-c-031",
+      "revision": 1,
+      "file": "books/ro-c-031.json",
+      "title": "Gus and the Mud",
+      "level": "C",
+      "reading_mode": "decodable",
+      "topic": "home",
+      "genre": "fiction",
+      "pages": 6,
+      "sha256": "81cee28de3c1741dbf3c2a230d09eb5415274ab9c0b4ab552adfa652c81461ef",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
+      "assets": [
+        "images/ro-c-031-p01.svg",
+        "images/ro-c-031-p02.svg",
+        "images/ro-c-031-p03.svg",
+        "images/ro-c-031-p04.svg",
+        "images/ro-c-031-p05.svg",
+        "images/ro-c-031-p06.svg"
+      ]
+    },
+    {
+      "book_id": "ro-c-032",
+      "revision": 1,
+      "file": "books/ro-c-032.json",
+      "title": "The Lost Sock",
+      "level": "C",
+      "reading_mode": "independent_reading",
+      "topic": "home",
+      "genre": "fiction",
+      "pages": 6,
+      "sha256": "4d80ae4353e31dbac5b43517e3e16afc46710cfa3d794badc9b1371b94fbf926",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
+      "assets": [
+        "images/ro-c-032-p01.svg",
+        "images/ro-c-032-p02.svg",
+        "images/ro-c-032-p03.svg",
+        "images/ro-c-032-p04.svg",
+        "images/ro-c-032-p05.svg",
+        "images/ro-c-032-p06.svg"
       ]
     },
     {
@@ -273,12 +410,255 @@
       "genre": "nonfiction",
       "pages": 5,
       "sha256": "bef19e3d0830eaf21cbc762e22e4cf04926334739c16ab39eebd7160749a7513",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
       "assets": [
         "images/ro-d-001-p01.svg",
         "images/ro-d-001-p02.svg",
         "images/ro-d-001-p03.svg",
         "images/ro-d-001-p04.svg",
         "images/ro-d-001-p05.svg"
+      ]
+    },
+    {
+      "book_id": "ro-d-030",
+      "revision": 1,
+      "file": "books/ro-d-030.json",
+      "title": "The Broken Umbrella",
+      "level": "D",
+      "reading_mode": "read_aloud",
+      "topic": "weather",
+      "genre": "fiction",
+      "pages": 8,
+      "sha256": "34b8c9c4effe69343e4080bb457da350fc221c348e20c43b1150e7c88b42f3d4",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
+      "assets": [
+        "images/ro-d-030-p01.svg",
+        "images/ro-d-030-p02.svg",
+        "images/ro-d-030-p03.svg",
+        "images/ro-d-030-p04.svg",
+        "images/ro-d-030-p05.svg",
+        "images/ro-d-030-p06.svg",
+        "images/ro-d-030-p07.svg",
+        "images/ro-d-030-p08.svg"
+      ]
+    },
+    {
+      "book_id": "ro-d-031",
+      "revision": 1,
+      "file": "books/ro-d-031.json",
+      "title": "Ants Work Together",
+      "level": "D",
+      "reading_mode": "read_aloud",
+      "topic": "animals",
+      "genre": "nonfiction",
+      "pages": 8,
+      "sha256": "d3e26595207d7a014aea881fe7af5da2c6457e655b8575336687d14971a2ef95",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
+      "assets": [
+        "images/ro-d-031-p01.svg",
+        "images/ro-d-031-p02.svg",
+        "images/ro-d-031-p03.svg",
+        "images/ro-d-031-p04.svg",
+        "images/ro-d-031-p05.svg",
+        "images/ro-d-031-p06.svg",
+        "images/ro-d-031-p07.svg",
+        "images/ro-d-031-p08.svg"
+      ]
+    },
+    {
+      "book_id": "ro-e-030",
+      "revision": 1,
+      "file": "books/ro-e-030.json",
+      "title": "Mai's Paper Boat",
+      "level": "E",
+      "reading_mode": "shared_reading",
+      "topic": "water",
+      "genre": "fiction",
+      "pages": 8,
+      "sha256": "32f8ea7642483cce9d3b86a072536906d3a5d7809cffd818a6e6d98e2034afce",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
+      "assets": [
+        "images/ro-e-030-p01.svg",
+        "images/ro-e-030-p02.svg",
+        "images/ro-e-030-p03.svg",
+        "images/ro-e-030-p04.svg",
+        "images/ro-e-030-p05.svg",
+        "images/ro-e-030-p06.svg",
+        "images/ro-e-030-p07.svg",
+        "images/ro-e-030-p08.svg"
+      ]
+    },
+    {
+      "book_id": "ro-e-031",
+      "revision": 1,
+      "file": "books/ro-e-031.json",
+      "title": "The Night Market",
+      "level": "E",
+      "reading_mode": "independent_reading",
+      "topic": "neighbourhood",
+      "genre": "fiction",
+      "pages": 8,
+      "sha256": "3f5ac47a6215d512989bec1f95daa171310a0bc7d2d506de72e89db229ab0e91",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
+      "assets": [
+        "images/ro-e-031-p01.svg",
+        "images/ro-e-031-p02.svg",
+        "images/ro-e-031-p03.svg",
+        "images/ro-e-031-p04.svg",
+        "images/ro-e-031-p05.svg",
+        "images/ro-e-031-p06.svg",
+        "images/ro-e-031-p07.svg",
+        "images/ro-e-031-p08.svg"
+      ]
+    },
+    {
+      "book_id": "ro-e-032",
+      "revision": 1,
+      "file": "books/ro-e-032.json",
+      "title": "The Wrong Bus",
+      "level": "E",
+      "reading_mode": "independent_reading",
+      "topic": "neighbourhood",
+      "genre": "fiction",
+      "pages": 8,
+      "sha256": "84bdcdf8669157253ee6289a48b27984268c930bd426473ab10168de05519c2e",
+      "pair_id": null,
+      "reserved_for_unseen_check": true,
+      "assets": [
+        "images/ro-e-032-p01.svg",
+        "images/ro-e-032-p02.svg",
+        "images/ro-e-032-p03.svg",
+        "images/ro-e-032-p04.svg",
+        "images/ro-e-032-p05.svg",
+        "images/ro-e-032-p06.svg",
+        "images/ro-e-032-p07.svg",
+        "images/ro-e-032-p08.svg"
+      ]
+    },
+    {
+      "book_id": "ro-f-030",
+      "revision": 1,
+      "file": "books/ro-f-030.json",
+      "title": "Why the Moon Changes Shape",
+      "level": "F",
+      "reading_mode": "shared_reading",
+      "topic": "sky",
+      "genre": "nonfiction",
+      "pages": 8,
+      "sha256": "7ab6c94c09a79c3d2e88e4647b830943e40ec8992134a858f77d2cea8ff51bbf",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
+      "assets": [
+        "images/ro-f-030-p01.svg",
+        "images/ro-f-030-p02.svg",
+        "images/ro-f-030-p03.svg",
+        "images/ro-f-030-p04.svg",
+        "images/ro-f-030-p05.svg",
+        "images/ro-f-030-p06.svg",
+        "images/ro-f-030-p07.svg",
+        "images/ro-f-030-p08.svg"
+      ]
+    },
+    {
+      "book_id": "ro-g-030",
+      "revision": 1,
+      "file": "books/ro-g-030.json",
+      "title": "Nia and the Runaway Shadow",
+      "level": "G",
+      "reading_mode": "read_aloud",
+      "topic": "sky",
+      "genre": "fiction",
+      "pages": 8,
+      "sha256": "152f1a5e2efcef8d35c6c39c98c1fb0d3dedf2cc76dd1116cd371307f473a3ae",
+      "pair_id": "pair-shadow-01",
+      "reserved_for_unseen_check": false,
+      "assets": [
+        "images/ro-g-030-p01.svg",
+        "images/ro-g-030-p02.svg",
+        "images/ro-g-030-p03.svg",
+        "images/ro-g-030-p04.svg",
+        "images/ro-g-030-p05.svg",
+        "images/ro-g-030-p06.svg",
+        "images/ro-g-030-p07.svg",
+        "images/ro-g-030-p08.svg"
+      ]
+    },
+    {
+      "book_id": "ro-g-031",
+      "revision": 1,
+      "file": "books/ro-g-031.json",
+      "title": "Shadows Move",
+      "level": "G",
+      "reading_mode": "read_aloud",
+      "topic": "sky",
+      "genre": "nonfiction",
+      "pages": 8,
+      "sha256": "ea487a7373810508c66963e917f4910ce8d627fdaad1afbf17e1f1d1371fa245",
+      "pair_id": "pair-shadow-01",
+      "reserved_for_unseen_check": false,
+      "assets": [
+        "images/ro-g-031-p01.svg",
+        "images/ro-g-031-p02.svg",
+        "images/ro-g-031-p03.svg",
+        "images/ro-g-031-p04.svg",
+        "images/ro-g-031-p05.svg",
+        "images/ro-g-031-p06.svg",
+        "images/ro-g-031-p07.svg",
+        "images/ro-g-031-p08.svg"
+      ]
+    },
+    {
+      "book_id": "ro-g-032",
+      "revision": 1,
+      "file": "books/ro-g-032.json",
+      "title": "The Bicycle Bell",
+      "level": "G",
+      "reading_mode": "independent_reading",
+      "topic": "friendship",
+      "genre": "fiction",
+      "pages": 8,
+      "sha256": "fd658cbccb87ce8640ae1b5abbcdb2e19af30089b9b7044ef8647c9933c9f9c2",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
+      "assets": [
+        "images/ro-g-032-p01.svg",
+        "images/ro-g-032-p02.svg",
+        "images/ro-g-032-p03.svg",
+        "images/ro-g-032-p04.svg",
+        "images/ro-g-032-p05.svg",
+        "images/ro-g-032-p06.svg",
+        "images/ro-g-032-p07.svg",
+        "images/ro-g-032-p08.svg"
+      ]
+    },
+    {
+      "book_id": "ro-h-030",
+      "revision": 1,
+      "file": "books/ro-h-030.json",
+      "title": "How Rice Gets to the Bowl",
+      "level": "H",
+      "reading_mode": "read_aloud",
+      "topic": "plants",
+      "genre": "nonfiction",
+      "pages": 9,
+      "sha256": "ee76a2e025cc1fdb836b5c283c53734c3ecf3a49374698c01ea28bce1fa967a6",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
+      "assets": [
+        "images/ro-h-030-p01.svg",
+        "images/ro-h-030-p02.svg",
+        "images/ro-h-030-p03.svg",
+        "images/ro-h-030-p04.svg",
+        "images/ro-h-030-p05.svg",
+        "images/ro-h-030-p06.svg",
+        "images/ro-h-030-p07.svg",
+        "images/ro-h-030-p08.svg",
+        "images/ro-h-030-p09.svg"
       ]
     }
   ]

@@ -1,0 +1,418 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-h-030",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "How Rice Gets to the Bowl",
+  "language": "en",
+  "level": "H",
+  "reading_mode": "read_aloud",
+  "topic": "plants",
+  "genre": "nonfiction",
+  "learning_objectives": [
+    "Follow a process with several stages in order",
+    "Learn the words seedling, paddy, harvest and husk in context"
+  ],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": {
+    "text": "medium",
+    "conceptual": "medium",
+    "visual_support": "medium"
+  },
+  "rights": {
+    "text_author": "Huy Tran for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
+  "factual_claims": [
+    {
+      "claim": "Rice is a grass; the grains we eat are its seeds.",
+      "source": "Britannica, 'Rice' (rice is a cereal grass); International Rice Research Institute (IRRI) Rice Knowledge Bank",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Rice seeds are often sprouted in a nursery bed and the young seedlings transplanted into flooded fields (paddies).",
+      "source": "IRRI Rice Knowledge Bank, 'Transplanting'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Rice plants grow well standing in shallow water, which also keeps down many weeds.",
+      "source": "IRRI Rice Knowledge Bank, 'Water management'; Britannica, 'Rice'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Rice takes roughly three to six months from planting to harvest depending on the variety.",
+      "source": "IRRI Rice Knowledge Bank, 'Growth stages of the rice plant' (90-180 days)",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "After harvest, grains are dried and the hard outer husk is removed (milling) before the rice is cooked.",
+      "source": "IRRI Rice Knowledge Bank, 'Milling'; Britannica, 'Rice'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Rice is a staple food for more than half of the world's people.",
+      "source": "IRRI, 'Rice facts'; FAO",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    }
+  ],
+  "parent_prompts": [
+    "Before: where does the rice in your bowl come from? What did it look like before?",
+    "After page 5: why do the fields have water in them?",
+    "After: which stage do you think is the hardest work?"
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "There is rice in your bowl tonight. Small, white, soft. But a few months ago, every one of those grains was a seed in the mud. This is the journey it took.",
+      "illustration_brief": "A bowl of white rice with steam; behind it, faded, a green paddy field.",
+      "audio_script": "There is rice in your bowl tonight. Small, white, soft. But a few months ago, every one of those grains was a seed in the mud. This is the journey it took.",
+      "timing_segments": [],
+      "image_asset": "images/ro-h-030-p01.svg",
+      "image_alt": "A bowl of white rice with steam; behind it, faded, a green paddy field.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p02",
+      "text": "Rice is a kind of grass. The grains are its seeds. Farmers keep some seeds from last year and soak them in water until tiny roots and shoots appear.",
+      "illustration_brief": "A shallow tray of rice seeds, some with tiny white roots and green shoots.",
+      "audio_script": "Rice is a kind of grass. The grains are its seeds. Farmers keep some seeds from last year and soak them in water until tiny roots and shoots appear.",
+      "timing_segments": [],
+      "image_asset": "images/ro-h-030-p02.svg",
+      "image_alt": "A shallow tray of rice seeds, some with tiny white roots and green shoots.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p03",
+      "text": "The sprouted seeds are planted close together in a small muddy bed. In a few weeks they are bright green seedlings as long as your hand.",
+      "illustration_brief": "A dense square of bright green seedlings in mud, a hand beside for scale.",
+      "audio_script": "The sprouted seeds are planted close together in a small muddy bed. In a few weeks they are bright green seedlings as long as your hand.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "seedling",
+          "definition": "A very young plant that has just grown from a seed.",
+          "example": "The tomato seedling has two leaves."
+        }
+      ],
+      "image_asset": "images/ro-h-030-p03.svg",
+      "image_alt": "A dense square of bright green seedlings in mud, a hand beside for scale.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p04",
+      "text": "Now comes the hard part. Farmers pull up the seedlings in bunches and walk into the big field, which is flooded with shallow water. Bending low, they push each seedling into the mud, one by one, in long straight rows.",
+      "illustration_brief": "Farmers in conical hats bent over in a flooded field, planting rows of seedlings; reflections in the water.",
+      "audio_script": "Now comes the hard part. Farmers pull up the seedlings in bunches and walk into the big field, which is flooded with shallow water. Bending low, they push each seedling into the mud, one by one, in long straight rows.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "paddy",
+          "definition": "A field flooded with water where rice grows.",
+          "example": "Ducks swim between the rice plants in the paddy."
+        }
+      ],
+      "image_asset": "images/ro-h-030-p04.svg",
+      "image_alt": "Farmers in conical hats bent over in a flooded field, planting rows of seedlings.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p05",
+      "text": "Why the water? Rice likes wet feet. The water also drowns most weeds, so the rice does not have to share the sun. Frogs, small fish and dragonflies move in too.",
+      "illustration_brief": "Close view of rice stems standing in water; a frog on a stem, a dragonfly above, small fish below.",
+      "audio_script": "Why the water? Rice likes wet feet. The water also drowns most weeds, so the rice does not have to share the sun. Frogs, small fish and dragonflies move in too.",
+      "timing_segments": [],
+      "image_asset": "images/ro-h-030-p05.svg",
+      "image_alt": "Close view of rice stems standing in water; a frog on a stem, a dragonfly above, small fish below.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p06",
+      "text": "For three or four months the plants grow tall. Then they flower, and each flower becomes a grain. The heads get heavy and bend over, and the whole field turns from green to gold.",
+      "illustration_brief": "A golden field of rice with heavy drooping heads; one head shown close with many grains.",
+      "audio_script": "For three or four months the plants grow tall. Then they flower, and each flower becomes a grain. The heads get heavy and bend over, and the whole field turns from green to gold.",
+      "timing_segments": [],
+      "image_asset": "images/ro-h-030-p06.svg",
+      "image_alt": "A golden field of rice with heavy drooping heads; one head shown close with many grains.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p07",
+      "text": "Harvest time. The stalks are cut and the grains are shaken loose. They are spread in the sun to dry, sometimes right on the road, raked into long golden stripes.",
+      "illustration_brief": "Rice grains spread on a road drying, a person raking them into stripes; cut stalks in bundles behind.",
+      "audio_script": "Harvest time. The stalks are cut and the grains are shaken loose. They are spread in the sun to dry, sometimes right on the road, raked into long golden stripes.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "harvest",
+          "definition": "Gathering crops when they are ripe.",
+          "example": "The apple harvest is in autumn."
+        }
+      ],
+      "image_asset": "images/ro-h-030-p07.svg",
+      "image_alt": "Rice grains spread on a road drying, a person raking them into stripes.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p08",
+      "text": "Each grain still wears a hard brown coat called the husk. A machine rubs the husks off. Underneath is the white rice you know.",
+      "illustration_brief": "Left: brown husked grains; right: white polished grains; a simple milling machine between.",
+      "audio_script": "Each grain still wears a hard brown coat called the husk. A machine rubs the husks off. Underneath is the white rice you know.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "husk",
+          "definition": "The hard dry outer coat of a seed or grain.",
+          "example": "Peel the husk off the corn."
+        }
+      ],
+      "image_asset": "images/ro-h-030-p08.svg",
+      "image_alt": "Left: brown husked grains; right: white polished grains; a simple milling machine between.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p09",
+      "text": "Seed, seedling, paddy, gold, harvest, husk. Then a bag, a shop, a pot, and your bowl. More than half the people in the world eat rice every day. Tonight, you are one of them.",
+      "illustration_brief": "A row of small icons: seed, seedling, paddy, golden head, grain pile, bowl; a child eating rice at the end.",
+      "audio_script": "Seed, seedling, paddy, gold, harvest, husk. Then a bag, a shop, a pot, and your bowl. More than half the people in the world eat rice every day. Tonight, you are one of them.",
+      "timing_segments": [],
+      "image_asset": "images/ro-h-030-p09.svg",
+      "image_alt": "A row of small icons: seed, seedling, paddy, golden head, grain pile, bowl; a child eating rice.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "explicit_detail",
+      "difficulty": "easy",
+      "prompt": "What kind of plant is rice?",
+      "options": [
+        {
+          "id": "grass",
+          "text": "A kind of grass"
+        },
+        {
+          "id": "tree",
+          "text": "A small tree"
+        },
+        {
+          "id": "moss",
+          "text": "A moss"
+        }
+      ],
+      "correct_option_id": "grass",
+      "evidence_page_ids": [
+        "p02"
+      ],
+      "explanation": "Page 2: Rice is a kind of grass.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "cause_effect",
+      "difficulty": "medium",
+      "prompt": "Why are rice fields flooded with water?",
+      "options": [
+        {
+          "id": "weeds",
+          "text": "Rice likes it, and the water drowns most weeds"
+        },
+        {
+          "id": "fish",
+          "text": "So farmers can catch fish"
+        },
+        {
+          "id": "cool",
+          "text": "To keep the farmers cool"
+        }
+      ],
+      "correct_option_id": "weeds",
+      "evidence_page_ids": [
+        "p05"
+      ],
+      "explanation": "Page 5: Rice likes wet feet. The water also drowns most weeds.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "sequence",
+      "difficulty": "medium",
+      "prompt": "What happens right after the field turns gold?",
+      "options": [
+        {
+          "id": "harvest",
+          "text": "Harvest: the stalks are cut and grains dried"
+        },
+        {
+          "id": "plant",
+          "text": "Seedlings are planted"
+        },
+        {
+          "id": "soak",
+          "text": "Seeds are soaked"
+        }
+      ],
+      "correct_option_id": "harvest",
+      "evidence_page_ids": [
+        "p06",
+        "p07"
+      ],
+      "explanation": "Page 6 ends with the field turning gold; page 7 begins with harvest time.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "word_knowledge",
+      "difficulty": "medium",
+      "prompt": "What is a husk?",
+      "options": [
+        {
+          "id": "coat",
+          "text": "The hard outer coat of a grain"
+        },
+        {
+          "id": "field",
+          "text": "A flooded field"
+        },
+        {
+          "id": "tool",
+          "text": "A tool for cutting"
+        }
+      ],
+      "correct_option_id": "coat",
+      "evidence_page_ids": [
+        "p08"
+      ],
+      "explanation": "Page 8: a hard brown coat called the husk.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q05",
+      "skill": "inference",
+      "difficulty": "hard",
+      "prompt": "Which stage does the book call the hard part, and why?",
+      "options": [
+        {
+          "id": "transplant",
+          "text": "Planting seedlings by hand, bending low in the water"
+        },
+        {
+          "id": "soak",
+          "text": "Soaking the seeds, because it takes long"
+        },
+        {
+          "id": "cook",
+          "text": "Cooking the rice"
+        }
+      ],
+      "correct_option_id": "transplant",
+      "evidence_page_ids": [
+        "p04"
+      ],
+      "explanation": "Page 4 says now comes the hard part and describes bending low to push each seedling into the mud one by one.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q06",
+      "skill": "summary",
+      "difficulty": "hard",
+      "response_type": "open",
+      "prompt": "Tell a grown-up the journey of rice from seed to bowl in order. Try to use paddy, harvest and husk.",
+      "rubric": "not yet: names one stage; with support: three stages with prompting; independent: seed soaked, seedling bed, planted in the paddy, grows gold, harvest and dry, husk removed, cooked",
+      "explanation": "An ordered retell with the key words shows the process was understood, not just the pictures."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "prompt": "Put the stages in order.",
+      "items": [
+        {
+          "id": "s1",
+          "text": "Seeds soaked until they sprout.",
+          "page_id": "p02"
+        },
+        {
+          "id": "s2",
+          "text": "Seedlings planted in the flooded paddy.",
+          "page_id": "p04"
+        },
+        {
+          "id": "s3",
+          "text": "The field turns gold.",
+          "page_id": "p06"
+        },
+        {
+          "id": "s4",
+          "text": "Grains dried and husks removed.",
+          "page_id": "p08"
+        }
+      ],
+      "correct_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "word_to_meaning",
+      "skill": "word_knowledge",
+      "prompt": "Match the word to its meaning.",
+      "pairs": [
+        {
+          "left": "seedling",
+          "right": "a very young plant"
+        },
+        {
+          "left": "paddy",
+          "right": "a flooded rice field"
+        },
+        {
+          "left": "harvest",
+          "right": "gathering ripe crops"
+        },
+        {
+          "left": "husk",
+          "right": "the hard coat of a grain"
+        }
+      ]
+    }
+  ],
+  "off_screen_prompt": "Look at a grain of uncooked rice with a magnifying glass. Then look at a cooked one. Tell someone three differences.",
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-09-28T07:36:45+00:00",
+    "reviewer": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+    "review_date": "2026-09-28",
+    "history": [
+      {
+        "action": "approve_all",
+        "at": "2026-09-28T07:36:45+00:00",
+        "by": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+        "note": "batch 030: phonics e/u/ll, D-H readers, shadow pair, unseen check"
+      }
+    ]
+  }
+}

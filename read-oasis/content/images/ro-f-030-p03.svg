@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Sunlight bounces</title>
+  <desc id="d">The Sun on the left, light rays hitting the Moon, bouncing toward a small Earth.</desc>
+  <rect width="400" height="300" fill="#2B3A55"/>
+  <circle cx="50" cy="150" r="34" fill="#F7D154" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M94 150 L107 150" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M80 180 L90 190" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M50 194 L50 207" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M20 180 L10 190" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M6 150 L-7 150" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M20 120 L10 110" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M50 106 L50 93" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M80 120 L90 110" stroke="#F7D154" stroke-width="6" stroke-linecap="round"/>
+  <path d="M90 114.0 L230 114.0" stroke="#F7D154" stroke-width="4" stroke-linecap="round"/>
+  <path d="M90 132.0 L230 132.0" stroke="#F7D154" stroke-width="4" stroke-linecap="round"/>
+  <path d="M90 150.0 L230 150.0" stroke="#F7D154" stroke-width="4" stroke-linecap="round"/>
+  <path d="M90 168.0 L230 168.0" stroke="#F7D154" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="260" cy="150" r="34" fill="#F4F1DE" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M280 155.0 L340 215.0" stroke="#F7D154" stroke-width="4" stroke-linecap="round"/>
+  <path d="M280 165.0 L340 225.0" stroke="#F7D154" stroke-width="4" stroke-linecap="round"/>
+  <path d="M280 175.0 L340 235.0" stroke="#F7D154" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="360" cy="250" r="22" fill="#5B8DEF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M346 244 q10 -12 22 -2 q-6 12 -22 2 Z M356 258 q8 -4 16 4 q-8 8 -16 -4 Z" fill="#6AB04C"/>
+
+</svg>

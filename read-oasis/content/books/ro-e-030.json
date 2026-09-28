@@ -1,0 +1,319 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-e-030",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "Mai's Paper Boat",
+  "language": "en",
+  "level": "E",
+  "reading_mode": "shared_reading",
+  "topic": "water",
+  "genre": "fiction",
+  "learning_objectives": [
+    "Predict and check what will happen to the boat",
+    "Explain why paper gets soft in water"
+  ],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": {
+    "text": "medium",
+    "conceptual": "medium",
+    "visual_support": "medium"
+  },
+  "rights": {
+    "text_author": "Huy Tran for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
+  "parent_prompts": [
+    "Before: Mai folds a boat from a page of her notebook. Will it float? For how long?",
+    "After page 4: What is happening to the paper?",
+    "After: What did Mai change the second time, and why?"
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "After the rain, a long puddle lay along the edge of the yard like a little river. Mai tore a page from her notebook and folded it, corner to corner, into a boat.",
+      "illustration_brief": "Mai (orange satchel) kneeling by a long puddle, folding a white paper boat.",
+      "audio_script": "After the rain, a long puddle lay along the edge of the yard like a little river. Mai tore a page from her notebook and folded it, corner to corner, into a boat.",
+      "timing_segments": [],
+      "image_asset": "images/ro-e-030-p01.svg",
+      "image_alt": "Mai kneeling by a long puddle, folding a white paper boat.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p02",
+      "text": "She set it on the water and gave it a gentle push. The boat floated! It turned slowly and drifted toward the gate.",
+      "illustration_brief": "The paper boat upright on the puddle, drifting; Mai's hand just letting go.",
+      "audio_script": "She set it on the water and gave it a gentle push. The boat floated! It turned slowly and drifted toward the gate.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "drifted",
+          "definition": "Moved slowly along, carried by water or wind.",
+          "example": "The leaf drifted down the stream."
+        }
+      ],
+      "image_asset": "images/ro-e-030-p02.svg",
+      "image_alt": "The paper boat upright on the puddle, drifting; Mai's hand just letting go.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p03",
+      "text": "Mai walked beside it, counting. Ten steps. Twenty steps. The boat was doing well.",
+      "illustration_brief": "Mai walking along the puddle edge beside the boat, counting on fingers.",
+      "audio_script": "Mai walked beside it, counting. Ten steps. Twenty steps. The boat was doing well.",
+      "timing_segments": [],
+      "image_asset": "images/ro-e-030-p03.svg",
+      "image_alt": "Mai walking along the puddle edge beside the boat, counting on fingers.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p04",
+      "text": "Then the bottom of the boat began to darken. The paper was drinking up water. It went soft, and the sides sagged.",
+      "illustration_brief": "The boat with a grey, soggy bottom and drooping sides, lower in the water.",
+      "audio_script": "Then the bottom of the boat began to darken. The paper was drinking up water. It went soft, and the sides sagged.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "sagged",
+          "definition": "Bent or dropped down because it was weak or heavy.",
+          "example": "The old shelf sagged in the middle."
+        }
+      ],
+      "image_asset": "images/ro-e-030-p04.svg",
+      "image_alt": "The boat with a grey soggy bottom and drooping sides, lower in the water.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p05",
+      "text": "At thirty steps, the boat folded in on itself and sank. Mai fished it out. It was a soggy grey lump.",
+      "illustration_brief": "Mai holding a limp grey paper lump, dripping.",
+      "audio_script": "At thirty steps, the boat folded in on itself and sank. Mai fished it out. It was a soggy grey lump.",
+      "timing_segments": [],
+      "image_asset": "images/ro-e-030-p05.svg",
+      "image_alt": "Mai holding a limp grey paper lump, dripping.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p06",
+      "text": "\"Paper drinks water,\" Mai said. \"So I need paper that does not drink.\" She went inside and came back with a page from a glossy magazine, shiny on both sides.",
+      "illustration_brief": "Mai holding up a shiny magazine page that reflects light.",
+      "audio_script": "Paper drinks water, Mai said. So I need paper that does not drink. She went inside and came back with a page from a glossy magazine, shiny on both sides.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "glossy",
+          "definition": "Smooth and shiny.",
+          "example": "The photo was printed on glossy paper."
+        }
+      ],
+      "image_asset": "images/ro-e-030-p06.svg",
+      "image_alt": "Mai holding up a shiny magazine page that reflects light.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p07",
+      "text": "She folded a second boat and launched it. Ten steps. Thirty steps. Fifty steps! The shiny paper stayed dry and the boat stayed up.",
+      "illustration_brief": "The second, shinier boat sailing far along the puddle; Mai jogging beside it.",
+      "audio_script": "She folded a second boat and launched it. Ten steps. Thirty steps. Fifty steps! The shiny paper stayed dry and the boat stayed up.",
+      "timing_segments": [],
+      "image_asset": "images/ro-e-030-p07.svg",
+      "image_alt": "The second, shinier boat sailing far along the puddle; Mai jogging beside it.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p08",
+      "text": "It reached the gate and bumped to a stop. Mai picked it up. Still dry inside. \"Boat number two,\" she said, \"you are a keeper.\"",
+      "illustration_brief": "The shiny boat at the gate; Mai lifting it, proud.",
+      "audio_script": "It reached the gate and bumped to a stop. Mai picked it up. Still dry inside. Boat number two, she said, you are a keeper.",
+      "timing_segments": [],
+      "image_asset": "images/ro-e-030-p08.svg",
+      "image_alt": "The shiny boat at the gate; Mai lifting it, proud.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "cause_effect",
+      "difficulty": "medium",
+      "prompt": "Why did the first boat sink?",
+      "options": [
+        {
+          "id": "soft",
+          "text": "The paper drank water and went soft"
+        },
+        {
+          "id": "wind",
+          "text": "The wind tipped it over"
+        },
+        {
+          "id": "heavy",
+          "text": "Mai put a stone in it"
+        }
+      ],
+      "correct_option_id": "soft",
+      "evidence_page_ids": [
+        "p04",
+        "p05"
+      ],
+      "explanation": "Page 4: the paper was drinking up water and went soft. Page 5: it folded in and sank.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "inference",
+      "difficulty": "hard",
+      "prompt": "Why did Mai choose the magazine page?",
+      "options": [
+        {
+          "id": "shiny",
+          "text": "Shiny paper does not soak up water"
+        },
+        {
+          "id": "pretty",
+          "text": "It had nice pictures"
+        },
+        {
+          "id": "bigger",
+          "text": "It was bigger"
+        }
+      ],
+      "correct_option_id": "shiny",
+      "evidence_page_ids": [
+        "p06",
+        "p07"
+      ],
+      "explanation": "Page 6: she wanted paper that does not drink. Page 7: the shiny paper stayed dry.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "compare",
+      "difficulty": "medium",
+      "prompt": "How far did each boat go?",
+      "options": [
+        {
+          "id": "3050",
+          "text": "First about thirty steps, second fifty steps to the gate"
+        },
+        {
+          "id": "same",
+          "text": "Both went the same distance"
+        },
+        {
+          "id": "first",
+          "text": "The first went further"
+        }
+      ],
+      "correct_option_id": "3050",
+      "evidence_page_ids": [
+        "p05",
+        "p07"
+      ],
+      "explanation": "Page 5: at thirty steps the first sank. Page 7: fifty steps, the second stayed up.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "word_knowledge",
+      "difficulty": "medium",
+      "prompt": "What does sagged mean here?",
+      "options": [
+        {
+          "id": "drop",
+          "text": "Dropped down because it was weak"
+        },
+        {
+          "id": "shine",
+          "text": "Became shiny"
+        },
+        {
+          "id": "fast",
+          "text": "Moved faster"
+        }
+      ],
+      "correct_option_id": "drop",
+      "evidence_page_ids": [
+        "p04"
+      ],
+      "explanation": "Page 4: it went soft, and the sides sagged. Soft sides drop down.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q05",
+      "skill": "summary",
+      "difficulty": "hard",
+      "response_type": "open",
+      "prompt": "Tell a grown-up what happened to boat one, what Mai learned, and what she changed for boat two.",
+      "rubric": "not yet: says it sank; with support: mentions the paper got wet, with prompting; independent: paper soaked and sank, so she chose shiny paper that does not soak, and it went further",
+      "explanation": "Stating the cause and the fix shows understanding of the experiment."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "prompt": "Put the story in order.",
+      "items": [
+        {
+          "id": "s1",
+          "text": "Mai folds a notebook-paper boat.",
+          "page_id": "p01"
+        },
+        {
+          "id": "s2",
+          "text": "The paper goes soft and sinks.",
+          "page_id": "p05"
+        },
+        {
+          "id": "s3",
+          "text": "Mai chooses shiny paper.",
+          "page_id": "p06"
+        },
+        {
+          "id": "s4",
+          "text": "The second boat reaches the gate.",
+          "page_id": "p08"
+        }
+      ],
+      "correct_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "choose_evidence",
+      "skill": "inference",
+      "claim": "The shiny paper stayed dry, so the second boat stayed up.",
+      "prompt": "Which page shows this?",
+      "correct_page_ids": [
+        "p07"
+      ]
+    }
+  ],
+  "off_screen_prompt": "Fold two paper boats, one from ordinary paper and one from a shiny leaflet. Float them in a bowl. Which lasts longer?",
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-09-28T07:36:45+00:00",
+    "reviewer": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+    "review_date": "2026-09-28",
+    "history": [
+      {
+        "action": "approve_all",
+        "at": "2026-09-28T07:36:45+00:00",
+        "by": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+        "note": "batch 030: phonics e/u/ll, D-H readers, shadow pair, unseen check"
+      }
+    ]
+  }
+}

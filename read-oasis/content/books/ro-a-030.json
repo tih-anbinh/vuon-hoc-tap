@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-a-030",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "Up, Up, Down",
+  "language": "en",
+  "level": "A",
+  "reading_mode": "independent_reading",
+  "topic": "play",
+  "genre": "fiction",
+  "learning_objectives": [
+    "Read a short book alone using the words up and down",
+    "Say what goes up and what comes down"
+  ],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": {
+    "text": "low",
+    "conceptual": "low",
+    "visual_support": "high"
+  },
+  "rights": {
+    "text_author": "Huy Tran for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
+  "parent_prompts": [
+    "Let the child read alone. After: what went up? What came down? Which one stayed up?"
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "The ball goes up.",
+      "illustration_brief": "Mo throws a red ball upward in a garden; ball high with motion lines.",
+      "audio_script": "The ball goes up.",
+      "timing_segments": [],
+      "image_asset": "images/ro-a-030-p01.svg",
+      "image_alt": "Mo throws a red ball upward in a garden.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p02",
+      "text": "The ball comes down. Bump!",
+      "illustration_brief": "The ball bouncing on the grass near Mo.",
+      "audio_script": "The ball comes down. Bump!",
+      "timing_segments": [],
+      "image_asset": "images/ro-a-030-p02.svg",
+      "image_alt": "The ball bouncing on the grass near Mo.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p03",
+      "text": "The leaf goes up.",
+      "illustration_brief": "A yellow leaf lifted by a gust; wind lines.",
+      "audio_script": "The leaf goes up.",
+      "timing_segments": [],
+      "image_asset": "images/ro-a-030-p03.svg",
+      "image_alt": "A yellow leaf lifted by a gust.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p04",
+      "text": "The leaf comes down. Slow, slow.",
+      "illustration_brief": "The leaf drifting down in a zigzag path.",
+      "audio_script": "The leaf comes down. Slow, slow.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "slow",
+          "definition": "Not fast; taking a long time.",
+          "example": "The snail is slow."
+        }
+      ],
+      "image_asset": "images/ro-a-030-p04.svg",
+      "image_alt": "The leaf drifting down in a zigzag path.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p05",
+      "text": "The bird goes up.",
+      "illustration_brief": "A small brown bird flying up from a bush.",
+      "audio_script": "The bird goes up.",
+      "timing_segments": [],
+      "image_asset": "images/ro-a-030-p05.svg",
+      "image_alt": "A small brown bird flying up from a bush.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p06",
+      "text": "The bird does not come down. It sits in the tree. Bye, bird!",
+      "illustration_brief": "The bird perched high in a tree; Mo waving from the grass.",
+      "audio_script": "The bird does not come down. It sits in the tree. Bye, bird!",
+      "timing_segments": [],
+      "image_asset": "images/ro-a-030-p06.svg",
+      "image_alt": "The bird perched high in a tree; Mo waving from the grass.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "explicit_detail",
+      "difficulty": "easy",
+      "prompt": "What comes down slowly?",
+      "options": [
+        {
+          "id": "leaf",
+          "text": "The leaf"
+        },
+        {
+          "id": "ball",
+          "text": "The ball"
+        },
+        {
+          "id": "bird",
+          "text": "The bird"
+        }
+      ],
+      "correct_option_id": "leaf",
+      "evidence_page_ids": [
+        "p04"
+      ],
+      "explanation": "Page 4 says: The leaf comes down. Slow, slow.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "compare",
+      "difficulty": "medium",
+      "prompt": "Which one does not come down?",
+      "options": [
+        {
+          "id": "bird",
+          "text": "The bird"
+        },
+        {
+          "id": "ball",
+          "text": "The ball"
+        },
+        {
+          "id": "leaf",
+          "text": "The leaf"
+        }
+      ],
+      "correct_option_id": "bird",
+      "evidence_page_ids": [
+        "p02",
+        "p04",
+        "p06"
+      ],
+      "explanation": "The ball comes down (page 2) and the leaf comes down (page 4), but the bird sits in the tree (page 6).",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "expression",
+      "difficulty": "easy",
+      "response_type": "open",
+      "prompt": "Tell a grown-up the three things that went up. Which one stayed up?",
+      "rubric": "not yet: names one thing; with support: two things with prompting; independent: ball, leaf, bird, and says the bird stayed in the tree",
+      "explanation": "Listing all three and the odd one out shows the pattern was followed."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "match_pairs",
+      "skill": "word_knowledge",
+      "prompt": "Match what happened.",
+      "pairs": [
+        {
+          "left": "ball",
+          "right": "comes down with a bump"
+        },
+        {
+          "left": "leaf",
+          "right": "comes down slowly"
+        },
+        {
+          "left": "bird",
+          "right": "stays up in the tree"
+        }
+      ]
+    }
+  ],
+  "off_screen_prompt": "Throw a soft toy up and catch it. Then drop a tissue. Which comes down slower?",
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-09-28T07:36:45+00:00",
+    "reviewer": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+    "review_date": "2026-09-28",
+    "history": [
+      {
+        "action": "approve_all",
+        "at": "2026-09-28T07:36:45+00:00",
+        "by": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+        "note": "batch 030: phonics e/u/ll, D-H readers, shadow pair, unseen check"
+      }
+    ]
+  }
+}

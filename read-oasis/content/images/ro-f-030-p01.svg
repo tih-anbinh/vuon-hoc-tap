@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Plate or slice?</title>
+  <desc id="d">Night sky split in two: a full round Moon on the left, a thin crescent on the right.</desc>
+  <rect width="400" height="300" fill="#2B3A55"/>
+  <path d="M200 0 L200 300" stroke="#F4F1DE" stroke-width="3" stroke-dasharray="8 8"/>
+  <circle cx="100" cy="130" r="50" fill="#F4F1DE" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="300" cy="130" r="50" fill="#3C4A66" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M300 80 a50 50 0 0 1 0 100 a30.0 50 0 0 0 0 -100 Z" fill="#F4F1DE"/>
+
+</svg>

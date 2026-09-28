@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">One blue sock</title>
+  <desc id="d">Nia holding up a single blue sock, puzzled.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="0" width="400" height="300" fill="#F7F1E3"/>
+  <g transform="translate(200 200) scale(1.0)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#2B2B2B"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-5 -30 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#9B59B6" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-42 -30 M24 0 L42 -30" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <path transform="translate(230 110) rotate(20) scale(0.9)" d="M0 0 L0 30 q0 14 14 14 L30 44 q10 0 10 -10 L20 24 L20 0 Z" fill="#5B8DEF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">A phone call</title>
+  <desc id="d">The bus stopped at a kerb; the driver on a phone; Ben on the front seat.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="230" width="400" height="70" fill="#BFE3B4"/>
+  <g transform="translate(200 180) scale(1.0)"><rect x="-90" y="-50" width="180" height="80" rx="12" fill="#5B8DEF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="-78" y="-40" width="34" height="28" rx="4" fill="#BFD7EA" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="-34" y="-40" width="34" height="28" rx="4" fill="#BFD7EA" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="10" y="-40" width="34" height="28" rx="4" fill="#BFD7EA" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="54" y="-40" width="34" height="28" rx="4" fill="#BFD7EA" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="-50" cy="34" r="14" fill="#2B2B2B"/><circle cx="50" cy="34" r="14" fill="#2B2B2B"/><rect x="-30" y="-64" width="60" height="14" rx="4" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g transform="translate(150 130) scale(0.55)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#DDD"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -30 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#6C757D" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-36 30 M24 0 L36 30" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <rect transform="translate(170 110) rotate(15)" x="-8" y="-16" width="16" height="32" rx="4" fill="#2B2B2B"/>
+  <g transform="translate(240 140) scale(0.55)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#2B2B2B"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -30 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#2A9D8F" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-40 26 M24 0 L40 26" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+</svg>

@@ -102,6 +102,11 @@ h2 { font-weight: 800; letter-spacing: -.01em; }
 .book-tile .progress { height: .5rem; border-radius: 999px; background: var(--chip); overflow: hidden; }
 .book-tile .progress > span { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--accent), var(--primary)); transition: width .6s var(--ease); }
 
+.shelf { margin-top: 1.4rem; }
+.book-tile[data-fit="later"] { opacity: .78; }
+.book-tile[data-fit="just_right"] { border-color: color-mix(in srgb, var(--accent) 60%, var(--line)); }
+.topbar h1 { cursor: default; }
+
 /* Stagger entrance */
 .fade { animation: fade var(--dur) var(--ease) both; }
 .stagger > * { animation: fade .45s var(--ease) both; }

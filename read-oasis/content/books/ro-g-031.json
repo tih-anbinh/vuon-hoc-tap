@@ -1,0 +1,340 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-g-031",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "Shadows Move",
+  "language": "en",
+  "level": "G",
+  "reading_mode": "read_aloud",
+  "topic": "sky",
+  "genre": "nonfiction",
+  "pair_id": "pair-shadow-01",
+  "learning_objectives": [
+    "Explain what a shadow is and why its length and direction change during the day",
+    "Compare an explanation text with a story on the same topic"
+  ],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": {
+    "text": "medium",
+    "conceptual": "high",
+    "visual_support": "high"
+  },
+  "rights": {
+    "text_author": "Huy Tran for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
+  "factual_claims": [
+    {
+      "claim": "A shadow is the dark area behind an object that blocks light.",
+      "source": "NASA Space Place, 'What is a shadow?' / Britannica Kids, 'Shadow'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "Shadows point away from the light source.",
+      "source": "Britannica Kids, 'Shadow'; BBC Bitesize KS2 'Light and shadows'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "When the Sun is low in the sky (morning and evening) shadows are long; when it is high (midday) shadows are short.",
+      "source": "BBC Bitesize KS2 'How do shadows change during the day?'; NOAA SciJinks",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "The Sun appears to move across the sky because the Earth is turning.",
+      "source": "NASA Space Place, 'What causes day and night?'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    },
+    {
+      "claim": "People long ago used the Sun's shadow on a marked surface (a sundial) to tell the time.",
+      "source": "Britannica Kids, 'Sundial'",
+      "reviewed": true,
+      "reviewed_by": "AI author (Claude) - parent fact-check pending",
+      "reviewed_at": "2026-09-28"
+    }
+  ],
+  "parent_prompts": [
+    "Before: Nia's shadow moved all day. Let's find out exactly why.",
+    "Try it: a torch and a pencil standing in clay. Move the torch low, high, low on the other side.",
+    "After: what would happen to Nia's stones on a cloudy day?"
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "Stand in the sun and you will see a dark shape on the ground, the same shape as you. That is your shadow.",
+      "illustration_brief": "A child standing on a path with a clear shadow beside; bright sun.",
+      "audio_script": "Stand in the sun and you will see a dark shape on the ground, the same shape as you. That is your shadow.",
+      "timing_segments": [],
+      "image_asset": "images/ro-g-031-p01.svg",
+      "image_alt": "A child standing on a path with a clear shadow beside; bright sun.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p02",
+      "text": "A shadow is made when something blocks light. Your body stops the sunlight from reaching the ground behind you, so that patch stays dark.",
+      "illustration_brief": "Diagram: sun rays hitting a figure; behind the figure a dark patch on the ground where rays are blocked.",
+      "audio_script": "A shadow is made when something blocks light. Your body stops the sunlight from reaching the ground behind you, so that patch stays dark.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "blocks",
+          "definition": "Gets in the way so something cannot pass.",
+          "example": "The tree blocks the wind."
+        }
+      ],
+      "image_asset": "images/ro-g-031-p02.svg",
+      "image_alt": "Sun rays hitting a figure; behind the figure a dark patch where rays are blocked.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p03",
+      "text": "Shadows always point away from the light. If the sun is on your left, your shadow is on your right.",
+      "illustration_brief": "Figure with sun on the left and shadow stretching to the right; an arrow from sun through the figure into the shadow.",
+      "audio_script": "Shadows always point away from the light. If the sun is on your left, your shadow is on your right.",
+      "timing_segments": [],
+      "image_asset": "images/ro-g-031-p03.svg",
+      "image_alt": "Figure with sun on the left and shadow stretching to the right; an arrow through.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p04",
+      "text": "When the sun is low, near the ground, light comes in sideways and your shadow stretches out long. That is why morning shadows are tall.",
+      "illustration_brief": "Low sun near the horizon; long stretched shadow.",
+      "audio_script": "When the sun is low, near the ground, light comes in sideways and your shadow stretches out long. That is why morning shadows are tall.",
+      "timing_segments": [],
+      "image_asset": "images/ro-g-031-p04.svg",
+      "image_alt": "Low sun near the horizon; long stretched shadow.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p05",
+      "text": "When the sun is high overhead, light comes almost straight down. Your shadow shrinks to a small shape at your feet. That is midday.",
+      "illustration_brief": "Sun directly overhead; tiny shadow under the figure.",
+      "audio_script": "When the sun is high overhead, light comes almost straight down. Your shadow shrinks to a small shape at your feet. That is midday.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "midday",
+          "definition": "The middle of the day, around twelve o'clock, when the sun is highest.",
+          "example": "We ate lunch at midday."
+        }
+      ],
+      "image_asset": "images/ro-g-031-p05.svg",
+      "image_alt": "Sun directly overhead; tiny shadow under the figure.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p06",
+      "text": "The sun seems to cross the sky from one side to the other. Really, it is the Earth that is turning, like a slow spinning top, carrying you round to face the sun and then away.",
+      "illustration_brief": "Small Earth with a curved arrow showing rotation; the Sun fixed to one side; a tiny figure on the Earth.",
+      "audio_script": "The sun seems to cross the sky from one side to the other. Really, it is the Earth that is turning, like a slow spinning top, carrying you round to face the sun and then away.",
+      "timing_segments": [],
+      "image_asset": "images/ro-g-031-p06.svg",
+      "image_alt": "Small Earth with a curved arrow showing rotation; the Sun fixed to one side; a tiny figure.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p07",
+      "text": "Because the sun's place in the sky keeps changing, your shadow keeps changing too: long, short, long again, and swinging round from one side to the other.",
+      "illustration_brief": "Three-panel strip: morning long shadow left, midday short, evening long shadow right.",
+      "audio_script": "Because the sun's place in the sky keeps changing, your shadow keeps changing too: long, short, long again, and swinging round from one side to the other.",
+      "timing_segments": [],
+      "image_asset": "images/ro-g-031-p07.svg",
+      "image_alt": "Three-panel strip: morning long shadow left, midday short, evening long shadow right.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    },
+    {
+      "page_id": "p08",
+      "text": "Long ago, people used this to tell the time. A stick in the ground and marks around it made a sun clock, called a sundial. Nia's stones were a sundial too.",
+      "illustration_brief": "A simple sundial: a stick casting a shadow onto marks arranged in an arc on the ground.",
+      "audio_script": "Long ago, people used this to tell the time. A stick in the ground and marks around it made a sun clock, called a sundial. Nia's stones were a sundial too.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "sundial",
+          "definition": "A clock that uses the shadow of a stick to show the time.",
+          "example": "The garden has an old stone sundial."
+        }
+      ],
+      "image_asset": "images/ro-g-031-p08.svg",
+      "image_alt": "A stick casting a shadow onto marks arranged in an arc on the ground.",
+      "image_provenance": "original SVG by Read Oasis (tools/gen_svgs_set3.py), 2026-09-28"
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "explicit_detail",
+      "difficulty": "easy",
+      "prompt": "What makes a shadow?",
+      "options": [
+        {
+          "id": "block",
+          "text": "Something blocking light"
+        },
+        {
+          "id": "cold",
+          "text": "Cold air"
+        },
+        {
+          "id": "dark",
+          "text": "Dark paint on the ground"
+        }
+      ],
+      "correct_option_id": "block",
+      "evidence_page_ids": [
+        "p02"
+      ],
+      "explanation": "Page 2: A shadow is made when something blocks light.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "cause_effect",
+      "difficulty": "medium",
+      "prompt": "Why are shadows short at midday?",
+      "options": [
+        {
+          "id": "high",
+          "text": "The sun is high and light comes almost straight down"
+        },
+        {
+          "id": "hot",
+          "text": "It is too hot for shadows"
+        },
+        {
+          "id": "cloud",
+          "text": "Clouds cover the sun"
+        }
+      ],
+      "correct_option_id": "high",
+      "evidence_page_ids": [
+        "p05"
+      ],
+      "explanation": "Page 5: when the sun is high overhead, light comes almost straight down and the shadow shrinks.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "explicit_detail",
+      "difficulty": "medium",
+      "prompt": "Why does the sun seem to cross the sky?",
+      "options": [
+        {
+          "id": "earth",
+          "text": "The Earth is turning"
+        },
+        {
+          "id": "sun",
+          "text": "The sun flies around the Earth"
+        },
+        {
+          "id": "wind",
+          "text": "The wind pushes it"
+        }
+      ],
+      "correct_option_id": "earth",
+      "evidence_page_ids": [
+        "p06"
+      ],
+      "explanation": "Page 6: Really, it is the Earth that is turning.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "compare",
+      "difficulty": "hard",
+      "prompt": "In the story, Nia's shadow was tiny at lunchtime. Which page of this book explains why?",
+      "options": [
+        {
+          "id": "p5",
+          "text": "The page about the sun being high overhead"
+        },
+        {
+          "id": "p8",
+          "text": "The page about sundials"
+        },
+        {
+          "id": "p1",
+          "text": "The page about standing in the sun"
+        }
+      ],
+      "correct_option_id": "p5",
+      "evidence_page_ids": [
+        "p05"
+      ],
+      "explanation": "Page 5 explains that at midday the sun is high and the shadow shrinks to a small shape, which is what Nia saw at lunch.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q05",
+      "skill": "summary",
+      "difficulty": "hard",
+      "response_type": "open",
+      "prompt": "Explain to a grown-up why a shadow is long in the morning and short at midday.",
+      "rubric": "not yet: says shadows change; with support: mentions the sun moving, with prompting; independent: low sun gives sideways light and long shadow, high sun gives straight-down light and short shadow, because the Earth turns",
+      "explanation": "Linking sun height to shadow length is the core idea of both books."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "match_pairs",
+      "skill": "compare",
+      "prompt": "Match what Nia saw to the reason in this book.",
+      "pairs": [
+        {
+          "left": "long shadow at breakfast",
+          "right": "the sun was low"
+        },
+        {
+          "left": "tiny shadow at lunch",
+          "right": "the sun was high overhead"
+        },
+        {
+          "left": "shadow on the other side at teatime",
+          "right": "the sun had crossed the sky"
+        }
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "choose_evidence",
+      "skill": "inference",
+      "claim": "Nia's stones worked like a sundial.",
+      "prompt": "Which page says this?",
+      "correct_page_ids": [
+        "p08"
+      ]
+    }
+  ],
+  "off_screen_prompt": "Make a sundial: a pencil in a lump of clay on a sunny windowsill. Mark the shadow tip every hour with a dot.",
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-09-28T07:36:45+00:00",
+    "reviewer": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+    "review_date": "2026-09-28",
+    "history": [
+      {
+        "action": "approve_all",
+        "at": "2026-09-28T07:36:45+00:00",
+        "by": "AI author (Claude); verified by tools/verify_book.py + review_batch.py",
+        "note": "batch 030: phonics e/u/ll, D-H readers, shadow pair, unseen check"
+      }
+    ]
+  }
+}

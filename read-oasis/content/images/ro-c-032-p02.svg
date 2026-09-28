@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">
+  <title id="t">Under the bed</title>
+  <desc id="d">Nia peering under a bed; a shoe and a book underneath.</desc>
+  <rect width="400" height="300" fill="#EAF4FB"/>
+  <rect x="0" y="0" width="400" height="300" fill="#F7F1E3"/>
+  <g transform="translate(120 150)"><rect x="0" y="0" width="200" height="40" rx="6" fill="#F4A6C1" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="0" y="-30" width="20" height="70" rx="4" fill="#A0522D" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><rect x="180" y="-20" width="20" height="60" rx="4" fill="#A0522D" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 40 L20 60 M180 40 L180 60" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <path d="M150 215 l30 0 l6 -12 l-30 0 Z" fill="#D9534F" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="220" y="200" width="36" height="14" fill="#5B8DEF" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(60 230) scale(0.8)">
+    <circle cx="0" cy="-40" r="26" fill="#F5CBA7" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-26 -50 q26 -30 52 0" fill="#2B2B2B"/>
+    <circle cx="-9" cy="-42" r="3.5" fill="#2B2B2B"/><circle cx="9" cy="-42" r="3.5" fill="#2B2B2B"/>
+    <path d="M-8 -30 q8 8 16 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-24" y="-12" width="48" height="56" rx="10" fill="#9B59B6" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-24 0 L-52 0 M24 0 L52 0" fill="none" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+</svg>
