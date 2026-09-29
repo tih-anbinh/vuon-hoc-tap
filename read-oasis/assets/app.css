@@ -456,3 +456,107 @@ html[data-theme="dark"] .auth-err { background:#4A2323;color:#FFC9C4;border-colo
 .acct-chip .acct-out { min-height:34px;padding:0 .7em;border-radius:999px;font-size:.9em;border:0;background:var(--surface); }
 @media (max-width:520px) { .auth-card { border-radius:24px; } .acct-chip .acct-name { display:none; } .acct-chip { padding:.15em; border:0; background:none; } }
 @media (prefers-reduced-motion:reduce) { .auth-gate,.auth-card { animation:none; } }
+
+/* ---------- "A letter from a father" footer (index.html); the closing page of a storybook ---------- */
+/* Theme-aware via the same variables the rest of the app uses -> works in light / cream / dark with no theme rules. */
+.oasis-letter {
+  --letter-serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Noto Serif", serif;
+  --letter-hand: "Segoe Script", "Bradley Hand", "Snell Roundhand", "Brush Script MT", "Comic Sans MS", cursive;
+  --letter-warm: color-mix(in srgb, var(--sun) 30%, var(--surface));
+  position: relative;
+  margin-top: clamp(48px, 8vw, 96px);
+  padding: clamp(40px, 7vw, 88px) clamp(18px, 5vw, 40px) clamp(64px, 9vw, 120px);
+  overflow: hidden;
+  color: var(--ink);
+  /* soft warm-sunset wash rising into the garden, all from theme tokens */
+  background:
+    radial-gradient(120% 80% at 50% 118%, color-mix(in srgb, var(--garden-leaf-2) 70%, transparent) 0 46%, transparent 52%),
+    radial-gradient(60% 50% at 14% 8%, color-mix(in srgb, var(--garden-peach) 90%, transparent), transparent 60%),
+    radial-gradient(58% 46% at 86% 10%, color-mix(in srgb, var(--garden-sky) 90%, transparent), transparent 60%),
+    linear-gradient(180deg, var(--paper) 0%, var(--garden-mist) 55%, var(--paper-2) 100%);
+  border-top: 1px solid color-mix(in srgb, var(--garden-leaf) 55%, var(--line));
+}
+/* gentle top ridge so the footer meets the page like a horizon */
+.oasis-letter::before {
+  content: ""; position: absolute; inset: -34px -12% auto -12%; height: 70px;
+  border-radius: 0 0 50% 50%;
+  background: color-mix(in srgb, var(--surface) 82%, transparent);
+  pointer-events: none;
+}
+
+/* drifting fireflies */
+.letter-sky { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+.letter-sky .firefly {
+  position: absolute; width: 6px; height: 6px; border-radius: 50%;
+  background: radial-gradient(circle, #FFF6D6 0 30%, var(--sun) 55%, transparent 72%);
+  opacity: 0; filter: drop-shadow(0 0 6px color-mix(in srgb, var(--sun) 80%, transparent));
+  animation: letter-glow 7s var(--ease) infinite;
+}
+.letter-sky .firefly:nth-child(1) { left: 8%;  top: 22%; animation-delay: 0s;   }
+.letter-sky .firefly:nth-child(2) { left: 20%; top: 62%; animation-delay: 1.1s; }
+.letter-sky .firefly:nth-child(3) { left: 34%; top: 14%; animation-delay: 2.4s; }
+.letter-sky .firefly:nth-child(4) { left: 48%; top: 74%; animation-delay: .6s;  }
+.letter-sky .firefly:nth-child(5) { left: 60%; top: 30%; animation-delay: 3.2s; }
+.letter-sky .firefly:nth-child(6) { left: 72%; top: 66%; animation-delay: 1.8s; }
+.letter-sky .firefly:nth-child(7) { left: 84%; top: 20%; animation-delay: 4.1s; }
+.letter-sky .firefly:nth-child(8) { left: 90%; top: 52%; animation-delay: 2.9s; }
+.letter-sky .firefly:nth-child(9) { left: 14%; top: 42%; animation-delay: 5.0s; }
+@keyframes letter-glow {
+  0%, 100% { opacity: 0;  transform: translateY(6px) scale(.7); }
+  45%      { opacity: .9; transform: translateY(-4px) scale(1); }
+  70%      { opacity: .35; transform: translateY(-8px) scale(.9); }
+}
+
+.letter-inner {
+  position: relative; z-index: 1;
+  max-width: 64ch; margin: 0 auto; text-align: center;
+  animation: fade .5s var(--ease) both;
+}
+
+.letter-lantern { display: block; width: clamp(46px, 9vw, 66px); height: auto; margin: 0 auto clamp(14px, 3vw, 22px); color: color-mix(in srgb, var(--ink) 55%, transparent); }
+
+.letter-eyebrow { margin: 0 0 clamp(20px, 4vw, 34px); font-size: .82rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 800; color: var(--muted); }
+
+.letter-block { margin: 0 auto; max-width: 60ch; }
+.letter-block + .letter-divider { margin: clamp(30px, 6vw, 52px) auto; }
+.letter-title {
+  font-family: var(--letter-serif);
+  font-size: clamp(1.5rem, 4.5vw, 2.15rem); line-height: 1.22; font-weight: 700;
+  letter-spacing: -.01em; margin: 0 0 clamp(18px, 3.5vw, 28px);
+  color: var(--primary); text-wrap: balance;
+}
+.letter-body { font-family: var(--letter-serif); font-size: clamp(1.02rem, 2.4vw, 1.16rem); line-height: 1.85; color: color-mix(in srgb, var(--ink) 92%, var(--muted)); }
+.letter-body p { margin: 0 0 1.05em; text-wrap: pretty; }
+.letter-block--vi .letter-title { color: var(--accent); }
+
+.letter-signoff { margin-top: 1.6em !important; font-style: italic; color: var(--muted); }
+.letter-refrain { display: flex; flex-direction: column; gap: .35em; margin: .9em 0 .5em !important; font-family: var(--letter-hand); font-size: clamp(1.35rem, 3.4vw, 1.75rem); line-height: 1.3; color: var(--primary); }
+.letter-block--vi .letter-refrain { color: var(--accent); }
+.letter-refrain-end { font-family: var(--letter-hand); font-size: clamp(1.25rem, 3vw, 1.55rem); color: var(--ink); margin: 0 !important; }
+
+.letter-divider { display: flex; align-items: center; justify-content: center; gap: 14px; color: color-mix(in srgb, var(--accent) 70%, var(--muted)); }
+.letter-divider span { height: 1px; width: min(120px, 22vw); background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--garden-leaf) 70%, var(--line)), transparent); }
+
+.letter-author { margin: clamp(40px, 7vw, 72px) auto clamp(24px, 4vw, 36px); }
+.letter-author-lede { margin: 0; font-size: .9rem; letter-spacing: .04em; color: var(--muted); }
+.letter-author-name { margin: .18em 0 .1em; font-family: var(--letter-hand); font-size: clamp(1.9rem, 5vw, 2.6rem); line-height: 1.1; font-weight: 400; color: var(--primary); }
+.letter-author-role { margin: .1em 0 0; font-weight: 800; color: var(--ink); }
+.letter-author-place { margin: .1em 0 0; color: var(--muted); }
+.letter-author-tags { margin: .55em 0 0; font-weight: 700; font-size: .95rem; color: var(--accent); }
+.letter-author-built { margin: .4em 0 0; font-style: italic; color: var(--muted); }
+
+.letter-quote { margin: clamp(30px, 6vw, 56px) auto 0; max-width: 56ch; padding: 0; border: 0; }
+.letter-quote-en { margin: 0; font-family: var(--letter-hand); font-size: clamp(1.5rem, 4.4vw, 2.2rem); line-height: 1.4; color: var(--primary); text-wrap: balance; }
+.letter-quote-vi { margin: 1em 0 0; font-family: var(--letter-serif); font-style: italic; font-size: clamp(1rem, 2.4vw, 1.14rem); line-height: 1.6; color: var(--muted); text-wrap: pretty; }
+
+/* native garden hill hugging the bottom, matching the app's signature 50% 50% 0 0 motif */
+.letter-hill { position: absolute; left: -12%; right: -12%; bottom: -46px; height: 120px; border-radius: 50% 50% 0 0; background: linear-gradient(180deg, var(--garden-leaf), var(--garden-leaf-2)); z-index: 0; pointer-events: none; }
+
+@media (max-width: 560px) {
+  .letter-refrain { gap: .25em; }
+}
+
+/* Honor both reduced-motion signals used across the app (media query already neutralizes *, this also covers data-motion). */
+@media (prefers-reduced-motion: reduce) { .letter-sky .firefly { animation: none; opacity: .5; } .letter-inner { animation: none; } }
+html[data-motion="reduce"] .letter-sky .firefly { animation: none; opacity: .5; }
+html[data-motion="reduce"] .letter-inner { animation: none; }
