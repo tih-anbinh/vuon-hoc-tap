@@ -1,18 +1,70 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-ball desc-ball">
-  <title id="title-ball">ball</title>
-  <desc id="desc-ball">A colourful bouncy ball with stripes on a grassy field.</desc>
-  <rect width="400" height="300" rx="20" fill="#E3F2FD"/>
-  <rect y="210" width="400" height="90" rx="0" fill="#C8E6C9"/>
-  <g transform="translate(200, 140)">
-    <!-- Shadow -->
-    <ellipse cx="5" cy="65" rx="45" ry="10" fill="#A5D6A7" opacity="0.5"/>
-    <!-- Ball -->
-    <circle cx="0" cy="0" r="55" fill="#EF5350" stroke="#D32F2F" stroke-width="2.5"/>
-    <!-- Stripes -->
-    <path d="M-55,0 Q-30,-30 0,-35 Q30,-30 55,0" fill="none" stroke="#FDD835" stroke-width="8" opacity="0.6"/>
-    <path d="M-55,0 Q-30,30 0,35 Q30,30 55,0" fill="none" stroke="#42A5F5" stroke-width="8" opacity="0.6"/>
-    <!-- Highlight -->
-    <circle cx="-18" cy="-20" r="12" fill="white" opacity="0.25"/>
-    <circle cx="-12" cy="-28" r="6" fill="white" opacity="0.3"/>
+  <title id="title-ball">Ball - Colorful bouncing ball</title>
+  <desc id="desc-ball">A vibrant round play ball with bright colored panels bouncing off the ground with motion lines, occupying the center of the frame.</desc>
+  <defs>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Ground line -->
+  <line x1="30" y1="265" x2="370" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Ground shadow (slightly detached showing lively bounce) -->
+  <ellipse cx="200" cy="265" rx="55" ry="10" fill="#0f172a" opacity="0.15"/>
+
+  <!-- Bounce Impact Lines -->
+  <path d="M145 250 C140 255 135 258 125 260" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+  <path d="M255 250 C260 255 265 258 275 260" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- TARGET OBJECT: BALL (Occupying 70% canvas) -->
+  <g id="ball-figure" filter="url(#soft-shadow)">
+    <!-- Main Ball Sphere Base (Clipping circle) -->
+    <clipPath id="ball-clip">
+      <circle cx="200" cy="145" r="90"/>
+    </clipPath>
+
+    <g clip-path="url(#ball-clip)">
+      <!-- Ball Background Base -->
+      <circle cx="200" cy="145" r="90" fill="#ffffff"/>
+
+      <!-- Colored Spherical Segments (Red, Yellow, Blue, Green, Orange) -->
+      <!-- Red Panel -->
+      <path d="M200 55 C160 55 130 95 130 145 C130 195 160 235 200 235 Z" fill="#ef4444"/>
+      <!-- Blue Panel -->
+      <path d="M200 55 C240 55 270 95 270 145 C270 195 240 235 200 235 Z" fill="#3b82f6"/>
+      <!-- Yellow Panel -->
+      <path d="M130 145 C130 95 160 55 200 55 L110 145 Z" fill="#facc15"/>
+      <!-- Green Panel -->
+      <path d="M270 145 C270 95 240 55 200 55 L290 145 Z" fill="#22c55e"/>
+      <!-- Orange Bottom Panel -->
+      <path d="M130 145 C130 195 160 235 200 235 L110 145 Z" fill="#f97316"/>
+      <!-- Cyan Bottom Panel -->
+      <path d="M270 145 C270 195 240 235 200 235 L290 145 Z" fill="#06b6d4"/>
+
+      <!-- Central Seam Curves -->
+      <path d="M200 55 C160 55 130 95 130 145 C130 195 160 235 200 235" fill="none" stroke="#1e293b" stroke-width="3"/>
+      <path d="M200 55 C240 55 270 95 270 145 C270 195 240 235 200 235" fill="none" stroke="#1e293b" stroke-width="3"/>
+      <line x1="200" y1="55" x2="200" y2="235" stroke="#1e293b" stroke-width="3.5"/>
+
+      <!-- Top and Bottom White Caps -->
+      <ellipse cx="200" cy="57" rx="16" ry="8" fill="#ffffff" stroke="#1e293b" stroke-width="2.5"/>
+      <ellipse cx="200" cy="233" rx="16" ry="8" fill="#ffffff" stroke="#1e293b" stroke-width="2.5"/>
+
+      <!-- 3D Spherical Shading Overlay -->
+      <radialGradient id="sphere-shade" cx="35%" cy="30%" r="70%">
+        <stop offset="0%" stop-color="#ffffff" stop-opacity="0.4"/>
+        <stop offset="60%" stop-color="#000000" stop-opacity="0"/>
+        <stop offset="100%" stop-color="#0f172a" stop-opacity="0.35"/>
+      </radialGradient>
+      <circle cx="200" cy="145" r="90" fill="url(#sphere-shade)"/>
+    </g>
+
+    <!-- Ball Outer Rim Contour -->
+    <circle cx="200" cy="145" r="90" fill="none" stroke="#0f172a" stroke-width="4.5"/>
+
+    <!-- Shiny Highlight Dot & Arc -->
+    <ellipse cx="160" cy="105" rx="18" ry="10" fill="#ffffff" opacity="0.6" transform="rotate(-35 160 105)"/>
+    <circle cx="145" cy="120" r="4.5" fill="#ffffff" opacity="0.6"/>
   </g>
 </svg>

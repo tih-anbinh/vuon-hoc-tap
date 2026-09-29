@@ -1,27 +1,77 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-hair desc-hair">
-  <title id="title-hair">hair</title>
-  <desc id="desc-hair">A child's head showing their brown hair with an arrow pointing to it.</desc>
-  <rect width="400" height="300" rx="20" fill="#FCE4EC"/>
-  <g transform="translate(200, 160)">
-    <!-- Head -->
-    <circle cx="0" cy="0" r="60" fill="#FFCC80" stroke="#F9A825" stroke-width="2.5"/>
-    <!-- Hair (prominent, highlighted) -->
-    <path d="M-55,-20 Q-50,-60 -30,-70 Q-10,-78 0,-75 Q10,-78 30,-70 Q50,-60 55,-20 Q50,-30 40,-40 Q20,-55 0,-52 Q-20,-55 -40,-40 Q-50,-30 -55,-20" fill="#5D4037" stroke="#4E342E" stroke-width="2.5"/>
-    <!-- Hair strands -->
-    <path d="M-30,-65 Q-25,-72 -20,-65" fill="none" stroke="#4E342E" stroke-width="2" opacity="0.5"/>
-    <path d="M0,-72 Q5,-80 10,-72" fill="none" stroke="#4E342E" stroke-width="2" opacity="0.5"/>
-    <path d="M20,-68 Q25,-75 30,-68" fill="none" stroke="#4E342E" stroke-width="2" opacity="0.5"/>
-    <!-- Face -->
-    <circle cx="-18" cy="-5" r="5" fill="#4E342E"/>
-    <circle cx="18" cy="-5" r="5" fill="#4E342E"/>
-    <path d="M-8,18 Q0,24 8,18" fill="none" stroke="#4E342E" stroke-width="2.5" stroke-linecap="round"/>
-    <circle cx="-28" cy="10" r="6" fill="#F48FB1" opacity="0.3"/>
-    <circle cx="28" cy="10" r="6" fill="#F48FB1" opacity="0.3"/>
+  <title id="title-hair">Hair - Lush glossy hair with comb</title>
+  <desc id="desc-hair">A head of lush glossy hair with rich curls, shining highlights, and a hair comb brushing through, occupying the center of the frame.</desc>
+  <defs>
+    <linearGradient id="hair-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#78350f"/>
+      <stop offset="40%" stop-color="#451a03"/>
+      <stop offset="100%" stop-color="#291205"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Sparkles on glossy hair -->
+  <path d="M140 75 L144 65 L148 75 L158 78 L148 81 L144 91 L140 81 L130 78 Z" fill="#fbbf24"/>
+  <circle cx="180" cy="55" r="3" fill="#fbbf24"/>
+  <path d="M280 115 L283 105 L286 115 L296 118 L286 121 L283 131 L280 121 L270 118 Z" fill="#fbbf24"/>
+
+  <!-- TARGET OBJECT: HAIR (Occupying 70% canvas) -->
+  <g id="hair-figure" filter="url(#soft-shadow)">
+    <!-- Back Hair Volume (Framing the head) -->
+    <path d="M120 120 C80 120 70 200 90 250 C110 270 140 265 140 250 C110 210 110 160 130 130 Z" fill="#291205" stroke="#1c1917" stroke-width="3"/>
+    <path d="M280 120 C320 120 330 200 310 250 C290 270 260 265 260 250 C290 210 290 160 270 130 Z" fill="#291205" stroke="#1c1917" stroke-width="3"/>
+
+    <!-- Subtle Face Contour for context -->
+    <ellipse cx="200" cy="180" rx="65" ry="75" fill="#fed7aa" stroke="#fb923c" stroke-width="3"/>
+    <!-- Cute Ears -->
+    <circle cx="132" cy="185" r="14" fill="#fed7aa" stroke="#fb923c" stroke-width="2.5"/>
+    <circle cx="268" cy="185" r="14" fill="#fed7aa" stroke="#fb923c" stroke-width="2.5"/>
+    <!-- Closed Happy Eyes (smiling expressions) -->
+    <path d="M165 180 Q175 190 185 180" fill="none" stroke="#78350f" stroke-width="3" stroke-linecap="round"/>
+    <path d="M215 180 Q225 190 235 180" fill="none" stroke="#78350f" stroke-width="3" stroke-linecap="round"/>
+    <!-- Little smile -->
+    <path d="M192 215 Q200 222 208 215" fill="none" stroke="#be123c" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Full Main Crown Hair & Flowing Bangs (Dominant Subject) -->
+    <path d="M125 150
+             C100 100 130 40 200 40
+             C270 40 300 100 275 150
+             C260 135 240 125 215 130
+             C190 135 170 125 150 145
+             C140 155 130 155 125 150 Z"
+          fill="url(#hair-grad)" stroke="#1c1917" stroke-width="4.5" stroke-linejoin="round"/>
+
+    <!-- Hair Bangs Details & Strands -->
+    <path d="M140 120 C160 150 170 155 185 135" fill="none" stroke="#92400e" stroke-width="3" stroke-linecap="round"/>
+    <path d="M180 115 C200 150 215 150 230 125" fill="none" stroke="#92400e" stroke-width="3" stroke-linecap="round"/>
+    <path d="M225 110 C240 140 255 145 268 130" fill="none" stroke="#92400e" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Glossy Hair Highlight Curves (Sheen across top) -->
+    <path d="M150 80 C175 62 225 62 250 80" fill="none" stroke="#fef08a" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+    <path d="M160 75 C180 65 220 65 240 75" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+
+    <!-- Red Hair Ribbon / Bow on side -->
+    <g id="hair-bow" transform="translate(105, 110)">
+      <polygon points="15,10 0,0 0,20" fill="#ef4444" stroke="#b91c1c" stroke-width="2.5"/>
+      <polygon points="15,10 30,0 30,20" fill="#ef4444" stroke="#b91c1c" stroke-width="2.5"/>
+      <circle cx="15" cy="10" r="5" fill="#f87171" stroke="#b91c1c" stroke-width="2"/>
+    </g>
+
+    <!-- Hair Comb (Gliding through hair) -->
+    <g id="hair-comb" transform="translate(265, 55) rotate(25)">
+      <!-- Comb Handle / Spine -->
+      <rect x="0" y="0" width="75" height="16" rx="5" fill="#0284c7" stroke="#0369a1" stroke-width="2.5"/>
+      <!-- Comb Teeth -->
+      <line x1="8" y1="16" x2="8" y2="35" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="16" y1="16" x2="16" y2="35" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="24" y1="16" x2="24" y2="35" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="32" y1="16" x2="32" y2="35" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="40" y1="16" x2="40" y2="35" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="48" y1="16" x2="48" y2="35" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="56" y1="16" x2="56" y2="35" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="64" y1="16" x2="64" y2="35" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
   </g>
-  <!-- Arrow pointing to hair -->
-  <g fill="none" stroke="#E53935" stroke-width="3">
-    <path d="M310,70 Q280,75 250,85" stroke-linecap="round"/>
-    <polygon points="248,80 242,90 254,88" fill="#E53935" stroke="none"/>
-  </g>
-  <text x="315" y="75" font-family="sans-serif" font-size="20" font-weight="bold" fill="#E53935">hair</text>
 </svg>

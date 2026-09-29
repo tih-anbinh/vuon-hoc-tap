@@ -1,26 +1,70 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-kite desc-kite">
-  <title id="title-kite">kite</title>
-  <desc id="desc-kite">A colourful diamond-shaped kite flying in the sky with a long tail.</desc>
-  <rect width="400" height="300" rx="20" fill="#E3F2FD"/>
-  <rect y="240" width="400" height="60" rx="0" fill="#C8E6C9"/>
-  <!-- Clouds -->
-  <ellipse cx="80" cy="60" rx="40" ry="18" fill="white" opacity="0.6"/>
-  <ellipse cx="320" cy="80" rx="35" ry="15" fill="white" opacity="0.5"/>
-  <!-- Kite -->
-  <g transform="translate(200, 100)">
-    <!-- Diamond shape -->
-    <polygon points="0,-60 -40,0 0,40 40,0" fill="#FDD835" stroke="#F9A825" stroke-width="2.5"/>
-    <!-- Cross pattern -->
-    <line x1="0" y1="-60" x2="0" y2="40" stroke="#FF7043" stroke-width="2" opacity="0.5"/>
-    <line x1="-40" y1="0" x2="40" y2="0" stroke="#42A5F5" stroke-width="2" opacity="0.5"/>
-    <!-- Quadrant colors -->
-    <polygon points="0,-60 -40,0 0,0" fill="#EF5350" opacity="0.3"/>
-    <polygon points="0,0 40,0 0,40" fill="#42A5F5" opacity="0.3"/>
-    <!-- String -->
-    <path d="M0,40 Q20,80 10,120 Q5,140 15,160" fill="none" stroke="#795548" stroke-width="2"/>
-    <!-- Tail bows -->
-    <path d="M5,80 Q15,75 20,82 Q15,88 5,85" fill="#EF5350" stroke="#D32F2F" stroke-width="1"/>
-    <path d="M8,110 Q18,105 22,112 Q18,118 8,115" fill="#42A5F5" stroke="#1E88E5" stroke-width="1"/>
-    <path d="M12,140 Q22,135 26,142 Q22,148 12,145" fill="#66BB6A" stroke="#43A047" stroke-width="1"/>
+  <title id="title-kite">Kite - Soaring diamond kite</title>
+  <desc id="desc-kite">A bright diamond kite soaring in the sky with colorful triangular panels, wooden cross spars, and a fluttering ribbon tail with bows, occupying the center of the frame.</desc>
+  <defs>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Sky Wind Streamers (Light, non-distracting breeze cues) -->
+  <path d="M40 80 C80 70 110 85 140 75" fill="none" stroke="#bae6fd" stroke-width="3" stroke-linecap="round"/>
+  <path d="M280 40 C320 30 350 45 380 35" fill="none" stroke="#bae6fd" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- TARGET OBJECT: KITE & TAIL (Occupying 70% canvas) -->
+  <g id="kite-figure" filter="url(#soft-shadow)">
+    <!-- Long Fluttering Ribbon Tail -->
+    <path d="M195 200 C170 230 140 240 120 220 C95 195 70 230 65 270" fill="none" stroke="#f43f5e" stroke-width="3.5" stroke-linecap="round"/>
+
+    <!-- Colorful Tail Bow Ties -->
+    <!-- Bow 1 -->
+    <g transform="translate(175, 218) rotate(35)">
+      <polygon points="10,6 0,0 0,12" fill="#fbbf24" stroke="#d97706" stroke-width="1.5"/>
+      <polygon points="10,6 20,0 20,12" fill="#fbbf24" stroke="#d97706" stroke-width="1.5"/>
+      <circle cx="10" cy="6" r="3" fill="#ea580c"/>
+    </g>
+    <!-- Bow 2 -->
+    <g transform="translate(132, 235) rotate(-20)">
+      <polygon points="10,6 0,0 0,12" fill="#38bdf8" stroke="#0284c7" stroke-width="1.5"/>
+      <polygon points="10,6 20,0 20,12" fill="#38bdf8" stroke="#0284c7" stroke-width="1.5"/>
+      <circle cx="10" cy="6" r="3" fill="#0369a1"/>
+    </g>
+    <!-- Bow 3 -->
+    <g transform="translate(95, 205) rotate(45)">
+      <polygon points="10,6 0,0 0,12" fill="#4ade80" stroke="#15803d" stroke-width="1.5"/>
+      <polygon points="10,6 20,0 20,12" fill="#4ade80" stroke="#15803d" stroke-width="1.5"/>
+      <circle cx="10" cy="6" r="3" fill="#166534"/>
+    </g>
+    <!-- Bow 4 -->
+    <g transform="translate(62, 252) rotate(-35)">
+      <polygon points="10,6 0,0 0,12" fill="#c084fc" stroke="#7e22ce" stroke-width="1.5"/>
+      <polygon points="10,6 20,0 20,12" fill="#c084fc" stroke="#7e22ce" stroke-width="1.5"/>
+      <circle cx="10" cy="6" r="3" fill="#6b21a8"/>
+    </g>
+
+    <!-- Kite Bridle & String -->
+    <line x1="220" y1="25" x2="210" y2="125" stroke="#94a3b8" stroke-width="2"/>
+    <line x1="195" y1="200" x2="210" y2="125" stroke="#94a3b8" stroke-width="2"/>
+    <path d="M210 125 C230 160 260 220 300 280" fill="none" stroke="#cbd5e1" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Diamond Kite Sail (4 quadrants) -->
+    <!-- Quadrant 1: Top-Left (Bright Red) -->
+    <polygon points="220,25 110,105 205,115" fill="#ef4444" stroke="#b91c1c" stroke-width="2"/>
+    <!-- Quadrant 2: Top-Right (Bright Yellow) -->
+    <polygon points="220,25 320,85 205,115" fill="#facc15" stroke="#ca8a04" stroke-width="2"/>
+    <!-- Quadrant 3: Bottom-Left (Cyan Blue) -->
+    <polygon points="110,105 195,200 205,115" fill="#06b6d4" stroke="#0891b2" stroke-width="2"/>
+    <!-- Quadrant 4: Bottom-Right (Vibrant Purple) -->
+    <polygon points="320,85 195,200 205,115" fill="#a855f7" stroke="#7e22ce" stroke-width="2"/>
+
+    <!-- Perimeter Outer Frame -->
+    <polygon points="220,25 320,85 195,200 110,105" fill="none" stroke="#1e293b" stroke-width="4.5" stroke-linejoin="round"/>
+
+    <!-- Wooden Spars / Struts (Cross bars) -->
+    <line x1="220" y1="25" x2="195" y2="200" stroke="#78350f" stroke-width="4" stroke-linecap="round"/>
+    <line x1="110" y1="105" x2="320" y2="85" stroke="#78350f" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Center Joint Cap -->
+    <circle cx="205" cy="115" r="5" fill="#fef08a" stroke="#78350f" stroke-width="2"/>
   </g>
 </svg>

@@ -1,32 +1,62 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-duck desc-duck">
-  <title id="title-duck">duck</title>
-  <desc id="desc-duck">A yellow duck swimming on a pond with ripples in the water.</desc>
-  <rect width="400" height="300" rx="20" fill="#E3F2FD"/>
-  <!-- Pond water -->
-  <ellipse cx="200" cy="210" rx="170" ry="60" fill="#81D4FA"/>
-  <ellipse cx="200" cy="210" rx="170" ry="60" fill="none" stroke="#4FC3F7" stroke-width="2"/>
-  <!-- Ripples -->
-  <path d="M130,230 Q145,225 160,230" fill="none" stroke="#4FC3F7" stroke-width="1.5" opacity="0.5"/>
-  <path d="M220,235 Q240,230 260,235" fill="none" stroke="#4FC3F7" stroke-width="1.5" opacity="0.5"/>
-  <!-- Grass banks -->
-  <rect y="250" width="400" height="50" rx="0" fill="#A5D6A7"/>
-  <g transform="translate(200, 130)">
-    <!-- Tail feathers -->
-    <path d="M30,30 Q50,15 45,35 Q55,20 48,40" fill="#FDD835" stroke="#F9A825" stroke-width="1.5"/>
-    <!-- Body -->
-    <ellipse cx="0" cy="40" rx="40" ry="25" fill="#FDD835" stroke="#F9A825" stroke-width="2.5"/>
-    <!-- Wing -->
-    <path d="M10,28 Q25,20 30,35 Q20,40 5,35" fill="#FBC02D" stroke="#F9A825" stroke-width="1.5"/>
-    <!-- Neck -->
-    <path d="M-25,25 Q-30,5 -20,-5" fill="none" stroke="#FDD835" stroke-width="18"/>
-    <!-- Head -->
-    <circle cx="-20" cy="-10" r="18" fill="#FDD835" stroke="#F9A825" stroke-width="2"/>
-    <!-- Eye -->
-    <circle cx="-26" cy="-14" r="4" fill="white" stroke="#37474F" stroke-width="1.5"/>
-    <circle cx="-27" cy="-14" r="2" fill="#37474F"/>
-    <!-- Beak -->
-    <path d="M-38,-8 L-52,-6 L-38,-2" fill="#FF8F00" stroke="#EF6C00" stroke-width="1.5"/>
-    <!-- Water line -->
-    <path d="M-40,50 Q-20,45 0,50 Q20,55 40,50" fill="none" stroke="#4FC3F7" stroke-width="2" opacity="0.6"/>
+  <title id="title-duck">Duck - Cheerful white duck</title>
+  <desc id="desc-duck">A cheerful white duck with a wide orange bill, upturned tail feathers, and orange webbed feet, occupying the center of the frame.</desc>
+  <defs>
+    <linearGradient id="duck-bill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Ground line -->
+  <line x1="30" y1="265" x2="370" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Ground shadow -->
+  <ellipse cx="205" cy="265" rx="85" ry="12" fill="#0f172a" opacity="0.15"/>
+
+  <!-- TARGET OBJECT: DUCK (Occupying 70% canvas) -->
+  <g id="duck-figure" filter="url(#soft-shadow)">
+    <!-- Curled Upward Tail Feathers -->
+    <path d="M125 160 C90 145 75 115 105 105 C115 102 120 115 110 125 C95 140 115 160 135 170 Z" fill="#f8fafc" stroke="#cbd5e1" stroke-width="3.5" stroke-linejoin="round"/>
+
+    <!-- Duck Body (Plump, buoyant oval) -->
+    <ellipse cx="195" cy="180" rx="78" ry="58" fill="#ffffff" stroke="#cbd5e1" stroke-width="4"/>
+
+    <!-- Wing (Folded neatly on side) -->
+    <g id="duck-wing">
+      <path d="M150 160 C170 145 230 155 240 185 C245 205 200 225 155 210 C140 185 145 170 150 160 Z" fill="#f1f5f9" stroke="#94a3b8" stroke-width="3.5"/>
+      <path d="M155 190 Q185 195 215 180" fill="none" stroke="#cbd5e1" stroke-width="3" stroke-linecap="round"/>
+      <path d="M170 205 Q195 208 220 195" fill="none" stroke="#cbd5e1" stroke-width="3" stroke-linecap="round"/>
+    </g>
+
+    <!-- Upright S-Curved Neck -->
+    <path d="M225 175 C245 170 260 145 255 110 L285 115 C290 155 265 195 235 200 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="3.5"/>
+
+    <!-- Duck Head -->
+    <circle cx="270" cy="100" r="38" fill="#ffffff" stroke="#cbd5e1" stroke-width="4"/>
+
+    <!-- Duck Eye (Round, lively, friendly) -->
+    <circle cx="280" cy="92" r="8" fill="#1e293b"/>
+    <circle cx="278" cy="89" r="2.5" fill="#ffffff"/>
+
+    <!-- Broad Orange Duck Bill (Mỏ bẹt đặc trưng) -->
+    <path d="M295 95 C330 90 355 95 365 105 C355 118 325 122 295 115 Z" fill="url(#duck-bill)" stroke="#c2410c" stroke-width="3.5" stroke-linejoin="round"/>
+    <!-- Nostril on bill -->
+    <ellipse cx="320" cy="102" rx="3" ry="2" fill="#9a3412"/>
+
+    <!-- Orange Webbed Feet -->
+    <!-- Left Foot -->
+    <g id="foot-left">
+      <line x1="180" y1="235" x2="180" y2="255" stroke="#ea580c" stroke-width="7" stroke-linecap="round"/>
+      <polygon points="160,265 180,252 205,265 185,258 180,252 175,258" fill="#f97316" stroke="#c2410c" stroke-width="3" stroke-linejoin="round"/>
+    </g>
+    <!-- Right Foot -->
+    <g id="foot-right">
+      <line x1="220" y1="235" x2="220" y2="255" stroke="#ea580c" stroke-width="7" stroke-linecap="round"/>
+      <polygon points="200,265 220,252 245,265 225,258 220,252 215,258" fill="#f97316" stroke="#c2410c" stroke-width="3" stroke-linejoin="round"/>
+    </g>
   </g>
 </svg>

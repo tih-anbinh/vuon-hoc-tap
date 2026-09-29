@@ -1,39 +1,89 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-behind desc-behind">
-  <title id="title-behind">behind</title>
-  <desc id="desc-behind">A dog hiding behind a door. Only the dog's head and tail peek out from behind the door.</desc>
-  <!-- Background: soft room -->
-  <rect width="400" height="300" rx="20" fill="#FFF8F0"/>
-  <rect y="230" width="400" height="70" rx="0" fill="#EFEBE9"/>
-  <!-- Wall line -->
-  <line x1="220" y1="0" x2="220" y2="230" stroke="#D7CCC8" stroke-width="3"/>
-  <!-- Door -->
-  <rect x="130" y="30" width="90" height="200" rx="6" fill="#A1887F" stroke="#795548" stroke-width="2.5"/>
-  <circle cx="205" cy="135" r="5" fill="#FFD54F" stroke="#F9A825" stroke-width="1.5"/>
-  <!-- Door panel details -->
-  <rect x="142" y="48" width="66" height="70" rx="4" fill="none" stroke="#8D6E63" stroke-width="1.5"/>
-  <rect x="142" y="132" width="66" height="70" rx="4" fill="none" stroke="#8D6E63" stroke-width="1.5"/>
-  <!-- Dog peeking behind door -->
-  <g transform="translate(225, 120)">
-    <!-- Body partially hidden -->
-    <ellipse cx="30" cy="60" rx="28" ry="22" fill="#8D6E63" stroke="#5D4037" stroke-width="2"/>
-    <!-- Back legs -->
-    <rect x="14" y="76" width="10" height="30" rx="5" fill="#8D6E63" stroke="#5D4037" stroke-width="1.5"/>
-    <rect x="38" y="76" width="10" height="30" rx="5" fill="#8D6E63" stroke="#5D4037" stroke-width="1.5"/>
-    <!-- Head peeking -->
-    <circle cx="4" cy="40" r="22" fill="#8D6E63" stroke="#5D4037" stroke-width="2"/>
-    <!-- Ears (floppy) -->
-    <ellipse cx="-14" cy="28" rx="10" ry="16" fill="#6D4C41" stroke="#5D4037" stroke-width="1.5" transform="rotate(-15 -14 28)"/>
-    <ellipse cx="18" cy="26" rx="9" ry="14" fill="#6D4C41" stroke="#5D4037" stroke-width="1.5" transform="rotate(10 18 26)"/>
-    <!-- Face -->
-    <circle cx="-4" cy="36" r="3" fill="#3E2723"/>
-    <circle cx="10" cy="36" r="3" fill="#3E2723"/>
-    <circle cx="-3" cy="35" r="1" fill="white"/>
-    <circle cx="11" cy="35" r="1" fill="white"/>
-    <ellipse cx="3" cy="44" rx="5" ry="3.5" fill="#4E342E"/>
-    <ellipse cx="3" cy="43" rx="3" ry="2" fill="#D7CCC8"/>
-    <!-- Tongue -->
-    <ellipse cx="3" cy="49" rx="3" ry="4" fill="#F48FB1"/>
-    <!-- Tail wagging (visible above body) -->
-    <path d="M56,42 Q72,20 64,50" fill="none" stroke="#5D4037" stroke-width="3.5" stroke-linecap="round"/>
+  <title id="title-behind">Behind - Puppy behind the fence</title>
+  <desc id="desc-behind">A friendly golden puppy peeking out from behind a wooden garden fence, demonstrating the spatial relationship behind.</desc>
+  <defs>
+    <linearGradient id="fence-wood" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <linearGradient id="dog-fur" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fed7aa"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Ground line -->
+  <line x1="20" y1="260" x2="380" y2="260" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Background Position Highlight Zone (behind the fence) -->
+  <rect x="70" y="80" width="130" height="180" rx="16" fill="#eff6ff" opacity="0.8"/>
+  <rect x="75" y="85" width="120" height="170" rx="12" fill="none" stroke="#60a5fa" stroke-width="3" stroke-dasharray="6 6"/>
+
+  <!-- TARGET OBJECT: Puppy (positioned behind the fence structure) -->
+  <g id="puppy-target">
+    <!-- Dog body & wagging tail (further back) -->
+    <ellipse cx="140" cy="205" rx="45" ry="32" fill="url(#dog-fur)" stroke="#c2410c" stroke-width="4"/>
+    <path d="M100 200 C80 185 75 160 88 145 C95 137 108 145 100 155 C92 165 98 185 110 195" fill="none" stroke="#ea580c" stroke-width="12" stroke-linecap="round"/>
+
+    <!-- Dog Head (peeking out from the left edge of the fence) -->
+    <g id="dog-head" filter="url(#soft-shadow)">
+      <circle cx="150" cy="140" r="38" fill="url(#dog-fur)" stroke="#c2410c" stroke-width="4"/>
+      <!-- Floppy left ear -->
+      <path d="M120 120 C100 125 90 160 102 180 C110 190 120 180 125 165 Z" fill="#ea580c" stroke="#9a3412" stroke-width="3.5"/>
+      <!-- Floppy right ear (partially behind fence edge) -->
+      <path d="M175 120 C190 125 198 155 190 175 C185 182 176 175 174 162 Z" fill="#ea580c" stroke="#9a3412" stroke-width="3.5"/>
+      <!-- Snout -->
+      <ellipse cx="145" cy="155" rx="18" ry="14" fill="#ffedd5" stroke="#c2410c" stroke-width="3"/>
+      <!-- Nose -->
+      <ellipse cx="145" cy="149" rx="7" ry="5" fill="#1e293b"/>
+      <ellipse cx="143" cy="147" rx="2" ry="1.5" fill="#ffffff"/>
+      <!-- Happy mouth -->
+      <path d="M140 156 Q145 162 150 156" fill="none" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+      <path d="M142 160 Q145 166 148 160" fill="#f43f5e"/>
+      <!-- Eyes with bright glint -->
+      <circle cx="132" cy="132" r="5" fill="#1e293b"/>
+      <circle cx="130" cy="130" r="2" fill="#ffffff"/>
+      <circle cx="158" cy="132" r="5" fill="#1e293b"/>
+      <circle cx="156" cy="130" r="2" fill="#ffffff"/>
+    </g>
+
+    <!-- Front paw peeking out -->
+    <ellipse cx="120" cy="245" rx="16" ry="12" fill="#fed7aa" stroke="#c2410c" stroke-width="3"/>
+    <ellipse cx="160" cy="248" rx="14" ry="10" fill="#fed7aa" stroke="#c2410c" stroke-width="3"/>
+  </g>
+
+  <!-- FOREGROUND ANCHOR OBJECT: Wooden fence standing IN FRONT of the puppy -->
+  <g id="anchor-fence" filter="url(#soft-shadow)">
+    <!-- Horizontal rails -->
+    <rect x="175" y="125" width="200" height="18" rx="4" fill="#b45309" stroke="#78350f" stroke-width="3.5"/>
+    <rect x="175" y="205" width="200" height="18" rx="4" fill="#b45309" stroke="#78350f" stroke-width="3.5"/>
+
+    <!-- Picket 1 (front left picket overlapping the dog) -->
+    <path d="M185 85 L200 65 L215 85 L215 255 L185 255 Z" fill="url(#fence-wood)" stroke="#78350f" stroke-width="3.5" stroke-linejoin="round"/>
+    <!-- Picket 2 -->
+    <path d="M230 85 L245 65 L260 85 L260 255 L230 255 Z" fill="url(#fence-wood)" stroke="#78350f" stroke-width="3.5" stroke-linejoin="round"/>
+    <!-- Picket 3 -->
+    <path d="M275 85 L290 65 L305 85 L305 255 L275 255 Z" fill="url(#fence-wood)" stroke="#78350f" stroke-width="3.5" stroke-linejoin="round"/>
+    <!-- Picket 4 -->
+    <path d="M320 85 L335 65 L350 85 L350 255 L320 255 Z" fill="url(#fence-wood)" stroke="#78350f" stroke-width="3.5" stroke-linejoin="round"/>
+    <!-- Post cap nails -->
+    <circle cx="200" cy="134" r="3" fill="#451a03"/>
+    <circle cx="200" cy="214" r="3" fill="#451a03"/>
+    <circle cx="245" cy="134" r="3" fill="#451a03"/>
+    <circle cx="245" cy="214" r="3" fill="#451a03"/>
+    <circle cx="290" cy="134" r="3" fill="#451a03"/>
+    <circle cx="290" cy="214" r="3" fill="#451a03"/>
+    <circle cx="335" cy="134" r="3" fill="#451a03"/>
+    <circle cx="335" cy="214" r="3" fill="#451a03"/>
+  </g>
+
+  <!-- Directional arrow cue: curving from behind to illustrate depth -->
+  <g id="direction-cue">
+    <circle cx="70" cy="65" r="18" fill="#3b82f6" stroke="#1d4ed8" stroke-width="3"/>
+    <!-- Curved arrow showing 'behind' -->
+    <path d="M60 70 C60 56 78 56 80 70 M74 65 L80 71 L86 65" fill="none" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 </svg>

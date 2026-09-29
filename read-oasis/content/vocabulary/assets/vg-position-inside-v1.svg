@@ -1,47 +1,101 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-inside desc-inside">
-  <title id="title-inside">inside</title>
-  <desc id="desc-inside">A toy bear sitting inside an open box. The bear is surrounded by the box walls.</desc>
-  <!-- Background -->
-  <rect width="400" height="300" rx="20" fill="#FFF8F0"/>
-  <rect y="220" width="400" height="80" rx="0" fill="#E8F5E9"/>
-  <!-- Box (open, 3D-ish) -->
-  <g transform="translate(110, 90)">
-    <!-- Box back wall -->
-    <rect x="10" y="20" width="180" height="120" rx="6" fill="#FFCC80" stroke="#E65100" stroke-width="2.5"/>
-    <!-- Box left wall -->
-    <polygon points="10,20 10,140 -10,155 -10,35" fill="#FFB74D" stroke="#E65100" stroke-width="2"/>
-    <!-- Box right wall -->
-    <polygon points="190,20 190,140 210,155 210,35" fill="#FFB74D" stroke="#E65100" stroke-width="2"/>
-    <!-- Box bottom -->
-    <polygon points="10,140 190,140 210,155 -10,155" fill="#FFA726" stroke="#E65100" stroke-width="2"/>
-    <!-- Box flap left (open) -->
-    <polygon points="10,20 -10,35 -30,10 10,0" fill="#FFCC80" stroke="#E65100" stroke-width="2"/>
-    <!-- Box flap right (open) -->
-    <polygon points="190,20 210,35 230,10 190,0" fill="#FFCC80" stroke="#E65100" stroke-width="2"/>
-    <!-- Teddy bear inside -->
-    <g transform="translate(70, 30)">
-      <!-- Body -->
-      <ellipse cx="30" cy="72" rx="26" ry="30" fill="#D7CCC8" stroke="#795548" stroke-width="2"/>
-      <!-- Belly -->
-      <ellipse cx="30" cy="76" rx="16" ry="18" fill="#EFEBE9"/>
-      <!-- Head -->
-      <circle cx="30" cy="32" r="24" fill="#D7CCC8" stroke="#795548" stroke-width="2"/>
-      <!-- Ears -->
-      <circle cx="10" cy="14" r="10" fill="#D7CCC8" stroke="#795548" stroke-width="2"/>
-      <circle cx="10" cy="14" r="5" fill="#BCAAA4"/>
-      <circle cx="50" cy="14" r="10" fill="#D7CCC8" stroke="#795548" stroke-width="2"/>
-      <circle cx="50" cy="14" r="5" fill="#BCAAA4"/>
-      <!-- Face -->
-      <circle cx="22" cy="28" r="3.5" fill="#4E342E"/>
-      <circle cx="38" cy="28" r="3.5" fill="#4E342E"/>
-      <circle cx="22" cy="27" r="1.2" fill="white"/>
-      <circle cx="38" cy="27" r="1.2" fill="white"/>
-      <ellipse cx="30" cy="36" rx="5" ry="3.5" fill="#8D6E63"/>
-      <!-- Smile -->
-      <path d="M24,40 Q30,47 36,40" fill="none" stroke="#5D4037" stroke-width="1.8" stroke-linecap="round"/>
-      <!-- Arms -->
-      <ellipse cx="2" cy="60" rx="10" ry="7" fill="#D7CCC8" stroke="#795548" stroke-width="1.5" transform="rotate(-20 2 60)"/>
-      <ellipse cx="58" cy="60" rx="10" ry="7" fill="#D7CCC8" stroke="#795548" stroke-width="1.5" transform="rotate(20 58 60)"/>
-    </g>
+  <title id="title-inside">Inside - Teddy bear inside the box</title>
+  <desc id="desc-inside">A smiling teddy bear sitting comfortably inside an open toy box, demonstrating the spatial position inside.</desc>
+  <defs>
+    <linearGradient id="box-outer" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="box-inner" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#b45309"/>
+      <stop offset="100%" stop-color="#78350f"/>
+    </linearGradient>
+    <linearGradient id="bear-fur" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b45309"/>
+      <stop offset="100%" stop-color="#854d0e"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Ground line -->
+  <line x1="20" y1="265" x2="380" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Shadow beneath the box -->
+  <ellipse cx="200" cy="265" rx="120" ry="14" fill="#0f172a" opacity="0.2"/>
+
+  <!-- BOX BACK WALL & INNER CAVITY (Layer 1 - behind bear) -->
+  <g id="box-cavity">
+    <!-- Back interior wall -->
+    <rect x="100" y="145" width="200" height="110" rx="6" fill="url(#box-inner)"/>
+    <!-- Left open flap -->
+    <polygon points="100,145 60,115 65,155 100,175" fill="#f59e0b" stroke="#92400e" stroke-width="3.5" stroke-linejoin="round"/>
+    <!-- Right open flap -->
+    <polygon points="300,145 340,115 335,155 300,175" fill="#d97706" stroke="#92400e" stroke-width="3.5" stroke-linejoin="round"/>
+    <!-- Back open flap -->
+    <polygon points="120,145 135,100 265,100 280,145" fill="#92400e" stroke="#78350f" stroke-width="3.5" stroke-linejoin="round"/>
+  </g>
+
+  <!-- TARGET OBJECT: Teddy Bear INSIDE the box (Layer 2) -->
+  <g id="target-bear" filter="url(#soft-shadow)">
+    <!-- Bear Body (deep inside box) -->
+    <ellipse cx="200" cy="195" rx="55" ry="40" fill="url(#bear-fur)" stroke="#581c87" stroke-width="0"/>
+
+    <!-- Bear Head -->
+    <circle cx="200" cy="120" r="44" fill="url(#bear-fur)" stroke="#451a03" stroke-width="4"/>
+
+    <!-- Bear Ears -->
+    <circle cx="162" cy="85" r="16" fill="url(#bear-fur)" stroke="#451a03" stroke-width="4"/>
+    <circle cx="162" cy="85" r="9" fill="#fde68a"/>
+    <circle cx="238" cy="85" r="16" fill="url(#bear-fur)" stroke="#451a03" stroke-width="4"/>
+    <circle cx="238" cy="85" r="9" fill="#fde68a"/>
+
+    <!-- Bear Face Muzzle -->
+    <ellipse cx="200" cy="132" rx="20" ry="15" fill="#fde68a" stroke="#451a03" stroke-width="2.5"/>
+    <!-- Nose -->
+    <polygon points="194,126 206,126 200,133" fill="#451a03"/>
+    <!-- Mouth -->
+    <path d="M194 135 Q200 141 206 135" fill="none" stroke="#451a03" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Eyes with cheerful glints -->
+    <circle cx="184" cy="114" r="5" fill="#1e293b"/>
+    <circle cx="182" cy="112" r="2" fill="#ffffff"/>
+    <circle cx="216" cy="114" r="5" fill="#1e293b"/>
+    <circle cx="214" cy="112" r="2" fill="#ffffff"/>
+
+    <!-- Rosy cheeks -->
+    <circle cx="170" cy="130" r="7" fill="#fca5a5" opacity="0.6"/>
+    <circle cx="230" cy="130" r="7" fill="#fca5a5" opacity="0.6"/>
+  </g>
+
+  <!-- BOX FRONT WALL (Layer 3 - in front of bear body) -->
+  <g id="box-front" filter="url(#soft-shadow)">
+    <!-- Front main container wall -->
+    <rect x="95" y="165" width="210" height="98" rx="8" fill="url(#box-outer)" stroke="#78350f" stroke-width="4"/>
+
+    <!-- Front open flap folded down -->
+    <polygon points="95,165 110,205 290,205 305,165" fill="#fef08a" opacity="0.3"/>
+    <polygon points="95,165 110,210 290,210 305,165" fill="none" stroke="#b45309" stroke-width="3"/>
+
+    <!-- Box tape / decor ribbon stripe -->
+    <rect x="188" y="165" width="24" height="98" fill="#f59e0b" opacity="0.5"/>
+    <line x1="188" y1="165" x2="188" y2="263" stroke="#b45309" stroke-width="2" stroke-dasharray="4 4"/>
+    <line x1="212" y1="165" x2="212" y2="263" stroke="#b45309" stroke-width="2" stroke-dasharray="4 4"/>
+  </g>
+
+  <!-- Bear Paws (Resting on the front rim of the box) -->
+  <g id="bear-paws" filter="url(#soft-shadow)">
+    <ellipse cx="140" cy="168" rx="16" ry="12" fill="url(#bear-fur)" stroke="#451a03" stroke-width="3.5"/>
+    <ellipse cx="140" cy="170" rx="9" ry="6" fill="#fde68a"/>
+
+    <ellipse cx="260" cy="168" rx="16" ry="12" fill="url(#bear-fur)" stroke="#451a03" stroke-width="3.5"/>
+    <ellipse cx="260" cy="170" rx="9" ry="6" fill="#fde68a"/>
+  </g>
+
+  <!-- Directional arrow cue: pointing down INTO the box -->
+  <g id="direction-cue">
+    <circle cx="50" cy="65" r="18" fill="#3b82f6" stroke="#1d4ed8" stroke-width="3"/>
+    <path d="M50 54 L50 74 M44 67 L50 74 L56 67" fill="none" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 </svg>

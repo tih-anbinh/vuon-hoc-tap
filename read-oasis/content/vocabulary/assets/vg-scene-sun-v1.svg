@@ -1,44 +1,79 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-sun desc-sun">
-  <title id="title-sun">sun</title>
-  <desc id="desc-sun">A bright yellow sun with rays shining in a blue sky.</desc>
-  <rect width="400" height="300" rx="20" fill="#E3F2FD"/>
-  <rect y="240" width="400" height="60" rx="0" fill="#C8E6C9"/>
-  <!-- Clouds -->
-  <ellipse cx="80" cy="200" rx="45" ry="18" fill="white" opacity="0.5"/>
-  <ellipse cx="320" cy="220" rx="40" ry="15" fill="white" opacity="0.4"/>
-  <g transform="translate(200, 130)">
-    <!-- Rays -->
-    <g stroke="#FDD835" stroke-width="5" stroke-linecap="round" opacity="0.5">
-      <line x1="0" y1="-90" x2="0" y2="-70"/>
-      <line x1="0" y1="70" x2="0" y2="90"/>
-      <line x1="-90" y1="0" x2="-70" y2="0"/>
-      <line x1="70" y1="0" x2="90" y2="0"/>
-      <line x1="-63" y1="-63" x2="-50" y2="-50"/>
-      <line x1="50" y1="-50" x2="63" y2="-63"/>
-      <line x1="-63" y1="63" x2="-50" y2="50"/>
-      <line x1="50" y1="50" x2="63" y2="63"/>
+  <title id="title-sun">Sun - Radiant golden sun</title>
+  <desc id="desc-sun">A bright golden sun with a friendly smiling face, radiant sunbeams, and warm glowing rays, occupying the center of the frame.</desc>
+  <defs>
+    <radialGradient id="sun-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="65%" stop-color="#facc15"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#ca8a04" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Warm background glow circle -->
+  <circle cx="200" cy="150" r="135" fill="#fef9c3" opacity="0.45"/>
+
+  <!-- TARGET OBJECT: SUN & RAYS (Occupying 75% canvas) -->
+  <g id="sun-figure" filter="url(#soft-shadow)">
+    <!-- 8 Primary Pointed Rays -->
+    <g fill="#f59e0b" stroke="#d97706" stroke-width="3" stroke-linejoin="round">
+      <!-- Top -->
+      <polygon points="190,75 200,25 210,75"/>
+      <!-- Top-Right -->
+      <polygon points="245,100 285,60 255,110"/>
+      <!-- Right -->
+      <polygon points="275,140 325,150 275,160"/>
+      <!-- Bottom-Right -->
+      <polygon points="255,190 285,240 245,200"/>
+      <!-- Bottom -->
+      <polygon points="210,225 200,275 190,225"/>
+      <!-- Bottom-Left -->
+      <polygon points="155,200 115,240 145,190"/>
+      <!-- Left -->
+      <polygon points="125,160 75,150 125,140"/>
+      <!-- Top-Left -->
+      <polygon points="145,110 115,60 155,100"/>
     </g>
-    <!-- Shorter rays -->
-    <g stroke="#FBC02D" stroke-width="3" stroke-linecap="round" opacity="0.35">
-      <line x1="-35" y1="-78" x2="-28" y2="-62"/>
-      <line x1="35" y1="-78" x2="28" y2="-62"/>
-      <line x1="-78" y1="-35" x2="-62" y2="-28"/>
-      <line x1="78" y1="-35" x2="62" y2="-28"/>
-      <line x1="-78" y1="35" x2="-62" y2="28"/>
-      <line x1="78" y1="35" x2="62" y2="28"/>
-      <line x1="-35" y1="78" x2="-28" y2="62"/>
-      <line x1="35" y1="78" x2="28" y2="62"/>
+
+    <!-- 8 Secondary Rounded Flame Beams (Alternating) -->
+    <g fill="#facc15" stroke="#d97706" stroke-width="2.5">
+      <!-- NNE -->
+      <path d="M225,80 Q240,40 248,88 Z"/>
+      <!-- ENE -->
+      <path d="M270,122 Q310,105 272,135 Z"/>
+      <!-- ESE -->
+      <path d="M272,165 Q310,195 270,178 Z"/>
+      <!-- SSE -->
+      <path d="M248,212 Q240,260 225,220 Z"/>
+      <!-- SSW -->
+      <path d="M175,220 Q160,260 152,212 Z"/>
+      <!-- WSW -->
+      <path d="M128,178 Q90,195 128,165 Z"/>
+      <!-- WNW -->
+      <path d="M128,135 Q90,105 130,122 Z"/>
+      <!-- NNW -->
+      <path d="M152,88 Q160,40 175,80 Z"/>
     </g>
-    <!-- Sun body -->
-    <circle cx="0" cy="0" r="50" fill="#FDD835" stroke="#F9A825" stroke-width="3"/>
-    <!-- Inner glow -->
-    <circle cx="0" cy="0" r="38" fill="#FFEE58" opacity="0.5"/>
-    <!-- Face -->
-    <circle cx="-14" cy="-8" r="5" fill="#F57F17"/>
-    <circle cx="14" cy="-8" r="5" fill="#F57F17"/>
-    <path d="M-12,12 Q0,24 12,12" fill="none" stroke="#F57F17" stroke-width="3" stroke-linecap="round"/>
-    <!-- Rosy cheeks -->
-    <circle cx="-24" cy="6" r="6" fill="#FFB74D" opacity="0.4"/>
-    <circle cx="24" cy="6" r="6" fill="#FFB74D" opacity="0.4"/>
+
+    <!-- Central Radiant Solar Disc -->
+    <circle cx="200" cy="150" r="75" fill="url(#sun-glow)" stroke="#d97706" stroke-width="4.5"/>
+
+    <!-- Friendly Sun Face (Engaging for children) -->
+    <!-- Left Eye -->
+    <circle cx="175" cy="138" r="8" fill="#1e293b"/>
+    <circle cx="173" cy="135" r="2.5" fill="#ffffff"/>
+
+    <!-- Right Eye -->
+    <circle cx="225" cy="138" r="8" fill="#1e293b"/>
+    <circle cx="223" cy="135" r="2.5" fill="#ffffff"/>
+
+    <!-- Cheerful Rosy Cheeks -->
+    <ellipse cx="165" cy="155" rx="12" ry="7" fill="#f43f5e" opacity="0.45"/>
+    <ellipse cx="235" cy="155" rx="12" ry="7" fill="#f43f5e" opacity="0.45"/>
+
+    <!-- Big Happy Smile -->
+    <path d="M180 162 Q200 185 220 162" fill="none" stroke="#b45309" stroke-width="4" stroke-linecap="round"/>
   </g>
 </svg>

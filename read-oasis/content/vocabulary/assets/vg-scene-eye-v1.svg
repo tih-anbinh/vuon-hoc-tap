@@ -1,29 +1,55 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-eye desc-eye">
-  <title id="title-eye">eye</title>
-  <desc id="desc-eye">A close-up of a friendly eye with colourful iris and eyelashes.</desc>
-  <rect width="400" height="300" rx="20" fill="#E8EAF6"/>
-  <g transform="translate(200, 150)">
-    <!-- Eye shape -->
-    <path d="M-80,0 Q-40,-50 0,-55 Q40,-50 80,0 Q40,50 0,55 Q-40,50 -80,0" fill="white" stroke="#5C6BC0" stroke-width="3"/>
-    <!-- Iris -->
-    <circle cx="0" cy="0" r="35" fill="#64B5F6"/>
-    <circle cx="0" cy="0" r="35" fill="none" stroke="#42A5F5" stroke-width="2"/>
-    <!-- Iris pattern -->
-    <circle cx="0" cy="0" r="28" fill="none" stroke="#1E88E5" stroke-width="1" opacity="0.3"/>
-    <circle cx="0" cy="0" r="20" fill="none" stroke="#1565C0" stroke-width="1" opacity="0.3"/>
-    <!-- Pupil -->
-    <circle cx="0" cy="0" r="14" fill="#1A237E"/>
-    <!-- Light reflection -->
-    <circle cx="-8" cy="-10" r="8" fill="white" opacity="0.7"/>
-    <circle cx="6" cy="8" r="4" fill="white" opacity="0.4"/>
-    <!-- Eyelashes top -->
-    <g stroke="#5D4037" stroke-width="2.5" stroke-linecap="round">
-      <line x1="-60" y1="-25" x2="-55" y2="-35"/>
-      <line x1="-40" y1="-40" x2="-38" y2="-52"/>
-      <line x1="-15" y1="-50" x2="-12" y2="-62"/>
-      <line x1="10" y1="-52" x2="12" y2="-64"/>
-      <line x1="35" y1="-44" x2="38" y2="-56"/>
-      <line x1="55" y1="-30" x2="58" y2="-40"/>
-    </g>
+  <title id="title-eye">Eye - Bright sparkling eye</title>
+  <desc id="desc-eye">A clear sparkling human eye with a curved eyebrow, rich blue iris, pupil with light reflections, and curved eyelashes, occupying the center of the frame.</desc>
+  <defs>
+    <radialGradient id="iris-grad" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="60%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Sparkles around the eye (alert, sparkling sight) -->
+  <path d="M330 90 L335 75 L340 90 L355 95 L340 100 L335 115 L330 100 L315 95 Z" fill="#38bdf8" opacity="0.7"/>
+  <circle cx="75" cy="115" r="3.5" fill="#38bdf8" opacity="0.6"/>
+
+  <!-- TARGET OBJECT: EYE & EYEBROW (Occupying 70% canvas) -->
+  <g id="eye-figure" filter="url(#soft-shadow)">
+    <!-- Arched Eyebrow -->
+    <path d="M90 85 C140 50 250 50 310 90 C260 70 150 70 90 85 Z" fill="#334155" stroke="#1e293b" stroke-width="2"/>
+
+    <!-- Eye Contour (Sclera / Eyeball almond shape) -->
+    <path d="M70 170 C120 95 280 95 330 170 C280 235 120 235 70 170 Z" fill="#ffffff" stroke="#1e293b" stroke-width="5"/>
+
+    <!-- Inner Corner (Lacrimal caruncle) -->
+    <path d="M70 170 C78 163 88 165 92 170 C88 175 78 177 70 170 Z" fill="#fbcfe8"/>
+
+    <!-- Iris (Rich blue patterned disc) -->
+    <circle cx="200" cy="165" r="50" fill="url(#iris-grad)" stroke="#0369a1" stroke-width="3"/>
+
+    <!-- Pupil (Deep black center) -->
+    <circle cx="200" cy="165" r="24" fill="#0f172a"/>
+
+    <!-- Catchlight / Shine Reflections (Gives life and sparkle) -->
+    <circle cx="185" cy="150" r="10" fill="#ffffff"/>
+    <circle cx="215" cy="178" r="4.5" fill="#ffffff"/>
+
+    <!-- Upper Eyelid Crease Line -->
+    <path d="M100 118 C150 95 250 95 300 118" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Upper Eyelashes (Curved, bold) -->
+    <path d="M120 125 C115 105 105 95 95 90" fill="none" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+    <path d="M155 110 C155 90 150 75 140 70" fill="none" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+    <path d="M200 105 C200 85 200 70 195 65" fill="none" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+    <path d="M245 110 C250 90 255 75 265 70" fill="none" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+    <path d="M285 125 C295 105 310 95 320 90" fill="none" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Lower Eyelashes (Subtle, short) -->
+    <line x1="150" y1="215" x2="145" y2="225" stroke="#1e293b" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="200" y1="220" x2="200" y2="232" stroke="#1e293b" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="250" y1="215" x2="255" y2="225" stroke="#1e293b" stroke-width="2.5" stroke-linecap="round"/>
   </g>
 </svg>

@@ -1,30 +1,62 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-mouth desc-mouth">
-  <title id="title-mouth">mouth</title>
-  <desc id="desc-mouth">A child's face with a big smile, with an arrow pointing to the mouth.</desc>
-  <rect width="400" height="300" rx="20" fill="#FFF8E1"/>
-  <g transform="translate(200, 150)">
-    <!-- Head -->
-    <circle cx="0" cy="0" r="60" fill="#FFCC80" stroke="#F9A825" stroke-width="2.5"/>
-    <!-- Hair -->
-    <path d="M-45,-30 Q-30,-60 0,-55 Q30,-60 45,-30" fill="#5D4037" stroke="#4E342E" stroke-width="2"/>
-    <!-- Eyes -->
-    <circle cx="-18" cy="-10" r="5" fill="#4E342E"/>
-    <circle cx="18" cy="-10" r="5" fill="#4E342E"/>
-    <circle cx="-17" cy="-11" r="2" fill="white"/>
-    <circle cx="19" cy="-11" r="2" fill="white"/>
-    <!-- Nose -->
-    <ellipse cx="0" cy="5" rx="4" ry="3" fill="#F9A825" opacity="0.3"/>
-    <!-- Mouth (big smile, highlighted) -->
-    <path d="M-20,18 Q0,38 20,18" fill="#E57373" stroke="#D32F2F" stroke-width="3"/>
-    <path d="M-16,20 Q0,30 16,20" fill="white"/>
-    <!-- Cheeks -->
-    <circle cx="-30" cy="12" r="7" fill="#F48FB1" opacity="0.3"/>
-    <circle cx="30" cy="12" r="7" fill="#F48FB1" opacity="0.3"/>
+  <title id="title-mouth">Mouth - Cheerful smiling mouth</title>
+  <desc id="desc-mouth">A bright smiling mouth with rosy lips, clean white teeth, and pink tongue, occupying the center of the frame.</desc>
+  <defs>
+    <linearGradient id="lip-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fb7185"/>
+      <stop offset="60%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#e11d48"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Smile sparkles (radiant clean smile) -->
+  <path d="M290 85 L294 70 L298 85 L313 89 L298 93 L294 108 L290 93 L275 89 Z" fill="#38bdf8"/>
+  <circle cx="320" cy="115" r="3" fill="#38bdf8"/>
+  <circle cx="95" cy="110" r="3" fill="#fb7185"/>
+
+  <!-- TARGET OBJECT: MOUTH (Occupying 70% canvas) -->
+  <g id="mouth-figure" filter="url(#soft-shadow)">
+    <!-- Smile Dimples / Cheek Lines -->
+    <path d="M60 145 C55 160 65 175 75 180" fill="none" stroke="#f43f5e" stroke-width="4" stroke-linecap="round"/>
+    <path d="M340 145 C345 160 335 175 325 180" fill="none" stroke="#f43f5e" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Inside Oral Cavity (Dark ruby red background) -->
+    <path d="M80 160 Q200 160 320 160 Q200 250 80 160 Z" fill="#881337" stroke="#4c0519" stroke-width="3"/>
+
+    <!-- Pink Tongue Resting at the Bottom -->
+    <path d="M130 190 C150 175 250 175 270 190 C250 230 150 230 130 190 Z" fill="#fda4af" stroke="#f43f5e" stroke-width="2"/>
+    <line x1="200" y1="182" x2="200" y2="205" stroke="#fb7185" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Neat White Upper Teeth -->
+    <path d="M100 160 Q200 160 300 160 L295 182 Q200 188 105 182 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <!-- Tooth divisions -->
+    <line x1="135" y1="160" x2="135" y2="182" stroke="#e2e8f0" stroke-width="2"/>
+    <line x1="165" y1="160" x2="165" y2="184" stroke="#e2e8f0" stroke-width="2"/>
+    <line x1="200" y1="160" x2="200" y2="185" stroke="#cbd5e1" stroke-width="2"/>
+    <line x1="235" y1="160" x2="235" y2="184" stroke="#e2e8f0" stroke-width="2"/>
+    <line x1="265" y1="160" x2="265" y2="182" stroke="#e2e8f0" stroke-width="2"/>
+
+    <!-- Upper Lip (Cupid's bow with lush curve) -->
+    <path d="M75 160
+             C120 155 160 120 190 125
+             C195 126 205 126 210 125
+             C240 120 280 155 325 160
+             C280 165 240 155 200 158
+             C160 155 120 165 75 160 Z"
+          fill="url(#lip-grad)" stroke="#be123c" stroke-width="3.5" stroke-linejoin="round"/>
+
+    <!-- Lower Lip (Full, gentle, rounded cushion) -->
+    <path d="M75 160
+             C120 165 160 160 200 160
+             C240 160 280 165 325 160
+             C295 240 105 240 75 160 Z"
+          fill="url(#lip-grad)" stroke="#be123c" stroke-width="3.5" stroke-linejoin="round"/>
+
+    <!-- Lower Lip Gloss Highlight -->
+    <ellipse cx="200" cy="205" rx="35" ry="8" fill="#ffffff" opacity="0.45"/>
+    <ellipse cx="180" cy="204" rx="15" ry="4" fill="#ffffff" opacity="0.6"/>
   </g>
-  <!-- Arrow pointing to mouth -->
-  <g fill="none" stroke="#E53935" stroke-width="3">
-    <path d="M310,180 Q290,178 270,175" stroke-linecap="round"/>
-    <polygon points="268,170 260,178 272,180" fill="#E53935" stroke="none"/>
-  </g>
-  <text x="315" y="185" font-family="sans-serif" font-size="18" font-weight="bold" fill="#E53935">mouth</text>
 </svg>

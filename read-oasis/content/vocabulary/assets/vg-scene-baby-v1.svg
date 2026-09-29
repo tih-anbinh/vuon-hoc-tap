@@ -1,39 +1,94 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-baby desc-baby">
-  <title id="title-baby">baby</title>
-  <desc id="desc-baby">A cute baby sitting and playing with a rattle toy.</desc>
-  <rect width="400" height="300" rx="20" fill="#FCE4EC"/>
-  <rect y="220" width="400" height="80" rx="0" fill="#F8BBD0" opacity="0.3"/>
-  <g transform="translate(200, 100)">
-    <!-- Body (onesie) -->
-    <ellipse cx="0" cy="65" rx="30" ry="35" fill="#BBDEFB" stroke="#90CAF9" stroke-width="2"/>
-    <!-- Legs -->
-    <ellipse cx="-18" cy="95" rx="14" ry="10" fill="#BBDEFB" stroke="#90CAF9" stroke-width="1.5"/>
-    <ellipse cx="18" cy="95" rx="14" ry="10" fill="#BBDEFB" stroke="#90CAF9" stroke-width="1.5"/>
-    <!-- Feet -->
-    <circle cx="-22" cy="100" r="6" fill="#FFCC80"/>
-    <circle cx="22" cy="100" r="6" fill="#FFCC80"/>
-    <!-- Arms -->
-    <line x1="-15" y1="50" x2="-30" y2="40" stroke="#FFCC80" stroke-width="8" stroke-linecap="round"/>
-    <line x1="15" y1="50" x2="35" y2="35" stroke="#FFCC80" stroke-width="8" stroke-linecap="round"/>
-    <!-- Rattle in right hand -->
-    <line x1="35" y1="35" x2="42" y2="25" stroke="#CE93D8" stroke-width="3"/>
-    <circle cx="44" cy="20" r="8" fill="#CE93D8" stroke="#AB47BC" stroke-width="1.5"/>
-    <circle cx="44" cy="20" r="3" fill="#F48FB1"/>
-    <!-- Head (bigger proportionally) -->
-    <circle cx="0" cy="15" r="28" fill="#FFCC80" stroke="#F9A825" stroke-width="2"/>
-    <!-- Wispy hair -->
-    <path d="M-8,-12 Q-5,-18 0,-15 Q5,-18 8,-12" fill="#8D6E63" stroke="#795548" stroke-width="1.5"/>
-    <!-- Big eyes -->
-    <circle cx="-9" cy="10" r="5" fill="#4E342E"/>
-    <circle cx="9" cy="10" r="5" fill="#4E342E"/>
-    <circle cx="-8" cy="9" r="2" fill="white"/>
-    <circle cx="10" cy="9" r="2" fill="white"/>
-    <!-- Tiny nose -->
-    <circle cx="0" cy="18" r="2" fill="#FFAB91"/>
-    <!-- Mouth (happy) -->
-    <path d="M-5,24 Q0,28 5,24" fill="none" stroke="#4E342E" stroke-width="2" stroke-linecap="round"/>
-    <!-- Rosy cheeks -->
-    <circle cx="-16" cy="18" r="5" fill="#F48FB1" opacity="0.4"/>
-    <circle cx="16" cy="18" r="5" fill="#F48FB1" opacity="0.4"/>
+  <title id="title-baby">Baby - Happy crawling baby</title>
+  <desc id="desc-baby">A cheerful chubby baby in a yellow onesie with a rattle, sitting happily, occupying the center of the frame.</desc>
+  <defs>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Ground line -->
+  <line x1="30" y1="265" x2="370" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Ground shadow -->
+  <ellipse cx="195" cy="265" rx="90" ry="12" fill="#0f172a" opacity="0.15"/>
+
+  <!-- Playful sparkles -->
+  <polygon points="105,75 108,65 111,75 121,78 111,81 108,91 105,81 95,78" fill="#facc15"/>
+  <circle cx="295" cy="95" r="3.5" fill="#38bdf8"/>
+
+  <!-- TARGET OBJECT: BABY (Occupying 70% canvas) -->
+  <g id="baby-figure" filter="url(#soft-shadow)">
+    <!-- Chubby Baby Legs & Feet (Tucked under in sitting pose) -->
+    <!-- Left Leg -->
+    <path d="M140 210 C120 220 115 245 130 258 C145 268 175 260 170 240 Z" fill="#fef08a" stroke="#ca8a04" stroke-width="3"/>
+    <!-- Left Tiny Foot & Toes -->
+    <ellipse cx="120" cy="250" rx="14" ry="10" fill="#fed7aa" stroke="#fb923c" stroke-width="2.5" transform="rotate(-15 120 250)"/>
+    <circle cx="112" cy="245" r="3" fill="#fed7aa"/>
+
+    <!-- Right Leg -->
+    <path d="M220 210 C240 220 245 245 230 258 C215 268 185 260 190 240 Z" fill="#fef08a" stroke="#ca8a04" stroke-width="3"/>
+    <!-- Right Tiny Foot & Toes -->
+    <ellipse cx="240" cy="250" rx="14" ry="10" fill="#fed7aa" stroke="#fb923c" stroke-width="2.5" transform="rotate(15 240 250)"/>
+    <circle cx="248" cy="245" r="3" fill="#fed7aa"/>
+
+    <!-- Onesie / Romper Body (Pastel sunny yellow) -->
+    <path d="M145 155 C135 180 135 235 155 245 C175 250 205 250 225 245 C245 235 245 180 235 155 Z" fill="#fef08a" stroke="#ca8a04" stroke-width="3.5"/>
+
+    <!-- White Peter Pan Bib / Collar -->
+    <path d="M160 155 C160 170 175 178 190 165 C205 178 220 170 220 155 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <!-- Little duck emblem on onesie -->
+    <ellipse cx="190" cy="200" rx="7" ry="5" fill="#f97316"/>
+    <circle cx="194" cy="197" r="4" fill="#f97316"/>
+
+    <!-- Chubby Baby Arms -->
+    <!-- Left Arm -->
+    <path d="M150 165 C130 180 120 205 140 220 C150 225 160 210 160 195 Z" fill="#fed7aa" stroke="#fb923c" stroke-width="3"/>
+    <ellipse cx="140" cy="220" rx="9" ry="8" fill="#fed7aa" stroke="#fb923c" stroke-width="2.5"/>
+
+    <!-- Right Arm Holding Rattle -->
+    <path d="M230 165 C255 175 270 185 265 205 C260 215 245 210 240 195 Z" fill="#fed7aa" stroke="#fb923c" stroke-width="3"/>
+    <circle cx="265" cy="205" r="8" fill="#fed7aa" stroke="#fb923c" stroke-width="2.5"/>
+
+    <!-- Colorful Baby Rattle in Hand -->
+    <g id="baby-rattle" transform="translate(265, 175) rotate(25)">
+      <!-- Handle -->
+      <rect x="0" y="20" width="8" height="30" rx="4" fill="#38bdf8" stroke="#0284c7" stroke-width="2"/>
+      <circle cx="4" cy="52" r="6" fill="#f43f5e" stroke="#e11d48" stroke-width="2"/>
+      <!-- Rattle Head -->
+      <circle cx="4" cy="12" r="14" fill="#ec4899" stroke="#be185d" stroke-width="2.5"/>
+      <circle cx="4" cy="12" r="8" fill="#fbcfe8"/>
+    </g>
+
+    <!-- Large Cute Chubby Head -->
+    <circle cx="190" cy="110" r="50" fill="#fed7aa" stroke="#fb923c" stroke-width="4"/>
+
+    <!-- Chubby Rosy Cheeks -->
+    <circle cx="155" cy="125" r="12" fill="#f472b6" opacity="0.5"/>
+    <circle cx="225" cy="125" r="12" fill="#f472b6" opacity="0.5"/>
+
+    <!-- Big Innocent Eyes -->
+    <circle cx="170" cy="110" r="8" fill="#1e293b"/>
+    <circle cx="168" cy="107" r="3" fill="#ffffff"/>
+    <circle cx="210" cy="110" r="8" fill="#1e293b"/>
+    <circle cx="208" cy="107" r="3" fill="#ffffff"/>
+
+    <!-- Delicate Curved Eyebrows -->
+    <path d="M162 98 Q170 94 178 98" fill="none" stroke="#9a3412" stroke-width="2" stroke-linecap="round"/>
+    <path d="M202 98 Q210 94 218 98" fill="none" stroke="#9a3412" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Cute Baby Nose Button -->
+    <circle cx="190" cy="118" r="3.5" fill="#f97316"/>
+
+    <!-- Happy Open Mouth Smile (Cute toothless smile) -->
+    <path d="M180 128 Q190 142 200 128 Z" fill="#e11d48" stroke="#9f1239" stroke-width="2"/>
+    <path d="M184 133 Q190 138 196 133" fill="none" stroke="#fda4af" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Cute Swirl Tuft of Hair on Top -->
+    <path d="M190 60 C185 45 195 40 200 48 C202 52 195 58 190 60 Z" fill="#9a3412" stroke="#7c2d12" stroke-width="2"/>
+
+    <!-- Cute Baby Ears -->
+    <ellipse cx="140" cy="115" rx="8" ry="10" fill="#fed7aa" stroke="#fb923c" stroke-width="2.5"/>
+    <ellipse cx="240" cy="115" rx="8" ry="10" fill="#fed7aa" stroke="#fb923c" stroke-width="2.5"/>
   </g>
 </svg>

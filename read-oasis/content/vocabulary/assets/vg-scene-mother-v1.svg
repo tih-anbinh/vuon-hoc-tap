@@ -1,41 +1,101 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-mother desc-mother">
-  <title id="title-mother">mother</title>
-  <desc id="desc-mother">A woman (mother) standing with a warm smile and long hair.</desc>
-  <rect width="400" height="300" rx="20" fill="#FCE4EC"/>
-  <rect y="240" width="400" height="60" rx="0" fill="#C8E6C9"/>
-  <g transform="translate(200, 30)">
-    <!-- Legs -->
-    <rect x="-12" y="135" width="10" height="50" rx="4" fill="#FFCC80"/>
-    <rect x="2" y="135" width="10" height="50" rx="4" fill="#FFCC80"/>
-    <!-- Shoes -->
-    <ellipse cx="-7" cy="188" rx="10" ry="5" fill="#CE93D8"/>
-    <ellipse cx="7" cy="188" rx="10" ry="5" fill="#CE93D8"/>
-    <!-- Dress -->
-    <path d="M-25,60 Q-30,100 -35,140 L35,140 Q30,100 25,60 Z" fill="#CE93D8" stroke="#AB47BC" stroke-width="2"/>
-    <!-- Upper body -->
-    <ellipse cx="0" cy="75" rx="25" ry="30" fill="#CE93D8" stroke="#AB47BC" stroke-width="2"/>
-    <!-- Arms -->
-    <line x1="-12" y1="65" x2="-30" y2="100" stroke="#FFCC80" stroke-width="8" stroke-linecap="round"/>
-    <line x1="12" y1="65" x2="30" y2="100" stroke="#FFCC80" stroke-width="8" stroke-linecap="round"/>
-    <circle cx="-32" cy="102" r="5" fill="#FFCC80"/>
-    <circle cx="32" cy="102" r="5" fill="#FFCC80"/>
-    <!-- Head -->
-    <circle cx="0" cy="28" r="26" fill="#FFCC80" stroke="#F9A825" stroke-width="2"/>
-    <!-- Long hair -->
-    <path d="M-22,10 Q-20,-10 0,-12 Q20,-10 22,10" fill="#5D4037" stroke="#4E342E" stroke-width="2"/>
-    <path d="M-22,10 Q-28,30 -25,50" fill="none" stroke="#5D4037" stroke-width="8" stroke-linecap="round"/>
-    <path d="M22,10 Q28,30 25,50" fill="none" stroke="#5D4037" stroke-width="8" stroke-linecap="round"/>
-    <!-- Face -->
-    <circle cx="-8" cy="22" r="3" fill="#4E342E"/>
-    <circle cx="8" cy="22" r="3" fill="#4E342E"/>
-    <circle cx="-7" cy="21" r="1" fill="white"/>
-    <circle cx="9" cy="21" r="1" fill="white"/>
-    <!-- Eyelashes -->
-    <path d="M-11,19 L-12,17" stroke="#4E342E" stroke-width="1.5" stroke-linecap="round"/>
-    <path d="M5,19 L4,17" stroke="#4E342E" stroke-width="1.5" stroke-linecap="round"/>
-    <path d="M-6,34 Q0,39 6,34" fill="none" stroke="#4E342E" stroke-width="2" stroke-linecap="round"/>
-    <!-- Rosy cheeks -->
-    <circle cx="-16" cy="28" r="4" fill="#F48FB1" opacity="0.35"/>
-    <circle cx="16" cy="28" r="4" fill="#F48FB1" opacity="0.35"/>
+  <title id="title-mother">Mother - Kind smiling woman</title>
+  <desc id="desc-mother">A gentle smiling mother with shoulder-length hair wearing an elegant coral cardigan and skirt, with a warm welcoming pose, occupying the center of the frame.</desc>
+  <defs>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Ground line -->
+  <line x1="30" y1="280" x2="370" y2="280" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Ground shadow -->
+  <ellipse cx="200" cy="280" rx="65" ry="10" fill="#0f172a" opacity="0.15"/>
+
+  <!-- TARGET OBJECT: MOTHER (Occupying 80% canvas) -->
+  <g id="mother-figure" filter="url(#soft-shadow)">
+    <!-- Elegant Skirt / Trousers & Shoes -->
+    <!-- Midi Skirt (Teal/Slate) -->
+    <path d="M172 165 L228 165 L245 245 L155 245 Z" fill="#0f766e" stroke="#115e59" stroke-width="3" stroke-linejoin="round"/>
+
+    <!-- Calves & Shoes -->
+    <rect x="178" y="245" width="14" height="20" rx="4" fill="#fed7aa" stroke="#fb923c" stroke-width="2"/>
+    <ellipse cx="184" cy="268" rx="14" ry="7" fill="#881337" stroke="#4c0519" stroke-width="2"/>
+
+    <rect x="208" y="245" width="14" height="20" rx="4" fill="#fed7aa" stroke="#fb923c" stroke-width="2"/>
+    <ellipse cx="216" cy="268" rx="14" ry="7" fill="#881337" stroke="#4c0519" stroke-width="2"/>
+
+    <!-- Blouse & Cardigan (Coral/Rose Cardigan over Cream Blouse) -->
+    <!-- Inner Blouse -->
+    <polygon points="190,88 210,88 200,125" fill="#fef08a"/>
+    <!-- Pearl Necklace -->
+    <circle cx="196" cy="100" r="2.5" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.5"/>
+    <circle cx="200" cy="102" r="2.5" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.5"/>
+    <circle cx="204" cy="100" r="2.5" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.5"/>
+
+    <!-- Cardigan Body -->
+    <path d="M165 88 L235 88 L228 165 L172 165 Z" fill="#f43f5e" stroke="#be123c" stroke-width="3" stroke-linejoin="round"/>
+    <polygon points="190,88 200,125 210,88" fill="none" stroke="#be123c" stroke-width="2"/>
+    <line x1="200" y1="125" x2="200" y2="165" stroke="#be123c" stroke-width="2"/>
+    <!-- Cardigan buttons -->
+    <circle cx="200" cy="135" r="2.5" fill="#fbcfe8"/>
+    <circle cx="200" cy="150" r="2.5" fill="#fbcfe8"/>
+
+    <!-- Left Arm Welcoming/Open -->
+    <path d="M165 88 C145 105 135 125 128 140" fill="none" stroke="#f43f5e" stroke-width="14" stroke-linecap="round"/>
+    <path d="M128 140 L120 150" fill="none" stroke="#fed7aa" stroke-width="11" stroke-linecap="round"/>
+    <circle cx="118" cy="152" r="7" fill="#fed7aa" stroke="#fb923c" stroke-width="2"/>
+
+    <!-- Right Arm in Gentle Greeting Wave -->
+    <path d="M235 88 C255 105 268 120 278 135" fill="none" stroke="#f43f5e" stroke-width="14" stroke-linecap="round"/>
+    <path d="M278 135 L286 144" fill="none" stroke="#fed7aa" stroke-width="11" stroke-linecap="round"/>
+    <circle cx="288" cy="146" r="7" fill="#fed7aa" stroke="#fb923c" stroke-width="2"/>
+
+    <!-- Flowing Hair Behind Shoulders -->
+    <path d="M162 60 C150 85 152 125 168 135 C175 120 172 90 172 75 Z" fill="#451a03"/>
+    <path d="M238 60 C250 85 248 125 232 135 C225 120 228 90 228 75 Z" fill="#451a03"/>
+
+    <!-- Head & Graceful Neck -->
+    <rect x="193" y="74" width="14" height="16" fill="#fed7aa" stroke="#fb923c" stroke-width="2"/>
+    <ellipse cx="200" cy="52" rx="26" ry="30" fill="#fed7aa" stroke="#fb923c" stroke-width="3"/>
+
+    <!-- Ears & Pearl Earrings -->
+    <ellipse cx="174" cy="54" rx="4" ry="7" fill="#fed7aa" stroke="#fb923c" stroke-width="1.5"/>
+    <circle cx="173" cy="62" r="2.5" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.5"/>
+    <ellipse cx="226" cy="54" rx="4" ry="7" fill="#fed7aa" stroke="#fb923c" stroke-width="1.5"/>
+    <circle cx="227" cy="62" r="2.5" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.5"/>
+
+    <!-- Hair (Soft, elegant waves) -->
+    <path d="M172 45 C172 20 228 20 228 45 C222 32 208 28 198 32 C185 28 175 35 172 45 Z" fill="#5c2d12" stroke="#451a03" stroke-width="3" stroke-linejoin="round"/>
+    <!-- Side hair strands framing face -->
+    <path d="M172 45 C170 60 174 72 176 80" fill="none" stroke="#5c2d12" stroke-width="4" stroke-linecap="round"/>
+    <path d="M228 45 C230 60 226 72 224 80" fill="none" stroke="#5c2d12" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Soft Kind Eyebrows -->
+    <path d="M182 45 Q188 41 194 44" fill="none" stroke="#5c2d12" stroke-width="2" stroke-linecap="round"/>
+    <path d="M206 44 Q212 41 218 45" fill="none" stroke="#5c2d12" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Gentle Kind Eyes with Eyelashes -->
+    <ellipse cx="187" cy="52" rx="4.5" ry="5" fill="#0f172a"/>
+    <circle cx="185" cy="50" r="1.5" fill="#ffffff"/>
+    <path d="M182 48 L179 46" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M191 48 L193 46" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round"/>
+
+    <ellipse cx="213" cy="52" rx="4.5" ry="5" fill="#0f172a"/>
+    <circle cx="211" cy="50" r="1.5" fill="#ffffff"/>
+    <path d="M209 48 L207 46" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M218 48 L221 46" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round"/>
+
+    <!-- Elegant Nose -->
+    <path d="M199 52 L202 59 L198 61" fill="none" stroke="#ea580c" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Soft Rosy Cheeks -->
+    <ellipse cx="178" cy="58" rx="5" ry="3" fill="#f43f5e" opacity="0.4"/>
+    <ellipse cx="222" cy="58" rx="5" ry="3" fill="#f43f5e" opacity="0.4"/>
+
+    <!-- Kind Warm Smile with Rosy Lips -->
+    <path d="M190 66 Q200 76 210 66" fill="#e11d48" stroke="#be123c" stroke-width="2"/>
+    <path d="M192 66 Q200 69 208 66" fill="#ffffff"/>
   </g>
 </svg>

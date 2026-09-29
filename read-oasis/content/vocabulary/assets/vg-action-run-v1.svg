@@ -1,37 +1,79 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-run desc-run">
-  <title id="title-run">run</title>
-  <desc id="desc-run">A child running fast with arms swinging and one foot off the ground.</desc>
-  <rect width="400" height="300" rx="20" fill="#E3F2FD"/>
-  <rect y="230" width="400" height="70" rx="0" fill="#C8E6C9"/>
-  <!-- Motion lines -->
-  <line x1="100" y1="140" x2="130" y2="140" stroke="#90CAF9" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
-  <line x1="90" y1="160" x2="125" y2="160" stroke="#90CAF9" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
-  <line x1="95" y1="180" x2="120" y2="180" stroke="#90CAF9" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
-  <!-- Character Mo running -->
-  <g transform="translate(200, 100)">
-    <!-- Back leg (stretched behind) -->
-    <line x1="-10" y1="80" x2="-40" y2="120" stroke="#5D4037" stroke-width="10" stroke-linecap="round"/>
-    <ellipse cx="-44" cy="124" rx="12" ry="6" fill="#FF7043" stroke="#E64A19" stroke-width="1.5"/>
-    <!-- Front leg (forward) -->
-    <line x1="10" y1="80" x2="40" y2="115" stroke="#5D4037" stroke-width="10" stroke-linecap="round"/>
-    <ellipse cx="44" cy="119" rx="12" ry="6" fill="#FF7043" stroke="#E64A19" stroke-width="1.5"/>
-    <!-- Body -->
-    <ellipse cx="0" cy="60" rx="22" ry="28" fill="#42A5F5" stroke="#1E88E5" stroke-width="2"/>
-    <!-- Arms swinging -->
-    <line x1="-8" y1="45" x2="-40" y2="70" stroke="#FFCC80" stroke-width="8" stroke-linecap="round"/>
-    <line x1="8" y1="45" x2="38" y2="30" stroke="#FFCC80" stroke-width="8" stroke-linecap="round"/>
-    <!-- Head -->
-    <circle cx="0" cy="18" r="22" fill="#FFCC80" stroke="#F9A825" stroke-width="2"/>
-    <!-- Hair -->
-    <path d="M-16,-2 Q-10,-18 0,-16 Q10,-18 16,-2" fill="#5D4037" stroke="#4E342E" stroke-width="1.5"/>
-    <!-- Face — happy effort -->
-    <circle cx="-7" cy="14" r="3" fill="#4E342E"/>
-    <circle cx="9" cy="14" r="3" fill="#4E342E"/>
-    <circle cx="-6" cy="13" r="1" fill="white"/>
-    <circle cx="10" cy="13" r="1" fill="white"/>
-    <path d="M-6,24 Q0,30 6,24" fill="none" stroke="#4E342E" stroke-width="2" stroke-linecap="round"/>
-    <!-- Rosy cheeks -->
-    <circle cx="-14" cy="20" r="4" fill="#F48FB1" opacity="0.4"/>
-    <circle cx="14" cy="20" r="4" fill="#F48FB1" opacity="0.4"/>
+  <title id="title-run">Run - Boy sprinting forward</title>
+  <desc id="desc-run">A child leaning forward dynamically mid-stride with arms pumping, knees high, and dust puffing behind, showing running action.</desc>
+  <defs>
+    <linearGradient id="shirt-run" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Ground line with motion accent -->
+  <line x1="30" y1="260" x2="370" y2="260" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Motion wind streaks & speed lines behind runner -->
+  <g id="speed-lines" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" opacity="0.8">
+    <line x1="40" y1="110" x2="110" y2="110"/>
+    <line x1="20" y1="140" x2="90" y2="140" stroke-width="4"/>
+    <line x1="50" y1="170" x2="120" y2="170"/>
+    <line x1="30" y1="200" x2="100" y2="200"/>
+  </g>
+
+  <!-- Dust puffs behind trailing foot -->
+  <g id="dust-puffs" fill="#cbd5e1" opacity="0.7">
+    <circle cx="105" cy="245" r="14"/>
+    <circle cx="85" cy="250" r="10"/>
+    <circle cx="70" cy="254" r="7"/>
+  </g>
+
+  <!-- Runner ground shadow (extended and stretched back) -->
+  <ellipse cx="225" cy="260" rx="65" ry="9" fill="#0f172a" opacity="0.15"/>
+
+  <!-- Character Mo Running (Dynamic athletic pose) -->
+  <g id="runner" filter="url(#soft-shadow)">
+    <!-- Back Leg (pushing off the ground, extended backwards) -->
+    <path d="M205 170 L155 210 L115 240" fill="none" stroke="#fed7aa" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Back Shoe (Red sneaker pushing off ground) -->
+    <path d="M115 240 L100 248 L125 252 Z" fill="#ef4444" stroke="#991b1b" stroke-width="3.5" stroke-linejoin="round"/>
+
+    <!-- Back Arm (pumping backwards) -->
+    <path d="M220 125 L170 140 L150 120" fill="none" stroke="#fed7aa" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Back hand clenched in fist -->
+    <circle cx="148" cy="118" r="9" fill="#fed7aa" stroke="#c2410c" stroke-width="3"/>
+
+    <!-- Torso (leaning forward ~25 degrees) -->
+    <path d="M205 110 L250 125 L230 185 L190 170 Z" fill="url(#shirt-run)" stroke="#0369a1" stroke-width="3.5" stroke-linejoin="round"/>
+
+    <!-- Running shorts -->
+    <path d="M190 170 L230 185 L225 205 L180 190 Z" fill="#1e3a8a" stroke="#172554" stroke-width="3"/>
+
+    <!-- Front Leg (knee driving high and forward) -->
+    <path d="M220 185 L275 205 L260 250" fill="none" stroke="#fed7aa" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Front Shoe (hitting the air, about to plant) -->
+    <path d="M260 250 L285 248 L275 258 Z" fill="#ef4444" stroke="#991b1b" stroke-width="3.5" stroke-linejoin="round"/>
+
+    <!-- Head & Face -->
+    <circle cx="265" cy="85" r="28" fill="#fed7aa" stroke="#c2410c" stroke-width="3.5"/>
+
+    <!-- Cap (red cap with visor pointing forward) -->
+    <path d="M245 78 C245 60 285 60 290 78 Z" fill="#ef4444" stroke="#991b1b" stroke-width="3"/>
+    <path d="M275 75 Q305 78 312 85 Q295 86 280 84" fill="#ef4444" stroke="#991b1b" stroke-width="3"/>
+
+    <!-- Face details -->
+    <!-- Determined running eye -->
+    <circle cx="276" cy="86" r="4.5" fill="#1e293b"/>
+    <circle cx="274" cy="84" r="1.5" fill="#ffffff"/>
+    <path d="M270 78 Q278 76 283 80" fill="none" stroke="#1e293b" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Happy open mouth catching breath -->
+    <path d="M276 94 Q284 94 280 100 Z" fill="#991b1b"/>
+    <circle cx="260" cy="94" r="6" fill="#fca5a5" opacity="0.5"/>
+
+    <!-- Front Arm (pumping forward) -->
+    <path d="M240 120 L275 140 L300 125" fill="none" stroke="#fed7aa" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Front hand fist -->
+    <circle cx="304" cy="122" r="10" fill="#fed7aa" stroke="#c2410c" stroke-width="3"/>
   </g>
 </svg>

@@ -1,36 +1,60 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-ear desc-ear">
-  <title id="title-ear">ear</title>
-  <desc id="desc-ear">A child's face with an arrow pointing to their ear, with sound waves nearby.</desc>
-  <rect width="400" height="300" rx="20" fill="#FFF3E0"/>
-  <!-- Character face (close-up) -->
-  <g transform="translate(180, 150)">
-    <!-- Head -->
-    <circle cx="0" cy="0" r="60" fill="#FFCC80" stroke="#F9A825" stroke-width="2.5"/>
-    <!-- Hair -->
-    <path d="M-45,-30 Q-30,-60 0,-55 Q30,-60 45,-30" fill="#5D4037" stroke="#4E342E" stroke-width="2"/>
-    <!-- Ear (highlighted) -->
-    <ellipse cx="-58" cy="0" rx="10" ry="16" fill="#FFCC80" stroke="#FF7043" stroke-width="3"/>
-    <ellipse cx="-56" cy="0" rx="5" ry="10" fill="#FFAB91" opacity="0.4"/>
-    <!-- Face -->
-    <circle cx="-18" cy="-5" r="5" fill="#4E342E"/>
-    <circle cx="18" cy="-5" r="5" fill="#4E342E"/>
-    <circle cx="-17" cy="-6" r="2" fill="white"/>
-    <circle cx="19" cy="-6" r="2" fill="white"/>
-    <path d="M-8,18 Q0,24 8,18" fill="none" stroke="#4E342E" stroke-width="2.5" stroke-linecap="round"/>
-    <!-- Rosy cheeks -->
-    <circle cx="-28" cy="10" r="6" fill="#F48FB1" opacity="0.3"/>
-    <circle cx="28" cy="10" r="6" fill="#F48FB1" opacity="0.3"/>
+  <title id="title-ear">Ear - Clear ear and sound waves</title>
+  <desc id="desc-ear">A clearly defined human ear with sound wave arcs arriving at it, occupying the center of the frame.</desc>
+  <defs>
+    <linearGradient id="ear-skin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffedd5"/>
+      <stop offset="60%" stop-color="#fed7aa"/>
+      <stop offset="100%" stop-color="#fdba74"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Incoming Sound Waves (Concentric arcs conveying sound & hearing function) -->
+  <g id="sound-waves" opacity="0.85">
+    <path d="M110 110 C90 135 90 165 110 190" fill="none" stroke="#3b82f6" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M80 90 C50 125 50 175 80 210" fill="none" stroke="#60a5fa" stroke-width="4" stroke-linecap="round"/>
+    <path d="M50 70 C10 120 10 180 50 230" fill="none" stroke="#93c5fd" stroke-width="3.5" stroke-linecap="round"/>
   </g>
-  <!-- Sound waves near ear -->
-  <g fill="none" stroke="#FF7043" stroke-width="2" opacity="0.5">
-    <path d="M90,130 Q80,140 90,155" stroke-linecap="round"/>
-    <path d="M78,125 Q65,145 78,165" stroke-linecap="round"/>
-    <path d="M66,120 Q50,145 66,175" stroke-linecap="round"/>
+
+  <!-- TARGET OBJECT: EAR (Occupying 70% canvas) -->
+  <g id="ear-figure" filter="url(#soft-shadow)">
+    <!-- Soft Head Contour behind ear for natural context -->
+    <path d="M210 35 C175 80 170 220 205 265" fill="none" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Main Ear Outline (Outer Helix, Earlobe) -->
+    <path d="M195 90
+             C195 50 240 40 280 50
+             C325 65 345 110 340 160
+             C335 200 310 230 285 245
+             C255 260 225 255 210 235
+             C200 220 205 200 215 195
+             C225 190 220 175 210 170
+             C198 165 195 150 205 140
+             C210 135 200 110 195 90 Z"
+          fill="url(#ear-skin)" stroke="#c2410c" stroke-width="4.5" stroke-linejoin="round"/>
+
+    <!-- Outer Helix Rim Curl (Folded edge) -->
+    <path d="M210 70
+             C240 55 295 65 315 105
+             C325 125 320 170 305 195"
+          fill="none" stroke="#ea580c" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Inner Ear Creases & Concha (Antihelix and ear canal bowl) -->
+    <!-- Antihelix Ridge -->
+    <path d="M285 95 C265 115 255 140 260 175 C265 200 250 215 235 220" fill="none" stroke="#ea580c" stroke-width="4" stroke-linecap="round"/>
+    <path d="M285 95 C295 110 295 130 290 145" fill="none" stroke="#ea580c" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Ear Canal Cavity (Concha - deeper shadow) -->
+    <path d="M228 150 C235 140 250 145 250 160 C250 175 235 180 225 170 Z" fill="#c2410c" opacity="0.35"/>
+    <path d="M228 152 C233 145 245 148 245 160 C245 170 234 174 227 167 Z" fill="#9a3412" opacity="0.5"/>
+
+    <!-- Tragus (Little protective flap in front of ear canal) -->
+    <path d="M208 148 C215 150 220 158 215 165 C210 170 205 165 208 148 Z" fill="#fed7aa" stroke="#c2410c" stroke-width="2.5"/>
+
+    <!-- Earlobe highlight (Smooth soft lobe) -->
+    <ellipse cx="250" cy="235" rx="12" ry="8" fill="#fff7ed" opacity="0.6"/>
   </g>
-  <!-- Arrow -->
-  <g fill="none" stroke="#E53935" stroke-width="3">
-    <path d="M90,100 Q100,120 108,135" stroke-linecap="round"/>
-    <polygon points="105,138 115,138 108,146" fill="#E53935" stroke="none"/>
-  </g>
-  <text x="60" y="95" font-family="sans-serif" font-size="20" font-weight="bold" fill="#E53935">ear</text>
 </svg>

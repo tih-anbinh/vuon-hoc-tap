@@ -1,28 +1,78 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-tree desc-tree">
-  <title id="title-tree">tree</title>
-  <desc id="desc-tree">A big green tree with a thick brown trunk and round leafy top.</desc>
-  <rect width="400" height="300" rx="20" fill="#E3F2FD"/>
-  <rect y="220" width="400" height="80" rx="0" fill="#A5D6A7"/>
-  <!-- Sun -->
-  <circle cx="340" cy="50" r="25" fill="#FDD835" opacity="0.6"/>
-  <g transform="translate(200, 100)">
-    <!-- Trunk -->
-    <rect x="-18" y="60" width="36" height="80" rx="8" fill="#8D6E63" stroke="#795548" stroke-width="2.5"/>
-    <!-- Roots -->
-    <path d="M-18,135 Q-30,140 -35,135" fill="none" stroke="#8D6E63" stroke-width="5" stroke-linecap="round"/>
-    <path d="M18,135 Q30,140 35,135" fill="none" stroke="#8D6E63" stroke-width="5" stroke-linecap="round"/>
-    <!-- Canopy layers -->
-    <circle cx="0" cy="10" r="60" fill="#66BB6A"/>
-    <circle cx="-30" cy="30" r="40" fill="#4CAF50"/>
-    <circle cx="30" cy="25" r="42" fill="#4CAF50"/>
-    <circle cx="0" cy="-10" r="45" fill="#81C784"/>
-    <circle cx="-20" cy="5" r="35" fill="#66BB6A"/>
-    <circle cx="20" cy="0" r="38" fill="#66BB6A"/>
-    <!-- Highlight -->
-    <circle cx="-15" cy="-20" r="20" fill="#A5D6A7" opacity="0.4"/>
-    <!-- Apples -->
-    <circle cx="-25" cy="20" r="5" fill="#EF5350"/>
-    <circle cx="20" cy="35" r="5" fill="#EF5350"/>
-    <circle cx="10" cy="-5" r="5" fill="#EF5350"/>
+  <title id="title-tree">Tree - Lush green tree</title>
+  <desc id="desc-tree">A grand leafy green tree with a strong brown trunk, spreading branches, and layered foliage, occupying the center of the frame.</desc>
+  <defs>
+    <linearGradient id="trunk-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#78350f"/>
+      <stop offset="40%" stop-color="#92400e"/>
+      <stop offset="100%" stop-color="#451a03"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Ground line -->
+  <line x1="30" y1="265" x2="370" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Ground shadow -->
+  <ellipse cx="200" cy="265" rx="100" ry="12" fill="#0f172a" opacity="0.15"/>
+
+  <!-- TARGET OBJECT: TREE (Occupying 75% canvas) -->
+  <g id="tree-figure" filter="url(#soft-shadow)">
+    <!-- Tree Trunk with Root Flares -->
+    <path d="M185 140
+             L180 230
+             C180 250 150 262 145 265
+             L255 265
+             C250 262 220 250 220 230
+             L215 140 Z"
+          fill="url(#trunk-grad)" stroke="#451a03" stroke-width="4"/>
+
+    <!-- Bark Texture Grooves -->
+    <path d="M195 180 C198 205 195 235 190 255" fill="none" stroke="#451a03" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M208 170 C205 200 208 230 212 250" fill="none" stroke="#451a03" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Large Boughs / Branches spreading into foliage -->
+    <path d="M185 150 Q160 130 140 120" fill="none" stroke="#78350f" stroke-width="12" stroke-linecap="round"/>
+    <path d="M215 150 Q240 130 260 120" fill="none" stroke="#78350f" stroke-width="12" stroke-linecap="round"/>
+
+    <!-- Layer 1: Dark Forest Green Background Foliage Clouds -->
+    <g fill="#15803d" stroke="#14532d" stroke-width="3.5">
+      <circle cx="130" cy="115" r="50"/>
+      <circle cx="270" cy="115" r="50"/>
+      <circle cx="200" cy="80" r="55"/>
+      <circle cx="150" cy="155" r="45"/>
+      <circle cx="250" cy="155" r="45"/>
+    </g>
+
+    <!-- Layer 2: Medium Fresh Green Midground Foliage Clouds -->
+    <g fill="#16a34a" stroke="#14532d" stroke-width="3">
+      <circle cx="145" cy="110" r="44"/>
+      <circle cx="255" cy="110" r="44"/>
+      <circle cx="200" cy="85" r="50"/>
+      <circle cx="160" cy="145" r="40"/>
+      <circle cx="240" cy="145" r="40"/>
+    </g>
+
+    <!-- Layer 3: Vibrant Sunlight Highlight Foliage Clouds (Top / Front) -->
+    <g fill="#4ade80">
+      <circle cx="155" cy="95" r="32"/>
+      <circle cx="245" cy="95" r="32"/>
+      <circle cx="200" cy="70" r="38"/>
+      <circle cx="170" cy="130" r="28"/>
+      <circle cx="230" cy="130" r="28"/>
+    </g>
+
+    <!-- Red Apples Nestled in Leaves (Adds lively contrast and educational interest) -->
+    <circle cx="140" cy="120" r="8" fill="#ef4444" stroke="#991b1b" stroke-width="1.5"/>
+    <circle cx="260" cy="125" r="8" fill="#ef4444" stroke="#991b1b" stroke-width="1.5"/>
+    <circle cx="185" cy="95" r="8" fill="#ef4444" stroke="#991b1b" stroke-width="1.5"/>
+    <circle cx="225" cy="80" r="8" fill="#ef4444" stroke="#991b1b" stroke-width="1.5"/>
+    <circle cx="205" cy="140" r="8" fill="#ef4444" stroke="#991b1b" stroke-width="1.5"/>
+
+    <!-- Small Grass Tufts at the Base -->
+    <path d="M135 265 L140 250 L145 265" fill="#22c55e" stroke="#15803d" stroke-width="2"/>
+    <path d="M255 265 L260 250 L265 265" fill="#22c55e" stroke="#15803d" stroke-width="2"/>
   </g>
 </svg>

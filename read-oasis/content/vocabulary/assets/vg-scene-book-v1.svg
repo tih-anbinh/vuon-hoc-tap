@@ -1,31 +1,77 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-book desc-book">
-  <title id="title-book">book</title>
-  <desc id="desc-book">An open book with colourful pages and a star on the cover.</desc>
-  <rect width="400" height="300" rx="20" fill="#E3F2FD"/>
-  <g transform="translate(200, 140)">
-    <!-- Shadow -->
-    <ellipse cx="0" cy="70" rx="100" ry="12" fill="#BBDEFB" opacity="0.3"/>
-    <!-- Left page -->
-    <path d="M-5,-40 Q-5,-45 -90,-35 Q-95,-34 -95,30 Q-95,55 -90,55 L-5,50 Z" fill="white" stroke="#90CAF9" stroke-width="2"/>
-    <!-- Right page -->
-    <path d="M5,-40 Q5,-45 90,-35 Q95,-34 95,30 Q95,55 90,55 L5,50 Z" fill="#FAFAFA" stroke="#90CAF9" stroke-width="2"/>
-    <!-- Spine -->
-    <rect x="-5" y="-42" width="10" height="94" rx="3" fill="#42A5F5" stroke="#1E88E5" stroke-width="1.5"/>
-    <!-- Left page lines -->
-    <g stroke="#BDBDBD" stroke-width="1.5" opacity="0.5">
-      <line x1="-80" y1="-20" x2="-15" y2="-25"/>
-      <line x1="-78" y1="-8" x2="-15" y2="-13"/>
-      <line x1="-76" y1="4" x2="-15" y2="-1"/>
-      <line x1="-74" y1="16" x2="-15" y2="11"/>
-      <line x1="-72" y1="28" x2="-15" y2="23"/>
+  <title id="title-book">Book - Open colorful storybook</title>
+  <desc id="desc-book">An open storybook with curved white pages, a blue hardcover, and a red ribbon bookmark, occupying the center of the frame.</desc>
+  <defs>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Ground line -->
+  <line x1="30" y1="265" x2="370" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Ground shadow -->
+  <ellipse cx="200" cy="265" rx="135" ry="12" fill="#0f172a" opacity="0.15"/>
+
+  <!-- Magic Reading Sparkles hovering above book -->
+  <path d="M200 45 L204 35 L208 45 L218 48 L208 51 L204 61 L200 51 L190 48 Z" fill="#fbbf24"/>
+  <circle cx="140" cy="65" r="3.5" fill="#38bdf8"/>
+  <circle cx="265" cy="60" r="3" fill="#f43f5e"/>
+
+  <!-- TARGET OBJECT: BOOK (Occupying 70% canvas) -->
+  <g id="book-figure" filter="url(#soft-shadow)">
+    <!-- Hardcover Outer Rim (Deep Royal Blue) -->
+    <path d="M60 210
+             C120 215 170 230 195 245
+             C205 245 205 245 205 245
+             C230 230 280 215 340 210
+             L345 220
+             C285 225 230 240 205 258
+             C195 258 195 258 195 258
+             C170 240 115 225 55 220 Z"
+          fill="#1d4ed8" stroke="#1e3a8a" stroke-width="3" stroke-linejoin="round"/>
+
+    <!-- Central Spine Joint -->
+    <ellipse cx="200" cy="254" rx="8" ry="4" fill="#1e3a8a"/>
+
+    <!-- Left Page Stack (Thickness of multiple pages) -->
+    <path d="M62 205 C120 210 170 225 195 240 L195 248 C170 233 120 218 62 213 Z" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2"/>
+
+    <!-- Right Page Stack (Thickness of multiple pages) -->
+    <path d="M338 205 C280 210 230 225 205 240 L205 248 C230 233 280 218 338 213 Z" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2"/>
+
+    <!-- Red Ribbon Bookmark (Draping out from center spine) -->
+    <path d="M200 110 C205 150 190 220 185 260 L195 275 L205 260 C205 220 210 150 200 110 Z" fill="#ef4444" stroke="#b91c1c" stroke-width="2"/>
+
+    <!-- Main Open Pages (Curving upwards gently) -->
+    <!-- Left Open Page -->
+    <path d="M65 195
+             C120 190 170 145 198 115
+             L198 238
+             C170 220 120 200 65 205 Z"
+          fill="#ffffff" stroke="#94a3b8" stroke-width="3" stroke-linejoin="round"/>
+
+    <!-- Right Open Page -->
+    <path d="M335 195
+             C280 190 230 145 202 115
+             L202 238
+             C230 220 280 200 335 205 Z"
+          fill="#f8fafc" stroke="#94a3b8" stroke-width="3" stroke-linejoin="round"/>
+
+    <!-- Page Content Hints (Graphic pictures and clean paragraph lines, NO TEXT) -->
+    <!-- Left Page: Story Illustration (Cute mountain & sun) -->
+    <g id="left-page-illustration" transform="translate(85, 130)">
+      <circle cx="30" cy="20" r="12" fill="#fde047" stroke="#eab308" stroke-width="1.5"/>
+      <polygon points="10,55 35,28 55,55" fill="#4ade80" stroke="#16a34a" stroke-width="1.5"/>
+      <polygon points="35,55 58,35 78,55" fill="#22c55e" stroke="#15803d" stroke-width="1.5"/>
     </g>
-    <!-- Right page illustration -->
-    <circle cx="50" cy="0" r="18" fill="#FDD835" opacity="0.3"/>
-    <text x="42" y="7" font-family="sans-serif" font-size="22" fill="#FDD835">★</text>
-    <!-- Right page lines -->
-    <g stroke="#BDBDBD" stroke-width="1.5" opacity="0.5">
-      <line x1="15" y1="20" x2="80" y2="16"/>
-      <line x1="15" y1="32" x2="78" y2="28"/>
+
+    <!-- Right Page: Paragraph simulated lines (Smooth rounded lines representing sentences) -->
+    <g id="right-page-lines" stroke="#94a3b8" stroke-width="3" stroke-linecap="round">
+      <line x1="225" y1="140" x2="310" y2="135"/>
+      <line x1="225" y1="155" x2="305" y2="150"/>
+      <line x1="225" y1="170" x2="315" y2="165"/>
+      <line x1="225" y1="185" x2="280" y2="180"/>
     </g>
   </g>
 </svg>

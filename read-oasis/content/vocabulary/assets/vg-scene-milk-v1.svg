@@ -1,22 +1,74 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-milk desc-milk">
-  <title id="title-milk">milk</title>
-  <desc id="desc-milk">A glass of white milk with a straw.</desc>
-  <rect width="400" height="300" rx="20" fill="#E3F2FD"/>
-  <g transform="translate(200, 60)">
-    <!-- Shadow -->
-    <ellipse cx="5" cy="195" rx="45" ry="8" fill="#BBDEFB" opacity="0.4"/>
-    <!-- Glass -->
-    <path d="M-35,30 L-30,185 Q-28,195 0,195 Q28,195 30,185 L35,30 Z" fill="#E3F2FD" stroke="#90CAF9" stroke-width="2.5" opacity="0.8"/>
-    <!-- Milk -->
-    <path d="M-33,40 L-30,185 Q-28,193 0,193 Q28,193 30,185 L33,40 Z" fill="white" stroke="#E0E0E0" stroke-width="1"/>
-    <!-- Milk surface -->
-    <ellipse cx="0" cy="40" rx="33" ry="8" fill="white" stroke="#E0E0E0" stroke-width="1.5"/>
-    <!-- Glass rim -->
-    <ellipse cx="0" cy="30" rx="35" ry="8" fill="none" stroke="#90CAF9" stroke-width="2.5"/>
-    <!-- Glass highlight -->
-    <path d="M-25,50 L-23,170" fill="none" stroke="white" stroke-width="3" opacity="0.4" stroke-linecap="round"/>
-    <!-- Straw -->
-    <line x1="10" y1="5" x2="15" y2="170" stroke="#EF5350" stroke-width="5" stroke-linecap="round"/>
-    <line x1="10" y1="5" x2="15" y2="170" stroke="#E53935" stroke-width="2" stroke-dasharray="8,8" opacity="0.3"/>
+  <title id="title-milk">Milk - Milk carton and full glass</title>
+  <desc id="desc-milk">A classic blue and white milk carton beside a tall drinking glass filled with creamy white milk and a striped straw, occupying the center of the frame.</desc>
+  <defs>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Ground line -->
+  <line x1="30" y1="265" x2="370" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Ground shadows -->
+  <ellipse cx="145" cy="265" rx="65" ry="12" fill="#0f172a" opacity="0.15"/>
+  <ellipse cx="275" cy="265" rx="55" ry="10" fill="#0f172a" opacity="0.15"/>
+
+  <!-- TARGET OBJECT: MILK CARTON & GLASS (Occupying 70% canvas) -->
+  <g id="milk-figure" filter="url(#soft-shadow)">
+    <!-- MILK CARTON (Gable top carton) -->
+    <!-- Gable Peak -->
+    <polygon points="105,75 145,50 185,75 145,90" fill="#bae6fd" stroke="#0284c7" stroke-width="3.5" stroke-linejoin="round"/>
+    <polygon points="105,75 145,50 145,90" fill="#7dd3fc"/>
+    <polygon points="120,58 145,42 170,58 145,72" fill="#0284c7"/>
+
+    <!-- Carton Front & Side -->
+    <!-- Front Face -->
+    <polygon points="105,75 145,90 145,255 105,245" fill="#f8fafc" stroke="#0284c7" stroke-width="3.5" stroke-linejoin="round"/>
+    <!-- Right Face -->
+    <polygon points="145,90 185,75 185,245 145,255" fill="#0284c7" stroke="#0369a1" stroke-width="3.5" stroke-linejoin="round"/>
+
+    <!-- Blue Band on Front Carton -->
+    <polygon points="105,120 145,135 145,185 105,170" fill="#0ea5e9"/>
+
+    <!-- Dairy Cow Silhouette Icon on Front (Iconic dairy cue, NO TEXT) -->
+    <g transform="translate(112, 133) scale(0.65)">
+      <!-- Mini cow head icon -->
+      <ellipse cx="20" cy="20" rx="14" ry="12" fill="#ffffff"/>
+      <polygon points="10,12 6,6 12,9" fill="#ffffff"/>
+      <polygon points="30,12 34,6 28,9" fill="#ffffff"/>
+      <ellipse cx="20" cy="25" rx="8" ry="6" fill="#fbcfe8"/>
+      <circle cx="16" cy="18" r="2" fill="#0284c7"/>
+      <circle cx="24" cy="18" r="2" fill="#0284c7"/>
+    </g>
+
+    <!-- Fresh Drop Graphic on Side -->
+    <path d="M165 130 C165 130 155 145 155 152 C155 158 160 162 165 162 C170 162 175 158 175 152 C175 145 165 130 165 130 Z" fill="#ffffff"/>
+
+    <!-- TALL GLASS OF MILK -->
+    <!-- Striped Straw extending out -->
+    <g id="straw">
+      <path d="M285 140 L315 70 L335 60" fill="none" stroke="#ef4444" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Straw stripes -->
+      <path d="M285 140 L315 70 L335 60" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 8"/>
+    </g>
+
+    <!-- Glass Body (Transparent tapered cylinder) -->
+    <path d="M240 130 L250 255 L300 255 L310 130 Z" fill="#e0f2fe" stroke="#38bdf8" stroke-width="3.5" stroke-linejoin="round" opacity="0.6"/>
+
+    <!-- Milk Liquid inside Glass -->
+    <path d="M243 145 L251 252 L299 252 L307 145 Z" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+    <!-- Milk Top Surface Ellipse -->
+    <ellipse cx="275" cy="145" rx="32" ry="7" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+
+    <!-- Glass Rim (Top Opening) -->
+    <ellipse cx="275" cy="130" rx="35" ry="8" fill="none" stroke="#38bdf8" stroke-width="3.5"/>
+    <ellipse cx="275" cy="255" rx="25" ry="5" fill="#bae6fd" opacity="0.5"/>
+
+    <!-- Glass Glare / Highlight -->
+    <line x1="248" y1="140" x2="255" y2="245" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+
+    <!-- Splash Droplet hovering playfully -->
+    <path d="M255 105 C255 105 248 116 248 120 C248 124 251 127 255 127 C259 127 262 124 262 120 C262 116 255 105 255 105 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
   </g>
 </svg>

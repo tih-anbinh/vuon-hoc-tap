@@ -1,35 +1,79 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-dog desc-dog">
-  <title id="title-dog">dog</title>
-  <desc id="desc-dog">A happy brown dog sitting with its tongue out and tail wagging.</desc>
-  <rect width="400" height="300" rx="20" fill="#E3F2FD"/>
-  <rect y="220" width="400" height="80" rx="0" fill="#C8E6C9"/>
-  <g transform="translate(200, 110)">
-    <!-- Tail wagging -->
-    <path d="M35,50 Q60,30 55,5" fill="none" stroke="#8D6E63" stroke-width="8" stroke-linecap="round"/>
-    <!-- Body -->
-    <ellipse cx="0" cy="55" rx="38" ry="30" fill="#A1887F" stroke="#8D6E63" stroke-width="2.5"/>
-    <!-- Belly patch -->
-    <ellipse cx="0" cy="62" rx="20" ry="16" fill="#D7CCC8"/>
-    <!-- Front legs -->
-    <rect x="-20" y="75" width="12" height="25" rx="5" fill="#A1887F" stroke="#8D6E63" stroke-width="2"/>
-    <rect x="8" y="75" width="12" height="25" rx="5" fill="#A1887F" stroke="#8D6E63" stroke-width="2"/>
-    <!-- Paws -->
-    <ellipse cx="-14" cy="102" rx="8" ry="5" fill="#8D6E63"/>
-    <ellipse cx="14" cy="102" rx="8" ry="5" fill="#8D6E63"/>
-    <!-- Head -->
-    <circle cx="0" cy="15" r="28" fill="#A1887F" stroke="#8D6E63" stroke-width="2.5"/>
-    <!-- Ears (floppy) -->
-    <ellipse cx="-24" cy="8" rx="12" ry="20" fill="#8D6E63" transform="rotate(-15,-24,8)"/>
-    <ellipse cx="24" cy="8" rx="12" ry="20" fill="#8D6E63" transform="rotate(15,24,8)"/>
-    <!-- Face -->
-    <circle cx="-8" cy="10" r="4" fill="#4E342E"/>
-    <circle cx="8" cy="10" r="4" fill="#4E342E"/>
-    <circle cx="-7" cy="9" r="1.5" fill="white"/>
-    <circle cx="9" cy="9" r="1.5" fill="white"/>
-    <!-- Snout -->
-    <ellipse cx="0" cy="22" rx="10" ry="8" fill="#D7CCC8"/>
-    <ellipse cx="0" cy="20" rx="5" ry="3" fill="#4E342E"/>
-    <!-- Tongue -->
-    <ellipse cx="3" cy="28" rx="4" ry="6" fill="#EF9A9A"/>
+  <title id="title-dog">Dog - Happy sitting puppy</title>
+  <desc id="desc-dog">A joyful domestic dog with floppy ears, a wagging tail, open happy mouth with tongue out, and red collar, occupying the center of the frame.</desc>
+  <defs>
+    <linearGradient id="dog-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Ground line -->
+  <line x1="40" y1="265" x2="360" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Ground Shadow -->
+  <ellipse cx="205" cy="265" rx="85" ry="12" fill="#0f172a" opacity="0.15"/>
+
+  <!-- TARGET OBJECT: DOG (Occupying 70% canvas) -->
+  <g id="dog-figure" filter="url(#soft-shadow)">
+    <!-- Happy Wagging Tail (with motion lines) -->
+    <path d="M130 220 C85 200 65 150 90 120" fill="none" stroke="#d97706" stroke-width="18" stroke-linecap="round"/>
+    <path d="M130 220 C85 200 65 150 90 120" fill="none" stroke="#92400e" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Wag motion arcs -->
+    <path d="M60 125 Q75 110 95 110" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+    <path d="M70 145 Q85 130 105 130" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Dog Body (sitting) -->
+    <ellipse cx="200" cy="195" rx="68" ry="62" fill="url(#dog-gold)" stroke="#92400e" stroke-width="4"/>
+
+    <!-- Light belly patch -->
+    <ellipse cx="200" cy="205" rx="42" ry="45" fill="#fef3c7"/>
+
+    <!-- Red Collar with Gold Medallion Tag -->
+    <path d="M165 148 Q200 162 235 148" fill="none" stroke="#dc2626" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="200" cy="164" r="8" fill="#fbbf24" stroke="#b45309" stroke-width="2.5"/>
+
+    <!-- Dog Head -->
+    <circle cx="200" cy="105" r="48" fill="url(#dog-gold)" stroke="#92400e" stroke-width="4"/>
+
+    <!-- Floppy Left Ear -->
+    <path d="M160 85 C130 90 120 140 145 165 C155 170 168 150 164 125 Z" fill="#b45309" stroke="#78350f" stroke-width="3.5" stroke-linejoin="round"/>
+
+    <!-- Floppy Right Ear -->
+    <path d="M240 85 C270 90 280 140 255 165 C245 170 232 150 236 125 Z" fill="#b45309" stroke="#78350f" stroke-width="3.5" stroke-linejoin="round"/>
+
+    <!-- Eyes (Big, friendly, soulful) -->
+    <circle cx="180" cy="98" r="9" fill="#1e293b"/>
+    <circle cx="177" cy="95" r="3" fill="#ffffff"/>
+    <circle cx="220" cy="98" r="9" fill="#1e293b"/>
+    <circle cx="217" cy="95" r="3" fill="#ffffff"/>
+
+    <!-- Eyebrows (expressive puppy eyes) -->
+    <ellipse cx="180" cy="85" rx="6" ry="3" fill="#92400e"/>
+    <ellipse cx="220" cy="85" rx="6" ry="3" fill="#92400e"/>
+
+    <!-- Muzzle / Snout -->
+    <ellipse cx="200" cy="118" rx="22" ry="16" fill="#fef3c7" stroke="#92400e" stroke-width="2.5"/>
+
+    <!-- Big shiny black nose -->
+    <path d="M190 110 Q200 106 210 110 Q200 122 190 110 Z" fill="#1e293b"/>
+    <circle cx="196" cy="110" r="2" fill="#ffffff"/>
+
+    <!-- Open Happy Mouth with Tongue Panting -->
+    <path d="M192 120 Q200 126 208 120" fill="none" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+    <path d="M194 122 Q200 142 206 122 Z" fill="#f43f5e" stroke="#be123c" stroke-width="2"/>
+    <line x1="200" y1="122" x2="200" y2="135" stroke="#be123c" stroke-width="1.5"/>
+
+    <!-- Front Paws standing on floor -->
+    <ellipse cx="175" cy="254" rx="18" ry="12" fill="#fef3c7" stroke="#92400e" stroke-width="3"/>
+    <line x1="170" y1="250" x2="170" y2="260" stroke="#92400e" stroke-width="2"/>
+    <line x1="180" y1="250" x2="180" y2="260" stroke="#92400e" stroke-width="2"/>
+
+    <ellipse cx="225" cy="254" rx="18" ry="12" fill="#fef3c7" stroke="#92400e" stroke-width="3"/>
+    <line x1="220" y1="250" x2="220" y2="260" stroke="#92400e" stroke-width="2"/>
+    <line x1="230" y1="250" x2="230" y2="260" stroke="#92400e" stroke-width="2"/>
   </g>
 </svg>

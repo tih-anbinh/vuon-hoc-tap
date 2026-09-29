@@ -1,38 +1,92 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-frog desc-frog">
-  <title id="title-frog">frog</title>
-  <desc id="desc-frog">A green frog sitting on a lily pad with big round eyes.</desc>
-  <rect width="400" height="300" rx="20" fill="#E0F7FA"/>
-  <!-- Pond -->
-  <ellipse cx="200" cy="220" rx="180" ry="55" fill="#80DEEA"/>
-  <rect y="260" width="400" height="40" fill="#A5D6A7"/>
-  <!-- Lily pad -->
-  <ellipse cx="200" cy="210" rx="55" ry="18" fill="#66BB6A" stroke="#43A047" stroke-width="2"/>
-  <line x1="200" y1="195" x2="200" y2="225" stroke="#43A047" stroke-width="1.5" opacity="0.4"/>
-  <!-- Frog -->
-  <g transform="translate(200, 140)">
-    <!-- Back legs -->
-    <path d="M-30,45 Q-50,55 -45,65 L-35,62 L-42,58 L-30,50" fill="#66BB6A" stroke="#43A047" stroke-width="2"/>
-    <path d="M30,45 Q50,55 45,65 L35,62 L42,58 L30,50" fill="#66BB6A" stroke="#43A047" stroke-width="2"/>
-    <!-- Body -->
-    <ellipse cx="0" cy="35" rx="35" ry="25" fill="#81C784" stroke="#66BB6A" stroke-width="2.5"/>
-    <!-- Belly -->
-    <ellipse cx="0" cy="42" rx="22" ry="14" fill="#C8E6C9"/>
-    <!-- Front legs -->
-    <path d="M-22,48 L-28,58 L-20,56 L-26,55" fill="#66BB6A" stroke="#43A047" stroke-width="2"/>
-    <path d="M22,48 L28,58 L20,56 L26,55" fill="#66BB6A" stroke="#43A047" stroke-width="2"/>
-    <!-- Head -->
-    <ellipse cx="0" cy="12" rx="28" ry="20" fill="#81C784" stroke="#66BB6A" stroke-width="2"/>
-    <!-- Big eyes (protruding) -->
-    <circle cx="-14" cy="-4" r="12" fill="white" stroke="#66BB6A" stroke-width="2"/>
-    <circle cx="14" cy="-4" r="12" fill="white" stroke="#66BB6A" stroke-width="2"/>
-    <circle cx="-14" cy="-2" r="5" fill="#37474F"/>
-    <circle cx="14" cy="-2" r="5" fill="#37474F"/>
-    <circle cx="-13" cy="-3" r="2" fill="white"/>
-    <circle cx="15" cy="-3" r="2" fill="white"/>
-    <!-- Mouth -->
-    <path d="M-15,18 Q0,26 15,18" fill="none" stroke="#43A047" stroke-width="2.5" stroke-linecap="round"/>
-    <!-- Spots -->
-    <circle cx="-12" cy="30" r="4" fill="#66BB6A" opacity="0.5"/>
-    <circle cx="10" cy="35" r="3" fill="#66BB6A" opacity="0.5"/>
+  <title id="title-frog">Frog - Cheerful green frog</title>
+  <desc id="desc-frog">A bright green frog with large bulging eyes, wide friendly smile, and folded leaping legs, sitting proudly in the center.</desc>
+  <defs>
+    <linearGradient id="frog-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+    <linearGradient id="frog-belly" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="100%" stop-color="#bbf7d0"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Ground line -->
+  <line x1="30" y1="265" x2="370" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Ground shadow -->
+  <ellipse cx="200" cy="265" rx="110" ry="12" fill="#0f172a" opacity="0.15"/>
+
+  <!-- TARGET OBJECT: FROG (Occupying 70% canvas) -->
+  <g id="frog-figure" filter="url(#soft-shadow)">
+    <!-- Powerful Folded Hind Legs (Thighs) -->
+    <!-- Left Thigh -->
+    <ellipse cx="115" cy="205" rx="42" ry="32" fill="#16a34a" stroke="#14532d" stroke-width="3.5" transform="rotate(-15 115 205)"/>
+    <!-- Right Thigh -->
+    <ellipse cx="285" cy="205" rx="42" ry="32" fill="#16a34a" stroke="#14532d" stroke-width="3.5" transform="rotate(15 285 205)"/>
+
+    <!-- Hind Webbed Feet (Flat on ground) -->
+    <!-- Left Back Foot -->
+    <g id="hind-foot-left">
+      <ellipse cx="90" cy="250" rx="25" ry="10" fill="#22c55e" stroke="#14532d" stroke-width="3"/>
+      <circle cx="70" cy="252" r="4.5" fill="#15803d"/>
+      <circle cx="85" cy="256" r="4.5" fill="#15803d"/>
+      <circle cx="102" cy="255" r="4.5" fill="#15803d"/>
+    </g>
+    <!-- Right Back Foot -->
+    <g id="hind-foot-right">
+      <ellipse cx="310" cy="250" rx="25" ry="10" fill="#22c55e" stroke="#14532d" stroke-width="3"/>
+      <circle cx="330" cy="252" r="4.5" fill="#15803d"/>
+      <circle cx="315" cy="256" r="4.5" fill="#15803d"/>
+      <circle cx="298" cy="255" r="4.5" fill="#15803d"/>
+    </g>
+
+    <!-- Frog Plump Body -->
+    <ellipse cx="200" cy="185" rx="72" ry="60" fill="url(#frog-green)" stroke="#14532d" stroke-width="4"/>
+
+    <!-- Cream / Yellow Belly -->
+    <ellipse cx="200" cy="195" rx="48" ry="40" fill="url(#frog-belly)"/>
+
+    <!-- Front Arms and Hands -->
+    <!-- Left Arm -->
+    <rect x="150" y="195" width="16" height="52" rx="8" fill="#22c55e" stroke="#14532d" stroke-width="3.5"/>
+    <!-- Left Hand with padded fingertips -->
+    <circle cx="146" cy="252" r="4.5" fill="#15803d"/>
+    <circle cx="158" cy="255" r="4.5" fill="#15803d"/>
+    <circle cx="170" cy="252" r="4.5" fill="#15803d"/>
+
+    <!-- Right Arm -->
+    <rect x="234" y="195" width="16" height="52" rx="8" fill="#22c55e" stroke="#14532d" stroke-width="3.5"/>
+    <!-- Right Hand with padded fingertips -->
+    <circle cx="230" cy="252" r="4.5" fill="#15803d"/>
+    <circle cx="242" cy="255" r="4.5" fill="#15803d"/>
+    <circle cx="254" cy="252" r="4.5" fill="#15803d"/>
+
+    <!-- Big Bulging Eyes (Perched high on head) -->
+    <!-- Left Eyeball Dome -->
+    <circle cx="155" cy="100" r="30" fill="url(#frog-green)" stroke="#14532d" stroke-width="4"/>
+    <circle cx="155" cy="100" r="21" fill="#fef08a"/>
+    <circle cx="155" cy="100" r="13" fill="#1e293b"/>
+    <circle cx="151" cy="96" r="4.5" fill="#ffffff"/>
+
+    <!-- Right Eyeball Dome -->
+    <circle cx="245" cy="100" r="30" fill="url(#frog-green)" stroke="#14532d" stroke-width="4"/>
+    <circle cx="245" cy="100" r="21" fill="#fef08a"/>
+    <circle cx="245" cy="100" r="13" fill="#1e293b"/>
+    <circle cx="241" cy="96" r="4.5" fill="#ffffff"/>
+
+    <!-- Wide Cheerful Smiling Mouth -->
+    <path d="M150 145 Q200 175 250 145" fill="none" stroke="#14532d" stroke-width="4" stroke-linecap="round"/>
+    <!-- Rosy Cheeks -->
+    <ellipse cx="148" cy="142" rx="10" ry="6" fill="#f472b6" opacity="0.6"/>
+    <ellipse cx="252" cy="142" rx="10" ry="6" fill="#f472b6" opacity="0.6"/>
+
+    <!-- Nostril Dots -->
+    <circle cx="192" cy="132" r="2" fill="#14532d"/>
+    <circle cx="208" cy="132" r="2" fill="#14532d"/>
   </g>
 </svg>

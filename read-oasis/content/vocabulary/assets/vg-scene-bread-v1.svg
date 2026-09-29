@@ -1,23 +1,59 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-bread desc-bread">
-  <title id="title-bread">bread</title>
-  <desc id="desc-bread">A loaf of golden brown bread on a cutting board.</desc>
-  <rect width="400" height="300" rx="20" fill="#EFEBE9"/>
-  <!-- Cutting board -->
-  <rect x="80" y="180" width="240" height="20" rx="6" fill="#A1887F" stroke="#8D6E63" stroke-width="2"/>
-  <rect x="85" y="195" width="230" height="4" rx="2" fill="#8D6E63" opacity="0.3"/>
-  <g transform="translate(200, 130)">
-    <!-- Bread loaf -->
-    <path d="M-70,40 Q-75,10 -60,-15 Q-40,-35 0,-38 Q40,-35 60,-15 Q75,10 70,40 Z" fill="#FFB74D" stroke="#F57C00" stroke-width="2.5"/>
-    <!-- Top crust (darker) -->
-    <path d="M-60,-15 Q-40,-35 0,-38 Q40,-35 60,-15 Q40,-20 0,-22 Q-40,-20 -60,-15" fill="#EF6C00" opacity="0.3"/>
-    <!-- Score marks -->
-    <path d="M-30,-20 Q-25,-28 -15,-22" fill="none" stroke="#EF6C00" stroke-width="2" opacity="0.4" stroke-linecap="round"/>
-    <path d="M0,-25 Q5,-32 15,-25" fill="none" stroke="#EF6C00" stroke-width="2" opacity="0.4" stroke-linecap="round"/>
-    <path d="M25,-18 Q30,-26 40,-18" fill="none" stroke="#EF6C00" stroke-width="2" opacity="0.4" stroke-linecap="round"/>
-    <!-- Highlight -->
-    <ellipse cx="-15" cy="-5" rx="20" ry="12" fill="white" opacity="0.1"/>
-    <!-- Steam -->
-    <path d="M-10,-45 Q-15,-55 -8,-60" fill="none" stroke="#BDBDBD" stroke-width="2" opacity="0.4" stroke-linecap="round"/>
-    <path d="M10,-48 Q5,-58 12,-65" fill="none" stroke="#BDBDBD" stroke-width="2" opacity="0.3" stroke-linecap="round"/>
+  <title id="title-bread">Bread - Golden loaf and fresh slice</title>
+  <desc id="desc-bread">A golden baked bread loaf with crisp crust slashes and a fresh cut slice of bread resting beside it, occupying the center of the frame.</desc>
+  <defs>
+    <linearGradient id="crust-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="60%" stop-color="#b45309"/>
+      <stop offset="100%" stop-color="#92400e"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Ground line -->
+  <line x1="30" y1="265" x2="370" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Ground shadows -->
+  <ellipse cx="200" cy="265" rx="120" ry="12" fill="#0f172a" opacity="0.15"/>
+
+  <!-- TARGET OBJECT: BREAD (Occupying 70% canvas) -->
+  <g id="bread-figure" filter="url(#soft-shadow)">
+    <!-- Main Loaf Body (Bakery sourdough/artisan oval loaf) -->
+    <path d="M70 200 C60 140 100 100 170 95 C250 90 320 120 330 180 C335 220 290 245 200 245 C110 245 75 230 70 200 Z" fill="url(#crust-grad)" stroke="#78350f" stroke-width="4"/>
+
+    <!-- Loaf Crust Diagonal Slashes (Artisan cuts showing pale tender interior) -->
+    <path d="M125 115 C130 145 140 180 148 205" fill="none" stroke="#fef3c7" stroke-width="8" stroke-linecap="round"/>
+    <path d="M125 115 C130 145 140 180 148 205" fill="none" stroke="#78350f" stroke-width="2.5" stroke-linecap="round"/>
+
+    <path d="M175 105 C185 140 195 180 205 210" fill="none" stroke="#fef3c7" stroke-width="8" stroke-linecap="round"/>
+    <path d="M175 105 C185 140 195 180 205 210" fill="none" stroke="#78350f" stroke-width="2.5" stroke-linecap="round"/>
+
+    <path d="M225 110 C235 140 248 175 258 205" fill="none" stroke="#fef3c7" stroke-width="8" stroke-linecap="round"/>
+    <path d="M225 110 C235 140 248 175 258 205" fill="none" stroke="#78350f" stroke-width="2.5" stroke-linecap="round"/>
+
+    <path d="M275 125 C282 145 290 170 298 195" fill="none" stroke="#fef3c7" stroke-width="8" stroke-linecap="round"/>
+    <path d="M275 125 C282 145 290 170 298 195" fill="none" stroke="#78350f" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Cut Slice in Foreground (Leaning forward, unmistakable bread slice shape) -->
+    <g id="bread-slice" transform="translate(45, 20)">
+      <!-- Outer crust perimeter -->
+      <path d="M75 130 C75 105 100 100 115 112 C130 100 155 105 155 130 C155 150 160 215 150 230 C140 238 85 238 80 230 C70 215 75 150 75 130 Z" fill="#b45309" stroke="#78350f" stroke-width="3.5"/>
+      <!-- Soft cream bread crumb -->
+      <path d="M82 133 C82 113 102 108 115 118 C128 108 148 113 148 133 C148 152 152 210 144 223 C135 230 92 230 86 223 C78 210 82 152 82 133 Z" fill="#fffbeb"/>
+      <!-- Bread crumb pore textures -->
+      <circle cx="100" cy="145" r="3" fill="#fde68a" opacity="0.6"/>
+      <circle cx="125" cy="155" r="4" fill="#fde68a" opacity="0.6"/>
+      <circle cx="110" cy="180" r="3.5" fill="#fde68a" opacity="0.6"/>
+      <circle cx="132" cy="190" r="2.5" fill="#fde68a" opacity="0.6"/>
+      <circle cx="98" cy="205" r="3" fill="#fde68a" opacity="0.6"/>
+    </g>
+
+    <!-- Little bread crumbs on surface -->
+    <circle cx="85" cy="260" r="2" fill="#d97706"/>
+    <circle cx="95" cy="262" r="3" fill="#b45309"/>
+    <circle cx="315" cy="258" r="2.5" fill="#b45309"/>
+    <circle cx="328" cy="260" r="2" fill="#d97706"/>
   </g>
 </svg>

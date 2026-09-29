@@ -1,38 +1,90 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-father desc-father">
-  <title id="title-father">father</title>
-  <desc id="desc-father">A tall man (father) standing with a warm smile.</desc>
-  <rect width="400" height="300" rx="20" fill="#FFF8E1"/>
-  <rect y="240" width="400" height="60" rx="0" fill="#C8E6C9"/>
-  <g transform="translate(200, 30)">
-    <!-- Legs -->
-    <rect x="-14" y="130" width="12" height="55" rx="5" fill="#455A64"/>
-    <rect x="2" y="130" width="12" height="55" rx="5" fill="#455A64"/>
-    <!-- Shoes -->
-    <ellipse cx="-8" cy="188" rx="12" ry="6" fill="#37474F"/>
-    <ellipse cx="8" cy="188" rx="12" ry="6" fill="#37474F"/>
-    <!-- Body (shirt) -->
-    <ellipse cx="0" cy="95" rx="28" ry="42" fill="#66BB6A" stroke="#43A047" stroke-width="2"/>
-    <!-- Collar -->
-    <path d="M-8,58 L0,68 L8,58" fill="none" stroke="#43A047" stroke-width="2"/>
-    <!-- Arms -->
-    <line x1="-14" y1="70" x2="-35" y2="110" stroke="#FFCC80" stroke-width="9" stroke-linecap="round"/>
-    <line x1="14" y1="70" x2="35" y2="110" stroke="#FFCC80" stroke-width="9" stroke-linecap="round"/>
-    <!-- Hands -->
-    <circle cx="-37" cy="112" r="6" fill="#FFCC80"/>
-    <circle cx="37" cy="112" r="6" fill="#FFCC80"/>
-    <!-- Head -->
-    <circle cx="0" cy="30" r="28" fill="#FFCC80" stroke="#F9A825" stroke-width="2"/>
-    <!-- Hair (short, neat) -->
-    <path d="M-22,10 Q-18,-8 0,-10 Q18,-8 22,10" fill="#4E342E" stroke="#3E2723" stroke-width="1.5"/>
-    <!-- Face -->
-    <circle cx="-8" cy="24" r="3.5" fill="#4E342E"/>
-    <circle cx="8" cy="24" r="3.5" fill="#4E342E"/>
-    <circle cx="-7" cy="23" r="1.2" fill="white"/>
-    <circle cx="9" cy="23" r="1.2" fill="white"/>
-    <path d="M-6,36 Q0,42 6,36" fill="none" stroke="#4E342E" stroke-width="2" stroke-linecap="round"/>
-    <!-- Glasses -->
-    <circle cx="-8" cy="24" r="7" fill="none" stroke="#795548" stroke-width="1.5"/>
-    <circle cx="8" cy="24" r="7" fill="none" stroke="#795548" stroke-width="1.5"/>
-    <line x1="-1" y1="24" x2="1" y2="24" stroke="#795548" stroke-width="1.5"/>
+  <title id="title-father">Father - Friendly adult man</title>
+  <desc id="desc-father">A kind smiling father in a blue collared shirt and trousers, standing tall with a warm welcoming gesture, occupying the center of the frame.</desc>
+  <defs>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Ground line -->
+  <line x1="30" y1="280" x2="370" y2="280" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Ground shadow -->
+  <ellipse cx="200" cy="280" rx="65" ry="10" fill="#0f172a" opacity="0.15"/>
+
+  <!-- TARGET OBJECT: FATHER (Occupying 80% canvas) -->
+  <g id="father-figure" filter="url(#soft-shadow)">
+    <!-- Trousers & Shoes -->
+    <!-- Left Leg -->
+    <path d="M172 165 L165 260 L188 260 L195 165 Z" fill="#475569" stroke="#334155" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- Left Leather Shoe -->
+    <ellipse cx="174" cy="268" rx="16" ry="8" fill="#1e293b" stroke="#0f172a" stroke-width="2"/>
+
+    <!-- Right Leg -->
+    <path d="M205 165 L212 260 L235 260 L228 165 Z" fill="#475569" stroke="#334155" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- Right Leather Shoe -->
+    <ellipse cx="226" cy="268" rx="16" ry="8" fill="#1e293b" stroke="#0f172a" stroke-width="2"/>
+
+    <!-- Belt -->
+    <rect x="170" y="160" width="60" height="8" fill="#1e293b" stroke="#0f172a" stroke-width="1.5"/>
+    <rect x="195" y="159" width="10" height="10" fill="#facc15" stroke="#ca8a04" stroke-width="1.5"/>
+
+    <!-- Torso: Collared Shirt (Smart Navy/Steel Blue) -->
+    <path d="M160 85 L240 85 L232 162 L168 162 Z" fill="#2563eb" stroke="#1d4ed8" stroke-width="3" stroke-linejoin="round"/>
+    <!-- Shirt Placket & Buttons -->
+    <line x1="200" y1="85" x2="200" y2="162" stroke="#1d4ed8" stroke-width="2"/>
+    <circle cx="200" cy="105" r="2" fill="#ffffff"/>
+    <circle cx="200" cy="125" r="2" fill="#ffffff"/>
+    <circle cx="200" cy="145" r="2" fill="#ffffff"/>
+    <!-- Shirt Collar -->
+    <polygon points="186,85 198,100 200,85" fill="#1d4ed8"/>
+    <polygon points="214,85 202,100 200,85" fill="#1d4ed8"/>
+
+    <!-- Left Arm Resting Warmly at Side -->
+    <path d="M160 85 C145 105 142 135 148 160" fill="none" stroke="#2563eb" stroke-width="15" stroke-linecap="round"/>
+    <path d="M148 160 L146 172" fill="none" stroke="#fed7aa" stroke-width="13" stroke-linecap="round"/>
+    <circle cx="146" cy="172" r="7" fill="#fed7aa" stroke="#fb923c" stroke-width="2"/>
+
+    <!-- Right Arm in Welcoming Open Gesture -->
+    <path d="M240 85 C260 100 272 118 285 130" fill="none" stroke="#2563eb" stroke-width="15" stroke-linecap="round"/>
+    <path d="M285 130 L296 138" fill="none" stroke="#fed7aa" stroke-width="13" stroke-linecap="round"/>
+    <!-- Open Welcoming Hand -->
+    <circle cx="298" cy="140" r="8" fill="#fed7aa" stroke="#fb923c" stroke-width="2"/>
+    <path d="M298 134 C304 135 306 142 302 146" fill="none" stroke="#fb923c" stroke-width="2"/>
+
+    <!-- Head & Strong Neck -->
+    <rect x="190" y="72" width="20" height="18" fill="#fed7aa" stroke="#fb923c" stroke-width="2"/>
+    <ellipse cx="200" cy="50" rx="28" ry="32" fill="#fed7aa" stroke="#fb923c" stroke-width="3"/>
+
+    <!-- Friendly Adult Ears -->
+    <ellipse cx="171" cy="52" rx="5" ry="9" fill="#fed7aa" stroke="#fb923c" stroke-width="2"/>
+    <ellipse cx="229" cy="52" rx="5" ry="9" fill="#fed7aa" stroke="#fb923c" stroke-width="2"/>
+
+    <!-- Short Neatly Styled Dark Hair -->
+    <path d="M172 45 C170 20 230 18 230 45 C222 32 205 28 190 30 C180 32 174 38 172 45 Z" fill="#334155" stroke="#1e293b" stroke-width="3" stroke-linejoin="round"/>
+    <!-- Sideburns -->
+    <rect x="171" y="44" width="4" height="10" fill="#334155"/>
+    <rect x="225" y="44" width="4" height="10" fill="#334155"/>
+
+    <!-- Eyebrows (Defined and kind) -->
+    <path d="M180 43 Q188 39 194 42" fill="none" stroke="#1e293b" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M206 42 Q212 39 220 43" fill="none" stroke="#1e293b" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Warm Smiling Eyes -->
+    <ellipse cx="186" cy="50" rx="4.5" ry="5" fill="#0f172a"/>
+    <circle cx="184" cy="48" r="1.5" fill="#ffffff"/>
+    <ellipse cx="214" cy="50" rx="4.5" ry="5" fill="#0f172a"/>
+    <circle cx="212" cy="48" r="1.5" fill="#ffffff"/>
+    <!-- Crow's feet smile crinkles -->
+    <path d="M178 50 L174 48" stroke="#f97316" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M222 50 L226 48" stroke="#f97316" stroke-width="1.5" stroke-linecap="round"/>
+
+    <!-- Defined Nose -->
+    <path d="M198 50 L202 58 L197 60" fill="none" stroke="#ea580c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Warm Broad Smile -->
+    <path d="M188 66 Q200 78 212 66" fill="#dc2626" stroke="#991b1b" stroke-width="2"/>
+    <path d="M190 66 Q200 70 210 66" fill="#ffffff"/>
   </g>
 </svg>

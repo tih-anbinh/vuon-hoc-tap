@@ -1,26 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-chair desc-chair">
-  <title id="title-chair">chair</title>
-  <desc id="desc-chair">A wooden chair with a cushion on the seat.</desc>
-  <rect width="400" height="300" rx="20" fill="#FFF8E1"/>
-  <rect y="240" width="400" height="60" rx="0" fill="#EFEBE9"/>
-  <g transform="translate(200, 60)">
-    <!-- Back legs -->
-    <rect x="-40" y="0" width="10" height="170" rx="4" fill="#A1887F" stroke="#8D6E63" stroke-width="2"/>
-    <rect x="30" y="0" width="10" height="170" rx="4" fill="#A1887F" stroke="#8D6E63" stroke-width="2"/>
-    <!-- Backrest -->
-    <rect x="-38" y="5" width="76" height="60" rx="6" fill="#BCAAA4" stroke="#8D6E63" stroke-width="2"/>
-    <!-- Backrest slats -->
-    <rect x="-25" y="10" width="8" height="50" rx="3" fill="#A1887F"/>
-    <rect x="-4" y="10" width="8" height="50" rx="3" fill="#A1887F"/>
-    <rect x="17" y="10" width="8" height="50" rx="3" fill="#A1887F"/>
-    <!-- Seat -->
-    <rect x="-45" y="90" width="90" height="12" rx="5" fill="#A1887F" stroke="#8D6E63" stroke-width="2"/>
-    <!-- Cushion -->
-    <rect x="-38" y="78" width="76" height="14" rx="6" fill="#EF9A9A" stroke="#EF5350" stroke-width="1.5"/>
-    <!-- Front legs -->
-    <rect x="-40" y="100" width="10" height="70" rx="4" fill="#A1887F" stroke="#8D6E63" stroke-width="2"/>
-    <rect x="30" y="100" width="10" height="70" rx="4" fill="#A1887F" stroke="#8D6E63" stroke-width="2"/>
-    <!-- Cross bar -->
-    <rect x="-30" y="140" width="60" height="6" rx="3" fill="#8D6E63"/>
+  <title id="title-chair">Chair - Sturdy wooden chair</title>
+  <desc id="desc-chair">A classic sturdy wooden dining chair with slatted backrest, wide comfortable seat, and four legs with stretchers, occupying the center of the frame.</desc>
+  <defs>
+    <linearGradient id="chair-wood" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="60%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Ground line -->
+  <line x1="30" y1="265" x2="370" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Ground shadow -->
+  <ellipse cx="205" cy="265" rx="85" ry="12" fill="#0f172a" opacity="0.15"/>
+
+  <!-- TARGET OBJECT: CHAIR (Occupying 70% canvas) -->
+  <g id="chair-figure" filter="url(#soft-shadow)">
+    <!-- Back Left Leg (extends all the way up to form backrest upright) -->
+    <rect x="145" y="45" width="16" height="215" rx="4" fill="#92400e" stroke="#451a03" stroke-width="3"/>
+
+    <!-- Back Right Leg (upright) -->
+    <rect x="235" y="45" width="16" height="215" rx="4" fill="#b45309" stroke="#451a03" stroke-width="3"/>
+
+    <!-- Top Curved Backrest Rail -->
+    <path d="M140 55 C170 40 225 40 255 55 L255 75 C225 65 170 65 140 75 Z" fill="url(#chair-wood)" stroke="#451a03" stroke-width="3.5"/>
+
+    <!-- Lower Backrest Rail -->
+    <rect x="155" y="125" width="85" height="12" rx="3" fill="url(#chair-wood)" stroke="#451a03" stroke-width="2.5"/>
+
+    <!-- Vertical Back Slats (3 decorative wooden spindles) -->
+    <rect x="170" y="72" width="10" height="55" rx="2" fill="url(#chair-wood)" stroke="#451a03" stroke-width="2"/>
+    <rect x="193" y="70" width="10" height="57" rx="2" fill="url(#chair-wood)" stroke="#451a03" stroke-width="2"/>
+    <rect x="216" y="72" width="10" height="55" rx="2" fill="url(#chair-wood)" stroke="#451a03" stroke-width="2"/>
+
+    <!-- Rear Leg Stretcher / Crossbar -->
+    <line x1="155" y1="205" x2="245" y2="205" stroke="#78350f" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- Left Side Stretcher (connecting back left and front left legs) -->
+    <line x1="155" y1="215" x2="135" y2="225" stroke="#78350f" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- Right Side Stretcher (connecting back right and front right legs) -->
+    <line x1="245" y1="215" x2="265" y2="225" stroke="#78350f" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- Front Stretcher -->
+    <line x1="135" y1="230" x2="265" y2="230" stroke="#92400e" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- Front Left Leg -->
+    <rect x="125" y="165" width="16" height="95" rx="4" fill="url(#chair-wood)" stroke="#451a03" stroke-width="3.5"/>
+
+    <!-- Front Right Leg -->
+    <rect x="255" y="165" width="16" height="95" rx="4" fill="url(#chair-wood)" stroke="#451a03" stroke-width="3.5"/>
+
+    <!-- Chair Seat (3D perspective quad with rounded corners) -->
+    <!-- Seat Underside Apron -->
+    <polygon points="120,165 276,165 276,178 120,178" fill="#92400e" stroke="#451a03" stroke-width="3"/>
+    <!-- Seat Surface -->
+    <polygon points="140,150 255,150 280,168 116,168" fill="url(#chair-wood)" stroke="#451a03" stroke-width="3.5"/>
+    <path d="M116 168 Q198 172 280 168 L280 174 Q198 178 116 174 Z" fill="#d97706" stroke="#451a03" stroke-width="2"/>
   </g>
 </svg>

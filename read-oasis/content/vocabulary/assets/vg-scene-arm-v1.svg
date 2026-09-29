@@ -1,30 +1,57 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-arm desc-arm">
-  <title id="title-arm">arm</title>
-  <desc id="desc-arm">A child waving their arm with an arrow pointing to the arm.</desc>
-  <rect width="400" height="300" rx="20" fill="#E8F5E9"/>
-  <rect y="230" width="400" height="70" rx="0" fill="#C8E6C9"/>
-  <!-- Character (upper body focus) -->
-  <g transform="translate(180, 80)">
-    <!-- Body -->
-    <ellipse cx="0" cy="80" rx="30" ry="40" fill="#42A5F5" stroke="#1E88E5" stroke-width="2"/>
-    <!-- Left arm (highlighted) -->
-    <line x1="-15" y1="55" x2="-55" y2="30" stroke="#FFCC80" stroke-width="12" stroke-linecap="round"/>
-    <circle cx="-58" cy="28" r="7" fill="#FFCC80" stroke="#F9A825" stroke-width="1.5"/>
-    <!-- Right arm -->
-    <line x1="15" y1="65" x2="40" y2="90" stroke="#FFCC80" stroke-width="12" stroke-linecap="round"/>
-    <circle cx="42" cy="92" r="7" fill="#FFCC80"/>
-    <!-- Head -->
-    <circle cx="0" cy="25" r="25" fill="#FFCC80" stroke="#F9A825" stroke-width="2"/>
-    <path d="M-18,8 Q-10,-8 0,-6 Q10,-8 18,8" fill="#5D4037" stroke="#4E342E" stroke-width="1.5"/>
-    <circle cx="-7" cy="20" r="3" fill="#4E342E"/>
-    <circle cx="9" cy="20" r="3" fill="#4E342E"/>
-    <path d="M-4,30 Q0,34 4,30" fill="none" stroke="#4E342E" stroke-width="2" stroke-linecap="round"/>
+  <title id="title-arm">Arm - Strong flexed arm</title>
+  <desc id="desc-arm">A strong muscular arm bent at the elbow showing a flexed bicep and clenched fist, occupying the center of the frame.</desc>
+  <defs>
+    <linearGradient id="arm-skin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fed7aa"/>
+      <stop offset="60%" stop-color="#fdba74"/>
+      <stop offset="100%" stop-color="#fb923c"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Power sparkles (reinforce strong arm) -->
+  <path d="M260 70 L265 55 L270 70 L285 75 L270 80 L265 95 L260 80 L245 75 Z" fill="#fbbf24"/>
+  <circle cx="295" cy="100" r="3" fill="#f59e0b"/>
+  <circle cx="230" cy="50" r="2.5" fill="#f59e0b"/>
+
+  <!-- TARGET OBJECT: ARM (Occupying 70% canvas) -->
+  <g id="arm-figure" filter="url(#soft-shadow)">
+    <!-- T-Shirt Sleeve at Shoulder -->
+    <path d="M60 170 C60 150 90 140 120 145 L110 225 C80 220 60 200 60 170 Z" fill="#3b82f6" stroke="#1d4ed8" stroke-width="4" stroke-linejoin="round"/>
+    <line x1="85" y1="145" x2="80" y2="223" stroke="#2563eb" stroke-width="3"/>
+
+    <!-- Entire Flexed Arm Path: Shoulder -> Bicep -> Forearm -> Clenched Fist -> Elbow -> Tricep -->
+    <path d="M115 155
+             C135 150 165 110 205 110
+             C235 110 240 145 220 180
+             L255 135
+             C270 115 315 110 325 140
+             C330 160 315 180 290 190
+             L215 240
+             C185 260 155 240 145 225
+             C130 200 110 190 108 185"
+          fill="url(#arm-skin)" stroke="#c2410c" stroke-width="4" stroke-linejoin="round"/>
+
+    <!-- Bicep Contour Peak -->
+    <path d="M165 140 C185 130 210 140 220 165" fill="none" stroke="#ea580c" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Elbow crease -->
+    <path d="M190 200 C180 215 170 210 165 205" fill="none" stroke="#ea580c" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Clenched Fist Details -->
+    <!-- Fingers curled in -->
+    <!-- Index Finger -->
+    <path d="M265 138 C275 125 300 125 305 140 C305 148 290 155 275 152" fill="#fdba74" stroke="#c2410c" stroke-width="2.5"/>
+    <!-- Middle Finger -->
+    <path d="M275 152 C285 140 312 142 315 156 C315 165 295 170 280 168" fill="#fdba74" stroke="#c2410c" stroke-width="2.5"/>
+    <!-- Ring Finger -->
+    <path d="M280 168 C290 158 312 160 312 172 C312 180 295 185 282 182" fill="#fdba74" stroke="#c2410c" stroke-width="2.5"/>
+    <!-- Pinky Finger -->
+    <path d="M282 182 C290 175 305 178 305 188 C305 195 290 198 280 195" fill="#fdba74" stroke="#c2410c" stroke-width="2.5"/>
+    <!-- Thumb wrapped over fingers -->
+    <path d="M255 148 C255 135 272 135 280 155 C280 170 265 175 255 165 Z" fill="#fed7aa" stroke="#c2410c" stroke-width="2.5"/>
   </g>
-  <!-- Arrow pointing to arm -->
-  <g fill="none" stroke="#E53935" stroke-width="3">
-    <path d="M280,80 Q260,70 240,65" stroke-linecap="round"/>
-    <polygon points="238,60 230,68 242,70" fill="#E53935" stroke="none"/>
-  </g>
-  <!-- Label -->
-  <text x="285" y="85" font-family="sans-serif" font-size="20" font-weight="bold" fill="#E53935">arm</text>
 </svg>

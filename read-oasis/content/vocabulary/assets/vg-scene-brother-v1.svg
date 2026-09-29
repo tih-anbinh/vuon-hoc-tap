@@ -1,31 +1,99 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-brother desc-brother">
-  <title id="title-brother">brother</title>
-  <desc id="desc-brother">A boy standing and waving hello with a friendly smile.</desc>
-  <rect width="400" height="300" rx="20" fill="#E3F2FD"/>
-  <rect y="230" width="400" height="70" rx="0" fill="#C8E6C9"/>
-  <g transform="translate(200, 60)">
-    <!-- Legs -->
-    <rect x="-14" y="110" width="12" height="45" rx="5" fill="#5D4037"/>
-    <rect x="2" y="110" width="12" height="45" rx="5" fill="#5D4037"/>
-    <!-- Shoes -->
-    <ellipse cx="-8" cy="158" rx="10" ry="6" fill="#37474F"/>
-    <ellipse cx="8" cy="158" rx="10" ry="6" fill="#37474F"/>
-    <!-- Body (t-shirt) -->
-    <ellipse cx="0" cy="80" rx="25" ry="35" fill="#42A5F5" stroke="#1E88E5" stroke-width="2"/>
-    <!-- Arms -->
-    <line x1="-12" y1="60" x2="-35" y2="45" stroke="#FFCC80" stroke-width="8" stroke-linecap="round"/>
-    <line x1="12" y1="60" x2="35" y2="90" stroke="#FFCC80" stroke-width="8" stroke-linecap="round"/>
-    <!-- Waving hand -->
-    <circle cx="-38" cy="42" r="6" fill="#FFCC80"/>
-    <!-- Head -->
-    <circle cx="0" cy="25" r="25" fill="#FFCC80" stroke="#F9A825" stroke-width="2"/>
-    <!-- Hair (short, boy style) -->
-    <path d="M-20,6 Q-15,-12 0,-14 Q15,-12 20,6" fill="#5D4037" stroke="#4E342E" stroke-width="2"/>
-    <!-- Face -->
-    <circle cx="-7" cy="20" r="3.5" fill="#4E342E"/>
-    <circle cx="7" cy="20" r="3.5" fill="#4E342E"/>
-    <circle cx="-6" cy="19" r="1.2" fill="white"/>
-    <circle cx="8" cy="19" r="1.2" fill="white"/>
-    <path d="M-5,30 Q0,35 5,30" fill="none" stroke="#4E342E" stroke-width="2" stroke-linecap="round"/>
+  <title id="title-brother">Brother - Cheerful boy</title>
+  <desc id="desc-brother">A cheerful young boy with a baseball cap, energetic smile, t-shirt and shorts giving a friendly wave, occupying the center of the frame.</desc>
+  <defs>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Ground line -->
+  <line x1="30" y1="270" x2="370" y2="270" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Ground shadow -->
+  <ellipse cx="195" cy="270" rx="60" ry="10" fill="#0f172a" opacity="0.15"/>
+
+  <!-- TARGET OBJECT: BROTHER (Occupying 75% canvas) -->
+  <g id="brother-figure" filter="url(#soft-shadow)">
+    <!-- Legs & Sneakers -->
+    <!-- Left Leg -->
+    <rect x="165" y="195" width="22" height="50" rx="8" fill="#fed7aa" stroke="#fb923c" stroke-width="2.5"/>
+    <ellipse cx="174" cy="256" rx="16" ry="9" fill="#dc2626" stroke="#991b1b" stroke-width="2.5"/>
+    <rect x="160" y="260" width="28" height="6" rx="2" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+
+    <!-- Right Leg -->
+    <rect x="205" y="195" width="22" height="50" rx="8" fill="#fed7aa" stroke="#fb923c" stroke-width="2.5"/>
+    <ellipse cx="218" cy="256" rx="16" ry="9" fill="#dc2626" stroke="#991b1b" stroke-width="2.5"/>
+    <rect x="204" y="260" width="28" height="6" rx="2" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+
+    <!-- Denim Shorts -->
+    <path d="M155 160 L235 160 L238 202 L202 202 L195 178 L188 202 L152 202 Z" fill="#2563eb" stroke="#1e40af" stroke-width="3" stroke-linejoin="round"/>
+    <line x1="195" y1="160" x2="195" y2="178" stroke="#1d4ed8" stroke-width="2"/>
+
+    <!-- T-Shirt Body (Bright Teal/Cyan) -->
+    <path d="M150 105 L240 105 L245 165 L145 165 Z" fill="#06b6d4" stroke="#0891b2" stroke-width="3.5" stroke-linejoin="round"/>
+    <!-- Star graphic on shirt -->
+    <polygon points="195,125 198,134 207,134 200,139 203,148 195,142 187,148 190,139 183,134 192,134" fill="#facc15"/>
+
+    <!-- Left Arm Resting on Hip -->
+    <path d="M150 105 C130 115 125 140 135 155 C142 165 152 158 152 150" fill="none" stroke="#fed7aa" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M150 105 C130 115 125 140 135 155 C142 165 152 158 152 150" fill="none" stroke="#fb923c" stroke-width="2.5"/>
+    <!-- Sleeve -->
+    <path d="M150 105 L132 122 L142 135 L156 122 Z" fill="#0891b2"/>
+
+    <!-- Right Arm Waving Cheerfully -->
+    <path d="M240 105 C265 95 285 75 292 55" fill="none" stroke="#fed7aa" stroke-width="14" stroke-linecap="round"/>
+    <path d="M240 105 C265 95 285 75 292 55" fill="none" stroke="#fb923c" stroke-width="2.5"/>
+    <!-- Sleeve -->
+    <path d="M236 105 L255 118 L264 105 L248 95 Z" fill="#0891b2"/>
+    <!-- Waving Hand -->
+    <g id="waving-hand" transform="translate(292, 45)">
+      <circle cx="5" cy="5" r="10" fill="#fed7aa" stroke="#fb923c" stroke-width="2"/>
+      <ellipse cx="2" cy="-4" rx="3.5" ry="6" fill="#fed7aa" stroke="#fb923c" stroke-width="1.5"/>
+      <ellipse cx="8" cy="-5" rx="3.5" ry="7" fill="#fed7aa" stroke="#fb923c" stroke-width="1.5"/>
+      <ellipse cx="14" cy="-3" rx="3.5" ry="6" fill="#fed7aa" stroke="#fb923c" stroke-width="1.5"/>
+      <!-- Wave motion lines -->
+      <path d="M18 -12 C24 -5 24 10 18 18" fill="none" stroke="#0891b2" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M24 -8 C30 -2 30 6 24 12" fill="none" stroke="#0891b2" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+
+    <!-- Head & Neck -->
+    <rect x="186" y="92" width="18" height="18" fill="#fed7aa" stroke="#fb923c" stroke-width="2"/>
+    <circle cx="195" cy="65" r="35" fill="#fed7aa" stroke="#fb923c" stroke-width="3.5"/>
+
+    <!-- Friendly Ears -->
+    <ellipse cx="160" cy="68" rx="6" ry="9" fill="#fed7aa" stroke="#fb923c" stroke-width="2"/>
+    <ellipse cx="230" cy="68" rx="6" ry="9" fill="#fed7aa" stroke="#fb923c" stroke-width="2"/>
+
+    <!-- Boyish Hair Peeking from Cap -->
+    <path d="M165 55 C162 48 168 45 172 50 C175 42 182 45 185 52" fill="#78350f" stroke="#451a03" stroke-width="2"/>
+
+    <!-- Cool Cap (Turned slightly sideways/forward) -->
+    <!-- Cap Dome -->
+    <path d="M160 52 C160 25 230 25 230 52 Z" fill="#ef4444" stroke="#b91c1c" stroke-width="3.5"/>
+    <circle cx="195" cy="26" r="3.5" fill="#ffffff"/>
+    <!-- Cap Visor / Peak -->
+    <path d="M160 50 C155 52 140 56 135 60 C145 66 175 62 185 55 Z" fill="#b91c1c" stroke="#7f1d1d" stroke-width="2"/>
+
+    <!-- Face Details -->
+    <!-- Eyebrows -->
+    <path d="M174 58 Q182 54 188 57" fill="none" stroke="#78350f" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M202 57 Q208 54 216 58" fill="none" stroke="#78350f" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Bright Eyes -->
+    <circle cx="182" cy="65" r="5" fill="#0f172a"/>
+    <circle cx="180" cy="63" r="1.5" fill="#ffffff"/>
+    <circle cx="208" cy="65" r="5" fill="#0f172a"/>
+    <circle cx="206" cy="63" r="1.5" fill="#ffffff"/>
+
+    <!-- Cute Nose -->
+    <path d="M194 68 Q196 73 192 74" fill="none" stroke="#ea580c" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Cheerful Grin -->
+    <path d="M182 78 Q195 90 208 78" fill="#dc2626" stroke="#991b1b" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M185 78 Q195 82 205 78" fill="#ffffff"/>
+    <!-- Rosy Cheeks -->
+    <circle cx="172" cy="74" r="5" fill="#f43f5e" opacity="0.35"/>
+    <circle cx="218" cy="74" r="5" fill="#f43f5e" opacity="0.35"/>
   </g>
 </svg>

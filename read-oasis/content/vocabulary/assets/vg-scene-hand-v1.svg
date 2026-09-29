@@ -1,29 +1,59 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-hand desc-hand">
-  <title id="title-hand">hand</title>
-  <desc id="desc-hand">An open hand waving hello with five fingers spread out.</desc>
-  <rect width="400" height="300" rx="20" fill="#E3F2FD"/>
-  <g transform="translate(200, 155)">
-    <!-- Wrist/arm -->
-    <rect x="-20" y="40" width="40" height="50" rx="15" fill="#FFCC80" stroke="#F9A825" stroke-width="2"/>
-    <!-- Palm -->
-    <ellipse cx="0" cy="20" rx="40" ry="35" fill="#FFCC80" stroke="#F9A825" stroke-width="2.5"/>
-    <!-- Thumb -->
-    <path d="M-35,10 Q-55,0 -50,-20 Q-48,-28 -40,-25 Q-35,-22 -32,0" fill="#FFCC80" stroke="#F9A825" stroke-width="2"/>
-    <!-- Index finger -->
-    <rect x="-22" y="-55" width="14" height="45" rx="7" fill="#FFCC80" stroke="#F9A825" stroke-width="2"/>
-    <!-- Middle finger -->
-    <rect x="-7" y="-62" width="14" height="50" rx="7" fill="#FFCC80" stroke="#F9A825" stroke-width="2"/>
-    <!-- Ring finger -->
-    <rect x="8" y="-55" width="14" height="45" rx="7" fill="#FFCC80" stroke="#F9A825" stroke-width="2"/>
-    <!-- Pinky -->
-    <rect x="22" y="-45" width="12" height="38" rx="6" fill="#FFCC80" stroke="#F9A825" stroke-width="2"/>
-    <!-- Palm lines -->
-    <path d="M-20,15 Q0,25 20,15" fill="none" stroke="#F9A825" stroke-width="1.5" opacity="0.3"/>
-    <path d="M-15,28 Q0,35 15,28" fill="none" stroke="#F9A825" stroke-width="1.5" opacity="0.3"/>
-  </g>
-  <!-- Wave motion lines -->
-  <g fill="none" stroke="#42A5F5" stroke-width="2" opacity="0.4">
-    <path d="M290,100 Q300,95 295,85" stroke-linecap="round"/>
-    <path d="M300,110 Q312,105 308,92" stroke-linecap="round"/>
+  <title id="title-hand">Hand - Open waving hand</title>
+  <desc id="desc-hand">An open hand showing five fingers, palm lines, and wrist, occupying the center of the frame.</desc>
+  <defs>
+    <linearGradient id="hand-skin" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffedd5"/>
+      <stop offset="60%" stop-color="#fed7aa"/>
+      <stop offset="100%" stop-color="#fdba74"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Gentle motion arcs (friendly wave) -->
+  <path d="M70 120 C60 140 60 160 70 180" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+  <path d="M55 130 C45 150 45 165 55 180" fill="none" stroke="#cbd5e1" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- TARGET OBJECT: HAND (Occupying 70% canvas) -->
+  <g id="hand-figure" filter="url(#soft-shadow)">
+    <!-- Wrist & Forearm -->
+    <path d="M165 240 L160 285 L230 285 L225 240 Z" fill="url(#hand-skin)" stroke="#c2410c" stroke-width="3.5"/>
+    <!-- Sleeve cuff -->
+    <rect x="150" y="275" width="90" height="15" rx="5" fill="#3b82f6" stroke="#1d4ed8" stroke-width="3"/>
+
+    <!-- Complete Hand Outline with 5 Fingers -->
+    <!-- Thumb -> Index -> Middle -> Ring -> Pinky -> Palm Edge -->
+    <path d="M165 240
+             C155 220 135 200 105 185
+             C90 178 80 185 85 198
+             C90 210 115 225 135 235
+             L135 210
+             C135 150 145 75 160 75
+             C172 75 178 95 178 140
+             L178 120
+             C178 80 190 45 205 45
+             C218 45 225 70 225 125
+             L225 130
+             C225 90 238 65 250 65
+             C262 65 268 90 268 145
+             L268 160
+             C270 125 285 105 295 105
+             C305 105 310 125 308 165
+             C305 205 280 235 225 240 Z"
+          fill="url(#hand-skin)" stroke="#c2410c" stroke-width="4" stroke-linejoin="round"/>
+
+    <!-- Fingernail details (neat & clean) -->
+    <ellipse cx="98" cy="192" rx="4.5" ry="6" fill="#fff7ed" stroke="#fb923c" stroke-width="1.5" transform="rotate(-30 98 192)"/>
+    <ellipse cx="160" cy="85" rx="5" ry="6" fill="#fff7ed" stroke="#fb923c" stroke-width="1.5"/>
+    <ellipse cx="205" cy="55" rx="5.5" ry="7" fill="#fff7ed" stroke="#fb923c" stroke-width="1.5"/>
+    <ellipse cx="250" cy="75" rx="5" ry="6.5" fill="#fff7ed" stroke="#fb923c" stroke-width="1.5"/>
+    <ellipse cx="295" cy="118" rx="4.5" ry="6" fill="#fff7ed" stroke="#fb923c" stroke-width="1.5"/>
+
+    <!-- Palm Creases (Life line, heart line) -->
+    <path d="M145 220 C170 200 185 180 180 160" fill="none" stroke="#ea580c" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M165 175 C200 178 240 185 270 175" fill="none" stroke="#ea580c" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M175 195 C210 205 250 212 280 195" fill="none" stroke="#ea580c" stroke-width="2.5" stroke-linecap="round"/>
   </g>
 </svg>

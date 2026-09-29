@@ -1,42 +1,101 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-sing desc-sing">
-  <title id="title-sing">sing</title>
-  <desc id="desc-sing">A child singing happily with mouth open and musical notes floating around.</desc>
-  <rect width="400" height="300" rx="20" fill="#F3E5F5"/>
-  <rect y="230" width="400" height="70" rx="0" fill="#E1BEE7"/>
-  <!-- Musical notes -->
-  <g fill="#7B1FA2" opacity="0.5">
-    <text x="120" y="80" font-family="sans-serif" font-size="28">♪</text>
-    <text x="270" y="60" font-family="sans-serif" font-size="22">♫</text>
-    <text x="300" y="110" font-family="sans-serif" font-size="18">♪</text>
-    <text x="90" y="130" font-family="sans-serif" font-size="20">♫</text>
+  <title id="title-sing">Sing - Child singing with microphone</title>
+  <desc id="desc-sing">A cheerful child singing with mouth wide open holding a microphone, surrounded by floating musical notes.</desc>
+  <defs>
+    <linearGradient id="sing-shirt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#7e22ce"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Ground line -->
+  <line x1="30" y1="265" x2="370" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Ground shadow -->
+  <ellipse cx="170" cy="265" rx="60" ry="10" fill="#0f172a" opacity="0.15"/>
+
+  <!-- FLOATING MUSICAL NOTES & SPARKLES (Singing cues) -->
+  <g id="musical-notes" fill="#8b5cf6" stroke="#6d28d9">
+    <!-- Double eighth note (top right) -->
+    <g transform="translate(260, 50)">
+      <ellipse cx="10" cy="30" rx="8" ry="6" transform="rotate(-20 10 30)"/>
+      <ellipse cx="38" cy="22" rx="8" ry="6" transform="rotate(-20 38 22)"/>
+      <rect x="14" y="8" width="4" height="22"/>
+      <rect x="42" y="0" width="4" height="22"/>
+      <polygon points="14,8 46,0 46,6 14,14"/>
+    </g>
+
+    <!-- Single eighth note (middle right) -->
+    <g transform="translate(300, 110)">
+      <ellipse cx="12" cy="24" rx="8" ry="6" transform="rotate(-20 12 24)"/>
+      <rect x="16" y="4" width="4" height="20"/>
+      <path d="M20 4 C28 4 34 10 32 18" fill="none" stroke-width="4" stroke-linecap="round"/>
+    </g>
+
+    <!-- Quarter note (high middle) -->
+    <g transform="translate(210, 30)">
+      <ellipse cx="10" cy="20" rx="7" ry="5.5" transform="rotate(-20 10 20)"/>
+      <rect x="14" y="2" width="3.5" height="18"/>
+    </g>
+
+    <!-- Melody sound ripples / sparkles -->
+    <path d="M235 90 Q248 85 255 72" fill="none" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+    <path d="M245 105 Q262 102 272 88" fill="none" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+    <!-- Little sparkle star -->
+    <polygon points="345,60 348,68 356,70 348,74 345,82 342,74 334,70 342,68" fill="#fbbf24" stroke="#d97706" stroke-width="1.5"/>
+    <polygon points="280,160 282,165 288,166 283,169 285,175 280,171 276,174 278,169 274,166 279,165" fill="#fbbf24" stroke="#d97706" stroke-width="1"/>
   </g>
-  <!-- Character Mo singing -->
-  <g transform="translate(200, 80)">
+
+  <!-- CHARACTER SINGING (Occupying 65% canvas) -->
+  <g id="singing-child" filter="url(#soft-shadow)">
     <!-- Legs -->
-    <line x1="-10" y1="90" x2="-12" y2="130" stroke="#5D4037" stroke-width="10" stroke-linecap="round"/>
-    <line x1="10" y1="90" x2="12" y2="130" stroke="#5D4037" stroke-width="10" stroke-linecap="round"/>
-    <ellipse cx="-16" cy="134" rx="12" ry="6" fill="#FF7043" stroke="#E64A19" stroke-width="1.5"/>
-    <ellipse cx="16" cy="134" rx="12" ry="6" fill="#FF7043" stroke="#E64A19" stroke-width="1.5"/>
-    <!-- Body -->
-    <ellipse cx="0" cy="62" rx="22" ry="28" fill="#FF7043" stroke="#E64A19" stroke-width="2"/>
-    <!-- Arms out expressively -->
-    <line x1="-10" y1="48" x2="-42" y2="38" stroke="#FFCC80" stroke-width="8" stroke-linecap="round"/>
-    <line x1="10" y1="48" x2="42" y2="38" stroke="#FFCC80" stroke-width="8" stroke-linecap="round"/>
-    <circle cx="-44" cy="36" r="5" fill="#FFCC80"/>
-    <circle cx="44" cy="36" r="5" fill="#FFCC80"/>
-    <!-- Head -->
-    <circle cx="0" cy="20" r="22" fill="#FFCC80" stroke="#F9A825" stroke-width="2"/>
+    <line x1="150" y1="210" x2="145" y2="255" stroke="#1e3a8a" stroke-width="18" stroke-linecap="round"/>
+    <line x1="185" y1="210" x2="190" y2="255" stroke="#1e3a8a" stroke-width="18" stroke-linecap="round"/>
+
+    <!-- Red sneakers -->
+    <ellipse cx="140" cy="256" rx="18" ry="9" fill="#ef4444" stroke="#991b1b" stroke-width="3"/>
+    <ellipse cx="195" cy="256" rx="18" ry="9" fill="#ef4444" stroke="#991b1b" stroke-width="3"/>
+
+    <!-- Torso -->
+    <rect x="135" y="130" width="65" height="85" rx="12" fill="url(#sing-shirt)" stroke="#581c87" stroke-width="3.5"/>
+
+    <!-- Left arm gesturing with musical passion -->
+    <path d="M140 145 L105 165 L85 150" fill="none" stroke="#fed7aa" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="82" cy="148" r="9" fill="#fed7aa" stroke="#c2410c" stroke-width="2.5"/>
+
+    <!-- Head tilted slightly upward in singing emotion -->
+    <circle cx="170" cy="85" r="32" fill="#fed7aa" stroke="#c2410c" stroke-width="3.5"/>
+
     <!-- Hair -->
-    <path d="M-16,2 Q-10,-14 0,-12 Q10,-14 16,2" fill="#5D4037" stroke="#4E342E" stroke-width="1.5"/>
-    <!-- Face — singing (open mouth) -->
-    <circle cx="-7" cy="14" r="3" fill="#4E342E"/>
-    <circle cx="9" cy="14" r="3" fill="#4E342E"/>
-    <path d="M-4,12 Q-7,9 -10,12" fill="none" stroke="#4E342E" stroke-width="1.5" stroke-linecap="round"/>
-    <path d="M6,12 Q9,9 12,12" fill="none" stroke="#4E342E" stroke-width="1.5" stroke-linecap="round"/>
-    <ellipse cx="0" cy="27" rx="7" ry="5" fill="#4E342E"/>
-    <ellipse cx="0" cy="26" rx="5" ry="3" fill="#E57373"/>
-    <!-- Rosy cheeks -->
-    <circle cx="-14" cy="22" r="4" fill="#F48FB1" opacity="0.4"/>
-    <circle cx="14" cy="22" r="4" fill="#F48FB1" opacity="0.4"/>
+    <path d="M142 80 C140 50 200 45 204 75 C190 68 165 68 142 80 Z" fill="#78350f" stroke="#451a03" stroke-width="2"/>
+    <circle cx="152" cy="62" r="14" fill="#78350f"/>
+    <circle cx="170" cy="56" r="14" fill="#78350f"/>
+    <circle cx="188" cy="62" r="14" fill="#78350f"/>
+
+    <!-- Closed eyes feeling the music -->
+    <path d="M164 82 Q170 76 176 82" fill="none" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+    <!-- Rosy singing cheeks -->
+    <circle cx="154" cy="90" r="6" fill="#fca5a5" opacity="0.6"/>
+    <circle cx="184" cy="92" r="6" fill="#fca5a5" opacity="0.6"/>
+
+    <!-- Singing Mouth: wide open round "O" singing shape -->
+    <ellipse cx="178" cy="96" rx="10" ry="12" fill="#991b1b" stroke="#7f1d1d" stroke-width="2.5"/>
+    <path d="M172 102 Q178 98 184 102 Q178 106 172 102 Z" fill="#f43f5e"/>
+
+    <!-- Right Arm holding microphone up to mouth -->
+    <path d="M190 145 L215 135 L200 110" fill="none" stroke="#fed7aa" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Hand grasping mic -->
+    <circle cx="198" cy="108" r="9" fill="#fed7aa" stroke="#c2410c" stroke-width="2.5"/>
+
+    <!-- Microphone -->
+    <!-- Mic handle -->
+    <line x1="206" y1="120" x2="194" y2="98" stroke="#334155" stroke-width="7" stroke-linecap="round"/>
+    <!-- Mic metal mesh ball -->
+    <circle cx="192" cy="95" r="9" fill="#94a3b8" stroke="#1e293b" stroke-width="2.5"/>
+    <line x1="187" y1="95" x2="197" y2="95" stroke="#475569" stroke-width="1.5"/>
+    <line x1="192" y1="90" x2="192" y2="100" stroke="#475569" stroke-width="1.5"/>
   </g>
 </svg>

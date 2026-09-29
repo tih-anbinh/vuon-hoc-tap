@@ -1,37 +1,81 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-cat desc-cat">
-  <title id="title-cat">cat</title>
-  <desc id="desc-cat">A friendly orange cat sitting with a curled tail and whiskers.</desc>
-  <rect width="400" height="300" rx="20" fill="#FFF3E0"/>
-  <rect y="220" width="400" height="80" rx="0" fill="#C8E6C9"/>
-  <!-- Cat body -->
-  <g transform="translate(200, 120)">
-    <!-- Tail -->
-    <path d="M30,60 Q70,40 60,10 Q55,-5 45,5" fill="none" stroke="#FF8A65" stroke-width="8" stroke-linecap="round"/>
-    <!-- Body -->
-    <ellipse cx="0" cy="55" rx="35" ry="30" fill="#FFAB91" stroke="#FF7043" stroke-width="2.5"/>
-    <!-- Front paws -->
-    <ellipse cx="-15" cy="82" rx="10" ry="6" fill="#FFAB91" stroke="#FF7043" stroke-width="2"/>
-    <ellipse cx="15" cy="82" rx="10" ry="6" fill="#FFAB91" stroke="#FF7043" stroke-width="2"/>
+  <title id="title-cat">Cat - Friendly sitting cat</title>
+  <desc id="desc-cat">A cute domestic cat with pointed ears, long whiskers, and an upward curving tail sitting proudly, occupying the center of the frame.</desc>
+  <defs>
+    <linearGradient id="cat-coat" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Ground line -->
+  <line x1="40" y1="265" x2="360" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Ground Shadow -->
+  <ellipse cx="200" cy="265" rx="80" ry="12" fill="#0f172a" opacity="0.15"/>
+
+  <!-- TARGET OBJECT: CAT (Occupying 70% canvas) -->
+  <g id="cat-figure" filter="url(#soft-shadow)">
+    <!-- Curled Upward Tail -->
+    <path d="M140 240 C90 230 70 170 100 130 C112 114 130 126 120 142 C100 170 115 215 155 228" fill="none" stroke="#ea580c" stroke-width="18" stroke-linecap="round"/>
+    <path d="M140 240 C90 230 70 170 100 130 C112 114 130 126 120 142 C100 170 115 215 155 228" fill="none" stroke="#c2410c" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Body (Plump sitting silhouette) -->
+    <ellipse cx="200" cy="195" rx="65" ry="60" fill="url(#cat-coat)" stroke="#9a3412" stroke-width="4"/>
+
+    <!-- White chest patch -->
+    <path d="M180 155 Q200 190 200 235 Q200 190 220 155 Z" fill="#fff7ed"/>
+
     <!-- Head -->
-    <circle cx="0" cy="15" r="28" fill="#FFAB91" stroke="#FF7043" stroke-width="2.5"/>
-    <!-- Ears -->
-    <polygon points="-22,-8 -14,-30 -4,-6" fill="#FFAB91" stroke="#FF7043" stroke-width="2"/>
-    <polygon points="22,-8 14,-30 4,-6" fill="#FFAB91" stroke="#FF7043" stroke-width="2"/>
-    <polygon points="-18,-8 -14,-24 -8,-8" fill="#FFCCBC"/>
-    <polygon points="18,-8 14,-24 8,-8" fill="#FFCCBC"/>
-    <!-- Face -->
-    <circle cx="-9" cy="10" r="4" fill="#4E342E"/>
-    <circle cx="9" cy="10" r="4" fill="#4E342E"/>
-    <circle cx="-8" cy="9" r="1.5" fill="white"/>
-    <circle cx="10" cy="9" r="1.5" fill="white"/>
-    <ellipse cx="0" cy="20" rx="4" ry="3" fill="#E57373"/>
+    <circle cx="200" cy="115" r="48" fill="url(#cat-coat)" stroke="#9a3412" stroke-width="4"/>
+
+    <!-- Left Ear -->
+    <polygon points="160,85 145,35 185,68" fill="#ea580c" stroke="#9a3412" stroke-width="3.5" stroke-linejoin="round"/>
+    <polygon points="162,78 152,48 180,68" fill="#fbcfe8"/>
+
+    <!-- Right Ear -->
+    <polygon points="240,85 255,35 215,68" fill="#ea580c" stroke="#9a3412" stroke-width="3.5" stroke-linejoin="round"/>
+    <polygon points="238,78 248,48 220,68" fill="#fbcfe8"/>
+
+    <!-- Tabby forehead stripes -->
+    <path d="M194 72 L200 86 L206 72" fill="none" stroke="#9a3412" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M185 75 L190 88" fill="none" stroke="#9a3412" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M215 75 L210 88" fill="none" stroke="#9a3412" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Eyes (Big, round, bright green) -->
+    <ellipse cx="178" cy="112" rx="11" ry="14" fill="#22c55e" stroke="#15803d" stroke-width="2"/>
+    <ellipse cx="178" cy="112" rx="4" ry="11" fill="#0f172a"/>
+    <circle cx="175" cy="107" r="3.5" fill="#ffffff"/>
+
+    <ellipse cx="222" cy="112" rx="11" ry="14" fill="#22c55e" stroke="#15803d" stroke-width="2"/>
+    <ellipse cx="222" cy="112" rx="4" ry="11" fill="#0f172a"/>
+    <circle cx="219" cy="107" r="3.5" fill="#ffffff"/>
+
+    <!-- Snout & Nose -->
+    <ellipse cx="200" cy="126" rx="16" ry="10" fill="#fff7ed"/>
+    <polygon points="196,122 204,122 200,127" fill="#f43f5e"/>
+    <!-- Mouth -->
+    <path d="M194 128 Q200 134 206 128" fill="none" stroke="#431407" stroke-width="2.5" stroke-linecap="round"/>
+
     <!-- Whiskers -->
-    <line x1="-14" y1="18" x2="-40" y2="14" stroke="#795548" stroke-width="1.5" opacity="0.5"/>
-    <line x1="-14" y1="20" x2="-40" y2="22" stroke="#795548" stroke-width="1.5" opacity="0.5"/>
-    <line x1="14" y1="18" x2="40" y2="14" stroke="#795548" stroke-width="1.5" opacity="0.5"/>
-    <line x1="14" y1="20" x2="40" y2="22" stroke="#795548" stroke-width="1.5" opacity="0.5"/>
-    <!-- Stripes -->
-    <path d="M-10,35 Q-5,30 0,35" fill="none" stroke="#FF7043" stroke-width="2" opacity="0.4"/>
-    <path d="M5,40 Q10,35 15,40" fill="none" stroke="#FF7043" stroke-width="2" opacity="0.4"/>
+    <line x1="168" y1="126" x2="125" y2="120" stroke="#431407" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="168" y1="131" x2="122" y2="134" stroke="#431407" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="168" y1="136" x2="128" y2="148" stroke="#431407" stroke-width="2.5" stroke-linecap="round"/>
+
+    <line x1="232" y1="126" x2="275" y2="120" stroke="#431407" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="232" y1="131" x2="278" y2="134" stroke="#431407" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="232" y1="136" x2="272" y2="148" stroke="#431407" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Front Paws placed neatly forward -->
+    <ellipse cx="180" cy="254" rx="16" ry="12" fill="#fff7ed" stroke="#9a3412" stroke-width="3"/>
+    <line x1="175" y1="250" x2="175" y2="260" stroke="#9a3412" stroke-width="2"/>
+    <line x1="184" y1="250" x2="184" y2="260" stroke="#9a3412" stroke-width="2"/>
+
+    <ellipse cx="220" cy="254" rx="16" ry="12" fill="#fff7ed" stroke="#9a3412" stroke-width="3"/>
+    <line x1="215" y1="250" x2="215" y2="260" stroke="#9a3412" stroke-width="2"/>
+    <line x1="224" y1="250" x2="224" y2="260" stroke="#9a3412" stroke-width="2"/>
   </g>
 </svg>

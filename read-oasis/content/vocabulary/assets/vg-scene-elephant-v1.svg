@@ -1,35 +1,78 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-elephant desc-elephant">
-  <title id="title-elephant">elephant</title>
-  <desc id="desc-elephant">A big grey elephant with large ears and a long trunk.</desc>
-  <rect width="400" height="300" rx="20" fill="#FFF8E1"/>
-  <rect y="220" width="400" height="80" rx="0" fill="#C8E6C9"/>
-  <g transform="translate(200, 80)">
-    <!-- Tail -->
-    <path d="M55,65 Q70,55 65,75" fill="none" stroke="#78909C" stroke-width="4" stroke-linecap="round"/>
-    <!-- Body -->
-    <ellipse cx="10" cy="70" rx="55" ry="40" fill="#B0BEC5" stroke="#90A4AE" stroke-width="2.5"/>
-    <!-- Legs -->
-    <rect x="-30" y="100" width="16" height="30" rx="7" fill="#B0BEC5" stroke="#90A4AE" stroke-width="2"/>
-    <rect x="-8" y="100" width="16" height="30" rx="7" fill="#B0BEC5" stroke="#90A4AE" stroke-width="2"/>
-    <rect x="22" y="100" width="16" height="30" rx="7" fill="#B0BEC5" stroke="#90A4AE" stroke-width="2"/>
-    <rect x="44" y="100" width="16" height="30" rx="7" fill="#B0BEC5" stroke="#90A4AE" stroke-width="2"/>
-    <!-- Feet -->
-    <ellipse cx="-22" cy="132" rx="10" ry="5" fill="#90A4AE"/>
-    <ellipse cx="0" cy="132" rx="10" ry="5" fill="#90A4AE"/>
-    <ellipse cx="30" cy="132" rx="10" ry="5" fill="#90A4AE"/>
-    <ellipse cx="52" cy="132" rx="10" ry="5" fill="#90A4AE"/>
-    <!-- Head -->
-    <circle cx="-30" cy="40" r="30" fill="#B0BEC5" stroke="#90A4AE" stroke-width="2.5"/>
-    <!-- Ears -->
-    <ellipse cx="-58" cy="35" rx="20" ry="28" fill="#B0BEC5" stroke="#90A4AE" stroke-width="2"/>
-    <ellipse cx="-56" cy="35" rx="14" ry="20" fill="#FFCCBC" opacity="0.4"/>
-    <!-- Eye -->
-    <circle cx="-22" cy="32" r="4" fill="#37474F"/>
-    <circle cx="-21" cy="31" r="1.5" fill="white"/>
-    <!-- Trunk -->
-    <path d="M-38,52 Q-45,75 -50,90 Q-52,98 -44,95 Q-40,92 -38,85" fill="none" stroke="#B0BEC5" stroke-width="12" stroke-linecap="round"/>
-    <path d="M-38,52 Q-45,75 -50,90 Q-52,98 -44,95" fill="none" stroke="#90A4AE" stroke-width="2"/>
-    <!-- Tusk -->
-    <path d="M-30,55 Q-25,65 -22,60" fill="none" stroke="#FFF9C4" stroke-width="4" stroke-linecap="round"/>
+  <title id="title-elephant">Elephant - Friendly gentle elephant</title>
+  <desc id="desc-elephant">A large gentle grey elephant with a big floppy ear, ivory tusk, and long upward-curling trunk, occupying the center of the frame.</desc>
+  <defs>
+    <linearGradient id="ele-grey" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#64748b"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Ground line -->
+  <line x1="30" y1="265" x2="370" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Ground shadow -->
+  <ellipse cx="190" cy="265" rx="125" ry="12" fill="#0f172a" opacity="0.15"/>
+
+  <!-- TARGET OBJECT: ELEPHANT (Occupying 70% canvas) -->
+  <g id="elephant-figure" filter="url(#soft-shadow)">
+    <!-- Little tufted tail -->
+    <path d="M75 160 C55 175 50 200 55 220" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="56" cy="223" rx="5" ry="9" fill="#334155"/>
+
+    <!-- Pillar Legs (Solid, sturdy, with toenails) -->
+    <!-- Rear Left Leg -->
+    <rect x="85" y="170" width="34" height="90" rx="8" fill="#64748b" stroke="#334155" stroke-width="3.5"/>
+    <circle cx="93" cy="256" r="4" fill="#cbd5e1"/>
+    <circle cx="102" cy="256" r="4" fill="#cbd5e1"/>
+    <circle cx="111" cy="256" r="4" fill="#cbd5e1"/>
+
+    <!-- Rear Right Leg -->
+    <rect x="135" y="165" width="30" height="95" rx="8" fill="#475569" stroke="#334155" stroke-width="3.5"/>
+    <circle cx="143" cy="256" r="3.5" fill="#94a3b8"/>
+    <circle cx="150" cy="256" r="3.5" fill="#94a3b8"/>
+    <circle cx="157" cy="256" r="3.5" fill="#94a3b8"/>
+
+    <!-- Front Left Leg -->
+    <rect x="200" y="165" width="30" height="95" rx="8" fill="#475569" stroke="#334155" stroke-width="3.5"/>
+    <circle cx="208" cy="256" r="3.5" fill="#94a3b8"/>
+    <circle cx="215" cy="256" r="3.5" fill="#94a3b8"/>
+    <circle cx="222" cy="256" r="3.5" fill="#94a3b8"/>
+
+    <!-- Front Right Leg -->
+    <rect x="245" y="170" width="34" height="90" rx="8" fill="#64748b" stroke="#334155" stroke-width="3.5"/>
+    <circle cx="253" cy="256" r="4" fill="#cbd5e1"/>
+    <circle cx="262" cy="256" r="4" fill="#cbd5e1"/>
+    <circle cx="271" cy="256" r="4" fill="#cbd5e1"/>
+
+    <!-- Massive Elephant Body -->
+    <rect x="70" y="90" width="215" height="110" rx="55" fill="url(#ele-grey)" stroke="#334155" stroke-width="4"/>
+
+    <!-- Elephant Head -->
+    <circle cx="275" cy="115" r="52" fill="url(#ele-grey)" stroke="#334155" stroke-width="4"/>
+
+    <!-- Long Curving Trunk (Upturned playfully) -->
+    <path d="M305 130 C340 140 375 180 345 200 C325 210 310 185 340 160 C355 145 340 110 320 95" fill="none" stroke="#64748b" stroke-width="24" stroke-linecap="round"/>
+    <path d="M305 130 C340 140 375 180 345 200 C325 210 310 185 340 160 C355 145 340 110 320 95" fill="none" stroke="#334155" stroke-width="3.5" stroke-linecap="round"/>
+
+    <!-- Trunk wrinkle lines -->
+    <line x1="318" y1="120" x2="328" y2="124" stroke="#475569" stroke-width="3" stroke-linecap="round"/>
+    <line x1="325" y1="135" x2="335" y2="139" stroke="#475569" stroke-width="3" stroke-linecap="round"/>
+    <line x1="335" y1="152" x2="345" y2="154" stroke="#475569" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Ivory Tusk -->
+    <path d="M295 150 C325 155 340 135 345 125 C335 140 315 142 292 142 Z" fill="#fffbeb" stroke="#d97706" stroke-width="2.5" stroke-linejoin="round"/>
+
+    <!-- Eye (Gentle, friendly) -->
+    <circle cx="282" cy="100" r="7" fill="#1e293b"/>
+    <circle cx="280" cy="98" r="2" fill="#ffffff"/>
+    <path d="M275 92 Q282 88 289 92" fill="none" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Big Floppy Ear (Overlapping head and body) -->
+    <path d="M220 85 C275 80 270 160 235 175 C205 185 195 140 220 85 Z" fill="#94a3b8" stroke="#334155" stroke-width="4"/>
+    <path d="M225 100 C258 95 255 150 232 160 C212 168 208 135 225 100 Z" fill="#fbcfe8" opacity="0.6"/>
   </g>
 </svg>

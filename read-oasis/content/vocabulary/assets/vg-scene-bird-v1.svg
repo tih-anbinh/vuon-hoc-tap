@@ -1,36 +1,70 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-bird desc-bird">
-  <title id="title-bird">bird</title>
-  <desc id="desc-bird">A colourful bird perched on a branch with wings slightly spread.</desc>
-  <rect width="400" height="300" rx="20" fill="#E8F5E9"/>
-  <!-- Branch -->
-  <path d="M80,200 Q200,180 320,190" fill="none" stroke="#8D6E63" stroke-width="10" stroke-linecap="round"/>
-  <ellipse cx="100" cy="195" rx="20" ry="8" fill="#A5D6A7" opacity="0.6"/>
-  <ellipse cx="300" cy="188" rx="22" ry="9" fill="#A5D6A7" opacity="0.6"/>
-  <!-- Bird -->
-  <g transform="translate(200, 130)">
-    <!-- Tail feathers -->
-    <path d="M25,30 Q55,20 50,45" fill="#42A5F5" stroke="#1E88E5" stroke-width="1.5"/>
-    <path d="M28,35 Q55,30 48,50" fill="#64B5F6" stroke="#1E88E5" stroke-width="1"/>
-    <!-- Body -->
-    <ellipse cx="0" cy="30" rx="28" ry="22" fill="#64B5F6" stroke="#42A5F5" stroke-width="2.5"/>
-    <!-- Belly -->
-    <ellipse cx="-2" cy="38" rx="16" ry="12" fill="#BBDEFB"/>
-    <!-- Wing -->
-    <path d="M-10,20 Q-40,10 -30,35 Q-20,40 -5,32" fill="#42A5F5" stroke="#1E88E5" stroke-width="1.5"/>
-    <!-- Legs -->
-    <line x1="-6" y1="48" x2="-8" y2="58" stroke="#FF8F00" stroke-width="3" stroke-linecap="round"/>
-    <line x1="6" y1="48" x2="8" y2="58" stroke="#FF8F00" stroke-width="3" stroke-linecap="round"/>
-    <!-- Feet -->
-    <path d="M-14,58 L-8,58 L-2,58" fill="none" stroke="#FF8F00" stroke-width="2" stroke-linecap="round"/>
-    <path d="M2,58 L8,58 L14,58" fill="none" stroke="#FF8F00" stroke-width="2" stroke-linecap="round"/>
+  <title id="title-bird">Bird - Colorful songbird</title>
+  <desc id="desc-bird">A vibrant blue and yellow songbird perched on a wooden branch with pointed beak, round eye, and sleek feathers, occupying the center of the frame.</desc>
+  <defs>
+    <linearGradient id="bird-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="bird-belly" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- WOODEN PERCH BRANCH (Clean anchor line) -->
+  <g id="perch-branch" filter="url(#soft-shadow)">
+    <path d="M40 240 Q180 230 360 235" stroke="#78350f" stroke-width="16" stroke-linecap="round"/>
+    <path d="M40 240 Q180 230 360 235" stroke="#b45309" stroke-width="8" stroke-linecap="round"/>
+    <!-- Small green sprouting leaves on branch -->
+    <path d="M100 235 Q115 210 135 225 Q115 240 100 235 Z" fill="#22c55e" stroke="#15803d" stroke-width="2"/>
+    <path d="M300 235 Q315 215 330 225 Q315 240 300 235 Z" fill="#22c55e" stroke="#15803d" stroke-width="2"/>
+  </g>
+
+  <!-- TARGET OBJECT: BIRD (Occupying 70% canvas) -->
+  <g id="bird-figure" filter="url(#soft-shadow)">
+    <!-- Tail Feathers extending back -->
+    <path d="M125 190 L50 220 L65 195 L55 180 L115 165 Z" fill="#0369a1" stroke="#075985" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M120 185 L65 205" stroke="#38bdf8" stroke-width="2"/>
+
+    <!-- Bird Body (Chubby, round, vibrant) -->
+    <ellipse cx="205" cy="155" rx="75" ry="60" fill="url(#bird-blue)" stroke="#0284c7" stroke-width="4"/>
+
+    <!-- Warm Golden/Yellow Belly -->
+    <path d="M185 130 C155 160 160 205 215 212 C255 212 270 185 270 160 C250 140 215 130 185 130 Z" fill="url(#bird-belly)"/>
+
     <!-- Head -->
-    <circle cx="0" cy="5" r="16" fill="#64B5F6" stroke="#42A5F5" stroke-width="2"/>
-    <!-- Eye -->
-    <circle cx="-5" cy="2" r="4" fill="white" stroke="#37474F" stroke-width="1.5"/>
-    <circle cx="-5" cy="2" r="2" fill="#37474F"/>
-    <!-- Beak -->
-    <polygon points="-16,6 -26,4 -16,10" fill="#FF8F00" stroke="#EF6C00" stroke-width="1"/>
-    <!-- Crest -->
-    <path d="M4,-10 Q8,-20 2,-16 Q6,-22 0,-14" fill="#FDD835" stroke="#F9A825" stroke-width="1"/>
+    <circle cx="265" cy="115" r="42" fill="url(#bird-blue)" stroke="#0284c7" stroke-width="4"/>
+
+    <!-- Wing (Folded neatly with tiered feather scallops) -->
+    <g id="bird-wing">
+      <path d="M160 135 C175 120 230 135 235 165 C240 195 190 220 140 210 C130 180 145 150 160 135 Z" fill="#0284c7" stroke="#075985" stroke-width="3.5"/>
+      <!-- Feather accent lines -->
+      <path d="M150 180 Q180 185 220 165" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
+      <path d="M145 195 Q175 200 205 185" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
+    </g>
+
+    <!-- Bird Eye (Round, inquisitive, bright) -->
+    <circle cx="275" cy="105" r="10" fill="#ffffff" stroke="#075985" stroke-width="2.5"/>
+    <circle cx="277" cy="105" r="5.5" fill="#0f172a"/>
+    <circle cx="275" cy="103" r="2" fill="#ffffff"/>
+
+    <!-- Pointed Beak -->
+    <polygon points="298,110 345,122 298,132" fill="#f59e0b" stroke="#d97706" stroke-width="3" stroke-linejoin="round"/>
+    <line x1="298" y1="122" x2="335" y2="122" stroke="#b45309" stroke-width="2"/>
+
+    <!-- Bird Feet gripping branch -->
+    <g id="bird-feet" stroke="#d97706" stroke-width="4" stroke-linecap="round">
+      <line x1="190" y1="210" x2="190" y2="232"/>
+      <line x1="182" y1="234" x2="190" y2="232"/>
+      <line x1="198" y1="234" x2="190" y2="232"/>
+
+      <line x1="225" y1="210" x2="225" y2="232"/>
+      <line x1="217" y1="234" x2="225" y2="232"/>
+      <line x1="233" y1="234" x2="225" y2="232"/>
+    </g>
   </g>
 </svg>

@@ -1,36 +1,78 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-sit desc-sit">
-  <title id="title-sit">sit</title>
-  <desc id="desc-sit">A child sitting on a chair with hands on their lap.</desc>
-  <rect width="400" height="300" rx="20" fill="#FFF8E1"/>
-  <rect y="230" width="400" height="70" rx="0" fill="#EFEBE9"/>
-  <!-- Chair -->
-  <g transform="translate(160, 100)">
-    <rect x="0" y="60" width="80" height="10" rx="4" fill="#A1887F" stroke="#795548" stroke-width="2"/>
-    <rect x="5" y="70" width="8" height="60" rx="3" fill="#8D6E63"/>
-    <rect x="67" y="70" width="8" height="60" rx="3" fill="#8D6E63"/>
-    <rect x="0" y="-20" width="80" height="82" rx="6" fill="#BCAAA4" stroke="#795548" stroke-width="2"/>
+  <title id="title-sit">Sit - Child sitting on a chair</title>
+  <desc id="desc-sit">A child sitting upright with good posture on a wooden chair, knees bent at right angles and hands resting in lap.</desc>
+  <defs>
+    <linearGradient id="chair-wood" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#b45309"/>
+      <stop offset="100%" stop-color="#78350f"/>
+    </linearGradient>
+    <linearGradient id="nia-shirt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#e11d48"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Ground line -->
+  <line x1="30" y1="265" x2="370" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Ground shadow -->
+  <ellipse cx="205" cy="265" rx="85" ry="12" fill="#0f172a" opacity="0.15"/>
+
+  <!-- CHAIR BACKREST (Layer 1 - behind character) -->
+  <g id="chair-back">
+    <rect x="135" y="90" width="16" height="100" rx="4" fill="url(#chair-wood)" stroke="#451a03" stroke-width="3.5"/>
+    <rect x="125" y="90" width="36" height="24" rx="4" fill="#d97706" stroke="#451a03" stroke-width="3"/>
   </g>
-  <!-- Character Mo sitting -->
-  <g transform="translate(200, 80)">
-    <!-- Legs (bent, sitting) -->
-    <line x1="-12" y1="90" x2="-18" y2="120" stroke="#5D4037" stroke-width="10" stroke-linecap="round"/>
-    <line x1="12" y1="90" x2="18" y2="120" stroke="#5D4037" stroke-width="10" stroke-linecap="round"/>
-    <ellipse cx="-22" cy="124" rx="12" ry="6" fill="#FF7043" stroke="#E64A19" stroke-width="1.5"/>
-    <ellipse cx="22" cy="124" rx="12" ry="6" fill="#FF7043" stroke="#E64A19" stroke-width="1.5"/>
-    <!-- Body -->
-    <ellipse cx="0" cy="62" rx="22" ry="28" fill="#AB47BC" stroke="#8E24AA" stroke-width="2"/>
-    <!-- Arms on lap -->
-    <line x1="-10" y1="50" x2="-18" y2="78" stroke="#FFCC80" stroke-width="8" stroke-linecap="round"/>
-    <line x1="10" y1="50" x2="18" y2="78" stroke="#FFCC80" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- CHARACTER NIA SITTING (Layer 2) -->
+  <g id="seated-child" filter="url(#soft-shadow)">
+    <!-- Ponytail hair -->
+    <path d="M165 75 C140 70 130 95 140 115 C146 122 158 116 154 104 C150 95 158 84 170 82" fill="#451a03" stroke="#260e02" stroke-width="3"/>
+    <circle cx="168" cy="78" r="6" fill="#06b6d4"/>
+
     <!-- Head -->
-    <circle cx="0" cy="20" r="22" fill="#FFCC80" stroke="#F9A825" stroke-width="2"/>
-    <!-- Hair -->
-    <path d="M-16,2 Q-10,-14 0,-12 Q10,-14 16,2" fill="#5D4037" stroke="#4E342E" stroke-width="1.5"/>
-    <!-- Face — calm, content -->
-    <circle cx="-7" cy="16" r="3" fill="#4E342E"/>
-    <circle cx="9" cy="16" r="3" fill="#4E342E"/>
-    <circle cx="-6" cy="15" r="1" fill="white"/>
-    <circle cx="10" cy="15" r="1" fill="white"/>
-    <path d="M-5,26 Q0,30 5,26" fill="none" stroke="#4E342E" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="200" cy="72" r="30" fill="#fed7aa" stroke="#c2410c" stroke-width="3.5"/>
+
+    <!-- Hair front fringe -->
+    <path d="M178 60 C185 45 220 45 228 62 C215 56 195 56 178 60 Z" fill="#451a03"/>
+
+    <!-- Face Profile: Friendly eye, smile -->
+    <circle cx="212" cy="70" r="4.5" fill="#1e293b"/>
+    <circle cx="210" cy="68" r="1.5" fill="#ffffff"/>
+    <path d="M208 62 Q214 60 218 63" fill="none" stroke="#1e293b" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="200" cy="78" r="5" fill="#fca5a5" opacity="0.6"/>
+    <!-- Smiling mouth -->
+    <path d="M214 78 Q222 84 216 88" fill="none" stroke="#991b1b" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Upright Torso -->
+    <rect x="170" y="105" width="45" height="65" rx="10" fill="url(#nia-shirt)" stroke="#be123c" stroke-width="3.5"/>
+
+    <!-- Seated Thighs (Horizontal posture from hip to knee) -->
+    <path d="M170 170 L240 170" stroke="#1d4ed8" stroke-width="28" stroke-linecap="round"/>
+
+    <!-- Lower Legs (Bent at 90 degrees vertically down to floor) -->
+    <path d="M240 170 L240 245" stroke="#fed7aa" stroke-width="16" stroke-linecap="round"/>
+
+    <!-- Shoes resting neatly on ground -->
+    <ellipse cx="250" cy="254" rx="18" ry="10" fill="#ef4444" stroke="#991b1b" stroke-width="3"/>
+
+    <!-- Arm & Hand resting calmly on lap -->
+    <path d="M190 115 L215 155 L235 160" fill="none" stroke="#fed7aa" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="238" cy="160" r="8" fill="#fed7aa" stroke="#c2410c" stroke-width="2.5"/>
+  </g>
+
+  <!-- CHAIR SEAT & FRONT LEGS (Layer 3 - under thighs and in front) -->
+  <g id="chair-front" filter="url(#soft-shadow)">
+    <!-- Seat Plank -->
+    <rect x="130" y="172" width="115" height="14" rx="4" fill="#d97706" stroke="#451a03" stroke-width="3.5"/>
+    <!-- Back Leg down to floor -->
+    <rect x="140" y="186" width="12" height="76" rx="3" fill="url(#chair-wood)" stroke="#451a03" stroke-width="3"/>
+    <!-- Front Leg down to floor -->
+    <rect x="225" y="186" width="12" height="76" rx="3" fill="url(#chair-wood)" stroke="#451a03" stroke-width="3"/>
+    <!-- Cross stretcher support -->
+    <line x1="146" y1="230" x2="231" y2="230" stroke="#451a03" stroke-width="4" stroke-linecap="round"/>
   </g>
 </svg>

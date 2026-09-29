@@ -1,41 +1,63 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-fish desc-fish">
-  <title id="title-fish">fish</title>
-  <desc id="desc-fish">A colourful fish swimming in water with bubbles around it.</desc>
-  <rect width="400" height="300" rx="20" fill="#E0F7FA"/>
-  <!-- Water gradient effect -->
-  <rect y="0" width="400" height="300" rx="20" fill="#B2EBF2" opacity="0.3"/>
-  <!-- Seaweed -->
-  <path d="M60,300 Q55,250 65,220 Q55,200 60,180" fill="none" stroke="#66BB6A" stroke-width="6" stroke-linecap="round" opacity="0.5"/>
-  <path d="M340,300 Q345,260 335,230 Q345,210 340,190" fill="none" stroke="#66BB6A" stroke-width="6" stroke-linecap="round" opacity="0.5"/>
-  <!-- Sand bottom -->
-  <path d="M0,280 Q100,270 200,275 Q300,280 400,270 L400,300 L0,300 Z" fill="#FFE0B2" opacity="0.6"/>
-  <!-- Bubbles -->
-  <circle cx="280" cy="80" r="6" fill="none" stroke="white" stroke-width="1.5" opacity="0.6"/>
-  <circle cx="290" cy="60" r="4" fill="none" stroke="white" stroke-width="1.5" opacity="0.4"/>
-  <circle cx="270" cy="100" r="5" fill="none" stroke="white" stroke-width="1.5" opacity="0.5"/>
-  <!-- Fish -->
-  <g transform="translate(200, 150)">
-    <!-- Tail fin -->
-    <polygon points="55,0 80,-25 80,25" fill="#FF7043" stroke="#E64A19" stroke-width="2"/>
-    <!-- Body -->
-    <ellipse cx="0" cy="0" rx="55" ry="30" fill="#FF8A65" stroke="#FF7043" stroke-width="2.5"/>
-    <!-- Belly -->
-    <ellipse cx="-5" cy="8" rx="35" ry="14" fill="#FFCCBC"/>
-    <!-- Dorsal fin -->
-    <path d="M-10,-28 Q5,-45 20,-28" fill="#FF7043" stroke="#E64A19" stroke-width="1.5"/>
-    <!-- Pectoral fin -->
-    <path d="M-15,10 Q-25,25 -10,22" fill="#FF7043" stroke="#E64A19" stroke-width="1.5"/>
-    <!-- Stripes -->
-    <path d="M10,-20 Q12,0 10,20" fill="none" stroke="#E64A19" stroke-width="2" opacity="0.3"/>
-    <path d="M25,-18 Q27,0 25,18" fill="none" stroke="#E64A19" stroke-width="2" opacity="0.3"/>
-    <!-- Eye -->
-    <circle cx="-25" cy="-5" r="8" fill="white" stroke="#37474F" stroke-width="1.5"/>
-    <circle cx="-26" cy="-5" r="4" fill="#37474F"/>
-    <circle cx="-27" cy="-6" r="1.5" fill="white"/>
-    <!-- Mouth -->
-    <path d="M-48,-2 Q-52,2 -48,4" fill="none" stroke="#E64A19" stroke-width="2" stroke-linecap="round"/>
-    <!-- Scales shimmer -->
-    <circle cx="5" cy="-8" r="3" fill="white" opacity="0.2"/>
-    <circle cx="15" cy="2" r="2.5" fill="white" opacity="0.2"/>
+  <title id="title-fish">Fish - Vibrant swimming fish</title>
+  <desc id="desc-fish">A bright orange swimming fish with bold white stripes, waving translucent fins, and rising water bubbles, occupying the center of the frame.</desc>
+  <defs>
+    <linearGradient id="fish-orange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <linearGradient id="fin-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fed7aa"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Water environment cues: Rising bubbles (delicate, non-distracting) -->
+  <circle cx="340" cy="90" r="12" fill="none" stroke="#38bdf8" stroke-width="2.5" opacity="0.6"/>
+  <circle cx="337" cy="86" r="3" fill="#ffffff" opacity="0.8"/>
+  <circle cx="355" cy="60" r="7" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.6"/>
+  <circle cx="365" cy="35" r="4" fill="none" stroke="#38bdf8" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- TARGET OBJECT: FISH (Occupying 70% canvas) -->
+  <g id="fish-figure" filter="url(#soft-shadow)">
+    <!-- Dorsal Fin (Top) -->
+    <path d="M150 100 C180 40 240 50 255 105 Z" fill="url(#fin-accent)" stroke="#c2410c" stroke-width="3.5" stroke-linejoin="round"/>
+    <line x1="175" y1="90" x2="185" y2="60" stroke="#c2410c" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="205" y1="90" x2="215" y2="55" stroke="#c2410c" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="230" y1="95" x2="238" y2="70" stroke="#c2410c" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Ventral / Pelvic Fin (Bottom) -->
+    <path d="M165 200 C180 250 220 255 240 205 Z" fill="url(#fin-accent)" stroke="#c2410c" stroke-width="3.5" stroke-linejoin="round"/>
+
+    <!-- Large Caudal Fin (Tail) -->
+    <path d="M120 150 C70 85 45 90 40 120 C55 145 55 160 40 185 C45 215 70 220 120 155 Z" fill="url(#fin-accent)" stroke="#c2410c" stroke-width="4" stroke-linejoin="round"/>
+    <line x1="100" y1="150" x2="52" y2="125" stroke="#c2410c" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="95" y1="153" x2="50" y2="153" stroke="#c2410c" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="100" y1="155" x2="52" y2="180" stroke="#c2410c" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Streamlined Fish Body -->
+    <path d="M100 150 C120 90 220 85 300 130 C320 145 320 160 300 175 C220 220 120 215 100 150 Z" fill="url(#fish-orange)" stroke="#9a3412" stroke-width="4"/>
+
+    <!-- White Striped Pattern (Iconic clownfish / reef fish markings) -->
+    <!-- Mid Body Stripe -->
+    <path d="M185 95 C195 130 195 175 185 208 C205 206 215 175 205 95 Z" fill="#ffffff" stroke="#9a3412" stroke-width="3"/>
+    <!-- Head Stripe -->
+    <path d="M260 105 C272 130 272 170 260 195 C275 190 282 170 275 115 Z" fill="#ffffff" stroke="#9a3412" stroke-width="3"/>
+
+    <!-- Pectoral Fin (Side Fin - in foreground) -->
+    <path d="M210 155 C230 140 255 165 245 185 C230 195 215 175 210 155 Z" fill="url(#fin-accent)" stroke="#9a3412" stroke-width="3.5" stroke-linejoin="round"/>
+
+    <!-- Fish Eye (Big, lively, shiny) -->
+    <circle cx="285" cy="138" r="14" fill="#ffffff" stroke="#9a3412" stroke-width="2.5"/>
+    <circle cx="287" cy="138" r="9" fill="#0f172a"/>
+    <circle cx="284" cy="135" r="3.5" fill="#ffffff"/>
+    <circle cx="290" cy="142" r="1.5" fill="#ffffff"/>
+
+    <!-- Cute Puckered Fish Lips (Mouth) -->
+    <ellipse cx="316" cy="154" rx="7" ry="5" fill="#ea580c" stroke="#9a3412" stroke-width="2.5"/>
+    <line x1="312" y1="154" x2="322" y2="154" stroke="#7c2d12" stroke-width="2"/>
   </g>
 </svg>

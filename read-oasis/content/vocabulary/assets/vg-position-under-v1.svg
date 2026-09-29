@@ -1,32 +1,83 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-under desc-under">
-  <title id="title-under">under</title>
-  <desc id="desc-under">A cat sleeping under a table. The cat is below the table top.</desc>
-  <!-- Background: soft room -->
-  <rect width="400" height="300" rx="20" fill="#FFF8F0"/>
-  <rect y="220" width="400" height="80" rx="0" fill="#E8F5E9"/>
-  <!-- Table -->
-  <rect x="80" y="120" width="240" height="14" rx="7" fill="#A1887F" stroke="#795548" stroke-width="2"/>
-  <rect x="100" y="134" width="12" height="86" rx="4" fill="#8D6E63"/>
-  <rect x="288" y="134" width="12" height="86" rx="4" fill="#8D6E63"/>
-  <!-- Cat under table -->
-  <g transform="translate(170, 168)">
-    <!-- Body -->
-    <ellipse cx="30" cy="32" rx="34" ry="20" fill="#FF9800" stroke="#E65100" stroke-width="2"/>
-    <!-- Head -->
-    <circle cx="0" cy="18" r="18" fill="#FF9800" stroke="#E65100" stroke-width="2"/>
-    <!-- Ears -->
-    <polygon points="-12,4 -16,-14 -4,-4" fill="#FF9800" stroke="#E65100" stroke-width="1.5"/>
-    <polygon points="12,4 16,-14 4,-4" fill="#FF9800" stroke="#E65100" stroke-width="1.5"/>
-    <polygon points="-10,2 -13,-10 -5,-3" fill="#FFE0B2"/>
-    <polygon points="10,2 13,-10 5,-3" fill="#FFE0B2"/>
-    <!-- Face — sleeping -->
-    <path d="M-7,18 Q-4,21 -1,18" fill="none" stroke="#4E342E" stroke-width="2" stroke-linecap="round"/>
-    <path d="M1,18 Q4,21 7,18" fill="none" stroke="#4E342E" stroke-width="2" stroke-linecap="round"/>
-    <ellipse cx="0" cy="24" rx="4" ry="2.5" fill="#F48FB1"/>
-    <!-- Tail -->
-    <path d="M64,28 Q80,10 72,38" fill="none" stroke="#E65100" stroke-width="3" stroke-linecap="round"/>
-    <!-- Zzz -->
-    <text x="26" y="-2" font-family="sans-serif" font-size="11" font-weight="bold" fill="#90A4AE" opacity="0.7">z</text>
-    <text x="36" y="-10" font-family="sans-serif" font-size="9" font-weight="bold" fill="#90A4AE" opacity="0.5">z</text>
+  <title id="title-under">Under - Cat under the table</title>
+  <desc id="desc-under">An orange cat resting comfortably on the floor directly under a wooden table, demonstrating the spatial position under.</desc>
+  <defs>
+    <linearGradient id="tbl-wood" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#b45309"/>
+      <stop offset="100%" stop-color="#78350f"/>
+    </linearGradient>
+    <linearGradient id="cat-body" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Ground floor line -->
+  <line x1="20" y1="260" x2="380" y2="260" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Position highlight zone (underneath the tabletop) -->
+  <rect x="75" y="125" width="250" height="135" rx="16" fill="#fef9c3" opacity="0.6"/>
+  <rect x="80" y="130" width="240" height="125" rx="12" fill="none" stroke="#facc15" stroke-width="3" stroke-dasharray="8 6"/>
+
+  <!-- Back table legs -->
+  <rect x="85" y="110" width="18" height="150" rx="4" fill="#78350f" opacity="0.5"/>
+  <rect x="297" y="110" width="18" height="150" rx="4" fill="#78350f" opacity="0.5"/>
+
+  <!-- Target: Cat UNDER the table -->
+  <g id="target-cat" filter="url(#soft-shadow)">
+    <!-- Cat floor shadow -->
+    <ellipse cx="200" cy="254" rx="75" ry="12" fill="#0f172a" opacity="0.2"/>
+
+    <!-- Tail curled -->
+    <path d="M125 242 C105 235 95 210 108 198 C116 190 128 198 122 208 C118 215 125 228 140 234" fill="none" stroke="#ea580c" stroke-width="12" stroke-linecap="round"/>
+
+    <!-- Cat body -->
+    <ellipse cx="200" cy="225" rx="65" ry="32" fill="url(#cat-body)" stroke="#9a3412" stroke-width="4"/>
+
+    <!-- Cat head -->
+    <circle cx="235" cy="195" r="30" fill="url(#cat-body)" stroke="#9a3412" stroke-width="4"/>
+
+    <!-- Cat ears -->
+    <polygon points="220,172 232,150 240,170" fill="#f97316" stroke="#9a3412" stroke-width="3" stroke-linejoin="round"/>
+    <polygon points="225,168 232,156 238,168" fill="#fbcfe8"/>
+    <polygon points="246,172 258,152 265,174" fill="#f97316" stroke="#9a3412" stroke-width="3" stroke-linejoin="round"/>
+    <polygon points="250,169 257,157 262,170" fill="#fbcfe8"/>
+
+    <!-- Cat face details -->
+    <!-- Eyes (happy sleeping curves) -->
+    <path d="M226 194 Q232 188 238 194" fill="none" stroke="#431407" stroke-width="3" stroke-linecap="round"/>
+    <path d="M246 194 Q252 188 258 194" fill="none" stroke="#431407" stroke-width="3" stroke-linecap="round"/>
+    <!-- Nose & mouth -->
+    <polygon points="244,198 248,198 246,202" fill="#f43f5e"/>
+    <path d="M242 203 Q246 206 250 203" fill="none" stroke="#431407" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Whiskers -->
+    <line x1="218" y1="198" x2="200" y2="195" stroke="#431407" stroke-width="2" stroke-linecap="round"/>
+    <line x1="218" y1="202" x2="202" y2="205" stroke="#431407" stroke-width="2" stroke-linecap="round"/>
+    <line x1="262" y1="198" x2="278" y2="196" stroke="#431407" stroke-width="2" stroke-linecap="round"/>
+    <line x1="262" y1="202" x2="276" y2="206" stroke="#431407" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Paws tucked -->
+    <ellipse cx="180" cy="245" rx="16" ry="10" fill="#fed7aa" stroke="#9a3412" stroke-width="3"/>
+    <ellipse cx="225" cy="246" rx="16" ry="10" fill="#fed7aa" stroke="#9a3412" stroke-width="3"/>
+  </g>
+
+  <!-- Front table legs -->
+  <rect x="55" y="110" width="22" height="150" rx="4" fill="url(#tbl-wood)" stroke="#451a03" stroke-width="4"/>
+  <rect x="323" y="110" width="22" height="150" rx="4" fill="url(#tbl-wood)" stroke="#451a03" stroke-width="4"/>
+
+  <!-- Tabletop (Anchor object in foreground) -->
+  <g id="tabletop" filter="url(#soft-shadow)">
+    <rect x="40" y="90" width="320" height="26" rx="6" fill="url(#tbl-wood)" stroke="#451a03" stroke-width="4"/>
+    <!-- Table bevel highlight -->
+    <line x1="46" y1="94" x2="354" y2="94" stroke="#d97706" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Directional arrow pointing UNDER -->
+  <g id="direction-cue">
+    <circle cx="200" cy="55" r="18" fill="#3b82f6" stroke="#1d4ed8" stroke-width="3"/>
+    <path d="M200 45 L200 65 M193 58 L200 65 L207 58" fill="none" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 </svg>
