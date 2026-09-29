@@ -101,6 +101,7 @@ if (-not (Test-Path $fpath)) { Write-Error "Không tìm thấy: $fpath"; exit 1 
 $isDir = (Get-Item $fpath).PSIsContainer
 
 if ($isDir) {
+    $fullRoot = (Resolve-Path $root).Path.TrimEnd('\','/') + [System.IO.Path]::DirectorySeparatorChar
     $dirName  = [System.IO.Path]::GetFileName($fpath.TrimEnd('\','/'))
     # fpathSlash đảm bảo có trailing separator để Substring cắt đúng
     $fpathSlash = $fpath.TrimEnd('\','/') + [System.IO.Path]::DirectorySeparatorChar
@@ -117,10 +118,21 @@ if ($isDir) {
     }
     if ($files.Count -eq 0) { Write-Error "Không có file nào sau khi lọc Exclude."; exit 1 }
     $entries = $files | ForEach-Object {
-        $rel = $_.FullName.Substring($fpathSlash.Length)
-        @{ localPath=$_.FullName; repoPath="$dirName/$($rel -replace '\\','/')" }
+        $fullItem = (Resolve-Path $_.FullName).Path
+        if ($fullItem.StartsWith($fullRoot, [System.StringComparison]::OrdinalIgnoreCase)) {
+            $rPath = $fullItem.Substring($fullRoot.Length) -replace '\\','/'
+        } else {
+            $rel = $_.FullName.Substring($fpathSlash.Length)
+            $rPath = "$dirName/$($rel -replace '\\','/')"
+        }
+        @{ localPath=$_.FullName; repoPath=$rPath }
     }
-    if (-not $Message) { $Message = "chore: update $dirName/" }
+    if (-not $Message) {
+        $dirRel = if ((Resolve-Path $fpath).Path.StartsWith($fullRoot, [System.StringComparison]::OrdinalIgnoreCase)) {
+            (Resolve-Path $fpath).Path.Substring($fullRoot.Length) -replace '\\','/'
+        } else { $dirName }
+        $Message = "chore: update $dirRel/"
+    }
     if ($Exclude.Count -gt 0) { Write-Host "(Bỏ qua: $($Exclude -join ', '))" }
 } else {
     # Giữ nguyên đường dẫn tương đối so với thư mục gốc (read-oasis/assets/app.css → read-oasis/assets/app.css),
