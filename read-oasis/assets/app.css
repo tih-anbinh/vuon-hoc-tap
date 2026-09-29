@@ -171,6 +171,23 @@ button[aria-pressed="true"].quiet { border-color: var(--primary); background: va
 .book-tile.garden-mode .cover.garden-cover { background: radial-gradient(circle at 72% 22%, color-mix(in srgb, var(--garden-sun) 60%, transparent) 0 15%, transparent 16%), linear-gradient(180deg, color-mix(in srgb, var(--garden-leaf) 30%, var(--garden-sky)) 0%, var(--garden-leaf) 100%); }
 .book-tile.garden-mode .cover.garden-cover .ic { width: 42%; height: 42%; color: var(--primary-ink); }
 .vocab-learn { display: grid; gap: .6rem; }
+/* Visual Learning System: type-aware rendering */
+.visual-position { border: 2px solid var(--accent); border-radius: var(--r-lg); padding: clamp(12px, 2vw, 20px); background: color-mix(in srgb, var(--accent-soft) 40%, var(--surface)); }
+.position-scene { display: flex; align-items: center; justify-content: center; gap: clamp(8px, 2vw, 16px); flex-wrap: wrap; padding: .8em 0; }
+.position-obj { font-size: 1.15em; font-weight: 700; color: var(--ink); padding: .4em .8em; border-radius: var(--r-md); background: var(--surface); border: 1.5px solid var(--line); box-shadow: var(--shadow-sm); }
+.position-label { font-size: 1.4em; font-weight: 900; color: var(--accent); text-transform: uppercase; letter-spacing: .04em; }
+.position-example { font-size: .95em; margin: .5em 0 0; font-style: italic; color: var(--muted); }
+.position-contrast { font-size: .88em; margin: .3em 0 0; }
+.visual-concept { display: grid; gap: .5rem; border-radius: var(--r-lg); overflow: hidden; }
+.concept-panel { display: flex; align-items: flex-start; gap: .7em; padding: .7em 1em; border-radius: var(--r-md); }
+.concept-panel p { margin: 0; font-size: .95em; }
+.concept-yes { background: color-mix(in srgb, var(--accent-soft) 60%, var(--surface)); border: 1.5px solid var(--accent); }
+.concept-no { background: color-mix(in srgb, var(--warn) 12%, var(--surface)); border: 1.5px solid color-mix(in srgb, var(--warn) 50%, var(--line)); }
+.concept-icon { font-size: 1.2em; font-weight: 800; flex: none; width: 1.5em; text-align: center; }
+.concept-yes .concept-icon { color: var(--accent); }
+.concept-no .concept-icon { color: var(--warn); }
+.visual-asset { border-radius: var(--r-lg); overflow: hidden; max-height: 280px; display: grid; place-items: center; }
+.visual-asset img { width: 100%; height: 100%; object-fit: contain; }
 .answers { display: grid; gap: .65rem; margin: .8rem 0; }
 .answers button { justify-content: flex-start; text-align: left; padding: .7em 1.1em; font-size: var(--control-px); min-height: 3.2em; white-space: normal; border-radius: var(--r-md); border-color: var(--line); color: var(--ink); box-shadow: none; }
 .answers button:hover { border-color: var(--primary); }

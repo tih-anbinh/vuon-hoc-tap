@@ -92,9 +92,27 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
-            "asset": { "type": ["string", "null"] },
+            "representation_type": {
+              "type": "string",
+              "enum": ["scene_svg", "action_svg", "position_svg", "concept_card", "no_visual_needed"],
+              "description": "Learning-representation strategy. Drives how the visual is rendered and what asset type is expected."
+            },
+            "visual_priority": {
+              "type": "string",
+              "enum": ["high", "medium", "low", "none"],
+              "description": "How important a visual is for learning this word. 'none' = no visual needed."
+            },
+            "asset_id": { "type": ["string", "null"], "description": "Identifier for the visual asset file (e.g. vg-scene-apple-v1). Null until asset is created." },
+            "asset": { "type": ["string", "null"], "description": "Relative path to the visual asset file. Null until asset is created." },
             "alt": { "type": ["string", "null"] },
-            "kind": { "type": "string", "enum": ["scene", "object", "action", "contrast", "none"] }
+            "status": {
+              "type": "string",
+              "enum": ["not_started", "draft", "approved", "not_applicable"],
+              "description": "Visual asset production status."
+            },
+            "kind": { "type": "string", "enum": ["scene", "object", "action", "position", "contrast", "concept_card", "none"], "description": "Legacy kind field. Use representation_type for new code." },
+            "template": { "type": ["string", "null"], "description": "For position_svg: reusable template name (e.g. 'cat_and_table')." },
+            "anchor_objects": { "type": "array", "items": { "type": "string" }, "description": "For position_svg: the objects used to demonstrate the spatial relationship." }
           }
         },
         "activity_templates": {

@@ -1,0 +1,881 @@
+{
+  "report_version": 1,
+  "generated_by": "tools/vocab/classify_visuals.py",
+  "statistics": {
+    "total_entries": 1403,
+    "approved_entries": 60,
+    "by_representation_type": {
+      "action_svg": 7,
+      "concept_card": 12,
+      "no_visual_needed": 0,
+      "position_svg": 3,
+      "scene_svg": 38
+    },
+    "by_visual_priority": {
+      "high": 51,
+      "medium": 7,
+      "low": 2,
+      "none": 0
+    },
+    "assets_not_started": 60,
+    "assets_draft": 0,
+    "assets_approved": 0,
+    "assets_not_applicable": 0
+  },
+  "errors": [],
+  "approved_entries": [
+    {
+      "entry_id": "ro-vocab:cross:noun-verb:unqualified:r1",
+      "headword": "cross",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun",
+        "verb"
+      ],
+      "representation_type": "action_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:cycle:verb:unqualified:r1",
+      "headword": "cycle",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "verb"
+      ],
+      "representation_type": "action_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:jump:verb:unqualified:r1",
+      "headword": "jump",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "verb"
+      ],
+      "representation_type": "action_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:run:verb:unqualified:r1",
+      "headword": "run",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "verb"
+      ],
+      "representation_type": "action_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:sing:verb:unqualified:r1",
+      "headword": "sing",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "verb"
+      ],
+      "representation_type": "action_svg",
+      "visual_priority": "medium",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:sit:verb:unqualified:r1",
+      "headword": "sit",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "verb"
+      ],
+      "representation_type": "action_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:sleep:verb:unqualified:r1",
+      "headword": "sleep",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "verb"
+      ],
+      "representation_type": "action_svg",
+      "visual_priority": "medium",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:big:adjective:unqualified:r1",
+      "headword": "big",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "adjective"
+      ],
+      "representation_type": "concept_card",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:dry:adjective-verb:unqualified:r1",
+      "headword": "dry",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "adjective",
+        "verb"
+      ],
+      "representation_type": "concept_card",
+      "visual_priority": "medium",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:empty:adjective:unqualified:r1",
+      "headword": "empty",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "adjective"
+      ],
+      "representation_type": "concept_card",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:happy:adjective:unqualified:r1",
+      "headword": "happy",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "adjective"
+      ],
+      "representation_type": "concept_card",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:heavy:adjective:unqualified:r1",
+      "headword": "heavy",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "adjective"
+      ],
+      "representation_type": "concept_card",
+      "visual_priority": "medium",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:midday:noun:unqualified:r1",
+      "headword": "midday",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "concept_card",
+      "visual_priority": "low",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:new:adjective:unqualified:r1",
+      "headword": "new",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "adjective"
+      ],
+      "representation_type": "concept_card",
+      "visual_priority": "medium",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:old:adjective:unqualified:r1",
+      "headword": "old",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "adjective"
+      ],
+      "representation_type": "concept_card",
+      "visual_priority": "medium",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:sad:adjective:unqualified:r1",
+      "headword": "sad",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "adjective"
+      ],
+      "representation_type": "concept_card",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:slow:adjective:unqualified:r1",
+      "headword": "slow",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "adjective"
+      ],
+      "representation_type": "concept_card",
+      "visual_priority": "medium",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:small:adjective:unqualified:r1",
+      "headword": "small",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "adjective"
+      ],
+      "representation_type": "concept_card",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:still:adverb:unqualified:r1",
+      "headword": "still",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "adverb"
+      ],
+      "representation_type": "concept_card",
+      "visual_priority": "low",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:behind:preposition:unqualified:r1",
+      "headword": "behind",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "preposition"
+      ],
+      "representation_type": "position_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": "dog_and_door",
+      "anchor_objects": [
+        "dog",
+        "door"
+      ]
+    },
+    {
+      "entry_id": "ro-vocab:inside:adverb-noun-preposition:unqualified:r1",
+      "headword": "inside",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "adverb",
+        "noun",
+        "preposition"
+      ],
+      "representation_type": "position_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": "toy_and_box",
+      "anchor_objects": [
+        "toy",
+        "box"
+      ]
+    },
+    {
+      "entry_id": "ro-vocab:under:preposition:unqualified:r1",
+      "headword": "under",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "preposition"
+      ],
+      "representation_type": "position_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": "cat_and_table",
+      "anchor_objects": [
+        "cat",
+        "table"
+      ]
+    },
+    {
+      "entry_id": "ro-vocab:apple:noun:unqualified:r1",
+      "headword": "apple",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:arm:noun:unqualified:r1",
+      "headword": "arm",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:baby:noun:unqualified:r1",
+      "headword": "baby",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:ball:noun:unqualified:r1",
+      "headword": "ball",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:banana:noun:unqualified:r1",
+      "headword": "banana",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:bed:noun:unqualified:r1",
+      "headword": "bed",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:bird:noun:unqualified:r1",
+      "headword": "bird",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:blue:adjective:unqualified:r1",
+      "headword": "blue",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "adjective"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:book:noun:unqualified:r1",
+      "headword": "book",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:bread:noun:unqualified:r1",
+      "headword": "bread",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:brother:noun:unqualified:r1",
+      "headword": "brother",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:cat:noun:unqualified:r1",
+      "headword": "cat",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:chair:noun:unqualified:r1",
+      "headword": "chair",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:cow:noun:unqualified:r1",
+      "headword": "cow",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:dog:noun:unqualified:r1",
+      "headword": "dog",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:duck:noun:unqualified:r1",
+      "headword": "duck",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:ear:noun:unqualified:r1",
+      "headword": "ear",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:egg:noun:unqualified:r1",
+      "headword": "egg",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:elephant:noun:unqualified:r1",
+      "headword": "elephant",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:eye:noun:unqualified:r1",
+      "headword": "eye",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:father:noun:unqualified:r1",
+      "headword": "father",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:frog:noun:unqualified:r1",
+      "headword": "frog",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:green:adjective:unqualified:r1",
+      "headword": "green",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "adjective"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:hair:noun:unqualified:r1",
+      "headword": "hair",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:hand:noun:unqualified:r1",
+      "headword": "hand",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:horse:noun:unqualified:r1",
+      "headword": "horse",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:kite:noun:unqualified:r1",
+      "headword": "kite",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:milk:noun:unqualified:r1",
+      "headword": "milk",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:mother:noun:unqualified:r1",
+      "headword": "mother",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:mouth:noun:unqualified:r1",
+      "headword": "mouth",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:nose:noun:unqualified:r1",
+      "headword": "nose",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:red:adjective:unqualified:r1",
+      "headword": "red",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "adjective"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:sister:noun:unqualified:r1",
+      "headword": "sister",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:sun:noun:unqualified:r1",
+      "headword": "sun",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:tail:noun:unqualified:r1",
+      "headword": "tail",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:tree:noun:unqualified:r1",
+      "headword": "tree",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:umbrella:noun:unqualified:r1",
+      "headword": "umbrella",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "noun"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    },
+    {
+      "entry_id": "ro-vocab:yellow:adjective:unqualified:r1",
+      "headword": "yellow",
+      "status": "editorially_approved",
+      "part_of_speech": [
+        "adjective"
+      ],
+      "representation_type": "scene_svg",
+      "visual_priority": "high",
+      "visual_asset_status": "not_started",
+      "asset_id": null,
+      "template": null,
+      "anchor_objects": []
+    }
+  ]
+}

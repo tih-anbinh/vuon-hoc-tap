@@ -68,6 +68,89 @@ async function getEntry(entryId) {
   return entryById.get(entryId) || null;
 }
 
+// ---------- visual rendering helpers ------------------------------------------
+const REPR_LABELS = {
+  scene_svg: 'Picture word',
+  action_svg: 'Action word',
+  position_svg: 'Position word',
+  concept_card: 'Idea word',
+  no_visual_needed: null,
+};
+const REPR_ICONS = {
+  scene_svg: 'image',
+  action_svg: 'play',
+  position_svg: 'eye',
+  concept_card: 'book',
+  no_visual_needed: null,
+};
+
+/** Build a visual-type badge chip for a vocabulary entry. */
+function visualBadge(entry) {
+  const vis = entry.teaching?.visual;
+  if (!vis) return null;
+  const rt = vis.representation_type || 'no_visual_needed';
+  const label = REPR_LABELS[rt];
+  if (!label) return null;
+  const cls = rt === 'position_svg' ? 'chip accent' : rt === 'action_svg' ? 'chip primary' : 'chip';
+  return h('span', { class: cls, text: label });
+}
+
+/**
+ * Render a type-aware learning visual for the basket card.
+ * - scene_svg / action_svg: placeholder art area (future: actual SVG asset)
+ * - position_svg: structured position diagram with anchor objects
+ * - concept_card: structured mini-lesson with contrast/sequence
+ * - no_visual_needed: nothing
+ */
+function renderVisualArea(entry) {
+  const vis = entry.teaching?.visual;
+  if (!vis) return null;
+  const rt = vis.representation_type || 'no_visual_needed';
+  const t = entry.teaching || {};
+
+  if (rt === 'position_svg') {
+    // Structured position diagram: show the word in context with anchor objects
+    const anchors = vis.anchor_objects || [];
+    return h('div', { class: 'visual-position', 'aria-label': `Position: ${entry.headword}` },
+      h('div', { class: 'position-scene' },
+        anchors.length >= 2
+          ? h('div', { class: 'position-objects' },
+              h('span', { class: 'position-obj', text: anchors[0] }),
+              h('span', { class: 'position-label', text: entry.headword }),
+              h('span', { class: 'position-obj', text: anchors[1] }))
+          : h('span', { class: 'position-label', text: entry.headword })),
+      t.example_en ? h('p', { class: 'position-example', text: t.example_en }) : null,
+      t.nonexample_en ? h('p', { class: 'position-contrast muted', text: 'Not: ' + t.nonexample_en }) : null);
+  }
+
+  if (rt === 'concept_card') {
+    // Structured concept card: show contrast pair or sequence
+    const panels = [];
+    if (t.example_en) panels.push(h('div', { class: 'concept-panel concept-yes' },
+      h('span', { class: 'concept-icon', text: '✓' }),
+      h('p', { text: t.example_en })));
+    if (t.nonexample_en) panels.push(h('div', { class: 'concept-panel concept-no' },
+      h('span', { class: 'concept-icon', text: '✗' }),
+      h('p', { text: t.nonexample_en })));
+    if (!panels.length) return null;
+    return h('div', { class: 'visual-concept', 'aria-label': `Concept: ${entry.headword}` },
+      ...panels);
+  }
+
+  if (rt === 'action_svg' || rt === 'scene_svg') {
+    // Future: render actual SVG asset. For now: styled placeholder with icon.
+    if (vis.asset) {
+      // When assets exist, render them here
+      return h('div', { class: 'visual-asset' },
+        h('img', { src: vis.asset, alt: vis.alt || entry.headword }));
+    }
+    // Placeholder: icon-based preview
+    return null; // No placeholder clutter — text-only until assets exist
+  }
+
+  return null;
+}
+
 // ---------- rendering helpers -------------------------------------------------
 function say(entry, { accent = 'en-GB' } = {}) {
   const t = entry.teaching || {};
@@ -154,16 +237,24 @@ function renderBasket(mount, ctx, basket, i) {
   const e = basket[i];
   setTitle(e.headword);
   const t = e.teaching || {};
-  // A single learning card: hear, see meaning, see example, then advance.
+  const vis = renderVisualArea(e);
+  const badge = visualBadge(e);
+  // A single learning card: hear, see meaning, see visual, then advance.
   evidence(store, e, 'listened', `basket-listen|${e.entry_id}|${new Date().toDateString()}`);
   const progress = h('span', { class: 'chip', text: `Word ${i + 1} of ${basket.length}` });
   mount.replaceChildren(h('section', { class: 'card fade vocab-learn' },
-    h('div', { class: 'card-head' }, h('b', { class: 'card-word', text: e.headword }),
-      btn('', () => say(e), { primary: true, ic: 'ear', attrs: { 'aria-label': 'Say ' + e.headword } })),
+    h('div', { class: 'card-head' },
+      h('b', { class: 'card-word', text: e.headword }),
+      btn('', () => say(e), { primary: true, ic: 'ear', attrs: { 'aria-label': 'Say ' + e.headword } }),
+      badge),
     t.definition_en ? h('p', { class: 'card-def', text: t.definition_en }) : null,
-    t.example_en ? h('p', { class: 'muted', text: '“' + t.example_en + '”' }) : null,
+    vis,
+    // For concept_card / position_svg, the visual already shows example/nonexample; skip text duplication
+    !vis && t.example_en ? h('p', { class: 'muted', text: '"' + t.example_en + '"' }) : null,
+    !vis && t.nonexample_en ? h('p', { class: 'muted', text: 'Not: ' + t.nonexample_en }) : null,
+    vis && t.example_en && !['concept_card', 'position_svg'].includes(t.visual?.representation_type)
+      ? h('p', { class: 'muted', text: '"' + t.example_en + '"' }) : null,
     t.explanation_vi ? h('p', { class: 'explain', text: t.explanation_vi }) : null,
-    t.nonexample_en ? h('p', { class: 'muted', text: 'Not: ' + t.nonexample_en }) : null,
     h('div', { class: 'row' },
       btn('Say it again', () => say(e), { ic: 'replay' }),
       btn('I know this', () => { evidence(store, e, 'recognized_in_context', `basket-know|${e.entry_id}|${new Date().toDateString()}`); store.scheduleVocabReview(e.entry_id, 2); next(); }, { primary: true, ic: 'check' }),
