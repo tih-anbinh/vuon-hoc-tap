@@ -55,10 +55,10 @@ function render() {
   if (!unlocked) return renderGate();
   app.replaceChildren(h('div', { class: 'parent-shell' },
     h('nav', { class: 'tabs', role: 'tablist' }, [
-      ['evidence', 'Evidence'], ['library', 'Library'], ['answers', 'Answers to review'], ['baseline', 'Baseline'], ['settings', 'Display & sound'],
+      ['evidence', 'Evidence'], ['library', 'Library'], ['vocab', 'Vocabulary'], ['answers', 'Answers to review'], ['baseline', 'Baseline'], ['settings', 'Display & sound'],
       ['studio', 'Content studio'], ['cloud', 'Cloud sync'], ['data', 'Data'],
     ].map(([id, label]) => btn(label, () => { tab = id; render(); }, { quiet: tab !== id, attrs: { role: 'tab', 'aria-selected': String(tab === id) } }))),
-    h('div', {}, ({ evidence: renderEvidence, library: renderLibraryTab, answers: renderAnswers, baseline: renderBaseline, settings: renderSettings, studio: renderStudio, cloud: renderCloud, data: renderData })[tab]())));
+    h('div', {}, ({ evidence: renderEvidence, library: renderLibraryTab, vocab: renderVocab, answers: renderAnswers, baseline: renderBaseline, settings: renderSettings, studio: renderStudio, cloud: renderCloud, data: renderData })[tab]())));
 }
 
 // ---------- library veto: every published book, show/hide per child, with review provenance
@@ -202,6 +202,62 @@ function obsForm() {
 }
 const sel = (opts, val) => h('select', {}, opts.map(o => h('option', { value: o, text: o.replace('_', ' ') || '-', selected: o === val })));
 const lab = (t, el) => h('label', { class: 'field' }, h('span', { text: t }), el);
+
+// ---------- Vocabulary Garden (parent view: Layer C progress + enrichment/mapping versions)
+let vocabMeta = null;   // { manifest, mappings } lazily loaded
+function renderVocab() {
+  const wrap = h('section', { class: 'card fade' }, h('h3', { text: 'Vocabulary Garden' }),
+    h('p', { class: 'muted', text: 'Words your child is meeting and how they are growing. Evidence-based: a word is never called "mastered" from one lucky tap.' }));
+  const body = h('div', {});
+  wrap.append(body);
+  const sum = store.vocabProgressSummary();
+  const lvl = sum.by_support_level;
+  body.append(
+    h('div', { class: 'card', style: 'margin-top:.5rem' }, h('h3', { text: 'How words are growing' }),
+      h('table', {}, h('thead', {}, h('tr', {}, h('th', { text: 'Stage' }), h('th', { text: 'Words' }))),
+        h('tbody', {},
+          h('tr', {}, h('td', { text: 'Not yet' }), h('td', { text: String(lvl.not_yet || 0) })),
+          h('tr', {}, h('td', { text: 'With support' }), h('td', { text: String(lvl.with_support || 0) })),
+          h('tr', {}, h('td', { text: 'Independent' }), h('td', { text: String(lvl.independent || 0) })),
+          h('tr', {}, h('td', { text: 'Used in a new context' }), h('td', { text: String(lvl.used_in_new_context || 0) })))),
+      h('p', { class: 'muted', text: `Encountered from books: ${sum.encountered_from_books} · Due for review: ${sum.due_reviews} · Total words touched: ${sum.total}` })));
+
+  // Words awaiting parent review = approved-content entries the parent has not yet confirmed in-app.
+  const awaiting = sum.words.filter(w => (w.evidence.recalled_without_choices || 0) > 0 && (w.evidence.parent_reviewed || 0) === 0);
+  body.append(h('div', { class: 'card', style: 'margin-top:1rem' }, h('h3', { text: 'Words to confirm' }),
+    !awaiting.length ? h('p', { class: 'muted', text: 'Nothing waiting. As your child recalls words on their own, they appear here for you to confirm.' })
+      : h('table', {}, h('thead', {}, h('tr', {}, h('th', { text: 'Word' }), h('th', { text: 'Recalled' }), h('th', {}))),
+        h('tbody', {}, awaiting.map(w => h('tr', {}, h('td', { text: w.word_id || w.entry_id }), h('td', { text: String(w.evidence.recalled_without_choices || 0) }),
+          h('td', {}, btn('Confirm', () => { store.recordVocabEvidence({ entryId: w.entry_id, wordId: w.word_id, evidenceType: 'parent_reviewed', dedupKey: `parent|${w.entry_id}|${Date.now()}` }); toast('Confirmed.'); render(); }, { quiet: true }))))))));
+
+  // Enrichment / mapping version info (facts, no fabrication).
+  const meta = h('div', { class: 'card', style: 'margin-top:1rem' }, h('h3', { text: 'Content versions' }));
+  body.append(meta);
+  if (vocabMeta) fillVocabMeta(meta); else {
+    meta.append(h('p', { class: 'muted', text: 'Loading version info...' }));
+    Promise.all([
+      loadJSON('vocabulary/manifest.json').catch(() => null),
+      loadJSON('vocabulary/mappings/book-page-mappings.json').catch(() => null),
+    ]).then(([manifest, mp]) => { vocabMeta = { manifest, mappings: mp?.mappings || [] }; if (tab === 'vocab') render(); });
+  }
+
+  // Export just vocabulary progress (subset of the full backup).
+  body.append(h('div', { class: 'card', style: 'margin-top:1rem' }, h('h3', { text: 'Vocabulary data' }),
+    h('p', { class: 'muted', text: 'Vocabulary progress is included in the full backup on the Data tab. You can also export just this part.' }),
+    btn('Export vocabulary progress (JSON)', () => download(`read-oasis-vocab-${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify(S.vocab_progress, null, 2)), { quiet: true })));
+  return wrap;
+}
+function fillVocabMeta(meta) {
+  const { manifest, mappings } = vocabMeta;
+  meta.replaceChildren(h('h3', { text: 'Content versions' }));
+  if (!manifest) { meta.append(h('p', { class: 'muted', text: 'Vocabulary content is not installed in this copy.' })); return; }
+  const d = manifest.disposition_counts || {};
+  meta.append(
+    h('p', { class: 'muted', text: `Source: ${manifest.source?.source_id} (schema ${manifest.source?.source_schema_version}); ${manifest.source?.total_source_records} source records.` }),
+    h('table', {}, h('thead', {}, h('tr', {}, h('th', { text: 'Disposition' }), h('th', { text: 'Count' }))),
+      h('tbody', {}, Object.entries(d).map(([k, v]) => h('tr', {}, h('td', { text: k }), h('td', { text: String(v) }))))),
+    h('p', { class: 'explain', text: `Approved book-page mappings: ${mappings.length}. Automatic publication of unreviewed words is disabled by design; only editorially approved words appear in the child's garden.` }));
+}
 
 // ---------- open answers review
 function renderAnswers() {

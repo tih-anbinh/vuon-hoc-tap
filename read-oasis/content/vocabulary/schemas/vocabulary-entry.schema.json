@@ -1,0 +1,145 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "read-oasis/vocabulary-entry.schema.json",
+  "title": "Read Oasis Vocabulary Garden enrichment entry",
+  "description": "Original Read Oasis teaching content (Layer B). References a private source lexicon record by id only; never copies source layout or third-party illustrations.",
+  "type": "object",
+  "required": [
+    "entry_id",
+    "revision",
+    "status",
+    "source_ref",
+    "headword",
+    "display_forms",
+    "part_of_speech",
+    "sense_label",
+    "level_metadata",
+    "teaching",
+    "review",
+    "provenance"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "entry_id": {
+      "type": "string",
+      "pattern": "^ro-vocab:cyle25:v2:[a-z0-9-]+:[a-z0-9-]+:[a-z0-9-]+:r[0-9]+$",
+      "description": "ro-vocab:<source-word_id without cyle25:v2: prefix>:r<revision>"
+    },
+    "revision": { "type": "integer", "minimum": 1 },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "editorially_approved",
+        "published",
+        "blocked_ambiguous",
+        "blocked_source_review",
+        "not_teachable_as_standalone",
+        "excluded_with_reason"
+      ]
+    },
+    "disposition_reason": { "type": ["string", "null"] },
+    "source_ref": {
+      "type": "object",
+      "required": ["source_id", "word_id", "source_schema_version", "source_pdf_sha256"],
+      "additionalProperties": false,
+      "properties": {
+        "source_id": { "type": "string" },
+        "word_id": { "type": "string" },
+        "source_schema_version": { "type": "string" },
+        "source_pdf_sha256": { "type": "string", "pattern": "^[0-9a-fA-F]{64}$" }
+      }
+    },
+    "headword": { "type": "string", "minLength": 1 },
+    "display_forms": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "part_of_speech": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "source_qualifier": { "type": ["string", "null"] },
+    "sense_label": { "type": "string", "minLength": 1 },
+    "level_metadata": {
+      "type": "object",
+      "required": ["first_listed_level"],
+      "additionalProperties": true,
+      "properties": {
+        "first_listed_level": { "type": "string" },
+        "listed_at_levels": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "theme_ids": { "type": "array", "items": { "type": "string" } },
+    "teaching": {
+      "type": "object",
+      "required": ["definition_en"],
+      "additionalProperties": false,
+      "properties": {
+        "definition_en": { "type": ["string", "null"] },
+        "explanation_vi": { "type": ["string", "null"] },
+        "example_en": { "type": ["string", "null"] },
+        "example_vi": { "type": ["string", "null"] },
+        "nonexample_en": { "type": ["string", "null"] },
+        "contrast_entry_ids": { "type": "array", "items": { "type": "string" } },
+        "usage_notes": { "type": "array", "items": { "type": "string" } },
+        "pronunciation": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "ipa_uk": { "type": ["string", "null"] },
+            "ipa_us": { "type": ["string", "null"] },
+            "audio_uk": { "type": ["string", "null"] },
+            "audio_us": { "type": ["string", "null"] },
+            "syllable_hint": { "type": ["string", "null"] }
+          }
+        },
+        "visual": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "asset": { "type": ["string", "null"] },
+            "alt": { "type": ["string", "null"] },
+            "kind": { "type": "string", "enum": ["scene", "object", "action", "contrast", "none"] }
+          }
+        },
+        "activity_templates": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "listen_and_find",
+              "look_and_say",
+              "read_in_context",
+              "meaning_match",
+              "position_action_play",
+              "word_detective",
+              "make_a_sentence"
+            ]
+          }
+        }
+      }
+    },
+    "review": {
+      "type": "object",
+      "required": [
+        "language_review",
+        "sense_review",
+        "child_suitability_review",
+        "media_review",
+        "parent_approval"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "language_review": { "type": "string", "enum": ["pending", "approved", "rejected"] },
+        "sense_review": { "type": "string", "enum": ["pending", "approved", "rejected"] },
+        "child_suitability_review": { "type": "string", "enum": ["pending", "approved", "rejected"] },
+        "media_review": { "type": "string", "enum": ["pending", "approved", "rejected", "not_applicable"] },
+        "parent_approval": { "type": "string", "enum": ["pending", "approved", "rejected"] }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["teaching_content_original", "source_attribution_internal_only"],
+      "additionalProperties": false,
+      "properties": {
+        "teaching_content_original": { "type": "boolean" },
+        "source_attribution_internal_only": { "type": "boolean" }
+      }
+    }
+  }
+}

@@ -166,6 +166,16 @@ button[aria-pressed="true"].quiet { border-color: var(--primary); background: va
 .options button.wrong { border-color: var(--warn); animation: shake .4s var(--ease); opacity: .7; }
 @keyframes shake { 25% { transform: translateX(-4px); } 75% { transform: translateX(4px); } }
 .explain { border-left: 6px solid var(--primary); padding: .6rem .9rem; background: var(--primary-soft); border-radius: var(--r-sm); margin: .6rem 0; animation: fade var(--dur) var(--ease); }
+
+/* Vocabulary Garden (companion area) — reuses book-tile / options language with a leafy accent */
+.book-tile.garden-mode .cover.garden-cover { background: radial-gradient(circle at 72% 22%, color-mix(in srgb, var(--garden-sun) 60%, transparent) 0 15%, transparent 16%), linear-gradient(180deg, color-mix(in srgb, var(--garden-leaf) 30%, var(--garden-sky)) 0%, var(--garden-leaf) 100%); }
+.book-tile.garden-mode .cover.garden-cover .ic { width: 42%; height: 42%; color: var(--primary-ink); }
+.vocab-learn { display: grid; gap: .6rem; }
+.answers { display: grid; gap: .65rem; margin: .8rem 0; }
+.answers button { justify-content: flex-start; text-align: left; padding: .7em 1.1em; font-size: var(--control-px); min-height: 3.2em; white-space: normal; border-radius: var(--r-md); border-color: var(--line); color: var(--ink); box-shadow: none; }
+.answers button:hover { border-color: var(--primary); }
+.answers button.correct { border-color: var(--accent); background: var(--accent-soft); animation: bump .5s var(--ease); }
+.answers button.wrong { border-color: var(--warn); animation: shake .4s var(--ease); opacity: .7; }
 .seq-list { list-style: none; margin: 0; padding: 0; display: grid; gap: .5rem; }
 .seq-item { display: flex; gap: .5rem; align-items: center; border: 1px solid var(--line); border-radius: var(--r-md); padding: .5rem .75rem; background: var(--surface); box-shadow: var(--shadow-sm); transition: transform var(--dur) var(--ease); }
 .seq-item .txt { flex: 1; font-weight: 600; }

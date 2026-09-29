@@ -1,0 +1,17 @@
+{
+  "name": "read-oasis",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Read Oasis — local-first child reading app. This package.json exists only to host the dev-time browser end-to-end (Playwright) tests; the app itself ships as static files with no build step.",
+  "type": "module",
+  "scripts": {
+    "test:unit": "node --test \"test/*.test.mjs\"",
+    "test:py": "python -m unittest discover -s test -p \"test_*.py\"",
+    "test:e2e": "playwright test",
+    "test:e2e:headed": "playwright test --headed",
+    "serve": "python -m http.server 4321"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0"
+  }
+}

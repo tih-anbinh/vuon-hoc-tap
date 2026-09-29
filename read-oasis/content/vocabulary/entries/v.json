@@ -1,0 +1,566 @@
+[
+  {
+    "entry_id": "ro-vocab:vegetable:noun:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:vegetable:noun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "vegetable",
+    "display_forms": [
+      "vegetable"
+    ],
+    "part_of_speech": [
+      "noun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "vegetable (noun)",
+    "level_metadata": {
+      "first_listed_level": "A1 Movers",
+      "listed_at_levels": [
+        "A1 Movers"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:food-drink"
+    ],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:very:adverb:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:very:adverb:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "very",
+    "display_forms": [
+      "very"
+    ],
+    "part_of_speech": [
+      "adverb"
+    ],
+    "source_qualifier": null,
+    "sense_label": "very (adverb)",
+    "level_metadata": {
+      "first_listed_level": "Pre A1 Starters",
+      "listed_at_levels": [
+        "Pre A1 Starters"
+      ]
+    },
+    "theme_ids": [],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:vicky:proper-noun:unqualified:r1",
+    "revision": 1,
+    "status": "not_teachable_as_standalone",
+    "disposition_reason": "Proper name / title: does not need an ordinary vocabulary lesson. Explicit disposition recorded.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:vicky:proper-noun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "vicky",
+    "display_forms": [
+      "vicky"
+    ],
+    "part_of_speech": [
+      "proper_noun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "vicky (proper_noun)",
+    "level_metadata": {
+      "first_listed_level": "A1 Movers",
+      "listed_at_levels": [
+        "A1 Movers"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:names"
+    ],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:video:noun-verb:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:video:noun-verb:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "video",
+    "display_forms": [
+      "video"
+    ],
+    "part_of_speech": [
+      "noun",
+      "verb"
+    ],
+    "source_qualifier": null,
+    "sense_label": "video (noun/verb)",
+    "level_metadata": {
+      "first_listed_level": "A1 Movers",
+      "listed_at_levels": [
+        "A1 Movers"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:sports-leisure"
+    ],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:view:noun:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:view:noun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "view",
+    "display_forms": [
+      "view"
+    ],
+    "part_of_speech": [
+      "noun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "view (noun)",
+    "level_metadata": {
+      "first_listed_level": "A2 Flyers",
+      "listed_at_levels": [
+        "A2 Flyers"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:the-world-around-us"
+    ],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:village:noun:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:village:noun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "village",
+    "display_forms": [
+      "village"
+    ],
+    "part_of_speech": [
+      "noun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "village (noun)",
+    "level_metadata": {
+      "first_listed_level": "A1 Movers",
+      "listed_at_levels": [
+        "A1 Movers"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:the-world-around-us"
+    ],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:violin:noun:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:violin:noun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "violin",
+    "display_forms": [
+      "violin"
+    ],
+    "part_of_speech": [
+      "noun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "violin (noun)",
+    "level_metadata": {
+      "first_listed_level": "A2 Flyers",
+      "listed_at_levels": [
+        "A2 Flyers"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:sports-leisure"
+    ],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:visit:verb:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:visit:verb:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "visit",
+    "display_forms": [
+      "visit"
+    ],
+    "part_of_speech": [
+      "verb"
+    ],
+    "source_qualifier": null,
+    "sense_label": "visit (verb)",
+    "level_metadata": {
+      "first_listed_level": "A2 Flyers",
+      "listed_at_levels": [
+        "A2 Flyers"
+      ]
+    },
+    "theme_ids": [],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:volleyball:noun:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:volleyball:noun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "volleyball",
+    "display_forms": [
+      "volleyball"
+    ],
+    "part_of_speech": [
+      "noun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "volleyball (noun)",
+    "level_metadata": {
+      "first_listed_level": "A2 Flyers",
+      "listed_at_levels": [
+        "A2 Flyers"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:sports-leisure"
+    ],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  }
+]

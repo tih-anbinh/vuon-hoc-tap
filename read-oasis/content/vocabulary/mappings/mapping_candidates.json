@@ -1,0 +1,1098 @@
+{
+  "generated_by": "tools/vocab/build_mappings.py",
+  "candidates": [
+    {
+      "book_id": "ro-a-001",
+      "book_revision": 1,
+      "page_id": "p01",
+      "surface_form": "kite",
+      "surface_span": {
+        "start": 13,
+        "end": 17
+      },
+      "candidate_entry_ids": [
+        "ro-vocab:kite:noun:unqualified:r1"
+      ],
+      "candidate_count": 1
+    },
+    {
+      "book_id": "ro-a-001",
+      "book_revision": 1,
+      "page_id": "p02",
+      "surface_form": "still",
+      "surface_span": {
+        "start": 12,
+        "end": 17
+      },
+      "candidate_entry_ids": [
+        "ro-vocab:still:adverb:unqualified:r1"
+      ],
+      "candidate_count": 1
+    },
+    {
+      "book_id": "ro-a-020",
+      "book_revision": 1,
+      "page_id": "p01",
+      "surface_form": "taps",
+      "surface_span": {
+        "start": 3,
+        "end": 7
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-a-023",
+      "book_revision": 1,
+      "page_id": "p05",
+      "surface_form": "then",
+      "surface_span": {
+        "start": 0,
+        "end": 4
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-a-023",
+      "book_revision": 1,
+      "page_id": "p06",
+      "surface_form": "dry",
+      "surface_span": {
+        "start": 12,
+        "end": 15
+      },
+      "candidate_entry_ids": [
+        "ro-vocab:dry:adjective-verb:unqualified:r1"
+      ],
+      "candidate_count": 1
+    },
+    {
+      "book_id": "ro-a-030",
+      "book_revision": 1,
+      "page_id": "p04",
+      "surface_form": "slow",
+      "surface_span": {
+        "start": 21,
+        "end": 25
+      },
+      "candidate_entry_ids": [
+        "ro-vocab:slow:adjective:unqualified:r1"
+      ],
+      "candidate_count": 1
+    },
+    {
+      "book_id": "ro-b-020",
+      "book_revision": 1,
+      "page_id": "p01",
+      "surface_form": "hen",
+      "surface_span": {
+        "start": 2,
+        "end": 5
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-b-020",
+      "book_revision": 1,
+      "page_id": "p05",
+      "surface_form": "hatches",
+      "surface_span": {
+        "start": 40,
+        "end": 47
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-b-020",
+      "book_revision": 1,
+      "page_id": "p05",
+      "surface_form": "chick",
+      "surface_span": {
+        "start": 2,
+        "end": 7
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-b-022",
+      "book_revision": 1,
+      "page_id": "p02",
+      "surface_form": "empty",
+      "surface_span": {
+        "start": 16,
+        "end": 21
+      },
+      "candidate_entry_ids": [
+        "ro-vocab:empty:adjective:unqualified:r1"
+      ],
+      "candidate_count": 1
+    },
+    {
+      "book_id": "ro-b-022",
+      "book_revision": 1,
+      "page_id": "p05",
+      "surface_form": "led",
+      "surface_span": {
+        "start": 60,
+        "end": 63
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-b-023",
+      "book_revision": 1,
+      "page_id": "p02",
+      "surface_form": "slips",
+      "surface_span": {
+        "start": 25,
+        "end": 30
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-c-020",
+      "book_revision": 1,
+      "page_id": "p02",
+      "surface_form": "tail",
+      "surface_span": {
+        "start": 19,
+        "end": 23
+      },
+      "candidate_entry_ids": [
+        "ro-vocab:tail:noun:unqualified:r1"
+      ],
+      "candidate_count": 1
+    },
+    {
+      "book_id": "ro-c-020",
+      "book_revision": 1,
+      "page_id": "p04",
+      "surface_form": "heavy",
+      "surface_span": {
+        "start": 50,
+        "end": 55
+      },
+      "candidate_entry_ids": [
+        "ro-vocab:heavy:adjective:unqualified:r1"
+      ],
+      "candidate_count": 1
+    },
+    {
+      "book_id": "ro-c-021",
+      "book_revision": 1,
+      "page_id": "p01",
+      "surface_form": "puddle",
+      "surface_span": {
+        "start": 27,
+        "end": 33
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-c-021",
+      "book_revision": 1,
+      "page_id": "p03",
+      "surface_form": "soaks",
+      "surface_span": {
+        "start": 11,
+        "end": 16
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-c-021",
+      "book_revision": 1,
+      "page_id": "p04",
+      "surface_form": "vapor",
+      "surface_span": {
+        "start": 53,
+        "end": 58
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-c-021",
+      "book_revision": 1,
+      "page_id": "p05",
+      "surface_form": "evaporation",
+      "surface_span": {
+        "start": 15,
+        "end": 26
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-c-023",
+      "book_revision": 1,
+      "page_id": "p01",
+      "surface_form": "list",
+      "surface_span": {
+        "start": 19,
+        "end": 23
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-c-023",
+      "book_revision": 1,
+      "page_id": "p03",
+      "surface_form": "stall",
+      "surface_span": {
+        "start": 15,
+        "end": 20
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-c-023",
+      "book_revision": 1,
+      "page_id": "p06",
+      "surface_form": "sour",
+      "surface_span": {
+        "start": 43,
+        "end": 47
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-c-032",
+      "book_revision": 1,
+      "page_id": "p02",
+      "surface_form": "under",
+      "surface_span": {
+        "start": 10,
+        "end": 15
+      },
+      "candidate_entry_ids": [
+        "ro-vocab:under:preposition:unqualified:r1"
+      ],
+      "candidate_count": 1
+    },
+    {
+      "book_id": "ro-c-032",
+      "book_revision": 1,
+      "page_id": "p03",
+      "surface_form": "behind",
+      "surface_span": {
+        "start": 10,
+        "end": 16
+      },
+      "candidate_entry_ids": [
+        "ro-vocab:behind:preposition:unqualified:r1"
+      ],
+      "candidate_count": 1
+    },
+    {
+      "book_id": "ro-c-032",
+      "book_revision": 1,
+      "page_id": "p04",
+      "surface_form": "inside",
+      "surface_span": {
+        "start": 10,
+        "end": 16
+      },
+      "candidate_entry_ids": [
+        "ro-vocab:inside:adverb-noun-preposition:unqualified:r1"
+      ],
+      "candidate_count": 1
+    },
+    {
+      "book_id": "ro-d-001",
+      "book_revision": 1,
+      "page_id": "p01",
+      "surface_form": "seed",
+      "surface_span": {
+        "start": 2,
+        "end": 6
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-d-001",
+      "book_revision": 1,
+      "page_id": "p02",
+      "surface_form": "swells",
+      "surface_span": {
+        "start": 69,
+        "end": 75
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-d-001",
+      "book_revision": 1,
+      "page_id": "p03",
+      "surface_form": "root",
+      "surface_span": {
+        "start": 9,
+        "end": 13
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-d-001",
+      "book_revision": 1,
+      "page_id": "p04",
+      "surface_form": "sprout",
+      "surface_span": {
+        "start": 14,
+        "end": 20
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-d-030",
+      "book_revision": 1,
+      "page_id": "p01",
+      "surface_form": "umbrella",
+      "surface_span": {
+        "start": 42,
+        "end": 50
+      },
+      "candidate_entry_ids": [
+        "ro-vocab:umbrella:noun:unqualified:r1"
+      ],
+      "candidate_count": 1
+    },
+    {
+      "book_id": "ro-d-030",
+      "book_revision": 1,
+      "page_id": "p04",
+      "surface_form": "gust",
+      "surface_span": {
+        "start": 110,
+        "end": 114
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-d-030",
+      "book_revision": 1,
+      "page_id": "p05",
+      "surface_form": "shield",
+      "surface_span": {
+        "start": 153,
+        "end": 159
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-d-031",
+      "book_revision": 1,
+      "page_id": "p02",
+      "surface_form": "colony",
+      "surface_span": {
+        "start": 58,
+        "end": 64
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-d-031",
+      "book_revision": 1,
+      "page_id": "p04",
+      "surface_form": "trail",
+      "surface_span": {
+        "start": 103,
+        "end": 108
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-d-031",
+      "book_revision": 1,
+      "page_id": "p05",
+      "surface_form": "antennae",
+      "surface_span": {
+        "start": 70,
+        "end": 78
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-e-030",
+      "book_revision": 1,
+      "page_id": "p02",
+      "surface_form": "drifted",
+      "surface_span": {
+        "start": 90,
+        "end": 97
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-e-030",
+      "book_revision": 1,
+      "page_id": "p04",
+      "surface_form": "sagged",
+      "surface_span": {
+        "start": 106,
+        "end": 112
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-e-030",
+      "book_revision": 1,
+      "page_id": "p06",
+      "surface_form": "glossy",
+      "surface_span": {
+        "start": 120,
+        "end": 126
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-e-031",
+      "book_revision": 1,
+      "page_id": "p02",
+      "surface_form": "tightly",
+      "surface_span": {
+        "start": 112,
+        "end": 119
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-e-031",
+      "book_revision": 1,
+      "page_id": "p03",
+      "surface_form": "nervous",
+      "surface_span": {
+        "start": 110,
+        "end": 117
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-f-030",
+      "book_revision": 1,
+      "page_id": "p03",
+      "surface_form": "reflects",
+      "surface_span": null,
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-f-030",
+      "book_revision": 1,
+      "page_id": "p04",
+      "surface_form": "orbit",
+      "surface_span": null,
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-g-030",
+      "book_revision": 1,
+      "page_id": "p04",
+      "surface_form": "crept",
+      "surface_span": {
+        "start": 153,
+        "end": 158
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-g-031",
+      "book_revision": 1,
+      "page_id": "p02",
+      "surface_form": "blocks",
+      "surface_span": {
+        "start": 32,
+        "end": 38
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-g-031",
+      "book_revision": 1,
+      "page_id": "p05",
+      "surface_form": "midday",
+      "surface_span": {
+        "start": 124,
+        "end": 130
+      },
+      "candidate_entry_ids": [
+        "ro-vocab:midday:noun:unqualified:r1"
+      ],
+      "candidate_count": 1
+    },
+    {
+      "book_id": "ro-g-031",
+      "book_revision": 1,
+      "page_id": "p08",
+      "surface_form": "sundial",
+      "surface_span": {
+        "start": 114,
+        "end": 121
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-g-032",
+      "book_revision": 1,
+      "page_id": "p03",
+      "surface_form": "cross",
+      "surface_span": {
+        "start": 66,
+        "end": 71
+      },
+      "candidate_entry_ids": [
+        "ro-vocab:cross:noun-verb:unqualified:r1"
+      ],
+      "candidate_count": 1
+    },
+    {
+      "book_id": "ro-g-032",
+      "book_revision": 1,
+      "page_id": "p05",
+      "surface_form": "whispered",
+      "surface_span": {
+        "start": 31,
+        "end": 40
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-h-030",
+      "book_revision": 1,
+      "page_id": "p03",
+      "surface_form": "seedling",
+      "surface_span": {
+        "start": 105,
+        "end": 113
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-h-030",
+      "book_revision": 1,
+      "page_id": "p04",
+      "surface_form": "paddy",
+      "surface_span": null,
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-h-030",
+      "book_revision": 1,
+      "page_id": "p07",
+      "surface_form": "harvest",
+      "surface_span": {
+        "start": 0,
+        "end": 7
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-h-030",
+      "book_revision": 1,
+      "page_id": "p08",
+      "surface_form": "husk",
+      "surface_span": {
+        "start": 52,
+        "end": 56
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-i-030",
+      "book_revision": 1,
+      "page_id": "p01",
+      "surface_form": "swap",
+      "surface_span": {
+        "start": 159,
+        "end": 163
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-i-030",
+      "book_revision": 1,
+      "page_id": "p04",
+      "surface_form": "worth",
+      "surface_span": {
+        "start": 143,
+        "end": 148
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-j-030",
+      "book_revision": 1,
+      "page_id": "p02",
+      "surface_form": "displace",
+      "surface_span": null,
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-j-030",
+      "book_revision": 1,
+      "page_id": "p03",
+      "surface_form": "upthrust",
+      "surface_span": null,
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-j-030",
+      "book_revision": 1,
+      "page_id": "p06",
+      "surface_form": "hollow",
+      "surface_span": {
+        "start": 59,
+        "end": 65
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-j-030",
+      "book_revision": 1,
+      "page_id": "p07",
+      "surface_form": "hull",
+      "surface_span": {
+        "start": 43,
+        "end": 47
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-k-030",
+      "book_revision": 1,
+      "page_id": "p01",
+      "surface_form": "flickered",
+      "surface_span": {
+        "start": 376,
+        "end": 385
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-k-030",
+      "book_revision": 1,
+      "page_id": "p03",
+      "surface_form": "scorch",
+      "surface_span": {
+        "start": 252,
+        "end": 258
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-k-030",
+      "book_revision": 1,
+      "page_id": "p07",
+      "surface_form": "draught",
+      "surface_span": {
+        "start": 247,
+        "end": 254
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-l-030",
+      "book_revision": 1,
+      "page_id": "p01",
+      "surface_form": "heaves",
+      "surface_span": {
+        "start": 82,
+        "end": 88
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-l-030",
+      "book_revision": 1,
+      "page_id": "p03",
+      "surface_form": "hatchling",
+      "surface_span": null,
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-l-030",
+      "book_revision": 1,
+      "page_id": "p06",
+      "surface_form": "astonishing",
+      "surface_span": {
+        "start": 104,
+        "end": 115
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-l-030",
+      "book_revision": 1,
+      "page_id": "p07",
+      "surface_form": "evidence",
+      "surface_span": null,
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-l-030",
+      "book_revision": 1,
+      "page_id": "p08",
+      "surface_form": "magnetic",
+      "surface_span": {
+        "start": 130,
+        "end": 138
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-m-030",
+      "book_revision": 1,
+      "page_id": "p02",
+      "surface_form": "compass rose",
+      "surface_span": {
+        "start": 269,
+        "end": 281
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-m-030",
+      "book_revision": 1,
+      "page_id": "p06",
+      "surface_form": "mirrored",
+      "surface_span": {
+        "start": 160,
+        "end": 168
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-n-030",
+      "book_revision": 1,
+      "page_id": "p02",
+      "surface_form": "vapour",
+      "surface_span": {
+        "start": 177,
+        "end": 183
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-n-030",
+      "book_revision": 1,
+      "page_id": "p04",
+      "surface_form": "condense",
+      "surface_span": null,
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-n-030",
+      "book_revision": 1,
+      "page_id": "p08",
+      "surface_form": "cycle",
+      "surface_span": null,
+      "candidate_entry_ids": [
+        "ro-vocab:cycle:verb:unqualified:r1"
+      ],
+      "candidate_count": 1
+    },
+    {
+      "book_id": "ro-o-030",
+      "book_revision": 1,
+      "page_id": "p02",
+      "surface_form": "timid",
+      "surface_span": null,
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-o-030",
+      "book_revision": 1,
+      "page_id": "p07",
+      "surface_form": "slack",
+      "surface_span": {
+        "start": 540,
+        "end": 545
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-p-030",
+      "book_revision": 1,
+      "page_id": "p02",
+      "surface_form": "compression",
+      "surface_span": {
+        "start": 265,
+        "end": 276
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-p-030",
+      "book_revision": 1,
+      "page_id": "p02",
+      "surface_form": "tension",
+      "surface_span": {
+        "start": 293,
+        "end": 300
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-p-030",
+      "book_revision": 1,
+      "page_id": "p04",
+      "surface_form": "arch",
+      "surface_span": {
+        "start": 51,
+        "end": 55
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-p-030",
+      "book_revision": 1,
+      "page_id": "p06",
+      "surface_form": "suspension",
+      "surface_span": {
+        "start": 271,
+        "end": 281
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-p-030",
+      "book_revision": 1,
+      "page_id": "p08",
+      "surface_form": "truss",
+      "surface_span": {
+        "start": 364,
+        "end": 369
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-q-030",
+      "book_revision": 1,
+      "page_id": "p04",
+      "surface_form": "pathetic",
+      "surface_span": {
+        "start": 349,
+        "end": 357
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-r-030",
+      "book_revision": 1,
+      "page_id": "p02",
+      "surface_form": "horizon",
+      "surface_span": null,
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-r-030",
+      "book_revision": 1,
+      "page_id": "p03",
+      "surface_form": "eclipse",
+      "surface_span": {
+        "start": 164,
+        "end": 171
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-r-030",
+      "book_revision": 1,
+      "page_id": "p06",
+      "surface_form": "circumference",
+      "surface_span": {
+        "start": 454,
+        "end": 467
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-r-030",
+      "book_revision": 1,
+      "page_id": "p08",
+      "surface_form": "observation",
+      "surface_span": {
+        "start": 44,
+        "end": 55
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-s-030",
+      "book_revision": 1,
+      "page_id": "p02",
+      "surface_form": "observation",
+      "surface_span": {
+        "start": 46,
+        "end": 57
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-s-030",
+      "book_revision": 1,
+      "page_id": "p05",
+      "surface_form": "barometer",
+      "surface_span": {
+        "start": 191,
+        "end": 200
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-s-030",
+      "book_revision": 1,
+      "page_id": "p07",
+      "surface_form": "prediction",
+      "surface_span": {
+        "start": 0,
+        "end": 10
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-t-030",
+      "book_revision": 1,
+      "page_id": "p02",
+      "surface_form": "cheated",
+      "surface_span": {
+        "start": 257,
+        "end": 264
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-t-030",
+      "book_revision": 1,
+      "page_id": "p05",
+      "surface_form": "method",
+      "surface_span": null,
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-t-030",
+      "book_revision": 1,
+      "page_id": "p07",
+      "surface_form": "trend",
+      "surface_span": {
+        "start": 528,
+        "end": 533
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-u-030",
+      "book_revision": 1,
+      "page_id": "p01",
+      "surface_form": "estimate",
+      "surface_span": {
+        "start": 432,
+        "end": 440
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-u-030",
+      "book_revision": 1,
+      "page_id": "p02",
+      "surface_form": "transect",
+      "surface_span": {
+        "start": 363,
+        "end": 371
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-u-030",
+      "book_revision": 1,
+      "page_id": "p03",
+      "surface_form": "index",
+      "surface_span": {
+        "start": 204,
+        "end": 209
+      },
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    },
+    {
+      "book_id": "ro-w-030",
+      "book_revision": 1,
+      "page_id": "p04",
+      "surface_form": "compromise",
+      "surface_span": null,
+      "candidate_entry_ids": [],
+      "candidate_count": 0
+    }
+  ]
+}

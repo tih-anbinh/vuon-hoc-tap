@@ -1,0 +1,3073 @@
+[
+  {
+    "entry_id": "ro-vocab:e-book:noun:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:e-book:noun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "e-book",
+    "display_forms": [
+      "e-book"
+    ],
+    "part_of_speech": [
+      "noun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "e-book (noun)",
+    "level_metadata": {
+      "first_listed_level": "A1 Movers",
+      "listed_at_levels": [
+        "A1 Movers"
+      ]
+    },
+    "theme_ids": [],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:each:determiner-pronoun:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:each:determiner-pronoun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "each",
+    "display_forms": [
+      "each"
+    ],
+    "part_of_speech": [
+      "determiner",
+      "pronoun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "each (determiner/pronoun)",
+    "level_metadata": {
+      "first_listed_level": "A2 Flyers",
+      "listed_at_levels": [
+        "A2 Flyers"
+      ]
+    },
+    "theme_ids": [],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:eagle:noun:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:eagle:noun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "eagle",
+    "display_forms": [
+      "eagle"
+    ],
+    "part_of_speech": [
+      "noun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "eagle (noun)",
+    "level_metadata": {
+      "first_listed_level": "A2 Flyers",
+      "listed_at_levels": [
+        "A2 Flyers"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:animals"
+    ],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:ear:noun:unqualified:r1",
+    "revision": 1,
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:ear:noun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "ear",
+    "display_forms": [
+      "ear"
+    ],
+    "part_of_speech": [
+      "noun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "the part of your head you hear with",
+    "level_metadata": {
+      "first_listed_level": "Pre A1 Starters",
+      "listed_at_levels": [
+        "Pre A1 Starters"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:the-body-and-the-face"
+    ],
+    "teaching": {
+      "definition_en": "The part on the side of your head that you hear with.",
+      "explanation_vi": "Bộ phận ở hai bên đầu dùng để nghe (cái tai).",
+      "example_en": "I hear the music with my ears.",
+      "example_vi": "Em nghe nhạc bằng đôi tai.",
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "object"
+      },
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
+    },
+    "review": {
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:earache:noun:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:earache:noun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "earache",
+    "display_forms": [
+      "earache"
+    ],
+    "part_of_speech": [
+      "noun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "earache (noun)",
+    "level_metadata": {
+      "first_listed_level": "A1 Movers",
+      "listed_at_levels": [
+        "A1 Movers"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:health"
+    ],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:early:adjective-adverb:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:early:adjective-adverb:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "early",
+    "display_forms": [
+      "early"
+    ],
+    "part_of_speech": [
+      "adjective",
+      "adverb"
+    ],
+    "source_qualifier": null,
+    "sense_label": "early (adjective/adverb)",
+    "level_metadata": {
+      "first_listed_level": "A2 Flyers",
+      "listed_at_levels": [
+        "A2 Flyers"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:time"
+    ],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:earth:noun:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:earth:noun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "earth",
+    "display_forms": [
+      "earth"
+    ],
+    "part_of_speech": [
+      "noun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "earth (noun)",
+    "level_metadata": {
+      "first_listed_level": "A2 Flyers",
+      "listed_at_levels": [
+        "A2 Flyers"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:the-world-around-us"
+    ],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:east:noun:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:east:noun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "east",
+    "display_forms": [
+      "east"
+    ],
+    "part_of_speech": [
+      "noun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "east (noun)",
+    "level_metadata": {
+      "first_listed_level": "A2 Flyers",
+      "listed_at_levels": [
+        "A2 Flyers"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:places-directions"
+    ],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:easy:adjective:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:easy:adjective:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "easy",
+    "display_forms": [
+      "easy"
+    ],
+    "part_of_speech": [
+      "adjective"
+    ],
+    "source_qualifier": null,
+    "sense_label": "easy (adjective)",
+    "level_metadata": {
+      "first_listed_level": "A1 Movers",
+      "listed_at_levels": [
+        "A1 Movers"
+      ]
+    },
+    "theme_ids": [],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:eat:verb:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:eat:verb:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "eat",
+    "display_forms": [
+      "eat"
+    ],
+    "part_of_speech": [
+      "verb"
+    ],
+    "source_qualifier": null,
+    "sense_label": "eat (verb)",
+    "level_metadata": {
+      "first_listed_level": "Pre A1 Starters",
+      "listed_at_levels": [
+        "Pre A1 Starters"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:food-drink"
+    ],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:egg:noun:unqualified:r1",
+    "revision": 1,
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:egg:noun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "egg",
+    "display_forms": [
+      "egg"
+    ],
+    "part_of_speech": [
+      "noun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "a round food from a hen",
+    "level_metadata": {
+      "first_listed_level": "Pre A1 Starters",
+      "listed_at_levels": [
+        "Pre A1 Starters"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:food-drink"
+    ],
+    "teaching": {
+      "definition_en": "A round food with a hard shell that comes from a bird such as a hen.",
+      "explanation_vi": "Món ăn hình tròn có vỏ cứng, lấy từ loài chim như gà mái (quả trứng).",
+      "example_en": "I eat an egg for breakfast.",
+      "example_vi": "Em ăn một quả trứng vào bữa sáng.",
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "object"
+      },
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
+    },
+    "review": {
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:elbow:noun:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:elbow:noun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "elbow",
+    "display_forms": [
+      "elbow"
+    ],
+    "part_of_speech": [
+      "noun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "elbow (noun)",
+    "level_metadata": {
+      "first_listed_level": "A2 Flyers",
+      "listed_at_levels": [
+        "A2 Flyers"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:the-body-and-the-face"
+    ],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:elephant:noun:unqualified:r1",
+    "revision": 1,
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:elephant:noun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "elephant",
+    "display_forms": [
+      "elephant"
+    ],
+    "part_of_speech": [
+      "noun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "a very big animal with a long nose",
+    "level_metadata": {
+      "first_listed_level": "Pre A1 Starters",
+      "listed_at_levels": [
+        "Pre A1 Starters"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:animals"
+    ],
+    "teaching": {
+      "definition_en": "A very big grey animal with big ears and a long nose called a trunk.",
+      "explanation_vi": "Con vật rất to, màu xám, tai to và có cái vòi dài (con voi).",
+      "example_en": "The elephant drinks water with its long trunk.",
+      "example_vi": "Con voi hút nước bằng cái vòi dài.",
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "object"
+      },
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
+    },
+    "review": {
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:elevator:noun:uk-lift:r1",
+    "revision": 1,
+    "status": "blocked_source_review",
+    "disposition_reason": "Source record is quarantined / review_required; cannot enrich until an editor resolves it.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:elevator:noun:uk-lift",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "elevator",
+    "display_forms": [
+      "elevator",
+      "lift"
+    ],
+    "part_of_speech": [
+      "noun"
+    ],
+    "source_qualifier": "UK lift",
+    "sense_label": "elevator (noun)",
+    "level_metadata": {
+      "first_listed_level": "A1 Movers",
+      "listed_at_levels": [
+        "A1 Movers"
+      ]
+    },
+    "theme_ids": [],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:else:adverb:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:else:adverb:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "else",
+    "display_forms": [
+      "else"
+    ],
+    "part_of_speech": [
+      "adverb"
+    ],
+    "source_qualifier": null,
+    "sense_label": "else (adverb)",
+    "level_metadata": {
+      "first_listed_level": "A2 Flyers",
+      "listed_at_levels": [
+        "A2 Flyers"
+      ]
+    },
+    "theme_ids": [],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:email:noun-verb:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:email:noun-verb:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "email",
+    "display_forms": [
+      "email"
+    ],
+    "part_of_speech": [
+      "noun",
+      "verb"
+    ],
+    "source_qualifier": null,
+    "sense_label": "email (noun/verb)",
+    "level_metadata": {
+      "first_listed_level": "A1 Movers",
+      "listed_at_levels": [
+        "A1 Movers"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:sports-leisure"
+    ],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:emma:proper-noun:unqualified:r1",
+    "revision": 1,
+    "status": "not_teachable_as_standalone",
+    "disposition_reason": "Proper name / title: does not need an ordinary vocabulary lesson. Explicit disposition recorded.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:emma:proper-noun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "emma",
+    "display_forms": [
+      "emma"
+    ],
+    "part_of_speech": [
+      "proper_noun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "emma (proper_noun)",
+    "level_metadata": {
+      "first_listed_level": "A2 Flyers",
+      "listed_at_levels": [
+        "A2 Flyers"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:names"
+    ],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:empty:adjective:unqualified:r1",
+    "revision": 1,
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:empty:adjective:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "empty",
+    "display_forms": [
+      "empty"
+    ],
+    "part_of_speech": [
+      "adjective"
+    ],
+    "source_qualifier": null,
+    "sense_label": "with nothing inside",
+    "level_metadata": {
+      "first_listed_level": "A2 Flyers",
+      "listed_at_levels": [
+        "A2 Flyers"
+      ]
+    },
+    "theme_ids": [],
+    "teaching": {
+      "definition_en": "Having nothing inside.",
+      "explanation_vi": "Không có gì ở bên trong (trống, rỗng).",
+      "example_en": "The glass is empty; please fill it with water.",
+      "example_vi": "Cái ly rỗng; hãy rót đầy nước vào nó.",
+      "nonexample_en": "The glass is full of water.",
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "contrast"
+      },
+      "activity_templates": [
+        "meaning_match",
+        "read_in_context",
+        "look_and_say"
+      ]
+    },
+    "review": {
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:end:noun:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:end:noun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "end",
+    "display_forms": [
+      "end"
+    ],
+    "part_of_speech": [
+      "noun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "end (noun)",
+    "level_metadata": {
+      "first_listed_level": "Pre A1 Starters",
+      "listed_at_levels": [
+        "Pre A1 Starters"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:places-directions",
+      "cyle25-theme:time"
+    ],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:end:verb:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:end:verb:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "end",
+    "display_forms": [
+      "end"
+    ],
+    "part_of_speech": [
+      "verb"
+    ],
+    "source_qualifier": null,
+    "sense_label": "end (verb)",
+    "level_metadata": {
+      "first_listed_level": "A2 Flyers",
+      "listed_at_levels": [
+        "A2 Flyers"
+      ]
+    },
+    "theme_ids": [],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:engine:noun:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:engine:noun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "engine",
+    "display_forms": [
+      "engine"
+    ],
+    "part_of_speech": [
+      "noun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "engine (noun)",
+    "level_metadata": {
+      "first_listed_level": "A2 Flyers",
+      "listed_at_levels": [
+        "A2 Flyers"
+      ]
+    },
+    "theme_ids": [],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:engineer:noun:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:engineer:noun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "engineer",
+    "display_forms": [
+      "engineer"
+    ],
+    "part_of_speech": [
+      "noun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "engineer (noun)",
+    "level_metadata": {
+      "first_listed_level": "A2 Flyers",
+      "listed_at_levels": [
+        "A2 Flyers"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:work"
+    ],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:english:adjective-noun:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:english:adjective-noun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "english",
+    "display_forms": [
+      "english"
+    ],
+    "part_of_speech": [
+      "adjective",
+      "noun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "english (adjective/noun)",
+    "level_metadata": {
+      "first_listed_level": "Pre A1 Starters",
+      "listed_at_levels": [
+        "Pre A1 Starters"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:school"
+    ],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:enjoy:verb:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:enjoy:verb:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "enjoy",
+    "display_forms": [
+      "enjoy"
+    ],
+    "part_of_speech": [
+      "verb"
+    ],
+    "source_qualifier": null,
+    "sense_label": "enjoy (verb)",
+    "level_metadata": {
+      "first_listed_level": "Pre A1 Starters",
+      "listed_at_levels": [
+        "Pre A1 Starters"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:sports-leisure"
+    ],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:enormous:adjective:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:enormous:adjective:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "enormous",
+    "display_forms": [
+      "enormous"
+    ],
+    "part_of_speech": [
+      "adjective"
+    ],
+    "source_qualifier": null,
+    "sense_label": "enormous (adjective)",
+    "level_metadata": {
+      "first_listed_level": "A2 Flyers",
+      "listed_at_levels": [
+        "A2 Flyers"
+      ]
+    },
+    "theme_ids": [],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:enough:adjective-pronoun:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:enough:adjective-pronoun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "enough",
+    "display_forms": [
+      "enough"
+    ],
+    "part_of_speech": [
+      "adjective",
+      "pronoun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "enough (adjective/pronoun)",
+    "level_metadata": {
+      "first_listed_level": "A2 Flyers",
+      "listed_at_levels": [
+        "A2 Flyers"
+      ]
+    },
+    "theme_ids": [],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:enter:verb:a-competition:r1",
+    "revision": 1,
+    "status": "blocked_source_review",
+    "disposition_reason": "Source record is quarantined / review_required; cannot enrich until an editor resolves it.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:enter:verb:a-competition",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "enter",
+    "display_forms": [
+      "enter"
+    ],
+    "part_of_speech": [
+      "verb"
+    ],
+    "source_qualifier": "a competition",
+    "sense_label": "enter (verb)",
+    "level_metadata": {
+      "first_listed_level": "A2 Flyers",
+      "listed_at_levels": [
+        "A2 Flyers"
+      ]
+    },
+    "theme_ids": [],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:entrance:noun:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:entrance:noun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "entrance",
+    "display_forms": [
+      "entrance"
+    ],
+    "part_of_speech": [
+      "noun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "entrance (noun)",
+    "level_metadata": {
+      "first_listed_level": "A2 Flyers",
+      "listed_at_levels": [
+        "A2 Flyers"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:the-home",
+      "cyle25-theme:the-world-around-us"
+    ],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:envelope:noun:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:envelope:noun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "envelope",
+    "display_forms": [
+      "envelope"
+    ],
+    "part_of_speech": [
+      "noun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "envelope (noun)",
+    "level_metadata": {
+      "first_listed_level": "A2 Flyers",
+      "listed_at_levels": [
+        "A2 Flyers"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:the-home"
+    ],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:environment:noun:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:environment:noun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "environment",
+    "display_forms": [
+      "environment"
+    ],
+    "part_of_speech": [
+      "noun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "environment (noun)",
+    "level_metadata": {
+      "first_listed_level": "A2 Flyers",
+      "listed_at_levels": [
+        "A2 Flyers"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:the-world-around-us"
+    ],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:eraser:noun:uk-rubber:r1",
+    "revision": 1,
+    "status": "blocked_source_review",
+    "disposition_reason": "Source record is quarantined / review_required; cannot enrich until an editor resolves it.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:eraser:noun:uk-rubber",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "eraser",
+    "display_forms": [
+      "eraser",
+      "rubber"
+    ],
+    "part_of_speech": [
+      "noun"
+    ],
+    "source_qualifier": "UK rubber",
+    "sense_label": "eraser (noun)",
+    "level_metadata": {
+      "first_listed_level": "Pre A1 Starters",
+      "listed_at_levels": [
+        "Pre A1 Starters"
+      ]
+    },
+    "theme_ids": [],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:eva:proper-noun:unqualified:r1",
+    "revision": 1,
+    "status": "not_teachable_as_standalone",
+    "disposition_reason": "Proper name / title: does not need an ordinary vocabulary lesson. Explicit disposition recorded.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:eva:proper-noun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "eva",
+    "display_forms": [
+      "eva"
+    ],
+    "part_of_speech": [
+      "proper_noun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "eva (proper_noun)",
+    "level_metadata": {
+      "first_listed_level": "Pre A1 Starters",
+      "listed_at_levels": [
+        "Pre A1 Starters"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:names"
+    ],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:evening:noun:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:evening:noun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "evening",
+    "display_forms": [
+      "evening"
+    ],
+    "part_of_speech": [
+      "noun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "evening (noun)",
+    "level_metadata": {
+      "first_listed_level": "Pre A1 Starters",
+      "listed_at_levels": [
+        "Pre A1 Starters"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:time"
+    ],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:ever:adverb:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:ever:adverb:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "ever",
+    "display_forms": [
+      "ever"
+    ],
+    "part_of_speech": [
+      "adverb"
+    ],
+    "source_qualifier": null,
+    "sense_label": "ever (adverb)",
+    "level_metadata": {
+      "first_listed_level": "A2 Flyers",
+      "listed_at_levels": [
+        "A2 Flyers"
+      ]
+    },
+    "theme_ids": [],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:every:determiner:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:every:determiner:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "every",
+    "display_forms": [
+      "every"
+    ],
+    "part_of_speech": [
+      "determiner"
+    ],
+    "source_qualifier": null,
+    "sense_label": "every (determiner)",
+    "level_metadata": {
+      "first_listed_level": "A1 Movers",
+      "listed_at_levels": [
+        "A1 Movers"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:time"
+    ],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:everyone:pronoun:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:everyone:pronoun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "everyone",
+    "display_forms": [
+      "everyone"
+    ],
+    "part_of_speech": [
+      "pronoun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "everyone (pronoun)",
+    "level_metadata": {
+      "first_listed_level": "A1 Movers",
+      "listed_at_levels": [
+        "A1 Movers"
+      ]
+    },
+    "theme_ids": [],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:everything:pronoun:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:everything:pronoun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "everything",
+    "display_forms": [
+      "everything"
+    ],
+    "part_of_speech": [
+      "pronoun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "everything (pronoun)",
+    "level_metadata": {
+      "first_listed_level": "A1 Movers",
+      "listed_at_levels": [
+        "A1 Movers"
+      ]
+    },
+    "theme_ids": [],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:everywhere:adverb:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:everywhere:adverb:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "everywhere",
+    "display_forms": [
+      "everywhere"
+    ],
+    "part_of_speech": [
+      "adverb"
+    ],
+    "source_qualifier": null,
+    "sense_label": "everywhere (adverb)",
+    "level_metadata": {
+      "first_listed_level": "A2 Flyers",
+      "listed_at_levels": [
+        "A2 Flyers"
+      ]
+    },
+    "theme_ids": [],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:example:noun:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:example:noun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "example",
+    "display_forms": [
+      "example"
+    ],
+    "part_of_speech": [
+      "noun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "example (noun)",
+    "level_metadata": {
+      "first_listed_level": "Pre A1 Starters",
+      "listed_at_levels": [
+        "Pre A1 Starters"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:school"
+    ],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:excellent:adjective-exclamation:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:excellent:adjective-exclamation:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "excellent",
+    "display_forms": [
+      "excellent"
+    ],
+    "part_of_speech": [
+      "adjective",
+      "exclamation"
+    ],
+    "source_qualifier": null,
+    "sense_label": "excellent (adjective/exclamation)",
+    "level_metadata": {
+      "first_listed_level": "A2 Flyers",
+      "listed_at_levels": [
+        "A2 Flyers"
+      ]
+    },
+    "theme_ids": [],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:excited:adjective:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:excited:adjective:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "excited",
+    "display_forms": [
+      "excited"
+    ],
+    "part_of_speech": [
+      "adjective"
+    ],
+    "source_qualifier": null,
+    "sense_label": "excited (adjective)",
+    "level_metadata": {
+      "first_listed_level": "A2 Flyers",
+      "listed_at_levels": [
+        "A2 Flyers"
+      ]
+    },
+    "theme_ids": [],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:exciting:adjective:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:exciting:adjective:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "exciting",
+    "display_forms": [
+      "exciting"
+    ],
+    "part_of_speech": [
+      "adjective"
+    ],
+    "source_qualifier": null,
+    "sense_label": "exciting (adjective)",
+    "level_metadata": {
+      "first_listed_level": "A1 Movers",
+      "listed_at_levels": [
+        "A1 Movers"
+      ]
+    },
+    "theme_ids": [],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:excuse-me:discourse-marker:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:excuse-me:discourse-marker:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "excuse me",
+    "display_forms": [
+      "excuse me"
+    ],
+    "part_of_speech": [
+      "discourse_marker"
+    ],
+    "source_qualifier": null,
+    "sense_label": "excuse me (discourse_marker)",
+    "level_metadata": {
+      "first_listed_level": "A1 Movers",
+      "listed_at_levels": [
+        "A1 Movers"
+      ]
+    },
+    "theme_ids": [],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:exit:noun:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:exit:noun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "exit",
+    "display_forms": [
+      "exit"
+    ],
+    "part_of_speech": [
+      "noun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "exit (noun)",
+    "level_metadata": {
+      "first_listed_level": "A2 Flyers",
+      "listed_at_levels": [
+        "A2 Flyers"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:the-world-around-us"
+    ],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:expensive:adjective:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:expensive:adjective:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "expensive",
+    "display_forms": [
+      "expensive"
+    ],
+    "part_of_speech": [
+      "adjective"
+    ],
+    "source_qualifier": null,
+    "sense_label": "expensive (adjective)",
+    "level_metadata": {
+      "first_listed_level": "A2 Flyers",
+      "listed_at_levels": [
+        "A2 Flyers"
+      ]
+    },
+    "theme_ids": [],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:explain:verb:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:explain:verb:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "explain",
+    "display_forms": [
+      "explain"
+    ],
+    "part_of_speech": [
+      "verb"
+    ],
+    "source_qualifier": null,
+    "sense_label": "explain (verb)",
+    "level_metadata": {
+      "first_listed_level": "A2 Flyers",
+      "listed_at_levels": [
+        "A2 Flyers"
+      ]
+    },
+    "theme_ids": [],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:explore:verb:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:explore:verb:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "explore",
+    "display_forms": [
+      "explore"
+    ],
+    "part_of_speech": [
+      "verb"
+    ],
+    "source_qualifier": null,
+    "sense_label": "explore (verb)",
+    "level_metadata": {
+      "first_listed_level": "A2 Flyers",
+      "listed_at_levels": [
+        "A2 Flyers"
+      ]
+    },
+    "theme_ids": [],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:extinct:adjective:unqualified:r1",
+    "revision": 1,
+    "status": "draft",
+    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:extinct:adjective:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "extinct",
+    "display_forms": [
+      "extinct"
+    ],
+    "part_of_speech": [
+      "adjective"
+    ],
+    "source_qualifier": null,
+    "sense_label": "extinct (adjective)",
+    "level_metadata": {
+      "first_listed_level": "A2 Flyers",
+      "listed_at_levels": [
+        "A2 Flyers"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:animals"
+    ],
+    "teaching": {
+      "definition_en": null,
+      "explanation_vi": null,
+      "example_en": null,
+      "example_vi": null,
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "none"
+      },
+      "activity_templates": []
+    },
+    "review": {
+      "language_review": "pending",
+      "sense_review": "pending",
+      "child_suitability_review": "pending",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  },
+  {
+    "entry_id": "ro-vocab:eye:noun:unqualified:r1",
+    "revision": 1,
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
+    "source_ref": {
+      "source_id": "cambridge-yle-2025",
+      "word_id": "cyle25:v2:eye:noun:unqualified",
+      "source_schema_version": "2.0.0",
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa"
+    },
+    "headword": "eye",
+    "display_forms": [
+      "eye"
+    ],
+    "part_of_speech": [
+      "noun"
+    ],
+    "source_qualifier": null,
+    "sense_label": "the part of your face you see with",
+    "level_metadata": {
+      "first_listed_level": "Pre A1 Starters",
+      "listed_at_levels": [
+        "Pre A1 Starters"
+      ]
+    },
+    "theme_ids": [
+      "cyle25-theme:the-body-and-the-face"
+    ],
+    "teaching": {
+      "definition_en": "One of the two parts on your face that you see with.",
+      "explanation_vi": "Một trong hai bộ phận trên mặt dùng để nhìn (con mắt).",
+      "example_en": "Close your eyes and count to ten.",
+      "example_vi": "Nhắm mắt lại và đếm đến mười nhé.",
+      "nonexample_en": null,
+      "contrast_entry_ids": [],
+      "usage_notes": [],
+      "pronunciation": {
+        "ipa_uk": null,
+        "ipa_us": null,
+        "audio_uk": null,
+        "audio_us": null,
+        "syllable_hint": null
+      },
+      "visual": {
+        "asset": null,
+        "alt": null,
+        "kind": "object"
+      },
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
+    },
+    "review": {
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
+      "media_review": "not_applicable",
+      "parent_approval": "pending"
+    },
+    "provenance": {
+      "teaching_content_original": true,
+      "source_attribution_internal_only": true
+    }
+  }
+]

@@ -6,9 +6,9 @@
 // Read Oasis service worker: cache app shell + published content for offline use (R07).
 // Same-origin only. No analytics, no external requests.
 // VERSION is stamped automatically by tools/validate_content.py --index (content hash + shell hash); do not edit by hand.
-const VERSION = 'ro-2a6c163583b1-0c0aa9f8';
+const VERSION = 'ro-2a6c163583b1-085bcc76';
 const SHELL = ['./', 'index.html', 'parent.html', 'manifest.webmanifest', 'assets/app.css',
-  'src/kid-app.mjs', 'src/parent-dashboard.mjs', 'src/progress-store.mjs', 'src/schema.mjs', 'src/ui.mjs', 'src/sync.mjs', 'src/config.mjs', 'src/auth-gate.mjs', 'content/index.json'];
+  'src/kid-app.mjs', 'src/parent-dashboard.mjs', 'src/progress-store.mjs', 'src/schema.mjs', 'src/ui.mjs', 'src/sync.mjs', 'src/config.mjs', 'src/auth-gate.mjs', 'src/vocab-garden.mjs', 'content/index.json'];
 
 self.addEventListener('install', e => {
   e.waitUntil((async () => {
@@ -20,6 +20,14 @@ self.addEventListener('install', e => {
       for (const b of idx.books || []) { urls.add('content/' + b.file); for (const a of b.assets || []) urls.add('content/' + a); }
       await Promise.all([...urls].map(u => c.add(u).catch(() => null)));
     } catch { /* offline install: shell only */ }
+    try { // Vocabulary Garden: cache ONLY public-safe approved enrichment (manifest + letter shards +
+          // approved book-page mappings + referenced assets). Never the private source lexicon, raw
+          // occurrences, review queue, or editorial notes — those never ship in the app directory.
+      const vm = await (await fetch('content/vocabulary/manifest.json', { cache: 'no-cache' })).json();
+      const vurls = new Set(['content/vocabulary/manifest.json', 'content/vocabulary/mappings/book-page-mappings.json']);
+      for (const l of vm.shards || []) vurls.add('content/vocabulary/entries/' + l + '.json');
+      await Promise.all([...vurls].map(u => c.add(u).catch(() => null)));
+    } catch { /* Vocabulary Garden is optional; reading still works without it */ }
     self.skipWaiting();
   })());
 });

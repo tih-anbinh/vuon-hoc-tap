@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "read-oasis/vocabulary-progress.schema.json",
+  "title": "Read Oasis Vocabulary Garden child progress (Layer C)",
+  "description": "Child-scoped learning evidence for vocabulary. Stored separately from books and the source lexicon. Evidence-based, never a single mastery boolean. No raw recordings are stored here.",
+  "type": "object",
+  "required": ["vocab_progress_version", "words"],
+  "additionalProperties": true,
+  "properties": {
+    "vocab_progress_version": { "type": "integer", "minimum": 1 },
+    "words": {
+      "type": "object",
+      "description": "Map of entry_id -> WordProgress",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["entry_id", "evidence", "support_level"],
+        "additionalProperties": false,
+        "properties": {
+          "entry_id": { "type": "string" },
+          "word_id": { "type": "string" },
+          "evidence": {
+            "type": "object",
+            "description": "Counts / flags per evidence type. Never one boolean.",
+            "additionalProperties": false,
+            "properties": {
+              "encountered_in_book": { "type": "integer", "minimum": 0 },
+              "listened": { "type": "integer", "minimum": 0 },
+              "recognized_in_context": { "type": "integer", "minimum": 0 },
+              "recognized_from_audio": { "type": "integer", "minimum": 0 },
+              "recalled_without_choices": { "type": "integer", "minimum": 0 },
+              "pronounced_self_listened": { "type": "integer", "minimum": 0 },
+              "used_in_new_context": { "type": "integer", "minimum": 0 },
+              "parent_reviewed": { "type": "integer", "minimum": 0 }
+            }
+          },
+          "support_level": {
+            "type": "string",
+            "enum": ["not_yet", "with_support", "independent", "used_in_new_context"]
+          },
+          "next_review_at": { "type": ["string", "null"], "format": "date-time" },
+          "last_evidence_occurrence": {
+            "type": ["object", "null"],
+            "additionalProperties": true,
+            "properties": {
+              "book_id": { "type": "string" },
+              "page_id": { "type": "string" },
+              "at": { "type": "string", "format": "date-time" }
+            }
+          }
+        }
+      }
+    },
+    "vocab_ledger": {
+      "type": "array",
+      "description": "Idempotent reward/event ledger keyed to prevent double-counting.",
+      "items": {
+        "type": "object",
+        "required": ["key"],
+        "additionalProperties": true,
+        "properties": {
+          "key": { "type": "string" },
+          "entry_id": { "type": "string" },
+          "evidence_type": { "type": "string" },
+          "at": { "type": "string", "format": "date-time" }
+        }
+      }
+    }
+  }
+}

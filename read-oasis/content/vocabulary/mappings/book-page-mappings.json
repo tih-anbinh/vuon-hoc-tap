@@ -1,0 +1,256 @@
+{
+  "generated_by": "tools/vocab/build_mappings.py",
+  "note": "Approved mappings only. Additive; book JSON is never modified.",
+  "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa",
+  "mappings": [
+    {
+      "mapping_id": "ro-map:ro-a-001:r1:p01:kite:001",
+      "book_id": "ro-a-001",
+      "book_revision": 1,
+      "page_id": "p01",
+      "surface_form": "kite",
+      "surface_span": {
+        "start": 13,
+        "end": 17
+      },
+      "entry_id": "ro-vocab:kite:noun:unqualified:r1",
+      "word_id": "cyle25:v2:kite:noun:unqualified",
+      "context_sense_id": "cyle25:v2:kite:noun:unqualified",
+      "enrichment_revision": 1,
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa",
+      "mapping_status": "editor_approved",
+      "approval_basis": "unique_eligible_candidate"
+    },
+    {
+      "mapping_id": "ro-map:ro-a-001:r1:p02:still:001",
+      "book_id": "ro-a-001",
+      "book_revision": 1,
+      "page_id": "p02",
+      "surface_form": "still",
+      "surface_span": {
+        "start": 12,
+        "end": 17
+      },
+      "entry_id": "ro-vocab:still:adverb:unqualified:r1",
+      "word_id": "cyle25:v2:still:adverb:unqualified",
+      "context_sense_id": "cyle25:v2:still:adverb:unqualified",
+      "enrichment_revision": 1,
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa",
+      "mapping_status": "editor_approved",
+      "approval_basis": "unique_eligible_candidate"
+    },
+    {
+      "mapping_id": "ro-map:ro-a-023:r1:p06:dry:001",
+      "book_id": "ro-a-023",
+      "book_revision": 1,
+      "page_id": "p06",
+      "surface_form": "dry",
+      "surface_span": {
+        "start": 12,
+        "end": 15
+      },
+      "entry_id": "ro-vocab:dry:adjective-verb:unqualified:r1",
+      "word_id": "cyle25:v2:dry:adjective-verb:unqualified",
+      "context_sense_id": "cyle25:v2:dry:adjective-verb:unqualified",
+      "enrichment_revision": 1,
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa",
+      "mapping_status": "editor_approved",
+      "approval_basis": "unique_eligible_candidate"
+    },
+    {
+      "mapping_id": "ro-map:ro-a-030:r1:p04:slow:001",
+      "book_id": "ro-a-030",
+      "book_revision": 1,
+      "page_id": "p04",
+      "surface_form": "slow",
+      "surface_span": {
+        "start": 21,
+        "end": 25
+      },
+      "entry_id": "ro-vocab:slow:adjective:unqualified:r1",
+      "word_id": "cyle25:v2:slow:adjective:unqualified",
+      "context_sense_id": "cyle25:v2:slow:adjective:unqualified",
+      "enrichment_revision": 1,
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa",
+      "mapping_status": "editor_approved",
+      "approval_basis": "unique_eligible_candidate"
+    },
+    {
+      "mapping_id": "ro-map:ro-b-022:r1:p02:empty:001",
+      "book_id": "ro-b-022",
+      "book_revision": 1,
+      "page_id": "p02",
+      "surface_form": "empty",
+      "surface_span": {
+        "start": 16,
+        "end": 21
+      },
+      "entry_id": "ro-vocab:empty:adjective:unqualified:r1",
+      "word_id": "cyle25:v2:empty:adjective:unqualified",
+      "context_sense_id": "cyle25:v2:empty:adjective:unqualified",
+      "enrichment_revision": 1,
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa",
+      "mapping_status": "editor_approved",
+      "approval_basis": "unique_eligible_candidate"
+    },
+    {
+      "mapping_id": "ro-map:ro-c-020:r1:p02:tail:001",
+      "book_id": "ro-c-020",
+      "book_revision": 1,
+      "page_id": "p02",
+      "surface_form": "tail",
+      "surface_span": {
+        "start": 19,
+        "end": 23
+      },
+      "entry_id": "ro-vocab:tail:noun:unqualified:r1",
+      "word_id": "cyle25:v2:tail:noun:unqualified",
+      "context_sense_id": "cyle25:v2:tail:noun:unqualified",
+      "enrichment_revision": 1,
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa",
+      "mapping_status": "editor_approved",
+      "approval_basis": "unique_eligible_candidate"
+    },
+    {
+      "mapping_id": "ro-map:ro-c-020:r1:p04:heavy:001",
+      "book_id": "ro-c-020",
+      "book_revision": 1,
+      "page_id": "p04",
+      "surface_form": "heavy",
+      "surface_span": {
+        "start": 50,
+        "end": 55
+      },
+      "entry_id": "ro-vocab:heavy:adjective:unqualified:r1",
+      "word_id": "cyle25:v2:heavy:adjective:unqualified",
+      "context_sense_id": "cyle25:v2:heavy:adjective:unqualified",
+      "enrichment_revision": 1,
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa",
+      "mapping_status": "editor_approved",
+      "approval_basis": "unique_eligible_candidate"
+    },
+    {
+      "mapping_id": "ro-map:ro-c-032:r1:p02:under:001",
+      "book_id": "ro-c-032",
+      "book_revision": 1,
+      "page_id": "p02",
+      "surface_form": "under",
+      "surface_span": {
+        "start": 10,
+        "end": 15
+      },
+      "entry_id": "ro-vocab:under:preposition:unqualified:r1",
+      "word_id": "cyle25:v2:under:preposition:unqualified",
+      "context_sense_id": "cyle25:v2:under:preposition:unqualified",
+      "enrichment_revision": 1,
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa",
+      "mapping_status": "editor_approved",
+      "approval_basis": "unique_eligible_candidate"
+    },
+    {
+      "mapping_id": "ro-map:ro-c-032:r1:p03:behind:001",
+      "book_id": "ro-c-032",
+      "book_revision": 1,
+      "page_id": "p03",
+      "surface_form": "behind",
+      "surface_span": {
+        "start": 10,
+        "end": 16
+      },
+      "entry_id": "ro-vocab:behind:preposition:unqualified:r1",
+      "word_id": "cyle25:v2:behind:preposition:unqualified",
+      "context_sense_id": "cyle25:v2:behind:preposition:unqualified",
+      "enrichment_revision": 1,
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa",
+      "mapping_status": "editor_approved",
+      "approval_basis": "unique_eligible_candidate"
+    },
+    {
+      "mapping_id": "ro-map:ro-c-032:r1:p04:inside:001",
+      "book_id": "ro-c-032",
+      "book_revision": 1,
+      "page_id": "p04",
+      "surface_form": "inside",
+      "surface_span": {
+        "start": 10,
+        "end": 16
+      },
+      "entry_id": "ro-vocab:inside:adverb-noun-preposition:unqualified:r1",
+      "word_id": "cyle25:v2:inside:adverb-noun-preposition:unqualified",
+      "context_sense_id": "cyle25:v2:inside:adverb-noun-preposition:unqualified",
+      "enrichment_revision": 1,
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa",
+      "mapping_status": "editor_approved",
+      "approval_basis": "unique_eligible_candidate"
+    },
+    {
+      "mapping_id": "ro-map:ro-d-030:r1:p01:umbrella:001",
+      "book_id": "ro-d-030",
+      "book_revision": 1,
+      "page_id": "p01",
+      "surface_form": "umbrella",
+      "surface_span": {
+        "start": 42,
+        "end": 50
+      },
+      "entry_id": "ro-vocab:umbrella:noun:unqualified:r1",
+      "word_id": "cyle25:v2:umbrella:noun:unqualified",
+      "context_sense_id": "cyle25:v2:umbrella:noun:unqualified",
+      "enrichment_revision": 1,
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa",
+      "mapping_status": "editor_approved",
+      "approval_basis": "unique_eligible_candidate"
+    },
+    {
+      "mapping_id": "ro-map:ro-g-031:r1:p05:midday:001",
+      "book_id": "ro-g-031",
+      "book_revision": 1,
+      "page_id": "p05",
+      "surface_form": "midday",
+      "surface_span": {
+        "start": 124,
+        "end": 130
+      },
+      "entry_id": "ro-vocab:midday:noun:unqualified:r1",
+      "word_id": "cyle25:v2:midday:noun:unqualified",
+      "context_sense_id": "cyle25:v2:midday:noun:unqualified",
+      "enrichment_revision": 1,
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa",
+      "mapping_status": "editor_approved",
+      "approval_basis": "unique_eligible_candidate"
+    },
+    {
+      "mapping_id": "ro-map:ro-g-032:r1:p03:cross:001",
+      "book_id": "ro-g-032",
+      "book_revision": 1,
+      "page_id": "p03",
+      "surface_form": "cross",
+      "surface_span": {
+        "start": 66,
+        "end": 71
+      },
+      "entry_id": "ro-vocab:cross:noun-verb:unqualified:r1",
+      "word_id": "cyle25:v2:cross:noun-verb:unqualified",
+      "context_sense_id": "cyle25:v2:cross:noun-verb:unqualified",
+      "enrichment_revision": 1,
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa",
+      "mapping_status": "editor_approved",
+      "approval_basis": "unique_eligible_candidate"
+    },
+    {
+      "mapping_id": "ro-map:ro-n-030:r1:p08:cycle:001",
+      "book_id": "ro-n-030",
+      "book_revision": 1,
+      "page_id": "p08",
+      "surface_form": "cycle",
+      "surface_span": null,
+      "entry_id": "ro-vocab:cycle:verb:unqualified:r1",
+      "word_id": "cyle25:v2:cycle:verb:unqualified",
+      "context_sense_id": "cyle25:v2:cycle:verb:unqualified",
+      "enrichment_revision": 1,
+      "source_pdf_sha256": "6f7a0ad1e277bd10ae8b3bcccfb76c058f611a607c6c9947601abbd7e16a99fa",
+      "mapping_status": "editor_approved",
+      "approval_basis": "unique_eligible_candidate"
+    }
+  ]
+}

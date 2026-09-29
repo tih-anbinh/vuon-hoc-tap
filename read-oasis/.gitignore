@@ -1,0 +1,11 @@
+# Node / Playwright (dev-time E2E only; the app itself ships as static files)
+node_modules/
+test-results/
+playwright-report/
+blob-report/
+.playwright/
+e2e-run.log
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db

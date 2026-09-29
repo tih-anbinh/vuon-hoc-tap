@@ -8,7 +8,7 @@
 // Storage-agnostic: pass any object with getItem/setItem/removeItem (localStorage
 // or an in-memory shim for tests).
 
-export const STORE_VERSION = 1;
+export const STORE_VERSION = 2;
 export const STORE_KEY = 'read_oasis.store.v1';
 
 export const DEFAULT_SETTINGS = Object.freeze({
@@ -61,7 +61,24 @@ export function emptyStore(profileId = 'child-1') {
     ledger: [],                 // reward transactions (idempotent)
     sessions: [],               // {started_at, ended_at, minutes, breaks_shown, breaks_dismissed}
     recordings_meta: [],        // only metadata; blobs live in IndexedDB when retained
+    // Layer C: Vocabulary Garden child progress. Kept separate from books and the source lexicon.
+    // Evidence is never a single mastery boolean; see content/vocabulary/schemas/vocabulary-progress.schema.json.
+    vocab_progress: { vocab_progress_version: 1, words: {}, vocab_ledger: [] },
   };
+}
+
+// Evidence types tracked per vocabulary entry (Layer C).
+export const VOCAB_EVIDENCE = [
+  'encountered_in_book', 'listened', 'recognized_in_context', 'recognized_from_audio',
+  'recalled_without_choices', 'pronounced_self_listened', 'used_in_new_context', 'parent_reviewed',
+];
+export function emptyVocabEvidence() { const o = {}; for (const k of VOCAB_EVIDENCE) o[k] = 0; return o; }
+/** Derive a support label from accumulated evidence (never a single boolean). */
+export function vocabSupportLevel(ev) {
+  if ((ev.used_in_new_context || 0) > 0) return 'used_in_new_context';
+  if ((ev.recalled_without_choices || 0) > 0 || (ev.recognized_from_audio || 0) > 0) return 'independent';
+  if ((ev.recognized_in_context || 0) > 0 || (ev.listened || 0) > 0) return 'with_support';
+  return 'not_yet';
 }
 
 export function nowIso() { return new Date().toISOString(); }
@@ -182,6 +199,53 @@ export class ProgressStore {
   endSession(id) { const s = this.data.sessions.find(x => x.id === id); if (s && !s.ended_at) { s.ended_at = nowIso(); this.save(); } return s; }
   noteBreak(id, dismissed) { const s = this.data.sessions.find(x => x.id === id); if (s) { s.breaks_shown += 1; if (dismissed) s.breaks_dismissed += 1; this.save(); } }
 
+  // ---------- Vocabulary Garden (Layer C)
+  /** Return (creating if needed) the progress record for an enrichment entry. */
+  vocabWord(entryId, wordId = null) {
+    const vp = this.data.vocab_progress || (this.data.vocab_progress = { vocab_progress_version: 1, words: {}, vocab_ledger: [] });
+    let w = vp.words[entryId];
+    if (!w) { w = vp.words[entryId] = { entry_id: entryId, word_id: wordId, evidence: emptyVocabEvidence(), support_level: 'not_yet', next_review_at: null, last_evidence_occurrence: null }; }
+    if (wordId && !w.word_id) w.word_id = wordId;
+    return w;
+  }
+  /**
+   * Record one piece of learning evidence, idempotently. `dedupKey` guarantees that repeating,
+   * refreshing, or double-clicking cannot double-count the same event. Returns {counted, key}.
+   */
+  recordVocabEvidence({ entryId, wordId = null, evidenceType, dedupKey = null, occurrence = null }) {
+    if (!VOCAB_EVIDENCE.includes(evidenceType)) return { counted: false, reason: 'unknown_evidence_type' };
+    const vp = this.data.vocab_progress || (this.data.vocab_progress = { vocab_progress_version: 1, words: {}, vocab_ledger: [] });
+    const key = dedupKey || `${entryId}|${evidenceType}|${nowIso()}`;
+    if (vp.vocab_ledger.some(t => t.key === key)) return { counted: false, reason: 'duplicate', key };
+    vp.vocab_ledger.push({ key, entry_id: entryId, word_id: wordId, evidence_type: evidenceType, occurrence, at: nowIso() });
+    const w = this.vocabWord(entryId, wordId);
+    w.evidence[evidenceType] += 1;
+    if (occurrence) w.last_evidence_occurrence = occurrence;
+    w.support_level = vocabSupportLevel(w.evidence);
+    this.save();
+    return { counted: true, key, support_level: w.support_level };
+  }
+  /** Schedule the next spaced-retrieval review for an entry (simple expanding interval). */
+  scheduleVocabReview(entryId, days) {
+    const w = this.vocabWord(entryId);
+    const d = new Date(); d.setDate(d.getDate() + Math.max(1, days || 1));
+    w.next_review_at = d.toISOString(); this.save(); return w.next_review_at;
+  }
+  /** Entries due for review now (next_review_at in the past). */
+  vocabDue(nowMs = Date.now()) {
+    const vp = this.data.vocab_progress || { words: {} };
+    return Object.values(vp.words).filter(w => w.next_review_at && new Date(w.next_review_at).getTime() <= nowMs);
+  }
+  /** Snapshot of vocab progress for the parent dashboard. */
+  vocabProgressSummary() {
+    const vp = this.data.vocab_progress || { words: {} };
+    const words = Object.values(vp.words);
+    const byLevel = { not_yet: 0, with_support: 0, independent: 0, used_in_new_context: 0 };
+    let encountered = 0;
+    for (const w of words) { byLevel[w.support_level] = (byLevel[w.support_level] || 0) + 1; if ((w.evidence.encountered_in_book || 0) > 0) encountered++; }
+    return { total: words.length, encountered_from_books: encountered, by_support_level: byLevel, due_reviews: this.vocabDue().length, words };
+  }
+
   // ---------- backup (D04, D05)
   exportBackup() {
     const payload = { format: 'read-oasis-backup', store_version: STORE_VERSION, exported_at: nowIso(), data: this.data };
@@ -246,7 +310,38 @@ export function mergeStores(a, b) {
       if (!cur || (rp.last_seen_at || '') > (cur.last_seen_at || '')) out.books[bid].revisions[rev] = rp;
     }
   }
+  // Vocabulary Garden (Layer C): merge idempotently. The vocab_ledger is the source of truth for
+  // de-duplication (keyed events); words[].evidence is rebuilt from the merged ledger so a re-import
+  // or offline sync can never double-count an event.
+  out.vocab_progress = out.vocab_progress || { vocab_progress_version: 1, words: {}, vocab_ledger: [] };
+  const av = a.vocab_progress || { vocab_ledger: [], words: {} };
+  const bv = b.vocab_progress || { vocab_ledger: [], words: {} };
+  const mergedLedger = [];
+  const seenKeys = new Set();
+  for (const t of [...(av.vocab_ledger || []), ...(bv.vocab_ledger || [])]) {
+    if (t && typeof t.key === 'string' && !seenKeys.has(t.key)) { mergedLedger.push(t); seenKeys.add(t.key); }
+  }
+  out.vocab_progress.vocab_ledger = mergedLedger;
+  out.vocab_progress.words = rebuildVocabWords(mergedLedger, { ...(av.words || {}), ...(bv.words || {}) });
   return out;
+}
+
+/** Rebuild per-word evidence counts from the deduplicated ledger (idempotent). */
+export function rebuildVocabWords(ledger, priorWords = {}) {
+  const words = {};
+  for (const [eid, w] of Object.entries(priorWords)) {
+    words[eid] = { entry_id: eid, word_id: w.word_id || null, evidence: emptyVocabEvidence(),
+      support_level: 'not_yet', next_review_at: w.next_review_at || null, last_evidence_occurrence: w.last_evidence_occurrence || null };
+  }
+  for (const t of ledger) {
+    const eid = t.entry_id; if (!eid) continue;
+    const w = words[eid] || (words[eid] = { entry_id: eid, word_id: t.word_id || null, evidence: emptyVocabEvidence(), support_level: 'not_yet', next_review_at: null, last_evidence_occurrence: null });
+    if (t.evidence_type && t.evidence_type in w.evidence) w.evidence[t.evidence_type] += 1;
+    if (t.word_id && !w.word_id) w.word_id = t.word_id;
+    if (t.occurrence) w.last_evidence_occurrence = t.occurrence;
+  }
+  for (const w of Object.values(words)) w.support_level = vocabSupportLevel(w.evidence);
+  return words;
 }
 
 function summarize(before, after) {
@@ -261,10 +356,17 @@ function summarize(before, after) {
 export function migrate(data) {
   let d = data;
   if (!d.store_version) d = { ...emptyStore(), ...d, store_version: 1 };
-  // future: if (d.store_version === 1) { ...; d.store_version = 2; }
+  // v1 -> v2: add the Vocabulary Garden progress section. Non-destructive: all existing
+  // reading progress, attempts, ledger, and settings are preserved untouched.
+  if (d.store_version === 1) {
+    if (!d.vocab_progress) d.vocab_progress = { vocab_progress_version: 1, words: {}, vocab_ledger: [] };
+    d.store_version = 2;
+  }
   // Backfill any missing sections from the empty template.
   const tpl = emptyStore(d.profile?.id);
   for (const k of Object.keys(tpl)) if (!(k in d)) d[k] = tpl[k];
+  if (!d.vocab_progress.words) d.vocab_progress.words = {};
+  if (!Array.isArray(d.vocab_progress.vocab_ledger)) d.vocab_progress.vocab_ledger = [];
   d.settings = { ...DEFAULT_SETTINGS, ...(d.settings || {}) };
   return d;
 }

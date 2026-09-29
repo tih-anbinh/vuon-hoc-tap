@@ -12,6 +12,7 @@ import { isPublishable } from './schema.mjs';
 import { h, btn, icon, applySettings, toast, narrator, BreakTimer, shuffle, loadJSON, assetUrl, isBundled, isFileProtocol } from './ui.mjs';
 import { attachSync } from './sync.mjs';
 import { requireAuth } from './auth-gate.mjs';
+import { renderGarden, loadVocabManifest } from './vocab-garden.mjs';
 
 // All module state is declared before any store listener can fire (save() notifies synchronously).
 const store = new ProgressStore(window.localStorage);
@@ -29,6 +30,7 @@ let audioUsedThisBook = false;
 let lastStars = null;
 let session = null;
 let breakTimer = null;
+let gardenAvailable = false;           // true when content/vocabulary/manifest.json loads (Phase 4)
 
 store.onChange(d => { applySettings(d.settings); renderStars(); if (breakTimer && breakTimer.minutes !== d.settings.break_minutes) breakTimer.setMinutes(d.settings.break_minutes); });
 session = store.startSession();
@@ -74,6 +76,9 @@ async function loadLibrary() {
     // Parent veto applied here; unseen-check texts (C06) are never in the child's shelf unless the parent unlocks one
     // for a check session from parent.html (settings.unseen_unlocked = book_id).
     library = (idx.books || []).filter(b => !store.isBookHidden(b.book_id) && (!b.reserved_for_unseen_check || S.settings.unseen_unlocked === b.book_id));
+    // Vocabulary Garden is optional: probe its manifest so the shelf can offer it, but never block reading.
+    const gm = await loadVocabManifest();
+    gardenAvailable = !!gm && ((gm.disposition_counts?.editorially_approved || 0) + (gm.disposition_counts?.published || 0)) > 0;
   } catch {
     library = [];
     toast(isFileProtocol ? 'This copy needs the single-file build (dist/index.html) or a local web server. See README.' : 'Could not load the library. If you are offline, open the app once while online first.', 8000);
@@ -168,9 +173,14 @@ async function render() {
     case 'activity': return renderActivity(await loadBook(route.bookId), route.index || 0);
     case 'quiz': return renderQuiz(await loadBook(route.bookId), route.index || 0);
     case 'celebrate': return renderCelebrate(await loadBook(route.bookId));
+    case 'garden': return renderGarden(app, gardenCtx());
     default: return renderLibrary();
   }
 }
+
+// Vocabulary Garden context: gives the companion area the store, title setter, and navigation
+// without letting it touch book routing internals.
+function gardenCtx() { return { store, setTitle, go, back: () => go({ view: 'library' }) }; }
 
 // ---------- library (Choose)
 function tile(b) {
@@ -220,6 +230,7 @@ function renderLibrary() {
           h('p', { class: 'sub', text: continueBook ? `Your book "${continueBook.title}" is waiting where you left it.` : 'A lovely new story is waiting for you. Pick a book and let’s explore together.' }),
           h('div', { class: 'row hero-actions' },
             continueBook ? btn('Continue', () => go({ view: 'preview', bookId: continueBook.book_id }), { primary: true, ic: 'play' }) : null,
+            gardenAvailable ? btn('Vocabulary Garden', () => go({ view: 'garden' }), { primary: !continueBook, ic: 'star' }) : null,
             btn('Hear that again', speakGreetingAgain, { quiet: true, ic: 'ear' }),
             hasBand ? h('span', { class: 'chip accent', text: 'Your level: ' + S.settings.independent_track_band + (S.settings.read_aloud_track_band && S.settings.read_aloud_track_band !== S.settings.independent_track_band ? ' · listening ' + S.settings.read_aloud_track_band : '') }) : h('span', { class: 'chip', text: 'A grown-up can set your reading level' }))),
         mascot ? h('div', { class: 'hero-art', 'aria-hidden': 'true' },
