@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-kitchen desc-kitchen">
+  <title id="title-kitchen">Kitchen - Kitchen scene</title>
+  <desc id="desc-kitchen">A kitchen scene with a stove, a pot, a refrigerator, a countertop with cutting board, and cabinets.</desc>
+  <defs>
+    <linearGradient id="wall-warm" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="counter-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e7e5e4"/>
+      <stop offset="100%" stop-color="#a8a29e"/>
+    </linearGradient>
+    <linearGradient id="cabinet-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#78350f"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <!-- Wall/floor -->
+  <rect x="0" y="0" width="400" height="240" fill="url(#wall-warm)"/>
+  <rect x="0" y="240" width="400" height="60" fill="#57534e"/>
+  <line x1="0" y1="240" x2="400" y2="240" stroke="#292524" stroke-width="3"/>
+  <!-- Tile floor -->
+  <g stroke="#78716c" stroke-width="1" opacity="0.5">
+    <line x1="100" y1="240" x2="80" y2="300"/>
+    <line x1="200" y1="240" x2="200" y2="300"/>
+    <line x1="300" y1="240" x2="320" y2="300"/>
+    <line x1="0" y1="270" x2="400" y2="270"/>
+  </g>
+  <g filter="url(#soft-shadow)">
+    <!-- Upper cabinets -->
+    <rect x="30" y="30" width="180" height="65" rx="3" fill="url(#cabinet-grad)" stroke="#451a03" stroke-width="3"/>
+    <line x1="120" y1="30" x2="120" y2="95" stroke="#451a03" stroke-width="2.5"/>
+    <circle cx="112" cy="63" r="3" fill="#fbbf24" stroke="#78350f" stroke-width="1.5"/>
+    <circle cx="128" cy="63" r="3" fill="#fbbf24" stroke="#78350f" stroke-width="1.5"/>
+    <!-- Cabinet panel details -->
+    <rect x="40" y="40" width="70" height="45" rx="2" fill="none" stroke="#451a03" stroke-width="1.5"/>
+    <rect x="130" y="40" width="70" height="45" rx="2" fill="none" stroke="#451a03" stroke-width="1.5"/>
+
+    <!-- Counter top -->
+    <rect x="20" y="160" width="230" height="15" rx="2" fill="url(#counter-grad)" stroke="#525252" stroke-width="2.5"/>
+    <!-- Counter front -->
+    <rect x="20" y="175" width="230" height="65" fill="#f5f5f4" stroke="#525252" stroke-width="2.5"/>
+    <!-- Lower cabinet dividers -->
+    <line x1="90" y1="175" x2="90" y2="240" stroke="#525252" stroke-width="2"/>
+    <line x1="180" y1="175" x2="180" y2="240" stroke="#525252" stroke-width="2"/>
+    <circle cx="55" cy="207" r="2.5" fill="#525252"/>
+    <circle cx="135" cy="207" r="2.5" fill="#525252"/>
+    <circle cx="215" cy="207" r="2.5" fill="#525252"/>
+
+    <!-- Cutting board on counter -->
+    <rect x="35" y="140" width="60" height="22" rx="2" fill="#d97706" stroke="#78350f" stroke-width="2"/>
+    <!-- Tomato -->
+    <circle cx="50" cy="145" r="6" fill="#dc2626" stroke="#7f1d1d" stroke-width="1.5"/>
+    <path d="M50 141 L50 138" stroke="#166534" stroke-width="2" stroke-linecap="round"/>
+    <!-- Knife -->
+    <rect x="60" y="148" width="30" height="4" rx="1" fill="#a8a29e" stroke="#525252" stroke-width="1.5"/>
+    <rect x="55" y="147" width="8" height="6" fill="#78350f" stroke="#451a03" stroke-width="1"/>
+
+    <!-- Stove -->
+    <rect x="260" y="140" width="90" height="100" rx="4" fill="#404040" stroke="#0c0a09" stroke-width="3"/>
+    <!-- Stove top -->
+    <rect x="265" y="145" width="80" height="35" rx="2" fill="#1c1917" stroke="#0c0a09" stroke-width="2"/>
+    <!-- Burners -->
+    <circle cx="285" cy="163" r="10" fill="#292524" stroke="#525252" stroke-width="2"/>
+    <circle cx="285" cy="163" r="6" fill="#ef4444" stroke="#7f1d1d" stroke-width="1.5"/>
+    <circle cx="325" cy="163" r="10" fill="#292524" stroke="#525252" stroke-width="2"/>
+    <!-- Pot on left burner -->
+    <ellipse cx="285" cy="145" rx="18" ry="4" fill="#a8a29e" stroke="#525252" stroke-width="2"/>
+    <path d="M267 145 L270 130 L300 130 L303 145 Z" fill="#a8a29e" stroke="#525252" stroke-width="2.5"/>
+    <path d="M270 130 L300 130" stroke="#78716c" stroke-width="3"/>
+    <!-- Pot handles -->
+    <path d="M267 138 L262 138" stroke="#525252" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M303 138 L308 138" stroke="#525252" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Steam -->
+    <path d="M280 125 Q275 118 282 112 Q288 118 285 125" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+    <path d="M290 128 Q295 121 290 115 Q285 121 288 128" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+    <!-- Oven door -->
+    <rect x="270" y="185" width="70" height="45" rx="3" fill="#292524" stroke="#0c0a09" stroke-width="2.5"/>
+    <rect x="275" y="192" width="60" height="30" rx="2" fill="#1c1917" stroke="#525252" stroke-width="1.5"/>
+    <!-- Oven handle -->
+    <rect x="278" y="235" width="55" height="4" rx="1.5" fill="#a8a29e" stroke="#525252" stroke-width="1.5"/>
+    <!-- Knobs -->
+    <circle cx="278" cy="192" r="3" fill="#fbbf24" stroke="#78350f" stroke-width="1"/>
+    <circle cx="332" cy="192" r="3" fill="#fbbf24" stroke="#78350f" stroke-width="1"/>
+
+    <!-- Refrigerator -->
+    <rect x="220" y="30" width="30" height="128" rx="3" fill="#f5f5f4" stroke="#525252" stroke-width="2.5"/>
+    <line x1="220" y1="80" x2="250" y2="80" stroke="#525252" stroke-width="2"/>
+    <rect x="245" y="55" width="3" height="12" rx="1" fill="#525252"/>
+    <rect x="245" y="105" width="3" height="12" rx="1" fill="#525252"/>
+  </g>
+</svg>

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-cake desc-cake">
+  <title id="title-cake">Cake - Birthday cake with candles</title>
+  <desc id="desc-cake">A round birthday cake with pink frosting, white cream layers, colourful sprinkles, and three lit candles on top.</desc>
+  <defs>
+    <linearGradient id="cake-pink" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f9a8d4"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <linearGradient id="cake-body" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <line x1="60" y1="265" x2="340" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="265" rx="85" ry="8" fill="#0f172a" opacity="0.1"/>
+
+  <!-- Plate -->
+  <ellipse cx="200" cy="252" rx="110" ry="14" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2.5"/>
+
+  <g id="cake-figure" filter="url(#soft-shadow)">
+    <!-- Bottom layer -->
+    <rect x="110" y="195" width="180" height="55" rx="10" fill="url(#cake-body)" stroke="#d97706" stroke-width="3"/>
+
+    <!-- Middle cream stripe -->
+    <rect x="110" y="215" width="180" height="10" rx="3" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+
+    <!-- Top layer (smaller) -->
+    <rect x="125" y="150" width="150" height="48" rx="10" fill="url(#cake-body)" stroke="#d97706" stroke-width="3"/>
+
+    <!-- Pink frosting drip (top) -->
+    <path d="M125 155 Q125 145 200 145 Q275 145 275 155" fill="url(#cake-pink)" stroke="#db2777" stroke-width="2.5"/>
+    <!-- Frosting drips -->
+    <path d="M140 155 C138 168 142 175 145 170 C148 165 146 158 140 155" fill="#ec4899"/>
+    <path d="M180 155 C178 172 182 180 185 174 C188 168 186 160 180 155" fill="#ec4899"/>
+    <path d="M220 155 C218 170 222 178 225 172 C228 166 226 158 220 155" fill="#ec4899"/>
+    <path d="M260 155 C258 165 262 172 265 167 C268 162 266 157 260 155" fill="#ec4899"/>
+
+    <!-- Sprinkles on frosting -->
+    <rect x="145" y="148" width="6" height="2" rx="1" fill="#ef4444" transform="rotate(30 148 149)"/>
+    <rect x="165" y="146" width="6" height="2" rx="1" fill="#3b82f6" transform="rotate(-20 168 147)"/>
+    <rect x="190" y="147" width="6" height="2" rx="1" fill="#22c55e" transform="rotate(45 193 148)"/>
+    <rect x="210" y="146" width="6" height="2" rx="1" fill="#f59e0b" transform="rotate(-35 213 147)"/>
+    <rect x="235" y="148" width="6" height="2" rx="1" fill="#a855f7" transform="rotate(15 238 149)"/>
+    <rect x="255" y="147" width="6" height="2" rx="1" fill="#ef4444" transform="rotate(-40 258 148)"/>
+
+    <!-- Candles -->
+    <!-- Left candle (blue) -->
+    <rect x="155" y="105" width="8" height="42" rx="3" fill="#3b82f6" stroke="#1d4ed8" stroke-width="2"/>
+    <rect x="155" y="118" width="8" height="3" rx="1" fill="#93c5fd"/>
+    <!-- Flame -->
+    <ellipse cx="159" cy="100" rx="5" ry="8" fill="#fbbf24"/>
+    <ellipse cx="159" cy="98" rx="3" ry="5" fill="#fef3c7"/>
+    <ellipse cx="159" cy="96" rx="1.5" ry="3" fill="#ffffff"/>
+
+    <!-- Middle candle (red, taller) -->
+    <rect x="196" y="95" width="8" height="52" rx="3" fill="#ef4444" stroke="#dc2626" stroke-width="2"/>
+    <rect x="196" y="112" width="8" height="3" rx="1" fill="#fca5a5"/>
+    <!-- Flame -->
+    <ellipse cx="200" cy="90" rx="5" ry="8" fill="#fbbf24"/>
+    <ellipse cx="200" cy="88" rx="3" ry="5" fill="#fef3c7"/>
+    <ellipse cx="200" cy="86" rx="1.5" ry="3" fill="#ffffff"/>
+
+    <!-- Right candle (green) -->
+    <rect x="237" y="105" width="8" height="42" rx="3" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
+    <rect x="237" y="118" width="8" height="3" rx="1" fill="#86efac"/>
+    <!-- Flame -->
+    <ellipse cx="241" cy="100" rx="5" ry="8" fill="#fbbf24"/>
+    <ellipse cx="241" cy="98" rx="3" ry="5" fill="#fef3c7"/>
+    <ellipse cx="241" cy="96" rx="1.5" ry="3" fill="#ffffff"/>
+  </g>
+</svg>

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-bathroom desc-bathroom">
+  <title id="title-bathroom">Bathroom - Bathroom scene</title>
+  <desc id="desc-bathroom">A tiled bathroom with a bathtub with bubbles, a sink with a mirror, and a rubber duck toy.</desc>
+  <defs>
+    <linearGradient id="wall-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#bae6fd"/>
+    </linearGradient>
+    <linearGradient id="tub-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="water-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <!-- Wall/floor -->
+  <rect x="0" y="0" width="400" height="220" fill="url(#wall-bg)"/>
+  <rect x="0" y="220" width="400" height="80" fill="#a8a29e"/>
+  <!-- Tile grid on wall -->
+  <g opacity="0.4">
+    <line x1="0" y1="60" x2="400" y2="60" stroke="#0369a1" stroke-width="1"/>
+    <line x1="0" y1="120" x2="400" y2="120" stroke="#0369a1" stroke-width="1"/>
+    <line x1="0" y1="180" x2="400" y2="180" stroke="#0369a1" stroke-width="1"/>
+    <line x1="50" y1="0" x2="50" y2="220" stroke="#0369a1" stroke-width="1"/>
+    <line x1="130" y1="0" x2="130" y2="220" stroke="#0369a1" stroke-width="1"/>
+    <line x1="210" y1="0" x2="210" y2="220" stroke="#0369a1" stroke-width="1"/>
+    <line x1="290" y1="0" x2="290" y2="220" stroke="#0369a1" stroke-width="1"/>
+    <line x1="370" y1="0" x2="370" y2="220" stroke="#0369a1" stroke-width="1"/>
+  </g>
+  <line x1="0" y1="220" x2="400" y2="220" stroke="#78716c" stroke-width="3"/>
+  <g id="bathroom-figure" filter="url(#soft-shadow)">
+    <!-- Bathtub -->
+    <path d="M180 175 L180 240 Q185 260 210 260 L340 260 Q365 260 370 240 L370 175 Q275 165 180 175 Z" fill="url(#tub-grad)" stroke="#475569" stroke-width="3.5"/>
+    <!-- Tub inner -->
+    <ellipse cx="275" cy="180" rx="90" ry="10" fill="#cbd5e1" stroke="#475569" stroke-width="2"/>
+    <!-- Water in tub -->
+    <path d="M195 195 Q275 190 355 195 L355 240 Q350 250 335 250 L215 250 Q200 250 195 240 Z" fill="url(#water-grad)" opacity="0.8"/>
+    <!-- Bubbles -->
+    <circle cx="220" cy="180" r="10" fill="#ffffff" stroke="#7dd3fc" stroke-width="1.5" opacity="0.85"/>
+    <circle cx="240" cy="170" r="7" fill="#ffffff" stroke="#7dd3fc" stroke-width="1.5" opacity="0.85"/>
+    <circle cx="255" cy="175" r="9" fill="#ffffff" stroke="#7dd3fc" stroke-width="1.5" opacity="0.85"/>
+    <circle cx="275" cy="165" r="8" fill="#ffffff" stroke="#7dd3fc" stroke-width="1.5" opacity="0.85"/>
+    <circle cx="295" cy="175" r="11" fill="#ffffff" stroke="#7dd3fc" stroke-width="1.5" opacity="0.85"/>
+    <circle cx="320" cy="170" r="7" fill="#ffffff" stroke="#7dd3fc" stroke-width="1.5" opacity="0.85"/>
+    <circle cx="340" cy="180" r="9" fill="#ffffff" stroke="#7dd3fc" stroke-width="1.5" opacity="0.85"/>
+    <circle cx="290" cy="155" r="5" fill="#ffffff" opacity="0.7"/>
+    <!-- Rubber duck -->
+    <ellipse cx="215" cy="205" rx="14" ry="9" fill="#fde047" stroke="#a16207" stroke-width="2.5"/>
+    <circle cx="223" cy="198" r="8" fill="#fde047" stroke="#a16207" stroke-width="2.5"/>
+    <path d="M228 197 L235 200 L228 202 Z" fill="#f59e0b" stroke="#78350f" stroke-width="1.5"/>
+    <circle cx="223" cy="196" r="1.5" fill="#0c0a09"/>
+    <!-- Tub feet -->
+    <ellipse cx="200" cy="258" rx="8" ry="4" fill="#525252" stroke="#292524" stroke-width="2"/>
+    <ellipse cx="350" cy="258" rx="8" ry="4" fill="#525252" stroke="#292524" stroke-width="2"/>
+    <!-- Faucet -->
+    <rect x="365" y="130" width="8" height="20" fill="#a8a29e" stroke="#525252" stroke-width="2"/>
+    <path d="M360 130 L373 130 L373 150 L365 152 L355 150 Z" fill="#a8a29e" stroke="#525252" stroke-width="2"/>
+
+    <!-- Sink pedestal -->
+    <path d="M55 190 L45 260 L115 260 L105 190 Z" fill="#f5f5f4" stroke="#78716c" stroke-width="2.5"/>
+    <!-- Sink basin -->
+    <ellipse cx="80" cy="185" rx="45" ry="15" fill="#ffffff" stroke="#78716c" stroke-width="3"/>
+    <ellipse cx="80" cy="187" rx="38" ry="10" fill="#e2e8f0" stroke="#78716c" stroke-width="1.5"/>
+    <!-- Sink faucet -->
+    <path d="M78 155 L82 155 L82 175 L78 175 Z" fill="#a8a29e" stroke="#525252" stroke-width="1.5"/>
+    <path d="M75 152 L85 152 L82 170 L78 170 Z" fill="#a8a29e" stroke="#525252" stroke-width="1.5"/>
+    <!-- Mirror above sink -->
+    <rect x="55" y="60" width="50" height="70" rx="4" fill="#bae6fd" stroke="#78350f" stroke-width="3"/>
+    <path d="M60 65 L80 65 L70 90 Z" fill="#ffffff" opacity="0.5"/>
+    <!-- Toothbrush cup -->
+    <rect x="125" y="170" width="15" height="18" rx="2" fill="#ec4899" stroke="#9d174d" stroke-width="1.5"/>
+    <rect x="129" y="155" width="3" height="17" fill="#3b82f6"/>
+    <rect x="134" y="152" width="3" height="20" fill="#22c55e"/>
+  </g>
+</svg>

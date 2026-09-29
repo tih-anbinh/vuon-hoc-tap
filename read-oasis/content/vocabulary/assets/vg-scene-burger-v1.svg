@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-burger desc-burger">
+  <title id="title-burger">Burger - Tasty hamburger</title>
+  <desc id="desc-burger">A large hamburger with a golden sesame bun, green lettuce, red tomato, yellow cheese, and a brown meat patty.</desc>
+  <defs>
+    <linearGradient id="bun-top" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="bun-bot" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Ground line -->
+  <line x1="60" y1="255" x2="340" y2="255" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="255" rx="90" ry="8" fill="#0f172a" opacity="0.1"/>
+
+  <g id="burger-figure" filter="url(#soft-shadow)">
+    <!-- Bottom bun -->
+    <path d="M105 210 Q105 235 200 235 Q295 235 295 210 Z" fill="url(#bun-bot)" stroke="#92400e" stroke-width="3"/>
+
+    <!-- Meat patty -->
+    <rect x="100" y="185" width="200" height="28" rx="8" fill="#78350f" stroke="#451a03" stroke-width="3"/>
+    <!-- Grill marks -->
+    <line x1="130" y1="192" x2="130" y2="206" stroke="#451a03" stroke-width="2" opacity="0.4"/>
+    <line x1="170" y1="192" x2="170" y2="206" stroke="#451a03" stroke-width="2" opacity="0.4"/>
+    <line x1="210" y1="192" x2="210" y2="206" stroke="#451a03" stroke-width="2" opacity="0.4"/>
+    <line x1="250" y1="192" x2="250" y2="206" stroke="#451a03" stroke-width="2" opacity="0.4"/>
+
+    <!-- Cheese (melting over patty) -->
+    <path d="M95 185 L305 185 L300 195 C290 200 280 192 265 198 C250 204 240 195 225 200 C210 205 200 196 185 200 C170 204 155 196 140 200 C125 204 115 196 100 195 Z" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+
+    <!-- Tomato slices -->
+    <ellipse cx="160" cy="178" rx="35" ry="8" fill="#ef4444" stroke="#dc2626" stroke-width="2"/>
+    <ellipse cx="240" cy="178" rx="35" ry="8" fill="#ef4444" stroke="#dc2626" stroke-width="2"/>
+    <!-- Tomato seeds -->
+    <ellipse cx="150" cy="177" rx="3" ry="2" fill="#fca5a5"/>
+    <ellipse cx="170" cy="178" rx="3" ry="2" fill="#fca5a5"/>
+    <ellipse cx="230" cy="177" rx="3" ry="2" fill="#fca5a5"/>
+    <ellipse cx="250" cy="178" rx="3" ry="2" fill="#fca5a5"/>
+
+    <!-- Lettuce (wavy green) -->
+    <path d="M90 170 C110 160 130 175 150 165 C170 155 190 172 210 162 C230 152 250 170 270 160 C290 150 310 168 315 170" fill="none" stroke="#22c55e" stroke-width="12" stroke-linecap="round"/>
+    <path d="M90 170 C110 160 130 175 150 165 C170 155 190 172 210 162 C230 152 250 170 270 160 C290 150 310 168 315 170" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Top bun (dome) -->
+    <path d="M100 170 Q100 80 200 80 Q300 80 300 170 Z" fill="url(#bun-top)" stroke="#92400e" stroke-width="3"/>
+
+    <!-- Bun highlight -->
+    <path d="M150 110 Q200 95 250 110" fill="none" stroke="#fcd34d" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+
+    <!-- Sesame seeds -->
+    <ellipse cx="160" cy="115" rx="5" ry="3" fill="#fef3c7" stroke="#d97706" stroke-width="1" transform="rotate(-20 160 115)"/>
+    <ellipse cx="200" cy="100" rx="5" ry="3" fill="#fef3c7" stroke="#d97706" stroke-width="1" transform="rotate(10 200 100)"/>
+    <ellipse cx="240" cy="112" rx="5" ry="3" fill="#fef3c7" stroke="#d97706" stroke-width="1" transform="rotate(25 240 112)"/>
+    <ellipse cx="180" cy="135" rx="5" ry="3" fill="#fef3c7" stroke="#d97706" stroke-width="1" transform="rotate(-10 180 135)"/>
+    <ellipse cx="225" cy="130" rx="5" ry="3" fill="#fef3c7" stroke="#d97706" stroke-width="1" transform="rotate(15 225 130)"/>
+  </g>
+</svg>

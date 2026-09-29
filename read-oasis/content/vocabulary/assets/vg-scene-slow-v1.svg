@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-slow desc-slow">
+  <title id="title-slow">Slow - A turtle walking slowly with soft motion lines</title>
+  <desc id="desc-slow">A friendly turtle moving slowly with a big rounded shell, one small foot lifted, gentle short motion lines behind.</desc>
+  <defs>
+    <linearGradient id="turtle-shell" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#65a30d"/>
+      <stop offset="100%" stop-color="#365314"/>
+    </linearGradient>
+    <linearGradient id="turtle-skin" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a3e635"/>
+      <stop offset="100%" stop-color="#4d7c0f"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <line x1="30" y1="265" x2="370" y2="265" stroke="#78716c" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="220" cy="265" rx="100" ry="7" fill="#0f172a" opacity="0.15"/>
+
+  <!-- Short, gentle motion lines behind (indicating slow) -->
+  <g stroke="#94a3b8" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.6">
+    <line x1="70" y1="220" x2="90" y2="220"/>
+    <line x1="65" y1="235" x2="85" y2="235"/>
+    <line x1="70" y1="250" x2="90" y2="250"/>
+  </g>
+
+  <!-- Snail (extra slow indicator, small) -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="115" cy="252" rx="12" ry="5" fill="#fbbf24" stroke="#78350f" stroke-width="2"/>
+    <circle cx="120" cy="245" r="10" fill="#f97316" stroke="#7c2d12" stroke-width="2"/>
+    <path d="M115 245 Q120 240 122 246" fill="none" stroke="#7c2d12" stroke-width="1.5"/>
+    <path d="M118 245 Q121 242 122 246" fill="none" stroke="#7c2d12" stroke-width="1.5"/>
+    <!-- Snail eyestalks -->
+    <line x1="110" y1="248" x2="105" y2="240" stroke="#7c2d12" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="104" cy="239" r="1.5" fill="#0c0a09"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Turtle shell (large dome) -->
+    <ellipse cx="230" cy="200" rx="80" ry="55" fill="url(#turtle-shell)" stroke="#1a2e05" stroke-width="4"/>
+    <!-- Shell segments (hexagon pattern) -->
+    <g stroke="#365314" stroke-width="2.5" fill="none">
+      <path d="M195 175 L230 165 L265 175 L265 210 L230 220 L195 210 Z" fill="#84cc16" opacity="0.4"/>
+      <path d="M165 195 L195 175 L195 210 L165 225 Z" fill="#84cc16" opacity="0.4"/>
+      <path d="M265 175 L295 195 L295 225 L265 210 Z" fill="#84cc16" opacity="0.4"/>
+      <path d="M195 210 L230 220 L215 245 L180 240 Z" fill="#84cc16" opacity="0.4"/>
+      <path d="M230 220 L265 210 L280 240 L245 245 Z" fill="#84cc16" opacity="0.4"/>
+    </g>
+    <!-- Small dots on shell -->
+    <circle cx="230" cy="195" r="4" fill="#365314"/>
+    <circle cx="200" cy="200" r="3" fill="#365314"/>
+    <circle cx="260" cy="200" r="3" fill="#365314"/>
+
+    <!-- Head (peeking out front) -->
+    <ellipse cx="315" cy="215" rx="30" ry="22" fill="url(#turtle-skin)" stroke="#1a2e05" stroke-width="3"/>
+    <!-- Neck (short, wrinkly) -->
+    <path d="M290 210 Q285 215 288 225" fill="none" stroke="#365314" stroke-width="1.5"/>
+    <path d="M292 205 Q287 210 290 220" fill="none" stroke="#365314" stroke-width="1.5"/>
+    <!-- Sleepy/slow eyes -->
+    <path d="M310 208 Q315 205 320 208" fill="none" stroke="#0c0a09" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M328 208 Q333 205 338 208" fill="none" stroke="#0c0a09" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Small smile -->
+    <path d="M320 225 Q325 228 330 225" fill="none" stroke="#0c0a09" stroke-width="2" stroke-linecap="round"/>
+    <!-- Nostrils -->
+    <circle cx="340" cy="215" r="1.5" fill="#0c0a09"/>
+    <circle cx="343" cy="220" r="1.5" fill="#0c0a09"/>
+    <!-- Cheek -->
+    <circle cx="305" cy="222" r="4" fill="#f43f5e" opacity="0.5"/>
+
+    <!-- Front leg (lifted slightly - taking a slow step) -->
+    <ellipse cx="275" cy="255" rx="16" ry="10" fill="url(#turtle-skin)" stroke="#1a2e05" stroke-width="3"/>
+    <!-- Back leg -->
+    <ellipse cx="185" cy="255" rx="16" ry="10" fill="url(#turtle-skin)" stroke="#1a2e05" stroke-width="3"/>
+    <!-- Toes -->
+    <circle cx="285" cy="260" r="2.5" fill="#365314"/>
+    <circle cx="278" cy="262" r="2.5" fill="#365314"/>
+    <circle cx="271" cy="262" r="2.5" fill="#365314"/>
+    <circle cx="195" cy="260" r="2.5" fill="#365314"/>
+    <circle cx="188" cy="262" r="2.5" fill="#365314"/>
+    <circle cx="181" cy="262" r="2.5" fill="#365314"/>
+
+    <!-- Tail (small) -->
+    <path d="M155 210 Q140 205 138 220" fill="none" stroke="#365314" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- "Z" sleep-like squiggles for slowness -->
+  <g stroke="#94a3b8" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.6">
+    <path d="M50 100 Q60 100 60 110 Q60 120 50 120"/>
+    <path d="M50 130 Q58 130 58 138 Q58 145 50 145"/>
+  </g>
+</svg>

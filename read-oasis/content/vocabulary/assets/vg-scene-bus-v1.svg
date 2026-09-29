@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-bus desc-bus">
+  <title id="title-bus">Bus - School bus</title>
+  <desc id="desc-bus">A cheerful yellow school bus with windows, wheels, headlights, and a red stop sign area.</desc>
+  <defs>
+    <linearGradient id="bus-yellow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#eab308"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <line x1="20" y1="245" x2="380" y2="245" stroke="#a8a29e" stroke-width="4" stroke-linecap="round"/>
+  <line x1="20" y1="252" x2="380" y2="252" stroke="#ffffff" stroke-width="2" stroke-dasharray="15,10"/>
+  <ellipse cx="200" cy="260" rx="150" ry="7" fill="#0f172a" opacity="0.1"/>
+  <g id="bus-figure" filter="url(#soft-shadow)">
+    <!-- Body -->
+    <path d="M50 130 L50 235 L350 235 L350 110 L100 110 Q60 110 50 130 Z" fill="url(#bus-yellow)" stroke="#a16207" stroke-width="3.5"/>
+    <!-- Roof shine -->
+    <path d="M60 120 Q200 115 340 118" fill="none" stroke="#fef9c3" stroke-width="5" stroke-linecap="round" opacity="0.5"/>
+    <!-- Windshield -->
+    <path d="M60 135 L60 175 L110 175 L110 130 Q80 130 60 135 Z" fill="#bfdbfe" stroke="#1e40af" stroke-width="2.5"/>
+    <!-- Windows -->
+    <rect x="125" y="130" width="45" height="45" rx="3" fill="#bfdbfe" stroke="#1e40af" stroke-width="2.5"/>
+    <rect x="180" y="130" width="45" height="45" rx="3" fill="#bfdbfe" stroke="#1e40af" stroke-width="2.5"/>
+    <rect x="235" y="130" width="45" height="45" rx="3" fill="#bfdbfe" stroke="#1e40af" stroke-width="2.5"/>
+    <rect x="290" y="130" width="45" height="45" rx="3" fill="#bfdbfe" stroke="#1e40af" stroke-width="2.5"/>
+    <!-- Window shine -->
+    <path d="M130 135 L155 135 L145 155 Z" fill="#ffffff" opacity="0.5"/>
+    <path d="M185 135 L210 135 L200 155 Z" fill="#ffffff" opacity="0.5"/>
+    <path d="M240 135 L265 135 L255 155 Z" fill="#ffffff" opacity="0.5"/>
+    <path d="M295 135 L320 135 L310 155 Z" fill="#ffffff" opacity="0.5"/>
+    <!-- Black stripe -->
+    <rect x="50" y="185" width="300" height="12" fill="#1c1917" stroke="#0c0a09" stroke-width="1.5"/>
+    <!-- Door -->
+    <rect x="60" y="185" width="35" height="50" rx="2" fill="#78350f" stroke="#451a03" stroke-width="2.5"/>
+    <line x1="77" y1="185" x2="77" y2="235" stroke="#451a03" stroke-width="2"/>
+    <!-- Stop sign area (red panel) -->
+    <rect x="200" y="205" width="70" height="25" rx="3" fill="#dc2626" stroke="#991b1b" stroke-width="2"/>
+    <circle cx="215" cy="217" r="5" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+    <circle cx="235" cy="217" r="5" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+    <circle cx="255" cy="217" r="5" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+    <!-- Headlight -->
+    <circle cx="65" cy="215" r="8" fill="#fef9c3" stroke="#ca8a04" stroke-width="2.5"/>
+    <!-- Front bumper -->
+    <rect x="50" y="225" width="60" height="10" rx="2" fill="#78716c" stroke="#44403c" stroke-width="2"/>
+    <!-- Wheels -->
+    <circle cx="115" cy="235" r="22" fill="#1c1917" stroke="#0c0a09" stroke-width="3"/>
+    <circle cx="115" cy="235" r="10" fill="#78716c" stroke="#44403c" stroke-width="2"/>
+    <circle cx="115" cy="235" r="4" fill="#a8a29e"/>
+    <circle cx="290" cy="235" r="22" fill="#1c1917" stroke="#0c0a09" stroke-width="3"/>
+    <circle cx="290" cy="235" r="10" fill="#78716c" stroke="#44403c" stroke-width="2"/>
+    <circle cx="290" cy="235" r="4" fill="#a8a29e"/>
+    <!-- Side mirror -->
+    <rect x="45" y="150" width="10" height="20" rx="2" fill="#44403c" stroke="#292524" stroke-width="1.5"/>
+  </g>
+</svg>

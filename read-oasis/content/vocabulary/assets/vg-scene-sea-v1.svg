@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-sea desc-sea">
+  <title id="title-sea">Sea - Ocean waves under a bright sky</title>
+  <desc id="desc-sea">A wide blue sea with rolling waves, a sailboat on the horizon, sun, and a seagull flying overhead.</desc>
+  <defs>
+    <linearGradient id="sky-sea" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#bfdbfe"/>
+      <stop offset="100%" stop-color="#fef3c7"/>
+    </linearGradient>
+    <linearGradient id="sea-water" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Sky background -->
+  <rect x="0" y="0" width="400" height="150" fill="url(#sky-sea)"/>
+
+  <!-- Sun -->
+  <circle cx="320" cy="70" r="28" fill="#fde047" stroke="#f59e0b" stroke-width="3"/>
+  <g stroke="#f59e0b" stroke-width="3" stroke-linecap="round">
+    <line x1="320" y1="30" x2="320" y2="22"/>
+    <line x1="360" y1="70" x2="368" y2="70"/>
+    <line x1="292" y1="42" x2="286" y2="36"/>
+    <line x1="348" y1="42" x2="354" y2="36"/>
+    <line x1="292" y1="98" x2="286" y2="104"/>
+    <line x1="348" y1="98" x2="354" y2="104"/>
+  </g>
+
+  <!-- Seagull -->
+  <g stroke="#0f172a" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M60 80 Q75 68 85 78 Q95 68 110 80"/>
+    <path d="M170 100 Q180 92 187 100 Q194 92 204 100"/>
+  </g>
+
+  <!-- Sea -->
+  <rect x="0" y="150" width="400" height="150" fill="url(#sea-water)"/>
+
+  <!-- Sailboat on horizon -->
+  <g filter="url(#soft-shadow)">
+    <!-- Hull -->
+    <path d="M240 155 L290 155 L285 168 L245 168 Z" fill="#78350f" stroke="#451a03" stroke-width="2.5"/>
+    <!-- Mast -->
+    <line x1="265" y1="155" x2="265" y2="115" stroke="#78350f" stroke-width="3" stroke-linecap="round"/>
+    <!-- Sail -->
+    <path d="M265 115 L265 155 L295 155 Z" fill="#ffffff" stroke="#0f172a" stroke-width="2.5"/>
+    <path d="M265 118 L265 152 L253 152 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="2"/>
+  </g>
+
+  <!-- Sea waves (large foreground) -->
+  <g filter="url(#soft-shadow)">
+    <path d="M0 180 Q50 165 100 180 Q150 195 200 180 Q250 165 300 180 Q350 195 400 180 L400 200 L0 200 Z" fill="#60a5fa" opacity="0.85"/>
+    <path d="M0 180 Q50 165 100 180 Q150 195 200 180 Q250 165 300 180 Q350 195 400 180" fill="none" stroke="#dbeafe" stroke-width="3.5"/>
+
+    <path d="M0 215 Q60 200 120 215 Q180 230 240 215 Q300 200 360 215 Q380 220 400 215 L400 240 L0 240 Z" fill="#3b82f6" opacity="0.9"/>
+    <path d="M0 215 Q60 200 120 215 Q180 230 240 215 Q300 200 360 215 Q380 220 400 215" fill="none" stroke="#93c5fd" stroke-width="3"/>
+
+    <path d="M0 255 Q70 240 140 255 Q210 270 280 255 Q350 240 400 250 L400 300 L0 300 Z" fill="#1e40af"/>
+    <path d="M0 255 Q70 240 140 255 Q210 270 280 255 Q350 240 400 250" fill="none" stroke="#60a5fa" stroke-width="3"/>
+  </g>
+
+  <!-- Whitecaps / foam highlights -->
+  <g fill="#ffffff" opacity="0.85">
+    <ellipse cx="50" cy="172" rx="14" ry="3"/>
+    <ellipse cx="150" cy="188" rx="12" ry="3"/>
+    <ellipse cx="250" cy="172" rx="14" ry="3"/>
+    <ellipse cx="350" cy="188" rx="12" ry="3"/>
+  </g>
+
+  <!-- Small fish jumping -->
+  <g filter="url(#soft-shadow)">
+    <path d="M80 220 Q95 210 100 220 L108 214 L108 226 Z" fill="#f97316" stroke="#7c2d12" stroke-width="2"/>
+    <circle cx="88" cy="218" r="1.5" fill="#0c0a09"/>
+  </g>
+
+  <!-- Sparkles on water -->
+  <g>
+    <path d="M180 250 L182 254 L186 256 L182 258 L180 262 L178 258 L174 256 L178 254 Z" fill="#ffffff" opacity="0.9"/>
+    <path d="M310 240 L312 244 L316 246 L312 248 L310 252 L308 248 L304 246 L308 244 Z" fill="#ffffff" opacity="0.9"/>
+    <path d="M40 245 L42 249 L46 251 L42 253 L40 257 L38 253 L34 251 L38 249 Z" fill="#ffffff" opacity="0.9"/>
+  </g>
+</svg>

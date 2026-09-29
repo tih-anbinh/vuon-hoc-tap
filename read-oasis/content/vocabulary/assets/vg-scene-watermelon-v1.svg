@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-watermelon desc-watermelon">
+  <title id="title-watermelon">Watermelon - Slice of fresh watermelon</title>
+  <desc id="desc-watermelon">A juicy triangular slice of watermelon with bright red flesh, black seeds, and green rind.</desc>
+  <defs>
+    <linearGradient id="wm-flesh" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fca5a5"/>
+      <stop offset="50%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <linearGradient id="wm-rind" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#86efac"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <line x1="30" y1="265" x2="370" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="265" rx="140" ry="8" fill="#0f172a" opacity="0.15"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Watermelon slice (big triangular wedge lying flat with dome up) -->
+    <!-- Outer rind (dark green outline) -->
+    <path d="M60 240 Q200 260 340 240 Q325 130 200 60 Q75 130 60 240 Z" fill="url(#wm-rind)" stroke="#14532d" stroke-width="4"/>
+    <!-- Light rind stripe (inner) -->
+    <path d="M75 235 Q200 253 325 235 Q315 140 200 78 Q85 140 75 235 Z" fill="#bef264" stroke="#65a30d" stroke-width="2.5"/>
+    <!-- Red flesh -->
+    <path d="M90 230 Q200 250 310 230 Q302 150 200 95 Q98 150 90 230 Z" fill="url(#wm-flesh)" stroke="#7f1d1d" stroke-width="3"/>
+
+    <!-- Seeds (black teardrop shapes scattered) -->
+    <g fill="#0c0a09" stroke="#000" stroke-width="1">
+      <ellipse cx="150" cy="180" rx="5" ry="8" transform="rotate(-20 150 180)"/>
+      <ellipse cx="200" cy="150" rx="5" ry="8" transform="rotate(10 200 150)"/>
+      <ellipse cx="250" cy="180" rx="5" ry="8" transform="rotate(25 250 180)"/>
+      <ellipse cx="130" cy="215" rx="5" ry="8" transform="rotate(-40 130 215)"/>
+      <ellipse cx="180" cy="210" rx="5" ry="8" transform="rotate(-10 180 210)"/>
+      <ellipse cx="230" cy="215" rx="5" ry="8" transform="rotate(20 230 215)"/>
+      <ellipse cx="275" cy="210" rx="5" ry="8" transform="rotate(35 275 210)"/>
+      <ellipse cx="200" cy="195" rx="5" ry="8" transform="rotate(0 200 195)"/>
+      <ellipse cx="165" cy="140" rx="4" ry="7" transform="rotate(-15 165 140)"/>
+      <ellipse cx="235" cy="140" rx="4" ry="7" transform="rotate(15 235 140)"/>
+      <ellipse cx="200" cy="230" rx="5" ry="8"/>
+      <ellipse cx="115" cy="195" rx="4" ry="7" transform="rotate(-45 115 195)"/>
+      <ellipse cx="285" cy="195" rx="4" ry="7" transform="rotate(45 285 195)"/>
+    </g>
+    <!-- Seed highlights -->
+    <g fill="#a8a29e" opacity="0.8">
+      <ellipse cx="149" cy="178" rx="1.5" ry="2.5"/>
+      <ellipse cx="199" cy="148" rx="1.5" ry="2.5"/>
+      <ellipse cx="249" cy="178" rx="1.5" ry="2.5"/>
+    </g>
+
+    <!-- Bite mark on right side (curved cutout) -->
+    <path d="M310 190 Q290 180 285 200 Q290 220 310 210" fill="url(#wm-rind)" stroke="#14532d" stroke-width="3" opacity="0"/>
+  </g>
+
+  <!-- Small mini watermelon slice on the side -->
+  <g filter="url(#soft-shadow)">
+    <path d="M300 245 L360 245 L358 220 Q330 210 302 220 Z" fill="url(#wm-rind)" stroke="#14532d" stroke-width="2.5"/>
+    <path d="M305 240 L355 240 L353 225 Q330 218 307 225 Z" fill="#bef264" stroke="#65a30d" stroke-width="1.5"/>
+    <path d="M310 235 L350 235 L348 228 Q330 224 312 228 Z" fill="url(#wm-flesh)" stroke="#7f1d1d" stroke-width="1.5"/>
+    <ellipse cx="325" cy="232" rx="2" ry="3" fill="#0c0a09"/>
+    <ellipse cx="340" cy="232" rx="2" ry="3" fill="#0c0a09"/>
+  </g>
+
+  <!-- Water/juice drops -->
+  <g fill="#60a5fa" stroke="#1e40af" stroke-width="1.5">
+    <path d="M50 90 Q45 75 55 70 Q65 75 60 90 Z"/>
+    <circle cx="365" cy="85" r="4"/>
+  </g>
+
+  <!-- Sparkles for freshness -->
+  <path d="M40 150 L42 156 L48 158 L42 160 L40 166 L38 160 L32 158 L38 156 Z" fill="#fde047" stroke="#a16207" stroke-width="1.5"/>
+  <path d="M360 160 L362 166 L368 168 L362 170 L360 176 L358 170 L352 168 L358 166 Z" fill="#fde047" stroke="#a16207" stroke-width="1.5"/>
+</svg>

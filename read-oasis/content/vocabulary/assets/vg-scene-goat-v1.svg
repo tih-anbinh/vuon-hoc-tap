@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-goat desc-goat">
+  <title id="title-goat">Goat - Friendly white goat</title>
+  <desc id="desc-goat">A white goat with curved horns, a small beard, upright ears, and a short tail standing on grass.</desc>
+  <defs>
+    <linearGradient id="goat-body" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Ground line -->
+  <line x1="40" y1="265" x2="360" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Grass tufts -->
+  <path d="M60 265 C63 255 67 255 70 265" fill="#86efac" stroke="none"/>
+  <path d="M120 265 C123 257 127 257 130 265" fill="#86efac" stroke="none"/>
+  <path d="M300 265 C303 257 307 257 310 265" fill="#86efac" stroke="none"/>
+  <path d="M340 265 C343 258 347 258 350 265" fill="#86efac" stroke="none"/>
+
+  <!-- Ground Shadow -->
+  <ellipse cx="200" cy="265" rx="85" ry="10" fill="#0f172a" opacity="0.12"/>
+
+  <!-- GOAT -->
+  <g id="goat-figure" filter="url(#soft-shadow)">
+    <!-- Short tail -->
+    <path d="M110 160 C95 150 90 145 95 140" fill="none" stroke="#e2e8f0" stroke-width="8" stroke-linecap="round"/>
+    <path d="M110 160 C95 150 90 145 95 140" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Rear legs -->
+    <rect x="130" y="195" width="18" height="65" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2.5"/>
+    <rect x="130" y="254" width="18" height="8" rx="3" fill="#78350f"/>
+
+    <rect x="155" y="195" width="16" height="65" rx="6" fill="#cbd5e1" stroke="#94a3b8" stroke-width="2.5"/>
+    <rect x="155" y="254" width="16" height="8" rx="3" fill="#78350f"/>
+
+    <!-- Front legs -->
+    <rect x="235" y="195" width="18" height="65" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2.5"/>
+    <rect x="235" y="254" width="18" height="8" rx="3" fill="#78350f"/>
+
+    <rect x="258" y="195" width="16" height="65" rx="6" fill="#cbd5e1" stroke="#94a3b8" stroke-width="2.5"/>
+    <rect x="258" y="254" width="16" height="8" rx="3" fill="#78350f"/>
+
+    <!-- Body -->
+    <ellipse cx="200" cy="175" rx="75" ry="42" fill="url(#goat-body)" stroke="#94a3b8" stroke-width="3.5"/>
+
+    <!-- Belly (slightly warmer) -->
+    <ellipse cx="200" cy="190" rx="50" ry="22" fill="#fef3c7" opacity="0.4"/>
+
+    <!-- Neck -->
+    <path d="M265 155 C275 135 280 110 275 90" fill="none" stroke="url(#goat-body)" stroke-width="28" stroke-linecap="round"/>
+    <path d="M265 155 C275 135 280 110 275 90" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Head -->
+    <ellipse cx="280" cy="78" rx="28" ry="22" fill="url(#goat-body)" stroke="#94a3b8" stroke-width="3"/>
+
+    <!-- Snout (elongated) -->
+    <ellipse cx="305" cy="85" rx="16" ry="12" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2.5"/>
+
+    <!-- Horns (curved backward) -->
+    <path d="M272 60 C265 40 260 25 270 18" fill="none" stroke="#d4d4d8" stroke-width="6" stroke-linecap="round"/>
+    <path d="M272 60 C265 40 260 25 270 18" fill="none" stroke="#a8a29e" stroke-width="2" stroke-linecap="round"/>
+
+    <path d="M290 60 C297 40 302 25 292 18" fill="none" stroke="#d4d4d8" stroke-width="6" stroke-linecap="round"/>
+    <path d="M290 60 C297 40 302 25 292 18" fill="none" stroke="#a8a29e" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Ears (upright, pointed outward) -->
+    <ellipse cx="262" cy="72" rx="12" ry="6" fill="#fecdd3" stroke="#94a3b8" stroke-width="2" transform="rotate(-30 262 72)"/>
+    <ellipse cx="300" cy="72" rx="12" ry="6" fill="#fecdd3" stroke="#94a3b8" stroke-width="2" transform="rotate(30 300 72)"/>
+
+    <!-- Eyes -->
+    <ellipse cx="275" cy="76" rx="5" ry="6" fill="#fef9c3" stroke="#78716c" stroke-width="2"/>
+    <ellipse cx="275" cy="76" rx="2" ry="5" fill="#1e293b"/>
+    <circle cx="274" cy="74" r="1.5" fill="#ffffff"/>
+
+    <ellipse cx="291" cy="76" rx="5" ry="6" fill="#fef9c3" stroke="#78716c" stroke-width="2"/>
+    <ellipse cx="291" cy="76" rx="2" ry="5" fill="#1e293b"/>
+    <circle cx="290" cy="74" r="1.5" fill="#ffffff"/>
+
+    <!-- Nose -->
+    <ellipse cx="312" cy="82" rx="4" ry="3" fill="#a8a29e"/>
+    <ellipse cx="318" cy="82" rx="4" ry="3" fill="#a8a29e"/>
+
+    <!-- Mouth -->
+    <path d="M308 90 Q312 95 318 90" fill="none" stroke="#78716c" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Beard -->
+    <path d="M305 95 C302 108 300 118 305 125" fill="none" stroke="#d6d3d1" stroke-width="5" stroke-linecap="round"/>
+    <path d="M305 95 C302 108 300 118 305 125" fill="none" stroke="#a8a29e" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>

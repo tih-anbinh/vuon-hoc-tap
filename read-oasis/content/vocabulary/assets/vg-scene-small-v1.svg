@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-small desc-small">
+  <title id="title-small">Small - A tiny mouse beside a big elephant</title>
+  <desc id="desc-small">A small friendly mouse in the foreground beside a much larger elephant behind, showing the concept of small by size contrast.</desc>
+  <defs>
+    <linearGradient id="small-mouse" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e7e5e4"/>
+      <stop offset="100%" stop-color="#78716c"/>
+    </linearGradient>
+    <linearGradient id="small-eleph" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a8a29e"/>
+      <stop offset="100%" stop-color="#57534e"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <line x1="30" y1="265" x2="370" y2="265" stroke="#78716c" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="180" cy="265" rx="130" ry="7" fill="#0f172a" opacity="0.15"/>
+  <ellipse cx="140" cy="248" rx="35" ry="5" fill="#0f172a" opacity="0.2"/>
+
+  <!-- DOWN arrow indicating smallness -->
+  <g stroke="#dc2626" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.75">
+    <line x1="340" y1="80" x2="340" y2="220"/>
+    <line x1="330" y1="205" x2="340" y2="220"/>
+    <line x1="350" y1="205" x2="340" y2="220"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <!-- BIG elephant (background, faded) -->
+    <g opacity="0.85">
+      <ellipse cx="240" cy="180" rx="90" ry="55" fill="url(#small-eleph)" stroke="#292524" stroke-width="3.5"/>
+      <circle cx="165" cy="165" r="52" fill="url(#small-eleph)" stroke="#292524" stroke-width="3.5"/>
+      <path d="M135 175 Q115 195 122 225 Q132 238 143 230 Q148 218 138 210" fill="url(#small-eleph)" stroke="#292524" stroke-width="3.5"/>
+      <ellipse cx="190" cy="130" rx="28" ry="38" fill="url(#small-eleph)" stroke="#292524" stroke-width="3" transform="rotate(-20 190 130)"/>
+      <rect x="180" y="228" width="24" height="35" rx="4" fill="url(#small-eleph)" stroke="#292524" stroke-width="3"/>
+      <rect x="220" y="230" width="24" height="35" rx="4" fill="url(#small-eleph)" stroke="#292524" stroke-width="3"/>
+      <rect x="270" y="230" width="24" height="35" rx="4" fill="url(#small-eleph)" stroke="#292524" stroke-width="3"/>
+      <rect x="305" y="228" width="24" height="35" rx="4" fill="url(#small-eleph)" stroke="#292524" stroke-width="3"/>
+      <circle cx="158" cy="152" r="4" fill="#ffffff" stroke="#0c0a09" stroke-width="1.5"/>
+      <circle cx="159" cy="153" r="2" fill="#0c0a09"/>
+    </g>
+
+    <!-- SMALL mouse (foreground, prominent) -->
+    <ellipse cx="140" cy="240" rx="45" ry="24" fill="url(#small-mouse)" stroke="#44403c" stroke-width="3"/>
+    <!-- Head -->
+    <circle cx="100" cy="230" r="22" fill="url(#small-mouse)" stroke="#44403c" stroke-width="3"/>
+    <!-- Ears -->
+    <circle cx="91" cy="212" r="10" fill="#fbcfe8" stroke="#44403c" stroke-width="2.5"/>
+    <circle cx="107" cy="210" r="10" fill="#fbcfe8" stroke="#44403c" stroke-width="2.5"/>
+    <circle cx="91" cy="212" r="5" fill="#f9a8d4"/>
+    <circle cx="107" cy="210" r="5" fill="#f9a8d4"/>
+    <!-- Face -->
+    <circle cx="94" cy="230" r="2.5" fill="#0c0a09"/>
+    <circle cx="106" cy="230" r="2.5" fill="#0c0a09"/>
+    <circle cx="94" cy="230" r="1" fill="#ffffff"/>
+    <circle cx="106" cy="230" r="1" fill="#ffffff"/>
+    <!-- Nose -->
+    <ellipse cx="85" cy="240" rx="3" ry="2" fill="#f472b6" stroke="#9f1239" stroke-width="1"/>
+    <!-- Whiskers -->
+    <line x1="80" y1="242" x2="65" y2="238" stroke="#44403c" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="80" y1="245" x2="65" y2="245" stroke="#44403c" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="80" y1="248" x2="65" y2="252" stroke="#44403c" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Mouth -->
+    <path d="M88 245 Q90 248 92 245" fill="none" stroke="#0c0a09" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Legs -->
+    <ellipse cx="120" cy="262" rx="6" ry="4" fill="#78716c" stroke="#44403c" stroke-width="1.5"/>
+    <ellipse cx="160" cy="262" rx="6" ry="4" fill="#78716c" stroke="#44403c" stroke-width="1.5"/>
+    <!-- Tail (long curly) -->
+    <path d="M180 245 Q205 240 210 258 Q212 268 200 268" fill="none" stroke="#44403c" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>

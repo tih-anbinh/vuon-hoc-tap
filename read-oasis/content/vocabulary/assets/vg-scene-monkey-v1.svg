@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-monkey desc-monkey">
+  <title id="title-monkey">Monkey - Playful brown monkey</title>
+  <desc id="desc-monkey">A cheerful brown monkey with a long curling tail, round ears, and a friendly face, sitting on a branch.</desc>
+  <defs>
+    <linearGradient id="monkey-fur" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a16207"/>
+      <stop offset="100%" stop-color="#854d0e"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Ground line -->
+  <line x1="40" y1="265" x2="360" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Branch -->
+  <path d="M60 230 Q200 210 340 225" fill="none" stroke="#78350f" stroke-width="14" stroke-linecap="round"/>
+  <path d="M60 230 Q200 210 340 225" fill="none" stroke="#92400e" stroke-width="10" stroke-linecap="round"/>
+  <!-- Branch texture lines -->
+  <path d="M100 224 Q110 220 120 223" fill="none" stroke="#78350f" stroke-width="2" stroke-linecap="round"/>
+  <path d="M250 220 Q260 216 270 219" fill="none" stroke="#78350f" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Ground Shadow -->
+  <ellipse cx="200" cy="265" rx="90" ry="10" fill="#0f172a" opacity="0.12"/>
+
+  <!-- MONKEY -->
+  <g id="monkey-figure" filter="url(#soft-shadow)">
+    <!-- Curling Tail -->
+    <path d="M130 195 C80 180 50 130 70 100 C80 85 95 95 90 110 C80 140 100 175 140 190" fill="none" stroke="#854d0e" stroke-width="10" stroke-linecap="round"/>
+    <path d="M130 195 C80 180 50 130 70 100 C80 85 95 95 90 110 C80 140 100 175 140 190" fill="none" stroke="#713f12" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Body -->
+    <ellipse cx="200" cy="175" rx="50" ry="48" fill="url(#monkey-fur)" stroke="#713f12" stroke-width="3.5"/>
+
+    <!-- Belly patch -->
+    <ellipse cx="200" cy="180" rx="32" ry="35" fill="#fde68a"/>
+
+    <!-- Left Arm (resting on branch) -->
+    <path d="M160 155 C140 170 135 200 150 215" fill="none" stroke="url(#monkey-fur)" stroke-width="16" stroke-linecap="round"/>
+    <path d="M160 155 C140 170 135 200 150 215" fill="none" stroke="#713f12" stroke-width="3" stroke-linecap="round"/>
+    <!-- Left Hand -->
+    <circle cx="150" cy="218" r="10" fill="#fde68a" stroke="#713f12" stroke-width="2.5"/>
+
+    <!-- Right Arm -->
+    <path d="M240 155 C260 170 265 200 250 215" fill="none" stroke="url(#monkey-fur)" stroke-width="16" stroke-linecap="round"/>
+    <path d="M240 155 C260 170 265 200 250 215" fill="none" stroke="#713f12" stroke-width="3" stroke-linecap="round"/>
+    <!-- Right Hand -->
+    <circle cx="250" cy="218" r="10" fill="#fde68a" stroke="#713f12" stroke-width="2.5"/>
+
+    <!-- Head -->
+    <circle cx="200" cy="100" r="45" fill="url(#monkey-fur)" stroke="#713f12" stroke-width="3.5"/>
+
+    <!-- Face area (lighter) -->
+    <ellipse cx="200" cy="108" rx="30" ry="28" fill="#fde68a"/>
+
+    <!-- Left Ear -->
+    <circle cx="152" cy="90" r="16" fill="url(#monkey-fur)" stroke="#713f12" stroke-width="3"/>
+    <circle cx="152" cy="90" r="9" fill="#fbbf24"/>
+
+    <!-- Right Ear -->
+    <circle cx="248" cy="90" r="16" fill="url(#monkey-fur)" stroke="#713f12" stroke-width="3"/>
+    <circle cx="248" cy="90" r="9" fill="#fbbf24"/>
+
+    <!-- Eyes -->
+    <ellipse cx="185" cy="98" rx="8" ry="10" fill="#ffffff" stroke="#713f12" stroke-width="2"/>
+    <circle cx="187" cy="100" r="5" fill="#1e293b"/>
+    <circle cx="185" cy="97" r="2" fill="#ffffff"/>
+
+    <ellipse cx="215" cy="98" rx="8" ry="10" fill="#ffffff" stroke="#713f12" stroke-width="2"/>
+    <circle cx="217" cy="100" r="5" fill="#1e293b"/>
+    <circle cx="215" cy="97" r="2" fill="#ffffff"/>
+
+    <!-- Nose -->
+    <ellipse cx="200" cy="112" rx="5" ry="4" fill="#78350f"/>
+
+    <!-- Mouth (happy smile) -->
+    <path d="M190 118 Q200 128 210 118" fill="none" stroke="#78350f" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Eyebrow ridges -->
+    <path d="M175 86 Q185 82 192 86" fill="none" stroke="#713f12" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M208 86 Q215 82 225 86" fill="none" stroke="#713f12" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Feet on branch -->
+    <ellipse cx="175" cy="225" rx="14" ry="8" fill="#fde68a" stroke="#713f12" stroke-width="2.5"/>
+    <ellipse cx="225" cy="223" rx="14" ry="8" fill="#fde68a" stroke="#713f12" stroke-width="2.5"/>
+  </g>
+</svg>

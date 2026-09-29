@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-pen desc-pen">
+  <title id="title-pen">Pen - Ballpoint pen</title>
+  <desc id="desc-pen">A blue ballpoint pen with a cap clip and a fine writing tip, alongside a small line of ink.</desc>
+  <defs>
+    <linearGradient id="pen-body" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#1e40af"/>
+    </linearGradient>
+    <linearGradient id="pen-cap" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e40af"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <line x1="60" y1="265" x2="340" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="265" rx="130" ry="7" fill="#0f172a" opacity="0.1"/>
+  <g id="pen-figure" filter="url(#soft-shadow)" transform="rotate(-15 200 170)">
+    <!-- Cap end -->
+    <rect x="60" y="158" width="70" height="24" rx="6" fill="url(#pen-cap)" stroke="#172554" stroke-width="3"/>
+    <!-- Clip -->
+    <path d="M75 158 L75 145 Q95 143 115 148 L115 168" fill="#1e3a8a" stroke="#172554" stroke-width="2.5"/>
+    <circle cx="80" cy="150" r="2" fill="#93c5fd"/>
+    <!-- Cap ring -->
+    <rect x="128" y="156" width="6" height="28" fill="#a8a29e" stroke="#525252" stroke-width="1.5"/>
+    <!-- Body -->
+    <rect x="134" y="160" width="180" height="20" rx="3" fill="url(#pen-body)" stroke="#1e3a8a" stroke-width="3"/>
+    <!-- Body highlight -->
+    <line x1="145" y1="165" x2="305" y2="165" stroke="#bfdbfe" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+    <!-- Body brand label ring -->
+    <rect x="200" y="158" width="30" height="24" fill="#1e3a8a" stroke="#172554" stroke-width="1.5"/>
+    <circle cx="215" cy="170" r="4" fill="#fbbf24" stroke="#d97706" stroke-width="1"/>
+    <!-- Cone (transitions to tip) -->
+    <path d="M314 160 L340 168 L340 172 L314 180 Z" fill="#1e3a8a" stroke="#172554" stroke-width="2.5"/>
+    <!-- Metal tip -->
+    <path d="M340 168 L360 170 L340 172 Z" fill="#a8a29e" stroke="#525252" stroke-width="2"/>
+    <!-- Ball at tip -->
+    <circle cx="358" cy="170" r="2.5" fill="#525252" stroke="#292524" stroke-width="1"/>
+  </g>
+  <!-- Ink line drawn from pen tip -->
+  <path d="M280 235 Q220 245 160 240 Q120 236 90 245" fill="none" stroke="#1e40af" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+</svg>

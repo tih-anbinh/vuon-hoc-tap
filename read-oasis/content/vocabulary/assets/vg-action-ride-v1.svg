@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-ride desc-ride">
+  <title id="title-ride">Ride - Child riding a bicycle</title>
+  <desc id="desc-ride">A cheerful child riding a red bicycle, with wind lines showing movement.</desc>
+  <defs>
+    <linearGradient id="ride-skin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5d0a9"/>
+    </linearGradient>
+    <linearGradient id="ride-shirt" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+    <linearGradient id="bike-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#991b1b"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <line x1="30" y1="265" x2="370" y2="265" stroke="#78716c" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="265" rx="150" ry="6" fill="#0f172a" opacity="0.12"/>
+
+  <!-- Wind/motion lines behind -->
+  <g stroke="#60a5fa" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="6,6" opacity="0.7">
+    <path d="M30 130 L80 130"/>
+    <path d="M20 165 L75 165"/>
+    <path d="M35 200 L85 200"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Bike wheels -->
+    <circle cx="130" cy="220" r="42" fill="#f1f5f9" stroke="#0f172a" stroke-width="4"/>
+    <circle cx="130" cy="220" r="8" fill="#0f172a"/>
+    <circle cx="290" cy="220" r="42" fill="#f1f5f9" stroke="#0f172a" stroke-width="4"/>
+    <circle cx="290" cy="220" r="8" fill="#0f172a"/>
+    <!-- Spokes (front wheel) -->
+    <g stroke="#94a3b8" stroke-width="2">
+      <line x1="130" y1="178" x2="130" y2="262"/>
+      <line x1="88" y1="220" x2="172" y2="220"/>
+      <line x1="100" y1="190" x2="160" y2="250"/>
+      <line x1="100" y1="250" x2="160" y2="190"/>
+    </g>
+    <!-- Spokes (back wheel) -->
+    <g stroke="#94a3b8" stroke-width="2">
+      <line x1="290" y1="178" x2="290" y2="262"/>
+      <line x1="248" y1="220" x2="332" y2="220"/>
+      <line x1="260" y1="190" x2="320" y2="250"/>
+      <line x1="260" y1="250" x2="320" y2="190"/>
+    </g>
+
+    <!-- Bike frame -->
+    <line x1="130" y1="220" x2="210" y2="150" stroke="url(#bike-grad)" stroke-width="10" stroke-linecap="round"/>
+    <line x1="130" y1="220" x2="290" y2="220" stroke="url(#bike-grad)" stroke-width="10" stroke-linecap="round"/>
+    <line x1="210" y1="150" x2="290" y2="220" stroke="url(#bike-grad)" stroke-width="10" stroke-linecap="round"/>
+    <line x1="210" y1="150" x2="210" y2="220" stroke="url(#bike-grad)" stroke-width="10" stroke-linecap="round"/>
+    <!-- Fork to front wheel -->
+    <line x1="130" y1="220" x2="150" y2="150" stroke="url(#bike-grad)" stroke-width="9" stroke-linecap="round"/>
+
+    <!-- Handlebars -->
+    <line x1="140" y1="140" x2="170" y2="130" stroke="#0f172a" stroke-width="6" stroke-linecap="round"/>
+    <line x1="140" y1="140" x2="115" y2="135" stroke="#0f172a" stroke-width="6" stroke-linecap="round"/>
+    <!-- Grips -->
+    <ellipse cx="172" cy="130" rx="5" ry="3" fill="#78350f" stroke="#451a03" stroke-width="1.5"/>
+    <ellipse cx="113" cy="135" rx="5" ry="3" fill="#78350f" stroke="#451a03" stroke-width="1.5"/>
+
+    <!-- Seat -->
+    <ellipse cx="212" cy="145" rx="15" ry="6" fill="#0f172a" stroke="#000" stroke-width="2"/>
+
+    <!-- Pedals -->
+    <circle cx="210" cy="220" r="6" fill="#0f172a"/>
+    <rect x="195" y="240" width="20" height="6" rx="2" fill="#78350f" stroke="#451a03" stroke-width="1.5"/>
+    <rect x="215" y="205" width="20" height="6" rx="2" fill="#78350f" stroke="#451a03" stroke-width="1.5"/>
+    <line x1="210" y1="220" x2="200" y2="243" stroke="#0f172a" stroke-width="3"/>
+    <line x1="210" y1="220" x2="225" y2="208" stroke="#0f172a" stroke-width="3"/>
+
+    <!-- Child on bike -->
+    <!-- Legs (bent, pedaling) -->
+    <path d="M212 145 Q200 175 200 243" fill="none" stroke="url(#ride-shirt)" stroke-width="18" stroke-linecap="round"/>
+    <path d="M212 145 Q225 165 225 208" fill="none" stroke="url(#ride-shirt)" stroke-width="18" stroke-linecap="round"/>
+
+    <!-- Torso -->
+    <path d="M180 90 Q210 82 240 92 L235 145 L188 148 Z" fill="url(#ride-shirt)" stroke="#166534" stroke-width="3"/>
+
+    <!-- Arms holding handlebars -->
+    <path d="M188 100 Q170 115 155 138" fill="none" stroke="url(#ride-shirt)" stroke-width="14" stroke-linecap="round"/>
+    <path d="M235 100 Q195 105 170 130" fill="none" stroke="url(#ride-shirt)" stroke-width="14" stroke-linecap="round"/>
+    <circle cx="155" cy="140" r="8" fill="url(#ride-skin)" stroke="#a16207" stroke-width="2"/>
+    <circle cx="170" cy="130" r="8" fill="url(#ride-skin)" stroke="#a16207" stroke-width="2"/>
+
+    <!-- Head with helmet -->
+    <circle cx="215" cy="70" r="26" fill="url(#ride-skin)" stroke="#a16207" stroke-width="3"/>
+    <!-- Helmet -->
+    <path d="M188 70 Q188 40 215 38 Q242 40 242 70 Q235 60 215 58 Q195 60 188 70 Z" fill="#f59e0b" stroke="#78350f" stroke-width="3"/>
+    <!-- Helmet strap -->
+    <line x1="195" y1="80" x2="205" y2="90" stroke="#78350f" stroke-width="2"/>
+    <line x1="235" y1="80" x2="225" y2="90" stroke="#78350f" stroke-width="2"/>
+    <!-- Eyes -->
+    <circle cx="207" cy="72" r="2.5" fill="#0c0a09"/>
+    <circle cx="223" cy="72" r="2.5" fill="#0c0a09"/>
+    <!-- Big smile -->
+    <path d="M205 85 Q215 92 225 85" fill="none" stroke="#0c0a09" stroke-width="2" stroke-linecap="round"/>
+    <!-- Cheeks -->
+    <circle cx="200" cy="82" r="4" fill="#fca5a5" opacity="0.6"/>
+    <circle cx="230" cy="82" r="4" fill="#fca5a5" opacity="0.6"/>
+  </g>
+</svg>

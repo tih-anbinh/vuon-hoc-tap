@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-computer desc-computer">
+  <title id="title-computer">Computer - Desktop computer</title>
+  <desc id="desc-computer">A friendly desktop computer with a monitor showing a colourful screen, a stand, and a keyboard.</desc>
+  <defs>
+    <linearGradient id="monitor-body" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#525252"/>
+      <stop offset="100%" stop-color="#1c1917"/>
+    </linearGradient>
+    <linearGradient id="screen-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <line x1="30" y1="265" x2="370" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="265" rx="145" ry="7" fill="#0f172a" opacity="0.15"/>
+  <g id="computer-figure" filter="url(#soft-shadow)">
+    <!-- Monitor bezel -->
+    <rect x="60" y="40" width="280" height="180" rx="10" fill="url(#monitor-body)" stroke="#0c0a09" stroke-width="3.5"/>
+    <!-- Screen -->
+    <rect x="75" y="55" width="250" height="140" rx="4" fill="url(#screen-grad)" stroke="#0c0a09" stroke-width="2"/>
+    <!-- Screen content: sun -->
+    <circle cx="130" cy="100" r="18" fill="#fde047" stroke="#ca8a04" stroke-width="2"/>
+    <line x1="130" y1="75" x2="130" y2="65" stroke="#fde047" stroke-width="3" stroke-linecap="round"/>
+    <line x1="130" y1="135" x2="130" y2="145" stroke="#fde047" stroke-width="3" stroke-linecap="round"/>
+    <line x1="105" y1="100" x2="95" y2="100" stroke="#fde047" stroke-width="3" stroke-linecap="round"/>
+    <line x1="155" y1="100" x2="165" y2="100" stroke="#fde047" stroke-width="3" stroke-linecap="round"/>
+    <!-- Screen content: mountains -->
+    <path d="M75 195 L120 140 L165 195 Z" fill="#16a34a" stroke="#166534" stroke-width="2" opacity="0.85"/>
+    <path d="M140 195 L200 130 L260 195 Z" fill="#15803d" stroke="#166534" stroke-width="2" opacity="0.85"/>
+    <path d="M235 195 L285 145 L325 195 Z" fill="#16a34a" stroke="#166534" stroke-width="2" opacity="0.85"/>
+    <!-- Screen shine -->
+    <path d="M85 65 L120 65 L100 100 Z" fill="#ffffff" opacity="0.25"/>
+    <!-- Camera dot -->
+    <circle cx="200" cy="48" r="3" fill="#a8a29e" stroke="#525252" stroke-width="1"/>
+    <!-- Monitor stand neck -->
+    <rect x="185" y="220" width="30" height="25" fill="#404040" stroke="#0c0a09" stroke-width="2.5"/>
+    <!-- Monitor base -->
+    <ellipse cx="200" cy="248" rx="60" ry="10" fill="#525252" stroke="#0c0a09" stroke-width="2.5"/>
+    <!-- Keyboard in front -->
+    <rect x="90" y="228" width="80" height="20" rx="3" fill="#e7e5e4" stroke="#78716c" stroke-width="2.5"/>
+    <!-- Keyboard keys -->
+    <line x1="95" y1="234" x2="165" y2="234" stroke="#a8a29e" stroke-width="1"/>
+    <line x1="95" y1="240" x2="165" y2="240" stroke="#a8a29e" stroke-width="1"/>
+    <line x1="105" y1="230" x2="105" y2="245" stroke="#a8a29e" stroke-width="1"/>
+    <line x1="120" y1="230" x2="120" y2="245" stroke="#a8a29e" stroke-width="1"/>
+    <line x1="135" y1="230" x2="135" y2="245" stroke="#a8a29e" stroke-width="1"/>
+    <line x1="150" y1="230" x2="150" y2="245" stroke="#a8a29e" stroke-width="1"/>
+    <!-- Mouse -->
+    <ellipse cx="255" cy="238" rx="14" ry="10" fill="#e7e5e4" stroke="#78716c" stroke-width="2.5"/>
+    <line x1="255" y1="230" x2="255" y2="238" stroke="#78716c" stroke-width="1.5"/>
+    <!-- Mouse cable -->
+    <path d="M255 228 Q265 220 270 225" fill="none" stroke="#a8a29e" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>

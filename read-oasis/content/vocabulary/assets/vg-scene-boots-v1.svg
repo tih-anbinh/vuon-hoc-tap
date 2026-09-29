@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-boots desc-boots">
+  <title id="title-boots">Boots - Pair of rain boots</title>
+  <desc id="desc-boots">A pair of bright yellow rain boots with a fun pattern, standing side by side.</desc>
+  <defs>
+    <linearGradient id="boot-yellow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#eab308"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <line x1="60" y1="265" x2="340" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="265" rx="100" ry="8" fill="#0f172a" opacity="0.1"/>
+  <g id="boots-figure" filter="url(#soft-shadow)">
+    <!-- Left boot -->
+    <path d="M100 80 L95 200 L80 210 Q70 260 120 260 L160 260 Q170 260 170 250 L170 210 L155 200 L150 80 Z" fill="url(#boot-yellow)" stroke="#ca8a04" stroke-width="3.5"/>
+    <!-- Boot top rim -->
+    <path d="M100 80 Q125 72 150 80" fill="none" stroke="#ca8a04" stroke-width="5" stroke-linecap="round"/>
+    <!-- Boot sole -->
+    <path d="M80 255 Q120 265 160 255" fill="#78350f" stroke="#451a03" stroke-width="2.5"/>
+    <!-- Heel -->
+    <rect x="82" y="248" width="25" height="12" rx="4" fill="#78350f" stroke="#451a03" stroke-width="2"/>
+    <!-- Decorative stripe -->
+    <rect x="98" y="180" width="55" height="6" rx="3" fill="#ef4444"/>
+    <rect x="98" y="192" width="55" height="4" rx="2" fill="#3b82f6"/>
+    <!-- Highlight -->
+    <path d="M110 100 L108 170" fill="none" stroke="#fef9c3" stroke-width="4" stroke-linecap="round" opacity="0.4"/>
+
+    <!-- Right boot -->
+    <path d="M230 80 L225 200 L210 210 Q200 260 250 260 L290 260 Q300 260 300 250 L300 210 L285 200 L280 80 Z" fill="url(#boot-yellow)" stroke="#ca8a04" stroke-width="3.5"/>
+    <!-- Boot top rim -->
+    <path d="M230 80 Q255 72 280 80" fill="none" stroke="#ca8a04" stroke-width="5" stroke-linecap="round"/>
+    <!-- Boot sole -->
+    <path d="M210 255 Q250 265 290 255" fill="#78350f" stroke="#451a03" stroke-width="2.5"/>
+    <!-- Heel -->
+    <rect x="212" y="248" width="25" height="12" rx="4" fill="#78350f" stroke="#451a03" stroke-width="2"/>
+    <!-- Decorative stripe -->
+    <rect x="228" y="180" width="55" height="6" rx="3" fill="#ef4444"/>
+    <rect x="228" y="192" width="55" height="4" rx="2" fill="#3b82f6"/>
+    <!-- Highlight -->
+    <path d="M240 100 L238 170" fill="none" stroke="#fef9c3" stroke-width="4" stroke-linecap="round" opacity="0.4"/>
+  </g>
+</svg>

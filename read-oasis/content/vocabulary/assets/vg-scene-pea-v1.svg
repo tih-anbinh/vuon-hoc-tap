@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-pea desc-pea">
+  <title id="title-pea">Pea - Green peas in a pod</title>
+  <desc id="desc-pea">An open green pea pod showing five round bright green peas inside, with curly tendrils.</desc>
+  <defs>
+    <linearGradient id="pod-green" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+    <linearGradient id="pea-ball" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#86efac"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <line x1="40" y1="260" x2="360" y2="260" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="260" rx="110" ry="8" fill="#0f172a" opacity="0.1"/>
+
+  <g id="pea-figure" filter="url(#soft-shadow)">
+    <!-- Pod bottom half (cradle) -->
+    <path d="M60 165 C80 220 150 245 200 245 C250 245 320 220 340 165" fill="url(#pod-green)" stroke="#16a34a" stroke-width="3.5"/>
+
+    <!-- Pod inner surface -->
+    <path d="M75 170 C90 210 150 230 200 230 C250 230 310 210 325 170" fill="#bbf7d0" stroke="none"/>
+
+    <!-- Peas (5 round balls sitting in pod) -->
+    <circle cx="115" cy="185" r="24" fill="url(#pea-ball)" stroke="#16a34a" stroke-width="2.5"/>
+    <circle cx="110" cy="178" r="6" fill="#bbf7d0" opacity="0.6"/>
+
+    <circle cx="160" cy="195" r="26" fill="url(#pea-ball)" stroke="#16a34a" stroke-width="2.5"/>
+    <circle cx="155" cy="188" r="7" fill="#bbf7d0" opacity="0.6"/>
+
+    <circle cx="205" cy="198" r="26" fill="url(#pea-ball)" stroke="#16a34a" stroke-width="2.5"/>
+    <circle cx="200" cy="191" r="7" fill="#bbf7d0" opacity="0.6"/>
+
+    <circle cx="250" cy="195" r="26" fill="url(#pea-ball)" stroke="#16a34a" stroke-width="2.5"/>
+    <circle cx="245" cy="188" r="7" fill="#bbf7d0" opacity="0.6"/>
+
+    <circle cx="292" cy="182" r="23" fill="url(#pea-ball)" stroke="#16a34a" stroke-width="2.5"/>
+    <circle cx="287" cy="175" r="6" fill="#bbf7d0" opacity="0.6"/>
+
+    <!-- Pod top half (lid, peeled open) -->
+    <path d="M60 165 C80 110 150 85 200 85 C250 85 320 110 340 165" fill="url(#pod-green)" stroke="#16a34a" stroke-width="3.5"/>
+
+    <!-- Pod top inner -->
+    <path d="M80 160 C95 120 155 100 200 100 C245 100 305 120 320 160" fill="#bbf7d0" opacity="0.5"/>
+
+    <!-- Pod tip (left) -->
+    <path d="M60 165 C45 160 35 150 40 140" fill="url(#pod-green)" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Pod tip (right) -->
+    <path d="M340 165 C355 160 365 150 360 140" fill="url(#pod-green)" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Curly tendril -->
+    <path d="M355 145 C365 130 375 125 370 115 C365 105 355 110 360 120 C365 130 375 135 370 145" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Small leaf -->
+    <path d="M45 142 C35 130 28 118 35 112 C42 106 48 118 45 130 Z" fill="#4ade80" stroke="#16a34a" stroke-width="2"/>
+  </g>
+</svg>

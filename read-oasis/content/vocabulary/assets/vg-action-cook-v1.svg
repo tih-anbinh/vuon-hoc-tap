@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-cook desc-cook">
+  <title id="title-cook">Cook - Child cooking at a stove</title>
+  <desc id="desc-cook">A cheerful child chef wearing a hat, stirring a pot with a spoon, steam rising from the food.</desc>
+  <defs>
+    <linearGradient id="cook-skin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5d0a9"/>
+    </linearGradient>
+    <linearGradient id="cook-apron" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="pot-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#78716c"/>
+      <stop offset="100%" stop-color="#292524"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <line x1="30" y1="265" x2="370" y2="265" stroke="#78716c" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="265" rx="150" ry="6" fill="#0f172a" opacity="0.1"/>
+
+  <!-- Steam swirls above pot -->
+  <g stroke="#cbd5e1" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.9">
+    <path d="M235 155 Q225 140 235 125 Q245 110 235 95"/>
+    <path d="M260 155 Q250 140 260 125 Q270 110 260 95"/>
+    <path d="M285 155 Q275 140 285 125 Q295 110 285 95"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Stove -->
+    <rect x="200" y="180" width="140" height="80" rx="4" fill="#404040" stroke="#0c0a09" stroke-width="3"/>
+    <rect x="205" y="185" width="130" height="20" rx="2" fill="#1c1917" stroke="#0c0a09" stroke-width="2"/>
+    <circle cx="270" cy="195" r="8" fill="#ef4444" stroke="#7f1d1d" stroke-width="1.5"/>
+    <!-- Knobs -->
+    <circle cx="215" cy="220" r="4" fill="#fbbf24" stroke="#78350f" stroke-width="1.5"/>
+    <circle cx="325" cy="220" r="4" fill="#fbbf24" stroke="#78350f" stroke-width="1.5"/>
+    <!-- Oven window -->
+    <rect x="230" y="220" width="80" height="30" rx="3" fill="#1c1917" stroke="#525252" stroke-width="1.5"/>
+
+    <!-- Pot on stove -->
+    <ellipse cx="260" cy="180" rx="35" ry="8" fill="#78716c" stroke="#292524" stroke-width="2.5"/>
+    <path d="M225 178 L230 155 L290 155 L295 178 Z" fill="url(#pot-grad)" stroke="#0c0a09" stroke-width="3"/>
+    <path d="M230 155 L290 155" stroke="#a8a29e" stroke-width="3"/>
+    <!-- Food in pot (visible) -->
+    <path d="M232 158 Q260 152 288 158" fill="#f97316" stroke="#7c2d12" stroke-width="2"/>
+    <circle cx="245" cy="160" r="3" fill="#dc2626"/>
+    <circle cx="270" cy="158" r="3" fill="#dc2626"/>
+    <circle cx="255" cy="161" r="2.5" fill="#fde047"/>
+    <!-- Pot handles -->
+    <path d="M225 168 L215 168" stroke="#292524" stroke-width="3" stroke-linecap="round"/>
+    <path d="M295 168 L305 168" stroke="#292524" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Child body -->
+    <!-- Apron -->
+    <path d="M75 180 L60 260 L150 260 L135 180 Q105 172 75 180 Z" fill="url(#cook-apron)" stroke="#78716c" stroke-width="3"/>
+    <!-- Apron neck strap -->
+    <path d="M95 180 Q95 155 105 148" fill="none" stroke="#a8a29e" stroke-width="3" stroke-linecap="round"/>
+    <path d="M115 180 Q115 155 105 148" fill="none" stroke="#a8a29e" stroke-width="3" stroke-linecap="round"/>
+    <!-- Apron pocket -->
+    <rect x="90" y="215" width="30" height="20" rx="2" fill="#e2e8f0" stroke="#78716c" stroke-width="2"/>
+    <!-- Legs -->
+    <rect x="88" y="255" width="12" height="15" fill="#1e40af" stroke="#1e3a8a" stroke-width="2"/>
+    <rect x="112" y="255" width="12" height="15" fill="#1e40af" stroke="#1e3a8a" stroke-width="2"/>
+    <ellipse cx="94" cy="270" rx="10" ry="4" fill="#78350f" stroke="#451a03" stroke-width="2"/>
+    <ellipse cx="118" cy="270" rx="10" ry="4" fill="#78350f" stroke="#451a03" stroke-width="2"/>
+
+    <!-- Left arm (stirring, reaching toward pot) -->
+    <path d="M135 190 Q170 175 200 170" fill="none" stroke="#dc2626" stroke-width="18" stroke-linecap="round"/>
+    <!-- Left hand -->
+    <circle cx="205" cy="170" r="10" fill="url(#cook-skin)" stroke="#a16207" stroke-width="2.5"/>
+    <!-- Spoon -->
+    <line x1="215" y1="170" x2="248" y2="150" stroke="#78350f" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="252" cy="147" rx="8" ry="5" fill="#a16207" stroke="#78350f" stroke-width="2" transform="rotate(-30 252 147)"/>
+
+    <!-- Right arm (down at side) -->
+    <path d="M75 190 Q55 210 55 235" fill="none" stroke="#dc2626" stroke-width="18" stroke-linecap="round"/>
+    <circle cx="55" cy="238" r="10" fill="url(#cook-skin)" stroke="#a16207" stroke-width="2.5"/>
+
+    <!-- Head -->
+    <circle cx="105" cy="130" r="30" fill="url(#cook-skin)" stroke="#a16207" stroke-width="3"/>
+    <!-- Chef's hat -->
+    <rect x="80" y="100" width="50" height="10" fill="#ffffff" stroke="#78716c" stroke-width="2.5"/>
+    <path d="M78 100 Q75 70 92 68 Q95 55 108 60 Q120 52 128 70 Q140 68 138 100" fill="#ffffff" stroke="#78716c" stroke-width="2.5"/>
+    <!-- Face -->
+    <circle cx="95" cy="128" r="2.5" fill="#0c0a09"/>
+    <circle cx="115" cy="128" r="2.5" fill="#0c0a09"/>
+    <path d="M97 140 Q105 148 113 140" fill="none" stroke="#0c0a09" stroke-width="2" stroke-linecap="round"/>
+    <!-- Cheeks -->
+    <circle cx="88" cy="138" r="4" fill="#fca5a5" opacity="0.5"/>
+    <circle cx="122" cy="138" r="4" fill="#fca5a5" opacity="0.5"/>
+  </g>
+</svg>

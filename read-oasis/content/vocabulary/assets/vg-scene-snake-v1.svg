@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-snake desc-snake">
+  <title id="title-snake">Snake - Friendly coiled green snake</title>
+  <desc id="desc-snake">A bright green snake with a yellow belly, coiled in an S-shape with its head raised and a flickering red tongue.</desc>
+  <defs>
+    <linearGradient id="snake-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Ground line -->
+  <line x1="40" y1="265" x2="360" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Ground Shadow -->
+  <ellipse cx="200" cy="265" rx="110" ry="10" fill="#0f172a" opacity="0.12"/>
+
+  <!-- SNAKE -->
+  <g id="snake-figure" filter="url(#soft-shadow)">
+    <!-- Coiled body (S-curve) -->
+    <path d="M100 255 C60 240 70 190 120 180 C170 170 200 210 240 200 C280 190 290 150 260 130 C230 110 200 130 220 160" fill="none" stroke="url(#snake-green)" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Body outline -->
+    <path d="M100 255 C60 240 70 190 120 180 C170 170 200 210 240 200 C280 190 290 150 260 130 C230 110 200 130 220 160" fill="none" stroke="#15803d" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Belly stripe (lighter) -->
+    <path d="M100 255 C60 240 70 190 120 180 C170 170 200 210 240 200 C280 190 290 150 260 130 C230 110 200 130 220 160" fill="none" stroke="#bbf7d0" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+
+    <!-- Scale pattern dots -->
+    <circle cx="90" cy="235" r="3" fill="#15803d" opacity="0.4"/>
+    <circle cx="120" cy="185" r="3" fill="#15803d" opacity="0.4"/>
+    <circle cx="160" cy="190" r="3" fill="#15803d" opacity="0.4"/>
+    <circle cx="240" cy="195" r="3" fill="#15803d" opacity="0.4"/>
+    <circle cx="270" cy="165" r="3" fill="#15803d" opacity="0.4"/>
+    <circle cx="250" cy="135" r="3" fill="#15803d" opacity="0.4"/>
+
+    <!-- Neck rising up -->
+    <path d="M220 160 C230 140 240 100 230 75" fill="none" stroke="url(#snake-green)" stroke-width="22" stroke-linecap="round"/>
+    <path d="M220 160 C230 140 240 100 230 75" fill="none" stroke="#15803d" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Head -->
+    <ellipse cx="230" cy="65" rx="24" ry="18" fill="url(#snake-green)" stroke="#15803d" stroke-width="3.5"/>
+
+    <!-- Head top (slightly darker) -->
+    <ellipse cx="230" cy="60" rx="18" ry="10" fill="#16a34a"/>
+
+    <!-- Eyes -->
+    <circle cx="220" cy="60" r="6" fill="#fef9c3" stroke="#15803d" stroke-width="2"/>
+    <ellipse cx="220" cy="60" rx="2.5" ry="5" fill="#1e293b"/>
+    <circle cx="219" cy="58" r="1.5" fill="#ffffff"/>
+
+    <circle cx="240" cy="60" r="6" fill="#fef9c3" stroke="#15803d" stroke-width="2"/>
+    <ellipse cx="240" cy="60" rx="2.5" ry="5" fill="#1e293b"/>
+    <circle cx="239" cy="58" r="1.5" fill="#ffffff"/>
+
+    <!-- Nostrils -->
+    <circle cx="245" cy="65" r="1.5" fill="#15803d"/>
+    <circle cx="250" cy="65" r="1.5" fill="#15803d"/>
+
+    <!-- Mouth line -->
+    <path d="M248 70 Q255 72 260 68" fill="none" stroke="#15803d" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Forked tongue -->
+    <line x1="258" y1="69" x2="275" y2="62" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="275" y1="62" x2="282" y2="56" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/>
+    <line x1="275" y1="62" x2="284" y2="66" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Tail tip (tapered) -->
+    <path d="M100 255 C110 260 115 262 118 258" fill="none" stroke="#16a34a" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>

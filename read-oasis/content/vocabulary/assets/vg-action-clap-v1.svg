@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-clap desc-clap">
+  <title id="title-clap">Clap - Hands clapping together</title>
+  <desc id="desc-clap">Two hands coming together to clap, with radiating sound lines and small stars showing the noise.</desc>
+  <defs>
+    <linearGradient id="hand-skin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5d0a9"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <line x1="60" y1="265" x2="340" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="265" rx="110" ry="7" fill="#0f172a" opacity="0.15"/>
+
+  <!-- Radiating sound lines (impact) -->
+  <g stroke="#f59e0b" stroke-width="4" stroke-linecap="round" fill="none">
+    <line x1="200" y1="60" x2="200" y2="30"/>
+    <line x1="145" y1="75" x2="120" y2="55"/>
+    <line x1="255" y1="75" x2="280" y2="55"/>
+    <line x1="120" y1="130" x2="90" y2="120"/>
+    <line x1="280" y1="130" x2="310" y2="120"/>
+    <line x1="130" y1="180" x2="105" y2="185"/>
+    <line x1="270" y1="180" x2="295" y2="185"/>
+  </g>
+  <!-- Sparkle stars -->
+  <path d="M90 90 L93 97 L100 100 L93 103 L90 110 L87 103 L80 100 L87 97 Z" fill="#fde047" stroke="#a16207" stroke-width="1.5"/>
+  <path d="M310 90 L313 97 L320 100 L313 103 L310 110 L307 103 L300 100 L307 97 Z" fill="#fde047" stroke="#a16207" stroke-width="1.5"/>
+  <path d="M200 40 L202 46 L208 48 L202 50 L200 56 L198 50 L192 48 L198 46 Z" fill="#fde047" stroke="#a16207" stroke-width="1.5"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Left arm/sleeve -->
+    <path d="M50 200 L110 175 L130 195 L70 220 Z" fill="#3b82f6" stroke="#1e3a8a" stroke-width="3"/>
+    <!-- Right arm/sleeve -->
+    <path d="M350 200 L290 175 L270 195 L330 220 Z" fill="#3b82f6" stroke="#1e3a8a" stroke-width="3"/>
+
+    <!-- Left hand (palm shape facing right) -->
+    <!-- Palm -->
+    <path d="M105 130 Q95 130 92 140 L92 210 Q95 220 108 220 L155 218 Q170 215 175 200 L175 155 Q175 140 165 138 Z" fill="url(#hand-skin)" stroke="#a16207" stroke-width="3"/>
+    <!-- Thumb -->
+    <path d="M105 130 Q98 115 108 108 Q120 105 125 118 L125 145 Q118 145 105 145 Z" fill="url(#hand-skin)" stroke="#a16207" stroke-width="2.5"/>
+    <!-- Finger creases -->
+    <path d="M135 148 L135 175" stroke="#a16207" stroke-width="1.5" opacity="0.5"/>
+    <path d="M148 148 L148 178" stroke="#a16207" stroke-width="1.5" opacity="0.5"/>
+    <path d="M161 148 L161 175" stroke="#a16207" stroke-width="1.5" opacity="0.5"/>
+    <!-- Palm crease -->
+    <path d="M105 170 Q130 175 155 168" fill="none" stroke="#a16207" stroke-width="1.5" opacity="0.4"/>
+
+    <!-- Right hand (mirror) -->
+    <path d="M295 130 Q305 130 308 140 L308 210 Q305 220 292 220 L245 218 Q230 215 225 200 L225 155 Q225 140 235 138 Z" fill="url(#hand-skin)" stroke="#a16207" stroke-width="3"/>
+    <!-- Thumb (right) -->
+    <path d="M295 130 Q302 115 292 108 Q280 105 275 118 L275 145 Q282 145 295 145 Z" fill="url(#hand-skin)" stroke="#a16207" stroke-width="2.5"/>
+    <!-- Finger creases -->
+    <path d="M265 148 L265 175" stroke="#a16207" stroke-width="1.5" opacity="0.5"/>
+    <path d="M252 148 L252 178" stroke="#a16207" stroke-width="1.5" opacity="0.5"/>
+    <path d="M239 148 L239 175" stroke="#a16207" stroke-width="1.5" opacity="0.5"/>
+    <path d="M245 170 Q270 175 295 168" fill="none" stroke="#a16207" stroke-width="1.5" opacity="0.4"/>
+
+    <!-- Contact spark (yellow burst where hands meet) -->
+    <circle cx="200" cy="175" r="14" fill="#fde047" stroke="#f59e0b" stroke-width="2.5" opacity="0.85"/>
+    <path d="M200 155 L204 172 L220 175 L204 178 L200 195 L196 178 L180 175 L196 172 Z" fill="#f59e0b" stroke="#78350f" stroke-width="1.5"/>
+  </g>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-phone desc-phone">
+  <title id="title-phone">Phone - Smartphone</title>
+  <desc id="desc-phone">A friendly smartphone with a colourful screen showing icons, a home button and a camera dot.</desc>
+  <defs>
+    <linearGradient id="phone-body" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#404040"/>
+      <stop offset="100%" stop-color="#0c0a09"/>
+    </linearGradient>
+    <linearGradient id="phone-screen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <line x1="80" y1="270" x2="320" y2="270" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="270" rx="70" ry="7" fill="#0f172a" opacity="0.15"/>
+  <g id="phone-figure" filter="url(#soft-shadow)">
+    <!-- Phone body -->
+    <rect x="140" y="25" width="120" height="235" rx="20" fill="url(#phone-body)" stroke="#0c0a09" stroke-width="3.5"/>
+    <!-- Screen -->
+    <rect x="150" y="55" width="100" height="180" rx="4" fill="url(#phone-screen)" stroke="#0c0a09" stroke-width="2"/>
+    <!-- Status bar -->
+    <rect x="150" y="55" width="100" height="15" rx="2" fill="#1e40af" opacity="0.6"/>
+    <circle cx="243" cy="62" r="2" fill="#ffffff"/>
+    <rect x="230" y="60" width="8" height="4" rx="1" fill="#ffffff"/>
+    <!-- App icons -->
+    <rect x="160" y="82" width="20" height="20" rx="4" fill="#dc2626" stroke="#7f1d1d" stroke-width="1.5"/>
+    <rect x="190" y="82" width="20" height="20" rx="4" fill="#f59e0b" stroke="#78350f" stroke-width="1.5"/>
+    <rect x="220" y="82" width="20" height="20" rx="4" fill="#16a34a" stroke="#14532d" stroke-width="1.5"/>
+    <rect x="160" y="112" width="20" height="20" rx="4" fill="#a855f7" stroke="#581c87" stroke-width="1.5"/>
+    <rect x="190" y="112" width="20" height="20" rx="4" fill="#ec4899" stroke="#831843" stroke-width="1.5"/>
+    <rect x="220" y="112" width="20" height="20" rx="4" fill="#0ea5e9" stroke="#0c4a6e" stroke-width="1.5"/>
+    <rect x="160" y="142" width="20" height="20" rx="4" fill="#fbbf24" stroke="#78350f" stroke-width="1.5"/>
+    <rect x="190" y="142" width="20" height="20" rx="4" fill="#84cc16" stroke="#3f6212" stroke-width="1.5"/>
+    <rect x="220" y="142" width="20" height="20" rx="4" fill="#f97316" stroke="#7c2d12" stroke-width="1.5"/>
+    <!-- Icon decorations -->
+    <circle cx="170" cy="92" r="4" fill="#ffffff" opacity="0.6"/>
+    <path d="M195 87 L205 97 M205 87 L195 97" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+    <path d="M225 87 L235 97" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+    <!-- Dock bar -->
+    <rect x="155" y="195" width="90" height="30" rx="6" fill="#1e40af" opacity="0.5"/>
+    <circle cx="170" cy="210" r="7" fill="#22c55e" stroke="#14532d" stroke-width="1.5"/>
+    <circle cx="200" cy="210" r="7" fill="#ef4444" stroke="#7f1d1d" stroke-width="1.5"/>
+    <circle cx="230" cy="210" r="7" fill="#3b82f6" stroke="#1e3a8a" stroke-width="1.5"/>
+    <!-- Home button -->
+    <circle cx="200" cy="247" r="9" fill="#404040" stroke="#a8a29e" stroke-width="2"/>
+    <rect x="196" y="243" width="8" height="8" rx="1.5" fill="none" stroke="#a8a29e" stroke-width="1.5"/>
+    <!-- Top speaker -->
+    <rect x="185" y="40" width="30" height="4" rx="2" fill="#292524" stroke="#0c0a09" stroke-width="1"/>
+    <!-- Front camera -->
+    <circle cx="225" cy="42" r="3" fill="#525252" stroke="#0c0a09" stroke-width="1"/>
+    <!-- Volume buttons (side) -->
+    <rect x="137" y="80" width="4" height="15" rx="1.5" fill="#292524"/>
+    <rect x="137" y="105" width="4" height="15" rx="1.5" fill="#292524"/>
+    <!-- Power button -->
+    <rect x="259" y="90" width="4" height="20" rx="1.5" fill="#292524"/>
+  </g>
+</svg>

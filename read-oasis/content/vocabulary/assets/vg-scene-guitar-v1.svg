@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-guitar desc-guitar">
+  <title id="title-guitar">Guitar - Acoustic guitar</title>
+  <desc id="desc-guitar">A wooden acoustic guitar with a sound hole, six strings, tuning pegs and a decorative rosette.</desc>
+  <defs>
+    <linearGradient id="guitar-wood" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="50%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#78350f"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <line x1="60" y1="270" x2="340" y2="270" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="270" rx="110" ry="7" fill="#0f172a" opacity="0.1"/>
+  <g id="guitar-figure" filter="url(#soft-shadow)" transform="rotate(-8 200 150)">
+    <!-- Body (figure-8 shape) -->
+    <path d="M200 90 Q145 90 130 145 Q120 175 130 205 Q140 245 200 260 Q260 245 270 205 Q280 175 270 145 Q255 90 200 90 Z" fill="url(#guitar-wood)" stroke="#451a03" stroke-width="3.5"/>
+    <!-- Waist indent (soft) -->
+    <path d="M135 170 Q145 165 155 170" fill="none" stroke="#451a03" stroke-width="1.5" opacity="0.5"/>
+    <path d="M245 170 Q255 165 265 170" fill="none" stroke="#451a03" stroke-width="1.5" opacity="0.5"/>
+    <!-- Sound hole -->
+    <circle cx="200" cy="195" r="28" fill="#1c1917" stroke="#451a03" stroke-width="3"/>
+    <!-- Rosette (decorative rings) -->
+    <circle cx="200" cy="195" r="34" fill="none" stroke="#78350f" stroke-width="2"/>
+    <circle cx="200" cy="195" r="38" fill="none" stroke="#a16207" stroke-width="1.5"/>
+    <!-- Bridge -->
+    <rect x="175" y="235" width="50" height="10" rx="2" fill="#451a03" stroke="#292524" stroke-width="2"/>
+    <!-- Bridge pins -->
+    <circle cx="182" cy="240" r="1.5" fill="#fbbf24"/>
+    <circle cx="192" cy="240" r="1.5" fill="#fbbf24"/>
+    <circle cx="200" cy="240" r="1.5" fill="#fbbf24"/>
+    <circle cx="208" cy="240" r="1.5" fill="#fbbf24"/>
+    <circle cx="218" cy="240" r="1.5" fill="#fbbf24"/>
+    <!-- Neck -->
+    <rect x="192" y="30" width="16" height="90" fill="#78350f" stroke="#451a03" stroke-width="2.5"/>
+    <!-- Frets -->
+    <line x1="192" y1="45" x2="208" y2="45" stroke="#e7e5e4" stroke-width="1.5"/>
+    <line x1="192" y1="60" x2="208" y2="60" stroke="#e7e5e4" stroke-width="1.5"/>
+    <line x1="192" y1="75" x2="208" y2="75" stroke="#e7e5e4" stroke-width="1.5"/>
+    <line x1="192" y1="90" x2="208" y2="90" stroke="#e7e5e4" stroke-width="1.5"/>
+    <line x1="192" y1="105" x2="208" y2="105" stroke="#e7e5e4" stroke-width="1.5"/>
+    <!-- Fret dots -->
+    <circle cx="200" cy="67" r="2" fill="#fef3c7"/>
+    <circle cx="200" cy="97" r="2" fill="#fef3c7"/>
+    <!-- Headstock -->
+    <path d="M185 15 L215 15 L218 40 L182 40 Z" fill="#451a03" stroke="#292524" stroke-width="2.5"/>
+    <!-- Tuning pegs -->
+    <circle cx="180" cy="22" r="3" fill="#a8a29e" stroke="#525252" stroke-width="1"/>
+    <circle cx="180" cy="32" r="3" fill="#a8a29e" stroke="#525252" stroke-width="1"/>
+    <circle cx="180" cy="42" r="3" fill="#a8a29e" stroke="#525252" stroke-width="1"/>
+    <circle cx="220" cy="22" r="3" fill="#a8a29e" stroke="#525252" stroke-width="1"/>
+    <circle cx="220" cy="32" r="3" fill="#a8a29e" stroke="#525252" stroke-width="1"/>
+    <circle cx="220" cy="42" r="3" fill="#a8a29e" stroke="#525252" stroke-width="1"/>
+    <!-- Strings (6) -->
+    <line x1="182" y1="240" x2="182" y2="22" stroke="#e7e5e4" stroke-width="0.8"/>
+    <line x1="189" y1="240" x2="189" y2="22" stroke="#e7e5e4" stroke-width="0.8"/>
+    <line x1="196" y1="240" x2="196" y2="22" stroke="#e7e5e4" stroke-width="0.8"/>
+    <line x1="204" y1="240" x2="204" y2="22" stroke="#e7e5e4" stroke-width="0.8"/>
+    <line x1="211" y1="240" x2="211" y2="22" stroke="#e7e5e4" stroke-width="0.8"/>
+    <line x1="218" y1="240" x2="218" y2="22" stroke="#e7e5e4" stroke-width="0.8"/>
+    <!-- Body wood grain -->
+    <path d="M155 130 Q200 125 245 130" fill="none" stroke="#78350f" stroke-width="1" opacity="0.3"/>
+    <path d="M150 240 Q200 250 250 240" fill="none" stroke="#78350f" stroke-width="1" opacity="0.3"/>
+  </g>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-camera desc-camera">
+  <title id="title-camera">Camera - Photo camera</title>
+  <desc id="desc-camera">A friendly retro photo camera with a big round lens, flash, shutter button, and neck strap.</desc>
+  <defs>
+    <linearGradient id="cam-body" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#525252"/>
+      <stop offset="100%" stop-color="#1c1917"/>
+    </linearGradient>
+    <radialGradient id="cam-lens" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="60%" stop-color="#1e40af"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <line x1="60" y1="265" x2="340" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="265" rx="120" ry="8" fill="#0f172a" opacity="0.15"/>
+  <g id="camera-figure" filter="url(#soft-shadow)">
+    <!-- Neck strap left -->
+    <path d="M80 100 Q60 80 75 60" fill="none" stroke="#78350f" stroke-width="5" stroke-linecap="round"/>
+    <!-- Neck strap right -->
+    <path d="M320 100 Q340 80 325 60" fill="none" stroke="#78350f" stroke-width="5" stroke-linecap="round"/>
+    <!-- Camera body -->
+    <rect x="70" y="100" width="260" height="140" rx="16" fill="url(#cam-body)" stroke="#0c0a09" stroke-width="3.5"/>
+    <!-- Top viewfinder hump -->
+    <path d="M160 100 L160 80 Q200 72 240 80 L240 100 Z" fill="#404040" stroke="#0c0a09" stroke-width="3"/>
+    <!-- Leather grip strip -->
+    <rect x="80" y="170" width="240" height="55" fill="#292524" stroke="#0c0a09" stroke-width="2"/>
+    <!-- Grip texture dots -->
+    <circle cx="95" cy="185" r="1.5" fill="#0c0a09"/>
+    <circle cx="110" cy="185" r="1.5" fill="#0c0a09"/>
+    <circle cx="95" cy="200" r="1.5" fill="#0c0a09"/>
+    <circle cx="110" cy="200" r="1.5" fill="#0c0a09"/>
+    <circle cx="95" cy="215" r="1.5" fill="#0c0a09"/>
+    <circle cx="110" cy="215" r="1.5" fill="#0c0a09"/>
+    <circle cx="290" cy="185" r="1.5" fill="#0c0a09"/>
+    <circle cx="305" cy="185" r="1.5" fill="#0c0a09"/>
+    <circle cx="290" cy="200" r="1.5" fill="#0c0a09"/>
+    <circle cx="305" cy="200" r="1.5" fill="#0c0a09"/>
+    <circle cx="290" cy="215" r="1.5" fill="#0c0a09"/>
+    <circle cx="305" cy="215" r="1.5" fill="#0c0a09"/>
+    <!-- Lens outer ring -->
+    <circle cx="200" cy="170" r="55" fill="#0c0a09" stroke="#525252" stroke-width="3"/>
+    <!-- Lens middle ring -->
+    <circle cx="200" cy="170" r="47" fill="#292524" stroke="#525252" stroke-width="2"/>
+    <!-- Lens glass -->
+    <circle cx="200" cy="170" r="38" fill="url(#cam-lens)" stroke="#0c0a09" stroke-width="2.5"/>
+    <!-- Lens reflection -->
+    <ellipse cx="185" cy="155" rx="15" ry="10" fill="#ffffff" opacity="0.5"/>
+    <circle cx="215" cy="180" r="4" fill="#ffffff" opacity="0.4"/>
+    <!-- Flash -->
+    <rect x="90" y="115" width="35" height="20" rx="3" fill="#fef9c3" stroke="#ca8a04" stroke-width="2.5"/>
+    <line x1="98" y1="125" x2="118" y2="125" stroke="#ca8a04" stroke-width="1.5" opacity="0.7"/>
+    <!-- Shutter button (red) -->
+    <circle cx="290" cy="125" r="12" fill="#dc2626" stroke="#7f1d1d" stroke-width="2.5"/>
+    <circle cx="290" cy="125" r="6" fill="#ef4444" stroke="#991b1b" stroke-width="1.5"/>
+    <!-- Viewfinder -->
+    <rect x="180" y="86" width="40" height="12" rx="2" fill="#0c0a09" stroke="#292524" stroke-width="1.5"/>
+    <!-- Mode dial -->
+    <circle cx="255" cy="125" r="10" fill="#525252" stroke="#0c0a09" stroke-width="2"/>
+    <circle cx="255" cy="125" r="3" fill="#a8a29e"/>
+    <!-- Brand plate -->
+    <rect x="155" y="115" width="18" height="8" rx="1" fill="#a8a29e" stroke="#525252" stroke-width="1"/>
+  </g>
+</svg>

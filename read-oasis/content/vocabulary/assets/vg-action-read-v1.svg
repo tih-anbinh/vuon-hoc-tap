@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-read desc-read">
+  <title id="title-read">Read - Child reading a book</title>
+  <desc id="desc-read">A happy child sitting and holding an open book, looking down at the colourful pages.</desc>
+  <defs>
+    <linearGradient id="read-skin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5d0a9"/>
+    </linearGradient>
+    <linearGradient id="read-shirt" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1e40af"/>
+    </linearGradient>
+    <linearGradient id="book-cover" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#dc2626"/>
+      <stop offset="100%" stop-color="#7f1d1d"/>
+    </linearGradient>
+    <linearGradient id="page-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#fef3c7"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <line x1="30" y1="265" x2="370" y2="265" stroke="#78716c" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="265" rx="150" ry="7" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Body/torso (sitting) -->
+    <path d="M140 175 Q195 165 250 175 L260 240 L130 240 Z" fill="url(#read-shirt)" stroke="#1e3a8a" stroke-width="3"/>
+    <!-- Legs (crossed, sitting) -->
+    <ellipse cx="195" cy="252" rx="80" ry="15" fill="#1e40af" stroke="#1e3a8a" stroke-width="3"/>
+
+    <!-- Neck -->
+    <rect x="183" y="145" width="24" height="18" fill="url(#read-skin)" stroke="#a16207" stroke-width="2.5"/>
+
+    <!-- Book (open, held in front) -->
+    <!-- Left page -->
+    <path d="M120 195 L195 190 L195 245 L120 240 Z" fill="url(#page-grad)" stroke="#78350f" stroke-width="2.5"/>
+    <!-- Right page -->
+    <path d="M195 190 L270 195 L270 240 L195 245 Z" fill="url(#page-grad)" stroke="#78350f" stroke-width="2.5"/>
+    <!-- Book spine (center crease) -->
+    <line x1="195" y1="190" x2="195" y2="245" stroke="#78350f" stroke-width="2"/>
+    <!-- Book cover edge (below) -->
+    <path d="M115 240 L275 240 L270 250 L120 250 Z" fill="url(#book-cover)" stroke="#7f1d1d" stroke-width="2.5"/>
+    <!-- Content on pages: illustration on left -->
+    <circle cx="145" cy="210" r="8" fill="#fde047" stroke="#a16207" stroke-width="1.5"/>
+    <path d="M138 220 Q145 218 152 220" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round"/>
+    <path d="M138 225 Q145 223 152 225" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round"/>
+    <path d="M138 230 Q145 228 152 230" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round"/>
+    <!-- Content on right page: lines (as shapes, no text) -->
+    <line x1="210" y1="205" x2="255" y2="207" stroke="#78716c" stroke-width="2"/>
+    <line x1="210" y1="215" x2="260" y2="217" stroke="#78716c" stroke-width="2"/>
+    <line x1="210" y1="225" x2="250" y2="227" stroke="#78716c" stroke-width="2"/>
+    <line x1="210" y1="235" x2="255" y2="237" stroke="#78716c" stroke-width="2"/>
+
+    <!-- Left arm (holding book) -->
+    <path d="M145 180 Q130 195 128 210" fill="none" stroke="url(#read-shirt)" stroke-width="18" stroke-linecap="round"/>
+    <circle cx="127" cy="215" r="10" fill="url(#read-skin)" stroke="#a16207" stroke-width="2.5"/>
+
+    <!-- Right arm (holding book) -->
+    <path d="M245 180 Q262 195 265 210" fill="none" stroke="url(#read-shirt)" stroke-width="18" stroke-linecap="round"/>
+    <circle cx="266" cy="215" r="10" fill="url(#read-skin)" stroke="#a16207" stroke-width="2.5"/>
+
+    <!-- Head (looking down at book) -->
+    <circle cx="195" cy="115" r="35" fill="url(#read-skin)" stroke="#a16207" stroke-width="3"/>
+    <!-- Hair -->
+    <path d="M162 105 Q165 78 195 72 Q225 78 228 105 Q220 88 195 85 Q170 88 162 105 Z" fill="#78350f" stroke="#451a03" stroke-width="2"/>
+    <!-- Eyes (looking down, half closed contentedly) -->
+    <path d="M180 125 Q186 128 192 125" fill="none" stroke="#0c0a09" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M198 125 Q204 128 210 125" fill="none" stroke="#0c0a09" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Small pleased smile -->
+    <path d="M188 140 Q195 145 202 140" fill="none" stroke="#0c0a09" stroke-width="2" stroke-linecap="round"/>
+    <!-- Cheeks -->
+    <circle cx="172" cy="132" r="5" fill="#fca5a5" opacity="0.6"/>
+    <circle cx="218" cy="132" r="5" fill="#fca5a5" opacity="0.6"/>
+  </g>
+
+  <!-- Small floating sparkles (imagination) -->
+  <g opacity="0.85">
+    <path d="M80 100 L82 106 L88 108 L82 110 L80 116 L78 110 L72 108 L78 106 Z" fill="#fde047" stroke="#a16207" stroke-width="1.5"/>
+    <path d="M315 90 L317 96 L323 98 L317 100 L315 106 L313 100 L307 98 L313 96 Z" fill="#fde047" stroke="#a16207" stroke-width="1.5"/>
+    <circle cx="60" cy="150" r="3" fill="#a855f7" stroke="#6b21a8" stroke-width="1"/>
+    <circle cx="345" cy="140" r="3" fill="#22c55e" stroke="#166534" stroke-width="1"/>
+  </g>
+</svg>

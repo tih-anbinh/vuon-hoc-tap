@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-skirt desc-skirt">
+  <title id="title-skirt">Skirt - Pleated skirt</title>
+  <desc id="desc-skirt">A purple pleated skirt with a waistband, displayed flat showing the flared shape.</desc>
+  <defs>
+    <linearGradient id="skirt-purple" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#9333ea"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <line x1="60" y1="270" x2="340" y2="270" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="270" rx="110" ry="7" fill="#0f172a" opacity="0.1"/>
+  <g id="skirt-figure" filter="url(#soft-shadow)">
+    <!-- Skirt body (trapezoid) -->
+    <path d="M135 65 L80 260 Q200 275 320 260 L265 65 Q200 72 135 65 Z" fill="url(#skirt-purple)" stroke="#7e22ce" stroke-width="3.5"/>
+    <!-- Waistband -->
+    <path d="M130 55 L130 70 Q200 78 270 70 L270 55 Q200 48 130 55 Z" fill="#7e22ce" stroke="#6b21a8" stroke-width="3"/>
+    <!-- Pleats -->
+    <line x1="150" y1="70" x2="110" y2="260" stroke="#7e22ce" stroke-width="2.5" opacity="0.4"/>
+    <line x1="175" y1="72" x2="145" y2="262" stroke="#a855f7" stroke-width="2" opacity="0.3"/>
+    <line x1="200" y1="74" x2="200" y2="265" stroke="#7e22ce" stroke-width="2.5" opacity="0.4"/>
+    <line x1="225" y1="72" x2="255" y2="262" stroke="#a855f7" stroke-width="2" opacity="0.3"/>
+    <line x1="250" y1="70" x2="290" y2="260" stroke="#7e22ce" stroke-width="2.5" opacity="0.4"/>
+    <!-- Pleat folds (alternating light/dark) -->
+    <path d="M150 70 L110 260 L145 262 L175 72 Z" fill="#a855f7" opacity="0.15"/>
+    <path d="M200 74 L200 265 L255 262 L225 72 Z" fill="#a855f7" opacity="0.15"/>
+    <!-- Waistband button -->
+    <circle cx="200" cy="62" r="4" fill="#e9d5ff" stroke="#7e22ce" stroke-width="1.5"/>
+    <!-- Hem -->
+    <path d="M80 258 Q200 273 320 258" fill="none" stroke="#6b21a8" stroke-width="3"/>
+    <!-- Decorative trim at hem -->
+    <path d="M85 255 Q200 270 315 255" fill="none" stroke="#e9d5ff" stroke-width="2" opacity="0.4"/>
+  </g>
+</svg>

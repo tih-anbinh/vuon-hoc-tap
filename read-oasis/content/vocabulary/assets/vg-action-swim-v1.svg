@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-swim desc-swim">
+  <title id="title-swim">Swim - Child swimming in water</title>
+  <desc id="desc-swim">A child doing freestyle swimming through wavy blue water with splashes and bubbles.</desc>
+  <defs>
+    <linearGradient id="swim-skin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5d0a9"/>
+    </linearGradient>
+    <linearGradient id="water-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#1e40af"/>
+    </linearGradient>
+    <linearGradient id="cap-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#991b1b"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Water background -->
+  <rect x="0" y="120" width="400" height="180" fill="url(#water-grad)" opacity="0.85"/>
+
+  <!-- Water surface waves (top of water) -->
+  <path d="M0 130 Q50 115 100 130 Q150 145 200 130 Q250 115 300 130 Q350 145 400 130 L400 150 L0 150 Z" fill="#3b82f6" opacity="0.6"/>
+  <path d="M0 130 Q50 115 100 130 Q150 145 200 130 Q250 115 300 130 Q350 145 400 130" fill="none" stroke="#dbeafe" stroke-width="3"/>
+
+  <!-- Deeper water ripples -->
+  <g stroke="#93c5fd" stroke-width="2.5" fill="none" opacity="0.5" stroke-linecap="round">
+    <path d="M40 200 Q70 195 100 200"/>
+    <path d="M300 210 Q330 205 360 210"/>
+    <path d="M80 240 Q110 235 140 240"/>
+    <path d="M260 245 Q290 240 320 245"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Body (horizontal, swimming freestyle) -->
+    <ellipse cx="200" cy="165" rx="90" ry="22" fill="url(#cap-grad)" stroke="#7f1d1d" stroke-width="3"/>
+
+    <!-- Right arm (extended forward, in front) -->
+    <path d="M280 155 Q320 140 340 130" fill="none" stroke="url(#swim-skin)" stroke-width="16" stroke-linecap="round"/>
+    <!-- Right hand (out of water, splashing) -->
+    <ellipse cx="345" cy="126" rx="10" ry="7" fill="url(#swim-skin)" stroke="#a16207" stroke-width="2.5" transform="rotate(-20 345 126)"/>
+
+    <!-- Left arm (pulling back, underwater bubbles around it) -->
+    <path d="M120 175 Q90 195 75 220" fill="none" stroke="url(#swim-skin)" stroke-width="16" stroke-linecap="round"/>
+    <circle cx="72" cy="222" r="10" fill="url(#swim-skin)" stroke="#a16207" stroke-width="2.5"/>
+
+    <!-- Legs (kicking, showing motion) -->
+    <path d="M120 165 L80 155" stroke="url(#cap-grad)" stroke-width="16" stroke-linecap="round"/>
+    <path d="M120 170 L70 190" stroke="url(#cap-grad)" stroke-width="16" stroke-linecap="round"/>
+    <!-- Feet -->
+    <ellipse cx="78" cy="153" rx="8" ry="5" fill="url(#swim-skin)" stroke="#a16207" stroke-width="2"/>
+    <ellipse cx="68" cy="192" rx="8" ry="5" fill="url(#swim-skin)" stroke="#a16207" stroke-width="2"/>
+
+    <!-- Head (partly submerged, side turned to breathe) -->
+    <circle cx="270" cy="150" r="24" fill="url(#swim-skin)" stroke="#a16207" stroke-width="3"/>
+    <!-- Swim cap -->
+    <path d="M250 148 Q248 128 270 125 Q292 128 290 148 Q285 138 270 137 Q255 138 250 148 Z" fill="url(#cap-grad)" stroke="#7f1d1d" stroke-width="2.5"/>
+    <!-- Swim goggles -->
+    <ellipse cx="263" cy="150" rx="7" ry="5" fill="#0f172a" stroke="#000" stroke-width="2"/>
+    <ellipse cx="278" cy="150" rx="7" ry="5" fill="#0f172a" stroke="#000" stroke-width="2"/>
+    <line x1="270" y1="150" x2="273" y2="150" stroke="#000" stroke-width="2"/>
+    <line x1="285" y1="148" x2="292" y2="145" stroke="#000" stroke-width="2"/>
+    <!-- Highlight on goggles -->
+    <circle cx="265" cy="148" r="1.5" fill="#ffffff"/>
+    <circle cx="280" cy="148" r="1.5" fill="#ffffff"/>
+    <!-- Small open mouth (breathing) -->
+    <ellipse cx="275" cy="165" rx="3" ry="2" fill="#7c2d12" stroke="#0c0a09" stroke-width="1"/>
+    <!-- Cheek -->
+    <circle cx="285" cy="160" r="4" fill="#fca5a5" opacity="0.6"/>
+  </g>
+
+  <!-- Splash around arm entry (front) -->
+  <g fill="#ffffff" stroke="#3b82f6" stroke-width="2">
+    <circle cx="340" cy="118" r="5"/>
+    <circle cx="352" cy="115" r="4"/>
+    <circle cx="330" cy="110" r="3"/>
+    <path d="M345 105 L347 115 L355 108 L353 118 L360 112" fill="none" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Bubbles underwater around left arm -->
+  <g fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5" opacity="0.9">
+    <circle cx="60" cy="240" r="5"/>
+    <circle cx="90" cy="250" r="3"/>
+    <circle cx="45" cy="235" r="3"/>
+    <circle cx="55" cy="215" r="4"/>
+  </g>
+
+  <!-- Kick splash (behind feet) -->
+  <g fill="#ffffff" stroke="#3b82f6" stroke-width="1.5" opacity="0.9">
+    <circle cx="55" cy="145" r="4"/>
+    <circle cx="45" cy="200" r="4"/>
+    <circle cx="65" cy="205" r="3"/>
+  </g>
+</svg>

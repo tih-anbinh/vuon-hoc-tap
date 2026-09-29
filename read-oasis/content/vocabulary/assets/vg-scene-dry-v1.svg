@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-dry desc-dry">
+  <title id="title-dry">Dry - Cracked dry ground with hot sun</title>
+  <desc id="desc-dry">Cracked dry earth under a bright hot sun, with a small wilted plant and no water in sight.</desc>
+  <defs>
+    <linearGradient id="sky-dry" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fdba74"/>
+    </linearGradient>
+    <linearGradient id="dry-ground" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#78350f"/>
+    </linearGradient>
+    <radialGradient id="sun-dry" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Sky (hot, hazy) -->
+  <rect x="0" y="0" width="400" height="180" fill="url(#sky-dry)"/>
+
+  <!-- Big hot sun -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="200" cy="70" r="45" fill="url(#sun-dry)" stroke="#c2410c" stroke-width="4"/>
+    <g stroke="#c2410c" stroke-width="5" stroke-linecap="round">
+      <line x1="200" y1="18" x2="200" y2="8"/>
+      <line x1="252" y1="70" x2="262" y2="70"/>
+      <line x1="148" y1="70" x2="138" y2="70"/>
+      <line x1="162" y1="32" x2="155" y2="25"/>
+      <line x1="238" y1="32" x2="245" y2="25"/>
+      <line x1="162" y1="108" x2="155" y2="115"/>
+      <line x1="238" y1="108" x2="245" y2="115"/>
+    </g>
+    <!-- Sun face (angry hot) -->
+    <path d="M182 62 L192 68" stroke="#7c2d12" stroke-width="3" stroke-linecap="round"/>
+    <path d="M218 62 L208 68" stroke="#7c2d12" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="188" cy="72" r="2.5" fill="#0c0a09"/>
+    <circle cx="212" cy="72" r="2.5" fill="#0c0a09"/>
+    <path d="M185 90 Q200 82 215 90" fill="none" stroke="#7c2d12" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Heat waves rising -->
+  <g stroke="#fb923c" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.7">
+    <path d="M80 160 Q85 150 80 140 Q75 130 80 120"/>
+    <path d="M320 160 Q325 150 320 140 Q315 130 320 120"/>
+    <path d="M110 155 Q115 145 110 135"/>
+    <path d="M290 155 Q295 145 290 135"/>
+  </g>
+
+  <!-- Ground -->
+  <rect x="0" y="180" width="400" height="120" fill="url(#dry-ground)"/>
+
+  <!-- Cracks in the dry ground -->
+  <g stroke="#451a03" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <!-- Main horizontal crack -->
+    <path d="M0 210 L50 215 L90 208 L140 220 L200 210 L260 218 L320 205 L400 215"/>
+    <!-- Branching cracks -->
+    <path d="M60 215 L55 240 L70 260"/>
+    <path d="M120 215 L130 240 L125 265"/>
+    <path d="M170 215 L165 235 L180 260"/>
+    <path d="M240 215 L245 240 L235 265"/>
+    <path d="M300 210 L305 235 L295 265"/>
+    <path d="M370 213 L365 240 L375 265"/>
+    <!-- Small crossing cracks -->
+    <path d="M40 245 L90 250"/>
+    <path d="M180 240 L230 245"/>
+    <path d="M290 245 L340 248"/>
+  </g>
+
+  <!-- Wilted plant (small, drooping) -->
+  <g filter="url(#soft-shadow)">
+    <!-- Stem drooping -->
+    <path d="M100 215 Q95 195 105 185 Q115 180 120 195" fill="none" stroke="#84cc16" stroke-width="4" stroke-linecap="round"/>
+    <!-- Wilted leaves (drooping down, brown-tipped) -->
+    <path d="M105 190 Q90 195 85 210 Q100 205 108 195" fill="#a3e635" stroke="#4d7c0f" stroke-width="2"/>
+    <path d="M115 195 Q130 200 130 215 Q120 208 115 200" fill="#a3e635" stroke="#4d7c0f" stroke-width="2"/>
+    <!-- Brown/dead tips -->
+    <path d="M85 208 Q92 210 100 205" fill="#78350f" opacity="0.6"/>
+    <path d="M130 213 Q125 210 118 208" fill="#78350f" opacity="0.6"/>
+  </g>
+
+  <!-- Empty water jar tipped over (no water) -->
+  <g filter="url(#soft-shadow)" transform="rotate(75 300 240)">
+    <path d="M280 220 L285 260 L315 260 L320 220 Z" fill="#e0f2fe" stroke="#3b82f6" stroke-width="3" opacity="0.7"/>
+    <ellipse cx="300" cy="220" rx="20" ry="4" fill="none" stroke="#3b82f6" stroke-width="3"/>
+  </g>
+</svg>

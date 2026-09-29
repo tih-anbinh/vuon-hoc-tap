@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-bag desc-bag">
+  <title id="title-bag">Bag - School backpack</title>
+  <desc id="desc-bag">A colourful school backpack with two straps, a front pocket, and a zipper, standing upright.</desc>
+  <defs>
+    <linearGradient id="bag-blue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <line x1="80" y1="270" x2="320" y2="270" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="270" rx="65" ry="7" fill="#0f172a" opacity="0.1"/>
+  <g id="bag-figure" filter="url(#soft-shadow)">
+    <!-- Straps (behind) -->
+    <path d="M155 60 C145 40 140 30 145 25 C150 20 158 25 155 40 L155 60" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="3"/>
+    <path d="M245 60 C255 40 260 30 255 25 C250 20 242 25 245 40 L245 60" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="3"/>
+    <!-- Main body -->
+    <rect x="130" y="45" width="140" height="160" rx="18" fill="url(#bag-blue)" stroke="#1e3a8a" stroke-width="3.5"/>
+    <!-- Top flap -->
+    <path d="M130 65 Q200 50 270 65" fill="#2563eb" stroke="#1e3a8a" stroke-width="2"/>
+    <!-- Handle -->
+    <path d="M185 45 Q200 30 215 45" fill="none" stroke="#1e3a8a" stroke-width="6" stroke-linecap="round"/>
+    <path d="M185 45 Q200 30 215 45" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round"/>
+    <!-- Front pocket -->
+    <rect x="150" y="130" width="100" height="60" rx="10" fill="#2563eb" stroke="#1e3a8a" stroke-width="2.5"/>
+    <!-- Pocket zipper -->
+    <line x1="165" y1="135" x2="235" y2="135" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="235" cy="135" r="4" fill="#fbbf24" stroke="#d97706" stroke-width="1.5"/>
+    <!-- Main zipper -->
+    <line x1="145" y1="55" x2="255" y2="55" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="200" cy="55" r="4" fill="#fbbf24" stroke="#d97706" stroke-width="1.5"/>
+    <!-- Side straps -->
+    <rect x="125" y="100" width="8" height="40" rx="3" fill="#1e3a8a"/>
+    <rect x="267" y="100" width="8" height="40" rx="3" fill="#1e3a8a"/>
+    <!-- Bottom padding -->
+    <rect x="130" y="195" width="140" height="12" rx="6" fill="#1e3a8a"/>
+    <!-- Reflective strip -->
+    <rect x="160" y="170" width="80" height="5" rx="2" fill="#e2e8f0" opacity="0.6"/>
+  </g>
+</svg>

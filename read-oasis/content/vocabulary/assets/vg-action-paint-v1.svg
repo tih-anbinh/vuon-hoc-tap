@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-paint desc-paint">
+  <title id="title-paint">Paint - Hand painting with a brush</title>
+  <desc id="desc-paint">A hand holding a paintbrush painting colorful strokes on an easel with a rainbow.</desc>
+  <defs>
+    <linearGradient id="paint-skin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5d0a9"/>
+    </linearGradient>
+    <linearGradient id="canvas-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <line x1="30" y1="265" x2="370" y2="265" stroke="#78716c" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="265" rx="150" ry="6" fill="#0f172a" opacity="0.1"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Easel legs -->
+    <line x1="100" y1="80" x2="70" y2="260" stroke="#78350f" stroke-width="6" stroke-linecap="round"/>
+    <line x1="200" y1="80" x2="230" y2="260" stroke="#78350f" stroke-width="6" stroke-linecap="round"/>
+    <line x1="150" y1="80" x2="150" y2="265" stroke="#78350f" stroke-width="6" stroke-linecap="round"/>
+    <!-- Cross bar -->
+    <line x1="80" y1="200" x2="220" y2="200" stroke="#78350f" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Canvas -->
+    <rect x="75" y="70" width="150" height="130" rx="3" fill="url(#canvas-grad)" stroke="#78350f" stroke-width="3"/>
+
+    <!-- Rainbow being painted -->
+    <path d="M85 175 Q150 90 215 175" fill="none" stroke="#ef4444" stroke-width="7"/>
+    <path d="M92 178 Q150 105 208 178" fill="none" stroke="#f97316" stroke-width="7"/>
+    <path d="M99 181 Q150 120 201 181" fill="none" stroke="#fde047" stroke-width="7"/>
+    <path d="M106 184 Q150 133 194 184" fill="none" stroke="#22c55e" stroke-width="7"/>
+    <path d="M113 187 Q150 145 187 187" fill="none" stroke="#3b82f6" stroke-width="7"/>
+    <path d="M120 190 Q150 156 180 190" fill="none" stroke="#a855f7" stroke-width="7"/>
+
+    <!-- Sun in corner -->
+    <circle cx="200" cy="90" r="10" fill="#fde047" stroke="#a16207" stroke-width="2"/>
+    <g stroke="#f59e0b" stroke-width="2" stroke-linecap="round">
+      <line x1="200" y1="75" x2="200" y2="70"/>
+      <line x1="215" y1="90" x2="220" y2="90"/>
+      <line x1="190" y1="80" x2="186" y2="76"/>
+      <line x1="210" y1="80" x2="214" y2="76"/>
+    </g>
+
+    <!-- Paint palette (bottom right) -->
+    <ellipse cx="310" cy="220" rx="55" ry="35" fill="#d97706" stroke="#78350f" stroke-width="3"/>
+    <!-- Thumb hole -->
+    <circle cx="290" cy="200" r="6" fill="#f59e0b" stroke="#78350f" stroke-width="1.5" opacity="0.6"/>
+    <!-- Paint blobs on palette -->
+    <circle cx="290" cy="230" r="8" fill="#ef4444" stroke="#7f1d1d" stroke-width="2"/>
+    <circle cx="315" cy="215" r="8" fill="#3b82f6" stroke="#1e3a8a" stroke-width="2"/>
+    <circle cx="335" cy="235" r="8" fill="#fde047" stroke="#a16207" stroke-width="2"/>
+    <circle cx="310" cy="240" r="6" fill="#22c55e" stroke="#166534" stroke-width="2"/>
+    <circle cx="335" cy="215" r="6" fill="#a855f7" stroke="#6b21a8" stroke-width="2"/>
+
+    <!-- Hand + paintbrush (right side, painting canvas) -->
+    <!-- Sleeve -->
+    <path d="M270 105 L310 100 L320 130 L280 135 Z" fill="#f472b6" stroke="#9f1239" stroke-width="3"/>
+    <!-- Hand -->
+    <path d="M270 115 Q255 115 253 128 Q253 140 268 143 L295 140 Q305 133 300 122 Z" fill="url(#paint-skin)" stroke="#a16207" stroke-width="2.5"/>
+    <!-- Thumb -->
+    <path d="M262 118 Q252 108 262 100 Q275 100 275 115" fill="url(#paint-skin)" stroke="#a16207" stroke-width="2.5"/>
+
+    <!-- Paintbrush -->
+    <line x1="253" y1="135" x2="200" y2="165" stroke="#d97706" stroke-width="5" stroke-linecap="round"/>
+    <!-- Metal ferrule -->
+    <rect x="195" y="160" width="15" height="10" rx="2" fill="#94a3b8" stroke="#475569" stroke-width="2" transform="rotate(-30 202 165)"/>
+    <!-- Bristles with paint -->
+    <path d="M197 168 L182 178 L188 190 L200 175 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="2"/>
+    <!-- Paint drop -->
+    <circle cx="180" cy="195" r="4" fill="#ef4444" stroke="#7f1d1d" stroke-width="1.5"/>
+    <ellipse cx="180" cy="203" rx="4" ry="2" fill="#ef4444" stroke="#7f1d1d" stroke-width="1"/>
+  </g>
+
+  <!-- Paint splatter sparkles -->
+  <circle cx="60" cy="230" r="3" fill="#22c55e" stroke="#166534" stroke-width="1"/>
+  <circle cx="50" cy="245" r="4" fill="#3b82f6" stroke="#1e3a8a" stroke-width="1"/>
+  <circle cx="370" cy="120" r="3" fill="#a855f7" stroke="#6b21a8" stroke-width="1"/>
+</svg>

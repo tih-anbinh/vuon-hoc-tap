@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-desk desc-desk">
+  <title id="title-desk">Desk - Study desk</title>
+  <desc id="desc-desk">A wooden study desk with a book, a lamp, and a pencil holder on top, and a drawer below.</desc>
+  <defs>
+    <linearGradient id="desk-wood" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#92400e"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <line x1="30" y1="265" x2="370" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="265" rx="160" ry="8" fill="#0f172a" opacity="0.15"/>
+  <g id="desk-figure" filter="url(#soft-shadow)">
+    <!-- Desk top surface -->
+    <rect x="50" y="145" width="300" height="18" rx="3" fill="url(#desk-wood)" stroke="#78350f" stroke-width="3"/>
+    <!-- Desk top perspective (front edge) -->
+    <path d="M50 163 L80 175 L320 175 L350 163 Z" fill="#b45309" stroke="#78350f" stroke-width="2.5"/>
+    <!-- Left leg -->
+    <rect x="65" y="163" width="20" height="95" rx="2" fill="#92400e" stroke="#78350f" stroke-width="2.5"/>
+    <!-- Right leg -->
+    <rect x="315" y="163" width="20" height="95" rx="2" fill="#92400e" stroke="#78350f" stroke-width="2.5"/>
+    <!-- Drawer section (right side) -->
+    <rect x="220" y="175" width="105" height="65" rx="3" fill="#a16207" stroke="#78350f" stroke-width="3"/>
+    <!-- Drawer -->
+    <rect x="230" y="185" width="85" height="45" rx="2" fill="#b45309" stroke="#78350f" stroke-width="2.5"/>
+    <!-- Drawer knob -->
+    <circle cx="272" cy="207" r="5" fill="#fbbf24" stroke="#92400e" stroke-width="2"/>
+    <!-- Wood grain -->
+    <path d="M60 155 Q200 152 340 155" fill="none" stroke="#78350f" stroke-width="1" opacity="0.4"/>
+
+    <!-- Book on desk -->
+    <path d="M85 130 L85 145 L165 145 L165 128 Q125 132 85 130 Z" fill="#dc2626" stroke="#7f1d1d" stroke-width="2.5"/>
+    <!-- Book pages -->
+    <path d="M85 130 Q125 126 165 128 L165 132 Q125 129 85 133 Z" fill="#ffffff" stroke="#a8a29e" stroke-width="1.5"/>
+    <!-- Book spine -->
+    <line x1="125" y1="128" x2="125" y2="145" stroke="#7f1d1d" stroke-width="2"/>
+
+    <!-- Pencil holder -->
+    <rect x="180" y="105" width="30" height="40" rx="3" fill="#3b82f6" stroke="#1e3a8a" stroke-width="2.5"/>
+    <ellipse cx="195" cy="105" rx="15" ry="5" fill="#1e40af" stroke="#1e3a8a" stroke-width="2"/>
+    <!-- Pencils in holder -->
+    <rect x="185" y="80" width="4" height="30" fill="#fbbf24" stroke="#d97706" stroke-width="1"/>
+    <path d="M185 80 L187 75 L189 80 Z" fill="#78350f"/>
+    <rect x="193" y="75" width="4" height="35" fill="#ef4444" stroke="#b91c1c" stroke-width="1"/>
+    <path d="M193 75 L195 70 L197 75 Z" fill="#78350f"/>
+    <rect x="201" y="82" width="4" height="28" fill="#16a34a" stroke="#166534" stroke-width="1"/>
+    <path d="M201 82 L203 77 L205 82 Z" fill="#78350f"/>
+
+    <!-- Desk lamp base -->
+    <ellipse cx="290" cy="143" rx="18" ry="5" fill="#525252" stroke="#0c0a09" stroke-width="2"/>
+    <!-- Lamp arm -->
+    <line x1="290" y1="140" x2="290" y2="100" stroke="#78716c" stroke-width="4" stroke-linecap="round"/>
+    <line x1="290" y1="100" x2="270" y2="85" stroke="#78716c" stroke-width="4" stroke-linecap="round"/>
+    <!-- Lamp shade -->
+    <path d="M255 75 L285 75 L275 95 L265 95 Z" fill="#fde047" stroke="#ca8a04" stroke-width="2.5"/>
+    <!-- Light glow -->
+    <ellipse cx="270" cy="98" rx="12" ry="5" fill="#fef9c3" opacity="0.6"/>
+  </g>
+</svg>

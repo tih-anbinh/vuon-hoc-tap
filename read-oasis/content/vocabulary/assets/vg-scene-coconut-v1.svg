@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-coconut desc-coconut">
+  <title id="title-coconut">Coconut - Brown coconut split open</title>
+  <desc id="desc-coconut">A brown hairy coconut split in half showing the white flesh inside, with a whole coconut beside it.</desc>
+  <defs>
+    <linearGradient id="coco-brown" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#78350f"/>
+      <stop offset="100%" stop-color="#451a03"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <line x1="60" y1="260" x2="340" y2="260" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="260" rx="100" ry="8" fill="#0f172a" opacity="0.1"/>
+
+  <g id="coconut-figure" filter="url(#soft-shadow)">
+    <!-- Whole coconut (background, slightly behind) -->
+    <ellipse cx="280" cy="195" rx="55" ry="52" fill="url(#coco-brown)" stroke="#3b1506" stroke-width="3.5"/>
+    <!-- Hairy texture -->
+    <path d="M240 180 C245 175 250 178 248 183" fill="none" stroke="#92400e" stroke-width="2" stroke-linecap="round"/>
+    <path d="M255 170 C260 165 265 168 263 173" fill="none" stroke="#92400e" stroke-width="2" stroke-linecap="round"/>
+    <path d="M300 175 C305 170 310 173 308 178" fill="none" stroke="#92400e" stroke-width="2" stroke-linecap="round"/>
+    <path d="M310 195 C315 190 320 193 318 198" fill="none" stroke="#92400e" stroke-width="2" stroke-linecap="round"/>
+    <path d="M295 215 C300 210 305 213 303 218" fill="none" stroke="#92400e" stroke-width="2" stroke-linecap="round"/>
+    <!-- Three eyes -->
+    <circle cx="270" cy="175" r="5" fill="#3b1506"/>
+    <circle cx="285" cy="172" r="4" fill="#3b1506"/>
+    <circle cx="278" cy="185" r="4.5" fill="#3b1506"/>
+
+    <!-- Split half (foreground, showing white flesh) -->
+    <ellipse cx="155" cy="190" rx="65" ry="60" fill="url(#coco-brown)" stroke="#3b1506" stroke-width="3.5"/>
+    <!-- Hairy texture on shell -->
+    <path d="M100 175 C105 170 110 173 108 178" fill="none" stroke="#92400e" stroke-width="2" stroke-linecap="round"/>
+    <path d="M115 160 C120 155 125 158 123 163" fill="none" stroke="#92400e" stroke-width="2" stroke-linecap="round"/>
+    <path d="M190 165 C195 160 200 163 198 168" fill="none" stroke="#92400e" stroke-width="2" stroke-linecap="round"/>
+    <path d="M205 190 C210 185 215 188 213 193" fill="none" stroke="#92400e" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- White flesh inside (inner circle) -->
+    <ellipse cx="155" cy="185" rx="48" ry="44" fill="#fefce8" stroke="#d6d3d1" stroke-width="2.5"/>
+
+    <!-- Coconut water pool hint -->
+    <ellipse cx="155" cy="200" rx="30" ry="15" fill="#e0f2fe" opacity="0.5"/>
+
+    <!-- Highlight on white flesh -->
+    <path d="M135 170 Q155 160 175 170" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+
+    <!-- Small palm leaf decoration (top) -->
+    <path d="M200 100 C180 80 150 75 130 85" fill="none" stroke="#22c55e" stroke-width="5" stroke-linecap="round"/>
+    <path d="M200 100 C210 75 230 65 250 70" fill="none" stroke="#4ade80" stroke-width="4" stroke-linecap="round"/>
+    <!-- Leaf veins -->
+    <path d="M185 88 C175 82 165 82 155 85" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round"/>
+    <path d="M210 82 C220 75 230 72 240 73" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>

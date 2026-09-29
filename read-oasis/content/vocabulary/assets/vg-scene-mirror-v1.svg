@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-mirror desc-mirror">
+  <title id="title-mirror">Mirror - Oval mirror on stand</title>
+  <desc id="desc-mirror">A pretty oval mirror in a decorative gold frame on a stand, with a soft reflected sparkle.</desc>
+  <defs>
+    <linearGradient id="mirror-frame" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="50%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#78350f"/>
+    </linearGradient>
+    <linearGradient id="mirror-glass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="50%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#7dd3fc"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <line x1="60" y1="265" x2="340" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="265" rx="100" ry="7" fill="#0f172a" opacity="0.15"/>
+  <g id="mirror-figure" filter="url(#soft-shadow)">
+    <!-- Base -->
+    <ellipse cx="200" cy="255" rx="60" ry="8" fill="#78350f" stroke="#451a03" stroke-width="2.5"/>
+    <path d="M150 245 L250 245 L245 260 L155 260 Z" fill="#92400e" stroke="#451a03" stroke-width="2.5"/>
+    <!-- Stand pole -->
+    <rect x="196" y="200" width="8" height="55" fill="#a16207" stroke="#78350f" stroke-width="2"/>
+    <!-- Mirror frame (outer) -->
+    <ellipse cx="200" cy="130" rx="90" ry="105" fill="url(#mirror-frame)" stroke="#451a03" stroke-width="3.5"/>
+    <!-- Decorative frame details (curls at top) -->
+    <path d="M200 25 Q180 15 170 25 Q175 35 190 30" fill="url(#mirror-frame)" stroke="#78350f" stroke-width="2"/>
+    <path d="M200 25 Q220 15 230 25 Q225 35 210 30" fill="url(#mirror-frame)" stroke="#78350f" stroke-width="2"/>
+    <!-- Curls at sides -->
+    <path d="M110 130 Q95 125 95 140 Q105 145 115 138" fill="url(#mirror-frame)" stroke="#78350f" stroke-width="2"/>
+    <path d="M290 130 Q305 125 305 140 Q295 145 285 138" fill="url(#mirror-frame)" stroke="#78350f" stroke-width="2"/>
+    <!-- Curls at bottom -->
+    <path d="M200 235 Q180 245 170 235 Q175 225 190 230" fill="url(#mirror-frame)" stroke="#78350f" stroke-width="2"/>
+    <path d="M200 235 Q220 245 230 235 Q225 225 210 230" fill="url(#mirror-frame)" stroke="#78350f" stroke-width="2"/>
+    <!-- Mirror glass -->
+    <ellipse cx="200" cy="130" rx="72" ry="87" fill="url(#mirror-glass)" stroke="#0369a1" stroke-width="2.5"/>
+    <!-- Mirror reflection shine -->
+    <ellipse cx="175" cy="80" rx="20" ry="35" fill="#ffffff" opacity="0.55" transform="rotate(-20 175 80)"/>
+    <ellipse cx="215" cy="170" rx="10" ry="18" fill="#ffffff" opacity="0.4" transform="rotate(-20 215 170)"/>
+    <!-- Small sparkle stars on glass -->
+    <path d="M170 55 L173 62 L180 65 L173 68 L170 75 L167 68 L160 65 L167 62 Z" fill="#ffffff" opacity="0.85"/>
+    <path d="M230 100 L232 105 L237 107 L232 109 L230 114 L228 109 L223 107 L228 105 Z" fill="#ffffff" opacity="0.7"/>
+    <path d="M225 195 L226 198 L229 199 L226 200 L225 203 L224 200 L221 199 L224 198 Z" fill="#ffffff" opacity="0.7"/>
+    <!-- Inner frame ring highlight -->
+    <ellipse cx="200" cy="130" rx="80" ry="95" fill="none" stroke="#fef3c7" stroke-width="2" opacity="0.5"/>
+    <!-- Top decorative gem -->
+    <circle cx="200" cy="18" r="6" fill="#dc2626" stroke="#7f1d1d" stroke-width="2"/>
+    <circle cx="199" cy="16" r="2" fill="#fca5a5"/>
+  </g>
+</svg>

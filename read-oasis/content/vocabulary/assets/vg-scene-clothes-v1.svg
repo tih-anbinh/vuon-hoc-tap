@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-clothes desc-clothes">
+  <title id="title-clothes">Clothes - Clothing on a hanger</title>
+  <desc id="desc-clothes">A wooden hanger holding a colourful t-shirt and shorts, representing clothes.</desc>
+  <defs>
+    <linearGradient id="shirt-red" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f87171"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <linearGradient id="shorts-blue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <line x1="80" y1="270" x2="320" y2="270" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <g id="clothes-figure" filter="url(#soft-shadow)">
+    <!-- Hanger hook -->
+    <path d="M200 20 Q215 20 215 35 Q215 50 200 50" fill="none" stroke="#92400e" stroke-width="5" stroke-linecap="round"/>
+    <!-- Hanger body -->
+    <path d="M200 50 L120 80 L120 88 L200 62 L280 88 L280 80 Z" fill="#d97706" stroke="#92400e" stroke-width="2.5"/>
+    <!-- T-shirt -->
+    <path d="M130 85 L110 110 L140 115 L140 190 Q200 200 260 190 L260 115 L290 110 L270 85 L240 95 Q200 105 160 95 Z" fill="url(#shirt-red)" stroke="#b91c1c" stroke-width="3"/>
+    <!-- Shirt collar -->
+    <path d="M170 90 Q200 100 230 90" fill="none" stroke="#b91c1c" stroke-width="3" stroke-linecap="round"/>
+    <!-- Shirt star decoration -->
+    <polygon points="200,130 205,142 218,142 208,150 212,162 200,155 188,162 192,150 182,142 195,142" fill="#fde047" stroke="#ca8a04" stroke-width="1.5"/>
+    <!-- Shorts -->
+    <path d="M145 195 L140 255 Q170 260 185 255 L195 215 L205 255 Q230 260 260 255 L255 195 Q200 205 145 195 Z" fill="url(#shorts-blue)" stroke="#1d4ed8" stroke-width="3"/>
+    <!-- Shorts waistband -->
+    <rect x="145" y="192" width="110" height="10" rx="4" fill="#1e40af" stroke="#1e3a8a" stroke-width="2"/>
+    <!-- Shorts pocket -->
+    <path d="M160 210 L160 225 Q170 228 180 225 L180 210" fill="none" stroke="#1e3a8a" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>

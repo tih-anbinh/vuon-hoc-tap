@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-garden desc-garden">
+  <title id="title-garden">Garden - Flower garden</title>
+  <desc id="desc-garden">A cheerful garden scene with colourful flowers, a small tree, a butterfly, and a fence.</desc>
+  <defs>
+    <linearGradient id="sky-day" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#7dd3fc"/>
+    </linearGradient>
+    <linearGradient id="grass-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <!-- Sky -->
+  <rect x="0" y="0" width="400" height="200" fill="url(#sky-day)"/>
+  <!-- Sun -->
+  <circle cx="330" cy="45" r="22" fill="#fde047" stroke="#ca8a04" stroke-width="2.5"/>
+  <g stroke="#fde047" stroke-width="3" stroke-linecap="round">
+    <line x1="330" y1="15" x2="330" y2="7"/>
+    <line x1="330" y1="75" x2="330" y2="83"/>
+    <line x1="300" y1="45" x2="292" y2="45"/>
+    <line x1="360" y1="45" x2="368" y2="45"/>
+  </g>
+  <!-- Cloud -->
+  <g fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" opacity="0.9">
+    <ellipse cx="60" cy="55" rx="20" ry="12"/>
+    <ellipse cx="80" cy="50" rx="18" ry="11"/>
+    <ellipse cx="95" cy="55" rx="15" ry="10"/>
+  </g>
+  <!-- Ground -->
+  <path d="M0 200 Q100 190 200 200 Q300 210 400 200 L400 300 L0 300 Z" fill="url(#grass-grad)"/>
+  <!-- Grass blades -->
+  <g stroke="#166534" stroke-width="2" stroke-linecap="round" fill="none">
+    <path d="M30 220 L30 210 M35 222 L35 213"/>
+    <path d="M80 225 L80 215 M85 227 L85 218"/>
+    <path d="M270 220 L270 210 M275 222 L275 213"/>
+    <path d="M370 225 L370 215 M375 227 L375 218"/>
+  </g>
+  <!-- Fence -->
+  <g stroke="#78350f" stroke-width="2.5" fill="#d97706">
+    <rect x="10" y="220" width="8" height="45"/>
+    <rect x="30" y="215" width="8" height="50"/>
+    <rect x="50" y="220" width="8" height="45"/>
+    <path d="M14 224 L54 224" stroke-width="4"/>
+    <path d="M14 255 L54 255" stroke-width="4"/>
+    <path d="M10 220 L10 215 L18 210 L18 220"/>
+    <path d="M30 215 L30 210 L38 205 L38 215"/>
+    <path d="M50 220 L50 215 L58 210 L58 220"/>
+  </g>
+  <g filter="url(#soft-shadow)">
+    <!-- Tree trunk -->
+    <rect x="330" y="145" width="16" height="90" fill="#78350f" stroke="#451a03" stroke-width="2.5"/>
+    <!-- Tree canopy -->
+    <circle cx="338" cy="130" r="45" fill="#16a34a" stroke="#166534" stroke-width="3"/>
+    <circle cx="320" cy="115" r="25" fill="#22c55e" stroke="#166534" stroke-width="2"/>
+    <circle cx="360" cy="115" r="25" fill="#22c55e" stroke="#166534" stroke-width="2"/>
+    <!-- Apples on tree -->
+    <circle cx="320" cy="130" r="6" fill="#dc2626" stroke="#7f1d1d" stroke-width="1.5"/>
+    <circle cx="355" cy="140" r="6" fill="#dc2626" stroke="#7f1d1d" stroke-width="1.5"/>
+    <circle cx="345" cy="115" r="6" fill="#dc2626" stroke="#7f1d1d" stroke-width="1.5"/>
+
+    <!-- Flower 1 (red) -->
+    <line x1="100" y1="250" x2="100" y2="200" stroke="#15803d" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="110" cy="230" rx="10" ry="4" fill="#22c55e" stroke="#166534" stroke-width="1.5"/>
+    <circle cx="100" cy="200" r="8" fill="#dc2626" stroke="#7f1d1d" stroke-width="2"/>
+    <circle cx="92" cy="197" r="7" fill="#dc2626" stroke="#7f1d1d" stroke-width="2"/>
+    <circle cx="108" cy="197" r="7" fill="#dc2626" stroke="#7f1d1d" stroke-width="2"/>
+    <circle cx="100" cy="192" r="7" fill="#dc2626" stroke="#7f1d1d" stroke-width="2"/>
+    <circle cx="95" cy="205" r="7" fill="#dc2626" stroke="#7f1d1d" stroke-width="2"/>
+    <circle cx="105" cy="205" r="7" fill="#dc2626" stroke="#7f1d1d" stroke-width="2"/>
+    <circle cx="100" cy="200" r="5" fill="#fde047" stroke="#ca8a04" stroke-width="1.5"/>
+
+    <!-- Flower 2 (yellow) -->
+    <line x1="150" y1="250" x2="150" y2="215" stroke="#15803d" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="145" cy="240" rx="10" ry="4" fill="#22c55e" stroke="#166534" stroke-width="1.5"/>
+    <circle cx="150" cy="215" r="7" fill="#fde047" stroke="#ca8a04" stroke-width="2"/>
+    <circle cx="143" cy="212" r="6" fill="#fde047" stroke="#ca8a04" stroke-width="2"/>
+    <circle cx="157" cy="212" r="6" fill="#fde047" stroke="#ca8a04" stroke-width="2"/>
+    <circle cx="150" cy="207" r="6" fill="#fde047" stroke="#ca8a04" stroke-width="2"/>
+    <circle cx="145" cy="220" r="6" fill="#fde047" stroke="#ca8a04" stroke-width="2"/>
+    <circle cx="155" cy="220" r="6" fill="#fde047" stroke="#ca8a04" stroke-width="2"/>
+    <circle cx="150" cy="215" r="4" fill="#f97316" stroke="#7c2d12" stroke-width="1.5"/>
+
+    <!-- Flower 3 (purple) -->
+    <line x1="200" y1="250" x2="200" y2="185" stroke="#15803d" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="192" cy="225" rx="10" ry="4" fill="#22c55e" stroke="#166534" stroke-width="1.5"/>
+    <ellipse cx="200" cy="175" rx="6" ry="12" fill="#a855f7" stroke="#7e22ce" stroke-width="2"/>
+    <ellipse cx="190" cy="185" rx="12" ry="6" fill="#a855f7" stroke="#7e22ce" stroke-width="2"/>
+    <ellipse cx="210" cy="185" rx="12" ry="6" fill="#a855f7" stroke="#7e22ce" stroke-width="2"/>
+    <ellipse cx="200" cy="195" rx="6" ry="12" fill="#a855f7" stroke="#7e22ce" stroke-width="2"/>
+    <circle cx="200" cy="185" r="5" fill="#fde047" stroke="#ca8a04" stroke-width="1.5"/>
+
+    <!-- Flower 4 (pink) -->
+    <line x1="250" y1="250" x2="250" y2="200" stroke="#15803d" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="258" cy="235" rx="10" ry="4" fill="#22c55e" stroke="#166534" stroke-width="1.5"/>
+    <circle cx="250" cy="200" r="7" fill="#ec4899" stroke="#9d174d" stroke-width="2"/>
+    <circle cx="243" cy="197" r="6" fill="#ec4899" stroke="#9d174d" stroke-width="2"/>
+    <circle cx="257" cy="197" r="6" fill="#ec4899" stroke="#9d174d" stroke-width="2"/>
+    <circle cx="250" cy="192" r="6" fill="#ec4899" stroke="#9d174d" stroke-width="2"/>
+    <circle cx="245" cy="205" r="6" fill="#ec4899" stroke="#9d174d" stroke-width="2"/>
+    <circle cx="255" cy="205" r="6" fill="#ec4899" stroke="#9d174d" stroke-width="2"/>
+    <circle cx="250" cy="200" r="4" fill="#fde047" stroke="#ca8a04" stroke-width="1.5"/>
+
+    <!-- Butterfly -->
+    <ellipse cx="175" cy="110" rx="10" ry="15" fill="#f97316" stroke="#7c2d12" stroke-width="2" transform="rotate(-20 175 110)"/>
+    <ellipse cx="195" cy="110" rx="10" ry="15" fill="#f97316" stroke="#7c2d12" stroke-width="2" transform="rotate(20 195 110)"/>
+    <ellipse cx="172" cy="125" rx="7" ry="10" fill="#fbbf24" stroke="#7c2d12" stroke-width="2" transform="rotate(-20 172 125)"/>
+    <ellipse cx="198" cy="125" rx="7" ry="10" fill="#fbbf24" stroke="#7c2d12" stroke-width="2" transform="rotate(20 198 125)"/>
+    <ellipse cx="185" cy="118" rx="3" ry="10" fill="#1c1917" stroke="#0c0a09" stroke-width="1.5"/>
+    <line x1="184" y1="108" x2="181" y2="102" stroke="#0c0a09" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="186" y1="108" x2="189" y2="102" stroke="#0c0a09" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="181" cy="102" r="1.5" fill="#0c0a09"/>
+    <circle cx="189" cy="102" r="1.5" fill="#0c0a09"/>
+  </g>
+</svg>

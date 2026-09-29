@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-meat desc-meat">
+  <title id="title-meat">Meat - Cooked meat on a plate</title>
+  <desc id="desc-meat">A large cooked steak with grill marks on a white plate, with a sprig of rosemary garnish.</desc>
+  <defs>
+    <linearGradient id="meat-brown" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#92400e"/>
+      <stop offset="100%" stop-color="#78350f"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <line x1="40" y1="260" x2="360" y2="260" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="260" rx="100" ry="8" fill="#0f172a" opacity="0.1"/>
+
+  <g id="meat-figure" filter="url(#soft-shadow)">
+    <!-- Plate -->
+    <ellipse cx="200" cy="200" rx="130" ry="45" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="3"/>
+    <ellipse cx="200" cy="200" rx="110" ry="38" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+
+    <!-- Steak (irregular organic shape) -->
+    <path d="M130 160 C120 140 140 115 175 110 C210 105 260 115 280 135 C300 155 290 185 265 195 C240 205 200 210 170 200 C140 190 125 180 130 160 Z" fill="url(#meat-brown)" stroke="#451a03" stroke-width="3.5"/>
+
+    <!-- Fat marbling -->
+    <path d="M160 135 C170 130 185 132 190 140" fill="none" stroke="#d6d3d1" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+    <path d="M220 125 C230 122 245 128 248 138" fill="none" stroke="#d6d3d1" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+    <path d="M180 170 C195 165 210 168 215 175" fill="none" stroke="#d6d3d1" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+
+    <!-- Grill marks -->
+    <line x1="150" y1="130" x2="175" y2="185" stroke="#451a03" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+    <line x1="180" y1="118" x2="200" y2="190" stroke="#451a03" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+    <line x1="210" y1="115" x2="225" y2="188" stroke="#451a03" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+    <line x1="240" y1="120" x2="250" y2="185" stroke="#451a03" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+
+    <!-- Highlight/sear -->
+    <path d="M155 125 Q200 108 260 125" fill="none" stroke="#b45309" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+
+    <!-- Bone (T-bone style) -->
+    <path d="M135 155 C128 148 130 135 140 130" fill="none" stroke="#e7e5e4" stroke-width="6" stroke-linecap="round"/>
+    <path d="M135 155 C128 162 130 175 140 178" fill="none" stroke="#e7e5e4" stroke-width="6" stroke-linecap="round"/>
+    <path d="M135 155 C128 148 130 135 140 130" fill="none" stroke="#d6d3d1" stroke-width="2" stroke-linecap="round"/>
+    <path d="M135 155 C128 162 130 175 140 178" fill="none" stroke="#d6d3d1" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Rosemary sprig garnish -->
+    <line x1="270" y1="195" x2="310" y2="175" stroke="#65a30d" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M280 190 C282 185 288 184 286 189" fill="#4ade80" stroke="none"/>
+    <path d="M285 187 C287 182 293 181 291 186" fill="#4ade80" stroke="none"/>
+    <path d="M290 184 C292 179 298 178 296 183" fill="#4ade80" stroke="none"/>
+    <path d="M295 181 C297 176 303 175 301 180" fill="#4ade80" stroke="none"/>
+    <path d="M282 192 C280 187 274 186 276 191" fill="#22c55e" stroke="none"/>
+    <path d="M287 189 C285 184 279 183 281 188" fill="#22c55e" stroke="none"/>
+    <path d="M292 186 C290 181 284 180 286 185" fill="#22c55e" stroke="none"/>
+  </g>
+</svg>

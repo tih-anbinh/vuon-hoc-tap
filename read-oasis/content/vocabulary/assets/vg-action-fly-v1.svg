@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-fly desc-fly">
+  <title id="title-fly">Fly - Bird flying in the sky</title>
+  <desc id="desc-fly">A colourful bird with spread wings flying through the sky with clouds and motion trails.</desc>
+  <defs>
+    <linearGradient id="sky-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#bfdbfe"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+    <linearGradient id="bird-body" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#c2410c"/>
+    </linearGradient>
+    <linearGradient id="bird-wing" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#facc15"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Sky background -->
+  <rect x="0" y="0" width="400" height="300" fill="url(#sky-grad)" opacity="0.4"/>
+
+  <!-- Sun -->
+  <circle cx="340" cy="60" r="22" fill="#fde047" stroke="#a16207" stroke-width="2.5"/>
+  <g stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round">
+    <line x1="340" y1="28" x2="340" y2="20"/>
+    <line x1="370" y1="60" x2="378" y2="60"/>
+    <line x1="318" y1="38" x2="312" y2="32"/>
+    <line x1="362" y1="38" x2="368" y2="32"/>
+  </g>
+
+  <!-- Clouds -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="70" cy="60" rx="35" ry="16" fill="#ffffff" stroke="#94a3b8" stroke-width="2.5"/>
+    <ellipse cx="85" cy="55" rx="22" ry="14" fill="#ffffff" stroke="#94a3b8" stroke-width="2.5"/>
+    <ellipse cx="270" cy="200" rx="40" ry="18" fill="#ffffff" stroke="#94a3b8" stroke-width="2.5"/>
+    <ellipse cx="290" cy="195" rx="26" ry="14" fill="#ffffff" stroke="#94a3b8" stroke-width="2.5"/>
+  </g>
+
+  <!-- Motion trails behind bird -->
+  <g stroke="#60a5fa" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="4,6" opacity="0.6">
+    <path d="M60 150 Q120 145 175 155"/>
+    <path d="M55 175 Q115 170 170 180"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Bird body (main oval) -->
+    <ellipse cx="220" cy="160" rx="45" ry="30" fill="url(#bird-body)" stroke="#7c2d12" stroke-width="3"/>
+    <!-- Bird head -->
+    <circle cx="265" cy="140" r="24" fill="url(#bird-body)" stroke="#7c2d12" stroke-width="3"/>
+    <!-- Beak -->
+    <path d="M285 138 L305 135 L288 148 Z" fill="#fbbf24" stroke="#78350f" stroke-width="2.5"/>
+    <!-- Eye -->
+    <circle cx="272" cy="135" r="5" fill="#ffffff" stroke="#0c0a09" stroke-width="2"/>
+    <circle cx="273" cy="136" r="2.5" fill="#0c0a09"/>
+    <!-- Cheek blush -->
+    <circle cx="260" cy="148" r="4" fill="#f43f5e" opacity="0.5"/>
+
+    <!-- Upper wing (spread out, top) -->
+    <path d="M215 140 Q195 90 145 80 Q135 100 170 130 Q195 140 215 145 Z" fill="url(#bird-wing)" stroke="#7c2d12" stroke-width="3"/>
+    <!-- Wing feather lines -->
+    <path d="M155 90 Q175 110 200 138" stroke="#7c2d12" stroke-width="1.5" fill="none" opacity="0.6"/>
+    <path d="M175 85 Q188 105 205 140" stroke="#7c2d12" stroke-width="1.5" fill="none" opacity="0.6"/>
+
+    <!-- Lower wing (extended below) -->
+    <path d="M210 175 Q190 220 150 225 Q145 205 170 190 Q190 178 210 175 Z" fill="url(#bird-wing)" stroke="#7c2d12" stroke-width="3"/>
+    <path d="M155 215 Q175 200 195 185" stroke="#7c2d12" stroke-width="1.5" fill="none" opacity="0.6"/>
+
+    <!-- Tail feathers -->
+    <path d="M180 160 L155 155 L165 165 L155 170 L180 170 Z" fill="url(#bird-wing)" stroke="#7c2d12" stroke-width="2.5"/>
+
+    <!-- Belly highlight -->
+    <ellipse cx="220" cy="175" rx="25" ry="12" fill="#fed7aa" opacity="0.7"/>
+
+    <!-- Feet (tucked under) -->
+    <path d="M215 185 L212 195" stroke="#78350f" stroke-width="3" stroke-linecap="round"/>
+    <path d="M228 187 L228 197" stroke="#78350f" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Small birds far away -->
+  <g stroke="#0f172a" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M50 220 Q57 215 62 220 Q67 215 74 220"/>
+    <path d="M90 240 Q97 235 102 240 Q107 235 114 240"/>
+  </g>
+</svg>

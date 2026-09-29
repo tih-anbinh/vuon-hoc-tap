@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-shirt desc-shirt">
+  <title id="title-shirt">Shirt - Collared button shirt</title>
+  <desc id="desc-shirt">A light blue collared button-up shirt with short sleeves and a chest pocket.</desc>
+  <defs>
+    <linearGradient id="shirt-blue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#bfdbfe"/>
+      <stop offset="100%" stop-color="#93c5fd"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <line x1="60" y1="270" x2="340" y2="270" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="270" rx="95" ry="7" fill="#0f172a" opacity="0.1"/>
+  <g id="shirt-figure" filter="url(#soft-shadow)">
+    <!-- Body -->
+    <path d="M140 75 L130 260 Q200 270 270 260 L260 75 Q200 85 140 75 Z" fill="url(#shirt-blue)" stroke="#3b82f6" stroke-width="3"/>
+    <!-- Left sleeve -->
+    <path d="M140 75 L85 95 L75 165 L115 170 L120 105 L140 95" fill="url(#shirt-blue)" stroke="#3b82f6" stroke-width="3"/>
+    <!-- Right sleeve -->
+    <path d="M260 75 L315 95 L325 165 L285 170 L280 105 L260 95" fill="url(#shirt-blue)" stroke="#3b82f6" stroke-width="3"/>
+    <!-- Collar left -->
+    <path d="M165 72 L150 42 L180 55 L195 78" fill="#dbeafe" stroke="#3b82f6" stroke-width="2.5"/>
+    <!-- Collar right -->
+    <path d="M235 72 L250 42 L220 55 L205 78" fill="#dbeafe" stroke="#3b82f6" stroke-width="2.5"/>
+    <!-- Button placket -->
+    <rect x="195" y="78" width="10" height="180" rx="3" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+    <!-- Buttons -->
+    <circle cx="200" cy="100" r="4" fill="#ffffff" stroke="#3b82f6" stroke-width="1.5"/>
+    <circle cx="200" cy="135" r="4" fill="#ffffff" stroke="#3b82f6" stroke-width="1.5"/>
+    <circle cx="200" cy="170" r="4" fill="#ffffff" stroke="#3b82f6" stroke-width="1.5"/>
+    <circle cx="200" cy="205" r="4" fill="#ffffff" stroke="#3b82f6" stroke-width="1.5"/>
+    <circle cx="200" cy="240" r="4" fill="#ffffff" stroke="#3b82f6" stroke-width="1.5"/>
+    <!-- Button holes (dots) -->
+    <line x1="198" y1="98" x2="198" y2="102" stroke="#3b82f6" stroke-width="1"/>
+    <line x1="198" y1="133" x2="198" y2="137" stroke="#3b82f6" stroke-width="1"/>
+    <line x1="198" y1="168" x2="198" y2="172" stroke="#3b82f6" stroke-width="1"/>
+    <!-- Chest pocket -->
+    <path d="M220 100 L220 135 Q235 140 250 135 L250 100 Z" fill="#93c5fd" stroke="#3b82f6" stroke-width="2"/>
+    <line x1="220" y1="100" x2="250" y2="100" stroke="#3b82f6" stroke-width="2.5"/>
+    <!-- Sleeve cuffs -->
+    <rect x="72" y="160" width="46" height="12" rx="5" fill="#93c5fd" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="282" y="160" width="46" height="12" rx="5" fill="#93c5fd" stroke="#3b82f6" stroke-width="2"/>
+    <!-- Bottom hem -->
+    <path d="M130 255 Q200 265 270 255" fill="none" stroke="#3b82f6" stroke-width="2.5"/>
+  </g>
+</svg>

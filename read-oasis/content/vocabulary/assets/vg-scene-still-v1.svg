@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-still desc-still">
+  <title id="title-still">Still - A perfectly calm pond with unbroken reflection</title>
+  <desc id="desc-still">A completely still, mirror-flat pond reflecting a tree and the sun perfectly, with no wind or motion — everything is still.</desc>
+  <defs>
+    <linearGradient id="sky-still" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#fef3c7"/>
+    </linearGradient>
+    <linearGradient id="pond-still" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#93c5fd"/>
+      <stop offset="100%" stop-color="#1e40af"/>
+    </linearGradient>
+    <linearGradient id="tree-still" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#84cc16"/>
+      <stop offset="100%" stop-color="#365314"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- Sky background -->
+  <rect x="0" y="0" width="400" height="160" fill="url(#sky-still)"/>
+
+  <!-- Sun (perfectly round, calm) -->
+  <circle cx="120" cy="65" r="30" fill="#fde047" stroke="#f59e0b" stroke-width="3"/>
+
+  <!-- Tree (upright, still) -->
+  <g filter="url(#soft-shadow)">
+    <!-- Trunk -->
+    <rect x="270" y="100" width="20" height="60" fill="#78350f" stroke="#451a03" stroke-width="3"/>
+    <!-- Foliage (round, no motion) -->
+    <circle cx="280" cy="80" r="40" fill="url(#tree-still)" stroke="#1a2e05" stroke-width="3"/>
+    <circle cx="255" cy="95" r="25" fill="url(#tree-still)" stroke="#1a2e05" stroke-width="3"/>
+    <circle cx="305" cy="95" r="25" fill="url(#tree-still)" stroke="#1a2e05" stroke-width="3"/>
+    <!-- Fruit dots -->
+    <circle cx="270" cy="70" r="4" fill="#ef4444" stroke="#7f1d1d" stroke-width="1.5"/>
+    <circle cx="295" cy="85" r="4" fill="#ef4444" stroke="#7f1d1d" stroke-width="1.5"/>
+    <circle cx="260" cy="90" r="3" fill="#ef4444" stroke="#7f1d1d" stroke-width="1.5"/>
+  </g>
+
+  <!-- Ground bank -->
+  <path d="M0 160 Q100 155 200 160 Q300 165 400 160 L400 175 L0 175 Z" fill="#84cc16" stroke="#4d7c0f" stroke-width="2.5"/>
+
+  <!-- Perfectly still pond -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="200" cy="215" rx="180" ry="55" fill="url(#pond-still)" stroke="#1e40af" stroke-width="4"/>
+  </g>
+
+  <!-- Mirror-flat surface line (a single unbroken line, no ripples) -->
+  <path d="M25 195 Q200 190 375 195" fill="none" stroke="#dbeafe" stroke-width="3" opacity="0.9"/>
+
+  <!-- Reflection of sun (perfect mirror, static) -->
+  <circle cx="120" cy="215" r="22" fill="#fde047" stroke="#f59e0b" stroke-width="2.5" opacity="0.65"/>
+
+  <!-- Reflection of tree (perfect mirror) -->
+  <g opacity="0.55">
+    <rect x="270" y="200" width="20" height="45" fill="#78350f"/>
+    <circle cx="280" cy="245" r="35" fill="url(#tree-still)"/>
+    <circle cx="258" cy="235" r="22" fill="url(#tree-still)"/>
+    <circle cx="302" cy="235" r="22" fill="url(#tree-still)"/>
+    <circle cx="270" cy="255" r="3" fill="#ef4444"/>
+    <circle cx="295" cy="240" r="3" fill="#ef4444"/>
+  </g>
+
+  <!-- Lily pad (perfectly still) -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="60" cy="230" rx="22" ry="10" fill="#22c55e" stroke="#166534" stroke-width="2.5"/>
+    <path d="M60 220 L58 232 M60 220 L52 228 M60 220 L68 228" stroke="#166534" stroke-width="1.5"/>
+    <!-- Flower on pad -->
+    <path d="M55 218 Q60 210 65 218 Q68 220 63 223 Q60 220 57 223 Q52 220 55 218 Z" fill="#fda4af" stroke="#9f1239" stroke-width="1.5"/>
+    <circle cx="60" cy="220" r="2" fill="#fbbf24"/>
+  </g>
+
+  <!-- A single "no motion" indicator: hold-still hand as small icon (right corner) -->
+  <g stroke="#0f172a" stroke-width="2" fill="none" opacity="0.35">
+    <path d="M345 250 Q345 235 355 235 L360 235 L360 218 Q360 213 365 213 Q370 213 370 218 L370 240 Q370 260 355 262 Z" fill="#fde8cd"/>
+  </g>
+
+  <!-- Small feather that has just landed motionless (near center bank) -->
+  <g filter="url(#soft-shadow)">
+    <path d="M180 178 Q190 173 200 178 L195 195 L182 195 Z" fill="#f5f5f4" stroke="#78716c" stroke-width="1.5"/>
+    <line x1="190" y1="178" x2="190" y2="193" stroke="#78716c" stroke-width="1"/>
+  </g>
+</svg>

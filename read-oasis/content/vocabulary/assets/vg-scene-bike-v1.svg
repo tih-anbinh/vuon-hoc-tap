@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-bike desc-bike">
+  <title id="title-bike">Bike - Bicycle</title>
+  <desc id="desc-bike">A colourful children's bicycle with two wheels, handlebars, a seat, and pedals.</desc>
+  <defs>
+    <linearGradient id="bike-frame" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <line x1="30" y1="265" x2="370" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="265" rx="140" ry="8" fill="#0f172a" opacity="0.1"/>
+  <g id="bike-figure" filter="url(#soft-shadow)">
+    <!-- Rear wheel -->
+    <circle cx="115" cy="200" r="55" fill="none" stroke="#44403c" stroke-width="8"/>
+    <circle cx="115" cy="200" r="55" fill="none" stroke="#78716c" stroke-width="3"/>
+    <circle cx="115" cy="200" r="8" fill="#a8a29e" stroke="#78716c" stroke-width="3"/>
+    <!-- Rear spokes -->
+    <line x1="115" y1="150" x2="115" y2="250" stroke="#a8a29e" stroke-width="1.5"/>
+    <line x1="65" y1="200" x2="165" y2="200" stroke="#a8a29e" stroke-width="1.5"/>
+    <line x1="76" y1="161" x2="154" y2="239" stroke="#a8a29e" stroke-width="1.5"/>
+    <line x1="76" y1="239" x2="154" y2="161" stroke="#a8a29e" stroke-width="1.5"/>
+    <!-- Front wheel -->
+    <circle cx="290" cy="200" r="55" fill="none" stroke="#44403c" stroke-width="8"/>
+    <circle cx="290" cy="200" r="55" fill="none" stroke="#78716c" stroke-width="3"/>
+    <circle cx="290" cy="200" r="8" fill="#a8a29e" stroke="#78716c" stroke-width="3"/>
+    <!-- Front spokes -->
+    <line x1="290" y1="150" x2="290" y2="250" stroke="#a8a29e" stroke-width="1.5"/>
+    <line x1="240" y1="200" x2="340" y2="200" stroke="#a8a29e" stroke-width="1.5"/>
+    <line x1="251" y1="161" x2="329" y2="239" stroke="#a8a29e" stroke-width="1.5"/>
+    <line x1="251" y1="239" x2="329" y2="161" stroke="#a8a29e" stroke-width="1.5"/>
+    <!-- Frame - seat tube -->
+    <line x1="175" y1="110" x2="175" y2="200" stroke="url(#bike-frame)" stroke-width="7" stroke-linecap="round"/>
+    <!-- Frame - top tube -->
+    <line x1="175" y1="120" x2="270" y2="130" stroke="url(#bike-frame)" stroke-width="7" stroke-linecap="round"/>
+    <!-- Frame - down tube -->
+    <line x1="175" y1="200" x2="270" y2="130" stroke="url(#bike-frame)" stroke-width="6" stroke-linecap="round"/>
+    <!-- Frame - chain stay -->
+    <line x1="115" y1="200" x2="175" y2="200" stroke="url(#bike-frame)" stroke-width="5" stroke-linecap="round"/>
+    <!-- Frame - seat stay -->
+    <line x1="115" y1="200" x2="175" y2="120" stroke="url(#bike-frame)" stroke-width="4" stroke-linecap="round"/>
+    <!-- Fork -->
+    <line x1="270" y1="130" x2="290" y2="200" stroke="url(#bike-frame)" stroke-width="6" stroke-linecap="round"/>
+    <!-- Handlebars -->
+    <path d="M255 110 Q270 100 285 110" fill="none" stroke="#44403c" stroke-width="6" stroke-linecap="round"/>
+    <!-- Handlebar stem -->
+    <line x1="270" y1="110" x2="270" y2="130" stroke="#44403c" stroke-width="5" stroke-linecap="round"/>
+    <!-- Grips -->
+    <rect x="250" y="105" width="12" height="10" rx="4" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1.5"/>
+    <rect x="278" y="105" width="12" height="10" rx="4" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1.5"/>
+    <!-- Seat -->
+    <ellipse cx="175" cy="105" rx="22" ry="8" fill="#44403c" stroke="#292524" stroke-width="2.5"/>
+    <!-- Pedal crank -->
+    <circle cx="175" cy="200" r="12" fill="#a8a29e" stroke="#78716c" stroke-width="2.5"/>
+    <!-- Pedals -->
+    <rect x="155" y="210" width="16" height="6" rx="2" fill="#44403c" stroke="#292524" stroke-width="1.5"/>
+    <rect x="185" y="186" width="16" height="6" rx="2" fill="#44403c" stroke="#292524" stroke-width="1.5"/>
+    <!-- Chain -->
+    <path d="M163 200 Q140 215 115 208" fill="none" stroke="#d97706" stroke-width="2.5" stroke-dasharray="3,2"/>
+  </g>
+</svg>

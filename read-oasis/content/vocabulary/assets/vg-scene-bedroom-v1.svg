@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-bedroom desc-bedroom">
+  <title id="title-bedroom">Bedroom - Cozy bedroom</title>
+  <desc id="desc-bedroom">A cozy bedroom with a bed, pillows, a blanket with stars, a nightstand with a lamp, and a picture on the wall.</desc>
+  <defs>
+    <linearGradient id="wall-pink" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fce7f3"/>
+      <stop offset="100%" stop-color="#f9a8d4"/>
+    </linearGradient>
+    <linearGradient id="blanket-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#4338ca"/>
+    </linearGradient>
+    <linearGradient id="bed-wood" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#78350f"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <!-- Wall/floor -->
+  <rect x="0" y="0" width="400" height="220" fill="url(#wall-pink)"/>
+  <rect x="0" y="220" width="400" height="80" fill="#b45309"/>
+  <!-- Floor perspective line -->
+  <line x1="0" y1="220" x2="400" y2="220" stroke="#78350f" stroke-width="3"/>
+  <!-- Floor grain -->
+  <line x1="0" y1="245" x2="400" y2="240" stroke="#78350f" stroke-width="1" opacity="0.4"/>
+  <line x1="0" y1="270" x2="400" y2="265" stroke="#78350f" stroke-width="1" opacity="0.4"/>
+  <line x1="0" y1="290" x2="400" y2="285" stroke="#78350f" stroke-width="1" opacity="0.4"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Picture on wall -->
+    <rect x="60" y="50" width="60" height="55" rx="3" fill="#fef3c7" stroke="#78350f" stroke-width="3"/>
+    <circle cx="90" cy="72" r="8" fill="#fbbf24" stroke="#78350f" stroke-width="1.5"/>
+    <path d="M65 100 L75 88 L85 95 L100 82 L115 100 Z" fill="#16a34a" stroke="#166534" stroke-width="1.5"/>
+
+    <!-- Window -->
+    <rect x="260" y="45" width="90" height="70" rx="3" fill="#bfdbfe" stroke="#78350f" stroke-width="3.5"/>
+    <line x1="305" y1="45" x2="305" y2="115" stroke="#78350f" stroke-width="2.5"/>
+    <line x1="260" y1="80" x2="350" y2="80" stroke="#78350f" stroke-width="2.5"/>
+    <!-- Moon -->
+    <circle cx="330" cy="65" r="8" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+    <!-- Stars -->
+    <path d="M275 60 L277 65 L282 65 L278 68 L280 73 L275 70 L270 73 L272 68 L268 65 L273 65 Z" fill="#fde047"/>
+    <path d="M290 100 L291 103 L294 103 L292 105 L293 108 L290 106 L287 108 L288 105 L286 103 L289 103 Z" fill="#fde047"/>
+
+    <!-- Bed frame headboard -->
+    <rect x="70" y="120" width="200" height="80" rx="8" fill="url(#bed-wood)" stroke="#451a03" stroke-width="3.5"/>
+    <!-- Headboard decoration -->
+    <path d="M85 120 Q170 108 255 120" fill="none" stroke="#451a03" stroke-width="2.5"/>
+    <path d="M85 130 Q170 122 255 130" fill="none" stroke="#78350f" stroke-width="1.5" opacity="0.6"/>
+    <!-- Mattress -->
+    <rect x="55" y="195" width="230" height="30" rx="4" fill="#fef3c7" stroke="#78350f" stroke-width="3"/>
+    <!-- Blanket (front side) -->
+    <path d="M55 210 L285 210 L295 255 L45 255 Z" fill="url(#blanket-grad)" stroke="#312e81" stroke-width="3"/>
+    <!-- Blanket stars -->
+    <path d="M100 225 L102 230 L107 230 L103 233 L105 238 L100 235 L95 238 L97 233 L93 230 L98 230 Z" fill="#fde047"/>
+    <path d="M170 235 L172 240 L177 240 L173 243 L175 248 L170 245 L165 248 L167 243 L163 240 L168 240 Z" fill="#fde047"/>
+    <path d="M240 225 L242 230 L247 230 L243 233 L245 238 L240 235 L235 238 L237 233 L233 230 L238 230 Z" fill="#fde047"/>
+    <!-- Pillow 1 -->
+    <ellipse cx="105" cy="180" rx="35" ry="18" fill="#ffffff" stroke="#a8a29e" stroke-width="2.5"/>
+    <path d="M85 180 Q105 172 125 180" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+    <!-- Pillow 2 -->
+    <ellipse cx="180" cy="180" rx="35" ry="18" fill="#ffffff" stroke="#a8a29e" stroke-width="2.5"/>
+    <path d="M160 180 Q180 172 200 180" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
+    <!-- Bed leg -->
+    <rect x="60" y="253" width="12" height="20" fill="#451a03" stroke="#292524" stroke-width="2"/>
+    <rect x="270" y="253" width="12" height="20" fill="#451a03" stroke="#292524" stroke-width="2"/>
+
+    <!-- Nightstand -->
+    <rect x="305" y="180" width="65" height="65" rx="3" fill="#a16207" stroke="#78350f" stroke-width="3"/>
+    <line x1="305" y1="215" x2="370" y2="215" stroke="#78350f" stroke-width="2"/>
+    <circle cx="337" cy="200" r="3" fill="#fbbf24" stroke="#78350f" stroke-width="1.5"/>
+    <circle cx="337" cy="230" r="3" fill="#fbbf24" stroke="#78350f" stroke-width="1.5"/>
+    <!-- Table lamp on nightstand -->
+    <ellipse cx="337" cy="178" rx="15" ry="4" fill="#525252" stroke="#292524" stroke-width="1.5"/>
+    <rect x="335" y="155" width="4" height="25" fill="#525252"/>
+    <path d="M320 130 L354 130 L347 158 L327 158 Z" fill="#fde047" stroke="#ca8a04" stroke-width="2.5"/>
+  </g>
+</svg>

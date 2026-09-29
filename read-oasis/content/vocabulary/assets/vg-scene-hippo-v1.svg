@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-hippo desc-hippo">
+  <title id="title-hippo">Hippo - Cute round hippopotamus</title>
+  <desc id="desc-hippo">A large, round purple-grey hippopotamus with a wide snout, small ears, tiny eyes, and stubby legs, partially in water.</desc>
+  <defs>
+    <linearGradient id="hippo-body" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="hippo-belly" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ddd6fe"/>
+      <stop offset="100%" stop-color="#c4b5fd"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Water surface -->
+  <rect x="0" y="230" width="400" height="70" fill="#bfdbfe" rx="0"/>
+  <path d="M0 230 Q50 225 100 230 Q150 235 200 230 Q250 225 300 230 Q350 235 400 230" fill="#93c5fd" opacity="0.5"/>
+  <!-- Water ripples -->
+  <path d="M40 250 Q60 246 80 250" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <path d="M150 255 Q170 251 190 255" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <path d="M280 248 Q300 244 320 248" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- HIPPO -->
+  <g id="hippo-figure" filter="url(#soft-shadow)">
+    <!-- Stubby legs (partially submerged) -->
+    <rect x="130" y="210" width="24" height="30" rx="10" fill="#7c3aed" stroke="#5b21b6" stroke-width="2.5"/>
+    <rect x="165" y="212" width="22" height="28" rx="9" fill="#6d28d9" stroke="#5b21b6" stroke-width="2.5"/>
+    <rect x="225" y="212" width="22" height="28" rx="9" fill="#6d28d9" stroke="#5b21b6" stroke-width="2.5"/>
+    <rect x="258" y="210" width="24" height="30" rx="10" fill="#7c3aed" stroke="#5b21b6" stroke-width="2.5"/>
+
+    <!-- Massive round body -->
+    <ellipse cx="205" cy="175" rx="90" ry="60" fill="url(#hippo-body)" stroke="#5b21b6" stroke-width="3.5"/>
+
+    <!-- Belly -->
+    <ellipse cx="205" cy="195" rx="60" ry="30" fill="url(#hippo-belly)"/>
+
+    <!-- Head (large, blocky) -->
+    <ellipse cx="310" cy="145" rx="55" ry="42" fill="url(#hippo-body)" stroke="#5b21b6" stroke-width="3.5"/>
+
+    <!-- Wide snout / muzzle -->
+    <ellipse cx="350" cy="155" rx="32" ry="25" fill="#c4b5fd" stroke="#5b21b6" stroke-width="3"/>
+
+    <!-- Nostrils (prominent, on top of snout) -->
+    <ellipse cx="358" cy="148" rx="6" ry="5" fill="#7c3aed" stroke="#5b21b6" stroke-width="2"/>
+    <ellipse cx="372" cy="148" rx="6" ry="5" fill="#7c3aed" stroke="#5b21b6" stroke-width="2"/>
+
+    <!-- Small ears -->
+    <ellipse cx="285" cy="108" rx="10" ry="14" fill="#a78bfa" stroke="#5b21b6" stroke-width="2.5"/>
+    <ellipse cx="285" cy="108" rx="5" ry="8" fill="#ddd6fe"/>
+
+    <ellipse cx="330" cy="105" rx="10" ry="14" fill="#a78bfa" stroke="#5b21b6" stroke-width="2.5"/>
+    <ellipse cx="330" cy="105" rx="5" ry="8" fill="#ddd6fe"/>
+
+    <!-- Tiny eyes -->
+    <circle cx="298" cy="135" r="6" fill="#ffffff" stroke="#5b21b6" stroke-width="2"/>
+    <circle cx="299" cy="136" r="3.5" fill="#1e293b"/>
+    <circle cx="297" cy="134" r="1.5" fill="#ffffff"/>
+
+    <circle cx="325" cy="132" r="6" fill="#ffffff" stroke="#5b21b6" stroke-width="2"/>
+    <circle cx="326" cy="133" r="3.5" fill="#1e293b"/>
+    <circle cx="324" cy="131" r="1.5" fill="#ffffff"/>
+
+    <!-- Wide happy mouth -->
+    <path d="M340 165 Q355 178 370 165" fill="none" stroke="#5b21b6" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Cheek blush -->
+    <circle cx="338" cy="160" r="6" fill="#f9a8d4" opacity="0.4"/>
+    <circle cx="372" cy="158" r="6" fill="#f9a8d4" opacity="0.4"/>
+
+    <!-- Small tail (stubby, with tuft) -->
+    <path d="M115 160 C100 155 95 150 100 145" fill="none" stroke="#7c3aed" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="100" cy="143" r="4" fill="#5b21b6"/>
+  </g>
+</svg>

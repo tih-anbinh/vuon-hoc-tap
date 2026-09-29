@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-beach desc-beach">
+  <title id="title-beach">Beach - Sunny beach scene</title>
+  <desc id="desc-beach">A sunny beach with blue sea waves, golden sand, a colourful umbrella, a sandcastle and a beach ball.</desc>
+  <defs>
+    <linearGradient id="sky-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#7dd3fc"/>
+    </linearGradient>
+    <linearGradient id="sea-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="sand-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <!-- Sky -->
+  <rect x="0" y="0" width="400" height="140" fill="url(#sky-grad)"/>
+  <!-- Sun -->
+  <circle cx="330" cy="55" r="28" fill="#fde047" stroke="#ca8a04" stroke-width="3"/>
+  <g stroke="#fde047" stroke-width="4" stroke-linecap="round">
+    <line x1="330" y1="15" x2="330" y2="5"/>
+    <line x1="330" y1="95" x2="330" y2="105"/>
+    <line x1="290" y1="55" x2="280" y2="55"/>
+    <line x1="370" y1="55" x2="380" y2="55"/>
+    <line x1="303" y1="28" x2="296" y2="21"/>
+    <line x1="357" y1="82" x2="364" y2="89"/>
+    <line x1="357" y1="28" x2="364" y2="21"/>
+    <line x1="303" y1="82" x2="296" y2="89"/>
+  </g>
+  <!-- Cloud -->
+  <g fill="#ffffff" stroke="#94a3b8" stroke-width="2">
+    <ellipse cx="80" cy="55" rx="25" ry="15"/>
+    <ellipse cx="100" cy="50" rx="20" ry="14"/>
+    <ellipse cx="115" cy="58" rx="18" ry="12"/>
+  </g>
+  <!-- Sea -->
+  <rect x="0" y="140" width="400" height="55" fill="url(#sea-grad)"/>
+  <!-- Waves -->
+  <path d="M0 150 Q40 145 80 150 Q120 155 160 150 Q200 145 240 150 Q280 155 320 150 Q360 145 400 150" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+  <path d="M0 165 Q40 160 80 165 Q120 170 160 165 Q200 160 240 165 Q280 170 320 165 Q360 160 400 165" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <path d="M0 180 Q40 175 80 180 Q120 185 160 180 Q200 175 240 180 Q280 185 320 180 Q360 175 400 180" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+  <!-- Sand -->
+  <path d="M0 195 Q100 190 200 200 Q300 210 400 195 L400 300 L0 300 Z" fill="url(#sand-grad)"/>
+  <!-- Sand grain dots -->
+  <g fill="#a16207" opacity="0.4">
+    <circle cx="30" cy="230" r="1"/>
+    <circle cx="60" cy="245" r="1"/>
+    <circle cx="90" cy="220" r="1"/>
+    <circle cx="140" cy="250" r="1"/>
+    <circle cx="180" cy="230" r="1"/>
+    <circle cx="220" cy="255" r="1"/>
+    <circle cx="270" cy="240" r="1"/>
+    <circle cx="310" cy="225" r="1"/>
+    <circle cx="360" cy="250" r="1"/>
+    <circle cx="45" cy="270" r="1"/>
+    <circle cx="200" cy="275" r="1"/>
+    <circle cx="330" cy="275" r="1"/>
+  </g>
+  <g filter="url(#soft-shadow)">
+    <!-- Beach umbrella pole -->
+    <line x1="105" y1="130" x2="105" y2="240" stroke="#78350f" stroke-width="4" stroke-linecap="round"/>
+    <!-- Umbrella (striped) -->
+    <path d="M40 130 Q105 90 170 130 Z" fill="#dc2626" stroke="#7f1d1d" stroke-width="3"/>
+    <path d="M60 128 Q90 100 105 90 L105 130 Z" fill="#fde047" stroke="#7f1d1d" stroke-width="2"/>
+    <path d="M105 90 L105 130 L150 128 Q120 100 105 90 Z" fill="#fde047" stroke="#7f1d1d" stroke-width="2"/>
+    <path d="M40 130 Q60 115 80 128" fill="#dc2626" stroke="#7f1d1d" stroke-width="2"/>
+    <path d="M170 130 Q150 115 130 128" fill="#dc2626" stroke="#7f1d1d" stroke-width="2"/>
+    <!-- Umbrella tip -->
+    <circle cx="105" cy="87" r="3" fill="#7f1d1d"/>
+    <!-- Sandcastle -->
+    <rect x="220" y="215" width="70" height="45" fill="#d97706" stroke="#78350f" stroke-width="2.5"/>
+    <!-- Castle towers -->
+    <rect x="215" y="200" width="15" height="55" fill="#d97706" stroke="#78350f" stroke-width="2.5"/>
+    <rect x="280" y="200" width="15" height="55" fill="#d97706" stroke="#78350f" stroke-width="2.5"/>
+    <rect x="245" y="185" width="20" height="35" fill="#d97706" stroke="#78350f" stroke-width="2.5"/>
+    <!-- Tower tops (triangles) -->
+    <path d="M215 200 L222 190 L230 200 Z" fill="#78350f" stroke="#451a03" stroke-width="1.5"/>
+    <path d="M280 200 L287 190 L295 200 Z" fill="#78350f" stroke="#451a03" stroke-width="1.5"/>
+    <path d="M245 185 L255 172 L265 185 Z" fill="#78350f" stroke="#451a03" stroke-width="1.5"/>
+    <!-- Flag on center tower -->
+    <line x1="255" y1="172" x2="255" y2="160" stroke="#78350f" stroke-width="1.5"/>
+    <path d="M255 160 L255 168 L265 164 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="1"/>
+    <!-- Castle window -->
+    <rect x="250" y="230" width="10" height="15" rx="2" fill="#1e3a8a" stroke="#0f172a" stroke-width="1.5"/>
+    <!-- Castle door -->
+    <path d="M245 250 L245 260 L265 260 L265 250 Q255 245 245 250 Z" fill="#78350f" stroke="#451a03" stroke-width="1.5"/>
+    <!-- Beach ball -->
+    <circle cx="340" cy="245" r="18" fill="#ffffff" stroke="#0c0a09" stroke-width="2.5"/>
+    <path d="M340 227 Q345 245 340 263" fill="#dc2626" stroke="#7f1d1d" stroke-width="1.5"/>
+    <path d="M340 227 Q335 245 340 263" fill="#3b82f6" stroke="#1e3a8a" stroke-width="1.5"/>
+    <path d="M322 245 Q340 250 358 245" fill="none" stroke="#0c0a09" stroke-width="1.5"/>
+    <!-- Starfish -->
+    <path d="M60 260 L65 250 L70 260 L80 260 L72 267 L75 277 L65 271 L55 277 L58 267 L50 260 Z" fill="#f59e0b" stroke="#78350f" stroke-width="1.5"/>
+  </g>
+</svg>

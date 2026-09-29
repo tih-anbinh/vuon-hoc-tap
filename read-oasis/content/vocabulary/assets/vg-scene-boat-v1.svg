@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-boat desc-boat">
+  <title id="title-boat">Boat - Sailboat</title>
+  <desc id="desc-boat">A cheerful sailboat with a colourful sail floating on gentle waves.</desc>
+  <defs>
+    <linearGradient id="sail-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="water-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="hull-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <!-- Water -->
+  <rect x="0" y="200" width="400" height="100" fill="url(#water-grad)"/>
+  <!-- Waves -->
+  <path d="M0 210 Q50 200 100 210 Q150 220 200 210 Q250 200 300 210 Q350 220 400 210 L400 220 Q350 230 300 220 Q250 210 200 220 Q150 230 100 220 Q50 210 0 220 Z" fill="#93c5fd" opacity="0.4"/>
+  <path d="M0 230 Q50 220 100 230 Q150 240 200 230 Q250 220 300 230 Q350 240 400 230 L400 240 Q350 250 300 240 Q250 230 200 240 Q150 250 100 240 Q50 230 0 240 Z" fill="#3b82f6" opacity="0.3"/>
+  <g id="boat-figure" filter="url(#soft-shadow)">
+    <!-- Hull -->
+    <path d="M100 200 L90 240 Q200 260 310 240 L300 200 Z" fill="url(#hull-grad)" stroke="#991b1b" stroke-width="3.5"/>
+    <!-- Hull stripe -->
+    <path d="M95 220 Q200 235 305 220" fill="none" stroke="#fbbf24" stroke-width="4"/>
+    <!-- Mast -->
+    <line x1="200" y1="40" x2="200" y2="200" stroke="#78350f" stroke-width="6" stroke-linecap="round"/>
+    <!-- Main sail -->
+    <path d="M205 50 L205 180 L310 180 Z" fill="url(#sail-grad)" stroke="#d97706" stroke-width="2.5"/>
+    <!-- Sail stripes -->
+    <line x1="210" y1="90" x2="260" y2="180" stroke="#ef4444" stroke-width="4" opacity="0.5"/>
+    <line x1="210" y1="120" x2="285" y2="180" stroke="#3b82f6" stroke-width="4" opacity="0.5"/>
+    <!-- Jib sail -->
+    <path d="M195 55 L195 170 L120 170 Z" fill="#ffffff" stroke="#d6d3d1" stroke-width="2"/>
+    <!-- Flag -->
+    <path d="M200 40 L200 25 L225 32 L200 40 Z" fill="#ef4444" stroke="#b91c1c" stroke-width="1.5"/>
+    <!-- Porthole -->
+    <circle cx="180" cy="215" r="8" fill="#bfdbfe" stroke="#991b1b" stroke-width="2.5"/>
+    <circle cx="220" cy="215" r="8" fill="#bfdbfe" stroke="#991b1b" stroke-width="2.5"/>
+  </g>
+</svg>

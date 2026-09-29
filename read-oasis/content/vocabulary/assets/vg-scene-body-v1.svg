@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-body desc-body">
+  <title id="title-body">Body - Child's whole body</title>
+  <desc id="desc-body">A friendly child standing with arms slightly out, showing the whole body from head to feet in a front view.</desc>
+  <defs>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <line x1="80" y1="280" x2="320" y2="280" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="280" rx="50" ry="6" fill="#0f172a" opacity="0.1"/>
+
+  <g id="body-figure" filter="url(#soft-shadow)">
+    <!-- Shoes -->
+    <ellipse cx="175" cy="275" rx="18" ry="8" fill="#3b82f6" stroke="#1d4ed8" stroke-width="2.5"/>
+    <ellipse cx="225" cy="275" rx="18" ry="8" fill="#3b82f6" stroke="#1d4ed8" stroke-width="2.5"/>
+
+    <!-- Legs (pants) -->
+    <rect x="165" y="210" width="22" height="62" rx="8" fill="#1e40af" stroke="#1e3a8a" stroke-width="2.5"/>
+    <rect x="213" y="210" width="22" height="62" rx="8" fill="#1e40af" stroke="#1e3a8a" stroke-width="2.5"/>
+
+    <!-- Arms -->
+    <!-- Left arm -->
+    <path d="M148 120 C125 135 110 160 105 180" fill="none" stroke="#f5d0a9" stroke-width="16" stroke-linecap="round"/>
+    <path d="M148 120 C125 135 110 160 105 180" fill="none" stroke="#d4a574" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Left hand -->
+    <circle cx="103" cy="183" r="10" fill="#f5d0a9" stroke="#d4a574" stroke-width="2"/>
+
+    <!-- Right arm -->
+    <path d="M252 120 C275 135 290 160 295 180" fill="none" stroke="#f5d0a9" stroke-width="16" stroke-linecap="round"/>
+    <path d="M252 120 C275 135 290 160 295 180" fill="none" stroke="#d4a574" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Right hand -->
+    <circle cx="297" cy="183" r="10" fill="#f5d0a9" stroke="#d4a574" stroke-width="2"/>
+
+    <!-- Torso (T-shirt) -->
+    <path d="M155 105 Q200 100 245 105 L240 215 Q200 220 160 215 Z" fill="#ef4444" stroke="#dc2626" stroke-width="3"/>
+
+    <!-- T-shirt collar -->
+    <path d="M180 105 Q200 115 220 105" fill="none" stroke="#dc2626" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Neck -->
+    <rect x="188" y="85" width="24" height="22" rx="8" fill="#f5d0a9" stroke="#d4a574" stroke-width="2"/>
+
+    <!-- Head -->
+    <circle cx="200" cy="60" r="35" fill="#f5d0a9" stroke="#d4a574" stroke-width="3"/>
+
+    <!-- Hair -->
+    <path d="M165 50 C168 25 185 15 200 15 C215 15 232 25 235 50 C238 35 230 20 200 18 C170 20 162 35 165 50 Z" fill="#451a03" stroke="#27150a" stroke-width="2"/>
+
+    <!-- Eyes -->
+    <circle cx="188" cy="55" r="5" fill="#1e293b"/>
+    <circle cx="186" cy="53" r="2" fill="#ffffff"/>
+    <circle cx="212" cy="55" r="5" fill="#1e293b"/>
+    <circle cx="210" cy="53" r="2" fill="#ffffff"/>
+
+    <!-- Eyebrows -->
+    <path d="M182 47 Q188 44 194 47" fill="none" stroke="#451a03" stroke-width="2" stroke-linecap="round"/>
+    <path d="M206 47 Q212 44 218 47" fill="none" stroke="#451a03" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Nose -->
+    <ellipse cx="200" cy="62" rx="3" ry="2.5" fill="#d4a574"/>
+
+    <!-- Smile -->
+    <path d="M192 70 Q200 78 208 70" fill="none" stroke="#78350f" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Cheek blush -->
+    <circle cx="178" cy="66" r="5" fill="#fca5a5" opacity="0.3"/>
+    <circle cx="222" cy="66" r="5" fill="#fca5a5" opacity="0.3"/>
+  </g>
+</svg>

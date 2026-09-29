@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-lime desc-lime">
+  <title id="title-lime">Lime - Green lime fruit</title>
+  <desc id="desc-lime">A bright green lime with a cut half showing pale green segments, and a small leaf on the stem.</desc>
+  <defs>
+    <linearGradient id="lime-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <line x1="60" y1="260" x2="340" y2="260" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="260" rx="80" ry="7" fill="#0f172a" opacity="0.1"/>
+
+  <g id="lime-figure" filter="url(#soft-shadow)">
+    <!-- Cut half (behind) -->
+    <circle cx="270" cy="170" r="48" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+    <circle cx="270" cy="170" r="48" fill="none" stroke="#22c55e" stroke-width="8"/>
+    <circle cx="270" cy="170" r="36" fill="#dcfce7" stroke="#86efac" stroke-width="2"/>
+    <!-- Segments -->
+    <line x1="270" y1="134" x2="270" y2="206" stroke="#22c55e" stroke-width="2" opacity="0.5"/>
+    <line x1="234" y1="170" x2="306" y2="170" stroke="#22c55e" stroke-width="2" opacity="0.5"/>
+    <line x1="244" y1="144" x2="296" y2="196" stroke="#22c55e" stroke-width="2" opacity="0.5"/>
+    <line x1="244" y1="196" x2="296" y2="144" stroke="#22c55e" stroke-width="2" opacity="0.5"/>
+    <circle cx="270" cy="170" r="5" fill="#bbf7d0"/>
+
+    <!-- Whole lime (foreground) -->
+    <circle cx="155" cy="175" r="60" fill="url(#lime-green)" stroke="#15803d" stroke-width="3.5"/>
+
+    <!-- Highlight -->
+    <path d="M125 148 Q155 132 185 148" fill="none" stroke="#bbf7d0" stroke-width="5" stroke-linecap="round" opacity="0.5"/>
+
+    <!-- Texture bumps -->
+    <circle cx="135" cy="165" r="2" fill="#15803d" opacity="0.15"/>
+    <circle cx="155" cy="155" r="2" fill="#15803d" opacity="0.15"/>
+    <circle cx="175" cy="165" r="2" fill="#15803d" opacity="0.15"/>
+    <circle cx="145" cy="185" r="2" fill="#15803d" opacity="0.15"/>
+    <circle cx="165" cy="180" r="2" fill="#15803d" opacity="0.15"/>
+
+    <!-- Stem nub -->
+    <ellipse cx="155" cy="115" rx="4" ry="3" fill="#4d7c0f" stroke="#365314" stroke-width="1.5"/>
+
+    <!-- Leaf -->
+    <path d="M158 115 C165 100 180 92 190 96 C185 105 170 112 158 115 Z" fill="#4ade80" stroke="#16a34a" stroke-width="2"/>
+    <path d="M158 115 C168 102 180 96 188 97" fill="none" stroke="#16a34a" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+</svg>

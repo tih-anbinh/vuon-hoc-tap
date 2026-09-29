@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-empty desc-empty">
+  <title id="title-empty">Empty - An empty glass tipped over showing nothing inside</title>
+  <desc id="desc-empty">An empty clear glass with no liquid inside, tilted slightly, with a small "nothing here" mark and dust motes.</desc>
+  <defs>
+    <linearGradient id="empty-glass" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e0f2fe" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#e0f2fe" stop-opacity="0.5"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <line x1="30" y1="270" x2="370" y2="270" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="270" rx="90" ry="7" fill="#0f172a" opacity="0.15"/>
+
+  <!-- Dust particles/nothingness floating -->
+  <g fill="#94a3b8" opacity="0.6">
+    <circle cx="80" cy="100" r="2"/>
+    <circle cx="330" cy="90" r="2"/>
+    <circle cx="60" cy="180" r="1.5"/>
+    <circle cx="350" cy="180" r="1.5"/>
+    <circle cx="100" cy="220" r="1.5"/>
+    <circle cx="310" cy="220" r="1.5"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Empty glass (tall, transparent) -->
+    <!-- Body -->
+    <path d="M140 85 L150 260 L250 260 L260 85 Z" fill="url(#empty-glass)" stroke="#3b82f6" stroke-width="4"/>
+    <!-- Rim -->
+    <ellipse cx="200" cy="85" rx="60" ry="10" fill="none" stroke="#3b82f6" stroke-width="4"/>
+    <ellipse cx="200" cy="85" rx="60" ry="8" fill="#e0f2fe" opacity="0.4"/>
+    <!-- Inner bottom (showing it's empty, no water line at all) -->
+    <ellipse cx="200" cy="258" rx="47" ry="5" fill="#dbeafe" opacity="0.5" stroke="#3b82f6" stroke-width="2"/>
+
+    <!-- Highlight on glass side -->
+    <path d="M158 100 L162 240" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+    <path d="M172 100 L173 130" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+
+    <!-- Highlight on right side -->
+    <path d="M238 100 L242 130" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  </g>
+
+  <!-- Big "Ø" no-symbol / empty indicator inside glass (as shape) -->
+  <g stroke="#dc2626" stroke-width="6" fill="none" opacity="0.7">
+    <circle cx="200" cy="175" r="40"/>
+    <line x1="172" y1="147" x2="228" y2="203"/>
+  </g>
+
+  <!-- Falling last drop that has already fallen (small drop below) -->
+  <g fill="#60a5fa" stroke="#1e40af" stroke-width="1.5">
+    <path d="M300 250 Q295 258 305 265 Q315 258 310 250 Z"/>
+  </g>
+
+  <!-- Small question mark shape floating (as decorative pieces, not text) -->
+  <g fill="#94a3b8" opacity="0.5" stroke="#475569" stroke-width="1.5">
+    <path d="M330 130 Q335 120 345 125 Q350 132 342 138 L342 145" fill="none" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="342" cy="152" r="2"/>
+  </g>
+
+  <!-- Wind puff (empty=nothing there, blows through) -->
+  <g stroke="#cbd5e1" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6">
+    <path d="M50 150 Q65 145 80 150"/>
+    <path d="M50 165 Q70 158 90 165"/>
+    <path d="M60 180 Q75 176 90 180"/>
+  </g>
+</svg>

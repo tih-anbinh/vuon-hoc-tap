@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-piano desc-piano">
+  <title id="title-piano">Piano - Upright piano</title>
+  <desc id="desc-piano">A dark wooden upright piano with white and black keys, music stand, pedals, and a small piano stool.</desc>
+  <defs>
+    <linearGradient id="piano-wood" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#57534e"/>
+      <stop offset="100%" stop-color="#1c1917"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <line x1="20" y1="265" x2="380" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="265" rx="160" ry="8" fill="#0f172a" opacity="0.15"/>
+  <g id="piano-figure" filter="url(#soft-shadow)">
+    <!-- Piano body -->
+    <rect x="50" y="35" width="300" height="200" rx="4" fill="url(#piano-wood)" stroke="#0c0a09" stroke-width="3.5"/>
+    <!-- Top lid -->
+    <rect x="45" y="30" width="310" height="15" rx="3" fill="#292524" stroke="#0c0a09" stroke-width="3"/>
+    <!-- Top highlight -->
+    <line x1="55" y1="35" x2="345" y2="35" stroke="#78716c" stroke-width="2" opacity="0.5"/>
+    <!-- Upper front panel -->
+    <rect x="65" y="55" width="270" height="70" rx="3" fill="#292524" stroke="#0c0a09" stroke-width="2.5"/>
+    <!-- Music stand groove -->
+    <line x1="70" y1="60" x2="330" y2="60" stroke="#a8a29e" stroke-width="1.5" opacity="0.5"/>
+    <line x1="70" y1="120" x2="330" y2="120" stroke="#a8a29e" stroke-width="1.5" opacity="0.5"/>
+    <!-- Wood grain panels -->
+    <line x1="200" y1="60" x2="200" y2="120" stroke="#0c0a09" stroke-width="1.5" opacity="0.5"/>
+    <!-- Piano brand plate -->
+    <rect x="180" y="80" width="40" height="12" rx="2" fill="#d97706" stroke="#78350f" stroke-width="1.5"/>
+    <!-- Keyboard shelf -->
+    <rect x="55" y="130" width="290" height="12" rx="2" fill="#0c0a09" stroke="#292524" stroke-width="2"/>
+    <!-- White keys row background -->
+    <rect x="60" y="142" width="280" height="55" fill="#fefce8" stroke="#0c0a09" stroke-width="3"/>
+    <!-- White key dividers (14 keys) -->
+    <line x1="80" y1="142" x2="80" y2="197" stroke="#78716c" stroke-width="1.5"/>
+    <line x1="100" y1="142" x2="100" y2="197" stroke="#78716c" stroke-width="1.5"/>
+    <line x1="120" y1="142" x2="120" y2="197" stroke="#78716c" stroke-width="1.5"/>
+    <line x1="140" y1="142" x2="140" y2="197" stroke="#78716c" stroke-width="1.5"/>
+    <line x1="160" y1="142" x2="160" y2="197" stroke="#78716c" stroke-width="1.5"/>
+    <line x1="180" y1="142" x2="180" y2="197" stroke="#78716c" stroke-width="1.5"/>
+    <line x1="200" y1="142" x2="200" y2="197" stroke="#78716c" stroke-width="1.5"/>
+    <line x1="220" y1="142" x2="220" y2="197" stroke="#78716c" stroke-width="1.5"/>
+    <line x1="240" y1="142" x2="240" y2="197" stroke="#78716c" stroke-width="1.5"/>
+    <line x1="260" y1="142" x2="260" y2="197" stroke="#78716c" stroke-width="1.5"/>
+    <line x1="280" y1="142" x2="280" y2="197" stroke="#78716c" stroke-width="1.5"/>
+    <line x1="300" y1="142" x2="300" y2="197" stroke="#78716c" stroke-width="1.5"/>
+    <line x1="320" y1="142" x2="320" y2="197" stroke="#78716c" stroke-width="1.5"/>
+    <!-- Black keys (groups of 2, 3) -->
+    <rect x="73" y="142" width="12" height="35" fill="#0c0a09" stroke="#292524" stroke-width="1"/>
+    <rect x="93" y="142" width="12" height="35" fill="#0c0a09" stroke="#292524" stroke-width="1"/>
+    <rect x="133" y="142" width="12" height="35" fill="#0c0a09" stroke="#292524" stroke-width="1"/>
+    <rect x="153" y="142" width="12" height="35" fill="#0c0a09" stroke="#292524" stroke-width="1"/>
+    <rect x="173" y="142" width="12" height="35" fill="#0c0a09" stroke="#292524" stroke-width="1"/>
+    <rect x="213" y="142" width="12" height="35" fill="#0c0a09" stroke="#292524" stroke-width="1"/>
+    <rect x="233" y="142" width="12" height="35" fill="#0c0a09" stroke="#292524" stroke-width="1"/>
+    <rect x="273" y="142" width="12" height="35" fill="#0c0a09" stroke="#292524" stroke-width="1"/>
+    <rect x="293" y="142" width="12" height="35" fill="#0c0a09" stroke="#292524" stroke-width="1"/>
+    <rect x="313" y="142" width="12" height="35" fill="#0c0a09" stroke="#292524" stroke-width="1"/>
+    <!-- Lower cabinet -->
+    <rect x="60" y="200" width="280" height="35" rx="2" fill="#292524" stroke="#0c0a09" stroke-width="2.5"/>
+    <!-- Pedals area -->
+    <rect x="170" y="230" width="60" height="12" rx="2" fill="#a8a29e" stroke="#525252" stroke-width="2"/>
+    <rect x="177" y="240" width="8" height="15" rx="1" fill="#d97706" stroke="#78350f" stroke-width="1.5"/>
+    <rect x="196" y="240" width="8" height="15" rx="1" fill="#d97706" stroke="#78350f" stroke-width="1.5"/>
+    <rect x="215" y="240" width="8" height="15" rx="1" fill="#d97706" stroke="#78350f" stroke-width="1.5"/>
+    <!-- Music notes floating -->
+    <circle cx="120" cy="80" r="4" fill="#fbbf24" stroke="#78350f" stroke-width="1.5"/>
+    <line x1="124" y1="80" x2="124" y2="55" stroke="#78350f" stroke-width="1.5"/>
+    <path d="M124 55 Q135 55 132 68" fill="#78350f"/>
+    <circle cx="280" cy="90" r="4" fill="#fbbf24" stroke="#78350f" stroke-width="1.5"/>
+    <line x1="284" y1="90" x2="284" y2="65" stroke="#78350f" stroke-width="1.5"/>
+  </g>
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-new desc-new">
+  <title id="title-new">New - A shiny new gift with a bow and sparkles</title>
+  <desc id="desc-new">A brand-new wrapped gift box with a shiny ribbon bow, sparkles, and a tag showing it is new and fresh.</desc>
+  <defs>
+    <linearGradient id="new-box" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f9a8d4"/>
+      <stop offset="100%" stop-color="#be185d"/>
+    </linearGradient>
+    <linearGradient id="new-ribbon" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="new-tag" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e5e7eb"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <line x1="30" y1="265" x2="370" y2="265" stroke="#78716c" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="265" rx="130" ry="7" fill="#0f172a" opacity="0.15"/>
+
+  <!-- Shine burst behind (starburst indicating "new/fresh/shiny") -->
+  <g fill="#fde047" opacity="0.4">
+    <path d="M200 155 L215 80 L230 155 L305 140 L230 170 L305 210 L230 185 L215 250 L200 185 L175 250 L170 185 L95 210 L170 170 L95 140 L170 155 L185 80 Z"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Gift box body -->
+    <rect x="115" y="130" width="170" height="130" rx="6" fill="url(#new-box)" stroke="#831843" stroke-width="4"/>
+    <!-- Vertical ribbon -->
+    <rect x="188" y="130" width="24" height="130" fill="url(#new-ribbon)" stroke="#78350f" stroke-width="2.5"/>
+    <!-- Horizontal ribbon -->
+    <rect x="115" y="180" width="170" height="24" fill="url(#new-ribbon)" stroke="#78350f" stroke-width="2.5"/>
+
+    <!-- Bow (top center) -->
+    <!-- Left loop -->
+    <path d="M200 130 Q160 90 145 105 Q140 125 175 130 Z" fill="url(#new-ribbon)" stroke="#78350f" stroke-width="3"/>
+    <!-- Right loop -->
+    <path d="M200 130 Q240 90 255 105 Q260 125 225 130 Z" fill="url(#new-ribbon)" stroke="#78350f" stroke-width="3"/>
+    <!-- Bow center knot -->
+    <ellipse cx="200" cy="125" rx="16" ry="12" fill="url(#new-ribbon)" stroke="#78350f" stroke-width="3"/>
+    <path d="M188 118 L212 118" stroke="#78350f" stroke-width="2"/>
+    <path d="M188 128 L212 128" stroke="#78350f" stroke-width="2"/>
+    <!-- Bow tails -->
+    <path d="M195 138 L180 165 L190 155 L188 168 L200 145 Z" fill="url(#new-ribbon)" stroke="#78350f" stroke-width="2.5"/>
+    <path d="M205 138 L220 165 L210 155 L212 168 L200 145 Z" fill="url(#new-ribbon)" stroke="#78350f" stroke-width="2.5"/>
+
+    <!-- Tag hanging from bow -->
+    <g transform="rotate(-10 300 180)">
+      <path d="M280 165 L330 165 L340 180 L330 195 L280 195 Z" fill="url(#new-tag)" stroke="#78350f" stroke-width="2.5"/>
+      <circle cx="290" cy="180" r="3" fill="#78350f"/>
+      <!-- Star on tag (means "new") -->
+      <path d="M312 172 L316 180 L324 182 L316 184 L312 192 L308 184 L300 182 L308 180 Z" fill="#f43f5e" stroke="#881337" stroke-width="1.5"/>
+    </g>
+    <path d="M225 130 Q265 155 285 168" fill="none" stroke="#78350f" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Highlight on box front -->
+    <path d="M130 145 L145 145 L145 250 L130 250 Z" fill="#ffffff" opacity="0.25"/>
+  </g>
+
+  <!-- Sparkles around box -->
+  <g>
+    <path d="M75 90 L79 100 L89 103 L79 106 L75 116 L71 106 L61 103 L71 100 Z" fill="#fde047" stroke="#a16207" stroke-width="2"/>
+    <path d="M340 100 L343 108 L351 110 L343 112 L340 120 L337 112 L329 110 L337 108 Z" fill="#fde047" stroke="#a16207" stroke-width="2"/>
+    <path d="M60 200 L63 207 L70 210 L63 213 L60 220 L57 213 L50 210 L57 207 Z" fill="#f43f5e" stroke="#881337" stroke-width="1.5"/>
+    <path d="M355 200 L358 207 L365 210 L358 213 L355 220 L352 213 L345 210 L352 207 Z" fill="#a855f7" stroke="#6b21a8" stroke-width="1.5"/>
+    <circle cx="90" cy="150" r="3" fill="#22c55e" stroke="#166534" stroke-width="1"/>
+    <circle cx="320" cy="240" r="3" fill="#3b82f6" stroke="#1e3a8a" stroke-width="1"/>
+  </g>
+</svg>

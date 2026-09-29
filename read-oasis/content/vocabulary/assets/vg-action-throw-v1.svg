@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-throw desc-throw">
+  <title id="title-throw">Throw - Child throwing a ball</title>
+  <desc id="desc-throw">A child in mid-throw motion, arm raised with a ball leaving their hand along a motion arc.</desc>
+  <defs>
+    <linearGradient id="throw-skin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5d0a9"/>
+    </linearGradient>
+    <linearGradient id="throw-shirt" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#c2410c"/>
+    </linearGradient>
+    <linearGradient id="ball-throw" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <line x1="30" y1="265" x2="370" y2="265" stroke="#78716c" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="130" cy="265" rx="80" ry="7" fill="#0f172a" opacity="0.12"/>
+
+  <!-- Motion arc showing throw trajectory -->
+  <path d="M200 100 Q280 40 360 90" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-dasharray="5,7" opacity="0.7"/>
+  <!-- Arrowhead at end -->
+  <path d="M355 85 L365 90 L355 96" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Speed lines behind ball -->
+  <g stroke="#3b82f6" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.7">
+    <path d="M195 95 L175 85"/>
+    <path d="M200 108 L180 110"/>
+    <path d="M210 118 L192 125"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Body/torso -->
+    <path d="M95 155 Q130 145 165 155 L175 235 L85 235 Z" fill="url(#throw-shirt)" stroke="#7c2d12" stroke-width="3"/>
+    <!-- Legs -->
+    <rect x="105" y="230" width="18" height="35" fill="#1e40af" stroke="#1e3a8a" stroke-width="2.5"/>
+    <rect x="137" y="230" width="18" height="35" fill="#1e40af" stroke="#1e3a8a" stroke-width="2.5"/>
+    <ellipse cx="113" cy="265" rx="14" ry="5" fill="#0f172a" stroke="#000" stroke-width="2"/>
+    <ellipse cx="145" cy="265" rx="14" ry="5" fill="#0f172a" stroke="#000" stroke-width="2"/>
+
+    <!-- Neck -->
+    <rect x="120" y="128" width="22" height="18" fill="url(#throw-skin)" stroke="#a16207" stroke-width="2.5"/>
+
+    <!-- Left arm (out for balance) -->
+    <path d="M95 165 Q70 190 65 220" fill="none" stroke="url(#throw-shirt)" stroke-width="16" stroke-linecap="round"/>
+    <circle cx="63" cy="223" r="10" fill="url(#throw-skin)" stroke="#a16207" stroke-width="2.5"/>
+
+    <!-- Right arm (raised high, throwing motion) -->
+    <path d="M158 160 Q180 130 190 105" fill="none" stroke="url(#throw-shirt)" stroke-width="16" stroke-linecap="round"/>
+    <!-- Right hand (open, ball just released) -->
+    <circle cx="193" cy="100" r="11" fill="url(#throw-skin)" stroke="#a16207" stroke-width="2.5"/>
+    <!-- Fingers spread -->
+    <path d="M200 92 Q205 88 208 85" fill="none" stroke="#a16207" stroke-width="2" stroke-linecap="round"/>
+    <path d="M200 100 Q207 100 210 100" fill="none" stroke="#a16207" stroke-width="2" stroke-linecap="round"/>
+    <path d="M200 108 Q205 112 208 115" fill="none" stroke="#a16207" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Head (tilted with throwing motion) -->
+    <circle cx="130" cy="100" r="28" fill="url(#throw-skin)" stroke="#a16207" stroke-width="3"/>
+    <!-- Hair -->
+    <path d="M105 92 Q108 65 130 60 Q152 65 155 92 Q147 75 130 72 Q113 75 105 92 Z" fill="#78350f" stroke="#451a03" stroke-width="2"/>
+    <!-- Eyes (focused, looking toward throw target) -->
+    <circle cx="128" cy="100" r="2.5" fill="#0c0a09"/>
+    <circle cx="142" cy="98" r="2.5" fill="#0c0a09"/>
+    <!-- Determined eyebrows -->
+    <path d="M122 92 L133 90" stroke="#451a03" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M136 90 L148 92" stroke="#451a03" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Open determined mouth -->
+    <path d="M128 115 Q135 118 142 115" fill="none" stroke="#0c0a09" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Cheeks -->
+    <circle cx="115" cy="110" r="4" fill="#fca5a5" opacity="0.5"/>
+    <circle cx="150" cy="108" r="4" fill="#fca5a5" opacity="0.5"/>
+  </g>
+
+  <!-- The ball being thrown (in mid-air, just released) -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="215" cy="95" r="18" fill="url(#ball-throw)" stroke="#78350f" stroke-width="3"/>
+    <path d="M197 95 Q215 88 233 95" fill="none" stroke="#78350f" stroke-width="2"/>
+    <path d="M197 95 Q215 102 233 95" fill="none" stroke="#78350f" stroke-width="2"/>
+    <!-- Highlight -->
+    <ellipse cx="208" cy="87" rx="5" ry="3" fill="#fef9c3" opacity="0.8"/>
+  </g>
+</svg>

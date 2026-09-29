@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-car desc-car">
+  <title id="title-car">Car - Family car</title>
+  <desc id="desc-car">A friendly red family car with windows, wheels, headlights, and a shiny body.</desc>
+  <defs>
+    <linearGradient id="car-red" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f87171"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <line x1="20" y1="245" x2="380" y2="245" stroke="#a8a29e" stroke-width="4" stroke-linecap="round"/>
+  <line x1="20" y1="252" x2="380" y2="252" stroke="#ffffff" stroke-width="2" stroke-dasharray="15,10"/>
+  <ellipse cx="200" cy="255" rx="150" ry="7" fill="#0f172a" opacity="0.15"/>
+  <g id="car-figure" filter="url(#soft-shadow)">
+    <!-- Lower body -->
+    <path d="M40 200 Q40 175 65 172 L120 172 L145 130 Q200 118 260 130 L285 172 L340 175 Q365 178 360 205 L355 235 L45 235 Z" fill="url(#car-red)" stroke="#7f1d1d" stroke-width="3.5"/>
+    <!-- Upper body (cabin) -->
+    <path d="M145 130 Q200 118 260 130 L245 175 L155 175 Z" fill="#dc2626" stroke="#7f1d1d" stroke-width="3"/>
+    <!-- Windshield -->
+    <path d="M155 135 L165 175 L200 175 L200 128 Q175 130 155 135 Z" fill="#bfdbfe" stroke="#1e40af" stroke-width="2.5"/>
+    <!-- Rear window -->
+    <path d="M245 135 L235 175 L200 175 L200 128 Q225 130 245 135 Z" fill="#bfdbfe" stroke="#1e40af" stroke-width="2.5"/>
+    <!-- Window pillar -->
+    <line x1="200" y1="128" x2="200" y2="175" stroke="#7f1d1d" stroke-width="3"/>
+    <!-- Window shine -->
+    <path d="M160 140 L180 140 L172 160 Z" fill="#ffffff" opacity="0.5"/>
+    <path d="M215 140 L235 140 L227 160 Z" fill="#ffffff" opacity="0.5"/>
+    <!-- Door line -->
+    <line x1="200" y1="175" x2="200" y2="230" stroke="#7f1d1d" stroke-width="2.5"/>
+    <!-- Door handle left -->
+    <rect x="165" y="195" width="15" height="4" rx="2" fill="#7f1d1d"/>
+    <!-- Door handle right -->
+    <rect x="220" y="195" width="15" height="4" rx="2" fill="#7f1d1d"/>
+    <!-- Body highlight -->
+    <path d="M70 185 Q200 178 340 185" fill="none" stroke="#fca5a5" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+    <!-- Headlight (front, right side) -->
+    <ellipse cx="345" cy="200" rx="12" ry="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="2.5"/>
+    <!-- Taillight (rear, left side) -->
+    <ellipse cx="55" cy="200" rx="10" ry="8" fill="#fca5a5" stroke="#7f1d1d" stroke-width="2.5"/>
+    <!-- Bumper -->
+    <rect x="45" y="225" width="310" height="10" rx="3" fill="#78716c" stroke="#44403c" stroke-width="2"/>
+    <!-- Front wheel -->
+    <circle cx="290" cy="235" r="28" fill="#1c1917" stroke="#0c0a09" stroke-width="3"/>
+    <circle cx="290" cy="235" r="14" fill="#78716c" stroke="#44403c" stroke-width="2"/>
+    <circle cx="290" cy="235" r="5" fill="#a8a29e"/>
+    <!-- Rear wheel -->
+    <circle cx="110" cy="235" r="28" fill="#1c1917" stroke="#0c0a09" stroke-width="3"/>
+    <circle cx="110" cy="235" r="14" fill="#78716c" stroke="#44403c" stroke-width="2"/>
+    <circle cx="110" cy="235" r="5" fill="#a8a29e"/>
+    <!-- Wheel spokes (front) -->
+    <line x1="278" y1="235" x2="302" y2="235" stroke="#a8a29e" stroke-width="2"/>
+    <line x1="290" y1="223" x2="290" y2="247" stroke="#a8a29e" stroke-width="2"/>
+    <line x1="98" y1="235" x2="122" y2="235" stroke="#a8a29e" stroke-width="2"/>
+    <line x1="110" y1="223" x2="110" y2="247" stroke="#a8a29e" stroke-width="2"/>
+  </g>
+</svg>

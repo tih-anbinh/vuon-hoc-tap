@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-dress desc-dress">
+  <title id="title-dress">Dress - Pretty summer dress</title>
+  <desc id="desc-dress">A pretty pink summer dress with short sleeves, a bow at the waist, and a flared skirt.</desc>
+  <defs>
+    <linearGradient id="dress-pink" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f9a8d4"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <line x1="80" y1="270" x2="320" y2="270" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="270" rx="80" ry="7" fill="#0f172a" opacity="0.1"/>
+  <g id="dress-figure" filter="url(#soft-shadow)">
+    <!-- Hanger hook -->
+    <path d="M200 15 Q215 15 215 30 Q215 42 200 42" fill="none" stroke="#92400e" stroke-width="4" stroke-linecap="round"/>
+    <!-- Hanger -->
+    <path d="M200 42 L140 65 L140 72 L200 52 L260 72 L260 65 Z" fill="#d97706" stroke="#92400e" stroke-width="2"/>
+    <!-- Bodice -->
+    <path d="M155 65 L130 90 L150 95 L150 130 Q200 135 250 130 L250 95 L270 90 L245 65 Q200 75 155 65 Z" fill="url(#dress-pink)" stroke="#be185d" stroke-width="3"/>
+    <!-- Neckline -->
+    <path d="M165 68 Q200 80 235 68" fill="none" stroke="#be185d" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Waist ribbon -->
+    <rect x="148" y="128" width="104" height="10" rx="4" fill="#be185d" stroke="#9d174d" stroke-width="2"/>
+    <!-- Bow center -->
+    <circle cx="200" cy="133" r="6" fill="#9d174d" stroke="#831843" stroke-width="1.5"/>
+    <!-- Bow loops -->
+    <ellipse cx="185" cy="133" rx="12" ry="7" fill="#be185d" stroke="#9d174d" stroke-width="1.5"/>
+    <ellipse cx="215" cy="133" rx="12" ry="7" fill="#be185d" stroke="#9d174d" stroke-width="1.5"/>
+    <!-- Bow tails -->
+    <path d="M188 138 L180 155" fill="none" stroke="#be185d" stroke-width="3" stroke-linecap="round"/>
+    <path d="M212 138 L220 155" fill="none" stroke="#be185d" stroke-width="3" stroke-linecap="round"/>
+    <!-- Skirt -->
+    <path d="M148 138 Q130 200 110 265 Q200 275 290 265 Q270 200 252 138 Q200 145 148 138 Z" fill="url(#dress-pink)" stroke="#be185d" stroke-width="3"/>
+    <!-- Skirt folds -->
+    <path d="M170 145 L155 260" fill="none" stroke="#db2777" stroke-width="2" opacity="0.3"/>
+    <path d="M200 148 L200 265" fill="none" stroke="#db2777" stroke-width="2" opacity="0.3"/>
+    <path d="M230 145 L245 260" fill="none" stroke="#db2777" stroke-width="2" opacity="0.3"/>
+    <!-- Polka dots -->
+    <circle cx="155" cy="180" r="5" fill="#fce7f3" opacity="0.6"/>
+    <circle cx="200" cy="200" r="5" fill="#fce7f3" opacity="0.6"/>
+    <circle cx="245" cy="180" r="5" fill="#fce7f3" opacity="0.6"/>
+    <circle cx="175" cy="220" r="5" fill="#fce7f3" opacity="0.6"/>
+    <circle cx="225" cy="220" r="5" fill="#fce7f3" opacity="0.6"/>
+    <circle cx="145" cy="240" r="5" fill="#fce7f3" opacity="0.6"/>
+    <circle cx="200" cy="245" r="5" fill="#fce7f3" opacity="0.6"/>
+    <circle cx="255" cy="240" r="5" fill="#fce7f3" opacity="0.6"/>
+  </g>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-lemon desc-lemon">
+  <title id="title-lemon">Lemon - Bright yellow lemon</title>
+  <desc id="desc-lemon">A bright yellow lemon with a pointed tip, a small green leaf, and a cut half showing the segments inside.</desc>
+  <defs>
+    <linearGradient id="lemon-yellow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#eab308"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <line x1="60" y1="260" x2="340" y2="260" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="260" rx="90" ry="8" fill="#0f172a" opacity="0.1"/>
+
+  <g id="lemon-figure" filter="url(#soft-shadow)">
+    <!-- Cut half (behind, showing segments) -->
+    <circle cx="280" cy="175" r="50" fill="#fef9c3" stroke="#d97706" stroke-width="3"/>
+    <!-- Rind ring -->
+    <circle cx="280" cy="175" r="50" fill="none" stroke="#eab308" stroke-width="8"/>
+    <!-- Inner circle -->
+    <circle cx="280" cy="175" r="38" fill="#fef9c3" stroke="#fde047" stroke-width="2"/>
+    <!-- Segments -->
+    <line x1="280" y1="137" x2="280" y2="213" stroke="#eab308" stroke-width="2" opacity="0.6"/>
+    <line x1="242" y1="175" x2="318" y2="175" stroke="#eab308" stroke-width="2" opacity="0.6"/>
+    <line x1="253" y1="148" x2="307" y2="202" stroke="#eab308" stroke-width="2" opacity="0.6"/>
+    <line x1="253" y1="202" x2="307" y2="148" stroke="#eab308" stroke-width="2" opacity="0.6"/>
+    <!-- Center pip -->
+    <circle cx="280" cy="175" r="6" fill="#fde047"/>
+
+    <!-- Whole lemon (foreground) -->
+    <ellipse cx="160" cy="175" rx="75" ry="50" fill="url(#lemon-yellow)" stroke="#ca8a04" stroke-width="3.5"/>
+
+    <!-- Pointed tips -->
+    <ellipse cx="82" cy="175" rx="12" ry="6" fill="#eab308" stroke="#ca8a04" stroke-width="2"/>
+    <ellipse cx="238" cy="175" rx="10" ry="5" fill="#eab308" stroke="#ca8a04" stroke-width="2"/>
+
+    <!-- Highlight -->
+    <path d="M120 150 Q160 135 200 150" fill="none" stroke="#fef9c3" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
+
+    <!-- Subtle texture bumps -->
+    <circle cx="130" cy="165" r="2" fill="#ca8a04" opacity="0.2"/>
+    <circle cx="150" cy="158" r="2" fill="#ca8a04" opacity="0.2"/>
+    <circle cx="170" cy="162" r="2" fill="#ca8a04" opacity="0.2"/>
+    <circle cx="145" cy="185" r="2" fill="#ca8a04" opacity="0.2"/>
+    <circle cx="175" cy="180" r="2" fill="#ca8a04" opacity="0.2"/>
+
+    <!-- Stem nub -->
+    <ellipse cx="236" cy="172" rx="4" ry="3" fill="#65a30d" stroke="#4d7c0f" stroke-width="1.5"/>
+
+    <!-- Leaf -->
+    <path d="M238 170 C250 155 270 148 280 152 C275 160 255 165 238 170 Z" fill="#4ade80" stroke="#16a34a" stroke-width="2"/>
+    <path d="M238 170 C255 158 270 152 278 153" fill="none" stroke="#16a34a" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+</svg>

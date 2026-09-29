@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-chocolate desc-chocolate">
+  <title id="title-chocolate">Chocolate - Chocolate bar</title>
+  <desc id="desc-chocolate">A partially unwrapped chocolate bar showing brown squares in a grid pattern, with colourful foil wrapper peeled back.</desc>
+  <defs>
+    <linearGradient id="choc-brown" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#78350f"/>
+      <stop offset="100%" stop-color="#451a03"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <line x1="60" y1="260" x2="340" y2="260" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="260" rx="100" ry="8" fill="#0f172a" opacity="0.1"/>
+
+  <g id="chocolate-figure" filter="url(#soft-shadow)" transform="rotate(-8 200 160)">
+    <!-- Wrapper (gold foil, partially peeled) -->
+    <rect x="85" y="110" width="230" height="120" rx="6" fill="#d97706" stroke="#b45309" stroke-width="3"/>
+    <!-- Wrapper inner -->
+    <rect x="88" y="113" width="224" height="114" rx="4" fill="#f59e0b"/>
+    <!-- Wrapper pattern stripes -->
+    <line x1="88" y1="140" x2="312" y2="140" stroke="#d97706" stroke-width="1.5" opacity="0.4"/>
+    <line x1="88" y1="200" x2="312" y2="200" stroke="#d97706" stroke-width="1.5" opacity="0.4"/>
+
+    <!-- Peeled-back wrapper flap (top-right) -->
+    <path d="M220 110 L315 110 L315 170 C310 165 290 155 270 160 C250 165 240 145 220 110 Z" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+    <path d="M315 110 L315 170 C310 165 290 155 270 160" fill="none" stroke="#b45309" stroke-width="2"/>
+
+    <!-- Exposed chocolate (grid of squares) -->
+    <rect x="85" y="110" width="140" height="120" rx="4" fill="url(#choc-brown)" stroke="#3b1506" stroke-width="3"/>
+
+    <!-- Chocolate grid lines -->
+    <line x1="120" y1="113" x2="120" y2="227" stroke="#5c2d0e" stroke-width="2"/>
+    <line x1="155" y1="113" x2="155" y2="227" stroke="#5c2d0e" stroke-width="2"/>
+    <line x1="190" y1="113" x2="190" y2="227" stroke="#5c2d0e" stroke-width="2"/>
+
+    <line x1="88" y1="140" x2="222" y2="140" stroke="#5c2d0e" stroke-width="2"/>
+    <line x1="88" y1="170" x2="222" y2="170" stroke="#5c2d0e" stroke-width="2"/>
+    <line x1="88" y1="200" x2="222" y2="200" stroke="#5c2d0e" stroke-width="2"/>
+
+    <!-- Chocolate square highlights -->
+    <rect x="92" y="116" width="24" height="20" rx="2" fill="#92400e" opacity="0.3"/>
+    <rect x="127" y="145" width="24" height="20" rx="2" fill="#92400e" opacity="0.3"/>
+    <rect x="162" y="175" width="24" height="20" rx="2" fill="#92400e" opacity="0.3"/>
+
+    <!-- Broken piece (one square detached) -->
+    <rect x="230" y="175" width="32" height="28" rx="3" fill="url(#choc-brown)" stroke="#3b1506" stroke-width="2.5" transform="rotate(15 246 189)"/>
+    <line x1="246" y1="178" x2="246" y2="200" stroke="#5c2d0e" stroke-width="1.5" transform="rotate(15 246 189)"/>
+  </g>
+</svg>

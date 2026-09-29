@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-juice desc-juice">
+  <title id="title-juice">Juice - Glass of orange juice</title>
+  <desc id="desc-juice">A tall clear glass filled with bright orange juice, with a striped straw and an orange slice on the rim.</desc>
+  <defs>
+    <linearGradient id="juice-orange" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <linearGradient id="glass-shine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.2"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <line x1="60" y1="265" x2="340" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="265" rx="55" ry="6" fill="#0f172a" opacity="0.1"/>
+
+  <g id="juice-figure" filter="url(#soft-shadow)">
+    <!-- Glass (tapered) -->
+    <path d="M155 70 L145 255 Q145 262 200 262 Q255 262 255 255 L245 70 Z" fill="#e0f2fe" stroke="#94a3b8" stroke-width="3" opacity="0.6"/>
+
+    <!-- Juice fill -->
+    <path d="M157 85 L147 252 Q147 258 200 258 Q253 258 253 252 L243 85 Z" fill="url(#juice-orange)" opacity="0.85"/>
+
+    <!-- Juice surface (top) -->
+    <ellipse cx="200" cy="85" rx="43" ry="8" fill="#fb923c" stroke="#ea580c" stroke-width="2"/>
+
+    <!-- Glass shine -->
+    <path d="M162 90 L153 248 Q155 252 160 252 L168 90 Z" fill="url(#glass-shine)"/>
+
+    <!-- Bubbles -->
+    <circle cx="180" cy="180" r="4" fill="#ffffff" opacity="0.4"/>
+    <circle cx="210" cy="200" r="3" fill="#ffffff" opacity="0.3"/>
+    <circle cx="190" cy="220" r="3.5" fill="#ffffff" opacity="0.35"/>
+    <circle cx="220" cy="150" r="2.5" fill="#ffffff" opacity="0.3"/>
+
+    <!-- Straw (striped) -->
+    <line x1="225" y1="30" x2="215" y2="240" stroke="#ef4444" stroke-width="7" stroke-linecap="round"/>
+    <line x1="225" y1="30" x2="215" y2="240" stroke="#ffffff" stroke-width="7" stroke-linecap="round" stroke-dasharray="10,10"/>
+
+    <!-- Orange slice on rim -->
+    <g transform="translate(245, 72) rotate(15)">
+      <circle cx="0" cy="0" r="20" fill="#fb923c" stroke="#ea580c" stroke-width="2.5"/>
+      <circle cx="0" cy="0" r="15" fill="#fdba74"/>
+      <!-- Segments -->
+      <line x1="0" y1="-14" x2="0" y2="14" stroke="#ea580c" stroke-width="1.5"/>
+      <line x1="-12" y1="-7" x2="12" y2="7" stroke="#ea580c" stroke-width="1.5"/>
+      <line x1="-12" y1="7" x2="12" y2="-7" stroke="#ea580c" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="3" fill="#fef3c7"/>
+    </g>
+
+    <!-- Glass rim highlight -->
+    <path d="M158 68 Q200 62 242 68" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  </g>
+</svg>

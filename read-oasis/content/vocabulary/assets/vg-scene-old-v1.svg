@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-old desc-old">
+  <title id="title-old">Old - A worn tattered teddy bear</title>
+  <desc id="desc-old">A well-loved old teddy bear with patches, faded fur, a missing button eye, and a stitched-on smile.</desc>
+  <defs>
+    <linearGradient id="old-bear" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d6d3d1"/>
+      <stop offset="100%" stop-color="#78716c"/>
+    </linearGradient>
+    <linearGradient id="old-patch" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a16207"/>
+      <stop offset="100%" stop-color="#78350f"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <line x1="30" y1="265" x2="370" y2="265" stroke="#78716c" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="265" rx="120" ry="7" fill="#0f172a" opacity="0.15"/>
+
+  <!-- Dust particles floating (old, dusty) -->
+  <g fill="#a8a29e" opacity="0.6">
+    <circle cx="60" cy="90" r="2"/>
+    <circle cx="80" cy="130" r="1.5"/>
+    <circle cx="330" cy="100" r="2"/>
+    <circle cx="350" cy="150" r="1.5"/>
+    <circle cx="45" cy="180" r="2"/>
+    <circle cx="360" cy="200" r="1.5"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Body -->
+    <ellipse cx="200" cy="200" rx="70" ry="55" fill="url(#old-bear)" stroke="#44403c" stroke-width="4"/>
+    <!-- Head -->
+    <circle cx="200" cy="115" r="55" fill="url(#old-bear)" stroke="#44403c" stroke-width="4"/>
+    <!-- Ears -->
+    <circle cx="160" cy="75" r="22" fill="url(#old-bear)" stroke="#44403c" stroke-width="3.5"/>
+    <circle cx="240" cy="75" r="22" fill="url(#old-bear)" stroke="#44403c" stroke-width="3.5"/>
+    <circle cx="160" cy="75" r="12" fill="#fbcfe8" opacity="0.6"/>
+    <circle cx="240" cy="75" r="12" fill="#fbcfe8" opacity="0.6"/>
+    <!-- Legs -->
+    <ellipse cx="165" cy="255" rx="20" ry="12" fill="url(#old-bear)" stroke="#44403c" stroke-width="3.5"/>
+    <ellipse cx="235" cy="255" rx="20" ry="12" fill="url(#old-bear)" stroke="#44403c" stroke-width="3.5"/>
+    <!-- Arms -->
+    <ellipse cx="135" cy="185" rx="15" ry="30" fill="url(#old-bear)" stroke="#44403c" stroke-width="3.5" transform="rotate(-20 135 185)"/>
+    <ellipse cx="265" cy="185" rx="15" ry="30" fill="url(#old-bear)" stroke="#44403c" stroke-width="3.5" transform="rotate(20 265 185)"/>
+
+    <!-- Muzzle -->
+    <ellipse cx="200" cy="135" rx="25" ry="18" fill="#f5f5f4" stroke="#44403c" stroke-width="3"/>
+
+    <!-- One eye (button, still there) -->
+    <circle cx="180" cy="105" r="6" fill="#0c0a09" stroke="#000" stroke-width="1.5"/>
+    <circle cx="181" cy="103" r="1.5" fill="#ffffff"/>
+    <!-- Cross stitches showing old button attached -->
+    <line x1="177" y1="102" x2="183" y2="108" stroke="#78716c" stroke-width="1"/>
+    <line x1="183" y1="102" x2="177" y2="108" stroke="#78716c" stroke-width="1"/>
+
+    <!-- Other eye MISSING (just an X stitch, showing loss/wear) -->
+    <line x1="215" y1="100" x2="227" y2="112" stroke="#44403c" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="227" y1="100" x2="215" y2="112" stroke="#44403c" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Nose (stitched) -->
+    <ellipse cx="200" cy="128" rx="6" ry="4" fill="#292524" stroke="#000" stroke-width="1.5"/>
+
+    <!-- Mouth (stitched, uneven) -->
+    <path d="M200 138 L200 145" stroke="#44403c" stroke-width="2"/>
+    <path d="M185 148 Q200 155 215 148" fill="none" stroke="#44403c" stroke-width="2" stroke-linecap="round"/>
+    <!-- Stitching dashes on mouth -->
+    <line x1="188" y1="150" x2="192" y2="151" stroke="#292524" stroke-width="1.5"/>
+    <line x1="196" y1="152" x2="200" y2="153" stroke="#292524" stroke-width="1.5"/>
+    <line x1="204" y1="153" x2="208" y2="152" stroke="#292524" stroke-width="1.5"/>
+    <line x1="212" y1="151" x2="216" y2="150" stroke="#292524" stroke-width="1.5"/>
+
+    <!-- Patch on belly (brown, with stitching around) -->
+    <rect x="180" y="200" width="40" height="30" rx="3" fill="url(#old-patch)" stroke="#451a03" stroke-width="2.5"/>
+    <g stroke="#292524" stroke-width="1.5" stroke-dasharray="3,2" fill="none">
+      <rect x="180" y="200" width="40" height="30" rx="3"/>
+    </g>
+    <!-- Patch on shoulder -->
+    <path d="M255 165 L275 165 L272 180 L252 180 Z" fill="#3b82f6" stroke="#1e3a8a" stroke-width="2.5"/>
+    <g stroke="#1e3a8a" stroke-width="1" stroke-dasharray="3,2" fill="none">
+      <path d="M255 165 L275 165 L272 180 L252 180 Z"/>
+    </g>
+
+    <!-- Tear/rip on ear -->
+    <path d="M155 68 L152 78 L158 74 L155 82" fill="none" stroke="#44403c" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Loose thread hanging -->
+    <path d="M270 205 Q275 220 272 235" fill="none" stroke="#78716c" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Cobweb in corner (old/forgotten) -->
+  <g stroke="#e7e5e4" stroke-width="1" fill="none" opacity="0.7">
+    <line x1="20" y1="20" x2="70" y2="60"/>
+    <line x1="70" y1="20" x2="20" y2="60"/>
+    <line x1="20" y1="40" x2="70" y2="40"/>
+    <line x1="45" y1="20" x2="45" y2="60"/>
+  </g>
+</svg>

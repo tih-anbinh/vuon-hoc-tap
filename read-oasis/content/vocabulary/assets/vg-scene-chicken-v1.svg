@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-chicken desc-chicken">
+  <title id="title-chicken">Chicken - Plump farm chicken</title>
+  <desc id="desc-chicken">A plump white chicken with a red comb and wattle, orange beak, yellow legs, and tail feathers, standing on the ground.</desc>
+  <defs>
+    <linearGradient id="chicken-body" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fefce8"/>
+      <stop offset="100%" stop-color="#fef9c3"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <line x1="40" y1="265" x2="360" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="265" rx="80" ry="8" fill="#0f172a" opacity="0.1"/>
+
+  <g id="chicken-figure" filter="url(#soft-shadow)">
+    <!-- Tail feathers -->
+    <path d="M110 150 C80 130 70 100 85 80" fill="none" stroke="#d97706" stroke-width="8" stroke-linecap="round"/>
+    <path d="M115 155 C90 140 75 115 80 90" fill="none" stroke="#fbbf24" stroke-width="6" stroke-linecap="round"/>
+    <path d="M120 145 C95 125 90 100 100 85" fill="none" stroke="#f59e0b" stroke-width="7" stroke-linecap="round"/>
+
+    <!-- Legs -->
+    <line x1="195" y1="225" x2="185" y2="255" stroke="#f59e0b" stroke-width="5" stroke-linecap="round"/>
+    <path d="M175 255 L185 255 L195 255" fill="none" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/>
+    <line x1="180" y1="255" x2="175" y2="260" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+    <line x1="185" y1="255" x2="185" y2="262" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+    <line x1="190" y1="255" x2="195" y2="260" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+
+    <line x1="225" y1="225" x2="230" y2="255" stroke="#f59e0b" stroke-width="5" stroke-linecap="round"/>
+    <path d="M220 255 L230 255 L240 255" fill="none" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/>
+    <line x1="225" y1="255" x2="220" y2="260" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+    <line x1="230" y1="255" x2="230" y2="262" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+    <line x1="235" y1="255" x2="240" y2="260" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Body (plump) -->
+    <ellipse cx="200" cy="180" rx="75" ry="55" fill="url(#chicken-body)" stroke="#d97706" stroke-width="3.5"/>
+
+    <!-- Wing -->
+    <path d="M160 165 C140 180 145 210 175 215 C200 218 220 200 215 180 C210 165 180 155 160 165 Z" fill="#fef9c3" stroke="#d97706" stroke-width="2.5"/>
+    <!-- Wing feather lines -->
+    <path d="M165 180 C175 185 185 195 180 205" fill="none" stroke="#eab308" stroke-width="2" stroke-linecap="round"/>
+    <path d="M175 175 C185 180 195 190 190 200" fill="none" stroke="#eab308" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Neck -->
+    <path d="M260 160 C270 140 275 120 270 100" fill="none" stroke="url(#chicken-body)" stroke-width="28" stroke-linecap="round"/>
+    <path d="M260 160 C270 140 275 120 270 100" fill="none" stroke="#d97706" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Head -->
+    <circle cx="270" cy="88" r="25" fill="url(#chicken-body)" stroke="#d97706" stroke-width="3"/>
+
+    <!-- Red comb (on top) -->
+    <path d="M258 68 C260 55 265 50 270 55 C275 48 280 50 282 58 C288 52 292 55 290 65 C285 62 275 60 265 62 Z" fill="#ef4444" stroke="#dc2626" stroke-width="2"/>
+
+    <!-- Eye -->
+    <circle cx="278" cy="84" r="5" fill="#1e293b"/>
+    <circle cx="276" cy="82" r="2" fill="#ffffff"/>
+
+    <!-- Beak -->
+    <path d="M292 90 L315 88 L292 96 Z" fill="#f59e0b" stroke="#d97706" stroke-width="2" stroke-linejoin="round"/>
+
+    <!-- Wattle (red, under beak) -->
+    <ellipse cx="295" cy="102" rx="6" ry="10" fill="#ef4444" stroke="#dc2626" stroke-width="1.5"/>
+
+    <!-- Cheek blush -->
+    <circle cx="282" cy="94" r="5" fill="#fca5a5" opacity="0.4"/>
+  </g>
+</svg>

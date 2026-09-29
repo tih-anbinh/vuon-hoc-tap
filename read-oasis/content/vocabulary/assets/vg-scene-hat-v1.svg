@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-hat desc-hat">
+  <title id="title-hat">Hat - Sun hat</title>
+  <desc id="desc-hat">A wide-brimmed straw sun hat with a colourful ribbon band, seen from a slight angle.</desc>
+  <defs>
+    <linearGradient id="hat-straw" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <line x1="60" y1="265" x2="340" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="265" rx="100" ry="8" fill="#0f172a" opacity="0.1"/>
+  <g id="hat-figure" filter="url(#soft-shadow)">
+    <!-- Brim (wide ellipse) -->
+    <ellipse cx="200" cy="195" rx="155" ry="40" fill="url(#hat-straw)" stroke="#b45309" stroke-width="3.5"/>
+    <!-- Brim underside shadow -->
+    <ellipse cx="200" cy="200" rx="140" ry="30" fill="#b45309" opacity="0.15"/>
+    <!-- Crown -->
+    <path d="M130 195 Q130 90 200 75 Q270 90 270 195" fill="url(#hat-straw)" stroke="#b45309" stroke-width="3.5"/>
+    <!-- Crown top highlight -->
+    <path d="M165 100 Q200 85 235 100" fill="none" stroke="#fef3c7" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+    <!-- Ribbon band -->
+    <path d="M130 175 Q200 165 270 175 Q200 185 130 175 Z" fill="#ef4444" stroke="#b91c1c" stroke-width="2"/>
+    <!-- Ribbon bow -->
+    <ellipse cx="270" cy="175" rx="15" ry="10" fill="#ef4444" stroke="#b91c1c" stroke-width="1.5"/>
+    <ellipse cx="285" cy="180" rx="12" ry="8" fill="#dc2626" stroke="#b91c1c" stroke-width="1.5"/>
+    <circle cx="272" cy="177" r="4" fill="#b91c1c"/>
+    <!-- Ribbon tails -->
+    <path d="M280 183 Q285 200 278 215" fill="none" stroke="#ef4444" stroke-width="4" stroke-linecap="round"/>
+    <path d="M285 185 Q292 200 290 210" fill="none" stroke="#dc2626" stroke-width="3" stroke-linecap="round"/>
+    <!-- Straw texture lines -->
+    <path d="M150 120 Q200 115 250 120" fill="none" stroke="#ca8a04" stroke-width="1.5" opacity="0.3"/>
+    <path d="M145 140 Q200 135 255 140" fill="none" stroke="#ca8a04" stroke-width="1.5" opacity="0.3"/>
+    <path d="M140 160 Q200 155 260 160" fill="none" stroke="#ca8a04" stroke-width="1.5" opacity="0.3"/>
+    <!-- Brim texture -->
+    <ellipse cx="200" cy="195" rx="130" ry="30" fill="none" stroke="#ca8a04" stroke-width="1" opacity="0.2"/>
+    <ellipse cx="200" cy="195" rx="100" ry="22" fill="none" stroke="#ca8a04" stroke-width="1" opacity="0.2"/>
+  </g>
+</svg>

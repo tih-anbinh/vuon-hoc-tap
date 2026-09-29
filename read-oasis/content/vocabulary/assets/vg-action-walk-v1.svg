@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-walk desc-walk">
+  <title id="title-walk">Walk - Child walking</title>
+  <desc id="desc-walk">A cheerful child walking mid-stride, one arm swinging forward, the other back, with footprints trailing behind.</desc>
+  <defs>
+    <linearGradient id="walk-skin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5d0a9"/>
+    </linearGradient>
+    <linearGradient id="walk-shirt" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#5b21b6"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <line x1="30" y1="265" x2="370" y2="265" stroke="#78716c" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Footprints trail behind -->
+  <g fill="#78716c" opacity="0.4">
+    <ellipse cx="60" cy="272" rx="10" ry="5"/>
+    <ellipse cx="110" cy="272" rx="10" ry="5"/>
+    <ellipse cx="160" cy="272" rx="10" ry="5"/>
+  </g>
+
+  <ellipse cx="230" cy="270" rx="60" ry="6" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Back leg (right, planted behind) -->
+    <path d="M225 195 L200 265" fill="none" stroke="#1e40af" stroke-width="20" stroke-linecap="round"/>
+    <ellipse cx="196" cy="267" rx="16" ry="6" fill="#78350f" stroke="#451a03" stroke-width="2.5"/>
+
+    <!-- Front leg (left, stepping forward) -->
+    <path d="M245 195 Q265 220 275 258" fill="none" stroke="#1e40af" stroke-width="20" stroke-linecap="round"/>
+    <ellipse cx="278" cy="260" rx="16" ry="6" fill="#78350f" stroke="#451a03" stroke-width="2.5"/>
+
+    <!-- Body/torso -->
+    <path d="M195 120 Q230 112 265 122 L262 200 L200 200 Z" fill="url(#walk-shirt)" stroke="#4c1d95" stroke-width="3"/>
+    <!-- Neck -->
+    <rect x="220" y="98" width="22" height="15" fill="url(#walk-skin)" stroke="#a16207" stroke-width="2.5"/>
+
+    <!-- Back arm (right, swinging back) -->
+    <path d="M198 135 Q170 145 155 170" fill="none" stroke="url(#walk-shirt)" stroke-width="15" stroke-linecap="round"/>
+    <circle cx="153" cy="172" r="9" fill="url(#walk-skin)" stroke="#a16207" stroke-width="2.5"/>
+
+    <!-- Front arm (left, swinging forward) -->
+    <path d="M260 135 Q290 145 300 175" fill="none" stroke="url(#walk-shirt)" stroke-width="15" stroke-linecap="round"/>
+    <circle cx="302" cy="178" r="9" fill="url(#walk-skin)" stroke="#a16207" stroke-width="2.5"/>
+
+    <!-- Head -->
+    <circle cx="230" cy="72" r="26" fill="url(#walk-skin)" stroke="#a16207" stroke-width="3"/>
+    <!-- Hair -->
+    <path d="M205 65 Q208 42 230 38 Q252 42 255 65 Q248 50 230 48 Q212 50 205 65 Z" fill="#78350f" stroke="#451a03" stroke-width="2"/>
+    <!-- Eyes (happy, looking forward) -->
+    <circle cx="222" cy="72" r="2.5" fill="#0c0a09"/>
+    <circle cx="238" cy="72" r="2.5" fill="#0c0a09"/>
+    <!-- Smile -->
+    <path d="M223 85 Q230 92 237 85" fill="none" stroke="#0c0a09" stroke-width="2" stroke-linecap="round"/>
+    <!-- Cheeks -->
+    <circle cx="212" cy="82" r="4" fill="#fca5a5" opacity="0.6"/>
+    <circle cx="248" cy="82" r="4" fill="#fca5a5" opacity="0.6"/>
+  </g>
+
+  <!-- Motion swoosh lines behind -->
+  <g stroke="#a855f7" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6">
+    <path d="M100 170 L140 175"/>
+    <path d="M95 200 L135 205"/>
+    <path d="M110 230 L145 235"/>
+  </g>
+
+  <!-- Sun in sky -->
+  <circle cx="345" cy="55" r="18" fill="#fde047" stroke="#a16207" stroke-width="2.5"/>
+  <g stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round">
+    <line x1="345" y1="30" x2="345" y2="24"/>
+    <line x1="370" y1="55" x2="376" y2="55"/>
+    <line x1="327" y1="37" x2="323" y2="33"/>
+    <line x1="363" y1="37" x2="367" y2="33"/>
+  </g>
+</svg>

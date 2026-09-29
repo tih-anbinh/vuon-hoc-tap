@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-door desc-door">
+  <title id="title-door">Door - Front door</title>
+  <desc id="desc-door">A wooden front door with panels, a round knob, a small window at the top, and a welcome mat.</desc>
+  <defs>
+    <linearGradient id="door-wood" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b45309"/>
+      <stop offset="100%" stop-color="#7c2d12"/>
+    </linearGradient>
+    <linearGradient id="door-frame" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a8a29e"/>
+      <stop offset="100%" stop-color="#57534e"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <line x1="30" y1="265" x2="370" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <g id="door-figure" filter="url(#soft-shadow)">
+    <!-- Wall around door -->
+    <rect x="60" y="30" width="280" height="230" fill="#fef3c7" stroke="#ca8a04" stroke-width="2" opacity="0.5"/>
+    <!-- Door frame -->
+    <rect x="105" y="35" width="190" height="225" rx="4" fill="url(#door-frame)" stroke="#292524" stroke-width="3"/>
+    <!-- Door body -->
+    <rect x="115" y="45" width="170" height="215" rx="3" fill="url(#door-wood)" stroke="#451a03" stroke-width="3.5"/>
+    <!-- Small window at top -->
+    <rect x="145" y="60" width="110" height="55" rx="3" fill="#bfdbfe" stroke="#451a03" stroke-width="3"/>
+    <!-- Window cross -->
+    <line x1="200" y1="60" x2="200" y2="115" stroke="#451a03" stroke-width="2.5"/>
+    <line x1="145" y1="87" x2="255" y2="87" stroke="#451a03" stroke-width="2.5"/>
+    <!-- Window shine -->
+    <path d="M150 65 L180 65 L165 80 Z" fill="#ffffff" opacity="0.5"/>
+    <!-- Upper panel -->
+    <rect x="135" y="130" width="130" height="55" rx="3" fill="none" stroke="#451a03" stroke-width="2.5"/>
+    <rect x="145" y="140" width="110" height="35" rx="2" fill="#92400e" stroke="#451a03" stroke-width="1.5"/>
+    <!-- Lower panel -->
+    <rect x="135" y="195" width="130" height="55" rx="3" fill="none" stroke="#451a03" stroke-width="2.5"/>
+    <rect x="145" y="205" width="110" height="35" rx="2" fill="#92400e" stroke="#451a03" stroke-width="1.5"/>
+    <!-- Doorknob -->
+    <circle cx="255" cy="170" r="8" fill="#fbbf24" stroke="#a16207" stroke-width="2.5"/>
+    <circle cx="255" cy="170" r="4" fill="#fef3c7"/>
+    <!-- Knob plate -->
+    <rect x="248" y="160" width="4" height="20" fill="#a16207" stroke="#78350f" stroke-width="1"/>
+    <!-- Hinges -->
+    <rect x="115" y="65" width="10" height="15" rx="2" fill="#a8a29e" stroke="#292524" stroke-width="1.5"/>
+    <rect x="115" y="140" width="10" height="15" rx="2" fill="#a8a29e" stroke="#292524" stroke-width="1.5"/>
+    <rect x="115" y="220" width="10" height="15" rx="2" fill="#a8a29e" stroke="#292524" stroke-width="1.5"/>
+    <!-- Wood grain -->
+    <path d="M120 100 Q135 105 150 100" fill="none" stroke="#451a03" stroke-width="0.8" opacity="0.4"/>
+    <path d="M260 100 Q275 105 285 100" fill="none" stroke="#451a03" stroke-width="0.8" opacity="0.4"/>
+    <!-- Welcome mat -->
+    <rect x="130" y="260" width="140" height="12" rx="2" fill="#78350f" stroke="#451a03" stroke-width="2.5"/>
+    <line x1="140" y1="263" x2="140" y2="270" stroke="#451a03" stroke-width="1" opacity="0.5"/>
+    <line x1="160" y1="263" x2="160" y2="270" stroke="#451a03" stroke-width="1" opacity="0.5"/>
+    <line x1="180" y1="263" x2="180" y2="270" stroke="#451a03" stroke-width="1" opacity="0.5"/>
+    <line x1="200" y1="263" x2="200" y2="270" stroke="#451a03" stroke-width="1" opacity="0.5"/>
+    <line x1="220" y1="263" x2="220" y2="270" stroke="#451a03" stroke-width="1" opacity="0.5"/>
+    <line x1="240" y1="263" x2="240" y2="270" stroke="#451a03" stroke-width="1" opacity="0.5"/>
+    <line x1="260" y1="263" x2="260" y2="270" stroke="#451a03" stroke-width="1" opacity="0.5"/>
+  </g>
+</svg>

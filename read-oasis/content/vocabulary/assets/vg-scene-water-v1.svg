@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-water desc-water">
+  <title id="title-water">Water - Glass of clear drinking water</title>
+  <desc id="desc-water">A tall clear glass full of water with a droplet splashing, bubbles, and cool blue tones.</desc>
+  <defs>
+    <linearGradient id="glass-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#dbeafe" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#dbeafe" stop-opacity="0.6"/>
+    </linearGradient>
+    <linearGradient id="water-fill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <line x1="30" y1="270" x2="370" y2="270" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="270" rx="90" ry="8" fill="#0f172a" opacity="0.15"/>
+
+  <!-- Splash droplets flying up around glass -->
+  <g fill="#60a5fa" stroke="#1e40af" stroke-width="2">
+    <path d="M130 80 Q125 60 135 55 Q145 60 140 80 Z"/>
+    <circle cx="90" cy="130" r="6"/>
+    <path d="M270 90 Q265 70 275 65 Q285 70 280 90 Z"/>
+    <circle cx="310" cy="140" r="5"/>
+    <circle cx="80" cy="160" r="4"/>
+    <circle cx="320" cy="110" r="4"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Glass outline -->
+    <path d="M140 90 L150 265 L250 265 L260 90 Z" fill="url(#glass-grad)" stroke="#3b82f6" stroke-width="3.5"/>
+    <!-- Rim of glass -->
+    <ellipse cx="200" cy="90" rx="60" ry="10" fill="none" stroke="#3b82f6" stroke-width="3.5"/>
+    <ellipse cx="200" cy="90" rx="60" ry="8" fill="#dbeafe" opacity="0.4"/>
+
+    <!-- Water inside glass -->
+    <path d="M150 130 L155 262 L245 262 L250 130 Z" fill="url(#water-fill)" opacity="0.85"/>
+    <!-- Water surface (top wave) -->
+    <ellipse cx="200" cy="130" rx="53" ry="7" fill="#93c5fd" stroke="#1e40af" stroke-width="2"/>
+    <path d="M147 128 Q170 122 200 128 Q230 134 253 128" fill="none" stroke="#dbeafe" stroke-width="2" opacity="0.9"/>
+
+    <!-- Big splash droplet rising from center -->
+    <path d="M195 90 Q188 60 195 45 Q210 45 205 60 Q212 75 195 90 Z" fill="#60a5fa" stroke="#1e40af" stroke-width="2.5"/>
+    <ellipse cx="198" cy="55" rx="3" ry="5" fill="#dbeafe" opacity="0.8"/>
+
+    <!-- Bubbles inside water -->
+    <circle cx="175" cy="180" r="5" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5" opacity="0.9"/>
+    <circle cx="225" cy="200" r="4" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5" opacity="0.9"/>
+    <circle cx="200" cy="220" r="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5" opacity="0.9"/>
+    <circle cx="180" cy="240" r="3" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5" opacity="0.9"/>
+    <circle cx="220" cy="150" r="4" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5" opacity="0.9"/>
+    <circle cx="165" cy="210" r="3" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5" opacity="0.9"/>
+    <circle cx="230" cy="230" r="3" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5" opacity="0.9"/>
+
+    <!-- Glass highlight (shine down left side) -->
+    <path d="M158 110 L163 250" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+    <path d="M170 105 L172 130" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+  </g>
+
+  <!-- Sparkles for freshness -->
+  <path d="M60 100 L63 108 L70 110 L63 112 L60 120 L57 112 L50 110 L57 108 Z" fill="#fde047" stroke="#a16207" stroke-width="1.5"/>
+  <path d="M340 200 L343 208 L350 210 L343 212 L340 220 L337 212 L330 210 L337 208 Z" fill="#fde047" stroke="#a16207" stroke-width="1.5"/>
+</svg>

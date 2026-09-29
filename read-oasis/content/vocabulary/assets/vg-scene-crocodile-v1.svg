@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-crocodile desc-crocodile">
+  <title id="title-crocodile">Crocodile - Green crocodile with open jaws</title>
+  <desc id="desc-crocodile">A large green crocodile with bumpy scales, a long snout with visible teeth, four short legs, and a powerful tail.</desc>
+  <defs>
+    <linearGradient id="croc-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4d7c0f"/>
+      <stop offset="100%" stop-color="#3f6212"/>
+    </linearGradient>
+    <linearGradient id="croc-belly" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ecfccb"/>
+      <stop offset="100%" stop-color="#d9f99d"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Ground line -->
+  <line x1="20" y1="250" x2="380" y2="250" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Water ripple hint -->
+  <path d="M30 260 Q60 255 90 260 Q120 265 150 260 Q180 255 210 260 Q240 265 270 260 Q300 255 330 260 Q360 265 380 260" fill="none" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- Ground Shadow -->
+  <ellipse cx="200" cy="250" rx="150" ry="10" fill="#0f172a" opacity="0.12"/>
+
+  <!-- CROCODILE -->
+  <g id="croc-figure" filter="url(#soft-shadow)">
+    <!-- Tail (long, tapering, with ridges) -->
+    <path d="M30 185 C50 175 80 180 110 185" fill="none" stroke="url(#croc-green)" stroke-width="22" stroke-linecap="round"/>
+    <path d="M30 185 C50 175 80 180 110 185" fill="none" stroke="#365314" stroke-width="3" stroke-linecap="round"/>
+    <!-- Tail ridges -->
+    <path d="M40 174 L45 168 L50 174" fill="#365314" stroke="#365314" stroke-width="1.5"/>
+    <path d="M58 172 L63 166 L68 172" fill="#365314" stroke="#365314" stroke-width="1.5"/>
+    <path d="M76 174 L81 168 L86 174" fill="#365314" stroke="#365314" stroke-width="1.5"/>
+
+    <!-- Rear legs -->
+    <path d="M130 210 C125 225 118 240 110 245" fill="none" stroke="url(#croc-green)" stroke-width="14" stroke-linecap="round"/>
+    <ellipse cx="108" cy="247" rx="12" ry="5" fill="#4d7c0f" stroke="#365314" stroke-width="2"/>
+    <!-- Toes -->
+    <circle cx="100" cy="246" r="2.5" fill="#365314"/>
+    <circle cx="106" cy="249" r="2.5" fill="#365314"/>
+    <circle cx="112" cy="249" r="2.5" fill="#365314"/>
+
+    <path d="M155 210 C150 225 145 240 138 245" fill="none" stroke="#3f6212" stroke-width="12" stroke-linecap="round"/>
+    <ellipse cx="136" cy="247" rx="11" ry="5" fill="#3f6212" stroke="#365314" stroke-width="2"/>
+
+    <!-- Front legs -->
+    <path d="M240 210 C238 225 232 240 225 245" fill="none" stroke="url(#croc-green)" stroke-width="14" stroke-linecap="round"/>
+    <ellipse cx="223" cy="247" rx="12" ry="5" fill="#4d7c0f" stroke="#365314" stroke-width="2"/>
+    <circle cx="215" cy="246" r="2.5" fill="#365314"/>
+    <circle cx="221" cy="249" r="2.5" fill="#365314"/>
+    <circle cx="227" cy="249" r="2.5" fill="#365314"/>
+
+    <path d="M265 210 C263 225 258 240 252 245" fill="none" stroke="#3f6212" stroke-width="12" stroke-linecap="round"/>
+    <ellipse cx="250" cy="247" rx="11" ry="5" fill="#3f6212" stroke="#365314" stroke-width="2"/>
+
+    <!-- Main body -->
+    <ellipse cx="190" cy="190" rx="95" ry="35" fill="url(#croc-green)" stroke="#365314" stroke-width="3.5"/>
+
+    <!-- Belly -->
+    <ellipse cx="190" cy="200" rx="70" ry="18" fill="url(#croc-belly)"/>
+
+    <!-- Back ridges -->
+    <path d="M100 160 L107 150 L114 160" fill="#365314"/>
+    <path d="M120 157 L127 147 L134 157" fill="#365314"/>
+    <path d="M140 155 L147 145 L154 155" fill="#365314"/>
+    <path d="M160 154 L167 144 L174 154" fill="#365314"/>
+    <path d="M180 155 L187 145 L194 155" fill="#365314"/>
+    <path d="M200 156 L207 146 L214 156" fill="#365314"/>
+    <path d="M220 157 L227 148 L234 157" fill="#365314"/>
+    <path d="M240 159 L247 150 L254 159" fill="#365314"/>
+
+    <!-- Head / Snout -->
+    <path d="M280 180 C300 175 340 170 360 165 C370 162 375 175 360 180 C340 185 300 190 280 195 Z" fill="url(#croc-green)" stroke="#365314" stroke-width="3.5"/>
+
+    <!-- Upper jaw bump -->
+    <ellipse cx="350" cy="168" rx="12" ry="6" fill="#4d7c0f"/>
+
+    <!-- Lower jaw (slightly open) -->
+    <path d="M280 195 C300 198 340 200 358 195 C365 192 365 185 360 180" fill="#3f6212" stroke="#365314" stroke-width="3"/>
+
+    <!-- Teeth (upper) -->
+    <polygon points="310,178 313,185 316,178" fill="#fffbeb" stroke="#d4d4d8" stroke-width="1"/>
+    <polygon points="325,176 328,183 331,176" fill="#fffbeb" stroke="#d4d4d8" stroke-width="1"/>
+    <polygon points="340,174 343,181 346,174" fill="#fffbeb" stroke="#d4d4d8" stroke-width="1"/>
+    <polygon points="352,172 355,179 358,172" fill="#fffbeb" stroke="#d4d4d8" stroke-width="1"/>
+
+    <!-- Teeth (lower) -->
+    <polygon points="315,195 318,188 321,195" fill="#fffbeb" stroke="#d4d4d8" stroke-width="1"/>
+    <polygon points="330,196 333,189 336,196" fill="#fffbeb" stroke="#d4d4d8" stroke-width="1"/>
+    <polygon points="345,195 348,188 351,195" fill="#fffbeb" stroke="#d4d4d8" stroke-width="1"/>
+
+    <!-- Eye (raised bump) -->
+    <ellipse cx="290" cy="172" rx="10" ry="8" fill="#65a30d"/>
+    <circle cx="290" cy="172" r="6" fill="#fef9c3" stroke="#365314" stroke-width="2"/>
+    <ellipse cx="291" cy="172" rx="2.5" ry="5" fill="#1e293b"/>
+    <circle cx="289" cy="170" r="1.5" fill="#ffffff"/>
+
+    <!-- Nostril -->
+    <circle cx="365" cy="168" r="2.5" fill="#365314"/>
+  </g>
+</svg>

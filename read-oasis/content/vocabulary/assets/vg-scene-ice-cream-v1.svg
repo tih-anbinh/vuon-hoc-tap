@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-icecream desc-icecream">
+  <title id="title-icecream">Ice cream - Ice cream cone with scoops</title>
+  <desc id="desc-icecream">A waffle cone holding three colourful scoops of ice cream — pink strawberry, white vanilla, and brown chocolate — with a cherry on top.</desc>
+  <defs>
+    <linearGradient id="cone-waffle" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <line x1="80" y1="280" x2="320" y2="280" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+
+  <g id="icecream-figure" filter="url(#soft-shadow)">
+    <!-- Waffle cone -->
+    <path d="M155 160 L200 275 L245 160 Z" fill="url(#cone-waffle)" stroke="#92400e" stroke-width="3"/>
+    <!-- Waffle pattern (diagonal cross-hatch) -->
+    <line x1="165" y1="175" x2="235" y2="175" stroke="#92400e" stroke-width="1.5" opacity="0.5"/>
+    <line x1="170" y1="195" x2="230" y2="195" stroke="#92400e" stroke-width="1.5" opacity="0.5"/>
+    <line x1="178" y1="215" x2="222" y2="215" stroke="#92400e" stroke-width="1.5" opacity="0.5"/>
+    <line x1="185" y1="235" x2="215" y2="235" stroke="#92400e" stroke-width="1.5" opacity="0.5"/>
+    <line x1="192" y1="255" x2="208" y2="255" stroke="#92400e" stroke-width="1.5" opacity="0.5"/>
+    <!-- Diagonal lines -->
+    <line x1="170" y1="165" x2="195" y2="260" stroke="#92400e" stroke-width="1.5" opacity="0.4"/>
+    <line x1="190" y1="162" x2="200" y2="270" stroke="#92400e" stroke-width="1.5" opacity="0.4"/>
+    <line x1="210" y1="162" x2="205" y2="270" stroke="#92400e" stroke-width="1.5" opacity="0.4"/>
+    <line x1="230" y1="165" x2="205" y2="260" stroke="#92400e" stroke-width="1.5" opacity="0.4"/>
+
+    <!-- Bottom scoop: Chocolate -->
+    <circle cx="200" cy="145" r="42" fill="#78350f" stroke="#451a03" stroke-width="3"/>
+    <circle cx="188" cy="135" r="8" fill="#92400e" opacity="0.4"/>
+
+    <!-- Middle scoop: Vanilla -->
+    <circle cx="185" cy="100" r="38" fill="#fefce8" stroke="#d97706" stroke-width="3"/>
+    <circle cx="175" cy="92" r="7" fill="#ffffff" opacity="0.6"/>
+
+    <!-- Top scoop: Strawberry -->
+    <circle cx="210" cy="65" r="36" fill="#f9a8d4" stroke="#db2777" stroke-width="3"/>
+    <circle cx="200" cy="57" r="6" fill="#fbcfe8" opacity="0.6"/>
+
+    <!-- Strawberry bits in pink scoop -->
+    <circle cx="195" cy="72" r="3" fill="#e11d48" opacity="0.5"/>
+    <circle cx="218" cy="60" r="2.5" fill="#e11d48" opacity="0.5"/>
+    <circle cx="225" cy="75" r="2" fill="#e11d48" opacity="0.5"/>
+
+    <!-- Drip from chocolate scoop -->
+    <path d="M170 155 C168 165 172 172 175 168" fill="#78350f"/>
+    <path d="M230 152 C232 162 228 168 226 164" fill="#78350f"/>
+
+    <!-- Cherry on top -->
+    <circle cx="215" cy="35" r="10" fill="#ef4444" stroke="#dc2626" stroke-width="2.5"/>
+    <circle cx="212" cy="32" r="3" fill="#fca5a5" opacity="0.6"/>
+    <!-- Cherry stem -->
+    <path d="M215 26 C218 15 225 12 228 18" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+</svg>

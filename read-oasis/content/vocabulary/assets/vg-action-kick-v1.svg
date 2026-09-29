@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-kick desc-kick">
+  <title id="title-kick">Kick - Child kicking a soccer ball</title>
+  <desc id="desc-kick">A child mid-kick, foot swinging forward, soccer ball flying with motion lines and impact burst.</desc>
+  <defs>
+    <linearGradient id="kick-skin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5d0a9"/>
+    </linearGradient>
+    <linearGradient id="kick-shirt" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#991b1b"/>
+    </linearGradient>
+    <linearGradient id="kick-shorts" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e40af"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <line x1="30" y1="265" x2="370" y2="265" stroke="#78716c" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="120" cy="265" rx="80" ry="7" fill="#0f172a" opacity="0.12"/>
+
+  <!-- Motion lines behind ball -->
+  <g stroke="#3b82f6" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.75">
+    <path d="M240 150 L200 155"/>
+    <path d="M245 165 L205 170"/>
+    <path d="M250 180 L210 185"/>
+  </g>
+  <!-- Impact burst (star) at kick contact area -->
+  <path d="M215 195 L225 195 L232 185 L235 195 L250 195 L235 205 L242 220 L225 210 L215 220 L212 205 L200 200 Z" fill="#fde047" stroke="#a16207" stroke-width="2" opacity="0.85"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Standing leg (left, planted) -->
+    <path d="M115 210 L110 260" fill="none" stroke="url(#kick-shorts)" stroke-width="20" stroke-linecap="round"/>
+    <ellipse cx="105" cy="262" rx="18" ry="6" fill="#0f172a" stroke="#000" stroke-width="2"/>
+
+    <!-- Kicking leg (right, extended forward) -->
+    <path d="M135 210 Q170 205 220 200" fill="none" stroke="url(#kick-shorts)" stroke-width="20" stroke-linecap="round"/>
+    <!-- Kicking foot/shoe -->
+    <ellipse cx="235" cy="200" rx="20" ry="8" fill="#0f172a" stroke="#000" stroke-width="2.5"/>
+    <path d="M220 198 Q235 190 250 198" fill="#dc2626" stroke="#7f1d1d" stroke-width="1.5"/>
+
+    <!-- Shorts -->
+    <path d="M90 175 Q120 168 150 175 L155 215 L85 215 Z" fill="url(#kick-shorts)" stroke="#1e3a8a" stroke-width="3"/>
+
+    <!-- Torso -->
+    <path d="M95 115 Q120 105 145 112 L152 178 Q120 185 88 178 Z" fill="url(#kick-shirt)" stroke="#7f1d1d" stroke-width="3"/>
+    <!-- Number "1" on shirt (as shape, no text!) -->
+    <rect x="115" y="130" width="10" height="35" fill="#ffffff" stroke="#7f1d1d" stroke-width="2"/>
+
+    <!-- Left arm (out for balance) -->
+    <path d="M92 130 Q65 140 55 165" fill="none" stroke="url(#kick-shirt)" stroke-width="16" stroke-linecap="round"/>
+    <circle cx="52" cy="168" r="9" fill="url(#kick-skin)" stroke="#a16207" stroke-width="2.5"/>
+
+    <!-- Right arm (forward, mid-swing) -->
+    <path d="M145 130 Q170 135 175 155" fill="none" stroke="url(#kick-shirt)" stroke-width="16" stroke-linecap="round"/>
+    <circle cx="178" cy="158" r="9" fill="url(#kick-skin)" stroke="#a16207" stroke-width="2.5"/>
+
+    <!-- Head -->
+    <circle cx="120" cy="85" r="28" fill="url(#kick-skin)" stroke="#a16207" stroke-width="3"/>
+    <!-- Hair -->
+    <path d="M95 78 Q98 55 120 50 Q142 55 145 78 Q138 62 120 60 Q102 62 95 78 Z" fill="#78350f" stroke="#451a03" stroke-width="2"/>
+    <!-- Eyes (focused) -->
+    <circle cx="112" cy="85" r="2.5" fill="#0c0a09"/>
+    <circle cx="130" cy="85" r="2.5" fill="#0c0a09"/>
+    <!-- Focused eyebrows -->
+    <path d="M107 78 L118 80" stroke="#451a03" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M125 80 L136 78" stroke="#451a03" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Determined mouth -->
+    <path d="M113 100 L128 100" stroke="#0c0a09" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Cheeks -->
+    <circle cx="103" cy="95" r="4" fill="#fca5a5" opacity="0.5"/>
+    <circle cx="137" cy="95" r="4" fill="#fca5a5" opacity="0.5"/>
+
+    <!-- Soccer ball (flying, at right side) -->
+    <circle cx="285" cy="180" r="30" fill="#ffffff" stroke="#0f172a" stroke-width="3"/>
+    <!-- Pentagon panels -->
+    <path d="M285 165 L295 172 L291 184 L279 184 L275 172 Z" fill="#0f172a"/>
+    <path d="M285 165 L285 155" stroke="#0f172a" stroke-width="2"/>
+    <path d="M295 172 L305 170" stroke="#0f172a" stroke-width="2"/>
+    <path d="M275 172 L265 170" stroke="#0f172a" stroke-width="2"/>
+    <path d="M279 184 L275 195" stroke="#0f172a" stroke-width="2"/>
+    <path d="M291 184 L295 195" stroke="#0f172a" stroke-width="2"/>
+    <path d="M270 178 Q267 190 275 200" fill="#0f172a" opacity="0.4"/>
+  </g>
+
+  <!-- Speed streaks -->
+  <g stroke="#fde047" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8">
+    <line x1="320" y1="155" x2="345" y2="150"/>
+    <line x1="325" y1="180" x2="355" y2="180"/>
+    <line x1="322" y1="205" x2="350" y2="212"/>
+  </g>
+</svg>

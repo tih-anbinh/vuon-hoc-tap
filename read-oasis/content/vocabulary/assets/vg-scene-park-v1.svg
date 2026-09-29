@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-park desc-park">
+  <title id="title-park">Park - Public park with slide and swing</title>
+  <desc id="desc-park">A sunny park with a slide, a swing, a green tree, a bench, and cheerful flowers on the grass.</desc>
+  <defs>
+    <linearGradient id="sky-park" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="grass-park" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#166534"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <!-- Sky -->
+  <rect x="0" y="0" width="400" height="200" fill="url(#sky-park)"/>
+  <!-- Sun -->
+  <circle cx="60" cy="45" r="20" fill="#fde047" stroke="#ca8a04" stroke-width="2.5"/>
+  <!-- Clouds -->
+  <g fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" opacity="0.9">
+    <ellipse cx="180" cy="50" rx="18" ry="10"/>
+    <ellipse cx="200" cy="45" rx="16" ry="10"/>
+    <ellipse cx="215" cy="52" rx="14" ry="9"/>
+    <ellipse cx="320" cy="70" rx="16" ry="9"/>
+    <ellipse cx="335" cy="65" rx="14" ry="9"/>
+  </g>
+  <!-- Grass -->
+  <path d="M0 200 Q100 190 200 200 Q300 210 400 200 L400 300 L0 300 Z" fill="url(#grass-park)"/>
+  <!-- Path -->
+  <path d="M150 300 Q180 260 200 240 Q220 260 250 300 Z" fill="#d97706" stroke="#92400e" stroke-width="2"/>
+  <g filter="url(#soft-shadow)">
+    <!-- Tree -->
+    <rect x="45" y="140" width="18" height="70" fill="#78350f" stroke="#451a03" stroke-width="2.5"/>
+    <circle cx="54" cy="125" r="40" fill="#16a34a" stroke="#166534" stroke-width="3"/>
+    <circle cx="35" cy="115" r="22" fill="#22c55e" stroke="#166534" stroke-width="2"/>
+    <circle cx="75" cy="115" r="22" fill="#22c55e" stroke="#166534" stroke-width="2"/>
+
+    <!-- Slide structure -->
+    <!-- Ladder posts -->
+    <line x1="145" y1="105" x2="145" y2="215" stroke="#525252" stroke-width="4" stroke-linecap="round"/>
+    <line x1="165" y1="105" x2="165" y2="215" stroke="#525252" stroke-width="4" stroke-linecap="round"/>
+    <!-- Ladder rungs -->
+    <line x1="145" y1="130" x2="165" y2="130" stroke="#78716c" stroke-width="3"/>
+    <line x1="145" y1="150" x2="165" y2="150" stroke="#78716c" stroke-width="3"/>
+    <line x1="145" y1="170" x2="165" y2="170" stroke="#78716c" stroke-width="3"/>
+    <line x1="145" y1="190" x2="165" y2="190" stroke="#78716c" stroke-width="3"/>
+    <!-- Top platform -->
+    <rect x="140" y="95" width="35" height="10" fill="#dc2626" stroke="#7f1d1d" stroke-width="2.5"/>
+    <!-- Slide surface -->
+    <path d="M170 105 L165 105 L215 210 L225 210 Z" fill="#fbbf24" stroke="#a16207" stroke-width="3"/>
+    <path d="M172 108 L222 205" fill="none" stroke="#fef3c7" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+    <!-- Slide side rail -->
+    <path d="M165 105 L215 210" fill="none" stroke="#dc2626" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Slide bottom curve -->
+    <ellipse cx="220" cy="212" rx="12" ry="4" fill="#a16207" stroke="#78350f" stroke-width="2"/>
+
+    <!-- Swing structure -->
+    <!-- A-frame poles -->
+    <line x1="270" y1="215" x2="310" y2="115" stroke="#525252" stroke-width="4" stroke-linecap="round"/>
+    <line x1="350" y1="215" x2="310" y2="115" stroke="#525252" stroke-width="4" stroke-linecap="round"/>
+    <line x1="290" y1="215" x2="330" y2="115" stroke="#525252" stroke-width="4" stroke-linecap="round"/>
+    <line x1="370" y1="215" x2="330" y2="115" stroke="#525252" stroke-width="4" stroke-linecap="round"/>
+    <!-- Top bar -->
+    <line x1="305" y1="115" x2="335" y2="115" stroke="#525252" stroke-width="5" stroke-linecap="round"/>
+    <!-- Swing ropes -->
+    <line x1="315" y1="115" x2="310" y2="180" stroke="#78716c" stroke-width="2.5"/>
+    <line x1="325" y1="115" x2="330" y2="180" stroke="#78716c" stroke-width="2.5"/>
+    <!-- Swing seat -->
+    <rect x="303" y="180" width="34" height="8" rx="2" fill="#78350f" stroke="#451a03" stroke-width="2.5"/>
+
+    <!-- Bench -->
+    <rect x="80" y="225" width="55" height="6" rx="2" fill="#a16207" stroke="#78350f" stroke-width="2"/>
+    <rect x="80" y="215" width="55" height="4" fill="#a16207" stroke="#78350f" stroke-width="1.5"/>
+    <line x1="85" y1="219" x2="85" y2="245" stroke="#525252" stroke-width="2.5"/>
+    <line x1="130" y1="219" x2="130" y2="245" stroke="#525252" stroke-width="2.5"/>
+
+    <!-- Small flowers on grass -->
+    <g>
+      <circle cx="30" cy="240" r="4" fill="#dc2626" stroke="#7f1d1d" stroke-width="1"/>
+      <circle cx="30" cy="240" r="1.5" fill="#fde047"/>
+    </g>
+    <g>
+      <circle cx="200" cy="270" r="4" fill="#fbbf24" stroke="#a16207" stroke-width="1"/>
+      <circle cx="200" cy="270" r="1.5" fill="#f97316"/>
+    </g>
+    <g>
+      <circle cx="380" cy="245" r="4" fill="#a855f7" stroke="#7e22ce" stroke-width="1"/>
+      <circle cx="380" cy="245" r="1.5" fill="#fde047"/>
+    </g>
+    <g>
+      <circle cx="260" cy="270" r="4" fill="#ec4899" stroke="#9d174d" stroke-width="1"/>
+      <circle cx="260" cy="270" r="1.5" fill="#fde047"/>
+    </g>
+  </g>
+</svg>

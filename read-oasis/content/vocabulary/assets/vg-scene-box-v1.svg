@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-box desc-box">
+  <title id="title-box">Box - Cardboard box</title>
+  <desc id="desc-box">A brown cardboard box with open flaps, tied with a red ribbon and bow on top.</desc>
+  <defs>
+    <linearGradient id="box-brown" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#92400e"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <line x1="60" y1="265" x2="340" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="265" rx="115" ry="8" fill="#0f172a" opacity="0.15"/>
+  <g id="box-figure" filter="url(#soft-shadow)">
+    <!-- Box front face -->
+    <path d="M85 130 L85 260 L315 260 L315 130 Z" fill="url(#box-brown)" stroke="#78350f" stroke-width="3.5"/>
+    <!-- Box top face (perspective) -->
+    <path d="M85 130 L120 95 L350 95 L315 130 Z" fill="#b45309" stroke="#78350f" stroke-width="3"/>
+    <!-- Box side face -->
+    <path d="M315 130 L350 95 L350 225 L315 260 Z" fill="#92400e" stroke="#78350f" stroke-width="3"/>
+    <!-- Center seam -->
+    <line x1="200" y1="130" x2="200" y2="260" stroke="#78350f" stroke-width="2.5"/>
+    <!-- Top seam -->
+    <line x1="235" y1="95" x2="200" y2="130" stroke="#78350f" stroke-width="2.5"/>
+    <!-- Tape strip vertical -->
+    <rect x="190" y="130" width="20" height="130" fill="#fde68a" stroke="#d97706" stroke-width="1.5" opacity="0.85"/>
+    <!-- Ribbon vertical -->
+    <rect x="195" y="130" width="10" height="130" fill="#dc2626" stroke="#991b1b" stroke-width="1.5"/>
+    <!-- Ribbon horizontal front -->
+    <rect x="85" y="185" width="230" height="10" fill="#dc2626" stroke="#991b1b" stroke-width="1.5"/>
+    <!-- Ribbon horizontal top -->
+    <path d="M85 185 L120 150 L350 150 L315 185 Z" fill="#dc2626" stroke="#991b1b" stroke-width="1.5" opacity="0.9"/>
+    <!-- Ribbon vertical top -->
+    <path d="M195 130 L230 95 L240 95 L205 130 Z" fill="#dc2626" stroke="#991b1b" stroke-width="1.5" opacity="0.9"/>
+    <!-- Bow center -->
+    <circle cx="222" cy="112" r="7" fill="#991b1b" stroke="#7f1d1d" stroke-width="2"/>
+    <!-- Bow loops -->
+    <ellipse cx="205" cy="108" rx="14" ry="8" fill="#dc2626" stroke="#991b1b" stroke-width="2" transform="rotate(-15 205 108)"/>
+    <ellipse cx="240" cy="108" rx="14" ry="8" fill="#dc2626" stroke="#991b1b" stroke-width="2" transform="rotate(15 240 108)"/>
+    <!-- Bow tails -->
+    <path d="M215 118 L200 138" fill="none" stroke="#dc2626" stroke-width="4" stroke-linecap="round"/>
+    <path d="M230 118 L245 138" fill="none" stroke="#dc2626" stroke-width="4" stroke-linecap="round"/>
+    <!-- Cardboard texture lines -->
+    <line x1="100" y1="150" x2="100" y2="255" stroke="#78350f" stroke-width="1" opacity="0.3"/>
+    <line x1="130" y1="150" x2="130" y2="255" stroke="#78350f" stroke-width="1" opacity="0.3"/>
+    <line x1="270" y1="150" x2="270" y2="255" stroke="#78350f" stroke-width="1" opacity="0.3"/>
+    <line x1="300" y1="150" x2="300" y2="255" stroke="#78350f" stroke-width="1" opacity="0.3"/>
+  </g>
+</svg>

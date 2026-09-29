@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-midday desc-midday">
+  <title id="title-midday">Midday - Sun directly overhead at noon</title>
+  <desc id="desc-midday">A bright sun high in the middle of the sky directly above a small tree and hills, showing the position of the sun at noon.</desc>
+  <defs>
+    <linearGradient id="sky-midday" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <radialGradient id="sun-midday" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="70%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </radialGradient>
+    <linearGradient id="hill-midday" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#84cc16"/>
+      <stop offset="100%" stop-color="#365314"/>
+    </linearGradient>
+    <linearGradient id="tree-midday" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#14532d"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect x="0" y="0" width="400" height="220" fill="url(#sky-midday)"/>
+
+  <!-- Arc path showing sun's midday position (dashed) -->
+  <path d="M40 220 Q200 30 360 220" fill="none" stroke="#fbbf24" stroke-width="2.5" stroke-dasharray="6,8" opacity="0.6"/>
+
+  <!-- Small labels of positions with mini-suns (morning/evening) -->
+  <circle cx="50" cy="200" r="10" fill="#fef08a" stroke="#f59e0b" stroke-width="2" opacity="0.5"/>
+  <circle cx="350" cy="200" r="10" fill="#fef08a" stroke="#f59e0b" stroke-width="2" opacity="0.5"/>
+
+  <!-- BIG midday sun (directly at TOP CENTER) -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="200" cy="55" r="45" fill="url(#sun-midday)" stroke="#c2410c" stroke-width="4"/>
+    <!-- Long bright rays -->
+    <g stroke="#f59e0b" stroke-width="6" stroke-linecap="round">
+      <line x1="200" y1="0" x2="200" y2="8"/>
+      <line x1="145" y1="10" x2="152" y2="20"/>
+      <line x1="255" y1="10" x2="248" y2="20"/>
+      <line x1="120" y1="55" x2="135" y2="55"/>
+      <line x1="280" y1="55" x2="265" y2="55"/>
+      <line x1="140" y1="105" x2="150" y2="95"/>
+      <line x1="260" y1="105" x2="250" y2="95"/>
+    </g>
+    <!-- Shorter secondary rays -->
+    <g stroke="#fbbf24" stroke-width="3" stroke-linecap="round" opacity="0.8">
+      <line x1="200" y1="105" x2="200" y2="115"/>
+      <line x1="170" y1="15" x2="175" y2="25"/>
+      <line x1="230" y1="15" x2="225" y2="25"/>
+      <line x1="128" y1="30" x2="138" y2="38"/>
+      <line x1="272" y1="30" x2="262" y2="38"/>
+    </g>
+    <!-- Happy sun face (midday, bright and cheerful) -->
+    <circle cx="187" cy="52" r="3.5" fill="#0c0a09"/>
+    <circle cx="213" cy="52" r="3.5" fill="#0c0a09"/>
+    <circle cx="188" cy="51" r="1" fill="#ffffff"/>
+    <circle cx="214" cy="51" r="1" fill="#ffffff"/>
+    <path d="M187 68 Q200 78 213 68" fill="none" stroke="#0c0a09" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="177" cy="63" r="4" fill="#fb7185" opacity="0.6"/>
+    <circle cx="223" cy="63" r="4" fill="#fb7185" opacity="0.6"/>
+  </g>
+
+  <!-- Vertical light beam from sun down to ground (highlighting directly overhead) -->
+  <path d="M195 100 L195 220 L205 220 L205 100 Z" fill="#fef9c3" opacity="0.35"/>
+
+  <!-- Hills -->
+  <g filter="url(#soft-shadow)">
+    <path d="M0 220 Q80 190 160 210 Q240 230 320 205 Q380 195 400 210 L400 270 L0 270 Z" fill="url(#hill-midday)" stroke="#1a2e05" stroke-width="3"/>
+  </g>
+
+  <!-- Tree in center (directly under sun) -->
+  <g filter="url(#soft-shadow)">
+    <rect x="192" y="205" width="16" height="45" fill="#78350f" stroke="#451a03" stroke-width="2.5"/>
+    <circle cx="200" cy="200" r="28" fill="url(#tree-midday)" stroke="#14532d" stroke-width="3"/>
+    <circle cx="182" cy="210" r="18" fill="url(#tree-midday)" stroke="#14532d" stroke-width="3"/>
+    <circle cx="218" cy="210" r="18" fill="url(#tree-midday)" stroke="#14532d" stroke-width="3"/>
+    <circle cx="195" cy="195" r="3" fill="#ef4444" stroke="#7f1d1d" stroke-width="1.5"/>
+    <circle cx="210" cy="205" r="3" fill="#ef4444" stroke="#7f1d1d" stroke-width="1.5"/>
+  </g>
+
+  <!-- Very short shadow directly below tree (midday shadows are shortest!) -->
+  <ellipse cx="200" cy="252" rx="35" ry="6" fill="#0f172a" opacity="0.35"/>
+
+  <!-- Clock face indicator (small, showing 12 o'clock position; no text, just arms) -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="350" cy="255" r="20" fill="#ffffff" stroke="#0f172a" stroke-width="2.5"/>
+    <!-- 12 position dot -->
+    <circle cx="350" cy="240" r="2" fill="#0f172a"/>
+    <!-- 3 position -->
+    <circle cx="365" cy="255" r="1.5" fill="#0f172a"/>
+    <!-- 6 position -->
+    <circle cx="350" cy="270" r="1.5" fill="#0f172a"/>
+    <!-- 9 position -->
+    <circle cx="335" cy="255" r="1.5" fill="#0f172a"/>
+    <!-- Hour hand pointing UP at 12 (midday) -->
+    <line x1="350" y1="255" x2="350" y2="243" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <!-- Minute hand also at 12 -->
+    <line x1="350" y1="255" x2="350" y2="241" stroke="#dc2626" stroke-width="2" stroke-linecap="round"/>
+    <!-- Center dot -->
+    <circle cx="350" cy="255" r="2" fill="#0f172a"/>
+  </g>
+</svg>

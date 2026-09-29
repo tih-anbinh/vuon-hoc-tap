@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-doll desc-doll">
+  <title id="title-doll">Doll - Ragdoll toy</title>
+  <desc id="desc-doll">A friendly ragdoll toy with yarn hair, big eyes, a pink dress, and stitched patches.</desc>
+  <defs>
+    <linearGradient id="doll-skin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5d0a9"/>
+    </linearGradient>
+    <linearGradient id="doll-dress" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f9a8d4"/>
+      <stop offset="100%" stop-color="#db2777"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <line x1="80" y1="270" x2="320" y2="270" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="270" rx="75" ry="7" fill="#0f172a" opacity="0.15"/>
+  <g id="doll-figure" filter="url(#soft-shadow)">
+    <!-- Legs -->
+    <rect x="175" y="215" width="14" height="45" rx="6" fill="#fbbf24" stroke="#a16207" stroke-width="2.5"/>
+    <rect x="211" y="215" width="14" height="45" rx="6" fill="#fbbf24" stroke="#a16207" stroke-width="2.5"/>
+    <!-- Shoes -->
+    <ellipse cx="182" cy="262" rx="12" ry="6" fill="#78350f" stroke="#451a03" stroke-width="2"/>
+    <ellipse cx="218" cy="262" rx="12" ry="6" fill="#78350f" stroke="#451a03" stroke-width="2"/>
+    <!-- Dress -->
+    <path d="M150 155 L130 225 L270 225 L250 155 Q200 165 150 155 Z" fill="url(#doll-dress)" stroke="#9d174d" stroke-width="3"/>
+    <!-- Dress collar -->
+    <path d="M175 155 Q200 165 225 155" fill="none" stroke="#9d174d" stroke-width="2.5"/>
+    <!-- Dress stitches -->
+    <line x1="140" y1="200" x2="155" y2="200" stroke="#fce7f3" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <line x1="245" y1="200" x2="260" y2="200" stroke="#fce7f3" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <!-- Dress flower -->
+    <circle cx="200" cy="195" r="8" fill="#fef3c7" stroke="#ca8a04" stroke-width="2"/>
+    <circle cx="200" cy="195" r="3" fill="#ca8a04"/>
+    <!-- Arms -->
+    <rect x="115" y="160" width="35" height="14" rx="7" fill="url(#doll-skin)" stroke="#a16207" stroke-width="2.5" transform="rotate(20 132 167)"/>
+    <rect x="250" y="160" width="35" height="14" rx="7" fill="url(#doll-skin)" stroke="#a16207" stroke-width="2.5" transform="rotate(-20 268 167)"/>
+    <!-- Hands -->
+    <circle cx="120" cy="200" r="10" fill="url(#doll-skin)" stroke="#a16207" stroke-width="2.5"/>
+    <circle cx="280" cy="200" r="10" fill="url(#doll-skin)" stroke="#a16207" stroke-width="2.5"/>
+    <!-- Head -->
+    <circle cx="200" cy="115" r="55" fill="url(#doll-skin)" stroke="#a16207" stroke-width="3"/>
+    <!-- Yarn hair - top loops -->
+    <path d="M150 100 Q145 65 165 60 Q180 55 175 90" fill="#c2410c" stroke="#7c2d12" stroke-width="2.5"/>
+    <path d="M180 90 Q180 55 200 50 Q220 55 220 90" fill="#c2410c" stroke="#7c2d12" stroke-width="2.5"/>
+    <path d="M225 90 Q220 55 235 60 Q255 65 250 100" fill="#c2410c" stroke="#7c2d12" stroke-width="2.5"/>
+    <!-- Side yarn (pigtails) -->
+    <path d="M148 120 Q125 130 128 165 Q135 175 145 165 Q140 140 155 130" fill="#c2410c" stroke="#7c2d12" stroke-width="2.5"/>
+    <path d="M252 120 Q275 130 272 165 Q265 175 255 165 Q260 140 245 130" fill="#c2410c" stroke="#7c2d12" stroke-width="2.5"/>
+    <!-- Hair bows -->
+    <ellipse cx="132" cy="145" rx="8" ry="5" fill="#3b82f6" stroke="#1e3a8a" stroke-width="1.5"/>
+    <ellipse cx="268" cy="145" rx="8" ry="5" fill="#3b82f6" stroke="#1e3a8a" stroke-width="1.5"/>
+    <!-- Eyes (button style) -->
+    <circle cx="180" cy="115" r="10" fill="#ffffff" stroke="#78716c" stroke-width="2.5"/>
+    <circle cx="180" cy="115" r="6" fill="#1e3a8a"/>
+    <circle cx="182" cy="113" r="2" fill="#ffffff"/>
+    <!-- 4 stitch dots on eye button -->
+    <circle cx="178" cy="113" r="0.8" fill="#ffffff" opacity="0.7"/>
+    <circle cx="182" cy="117" r="0.8" fill="#ffffff" opacity="0.7"/>
+    <circle cx="220" cy="115" r="10" fill="#ffffff" stroke="#78716c" stroke-width="2.5"/>
+    <circle cx="220" cy="115" r="6" fill="#1e3a8a"/>
+    <circle cx="222" cy="113" r="2" fill="#ffffff"/>
+    <circle cx="218" cy="113" r="0.8" fill="#ffffff" opacity="0.7"/>
+    <circle cx="222" cy="117" r="0.8" fill="#ffffff" opacity="0.7"/>
+    <!-- Cheek blush -->
+    <circle cx="170" cy="135" r="7" fill="#fca5a5" opacity="0.6"/>
+    <circle cx="230" cy="135" r="7" fill="#fca5a5" opacity="0.6"/>
+    <!-- Stitched mouth -->
+    <path d="M185 140 Q200 148 215 140" fill="none" stroke="#7f1d1d" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="3,2"/>
+    <!-- Stitched patch on cheek -->
+    <path d="M240 105 L250 105" stroke="#7c2d12" stroke-width="1.5" stroke-dasharray="2,2"/>
+    <path d="M240 108 L250 108" stroke="#7c2d12" stroke-width="1.5" stroke-dasharray="2,2"/>
+  </g>
+</svg>

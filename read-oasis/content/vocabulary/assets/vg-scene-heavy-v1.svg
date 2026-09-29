@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 400 300" role="img" aria-labelledby="title-heavy desc-heavy">
+  <title id="title-heavy">Heavy - A child straining to lift a heavy weight</title>
+  <desc id="desc-heavy">A child struggling to hold a large black weight, arms bent, face straining, showing something is heavy.</desc>
+  <defs>
+    <linearGradient id="heavy-skin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5d0a9"/>
+    </linearGradient>
+    <linearGradient id="heavy-shirt" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#7f1d1d"/>
+    </linearGradient>
+    <linearGradient id="weight-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#525252"/>
+      <stop offset="100%" stop-color="#171717"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <line x1="30" y1="265" x2="370" y2="265" stroke="#78716c" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="200" cy="265" rx="150" ry="10" fill="#0f172a" opacity="0.25"/>
+
+  <!-- Strain motion lines around child -->
+  <g stroke="#f59e0b" stroke-width="3" stroke-linecap="round" opacity="0.75">
+    <line x1="70" y1="150" x2="55" y2="150"/>
+    <line x1="70" y1="170" x2="50" y2="180"/>
+    <line x1="330" y1="150" x2="345" y2="150"/>
+    <line x1="330" y1="170" x2="350" y2="180"/>
+  </g>
+
+  <!-- Sweat drops on head -->
+  <g fill="#60a5fa" stroke="#1e40af" stroke-width="1.5">
+    <path d="M155 55 Q150 65 160 70 Q170 65 165 55 Z"/>
+    <path d="M240 60 Q235 70 245 75 Q255 70 250 60 Z"/>
+  </g>
+
+  <!-- Downward pressure arrows -->
+  <g stroke="#dc2626" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.7">
+    <line x1="130" y1="130" x2="130" y2="160"/>
+    <line x1="122" y1="152" x2="130" y2="160"/>
+    <line x1="138" y1="152" x2="130" y2="160"/>
+    <line x1="270" y1="130" x2="270" y2="160"/>
+    <line x1="262" y1="152" x2="270" y2="160"/>
+    <line x1="278" y1="152" x2="270" y2="160"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Legs (bent, straining) -->
+    <path d="M170 210 Q160 240 170 265" fill="none" stroke="#1e40af" stroke-width="22" stroke-linecap="round"/>
+    <path d="M230 210 Q240 240 230 265" fill="none" stroke="#1e40af" stroke-width="22" stroke-linecap="round"/>
+    <ellipse cx="170" cy="265" rx="16" ry="5" fill="#0f172a"/>
+    <ellipse cx="230" cy="265" rx="16" ry="5" fill="#0f172a"/>
+
+    <!-- Torso (compressed, bent from load) -->
+    <path d="M155 165 Q200 155 245 165 L250 220 L150 220 Z" fill="url(#heavy-shirt)" stroke="#7f1d1d" stroke-width="3"/>
+
+    <!-- Arms (bent up, holding weight overhead) -->
+    <!-- Left arm bent -->
+    <path d="M155 170 Q135 155 140 130 Q145 115 165 115" fill="none" stroke="url(#heavy-shirt)" stroke-width="16" stroke-linecap="round"/>
+    <!-- Right arm bent -->
+    <path d="M245 170 Q265 155 260 130 Q255 115 235 115" fill="none" stroke="url(#heavy-shirt)" stroke-width="16" stroke-linecap="round"/>
+
+    <!-- Weight (big black barbell above head) -->
+    <!-- Bar -->
+    <rect x="110" y="97" width="180" height="12" fill="#292524" stroke="#000" stroke-width="2"/>
+    <!-- Left weight discs -->
+    <circle cx="120" cy="103" r="28" fill="url(#weight-grad)" stroke="#000" stroke-width="3"/>
+    <circle cx="105" cy="103" r="22" fill="url(#weight-grad)" stroke="#000" stroke-width="3"/>
+    <!-- Right weight discs -->
+    <circle cx="280" cy="103" r="28" fill="url(#weight-grad)" stroke="#000" stroke-width="3"/>
+    <circle cx="295" cy="103" r="22" fill="url(#weight-grad)" stroke="#000" stroke-width="3"/>
+    <!-- Center indicator on discs (heavy weight mark: circle) -->
+    <circle cx="120" cy="103" r="8" fill="#dc2626" stroke="#000" stroke-width="1.5"/>
+    <circle cx="280" cy="103" r="8" fill="#dc2626" stroke="#000" stroke-width="1.5"/>
+
+    <!-- Hands gripping bar -->
+    <circle cx="167" cy="115" r="9" fill="url(#heavy-skin)" stroke="#a16207" stroke-width="2.5"/>
+    <circle cx="233" cy="115" r="9" fill="url(#heavy-skin)" stroke="#a16207" stroke-width="2.5"/>
+
+    <!-- Head (below bar, straining expression) -->
+    <circle cx="200" cy="145" r="30" fill="url(#heavy-skin)" stroke="#a16207" stroke-width="3"/>
+    <!-- Hair -->
+    <path d="M172 138 Q175 118 200 115 Q225 118 228 138 Q220 125 200 122 Q180 125 172 138 Z" fill="#78350f" stroke="#451a03" stroke-width="2"/>
+    <!-- Strained eyes (squinting) -->
+    <path d="M187 148 Q192 143 197 148" fill="none" stroke="#0c0a09" stroke-width="3" stroke-linecap="round"/>
+    <path d="M203 148 Q208 143 213 148" fill="none" stroke="#0c0a09" stroke-width="3" stroke-linecap="round"/>
+    <!-- Strained furrowed brow -->
+    <path d="M182 138 L195 141" stroke="#451a03" stroke-width="3" stroke-linecap="round"/>
+    <path d="M205 141 L218 138" stroke="#451a03" stroke-width="3" stroke-linecap="round"/>
+    <!-- Grimace mouth (open, straining) -->
+    <path d="M192 162 Q200 168 208 162" fill="#7c2d12" stroke="#0c0a09" stroke-width="2"/>
+    <!-- Red strained cheeks -->
+    <circle cx="178" cy="158" r="5" fill="#f43f5e" opacity="0.7"/>
+    <circle cx="222" cy="158" r="5" fill="#f43f5e" opacity="0.7"/>
+  </g>
+</svg>
