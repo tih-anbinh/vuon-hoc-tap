@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-tree desc-tree">
+  <title id="title-tree">tree</title>
+  <desc id="desc-tree">A big green tree with a thick brown trunk and round leafy top.</desc>
+  <rect width="400" height="300" rx="20" fill="#E3F2FD"/>
+  <rect y="220" width="400" height="80" rx="0" fill="#A5D6A7"/>
+  <!-- Sun -->
+  <circle cx="340" cy="50" r="25" fill="#FDD835" opacity="0.6"/>
+  <g transform="translate(200, 100)">
+    <!-- Trunk -->
+    <rect x="-18" y="60" width="36" height="80" rx="8" fill="#8D6E63" stroke="#795548" stroke-width="2.5"/>
+    <!-- Roots -->
+    <path d="M-18,135 Q-30,140 -35,135" fill="none" stroke="#8D6E63" stroke-width="5" stroke-linecap="round"/>
+    <path d="M18,135 Q30,140 35,135" fill="none" stroke="#8D6E63" stroke-width="5" stroke-linecap="round"/>
+    <!-- Canopy layers -->
+    <circle cx="0" cy="10" r="60" fill="#66BB6A"/>
+    <circle cx="-30" cy="30" r="40" fill="#4CAF50"/>
+    <circle cx="30" cy="25" r="42" fill="#4CAF50"/>
+    <circle cx="0" cy="-10" r="45" fill="#81C784"/>
+    <circle cx="-20" cy="5" r="35" fill="#66BB6A"/>
+    <circle cx="20" cy="0" r="38" fill="#66BB6A"/>
+    <!-- Highlight -->
+    <circle cx="-15" cy="-20" r="20" fill="#A5D6A7" opacity="0.4"/>
+    <!-- Apples -->
+    <circle cx="-25" cy="20" r="5" fill="#EF5350"/>
+    <circle cx="20" cy="35" r="5" fill="#EF5350"/>
+    <circle cx="10" cy="-5" r="5" fill="#EF5350"/>
+  </g>
+</svg>

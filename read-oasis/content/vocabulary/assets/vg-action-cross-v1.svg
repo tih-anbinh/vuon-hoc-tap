@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-cross desc-cross">
+  <title id="title-cross">cross</title>
+  <desc id="desc-cross">A child walking across a road on a zebra crossing, looking both ways.</desc>
+  <rect width="400" height="300" rx="20" fill="#E3F2FD"/>
+  <!-- Road -->
+  <rect y="180" width="400" height="80" fill="#78909C"/>
+  <!-- Zebra crossing stripes -->
+  <g fill="white">
+    <rect x="140" y="180" width="120" height="10" rx="2"/>
+    <rect x="140" y="196" width="120" height="10" rx="2"/>
+    <rect x="140" y="212" width="120" height="10" rx="2"/>
+    <rect x="140" y="228" width="120" height="10" rx="2"/>
+    <rect x="140" y="244" width="120" height="10" rx="2"/>
+  </g>
+  <!-- Pavement -->
+  <rect y="260" width="400" height="40" fill="#BDBDBD"/>
+  <rect y="160" width="400" height="20" fill="#BDBDBD"/>
+  <!-- Character Mo crossing -->
+  <g transform="translate(200, 100)">
+    <!-- Legs walking -->
+    <line x1="-8" y1="85" x2="-20" y2="120" stroke="#5D4037" stroke-width="10" stroke-linecap="round"/>
+    <line x1="8" y1="85" x2="20" y2="118" stroke="#5D4037" stroke-width="10" stroke-linecap="round"/>
+    <ellipse cx="-24" cy="124" rx="12" ry="6" fill="#FF7043" stroke="#E64A19" stroke-width="1.5"/>
+    <ellipse cx="24" cy="122" rx="12" ry="6" fill="#FF7043" stroke="#E64A19" stroke-width="1.5"/>
+    <!-- Body -->
+    <ellipse cx="0" cy="60" rx="22" ry="28" fill="#FDD835" stroke="#F9A825" stroke-width="2"/>
+    <!-- Arms -->
+    <line x1="-10" y1="48" x2="-30" y2="65" stroke="#FFCC80" stroke-width="8" stroke-linecap="round"/>
+    <line x1="10" y1="48" x2="30" y2="65" stroke="#FFCC80" stroke-width="8" stroke-linecap="round"/>
+    <!-- Head turned (looking) -->
+    <circle cx="0" cy="18" r="22" fill="#FFCC80" stroke="#F9A825" stroke-width="2"/>
+    <path d="M-16,0 Q-10,-16 0,-14 Q10,-16 16,0" fill="#5D4037" stroke="#4E342E" stroke-width="1.5"/>
+    <!-- Eyes looking left (checking road) -->
+    <circle cx="-10" cy="14" r="3" fill="#4E342E"/>
+    <circle cx="4" cy="14" r="3" fill="#4E342E"/>
+    <circle cx="-11" cy="13" r="1" fill="white"/>
+    <circle cx="3" cy="13" r="1" fill="white"/>
+    <path d="M-5,26 Q0,30 5,26" fill="none" stroke="#4E342E" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <!-- Arrow showing direction -->
+  <path d="M120,220 L280,220" fill="none" stroke="#43A047" stroke-width="3" stroke-dasharray="8,4" opacity="0.5"/>
+  <polygon points="280,215 295,220 280,225" fill="#43A047" opacity="0.5"/>
+</svg>

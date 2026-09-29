@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-cat desc-cat">
+  <title id="title-cat">cat</title>
+  <desc id="desc-cat">A friendly orange cat sitting with a curled tail and whiskers.</desc>
+  <rect width="400" height="300" rx="20" fill="#FFF3E0"/>
+  <rect y="220" width="400" height="80" rx="0" fill="#C8E6C9"/>
+  <!-- Cat body -->
+  <g transform="translate(200, 120)">
+    <!-- Tail -->
+    <path d="M30,60 Q70,40 60,10 Q55,-5 45,5" fill="none" stroke="#FF8A65" stroke-width="8" stroke-linecap="round"/>
+    <!-- Body -->
+    <ellipse cx="0" cy="55" rx="35" ry="30" fill="#FFAB91" stroke="#FF7043" stroke-width="2.5"/>
+    <!-- Front paws -->
+    <ellipse cx="-15" cy="82" rx="10" ry="6" fill="#FFAB91" stroke="#FF7043" stroke-width="2"/>
+    <ellipse cx="15" cy="82" rx="10" ry="6" fill="#FFAB91" stroke="#FF7043" stroke-width="2"/>
+    <!-- Head -->
+    <circle cx="0" cy="15" r="28" fill="#FFAB91" stroke="#FF7043" stroke-width="2.5"/>
+    <!-- Ears -->
+    <polygon points="-22,-8 -14,-30 -4,-6" fill="#FFAB91" stroke="#FF7043" stroke-width="2"/>
+    <polygon points="22,-8 14,-30 4,-6" fill="#FFAB91" stroke="#FF7043" stroke-width="2"/>
+    <polygon points="-18,-8 -14,-24 -8,-8" fill="#FFCCBC"/>
+    <polygon points="18,-8 14,-24 8,-8" fill="#FFCCBC"/>
+    <!-- Face -->
+    <circle cx="-9" cy="10" r="4" fill="#4E342E"/>
+    <circle cx="9" cy="10" r="4" fill="#4E342E"/>
+    <circle cx="-8" cy="9" r="1.5" fill="white"/>
+    <circle cx="10" cy="9" r="1.5" fill="white"/>
+    <ellipse cx="0" cy="20" rx="4" ry="3" fill="#E57373"/>
+    <!-- Whiskers -->
+    <line x1="-14" y1="18" x2="-40" y2="14" stroke="#795548" stroke-width="1.5" opacity="0.5"/>
+    <line x1="-14" y1="20" x2="-40" y2="22" stroke="#795548" stroke-width="1.5" opacity="0.5"/>
+    <line x1="14" y1="18" x2="40" y2="14" stroke="#795548" stroke-width="1.5" opacity="0.5"/>
+    <line x1="14" y1="20" x2="40" y2="22" stroke="#795548" stroke-width="1.5" opacity="0.5"/>
+    <!-- Stripes -->
+    <path d="M-10,35 Q-5,30 0,35" fill="none" stroke="#FF7043" stroke-width="2" opacity="0.4"/>
+    <path d="M5,40 Q10,35 15,40" fill="none" stroke="#FF7043" stroke-width="2" opacity="0.4"/>
+  </g>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-dog desc-dog">
+  <title id="title-dog">dog</title>
+  <desc id="desc-dog">A happy brown dog sitting with its tongue out and tail wagging.</desc>
+  <rect width="400" height="300" rx="20" fill="#E3F2FD"/>
+  <rect y="220" width="400" height="80" rx="0" fill="#C8E6C9"/>
+  <g transform="translate(200, 110)">
+    <!-- Tail wagging -->
+    <path d="M35,50 Q60,30 55,5" fill="none" stroke="#8D6E63" stroke-width="8" stroke-linecap="round"/>
+    <!-- Body -->
+    <ellipse cx="0" cy="55" rx="38" ry="30" fill="#A1887F" stroke="#8D6E63" stroke-width="2.5"/>
+    <!-- Belly patch -->
+    <ellipse cx="0" cy="62" rx="20" ry="16" fill="#D7CCC8"/>
+    <!-- Front legs -->
+    <rect x="-20" y="75" width="12" height="25" rx="5" fill="#A1887F" stroke="#8D6E63" stroke-width="2"/>
+    <rect x="8" y="75" width="12" height="25" rx="5" fill="#A1887F" stroke="#8D6E63" stroke-width="2"/>
+    <!-- Paws -->
+    <ellipse cx="-14" cy="102" rx="8" ry="5" fill="#8D6E63"/>
+    <ellipse cx="14" cy="102" rx="8" ry="5" fill="#8D6E63"/>
+    <!-- Head -->
+    <circle cx="0" cy="15" r="28" fill="#A1887F" stroke="#8D6E63" stroke-width="2.5"/>
+    <!-- Ears (floppy) -->
+    <ellipse cx="-24" cy="8" rx="12" ry="20" fill="#8D6E63" transform="rotate(-15,-24,8)"/>
+    <ellipse cx="24" cy="8" rx="12" ry="20" fill="#8D6E63" transform="rotate(15,24,8)"/>
+    <!-- Face -->
+    <circle cx="-8" cy="10" r="4" fill="#4E342E"/>
+    <circle cx="8" cy="10" r="4" fill="#4E342E"/>
+    <circle cx="-7" cy="9" r="1.5" fill="white"/>
+    <circle cx="9" cy="9" r="1.5" fill="white"/>
+    <!-- Snout -->
+    <ellipse cx="0" cy="22" rx="10" ry="8" fill="#D7CCC8"/>
+    <ellipse cx="0" cy="20" rx="5" ry="3" fill="#4E342E"/>
+    <!-- Tongue -->
+    <ellipse cx="3" cy="28" rx="4" ry="6" fill="#EF9A9A"/>
+  </g>
+</svg>

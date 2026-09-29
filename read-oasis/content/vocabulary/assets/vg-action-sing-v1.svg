@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-sing desc-sing">
+  <title id="title-sing">sing</title>
+  <desc id="desc-sing">A child singing happily with mouth open and musical notes floating around.</desc>
+  <rect width="400" height="300" rx="20" fill="#F3E5F5"/>
+  <rect y="230" width="400" height="70" rx="0" fill="#E1BEE7"/>
+  <!-- Musical notes -->
+  <g fill="#7B1FA2" opacity="0.5">
+    <text x="120" y="80" font-family="sans-serif" font-size="28">♪</text>
+    <text x="270" y="60" font-family="sans-serif" font-size="22">♫</text>
+    <text x="300" y="110" font-family="sans-serif" font-size="18">♪</text>
+    <text x="90" y="130" font-family="sans-serif" font-size="20">♫</text>
+  </g>
+  <!-- Character Mo singing -->
+  <g transform="translate(200, 80)">
+    <!-- Legs -->
+    <line x1="-10" y1="90" x2="-12" y2="130" stroke="#5D4037" stroke-width="10" stroke-linecap="round"/>
+    <line x1="10" y1="90" x2="12" y2="130" stroke="#5D4037" stroke-width="10" stroke-linecap="round"/>
+    <ellipse cx="-16" cy="134" rx="12" ry="6" fill="#FF7043" stroke="#E64A19" stroke-width="1.5"/>
+    <ellipse cx="16" cy="134" rx="12" ry="6" fill="#FF7043" stroke="#E64A19" stroke-width="1.5"/>
+    <!-- Body -->
+    <ellipse cx="0" cy="62" rx="22" ry="28" fill="#FF7043" stroke="#E64A19" stroke-width="2"/>
+    <!-- Arms out expressively -->
+    <line x1="-10" y1="48" x2="-42" y2="38" stroke="#FFCC80" stroke-width="8" stroke-linecap="round"/>
+    <line x1="10" y1="48" x2="42" y2="38" stroke="#FFCC80" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="-44" cy="36" r="5" fill="#FFCC80"/>
+    <circle cx="44" cy="36" r="5" fill="#FFCC80"/>
+    <!-- Head -->
+    <circle cx="0" cy="20" r="22" fill="#FFCC80" stroke="#F9A825" stroke-width="2"/>
+    <!-- Hair -->
+    <path d="M-16,2 Q-10,-14 0,-12 Q10,-14 16,2" fill="#5D4037" stroke="#4E342E" stroke-width="1.5"/>
+    <!-- Face — singing (open mouth) -->
+    <circle cx="-7" cy="14" r="3" fill="#4E342E"/>
+    <circle cx="9" cy="14" r="3" fill="#4E342E"/>
+    <path d="M-4,12 Q-7,9 -10,12" fill="none" stroke="#4E342E" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M6,12 Q9,9 12,12" fill="none" stroke="#4E342E" stroke-width="1.5" stroke-linecap="round"/>
+    <ellipse cx="0" cy="27" rx="7" ry="5" fill="#4E342E"/>
+    <ellipse cx="0" cy="26" rx="5" ry="3" fill="#E57373"/>
+    <!-- Rosy cheeks -->
+    <circle cx="-14" cy="22" r="4" fill="#F48FB1" opacity="0.4"/>
+    <circle cx="14" cy="22" r="4" fill="#F48FB1" opacity="0.4"/>
+  </g>
+</svg>

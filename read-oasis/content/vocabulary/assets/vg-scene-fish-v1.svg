@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-fish desc-fish">
+  <title id="title-fish">fish</title>
+  <desc id="desc-fish">A colourful fish swimming in water with bubbles around it.</desc>
+  <rect width="400" height="300" rx="20" fill="#E0F7FA"/>
+  <!-- Water gradient effect -->
+  <rect y="0" width="400" height="300" rx="20" fill="#B2EBF2" opacity="0.3"/>
+  <!-- Seaweed -->
+  <path d="M60,300 Q55,250 65,220 Q55,200 60,180" fill="none" stroke="#66BB6A" stroke-width="6" stroke-linecap="round" opacity="0.5"/>
+  <path d="M340,300 Q345,260 335,230 Q345,210 340,190" fill="none" stroke="#66BB6A" stroke-width="6" stroke-linecap="round" opacity="0.5"/>
+  <!-- Sand bottom -->
+  <path d="M0,280 Q100,270 200,275 Q300,280 400,270 L400,300 L0,300 Z" fill="#FFE0B2" opacity="0.6"/>
+  <!-- Bubbles -->
+  <circle cx="280" cy="80" r="6" fill="none" stroke="white" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="290" cy="60" r="4" fill="none" stroke="white" stroke-width="1.5" opacity="0.4"/>
+  <circle cx="270" cy="100" r="5" fill="none" stroke="white" stroke-width="1.5" opacity="0.5"/>
+  <!-- Fish -->
+  <g transform="translate(200, 150)">
+    <!-- Tail fin -->
+    <polygon points="55,0 80,-25 80,25" fill="#FF7043" stroke="#E64A19" stroke-width="2"/>
+    <!-- Body -->
+    <ellipse cx="0" cy="0" rx="55" ry="30" fill="#FF8A65" stroke="#FF7043" stroke-width="2.5"/>
+    <!-- Belly -->
+    <ellipse cx="-5" cy="8" rx="35" ry="14" fill="#FFCCBC"/>
+    <!-- Dorsal fin -->
+    <path d="M-10,-28 Q5,-45 20,-28" fill="#FF7043" stroke="#E64A19" stroke-width="1.5"/>
+    <!-- Pectoral fin -->
+    <path d="M-15,10 Q-25,25 -10,22" fill="#FF7043" stroke="#E64A19" stroke-width="1.5"/>
+    <!-- Stripes -->
+    <path d="M10,-20 Q12,0 10,20" fill="none" stroke="#E64A19" stroke-width="2" opacity="0.3"/>
+    <path d="M25,-18 Q27,0 25,18" fill="none" stroke="#E64A19" stroke-width="2" opacity="0.3"/>
+    <!-- Eye -->
+    <circle cx="-25" cy="-5" r="8" fill="white" stroke="#37474F" stroke-width="1.5"/>
+    <circle cx="-26" cy="-5" r="4" fill="#37474F"/>
+    <circle cx="-27" cy="-6" r="1.5" fill="white"/>
+    <!-- Mouth -->
+    <path d="M-48,-2 Q-52,2 -48,4" fill="none" stroke="#E64A19" stroke-width="2" stroke-linecap="round"/>
+    <!-- Scales shimmer -->
+    <circle cx="5" cy="-8" r="3" fill="white" opacity="0.2"/>
+    <circle cx="15" cy="2" r="2.5" fill="white" opacity="0.2"/>
+  </g>
+</svg>

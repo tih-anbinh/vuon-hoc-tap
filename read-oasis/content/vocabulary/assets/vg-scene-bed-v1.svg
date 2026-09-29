@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-bed desc-bed">
+  <title id="title-bed">bed</title>
+  <desc id="desc-bed">A cosy bed with a pillow and colourful blanket in a bedroom.</desc>
+  <rect width="400" height="300" rx="20" fill="#E8EAF6"/>
+  <!-- Floor -->
+  <rect y="230" width="400" height="70" rx="0" fill="#D7CCC8"/>
+  <!-- Bed frame -->
+  <g transform="translate(60, 120)">
+    <!-- Headboard -->
+    <rect x="0" y="-30" width="15" height="130" rx="5" fill="#8D6E63" stroke="#795548" stroke-width="2"/>
+    <!-- Footboard -->
+    <rect x="265" y="20" width="15" height="80" rx="5" fill="#8D6E63" stroke="#795548" stroke-width="2"/>
+    <!-- Bed base -->
+    <rect x="0" y="80" width="280" height="15" rx="5" fill="#A1887F" stroke="#8D6E63" stroke-width="2"/>
+    <!-- Legs -->
+    <rect x="5" y="95" width="8" height="18" rx="3" fill="#795548"/>
+    <rect x="267" y="95" width="8" height="18" rx="3" fill="#795548"/>
+    <!-- Mattress -->
+    <rect x="15" y="40" width="250" height="42" rx="6" fill="white" stroke="#E0E0E0" stroke-width="1.5"/>
+    <!-- Pillow -->
+    <ellipse cx="55" cy="50" rx="35" ry="18" fill="white" stroke="#E0E0E0" stroke-width="1.5"/>
+    <ellipse cx="55" cy="50" rx="30" ry="14" fill="#F5F5F5"/>
+    <!-- Blanket -->
+    <rect x="30" y="48" width="230" height="30" rx="6" fill="#7986CB" stroke="#5C6BC0" stroke-width="1.5"/>
+    <!-- Blanket pattern -->
+    <path d="M50,55 Q80,50 110,55 Q140,60 170,55 Q200,50 230,55" fill="none" stroke="#9FA8DA" stroke-width="2" opacity="0.5"/>
+  </g>
+  <!-- Nightstand -->
+  <rect x="20" y="180" width="30" height="50" rx="4" fill="#A1887F" stroke="#8D6E63" stroke-width="1.5"/>
+  <!-- Lamp -->
+  <rect x="30" y="170" width="8" height="12" rx="2" fill="#BDBDBD"/>
+  <path d="M22,170 Q35,155 48,170" fill="#FFF9C4" stroke="#FDD835" stroke-width="1.5"/>
+</svg>

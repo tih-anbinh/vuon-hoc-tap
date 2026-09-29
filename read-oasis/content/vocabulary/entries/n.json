@@ -663,7 +663,7 @@
         "asset_id": null,
         "asset": null,
         "alt": null,
-        "status": "not_started",
+        "status": "not_applicable",
         "kind": "contrast",
         "template": null,
         "anchor_objects": []
@@ -1685,10 +1685,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-nose-v1",
+        "asset": "vocabulary/assets/vg-scene-nose-v1.svg",
+        "alt": "The part in the middle of your face that you smell and breathe with.",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []

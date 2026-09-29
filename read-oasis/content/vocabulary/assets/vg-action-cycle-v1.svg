@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-cycle desc-cycle">
+  <title id="title-cycle">cycle</title>
+  <desc id="desc-cycle">A child riding a bicycle on a path with trees in the background.</desc>
+  <rect width="400" height="300" rx="20" fill="#E8F5E9"/>
+  <rect y="220" width="400" height="80" rx="0" fill="#A5D6A7"/>
+  <!-- Path -->
+  <rect x="40" y="220" width="320" height="16" rx="4" fill="#BDBDBD"/>
+  <!-- Trees background -->
+  <circle cx="60" cy="160" r="30" fill="#66BB6A" opacity="0.4"/>
+  <rect x="56" y="185" width="8" height="35" rx="3" fill="#8D6E63" opacity="0.4"/>
+  <circle cx="340" cy="150" r="35" fill="#66BB6A" opacity="0.3"/>
+  <rect x="336" y="180" width="8" height="40" rx="3" fill="#8D6E63" opacity="0.3"/>
+  <!-- Bicycle -->
+  <g transform="translate(180, 140)">
+    <!-- Back wheel -->
+    <circle cx="-30" cy="70" r="28" fill="none" stroke="#546E7A" stroke-width="4"/>
+    <circle cx="-30" cy="70" r="4" fill="#546E7A"/>
+    <!-- Front wheel -->
+    <circle cx="50" cy="70" r="28" fill="none" stroke="#546E7A" stroke-width="4"/>
+    <circle cx="50" cy="70" r="4" fill="#546E7A"/>
+    <!-- Frame -->
+    <line x1="-30" y1="70" x2="10" y2="35" stroke="#E53935" stroke-width="4" stroke-linecap="round"/>
+    <line x1="10" y1="35" x2="50" y2="70" stroke="#E53935" stroke-width="4" stroke-linecap="round"/>
+    <line x1="10" y1="35" x2="10" y2="15" stroke="#E53935" stroke-width="4" stroke-linecap="round"/>
+    <line x1="-5" y1="15" x2="25" y2="15" stroke="#546E7A" stroke-width="3" stroke-linecap="round"/>
+    <!-- Seat -->
+    <ellipse cx="0" cy="32" rx="10" ry="4" fill="#4E342E"/>
+    <!-- Pedals -->
+    <line x1="-30" y1="65" x2="-30" y2="75" stroke="#546E7A" stroke-width="3"/>
+    <!-- Character on bike -->
+    <g transform="translate(0, -30)">
+      <!-- Body -->
+      <ellipse cx="0" cy="30" rx="16" ry="22" fill="#42A5F5" stroke="#1E88E5" stroke-width="2"/>
+      <!-- Arms to handlebars -->
+      <line x1="6" y1="18" x2="20" y2="38" stroke="#FFCC80" stroke-width="6" stroke-linecap="round"/>
+      <line x1="-6" y1="18" x2="-10" y2="38" stroke="#FFCC80" stroke-width="6" stroke-linecap="round"/>
+      <!-- Head -->
+      <circle cx="0" cy="-2" r="18" fill="#FFCC80" stroke="#F9A825" stroke-width="2"/>
+      <!-- Helmet -->
+      <path d="M-16,-8 Q-14,-22 0,-24 Q14,-22 16,-8" fill="#E53935" stroke="#C62828" stroke-width="1.5"/>
+      <!-- Face -->
+      <circle cx="-5" cy="-4" r="2.5" fill="#4E342E"/>
+      <circle cx="7" cy="-4" r="2.5" fill="#4E342E"/>
+      <path d="M-3,6 Q0,10 3,6" fill="none" stroke="#4E342E" stroke-width="1.8" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>

@@ -2514,7 +2514,7 @@
         "asset_id": null,
         "asset": null,
         "alt": null,
-        "status": "not_started",
+        "status": "not_applicable",
         "kind": "scene",
         "template": null,
         "anchor_objects": []
@@ -2789,10 +2789,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-milk-v1",
+        "asset": "vocabulary/assets/vg-scene-milk-v1.svg",
+        "alt": "A white drink that comes from cows. It helps you grow.",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -4230,10 +4230,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-mother-v1",
+        "asset": "vocabulary/assets/vg-scene-mother-v1.svg",
+        "alt": "A woman who has a child. She is the child's mum.",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -4716,10 +4716,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-mouth-v1",
+        "asset": "vocabulary/assets/vg-scene-mouth-v1.svg",
+        "alt": "The part of your face that you use to eat, drink and talk.",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []

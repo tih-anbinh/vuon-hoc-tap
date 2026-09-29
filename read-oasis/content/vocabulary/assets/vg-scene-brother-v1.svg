@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-brother desc-brother">
+  <title id="title-brother">brother</title>
+  <desc id="desc-brother">A boy standing and waving hello with a friendly smile.</desc>
+  <rect width="400" height="300" rx="20" fill="#E3F2FD"/>
+  <rect y="230" width="400" height="70" rx="0" fill="#C8E6C9"/>
+  <g transform="translate(200, 60)">
+    <!-- Legs -->
+    <rect x="-14" y="110" width="12" height="45" rx="5" fill="#5D4037"/>
+    <rect x="2" y="110" width="12" height="45" rx="5" fill="#5D4037"/>
+    <!-- Shoes -->
+    <ellipse cx="-8" cy="158" rx="10" ry="6" fill="#37474F"/>
+    <ellipse cx="8" cy="158" rx="10" ry="6" fill="#37474F"/>
+    <!-- Body (t-shirt) -->
+    <ellipse cx="0" cy="80" rx="25" ry="35" fill="#42A5F5" stroke="#1E88E5" stroke-width="2"/>
+    <!-- Arms -->
+    <line x1="-12" y1="60" x2="-35" y2="45" stroke="#FFCC80" stroke-width="8" stroke-linecap="round"/>
+    <line x1="12" y1="60" x2="35" y2="90" stroke="#FFCC80" stroke-width="8" stroke-linecap="round"/>
+    <!-- Waving hand -->
+    <circle cx="-38" cy="42" r="6" fill="#FFCC80"/>
+    <!-- Head -->
+    <circle cx="0" cy="25" r="25" fill="#FFCC80" stroke="#F9A825" stroke-width="2"/>
+    <!-- Hair (short, boy style) -->
+    <path d="M-20,6 Q-15,-12 0,-14 Q15,-12 20,6" fill="#5D4037" stroke="#4E342E" stroke-width="2"/>
+    <!-- Face -->
+    <circle cx="-7" cy="20" r="3.5" fill="#4E342E"/>
+    <circle cx="7" cy="20" r="3.5" fill="#4E342E"/>
+    <circle cx="-6" cy="19" r="1.2" fill="white"/>
+    <circle cx="8" cy="19" r="1.2" fill="white"/>
+    <path d="M-5,30 Q0,35 5,30" fill="none" stroke="#4E342E" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>

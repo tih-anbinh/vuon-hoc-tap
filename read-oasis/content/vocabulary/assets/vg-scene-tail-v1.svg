@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-tail desc-tail">
+  <title id="title-tail">tail</title>
+  <desc id="desc-tail">A dog from behind showing its wagging tail with an arrow pointing to the tail.</desc>
+  <rect width="400" height="300" rx="20" fill="#E8F5E9"/>
+  <rect y="220" width="400" height="80" rx="0" fill="#C8E6C9"/>
+  <!-- Dog from behind -->
+  <g transform="translate(200, 100)">
+    <!-- Body -->
+    <ellipse cx="0" cy="55" rx="40" ry="35" fill="#A1887F" stroke="#8D6E63" stroke-width="2.5"/>
+    <!-- Back legs -->
+    <rect x="-25" y="80" width="14" height="30" rx="6" fill="#A1887F" stroke="#8D6E63" stroke-width="2"/>
+    <rect x="11" y="80" width="14" height="30" rx="6" fill="#A1887F" stroke="#8D6E63" stroke-width="2"/>
+    <!-- Paws -->
+    <ellipse cx="-18" cy="112" rx="9" ry="5" fill="#8D6E63"/>
+    <ellipse cx="18" cy="112" rx="9" ry="5" fill="#8D6E63"/>
+    <!-- Head (from behind) -->
+    <circle cx="0" cy="20" r="25" fill="#A1887F" stroke="#8D6E63" stroke-width="2"/>
+    <!-- Ears -->
+    <ellipse cx="-22" cy="12" rx="10" ry="16" fill="#8D6E63" transform="rotate(-10,-22,12)"/>
+    <ellipse cx="22" cy="12" rx="10" ry="16" fill="#8D6E63" transform="rotate(10,22,12)"/>
+    <!-- Tail (highlighted, wagging) -->
+    <path d="M0,35 Q15,10 25,-5 Q30,-15 20,-20" fill="none" stroke="#8D6E63" stroke-width="10" stroke-linecap="round"/>
+    <!-- Motion lines for wagging -->
+    <path d="M30,-10 Q35,-5 32,0" fill="none" stroke="#FF7043" stroke-width="2" opacity="0.5" stroke-linecap="round"/>
+    <path d="M35,-15 Q40,-8 36,-2" fill="none" stroke="#FF7043" stroke-width="2" opacity="0.4" stroke-linecap="round"/>
+  </g>
+  <!-- Arrow pointing to tail -->
+  <g fill="none" stroke="#E53935" stroke-width="3">
+    <path d="M300,70 Q280,75 250,80" stroke-linecap="round"/>
+    <polygon points="248,75 240,83 252,85" fill="#E53935" stroke="none"/>
+  </g>
+  <text x="305" y="75" font-family="sans-serif" font-size="20" font-weight="bold" fill="#E53935">tail</text>
+</svg>

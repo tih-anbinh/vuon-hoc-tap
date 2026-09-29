@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-frog desc-frog">
+  <title id="title-frog">frog</title>
+  <desc id="desc-frog">A green frog sitting on a lily pad with big round eyes.</desc>
+  <rect width="400" height="300" rx="20" fill="#E0F7FA"/>
+  <!-- Pond -->
+  <ellipse cx="200" cy="220" rx="180" ry="55" fill="#80DEEA"/>
+  <rect y="260" width="400" height="40" fill="#A5D6A7"/>
+  <!-- Lily pad -->
+  <ellipse cx="200" cy="210" rx="55" ry="18" fill="#66BB6A" stroke="#43A047" stroke-width="2"/>
+  <line x1="200" y1="195" x2="200" y2="225" stroke="#43A047" stroke-width="1.5" opacity="0.4"/>
+  <!-- Frog -->
+  <g transform="translate(200, 140)">
+    <!-- Back legs -->
+    <path d="M-30,45 Q-50,55 -45,65 L-35,62 L-42,58 L-30,50" fill="#66BB6A" stroke="#43A047" stroke-width="2"/>
+    <path d="M30,45 Q50,55 45,65 L35,62 L42,58 L30,50" fill="#66BB6A" stroke="#43A047" stroke-width="2"/>
+    <!-- Body -->
+    <ellipse cx="0" cy="35" rx="35" ry="25" fill="#81C784" stroke="#66BB6A" stroke-width="2.5"/>
+    <!-- Belly -->
+    <ellipse cx="0" cy="42" rx="22" ry="14" fill="#C8E6C9"/>
+    <!-- Front legs -->
+    <path d="M-22,48 L-28,58 L-20,56 L-26,55" fill="#66BB6A" stroke="#43A047" stroke-width="2"/>
+    <path d="M22,48 L28,58 L20,56 L26,55" fill="#66BB6A" stroke="#43A047" stroke-width="2"/>
+    <!-- Head -->
+    <ellipse cx="0" cy="12" rx="28" ry="20" fill="#81C784" stroke="#66BB6A" stroke-width="2"/>
+    <!-- Big eyes (protruding) -->
+    <circle cx="-14" cy="-4" r="12" fill="white" stroke="#66BB6A" stroke-width="2"/>
+    <circle cx="14" cy="-4" r="12" fill="white" stroke="#66BB6A" stroke-width="2"/>
+    <circle cx="-14" cy="-2" r="5" fill="#37474F"/>
+    <circle cx="14" cy="-2" r="5" fill="#37474F"/>
+    <circle cx="-13" cy="-3" r="2" fill="white"/>
+    <circle cx="15" cy="-3" r="2" fill="white"/>
+    <!-- Mouth -->
+    <path d="M-15,18 Q0,26 15,18" fill="none" stroke="#43A047" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Spots -->
+    <circle cx="-12" cy="30" r="4" fill="#66BB6A" opacity="0.5"/>
+    <circle cx="10" cy="35" r="3" fill="#66BB6A" opacity="0.5"/>
+  </g>
+</svg>

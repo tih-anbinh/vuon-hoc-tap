@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-kite desc-kite">
+  <title id="title-kite">kite</title>
+  <desc id="desc-kite">A colourful diamond-shaped kite flying in the sky with a long tail.</desc>
+  <rect width="400" height="300" rx="20" fill="#E3F2FD"/>
+  <rect y="240" width="400" height="60" rx="0" fill="#C8E6C9"/>
+  <!-- Clouds -->
+  <ellipse cx="80" cy="60" rx="40" ry="18" fill="white" opacity="0.6"/>
+  <ellipse cx="320" cy="80" rx="35" ry="15" fill="white" opacity="0.5"/>
+  <!-- Kite -->
+  <g transform="translate(200, 100)">
+    <!-- Diamond shape -->
+    <polygon points="0,-60 -40,0 0,40 40,0" fill="#FDD835" stroke="#F9A825" stroke-width="2.5"/>
+    <!-- Cross pattern -->
+    <line x1="0" y1="-60" x2="0" y2="40" stroke="#FF7043" stroke-width="2" opacity="0.5"/>
+    <line x1="-40" y1="0" x2="40" y2="0" stroke="#42A5F5" stroke-width="2" opacity="0.5"/>
+    <!-- Quadrant colors -->
+    <polygon points="0,-60 -40,0 0,0" fill="#EF5350" opacity="0.3"/>
+    <polygon points="0,0 40,0 0,40" fill="#42A5F5" opacity="0.3"/>
+    <!-- String -->
+    <path d="M0,40 Q20,80 10,120 Q5,140 15,160" fill="none" stroke="#795548" stroke-width="2"/>
+    <!-- Tail bows -->
+    <path d="M5,80 Q15,75 20,82 Q15,88 5,85" fill="#EF5350" stroke="#D32F2F" stroke-width="1"/>
+    <path d="M8,110 Q18,105 22,112 Q18,118 8,115" fill="#42A5F5" stroke="#1E88E5" stroke-width="1"/>
+    <path d="M12,140 Q22,135 26,142 Q22,148 12,145" fill="#66BB6A" stroke="#43A047" stroke-width="1"/>
+  </g>
+</svg>

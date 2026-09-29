@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-blue desc-blue">
+  <title id="title-blue">blue</title>
+  <desc id="desc-blue">A collection of blue things: sky, water, and a blue butterfly.</desc>
+  <rect width="400" height="300" rx="20" fill="#E3F2FD"/>
+  <!-- Sky gradient -->
+  <rect width="400" height="150" rx="20" fill="#64B5F6"/>
+  <!-- Clouds -->
+  <ellipse cx="100" cy="50" rx="45" ry="18" fill="white" opacity="0.7"/>
+  <ellipse cx="300" cy="70" rx="35" ry="14" fill="white" opacity="0.6"/>
+  <!-- Water -->
+  <rect y="150" width="400" height="80" fill="#42A5F5"/>
+  <path d="M0,160 Q50,155 100,160 Q150,165 200,160 Q250,155 300,160 Q350,165 400,160" fill="none" stroke="#90CAF9" stroke-width="2" opacity="0.5"/>
+  <path d="M0,175 Q50,170 100,175 Q150,180 200,175 Q250,170 300,175 Q350,180 400,175" fill="none" stroke="#90CAF9" stroke-width="2" opacity="0.4"/>
+  <!-- Ground -->
+  <rect y="230" width="400" height="70" rx="0" fill="#C8E6C9"/>
+  <!-- Blue butterfly -->
+  <g transform="translate(200, 250)">
+    <ellipse cx="0" cy="0" rx="3" ry="8" fill="#1565C0"/>
+    <path d="M0,-5 Q-20,-20 -25,-5 Q-22,5 0,0" fill="#42A5F5" stroke="#1E88E5" stroke-width="1.5"/>
+    <path d="M0,-5 Q20,-20 25,-5 Q22,5 0,0" fill="#42A5F5" stroke="#1E88E5" stroke-width="1.5"/>
+    <path d="M0,0 Q-15,10 -18,5 Q-12,0 0,2" fill="#64B5F6" stroke="#1E88E5" stroke-width="1"/>
+    <path d="M0,0 Q15,10 18,5 Q12,0 0,2" fill="#64B5F6" stroke="#1E88E5" stroke-width="1"/>
+    <circle cx="-12" cy="-10" r="3" fill="#1565C0" opacity="0.4"/>
+    <circle cx="12" cy="-10" r="3" fill="#1565C0" opacity="0.4"/>
+  </g>
+  <!-- Label -->
+  <text x="200" y="215" font-family="sans-serif" font-size="32" font-weight="bold" fill="#1565C0" text-anchor="middle">blue</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-egg desc-egg">
+  <title id="title-egg">egg</title>
+  <desc id="desc-egg">A white egg sitting in a nest made of straw.</desc>
+  <rect width="400" height="300" rx="20" fill="#E8F5E9"/>
+  <!-- Nest -->
+  <g transform="translate(200, 200)">
+    <ellipse cx="0" cy="0" rx="80" ry="25" fill="#A1887F"/>
+    <ellipse cx="0" cy="-5" rx="70" ry="20" fill="#BCAAA4"/>
+    <!-- Straw texture -->
+    <path d="M-60,-5 Q-40,-15 -20,-5" fill="none" stroke="#8D6E63" stroke-width="2" opacity="0.5"/>
+    <path d="M-30,-8 Q0,-18 30,-8" fill="none" stroke="#8D6E63" stroke-width="2" opacity="0.5"/>
+    <path d="M20,-5 Q40,-15 60,-5" fill="none" stroke="#8D6E63" stroke-width="2" opacity="0.5"/>
+    <path d="M-50,5 Q-20,-5 10,5" fill="none" stroke="#8D6E63" stroke-width="1.5" opacity="0.4"/>
+    <path d="M10,5 Q40,-5 60,5" fill="none" stroke="#8D6E63" stroke-width="1.5" opacity="0.4"/>
+  </g>
+  <!-- Egg -->
+  <g transform="translate(200, 140)">
+    <path d="M0,-55 Q-35,-30 -35,10 Q-35,45 0,50 Q35,45 35,10 Q35,-30 0,-55" fill="#FAFAFA" stroke="#E0E0E0" stroke-width="2.5"/>
+    <!-- Highlight -->
+    <ellipse cx="-10" cy="-15" rx="10" ry="18" fill="white" opacity="0.4"/>
+    <!-- Subtle shadow -->
+    <ellipse cx="10" cy="20" rx="12" ry="15" fill="#E0E0E0" opacity="0.15"/>
+  </g>
+</svg>

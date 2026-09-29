@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-horse desc-horse">
+  <title id="title-horse">horse</title>
+  <desc id="desc-horse">A brown horse standing in a field with a flowing mane.</desc>
+  <rect width="400" height="300" rx="20" fill="#FFF8E1"/>
+  <rect y="210" width="400" height="90" rx="0" fill="#A5D6A7"/>
+  <!-- Fence -->
+  <line x1="30" y1="200" x2="370" y2="200" stroke="#8D6E63" stroke-width="4"/>
+  <rect x="60" y="180" width="6" height="40" rx="2" fill="#8D6E63"/>
+  <rect x="180" y="180" width="6" height="40" rx="2" fill="#8D6E63"/>
+  <rect x="300" y="180" width="6" height="40" rx="2" fill="#8D6E63"/>
+  <g transform="translate(200, 60)">
+    <!-- Tail -->
+    <path d="M60,70 Q80,50 75,80 Q85,60 78,90" fill="none" stroke="#5D4037" stroke-width="5" stroke-linecap="round"/>
+    <!-- Body -->
+    <ellipse cx="10" cy="75" rx="55" ry="32" fill="#A1887F" stroke="#8D6E63" stroke-width="2.5"/>
+    <!-- Legs -->
+    <rect x="-28" y="100" width="10" height="40" rx="4" fill="#A1887F" stroke="#8D6E63" stroke-width="1.5"/>
+    <rect x="-12" y="100" width="10" height="40" rx="4" fill="#A1887F" stroke="#8D6E63" stroke-width="1.5"/>
+    <rect x="30" y="100" width="10" height="40" rx="4" fill="#A1887F" stroke="#8D6E63" stroke-width="1.5"/>
+    <rect x="46" y="100" width="10" height="40" rx="4" fill="#A1887F" stroke="#8D6E63" stroke-width="1.5"/>
+    <!-- Hooves -->
+    <rect x="-30" y="136" width="14" height="6" rx="3" fill="#5D4037"/>
+    <rect x="-14" y="136" width="14" height="6" rx="3" fill="#5D4037"/>
+    <rect x="28" y="136" width="14" height="6" rx="3" fill="#5D4037"/>
+    <rect x="44" y="136" width="14" height="6" rx="3" fill="#5D4037"/>
+    <!-- Neck -->
+    <path d="M-30,60 Q-40,30 -35,10" fill="#A1887F" stroke="#8D6E63" stroke-width="2"/>
+    <rect x="-48" y="20" width="22" height="50" rx="8" fill="#A1887F" stroke="#8D6E63" stroke-width="2"/>
+    <!-- Head -->
+    <ellipse cx="-40" cy="10" rx="18" ry="22" fill="#A1887F" stroke="#8D6E63" stroke-width="2" transform="rotate(-10,-40,10)"/>
+    <!-- Mane -->
+    <path d="M-32,0 Q-28,-10 -34,-5 Q-26,-15 -32,-8 Q-24,-18 -30,-10" fill="#5D4037"/>
+    <path d="M-30,10 Q-26,5 -30,15 Q-24,10 -28,20" fill="#5D4037"/>
+    <!-- Ear -->
+    <polygon points="-44,-8 -40,-22 -36,-8" fill="#A1887F" stroke="#8D6E63" stroke-width="1.5"/>
+    <!-- Eye -->
+    <circle cx="-46" cy="6" r="3" fill="#37474F"/>
+    <circle cx="-45" cy="5" r="1" fill="white"/>
+    <!-- Nostril -->
+    <circle cx="-50" cy="20" r="2" fill="#795548"/>
+    <!-- Mouth -->
+    <path d="M-52,24 Q-48,28 -44,24" fill="none" stroke="#795548" stroke-width="1.5"/>
+  </g>
+</svg>

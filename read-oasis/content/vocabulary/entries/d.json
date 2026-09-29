@@ -2232,10 +2232,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-dog-v1",
+        "asset": "vocabulary/assets/vg-scene-dog-v1.svg",
+        "alt": "A friendly animal that many people keep as a pet. It barks and wags its tail.",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -3618,7 +3618,7 @@
         "asset_id": null,
         "asset": null,
         "alt": null,
-        "status": "not_started",
+        "status": "not_applicable",
         "kind": "contrast",
         "template": null,
         "anchor_objects": []
@@ -3688,10 +3688,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-duck-v1",
+        "asset": "vocabulary/assets/vg-scene-duck-v1.svg",
+        "alt": "A bird that swims on water and says \"quack\".",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []

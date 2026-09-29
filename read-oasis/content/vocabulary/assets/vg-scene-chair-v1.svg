@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-chair desc-chair">
+  <title id="title-chair">chair</title>
+  <desc id="desc-chair">A wooden chair with a cushion on the seat.</desc>
+  <rect width="400" height="300" rx="20" fill="#FFF8E1"/>
+  <rect y="240" width="400" height="60" rx="0" fill="#EFEBE9"/>
+  <g transform="translate(200, 60)">
+    <!-- Back legs -->
+    <rect x="-40" y="0" width="10" height="170" rx="4" fill="#A1887F" stroke="#8D6E63" stroke-width="2"/>
+    <rect x="30" y="0" width="10" height="170" rx="4" fill="#A1887F" stroke="#8D6E63" stroke-width="2"/>
+    <!-- Backrest -->
+    <rect x="-38" y="5" width="76" height="60" rx="6" fill="#BCAAA4" stroke="#8D6E63" stroke-width="2"/>
+    <!-- Backrest slats -->
+    <rect x="-25" y="10" width="8" height="50" rx="3" fill="#A1887F"/>
+    <rect x="-4" y="10" width="8" height="50" rx="3" fill="#A1887F"/>
+    <rect x="17" y="10" width="8" height="50" rx="3" fill="#A1887F"/>
+    <!-- Seat -->
+    <rect x="-45" y="90" width="90" height="12" rx="5" fill="#A1887F" stroke="#8D6E63" stroke-width="2"/>
+    <!-- Cushion -->
+    <rect x="-38" y="78" width="76" height="14" rx="6" fill="#EF9A9A" stroke="#EF5350" stroke-width="1.5"/>
+    <!-- Front legs -->
+    <rect x="-40" y="100" width="10" height="70" rx="4" fill="#A1887F" stroke="#8D6E63" stroke-width="2"/>
+    <rect x="30" y="100" width="10" height="70" rx="4" fill="#A1887F" stroke="#8D6E63" stroke-width="2"/>
+    <!-- Cross bar -->
+    <rect x="-30" y="140" width="60" height="6" rx="3" fill="#8D6E63"/>
+  </g>
+</svg>

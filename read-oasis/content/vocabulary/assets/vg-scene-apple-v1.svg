@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-apple desc-apple">
+  <title id="title-apple">apple</title>
+  <desc id="desc-apple">A shiny red apple with a green leaf on top.</desc>
+  <rect width="400" height="300" rx="20" fill="#FFF3E0"/>
+  <g transform="translate(200, 150)">
+    <!-- Shadow -->
+    <ellipse cx="5" cy="75" rx="50" ry="10" fill="#FFCCBC" opacity="0.4"/>
+    <!-- Apple body -->
+    <path d="M-5,-50 Q-55,-45 -55,10 Q-55,60 -5,65 Q5,68 15,65 Q65,60 65,10 Q65,-45 15,-50 Q5,-55 -5,-50" fill="#EF5350" stroke="#D32F2F" stroke-width="2.5"/>
+    <!-- Highlight -->
+    <ellipse cx="-20" cy="-15" rx="15" ry="20" fill="white" opacity="0.15"/>
+    <!-- Stem -->
+    <path d="M5,-50 Q3,-65 8,-70" fill="none" stroke="#795548" stroke-width="4" stroke-linecap="round"/>
+    <!-- Leaf -->
+    <path d="M8,-65 Q25,-75 30,-60 Q20,-55 8,-65" fill="#66BB6A" stroke="#43A047" stroke-width="1.5"/>
+    <line x1="10" y1="-65" x2="26" y2="-63" stroke="#43A047" stroke-width="1" opacity="0.5"/>
+    <!-- Shine spot -->
+    <circle cx="-15" cy="-20" r="6" fill="white" opacity="0.3"/>
+  </g>
+</svg>

@@ -1148,10 +1148,10 @@
       "visual": {
         "representation_type": "action_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-action-jump-v1",
+        "asset": "vocabulary/assets/vg-action-jump-v1.svg",
+        "alt": "To push yourself up off the ground with your legs.",
+        "status": "approved",
         "kind": "action",
         "template": null,
         "anchor_objects": []

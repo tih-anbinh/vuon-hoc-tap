@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-hand desc-hand">
+  <title id="title-hand">hand</title>
+  <desc id="desc-hand">An open hand waving hello with five fingers spread out.</desc>
+  <rect width="400" height="300" rx="20" fill="#E3F2FD"/>
+  <g transform="translate(200, 155)">
+    <!-- Wrist/arm -->
+    <rect x="-20" y="40" width="40" height="50" rx="15" fill="#FFCC80" stroke="#F9A825" stroke-width="2"/>
+    <!-- Palm -->
+    <ellipse cx="0" cy="20" rx="40" ry="35" fill="#FFCC80" stroke="#F9A825" stroke-width="2.5"/>
+    <!-- Thumb -->
+    <path d="M-35,10 Q-55,0 -50,-20 Q-48,-28 -40,-25 Q-35,-22 -32,0" fill="#FFCC80" stroke="#F9A825" stroke-width="2"/>
+    <!-- Index finger -->
+    <rect x="-22" y="-55" width="14" height="45" rx="7" fill="#FFCC80" stroke="#F9A825" stroke-width="2"/>
+    <!-- Middle finger -->
+    <rect x="-7" y="-62" width="14" height="50" rx="7" fill="#FFCC80" stroke="#F9A825" stroke-width="2"/>
+    <!-- Ring finger -->
+    <rect x="8" y="-55" width="14" height="45" rx="7" fill="#FFCC80" stroke="#F9A825" stroke-width="2"/>
+    <!-- Pinky -->
+    <rect x="22" y="-45" width="12" height="38" rx="6" fill="#FFCC80" stroke="#F9A825" stroke-width="2"/>
+    <!-- Palm lines -->
+    <path d="M-20,15 Q0,25 20,15" fill="none" stroke="#F9A825" stroke-width="1.5" opacity="0.3"/>
+    <path d="M-15,28 Q0,35 15,28" fill="none" stroke="#F9A825" stroke-width="1.5" opacity="0.3"/>
+  </g>
+  <!-- Wave motion lines -->
+  <g fill="none" stroke="#42A5F5" stroke-width="2" opacity="0.4">
+    <path d="M290,100 Q300,95 295,85" stroke-linecap="round"/>
+    <path d="M300,110 Q312,105 308,92" stroke-linecap="round"/>
+  </g>
+</svg>

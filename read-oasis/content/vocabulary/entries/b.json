@@ -46,10 +46,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-baby-v1",
+        "asset": "vocabulary/assets/vg-scene-baby-v1.svg",
+        "alt": "A very young child who cannot walk or talk yet.",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -600,10 +600,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-ball-v1",
+        "asset": "vocabulary/assets/vg-scene-ball-v1.svg",
+        "alt": "A round toy that you can throw, catch, kick or roll.",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -742,10 +742,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-banana-v1",
+        "asset": "vocabulary/assets/vg-scene-banana-v1.svg",
+        "alt": "A long, curved fruit with a yellow skin.",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -2117,10 +2117,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-bed-v1",
+        "asset": "vocabulary/assets/vg-scene-bed-v1.svg",
+        "alt": "A soft place where you lie down and sleep at night.",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -2599,10 +2599,10 @@
       "visual": {
         "representation_type": "position_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-position-behind-v1",
+        "asset": "vocabulary/assets/vg-position-behind-v1.svg",
+        "alt": "At the back of a person or thing.",
+        "status": "approved",
         "kind": "position",
         "template": "dog_and_door",
         "anchor_objects": [
@@ -3293,7 +3293,7 @@
         "asset_id": null,
         "asset": null,
         "alt": null,
-        "status": "not_started",
+        "status": "not_applicable",
         "kind": "contrast",
         "template": null,
         "anchor_objects": []
@@ -3572,10 +3572,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-bird-v1",
+        "asset": "vocabulary/assets/vg-scene-bird-v1.svg",
+        "alt": "An animal with wings and feathers. Most birds can fly.",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -4054,10 +4054,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-blue-v1",
+        "asset": "vocabulary/assets/vg-scene-blue-v1.svg",
+        "alt": "The colour of the sky on a sunny day.",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -4406,10 +4406,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-book-v1",
+        "asset": "vocabulary/assets/vg-scene-book-v1.svg",
+        "alt": "Many pages joined together with words and pictures that you read.",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -5505,10 +5505,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-bread-v1",
+        "asset": "vocabulary/assets/vg-scene-bread-v1.svg",
+        "alt": "A soft food made from flour that we bake and eat.",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -6055,10 +6055,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-brother-v1",
+        "asset": "vocabulary/assets/vg-scene-brother-v1.svg",
+        "alt": "A boy or man who has the same mother and father as you.",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []

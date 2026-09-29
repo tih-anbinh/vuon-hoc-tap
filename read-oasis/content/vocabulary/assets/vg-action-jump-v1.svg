@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-jump desc-jump">
+  <title id="title-jump">jump</title>
+  <desc id="desc-jump">A child jumping high in the air with arms raised and both feet off the ground.</desc>
+  <rect width="400" height="300" rx="20" fill="#E3F2FD"/>
+  <rect y="240" width="400" height="60" rx="0" fill="#C8E6C9"/>
+  <!-- Shadow on ground -->
+  <ellipse cx="200" cy="242" rx="30" ry="6" fill="#A5D6A7" opacity="0.6"/>
+  <!-- Character Mo jumping -->
+  <g transform="translate(200, 70)">
+    <!-- Legs (tucked, both off ground) -->
+    <line x1="-12" y1="85" x2="-20" y2="110" stroke="#5D4037" stroke-width="10" stroke-linecap="round"/>
+    <ellipse cx="-24" cy="114" rx="12" ry="6" fill="#FF7043" stroke="#E64A19" stroke-width="1.5"/>
+    <line x1="12" y1="85" x2="20" y2="110" stroke="#5D4037" stroke-width="10" stroke-linecap="round"/>
+    <ellipse cx="24" cy="114" rx="12" ry="6" fill="#FF7043" stroke="#E64A19" stroke-width="1.5"/>
+    <!-- Body -->
+    <ellipse cx="0" cy="62" rx="22" ry="28" fill="#66BB6A" stroke="#43A047" stroke-width="2"/>
+    <!-- Arms raised high -->
+    <line x1="-10" y1="45" x2="-30" y2="10" stroke="#FFCC80" stroke-width="8" stroke-linecap="round"/>
+    <line x1="10" y1="45" x2="30" y2="10" stroke="#FFCC80" stroke-width="8" stroke-linecap="round"/>
+    <!-- Hands -->
+    <circle cx="-32" cy="8" r="5" fill="#FFCC80" stroke="#F9A825" stroke-width="1"/>
+    <circle cx="32" cy="8" r="5" fill="#FFCC80" stroke="#F9A825" stroke-width="1"/>
+    <!-- Head -->
+    <circle cx="0" cy="20" r="22" fill="#FFCC80" stroke="#F9A825" stroke-width="2"/>
+    <!-- Hair -->
+    <path d="M-16,2 Q-10,-14 0,-12 Q10,-14 16,2" fill="#5D4037" stroke="#4E342E" stroke-width="1.5"/>
+    <!-- Face — excited -->
+    <circle cx="-7" cy="16" r="3" fill="#4E342E"/>
+    <circle cx="9" cy="16" r="3" fill="#4E342E"/>
+    <circle cx="-6" cy="15" r="1" fill="white"/>
+    <circle cx="10" cy="15" r="1" fill="white"/>
+    <ellipse cx="0" cy="27" rx="6" ry="4" fill="#4E342E"/>
+    <ellipse cx="0" cy="26" rx="4" ry="2" fill="#E57373"/>
+    <!-- Rosy cheeks -->
+    <circle cx="-14" cy="22" r="4" fill="#F48FB1" opacity="0.4"/>
+    <circle cx="14" cy="22" r="4" fill="#F48FB1" opacity="0.4"/>
+  </g>
+</svg>

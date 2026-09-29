@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-cow desc-cow">
+  <title id="title-cow">cow</title>
+  <desc id="desc-cow">A friendly black and white cow standing in a green field.</desc>
+  <rect width="400" height="300" rx="20" fill="#E8F5E9"/>
+  <rect y="200" width="400" height="100" rx="0" fill="#A5D6A7"/>
+  <!-- Flowers -->
+  <circle cx="80" cy="240" r="5" fill="#F48FB1"/>
+  <circle cx="320" cy="250" r="4" fill="#FDD835"/>
+  <circle cx="150" cy="260" r="4" fill="#CE93D8"/>
+  <g transform="translate(200, 90)">
+    <!-- Tail -->
+    <path d="M55,50 Q75,30 70,60" fill="none" stroke="#5D4037" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="70" cy="62" rx="5" ry="6" fill="#5D4037"/>
+    <!-- Body -->
+    <ellipse cx="10" cy="60" rx="55" ry="35" fill="white" stroke="#BDBDBD" stroke-width="2"/>
+    <!-- Spots -->
+    <ellipse cx="-10" cy="50" rx="15" ry="12" fill="#424242" opacity="0.7"/>
+    <ellipse cx="25" cy="65" rx="12" ry="10" fill="#424242" opacity="0.7"/>
+    <circle cx="5" cy="72" r="8" fill="#424242" opacity="0.5"/>
+    <!-- Legs -->
+    <rect x="-30" y="85" width="12" height="30" rx="5" fill="white" stroke="#BDBDBD" stroke-width="1.5"/>
+    <rect x="-10" y="85" width="12" height="30" rx="5" fill="white" stroke="#BDBDBD" stroke-width="1.5"/>
+    <rect x="20" y="85" width="12" height="30" rx="5" fill="white" stroke="#BDBDBD" stroke-width="1.5"/>
+    <rect x="40" y="85" width="12" height="30" rx="5" fill="white" stroke="#BDBDBD" stroke-width="1.5"/>
+    <!-- Head -->
+    <circle cx="-30" cy="30" r="25" fill="white" stroke="#BDBDBD" stroke-width="2"/>
+    <!-- Ears -->
+    <ellipse cx="-50" cy="18" rx="10" ry="6" fill="#FFCCBC" stroke="#BDBDBD" stroke-width="1.5" transform="rotate(-20,-50,18)"/>
+    <ellipse cx="-10" cy="14" rx="10" ry="6" fill="#FFCCBC" stroke="#BDBDBD" stroke-width="1.5" transform="rotate(20,-10,14)"/>
+    <!-- Horns -->
+    <path d="M-44,10 Q-48,-5 -40,-2" fill="none" stroke="#FDD835" stroke-width="4" stroke-linecap="round"/>
+    <path d="M-16,8 Q-12,-7 -20,-4" fill="none" stroke="#FDD835" stroke-width="4" stroke-linecap="round"/>
+    <!-- Face -->
+    <circle cx="-36" cy="24" r="3.5" fill="#4E342E"/>
+    <circle cx="-22" cy="24" r="3.5" fill="#4E342E"/>
+    <!-- Snout -->
+    <ellipse cx="-30" cy="38" rx="12" ry="8" fill="#FFCCBC" stroke="#FFAB91" stroke-width="1.5"/>
+    <circle cx="-34" cy="38" r="2" fill="#795548"/>
+    <circle cx="-26" cy="38" r="2" fill="#795548"/>
+  </g>
+</svg>

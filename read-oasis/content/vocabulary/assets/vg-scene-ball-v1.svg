@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-ball desc-ball">
+  <title id="title-ball">ball</title>
+  <desc id="desc-ball">A colourful bouncy ball with stripes on a grassy field.</desc>
+  <rect width="400" height="300" rx="20" fill="#E3F2FD"/>
+  <rect y="210" width="400" height="90" rx="0" fill="#C8E6C9"/>
+  <g transform="translate(200, 140)">
+    <!-- Shadow -->
+    <ellipse cx="5" cy="65" rx="45" ry="10" fill="#A5D6A7" opacity="0.5"/>
+    <!-- Ball -->
+    <circle cx="0" cy="0" r="55" fill="#EF5350" stroke="#D32F2F" stroke-width="2.5"/>
+    <!-- Stripes -->
+    <path d="M-55,0 Q-30,-30 0,-35 Q30,-30 55,0" fill="none" stroke="#FDD835" stroke-width="8" opacity="0.6"/>
+    <path d="M-55,0 Q-30,30 0,35 Q30,30 55,0" fill="none" stroke="#42A5F5" stroke-width="8" opacity="0.6"/>
+    <!-- Highlight -->
+    <circle cx="-18" cy="-20" r="12" fill="white" opacity="0.25"/>
+    <circle cx="-12" cy="-28" r="6" fill="white" opacity="0.3"/>
+  </g>
+</svg>

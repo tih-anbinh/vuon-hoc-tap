@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-mouth desc-mouth">
+  <title id="title-mouth">mouth</title>
+  <desc id="desc-mouth">A child's face with a big smile, with an arrow pointing to the mouth.</desc>
+  <rect width="400" height="300" rx="20" fill="#FFF8E1"/>
+  <g transform="translate(200, 150)">
+    <!-- Head -->
+    <circle cx="0" cy="0" r="60" fill="#FFCC80" stroke="#F9A825" stroke-width="2.5"/>
+    <!-- Hair -->
+    <path d="M-45,-30 Q-30,-60 0,-55 Q30,-60 45,-30" fill="#5D4037" stroke="#4E342E" stroke-width="2"/>
+    <!-- Eyes -->
+    <circle cx="-18" cy="-10" r="5" fill="#4E342E"/>
+    <circle cx="18" cy="-10" r="5" fill="#4E342E"/>
+    <circle cx="-17" cy="-11" r="2" fill="white"/>
+    <circle cx="19" cy="-11" r="2" fill="white"/>
+    <!-- Nose -->
+    <ellipse cx="0" cy="5" rx="4" ry="3" fill="#F9A825" opacity="0.3"/>
+    <!-- Mouth (big smile, highlighted) -->
+    <path d="M-20,18 Q0,38 20,18" fill="#E57373" stroke="#D32F2F" stroke-width="3"/>
+    <path d="M-16,20 Q0,30 16,20" fill="white"/>
+    <!-- Cheeks -->
+    <circle cx="-30" cy="12" r="7" fill="#F48FB1" opacity="0.3"/>
+    <circle cx="30" cy="12" r="7" fill="#F48FB1" opacity="0.3"/>
+  </g>
+  <!-- Arrow pointing to mouth -->
+  <g fill="none" stroke="#E53935" stroke-width="3">
+    <path d="M310,180 Q290,178 270,175" stroke-linecap="round"/>
+    <polygon points="268,170 260,178 272,180" fill="#E53935" stroke="none"/>
+  </g>
+  <text x="315" y="185" font-family="sans-serif" font-size="18" font-weight="bold" fill="#E53935">mouth</text>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-umbrella desc-umbrella">
+  <title id="title-umbrella">umbrella</title>
+  <desc id="desc-umbrella">A colourful open umbrella with raindrops falling around it.</desc>
+  <rect width="400" height="300" rx="20" fill="#CFD8DC"/>
+  <!-- Raindrops -->
+  <g fill="#64B5F6" opacity="0.5">
+    <ellipse cx="60" cy="80" rx="3" ry="6"/>
+    <ellipse cx="120" cy="50" rx="3" ry="6"/>
+    <ellipse cx="300" cy="70" rx="3" ry="6"/>
+    <ellipse cx="340" cy="120" rx="3" ry="6"/>
+    <ellipse cx="80" cy="200" rx="3" ry="6"/>
+    <ellipse cx="320" cy="220" rx="3" ry="6"/>
+    <ellipse cx="50" cy="250" rx="3" ry="6"/>
+    <ellipse cx="350" cy="260" rx="3" ry="6"/>
+  </g>
+  <g transform="translate(200, 80)">
+    <!-- Umbrella canopy -->
+    <path d="M-80,60 Q-80,0 -40,-20 Q0,-35 40,-20 Q80,0 80,60" fill="#EF5350" stroke="#D32F2F" stroke-width="2.5"/>
+    <!-- Scalloped edge -->
+    <path d="M-80,60 Q-60,50 -40,60 Q-20,50 0,60 Q20,50 40,60 Q60,50 80,60" fill="#EF5350" stroke="#D32F2F" stroke-width="2"/>
+    <!-- Sections -->
+    <line x1="-40" y1="-15" x2="-40" y2="58" stroke="#D32F2F" stroke-width="1.5" opacity="0.3"/>
+    <line x1="0" y1="-30" x2="0" y2="58" stroke="#D32F2F" stroke-width="1.5" opacity="0.3"/>
+    <line x1="40" y1="-15" x2="40" y2="58" stroke="#D32F2F" stroke-width="1.5" opacity="0.3"/>
+    <!-- Handle -->
+    <line x1="0" y1="60" x2="0" y2="160" stroke="#795548" stroke-width="5" stroke-linecap="round"/>
+    <!-- Handle hook -->
+    <path d="M0,160 Q0,175 -12,175 Q-20,175 -20,165" fill="none" stroke="#795548" stroke-width="5" stroke-linecap="round"/>
+    <!-- Tip -->
+    <circle cx="0" cy="-30" r="3" fill="#FDD835"/>
+  </g>
+</svg>

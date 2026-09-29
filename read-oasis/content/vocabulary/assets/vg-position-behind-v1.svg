@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-behind desc-behind">
+  <title id="title-behind">behind</title>
+  <desc id="desc-behind">A dog hiding behind a door. Only the dog's head and tail peek out from behind the door.</desc>
+  <!-- Background: soft room -->
+  <rect width="400" height="300" rx="20" fill="#FFF8F0"/>
+  <rect y="230" width="400" height="70" rx="0" fill="#EFEBE9"/>
+  <!-- Wall line -->
+  <line x1="220" y1="0" x2="220" y2="230" stroke="#D7CCC8" stroke-width="3"/>
+  <!-- Door -->
+  <rect x="130" y="30" width="90" height="200" rx="6" fill="#A1887F" stroke="#795548" stroke-width="2.5"/>
+  <circle cx="205" cy="135" r="5" fill="#FFD54F" stroke="#F9A825" stroke-width="1.5"/>
+  <!-- Door panel details -->
+  <rect x="142" y="48" width="66" height="70" rx="4" fill="none" stroke="#8D6E63" stroke-width="1.5"/>
+  <rect x="142" y="132" width="66" height="70" rx="4" fill="none" stroke="#8D6E63" stroke-width="1.5"/>
+  <!-- Dog peeking behind door -->
+  <g transform="translate(225, 120)">
+    <!-- Body partially hidden -->
+    <ellipse cx="30" cy="60" rx="28" ry="22" fill="#8D6E63" stroke="#5D4037" stroke-width="2"/>
+    <!-- Back legs -->
+    <rect x="14" y="76" width="10" height="30" rx="5" fill="#8D6E63" stroke="#5D4037" stroke-width="1.5"/>
+    <rect x="38" y="76" width="10" height="30" rx="5" fill="#8D6E63" stroke="#5D4037" stroke-width="1.5"/>
+    <!-- Head peeking -->
+    <circle cx="4" cy="40" r="22" fill="#8D6E63" stroke="#5D4037" stroke-width="2"/>
+    <!-- Ears (floppy) -->
+    <ellipse cx="-14" cy="28" rx="10" ry="16" fill="#6D4C41" stroke="#5D4037" stroke-width="1.5" transform="rotate(-15 -14 28)"/>
+    <ellipse cx="18" cy="26" rx="9" ry="14" fill="#6D4C41" stroke="#5D4037" stroke-width="1.5" transform="rotate(10 18 26)"/>
+    <!-- Face -->
+    <circle cx="-4" cy="36" r="3" fill="#3E2723"/>
+    <circle cx="10" cy="36" r="3" fill="#3E2723"/>
+    <circle cx="-3" cy="35" r="1" fill="white"/>
+    <circle cx="11" cy="35" r="1" fill="white"/>
+    <ellipse cx="3" cy="44" rx="5" ry="3.5" fill="#4E342E"/>
+    <ellipse cx="3" cy="43" rx="3" ry="2" fill="#D7CCC8"/>
+    <!-- Tongue -->
+    <ellipse cx="3" cy="49" rx="3" ry="4" fill="#F48FB1"/>
+    <!-- Tail wagging (visible above body) -->
+    <path d="M56,42 Q72,20 64,50" fill="none" stroke="#5D4037" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+</svg>

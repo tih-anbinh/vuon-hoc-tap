@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-bird desc-bird">
+  <title id="title-bird">bird</title>
+  <desc id="desc-bird">A colourful bird perched on a branch with wings slightly spread.</desc>
+  <rect width="400" height="300" rx="20" fill="#E8F5E9"/>
+  <!-- Branch -->
+  <path d="M80,200 Q200,180 320,190" fill="none" stroke="#8D6E63" stroke-width="10" stroke-linecap="round"/>
+  <ellipse cx="100" cy="195" rx="20" ry="8" fill="#A5D6A7" opacity="0.6"/>
+  <ellipse cx="300" cy="188" rx="22" ry="9" fill="#A5D6A7" opacity="0.6"/>
+  <!-- Bird -->
+  <g transform="translate(200, 130)">
+    <!-- Tail feathers -->
+    <path d="M25,30 Q55,20 50,45" fill="#42A5F5" stroke="#1E88E5" stroke-width="1.5"/>
+    <path d="M28,35 Q55,30 48,50" fill="#64B5F6" stroke="#1E88E5" stroke-width="1"/>
+    <!-- Body -->
+    <ellipse cx="0" cy="30" rx="28" ry="22" fill="#64B5F6" stroke="#42A5F5" stroke-width="2.5"/>
+    <!-- Belly -->
+    <ellipse cx="-2" cy="38" rx="16" ry="12" fill="#BBDEFB"/>
+    <!-- Wing -->
+    <path d="M-10,20 Q-40,10 -30,35 Q-20,40 -5,32" fill="#42A5F5" stroke="#1E88E5" stroke-width="1.5"/>
+    <!-- Legs -->
+    <line x1="-6" y1="48" x2="-8" y2="58" stroke="#FF8F00" stroke-width="3" stroke-linecap="round"/>
+    <line x1="6" y1="48" x2="8" y2="58" stroke="#FF8F00" stroke-width="3" stroke-linecap="round"/>
+    <!-- Feet -->
+    <path d="M-14,58 L-8,58 L-2,58" fill="none" stroke="#FF8F00" stroke-width="2" stroke-linecap="round"/>
+    <path d="M2,58 L8,58 L14,58" fill="none" stroke="#FF8F00" stroke-width="2" stroke-linecap="round"/>
+    <!-- Head -->
+    <circle cx="0" cy="5" r="16" fill="#64B5F6" stroke="#42A5F5" stroke-width="2"/>
+    <!-- Eye -->
+    <circle cx="-5" cy="2" r="4" fill="white" stroke="#37474F" stroke-width="1.5"/>
+    <circle cx="-5" cy="2" r="2" fill="#37474F"/>
+    <!-- Beak -->
+    <polygon points="-16,6 -26,4 -16,10" fill="#FF8F00" stroke="#EF6C00" stroke-width="1"/>
+    <!-- Crest -->
+    <path d="M4,-10 Q8,-20 2,-16 Q6,-22 0,-14" fill="#FDD835" stroke="#F9A825" stroke-width="1"/>
+  </g>
+</svg>

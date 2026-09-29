@@ -47,7 +47,7 @@
         "asset_id": null,
         "asset": null,
         "alt": null,
-        "status": "not_started",
+        "status": "not_applicable",
         "kind": "contrast",
         "template": null,
         "anchor_objects": []
@@ -4284,10 +4284,10 @@
       "visual": {
         "representation_type": "action_svg",
         "visual_priority": "medium",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-action-sing-v1",
+        "asset": "vocabulary/assets/vg-action-sing-v1.svg",
+        "alt": "To make music with your voice.",
+        "status": "approved",
         "kind": "action",
         "template": null,
         "anchor_objects": []
@@ -4426,10 +4426,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-sister-v1",
+        "asset": "vocabulary/assets/vg-scene-sister-v1.svg",
+        "alt": "A girl or woman who has the same mother and father as you.",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -4499,10 +4499,10 @@
       "visual": {
         "representation_type": "action_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-action-sit-v1",
+        "asset": "vocabulary/assets/vg-action-sit-v1.svg",
+        "alt": "To rest with your bottom on a chair or on the floor.",
+        "status": "approved",
         "kind": "action",
         "template": null,
         "anchor_objects": []
@@ -5197,10 +5197,10 @@
       "visual": {
         "representation_type": "action_svg",
         "visual_priority": "medium",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-action-sleep-v1",
+        "asset": "vocabulary/assets/vg-action-sleep-v1.svg",
+        "alt": "To rest with your eyes closed, the way you do at night.",
+        "status": "approved",
         "kind": "action",
         "template": null,
         "anchor_objects": []
@@ -5271,7 +5271,7 @@
         "asset_id": null,
         "asset": null,
         "alt": null,
-        "status": "not_started",
+        "status": "not_applicable",
         "kind": "contrast",
         "template": null,
         "anchor_objects": []
@@ -5409,7 +5409,7 @@
         "asset_id": null,
         "asset": null,
         "alt": null,
-        "status": "not_started",
+        "status": "not_applicable",
         "kind": "contrast",
         "template": null,
         "anchor_objects": []
@@ -9247,7 +9247,7 @@
         "asset_id": null,
         "asset": null,
         "alt": null,
-        "status": "not_started",
+        "status": "not_applicable",
         "kind": "contrast",
         "template": null,
         "anchor_objects": []
@@ -11035,10 +11035,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-sun-v1",
+        "asset": "vocabulary/assets/vg-scene-sun-v1.svg",
+        "alt": "The big, bright light in the sky in the daytime. It gives us light and heat.",
+        "status": "approved",
         "kind": "scene",
         "template": null,
         "anchor_objects": []

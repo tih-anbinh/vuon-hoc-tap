@@ -3509,10 +3509,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-apple-v1",
+        "asset": "vocabulary/assets/vg-scene-apple-v1.svg",
+        "alt": "A round fruit, often red or green, that grows on a tree.",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -3651,10 +3651,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-arm-v1",
+        "asset": "vocabulary/assets/vg-scene-arm-v1.svg",
+        "alt": "The long part of your body between your shoulder and your hand.",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []

@@ -114,10 +114,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-umbrella-v1",
+        "asset": "vocabulary/assets/vg-scene-umbrella-v1.svg",
+        "alt": "A thing you hold over your head to keep the rain off.",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -256,10 +256,10 @@
       "visual": {
         "representation_type": "position_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-position-under-v1",
+        "asset": "vocabulary/assets/vg-position-under-v1.svg",
+        "alt": "In a lower place than something, or covered by it.",
+        "status": "approved",
         "kind": "position",
         "template": "cat_and_table",
         "anchor_objects": [

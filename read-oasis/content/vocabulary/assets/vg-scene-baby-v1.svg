@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-baby desc-baby">
+  <title id="title-baby">baby</title>
+  <desc id="desc-baby">A cute baby sitting and playing with a rattle toy.</desc>
+  <rect width="400" height="300" rx="20" fill="#FCE4EC"/>
+  <rect y="220" width="400" height="80" rx="0" fill="#F8BBD0" opacity="0.3"/>
+  <g transform="translate(200, 100)">
+    <!-- Body (onesie) -->
+    <ellipse cx="0" cy="65" rx="30" ry="35" fill="#BBDEFB" stroke="#90CAF9" stroke-width="2"/>
+    <!-- Legs -->
+    <ellipse cx="-18" cy="95" rx="14" ry="10" fill="#BBDEFB" stroke="#90CAF9" stroke-width="1.5"/>
+    <ellipse cx="18" cy="95" rx="14" ry="10" fill="#BBDEFB" stroke="#90CAF9" stroke-width="1.5"/>
+    <!-- Feet -->
+    <circle cx="-22" cy="100" r="6" fill="#FFCC80"/>
+    <circle cx="22" cy="100" r="6" fill="#FFCC80"/>
+    <!-- Arms -->
+    <line x1="-15" y1="50" x2="-30" y2="40" stroke="#FFCC80" stroke-width="8" stroke-linecap="round"/>
+    <line x1="15" y1="50" x2="35" y2="35" stroke="#FFCC80" stroke-width="8" stroke-linecap="round"/>
+    <!-- Rattle in right hand -->
+    <line x1="35" y1="35" x2="42" y2="25" stroke="#CE93D8" stroke-width="3"/>
+    <circle cx="44" cy="20" r="8" fill="#CE93D8" stroke="#AB47BC" stroke-width="1.5"/>
+    <circle cx="44" cy="20" r="3" fill="#F48FB1"/>
+    <!-- Head (bigger proportionally) -->
+    <circle cx="0" cy="15" r="28" fill="#FFCC80" stroke="#F9A825" stroke-width="2"/>
+    <!-- Wispy hair -->
+    <path d="M-8,-12 Q-5,-18 0,-15 Q5,-18 8,-12" fill="#8D6E63" stroke="#795548" stroke-width="1.5"/>
+    <!-- Big eyes -->
+    <circle cx="-9" cy="10" r="5" fill="#4E342E"/>
+    <circle cx="9" cy="10" r="5" fill="#4E342E"/>
+    <circle cx="-8" cy="9" r="2" fill="white"/>
+    <circle cx="10" cy="9" r="2" fill="white"/>
+    <!-- Tiny nose -->
+    <circle cx="0" cy="18" r="2" fill="#FFAB91"/>
+    <!-- Mouth (happy) -->
+    <path d="M-5,24 Q0,28 5,24" fill="none" stroke="#4E342E" stroke-width="2" stroke-linecap="round"/>
+    <!-- Rosy cheeks -->
+    <circle cx="-16" cy="18" r="5" fill="#F48FB1" opacity="0.4"/>
+    <circle cx="16" cy="18" r="5" fill="#F48FB1" opacity="0.4"/>
+  </g>
+</svg>

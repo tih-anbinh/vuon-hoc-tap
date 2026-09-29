@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-sit desc-sit">
+  <title id="title-sit">sit</title>
+  <desc id="desc-sit">A child sitting on a chair with hands on their lap.</desc>
+  <rect width="400" height="300" rx="20" fill="#FFF8E1"/>
+  <rect y="230" width="400" height="70" rx="0" fill="#EFEBE9"/>
+  <!-- Chair -->
+  <g transform="translate(160, 100)">
+    <rect x="0" y="60" width="80" height="10" rx="4" fill="#A1887F" stroke="#795548" stroke-width="2"/>
+    <rect x="5" y="70" width="8" height="60" rx="3" fill="#8D6E63"/>
+    <rect x="67" y="70" width="8" height="60" rx="3" fill="#8D6E63"/>
+    <rect x="0" y="-20" width="80" height="82" rx="6" fill="#BCAAA4" stroke="#795548" stroke-width="2"/>
+  </g>
+  <!-- Character Mo sitting -->
+  <g transform="translate(200, 80)">
+    <!-- Legs (bent, sitting) -->
+    <line x1="-12" y1="90" x2="-18" y2="120" stroke="#5D4037" stroke-width="10" stroke-linecap="round"/>
+    <line x1="12" y1="90" x2="18" y2="120" stroke="#5D4037" stroke-width="10" stroke-linecap="round"/>
+    <ellipse cx="-22" cy="124" rx="12" ry="6" fill="#FF7043" stroke="#E64A19" stroke-width="1.5"/>
+    <ellipse cx="22" cy="124" rx="12" ry="6" fill="#FF7043" stroke="#E64A19" stroke-width="1.5"/>
+    <!-- Body -->
+    <ellipse cx="0" cy="62" rx="22" ry="28" fill="#AB47BC" stroke="#8E24AA" stroke-width="2"/>
+    <!-- Arms on lap -->
+    <line x1="-10" y1="50" x2="-18" y2="78" stroke="#FFCC80" stroke-width="8" stroke-linecap="round"/>
+    <line x1="10" y1="50" x2="18" y2="78" stroke="#FFCC80" stroke-width="8" stroke-linecap="round"/>
+    <!-- Head -->
+    <circle cx="0" cy="20" r="22" fill="#FFCC80" stroke="#F9A825" stroke-width="2"/>
+    <!-- Hair -->
+    <path d="M-16,2 Q-10,-14 0,-12 Q10,-14 16,2" fill="#5D4037" stroke="#4E342E" stroke-width="1.5"/>
+    <!-- Face — calm, content -->
+    <circle cx="-7" cy="16" r="3" fill="#4E342E"/>
+    <circle cx="9" cy="16" r="3" fill="#4E342E"/>
+    <circle cx="-6" cy="15" r="1" fill="white"/>
+    <circle cx="10" cy="15" r="1" fill="white"/>
+    <path d="M-5,26 Q0,30 5,26" fill="none" stroke="#4E342E" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>

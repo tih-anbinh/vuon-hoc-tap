@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-inside desc-inside">
+  <title id="title-inside">inside</title>
+  <desc id="desc-inside">A toy bear sitting inside an open box. The bear is surrounded by the box walls.</desc>
+  <!-- Background -->
+  <rect width="400" height="300" rx="20" fill="#FFF8F0"/>
+  <rect y="220" width="400" height="80" rx="0" fill="#E8F5E9"/>
+  <!-- Box (open, 3D-ish) -->
+  <g transform="translate(110, 90)">
+    <!-- Box back wall -->
+    <rect x="10" y="20" width="180" height="120" rx="6" fill="#FFCC80" stroke="#E65100" stroke-width="2.5"/>
+    <!-- Box left wall -->
+    <polygon points="10,20 10,140 -10,155 -10,35" fill="#FFB74D" stroke="#E65100" stroke-width="2"/>
+    <!-- Box right wall -->
+    <polygon points="190,20 190,140 210,155 210,35" fill="#FFB74D" stroke="#E65100" stroke-width="2"/>
+    <!-- Box bottom -->
+    <polygon points="10,140 190,140 210,155 -10,155" fill="#FFA726" stroke="#E65100" stroke-width="2"/>
+    <!-- Box flap left (open) -->
+    <polygon points="10,20 -10,35 -30,10 10,0" fill="#FFCC80" stroke="#E65100" stroke-width="2"/>
+    <!-- Box flap right (open) -->
+    <polygon points="190,20 210,35 230,10 190,0" fill="#FFCC80" stroke="#E65100" stroke-width="2"/>
+    <!-- Teddy bear inside -->
+    <g transform="translate(70, 30)">
+      <!-- Body -->
+      <ellipse cx="30" cy="72" rx="26" ry="30" fill="#D7CCC8" stroke="#795548" stroke-width="2"/>
+      <!-- Belly -->
+      <ellipse cx="30" cy="76" rx="16" ry="18" fill="#EFEBE9"/>
+      <!-- Head -->
+      <circle cx="30" cy="32" r="24" fill="#D7CCC8" stroke="#795548" stroke-width="2"/>
+      <!-- Ears -->
+      <circle cx="10" cy="14" r="10" fill="#D7CCC8" stroke="#795548" stroke-width="2"/>
+      <circle cx="10" cy="14" r="5" fill="#BCAAA4"/>
+      <circle cx="50" cy="14" r="10" fill="#D7CCC8" stroke="#795548" stroke-width="2"/>
+      <circle cx="50" cy="14" r="5" fill="#BCAAA4"/>
+      <!-- Face -->
+      <circle cx="22" cy="28" r="3.5" fill="#4E342E"/>
+      <circle cx="38" cy="28" r="3.5" fill="#4E342E"/>
+      <circle cx="22" cy="27" r="1.2" fill="white"/>
+      <circle cx="38" cy="27" r="1.2" fill="white"/>
+      <ellipse cx="30" cy="36" rx="5" ry="3.5" fill="#8D6E63"/>
+      <!-- Smile -->
+      <path d="M24,40 Q30,47 36,40" fill="none" stroke="#5D4037" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- Arms -->
+      <ellipse cx="2" cy="60" rx="10" ry="7" fill="#D7CCC8" stroke="#795548" stroke-width="1.5" transform="rotate(-20 2 60)"/>
+      <ellipse cx="58" cy="60" rx="10" ry="7" fill="#D7CCC8" stroke="#795548" stroke-width="1.5" transform="rotate(20 58 60)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-mother desc-mother">
+  <title id="title-mother">mother</title>
+  <desc id="desc-mother">A woman (mother) standing with a warm smile and long hair.</desc>
+  <rect width="400" height="300" rx="20" fill="#FCE4EC"/>
+  <rect y="240" width="400" height="60" rx="0" fill="#C8E6C9"/>
+  <g transform="translate(200, 30)">
+    <!-- Legs -->
+    <rect x="-12" y="135" width="10" height="50" rx="4" fill="#FFCC80"/>
+    <rect x="2" y="135" width="10" height="50" rx="4" fill="#FFCC80"/>
+    <!-- Shoes -->
+    <ellipse cx="-7" cy="188" rx="10" ry="5" fill="#CE93D8"/>
+    <ellipse cx="7" cy="188" rx="10" ry="5" fill="#CE93D8"/>
+    <!-- Dress -->
+    <path d="M-25,60 Q-30,100 -35,140 L35,140 Q30,100 25,60 Z" fill="#CE93D8" stroke="#AB47BC" stroke-width="2"/>
+    <!-- Upper body -->
+    <ellipse cx="0" cy="75" rx="25" ry="30" fill="#CE93D8" stroke="#AB47BC" stroke-width="2"/>
+    <!-- Arms -->
+    <line x1="-12" y1="65" x2="-30" y2="100" stroke="#FFCC80" stroke-width="8" stroke-linecap="round"/>
+    <line x1="12" y1="65" x2="30" y2="100" stroke="#FFCC80" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="-32" cy="102" r="5" fill="#FFCC80"/>
+    <circle cx="32" cy="102" r="5" fill="#FFCC80"/>
+    <!-- Head -->
+    <circle cx="0" cy="28" r="26" fill="#FFCC80" stroke="#F9A825" stroke-width="2"/>
+    <!-- Long hair -->
+    <path d="M-22,10 Q-20,-10 0,-12 Q20,-10 22,10" fill="#5D4037" stroke="#4E342E" stroke-width="2"/>
+    <path d="M-22,10 Q-28,30 -25,50" fill="none" stroke="#5D4037" stroke-width="8" stroke-linecap="round"/>
+    <path d="M22,10 Q28,30 25,50" fill="none" stroke="#5D4037" stroke-width="8" stroke-linecap="round"/>
+    <!-- Face -->
+    <circle cx="-8" cy="22" r="3" fill="#4E342E"/>
+    <circle cx="8" cy="22" r="3" fill="#4E342E"/>
+    <circle cx="-7" cy="21" r="1" fill="white"/>
+    <circle cx="9" cy="21" r="1" fill="white"/>
+    <!-- Eyelashes -->
+    <path d="M-11,19 L-12,17" stroke="#4E342E" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M5,19 L4,17" stroke="#4E342E" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M-6,34 Q0,39 6,34" fill="none" stroke="#4E342E" stroke-width="2" stroke-linecap="round"/>
+    <!-- Rosy cheeks -->
+    <circle cx="-16" cy="28" r="4" fill="#F48FB1" opacity="0.35"/>
+    <circle cx="16" cy="28" r="4" fill="#F48FB1" opacity="0.35"/>
+  </g>
+</svg>

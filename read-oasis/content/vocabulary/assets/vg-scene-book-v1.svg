@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-book desc-book">
+  <title id="title-book">book</title>
+  <desc id="desc-book">An open book with colourful pages and a star on the cover.</desc>
+  <rect width="400" height="300" rx="20" fill="#E3F2FD"/>
+  <g transform="translate(200, 140)">
+    <!-- Shadow -->
+    <ellipse cx="0" cy="70" rx="100" ry="12" fill="#BBDEFB" opacity="0.3"/>
+    <!-- Left page -->
+    <path d="M-5,-40 Q-5,-45 -90,-35 Q-95,-34 -95,30 Q-95,55 -90,55 L-5,50 Z" fill="white" stroke="#90CAF9" stroke-width="2"/>
+    <!-- Right page -->
+    <path d="M5,-40 Q5,-45 90,-35 Q95,-34 95,30 Q95,55 90,55 L5,50 Z" fill="#FAFAFA" stroke="#90CAF9" stroke-width="2"/>
+    <!-- Spine -->
+    <rect x="-5" y="-42" width="10" height="94" rx="3" fill="#42A5F5" stroke="#1E88E5" stroke-width="1.5"/>
+    <!-- Left page lines -->
+    <g stroke="#BDBDBD" stroke-width="1.5" opacity="0.5">
+      <line x1="-80" y1="-20" x2="-15" y2="-25"/>
+      <line x1="-78" y1="-8" x2="-15" y2="-13"/>
+      <line x1="-76" y1="4" x2="-15" y2="-1"/>
+      <line x1="-74" y1="16" x2="-15" y2="11"/>
+      <line x1="-72" y1="28" x2="-15" y2="23"/>
+    </g>
+    <!-- Right page illustration -->
+    <circle cx="50" cy="0" r="18" fill="#FDD835" opacity="0.3"/>
+    <text x="42" y="7" font-family="sans-serif" font-size="22" fill="#FDD835">★</text>
+    <!-- Right page lines -->
+    <g stroke="#BDBDBD" stroke-width="1.5" opacity="0.5">
+      <line x1="15" y1="20" x2="80" y2="16"/>
+      <line x1="15" y1="32" x2="78" y2="28"/>
+    </g>
+  </g>
+</svg>

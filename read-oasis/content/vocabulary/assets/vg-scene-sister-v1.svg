@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-sister desc-sister">
+  <title id="title-sister">sister</title>
+  <desc id="desc-sister">A girl standing with pigtails and a cheerful smile.</desc>
+  <rect width="400" height="300" rx="20" fill="#F3E5F5"/>
+  <rect y="230" width="400" height="70" rx="0" fill="#C8E6C9"/>
+  <g transform="translate(200, 55)">
+    <!-- Legs -->
+    <rect x="-12" y="110" width="10" height="40" rx="4" fill="#FFCC80"/>
+    <rect x="2" y="110" width="10" height="40" rx="4" fill="#FFCC80"/>
+    <!-- Shoes -->
+    <ellipse cx="-7" cy="153" rx="10" ry="5" fill="#EF5350"/>
+    <ellipse cx="7" cy="153" rx="10" ry="5" fill="#EF5350"/>
+    <!-- Skirt -->
+    <path d="M-22,80 Q-28,110 -30,120 L30,120 Q28,110 22,80 Z" fill="#F48FB1" stroke="#EC407A" stroke-width="2"/>
+    <!-- Body (top) -->
+    <ellipse cx="0" cy="65" rx="22" ry="25" fill="#FDD835" stroke="#F9A825" stroke-width="2"/>
+    <!-- Arms -->
+    <line x1="-10" y1="55" x2="-28" y2="80" stroke="#FFCC80" stroke-width="7" stroke-linecap="round"/>
+    <line x1="10" y1="55" x2="28" y2="80" stroke="#FFCC80" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="-30" cy="82" r="5" fill="#FFCC80"/>
+    <circle cx="30" cy="82" r="5" fill="#FFCC80"/>
+    <!-- Head -->
+    <circle cx="0" cy="22" r="24" fill="#FFCC80" stroke="#F9A825" stroke-width="2"/>
+    <!-- Hair with pigtails -->
+    <path d="M-20,5 Q-15,-10 0,-12 Q15,-10 20,5" fill="#5D4037" stroke="#4E342E" stroke-width="2"/>
+    <!-- Pigtails -->
+    <circle cx="-26" cy="10" r="10" fill="#5D4037"/>
+    <circle cx="26" cy="10" r="10" fill="#5D4037"/>
+    <!-- Hair ties -->
+    <circle cx="-22" cy="4" r="3" fill="#EF5350"/>
+    <circle cx="22" cy="4" r="3" fill="#EF5350"/>
+    <!-- Face -->
+    <circle cx="-7" cy="18" r="3" fill="#4E342E"/>
+    <circle cx="7" cy="18" r="3" fill="#4E342E"/>
+    <circle cx="-6" cy="17" r="1" fill="white"/>
+    <circle cx="8" cy="17" r="1" fill="white"/>
+    <path d="M-5,28 Q0,33 5,28" fill="none" stroke="#4E342E" stroke-width="2" stroke-linecap="round"/>
+    <!-- Rosy cheeks -->
+    <circle cx="-14" cy="24" r="4" fill="#F48FB1" opacity="0.35"/>
+    <circle cx="14" cy="24" r="4" fill="#F48FB1" opacity="0.35"/>
+  </g>
+</svg>

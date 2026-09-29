@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-arm desc-arm">
+  <title id="title-arm">arm</title>
+  <desc id="desc-arm">A child waving their arm with an arrow pointing to the arm.</desc>
+  <rect width="400" height="300" rx="20" fill="#E8F5E9"/>
+  <rect y="230" width="400" height="70" rx="0" fill="#C8E6C9"/>
+  <!-- Character (upper body focus) -->
+  <g transform="translate(180, 80)">
+    <!-- Body -->
+    <ellipse cx="0" cy="80" rx="30" ry="40" fill="#42A5F5" stroke="#1E88E5" stroke-width="2"/>
+    <!-- Left arm (highlighted) -->
+    <line x1="-15" y1="55" x2="-55" y2="30" stroke="#FFCC80" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="-58" cy="28" r="7" fill="#FFCC80" stroke="#F9A825" stroke-width="1.5"/>
+    <!-- Right arm -->
+    <line x1="15" y1="65" x2="40" y2="90" stroke="#FFCC80" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="42" cy="92" r="7" fill="#FFCC80"/>
+    <!-- Head -->
+    <circle cx="0" cy="25" r="25" fill="#FFCC80" stroke="#F9A825" stroke-width="2"/>
+    <path d="M-18,8 Q-10,-8 0,-6 Q10,-8 18,8" fill="#5D4037" stroke="#4E342E" stroke-width="1.5"/>
+    <circle cx="-7" cy="20" r="3" fill="#4E342E"/>
+    <circle cx="9" cy="20" r="3" fill="#4E342E"/>
+    <path d="M-4,30 Q0,34 4,30" fill="none" stroke="#4E342E" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <!-- Arrow pointing to arm -->
+  <g fill="none" stroke="#E53935" stroke-width="3">
+    <path d="M280,80 Q260,70 240,65" stroke-linecap="round"/>
+    <polygon points="238,60 230,68 242,70" fill="#E53935" stroke="none"/>
+  </g>
+  <!-- Label -->
+  <text x="285" y="85" font-family="sans-serif" font-size="20" font-weight="bold" fill="#E53935">arm</text>
+</svg>

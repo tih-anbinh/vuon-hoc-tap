@@ -1005,10 +1005,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-father-v1",
+        "asset": "vocabulary/assets/vg-scene-father-v1.svg",
+        "alt": "A man who has a child. He is the child's dad.",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -4632,10 +4632,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-frog-v1",
+        "asset": "vocabulary/assets/vg-scene-frog-v1.svg",
+        "alt": "A small green animal that jumps and lives near water.",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []

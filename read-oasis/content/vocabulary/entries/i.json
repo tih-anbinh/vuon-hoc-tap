@@ -1135,10 +1135,10 @@
       "visual": {
         "representation_type": "position_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-position-inside-v1",
+        "asset": "vocabulary/assets/vg-position-inside-v1.svg",
+        "alt": "In the inner part of something, not outside.",
+        "status": "approved",
         "kind": "position",
         "template": "toy_and_box",
         "anchor_objects": [

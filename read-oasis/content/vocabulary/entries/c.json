@@ -1347,10 +1347,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-cat-v1",
+        "asset": "vocabulary/assets/vg-scene-cat-v1.svg",
+        "alt": "A small, furry animal that many people keep as a pet. It says \"meow\".",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -1898,10 +1898,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-chair-v1",
+        "asset": "vocabulary/assets/vg-scene-chair-v1.svg",
+        "alt": "A seat for one person, with a back and four legs.",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -6498,10 +6498,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-cow-v1",
+        "asset": "vocabulary/assets/vg-scene-cow-v1.svg",
+        "alt": "A big farm animal that eats grass and gives us milk.",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -6779,10 +6779,10 @@
       "visual": {
         "representation_type": "action_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-action-cross-v1",
+        "asset": "vocabulary/assets/vg-action-cross-v1.svg",
+        "alt": "To go from one side of something to the other side.",
+        "status": "approved",
         "kind": "action",
         "template": null,
         "anchor_objects": []
@@ -7334,10 +7334,10 @@
       "visual": {
         "representation_type": "action_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-action-cycle-v1",
+        "asset": "vocabulary/assets/vg-action-cycle-v1.svg",
+        "alt": "To ride a bicycle.",
+        "status": "approved",
         "kind": "action",
         "template": null,
         "anchor_objects": []

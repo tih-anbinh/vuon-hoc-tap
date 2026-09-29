@@ -250,10 +250,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-ear-v1",
+        "asset": "vocabulary/assets/vg-scene-ear-v1.svg",
+        "alt": "The part on the side of your head that you hear with.",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -736,10 +736,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-egg-v1",
+        "asset": "vocabulary/assets/vg-scene-egg-v1.svg",
+        "alt": "A round food with a hard shell that comes from a bird such as a hen.",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -878,10 +878,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-elephant-v1",
+        "asset": "vocabulary/assets/vg-scene-elephant-v1.svg",
+        "alt": "A very big grey animal with big ears and a long nose called a trunk.",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -1226,7 +1226,7 @@
         "asset_id": null,
         "asset": null,
         "alt": null,
-        "status": "not_started",
+        "status": "not_applicable",
         "kind": "contrast",
         "template": null,
         "anchor_objects": []
@@ -3338,10 +3338,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-eye-v1",
+        "asset": "vocabulary/assets/vg-scene-eye-v1.svg",
+        "alt": "One of the two parts on your face that you see with.",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []

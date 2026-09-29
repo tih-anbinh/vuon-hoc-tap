@@ -12,7 +12,7 @@
 // alternative; audio-denied still leaves every task completable; fast guessing is not
 // rewarded; no voice recording is ever required.
 
-import { h, btn, icon, toast, narrator, shuffle, loadJSON } from './ui.mjs';
+import { h, btn, icon, toast, narrator, shuffle, loadJSON, assetUrl } from './ui.mjs';
 
 const VOCAB_BASE = 'vocabulary/';
 let manifest = null;                 // content/vocabulary/manifest.json
@@ -109,9 +109,14 @@ function renderVisualArea(entry) {
   const t = entry.teaching || {};
 
   if (rt === 'position_svg') {
-    // Structured position diagram: show the word in context with anchor objects
+    // Structured position diagram with optional SVG illustration
     const anchors = vis.anchor_objects || [];
+    const imgEl = vis.asset
+      ? h('img', { src: assetUrl(vis.asset), alt: vis.alt || entry.headword,
+                   class: 'position-illustration', loading: 'lazy', width: '400', height: '300' })
+      : null;
     return h('div', { class: 'visual-position', 'aria-label': `Position: ${entry.headword}` },
+      imgEl,
       h('div', { class: 'position-scene' },
         anchors.length >= 2
           ? h('div', { class: 'position-objects' },
@@ -140,12 +145,11 @@ function renderVisualArea(entry) {
   if (rt === 'action_svg' || rt === 'scene_svg') {
     // Future: render actual SVG asset. For now: styled placeholder with icon.
     if (vis.asset) {
-      // When assets exist, render them here
       return h('div', { class: 'visual-asset' },
-        h('img', { src: vis.asset, alt: vis.alt || entry.headword }));
+        h('img', { src: assetUrl(vis.asset), alt: vis.alt || entry.headword,
+                   loading: 'lazy', width: '400', height: '300' }));
     }
-    // Placeholder: icon-based preview
-    return null; // No placeholder clutter — text-only until assets exist
+    return null; // No placeholder — text-only until assets exist
   }
 
   return null;

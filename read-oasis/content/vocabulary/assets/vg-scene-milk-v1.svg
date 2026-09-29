@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-milk desc-milk">
+  <title id="title-milk">milk</title>
+  <desc id="desc-milk">A glass of white milk with a straw.</desc>
+  <rect width="400" height="300" rx="20" fill="#E3F2FD"/>
+  <g transform="translate(200, 60)">
+    <!-- Shadow -->
+    <ellipse cx="5" cy="195" rx="45" ry="8" fill="#BBDEFB" opacity="0.4"/>
+    <!-- Glass -->
+    <path d="M-35,30 L-30,185 Q-28,195 0,195 Q28,195 30,185 L35,30 Z" fill="#E3F2FD" stroke="#90CAF9" stroke-width="2.5" opacity="0.8"/>
+    <!-- Milk -->
+    <path d="M-33,40 L-30,185 Q-28,193 0,193 Q28,193 30,185 L33,40 Z" fill="white" stroke="#E0E0E0" stroke-width="1"/>
+    <!-- Milk surface -->
+    <ellipse cx="0" cy="40" rx="33" ry="8" fill="white" stroke="#E0E0E0" stroke-width="1.5"/>
+    <!-- Glass rim -->
+    <ellipse cx="0" cy="30" rx="35" ry="8" fill="none" stroke="#90CAF9" stroke-width="2.5"/>
+    <!-- Glass highlight -->
+    <path d="M-25,50 L-23,170" fill="none" stroke="white" stroke-width="3" opacity="0.4" stroke-linecap="round"/>
+    <!-- Straw -->
+    <line x1="10" y1="5" x2="15" y2="170" stroke="#EF5350" stroke-width="5" stroke-linecap="round"/>
+    <line x1="10" y1="5" x2="15" y2="170" stroke="#E53935" stroke-width="2" stroke-dasharray="8,8" opacity="0.3"/>
+  </g>
+</svg>

@@ -46,10 +46,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-hair-v1",
+        "asset": "vocabulary/assets/vg-scene-hair-v1.svg",
+        "alt": "The soft threads that grow on top of your head.",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -256,10 +256,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-hand-v1",
+        "asset": "vocabulary/assets/vg-scene-hand-v1.svg",
+        "alt": "The part of your body at the end of your arm. You use it to hold things.",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -466,7 +466,7 @@
         "asset_id": null,
         "asset": null,
         "alt": null,
-        "status": "not_started",
+        "status": "not_applicable",
         "kind": "contrast",
         "template": null,
         "anchor_objects": []
@@ -1283,7 +1283,7 @@
         "asset_id": null,
         "asset": null,
         "alt": null,
-        "status": "not_started",
+        "status": "not_applicable",
         "kind": "contrast",
         "template": null,
         "anchor_objects": []
@@ -3397,10 +3397,10 @@
       "visual": {
         "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_started",
+        "asset_id": "vg-scene-horse-v1",
+        "asset": "vocabulary/assets/vg-scene-horse-v1.svg",
+        "alt": "A big, strong animal that can run fast. People can ride it.",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
