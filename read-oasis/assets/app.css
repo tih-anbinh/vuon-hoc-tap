@@ -186,8 +186,12 @@ button[aria-pressed="true"].quiet { border-color: var(--primary); background: va
 .concept-icon { font-size: 1.2em; font-weight: 800; flex: none; width: 1.5em; text-align: center; }
 .concept-yes .concept-icon { color: var(--accent); }
 .concept-no .concept-icon { color: var(--warn); }
-.visual-asset { border-radius: var(--r-lg); overflow: hidden; max-height: 280px; display: grid; place-items: center; }
-.visual-asset img { width: 100%; height: 100%; object-fit: contain; }
+/* Flashcard illustration: preserve 4:3 aspect from SVG viewBox; never crop.
+   Use max-width/max-height and let width/height stay 'auto' so the browser
+   scales the image proportionally inside the card. */
+.visual-asset { border-radius: var(--r-lg); display: grid; place-items: center; width: 100%; }
+.visual-asset img { display: block; max-width: 100%; max-height: 280px; width: auto; height: auto; }
+.position-illustration { display: block; max-width: 100%; max-height: 240px; width: auto; height: auto; margin: 0 auto .6rem; border-radius: var(--r-md); }
 .answers { display: grid; gap: .65rem; margin: .8rem 0; }
 .answers button { justify-content: flex-start; text-align: left; padding: .7em 1.1em; font-size: var(--control-px); min-height: 3.2em; white-space: normal; border-radius: var(--r-md); border-color: var(--line); color: var(--ink); box-shadow: none; }
 .answers button:hover { border-color: var(--primary); }
