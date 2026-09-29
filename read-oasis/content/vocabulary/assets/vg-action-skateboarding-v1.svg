@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-skateboarding desc-skateboarding">
+  <title id="title-skateboarding">Skateboarding - Child riding a skateboard</title>
+  <desc id="desc-skateboarding">A happy child wearing a helmet riding a skateboard with knees bent and arms out for balance, with motion lines showing speed.</desc>
+  <defs>
+    <linearGradient id="sb-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#sb-bg)"/>
+  <circle cx="345" cy="48" r="22" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <ellipse cx="80" cy="50" rx="34" ry="12" fill="#ffffff" opacity="0.95"/>
+  <!-- ramp / ground -->
+  <rect x="0" y="245" width="400" height="55" fill="#94a3b8"/>
+  <line x1="0" y1="245" x2="400" y2="245" stroke="#475569" stroke-width="3.5"/>
+  <rect x="0" y="220" width="400" height="25" fill="#4ade80"/>
+  <line x1="0" y1="220" x2="400" y2="220" stroke="#15803d" stroke-width="3"/>
+  <ellipse cx="205" cy="252" rx="120" ry="10" fill="#0f172a" opacity="0.25"/>
+  <!-- rider -->
+  <g filter="url(#soft-shadow)">
+    <!-- helmet -->
+    <path d="M172,72 Q172,40 204,40 Q236,40 236,72 L232,80 L176,80 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="3.5"/>
+    <line x1="204" y1="42" x2="204" y2="78" stroke="#7f1d1d" stroke-width="2.5" opacity="0.6"/>
+    <!-- head -->
+    <circle cx="204" cy="90" r="24" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <circle cx="196" cy="87" r="3.5" fill="#0f172a"/>
+    <circle cx="214" cy="87" r="3.5" fill="#0f172a"/>
+    <path d="M194,100 Q204,108 214,100" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <!-- body leaning forward -->
+    <path d="M188,112 L222,112 L232,172 L182,172 Z" fill="#3b82f6" stroke="#1e3a8a" stroke-width="3.5"/>
+    <!-- arms out for balance -->
+    <path d="M188,120 Q150,110 122,124" fill="none" stroke="#fcd9b6" stroke-width="11" stroke-linecap="round"/>
+    <path d="M222,120 Q262,108 290,118" fill="none" stroke="#fcd9b6" stroke-width="11" stroke-linecap="round"/>
+    <circle cx="118" cy="126" r="8" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <circle cx="294" cy="116" r="8" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <!-- bent legs -->
+    <path d="M192,172 Q176,192 184,214" fill="none" stroke="#334155" stroke-width="13" stroke-linecap="round"/>
+    <path d="M222,172 Q240,190 236,214" fill="none" stroke="#334155" stroke-width="13" stroke-linecap="round"/>
+    <!-- shoes -->
+    <ellipse cx="182" cy="220" rx="16" ry="8" fill="#ef4444" stroke="#7f1d1d" stroke-width="3"/>
+    <ellipse cx="240" cy="220" rx="16" ry="8" fill="#ef4444" stroke="#7f1d1d" stroke-width="3"/>
+  </g>
+  <!-- skateboard -->
+  <g filter="url(#soft-shadow)">
+    <path d="M138,230 Q144,222 158,225 L266,225 Q280,222 286,230 Q281,236 270,233 L154,233 Q143,236 138,230 Z" fill="#f97316" stroke="#7c2d12" stroke-width="3.5"/>
+    <circle cx="172" cy="242" r="10" fill="#facc15" stroke="#a16207" stroke-width="3"/>
+    <circle cx="252" cy="242" r="10" fill="#facc15" stroke="#a16207" stroke-width="3"/>
+  </g>
+  <!-- motion lines -->
+  <g stroke="#64748b" stroke-width="4" stroke-linecap="round" opacity="0.8">
+    <line x1="60" y1="180" x2="100" y2="180"/>
+    <line x1="45" y1="205" x2="90" y2="205"/>
+    <line x1="58" y1="232" x2="104" y2="232"/>
+  </g>
+</svg>

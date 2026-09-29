@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-lake desc-lake">
+  <title id="title-lake">Lake - A calm blue lake with ducks</title>
+  <desc id="desc-lake">A big calm blue lake surrounded by green hills and trees, with ducks swimming, a small wooden boat, and mountains in the distance.</desc>
+  <defs>
+    <linearGradient id="lk-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="lk-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#lk-sky)"/>
+  <circle cx="330" cy="50" r="22" fill="#fbbf24" stroke="#d97706" stroke-width="3.5"/>
+  <ellipse cx="100" cy="44" rx="34" ry="12" fill="#ffffff" opacity="0.95"/>
+  <!-- mountains -->
+  <path d="M-10,150 L70,70 L150,150 Z" fill="#94a3b8" stroke="#475569" stroke-width="3.5"/>
+  <path d="M56,84 L70,70 L84,84 L70,96 Z" fill="#f8fafc" stroke="#475569" stroke-width="2.5"/>
+  <path d="M120,150 L210,58 L300,150 Z" fill="#64748b" stroke="#334155" stroke-width="3.5"/>
+  <path d="M194,74 L210,58 L226,74 L210,90 Z" fill="#f8fafc" stroke="#334155" stroke-width="2.5"/>
+  <!-- green shore hills -->
+  <path d="M-10,160 Q100,132 210,158 Q310,178 410,152 L410,180 L-10,180 Z" fill="#4ade80" stroke="#15803d" stroke-width="3.5"/>
+  <!-- trees on shore -->
+  <g filter="url(#soft-shadow)">
+    <rect x="40" y="146" width="8" height="20" fill="#92400e" stroke="#451a03" stroke-width="2.5"/>
+    <circle cx="44" cy="138" r="18" fill="#22c55e" stroke="#15803d" stroke-width="3"/>
+    <rect x="352" y="140" width="8" height="20" fill="#92400e" stroke="#451a03" stroke-width="2.5"/>
+    <circle cx="356" cy="132" r="18" fill="#16a34a" stroke="#14532d" stroke-width="3"/>
+  </g>
+  <!-- LAKE (hero element) -->
+  <ellipse cx="200" cy="238" rx="196" ry="62" fill="url(#lk-water)" stroke="#0c4a6e" stroke-width="4.5"/>
+  <!-- ripples -->
+  <g stroke="#bae6fd" stroke-width="3.5" fill="none" stroke-linecap="round">
+    <path d="M70,230 Q86,224 102,230 Q118,236 134,230"/>
+    <path d="M260,222 Q276,216 292,222 Q308,228 324,222"/>
+    <path d="M130,262 Q146,256 162,262 Q178,268 194,262"/>
+    <path d="M270,258 Q286,252 302,258"/>
+    <path d="M60,258 Q76,252 92,258"/>
+  </g>
+  <!-- rowing boat -->
+  <g filter="url(#soft-shadow)">
+    <path d="M234,206 L306,206 L292,226 L248,226 Z" fill="#b45309" stroke="#451a03" stroke-width="3.5"/>
+    <line x1="252" y1="206" x2="252" y2="224" stroke="#451a03" stroke-width="2.5"/>
+    <line x1="288" y1="206" x2="288" y2="224" stroke="#451a03" stroke-width="2.5"/>
+    <line x1="296" y1="200" x2="322" y2="218" stroke="#78350f" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="325" cy="220" rx="7" ry="4" fill="#92400e" stroke="#451a03" stroke-width="2.5" transform="rotate(35 325 220)"/>
+  </g>
+  <!-- mother duck -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="130" cy="246" rx="26" ry="16" fill="#fbbf24" stroke="#a16207" stroke-width="3.5"/>
+    <path d="M148,238 Q158,224 152,214" fill="none" stroke="#fbbf24" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="152" cy="210" r="11" fill="#fbbf24" stroke="#a16207" stroke-width="3"/>
+    <path d="M162,212 Q172,214 168,219 Q163,218 161,215 Z" fill="#f97316" stroke="#9a3412" stroke-width="2"/>
+    <circle cx="154" cy="207" r="2.5" fill="#0f172a"/>
+    <path d="M112,240 Q120,234 128,240" fill="none" stroke="#d97706" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <!-- duckling -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="84" cy="252" rx="14" ry="9" fill="#fde047" stroke="#a16207" stroke-width="2.5"/>
+    <circle cx="96" cy="244" r="7" fill="#fde047" stroke="#a16207" stroke-width="2.5"/>
+    <path d="M102,245 Q108,246 105,249 Q102,248 101,247 Z" fill="#f97316" stroke="#9a3412" stroke-width="1.5"/>
+    <circle cx="97" cy="242" r="1.8" fill="#0f172a"/>
+  </g>
+  <!-- cattails at edge -->
+  <g filter="url(#soft-shadow)">
+    <line x1="30" y1="290" x2="34" y2="238" stroke="#15803d" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="34" cy="230" rx="6" ry="14" fill="#92400e" stroke="#451a03" stroke-width="2.5"/>
+    <line x1="52" y1="292" x2="54" y2="248" stroke="#15803d" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="54" cy="240" rx="5" ry="12" fill="#a16207" stroke="#451a03" stroke-width="2.5"/>
+  </g>
+  <!-- birds -->
+  <g stroke="#334155" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M150,40 Q158,32 166,40 Q174,32 182,40"/>
+    <path d="M230,58 Q236,52 242,58 Q248,52 254,58"/>
+  </g>
+</svg>

@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-grass desc-grass">
+  <title id="title-grass">Grass - Green grass growing in the field</title>
+  <desc id="desc-grass">A close-up of bright green grass blades growing in a field, with a ladybird on one blade, small flowers, and a child lying happily on the lawn.</desc>
+  <defs>
+    <linearGradient id="gr-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="gr-lawn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#gr-sky)"/>
+  <circle cx="56" cy="48" r="22" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <ellipse cx="300" cy="52" rx="36" ry="12" fill="#ffffff" opacity="0.95"/>
+  <!-- lawn (dominant) -->
+  <path d="M0,150 Q200,128 400,150 L400,300 L0,300 Z" fill="url(#gr-lawn)"/>
+  <path d="M0,150 Q200,128 400,150" fill="none" stroke="#15803d" stroke-width="4"/>
+  <!-- child lying on grass in background -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="308" cy="172" r="18" fill="#fcd9b6" stroke="#78350f" stroke-width="3"/>
+    <path d="M292,166 Q292,152 308,150 Q324,152 324,166 L319,169 Q308,158 297,169 Z" fill="#451a03" stroke="#1c1917" stroke-width="2.5"/>
+    <path d="M301,170 Q304,173 307,170" fill="none" stroke="#0f172a" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M311,170 Q314,173 317,170" fill="none" stroke="#0f172a" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M303,179 Q308,183 313,179" fill="none" stroke="#0f172a" stroke-width="2.2" stroke-linecap="round"/>
+    <!-- body lying sideways -->
+    <path d="M322,184 L376,190 L374,208 L320,202 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="3"/>
+    <path d="M374,196 Q392,198 396,206" fill="none" stroke="#1d4ed8" stroke-width="8" stroke-linecap="round"/>
+    <!-- arms behind head -->
+    <path d="M296,182 Q284,188 284,198" fill="none" stroke="#fcd9b6" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <!-- BIG GRASS BLADES foreground (hero element) -->
+  <g filter="url(#soft-shadow)">
+    <g fill="#22c55e" stroke="#14532d" stroke-width="3.5" stroke-linejoin="round">
+      <path d="M30,300 Q22,240 42,196 Q48,242 46,300 Z"/>
+      <path d="M62,300 Q72,230 58,186 Q80,226 78,300 Z"/>
+      <path d="M104,300 Q94,232 116,180 Q122,234 118,300 Z"/>
+      <path d="M148,300 Q158,236 140,192 Q166,230 162,300 Z"/>
+      <path d="M192,300 Q182,238 204,188 Q210,238 206,300 Z"/>
+      <path d="M240,300 Q250,240 230,198 Q256,234 252,300 Z"/>
+      <path d="M286,300 Q276,244 296,204 Q304,244 300,300 Z"/>
+      <path d="M336,300 Q344,248 328,212 Q352,244 348,300 Z"/>
+      <path d="M374,300 Q366,252 384,220 Q392,252 388,300 Z"/>
+    </g>
+    <!-- lighter inner blades -->
+    <g fill="#86efac" stroke="#16a34a" stroke-width="2.5">
+      <path d="M48,300 Q46,256 58,228 Q62,258 60,300 Z"/>
+      <path d="M128,300 Q124,256 136,230 Q142,260 138,300 Z"/>
+      <path d="M216,300 Q212,258 224,232 Q230,262 226,300 Z"/>
+      <path d="M312,300 Q308,262 320,238 Q326,264 322,300 Z"/>
+    </g>
+  </g>
+  <!-- ladybird on a blade -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="116" cy="196" rx="13" ry="10" fill="#ef4444" stroke="#7f1d1d" stroke-width="2.5"/>
+    <circle cx="106" cy="192" r="5" fill="#0f172a"/>
+    <line x1="116" y1="187" x2="116" y2="205" stroke="#0f172a" stroke-width="2"/>
+    <g fill="#0f172a">
+      <circle cx="112" cy="194" r="2"/>
+      <circle cx="122" cy="192" r="2"/>
+      <circle cx="120" cy="200" r="2"/>
+    </g>
+    <g stroke="#0f172a" stroke-width="1.5" fill="none">
+      <path d="M104,188 Q101,184 98,183"/>
+      <path d="M107,187 Q106,182 104,180"/>
+    </g>
+  </g>
+  <!-- small daisies among grass -->
+  <g>
+    <g transform="translate(174,246)">
+      <circle r="5" fill="#fbbf24" stroke="#a16207" stroke-width="1.8"/>
+      <g fill="#ffffff" stroke="#94a3b8" stroke-width="1.2">
+        <ellipse cx="0" cy="-9" rx="3.5" ry="5"/>
+        <ellipse cx="8" cy="-4" rx="3.5" ry="5" transform="rotate(60)"/>
+        <ellipse cx="8" cy="5" rx="3.5" ry="5" transform="rotate(120)"/>
+        <ellipse cx="0" cy="9" rx="3.5" ry="5"/>
+        <ellipse cx="-8" cy="4" rx="3.5" ry="5" transform="rotate(60)"/>
+        <ellipse cx="-8" cy="-5" rx="3.5" ry="5" transform="rotate(120)"/>
+      </g>
+      <circle r="5" fill="#fbbf24" stroke="#a16207" stroke-width="1.8"/>
+    </g>
+    <g transform="translate(268,262)">
+      <g fill="#ffffff" stroke="#94a3b8" stroke-width="1.2">
+        <ellipse cx="0" cy="-8" rx="3" ry="4.5"/>
+        <ellipse cx="7" cy="-3" rx="3" ry="4.5" transform="rotate(60)"/>
+        <ellipse cx="7" cy="5" rx="3" ry="4.5" transform="rotate(120)"/>
+        <ellipse cx="0" cy="8" rx="3" ry="4.5"/>
+        <ellipse cx="-7" cy="4" rx="3" ry="4.5" transform="rotate(60)"/>
+        <ellipse cx="-7" cy="-4" rx="3" ry="4.5" transform="rotate(120)"/>
+      </g>
+      <circle r="4.5" fill="#fbbf24" stroke="#a16207" stroke-width="1.8"/>
+    </g>
+  </g>
+  <!-- butterfly -->
+  <g>
+    <ellipse cx="230" cy="120" rx="8" ry="11" fill="#a78bfa" stroke="#6d28d9" stroke-width="2" transform="rotate(-25 230 120)"/>
+    <ellipse cx="243" cy="118" rx="8" ry="11" fill="#c4b5fd" stroke="#6d28d9" stroke-width="2" transform="rotate(25 243 118)"/>
+    <line x1="236" y1="112" x2="236" y2="130" stroke="#4c1d95" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+</svg>

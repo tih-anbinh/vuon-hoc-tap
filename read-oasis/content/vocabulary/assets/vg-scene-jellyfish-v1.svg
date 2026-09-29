@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-jellyfish desc-jellyfish">
+  <title id="title-jellyfish">Jellyfish - Pink jellyfish floating in the sea</title>
+  <desc id="desc-jellyfish">A big friendly pink jellyfish with a rounded bell and long wavy tentacles floating underwater among bubbles and small fish.</desc>
+  <defs>
+    <linearGradient id="jf-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <radialGradient id="jf-bell" cx="0.5" cy="0.35" r="0.8">
+      <stop offset="0%" stop-color="#fbcfe8"/>
+      <stop offset="70%" stop-color="#f472b6"/>
+      <stop offset="100%" stop-color="#db2777"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#jf-bg)"/>
+  <!-- light rays -->
+  <g fill="#e0f2fe" opacity="0.15">
+    <path d="M60,0 L110,0 L70,300 L30,300 Z"/>
+    <path d="M300,0 L340,0 L380,300 L330,300 Z"/>
+  </g>
+  <!-- sea floor hint -->
+  <path d="M0,282 Q100,270 200,282 T400,282 L400,300 L0,300 Z" fill="#fbbf24" opacity="0.5"/>
+  <!-- small fish -->
+  <g fill="#fb923c" stroke="#c2410c" stroke-width="2.5">
+    <path d="M60,220 Q75,210 88,220 Q75,230 60,220 Z"/>
+    <path d="M60,220 L48,212 L48,228 Z"/>
+  </g>
+  <circle cx="82" cy="218" r="2" fill="#0f172a"/>
+  <g fill="#facc15" stroke="#b45309" stroke-width="2.5">
+    <path d="M330,190 Q345,181 357,190 Q345,199 330,190 Z"/>
+    <path d="M330,190 L319,183 L319,197 Z"/>
+  </g>
+  <circle cx="352" cy="188" r="2" fill="#0f172a"/>
+  <!-- jellyfish -->
+  <g filter="url(#soft-shadow)">
+    <!-- bell -->
+    <path d="M110,140 Q110,45 200,45 Q290,45 290,140 Q268,128 245,140 Q222,128 200,140 Q178,128 155,140 Q132,128 110,140 Z" fill="url(#jf-bell)" stroke="#9d174d" stroke-width="4"/>
+    <!-- bell highlight -->
+    <ellipse cx="165" cy="80" rx="26" ry="16" fill="#fdf2f8" opacity="0.6"/>
+    <!-- spots -->
+    <circle cx="230" cy="90" r="8" fill="#f9a8d4" stroke="#be185d" stroke-width="2"/>
+    <circle cx="255" cy="112" r="6" fill="#f9a8d4" stroke="#be185d" stroke-width="2"/>
+    <circle cx="145" cy="112" r="6" fill="#f9a8d4" stroke="#be185d" stroke-width="2"/>
+    <!-- face -->
+    <circle cx="180" cy="105" r="6" fill="#0f172a"/>
+    <circle cx="220" cy="105" r="6" fill="#0f172a"/>
+    <circle cx="182" cy="103" r="2" fill="#ffffff"/>
+    <circle cx="222" cy="103" r="2" fill="#ffffff"/>
+    <path d="M188,120 Q200,130 212,120" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- tentacles -->
+    <g fill="none" stroke="#f472b6" stroke-width="7" stroke-linecap="round">
+      <path d="M125,142 Q112,175 128,205 Q142,232 126,258"/>
+      <path d="M160,142 Q150,180 165,212 Q177,240 164,265"/>
+      <path d="M200,144 Q192,182 205,215 Q216,244 202,270"/>
+      <path d="M240,142 Q250,180 236,212 Q224,240 238,265"/>
+      <path d="M275,142 Q288,175 272,205 Q258,232 274,258"/>
+    </g>
+    <g fill="none" stroke="#fbcfe8" stroke-width="4" stroke-linecap="round" opacity="0.9">
+      <path d="M142,142 Q132,178 146,208 Q158,235 144,260"/>
+      <path d="M258,142 Q270,178 254,208 Q242,235 256,260"/>
+    </g>
+  </g>
+  <!-- bubbles -->
+  <g fill="none" stroke="#e0f2fe" stroke-width="2.5" opacity="0.9">
+    <circle cx="320" cy="70" r="9"/>
+    <circle cx="340" cy="45" r="6"/>
+    <circle cx="70" cy="90" r="8"/>
+    <circle cx="55" cy="60" r="5"/>
+    <circle cx="305" cy="250" r="7"/>
+  </g>
+</svg>

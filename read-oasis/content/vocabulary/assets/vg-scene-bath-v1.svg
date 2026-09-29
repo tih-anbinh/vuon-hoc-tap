@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-bath desc-bath">
+  <title id="title-bath">Bath - White bathtub filled with water and bubbles</title>
+  <desc id="desc-bath">A white claw-foot bathtub filled with light blue water and topped with fluffy white foam bubbles.</desc>
+  <defs>
+    <linearGradient id="ba-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#bfdbfe"/>
+    </linearGradient>
+    <linearGradient id="ba-tub" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+    <linearGradient id="ba-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#ba-bg)"/>
+  <!-- tile lines background -->
+  <g stroke="#93c5fd" stroke-width="1" opacity="0.4">
+    <line x1="0" y1="80" x2="400" y2="80"/>
+    <line x1="0" y1="140" x2="400" y2="140"/>
+    <line x1="100" y1="0" x2="100" y2="200"/>
+    <line x1="200" y1="0" x2="200" y2="200"/>
+    <line x1="300" y1="0" x2="300" y2="200"/>
+  </g>
+  <ellipse cx="200" cy="272" rx="150" ry="8" fill="#0f172a" opacity="0.22"/>
+  <!-- bathtub -->
+  <g filter="url(#soft-shadow)">
+    <!-- tub body -->
+    <path d="M60,150 Q60,240 130,250 L270,250 Q340,240 340,150 Z" fill="url(#ba-tub)" stroke="#334155" stroke-width="4"/>
+    <!-- rim -->
+    <ellipse cx="200" cy="150" rx="140" ry="18" fill="#e2e8f0" stroke="#334155" stroke-width="3"/>
+    <ellipse cx="200" cy="150" rx="130" ry="12" fill="url(#ba-water)" stroke="#0369a1" stroke-width="2"/>
+    <!-- bubbles/foam -->
+    <g fill="#ffffff" stroke="#94a3b8" stroke-width="1.5">
+      <circle cx="120" cy="140" r="14"/>
+      <circle cx="145" cy="128" r="10"/>
+      <circle cx="170" cy="138" r="12"/>
+      <circle cx="200" cy="126" r="16"/>
+      <circle cx="230" cy="140" r="11"/>
+      <circle cx="255" cy="130" r="13"/>
+      <circle cx="280" cy="142" r="10"/>
+    </g>
+    <!-- claw feet -->
+    <g fill="#78350f" stroke="#451a03" stroke-width="2.5">
+      <ellipse cx="90" cy="255" rx="12" ry="14"/>
+      <ellipse cx="310" cy="255" rx="12" ry="14"/>
+    </g>
+    <!-- faucet -->
+    <g stroke="#94a3b8" stroke-width="3" fill="#cbd5e1">
+      <rect x="182" y="80" width="36" height="12" rx="3"/>
+      <rect x="196" y="60" width="8" height="20"/>
+    </g>
+    <!-- water stream -->
+    <line x1="200" y1="92" x2="200" y2="120" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>

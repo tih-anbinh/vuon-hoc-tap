@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-rice desc-rice">
+  <title id="title-rice">Rice - Bowl of steaming white rice</title>
+  <desc id="desc-rice">A big blue bowl full of fluffy white rice with steam rising, chopsticks resting beside it and grains of rice on the table.</desc>
+  <defs>
+    <linearGradient id="rc-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="rc-bowl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#rc-bg)"/>
+  <!-- table -->
+  <rect x="0" y="230" width="400" height="70" fill="#e8b478"/>
+  <line x1="0" y1="230" x2="400" y2="230" stroke="#a16207" stroke-width="3.5"/>
+  <ellipse cx="200" cy="245" rx="160" ry="12" fill="#0f172a" opacity="0.2"/>
+  <!-- steam -->
+  <g fill="none" stroke="#cbd5e1" stroke-width="5" stroke-linecap="round" opacity="0.85">
+    <path d="M150,105 Q142,82 152,62 Q160,46 152,28"/>
+    <path d="M200,98 Q192,75 202,55 Q210,40 202,22"/>
+    <path d="M250,105 Q242,82 252,62"/>
+  </g>
+  <!-- mound of rice -->
+  <g filter="url(#soft-shadow)">
+    <path d="M95,160 Q100,105 200,105 Q300,105 305,160 Z" fill="#ffffff" stroke="#94a3b8" stroke-width="4"/>
+    <!-- rice grain texture -->
+    <g fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.8">
+      <ellipse cx="150" cy="130" rx="9" ry="4.5" transform="rotate(-20 150 130)"/>
+      <ellipse cx="185" cy="118" rx="9" ry="4.5" transform="rotate(15 185 118)"/>
+      <ellipse cx="222" cy="125" rx="9" ry="4.5" transform="rotate(-10 222 125)"/>
+      <ellipse cx="255" cy="135" rx="9" ry="4.5" transform="rotate(25 255 135)"/>
+      <ellipse cx="130" cy="148" rx="9" ry="4.5" transform="rotate(10 130 148)"/>
+      <ellipse cx="170" cy="145" rx="9" ry="4.5" transform="rotate(-25 170 145)"/>
+      <ellipse cx="205" cy="140" rx="9" ry="4.5" transform="rotate(20 205 140)"/>
+      <ellipse cx="240" cy="150" rx="9" ry="4.5" transform="rotate(-15 240 150)"/>
+      <ellipse cx="275" cy="148" rx="9" ry="4.5" transform="rotate(10 275 148)"/>
+      <ellipse cx="200" cy="112" rx="9" ry="4.5" transform="rotate(-5 200 112)"/>
+    </g>
+  </g>
+  <!-- bowl -->
+  <g filter="url(#soft-shadow)">
+    <path d="M82,158 L318,158 Q315,225 200,228 Q85,225 82,158 Z" fill="url(#rc-bowl)" stroke="#1e3a8a" stroke-width="4.5"/>
+    <ellipse cx="200" cy="158" rx="118" ry="14" fill="#3b82f6" stroke="#1e3a8a" stroke-width="3.5"/>
+    <!-- bowl pattern -->
+    <path d="M110,190 Q200,208 290,190" fill="none" stroke="#bfdbfe" stroke-width="4"/>
+    <ellipse cx="200" cy="228" rx="42" ry="8" fill="#1e3a8a"/>
+  </g>
+  <!-- chopsticks -->
+  <g filter="url(#soft-shadow)">
+    <rect x="290" y="180" width="100" height="8" rx="4" fill="#a16207" stroke="#78350f" stroke-width="2.5" transform="rotate(-32 340 184)"/>
+    <rect x="298" y="196" width="100" height="8" rx="4" fill="#c98a3b" stroke="#78350f" stroke-width="2.5" transform="rotate(-28 348 200)"/>
+  </g>
+  <!-- scattered grains on table -->
+  <g fill="#ffffff" stroke="#94a3b8" stroke-width="1.8">
+    <ellipse cx="70" cy="250" rx="8" ry="4" transform="rotate(-15 70 250)"/>
+    <ellipse cx="95" cy="262" rx="8" ry="4" transform="rotate(20 95 262)"/>
+    <ellipse cx="320" cy="255" rx="8" ry="4" transform="rotate(10 320 255)"/>
+    <ellipse cx="345" cy="268" rx="8" ry="4" transform="rotate(-25 345 268)"/>
+  </g>
+</svg>

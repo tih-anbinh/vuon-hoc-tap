@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-day desc-day">
+  <title id="title-day">Day - Bright sunny daytime sky</title>
+  <desc id="desc-day">A big bright sun high in a blue daytime sky with fluffy clouds, over green hills with a small tree and flying birds.</desc>
+  <defs>
+    <linearGradient id="dy-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#bae6fd"/>
+    </linearGradient>
+    <radialGradient id="dy-sun" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </radialGradient>
+    <linearGradient id="dy-hill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#86efac"/>
+      <stop offset="100%" stop-color="#4d7c0f"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#dy-sky)"/>
+  <!-- sun high in sky -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="200" cy="90" r="52" fill="url(#dy-sun)" stroke="#d97706" stroke-width="4"/>
+    <g stroke="#f59e0b" stroke-width="6" stroke-linecap="round">
+      <line x1="200" y1="16" x2="200" y2="32"/>
+      <line x1="200" y1="148" x2="200" y2="164"/>
+      <line x1="126" y1="90" x2="142" y2="90"/>
+      <line x1="258" y1="90" x2="274" y2="90"/>
+      <line x1="148" y1="38" x2="159" y2="49"/>
+      <line x1="241" y1="131" x2="252" y2="142"/>
+      <line x1="252" y1="38" x2="241" y2="49"/>
+      <line x1="159" y1="131" x2="148" y2="142"/>
+    </g>
+    <!-- happy face on sun -->
+    <circle cx="185" cy="82" r="5" fill="#b45309"/>
+    <circle cx="215" cy="82" r="5" fill="#b45309"/>
+    <path d="M182,102 Q200,116 218,102" fill="none" stroke="#b45309" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <!-- clouds -->
+  <g fill="#ffffff" opacity="0.95">
+    <ellipse cx="70" cy="60" rx="36" ry="14"/>
+    <ellipse cx="95" cy="52" rx="24" ry="11"/>
+    <ellipse cx="330" cy="70" rx="34" ry="13"/>
+    <ellipse cx="352" cy="62" rx="22" ry="10"/>
+  </g>
+  <!-- birds -->
+  <g fill="none" stroke="#334155" stroke-width="3" stroke-linecap="round">
+    <path d="M80,120 Q88,112 96,120 Q104,112 112,120"/>
+    <path d="M300,130 Q307,123 314,130 Q321,123 328,130"/>
+  </g>
+  <!-- hills -->
+  <path d="M0,230 Q100,180 220,225 Q320,255 400,215 L400,300 L0,300 Z" fill="url(#dy-hill)"/>
+  <!-- tree -->
+  <g filter="url(#soft-shadow)">
+    <rect x="315" y="200" width="14" height="45" rx="4" fill="#78350f" stroke="#451a03" stroke-width="2.5"/>
+    <circle cx="322" cy="180" r="32" fill="#22c55e" stroke="#15803d" stroke-width="3"/>
+  </g>
+  <!-- flowers -->
+  <g>
+    <circle cx="80" cy="265" r="7" fill="#f472b6" stroke="#be185d" stroke-width="2"/>
+    <circle cx="130" cy="278" r="7" fill="#facc15" stroke="#b45309" stroke-width="2"/>
+    <circle cx="185" cy="268" r="7" fill="#f87171" stroke="#b91c1c" stroke-width="2"/>
+  </g>
+</svg>

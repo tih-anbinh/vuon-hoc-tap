@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-man-men desc-man-men">
+  <title id="title-man-men">Man and men - One man and a group of men</title>
+  <desc id="desc-man-men">One man standing alone on the left side, and three men standing together on the right side, showing singular and plural.</desc>
+  <defs>
+    <linearGradient id="mn-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#bae6fd"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#mn-bg)"/>
+  <rect x="0" y="248" width="400" height="52" fill="#65a30d"/>
+  <!-- divider -->
+  <line x1="160" y1="30" x2="160" y2="270" stroke="#94a3b8" stroke-width="3" stroke-dasharray="10,8"/>
+  <ellipse cx="85" cy="255" rx="55" ry="7" fill="#0f172a" opacity="0.22"/>
+  <ellipse cx="280" cy="255" rx="105" ry="7" fill="#0f172a" opacity="0.22"/>
+  <!-- single man (left) -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="85" cy="95" r="30" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M55,90 Q56,62 85,62 Q114,62 115,90 Q104,72 85,72 Q66,72 55,90 Z" fill="#1e293b"/>
+    <circle cx="76" cy="97" r="4" fill="#0f172a"/>
+    <circle cx="94" cy="97" r="4" fill="#0f172a"/>
+    <path d="M76,110 Q85,117 94,110" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <!-- shirt -->
+    <path d="M64,125 L106,125 L114,205 L56,205 Z" fill="#3b82f6" stroke="#1e3a8a" stroke-width="3.5"/>
+    <!-- tie -->
+    <path d="M85,125 L79,135 L85,170 L91,135 Z" fill="#dc2626" stroke="#7f1d1d" stroke-width="2"/>
+    <!-- arms -->
+    <path d="M62,138 Q46,165 48,188" fill="none" stroke="#3b82f6" stroke-width="10" stroke-linecap="round"/>
+    <path d="M108,138 Q124,165 122,188" fill="none" stroke="#3b82f6" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="48" cy="193" r="7" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <circle cx="122" cy="193" r="7" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <!-- trousers -->
+    <path d="M64,205 L60,250" stroke="#334155" stroke-width="13" stroke-linecap="round"/>
+    <path d="M106,205 L110,250" stroke="#334155" stroke-width="13" stroke-linecap="round"/>
+    <ellipse cx="58" cy="256" rx="12" ry="6" fill="#0f172a"/>
+    <ellipse cx="113" cy="256" rx="12" ry="6" fill="#0f172a"/>
+  </g>
+  <!-- three men (right) -->
+  <g filter="url(#soft-shadow)">
+    <!-- man A -->
+    <circle cx="210" cy="120" r="22" fill="#fcd9b6" stroke="#78350f" stroke-width="3"/>
+    <path d="M188,116 Q189,96 210,96 Q231,96 232,116 Q222,103 210,103 Q198,103 188,116 Z" fill="#78350f"/>
+    <circle cx="203" cy="122" r="3" fill="#0f172a"/>
+    <circle cx="217" cy="122" r="3" fill="#0f172a"/>
+    <path d="M203,131 Q210,136 217,131" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M194,142 L226,142 L232,212 L188,212 Z" fill="#22c55e" stroke="#14532d" stroke-width="3"/>
+    <path d="M198,212 L195,250" stroke="#334155" stroke-width="10" stroke-linecap="round"/>
+    <path d="M222,212 L225,250" stroke="#334155" stroke-width="10" stroke-linecap="round"/>
+    <ellipse cx="194" cy="255" rx="10" ry="5" fill="#0f172a"/>
+    <ellipse cx="227" cy="255" rx="10" ry="5" fill="#0f172a"/>
+    <!-- man B (center, taller) -->
+    <circle cx="282" cy="108" r="24" fill="#e8b478" stroke="#78350f" stroke-width="3"/>
+    <path d="M258,104 Q259,82 282,82 Q305,82 306,104 Q294,90 282,90 Q270,90 258,104 Z" fill="#0f172a"/>
+    <circle cx="274" cy="110" r="3.5" fill="#0f172a"/>
+    <circle cx="290" cy="110" r="3.5" fill="#0f172a"/>
+    <path d="M274,120 Q282,126 290,120" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M265,132 L299,132 L306,212 L258,212 Z" fill="#f97316" stroke="#c2410c" stroke-width="3"/>
+    <path d="M270,212 L267,250" stroke="#334155" stroke-width="10" stroke-linecap="round"/>
+    <path d="M294,212 L297,250" stroke="#334155" stroke-width="10" stroke-linecap="round"/>
+    <ellipse cx="266" cy="255" rx="10" ry="5" fill="#0f172a"/>
+    <ellipse cx="299" cy="255" rx="10" ry="5" fill="#0f172a"/>
+    <!-- man C -->
+    <circle cx="352" cy="122" r="21" fill="#fcd9b6" stroke="#78350f" stroke-width="3"/>
+    <path d="M331,118 Q332,99 352,99 Q372,99 373,118 Q363,106 352,106 Q341,106 331,118 Z" fill="#451a03"/>
+    <circle cx="345" cy="124" r="3" fill="#0f172a"/>
+    <circle cx="359" cy="124" r="3" fill="#0f172a"/>
+    <path d="M345,132 Q352,137 359,132" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M337,143 L367,143 L373,212 L331,212 Z" fill="#8b5cf6" stroke="#4c1d95" stroke-width="3"/>
+    <path d="M341,212 L338,250" stroke="#334155" stroke-width="10" stroke-linecap="round"/>
+    <path d="M363,212 L366,250" stroke="#334155" stroke-width="10" stroke-linecap="round"/>
+    <ellipse cx="337" cy="255" rx="10" ry="5" fill="#0f172a"/>
+    <ellipse cx="368" cy="255" rx="10" ry="5" fill="#0f172a"/>
+  </g>
+</svg>

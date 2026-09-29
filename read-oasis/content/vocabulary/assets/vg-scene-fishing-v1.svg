@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-fishing desc-fishing">
+  <title id="title-fishing">Fishing - Child fishing with a rod at the lake</title>
+  <desc id="desc-fishing">A child sitting on a wooden pier holding a fishing rod, with the line in the blue lake water and an orange fish swimming near the hook.</desc>
+  <defs>
+    <linearGradient id="fs-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="fs-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0c4a6e"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="180" fill="url(#fs-sky)"/>
+  <circle cx="345" cy="45" r="24" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <ellipse cx="90" cy="55" rx="32" ry="12" fill="#fff" opacity="0.9"/>
+  <!-- water -->
+  <rect x="0" y="175" width="400" height="125" fill="url(#fs-water)"/>
+  <g stroke="#7dd3fc" stroke-width="2.5" stroke-linecap="round" opacity="0.6" fill="none">
+    <path d="M20,200 Q35,195 50,200"/>
+    <path d="M320,215 Q335,210 350,215"/>
+    <path d="M60,250 Q75,245 90,250"/>
+  </g>
+  <!-- pier -->
+  <g filter="url(#soft-shadow)">
+    <rect x="0" y="160" width="185" height="16" rx="4" fill="#a16207" stroke="#451a03" stroke-width="3"/>
+    <rect x="40" y="176" width="12" height="60" fill="#78350f" stroke="#451a03" stroke-width="2.5"/>
+    <rect x="140" y="176" width="12" height="70" fill="#78350f" stroke="#451a03" stroke-width="2.5"/>
+  </g>
+  <!-- child sitting -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="110" cy="85" r="24" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M86,80 Q88,58 110,59 Q132,58 134,80 Q125,68 110,68 Q95,68 86,80 Z" fill="#a16207"/>
+    <!-- sun hat -->
+    <path d="M80,72 Q110,40 140,72 Q125,60 110,60 Q95,60 80,72 Z" fill="#facc15" stroke="#b45309" stroke-width="3"/>
+    <ellipse cx="110" cy="72" rx="34" ry="8" fill="#facc15" stroke="#b45309" stroke-width="2.5"/>
+    <circle cx="103" cy="87" r="3.5" fill="#0f172a"/>
+    <circle cx="119" cy="87" r="3.5" fill="#0f172a"/>
+    <path d="M103,98 Q110,104 117,98" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <!-- body sitting -->
+    <rect x="92" y="108" width="38" height="40" rx="8" fill="#22c55e" stroke="#14532d" stroke-width="3.5"/>
+    <!-- legs dangling over pier -->
+    <path d="M100,146 Q100,168 96,185" fill="none" stroke="#1e40af" stroke-width="11" stroke-linecap="round"/>
+    <path d="M120,146 Q122,168 120,188" fill="none" stroke="#1e40af" stroke-width="11" stroke-linecap="round"/>
+    <!-- arms holding rod -->
+    <line x1="130" y1="120" x2="158" y2="112" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <!-- rod + line -->
+  <g filter="url(#soft-shadow)">
+    <line x1="150" y1="118" x2="255" y2="55" stroke="#78350f" stroke-width="5" stroke-linecap="round"/>
+    <path d="M255,55 Q262,120 258,195" fill="none" stroke="#334155" stroke-width="2"/>
+    <!-- bobber -->
+    <circle cx="258" cy="178" r="7" fill="#ef4444" stroke="#7f1d1d" stroke-width="2"/>
+    <circle cx="258" cy="172" r="4" fill="#fff" stroke="#7f1d1d" stroke-width="1.5"/>
+    <!-- hook -->
+    <path d="M258,195 Q258,212 266,212 Q272,212 271,204" fill="none" stroke="#94a3b8" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  <!-- fish approaching hook -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="310" cy="235" rx="30" ry="17" fill="#fb923c" stroke="#9a3412" stroke-width="3"/>
+    <path d="M338,235 L358,220 L358,250 Z" fill="#fb923c" stroke="#9a3412" stroke-width="3" stroke-linejoin="round"/>
+    <circle cx="296" cy="230" r="4" fill="#0f172a"/>
+    <path d="M305,244 Q312,248 319,244" fill="none" stroke="#9a3412" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <!-- bubbles -->
+  <g fill="none" stroke="#bae6fd" stroke-width="2" opacity="0.8">
+    <circle cx="285" cy="215" r="4"/>
+    <circle cx="278" cy="205" r="3"/>
+  </g>
+</svg>

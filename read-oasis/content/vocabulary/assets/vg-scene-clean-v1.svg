@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-clean desc-clean">
+  <title id="title-clean">Clean - Sparkling clean shirt with soap bubbles</title>
+  <desc id="desc-clean">A bright white sparkling-clean t-shirt on a hanger with shine sparkles, soap bubbles floating around it.</desc>
+  <defs>
+    <linearGradient id="cl-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cffafe"/>
+      <stop offset="100%" stop-color="#a5f3fc"/>
+    </linearGradient>
+    <linearGradient id="cl-shirt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#cl-bg)"/>
+  <!-- clothesline -->
+  <line x1="0" y1="55" x2="400" y2="45" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="200" cy="272" rx="140" ry="8" fill="#0f172a" opacity="0.15"/>
+  <!-- hanger -->
+  <g filter="url(#soft-shadow)">
+    <path d="M200,50 Q200,62 195,68" fill="none" stroke="#64748b" stroke-width="4" stroke-linecap="round"/>
+    <path d="M130,100 L200,68 L270,100" fill="none" stroke="#64748b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- shirt -->
+  <g filter="url(#soft-shadow)">
+    <path d="M155,100 L120,135 L145,158 L160,145 L160,240 Q200,250 240,240 L240,145 L255,158 L280,135 L245,100 Q222,88 200,100 Q178,88 155,100 Z" fill="url(#cl-shirt)" stroke="#0369a1" stroke-width="4" stroke-linejoin="round"/>
+    <!-- collar -->
+    <path d="M178,98 Q200,116 222,98" fill="none" stroke="#0369a1" stroke-width="3"/>
+  </g>
+  <!-- sparkles on shirt -->
+  <g fill="#facc15" stroke="#d97706" stroke-width="1.5">
+    <path d="M200,160 L205,172 L217,176 L205,180 L200,192 L195,180 L183,176 L195,172 Z"/>
+    <path d="M175,205 L178,212 L185,214 L178,216 L175,223 L172,216 L165,214 L172,212 Z"/>
+    <path d="M228,198 L231,205 L238,207 L231,209 L228,216 L225,209 L218,207 L225,205 Z"/>
+  </g>
+  <!-- soap bubbles -->
+  <g fill="none" stroke="#0891b2" stroke-width="2.5" opacity="0.8">
+    <circle cx="80" cy="180" r="18"/>
+    <circle cx="105" cy="220" r="12"/>
+    <circle cx="320" cy="190" r="16"/>
+    <circle cx="340" cy="235" r="11"/>
+    <circle cx="70" cy="110" r="10"/>
+    <circle cx="330" cy="110" r="12"/>
+  </g>
+  <!-- bubble highlights -->
+  <g fill="#fff" opacity="0.9">
+    <circle cx="74" cy="174" r="4"/>
+    <circle cx="101" cy="216" r="3"/>
+    <circle cx="315" cy="185" r="4"/>
+    <circle cx="336" cy="231" r="2.5"/>
+    <circle cx="67" cy="107" r="2.5"/>
+    <circle cx="326" cy="106" r="3"/>
+  </g>
+</svg>

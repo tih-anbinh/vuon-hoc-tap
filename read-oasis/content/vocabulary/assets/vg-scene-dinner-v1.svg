@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-dinner desc-dinner">
+  <title id="title-dinner">Dinner - Evening meal with chicken, vegetables and rice</title>
+  <desc id="desc-dinner">An evening dinner plate with roast chicken leg, broccoli and rice, a fork and knife beside it, with a crescent moon in the window showing it is evening.</desc>
+  <defs>
+    <linearGradient id="dn-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#312e81"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="dn-table" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c2955a"/>
+      <stop offset="100%" stop-color="#8a5a24"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#dn-bg)"/>
+  <!-- moon + stars = evening -->
+  <path d="M330,35 A22,22 0 1,0 352,68 A17,17 0 1,1 330,35 Z" fill="#facc15" stroke="#d97706" stroke-width="2.5"/>
+  <g fill="#fef08a">
+    <circle cx="60" cy="40" r="3"/>
+    <circle cx="120" cy="65" r="2.5"/>
+    <circle cx="260" cy="30" r="3"/>
+    <circle cx="380" cy="90" r="2.5"/>
+  </g>
+  <!-- table -->
+  <rect x="0" y="145" width="400" height="155" fill="url(#dn-table)"/>
+  <line x1="0" y1="145" x2="400" y2="145" stroke="#5c3210" stroke-width="4"/>
+  <!-- plate -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="200" cy="220" rx="120" ry="52" fill="#f1f5f9" stroke="#94a3b8" stroke-width="4"/>
+    <ellipse cx="200" cy="218" rx="100" ry="42" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <!-- chicken leg -->
+    <g transform="rotate(-15 245 210)">
+      <ellipse cx="245" cy="208" rx="35" ry="26" fill="#c2955a" stroke="#78350f" stroke-width="3"/>
+      <rect x="275" y="203" width="28" height="10" rx="5" fill="#f5d9a8" stroke="#a16207" stroke-width="2.5"/>
+      <circle cx="305" cy="203" r="6" fill="#fff" stroke="#a16207" stroke-width="2"/>
+      <circle cx="305" cy="213" r="6" fill="#fff" stroke="#a16207" stroke-width="2"/>
+    </g>
+    <!-- broccoli -->
+    <g stroke="#14532d" stroke-width="2.5">
+      <rect x="142" y="222" width="9" height="14" rx="3" fill="#86efac"/>
+      <circle cx="138" cy="215" r="10" fill="#16a34a"/>
+      <circle cx="150" cy="210" r="11" fill="#22c55e"/>
+      <circle cx="160" cy="218" r="9" fill="#16a34a"/>
+    </g>
+    <!-- rice mound -->
+    <ellipse cx="118" cy="230" rx="26" ry="14" fill="#fefce8" stroke="#d6d3d1" stroke-width="2.5"/>
+    <g fill="#e7e5e4">
+      <ellipse cx="108" cy="226" rx="4" ry="2"/>
+      <ellipse cx="122" cy="223" rx="4" ry="2"/>
+      <ellipse cx="128" cy="232" rx="4" ry="2"/>
+    </g>
+    <!-- steam -->
+    <g fill="none" stroke="#e2e8f0" stroke-width="2.5" stroke-linecap="round" opacity="0.8">
+      <path d="M180,175 Q175,163 182,152"/>
+      <path d="M205,172 Q212,160 205,148"/>
+    </g>
+  </g>
+  <!-- fork -->
+  <g filter="url(#soft-shadow)" stroke="#94a3b8" stroke-width="3" fill="#cbd5e1">
+    <rect x="45" y="195" width="8" height="65" rx="4"/>
+    <g stroke-width="3.5">
+      <line x1="42" y1="178" x2="42" y2="196"/>
+      <line x1="49" y1="176" x2="49" y2="196"/>
+      <line x1="56" y1="178" x2="56" y2="196"/>
+    </g>
+  </g>
+  <!-- knife -->
+  <g filter="url(#soft-shadow)">
+    <path d="M352,175 Q364,200 356,230 L348,230 L348,178 Z" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2.5"/>
+    <rect x="347" y="228" width="10" height="35" rx="4" fill="#78350f" stroke="#451a03" stroke-width="2.5"/>
+  </g>
+</svg>

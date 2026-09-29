@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-purple desc-purple">
+  <title id="title-purple">Purple - Purple colored things</title>
+  <desc id="desc-purple">A big purple paint splash surrounded by purple things: grapes, an eggplant, a butterfly and a wizard hat.</desc>
+  <defs>
+    <linearGradient id="pu-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f3ff"/>
+      <stop offset="100%" stop-color="#ede9fe"/>
+    </linearGradient>
+    <radialGradient id="pu-splash" cx="0.5" cy="0.5" r="0.6">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#pu-bg)"/>
+  <!-- central splash -->
+  <g filter="url(#soft-shadow)">
+    <path d="M200,58 Q246,56 270,90 Q308,98 302,140 Q325,168 297,193 Q300,234 259,237 Q236,264 200,251 Q164,264 141,237 Q100,234 103,193 Q75,168 98,140 Q92,98 130,90 Q154,56 200,58 Z" fill="url(#pu-splash)" stroke="#4c1d95" stroke-width="4.5"/>
+    <!-- drips -->
+    <path d="M158,248 Q156,270 164,274 Q171,270 166,248 Z" fill="#7c3aed" stroke="#4c1d95" stroke-width="2.5"/>
+    <path d="M240,250 Q239,266 245,269 Q251,266 247,250 Z" fill="#a78bfa" stroke="#4c1d95" stroke-width="2.5"/>
+  </g>
+  <!-- grapes inside splash -->
+  <g filter="url(#soft-shadow)">
+    <path d="M172,105 Q178,88 192,84" fill="none" stroke="#78350f" stroke-width="4" stroke-linecap="round"/>
+    <path d="M185,94 Q198,84 206,92 Q198,100 185,94 Z" fill="#22c55e" stroke="#15803d" stroke-width="2.5"/>
+    <g fill="#6d28d9" stroke="#3b0764" stroke-width="2.5">
+      <circle cx="150" cy="125" r="14"/>
+      <circle cx="178" cy="120" r="14"/>
+      <circle cx="205" cy="125" r="14"/>
+      <circle cx="162" cy="148" r="14"/>
+      <circle cx="192" cy="148" r="14"/>
+      <circle cx="176" cy="172" r="14"/>
+    </g>
+    <circle cx="146" cy="120" r="4" fill="#c4b5fd" opacity="0.8"/>
+    <circle cx="174" cy="115" r="4" fill="#c4b5fd" opacity="0.8"/>
+  </g>
+  <!-- eggplant inside splash -->
+  <g filter="url(#soft-shadow)" transform="rotate(20 245 175)">
+    <path d="M245,130 Q278,140 275,185 Q272,222 245,222 Q225,222 222,190 Q220,145 245,130 Z" fill="#581c87" stroke="#3b0764" stroke-width="3.5"/>
+    <path d="M238,128 Q232,118 240,112 Q246,120 250,126 Q256,118 262,124 Q254,132 246,132 Z" fill="#22c55e" stroke="#15803d" stroke-width="2.5"/>
+    <ellipse cx="235" cy="160" rx="6" ry="14" fill="#a78bfa" opacity="0.5"/>
+  </g>
+  <!-- purple butterfly (top left) -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="72" cy="72" rx="5" ry="17" fill="#3b0764"/>
+    <path d="M69,64 Q45,42 40,64 Q37,82 66,74 Z" fill="#a78bfa" stroke="#4c1d95" stroke-width="2.5"/>
+    <path d="M75,64 Q99,42 104,64 Q107,82 78,74 Z" fill="#a78bfa" stroke="#4c1d95" stroke-width="2.5"/>
+    <path d="M69,78 Q52,92 56,100 Q66,100 70,84 Z" fill="#c4b5fd" stroke="#4c1d95" stroke-width="2.5"/>
+    <path d="M75,78 Q92,92 88,100 Q78,100 74,84 Z" fill="#c4b5fd" stroke="#4c1d95" stroke-width="2.5"/>
+    <g stroke="#3b0764" stroke-width="2" stroke-linecap="round" fill="none">
+      <path d="M70,56 Q66,46 60,44"/>
+      <path d="M74,56 Q78,46 84,44"/>
+    </g>
+  </g>
+  <!-- wizard hat (top right) -->
+  <g filter="url(#soft-shadow)">
+    <path d="M340,32 Q356,60 366,92 L306,92 Q322,60 340,32 Z" fill="#7c3aed" stroke="#4c1d95" stroke-width="3.5"/>
+    <ellipse cx="336" cy="94" rx="42" ry="11" fill="#8b5cf6" stroke="#4c1d95" stroke-width="3.5"/>
+    <path d="M330,62 L334,72 L344,72 L336,79 L339,89 L330,83 L321,89 L324,79 L316,72 L326,72 Z" fill="#fde047" stroke="#b45309" stroke-width="1.8"/>
+  </g>
+  <!-- purple flower (bottom left) -->
+  <g filter="url(#soft-shadow)">
+    <g fill="#8b5cf6" stroke="#4c1d95" stroke-width="2.5">
+      <ellipse cx="62" cy="235" rx="10" ry="16"/>
+      <ellipse cx="62" cy="235" rx="10" ry="16" transform="rotate(72 62 235)"/>
+      <ellipse cx="62" cy="235" rx="10" ry="16" transform="rotate(144 62 235)"/>
+      <ellipse cx="62" cy="235" rx="10" ry="16" transform="rotate(216 62 235)"/>
+      <ellipse cx="62" cy="235" rx="10" ry="16" transform="rotate(288 62 235)"/>
+    </g>
+    <circle cx="62" cy="235" r="8" fill="#fde047" stroke="#b45309" stroke-width="2.5"/>
+  </g>
+  <!-- purple balloon (bottom right) -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="345" cy="215" rx="26" ry="32" fill="#a78bfa" stroke="#4c1d95" stroke-width="3.5"/>
+    <ellipse cx="336" cy="204" rx="7" ry="10" fill="#ddd6fe" opacity="0.8"/>
+    <path d="M341,247 L345,252 L349,247 Z" fill="#7c3aed" stroke="#4c1d95" stroke-width="2"/>
+    <path d="M345,252 Q340,268 348,282" fill="none" stroke="#4c1d95" stroke-width="2.5"/>
+  </g>
+</svg>

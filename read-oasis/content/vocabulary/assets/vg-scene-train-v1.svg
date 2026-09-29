@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-train desc-train">
+  <title id="title-train">Train - Steam train on railway tracks</title>
+  <desc id="desc-train">A cheerful blue steam train with a red engine cab and two carriages, puffing white smoke as it rides along railway tracks through green hills.</desc>
+  <defs>
+    <linearGradient id="tn2-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="tn2-engine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#tn2-sky)"/>
+  <circle cx="350" cy="46" r="22" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <!-- hills -->
+  <path d="M0,200 Q90,140 190,196 Q280,150 400,198 L400,300 L0,300 Z" fill="#4ade80" stroke="#15803d" stroke-width="3"/>
+  <!-- smoke puffs -->
+  <g fill="#f8fafc" stroke="#cbd5e1" stroke-width="2.5">
+    <circle cx="88" cy="86" r="12"/>
+    <circle cx="102" cy="64" r="15"/>
+    <circle cx="122" cy="42" r="18"/>
+  </g>
+  <!-- track bed -->
+  <rect x="0" y="252" width="400" height="48" fill="#a8a29e"/>
+  <line x1="0" y1="252" x2="400" y2="252" stroke="#57534e" stroke-width="3"/>
+  <!-- sleepers -->
+  <g fill="#78350f">
+    <rect x="10" y="262" width="26" height="9" rx="2"/>
+    <rect x="60" y="262" width="26" height="9" rx="2"/>
+    <rect x="110" y="262" width="26" height="9" rx="2"/>
+    <rect x="160" y="262" width="26" height="9" rx="2"/>
+    <rect x="210" y="262" width="26" height="9" rx="2"/>
+    <rect x="260" y="262" width="26" height="9" rx="2"/>
+    <rect x="310" y="262" width="26" height="9" rx="2"/>
+    <rect x="360" y="262" width="26" height="9" rx="2"/>
+  </g>
+  <!-- rails -->
+  <line x1="0" y1="260" x2="400" y2="260" stroke="#475569" stroke-width="5"/>
+  <line x1="0" y1="274" x2="400" y2="274" stroke="#475569" stroke-width="5"/>
+  <!-- train -->
+  <g filter="url(#soft-shadow)">
+    <!-- engine boiler -->
+    <rect x="52" y="150" width="110" height="60" rx="16" fill="url(#tn2-engine)" stroke="#1e3a8a" stroke-width="4.5"/>
+    <!-- chimney -->
+    <path d="M78,150 L78,120 Q78,112 88,112 Q98,112 98,120 L98,150 Z" fill="#334155" stroke="#0f172a" stroke-width="3.5"/>
+    <rect x="72" y="106" width="32" height="12" rx="5" fill="#475569" stroke="#0f172a" stroke-width="3"/>
+    <!-- cab -->
+    <rect x="150" y="112" width="62" height="98" rx="8" fill="#ef4444" stroke="#7f1d1d" stroke-width="4"/>
+    <rect x="160" y="126" width="42" height="34" rx="5" fill="#bae6fd" stroke="#7f1d1d" stroke-width="3"/>
+    <path d="M144,112 L218,112 L212,98 L150,98 Z" fill="#b91c1c" stroke="#7f1d1d" stroke-width="3.5"/>
+    <!-- front light + cowcatcher -->
+    <circle cx="52" cy="172" r="10" fill="#fde047" stroke="#a16207" stroke-width="3"/>
+    <path d="M46,210 L24,242 L66,242 Z" fill="#94a3b8" stroke="#475569" stroke-width="3"/>
+    <!-- engine wheels -->
+    <circle cx="86" cy="232" r="22" fill="#334155" stroke="#0f172a" stroke-width="3.5"/>
+    <circle cx="86" cy="232" r="9" fill="#94a3b8"/>
+    <circle cx="146" cy="232" r="22" fill="#334155" stroke="#0f172a" stroke-width="3.5"/>
+    <circle cx="146" cy="232" r="9" fill="#94a3b8"/>
+    <circle cx="194" cy="238" r="16" fill="#334155" stroke="#0f172a" stroke-width="3.5"/>
+    <circle cx="194" cy="238" r="6" fill="#94a3b8"/>
+    <!-- coupling -->
+    <rect x="212" y="196" width="18" height="8" fill="#475569"/>
+    <!-- carriage 1 -->
+    <rect x="230" y="152" width="76" height="58" rx="8" fill="#fbbf24" stroke="#92400e" stroke-width="4"/>
+    <rect x="240" y="164" width="24" height="22" rx="4" fill="#bae6fd" stroke="#92400e" stroke-width="3"/>
+    <rect x="272" y="164" width="24" height="22" rx="4" fill="#bae6fd" stroke="#92400e" stroke-width="3"/>
+    <circle cx="248" cy="234" r="15" fill="#334155" stroke="#0f172a" stroke-width="3"/>
+    <circle cx="288" cy="234" r="15" fill="#334155" stroke="#0f172a" stroke-width="3"/>
+    <circle cx="248" cy="234" r="6" fill="#94a3b8"/>
+    <circle cx="288" cy="234" r="6" fill="#94a3b8"/>
+    <rect x="306" y="196" width="16" height="8" fill="#475569"/>
+    <!-- carriage 2 -->
+    <rect x="322" y="152" width="70" height="58" rx="8" fill="#22c55e" stroke="#14532d" stroke-width="4"/>
+    <rect x="332" y="164" width="22" height="22" rx="4" fill="#bae6fd" stroke="#14532d" stroke-width="3"/>
+    <rect x="362" y="164" width="22" height="22" rx="4" fill="#bae6fd" stroke="#14532d" stroke-width="3"/>
+    <circle cx="340" cy="234" r="15" fill="#334155" stroke="#0f172a" stroke-width="3"/>
+    <circle cx="376" cy="234" r="15" fill="#334155" stroke="#0f172a" stroke-width="3"/>
+    <circle cx="340" cy="234" r="6" fill="#94a3b8"/>
+    <circle cx="376" cy="234" r="6" fill="#94a3b8"/>
+  </g>
+</svg>

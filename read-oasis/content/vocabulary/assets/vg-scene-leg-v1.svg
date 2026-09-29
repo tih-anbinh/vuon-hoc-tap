@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-leg desc-leg">
+  <title id="title-leg">Leg - Child pointing at their leg</title>
+  <desc id="desc-leg">A smiling child in shorts pointing down at one leg, which is highlighted with a dashed ring to show the body part clearly.</desc>
+  <defs>
+    <linearGradient id="lg-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#lg-bg)"/>
+  <rect x="0" y="252" width="400" height="48" fill="#a3e635" opacity="0.6"/>
+  <ellipse cx="200" cy="258" rx="85" ry="9" fill="#0f172a" opacity="0.22"/>
+  <!-- child -->
+  <g filter="url(#soft-shadow)">
+    <!-- head -->
+    <circle cx="200" cy="78" r="36" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <!-- hair -->
+    <path d="M164,72 Q164,38 200,36 Q236,38 236,72 Q228,52 200,52 Q172,52 164,72 Z" fill="#451a03" stroke="#451a03" stroke-width="2"/>
+    <!-- face -->
+    <circle cx="188" cy="78" r="5" fill="#0f172a"/>
+    <circle cx="212" cy="78" r="5" fill="#0f172a"/>
+    <circle cx="190" cy="76" r="1.8" fill="#ffffff"/>
+    <circle cx="214" cy="76" r="1.8" fill="#ffffff"/>
+    <path d="M186,92 Q200,104 216,92" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="176" cy="88" r="6" fill="#fda4af" opacity="0.7"/>
+    <circle cx="224" cy="88" r="6" fill="#fda4af" opacity="0.7"/>
+    <!-- body / t-shirt -->
+    <path d="M174,116 L226,116 L234,178 L166,178 Z" fill="#38bdf8" stroke="#0c4a6e" stroke-width="3.5"/>
+    <!-- left arm relaxed -->
+    <path d="M172,128 Q154,148 152,168" fill="none" stroke="#fcd9b6" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="151" cy="172" r="8" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <!-- right arm pointing down at leg -->
+    <path d="M228,128 Q252,155 250,185" fill="none" stroke="#fcd9b6" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="250" cy="190" r="8" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <path d="M250,196 L244,212" stroke="#fcd9b6" stroke-width="6" stroke-linecap="round"/>
+    <!-- shorts -->
+    <path d="M166,178 L234,178 L236,204 L206,204 L200,192 L194,204 L164,204 Z" fill="#f97316" stroke="#c2410c" stroke-width="3.5"/>
+    <!-- legs -->
+    <path d="M182,204 L180,252" fill="none" stroke="#fcd9b6" stroke-width="13" stroke-linecap="round"/>
+    <path d="M218,204 L221,252" fill="none" stroke="#fcd9b6" stroke-width="13" stroke-linecap="round"/>
+    <!-- shoes -->
+    <ellipse cx="176" cy="258" rx="14" ry="7" fill="#ef4444" stroke="#7f1d1d" stroke-width="2.5"/>
+    <ellipse cx="226" cy="258" rx="14" ry="7" fill="#ef4444" stroke="#7f1d1d" stroke-width="2.5"/>
+  </g>
+  <!-- dashed highlight ring around the pointed leg -->
+  <ellipse cx="221" cy="230" rx="34" ry="44" fill="none" stroke="#dc2626" stroke-width="4" stroke-dasharray="10,7"/>
+  <!-- arrow accent -->
+  <path d="M262,208 L238,222" fill="none" stroke="#dc2626" stroke-width="4" stroke-linecap="round"/>
+  <path d="M244,214 L238,222 L248,224" fill="none" stroke="#dc2626" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

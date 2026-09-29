@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-grandson desc-grandson">
+  <title id="title-grandson">Grandson - Grandfather playing ball with his grandson</title>
+  <desc id="desc-grandson">A grandfather with grey hair and glasses gently rolling a ball to his little grandson, who kneels ready to catch it in the garden.</desc>
+  <defs>
+    <linearGradient id="gs-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bbf7d0"/>
+      <stop offset="100%" stop-color="#86efac"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#gs-bg)"/>
+  <circle cx="350" cy="46" r="22" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <!-- grass -->
+  <rect x="0" y="236" width="400" height="64" fill="#4ade80"/>
+  <line x1="0" y1="236" x2="400" y2="236" stroke="#15803d" stroke-width="3.5"/>
+  <ellipse cx="200" cy="256" rx="160" ry="12" fill="#0f172a" opacity="0.13"/>
+  <!-- bush -->
+  <ellipse cx="52" cy="222" rx="40" ry="22" fill="#22c55e" stroke="#15803d" stroke-width="3.5"/>
+  <!-- GRANDFATHER (left) -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="110" cy="98" r="30" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M82,92 Q80,74 92,66 Q90,84 96,94 Z" fill="#e2e8f0" stroke="#64748b" stroke-width="2.5"/>
+    <path d="M138,92 Q140,74 128,66 Q130,84 124,94 Z" fill="#e2e8f0" stroke="#64748b" stroke-width="2.5"/>
+    <!-- glasses -->
+    <circle cx="100" cy="96" r="8" fill="none" stroke="#334155" stroke-width="2.8"/>
+    <circle cx="120" cy="96" r="8" fill="none" stroke="#334155" stroke-width="2.8"/>
+    <line x1="108" y1="96" x2="112" y2="96" stroke="#334155" stroke-width="2.8"/>
+    <circle cx="100" cy="96" r="2.4" fill="#0f172a"/>
+    <circle cx="120" cy="96" r="2.4" fill="#0f172a"/>
+    <path d="M100,112 Q110,118 120,112" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <!-- body bending forward slightly -->
+    <path d="M84,128 L136,128 L146,222 L74,222 Z" fill="#3b82f6" stroke="#1e3a8a" stroke-width="4"/>
+    <line x1="110" y1="130" x2="110" y2="220" stroke="#1e3a8a" stroke-width="2.5"/>
+    <circle cx="118" cy="152" r="3" fill="#1e3a8a"/>
+    <circle cx="118" cy="174" r="3" fill="#1e3a8a"/>
+    <!-- arm rolling ball -->
+    <path d="M136,140 Q168,168 188,196" fill="none" stroke="#fcd9b6" stroke-width="11" stroke-linecap="round"/>
+    <circle cx="190" cy="200" r="8" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <path d="M84,140 Q68,156 66,176" fill="none" stroke="#fcd9b6" stroke-width="11" stroke-linecap="round"/>
+    <!-- legs -->
+    <line x1="94" y1="222" x2="94" y2="240" stroke="#1e293b" stroke-width="9" stroke-linecap="round"/>
+    <line x1="126" y1="222" x2="126" y2="240" stroke="#1e293b" stroke-width="9" stroke-linecap="round"/>
+    <ellipse cx="92" cy="246" rx="13" ry="6" fill="#334155"/>
+    <ellipse cx="128" cy="246" rx="13" ry="6" fill="#334155"/>
+  </g>
+  <!-- ball rolling between them -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="216" cy="228" r="18" fill="#ef4444" stroke="#7f1d1d" stroke-width="3.5"/>
+    <path d="M200,220 Q216,212 232,220" fill="none" stroke="#fde047" stroke-width="4"/>
+    <path d="M200,236 Q216,244 232,236" fill="none" stroke="#fde047" stroke-width="4"/>
+  </g>
+  <g stroke="#94a3b8" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.8">
+    <path d="M192,246 Q200,250 208,248"/>
+    <path d="M188,236 Q194,240 198,240"/>
+  </g>
+  <!-- GRANDSON (right, hero) kneeling to catch -->
+  <g filter="url(#soft-shadow)">
+    <!-- hair -->
+    <path d="M266,138 Q264,112 292,110 Q320,112 318,138 L312,142 Q292,124 272,142 Z" fill="#451a03" stroke="#1c1917" stroke-width="3"/>
+    <!-- head -->
+    <circle cx="292" cy="146" r="26" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <circle cx="284" cy="143" r="3" fill="#0f172a"/>
+    <circle cx="300" cy="143" r="3" fill="#0f172a"/>
+    <path d="M282,156 Q292,164 302,156" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="276" cy="150" rx="5.5" ry="4" fill="#fb7185" opacity="0.6"/>
+    <ellipse cx="308" cy="150" rx="5.5" ry="4" fill="#fb7185" opacity="0.6"/>
+    <!-- t-shirt -->
+    <path d="M274,170 L310,170 L318,226 L266,226 Z" fill="#f97316" stroke="#7c2d12" stroke-width="3.5"/>
+    <path d="M292,178 L296,188 L306,188 L298,194 L301,204 L292,198 L283,204 L286,194 L278,188 L288,188 Z" fill="#fde047" stroke="#a16207" stroke-width="2"/>
+    <!-- arms reaching toward ball -->
+    <path d="M276,178 Q252,196 240,214" fill="none" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="238" cy="218" r="7.5" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <path d="M308,178 Q290,200 262,222" fill="none" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="258" cy="224" r="7.5" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <!-- kneeling legs -->
+    <path d="M274,226 Q268,240 278,248 L296,248" fill="none" stroke="#1d4ed8" stroke-width="13" stroke-linecap="round"/>
+    <path d="M310,226 Q320,238 316,250" fill="none" stroke="#1d4ed8" stroke-width="13" stroke-linecap="round"/>
+    <ellipse cx="300" cy="252" rx="12" ry="6" fill="#ef4444" stroke="#7f1d1d" stroke-width="2.5"/>
+    <ellipse cx="318" cy="254" rx="12" ry="6" fill="#ef4444" stroke="#7f1d1d" stroke-width="2.5"/>
+  </g>
+  <!-- butterfly -->
+  <g>
+    <ellipse cx="356" cy="130" rx="7" ry="10" fill="#f472b6" stroke="#be185d" stroke-width="2" transform="rotate(-25 356 130)"/>
+    <ellipse cx="368" cy="128" rx="7" ry="10" fill="#f9a8d4" stroke="#be185d" stroke-width="2" transform="rotate(25 368 128)"/>
+    <line x1="362" y1="122" x2="362" y2="140" stroke="#831843" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-dining-room desc-dining-room">
+  <title id="title-dining-room">Dining room - Room with table set for a meal</title>
+  <desc id="desc-dining-room">A cozy dining room with a wooden table set with plates, two chairs, a hanging lamp above, and a window with curtains.</desc>
+  <defs>
+    <linearGradient id="dr-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="dr-wood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c2955a"/>
+      <stop offset="100%" stop-color="#8a5a24"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="230" fill="url(#dr-wall)"/>
+  <rect x="0" y="225" width="400" height="75" fill="#a16207"/>
+  <g stroke="#7c2d12" stroke-width="1.5" opacity="0.4">
+    <line x1="0" y1="248" x2="400" y2="248"/>
+    <line x1="0" y1="272" x2="400" y2="272"/>
+  </g>
+  <!-- window -->
+  <g filter="url(#soft-shadow)">
+    <rect x="270" y="40" width="95" height="85" rx="6" fill="#bae6fd" stroke="#78350f" stroke-width="4"/>
+    <line x1="317" y1="40" x2="317" y2="125" stroke="#78350f" stroke-width="3"/>
+    <line x1="270" y1="82" x2="365" y2="82" stroke="#78350f" stroke-width="3"/>
+    <path d="M262,36 Q262,90 275,128 L262,128 Z" fill="#f472b6" stroke="#be185d" stroke-width="2.5"/>
+    <path d="M373,36 Q373,90 360,128 L373,128 Z" fill="#f472b6" stroke="#be185d" stroke-width="2.5"/>
+  </g>
+  <!-- hanging lamp -->
+  <g filter="url(#soft-shadow)">
+    <line x1="165" y1="0" x2="165" y2="42" stroke="#334155" stroke-width="3"/>
+    <path d="M140,70 Q140,42 165,42 Q190,42 190,70 Z" fill="#f59e0b" stroke="#b45309" stroke-width="3.5"/>
+    <circle cx="165" cy="76" r="7" fill="#fef08a" stroke="#d97706" stroke-width="2"/>
+  </g>
+  <ellipse cx="180" cy="262" rx="150" ry="8" fill="#0f172a" opacity="0.22"/>
+  <!-- table -->
+  <g filter="url(#soft-shadow)">
+    <rect x="75" y="160" width="185" height="16" rx="5" fill="url(#dr-wood)" stroke="#451a03" stroke-width="3.5"/>
+    <rect x="90" y="176" width="12" height="80" fill="#8a5a24" stroke="#451a03" stroke-width="2.5"/>
+    <rect x="233" y="176" width="12" height="80" fill="#8a5a24" stroke="#451a03" stroke-width="2.5"/>
+    <!-- plates on table -->
+    <ellipse cx="125" cy="158" rx="26" ry="8" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2.5"/>
+    <ellipse cx="210" cy="158" rx="26" ry="8" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2.5"/>
+    <!-- vase -->
+    <path d="M162,158 L173,158 L170,140 L165,140 Z" fill="#0ea5e9" stroke="#0369a1" stroke-width="2"/>
+    <circle cx="167" cy="133" r="6" fill="#f472b6" stroke="#be185d" stroke-width="2"/>
+  </g>
+  <!-- chair left -->
+  <g filter="url(#soft-shadow)">
+    <rect x="28" y="120" width="12" height="135" rx="4" fill="url(#dr-wood)" stroke="#451a03" stroke-width="3"/>
+    <rect x="28" y="185" width="52" height="12" rx="4" fill="url(#dr-wood)" stroke="#451a03" stroke-width="3"/>
+    <rect x="68" y="197" width="10" height="58" rx="3" fill="#8a5a24" stroke="#451a03" stroke-width="2.5"/>
+  </g>
+  <!-- chair right (mirrored) -->
+  <g filter="url(#soft-shadow)">
+    <rect x="330" y="120" width="12" height="135" rx="4" fill="url(#dr-wood)" stroke="#451a03" stroke-width="3"/>
+    <rect x="290" y="185" width="52" height="12" rx="4" fill="url(#dr-wood)" stroke="#451a03" stroke-width="3"/>
+    <rect x="292" y="197" width="10" height="58" rx="3" fill="#8a5a24" stroke="#451a03" stroke-width="2.5"/>
+  </g>
+</svg>

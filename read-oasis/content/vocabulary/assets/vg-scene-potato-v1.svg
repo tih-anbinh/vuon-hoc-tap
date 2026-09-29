@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-potato desc-potato">
+  <title id="title-potato">Potato - Brown potatoes in a basket</title>
+  <desc id="desc-potato">Big brown bumpy potatoes with small eye spots, one large in front and more in a woven basket behind, on a kitchen table.</desc>
+  <defs>
+    <linearGradient id="pot-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <radialGradient id="pot-skin" cx="0.4" cy="0.35" r="0.85">
+      <stop offset="0%" stop-color="#d6a35c"/>
+      <stop offset="100%" stop-color="#92400e"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#pot-bg)"/>
+  <rect x="0" y="235" width="400" height="65" fill="#e8b478"/>
+  <line x1="0" y1="235" x2="400" y2="235" stroke="#a16207" stroke-width="3.5"/>
+  <ellipse cx="200" cy="248" rx="165" ry="11" fill="#0f172a" opacity="0.2"/>
+  <!-- basket with potatoes -->
+  <g filter="url(#soft-shadow)">
+    <!-- potatoes peeking above rim -->
+    <ellipse cx="255" cy="128" rx="38" ry="28" fill="url(#pot-skin)" stroke="#78350f" stroke-width="3.5" transform="rotate(-12 255 128)"/>
+    <ellipse cx="315" cy="132" rx="34" ry="26" fill="#c98a3b" stroke="#78350f" stroke-width="3.5" transform="rotate(10 315 132)"/>
+    <ellipse cx="285" cy="112" rx="30" ry="23" fill="#d6a35c" stroke="#78350f" stroke-width="3.5"/>
+    <g fill="#78350f" opacity="0.7">
+      <ellipse cx="270" cy="108" rx="3" ry="2"/>
+      <ellipse cx="296" cy="116" rx="3" ry="2"/>
+      <ellipse cx="245" cy="125" rx="3" ry="2"/>
+      <ellipse cx="322" cy="128" rx="3" ry="2"/>
+    </g>
+    <!-- basket -->
+    <path d="M212,140 L358,140 L344,235 L226,235 Z" fill="#a16207" stroke="#78350f" stroke-width="4"/>
+    <!-- weave -->
+    <g stroke="#78350f" stroke-width="2.5" opacity="0.85">
+      <path d="M216,165 Q285,178 354,165" fill="none"/>
+      <path d="M220,192 Q285,205 350,192" fill="none"/>
+      <path d="M224,218 Q285,230 346,218" fill="none"/>
+      <line x1="248" y1="142" x2="256" y2="234"/>
+      <line x1="285" y1="145" x2="285" y2="235"/>
+      <line x1="322" y1="142" x2="314" y2="234"/>
+    </g>
+    <!-- rim -->
+    <rect x="206" y="132" width="158" height="14" rx="7" fill="#c98a3b" stroke="#78350f" stroke-width="3"/>
+  </g>
+  <!-- big potato in front -->
+  <g filter="url(#soft-shadow)">
+    <path d="M50,185 Q42,148 82,138 Q130,128 160,150 Q188,170 178,205 Q168,238 120,240 Q68,242 50,185 Z" fill="url(#pot-skin)" stroke="#78350f" stroke-width="4.5"/>
+    <!-- eyes (spots) -->
+    <g fill="#78350f" opacity="0.8">
+      <ellipse cx="85" cy="170" rx="5" ry="3.5" transform="rotate(-20 85 170)"/>
+      <ellipse cx="135" cy="160" rx="5" ry="3.5" transform="rotate(15 135 160)"/>
+      <ellipse cx="110" cy="205" rx="5" ry="3.5" transform="rotate(-10 110 205)"/>
+      <ellipse cx="155" cy="195" rx="4.5" ry="3" transform="rotate(20 155 195)"/>
+      <ellipse cx="70" cy="205" rx="4" ry="3"/>
+    </g>
+    <!-- dimple curves -->
+    <g fill="none" stroke="#92400e" stroke-width="2" opacity="0.65">
+      <path d="M75,155 Q85,160 92,156"/>
+      <path d="M125,220 Q135,224 145,220"/>
+    </g>
+    <!-- highlight -->
+    <ellipse cx="85" cy="158" rx="16" ry="9" fill="#fde68a" opacity="0.45" transform="rotate(-15 85 158)"/>
+  </g>
+  <!-- small potato beside -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="188" cy="228" rx="26" ry="18" fill="#c98a3b" stroke="#78350f" stroke-width="3.5" transform="rotate(-8 188 228)"/>
+    <ellipse cx="180" cy="224" rx="3.5" ry="2.5" fill="#78350f" opacity="0.8"/>
+    <ellipse cx="198" cy="232" rx="3.5" ry="2.5" fill="#78350f" opacity="0.8"/>
+  </g>
+</svg>

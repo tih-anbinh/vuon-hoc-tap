@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-scary desc-scary">
+  <title id="title-scary">Scary - Spooky ghost frightening a child</title>
+  <desc id="desc-scary">A spooky white ghost with wide eyes floating in a dark room, and a frightened child with hands on cheeks and hair standing up, showing something scary.</desc>
+  <defs>
+    <linearGradient id="sc-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#4c1d95"/>
+    </linearGradient>
+    <radialGradient id="sc-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#e0e7ff" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#e0e7ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#sc-bg)"/>
+  <!-- moonlight through window -->
+  <g opacity="0.85">
+    <rect x="300" y="30" width="72" height="88" rx="5" fill="#312e81" stroke="#1e1b4b" stroke-width="4"/>
+    <line x1="336" y1="30" x2="336" y2="118" stroke="#1e1b4b" stroke-width="3"/>
+    <line x1="300" y1="74" x2="372" y2="74" stroke="#1e1b4b" stroke-width="3"/>
+    <circle cx="320" cy="52" r="12" fill="#fef9c3"/>
+  </g>
+  <rect x="0" y="252" width="400" height="48" fill="#0f172a" opacity="0.6"/>
+  <!-- ghost glow -->
+  <circle cx="140" cy="130" r="115" fill="url(#sc-glow)"/>
+  <!-- ghost -->
+  <g filter="url(#soft-shadow)">
+    <path d="M75,235 Q68,110 140,72 Q212,110 205,235 Q192,222 178,238 Q164,222 150,238 Q136,222 122,238 Q108,222 94,238 Q86,228 75,235 Z" fill="#f8fafc" stroke="#94a3b8" stroke-width="4"/>
+    <!-- wavy arms raised -->
+    <path d="M82,150 Q52,140 42,112" fill="none" stroke="#f8fafc" stroke-width="16" stroke-linecap="round"/>
+    <path d="M198,150 Q228,140 238,112" fill="none" stroke="#f8fafc" stroke-width="16" stroke-linecap="round"/>
+    <!-- spooky face: hollow eyes, open mouth -->
+    <ellipse cx="118" cy="130" rx="12" ry="17" fill="#0f172a"/>
+    <ellipse cx="162" cy="130" rx="12" ry="17" fill="#0f172a"/>
+    <ellipse cx="140" cy="172" rx="13" ry="19" fill="#0f172a"/>
+  </g>
+  <!-- boo sound waves -->
+  <g fill="none" stroke="#c7d2fe" stroke-width="3" stroke-linecap="round" opacity="0.8">
+    <path d="M215,95 Q224,85 220,72"/>
+    <path d="M230,105 Q244,92 240,74"/>
+  </g>
+  <!-- frightened child -->
+  <g filter="url(#soft-shadow)">
+    <!-- hair standing up -->
+    <g stroke="#451a03" stroke-width="5" stroke-linecap="round">
+      <line x1="305" y1="152" x2="300" y2="132"/>
+      <line x1="318" y1="148" x2="316" y2="128"/>
+      <line x1="331" y1="148" x2="333" y2="128"/>
+      <line x1="344" y1="152" x2="349" y2="133"/>
+    </g>
+    <!-- head -->
+    <circle cx="324" cy="180" r="30" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <!-- wide frightened eyes -->
+    <circle cx="313" cy="176" r="8" fill="#ffffff" stroke="#0f172a" stroke-width="2.5"/>
+    <circle cx="335" cy="176" r="8" fill="#ffffff" stroke="#0f172a" stroke-width="2.5"/>
+    <circle cx="313" cy="177" r="3.5" fill="#0f172a"/>
+    <circle cx="335" cy="177" r="3.5" fill="#0f172a"/>
+    <!-- open mouth screaming -->
+    <ellipse cx="324" cy="197" rx="8" ry="11" fill="#7f1d1d" stroke="#0f172a" stroke-width="2.5"/>
+    <!-- hands on cheeks -->
+    <circle cx="296" cy="195" r="10" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <circle cx="352" cy="195" r="10" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <!-- body -->
+    <path d="M308,208 L340,208 L346,258 L302,258 Z" fill="#f97316" stroke="#c2410c" stroke-width="3"/>
+    <!-- arms up to cheeks -->
+    <path d="M308,215 Q296,208 296,202" fill="none" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+    <path d="M340,215 Q352,208 352,202" fill="none" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+    <!-- shaking legs -->
+    <path d="M314,258 L310,276" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
+    <path d="M334,258 L338,276" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
+    <ellipse cx="308" cy="280" rx="10" ry="5" fill="#1e3a8a"/>
+    <ellipse cx="340" cy="280" rx="10" ry="5" fill="#1e3a8a"/>
+    <!-- tremble marks -->
+    <g stroke="#c7d2fe" stroke-width="2.5" stroke-linecap="round" opacity="0.9">
+      <path d="M290,235 L284,238"/>
+      <path d="M290,245 L283,247"/>
+      <path d="M358,235 L364,238"/>
+      <path d="M358,245 L365,247"/>
+    </g>
+  </g>
+</svg>

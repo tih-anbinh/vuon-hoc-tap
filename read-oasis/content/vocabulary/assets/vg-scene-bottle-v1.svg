@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-bottle desc-bottle">
+  <title id="title-bottle">Bottle - Big bottle of water on a table</title>
+  <desc id="desc-bottle">A large blue water bottle with a cap standing on a table, next to a glass being filled with water, showing what a bottle is.</desc>
+  <defs>
+    <linearGradient id="bo-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="bo-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#bo-bg)"/>
+  <!-- table -->
+  <rect x="20" y="240" width="360" height="18" rx="6" fill="#b45309" stroke="#78350f" stroke-width="4"/>
+  <rect x="48" y="258" width="16" height="42" fill="#92400e" stroke="#78350f" stroke-width="3"/>
+  <rect x="336" y="258" width="16" height="42" fill="#92400e" stroke="#78350f" stroke-width="3"/>
+  <ellipse cx="200" cy="248" rx="150" ry="8" fill="#0f172a" opacity="0.18"/>
+  <!-- THE BOTTLE (hero element) -->
+  <g filter="url(#soft-shadow)">
+    <!-- cap -->
+    <rect x="166" y="36" width="48" height="26" rx="6" fill="#ef4444" stroke="#7f1d1d" stroke-width="4"/>
+    <g stroke="#7f1d1d" stroke-width="2.5">
+      <line x1="176" y1="38" x2="176" y2="60"/>
+      <line x1="190" y1="38" x2="190" y2="60"/>
+      <line x1="204" y1="38" x2="204" y2="60"/>
+    </g>
+    <!-- neck -->
+    <path d="M172,62 L208,62 L208,86 L172,86 Z" fill="#bae6fd" stroke="#0c4a6e" stroke-width="4"/>
+    <!-- shoulders + body -->
+    <path d="M172,86 Q140,104 140,136 L140,216 Q140,240 164,240 L216,240 Q240,240 240,216 L240,136 Q240,104 208,86 Z"
+          fill="#e0f2fe" stroke="#0c4a6e" stroke-width="4.5"/>
+    <!-- water inside -->
+    <path d="M144,150 Q170,142 200,150 Q222,156 236,150 L236,216 Q236,236 216,236 L164,236 Q144,236 144,216 Z"
+          fill="url(#bo-water)" opacity="0.9"/>
+    <path d="M144,150 Q170,142 200,150 Q222,156 236,150" fill="none" stroke="#0284c7" stroke-width="3"/>
+    <!-- label band -->
+    <rect x="140" y="168" width="100" height="42" fill="#f472b6" stroke="#be185d" stroke-width="3.5" opacity="0.95"/>
+    <circle cx="190" cy="189" r="13" fill="#ffffff" stroke="#be185d" stroke-width="3"/>
+    <path d="M190,181 Q197,190 190,197 Q183,190 190,181 Z" fill="#0ea5e9" stroke="#0c4a6e" stroke-width="2"/>
+    <!-- shine -->
+    <path d="M156,104 Q150,140 152,190" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.75"/>
+    <!-- bubbles -->
+    <circle cx="216" cy="176" r="4" fill="#ffffff" opacity="0.8"/>
+    <circle cx="224" cy="196" r="3" fill="#ffffff" opacity="0.8"/>
+    <circle cx="210" cy="220" r="3.5" fill="#ffffff" opacity="0.8"/>
+  </g>
+  <!-- glass with water beside bottle -->
+  <g filter="url(#soft-shadow)">
+    <path d="M288,168 L340,168 L334,240 L294,240 Z" fill="#f0f9ff" stroke="#0c4a6e" stroke-width="4" opacity="0.95"/>
+    <path d="M292,196 L336,196 L333,236 L295,236 Z" fill="url(#bo-water)"/>
+    <line x1="292" y1="196" x2="336" y2="196" stroke="#0284c7" stroke-width="2.5"/>
+    <circle cx="314" cy="212" r="3" fill="#ffffff" opacity="0.85"/>
+    <circle cx="306" cy="226" r="2.5" fill="#ffffff" opacity="0.85"/>
+  </g>
+  <!-- water drops decorative -->
+  <g fill="#38bdf8" stroke="#0c4a6e" stroke-width="2.5">
+    <path d="M72,110 Q80,122 72,130 Q64,122 72,110 Z"/>
+    <path d="M330,84 Q338,96 330,104 Q322,96 330,84 Z"/>
+    <path d="M92,180 Q99,190 92,197 Q85,190 92,180 Z"/>
+  </g>
+</svg>

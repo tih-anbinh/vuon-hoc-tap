@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-basketball desc-basketball">
+  <title id="title-basketball">Basketball - Orange ball with black seams</title>
+  <desc id="desc-basketball">A round orange basketball with characteristic curved black seam lines on a wooden court floor.</desc>
+  <defs>
+    <linearGradient id="bk-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fed7aa"/>
+    </linearGradient>
+    <linearGradient id="bk-floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8b478"/>
+      <stop offset="100%" stop-color="#a16207"/>
+    </linearGradient>
+    <radialGradient id="bk-ball" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#fdba74"/>
+      <stop offset="60%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#9a3412"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="220" fill="url(#bk-bg)"/>
+  <rect x="0" y="210" width="400" height="90" fill="url(#bk-floor)"/>
+  <g stroke="#7c2d12" stroke-width="1.5" opacity="0.5">
+    <line x1="0" y1="230" x2="400" y2="230"/>
+    <line x1="0" y1="255" x2="400" y2="255"/>
+    <line x1="0" y1="280" x2="400" y2="280"/>
+  </g>
+  <ellipse cx="200" cy="260" rx="90" ry="10" fill="#0f172a" opacity="0.3"/>
+  <!-- ball -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="200" cy="160" r="80" fill="url(#bk-ball)" stroke="#7c2d12" stroke-width="4"/>
+    <!-- seams -->
+    <line x1="200" y1="80" x2="200" y2="240" stroke="#3f1d0e" stroke-width="3.5"/>
+    <path d="M120,160 Q200,140 280,160" fill="none" stroke="#3f1d0e" stroke-width="3.5"/>
+    <path d="M120,160 Q200,180 280,160" fill="none" stroke="#3f1d0e" stroke-width="3.5"/>
+    <path d="M145,100 Q160,160 145,220" fill="none" stroke="#3f1d0e" stroke-width="3.5"/>
+    <path d="M255,100 Q240,160 255,220" fill="none" stroke="#3f1d0e" stroke-width="3.5"/>
+  </g>
+</svg>

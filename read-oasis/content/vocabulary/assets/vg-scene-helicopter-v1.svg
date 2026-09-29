@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-helicopter desc-helicopter">
+  <title id="title-helicopter">Helicopter - Red helicopter flying in the sky</title>
+  <desc id="desc-helicopter">A red helicopter with spinning top rotor blades, a round cockpit window, tail rotor and landing skids, flying among clouds.</desc>
+  <defs>
+    <linearGradient id="hc-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#bae6fd"/>
+    </linearGradient>
+    <linearGradient id="hc-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f87171"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#hc-bg)"/>
+  <!-- clouds -->
+  <g fill="#ffffff" opacity="0.95">
+    <ellipse cx="70" cy="240" rx="42" ry="15"/>
+    <ellipse cx="100" cy="230" rx="28" ry="12"/>
+    <ellipse cx="330" cy="255" rx="45" ry="16"/>
+    <ellipse cx="360" cy="245" rx="26" ry="11"/>
+    <ellipse cx="60" cy="60" rx="34" ry="12"/>
+  </g>
+  <g filter="url(#soft-shadow)">
+    <!-- spinning rotor (blurred sweep) -->
+    <ellipse cx="190" cy="75" rx="130" ry="10" fill="#94a3b8" opacity="0.5"/>
+    <rect x="70" y="71" width="240" height="8" rx="4" fill="#334155"/>
+    <!-- rotor mast -->
+    <rect x="184" y="79" width="12" height="18" fill="#334155"/>
+    <!-- tail boom -->
+    <path d="M255,135 L345,118 L345,136 L258,155 Z" fill="url(#hc-body)" stroke="#7f1d1d" stroke-width="3.5"/>
+    <!-- tail rotor -->
+    <circle cx="348" cy="112" r="4" fill="#334155"/>
+    <rect x="344" y="86" width="8" height="52" rx="4" fill="#334155" opacity="0.85"/>
+    <!-- tail fin -->
+    <path d="M335,118 L352,100 L358,110 L345,128 Z" fill="#dc2626" stroke="#7f1d1d" stroke-width="3"/>
+    <!-- cabin -->
+    <path d="M110,140 Q110,95 165,93 L240,93 Q280,95 275,140 Q272,175 230,178 L150,178 Q112,175 110,140 Z" fill="url(#hc-body)" stroke="#7f1d1d" stroke-width="4"/>
+    <!-- cockpit window -->
+    <path d="M118,135 Q118,105 160,102 L175,102 L175,150 Q145,152 118,135 Z" fill="#bae6fd" stroke="#7f1d1d" stroke-width="3"/>
+    <!-- side window -->
+    <rect x="192" y="105" width="42" height="32" rx="10" fill="#bae6fd" stroke="#7f1d1d" stroke-width="3"/>
+    <!-- pilot in cockpit -->
+    <circle cx="150" cy="126" r="12" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <path d="M138,123 Q139,111 150,112 Q161,111 162,123 Q156,116 150,116 Q144,116 138,123 Z" fill="#78350f"/>
+    <circle cx="146" cy="125" r="2" fill="#0f172a"/>
+    <circle cx="154" cy="125" r="2" fill="#0f172a"/>
+    <!-- skids -->
+    <line x1="140" y1="178" x2="132" y2="198" stroke="#334155" stroke-width="5"/>
+    <line x1="240" y1="178" x2="248" y2="198" stroke="#334155" stroke-width="5"/>
+    <rect x="105" y="197" width="175" height="8" rx="4" fill="#334155"/>
+  </g>
+  <!-- motion swish under rotor tips -->
+  <g stroke="#e0f2fe" stroke-width="3" stroke-linecap="round" opacity="0.8">
+    <path d="M60,62 Q55,55 60,48"/>
+    <path d="M322,62 Q327,55 322,48"/>
+  </g>
+</svg>

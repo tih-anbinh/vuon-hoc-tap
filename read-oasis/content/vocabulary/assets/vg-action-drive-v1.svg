@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-drive desc-drive">
+  <title id="title-drive">Drive - Person driving a car</title>
+  <desc id="desc-drive">A smiling person behind the wheel of a red car driving along a road, with motion lines behind the car showing movement.</desc>
+  <defs>
+    <linearGradient id="dv-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="dv-car" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f87171"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#dv-bg)"/>
+  <circle cx="60" cy="50" r="24" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <ellipse cx="300" cy="70" rx="34" ry="12" fill="#fff" opacity="0.9"/>
+  <ellipse cx="325" cy="62" rx="22" ry="9" fill="#fff" opacity="0.9"/>
+  <!-- road -->
+  <rect x="0" y="230" width="400" height="70" fill="#475569"/>
+  <g stroke="#facc15" stroke-width="5" stroke-dasharray="25,18">
+    <line x1="0" y1="265" x2="400" y2="265"/>
+  </g>
+  <!-- motion lines -->
+  <g stroke="#64748b" stroke-width="4" stroke-linecap="round" opacity="0.7">
+    <line x1="20" y1="150" x2="60" y2="150"/>
+    <line x1="10" y1="175" x2="55" y2="175"/>
+    <line x1="25" y1="200" x2="65" y2="200"/>
+  </g>
+  <!-- car -->
+  <g filter="url(#soft-shadow)">
+    <!-- cabin -->
+    <path d="M130,150 Q140,95 200,95 L265,95 Q300,100 315,150 Z" fill="url(#dv-car)" stroke="#7f1d1d" stroke-width="4"/>
+    <!-- window -->
+    <path d="M150,145 Q158,108 200,108 L250,108 L252,145 Z" fill="#bae6fd" stroke="#7f1d1d" stroke-width="3"/>
+    <!-- body -->
+    <rect x="90" y="148" width="255" height="62" rx="18" fill="url(#dv-car)" stroke="#7f1d1d" stroke-width="4"/>
+    <!-- driver -->
+    <circle cx="215" cy="122" r="17" fill="#fcd9b6" stroke="#78350f" stroke-width="3"/>
+    <path d="M198,118 Q199,102 215,103 Q231,102 232,118 Q225,109 215,109 Q205,109 198,118 Z" fill="#78350f"/>
+    <circle cx="209" cy="121" r="2.5" fill="#0f172a"/>
+    <circle cx="221" cy="121" r="2.5" fill="#0f172a"/>
+    <path d="M209,129 Q215,134 221,129" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- steering wheel + arm -->
+    <circle cx="182" cy="138" r="10" fill="none" stroke="#0f172a" stroke-width="4"/>
+    <path d="M212,140 Q198,142 188,138" fill="none" stroke="#fcd9b6" stroke-width="7" stroke-linecap="round"/>
+    <!-- headlight -->
+    <circle cx="335" cy="170" r="8" fill="#fef08a" stroke="#b45309" stroke-width="2.5"/>
+    <!-- wheels -->
+    <circle cx="150" cy="215" r="28" fill="#1e293b" stroke="#0f172a" stroke-width="4"/>
+    <circle cx="150" cy="215" r="12" fill="#94a3b8" stroke="#0f172a" stroke-width="3"/>
+    <circle cx="290" cy="215" r="28" fill="#1e293b" stroke="#0f172a" stroke-width="4"/>
+    <circle cx="290" cy="215" r="12" fill="#94a3b8" stroke="#0f172a" stroke-width="3"/>
+  </g>
+</svg>

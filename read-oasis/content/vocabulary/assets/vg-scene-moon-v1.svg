@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-moon desc-moon">
+  <title id="title-moon">Moon - The bright moon in the night sky</title>
+  <desc id="desc-moon">A big glowing full moon with craters shining in the dark blue night sky over sleeping houses, surrounded by twinkling stars.</desc>
+  <defs>
+    <linearGradient id="mn-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#312e81"/>
+    </linearGradient>
+    <radialGradient id="mn-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#fef9c3" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#fef9c3" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="mn-face" cx="0.4" cy="0.4" r="0.7">
+      <stop offset="0%" stop-color="#fefce8"/>
+      <stop offset="100%" stop-color="#fde047"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#mn-sky)"/>
+  <!-- glow -->
+  <circle cx="200" cy="120" r="130" fill="url(#mn-glow)"/>
+  <!-- MOON (hero element) -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="200" cy="120" r="76" fill="url(#mn-face)" stroke="#ca8a04" stroke-width="5"/>
+    <!-- craters -->
+    <g fill="#facc15" stroke="#ca8a04" stroke-width="2.5">
+      <circle cx="172" cy="92" r="13"/>
+      <circle cx="232" cy="110" r="9"/>
+      <circle cx="186" cy="150" r="11"/>
+      <circle cx="228" cy="156" r="7"/>
+      <circle cx="152" cy="128" r="7"/>
+    </g>
+    <g fill="#eab308" opacity="0.6">
+      <circle cx="169" cy="89" r="6"/>
+      <circle cx="183" cy="147" r="5"/>
+      <circle cx="230" cy="108" r="4"/>
+    </g>
+    <!-- sleepy face -->
+    <path d="M178,116 Q183,112 188,116" fill="none" stroke="#78350f" stroke-width="3" stroke-linecap="round"/>
+    <path d="M212,116 Q217,112 222,116" fill="none" stroke="#78350f" stroke-width="3" stroke-linecap="round"/>
+    <path d="M192,134 Q200,140 208,134" fill="none" stroke="#78350f" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="176" cy="126" rx="5" ry="3.5" fill="#fb923c" opacity="0.5"/>
+    <ellipse cx="224" cy="126" rx="5" ry="3.5" fill="#fb923c" opacity="0.5"/>
+  </g>
+  <!-- stars -->
+  <g fill="#fde047" stroke="#ca8a04" stroke-width="1.8">
+    <path d="M60,50 L64,60 L74,62 L66,69 L68,80 L60,74 L52,80 L54,69 L46,62 L56,60 Z"/>
+    <path d="M330,44 L334,54 L344,56 L336,63 L338,74 L330,68 L322,74 L324,63 L316,56 L326,54 Z"/>
+    <path d="M352,140 L355,147 L362,148 L357,153 L358,161 L352,157 L346,161 L347,153 L342,148 L349,147 Z"/>
+    <path d="M46,150 L49,157 L56,158 L51,163 L52,171 L46,167 L40,171 L41,163 L36,158 L43,157 Z"/>
+    <path d="M96,196 L98,201 L103,202 L99,206 L100,211 L96,208 L92,211 L93,206 L89,202 L94,201 Z"/>
+    <path d="M310,190 L312,195 L317,196 L313,200 L314,205 L310,202 L306,205 L307,200 L303,196 L308,195 Z"/>
+  </g>
+  <g fill="#e0e7ff">
+    <circle cx="120" cy="40" r="2.5"/>
+    <circle cx="260" cy="30" r="2.5"/>
+    <circle cx="30" cy="100" r="2.5"/>
+    <circle cx="376" cy="90" r="2.5"/>
+    <circle cx="140" cy="190" r="2.5"/>
+    <circle cx="282" cy="182" r="2.5"/>
+  </g>
+  <!-- sleeping village silhouette -->
+  <g filter="url(#soft-shadow)">
+    <rect x="0" y="252" width="400" height="48" fill="#1e293b"/>
+    <path d="M0,252 L400,252" stroke="#0f172a" stroke-width="3"/>
+    <!-- houses -->
+    <g fill="#334155" stroke="#0f172a" stroke-width="3">
+      <rect x="46" y="222" width="52" height="30"/>
+      <path d="M40,222 L72,198 L104,222 Z"/>
+      <rect x="170" y="228" width="46" height="24"/>
+      <path d="M164,228 L193,206 L222,228 Z"/>
+      <rect x="296" y="220" width="56" height="32"/>
+      <path d="M290,220 L324,194 L358,220 Z"/>
+    </g>
+    <!-- lit windows -->
+    <g fill="#fde047" stroke="#a16207" stroke-width="2">
+      <rect x="62" y="232" width="12" height="12" rx="2"/>
+      <rect x="186" y="236" width="11" height="11" rx="2"/>
+      <rect x="312" y="230" width="12" height="12" rx="2"/>
+      <rect x="332" y="230" width="12" height="12" rx="2"/>
+    </g>
+  </g>
+  <!-- owl on branch -->
+  <g filter="url(#soft-shadow)">
+    <line x1="330" y1="168" x2="384" y2="162" stroke="#78350f" stroke-width="5" stroke-linecap="round"/>
+    <ellipse cx="356" cy="146" rx="15" ry="18" fill="#92400e" stroke="#451a03" stroke-width="3"/>
+    <circle cx="350" cy="140" r="6" fill="#fef3c7" stroke="#451a03" stroke-width="2"/>
+    <circle cx="362" cy="140" r="6" fill="#fef3c7" stroke="#451a03" stroke-width="2"/>
+    <circle cx="350" cy="140" r="2.5" fill="#0f172a"/>
+    <circle cx="362" cy="140" r="2.5" fill="#0f172a"/>
+    <path d="M354,147 L358,147 L356,151 Z" fill="#f59e0b" stroke="#78350f" stroke-width="1.5"/>
+    <path d="M344,132 L340,124 L350,128 Z" fill="#92400e" stroke="#451a03" stroke-width="2"/>
+    <path d="M368,132 L372,124 L362,128 Z" fill="#92400e" stroke="#451a03" stroke-width="2"/>
+  </g>
+</svg>

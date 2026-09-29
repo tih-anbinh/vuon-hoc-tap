@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-board-game desc-board-game">
+  <title id="title-board-game">Board game - Game board with dice and pawns</title>
+  <desc id="desc-board-game">A colorful board game with a winding path of squares, two dice showing dots, and red and blue playing pawns.</desc>
+  <defs>
+    <linearGradient id="bg-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ede9fe"/>
+      <stop offset="100%" stop-color="#ddd6fe"/>
+    </linearGradient>
+    <linearGradient id="bg-board" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a7f3d0"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#bg-bg)"/>
+  <ellipse cx="200" cy="268" rx="165" ry="9" fill="#0f172a" opacity="0.22"/>
+  <!-- game board (perspective rectangle) -->
+  <g filter="url(#soft-shadow)">
+    <path d="M70,90 L330,90 L365,250 L35,250 Z" fill="url(#bg-board)" stroke="#065f46" stroke-width="4"/>
+    <!-- winding path squares -->
+    <g stroke="#0f172a" stroke-width="2.5">
+      <rect x="80" y="210" width="34" height="28" rx="4" fill="#fde68a"/>
+      <rect x="120" y="210" width="34" height="28" rx="4" fill="#f9a8d4"/>
+      <rect x="160" y="210" width="34" height="28" rx="4" fill="#93c5fd"/>
+      <rect x="200" y="210" width="34" height="28" rx="4" fill="#fde68a"/>
+      <rect x="240" y="210" width="34" height="28" rx="4" fill="#f9a8d4"/>
+      <rect x="280" y="210" width="34" height="28" rx="4" fill="#93c5fd"/>
+      <rect x="278" y="172" width="32" height="26" rx="4" fill="#fde68a"/>
+      <rect x="240" y="140" width="32" height="26" rx="4" fill="#93c5fd"/>
+      <rect x="200" y="140" width="32" height="26" rx="4" fill="#f9a8d4"/>
+      <rect x="160" y="140" width="32" height="26" rx="4" fill="#fde68a"/>
+      <rect x="120" y="140" width="32" height="26" rx="4" fill="#93c5fd"/>
+      <rect x="100" y="105" width="30" height="24" rx="4" fill="#f9a8d4"/>
+      <!-- star finish square -->
+      <rect x="140" y="102" width="32" height="26" rx="4" fill="#fca5a5"/>
+    </g>
+    <path d="M156,106 L159,113 L167,113 L161,118 L163,125 L156,121 L149,125 L151,118 L145,113 L153,113 Z" fill="#facc15" stroke="#b45309" stroke-width="1.5"/>
+  </g>
+  <!-- dice -->
+  <g filter="url(#soft-shadow)">
+    <rect x="55" y="35" width="44" height="44" rx="8" fill="#ffffff" stroke="#0f172a" stroke-width="3.5"/>
+    <circle cx="68" cy="48" r="4" fill="#0f172a"/>
+    <circle cx="86" cy="48" r="4" fill="#0f172a"/>
+    <circle cx="68" cy="66" r="4" fill="#0f172a"/>
+    <circle cx="86" cy="66" r="4" fill="#0f172a"/>
+    <rect x="310" y="30" width="40" height="40" rx="7" fill="#ffffff" stroke="#0f172a" stroke-width="3.5" transform="rotate(15 330 50)"/>
+    <circle cx="330" cy="50" r="4" fill="#0f172a" transform="rotate(15 330 50)"/>
+  </g>
+  <!-- pawns -->
+  <g filter="url(#soft-shadow)">
+    <!-- red pawn -->
+    <g stroke="#7f1d1d" stroke-width="2.5">
+      <circle cx="137" cy="195" r="10" fill="#ef4444"/>
+      <path d="M129,202 Q137,196 145,202 L149,222 L125,222 Z" fill="#ef4444"/>
+    </g>
+    <!-- blue pawn -->
+    <g stroke="#1e3a8a" stroke-width="2.5">
+      <circle cx="217" cy="196" r="10" fill="#3b82f6"/>
+      <path d="M209,203 Q217,197 225,203 L229,223 L205,223 Z" fill="#3b82f6"/>
+    </g>
+  </g>
+</svg>

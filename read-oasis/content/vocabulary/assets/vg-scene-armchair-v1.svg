@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-armchair desc-armchair">
+    <title id="title-armchair">Armchair - Cozy padded chair with arms</title>
+  <desc id="desc-armchair">A soft cozy armchair with a padded backrest, two rounded arm rests, plump cushion, and short wooden legs on a wooden floor.</desc>
+  <defs>
+    <linearGradient id="ac-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="ac-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fca5a5"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <linearGradient id="ac-cushion" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fecaca"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="ac-floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c2955a"/>
+      <stop offset="100%" stop-color="#78350f"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="240" fill="url(#ac-bg)"/>
+  <rect x="0" y="230" width="400" height="70" fill="url(#ac-floor)"/>
+  <!-- floor plank lines -->
+  <g stroke="#5c3210" stroke-width="1.5" opacity="0.5">
+    <line x1="0" y1="250" x2="400" y2="250"/>
+    <line x1="0" y1="270" x2="400" y2="270"/>
+  </g>
+  <!-- ground shadow -->
+  <ellipse cx="200" cy="272" rx="140" ry="8" fill="#0f172a" opacity="0.28"/>
+  <!-- armchair -->
+  <g filter="url(#soft-shadow)">
+    <!-- back rest -->
+    <path d="M100,110 Q100,80 130,80 L270,80 Q300,80 300,110 L300,220 L100,220 Z" fill="url(#ac-body)" stroke="#7f1d1d" stroke-width="4"/>
+    <!-- left arm -->
+    <ellipse cx="90" cy="185" rx="24" ry="35" fill="url(#ac-body)" stroke="#7f1d1d" stroke-width="4"/>
+    <!-- right arm -->
+    <ellipse cx="310" cy="185" rx="24" ry="35" fill="url(#ac-body)" stroke="#7f1d1d" stroke-width="4"/>
+    <!-- cushion -->
+    <rect x="115" y="170" width="170" height="50" rx="18" fill="url(#ac-cushion)" stroke="#7f1d1d" stroke-width="3.5"/>
+    <!-- button on backrest -->
+    <circle cx="170" cy="130" r="4" fill="#7f1d1d"/>
+    <circle cx="200" cy="120" r="4" fill="#7f1d1d"/>
+    <circle cx="230" cy="130" r="4" fill="#7f1d1d"/>
+    <!-- legs -->
+    <rect x="80" y="220" width="14" height="20" rx="3" fill="#78350f" stroke="#451a03" stroke-width="2"/>
+    <rect x="306" y="220" width="14" height="20" rx="3" fill="#78350f" stroke="#451a03" stroke-width="2"/>
+  </g>
+</svg>

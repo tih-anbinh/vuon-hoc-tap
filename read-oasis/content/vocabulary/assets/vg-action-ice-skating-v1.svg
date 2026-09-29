@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-ice-skating desc-ice-skating">
+  <title id="title-ice-skating">Ice skating - A child gliding on the ice rink</title>
+  <desc id="desc-ice-skating">A happy child in a warm hat and scarf gliding across a frozen ice rink on skates, arms out for balance, with motion lines and snowflakes.</desc>
+  <defs>
+    <linearGradient id="is-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a5b4fc"/>
+      <stop offset="100%" stop-color="#e0e7ff"/>
+    </linearGradient>
+    <linearGradient id="is-ice" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#93c5fd"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#is-bg)"/>
+  <!-- distant trees -->
+  <g fill="#166534" stroke="#14532d" stroke-width="2.5">
+    <path d="M40,140 L58,100 L76,140 Z"/>
+    <path d="M44,120 L58,88 L72,120 Z"/>
+    <path d="M330,136 L348,98 L366,136 Z"/>
+    <path d="M334,118 L348,86 L362,118 Z"/>
+  </g>
+  <rect x="54" y="140" width="8" height="12" fill="#78350f"/>
+  <rect x="344" y="136" width="8" height="12" fill="#78350f"/>
+  <!-- ice rink -->
+  <path d="M0,168 Q200,150 400,168 L400,300 L0,300 Z" fill="url(#is-ice)"/>
+  <path d="M0,168 Q200,150 400,168" fill="none" stroke="#60a5fa" stroke-width="4"/>
+  <!-- skate trail curve -->
+  <path d="M40,268 Q120,240 170,252 Q210,262 236,246" fill="none" stroke="#f8fafc" stroke-width="4" stroke-linecap="round" stroke-dasharray="2,14"/>
+  <ellipse cx="220" cy="266" rx="110" ry="12" fill="#0f172a" opacity="0.13"/>
+  <!-- SKATING CHILD (hero element) -->
+  <g filter="url(#soft-shadow)">
+    <!-- warm hat -->
+    <path d="M172,72 Q172,42 204,42 Q236,42 236,72 L232,80 L176,80 Z" fill="#dc2626" stroke="#7f1d1d" stroke-width="3.5"/>
+    <circle cx="204" cy="38" r="9" fill="#fde047" stroke="#a16207" stroke-width="3"/>
+    <rect x="170" y="72" width="68" height="12" rx="6" fill="#fca5a5" stroke="#7f1d1d" stroke-width="3"/>
+    <!-- head -->
+    <circle cx="204" cy="102" r="26" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <circle cx="196" cy="99" r="3" fill="#0f172a"/>
+    <circle cx="212" cy="99" r="3" fill="#0f172a"/>
+    <path d="M194,110 Q204,120 214,110" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="188" cy="106" rx="5.5" ry="4" fill="#fb7185" opacity="0.7"/>
+    <ellipse cx="220" cy="106" rx="5.5" ry="4" fill="#fb7185" opacity="0.7"/>
+    <!-- scarf -->
+    <rect x="184" y="124" width="40" height="13" rx="6" fill="#16a34a" stroke="#14532d" stroke-width="3"/>
+    <path d="M218,134 Q234,146 230,164" fill="none" stroke="#16a34a" stroke-width="10" stroke-linecap="round"/>
+    <!-- coat, leaning forward -->
+    <path d="M186,136 L222,136 L236,204 L178,204 Z" fill="#7c3aed" stroke="#4c1d95" stroke-width="4"/>
+    <line x1="206" y1="140" x2="210" y2="200" stroke="#4c1d95" stroke-width="2.5"/>
+    <circle cx="216" cy="156" r="3" fill="#fde047"/>
+    <circle cx="218" cy="176" r="3" fill="#fde047"/>
+    <!-- arms out for balance -->
+    <path d="M188,146 Q152,140 130,152" fill="none" stroke="#7c3aed" stroke-width="11" stroke-linecap="round"/>
+    <circle cx="126" cy="154" r="8" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <path d="M220,146 Q256,136 278,120" fill="none" stroke="#7c3aed" stroke-width="11" stroke-linecap="round"/>
+    <circle cx="282" cy="117" r="8" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <!-- gliding legs: one down, one lifted back -->
+    <path d="M196,204 L192,240" fill="none" stroke="#1e293b" stroke-width="11" stroke-linecap="round"/>
+    <path d="M224,204 Q248,216 262,210" fill="none" stroke="#1e293b" stroke-width="11" stroke-linecap="round"/>
+    <!-- skate boots + blades -->
+    <g>
+      <path d="M180,240 L204,240 L208,250 L178,250 Z" fill="#f8fafc" stroke="#334155" stroke-width="3"/>
+      <line x1="176" y1="258" x2="212" y2="258" stroke="#475569" stroke-width="4" stroke-linecap="round"/>
+      <line x1="184" y1="250" x2="184" y2="258" stroke="#475569" stroke-width="3"/>
+      <line x1="202" y1="250" x2="202" y2="258" stroke="#475569" stroke-width="3"/>
+    </g>
+    <g transform="rotate(-24 268 208)">
+      <path d="M252,202 L276,202 L280,212 L250,212 Z" fill="#f8fafc" stroke="#334155" stroke-width="3"/>
+      <line x1="248" y1="220" x2="284" y2="220" stroke="#475569" stroke-width="4" stroke-linecap="round"/>
+      <line x1="256" y1="212" x2="256" y2="220" stroke="#475569" stroke-width="3"/>
+      <line x1="274" y1="212" x2="274" y2="220" stroke="#475569" stroke-width="3"/>
+    </g>
+  </g>
+  <!-- motion lines -->
+  <g stroke="#818cf8" stroke-width="4" stroke-linecap="round" fill="none">
+    <path d="M96,196 Q116,192 134,196"/>
+    <path d="M84,220 Q108,214 130,220"/>
+    <path d="M100,244 Q118,240 134,244"/>
+  </g>
+  <!-- snowflakes -->
+  <g stroke="#c7d2fe" stroke-width="3" stroke-linecap="round">
+    <g transform="translate(120,50)">
+      <line x1="-9" y1="0" x2="9" y2="0"/><line x1="0" y1="-9" x2="0" y2="9"/>
+      <line x1="-6" y1="-6" x2="6" y2="6"/><line x1="-6" y1="6" x2="6" y2="-6"/>
+    </g>
+    <g transform="translate(310,58)">
+      <line x1="-9" y1="0" x2="9" y2="0"/><line x1="0" y1="-9" x2="0" y2="9"/>
+      <line x1="-6" y1="-6" x2="6" y2="6"/><line x1="-6" y1="6" x2="6" y2="-6"/>
+    </g>
+  </g>
+</svg>

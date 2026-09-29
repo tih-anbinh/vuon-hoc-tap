@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-tablet desc-tablet">
+  <title id="title-tablet">Tablet - Tablet computer with app icons</title>
+  <desc id="desc-tablet">A big tablet computer with a bright touchscreen showing colorful app icons, and a child's finger tapping the screen.</desc>
+  <defs>
+    <linearGradient id="ta-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0e7ff"/>
+      <stop offset="100%" stop-color="#c7d2fe"/>
+    </linearGradient>
+    <linearGradient id="ta-screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#ta-bg)"/>
+  <!-- desk -->
+  <rect x="0" y="240" width="400" height="60" fill="#e8b478"/>
+  <line x1="0" y1="240" x2="400" y2="240" stroke="#a16207" stroke-width="3.5"/>
+  <ellipse cx="200" cy="252" rx="150" ry="12" fill="#0f172a" opacity="0.22"/>
+  <!-- tablet (dominant) -->
+  <g filter="url(#soft-shadow)">
+    <rect x="70" y="42" width="260" height="200" rx="18" fill="#1e293b" stroke="#0f172a" stroke-width="4.5"/>
+    <rect x="88" y="60" width="224" height="152" rx="6" fill="url(#ta-screen)" stroke="#0f172a" stroke-width="3"/>
+    <!-- home button -->
+    <circle cx="200" cy="227" r="8" fill="#475569" stroke="#0f172a" stroke-width="2.5"/>
+    <!-- camera dot -->
+    <circle cx="200" cy="51" r="4" fill="#475569"/>
+    <!-- app icons grid -->
+    <g stroke-width="3">
+      <rect x="104" y="76" width="42" height="42" rx="10" fill="#ef4444" stroke="#7f1d1d"/>
+      <rect x="160" y="76" width="42" height="42" rx="10" fill="#22c55e" stroke="#14532d"/>
+      <rect x="216" y="76" width="42" height="42" rx="10" fill="#f59e0b" stroke="#92400e"/>
+      <rect x="272" y="76" width="28" height="42" rx="10" fill="#a78bfa" stroke="#4c1d95"/>
+      <rect x="104" y="132" width="42" height="42" rx="10" fill="#ec4899" stroke="#831843"/>
+      <rect x="160" y="132" width="42" height="42" rx="10" fill="#06b6d4" stroke="#155e75"/>
+    </g>
+    <!-- icon symbols -->
+    <path d="M117,97 L125,86 L133,97 L129,97 L129,106 L121,106 L121,97 Z" fill="#ffffff"/>
+    <circle cx="181" cy="97" r="11" fill="none" stroke="#ffffff" stroke-width="3.5"/>
+    <path d="M230,104 L237,84 L244,104 Z" fill="#ffffff"/>
+    <circle cx="286" cy="97" r="8" fill="#ffffff"/>
+    <path d="M119,146 Q125,140 131,146 Q137,152 131,158 L125,164 L119,158 Q113,152 119,146 Z" fill="#ffffff"/>
+    <path d="M173,142 L191,153 L173,164 Z" fill="#ffffff"/>
+    <!-- game window on lower right of screen -->
+    <rect x="216" y="132" width="84" height="66" rx="8" fill="#fef9c3" stroke="#a16207" stroke-width="3"/>
+    <circle cx="240" cy="165" r="12" fill="#f97316" stroke="#7c2d12" stroke-width="2.5"/>
+    <path d="M262,178 L272,152 L282,178 Z" fill="#22c55e" stroke="#14532d" stroke-width="2.5"/>
+  </g>
+  <!-- child's hand tapping -->
+  <g filter="url(#soft-shadow)">
+    <path d="M320,300 L320,252 Q320,238 332,238 Q340,238 342,248 L342,232 Q342,222 351,222 Q360,222 360,232 L360,300 Z" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M342,248 L342,262" stroke="#b45309" stroke-width="2" opacity="0.6"/>
+    <!-- pointing finger extended to screen -->
+    <path d="M330,240 Q326,214 318,196 Q315,188 322,185 Q329,182 333,190 Q340,208 344,232" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <!-- tap ripples -->
+    <g fill="none" stroke="#fef08a" stroke-width="3.5">
+      <circle cx="316" cy="180" r="10"/>
+      <circle cx="316" cy="180" r="19" opacity="0.6"/>
+    </g>
+  </g>
+</svg>

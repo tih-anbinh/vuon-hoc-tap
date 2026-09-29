@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-table-tennis desc-table-tennis">
+  <title id="title-table-tennis">Table tennis - Ping pong table with paddles and ball</title>
+  <desc id="desc-table-tennis">A blue table tennis table with a net in the middle, two red and black paddles, and a small white ball bouncing across.</desc>
+  <defs>
+    <linearGradient id="tt-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="tt-top" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#tt-bg)"/>
+  <!-- floor -->
+  <rect x="0" y="245" width="400" height="55" fill="#d6a05c"/>
+  <line x1="0" y1="245" x2="400" y2="245" stroke="#92400e" stroke-width="3.5"/>
+  <ellipse cx="200" cy="262" rx="165" ry="13" fill="#0f172a" opacity="0.2"/>
+  <!-- ball trajectory dotted arc -->
+  <path d="M96,120 Q200,58 306,118" fill="none" stroke="#94a3b8" stroke-width="3.5" stroke-dasharray="2,10" stroke-linecap="round"/>
+  <!-- ball -->
+  <circle cx="255" cy="86" r="11" fill="#ffffff" stroke="#475569" stroke-width="3"/>
+  <!-- table -->
+  <g filter="url(#soft-shadow)">
+    <!-- tabletop in perspective -->
+    <path d="M56,150 L344,150 L376,196 L24,196 Z" fill="url(#tt-top)" stroke="#1e3a8a" stroke-width="4.5"/>
+    <!-- white boundary lines -->
+    <path d="M66,155 L334,155 L362,191 L38,191 Z" fill="none" stroke="#ffffff" stroke-width="3"/>
+    <line x1="200" y1="155" x2="200" y2="191" stroke="#ffffff" stroke-width="3"/>
+    <!-- net -->
+    <rect x="188" y="120" width="24" height="4" fill="#334155"/>
+    <path d="M190,124 L190,172 L210,172 L210,124 Z" fill="#e2e8f0" opacity="0.85" stroke="#475569" stroke-width="2.5"/>
+    <g stroke="#64748b" stroke-width="1.5" opacity="0.8">
+      <line x1="190" y1="134" x2="210" y2="134"/>
+      <line x1="190" y1="146" x2="210" y2="146"/>
+      <line x1="190" y1="158" x2="210" y2="158"/>
+      <line x1="195" y1="124" x2="195" y2="172"/>
+      <line x1="200" y1="124" x2="200" y2="172"/>
+      <line x1="205" y1="124" x2="205" y2="172"/>
+    </g>
+    <!-- legs -->
+    <rect x="52" y="196" width="16" height="52" rx="4" fill="#475569" stroke="#1e293b" stroke-width="3"/>
+    <rect x="332" y="196" width="16" height="52" rx="4" fill="#475569" stroke="#1e293b" stroke-width="3"/>
+    <rect x="130" y="196" width="14" height="46" rx="4" fill="#64748b" stroke="#1e293b" stroke-width="2.5"/>
+    <rect x="256" y="196" width="14" height="46" rx="4" fill="#64748b" stroke="#1e293b" stroke-width="2.5"/>
+  </g>
+  <!-- left paddle (red face) -->
+  <g filter="url(#soft-shadow)" transform="rotate(-25 82 130)">
+    <circle cx="82" cy="118" r="34" fill="#ef4444" stroke="#7f1d1d" stroke-width="4"/>
+    <rect x="74" y="148" width="16" height="38" rx="7" fill="#d6a05c" stroke="#78350f" stroke-width="3.5"/>
+  </g>
+  <!-- right paddle (black face) -->
+  <g filter="url(#soft-shadow)" transform="rotate(25 322 130)">
+    <circle cx="322" cy="118" r="34" fill="#1e293b" stroke="#0f172a" stroke-width="4"/>
+    <rect x="314" y="148" width="16" height="38" rx="7" fill="#d6a05c" stroke="#78350f" stroke-width="3.5"/>
+  </g>
+  <!-- motion stars near ball -->
+  <g fill="#f59e0b">
+    <path d="M282,72 L285,79 L292,82 L285,85 L282,92 L279,85 L272,82 L279,79 Z"/>
+  </g>
+</svg>

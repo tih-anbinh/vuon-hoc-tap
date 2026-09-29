@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-ruler desc-ruler">
+  <title id="title-ruler">Ruler - Yellow ruler with tick marks</title>
+  <desc id="desc-ruler">A big yellow ruler with evenly spaced measuring tick marks lying diagonally on a desk, next to a pencil drawing a straight line.</desc>
+  <defs>
+    <linearGradient id="ru-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="ru-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#ru-bg)"/>
+  <!-- desk -->
+  <rect x="0" y="210" width="400" height="90" fill="#e8b478"/>
+  <line x1="0" y1="210" x2="400" y2="210" stroke="#a16207" stroke-width="3.5"/>
+  <!-- paper under ruler -->
+  <g filter="url(#soft-shadow)">
+    <rect x="60" y="90" width="285" height="185" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="3" transform="rotate(-3 200 180)"/>
+    <!-- drawn line along ruler edge -->
+    <line x1="85" y1="195" x2="300" y2="152" stroke="#334155" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+  <!-- ruler (diagonal) -->
+  <g filter="url(#soft-shadow)" transform="rotate(-11 200 130)">
+    <rect x="45" y="105" width="310" height="58" rx="6" fill="url(#ru-body)" stroke="#92400e" stroke-width="4"/>
+    <!-- major ticks -->
+    <g stroke="#78350f" stroke-width="3.5">
+      <line x1="70" y1="105" x2="70" y2="133"/>
+      <line x1="120" y1="105" x2="120" y2="133"/>
+      <line x1="170" y1="105" x2="170" y2="133"/>
+      <line x1="220" y1="105" x2="220" y2="133"/>
+      <line x1="270" y1="105" x2="270" y2="133"/>
+      <line x1="320" y1="105" x2="320" y2="133"/>
+    </g>
+    <!-- minor ticks -->
+    <g stroke="#92400e" stroke-width="2">
+      <line x1="95" y1="105" x2="95" y2="121"/>
+      <line x1="145" y1="105" x2="145" y2="121"/>
+      <line x1="195" y1="105" x2="195" y2="121"/>
+      <line x1="245" y1="105" x2="245" y2="121"/>
+      <line x1="295" y1="105" x2="295" y2="121"/>
+      <line x1="82" y1="105" x2="82" y2="114"/>
+      <line x1="107" y1="105" x2="107" y2="114"/>
+      <line x1="132" y1="105" x2="132" y2="114"/>
+      <line x1="157" y1="105" x2="157" y2="114"/>
+      <line x1="182" y1="105" x2="182" y2="114"/>
+      <line x1="207" y1="105" x2="207" y2="114"/>
+      <line x1="232" y1="105" x2="232" y2="114"/>
+      <line x1="257" y1="105" x2="257" y2="114"/>
+      <line x1="282" y1="105" x2="282" y2="114"/>
+      <line x1="307" y1="105" x2="307" y2="114"/>
+    </g>
+    <!-- center hole -->
+    <circle cx="200" cy="148" r="6" fill="#fef3c7" stroke="#92400e" stroke-width="2.5"/>
+  </g>
+  <!-- pencil at end of drawn line -->
+  <g filter="url(#soft-shadow)" transform="rotate(-52 310 145)">
+    <rect x="300" y="60" width="18" height="105" fill="#ef4444" stroke="#7f1d1d" stroke-width="3"/>
+    <path d="M300,165 L309,190 L318,165 Z" fill="#fcd9b6" stroke="#b45309" stroke-width="2.5"/>
+    <path d="M305,179 L309,190 L313,179 Z" fill="#334155"/>
+    <rect x="300" y="48" width="18" height="12" fill="#94a3b8" stroke="#475569" stroke-width="2.5"/>
+    <path d="M300,36 Q309,28 318,36 L318,48 L300,48 Z" fill="#f9a8d4" stroke="#be185d" stroke-width="2.5"/>
+  </g>
+</svg>

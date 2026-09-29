@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-pet desc-pet">
+  <title id="title-pet">Pet - Child with a pet dog</title>
+  <desc id="desc-pet">A happy child kneeling and petting a friendly dog that wags its tail, with a red collar, food bowl and a heart showing love for the pet.</desc>
+  <defs>
+    <linearGradient id="pt2-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#pt2-bg)"/>
+  <circle cx="350" cy="50" r="24" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <rect x="0" y="245" width="400" height="55" fill="#65a30d"/>
+  <path d="M0,245 Q100,238 200,245 T400,245 L400,255 L0,255 Z" fill="#86efac" opacity="0.6"/>
+  <ellipse cx="200" cy="252" rx="140" ry="9" fill="#0f172a" opacity="0.22"/>
+  <!-- heart -->
+  <path d="M200,68 C195,58 180,58 180,72 C180,82 200,96 200,96 C200,96 220,82 220,72 C220,58 205,58 200,68 Z" fill="#ec4899" stroke="#9d174d" stroke-width="3" filter="url(#soft-shadow)"/>
+  <!-- child kneeling -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="110" cy="120" r="30" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M80,114 Q81,86 110,86 Q139,86 140,114 Q130,96 110,96 Q90,96 80,114 Z" fill="#78350f"/>
+    <circle cx="101" cy="122" r="4" fill="#0f172a"/>
+    <circle cx="119" cy="122" r="4" fill="#0f172a"/>
+    <path d="M101,134 Q110,141 119,134" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="93" cy="130" r="5" fill="#fda4af" opacity="0.7"/>
+    <circle cx="127" cy="130" r="5" fill="#fda4af" opacity="0.7"/>
+    <!-- body kneeling -->
+    <path d="M92,148 L128,148 L138,215 L82,215 Z" fill="#f97316" stroke="#c2410c" stroke-width="3.5"/>
+    <!-- kneeling legs tucked -->
+    <path d="M90,215 Q86,240 108,242 L134,242 L134,228" fill="none" stroke="#1e40af" stroke-width="13" stroke-linecap="round"/>
+    <ellipse cx="104" cy="248" rx="12" ry="6" fill="#0f172a"/>
+    <!-- arm reaching to pet dog -->
+    <path d="M128,158 Q175,155 208,162" fill="none" stroke="#fcd9b6" stroke-width="11" stroke-linecap="round"/>
+    <circle cx="213" cy="164" r="9" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <!-- other arm -->
+    <path d="M90,160 Q75,180 76,198" fill="none" stroke="#fcd9b6" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="76" cy="202" r="8" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+  </g>
+  <!-- dog -->
+  <g filter="url(#soft-shadow)">
+    <!-- wagging tail with motion -->
+    <path d="M330,190 Q358,175 362,150" fill="none" stroke="#c98a3b" stroke-width="11" stroke-linecap="round"/>
+    <g stroke="#94a3b8" stroke-width="2.5" stroke-linecap="round" opacity="0.7">
+      <path d="M370,162 Q378,155 378,146"/>
+      <path d="M368,178 Q380,174 384,165"/>
+    </g>
+    <!-- body -->
+    <ellipse cx="280" cy="212" rx="58" ry="38" fill="#e8b478" stroke="#78350f" stroke-width="3.5"/>
+    <!-- head -->
+    <circle cx="228" cy="185" r="32" fill="#e8b478" stroke="#78350f" stroke-width="3.5"/>
+    <!-- floppy ears -->
+    <path d="M203,165 Q192,145 205,138 Q216,150 218,162 Z" fill="#a16207" stroke="#78350f" stroke-width="3"/>
+    <path d="M250,160 Q260,140 248,133 Q238,146 236,158 Z" fill="#a16207" stroke="#78350f" stroke-width="3"/>
+    <!-- face -->
+    <circle cx="219" cy="182" r="4" fill="#0f172a"/>
+    <circle cx="238" cy="182" r="4" fill="#0f172a"/>
+    <ellipse cx="228" cy="196" rx="7" ry="5" fill="#0f172a"/>
+    <path d="M221,204 Q228,210 235,204" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- tongue -->
+    <path d="M228,208 Q230,218 224,218 Q219,216 222,208 Z" fill="#f472b6" stroke="#be185d" stroke-width="1.8"/>
+    <!-- collar -->
+    <path d="M205,210 Q228,222 251,208" fill="none" stroke="#dc2626" stroke-width="7"/>
+    <circle cx="229" cy="220" r="5" fill="#facc15" stroke="#b45309" stroke-width="2"/>
+    <!-- legs -->
+    <path d="M248,240 L246,258" stroke="#e8b478" stroke-width="12" stroke-linecap="round"/>
+    <path d="M305,240 L308,258" stroke="#e8b478" stroke-width="12" stroke-linecap="round"/>
+    <ellipse cx="246" cy="260" rx="10" ry="5" fill="#a16207"/>
+    <ellipse cx="309" cy="260" rx="10" ry="5" fill="#a16207"/>
+    <!-- spot -->
+    <ellipse cx="295" cy="200" rx="14" ry="10" fill="#a16207" opacity="0.8"/>
+  </g>
+  <!-- food bowl -->
+  <g filter="url(#soft-shadow)">
+    <path d="M345,262 L385,262 L379,242 L351,242 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="3"/>
+    <ellipse cx="365" cy="242" rx="14" ry="4.5" fill="#a16207" stroke="#78350f" stroke-width="2"/>
+  </g>
+</svg>

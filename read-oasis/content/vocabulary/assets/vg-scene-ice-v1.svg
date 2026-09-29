@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-ice desc-ice">
+  <title id="title-ice">Ice - Cold ice cubes and a frozen pond</title>
+  <desc id="desc-ice">Big shiny blue ice cubes stacked together with frost sparkles, in front of a frozen pond with snowflakes falling around.</desc>
+  <defs>
+    <linearGradient id="ic-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="ic-cube" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#7dd3fc"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#ic-bg)"/>
+  <!-- snowy ground -->
+  <path d="M0,210 Q100,196 200,210 Q300,224 400,206 L400,300 L0,300 Z" fill="#f8fafc"/>
+  <path d="M0,210 Q100,196 200,210 Q300,224 400,206" fill="none" stroke="#94a3b8" stroke-width="3.5"/>
+  <!-- frozen pond -->
+  <ellipse cx="300" cy="248" rx="88" ry="26" fill="#bfdbfe" stroke="#60a5fa" stroke-width="4"/>
+  <g stroke="#93c5fd" stroke-width="2.5" fill="none">
+    <path d="M258,244 L286,252 L306,242"/>
+    <path d="M306,242 L330,254"/>
+    <path d="M286,252 L296,262"/>
+  </g>
+  <ellipse cx="150" cy="268" rx="120" ry="14" fill="#0f172a" opacity="0.12"/>
+  <!-- BIG ICE CUBES (hero element) -->
+  <g filter="url(#soft-shadow)">
+    <!-- back cube -->
+    <g transform="translate(150,96)">
+      <rect x="0" y="0" width="86" height="86" rx="12" fill="url(#ic-cube)" stroke="#0369a1" stroke-width="4.5"/>
+      <path d="M14,72 L72,14" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.85"/>
+      <path d="M14,48 L48,14" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+    </g>
+    <!-- left cube -->
+    <g transform="translate(66,150)">
+      <rect x="0" y="0" width="92" height="92" rx="12" fill="url(#ic-cube)" stroke="#0369a1" stroke-width="4.5"/>
+      <path d="M16,76 L76,16" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.85"/>
+      <path d="M16,50 L50,16" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+    </g>
+    <!-- right cube -->
+    <g transform="translate(168,158)">
+      <rect x="0" y="0" width="84" height="84" rx="12" fill="url(#ic-cube)" stroke="#0369a1" stroke-width="4.5"/>
+      <path d="M14,70 L70,14" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.85"/>
+      <path d="M14,46 L46,14" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+    </g>
+  </g>
+  <!-- melting drips -->
+  <g fill="#38bdf8" stroke="#0369a1" stroke-width="2">
+    <path d="M100,248 Q104,256 100,262 Q95,256 100,248 Z"/>
+    <path d="M226,250 Q230,258 226,264 Q221,258 226,250 Z"/>
+  </g>
+  <!-- snowflakes -->
+  <g stroke="#38bdf8" stroke-width="3" stroke-linecap="round">
+    <g transform="translate(60,60)">
+      <line x1="-12" y1="0" x2="12" y2="0"/><line x1="0" y1="-12" x2="0" y2="12"/>
+      <line x1="-8" y1="-8" x2="8" y2="8"/><line x1="-8" y1="8" x2="8" y2="-8"/>
+    </g>
+    <g transform="translate(320,80)">
+      <line x1="-12" y1="0" x2="12" y2="0"/><line x1="0" y1="-12" x2="0" y2="12"/>
+      <line x1="-8" y1="-8" x2="8" y2="8"/><line x1="-8" y1="8" x2="8" y2="-8"/>
+    </g>
+    <g transform="translate(120,36)">
+      <line x1="-8" y1="0" x2="8" y2="0"/><line x1="0" y1="-8" x2="0" y2="8"/>
+      <line x1="-6" y1="-6" x2="6" y2="6"/><line x1="-6" y1="6" x2="6" y2="-6"/>
+    </g>
+    <g transform="translate(270,40)">
+      <line x1="-8" y1="0" x2="8" y2="0"/><line x1="0" y1="-8" x2="0" y2="8"/>
+      <line x1="-6" y1="-6" x2="6" y2="6"/><line x1="-6" y1="6" x2="6" y2="-6"/>
+    </g>
+    <g transform="translate(376,140)">
+      <line x1="-8" y1="0" x2="8" y2="0"/><line x1="0" y1="-8" x2="0" y2="8"/>
+      <line x1="-6" y1="-6" x2="6" y2="6"/><line x1="-6" y1="6" x2="6" y2="-6"/>
+    </g>
+  </g>
+  <!-- sparkles on cubes -->
+  <g fill="#ffffff" stroke="#7dd3fc" stroke-width="2">
+    <path d="M148,88 L152,98 L162,100 L154,107 L156,118 L148,112 L140,118 L142,107 L134,100 L144,98 Z"/>
+    <path d="M250,150 L253,157 L260,158 L255,163 L256,171 L250,167 L244,171 L245,163 L240,158 L247,157 Z"/>
+  </g>
+</svg>

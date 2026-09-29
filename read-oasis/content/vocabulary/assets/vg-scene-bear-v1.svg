@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-bear desc-bear">
+  <title id="title-bear">Bear - Friendly brown bear</title>
+  <desc id="desc-bear">A round friendly brown bear with two small ears, a tan face patch and muzzle, black nose, and dark button eyes.</desc>
+  <defs>
+    <linearGradient id="br-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#a3e635"/>
+    </linearGradient>
+    <linearGradient id="br-fur" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a16207"/>
+      <stop offset="100%" stop-color="#78350f"/>
+    </linearGradient>
+    <radialGradient id="br-belly" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#br-bg)"/>
+  <ellipse cx="200" cy="272" rx="130" ry="9" fill="#0f172a" opacity="0.28"/>
+  <g filter="url(#soft-shadow)">
+    <!-- body -->
+    <ellipse cx="200" cy="200" rx="90" ry="70" fill="url(#br-fur)" stroke="#451a03" stroke-width="4"/>
+    <!-- belly -->
+    <ellipse cx="200" cy="210" rx="55" ry="45" fill="url(#br-belly)" stroke="#78350f" stroke-width="2.5"/>
+    <!-- head -->
+    <circle cx="200" cy="115" r="65" fill="url(#br-fur)" stroke="#451a03" stroke-width="4"/>
+    <!-- ears -->
+    <circle cx="150" cy="75" r="20" fill="url(#br-fur)" stroke="#451a03" stroke-width="4"/>
+    <circle cx="250" cy="75" r="20" fill="url(#br-fur)" stroke="#451a03" stroke-width="4"/>
+    <circle cx="150" cy="78" r="10" fill="#fde68a"/>
+    <circle cx="250" cy="78" r="10" fill="#fde68a"/>
+    <!-- face patch -->
+    <ellipse cx="200" cy="130" rx="40" ry="32" fill="#fde68a" stroke="#78350f" stroke-width="2.5"/>
+    <!-- eyes -->
+    <circle cx="180" cy="105" r="7" fill="#0f172a"/>
+    <circle cx="220" cy="105" r="7" fill="#0f172a"/>
+    <circle cx="178" cy="103" r="2.5" fill="#fff"/>
+    <circle cx="218" cy="103" r="2.5" fill="#fff"/>
+    <!-- nose -->
+    <ellipse cx="200" cy="128" rx="10" ry="7" fill="#0f172a"/>
+    <!-- mouth -->
+    <path d="M200,138 L200,148 M200,148 Q188,155 182,150 M200,148 Q212,155 218,150" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <!-- paws -->
+    <ellipse cx="140" cy="245" rx="26" ry="20" fill="url(#br-fur)" stroke="#451a03" stroke-width="3.5"/>
+    <ellipse cx="260" cy="245" rx="26" ry="20" fill="url(#br-fur)" stroke="#451a03" stroke-width="3.5"/>
+    <ellipse cx="140" cy="248" rx="12" ry="9" fill="#fde68a"/>
+    <ellipse cx="260" cy="248" rx="12" ry="9" fill="#fde68a"/>
+  </g>
+</svg>

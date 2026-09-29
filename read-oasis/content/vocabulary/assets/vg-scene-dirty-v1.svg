@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-dirty desc-dirty">
+  <title id="title-dirty">Dirty - Muddy shirt with stains and flies</title>
+  <desc id="desc-dirty">A stained t-shirt splattered with brown mud spots and dark smudges, with small flies buzzing around and a mud puddle below.</desc>
+  <defs>
+    <linearGradient id="dt-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e7e5e4"/>
+      <stop offset="100%" stop-color="#d6d3d1"/>
+    </linearGradient>
+    <linearGradient id="dt-shirt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f5f4"/>
+      <stop offset="100%" stop-color="#d6d3d1"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#dt-bg)"/>
+  <!-- mud puddle -->
+  <ellipse cx="200" cy="272" rx="130" ry="16" fill="#78350f" opacity="0.7"/>
+  <ellipse cx="200" cy="270" rx="105" ry="11" fill="#a16207" opacity="0.6"/>
+  <!-- shirt -->
+  <g filter="url(#soft-shadow)">
+    <path d="M155,70 L120,105 L145,128 L160,115 L160,225 Q200,235 240,225 L240,115 L255,128 L280,105 L245,70 Q222,58 200,70 Q178,58 155,70 Z" fill="url(#dt-shirt)" stroke="#57534e" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M178,68 Q200,86 222,68" fill="none" stroke="#57534e" stroke-width="3"/>
+    <!-- mud stains -->
+    <g fill="#78350f" opacity="0.85">
+      <path d="M175,130 Q185,120 195,130 Q205,125 208,138 Q215,145 205,152 Q200,162 188,155 Q175,158 172,146 Q165,138 175,130 Z"/>
+      <ellipse cx="228" cy="180" rx="16" ry="12" transform="rotate(20 228 180)"/>
+      <ellipse cx="170" cy="200" rx="12" ry="9" transform="rotate(-15 170 200)"/>
+      <circle cx="215" cy="115" r="7"/>
+      <circle cx="185" cy="215" r="6"/>
+    </g>
+    <g fill="#a16207" opacity="0.7">
+      <circle cx="205" cy="145" r="5"/>
+      <circle cx="240" cy="150" r="6"/>
+      <circle cx="160" cy="170" r="5"/>
+      <ellipse cx="200" cy="195" rx="8" ry="5"/>
+    </g>
+    <!-- splatter dots -->
+    <g fill="#57534e" opacity="0.6">
+      <circle cx="150" cy="140" r="3"/>
+      <circle cx="250" cy="200" r="3"/>
+      <circle cx="230" cy="130" r="2.5"/>
+      <circle cx="165" cy="185" r="2.5"/>
+    </g>
+  </g>
+  <!-- flies -->
+  <g>
+    <g transform="translate(95,90)">
+      <ellipse cx="0" cy="0" rx="5" ry="4" fill="#0f172a"/>
+      <ellipse cx="-4" cy="-5" rx="5" ry="3" fill="#94a3b8" opacity="0.7" transform="rotate(-30)"/>
+      <ellipse cx="4" cy="-5" rx="5" ry="3" fill="#94a3b8" opacity="0.7" transform="rotate(30)"/>
+    </g>
+    <g transform="translate(310,80)">
+      <ellipse cx="0" cy="0" rx="5" ry="4" fill="#0f172a"/>
+      <ellipse cx="-4" cy="-5" rx="5" ry="3" fill="#94a3b8" opacity="0.7" transform="rotate(-30)"/>
+      <ellipse cx="4" cy="-5" rx="5" ry="3" fill="#94a3b8" opacity="0.7" transform="rotate(30)"/>
+    </g>
+    <!-- buzz paths -->
+    <path d="M95,95 Q85,110 95,120 Q105,128 100,140" fill="none" stroke="#57534e" stroke-width="1.5" stroke-dasharray="2,4" opacity="0.7"/>
+    <path d="M310,85 Q322,100 314,112" fill="none" stroke="#57534e" stroke-width="1.5" stroke-dasharray="2,4" opacity="0.7"/>
+  </g>
+  <!-- stink wavy lines -->
+  <g fill="none" stroke="#65a30d" stroke-width="2.5" stroke-linecap="round" opacity="0.7">
+    <path d="M130,60 Q125,48 130,38 Q135,28 130,18"/>
+    <path d="M270,60 Q275,48 270,38 Q265,28 270,18"/>
+  </g>
+</svg>

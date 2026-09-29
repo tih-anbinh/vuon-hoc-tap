@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-live desc-live">
+  <title id="title-live">Live - Family living in their house</title>
+  <desc id="desc-live">A family of three standing happily in front of their house with a heart above them, showing that they live there together.</desc>
+  <defs>
+    <linearGradient id="lv-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="lv-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fcd9b6"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#lv-bg)"/>
+  <circle cx="52" cy="48" r="24" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <rect x="0" y="242" width="400" height="58" fill="#65a30d"/>
+  <ellipse cx="210" cy="248" rx="150" ry="9" fill="#0f172a" opacity="0.22"/>
+  <!-- house behind -->
+  <g filter="url(#soft-shadow)">
+    <rect x="130" y="110" width="180" height="132" rx="4" fill="url(#lv-wall)" stroke="#78350f" stroke-width="4"/>
+    <path d="M115,112 L220,40 L325,112 Z" fill="#dc2626" stroke="#7f1d1d" stroke-width="4" stroke-linejoin="round"/>
+    <rect x="270" y="58" width="20" height="38" fill="#a16207" stroke="#78350f" stroke-width="3"/>
+    <rect x="150" y="130" width="36" height="34" rx="4" fill="#fbbf24" stroke="#78350f" stroke-width="3"/>
+    <line x1="168" y1="130" x2="168" y2="164" stroke="#78350f" stroke-width="2.5"/>
+    <line x1="150" y1="147" x2="186" y2="147" stroke="#78350f" stroke-width="2.5"/>
+    <rect x="256" y="130" width="36" height="34" rx="4" fill="#fbbf24" stroke="#78350f" stroke-width="3"/>
+    <line x1="274" y1="130" x2="274" y2="164" stroke="#78350f" stroke-width="2.5"/>
+    <line x1="256" y1="147" x2="292" y2="147" stroke="#78350f" stroke-width="2.5"/>
+    <path d="M200,242 L200,190 Q200,176 220,176 Q240,176 240,190 L240,242 Z" fill="#78350f" stroke="#451a03" stroke-width="3.5"/>
+    <circle cx="232" cy="212" r="3.5" fill="#facc15"/>
+  </g>
+  <!-- heart above family -->
+  <path d="M90,60 C85,50 70,50 70,64 C70,74 90,88 90,88 C90,88 110,74 110,64 C110,50 95,50 90,60 Z" fill="#ec4899" stroke="#9d174d" stroke-width="3" filter="url(#soft-shadow)"/>
+  <!-- family: parent 1 -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="55" cy="150" r="22" fill="#fcd9b6" stroke="#78350f" stroke-width="3"/>
+    <path d="M33,146 Q34,124 55,124 Q76,124 77,146 Q68,132 55,132 Q42,132 33,146 Z" fill="#451a03"/>
+    <circle cx="48" cy="151" r="3.5" fill="#0f172a"/>
+    <circle cx="62" cy="151" r="3.5" fill="#0f172a"/>
+    <path d="M48,161 Q55,167 62,161" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M40,172 L70,172 L76,235 L34,235 Z" fill="#3b82f6" stroke="#1e3a8a" stroke-width="3"/>
+    <path d="M44,235 L42,258" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
+    <path d="M66,235 L68,258" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
+    <ellipse cx="41" cy="262" rx="10" ry="5" fill="#0f172a"/>
+    <ellipse cx="70" cy="262" rx="10" ry="5" fill="#0f172a"/>
+  </g>
+  <!-- family: parent 2 -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="122" cy="155" r="20" fill="#fcd9b6" stroke="#78350f" stroke-width="3"/>
+    <path d="M102,152 Q102,131 122,131 Q142,131 142,152 Q142,166 136,172 L136,152 Q130,140 122,140 Q114,140 108,152 L108,172 Q102,166 102,152 Z" fill="#78350f"/>
+    <circle cx="116" cy="156" r="3.5" fill="#0f172a"/>
+    <circle cx="128" cy="156" r="3.5" fill="#0f172a"/>
+    <path d="M116,165 Q122,170 128,165" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M108,175 L136,175 Q146,205 138,238 L106,238 Q98,205 108,175 Z" fill="#ec4899" stroke="#9d174d" stroke-width="3"/>
+    <path d="M114,238 L113,258" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+    <path d="M130,238 L131,258" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+    <ellipse cx="112" cy="262" rx="9" ry="5" fill="#7f1d1d"/>
+    <ellipse cx="132" cy="262" rx="9" ry="5" fill="#7f1d1d"/>
+  </g>
+  <!-- family: child between, holding hands -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="90" cy="185" r="15" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <path d="M75,182 Q76,167 90,167 Q104,167 105,182 Q98,173 90,173 Q82,173 75,182 Z" fill="#451a03"/>
+    <circle cx="85" cy="186" r="2.5" fill="#0f172a"/>
+    <circle cx="95" cy="186" r="2.5" fill="#0f172a"/>
+    <path d="M85,193 Q90,197 95,193" fill="none" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/>
+    <path d="M81,199 L99,199 L103,232 L77,232 Z" fill="#22c55e" stroke="#14532d" stroke-width="2.5"/>
+    <path d="M84,232 L83,252" stroke="#fcd9b6" stroke-width="7" stroke-linecap="round"/>
+    <path d="M96,232 L97,252" stroke="#fcd9b6" stroke-width="7" stroke-linecap="round"/>
+    <ellipse cx="82" cy="256" rx="8" ry="4.5" fill="#1e3a8a"/>
+    <ellipse cx="98" cy="256" rx="8" ry="4.5" fill="#1e3a8a"/>
+    <!-- hands linked -->
+    <path d="M78,205 Q70,195 64,190" fill="none" stroke="#fcd9b6" stroke-width="6" stroke-linecap="round"/>
+    <path d="M102,205 Q110,196 114,192" fill="none" stroke="#fcd9b6" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-jungle desc-jungle">
+  <title id="title-jungle">Jungle - A thick green jungle with animals</title>
+  <desc id="desc-jungle">A dense green jungle with tall trees, hanging vines, big leaves, a monkey swinging on a vine and a parrot on a branch.</desc>
+  <defs>
+    <linearGradient id="jg-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bbf7d0"/>
+      <stop offset="100%" stop-color="#4ade80"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#jg-bg)"/>
+  <!-- jungle floor -->
+  <rect x="0" y="244" width="400" height="56" fill="#166534"/>
+  <line x1="0" y1="244" x2="400" y2="244" stroke="#14532d" stroke-width="3.5"/>
+  <!-- big tree trunks -->
+  <g filter="url(#soft-shadow)">
+    <path d="M40,244 L48,60 L76,60 L84,244 Z" fill="#92400e" stroke="#451a03" stroke-width="4"/>
+    <path d="M320,244 L326,52 L354,52 L362,244 Z" fill="#a16207" stroke="#451a03" stroke-width="4"/>
+    <line x1="56" y1="120" x2="68" y2="124" stroke="#451a03" stroke-width="2.5"/>
+    <line x1="54" y1="170" x2="70" y2="174" stroke="#451a03" stroke-width="2.5"/>
+    <line x1="334" y1="120" x2="348" y2="124" stroke="#451a03" stroke-width="2.5"/>
+    <line x1="332" y1="180" x2="350" y2="184" stroke="#451a03" stroke-width="2.5"/>
+  </g>
+  <!-- canopy -->
+  <g fill="#15803d" stroke="#14532d" stroke-width="4">
+    <ellipse cx="60" cy="46" rx="86" ry="42"/>
+    <ellipse cx="212" cy="30" rx="110" ry="44"/>
+    <ellipse cx="352" cy="44" rx="82" ry="40"/>
+  </g>
+  <g fill="#22c55e" stroke="#15803d" stroke-width="3">
+    <ellipse cx="120" cy="62" rx="56" ry="26"/>
+    <ellipse cx="286" cy="60" rx="60" ry="26"/>
+  </g>
+  <!-- hanging vines -->
+  <g stroke="#16a34a" stroke-width="6" fill="none" stroke-linecap="round">
+    <path d="M120,70 Q116,140 124,200"/>
+    <path d="M250,66 Q256,130 248,190"/>
+    <path d="M296,72 Q292,120 300,160"/>
+  </g>
+  <g fill="#22c55e" stroke="#15803d" stroke-width="2.5">
+    <ellipse cx="118" cy="130" rx="9" ry="5" transform="rotate(-30 118 130)"/>
+    <ellipse cx="126" cy="176" rx="9" ry="5" transform="rotate(25 126 176)"/>
+    <ellipse cx="254" cy="120" rx="9" ry="5" transform="rotate(-25 254 120)"/>
+    <ellipse cx="298" cy="130" rx="9" ry="5" transform="rotate(30 298 130)"/>
+  </g>
+  <!-- monkey swinging on vine -->
+  <g filter="url(#soft-shadow)">
+    <path d="M248,190 Q238,196 236,206" fill="none" stroke="#92400e" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="228" cy="216" r="17" fill="#b45309" stroke="#78350f" stroke-width="3.5"/>
+    <circle cx="228" cy="219" r="10" fill="#fde68a" stroke="#b45309" stroke-width="2"/>
+    <circle cx="223" cy="212" r="2.5" fill="#0f172a"/>
+    <circle cx="233" cy="212" r="2.5" fill="#0f172a"/>
+    <path d="M224,222 Q228,225 232,222" fill="none" stroke="#0f172a" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="212" cy="208" r="6" fill="#b45309" stroke="#78350f" stroke-width="2.5"/>
+    <circle cx="244" cy="208" r="6" fill="#b45309" stroke="#78350f" stroke-width="2.5"/>
+    <ellipse cx="228" cy="242" rx="13" ry="12" fill="#b45309" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M240,246 Q256,244 258,230" fill="none" stroke="#92400e" stroke-width="5" stroke-linecap="round"/>
+    <path d="M218,252 Q212,260 214,266" fill="none" stroke="#92400e" stroke-width="5" stroke-linecap="round"/>
+    <path d="M238,252 Q244,260 242,266" fill="none" stroke="#92400e" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <!-- parrot on branch -->
+  <g filter="url(#soft-shadow)">
+    <line x1="322" y1="150" x2="376" y2="146" stroke="#78350f" stroke-width="6" stroke-linecap="round"/>
+    <ellipse cx="352" cy="124" rx="14" ry="20" fill="#dc2626" stroke="#7f1d1d" stroke-width="3"/>
+    <circle cx="352" cy="102" r="11" fill="#dc2626" stroke="#7f1d1d" stroke-width="3"/>
+    <circle cx="356" cy="100" r="2.5" fill="#0f172a"/>
+    <path d="M362,104 Q372,106 366,112 Q362,110 362,104 Z" fill="#fbbf24" stroke="#a16207" stroke-width="2"/>
+    <path d="M344,116 Q334,128 340,140 Q348,132 350,120 Z" fill="#2563eb" stroke="#1e3a8a" stroke-width="2.5"/>
+    <path d="M352,142 Q348,158 354,164 Q360,156 358,142 Z" fill="#16a34a" stroke="#14532d" stroke-width="2.5"/>
+    <line x1="348" y1="144" x2="348" y2="150" stroke="#a16207" stroke-width="2.5"/>
+    <line x1="356" y1="144" x2="356" y2="150" stroke="#a16207" stroke-width="2.5"/>
+  </g>
+  <!-- big foreground leaves -->
+  <g fill="#16a34a" stroke="#14532d" stroke-width="4" filter="url(#soft-shadow)">
+    <path d="M-10,300 Q10,230 60,214 Q40,262 30,300 Z"/>
+    <path d="M60,300 Q70,244 116,226 Q100,268 92,300 Z"/>
+    <path d="M410,300 Q392,236 344,220 Q362,266 372,300 Z"/>
+  </g>
+  <g stroke="#22c55e" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M34,286 Q42,254 58,228"/>
+    <path d="M94,290 Q100,260 112,234"/>
+    <path d="M368,288 Q360,258 350,232"/>
+  </g>
+  <!-- flowers -->
+  <g>
+    <g transform="translate(160,262)">
+      <g fill="#f472b6" stroke="#be185d" stroke-width="2">
+        <circle cx="0" cy="-8" r="5"/><circle cx="8" cy="-2" r="5"/><circle cx="5" cy="7" r="5"/>
+        <circle cx="-5" cy="7" r="5"/><circle cx="-8" cy="-2" r="5"/>
+      </g>
+      <circle r="4.5" fill="#fde047" stroke="#a16207" stroke-width="2"/>
+    </g>
+    <g transform="translate(282,270)">
+      <g fill="#fb923c" stroke="#9a3412" stroke-width="2">
+        <circle cx="0" cy="-7" r="4.5"/><circle cx="7" cy="-2" r="4.5"/><circle cx="4" cy="6" r="4.5"/>
+        <circle cx="-4" cy="6" r="4.5"/><circle cx="-7" cy="-2" r="4.5"/>
+      </g>
+      <circle r="4" fill="#fde047" stroke="#a16207" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

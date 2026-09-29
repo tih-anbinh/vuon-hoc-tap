@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-woman-women desc-woman-women">
+  <title id="title-woman-women">Woman and women - One woman and three women</title>
+  <desc id="desc-woman-women">A split picture: on the left one woman standing alone, and on the right three women standing together, showing singular and plural.</desc>
+  <defs>
+    <linearGradient id="ww-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#ww-bg)"/>
+  <rect x="0" y="250" width="400" height="50" fill="#4ade80"/>
+  <line x1="0" y1="250" x2="400" y2="250" stroke="#15803d" stroke-width="3.5"/>
+  <!-- divider -->
+  <line x1="138" y1="20" x2="138" y2="280" stroke="#94a3b8" stroke-width="3" stroke-dasharray="10,8"/>
+  <!-- LEFT: one woman -->
+  <g filter="url(#soft-shadow)">
+    <!-- long hair -->
+    <path d="M42,150 Q36,74 70,68 Q104,74 98,150 Q92,128 88,110 Q72,96 52,110 Q48,128 42,150 Z" fill="#78350f" stroke="#451a03" stroke-width="3.5"/>
+    <!-- head -->
+    <circle cx="70" cy="104" r="26" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <circle cx="61" cy="100" r="3.2" fill="#0f172a"/>
+    <circle cx="79" cy="100" r="3.2" fill="#0f172a"/>
+    <path d="M61,114 Q70,121 79,114" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <ellipse cx="53" cy="108" rx="5" ry="3.5" fill="#fb7185" opacity="0.5"/>
+    <ellipse cx="87" cy="108" rx="5" ry="3.5" fill="#fb7185" opacity="0.5"/>
+    <!-- dress -->
+    <path d="M54,128 L86,128 L106,240 L34,240 Z" fill="#8b5cf6" stroke="#4c1d95" stroke-width="3.5"/>
+    <!-- arms -->
+    <path d="M56,140 Q38,158 42,180" fill="none" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
+    <path d="M84,140 Q102,158 98,180" fill="none" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
+    <!-- legs -->
+    <line x1="60" y1="240" x2="60" y2="264" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+    <line x1="80" y1="240" x2="80" y2="264" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+    <ellipse cx="58" cy="269" rx="11" ry="5" fill="#be185d"/>
+    <ellipse cx="82" cy="269" rx="11" ry="5" fill="#be185d"/>
+  </g>
+  <!-- RIGHT: three women -->
+  <!-- woman A -->
+  <g filter="url(#soft-shadow)">
+    <path d="M162,158 Q158,96 188,92 Q218,96 214,158 Q208,136 204,122 Q188,110 172,122 Q168,136 162,158 Z" fill="#1c1917" stroke="#0f172a" stroke-width="3"/>
+    <circle cx="188" cy="124" r="22" fill="#f5c19b" stroke="#78350f" stroke-width="3"/>
+    <circle cx="181" cy="121" r="2.8" fill="#0f172a"/>
+    <circle cx="195" cy="121" r="2.8" fill="#0f172a"/>
+    <path d="M181,132 Q188,138 195,132" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M174,144 L202,144 L218,244 L158,244 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="3"/>
+    <path d="M176,154 Q162,168 166,186" fill="none" stroke="#f5c19b" stroke-width="8" stroke-linecap="round"/>
+    <path d="M200,154 Q214,168 210,186" fill="none" stroke="#f5c19b" stroke-width="8" stroke-linecap="round"/>
+    <line x1="180" y1="244" x2="180" y2="264" stroke="#f5c19b" stroke-width="7" stroke-linecap="round"/>
+    <line x1="196" y1="244" x2="196" y2="264" stroke="#f5c19b" stroke-width="7" stroke-linecap="round"/>
+    <ellipse cx="178" cy="268" rx="10" ry="5" fill="#0f172a"/>
+    <ellipse cx="198" cy="268" rx="10" ry="5" fill="#0f172a"/>
+  </g>
+  <!-- woman B (center, hair bun) -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="266" cy="78" r="12" fill="#a16207" stroke="#78350f" stroke-width="3"/>
+    <path d="M242,120 Q240,88 266,86 Q292,88 290,120 L284,128 Q266,110 248,128 Z" fill="#a16207" stroke="#78350f" stroke-width="3"/>
+    <circle cx="266" cy="122" r="22" fill="#fcd9b6" stroke="#78350f" stroke-width="3"/>
+    <circle cx="259" cy="119" r="2.8" fill="#0f172a"/>
+    <circle cx="273" cy="119" r="2.8" fill="#0f172a"/>
+    <path d="M259,130 Q266,136 273,130" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M252,142 L280,142 L296,242 L236,242 Z" fill="#0ea5e9" stroke="#0c4a6e" stroke-width="3"/>
+    <path d="M254,152 Q240,166 244,184" fill="none" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+    <path d="M278,152 Q292,166 288,184" fill="none" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+    <line x1="258" y1="242" x2="258" y2="262" stroke="#fcd9b6" stroke-width="7" stroke-linecap="round"/>
+    <line x1="274" y1="242" x2="274" y2="262" stroke="#fcd9b6" stroke-width="7" stroke-linecap="round"/>
+    <ellipse cx="256" cy="266" rx="10" ry="5" fill="#7c3aed"/>
+    <ellipse cx="276" cy="266" rx="10" ry="5" fill="#7c3aed"/>
+  </g>
+  <!-- woman C (right, curly hair) -->
+  <g filter="url(#soft-shadow)">
+    <g fill="#451a03" stroke="#1c1917" stroke-width="2.5">
+      <circle cx="330" cy="106" r="12"/>
+      <circle cx="344" cy="98" r="12"/>
+      <circle cx="358" cy="106" r="12"/>
+      <circle cx="326" cy="120" r="10"/>
+      <circle cx="362" cy="120" r="10"/>
+    </g>
+    <circle cx="344" cy="126" r="22" fill="#e8a87c" stroke="#78350f" stroke-width="3"/>
+    <circle cx="337" cy="123" r="2.8" fill="#0f172a"/>
+    <circle cx="351" cy="123" r="2.8" fill="#0f172a"/>
+    <path d="M337,134 Q344,140 351,134" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M330,146 L358,146 L374,244 L314,244 Z" fill="#22c55e" stroke="#14532d" stroke-width="3"/>
+    <path d="M332,156 Q318,170 322,188" fill="none" stroke="#e8a87c" stroke-width="8" stroke-linecap="round"/>
+    <path d="M356,156 Q370,170 366,188" fill="none" stroke="#e8a87c" stroke-width="8" stroke-linecap="round"/>
+    <line x1="336" y1="244" x2="336" y2="264" stroke="#e8a87c" stroke-width="7" stroke-linecap="round"/>
+    <line x1="352" y1="244" x2="352" y2="264" stroke="#e8a87c" stroke-width="7" stroke-linecap="round"/>
+    <ellipse cx="334" cy="268" rx="10" ry="5" fill="#0f172a"/>
+    <ellipse cx="354" cy="268" rx="10" ry="5" fill="#0f172a"/>
+  </g>
+</svg>

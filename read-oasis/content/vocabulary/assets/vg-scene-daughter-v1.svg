@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-daughter desc-daughter">
+  <title id="title-daughter">Daughter - Parents with their little daughter</title>
+  <desc id="desc-daughter">A mother and father standing proudly behind their little daughter, who stands in front holding both their hands, with a heart above her.</desc>
+  <defs>
+    <linearGradient id="dg-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#dg-bg)"/>
+  <circle cx="52" cy="46" r="20" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <rect x="0" y="248" width="400" height="52" fill="#86efac"/>
+  <line x1="0" y1="248" x2="400" y2="248" stroke="#15803d" stroke-width="3.5"/>
+  <ellipse cx="200" cy="264" rx="155" ry="12" fill="#0f172a" opacity="0.15"/>
+  <!-- heart above daughter -->
+  <path d="M200,52 Q200,40 211,40 Q221,40 221,50 Q221,62 200,76 Q179,62 179,50 Q179,40 189,40 Q200,40 200,52 Z"
+        fill="#f472b6" stroke="#be185d" stroke-width="3"/>
+  <!-- father (left, tall) -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="110" cy="106" r="27" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M85,98 Q85,76 110,74 Q135,76 135,98 L129,102 Q110,86 91,102 Z" fill="#1c1917" stroke="#0f172a" stroke-width="2.5"/>
+    <circle cx="101" cy="104" r="3" fill="#0f172a"/>
+    <circle cx="119" cy="104" r="3" fill="#0f172a"/>
+    <path d="M101,116 Q110,122 119,116" fill="none" stroke="#0f172a" stroke-width="2.8" stroke-linecap="round"/>
+    <path d="M88,132 L132,132 L138,212 L82,212 Z" fill="#2563eb" stroke="#1e3a8a" stroke-width="3.5"/>
+    <!-- arm down to daughter's hand -->
+    <path d="M132,142 Q152,160 162,180" fill="none" stroke="#fcd9b6" stroke-width="10" stroke-linecap="round"/>
+    <path d="M90,142 Q76,160 74,180" fill="none" stroke="#fcd9b6" stroke-width="10" stroke-linecap="round"/>
+    <line x1="98" y1="212" x2="98" y2="244" stroke="#1e293b" stroke-width="9" stroke-linecap="round"/>
+    <line x1="122" y1="212" x2="122" y2="244" stroke="#1e293b" stroke-width="9" stroke-linecap="round"/>
+    <ellipse cx="96" cy="250" rx="14" ry="6" fill="#334155"/>
+    <ellipse cx="124" cy="250" rx="14" ry="6" fill="#334155"/>
+  </g>
+  <!-- mother (right, tall) -->
+  <g filter="url(#soft-shadow)">
+    <path d="M262,100 Q258,66 290,64 Q322,66 318,100 Q324,130 310,142 Q316,116 306,98 Q290,86 274,98 Q264,116 270,142 Q256,130 262,100 Z"
+          fill="#92400e" stroke="#451a03" stroke-width="3"/>
+    <circle cx="290" cy="106" r="27" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <circle cx="281" cy="104" r="3" fill="#0f172a"/>
+    <circle cx="299" cy="104" r="3" fill="#0f172a"/>
+    <path d="M281,116 Q290,122 299,116" fill="none" stroke="#0f172a" stroke-width="2.8" stroke-linecap="round"/>
+    <ellipse cx="273" cy="110" rx="5" ry="3.5" fill="#fb7185" opacity="0.55"/>
+    <ellipse cx="307" cy="110" rx="5" ry="3.5" fill="#fb7185" opacity="0.55"/>
+    <path d="M272,132 L308,132 L326,220 L254,220 Z" fill="#ec4899" stroke="#831843" stroke-width="3.5"/>
+    <!-- arm down to daughter's hand -->
+    <path d="M270,142 Q248,160 238,180" fill="none" stroke="#fcd9b6" stroke-width="10" stroke-linecap="round"/>
+    <path d="M308,142 Q324,162 326,182" fill="none" stroke="#fcd9b6" stroke-width="10" stroke-linecap="round"/>
+    <line x1="276" y1="220" x2="276" y2="246" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+    <line x1="302" y1="220" x2="302" y2="246" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+    <ellipse cx="274" cy="252" rx="13" ry="6" fill="#be185d"/>
+    <ellipse cx="304" cy="252" rx="13" ry="6" fill="#be185d"/>
+  </g>
+  <!-- DAUGHTER (hero, front centre) -->
+  <g filter="url(#soft-shadow)">
+    <!-- pigtails with bows -->
+    <circle cx="168" cy="128" r="12" fill="#451a03" stroke="#1c1917" stroke-width="2.5"/>
+    <circle cx="232" cy="128" r="12" fill="#451a03" stroke="#1c1917" stroke-width="2.5"/>
+    <path d="M164,116 L156,108 L166,106 L162,98 L172,102 L172,112 Z" fill="#f472b6" stroke="#be185d" stroke-width="2"/>
+    <path d="M236,116 L244,108 L234,106 L238,98 L228,102 L228,112 Z" fill="#f472b6" stroke="#be185d" stroke-width="2"/>
+    <path d="M172,126 Q172,98 200,96 Q228,98 228,126 L222,132 Q200,112 178,132 Z" fill="#451a03" stroke="#1c1917" stroke-width="3"/>
+    <!-- face -->
+    <circle cx="200" cy="136" r="26" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <circle cx="191" cy="133" r="3.2" fill="#0f172a"/>
+    <circle cx="209" cy="133" r="3.2" fill="#0f172a"/>
+    <path d="M190,146 Q200,154 210,146" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="183" cy="140" rx="5.5" ry="4" fill="#fb7185" opacity="0.6"/>
+    <ellipse cx="217" cy="140" rx="5.5" ry="4" fill="#fb7185" opacity="0.6"/>
+    <!-- dress -->
+    <path d="M182,160 L218,160 L236,232 L164,232 Z" fill="#a78bfa" stroke="#4c1d95" stroke-width="3.5"/>
+    <g fill="#fde047">
+      <circle cx="192" cy="186" r="5"/>
+      <circle cx="212" cy="198" r="5"/>
+      <circle cx="196" cy="216" r="5"/>
+    </g>
+    <!-- arms up holding parents' hands -->
+    <path d="M184,166 Q170,172 164,180" fill="none" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+    <path d="M216,166 Q230,172 236,180" fill="none" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="162" cy="181" r="8" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <circle cx="238" cy="181" r="8" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <!-- legs -->
+    <line x1="190" y1="232" x2="190" y2="252" stroke="#fcd9b6" stroke-width="7" stroke-linecap="round"/>
+    <line x1="210" y1="232" x2="210" y2="252" stroke="#fcd9b6" stroke-width="7" stroke-linecap="round"/>
+    <ellipse cx="188" cy="257" rx="11" ry="5" fill="#ec4899"/>
+    <ellipse cx="212" cy="257" rx="11" ry="5" fill="#ec4899"/>
+  </g>
+</svg>

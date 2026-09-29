@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-poster desc-poster">
+  <title id="title-poster">Poster - Big colorful poster on a bedroom wall</title>
+  <desc id="desc-poster">A large colorful rocket poster pinned to a bedroom wall with corner pins, next to a smaller star poster, above a bed headboard.</desc>
+  <defs>
+    <linearGradient id="po-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="po-poster" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#312e81"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#po-wall)"/>
+  <!-- floor line -->
+  <rect x="0" y="262" width="400" height="38" fill="#e8b478"/>
+  <line x1="0" y1="262" x2="400" y2="262" stroke="#a16207" stroke-width="3"/>
+  <!-- bed headboard bottom -->
+  <g filter="url(#soft-shadow)">
+    <rect x="60" y="238" width="290" height="26" rx="8" fill="#a16207" stroke="#78350f" stroke-width="3.5"/>
+    <rect x="75" y="252" width="260" height="14" fill="#3b82f6" stroke="#1e3a8a" stroke-width="3"/>
+  </g>
+  <!-- main rocket poster -->
+  <g filter="url(#soft-shadow)" transform="rotate(-2 165 130)">
+    <rect x="62" y="35" width="205" height="190" rx="4" fill="url(#po-poster)" stroke="#0f172a" stroke-width="4"/>
+    <!-- stars on poster -->
+    <g fill="#fde047">
+      <path d="M95,65 L98,74 L107,75 L100,81 L102,90 L95,85 L88,90 L90,81 L83,75 L92,74 Z"/>
+      <circle cx="230" cy="60" r="4"/>
+      <circle cx="210" cy="95" r="3"/>
+      <circle cx="90" cy="130" r="3.5"/>
+      <circle cx="240" cy="150" r="3"/>
+      <circle cx="105" cy="190" r="3"/>
+    </g>
+    <!-- planet -->
+    <circle cx="230" cy="195" r="18" fill="#f59e0b" stroke="#b45309" stroke-width="2.5"/>
+    <ellipse cx="230" cy="195" rx="27" ry="7" fill="none" stroke="#fbbf24" stroke-width="2.5" transform="rotate(-18 230 195)"/>
+    <!-- rocket -->
+    <g transform="rotate(15 160 135)">
+      <path d="M160,70 Q182,100 182,145 L138,145 Q138,100 160,70 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="3"/>
+      <circle cx="160" cy="118" r="12" fill="#bae6fd" stroke="#1e3a8a" stroke-width="2.5"/>
+      <path d="M138,130 L120,160 L138,152 Z" fill="#f59e0b" stroke="#b45309" stroke-width="2.5"/>
+      <path d="M182,130 L200,160 L182,152 Z" fill="#f59e0b" stroke="#b45309" stroke-width="2.5"/>
+      <rect x="146" y="145" width="28" height="10" fill="#94a3b8" stroke="#475569" stroke-width="2"/>
+      <path d="M150,155 Q160,180 170,155 Q165,172 160,178 Q155,172 150,155 Z" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+    </g>
+    <!-- corner pins -->
+    <circle cx="74" cy="47" r="6" fill="#ef4444" stroke="#7f1d1d" stroke-width="2"/>
+    <circle cx="255" cy="47" r="6" fill="#22c55e" stroke="#14532d" stroke-width="2"/>
+    <circle cx="74" cy="213" r="6" fill="#facc15" stroke="#b45309" stroke-width="2"/>
+    <circle cx="255" cy="213" r="6" fill="#3b82f6" stroke="#1e3a8a" stroke-width="2"/>
+  </g>
+  <!-- smaller star poster -->
+  <g filter="url(#soft-shadow)" transform="rotate(3 335 105)">
+    <rect x="292" y="50" width="86" height="110" rx="4" fill="#fbcfe8" stroke="#9d174d" stroke-width="3.5"/>
+    <path d="M335,72 L343,94 L366,95 L348,109 L354,131 L335,118 L316,131 L322,109 L304,95 L327,94 Z" fill="#facc15" stroke="#b45309" stroke-width="2.5"/>
+    <circle cx="316" cy="145" r="4" fill="#ec4899"/>
+    <circle cx="335" cy="148" r="4" fill="#8b5cf6"/>
+    <circle cx="354" cy="145" r="4" fill="#22c55e"/>
+    <!-- tape top -->
+    <rect x="320" y="42" width="30" height="12" rx="3" fill="#fde047" opacity="0.85"/>
+  </g>
+</svg>

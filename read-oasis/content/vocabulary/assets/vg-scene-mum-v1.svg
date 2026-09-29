@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-mum desc-mum">
+  <title id="title-mum">Mum - Mother hugging her child</title>
+  <desc id="desc-mum">A smiling mother with long hair kneeling and hugging her small child warmly, with hearts floating around them.</desc>
+  <defs>
+    <linearGradient id="mm-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbcfe8"/>
+      <stop offset="100%" stop-color="#fdf2f8"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#mm-bg)"/>
+  <rect x="0" y="248" width="400" height="52" fill="#f9a8d4" opacity="0.5"/>
+  <ellipse cx="200" cy="255" rx="120" ry="10" fill="#0f172a" opacity="0.2"/>
+  <!-- floating hearts -->
+  <g fill="#ec4899" stroke="#9d174d" stroke-width="2">
+    <path d="M70,70 C67,64 58,64 58,72 C58,78 70,86 70,86 C70,86 82,78 82,72 C82,64 73,64 70,70 Z"/>
+    <path d="M330,55 C328,50 321,50 321,57 C321,62 330,68 330,68 C330,68 339,62 339,57 C339,50 332,50 330,55 Z"/>
+    <path d="M320,140 C318,136 313,136 313,141 C313,145 320,150 320,150 C320,150 327,145 327,141 C327,136 322,136 320,140 Z"/>
+  </g>
+  <!-- mum -->
+  <g filter="url(#soft-shadow)">
+    <!-- long hair behind -->
+    <path d="M130,95 Q122,60 160,48 Q200,38 218,70 Q228,95 222,130 Q230,175 218,200 L200,195 Q210,150 204,120 L146,120 Q140,160 148,200 L130,195 Q120,150 130,95 Z" fill="#78350f" stroke="#451a03" stroke-width="3"/>
+    <!-- head -->
+    <circle cx="175" cy="95" r="34" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <!-- hair front -->
+    <path d="M141,90 Q141,56 175,54 Q209,56 209,90 Q200,68 175,68 Q150,68 141,90 Z" fill="#78350f"/>
+    <!-- face -->
+    <circle cx="164" cy="95" r="4.5" fill="#0f172a"/>
+    <circle cx="186" cy="95" r="4.5" fill="#0f172a"/>
+    <path d="M160,88 Q164,85 168,88" fill="none" stroke="#451a03" stroke-width="2" stroke-linecap="round"/>
+    <path d="M182,88 Q186,85 190,88" fill="none" stroke="#451a03" stroke-width="2" stroke-linecap="round"/>
+    <path d="M164,109 Q175,118 186,109" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="153" cy="103" r="5.5" fill="#fda4af" opacity="0.7"/>
+    <circle cx="197" cy="103" r="5.5" fill="#fda4af" opacity="0.7"/>
+    <!-- dress body, kneeling -->
+    <path d="M150,128 L200,128 Q222,170 218,235 L132,235 Q128,170 150,128 Z" fill="#ec4899" stroke="#9d174d" stroke-width="3.5"/>
+    <!-- hugging arms wrapping around child -->
+    <path d="M200,140 Q248,150 262,185" fill="none" stroke="#fcd9b6" stroke-width="12" stroke-linecap="round"/>
+    <path d="M204,165 Q244,178 258,205" fill="none" stroke="#fcd9b6" stroke-width="12" stroke-linecap="round"/>
+    <!-- kneeling legs -->
+    <path d="M140,235 Q140,252 158,252 L200,252 L200,240" fill="none" stroke="#ec4899" stroke-width="14" stroke-linecap="round"/>
+    <ellipse cx="152" cy="256" rx="13" ry="6" fill="#9d174d"/>
+  </g>
+  <!-- child being hugged -->
+  <g filter="url(#soft-shadow)">
+    <!-- head -->
+    <circle cx="277" cy="165" r="26" fill="#fcd9b6" stroke="#78350f" stroke-width="3"/>
+    <path d="M251,160 Q252,136 277,136 Q302,136 303,160 Q294,146 277,146 Q260,146 251,160 Z" fill="#451a03"/>
+    <!-- face looking at mum -->
+    <circle cx="269" cy="167" r="3.5" fill="#0f172a"/>
+    <circle cx="285" cy="167" r="3.5" fill="#0f172a"/>
+    <path d="M269,178 Q277,184 285,178" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="262" cy="174" r="4.5" fill="#fda4af" opacity="0.7"/>
+    <circle cx="292" cy="174" r="4.5" fill="#fda4af" opacity="0.7"/>
+    <!-- small body -->
+    <path d="M262,190 L292,190 L298,242 L256,242 Z" fill="#38bdf8" stroke="#0c4a6e" stroke-width="3"/>
+    <!-- arm hugging back -->
+    <path d="M262,198 Q230,190 214,172" fill="none" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
+    <!-- legs -->
+    <path d="M268,242 L266,258" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
+    <path d="M286,242 L288,258" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
+    <ellipse cx="265" cy="262" rx="10" ry="5" fill="#1e3a8a"/>
+    <ellipse cx="290" cy="262" rx="10" ry="5" fill="#1e3a8a"/>
+  </g>
+  <!-- big heart between them -->
+  <path d="M238,110 C233,100 218,100 218,114 C218,124 238,138 238,138 C238,138 258,124 258,114 C258,100 243,100 238,110 Z" fill="#f472b6" stroke="#9d174d" stroke-width="3" filter="url(#soft-shadow)"/>
+</svg>

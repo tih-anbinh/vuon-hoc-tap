@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-cloud desc-cloud">
+  <title id="title-cloud">Cloud - Big fluffy white cloud in the sky</title>
+  <desc id="desc-cloud">One big fluffy white cloud with a happy face floating in a bright blue sky above green hills, with smaller clouds and birds around it.</desc>
+  <defs>
+    <linearGradient id="cl-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#bae6fd"/>
+    </linearGradient>
+    <radialGradient id="cl-cloud" cx="0.5" cy="0.35" r="0.9">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#cl-sky)"/>
+  <circle cx="352" cy="48" r="26" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <g stroke="#fbbf24" stroke-width="4" stroke-linecap="round" opacity="0.8">
+    <line x1="352" y1="10" x2="352" y2="20"/>
+    <line x1="386" y1="48" x2="396" y2="48"/>
+    <line x1="376" y1="24" x2="383" y2="17"/>
+    <line x1="376" y1="72" x2="383" y2="79"/>
+  </g>
+  <!-- green hills at bottom -->
+  <path d="M0,262 Q100,222 200,258 Q300,290 400,252 L400,300 L0,300 Z" fill="#4ade80" stroke="#15803d" stroke-width="4"/>
+  <path d="M0,286 Q120,258 240,284 Q320,298 400,282 L400,300 L0,300 Z" fill="#22c55e"/>
+  <!-- small tree on hill -->
+  <g>
+    <rect x="60" y="252" width="7" height="16" fill="#78350f"/>
+    <circle cx="63" cy="244" r="14" fill="#16a34a" stroke="#14532d" stroke-width="3"/>
+  </g>
+  <!-- THE BIG CLOUD (hero element) -->
+  <g filter="url(#soft-shadow)">
+    <path d="M96,160 Q66,160 66,132 Q66,106 94,104 Q96,72 132,70 Q152,44 192,50 Q228,32 260,58 Q300,52 312,86 Q342,90 340,120 Q346,150 314,158 Q300,172 276,168 L120,168 Q104,168 96,160 Z"
+          fill="url(#cl-cloud)" stroke="#64748b" stroke-width="4.5" stroke-linejoin="round"/>
+    <!-- happy face -->
+    <circle cx="176" cy="114" r="7" fill="#0f172a"/>
+    <circle cx="238" cy="114" r="7" fill="#0f172a"/>
+    <circle cx="178" cy="112" r="2.4" fill="#ffffff"/>
+    <circle cx="240" cy="112" r="2.4" fill="#ffffff"/>
+    <path d="M186,136 Q207,152 228,136" fill="none" stroke="#0f172a" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="156" cy="130" rx="9" ry="6" fill="#fb7185" opacity="0.5"/>
+    <ellipse cx="258" cy="130" rx="9" ry="6" fill="#fb7185" opacity="0.5"/>
+  </g>
+  <!-- small clouds -->
+  <g fill="#ffffff" stroke="#94a3b8" stroke-width="3" opacity="0.95">
+    <path d="M40,196 Q28,196 28,186 Q28,177 38,176 Q41,166 53,167 Q64,162 72,170 Q84,170 84,181 Q84,192 72,193 Q62,200 52,196 Z"/>
+    <path d="M316,196 Q306,196 306,187 Q306,180 314,179 Q317,170 327,171 Q336,167 343,173 Q353,173 353,183 Q353,192 343,193 Q334,199 326,196 Z"/>
+  </g>
+  <!-- birds -->
+  <g fill="none" stroke="#334155" stroke-width="3" stroke-linecap="round">
+    <path d="M110,214 Q117,207 124,214 M124,214 Q131,207 138,214"/>
+    <path d="M256,206 Q262,200 268,206 M268,206 Q274,200 280,206"/>
+  </g>
+</svg>

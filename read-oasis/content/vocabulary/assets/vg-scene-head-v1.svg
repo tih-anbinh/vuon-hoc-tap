@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-head desc-head">
+  <title id="title-head">Head - Child pointing to their head</title>
+  <desc id="desc-head">A smiling child pointing with one finger at their own head, which is highlighted with a soft glowing ring around it.</desc>
+  <defs>
+    <linearGradient id="hd-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cffafe"/>
+      <stop offset="100%" stop-color="#a5f3fc"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#hd-bg)"/>
+  <ellipse cx="200" cy="272" rx="110" ry="8" fill="#0f172a" opacity="0.22"/>
+  <!-- highlight ring around head -->
+  <circle cx="200" cy="105" r="72" fill="none" stroke="#facc15" stroke-width="6" stroke-dasharray="14,10" opacity="0.9"/>
+  <g filter="url(#soft-shadow)">
+    <!-- head (big, focal) -->
+    <circle cx="200" cy="105" r="52" fill="#fcd9b6" stroke="#78350f" stroke-width="4"/>
+    <!-- hair -->
+    <path d="M148,98 Q150,58 200,58 Q250,58 252,98 Q238,74 200,74 Q162,74 148,98 Z" fill="#a16207"/>
+    <!-- ears -->
+    <circle cx="148" cy="108" r="9" fill="#fcd9b6" stroke="#78350f" stroke-width="3"/>
+    <circle cx="252" cy="108" r="9" fill="#fcd9b6" stroke="#78350f" stroke-width="3"/>
+    <!-- face -->
+    <circle cx="183" cy="103" r="5.5" fill="#0f172a"/>
+    <circle cx="217" cy="103" r="5.5" fill="#0f172a"/>
+    <circle cx="181" cy="101" r="2" fill="#fff"/>
+    <circle cx="215" cy="101" r="2" fill="#fff"/>
+    <path d="M183,125 Q200,137 217,125" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+    <ellipse cx="167" cy="117" rx="8" ry="5" fill="#fb923c" opacity="0.55"/>
+    <ellipse cx="233" cy="117" rx="8" ry="5" fill="#fb923c" opacity="0.55"/>
+    <!-- body -->
+    <rect x="170" y="160" width="60" height="78" rx="12" fill="#22c55e" stroke="#14532d" stroke-width="4"/>
+    <!-- pointing arm up to head -->
+    <path d="M230,175 Q265,150 258,112" fill="none" stroke="#fcd9b6" stroke-width="11" stroke-linecap="round"/>
+    <!-- pointing hand + finger -->
+    <circle cx="257" cy="105" r="9" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <path d="M254,98 L248,84" fill="none" stroke="#fcd9b6" stroke-width="7" stroke-linecap="round"/>
+    <!-- other arm relaxed -->
+    <line x1="170" y1="178" x2="145" y2="210" stroke="#fcd9b6" stroke-width="11" stroke-linecap="round"/>
+    <!-- legs -->
+    <rect x="178" y="238" width="16" height="32" rx="6" fill="#1e40af"/>
+    <rect x="206" y="238" width="16" height="32" rx="6" fill="#1e40af"/>
+  </g>
+  <!-- small arrow pointing at head -->
+  <g fill="#ef4444" stroke="#7f1d1d" stroke-width="2">
+    <path d="M305,70 L280,88 L292,90 L288,102 L300,92 L302,104 Z" transform="rotate(10 295 88)"/>
+  </g>
+</svg>

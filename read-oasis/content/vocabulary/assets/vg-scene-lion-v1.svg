@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-lion desc-lion">
+  <title id="title-lion">Lion - A big lion with a golden mane</title>
+  <desc id="desc-lion">A big friendly lion with a fluffy golden-orange mane, standing proudly on the sunny savannah with a tufted tail.</desc>
+  <defs>
+    <linearGradient id="ln-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <radialGradient id="ln-mane" cx="0.5" cy="0.5" r="0.6">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#ln-bg)"/>
+  <circle cx="340" cy="52" r="24" fill="#fbbf24" stroke="#d97706" stroke-width="3.5"/>
+  <!-- savannah -->
+  <rect x="0" y="228" width="400" height="72" fill="#fbbf24"/>
+  <line x1="0" y1="228" x2="400" y2="228" stroke="#b45309" stroke-width="3.5"/>
+  <g stroke="#b45309" stroke-width="3" stroke-linecap="round" fill="none">
+    <path d="M32,254 Q34,242 32,236 M40,254 Q44,244 46,238"/>
+    <path d="M356,258 Q358,246 356,240 M364,258 Q368,248 370,242"/>
+  </g>
+  <!-- acacia tree far -->
+  <g>
+    <line x1="70" y1="228" x2="70" y2="176" stroke="#78350f" stroke-width="5"/>
+    <path d="M34,176 Q70,152 106,176 Q70,168 34,176 Z" fill="#65a30d" stroke="#3f6212" stroke-width="3"/>
+  </g>
+  <ellipse cx="230" cy="262" rx="140" ry="14" fill="#0f172a" opacity="0.15"/>
+  <!-- LION (hero element) -->
+  <g filter="url(#soft-shadow)">
+    <!-- tail with tuft -->
+    <path d="M312,190 Q352,180 358,148" fill="none" stroke="#f59e0b" stroke-width="10" stroke-linecap="round"/>
+    <path d="M350,142 Q366,130 372,142 Q378,154 362,158 Q350,158 350,142 Z" fill="#92400e" stroke="#78350f" stroke-width="3"/>
+    <!-- body -->
+    <path d="M196,166 Q262,152 306,178 Q322,192 318,220 Q314,244 288,246 L212,246 Q188,242 186,214 Q184,184 196,166 Z"
+          fill="#fbbf24" stroke="#92400e" stroke-width="4.5"/>
+    <!-- legs -->
+    <rect x="206" y="238" width="20" height="28" rx="8" fill="#fbbf24" stroke="#92400e" stroke-width="4"/>
+    <rect x="242" y="240" width="20" height="26" rx="8" fill="#f59e0b" stroke="#92400e" stroke-width="4"/>
+    <rect x="280" y="238" width="20" height="28" rx="8" fill="#fbbf24" stroke="#92400e" stroke-width="4"/>
+    <!-- mane (big fluffy) -->
+    <g fill="url(#ln-mane)" stroke="#92400e" stroke-width="4">
+      <path d="M130,128 Q118,84 156,64 Q150,92 166,98 Q160,64 200,52 Q196,80 212,86 Q216,54 252,66 Q238,90 250,100 Q268,80 282,104 Q262,116 268,130 Q292,128 288,156 Q264,154 260,168 Q284,178 268,198 Q248,186 238,196 Q252,214 228,222 Q216,204 202,210 Q206,230 182,226 Q176,208 162,206 Q156,224 138,212 Q146,192 136,182 Q114,190 110,166 Q130,158 128,146 Q106,142 112,118 Q124,124 130,128 Z"/>
+    </g>
+    <!-- face -->
+    <circle cx="196" cy="138" r="52" fill="#fbbf24" stroke="#92400e" stroke-width="4.5"/>
+    <!-- ears -->
+    <circle cx="156" cy="100" r="13" fill="#fbbf24" stroke="#92400e" stroke-width="3.5"/>
+    <circle cx="236" cy="100" r="13" fill="#fbbf24" stroke="#92400e" stroke-width="3.5"/>
+    <circle cx="156" cy="100" r="6" fill="#f59e0b"/>
+    <circle cx="236" cy="100" r="6" fill="#f59e0b"/>
+    <!-- eyes -->
+    <circle cx="178" cy="130" r="6" fill="#0f172a"/>
+    <circle cx="214" cy="130" r="6" fill="#0f172a"/>
+    <circle cx="180" cy="128" r="2" fill="#ffffff"/>
+    <circle cx="216" cy="128" r="2" fill="#ffffff"/>
+    <!-- muzzle -->
+    <ellipse cx="196" cy="158" rx="24" ry="18" fill="#fef3c7" stroke="#92400e" stroke-width="3.5"/>
+    <path d="M188,150 L204,150 L196,160 Z" fill="#78350f" stroke="#451a03" stroke-width="2.5"/>
+    <path d="M196,160 Q190,168 182,166 M196,160 Q202,168 210,166" fill="none" stroke="#78350f" stroke-width="3" stroke-linecap="round"/>
+    <!-- whiskers -->
+    <g stroke="#92400e" stroke-width="2.2" stroke-linecap="round">
+      <line x1="170" y1="154" x2="148" y2="150"/>
+      <line x1="170" y1="162" x2="150" y2="164"/>
+      <line x1="222" y1="154" x2="244" y2="150"/>
+      <line x1="222" y1="162" x2="242" y2="164"/>
+    </g>
+  </g>
+  <!-- butterfly friend -->
+  <g>
+    <ellipse cx="330" cy="120" rx="7" ry="10" fill="#f472b6" stroke="#be185d" stroke-width="2" transform="rotate(-25 330 120)"/>
+    <ellipse cx="342" cy="118" rx="7" ry="10" fill="#f9a8d4" stroke="#be185d" stroke-width="2" transform="rotate(25 342 118)"/>
+    <line x1="336" y1="112" x2="336" y2="130" stroke="#831843" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+</svg>

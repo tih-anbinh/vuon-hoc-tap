@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-t-shirt desc-t-shirt">
+  <title id="title-t-shirt">T-shirt - Green t-shirt with a star</title>
+  <desc id="desc-t-shirt">A big green short-sleeved t-shirt with a yellow star on the chest hanging on a clothesline with pegs, drying in the sun.</desc>
+  <defs>
+    <linearGradient id="ts-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="ts-shirt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#ts-bg)"/>
+  <circle cx="58" cy="52" r="24" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <g stroke="#d97706" stroke-width="3" stroke-linecap="round">
+    <line x1="58" y1="16" x2="58" y2="8"/>
+    <line x1="88" y1="28" x2="94" y2="22"/>
+    <line x1="94" y1="52" x2="102" y2="52"/>
+  </g>
+  <ellipse cx="330" cy="46" rx="36" ry="13" fill="#ffffff" opacity="0.95"/>
+  <!-- grass -->
+  <rect x="0" y="260" width="400" height="40" fill="#4ade80"/>
+  <line x1="0" y1="260" x2="400" y2="260" stroke="#15803d" stroke-width="3.5"/>
+  <!-- clothesline -->
+  <path d="M0,80 Q200,100 400,76" fill="none" stroke="#78350f" stroke-width="4"/>
+  <!-- t-shirt (dominant) -->
+  <g filter="url(#soft-shadow)">
+    <!-- pegs -->
+    <rect x="132" y="76" width="13" height="28" rx="4" fill="#d6a05c" stroke="#92400e" stroke-width="2.5"/>
+    <rect x="256" y="78" width="13" height="28" rx="4" fill="#d6a05c" stroke="#92400e" stroke-width="2.5"/>
+    <!-- shirt body with sleeves -->
+    <path d="M138,96 L110,150 L146,166 L152,140 L152,244 L250,244 L250,140 L256,166 L292,150 L264,96 Q240,84 201,84 Q162,84 138,96 Z" fill="url(#ts-shirt)" stroke="#14532d" stroke-width="4.5"/>
+    <!-- neckline -->
+    <path d="M172,88 Q201,110 230,88 Q216,96 201,96 Q186,96 172,88 Z" fill="#dcfce7" stroke="#14532d" stroke-width="3.5"/>
+    <!-- sleeve cuffs -->
+    <path d="M110,150 L146,166" stroke="#dcfce7" stroke-width="5" stroke-linecap="round"/>
+    <path d="M292,150 L256,166" stroke="#dcfce7" stroke-width="5" stroke-linecap="round"/>
+    <!-- hem -->
+    <line x1="152" y1="234" x2="250" y2="234" stroke="#dcfce7" stroke-width="4" stroke-dasharray="8,6"/>
+    <!-- star on chest -->
+    <path d="M201,138 L211,160 L235,162 L217,178 L222,202 L201,189 L180,202 L185,178 L167,162 L191,160 Z" fill="#fde047" stroke="#a16207" stroke-width="3.5" stroke-linejoin="round"/>
+  </g>
+  <!-- flowers on grass -->
+  <g>
+    <circle cx="60" cy="278" r="8" fill="#f472b6" stroke="#be185d" stroke-width="2.5"/>
+    <circle cx="60" cy="278" r="3" fill="#fde047"/>
+    <circle cx="340" cy="280" r="8" fill="#a78bfa" stroke="#6d28d9" stroke-width="2.5"/>
+    <circle cx="340" cy="280" r="3" fill="#fde047"/>
+    <circle cx="200" cy="282" r="8" fill="#fb923c" stroke="#c2410c" stroke-width="2.5"/>
+    <circle cx="200" cy="282" r="3" fill="#fde047"/>
+  </g>
+  <!-- butterfly -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="330" cy="190" rx="4" ry="12" fill="#334155"/>
+    <path d="M330,184 Q312,168 308,184 Q306,196 328,192 Z" fill="#f472b6" stroke="#be185d" stroke-width="2.5"/>
+    <path d="M330,184 Q348,168 352,184 Q354,196 332,192 Z" fill="#f472b6" stroke="#be185d" stroke-width="2.5"/>
+  </g>
+</svg>

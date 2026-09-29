@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-cupboard desc-cupboard">
+  <title id="title-cupboard">Cupboard - Wooden cupboard with one door open showing dishes</title>
+  <desc id="desc-cupboard">A wooden kitchen cupboard with two doors, one open to reveal plates and cups stacked neatly on shelves inside.</desc>
+  <defs>
+    <linearGradient id="cb-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="cb-wood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c2955a"/>
+      <stop offset="100%" stop-color="#8a5a24"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#cb-bg)"/>
+  <rect x="0" y="262" width="400" height="38" fill="#a16207"/>
+  <ellipse cx="200" cy="266" rx="140" ry="8" fill="#0f172a" opacity="0.25"/>
+  <g filter="url(#soft-shadow)">
+    <!-- cupboard body -->
+    <rect x="90" y="50" width="220" height="212" rx="8" fill="url(#cb-wood)" stroke="#451a03" stroke-width="4"/>
+    <!-- open left side: interior -->
+    <rect x="102" y="64" width="96" height="184" fill="#5c3210" stroke="#451a03" stroke-width="2.5"/>
+    <!-- shelves inside -->
+    <rect x="102" y="122" width="96" height="7" fill="#8a5a24" stroke="#451a03" stroke-width="1.5"/>
+    <rect x="102" y="185" width="96" height="7" fill="#8a5a24" stroke="#451a03" stroke-width="1.5"/>
+    <!-- plates stack (top shelf) -->
+    <g stroke="#64748b" stroke-width="2">
+      <ellipse cx="150" cy="116" rx="34" ry="7" fill="#e2e8f0"/>
+      <ellipse cx="150" cy="108" rx="34" ry="7" fill="#f1f5f9"/>
+      <ellipse cx="150" cy="100" rx="34" ry="7" fill="#e2e8f0"/>
+    </g>
+    <!-- cups (middle shelf) -->
+    <g stroke="#0369a1" stroke-width="2.5">
+      <path d="M116,182 L116,160 Q116,155 121,155 L138,155 Q143,155 143,160 L143,182 Z" fill="#7dd3fc"/>
+      <path d="M143,164 Q152,164 152,171 Q152,178 143,178" fill="none"/>
+      <path d="M158,182 L158,160 Q158,155 163,155 L180,155 Q185,155 185,160 L185,182 Z" fill="#f9a8d4" stroke="#be185d"/>
+      <path d="M185,164 Q194,164 194,171 Q194,178 185,178" fill="none" stroke="#be185d"/>
+    </g>
+    <!-- bowl (bottom shelf) -->
+    <path d="M120,232 Q120,246 150,246 Q180,246 180,232 L176,218 L124,218 Z" fill="#fb923c" stroke="#9a3412" stroke-width="2.5"/>
+    <!-- open door (swung out to the left) -->
+    <path d="M102,64 L48,80 L48,264 L102,248 Z" fill="url(#cb-wood)" stroke="#451a03" stroke-width="3.5"/>
+    <circle cx="92" cy="158" r="5" fill="#facc15" stroke="#451a03" stroke-width="2"/>
+    <!-- closed right door -->
+    <rect x="202" y="64" width="96" height="184" rx="4" fill="url(#cb-wood)" stroke="#451a03" stroke-width="3.5"/>
+    <rect x="214" y="78" width="72" height="156" rx="4" fill="none" stroke="#451a03" stroke-width="2.5" opacity="0.6"/>
+    <circle cx="212" cy="158" r="5" fill="#facc15" stroke="#451a03" stroke-width="2"/>
+  </g>
+</svg>

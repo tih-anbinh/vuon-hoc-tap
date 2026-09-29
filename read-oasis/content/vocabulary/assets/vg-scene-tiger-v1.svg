@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-tiger desc-tiger">
+  <title id="title-tiger">Tiger - Orange tiger with black stripes</title>
+  <desc id="desc-tiger">A big friendly orange tiger with black stripes, white belly and long striped tail, standing in tall jungle grass.</desc>
+  <defs>
+    <linearGradient id="tg-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a7f3d0"/>
+      <stop offset="100%" stop-color="#6ee7b7"/>
+    </linearGradient>
+    <linearGradient id="tg-fur" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#tg-bg)"/>
+  <!-- jungle leaves background -->
+  <g fill="#059669" opacity="0.7">
+    <path d="M30,20 Q60,45 40,90 Q10,60 30,20 Z"/>
+    <path d="M370,15 Q340,45 362,92 Q392,58 370,15 Z"/>
+    <path d="M330,50 Q305,70 318,105 Q345,82 330,50 Z"/>
+  </g>
+  <!-- ground grass -->
+  <rect x="0" y="235" width="400" height="65" fill="#34d399"/>
+  <line x1="0" y1="235" x2="400" y2="235" stroke="#047857" stroke-width="3.5"/>
+  <ellipse cx="200" cy="258" rx="150" ry="14" fill="#0f172a" opacity="0.22"/>
+  <!-- tiger -->
+  <g filter="url(#soft-shadow)">
+    <!-- tail -->
+    <path d="M318,180 Q368,168 362,120" fill="none" stroke="#fb923c" stroke-width="16" stroke-linecap="round"/>
+    <g stroke="#0f172a" stroke-width="5" stroke-linecap="round">
+      <path d="M350,162 L366,156"/>
+      <path d="M356,140 L372,138"/>
+    </g>
+    <circle cx="362" cy="118" r="9" fill="#0f172a"/>
+    <!-- body -->
+    <ellipse cx="240" cy="196" rx="88" ry="56" fill="url(#tg-fur)" stroke="#7c2d12" stroke-width="4.5"/>
+    <!-- belly -->
+    <ellipse cx="235" cy="222" rx="52" ry="26" fill="#fef3c7" stroke="#7c2d12" stroke-width="3"/>
+    <!-- body stripes -->
+    <g fill="#0f172a">
+      <path d="M200,148 Q206,170 200,188 L190,186 Q196,168 190,150 Z"/>
+      <path d="M232,142 Q238,166 232,186 L222,184 Q228,164 222,144 Z"/>
+      <path d="M264,146 Q270,168 264,188 L254,186 Q260,166 254,148 Z"/>
+      <path d="M296,158 Q302,176 296,194 L286,192 Q292,174 286,160 Z"/>
+    </g>
+    <!-- legs -->
+    <rect x="178" y="228" width="24" height="42" rx="10" fill="#fb923c" stroke="#7c2d12" stroke-width="3.5"/>
+    <rect x="280" y="228" width="24" height="42" rx="10" fill="#fb923c" stroke="#7c2d12" stroke-width="3.5"/>
+    <rect x="212" y="238" width="24" height="34" rx="10" fill="#ea580c" stroke="#7c2d12" stroke-width="3.5"/>
+    <rect x="248" y="238" width="24" height="34" rx="10" fill="#ea580c" stroke="#7c2d12" stroke-width="3.5"/>
+    <!-- paws -->
+    <ellipse cx="190" cy="272" rx="16" ry="8" fill="#fef3c7" stroke="#7c2d12" stroke-width="3"/>
+    <ellipse cx="292" cy="272" rx="16" ry="8" fill="#fef3c7" stroke="#7c2d12" stroke-width="3"/>
+    <!-- head -->
+    <circle cx="138" cy="140" r="58" fill="url(#tg-fur)" stroke="#7c2d12" stroke-width="4.5"/>
+    <!-- ears -->
+    <circle cx="96" cy="96" r="17" fill="#fb923c" stroke="#7c2d12" stroke-width="3.5"/>
+    <circle cx="180" cy="96" r="17" fill="#fb923c" stroke="#7c2d12" stroke-width="3.5"/>
+    <circle cx="96" cy="96" r="8" fill="#fef3c7"/>
+    <circle cx="180" cy="96" r="8" fill="#fef3c7"/>
+    <!-- head stripes -->
+    <g fill="#0f172a">
+      <path d="M134,84 L142,84 L140,102 L136,102 Z"/>
+      <path d="M114,90 L122,88 L122,104 L116,105 Z"/>
+      <path d="M154,88 L162,90 L160,105 L154,104 Z"/>
+      <path d="M84,130 L100,134 L100,142 L84,138 Z"/>
+      <path d="M192,134 L176,138 L176,146 L192,142 Z"/>
+    </g>
+    <!-- muzzle -->
+    <ellipse cx="138" cy="162" rx="30" ry="22" fill="#fef3c7" stroke="#7c2d12" stroke-width="3"/>
+    <!-- eyes -->
+    <circle cx="118" cy="132" r="9" fill="#ffffff" stroke="#0f172a" stroke-width="2.5"/>
+    <circle cx="158" cy="132" r="9" fill="#ffffff" stroke="#0f172a" stroke-width="2.5"/>
+    <circle cx="119" cy="134" r="4.5" fill="#0f172a"/>
+    <circle cx="157" cy="134" r="4.5" fill="#0f172a"/>
+    <!-- nose -->
+    <path d="M130,152 L146,152 L138,162 Z" fill="#be185d" stroke="#831843" stroke-width="2.5"/>
+    <!-- mouth -->
+    <path d="M138,162 L138,170 M138,170 Q128,178 120,172 M138,170 Q148,178 156,172" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- whiskers -->
+    <g stroke="#0f172a" stroke-width="2" stroke-linecap="round">
+      <line x1="104" y1="158" x2="80" y2="152"/>
+      <line x1="104" y1="166" x2="80" y2="168"/>
+      <line x1="172" y1="158" x2="196" y2="152"/>
+      <line x1="172" y1="166" x2="196" y2="168"/>
+    </g>
+  </g>
+  <!-- foreground grass blades -->
+  <g stroke="#047857" stroke-width="4" stroke-linecap="round" fill="none">
+    <path d="M40,272 Q38,250 46,238"/>
+    <path d="M58,275 Q60,255 54,242"/>
+    <path d="M352,272 Q350,252 358,240"/>
+    <path d="M370,276 Q372,258 366,246"/>
+  </g>
+</svg>

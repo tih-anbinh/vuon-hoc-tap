@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-grandparent desc-grandparent">
+  <title id="title-grandparent">Grandparent - Grandmother and grandfather together</title>
+  <desc id="desc-grandparent">A smiling grandmother with a hair bun and a grandfather with glasses and a walking stick standing side by side, both with grey hair, with a heart between them.</desc>
+  <defs>
+    <linearGradient id="gp-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#gp-bg)"/>
+  <circle cx="52" cy="46" r="20" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <rect x="0" y="250" width="400" height="50" fill="#86efac"/>
+  <line x1="0" y1="250" x2="400" y2="250" stroke="#15803d" stroke-width="3.5"/>
+  <ellipse cx="200" cy="264" rx="150" ry="12" fill="#0f172a" opacity="0.15"/>
+  <!-- heart between them -->
+  <path d="M200,96 Q200,84 211,84 Q221,84 221,94 Q221,106 200,120 Q179,106 179,94 Q179,84 189,84 Q200,84 200,96 Z"
+        fill="#f472b6" stroke="#be185d" stroke-width="3"/>
+  <!-- GRANDFATHER (left, hero) -->
+  <g filter="url(#soft-shadow)">
+    <!-- bald head with grey side hair -->
+    <circle cx="124" cy="102" r="34" fill="#fcd9b6" stroke="#78350f" stroke-width="4"/>
+    <path d="M92,96 Q90,80 100,72 Q98,88 102,98 Z" fill="#e2e8f0" stroke="#64748b" stroke-width="2.5"/>
+    <path d="M156,96 Q158,80 148,72 Q150,88 146,98 Z" fill="#e2e8f0" stroke="#64748b" stroke-width="2.5"/>
+    <!-- glasses -->
+    <circle cx="113" cy="100" r="9" fill="none" stroke="#334155" stroke-width="3"/>
+    <circle cx="135" cy="100" r="9" fill="none" stroke="#334155" stroke-width="3"/>
+    <line x1="122" y1="100" x2="126" y2="100" stroke="#334155" stroke-width="3"/>
+    <circle cx="113" cy="100" r="2.6" fill="#0f172a"/>
+    <circle cx="135" cy="100" r="2.6" fill="#0f172a"/>
+    <!-- grey moustache + smile -->
+    <path d="M110,114 Q124,108 138,114 Q132,120 124,119 Q116,120 110,114 Z" fill="#e2e8f0" stroke="#64748b" stroke-width="2.5"/>
+    <path d="M114,122 Q124,128 134,122" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <!-- cardigan -->
+    <path d="M96,136 L152,136 L162,238 L86,238 Z" fill="#0d9488" stroke="#134e4a" stroke-width="4"/>
+    <line x1="124" y1="138" x2="124" y2="236" stroke="#134e4a" stroke-width="2.5"/>
+    <circle cx="132" cy="162" r="3" fill="#134e4a"/>
+    <circle cx="132" cy="186" r="3" fill="#134e4a"/>
+    <!-- arms: one holding stick -->
+    <path d="M96,148 Q76,164 72,190" fill="none" stroke="#0d9488" stroke-width="11" stroke-linecap="round"/>
+    <circle cx="72" cy="196" r="8" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <!-- walking stick -->
+    <path d="M72,200 L70,258" stroke="#92400e" stroke-width="6" stroke-linecap="round"/>
+    <path d="M64,198 Q72,190 80,198" fill="none" stroke="#92400e" stroke-width="6" stroke-linecap="round"/>
+    <!-- other arm linking with grandma -->
+    <path d="M152,150 Q176,158 190,168" fill="none" stroke="#0d9488" stroke-width="11" stroke-linecap="round"/>
+    <!-- legs -->
+    <line x1="108" y1="238" x2="108" y2="252" stroke="#1e293b" stroke-width="9" stroke-linecap="round"/>
+    <line x1="140" y1="238" x2="140" y2="252" stroke="#1e293b" stroke-width="9" stroke-linecap="round"/>
+    <ellipse cx="106" cy="258" rx="14" ry="6" fill="#334155"/>
+    <ellipse cx="142" cy="258" rx="14" ry="6" fill="#334155"/>
+  </g>
+  <!-- GRANDMOTHER (right, hero) -->
+  <g filter="url(#soft-shadow)">
+    <!-- grey hair with bun -->
+    <path d="M244,96 Q240,64 274,62 Q308,64 304,96 Q310,118 298,126 Q302,104 294,92 Q274,82 256,92 Q248,104 252,126 Q240,118 244,96 Z"
+          fill="#e2e8f0" stroke="#64748b" stroke-width="3"/>
+    <circle cx="274" cy="62" r="12" fill="#e2e8f0" stroke="#64748b" stroke-width="3"/>
+    <!-- face -->
+    <circle cx="274" cy="104" r="32" fill="#fcd9b6" stroke="#78350f" stroke-width="4"/>
+    <circle cx="264" cy="100" r="3.2" fill="#0f172a"/>
+    <circle cx="284" cy="100" r="3.2" fill="#0f172a"/>
+    <!-- smile wrinkles -->
+    <path d="M256,96 Q260,92 264,94" fill="none" stroke="#d4a276" stroke-width="2"/>
+    <path d="M292,96 Q288,92 284,94" fill="none" stroke="#d4a276" stroke-width="2"/>
+    <path d="M262,114 Q274,122 286,114" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="254" cy="108" rx="6" ry="4" fill="#fb7185" opacity="0.55"/>
+    <ellipse cx="294" cy="108" rx="6" ry="4" fill="#fb7185" opacity="0.55"/>
+    <!-- earrings -->
+    <circle cx="244" cy="112" r="4" fill="#fde047" stroke="#a16207" stroke-width="2"/>
+    <circle cx="304" cy="112" r="4" fill="#fde047" stroke="#a16207" stroke-width="2"/>
+    <!-- flowery dress -->
+    <path d="M250,134 L298,134 L318,240 L230,240 Z" fill="#ec4899" stroke="#831843" stroke-width="4"/>
+    <g fill="#fde047" stroke="#a16207" stroke-width="2">
+      <circle cx="262" cy="168" r="6"/>
+      <circle cx="292" cy="188" r="6"/>
+      <circle cx="264" cy="214" r="6"/>
+    </g>
+    <!-- arm linking with grandpa -->
+    <path d="M250,148 Q222,158 208,168" fill="none" stroke="#fcd9b6" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="200" cy="170" r="9" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <!-- other arm waving -->
+    <path d="M298,148 Q322,134 328,112" fill="none" stroke="#fcd9b6" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="330" cy="108" r="8" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <g stroke="#f59e0b" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.9">
+      <path d="M344,98 Q350,106 348,116"/>
+      <path d="M352,90 Q362,102 358,116"/>
+    </g>
+    <!-- legs -->
+    <line x1="262" y1="240" x2="262" y2="252" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+    <line x1="286" y1="240" x2="286" y2="252" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+    <ellipse cx="260" cy="258" rx="13" ry="6" fill="#be185d"/>
+    <ellipse cx="288" cy="258" rx="13" ry="6" fill="#be185d"/>
+  </g>
+</svg>

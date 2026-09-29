@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-trousers desc-trousers">
+  <title id="title-trousers">Trousers - Blue trousers on a hanger</title>
+  <desc id="desc-trousers">A big pair of blue trousers with pockets and a brown belt hanging on a wooden hanger, with a smaller red pair folded nearby.</desc>
+  <defs>
+    <linearGradient id="tu-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="tu-denim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#tu-bg)"/>
+  <!-- closet rail -->
+  <rect x="0" y="34" width="400" height="10" rx="5" fill="#92400e" stroke="#78350f" stroke-width="3"/>
+  <!-- floor -->
+  <rect x="0" y="258" width="400" height="42" fill="#e8b478"/>
+  <line x1="0" y1="258" x2="400" y2="258" stroke="#a16207" stroke-width="3.5"/>
+  <!-- hanger -->
+  <g filter="url(#soft-shadow)">
+    <path d="M175,44 Q175,56 163,60 L100,80 L250,80 L187,60 Q175,56 175,44" fill="none" stroke="#78350f" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="175" cy="48" r="7" fill="none" stroke="#78350f" stroke-width="4.5"/>
+  </g>
+  <!-- trousers (dominant) -->
+  <g filter="url(#soft-shadow)">
+    <!-- waistband -->
+    <rect x="100" y="80" width="150" height="24" fill="#1e3a8a" stroke="#172554" stroke-width="4"/>
+    <!-- belt -->
+    <rect x="96" y="84" width="158" height="14" rx="4" fill="#92400e" stroke="#451a03" stroke-width="3"/>
+    <rect x="164" y="80" width="22" height="22" rx="4" fill="#fbbf24" stroke="#92400e" stroke-width="3"/>
+    <rect x="171" y="86" width="8" height="10" fill="#92400e"/>
+    <!-- legs -->
+    <path d="M100,104 L100,242 L162,242 L172,150 L178,150 L188,242 L250,242 L250,104 Z" fill="url(#tu-denim)" stroke="#172554" stroke-width="4.5"/>
+    <!-- center seam stitching -->
+    <g stroke="#93c5fd" stroke-width="2.5" stroke-dasharray="6,5" fill="none">
+      <path d="M108,110 L108,234"/>
+      <path d="M242,110 L242,234"/>
+      <path d="M175,110 L175,146"/>
+    </g>
+    <!-- pockets -->
+    <path d="M104,110 Q126,112 132,132 L104,132 Z" fill="#3b82f6" stroke="#172554" stroke-width="3"/>
+    <path d="M246,110 Q224,112 218,132 L246,132 Z" fill="#3b82f6" stroke="#172554" stroke-width="3"/>
+    <!-- cuffs -->
+    <rect x="100" y="230" width="62" height="12" fill="#1e40af" stroke="#172554" stroke-width="3"/>
+    <rect x="188" y="230" width="62" height="12" fill="#1e40af" stroke="#172554" stroke-width="3"/>
+  </g>
+  <!-- folded red trousers on shelf -->
+  <g filter="url(#soft-shadow)">
+    <rect x="288" y="196" width="92 " height="20" rx="5" fill="#ef4444" stroke="#7f1d1d" stroke-width="3.5"/>
+    <rect x="288" y="216" width="92" height="20" rx="5" fill="#dc2626" stroke="#7f1d1d" stroke-width="3.5"/>
+    <rect x="288" y="236" width="92" height="20" rx="5" fill="#b91c1c" stroke="#7f1d1d" stroke-width="3.5"/>
+    <line x1="298" y1="206" x2="370" y2="206" stroke="#fecaca" stroke-width="2.5" stroke-dasharray="5,5"/>
+  </g>
+  <!-- small floor plant decoration -->
+  <g filter="url(#soft-shadow)">
+    <path d="M40,258 L64,258 L60,232 L44,232 Z" fill="#f97316" stroke="#7c2d12" stroke-width="3"/>
+    <g stroke="#15803d" stroke-width="4" fill="none" stroke-linecap="round">
+      <path d="M52,232 Q52,212 44,202"/>
+      <path d="M52,232 Q54,210 62,202"/>
+      <path d="M52,232 Q50,216 52,206"/>
+    </g>
+    <circle cx="42" cy="199" r="6" fill="#4ade80" stroke="#15803d" stroke-width="2.5"/>
+    <circle cx="64" cy="199" r="6" fill="#4ade80" stroke="#15803d" stroke-width="2.5"/>
+    <circle cx="52" cy="202" r="6" fill="#4ade80" stroke="#15803d" stroke-width="2.5"/>
+  </g>
+</svg>

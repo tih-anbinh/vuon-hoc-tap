@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-kid desc-kid">
+  <title id="title-kid">Kid - Happy child waving hello</title>
+  <desc id="desc-kid">A cheerful young child with a big smile waving one hand, wearing a green t-shirt and orange shorts, standing on grass with a ball nearby.</desc>
+  <defs>
+    <linearGradient id="kd-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#kd-bg)"/>
+  <circle cx="345" cy="52" r="26" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <ellipse cx="80" cy="60" rx="34" ry="13" fill="#ffffff" opacity="0.95"/>
+  <ellipse cx="110" cy="50" rx="22" ry="10" fill="#ffffff" opacity="0.95"/>
+  <rect x="0" y="245" width="400" height="55" fill="#65a30d"/>
+  <path d="M0,245 Q100,238 200,245 T400,245 L400,255 L0,255 Z" fill="#86efac" opacity="0.6"/>
+  <ellipse cx="200" cy="252" rx="80" ry="9" fill="#0f172a" opacity="0.25"/>
+  <!-- ball nearby -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="315" cy="235" r="26" fill="#ef4444" stroke="#7f1d1d" stroke-width="3.5"/>
+    <path d="M289,235 Q315,220 341,235" fill="none" stroke="#fef3c7" stroke-width="5"/>
+    <path d="M289,235 Q315,250 341,235" fill="none" stroke="#fef3c7" stroke-width="5"/>
+  </g>
+  <!-- kid -->
+  <g filter="url(#soft-shadow)">
+    <!-- waving arm up -->
+    <path d="M245,148 Q268,120 278,95" fill="none" stroke="#fcd9b6" stroke-width="11" stroke-linecap="round"/>
+    <circle cx="280" cy="90" r="10" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <!-- head -->
+    <circle cx="200" cy="95" r="38" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <!-- hair -->
+    <path d="M162,90 Q160,52 200,50 Q240,52 238,90 Q230,66 200,66 Q170,66 162,90 Z" fill="#78350f" stroke="#451a03" stroke-width="2.5"/>
+    <path d="M188,55 Q193,44 200,52 Q206,43 212,54" fill="#78350f"/>
+    <!-- face -->
+    <circle cx="188" cy="95" r="5" fill="#0f172a"/>
+    <circle cx="214" cy="95" r="5" fill="#0f172a"/>
+    <circle cx="190" cy="93" r="1.8" fill="#ffffff"/>
+    <circle cx="216" cy="93" r="1.8" fill="#ffffff"/>
+    <path d="M184,110 Q200,124 218,110" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="176" cy="106" r="6" fill="#fda4af" opacity="0.7"/>
+    <circle cx="226" cy="106" r="6" fill="#fda4af" opacity="0.7"/>
+    <!-- body -->
+    <path d="M172,135 L228,135 L236,200 L164,200 Z" fill="#22c55e" stroke="#14532d" stroke-width="3.5"/>
+    <!-- other arm down -->
+    <path d="M170,148 Q152,168 150,188" fill="none" stroke="#fcd9b6" stroke-width="11" stroke-linecap="round"/>
+    <circle cx="149" cy="192" r="9" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <!-- shorts -->
+    <path d="M164,200 L236,200 L238,226 L206,226 L200,214 L194,226 L162,226 Z" fill="#fb923c" stroke="#c2410c" stroke-width="3.5"/>
+    <!-- legs -->
+    <path d="M180,226 L178,250" fill="none" stroke="#fcd9b6" stroke-width="12" stroke-linecap="round"/>
+    <path d="M220,226 L222,250" fill="none" stroke="#fcd9b6" stroke-width="12" stroke-linecap="round"/>
+    <!-- shoes -->
+    <ellipse cx="174" cy="255" rx="14" ry="7" fill="#3b82f6" stroke="#1e3a8a" stroke-width="2.5"/>
+    <ellipse cx="226" cy="255" rx="14" ry="7" fill="#3b82f6" stroke="#1e3a8a" stroke-width="2.5"/>
+  </g>
+  <!-- wave motion marks -->
+  <g stroke="#94a3b8" stroke-width="3" stroke-linecap="round" opacity="0.7">
+    <path d="M296,78 Q302,72 300,64"/>
+    <path d="M300,95 Q308,92 312,85"/>
+  </g>
+  <!-- flowers -->
+  <circle cx="60" cy="268" r="7" fill="#f472b6" stroke="#be185d" stroke-width="2"/>
+  <circle cx="100" cy="278" r="6" fill="#facc15" stroke="#b45309" stroke-width="2"/>
+</svg>

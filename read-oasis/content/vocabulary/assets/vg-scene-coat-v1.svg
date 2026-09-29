@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-coat desc-coat">
+  <title id="title-coat">Coat - Warm winter coat on a hook</title>
+  <desc id="desc-coat">A big warm red winter coat with buttons, pockets and a fluffy hood hanging on a wall hook, with snowflakes visible through a window.</desc>
+  <defs>
+    <linearGradient id="ct-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#bae6fd"/>
+    </linearGradient>
+    <linearGradient id="ct-coat" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#ct-bg)"/>
+  <!-- wall panelling -->
+  <rect x="0" y="230" width="400" height="70" fill="#d97706" opacity="0.35"/>
+  <line x1="0" y1="230" x2="400" y2="230" stroke="#92400e" stroke-width="3.5" opacity="0.7"/>
+  <!-- window with snow -->
+  <g>
+    <rect x="292" y="40" width="86" height="96" rx="6" fill="#dbeafe" stroke="#475569" stroke-width="4"/>
+    <line x1="335" y1="40" x2="335" y2="136" stroke="#475569" stroke-width="3"/>
+    <line x1="292" y1="88" x2="378" y2="88" stroke="#475569" stroke-width="3"/>
+    <g fill="#ffffff" stroke="#94a3b8" stroke-width="1.5">
+      <circle cx="310" cy="60" r="4"/>
+      <circle cx="356" cy="70" r="3.5"/>
+      <circle cx="322" cy="110" r="4"/>
+      <circle cx="362" cy="118" r="3"/>
+      <circle cx="304" cy="124" r="3"/>
+    </g>
+    <path d="M292,132 Q315,124 335,132 Q358,138 378,130 L378,136 L292,136 Z" fill="#ffffff"/>
+  </g>
+  <!-- wall hook rail -->
+  <g filter="url(#soft-shadow)">
+    <rect x="40" y="46" width="220" height="14" rx="5" fill="#92400e" stroke="#451a03" stroke-width="3.5"/>
+    <path d="M150,60 L150,72 Q150,80 158,80" fill="none" stroke="#334155" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="70" cy="53" r="4" fill="#451a03"/>
+    <circle cx="230" cy="53" r="4" fill="#451a03"/>
+    <!-- spare hook -->
+    <path d="M230,60 L230,72 Q230,80 238,80" fill="none" stroke="#334155" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <!-- THE COAT (hero element) -->
+  <g filter="url(#soft-shadow)">
+    <!-- fluffy hood -->
+    <path d="M118,96 Q118,70 150,66 Q182,70 182,96 Q182,110 168,114 L132,114 Q118,110 118,96 Z"
+          fill="url(#ct-coat)" stroke="#7f1d1d" stroke-width="4"/>
+    <g fill="#fef3c7" stroke="#b45309" stroke-width="2.5">
+      <circle cx="126" cy="98" r="8"/>
+      <circle cx="138" cy="106" r="8"/>
+      <circle cx="152" cy="108" r="8"/>
+      <circle cx="166" cy="104" r="8"/>
+      <circle cx="175" cy="95" r="8"/>
+    </g>
+    <!-- coat body -->
+    <path d="M112,120 Q126,108 150,108 Q174,108 188,120 L206,150 Q212,162 204,168 L192,158 L196,240 Q196,252 184,252 L116,252 Q104,252 104,240 L108,158 L96,168 Q88,162 94,150 Z"
+          fill="url(#ct-coat)" stroke="#7f1d1d" stroke-width="4.5"/>
+    <!-- sleeves hanging -->
+    <path d="M94,150 L74,206 Q72,218 84,220 L100,216 L108,158" fill="url(#ct-coat)" stroke="#7f1d1d" stroke-width="4"/>
+    <path d="M206,150 L226,206 Q228,218 216,220 L200,216 L192,158" fill="url(#ct-coat)" stroke="#7f1d1d" stroke-width="4"/>
+    <!-- cuffs -->
+    <path d="M76,206 Q86,214 100,212" fill="none" stroke="#fef3c7" stroke-width="7" stroke-linecap="round"/>
+    <path d="M224,206 Q214,214 200,212" fill="none" stroke="#fef3c7" stroke-width="7" stroke-linecap="round"/>
+    <!-- centre zip placket -->
+    <line x1="150" y1="118" x2="150" y2="250" stroke="#7f1d1d" stroke-width="4"/>
+    <!-- buttons -->
+    <g fill="#fde047" stroke="#a16207" stroke-width="2.5">
+      <circle cx="164" cy="146" r="6"/>
+      <circle cx="164" cy="176" r="6"/>
+      <circle cx="164" cy="206" r="6"/>
+    </g>
+    <!-- pockets -->
+    <path d="M116,208 L140,208 L140,232 L116,232 Z" fill="#b91c1c" stroke="#7f1d1d" stroke-width="3"/>
+    <path d="M162,208 L186,208 L186,232 L162,232 Z" fill="#b91c1c" stroke="#7f1d1d" stroke-width="3"/>
+    <!-- hem trim -->
+    <path d="M104,246 Q150,254 196,246" fill="none" stroke="#fef3c7" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <!-- scarf on spare hook -->
+  <g filter="url(#soft-shadow)">
+    <path d="M234,82 Q248,90 246,120 Q244,150 252,170 L264,168 Q258,146 260,120 Q262,92 248,80 Z"
+          fill="#38bdf8" stroke="#0c4a6e" stroke-width="3.5"/>
+    <g stroke="#0c4a6e" stroke-width="2.5">
+      <line x1="252" y1="170" x2="250" y2="180"/>
+      <line x1="258" y1="169" x2="257" y2="179"/>
+      <line x1="263" y1="168" x2="263" y2="178"/>
+    </g>
+  </g>
+  <!-- boots on floor -->
+  <g filter="url(#soft-shadow)">
+    <path d="M56,262 L56,240 Q56,234 64,234 L76,234 Q82,234 82,240 L82,254 Q94,256 94,264 Q94,270 86,270 L62,270 Q56,270 56,262 Z" fill="#78350f" stroke="#451a03" stroke-width="3.5"/>
+    <path d="M104,262 L104,240 Q104,234 112,234 L124,234 Q130,234 130,240 L130,254 Q142,256 142,264 Q142,270 134,270 L110,270 Q104,270 104,262 Z" fill="#78350f" stroke="#451a03" stroke-width="3.5"/>
+  </g>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-pineapple desc-pineapple">
+  <title id="title-pineapple">Pineapple - Big golden pineapple with spiky leaves</title>
+  <desc id="desc-pineapple">A large golden pineapple with a criss-cross diamond pattern on its skin and tall spiky green leaves on top, standing on a table.</desc>
+  <defs>
+    <linearGradient id="pa-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <radialGradient id="pa-body" cx="0.4" cy="0.35" r="0.85">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#pa-bg)"/>
+  <rect x="0" y="248" width="400" height="52" fill="#e8b478"/>
+  <line x1="0" y1="248" x2="400" y2="248" stroke="#a16207" stroke-width="3.5"/>
+  <ellipse cx="200" cy="255" rx="115" ry="10" fill="#0f172a" opacity="0.22"/>
+  <!-- pineapple -->
+  <g filter="url(#soft-shadow)">
+    <!-- spiky crown -->
+    <g fill="#16a34a" stroke="#14532d" stroke-width="3" stroke-linejoin="round">
+      <path d="M200,92 L182,30 L206,70 Z"/>
+      <path d="M200,92 L218,28 L212,72 Z" fill="#22c55e"/>
+      <path d="M195,95 L150,35 L184,80 Z" fill="#22c55e"/>
+      <path d="M205,95 L252,38 L218,82 Z"/>
+      <path d="M188,98 L122,60 L172,92 Z"/>
+      <path d="M212,98 L280,62 L228,94 Z" fill="#22c55e"/>
+      <path d="M182,102 L108,92 L168,104 Z" fill="#4ade80"/>
+      <path d="M218,102 L292,94 L232,106 Z" fill="#4ade80"/>
+    </g>
+    <!-- body -->
+    <ellipse cx="200" cy="185" rx="88" ry="88" fill="url(#pa-body)" stroke="#92400e" stroke-width="4.5"/>
+    <!-- diamond criss-cross pattern -->
+    <g stroke="#b45309" stroke-width="3" opacity="0.9" fill="none">
+      <path d="M128,130 L275,240"/>
+      <path d="M115,165 L255,265"/>
+      <path d="M118,215 L205,272"/>
+      <path d="M272,130 L125,240"/>
+      <path d="M285,165 L145,265"/>
+      <path d="M282,215 L195,272"/>
+      <path d="M160,105 L290,200"/>
+      <path d="M240,105 L110,200"/>
+    </g>
+    <!-- little spikes at diamond centers -->
+    <g fill="#92400e">
+      <circle cx="200" cy="145" r="3.5"/>
+      <circle cx="165" cy="170" r="3.5"/>
+      <circle cx="235" cy="170" r="3.5"/>
+      <circle cx="200" cy="195" r="3.5"/>
+      <circle cx="150" cy="205" r="3.5"/>
+      <circle cx="250" cy="205" r="3.5"/>
+      <circle cx="180" cy="230" r="3.5"/>
+      <circle cx="222" cy="230" r="3.5"/>
+    </g>
+    <!-- highlight -->
+    <ellipse cx="160" cy="140" rx="17" ry="26" fill="#fde68a" opacity="0.55" transform="rotate(-25 160 140)"/>
+  </g>
+</svg>

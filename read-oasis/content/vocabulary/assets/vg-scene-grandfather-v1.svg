@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-grandfather desc-grandfather">
+  <title id="title-grandfather">Grandfather - Elderly man with white beard and cane</title>
+  <desc id="desc-grandfather">A kind elderly grandfather with white hair, a bushy white beard and glasses, standing with a wooden walking cane.</desc>
+  <defs>
+    <linearGradient id="gf-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="gf-vest" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a16207"/>
+      <stop offset="100%" stop-color="#78350f"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#gf-bg)"/>
+  <rect x="0" y="252" width="400" height="48" fill="#a16207"/>
+  <line x1="0" y1="252" x2="400" y2="252" stroke="#5c3210" stroke-width="3"/>
+  <ellipse cx="200" cy="258" rx="110" ry="8" fill="#0f172a" opacity="0.25"/>
+  <g filter="url(#soft-shadow)">
+    <!-- head -->
+    <circle cx="200" cy="100" r="42" fill="#fcd9b6" stroke="#78350f" stroke-width="4"/>
+    <!-- white hair (balding top, sides) -->
+    <path d="M158,95 Q158,72 175,66 Q168,80 170,92 Z" fill="#e5e7eb" stroke="#94a3b8" stroke-width="2"/>
+    <path d="M242,95 Q242,72 225,66 Q232,80 230,92 Z" fill="#e5e7eb" stroke="#94a3b8" stroke-width="2"/>
+    <!-- glasses -->
+    <g fill="none" stroke="#334155" stroke-width="3.5">
+      <circle cx="184" cy="98" r="12"/>
+      <circle cx="216" cy="98" r="12"/>
+      <line x1="196" y1="98" x2="204" y2="98"/>
+      <line x1="172" y1="96" x2="160" y2="92"/>
+      <line x1="228" y1="96" x2="240" y2="92"/>
+    </g>
+    <circle cx="184" cy="98" r="3.5" fill="#0f172a"/>
+    <circle cx="216" cy="98" r="3.5" fill="#0f172a"/>
+    <!-- bushy white beard -->
+    <path d="M162,112 Q160,155 200,160 Q240,155 238,112 Q230,140 200,142 Q170,140 162,112 Z" fill="#f1f5f9" stroke="#94a3b8" stroke-width="3"/>
+    <!-- moustache -->
+    <path d="M182,122 Q200,132 218,122 Q210,130 200,129 Q190,130 182,122 Z" fill="#e5e7eb" stroke="#94a3b8" stroke-width="2"/>
+    <!-- smile under moustache -->
+    <path d="M190,133 Q200,139 210,133" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- eyebrows -->
+    <path d="M174,84 Q184,79 193,84" fill="none" stroke="#e5e7eb" stroke-width="4" stroke-linecap="round"/>
+    <path d="M207,84 Q216,79 226,84" fill="none" stroke="#e5e7eb" stroke-width="4" stroke-linecap="round"/>
+    <!-- body: shirt + vest -->
+    <path d="M170,158 L230,158 L240,240 L160,240 Z" fill="#e0f2fe" stroke="#334155" stroke-width="3.5"/>
+    <path d="M170,158 L188,158 L184,240 L162,240 Z" fill="url(#gf-vest)" stroke="#451a03" stroke-width="3"/>
+    <path d="M230,158 L212,158 L216,240 L238,240 Z" fill="url(#gf-vest)" stroke="#451a03" stroke-width="3"/>
+    <!-- buttons -->
+    <circle cx="200" cy="180" r="3.5" fill="#334155"/>
+    <circle cx="200" cy="202" r="3.5" fill="#334155"/>
+    <!-- arms -->
+    <line x1="170" y1="172" x2="140" y2="205" stroke="#e0f2fe" stroke-width="11" stroke-linecap="round"/>
+    <line x1="230" y1="172" x2="262" y2="200" stroke="#e0f2fe" stroke-width="11" stroke-linecap="round"/>
+    <circle cx="138" cy="210" r="8" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <circle cx="265" cy="205" r="8" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <!-- legs -->
+    <rect x="172" y="240" width="20" height="16" rx="5" fill="#57534e"/>
+    <rect x="208" y="240" width="20" height="16" rx="5" fill="#57534e"/>
+    <!-- cane -->
+    <path d="M138,215 L136,255 M136,222 Q125,215 128,205" fill="none" stroke="#78350f" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>

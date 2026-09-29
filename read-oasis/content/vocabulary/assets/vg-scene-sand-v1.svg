@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-sand desc-sand">
+  <title id="title-sand">Sand - Sandy beach with sandcastle and bucket</title>
+  <desc id="desc-sand">A golden sandy beach with a sandcastle, a red bucket and spade, seashells and a starfish, beside the blue sea.</desc>
+  <defs>
+    <linearGradient id="sd-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#bae6fd"/>
+    </linearGradient>
+    <linearGradient id="sd-sand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#sd-sky)"/>
+  <circle cx="345" cy="48" r="26" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <ellipse cx="80" cy="55" rx="34" ry="12" fill="#ffffff" opacity="0.95"/>
+  <!-- sea strip -->
+  <rect x="0" y="105" width="400" height="45" fill="#0ea5e9"/>
+  <g stroke="#7dd3fc" stroke-width="3" stroke-linecap="round" opacity="0.9">
+    <path d="M25,120 Q40,114 55,120"/>
+    <path d="M150,132 Q165,126 180,132"/>
+    <path d="M300,118 Q315,112 330,118"/>
+  </g>
+  <!-- big sand area (dominant) -->
+  <path d="M0,150 Q100,138 200,150 T400,148 L400,300 L0,300 Z" fill="url(#sd-sand)"/>
+  <path d="M0,150 Q100,140 200,150 T400,148 L400,158 Q300,150 200,158 Q100,166 0,158 Z" fill="#fef3c7" opacity="0.8"/>
+  <!-- sand speckles -->
+  <g fill="#d97706" opacity="0.6">
+    <circle cx="50" cy="190" r="2.5"/>
+    <circle cx="90" cy="230" r="2"/>
+    <circle cx="140" cy="200" r="2.5"/>
+    <circle cx="330" cy="190" r="2.5"/>
+    <circle cx="360" cy="240" r="2"/>
+    <circle cx="300" cy="278" r="2.5"/>
+    <circle cx="65" cy="272" r="2"/>
+    <circle cx="200" cy="285" r="2.5"/>
+  </g>
+  <!-- sandcastle -->
+  <g filter="url(#soft-shadow)">
+    <!-- side towers -->
+    <rect x="120" y="185" width="34 " height="60" fill="#f59e0b" stroke="#b45309" stroke-width="3.5"/>
+    <rect x="226" y="185" width="34" height="60" fill="#f59e0b" stroke="#b45309" stroke-width="3.5"/>
+    <!-- crenellations -->
+    <path d="M118,185 L118,172 L128,172 L128,180 L136,180 L136,172 L146,172 L146,180 L156,180 L156,185 Z" fill="#f59e0b" stroke="#b45309" stroke-width="2.5"/>
+    <path d="M224,185 L224,172 L234,172 L234,180 L242,180 L242,172 L252,172 L252,180 L262,180 L262,185 Z" fill="#f59e0b" stroke="#b45309" stroke-width="2.5"/>
+    <!-- main keep -->
+    <rect x="152" y="165" width="76" height="80" fill="#fbbf24" stroke="#b45309" stroke-width="3.5"/>
+    <path d="M150,165 L150,150 L162,150 L162,158 L172,158 L172,150 L184,150 L184,158 L196,158 L196,150 L208,150 L208,158 L218,158 L218,150 L230,150 L230,165 Z" fill="#fbbf24" stroke="#b45309" stroke-width="2.5"/>
+    <!-- door -->
+    <path d="M178,245 L178,215 Q178,203 190,203 Q202,203 202,215 L202,245 Z" fill="#92400e" stroke="#78350f" stroke-width="2.5"/>
+    <!-- flag -->
+    <line x1="190" y1="150" x2="190" y2="122" stroke="#78350f" stroke-width="3"/>
+    <path d="M190,122 L214,129 L190,137 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="2"/>
+    <!-- texture dots -->
+    <g fill="#d97706" opacity="0.7">
+      <circle cx="165" cy="185" r="2"/>
+      <circle cx="205" cy="192" r="2"/>
+      <circle cx="180" cy="175" r="2"/>
+      <circle cx="132" cy="205" r="2"/>
+      <circle cx="240" cy="210" r="2"/>
+    </g>
+  </g>
+  <!-- bucket and spade -->
+  <g filter="url(#soft-shadow)">
+    <path d="M300,215 L346,215 L338,262 L308,262 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="3.5"/>
+    <ellipse cx="323" cy="215" rx="23" ry="7" fill="#f87171" stroke="#7f1d1d" stroke-width="3"/>
+    <path d="M302,213 Q323,196 344,213" fill="none" stroke="#7f1d1d" stroke-width="3.5"/>
+    <!-- spade -->
+    <line x1="368" y1="200" x2="360" y2="245" stroke="#3b82f6" stroke-width="6" stroke-linecap="round"/>
+    <path d="M352,245 L368,245 Q370,265 360,270 Q350,265 352,245 Z" fill="#3b82f6" stroke="#1e3a8a" stroke-width="3"/>
+    <rect x="362" y="192" width="13" height="8" rx="3" fill="#3b82f6" stroke="#1e3a8a" stroke-width="2.5"/>
+  </g>
+  <!-- shells and starfish -->
+  <g filter="url(#soft-shadow)">
+    <!-- starfish -->
+    <path d="M70,235 L78,250 L95,251 L82,262 L86,278 L70,269 L54,278 L58,262 L45,251 L62,250 Z" fill="#fb923c" stroke="#c2410c" stroke-width="2.5"/>
+    <!-- shell -->
+    <path d="M42,200 Q52,182 62,200 Q52,206 42,200 Z" fill="#f9a8d4" stroke="#be185d" stroke-width="2.5"/>
+    <g stroke="#be185d" stroke-width="1.5">
+      <line x1="52" y1="186" x2="52" y2="202"/>
+      <line x1="47" y1="190" x2="49" y2="201"/>
+      <line x1="57" y1="190" x2="55" y2="201"/>
+    </g>
+    <!-- small shell right -->
+    <path d="M275,275 Q283,262 291,275 Q283,280 275,275 Z" fill="#e9d5ff" stroke="#7c3aed" stroke-width="2.5"/>
+  </g>
+</svg>

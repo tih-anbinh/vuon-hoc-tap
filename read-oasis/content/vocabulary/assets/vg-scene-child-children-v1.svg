@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-child-children desc-child-children">
+  <title id="title-child-children">Child, children - Three happy kids together</title>
+  <desc id="desc-child-children">Three smiling children of different heights standing together holding hands on green grass under a sunny sky.</desc>
+  <defs>
+    <linearGradient id="cc-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#cc-bg)"/>
+  <circle cx="350" cy="45" r="26" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <rect x="0" y="245" width="400" height="55" fill="#4d7c0f"/>
+  <path d="M0,245 Q100,237 200,245 T400,245 L400,255 L0,255 Z" fill="#65a30d"/>
+  <ellipse cx="200" cy="252" rx="160" ry="8" fill="#0f172a" opacity="0.22"/>
+  <!-- child 1 (left, girl, pink) -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="105" cy="130" r="30" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M75,125 Q75,95 105,95 Q135,95 135,125 Q127,110 105,110 Q83,110 75,125 Z" fill="#78350f"/>
+    <circle cx="78" cy="142" r="9" fill="#78350f"/>
+    <circle cx="132" cy="142" r="9" fill="#78350f"/>
+    <circle cx="96" cy="128" r="4" fill="#0f172a"/>
+    <circle cx="114" cy="128" r="4" fill="#0f172a"/>
+    <path d="M96,142 Q105,150 114,142" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M85,162 L125,162 L133,225 L77,225 Z" fill="#ec4899" stroke="#9d174d" stroke-width="3.5"/>
+    <line x1="85" y1="180" x2="70" y2="200" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
+    <line x1="125" y1="180" x2="143" y2="196" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
+    <line x1="95" y1="225" x2="95" y2="245" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
+    <line x1="115" y1="225" x2="115" y2="245" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <!-- child 2 (middle, taller boy, blue) -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="200" cy="112" r="32" fill="#f5b26b" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M168,106 Q170,76 200,78 Q230,76 232,106 Q222,92 200,92 Q178,92 168,106 Z" fill="#0f172a"/>
+    <circle cx="190" cy="110" r="4" fill="#0f172a"/>
+    <circle cx="210" cy="110" r="4" fill="#0f172a"/>
+    <path d="M190,125 Q200,133 210,125" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <rect x="178" y="146" width="44" height="60" rx="8" fill="#3b82f6" stroke="#1e3a8a" stroke-width="3.5"/>
+    <line x1="178" y1="162" x2="143" y2="196" stroke="#f5b26b" stroke-width="9" stroke-linecap="round"/>
+    <line x1="222" y1="162" x2="256" y2="198" stroke="#f5b26b" stroke-width="9" stroke-linecap="round"/>
+    <rect x="182" y="206" width="16" height="40" rx="6" fill="#1e40af"/>
+    <rect x="202" y="206" width="16" height="40" rx="6" fill="#1e40af"/>
+  </g>
+  <!-- child 3 (right, small kid, green) -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="298" cy="145" r="27" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M271,140 Q272,113 298,114 Q324,113 325,140 Q316,126 298,126 Q280,126 271,140 Z" fill="#a16207"/>
+    <circle cx="290" cy="143" r="3.5" fill="#0f172a"/>
+    <circle cx="306" cy="143" r="3.5" fill="#0f172a"/>
+    <path d="M290,156 Q298,163 306,156" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <rect x="280" y="174" width="36" height="48" rx="7" fill="#22c55e" stroke="#14532d" stroke-width="3.5"/>
+    <line x1="280" y1="188" x2="256" y2="198" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+    <line x1="316" y1="188" x2="336" y2="204" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+    <line x1="290" y1="222" x2="290" y2="244" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+    <line x1="306" y1="222" x2="306" y2="244" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+  </g>
+</svg>

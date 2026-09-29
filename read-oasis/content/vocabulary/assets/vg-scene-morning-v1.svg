@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-morning desc-morning">
+  <title id="title-morning">Morning - Sunrise with rooster crowing</title>
+  <desc id="desc-morning">An orange sunrise over hills with a rooster crowing on a fence, birds flying, and dew on the grass showing early morning.</desc>
+  <defs>
+    <linearGradient id="mo-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="55%" stop-color="#fdba74"/>
+      <stop offset="100%" stop-color="#fb923c"/>
+    </linearGradient>
+    <radialGradient id="mo-sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#mo-sky)"/>
+  <!-- rising sun -->
+  <circle cx="200" cy="190" r="55" fill="url(#mo-sun)" stroke="#d97706" stroke-width="3.5"/>
+  <g stroke="#fbbf24" stroke-width="5" stroke-linecap="round">
+    <line x1="200" y1="110" x2="200" y2="88"/>
+    <line x1="145" y1="130" x2="130" y2="114"/>
+    <line x1="255" y1="130" x2="270" y2="114"/>
+    <line x1="120" y1="175" x2="98" y2="168"/>
+    <line x1="280" y1="175" x2="302" y2="168"/>
+  </g>
+  <!-- hills -->
+  <path d="M0,215 Q100,165 200,210 T400,205 L400,300 L0,300 Z" fill="#4d7c0f"/>
+  <path d="M0,240 Q120,205 250,240 T400,235 L400,300 L0,300 Z" fill="#65a30d"/>
+  <!-- birds -->
+  <g fill="none" stroke="#334155" stroke-width="3" stroke-linecap="round">
+    <path d="M70,60 Q78,52 86,60 Q94,52 102,60"/>
+    <path d="M300,45 Q307,38 314,45 Q321,38 328,45"/>
+    <path d="M120,90 Q126,84 132,90 Q138,84 144,90"/>
+  </g>
+  <!-- fence -->
+  <g filter="url(#soft-shadow)">
+    <rect x="38" y="200" width="12" height="72" rx="3" fill="#a16207" stroke="#78350f" stroke-width="3"/>
+    <rect x="98" y="200" width="12" height="72" rx="3" fill="#a16207" stroke="#78350f" stroke-width="3"/>
+    <rect x="24" y="214" width="100" height="10" rx="3" fill="#c98a3b" stroke="#78350f" stroke-width="2.5"/>
+    <rect x="24" y="244" width="100" height="10" rx="3" fill="#c98a3b" stroke="#78350f" stroke-width="2.5"/>
+  </g>
+  <!-- rooster on fence -->
+  <g filter="url(#soft-shadow)">
+    <!-- tail feathers -->
+    <path d="M38,168 Q10,150 16,120 Q34,140 44,150 Z" fill="#16a34a" stroke="#14532d" stroke-width="3"/>
+    <path d="M40,172 Q18,168 10,146 Q32,156 46,162 Z" fill="#0ea5e9" stroke="#075985" stroke-width="3"/>
+    <!-- body -->
+    <ellipse cx="66" cy="172" rx="30" ry="24" fill="#b91c1c" stroke="#7f1d1d" stroke-width="3.5"/>
+    <!-- wing -->
+    <path d="M58,164 Q80,162 76,184 Q64,186 56,176 Z" fill="#f87171" stroke="#7f1d1d" stroke-width="2.5"/>
+    <!-- neck and head raised crowing -->
+    <path d="M84,162 Q98,140 100,122 Q112,120 114,128 Q110,150 94,170 Z" fill="#dc2626" stroke="#7f1d1d" stroke-width="3"/>
+    <circle cx="106" cy="124" r="12" fill="#dc2626" stroke="#7f1d1d" stroke-width="3"/>
+    <!-- comb -->
+    <path d="M98,116 Q96,104 104,106 Q104,98 111,102 Q114,94 118,104 Q112,110 114,114 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="2"/>
+    <!-- open beak crowing -->
+    <path d="M116,120 L132,114 L120,124 Z" fill="#f59e0b" stroke="#b45309" stroke-width="2"/>
+    <path d="M117,126 L130,130 L119,131 Z" fill="#f59e0b" stroke="#b45309" stroke-width="2"/>
+    <circle cx="104" cy="121" r="2.5" fill="#0f172a"/>
+    <!-- wattle -->
+    <path d="M112,132 Q114,140 108,138 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="1.5"/>
+    <!-- legs on rail -->
+    <line x1="60" y1="195" x2="60" y2="214" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/>
+    <line x1="76" y1="195" x2="76" y2="214" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <!-- crow sound marks -->
+  <g stroke="#f8fafc" stroke-width="3" stroke-linecap="round" opacity="0.9">
+    <path d="M140,100 Q148,96 150,88"/>
+    <path d="M144,116 Q154,114 160,106"/>
+  </g>
+  <!-- dew drops -->
+  <g fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5" opacity="0.9">
+    <path d="M320,262 Q326,252 332,262 Q332,270 326,270 Q320,270 320,262 Z"/>
+    <path d="M355,275 Q360,267 365,275 Q365,281 360,281 Q355,281 355,275 Z"/>
+    <path d="M280,278 Q285,270 290,278 Q290,284 285,284 Q280,284 280,278 Z"/>
+  </g>
+</svg>

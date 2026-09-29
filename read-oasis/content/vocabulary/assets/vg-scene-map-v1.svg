@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-map desc-map">
+  <title id="title-map">Map - A treasure map with a route</title>
+  <desc id="desc-map">A big unfolded paper map showing an island with mountains, a forest, a river, a dashed route leading to a red cross, and a compass rose.</desc>
+  <defs>
+    <linearGradient id="mp-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="mp-paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#mp-bg)"/>
+  <rect x="0" y="252" width="400" height="48" fill="#93c5fd"/>
+  <line x1="0" y1="252" x2="400" y2="252" stroke="#1d4ed8" stroke-width="3.5"/>
+  <!-- MAP (hero element) -->
+  <g filter="url(#soft-shadow)">
+    <!-- rolled edges -->
+    <rect x="34" y="40" width="16" height="212" rx="8" fill="#d97706" stroke="#78350f" stroke-width="3.5"/>
+    <rect x="350" y="40" width="16" height="212" rx="8" fill="#d97706" stroke="#78350f" stroke-width="3.5"/>
+    <!-- paper -->
+    <path d="M50,48 Q200,38 350,48 L350,244 Q200,254 50,244 Z" fill="url(#mp-paper)" stroke="#92400e" stroke-width="4.5"/>
+    <!-- island outline on map -->
+    <path d="M96,110 Q120,76 176,84 Q230,70 272,96 Q312,110 302,152 Q314,190 272,206 Q234,226 182,214 Q120,222 100,184 Q76,148 96,110 Z"
+          fill="#bbf7d0" stroke="#15803d" stroke-width="3.5"/>
+    <!-- water ripples around island -->
+    <g stroke="#60a5fa" stroke-width="2.5" fill="none" stroke-linecap="round">
+      <path d="M66,100 Q74,96 82,100"/>
+      <path d="M320,120 Q328,116 336,120"/>
+      <path d="M66,200 Q74,196 82,200"/>
+      <path d="M318,214 Q326,210 334,214"/>
+    </g>
+    <!-- mountains -->
+    <g fill="#a8a29e" stroke="#57534e" stroke-width="2.5">
+      <path d="M130,132 L146,104 L162,132 Z"/>
+      <path d="M152,136 L166,112 L180,136 Z"/>
+    </g>
+    <!-- forest -->
+    <g fill="#22c55e" stroke="#14532d" stroke-width="2.5">
+      <path d="M218,110 L228,92 L238,110 Z"/>
+      <path d="M236,116 L246,98 L256,116 Z"/>
+      <path d="M224,124 L234,106 L244,124 Z"/>
+    </g>
+    <!-- river -->
+    <path d="M110,170 Q150,158 186,170 Q222,182 258,168" fill="none" stroke="#38bdf8" stroke-width="7" stroke-linecap="round"/>
+    <!-- little house -->
+    <g>
+      <rect x="122" y="196" width="20" height="14" fill="#f87171" stroke="#7f1d1d" stroke-width="2.5"/>
+      <path d="M118,196 L132,184 L146,196 Z" fill="#b91c1c" stroke="#7f1d1d" stroke-width="2.5"/>
+    </g>
+    <!-- dashed route to treasure -->
+    <path d="M134,206 Q170,196 190,182 Q220,162 244,158 Q268,152 276,134"
+          fill="none" stroke="#dc2626" stroke-width="4" stroke-linecap="round" stroke-dasharray="3,11"/>
+    <!-- treasure X -->
+    <g stroke="#dc2626" stroke-width="7" stroke-linecap="round">
+      <line x1="268" y1="118" x2="288" y2="138"/>
+      <line x1="288" y1="118" x2="268" y2="138"/>
+    </g>
+    <!-- compass rose -->
+    <g transform="translate(310,74)">
+      <circle r="21" fill="#ffffff" stroke="#92400e" stroke-width="3"/>
+      <path d="M0,-17 L5,0 L0,17 L-5,0 Z" fill="#dc2626" stroke="#7f1d1d" stroke-width="2"/>
+      <path d="M-17,0 L0,5 L17,0 L0,-5 Z" fill="#334155" stroke="#0f172a" stroke-width="2"/>
+      <circle r="4" fill="#fbbf24" stroke="#78350f" stroke-width="2"/>
+    </g>
+    <!-- palm on island -->
+    <g>
+      <path d="M212,196 Q210,182 216,172" fill="none" stroke="#92400e" stroke-width="4" stroke-linecap="round"/>
+      <path d="M216,172 Q204,164 196,168 M216,172 Q228,164 236,168 M216,172 Q214,160 218,154" fill="none" stroke="#16a34a" stroke-width="3.5" stroke-linecap="round"/>
+    </g>
+  </g>
+  <!-- magnifying glass -->
+  <g filter="url(#soft-shadow)" transform="rotate(18 330 232)">
+    <circle cx="322" cy="222" r="20" fill="#bfdbfe" fill-opacity="0.6" stroke="#1e3a8a" stroke-width="5"/>
+    <line x1="336" y1="238" x2="356" y2="260" stroke="#92400e" stroke-width="8" stroke-linecap="round"/>
+  </g>
+</svg>

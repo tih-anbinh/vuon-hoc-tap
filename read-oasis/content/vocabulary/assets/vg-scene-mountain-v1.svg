@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-mountain desc-mountain">
+  <title id="title-mountain">Mountain - A tall mountain with a snowy top</title>
+  <desc id="desc-mountain">A huge tall mountain with a white snowy peak reaching into the clouds, green pine trees at the bottom, and a small hiker with a flag on the trail.</desc>
+  <defs>
+    <linearGradient id="mt-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+    <linearGradient id="mt-rock" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#475569"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#mt-sky)"/>
+  <circle cx="56" cy="52" r="22" fill="#fbbf24" stroke="#d97706" stroke-width="3.5"/>
+  <!-- side mountains -->
+  <path d="M-20,252 L80,120 L180,252 Z" fill="#64748b" stroke="#334155" stroke-width="4"/>
+  <path d="M64,142 L80,120 L96,142 L88,150 L80,144 L72,150 Z" fill="#f8fafc" stroke="#334155" stroke-width="3"/>
+  <path d="M220,252 L320,132 L420,252 Z" fill="#64748b" stroke="#334155" stroke-width="4"/>
+  <path d="M306,150 L320,132 L334,150 L327,157 L320,151 L313,157 Z" fill="#f8fafc" stroke="#334155" stroke-width="3"/>
+  <!-- MAIN MOUNTAIN (hero element) -->
+  <g filter="url(#soft-shadow)">
+    <path d="M40,252 L200,36 L360,252 Z" fill="url(#mt-rock)" stroke="#1e293b" stroke-width="5"/>
+    <!-- snow cap -->
+    <path d="M162,88 L200,36 L238,88 L224,100 L212,88 L200,102 L188,88 L176,100 Z"
+          fill="#f8fafc" stroke="#1e293b" stroke-width="4"/>
+    <!-- rock ridges -->
+    <g stroke="#334155" stroke-width="3" fill="none" stroke-linecap="round">
+      <path d="M186,120 Q192,150 180,186"/>
+      <path d="M218,124 Q226,160 240,200"/>
+      <path d="M160,170 Q150,200 136,228"/>
+    </g>
+    <!-- winding trail -->
+    <path d="M200,252 Q170,230 196,206 Q222,184 202,162 Q186,144 200,124"
+          fill="none" stroke="#fde68a" stroke-width="6" stroke-linecap="round" stroke-dasharray="12,9"/>
+  </g>
+  <!-- clouds around peak -->
+  <g fill="#ffffff" opacity="0.95">
+    <ellipse cx="130" cy="74" rx="34" ry="12"/>
+    <ellipse cx="286" cy="60" rx="38" ry="13"/>
+    <ellipse cx="330" cy="102" rx="28" ry="10"/>
+  </g>
+  <!-- flag on peak -->
+  <g filter="url(#soft-shadow)">
+    <line x1="200" y1="36" x2="200" y2="10" stroke="#78350f" stroke-width="4" stroke-linecap="round"/>
+    <path d="M200,12 L228,20 L200,28 Z" fill="#dc2626" stroke="#7f1d1d" stroke-width="2.5"/>
+  </g>
+  <!-- pine forest at base -->
+  <g filter="url(#soft-shadow)">
+    <g fill="#166534" stroke="#14532d" stroke-width="3">
+      <path d="M52,252 L74,208 L96,252 Z"/>
+      <path d="M58,232 L74,196 L90,232 Z"/>
+      <path d="M104,252 L128,204 L152,252 Z"/>
+      <path d="M110,230 L128,192 L146,230 Z"/>
+      <path d="M250,252 L274,206 L298,252 Z"/>
+      <path d="M256,232 L274,194 L292,232 Z"/>
+      <path d="M306,252 L328,210 L350,252 Z"/>
+      <path d="M312,234 L328,200 L344,234 Z"/>
+    </g>
+    <g fill="#78350f">
+      <rect x="70" y="252" width="9" height="12"/>
+      <rect x="123" y="252" width="9" height="12"/>
+      <rect x="269" y="252" width="9" height="12"/>
+      <rect x="323" y="252" width="9" height="12"/>
+    </g>
+  </g>
+  <!-- ground -->
+  <rect x="0" y="262" width="400" height="38" fill="#4ade80"/>
+  <line x1="0" y1="262" x2="400" y2="262" stroke="#15803d" stroke-width="3.5"/>
+  <!-- hiker on trail -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="196" cy="216" r="10" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <path d="M188,212 Q188,204 196,203 Q204,204 204,212 Z" fill="#dc2626" stroke="#7f1d1d" stroke-width="2.5"/>
+    <path d="M196,226 L192,244" stroke="#16a34a" stroke-width="7" stroke-linecap="round"/>
+    <path d="M193,232 Q186,238 184,244" stroke="#1e293b" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <path d="M197,232 Q202,238 204,244" stroke="#1e293b" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <line x1="206" y1="222" x2="212" y2="246" stroke="#78350f" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M196,228 Q202,224 206,223" stroke="#fcd9b6" stroke-width="4" stroke-linecap="round" fill="none"/>
+  </g>
+  <!-- birds -->
+  <g stroke="#334155" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M100,40 Q108,32 116,40 Q124,32 132,40"/>
+    <path d="M300,30 Q306,24 312,30 Q318,24 324,30"/>
+  </g>
+</svg>

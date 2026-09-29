@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-room desc-room">
+  <title id="title-room">Room - Bedroom with bed, window and toys</title>
+  <desc id="desc-room">A cozy room seen from inside with walls and floor, a bed, a window with curtains, a wardrobe, a rug and a teddy bear on the floor.</desc>
+  <defs>
+    <linearGradient id="rm-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bfdbfe"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <!-- walls -->
+  <rect x="0" y="0" width="400" height="205" fill="url(#rm-wall)"/>
+  <!-- floor -->
+  <rect x="0" y="205" width="400" height="95" fill="#e8b478"/>
+  <line x1="0" y1="205" x2="400" y2="205" stroke="#a16207" stroke-width="3"/>
+  <g stroke="#d6a35c" stroke-width="2" opacity="0.7">
+    <line x1="0" y1="240" x2="400" y2="240"/>
+    <line x1="0" y1="275" x2="400" y2="275"/>
+  </g>
+  <!-- window with curtains -->
+  <g filter="url(#soft-shadow)">
+    <rect x="150" y="30" width="100" height="85" rx="5" fill="#7dd3fc" stroke="#78350f" stroke-width="4"/>
+    <line x1="200" y1="30" x2="200" y2="115" stroke="#78350f" stroke-width="3"/>
+    <line x1="150" y1="72" x2="250" y2="72" stroke="#78350f" stroke-width="3"/>
+    <circle cx="178" cy="52" r="10" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+    <!-- curtains -->
+    <path d="M142,25 Q158,70 146,120 L130,120 Q140,70 130,25 Z" fill="#f472b6" stroke="#be185d" stroke-width="3"/>
+    <path d="M258,25 Q242,70 254,120 L270,120 Q260,70 270,25 Z" fill="#f472b6" stroke="#be185d" stroke-width="3"/>
+    <rect x="124" y="18" width="152" height="10" rx="5" fill="#a16207" stroke="#78350f" stroke-width="2.5"/>
+  </g>
+  <!-- bed -->
+  <g filter="url(#soft-shadow)">
+    <rect x="18" y="120" width="30" height="95" rx="6" fill="#a16207" stroke="#78350f" stroke-width="3.5"/>
+    <rect x="30" y="150" width="118" height="60" rx="8" fill="#3b82f6" stroke="#1e3a8a" stroke-width="3.5"/>
+    <rect x="36" y="138" width="42" height="24" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="3"/>
+    <path d="M30,175 L148,175 L148,210 L30,210 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="3.5"/>
+    <g stroke="#fca5a5" stroke-width="2.5">
+      <line x1="48" y1="180" x2="48" y2="205"/>
+      <line x1="78" y1="180" x2="78" y2="205"/>
+      <line x1="108" y1="180" x2="108" y2="205"/>
+      <line x1="132" y1="180" x2="132" y2="205"/>
+    </g>
+    <rect x="138" y="205" width="12" height="18" fill="#a16207" stroke="#78350f" stroke-width="2.5"/>
+  </g>
+  <!-- wardrobe -->
+  <g filter="url(#soft-shadow)">
+    <rect x="295" y="55" width="88" height="160" rx="6" fill="#c98a3b" stroke="#78350f" stroke-width="4"/>
+    <line x1="339" y1="55" x2="339" y2="215" stroke="#78350f" stroke-width="3"/>
+    <circle cx="330" cy="135" r="4.5" fill="#451a03"/>
+    <circle cx="348" cy="135" r="4.5" fill="#451a03"/>
+    <rect x="303" y="68" width="28" height="40" rx="4" fill="#e8b478" stroke="#78350f" stroke-width="2.5"/>
+    <rect x="347" y="68" width="28" height="40" rx="4" fill="#e8b478" stroke="#78350f" stroke-width="2.5"/>
+  </g>
+  <!-- rug -->
+  <ellipse cx="215" cy="258" rx="85" ry="20" fill="#22c55e" stroke="#15803d" stroke-width="3"/>
+  <ellipse cx="215" cy="258" rx="58" ry="13" fill="none" stroke="#bbf7d0" stroke-width="3"/>
+  <!-- teddy bear on floor -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="215" cy="245" rx="17" ry="19" fill="#c98a3b" stroke="#78350f" stroke-width="2.5"/>
+    <circle cx="215" cy="218" r="13" fill="#c98a3b" stroke="#78350f" stroke-width="2.5"/>
+    <circle cx="205" cy="208" r="5.5" fill="#c98a3b" stroke="#78350f" stroke-width="2"/>
+    <circle cx="225" cy="208" r="5.5" fill="#c98a3b" stroke="#78350f" stroke-width="2"/>
+    <circle cx="211" cy="216" r="2" fill="#0f172a"/>
+    <circle cx="219" cy="216" r="2" fill="#0f172a"/>
+    <ellipse cx="215" cy="222" rx="4" ry="3" fill="#78350f"/>
+    <ellipse cx="215" cy="248" rx="7" ry="9" fill="#e8b478"/>
+    <path d="M199,238 Q191,246 195,254" fill="none" stroke="#c98a3b" stroke-width="6" stroke-linecap="round"/>
+    <path d="M231,238 Q239,246 235,254" fill="none" stroke="#c98a3b" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <!-- ball -->
+  <circle cx="290" cy="250" r="14" fill="#f59e0b" stroke="#b45309" stroke-width="3" filter="url(#soft-shadow)"/>
+  <path d="M276,250 Q290,242 304,250" fill="none" stroke="#fef3c7" stroke-width="3"/>
+</svg>

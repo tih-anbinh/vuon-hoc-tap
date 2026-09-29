@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-window desc-window">
+  <title id="title-window">Window - Open window with curtains and view</title>
+  <desc id="desc-window">A big window with yellow curtains and a flower pot on the sill, looking out at a sunny garden with a tree and a bird flying by.</desc>
+  <defs>
+    <linearGradient id="wd-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbcfe8"/>
+      <stop offset="100%" stop-color="#f9a8d4"/>
+    </linearGradient>
+    <linearGradient id="wd-view" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#bae6fd"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <!-- interior wall -->
+  <rect x="0" y="0" width="400" height="300" fill="url(#wd-wall)"/>
+  <!-- window (dominant) -->
+  <g filter="url(#soft-shadow)">
+    <!-- outer frame -->
+    <rect x="70" y="34" width="260" height="210" rx="10" fill="#92400e" stroke="#78350f" stroke-width="5"/>
+    <!-- view through glass -->
+    <rect x="86" y="50" width="228" height="178" rx="5" fill="url(#wd-view)" stroke="#78350f" stroke-width="3"/>
+    <!-- garden view: sun -->
+    <circle cx="126" cy="86" r="18" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+    <g stroke="#d97706" stroke-width="2.5" stroke-linecap="round">
+      <line x1="126" y1="60" x2="126" y2="52"/>
+      <line x1="148" y1="66" x2="154" y2="60"/>
+      <line x1="152" y1="86" x2="160" y2="86"/>
+    </g>
+    <!-- bird -->
+    <path d="M240,88 Q248,80 256,88 M256,88 Q264,80 272,88" fill="none" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
+    <!-- hills and tree -->
+    <path d="M86,200 Q150,160 220,196 Q270,168 314,194 L314,228 L86,228 Z" fill="#4ade80" stroke="#15803d" stroke-width="3"/>
+    <rect x="252" y="150" width="12" height="46" fill="#92400e" stroke="#451a03" stroke-width="2.5"/>
+    <circle cx="258" cy="130" r="30" fill="#22c55e" stroke="#15803d" stroke-width="3"/>
+    <circle cx="248" cy="122" r="5" fill="#ef4444"/>
+    <circle cx="268" cy="136" r="5" fill="#ef4444"/>
+    <!-- window cross bars -->
+    <line x1="200" y1="50" x2="200" y2="228" stroke="#92400e" stroke-width="7"/>
+    <line x1="86" y1="139" x2="314" y2="139" stroke="#92400e" stroke-width="7"/>
+    <!-- glass shine -->
+    <line x1="110" y1="120" x2="150" y2="66" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
+    <line x1="230" y1="210" x2="280" y2="150" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.5"/>
+  </g>
+  <!-- curtains -->
+  <g filter="url(#soft-shadow)">
+    <path d="M62,28 Q66,120 52,244 L96,244 Q88,140 96,50 Q98,32 84,28 Z" fill="#fde047" stroke="#a16207" stroke-width="4"/>
+    <path d="M338,28 Q334,120 348,244 L304,244 Q312,140 304,50 Q302,32 316,28 Z" fill="#fde047" stroke="#a16207" stroke-width="4"/>
+    <!-- curtain folds -->
+    <g stroke="#eab308" stroke-width="3" fill="none" opacity="0.8">
+      <path d="M72,40 Q74,140 66,236"/>
+      <path d="M84,40 Q86,140 80,238"/>
+      <path d="M328,40 Q326,140 334,236"/>
+      <path d="M316,40 Q314,140 320,238"/>
+    </g>
+    <!-- tiebacks -->
+    <path d="M52,150 Q72,160 94,152" fill="none" stroke="#ef4444" stroke-width="7" stroke-linecap="round"/>
+    <path d="M348,150 Q328,160 306,152" fill="none" stroke="#ef4444" stroke-width="7" stroke-linecap="round"/>
+    <!-- curtain rod -->
+    <rect x="42" y="20" width="316" height="10" rx="5" fill="#78350f" stroke="#451a03" stroke-width="2.5"/>
+    <circle cx="42" cy="25" r="8" fill="#f59e0b" stroke="#92400e" stroke-width="2.5"/>
+    <circle cx="358" cy="25" r="8" fill="#f59e0b" stroke="#92400e" stroke-width="2.5"/>
+  </g>
+  <!-- window sill with flower pot -->
+  <g filter="url(#soft-shadow)">
+    <rect x="58" y="244" width="284" height="16" rx="5" fill="#b45309" stroke="#78350f" stroke-width="3.5"/>
+    <!-- flower pot -->
+    <path d="M160,244 L200,244 L194,214 L166,214 Z" fill="#f97316" stroke="#7c2d12" stroke-width="3.5"/>
+    <g stroke="#15803d" stroke-width="3.5" fill="none">
+      <line x1="172" y1="214" x2="166" y2="192"/>
+      <line x1="180" y1="214" x2="180" y2="188"/>
+      <line x1="188" y1="214" x2="194" y2="192"/>
+    </g>
+    <circle cx="164" cy="188" r="8" fill="#f472b6" stroke="#be185d" stroke-width="2.5"/>
+    <circle cx="164" cy="188" r="3" fill="#fde047"/>
+    <circle cx="180" cy="182" r="8" fill="#a78bfa" stroke="#6d28d9" stroke-width="2.5"/>
+    <circle cx="180" cy="182" r="3" fill="#fde047"/>
+    <circle cx="196" cy="188" r="8" fill="#fb923c" stroke="#c2410c" stroke-width="2.5"/>
+    <circle cx="196" cy="188" r="3" fill="#fde047"/>
+  </g>
+</svg>

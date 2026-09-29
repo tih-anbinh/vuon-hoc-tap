@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-drawing desc-drawing">
+  <title id="title-drawing">Drawing - Paper with a crayon picture being drawn</title>
+  <desc id="desc-drawing">A sheet of paper with a colorful child's drawing of a house, sun and tree, with a hand holding a red crayon finishing the picture, crayons scattered nearby.</desc>
+  <defs>
+    <linearGradient id="dw-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fce7f3"/>
+      <stop offset="100%" stop-color="#fbcfe8"/>
+    </linearGradient>
+    <linearGradient id="dw-desk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c2955a"/>
+      <stop offset="100%" stop-color="#8a5a24"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#dw-desk)"/>
+  <g stroke="#5c3210" stroke-width="1.5" opacity="0.4">
+    <line x1="0" y1="60" x2="400" y2="60"/>
+    <line x1="0" y1="160" x2="400" y2="160"/>
+    <line x1="0" y1="260" x2="400" y2="260"/>
+  </g>
+  <!-- paper -->
+  <g filter="url(#soft-shadow)">
+    <rect x="75" y="40" width="230" height="210" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="3" transform="rotate(-3 190 145)"/>
+    <!-- child's drawing on paper -->
+    <g transform="rotate(-3 190 145)">
+      <!-- sun -->
+      <circle cx="130" cy="85" r="16" fill="none" stroke="#f59e0b" stroke-width="4"/>
+      <g stroke="#f59e0b" stroke-width="3" stroke-linecap="round">
+        <line x1="130" y1="61" x2="130" y2="54"/>
+        <line x1="130" y1="109" x2="130" y2="116"/>
+        <line x1="106" y1="85" x2="99" y2="85"/>
+        <line x1="154" y1="85" x2="161" y2="85"/>
+      </g>
+      <!-- house -->
+      <rect x="175" y="135" width="60" height="50" fill="none" stroke="#3b82f6" stroke-width="4"/>
+      <path d="M168,135 L205,102 L242,135" fill="none" stroke="#ef4444" stroke-width="4" stroke-linejoin="round"/>
+      <rect x="196" y="155" width="18" height="30" fill="none" stroke="#22c55e" stroke-width="3.5"/>
+      <!-- tree -->
+      <line x1="130" y1="185" x2="130" y2="160" stroke="#78350f" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="130" cy="148" r="16" fill="none" stroke="#22c55e" stroke-width="4"/>
+      <!-- squiggly grass -->
+      <path d="M95,200 Q105,193 115,200 Q125,193 135,200 Q145,193 155,200 Q165,193 175,200" fill="none" stroke="#22c55e" stroke-width="3.5" stroke-linecap="round"/>
+      <!-- partial rainbow being drawn -->
+      <path d="M235,225 Q262,195 290,225" fill="none" stroke="#ef4444" stroke-width="4" stroke-linecap="round"/>
+    </g>
+  </g>
+  <!-- hand holding crayon -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="330" cy="245" rx="34" ry="26" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5" transform="rotate(-25 330 245)"/>
+    <path d="M305,232 Q297,222 303,215 Q311,212 316,222" fill="#fcd9b6" stroke="#78350f" stroke-width="3"/>
+    <!-- crayon -->
+    <g transform="rotate(40 300 218)">
+      <rect x="278" y="211" width="46" height="14" rx="4" fill="#ef4444" stroke="#7f1d1d" stroke-width="2.5"/>
+      <path d="M278,213 L266,218 L278,223 Z" fill="#f87171" stroke="#7f1d1d" stroke-width="2.5"/>
+    </g>
+  </g>
+  <!-- scattered crayons -->
+  <g filter="url(#soft-shadow)">
+    <g transform="rotate(-30 50 220)">
+      <rect x="28" y="213" width="44" height="13" rx="4" fill="#3b82f6" stroke="#1e3a8a" stroke-width="2.5"/>
+      <path d="M28,215 L17,219 L28,224 Z" fill="#60a5fa" stroke="#1e3a8a" stroke-width="2.5"/>
+    </g>
+    <g transform="rotate(15 55 275)">
+      <rect x="33" y="268" width="44" height="13" rx="4" fill="#22c55e" stroke="#14532d" stroke-width="2.5"/>
+      <path d="M33,270 L22,274 L33,279 Z" fill="#4ade80" stroke="#14532d" stroke-width="2.5"/>
+    </g>
+    <g transform="rotate(-10 350 60)">
+      <rect x="328" y="53" width="44" height="13" rx="4" fill="#facc15" stroke="#a16207" stroke-width="2.5"/>
+      <path d="M328,55 L317,59 L328,64 Z" fill="#fde047" stroke="#a16207" stroke-width="2.5"/>
+    </g>
+  </g>
+</svg>

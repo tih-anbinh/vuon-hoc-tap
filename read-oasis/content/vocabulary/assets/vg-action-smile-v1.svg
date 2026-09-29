@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-smile desc-smile">
+  <title id="title-smile">Smile - Child with a big happy smile</title>
+  <desc id="desc-smile">A close-up of a happy child's face with a very big smile showing teeth, rosy cheeks and sparkles around, radiating happiness.</desc>
+  <defs>
+    <radialGradient id="sm-bg" cx="0.5" cy="0.4" r="0.8">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#sm-bg)"/>
+  <!-- radiating happiness rays -->
+  <g stroke="#fbbf24" stroke-width="5" stroke-linecap="round" opacity="0.8">
+    <line x1="55" y1="60" x2="80" y2="82"/>
+    <line x1="345" y1="60" x2="320" y2="82"/>
+    <line x1="35" y1="150" x2="68" y2="150"/>
+    <line x1="365" y1="150" x2="332" y2="150"/>
+    <line x1="55" y1="245" x2="82" y2="224"/>
+    <line x1="345" y1="245" x2="318" y2="224"/>
+  </g>
+  <!-- sparkles -->
+  <g fill="#f59e0b">
+    <path d="M78,110 L83,122 L95,127 L83,132 L78,144 L73,132 L61,127 L73,122 Z"/>
+    <path d="M322,110 L327,122 L339,127 L327,132 L322,144 L317,132 L305,127 L317,122 Z"/>
+    <path d="M95,215 L98,223 L106,226 L98,229 L95,237 L92,229 L84,226 L92,223 Z"/>
+    <path d="M308,215 L311,223 L319,226 L311,229 L308,237 L305,229 L297,226 L305,223 Z"/>
+  </g>
+  <!-- big smiling face (dominant) -->
+  <g filter="url(#soft-shadow)">
+    <!-- hair -->
+    <path d="M100,130 Q96,52 200,48 Q304,52 300,130 Q290,96 258,92 Q236,72 200,74 Q164,72 142,92 Q110,96 100,130 Z" fill="#78350f" stroke="#451a03" stroke-width="4"/>
+    <!-- face -->
+    <circle cx="200" cy="160" r="105" fill="#fcd9b6" stroke="#78350f" stroke-width="4.5"/>
+    <!-- hair fringe overlay -->
+    <path d="M98,140 Q104,84 156,74 Q140,96 148,108 Q170,80 210,82 Q192,98 202,110 Q228,84 262,92 Q252,104 258,116 Q286,104 302,140 Q296,110 278,92 Q244,60 200,60 Q156,60 122,92 Q104,110 98,140 Z" fill="#78350f" stroke="#451a03" stroke-width="3"/>
+    <!-- happy closed eyes (upturned arcs) -->
+    <path d="M138,142 Q152,126 166,142" fill="none" stroke="#0f172a" stroke-width="5.5" stroke-linecap="round"/>
+    <path d="M234,142 Q248,126 262,142" fill="none" stroke="#0f172a" stroke-width="5.5" stroke-linecap="round"/>
+    <!-- eyebrows -->
+    <path d="M136,120 Q152,110 168,118" fill="none" stroke="#451a03" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M232,118 Q248,110 264,120" fill="none" stroke="#451a03" stroke-width="4.5" stroke-linecap="round"/>
+    <!-- rosy cheeks -->
+    <ellipse cx="130" cy="180" rx="18" ry="12" fill="#fb7185" opacity="0.55"/>
+    <ellipse cx="270" cy="180" rx="18" ry="12" fill="#fb7185" opacity="0.55"/>
+    <!-- nose -->
+    <path d="M196,162 Q200,172 204,162" fill="none" stroke="#b45309" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- BIG smile with teeth -->
+    <path d="M136,192 Q200,258 264,192 Q246,236 200,238 Q154,236 136,192 Z" fill="#7f1d1d" stroke="#0f172a" stroke-width="4"/>
+    <path d="M144,196 Q200,214 256,196 Q200,222 144,196 Z" fill="#ffffff" stroke="#0f172a" stroke-width="2"/>
+    <!-- tongue hint -->
+    <path d="M176,228 Q200,240 224,228 Q212,238 200,238 Q188,238 176,228 Z" fill="#fb7185"/>
+  </g>
+</svg>

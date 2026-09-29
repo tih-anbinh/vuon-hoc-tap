@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-television-tv desc-television-tv">
+  <title id="title-television-tv">Television / TV - TV showing a cartoon</title>
+  <desc id="desc-television-tv">A big television on a wooden stand showing a colorful cartoon with a smiling sun and hills, with a remote control nearby.</desc>
+  <defs>
+    <linearGradient id="tv-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0e7ff"/>
+      <stop offset="100%" stop-color="#c7d2fe"/>
+    </linearGradient>
+    <linearGradient id="tv-screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#tv-bg)"/>
+  <!-- floor -->
+  <rect x="0" y="250" width="400" height="50" fill="#e8b478"/>
+  <line x1="0" y1="250" x2="400" y2="250" stroke="#a16207" stroke-width="3.5"/>
+  <ellipse cx="200" cy="262" rx="160" ry="13" fill="#0f172a" opacity="0.2"/>
+  <!-- TV stand -->
+  <g filter="url(#soft-shadow)">
+    <rect x="90" y="216" width="220" height="20" rx="6" fill="#b45309" stroke="#78350f" stroke-width="3.5"/>
+    <rect x="110" y="236" width="16" height="24" rx="4" fill="#92400e" stroke="#78350f" stroke-width="3"/>
+    <rect x="274" y="236" width="16" height="24" rx="4" fill="#92400e" stroke="#78350f" stroke-width="3"/>
+  </g>
+  <!-- television (dominant) -->
+  <g filter="url(#soft-shadow)">
+    <rect x="66" y="42" width="268" height="168" rx="14" fill="#1e293b" stroke="#0f172a" stroke-width="5"/>
+    <rect x="82" y="58" width="236" height="128" rx="6" fill="url(#tv-screen)" stroke="#0f172a" stroke-width="3"/>
+    <!-- cartoon on screen: smiling sun over hills -->
+    <circle cx="140" cy="98" r="24" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+    <g stroke="#d97706" stroke-width="3" stroke-linecap="round">
+      <line x1="140" y1="64" x2="140" y2="56"/>
+      <line x1="168" y1="74" x2="174" y2="68"/>
+      <line x1="112" y1="74" x2="106" y2="68"/>
+      <line x1="174" y1="98" x2="182" y2="98"/>
+      <line x1="106" y1="98" x2="98" y2="98"/>
+    </g>
+    <circle cx="132" cy="94" r="3" fill="#78350f"/>
+    <circle cx="148" cy="94" r="3" fill="#78350f"/>
+    <path d="M131,105 Q140,112 149,105" fill="none" stroke="#78350f" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- hills -->
+    <path d="M82,186 Q140,130 200,168 Q225,150 260,164 Q295,140 318,166 L318,186 Z" fill="#4ade80" stroke="#15803d" stroke-width="3"/>
+    <!-- little house on hill -->
+    <rect x="240" y="152" width="26" height="20" fill="#f87171" stroke="#7f1d1d" stroke-width="2.5"/>
+    <path d="M236,152 L253,138 L270,152 Z" fill="#b91c1c" stroke="#7f1d1d" stroke-width="2.5"/>
+    <!-- flying bird -->
+    <path d="M212,84 Q218,78 224,84 M224,84 Q230,78 236,84" fill="none" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- speaker strip -->
+    <g fill="#475569">
+      <circle cx="176" cy="198" r="3"/>
+      <circle cx="190" cy="198" r="3"/>
+      <circle cx="204" cy="198" r="3"/>
+      <circle cx="218" cy="198" r="3"/>
+    </g>
+    <!-- power light -->
+    <circle cx="308" cy="198" r="4" fill="#4ade80" stroke="#14532d" stroke-width="1.5"/>
+  </g>
+  <!-- remote control -->
+  <g filter="url(#soft-shadow)" transform="rotate(12 352 246)">
+    <rect x="336" y="216" width="32 " height="62" rx="8" fill="#334155" stroke="#0f172a" stroke-width="3"/>
+    <circle cx="352" cy="230" r="6" fill="#ef4444" stroke="#7f1d1d" stroke-width="2"/>
+    <g fill="#94a3b8">
+      <circle cx="345" cy="246" r="3.5"/>
+      <circle cx="359" cy="246" r="3.5"/>
+      <circle cx="345" cy="258" r="3.5"/>
+      <circle cx="359" cy="258" r="3.5"/>
+    </g>
+    <rect x="345" y="266" width="14" height="6" rx="3" fill="#94a3b8"/>
+  </g>
+  <!-- signal sparkle from remote -->
+  <g stroke="#f59e0b" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.85">
+    <path d="M330,214 Q324,206 326,196"/>
+    <path d="M320,220 Q310,208 312,194"/>
+  </g>
+</svg>

@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-blanket desc-blanket">
+  <title id="title-blanket">Blanket - Child sleeping under a cosy blanket</title>
+  <desc id="desc-blanket">A child sleeping happily in bed covered by a big warm orange patchwork blanket, with a moon and stars in the window showing night time.</desc>
+  <defs>
+    <linearGradient id="bk-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#312e81"/>
+      <stop offset="100%" stop-color="#4338ca"/>
+    </linearGradient>
+    <linearGradient id="bk-blanket" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.32"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#bk-bg)"/>
+  <!-- window with night sky -->
+  <g>
+    <rect x="282" y="30" width="88" height="78" rx="6" fill="#1e1b4b" stroke="#a5b4fc" stroke-width="4"/>
+    <line x1="326" y1="30" x2="326" y2="108" stroke="#a5b4fc" stroke-width="3"/>
+    <line x1="282" y1="69" x2="370" y2="69" stroke="#a5b4fc" stroke-width="3"/>
+    <path d="M310,52 A13,13 0 1,1 300,40 A10,10 0 0,0 310,52 Z" fill="#fde047"/>
+    <circle cx="348" cy="48" r="2.5" fill="#fefce8"/>
+    <circle cx="340" cy="90" r="2.5" fill="#fefce8"/>
+    <circle cx="300" cy="92" r="2" fill="#fefce8"/>
+  </g>
+  <!-- floor -->
+  <rect x="0" y="252" width="400" height="48" fill="#7c3aed" opacity="0.4"/>
+  <ellipse cx="200" cy="262" rx="160" ry="12" fill="#0f172a" opacity="0.25"/>
+  <!-- bed -->
+  <g filter="url(#soft-shadow)">
+    <!-- headboard -->
+    <path d="M36,120 Q36,92 66,92 Q96,92 96,120 L96,236 L36,236 Z" fill="#92400e" stroke="#451a03" stroke-width="4"/>
+    <!-- bed base -->
+    <rect x="36" y="200" width="330" height="40" rx="8" fill="#b45309" stroke="#451a03" stroke-width="4"/>
+    <!-- legs -->
+    <rect x="44" y="240" width="14" height="20" fill="#78350f" stroke="#451a03" stroke-width="3"/>
+    <rect x="342" y="240" width="14" height="20" fill="#78350f" stroke="#451a03" stroke-width="3"/>
+    <!-- mattress -->
+    <rect x="60" y="176" width="306" height="30" rx="10" fill="#f1f5f9" stroke="#64748b" stroke-width="3.5"/>
+    <!-- pillow -->
+    <ellipse cx="112" cy="164" rx="42" ry="20" fill="#e0f2fe" stroke="#64748b" stroke-width="3.5"/>
+    <!-- child's head on pillow -->
+    <circle cx="118" cy="150" r="24" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M96,142 Q96,122 118,120 Q140,122 140,142 L134,146 Q118,132 102,146 Z" fill="#451a03" stroke="#1c1917" stroke-width="2.5"/>
+    <!-- sleeping eyes -->
+    <path d="M108,150 Q112,154 116,150" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M122,150 Q126,154 130,150" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M112,160 Q118,164 124,160" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <ellipse cx="104" cy="156" rx="5" ry="3.5" fill="#fb7185" opacity="0.55"/>
+    <!-- THE BLANKET (hero element) covering body -->
+    <path d="M138,152 Q160,132 200,134 Q300,136 356,160 Q368,168 366,182 L366,198 Q290,182 200,182 Q166,182 142,190 Q134,172 138,152 Z"
+          fill="url(#bk-blanket)" stroke="#7c2d12" stroke-width="4.5"/>
+    <!-- blanket draping over mattress edge -->
+    <path d="M142,188 Q140,206 146,214 L358,214 Q366,204 366,192 Q290,178 200,180 Q164,180 142,188 Z"
+          fill="#fb923c" stroke="#7c2d12" stroke-width="4"/>
+    <!-- patchwork pattern -->
+    <g stroke="#7c2d12" stroke-width="2.5" opacity="0.8">
+      <line x1="200" y1="136" x2="196" y2="212"/>
+      <line x1="258" y1="140" x2="256" y2="212"/>
+      <line x1="314" y1="150" x2="314" y2="212"/>
+      <path d="M146,168 Q250,152 364,176" fill="none"/>
+    </g>
+    <g fill="#fde047" opacity="0.9">
+      <circle cx="172" cy="158" r="6"/>
+      <circle cx="228" cy="152" r="6"/>
+      <circle cx="286" cy="158" r="6"/>
+      <circle cx="338" cy="170" r="6"/>
+      <circle cx="226" cy="196" r="6"/>
+      <circle cx="336" cy="198" r="6"/>
+    </g>
+    <!-- blanket fold line at top -->
+    <path d="M140,152 Q200,138 356,162" fill="none" stroke="#fdba74" stroke-width="5" stroke-linecap="round"/>
+    <!-- hand holding blanket edge -->
+    <circle cx="152" cy="152" r="8" fill="#fcd9b6" stroke="#78350f" stroke-width="3"/>
+  </g>
+  <!-- sleep Zzz as shapes (curved swoosh marks, no text) -->
+  <g stroke="#c7d2fe" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.9">
+    <path d="M170,96 L188,96 L170,112 L188,112"/>
+    <path d="M204,72 L216,72 L204,84 L216,84"/>
+  </g>
+</svg>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-kangaroo desc-kangaroo">
+  <title id="title-kangaroo">Kangaroo - A kangaroo with a joey in its pouch</title>
+  <desc id="desc-kangaroo">A big brown kangaroo standing on strong back legs with a long tail, carrying a baby joey peeking out of its tummy pouch, in a sunny grassland.</desc>
+  <defs>
+    <linearGradient id="kg-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#kg-bg)"/>
+  <circle cx="60" cy="52" r="24" fill="#fbbf24" stroke="#d97706" stroke-width="3.5"/>
+  <ellipse cx="320" cy="48" rx="34" ry="12" fill="#ffffff" opacity="0.9"/>
+  <!-- grassland -->
+  <rect x="0" y="232" width="400" height="68" fill="#a3e635"/>
+  <line x1="0" y1="232" x2="400" y2="232" stroke="#4d7c0f" stroke-width="3.5"/>
+  <g stroke="#4d7c0f" stroke-width="3" stroke-linecap="round" fill="none">
+    <path d="M40,258 Q42,246 40,240 M48,258 Q52,248 54,242"/>
+    <path d="M348,262 Q350,250 348,244 M356,262 Q360,252 362,246"/>
+  </g>
+  <ellipse cx="210" cy="262" rx="130" ry="13" fill="#0f172a" opacity="0.15"/>
+  <!-- KANGAROO (hero element) -->
+  <g filter="url(#soft-shadow)">
+    <!-- tail -->
+    <path d="M258,220 Q322,236 350,258 Q358,268 346,270 Q300,254 254,244 Z"
+          fill="#c2712a" stroke="#78350f" stroke-width="4"/>
+    <!-- back leg -->
+    <path d="M248,190 Q276,196 274,226 Q272,248 244,250 L200,250 Q212,224 226,206 Z"
+          fill="#d97706" stroke="#78350f" stroke-width="4"/>
+    <path d="M232,250 L200,250 L192,258 Q190,264 200,264 L244,264 L244,254 Z"
+          fill="#c2712a" stroke="#78350f" stroke-width="3.5"/>
+    <!-- body -->
+    <path d="M186,110 Q244,116 256,170 Q264,214 236,238 Q206,256 176,240 Q150,224 152,182 Q154,136 186,110 Z"
+          fill="#d97706" stroke="#78350f" stroke-width="4.5"/>
+    <!-- pouch -->
+    <path d="M164,182 Q160,232 196,240 Q226,244 232,214 Q210,224 188,216 Q168,208 164,182 Z"
+          fill="#f59e0b" stroke="#78350f" stroke-width="4"/>
+    <!-- joey in pouch -->
+    <circle cx="196" cy="196" r="17" fill="#fbbf24" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M184,186 Q178,172 186,168 Q192,176 190,184 Z" fill="#fbbf24" stroke="#78350f" stroke-width="2.5"/>
+    <path d="M206,184 Q210,170 202,167 Q197,175 200,183 Z" fill="#fbbf24" stroke="#78350f" stroke-width="2.5"/>
+    <circle cx="191" cy="194" r="2.5" fill="#0f172a"/>
+    <circle cx="201" cy="194" r="2.5" fill="#0f172a"/>
+    <ellipse cx="196" cy="201" rx="3" ry="2.2" fill="#78350f"/>
+    <!-- neck + head -->
+    <path d="M186,112 Q176,84 190,62 L216,70 Q206,94 212,118 Z" fill="#d97706" stroke="#78350f" stroke-width="4"/>
+    <ellipse cx="196" cy="56" rx="26" ry="22" fill="#d97706" stroke="#78350f" stroke-width="4"/>
+    <!-- snout -->
+    <path d="M172,58 Q158,60 154,68 Q160,76 174,72 Z" fill="#c2712a" stroke="#78350f" stroke-width="3.5"/>
+    <ellipse cx="157" cy="66" rx="4" ry="3.2" fill="#0f172a"/>
+    <!-- ears -->
+    <path d="M188,38 Q182,10 196,6 Q206,20 202,40 Z" fill="#d97706" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M210,40 Q212,12 226,10 Q232,26 220,44 Z" fill="#d97706" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M192,32 Q190,18 196,14" fill="none" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+    <path d="M215,34 Q217,22 222,18" fill="none" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+    <!-- eye -->
+    <circle cx="184" cy="52" r="4.5" fill="#0f172a"/>
+    <circle cx="186" cy="50" r="1.5" fill="#ffffff"/>
+    <!-- small front arms -->
+    <path d="M188,130 Q172,142 174,156" fill="none" stroke="#c2712a" stroke-width="9" stroke-linecap="round"/>
+    <path d="M206,132 Q196,146 200,158" fill="none" stroke="#c2712a" stroke-width="9" stroke-linecap="round"/>
+    <!-- front foot visible -->
+    <path d="M160,244 L136,252 Q130,258 140,262 L172,262 L170,248 Z" fill="#c2712a" stroke="#78350f" stroke-width="3.5"/>
+  </g>
+  <!-- bushes -->
+  <ellipse cx="356" cy="222" rx="34" ry="18" fill="#65a30d" stroke="#3f6212" stroke-width="3.5"/>
+  <ellipse cx="34" cy="226" rx="30" ry="16" fill="#84cc16" stroke="#3f6212" stroke-width="3.5"/>
+</svg>

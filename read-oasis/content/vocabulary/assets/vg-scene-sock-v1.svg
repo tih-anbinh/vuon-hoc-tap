@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-sock desc-sock">
+  <title id="title-sock">Sock - Striped sock on a clothesline</title>
+  <desc id="desc-sock">A big red and white striped sock hanging on a clothesline with a wooden peg, next to a smaller matching blue sock.</desc>
+  <defs>
+    <linearGradient id="so-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="so-red" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f87171"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#so-bg)"/>
+  <circle cx="55" cy="50" r="22" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <ellipse cx="330" cy="42" rx="34" ry="12" fill="#ffffff" opacity="0.95"/>
+  <!-- grass -->
+  <rect x="0" y="255" width="400" height="45" fill="#4ade80"/>
+  <line x1="0" y1="255" x2="400" y2="255" stroke="#15803d" stroke-width="3.5"/>
+  <!-- clothesline -->
+  <path d="M0,72 Q200,92 400,68" fill="none" stroke="#78350f" stroke-width="4"/>
+  <!-- big striped sock (dominant) -->
+  <g filter="url(#soft-shadow)">
+    <!-- peg -->
+    <rect x="150" y="66" width="14" height="30" rx="4" fill="#d6a05c" stroke="#92400e" stroke-width="2.5"/>
+    <!-- sock body: cuff, leg, curved heel-toe foot -->
+    <path d="M118,96 L196,96 L196,196 Q196,216 218,228 Q252,246 244,270 Q236,290 206,288 Q178,286 158,268 Q118,236 118,180 Z" fill="url(#so-red)" stroke="#7f1d1d" stroke-width="4.5"/>
+    <!-- cuff -->
+    <rect x="112" y="86" width="90" height="30" rx="8" fill="#ffffff" stroke="#7f1d1d" stroke-width="4"/>
+    <line x1="112" y1="101" x2="202" y2="101" stroke="#cbd5e1" stroke-width="2.5"/>
+    <!-- white stripes -->
+    <path d="M118,130 L196,130 L196,148 L118,148 Z" fill="#ffffff" stroke="#7f1d1d" stroke-width="2.5"/>
+    <path d="M118,168 L196,168 L196,186 Q188,186 118,182 Z" fill="#ffffff" stroke="#7f1d1d" stroke-width="2.5"/>
+    <!-- toe -->
+    <path d="M244,270 Q236,290 206,288 Q192,287 180,280 Q200,262 226,258 Q244,260 244,270 Z" fill="#ffffff" stroke="#7f1d1d" stroke-width="3.5"/>
+    <!-- heel -->
+    <path d="M196,196 Q196,216 218,228 Q206,232 196,226 Q188,214 190,198 Z" fill="#ffffff" stroke="#7f1d1d" stroke-width="3" opacity="0.9"/>
+  </g>
+  <!-- small blue sock -->
+  <g filter="url(#soft-shadow)">
+    <rect x="290" y="60" width="11" height="24" rx="4" fill="#d6a05c" stroke="#92400e" stroke-width="2.5"/>
+    <path d="M272,84 L324,84 L324,150 Q324,164 340,172 Q362,184 356,200 Q350,214 328,212 Q308,210 294,196 Q272,176 272,140 Z" fill="#3b82f6" stroke="#1e3a8a" stroke-width="4"/>
+    <rect x="268" y="76" width="60" height="22" rx="7" fill="#ffffff" stroke="#1e3a8a" stroke-width="3.5"/>
+    <path d="M272,110 L324,110 L324,124 L272,124 Z" fill="#fde047" stroke="#1e3a8a" stroke-width="2"/>
+    <path d="M356,200 Q350,214 328,212 Q318,211 310,206 Q324,192 342,190 Q354,192 356,200 Z" fill="#fde047" stroke="#1e3a8a" stroke-width="3"/>
+  </g>
+  <!-- flowers on grass -->
+  <g>
+    <circle cx="60" cy="275" r="7" fill="#f472b6" stroke="#be185d" stroke-width="2"/>
+    <circle cx="60" cy="275" r="2.5" fill="#fde047"/>
+    <circle cx="345" cy="278" r="7" fill="#a78bfa" stroke="#6d28d9" stroke-width="2"/>
+    <circle cx="345" cy="278" r="2.5" fill="#fde047"/>
+  </g>
+</svg>

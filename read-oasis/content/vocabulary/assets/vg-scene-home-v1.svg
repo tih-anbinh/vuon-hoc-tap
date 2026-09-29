@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-home desc-home">
+  <title id="title-home">Home - Cozy house with heart and family warmth</title>
+  <desc id="desc-home">A warm cozy house with smoke curling from the chimney, glowing windows, a heart above the door, and a winding path leading to it.</desc>
+  <defs>
+    <linearGradient id="hm-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fed7aa"/>
+      <stop offset="100%" stop-color="#fef3c7"/>
+    </linearGradient>
+    <linearGradient id="hm-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fcd9b6"/>
+    </linearGradient>
+    <linearGradient id="hm-roof" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f87171"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#hm-bg)"/>
+  <circle cx="55" cy="50" r="26" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <rect x="0" y="235" width="400" height="65" fill="#65a30d"/>
+  <path d="M0,235 Q100,228 200,235 T400,235 L400,245 L0,245 Z" fill="#86efac" opacity="0.6"/>
+  <!-- path to door -->
+  <path d="M185,300 Q175,275 200,262 Q222,252 205,238 L225,238 Q245,255 220,270 Q200,282 215,300 Z" fill="#d6d3d1" stroke="#a8a29e" stroke-width="2.5"/>
+  <ellipse cx="215" cy="240" rx="130" ry="8" fill="#0f172a" opacity="0.2"/>
+  <!-- house -->
+  <g filter="url(#soft-shadow)">
+    <!-- wall -->
+    <rect x="120" y="130" width="185" height="108" rx="4" fill="url(#hm-wall)" stroke="#78350f" stroke-width="4"/>
+    <!-- roof -->
+    <path d="M105,132 L212,55 L320,132 Z" fill="url(#hm-roof)" stroke="#7f1d1d" stroke-width="4" stroke-linejoin="round"/>
+    <!-- chimney -->
+    <rect x="265" y="72" width="22" height="42" fill="#a16207" stroke="#78350f" stroke-width="3"/>
+    <!-- smoke -->
+    <g fill="#e7e5e4" opacity="0.85">
+      <circle cx="278" cy="58" r="8"/>
+      <circle cx="288" cy="42" r="10"/>
+      <circle cx="300" cy="24" r="12"/>
+    </g>
+    <!-- glowing windows -->
+    <rect x="138" y="150" width="38" height="36" rx="4" fill="#fbbf24" stroke="#78350f" stroke-width="3"/>
+    <line x1="157" y1="150" x2="157" y2="186" stroke="#78350f" stroke-width="2.5"/>
+    <line x1="138" y1="168" x2="176" y2="168" stroke="#78350f" stroke-width="2.5"/>
+    <rect x="250" y="150" width="38" height="36" rx="4" fill="#fbbf24" stroke="#78350f" stroke-width="3"/>
+    <line x1="269" y1="150" x2="269" y2="186" stroke="#78350f" stroke-width="2.5"/>
+    <line x1="250" y1="168" x2="288" y2="168" stroke="#78350f" stroke-width="2.5"/>
+    <!-- door -->
+    <path d="M195,238 L195,178 Q195,164 212,164 Q229,164 229,178 L229,238 Z" fill="#78350f" stroke="#451a03" stroke-width="3.5"/>
+    <circle cx="222" cy="205" r="4" fill="#facc15" stroke="#451a03" stroke-width="1.8"/>
+    <!-- heart above door -->
+    <path d="M212,120 C208,112 196,112 196,123 C196,131 212,141 212,141 C212,141 228,131 228,123 C228,112 216,112 212,120 Z" fill="#ec4899" stroke="#9d174d" stroke-width="2.5"/>
+  </g>
+  <!-- bushes -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="105" cy="230" r="18" fill="#22c55e" stroke="#15803d" stroke-width="3"/>
+    <circle cx="330" cy="232" r="20" fill="#22c55e" stroke="#15803d" stroke-width="3"/>
+    <circle cx="352" cy="238" r="14" fill="#4ade80" stroke="#15803d" stroke-width="2.5"/>
+  </g>
+  <!-- flowers -->
+  <g>
+    <circle cx="90" cy="262" r="7" fill="#f472b6" stroke="#be185d" stroke-width="2"/>
+    <circle cx="320" cy="268" r="7" fill="#facc15" stroke="#b45309" stroke-width="2"/>
+  </g>
+</svg>

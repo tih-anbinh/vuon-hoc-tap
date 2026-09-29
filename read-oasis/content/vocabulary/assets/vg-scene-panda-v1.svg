@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-panda desc-panda">
+  <title id="title-panda">Panda - A black and white panda eating bamboo</title>
+  <desc id="desc-panda">A cute round black and white panda bear sitting down and happily munching a green bamboo stick, with bamboo plants growing behind.</desc>
+  <defs>
+    <linearGradient id="pd-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d1fae5"/>
+      <stop offset="100%" stop-color="#a7f3d0"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#pd-bg)"/>
+  <circle cx="60" cy="50" r="20" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <!-- ground -->
+  <rect x="0" y="238" width="400" height="62" fill="#4ade80"/>
+  <line x1="0" y1="238" x2="400" y2="238" stroke="#15803d" stroke-width="3.5"/>
+  <!-- bamboo grove behind -->
+  <g filter="url(#soft-shadow)">
+    <g stroke="#16a34a" stroke-width="12" stroke-linecap="round">
+      <line x1="60" y1="238" x2="60" y2="60"/>
+      <line x1="330" y1="238" x2="330" y2="48"/>
+      <line x1="368" y1="238" x2="368" y2="90"/>
+    </g>
+    <g stroke="#14532d" stroke-width="3.5">
+      <line x1="52" y1="110" x2="68" y2="110"/>
+      <line x1="52" y1="170" x2="68" y2="170"/>
+      <line x1="322" y1="100" x2="338" y2="100"/>
+      <line x1="322" y1="164" x2="338" y2="164"/>
+      <line x1="360" y1="140" x2="376" y2="140"/>
+      <line x1="360" y1="196" x2="376" y2="196"/>
+    </g>
+    <!-- bamboo leaves -->
+    <g fill="#22c55e" stroke="#14532d" stroke-width="2.5">
+      <path d="M60,60 Q42,44 24,42 Q40,58 56,64 Z"/>
+      <path d="M60,60 Q78,44 96,42 Q80,58 64,64 Z"/>
+      <path d="M330,48 Q312,32 294,30 Q310,46 326,52 Z"/>
+      <path d="M330,48 Q348,32 366,30 Q350,46 334,52 Z"/>
+      <path d="M368,90 Q384,76 398,74 Q386,90 372,96 Z"/>
+    </g>
+  </g>
+  <ellipse cx="200" cy="262" rx="130" ry="14" fill="#0f172a" opacity="0.15"/>
+  <!-- PANDA (hero element) -->
+  <g filter="url(#soft-shadow)">
+    <!-- round body -->
+    <ellipse cx="200" cy="204" rx="76" ry="60" fill="#f8fafc" stroke="#1e293b" stroke-width="4.5"/>
+    <!-- black legs sitting -->
+    <ellipse cx="144" cy="238" rx="26" ry="20" fill="#1e293b" stroke="#0f172a" stroke-width="3.5"/>
+    <ellipse cx="256" cy="238" rx="26" ry="20" fill="#1e293b" stroke="#0f172a" stroke-width="3.5"/>
+    <ellipse cx="144" cy="242" rx="12" ry="8" fill="#475569"/>
+    <ellipse cx="256" cy="242" rx="12" ry="8" fill="#475569"/>
+    <!-- black arms; right arm holds bamboo -->
+    <path d="M136,182 Q112,192 110,214 Q112,228 128,226 Q140,218 148,200 Z" fill="#1e293b" stroke="#0f172a" stroke-width="3.5"/>
+    <path d="M262,180 Q284,168 280,144 Q276,132 262,138 Q250,148 248,168 Z" fill="#1e293b" stroke="#0f172a" stroke-width="3.5"/>
+    <!-- head -->
+    <circle cx="200" cy="114" r="62" fill="#f8fafc" stroke="#1e293b" stroke-width="4.5"/>
+    <!-- black ears -->
+    <circle cx="152" cy="68" r="20" fill="#1e293b" stroke="#0f172a" stroke-width="3.5"/>
+    <circle cx="248" cy="68" r="20" fill="#1e293b" stroke="#0f172a" stroke-width="3.5"/>
+    <!-- black eye patches -->
+    <ellipse cx="176" cy="112" rx="17" ry="21" fill="#1e293b" transform="rotate(-14 176 112)"/>
+    <ellipse cx="224" cy="112" rx="17" ry="21" fill="#1e293b" transform="rotate(14 224 112)"/>
+    <!-- eyes -->
+    <circle cx="178" cy="110" r="6.5" fill="#ffffff"/>
+    <circle cx="222" cy="110" r="6.5" fill="#ffffff"/>
+    <circle cx="179" cy="111" r="3.5" fill="#0f172a"/>
+    <circle cx="221" cy="111" r="3.5" fill="#0f172a"/>
+    <!-- nose + mouth munching -->
+    <ellipse cx="200" cy="136" rx="9" ry="6.5" fill="#0f172a"/>
+    <path d="M200,142 Q194,152 184,150 M200,142 Q206,152 216,150" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="163" cy="132" rx="8" ry="5.5" fill="#fb7185" opacity="0.55"/>
+    <ellipse cx="237" cy="132" rx="8" ry="5.5" fill="#fb7185" opacity="0.55"/>
+    <!-- bamboo stick held to mouth -->
+    <g transform="rotate(32 258 128)">
+      <rect x="250" y="70" width="13" height="120" rx="6" fill="#22c55e" stroke="#14532d" stroke-width="3.5"/>
+      <line x1="250" y1="102" x2="263" y2="102" stroke="#14532d" stroke-width="3"/>
+      <line x1="250" y1="140" x2="263" y2="140" stroke="#14532d" stroke-width="3"/>
+      <path d="M256,70 Q244,54 228,50 Q242,66 254,74 Z" fill="#4ade80" stroke="#14532d" stroke-width="2.5"/>
+      <path d="M258,70 Q270,54 286,50 Q272,66 260,74 Z" fill="#4ade80" stroke="#14532d" stroke-width="2.5"/>
+    </g>
+    <!-- tummy patch -->
+    <ellipse cx="196" cy="208" rx="38" ry="30" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+  </g>
+  <!-- munch crumbs / leaf bits -->
+  <g fill="#22c55e" stroke="#14532d" stroke-width="1.8">
+    <ellipse cx="268" cy="96" rx="5" ry="3" transform="rotate(-20 268 96)"/>
+    <ellipse cx="282" cy="112" rx="4" ry="2.5" transform="rotate(30 282 112)"/>
+  </g>
+  <!-- heart -->
+  <g fill="#f472b6" stroke="#be185d" stroke-width="2">
+    <path d="M108,58 C108,52 116,49 120,54 C124,49 132,52 132,58 C132,64 120,72 120,72 C120,72 108,64 108,58 Z"/>
+  </g>
+</svg>

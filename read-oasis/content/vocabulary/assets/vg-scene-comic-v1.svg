@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-comic desc-comic">
+  <title id="title-comic">Comic - Open comic with picture panels</title>
+  <desc id="desc-comic">An open comic spread showing colourful picture panels with a superhero flying, action stars and speech bubbles, read by no one so the panels are the focus.</desc>
+  <defs>
+    <linearGradient id="cm-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c7d2fe"/>
+      <stop offset="100%" stop-color="#a5b4fc"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#cm-bg)"/>
+  <ellipse cx="200" cy="266" rx="160" ry="14" fill="#0f172a" opacity="0.2"/>
+  <!-- action stars around -->
+  <g fill="#fde047" stroke="#a16207" stroke-width="2.5">
+    <path d="M52,60 L58,76 L74,78 L62,89 L66,105 L52,96 L38,105 L42,89 L30,78 L46,76 Z"/>
+    <path d="M352,52 L357,64 L369,66 L360,74 L363,86 L352,79 L341,86 L344,74 L335,66 L347,64 Z"/>
+  </g>
+  <!-- THE OPEN COMIC (hero element) -->
+  <g filter="url(#soft-shadow)">
+    <!-- pages -->
+    <path d="M42,88 Q120,66 200,84 Q280,66 358,88 L358,248 Q280,228 200,246 Q120,228 42,248 Z"
+          fill="#fefce8" stroke="#78350f" stroke-width="5"/>
+    <!-- centre fold -->
+    <line x1="200" y1="84" x2="200" y2="246" stroke="#a8a29e" stroke-width="3.5"/>
+    <!-- LEFT PAGE: two panels -->
+    <!-- panel 1: superhero flying -->
+    <rect x="58" y="100" width="128" height="66" rx="4" fill="#7dd3fc" stroke="#0f172a" stroke-width="3.5"/>
+    <g>
+      <ellipse cx="112" cy="134" rx="20" ry="9" fill="#ef4444" stroke="#7f1d1d" stroke-width="2.5"/>
+      <circle cx="134" cy="130" r="8" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+      <path d="M92,132 Q76,124 70,112 L82,110 Q92,120 98,126 Z" fill="#f97316" stroke="#7c2d12" stroke-width="2.5"/>
+      <g stroke="#ffffff" stroke-width="2.5" stroke-linecap="round">
+        <line x1="66" y1="142" x2="84" y2="142"/>
+        <line x1="60" y1="152" x2="82" y2="152"/>
+      </g>
+      <circle cx="166" cy="112" r="6" fill="#fde047" stroke="#a16207" stroke-width="2"/>
+    </g>
+    <!-- panel 2: explosion star burst -->
+    <rect x="58" y="176" width="128" height="58" rx="4" fill="#fbcfe8" stroke="#0f172a" stroke-width="3.5"/>
+    <path d="M122,182 L130,196 L146,192 L138,206 L152,214 L136,216 L138,232 L124,222 L112,232 L114,216 L98,214 L112,206 L104,192 L120,196 Z"
+          fill="#f97316" stroke="#7c2d12" stroke-width="3"/>
+    <circle cx="122" cy="206" r="8" fill="#fde047" stroke="#a16207" stroke-width="2.5"/>
+    <!-- RIGHT PAGE: two panels -->
+    <!-- panel 3: character with speech bubble -->
+    <rect x="214" y="100" width="128" height="66" rx="4" fill="#bbf7d0" stroke="#0f172a" stroke-width="3.5"/>
+    <circle cx="244" cy="140" r="13" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <path d="M236,134 Q236,126 244,126 Q252,126 252,134 Z" fill="#451a03"/>
+    <circle cx="240" cy="139" r="1.8" fill="#0f172a"/>
+    <circle cx="248" cy="139" r="1.8" fill="#0f172a"/>
+    <path d="M240,146 Q244,149 248,146" fill="none" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/>
+    <!-- speech bubble with dots -->
+    <path d="M264,108 Q264,102 272,102 L322,102 Q330,102 330,110 L330,128 Q330,136 322,136 L282,136 L268,148 L272,136 Q264,134 264,126 Z"
+          fill="#ffffff" stroke="#0f172a" stroke-width="3"/>
+    <g fill="#0f172a">
+      <circle cx="286" cy="119" r="3.5"/>
+      <circle cx="298" cy="119" r="3.5"/>
+      <circle cx="310" cy="119" r="3.5"/>
+    </g>
+    <!-- panel 4: zigzag action -->
+    <rect x="214" y="176" width="128" height="58" rx="4" fill="#fde68a" stroke="#0f172a" stroke-width="3.5"/>
+    <path d="M226,222 L246,196 L258,212 L276,188 L288,206 L306,186 L322,214" fill="none" stroke="#dc2626" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="322" cy="214" r="6" fill="#dc2626"/>
+  </g>
+</svg>

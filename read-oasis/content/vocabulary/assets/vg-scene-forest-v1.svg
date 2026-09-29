@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-forest desc-forest">
+  <title id="title-forest">Forest - Many tall trees growing together</title>
+  <desc id="desc-forest">A green forest of many tall trees with a winding path through the middle, mushrooms, a squirrel and a deer peeking between the trunks.</desc>
+  <defs>
+    <linearGradient id="fo-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#d9f99d"/>
+    </linearGradient>
+    <linearGradient id="fo-leaf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#fo-sky)"/>
+  <!-- forest floor -->
+  <rect x="0" y="230" width="400" height="70" fill="#65a30d"/>
+  <line x1="0" y1="230" x2="400" y2="230" stroke="#3f6212" stroke-width="3.5"/>
+  <!-- winding path -->
+  <path d="M175,300 Q185,270 200,252 Q214,236 208,230 L232,230 Q222,244 230,262 Q240,282 235,300 Z" fill="#fbbf24" stroke="#a16207" stroke-width="3"/>
+  <!-- back row trees (smaller, lighter) -->
+  <g opacity="0.85">
+    <rect x="66" y="120" width="12" height="60" fill="#92400e"/>
+    <path d="M40,130 L72,58 L104,130 Z" fill="#86efac" stroke="#16a34a" stroke-width="3"/>
+    <rect x="322" y="116" width="12" height="60" fill="#92400e"/>
+    <path d="M296,126 L328,54 L360,126 Z" fill="#86efac" stroke="#16a34a" stroke-width="3"/>
+    <rect x="196" y="110" width="12" height="56" fill="#92400e"/>
+    <path d="M172,120 L202,52 L232,120 Z" fill="#86efac" stroke="#16a34a" stroke-width="3"/>
+  </g>
+  <!-- front row trees (big, dominant) -->
+  <g filter="url(#soft-shadow)">
+    <!-- tree 1 -->
+    <rect x="34" y="160" width="20" height="76" rx="4" fill="#78350f" stroke="#451a03" stroke-width="3.5"/>
+    <path d="M2,176 L44,84 L86,176 Z" fill="url(#fo-leaf)" stroke="#14532d" stroke-width="4"/>
+    <path d="M10,130 L44,60 L78,130 Z" fill="url(#fo-leaf)" stroke="#14532d" stroke-width="4"/>
+    <!-- tree 2 -->
+    <rect x="126" y="150" width="22" height="86" rx="4" fill="#78350f" stroke="#451a03" stroke-width="3.5"/>
+    <path d="M92,168 L137,66 L182,168 Z" fill="url(#fo-leaf)" stroke="#14532d" stroke-width="4"/>
+    <path d="M100,116 L137,42 L174,116 Z" fill="url(#fo-leaf)" stroke="#14532d" stroke-width="4"/>
+    <!-- tree 3 -->
+    <rect x="252" y="150" width="22" height="86" rx="4" fill="#78350f" stroke="#451a03" stroke-width="3.5"/>
+    <path d="M218,168 L263,66 L308,168 Z" fill="url(#fo-leaf)" stroke="#14532d" stroke-width="4"/>
+    <path d="M226,116 L263,42 L300,116 Z" fill="url(#fo-leaf)" stroke="#14532d" stroke-width="4"/>
+    <!-- tree 4 -->
+    <rect x="348" y="160" width="20" height="76" rx="4" fill="#78350f" stroke="#451a03" stroke-width="3.5"/>
+    <path d="M316,176 L358,84 L400,176 Z" fill="url(#fo-leaf)" stroke="#14532d" stroke-width="4"/>
+    <path d="M324,130 L358,60 L392,130 Z" fill="url(#fo-leaf)" stroke="#14532d" stroke-width="4"/>
+  </g>
+  <!-- deer peeking between trees -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="310" cy="252" rx="26" ry="17" fill="#d97706" stroke="#78350f" stroke-width="3"/>
+    <circle cx="332" cy="236" r="11" fill="#d97706" stroke="#78350f" stroke-width="3"/>
+    <path d="M328,226 L324,214 M334,226 L338,214" stroke="#78350f" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="335" cy="234" r="2" fill="#0f172a"/>
+    <circle cx="340" cy="240" r="2.5" fill="#0f172a"/>
+    <circle cx="300" cy="248" r="3" fill="#fef3c7"/>
+    <circle cx="312" cy="256" r="3" fill="#fef3c7"/>
+    <line x1="298" y1="268" x2="298" y2="280" stroke="#78350f" stroke-width="4" stroke-linecap="round"/>
+    <line x1="320" y1="268" x2="320" y2="280" stroke="#78350f" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <!-- squirrel on trunk -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="140" cy="210" rx="10" ry="13" fill="#ea580c" stroke="#7c2d12" stroke-width="2.5"/>
+    <circle cx="140" cy="196" r="7" fill="#ea580c" stroke="#7c2d12" stroke-width="2.5"/>
+    <circle cx="142" cy="194" r="1.6" fill="#0f172a"/>
+    <path d="M148,214 Q160,210 158,194 Q168,204 162,218 Q154,226 148,220 Z" fill="#f97316" stroke="#7c2d12" stroke-width="2.5"/>
+    <path d="M136,190 L134,184 L139,188 Z" fill="#ea580c" stroke="#7c2d12" stroke-width="1.5"/>
+  </g>
+  <!-- mushrooms -->
+  <g filter="url(#soft-shadow)">
+    <rect x="88" y="262" width="8" height="12" rx="3" fill="#fef3c7" stroke="#a8a29e" stroke-width="2"/>
+    <path d="M78,264 Q92,244 106,264 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="2.5"/>
+    <circle cx="87" cy="256" r="2.5" fill="#ffffff"/>
+    <circle cx="97" cy="258" r="2" fill="#ffffff"/>
+  </g>
+  <!-- birds -->
+  <path d="M150,30 Q157,23 164,30 M164,30 Q171,23 178,30" fill="none" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
+</svg>

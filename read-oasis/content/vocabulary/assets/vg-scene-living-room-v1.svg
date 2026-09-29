@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-living-room desc-living-room">
+  <title id="title-living-room">Living room - Cozy room with sofa and TV</title>
+  <desc id="desc-living-room">A cozy living room with a green sofa, cushions, a television on a stand, a rug, a lamp and a picture on the wall.</desc>
+  <defs>
+    <linearGradient id="lr-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="lr-sofa" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <!-- wall and floor -->
+  <rect x="0" y="0" width="400" height="210" fill="url(#lr-wall)"/>
+  <rect x="0" y="210" width="400" height="90" fill="#e8b478"/>
+  <line x1="0" y1="210" x2="400" y2="210" stroke="#a16207" stroke-width="3"/>
+  <!-- rug -->
+  <ellipse cx="200" cy="262" rx="130" ry="24" fill="#f472b6" stroke="#be185d" stroke-width="3"/>
+  <ellipse cx="200" cy="262" rx="95" ry="16" fill="none" stroke="#fbcfe8" stroke-width="3"/>
+  <!-- picture on wall -->
+  <g filter="url(#soft-shadow)">
+    <rect x="60" y="40" width="70" height="55" rx="4" fill="#ffffff" stroke="#78350f" stroke-width="4"/>
+    <path d="M66,86 L88,62 L104,78 L114,68 L124,86 Z" fill="#22c55e" stroke="#15803d" stroke-width="2"/>
+    <circle cx="112" cy="52" r="7" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+  </g>
+  <!-- window -->
+  <g filter="url(#soft-shadow)">
+    <rect x="290" y="35" width="80" height="70" rx="4" fill="#bae6fd" stroke="#78350f" stroke-width="4"/>
+    <line x1="330" y1="35" x2="330" y2="105" stroke="#78350f" stroke-width="3"/>
+    <line x1="290" y1="70" x2="370" y2="70" stroke="#78350f" stroke-width="3"/>
+  </g>
+  <!-- sofa -->
+  <g filter="url(#soft-shadow)">
+    <rect x="45" y="130" width="180" height="60" rx="12" fill="url(#lr-sofa)" stroke="#14532d" stroke-width="3.5"/>
+    <rect x="35" y="150" width="26" height="72" rx="10" fill="#16a34a" stroke="#14532d" stroke-width="3.5"/>
+    <rect x="209" y="150" width="26" height="72" rx="10" fill="#16a34a" stroke="#14532d" stroke-width="3.5"/>
+    <rect x="55" y="180" width="160" height="42" rx="8" fill="#22c55e" stroke="#14532d" stroke-width="3.5"/>
+    <!-- cushions -->
+    <rect x="70" y="145" width="42" height="38" rx="8" fill="#facc15" stroke="#b45309" stroke-width="3" transform="rotate(-6 91 164)"/>
+    <rect x="150" y="145" width="42" height="38" rx="8" fill="#fb923c" stroke="#c2410c" stroke-width="3" transform="rotate(5 171 164)"/>
+    <!-- legs -->
+    <rect x="52" y="222" width="10" height="14" rx="3" fill="#78350f"/>
+    <rect x="208" y="222" width="10" height="14" rx="3" fill="#78350f"/>
+  </g>
+  <!-- TV on stand -->
+  <g filter="url(#soft-shadow)">
+    <rect x="270" y="130" width="105" height="66" rx="6" fill="#1e293b" stroke="#0f172a" stroke-width="3.5"/>
+    <rect x="278" y="138" width="89" height="50" rx="3" fill="#38bdf8"/>
+    <path d="M290,178 Q310,150 330,170 Q345,155 358,172" fill="none" stroke="#0ea5e9" stroke-width="3"/>
+    <circle cx="345" cy="150" r="6" fill="#fef9c3"/>
+    <rect x="312" y="196" width="20" height="10" fill="#334155"/>
+    <rect x="285" y="206" width="75" height="10" rx="4" fill="#78350f" stroke="#451a03" stroke-width="2.5"/>
+  </g>
+  <!-- lamp -->
+  <g filter="url(#soft-shadow)">
+    <path d="M242,108 L272,108 L264,80 L250,80 Z" fill="#fbbf24" stroke="#b45309" stroke-width="3"/>
+    <line x1="257" y1="108" x2="257" y2="200" stroke="#78350f" stroke-width="5"/>
+    <ellipse cx="257" cy="204" rx="18" ry="6" fill="#78350f" stroke="#451a03" stroke-width="2.5"/>
+    <g stroke="#fde047" stroke-width="2.5" stroke-linecap="round" opacity="0.9">
+      <line x1="240" y1="72" x2="234" y2="64"/>
+      <line x1="257" y1="70" x2="257" y2="60"/>
+      <line x1="274" y1="72" x2="280" y2="64"/>
+    </g>
+  </g>
+</svg>

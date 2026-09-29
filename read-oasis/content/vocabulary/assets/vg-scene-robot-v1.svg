@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-robot desc-robot">
+  <title id="title-robot">Robot - Friendly blue robot waving</title>
+  <desc id="desc-robot">A friendly blue robot with an antenna, glowing eyes, a control panel with buttons, claw hands and track feet, waving hello with gears floating around.</desc>
+  <defs>
+    <linearGradient id="rb-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c7d2fe"/>
+      <stop offset="100%" stop-color="#e0e7ff"/>
+    </linearGradient>
+    <linearGradient id="rb-metal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#93c5fd"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#rb-bg)"/>
+  <rect x="0" y="252" width="400" height="48" fill="#818cf8" opacity="0.4"/>
+  <ellipse cx="200" cy="260" rx="110" ry="10" fill="#0f172a" opacity="0.25"/>
+  <!-- floating gears -->
+  <g filter="url(#soft-shadow)">
+    <g transform="translate(70,70)" fill="#94a3b8" stroke="#475569" stroke-width="2.5">
+      <circle r="16"/>
+      <rect x="-4" y="-24" width="8" height="10" rx="2"/>
+      <rect x="-4" y="14" width="8" height="10" rx="2"/>
+      <rect x="14" y="-4" width="10" height="8" rx="2"/>
+      <rect x="-24" y="-4" width="10" height="8" rx="2"/>
+      <circle r="6" fill="#e2e8f0"/>
+    </g>
+    <g transform="translate(340,90)" fill="#fbbf24" stroke="#b45309" stroke-width="2.5">
+      <circle r="13"/>
+      <rect x="-3.5" y="-20" width="7" height="9" rx="2"/>
+      <rect x="-3.5" y="11" width="7" height="9" rx="2"/>
+      <rect x="11" y="-3.5" width="9" height="7" rx="2"/>
+      <rect x="-20" y="-3.5" width="9" height="7" rx="2"/>
+      <circle r="5" fill="#fef3c7"/>
+    </g>
+  </g>
+  <!-- robot -->
+  <g filter="url(#soft-shadow)">
+    <!-- antenna -->
+    <line x1="200" y1="62" x2="200" y2="38" stroke="#475569" stroke-width="5"/>
+    <circle cx="200" cy="32" r="9" fill="#ef4444" stroke="#7f1d1d" stroke-width="3"/>
+    <g stroke="#f87171" stroke-width="2.5" stroke-linecap="round" opacity="0.9">
+      <path d="M184,22 Q182,16 186,10"/>
+      <path d="M216,22 Q218,16 214,10"/>
+    </g>
+    <!-- head -->
+    <rect x="150" y="62" width="100" height="74" rx="14" fill="url(#rb-metal)" stroke="#1e3a8a" stroke-width="4"/>
+    <!-- eyes -->
+    <circle cx="180" cy="95" r="14" fill="#fef9c3" stroke="#1e3a8a" stroke-width="3.5"/>
+    <circle cx="220" cy="95" r="14" fill="#fef9c3" stroke="#1e3a8a" stroke-width="3.5"/>
+    <circle cx="180" cy="95" r="6" fill="#0f172a"/>
+    <circle cx="220" cy="95" r="6" fill="#0f172a"/>
+    <!-- mouth grill -->
+    <rect x="178" y="116" width="44" height="10" rx="5" fill="#1e3a8a"/>
+    <g stroke="#93c5fd" stroke-width="2">
+      <line x1="188" y1="117" x2="188" y2="125"/>
+      <line x1="200" y1="117" x2="200" y2="125"/>
+      <line x1="212" y1="117" x2="212" y2="125"/>
+    </g>
+    <!-- ear bolts -->
+    <circle cx="148" cy="99" r="8" fill="#94a3b8" stroke="#475569" stroke-width="2.5"/>
+    <circle cx="252" cy="99" r="8" fill="#94a3b8" stroke="#475569" stroke-width="2.5"/>
+    <!-- neck -->
+    <rect x="188" y="136" width="24" height="12" fill="#64748b" stroke="#334155" stroke-width="2.5"/>
+    <!-- body -->
+    <rect x="140" y="148" width="120" height="80" rx="12" fill="url(#rb-metal)" stroke="#1e3a8a" stroke-width="4"/>
+    <!-- control panel -->
+    <rect x="158" y="162" width="84" height="34" rx="6" fill="#e0f2fe" stroke="#1e3a8a" stroke-width="3"/>
+    <circle cx="174" cy="179" r="7" fill="#ef4444" stroke="#7f1d1d" stroke-width="2"/>
+    <circle cx="196" cy="179" r="7" fill="#facc15" stroke="#b45309" stroke-width="2"/>
+    <circle cx="218" cy="179" r="7" fill="#22c55e" stroke="#14532d" stroke-width="2"/>
+    <!-- chest light -->
+    <rect x="182" y="203" width="36" height="14" rx="7" fill="#fbbf24" stroke="#b45309" stroke-width="2.5"/>
+    <!-- waving arm (up) -->
+    <path d="M260,160 Q295,140 305,105" fill="none" stroke="#64748b" stroke-width="12" stroke-linecap="round"/>
+    <!-- claw -->
+    <path d="M300,100 Q294,86 304,80 M308,102 Q318,90 312,78" fill="none" stroke="#334155" stroke-width="6" stroke-linecap="round"/>
+    <!-- other arm down -->
+    <path d="M140,165 Q112,185 110,210" fill="none" stroke="#64748b" stroke-width="12" stroke-linecap="round"/>
+    <path d="M104,214 Q96,222 102,230 M114,214 Q122,222 116,230" fill="none" stroke="#334155" stroke-width="6" stroke-linecap="round"/>
+    <!-- legs -->
+    <rect x="160" y="228" width="24" height="22" fill="#64748b" stroke="#334155" stroke-width="3"/>
+    <rect x="216" y="228" width="24" height="22" fill="#64748b" stroke="#334155" stroke-width="3"/>
+    <!-- track feet -->
+    <rect x="146" y="248" width="52" height="16" rx="8" fill="#334155" stroke="#0f172a" stroke-width="3"/>
+    <rect x="202" y="248" width="52" height="16" rx="8" fill="#334155" stroke="#0f172a" stroke-width="3"/>
+    <g fill="#94a3b8">
+      <circle cx="158" cy="256" r="4"/>
+      <circle cx="172" cy="256" r="4"/>
+      <circle cx="186" cy="256" r="4"/>
+      <circle cx="214" cy="256" r="4"/>
+      <circle cx="228" cy="256" r="4"/>
+      <circle cx="242" cy="256" r="4"/>
+    </g>
+  </g>
+</svg>

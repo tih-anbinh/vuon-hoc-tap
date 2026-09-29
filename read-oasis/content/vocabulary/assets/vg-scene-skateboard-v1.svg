@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-skateboard desc-skateboard">
+  <title id="title-skateboard">Skateboard - Colorful skateboard with wheels</title>
+  <desc id="desc-skateboard">A big colorful skateboard with an orange deck, a lightning stripe and four yellow wheels, shown large on a park path.</desc>
+  <defs>
+    <linearGradient id="sk-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="sk-deck" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#sk-bg)"/>
+  <!-- park ground -->
+  <rect x="0" y="215" width="400" height="85" fill="#4ade80"/>
+  <line x1="0" y1="215" x2="400" y2="215" stroke="#15803d" stroke-width="3.5"/>
+  <path d="M0,250 L400,250 L400,300 L0,300 Z" fill="#94a3b8"/>
+  <line x1="0" y1="250" x2="400" y2="250" stroke="#475569" stroke-width="3"/>
+  <!-- bush and tree background -->
+  <circle cx="52" cy="200" r="26" fill="#22c55e" stroke="#15803d" stroke-width="3"/>
+  <rect x="340" y="160" width="14" height="55" fill="#92400e" stroke="#451a03" stroke-width="2.5"/>
+  <circle cx="347" cy="140" r="34" fill="#22c55e" stroke="#15803d" stroke-width="3"/>
+  <ellipse cx="200" cy="272" rx="150" ry="13" fill="#0f172a" opacity="0.25"/>
+  <!-- skateboard (dominant, side view) -->
+  <g filter="url(#soft-shadow)">
+    <!-- deck with curved kicktails -->
+    <path d="M50,190 Q58,168 82,172 L318,172 Q342,168 350,190 Q344,196 330,192 L322,188 L78,188 L70,192 Q56,196 50,190 Z" fill="url(#sk-deck)" stroke="#7c2d12" stroke-width="4.5"/>
+    <!-- lightning stripe on deck -->
+    <path d="M150,176 L185,176 L172,181 L212,181 L165,186 L182,182 L142,182 Z" fill="#fde047" stroke="#a16207" stroke-width="2"/>
+    <!-- grip line -->
+    <line x1="88" y1="176" x2="312" y2="176" stroke="#7c2d12" stroke-width="2.5" opacity="0.6"/>
+    <!-- trucks -->
+    <rect x="108" y="188" width="16" height="20" fill="#64748b" stroke="#334155" stroke-width="3"/>
+    <rect x="276" y="188" width="16" height="20" fill="#64748b" stroke="#334155" stroke-width="3"/>
+    <!-- wheels -->
+    <g fill="#facc15" stroke="#a16207" stroke-width="4">
+      <circle cx="96" cy="222" r="22"/>
+      <circle cx="140" cy="222" r="22"/>
+      <circle cx="260" cy="222" r="22"/>
+      <circle cx="304" cy="222" r="22"/>
+    </g>
+    <g fill="#fef9c3" stroke="#a16207" stroke-width="3">
+      <circle cx="96" cy="222" r="8"/>
+      <circle cx="140" cy="222" r="8"/>
+      <circle cx="260" cy="222" r="8"/>
+      <circle cx="304" cy="222" r="8"/>
+    </g>
+  </g>
+  <!-- motion streaks -->
+  <g stroke="#94a3b8" stroke-width="4" stroke-linecap="round" opacity="0.8">
+    <line x1="22" y1="200" x2="46" y2="200"/>
+    <line x1="14" y1="218" x2="40" y2="218"/>
+    <line x1="24" y1="236" x2="48" y2="236"/>
+  </g>
+  <!-- sun -->
+  <circle cx="60" cy="48" r="22" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <ellipse cx="290" cy="52" rx="34" ry="12" fill="#ffffff" opacity="0.95"/>
+</svg>

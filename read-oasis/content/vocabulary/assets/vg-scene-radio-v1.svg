@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-radio desc-radio">
+  <title id="title-radio">Radio - Retro radio playing music</title>
+  <desc id="desc-radio">A red retro radio with a round speaker, tuning dial, two knobs and an antenna, with musical notes floating out of it.</desc>
+  <defs>
+    <linearGradient id="rd-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="rd-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f87171"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#rd-bg)"/>
+  <!-- table -->
+  <rect x="0" y="245" width="400" height="55" fill="#e8b478"/>
+  <line x1="0" y1="245" x2="400" y2="245" stroke="#a16207" stroke-width="3.5"/>
+  <ellipse cx="200" cy="252" rx="140" ry="10" fill="#0f172a" opacity="0.22"/>
+  <!-- musical notes -->
+  <g filter="url(#soft-shadow)">
+    <g fill="#7c3aed" stroke="#4c1d95" stroke-width="2.5">
+      <ellipse cx="320" cy="80" rx="11" ry="8" transform="rotate(-20 320 80)"/>
+    </g>
+    <path d="M330,76 L330,32" fill="none" stroke="#4c1d95" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M330,32 Q348,40 345,58 Q341,44 330,44 Z" fill="#7c3aed" stroke="#4c1d95" stroke-width="2"/>
+    <g fill="#ec4899" stroke="#9d174d" stroke-width="2.5">
+      <ellipse cx="358" cy="130 " rx="9" ry="7" transform="rotate(-20 358 130)"/>
+    </g>
+    <path d="M366,127 L366,92" fill="none" stroke="#9d174d" stroke-width="4" stroke-linecap="round"/>
+    <g fill="#f59e0b" stroke="#b45309" stroke-width="2.5">
+      <ellipse cx="300" cy="45" rx="8" ry="6" transform="rotate(-20 300 45)"/>
+    </g>
+    <path d="M307,42 L307,15" fill="none" stroke="#b45309" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+  <!-- sound waves -->
+  <g fill="none" stroke="#a78bfa" stroke-width="3.5" stroke-linecap="round" opacity="0.8">
+    <path d="M295,140 Q303,128 295,116"/>
+    <path d="M310,150 Q322,130 310,110"/>
+  </g>
+  <!-- radio -->
+  <g filter="url(#soft-shadow)">
+    <!-- antenna -->
+    <line x1="255" y1="105" x2="320" y2="28" stroke="#475569" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="322" cy="26" r="6" fill="#94a3b8" stroke="#475569" stroke-width="2.5"/>
+    <!-- body -->
+    <rect x="55" y="100" width="240" height="148" rx="18" fill="url(#rd-body)" stroke="#7f1d1d" stroke-width="4.5"/>
+    <!-- handle -->
+    <path d="M110,100 Q110,62 175,62 Q240,62 240,100" fill="none" stroke="#7f1d1d" stroke-width="10" stroke-linecap="round"/>
+    <!-- speaker -->
+    <circle cx="125" cy="174" r="48" fill="#fef3c7" stroke="#7f1d1d" stroke-width="4"/>
+    <g fill="none" stroke="#b45309" stroke-width="3">
+      <circle cx="125" cy="174" r="36"/>
+      <circle cx="125" cy="174" r="24"/>
+      <circle cx="125" cy="174" r="12"/>
+    </g>
+    <!-- grill dots -->
+    <g fill="#b45309">
+      <circle cx="125" cy="174" r="4"/>
+    </g>
+    <!-- tuning dial panel -->
+    <rect x="192" y="120" width="88" height="34" rx="8" fill="#fef9c3" stroke="#7f1d1d" stroke-width="3"/>
+    <g stroke="#92400e" stroke-width="2.5">
+      <line x1="204" y1="128" x2="204" y2="146"/>
+      <line x1="220" y1="128" x2="220" y2="146"/>
+      <line x1="236" y1="128" x2="236" y2="146"/>
+      <line x1="252" y1="128" x2="252" y2="146"/>
+      <line x1="268" y1="128" x2="268" y2="146"/>
+    </g>
+    <line x1="230" y1="122" x2="230" y2="152" stroke="#dc2626" stroke-width="3.5"/>
+    <!-- knobs -->
+    <circle cx="215" cy="190" r="16" fill="#fbbf24" stroke="#92400e" stroke-width="3.5"/>
+    <line x1="215" y1="178" x2="215" y2="190" stroke="#92400e" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="262" cy="190" r="16" fill="#fbbf24" stroke="#92400e" stroke-width="3.5"/>
+    <line x1="262" y1="190" x2="272" y2="182" stroke="#92400e" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- feet -->
+    <rect x="80" y="245" width="26" height="10" rx="4" fill="#7f1d1d"/>
+    <rect x="245" y="245" width="26" height="10" rx="4" fill="#7f1d1d"/>
+  </g>
+</svg>

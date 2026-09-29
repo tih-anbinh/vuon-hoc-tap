@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-animal desc-animal">
+  <title id="title-animal">Animal - Friendly cat, dog and bird together</title>
+  <desc id="desc-animal">A cheerful group of three animals - a cat, a dog, and a small bird - standing together on grass under a warm sky, illustrating the general category of animals.</desc>
+  <defs>
+    <linearGradient id="anm-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#bfdbfe"/>
+    </linearGradient>
+    <linearGradient id="anm-grass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a3e635"/>
+      <stop offset="100%" stop-color="#4d7c0f"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="230" fill="url(#anm-sky)"/>
+  <rect x="0" y="220" width="400" height="80" fill="url(#anm-grass)"/>
+  <!-- ground shadows -->
+  <ellipse cx="90" cy="248" rx="45" ry="6" fill="#0f172a" opacity="0.2"/>
+  <ellipse cx="220" cy="252" rx="55" ry="7" fill="#0f172a" opacity="0.2"/>
+  <ellipse cx="330" cy="238" rx="25" ry="4" fill="#0f172a" opacity="0.18"/>
+  <!-- CAT (left) -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="90" cy="215" rx="42" ry="32" fill="#fbbf24" stroke="#78350f" stroke-width="3.5"/>
+    <circle cx="90" cy="170" r="28" fill="#fbbf24" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M70,150 L65,132 L82,148 Z" fill="#fbbf24" stroke="#78350f" stroke-width="3"/>
+    <path d="M110,150 L115,132 L98,148 Z" fill="#fbbf24" stroke="#78350f" stroke-width="3"/>
+    <circle cx="82" cy="170" r="3" fill="#0f172a"/>
+    <circle cx="98" cy="170" r="3" fill="#0f172a"/>
+    <path d="M87,180 L90,185 L93,180 Z" fill="#78350f"/>
+    <path d="M85,187 Q90,192 95,187" fill="none" stroke="#78350f" stroke-width="2"/>
+    <!-- tail -->
+    <path d="M128,220 Q150,205 145,180" fill="none" stroke="#78350f" stroke-width="4" stroke-linecap="round"/>
+    <path d="M128,220 Q150,205 145,180" fill="none" stroke="#fbbf24" stroke-width="10" stroke-linecap="round" opacity="0.4"/>
+  </g>
+  <!-- DOG (middle) -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="220" cy="215" rx="52" ry="36" fill="#fef3c7" stroke="#78350f" stroke-width="3.5"/>
+    <circle cx="220" cy="160" r="34" fill="#fef3c7" stroke="#78350f" stroke-width="3.5"/>
+    <!-- floppy ears -->
+    <path d="M188,145 Q175,180 195,190 Q200,175 200,155 Z" fill="#a16207" stroke="#78350f" stroke-width="3"/>
+    <path d="M252,145 Q265,180 245,190 Q240,175 240,155 Z" fill="#a16207" stroke="#78350f" stroke-width="3"/>
+    <!-- muzzle -->
+    <ellipse cx="220" cy="175" rx="16" ry="12" fill="#fef9c3" stroke="#78350f" stroke-width="2.5"/>
+    <circle cx="211" cy="158" r="3.5" fill="#0f172a"/>
+    <circle cx="229" cy="158" r="3.5" fill="#0f172a"/>
+    <ellipse cx="220" cy="170" rx="4" ry="3" fill="#0f172a"/>
+    <path d="M215,182 Q220,188 225,182" fill="none" stroke="#78350f" stroke-width="2.5"/>
+    <!-- tail wag -->
+    <path d="M270,215 Q290,200 288,180" fill="none" stroke="#78350f" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <!-- BIRD (right) -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="330" cy="215" rx="22" ry="18" fill="#93c5fd" stroke="#1e3a8a" stroke-width="3"/>
+    <circle cx="345" cy="200" r="14" fill="#93c5fd" stroke="#1e3a8a" stroke-width="3"/>
+    <circle cx="348" cy="197" r="2.5" fill="#0f172a"/>
+    <path d="M357,201 L365,199 L357,205 Z" fill="#f97316" stroke="#78350f" stroke-width="2"/>
+    <!-- wing -->
+    <path d="M320,210 Q315,220 325,225 Q332,220 335,215 Z" fill="#60a5fa" stroke="#1e3a8a" stroke-width="2.5"/>
+    <!-- legs -->
+    <line x1="325" y1="232" x2="325" y2="240" stroke="#f97316" stroke-width="3"/>
+    <line x1="335" y1="232" x2="335" y2="240" stroke="#f97316" stroke-width="3"/>
+  </g>
+</svg>

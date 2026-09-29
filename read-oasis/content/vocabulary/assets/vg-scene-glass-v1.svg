@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-glass desc-glass">
+  <title id="title-glass">Glass - Glass of orange juice with a straw</title>
+  <desc id="desc-glass">A big clear glass filled with orange juice and a striped straw, next to a jug pouring more juice and orange slices on the table.</desc>
+  <defs>
+    <linearGradient id="gl-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ccfbf1"/>
+      <stop offset="100%" stop-color="#99f6e4"/>
+    </linearGradient>
+    <linearGradient id="gl-juice" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#gl-bg)"/>
+  <!-- table -->
+  <rect x="0" y="240" width="400" height="60" fill="#0d9488" opacity="0.5"/>
+  <line x1="0" y1="240" x2="400" y2="240" stroke="#115e59" stroke-width="3.5"/>
+  <ellipse cx="180" cy="254" rx="150" ry="12" fill="#0f172a" opacity="0.15"/>
+  <!-- THE GLASS (hero element) -->
+  <g filter="url(#soft-shadow)">
+    <!-- glass body: tapered tumbler -->
+    <path d="M116,84 L244,84 L228,244 Q227,252 218,252 L142,252 Q133,252 132,244 Z"
+          fill="#f0fdfa" fill-opacity="0.65" stroke="#0f766e" stroke-width="5"/>
+    <!-- juice inside -->
+    <path d="M124,128 L236,128 L226,240 Q225,246 218,246 L142,246 Q135,246 134,240 Z"
+          fill="url(#gl-juice)" opacity="0.95"/>
+    <!-- juice surface -->
+    <ellipse cx="180" cy="128" rx="56" ry="10" fill="#fdba74" stroke="#c2410c" stroke-width="3"/>
+    <!-- striped straw -->
+    <g>
+      <path d="M206,20 L228,26 L192,132 L176,128 Z" fill="#ffffff" stroke="#be185d" stroke-width="3"/>
+      <g fill="#f472b6">
+        <path d="M208,26 L221,30 L216,44 L203,40 Z"/>
+        <path d="M199,52 L212,56 L207,70 L194,66 Z"/>
+        <path d="M190,78 L203,82 L198,96 L185,92 Z"/>
+        <path d="M181,104 L194,108 L190,122 L177,118 Z"/>
+      </g>
+    </g>
+    <!-- bubbles in juice -->
+    <g fill="#fed7aa" opacity="0.9">
+      <circle cx="156" cy="160" r="5"/>
+      <circle cx="200" cy="180" r="4"/>
+      <circle cx="168" cy="210" r="4.5"/>
+      <circle cx="210" cy="220" r="3.5"/>
+      <circle cx="146" cy="190" r="3.5"/>
+    </g>
+    <!-- glass shine -->
+    <path d="M132,100 Q128,160 136,230" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" opacity="0.8"/>
+    <!-- orange slice on rim -->
+    <g>
+      <circle cx="240" cy="90" r="20" fill="#fb923c" stroke="#c2410c" stroke-width="3"/>
+      <circle cx="240" cy="90" r="15" fill="#fdba74"/>
+      <g stroke="#f97316" stroke-width="2.5">
+        <line x1="240" y1="75" x2="240" y2="105"/>
+        <line x1="225" y1="90" x2="255" y2="90"/>
+        <line x1="230" y1="80" x2="250" y2="100"/>
+        <line x1="250" y1="80" x2="230" y2="100"/>
+      </g>
+    </g>
+  </g>
+  <!-- jug pouring -->
+  <g filter="url(#soft-shadow)">
+    <path d="M292,120 L360,120 L352,222 Q351,232 340,232 L312,232 Q301,232 300,222 Z"
+          fill="#f0fdfa" fill-opacity="0.7" stroke="#0f766e" stroke-width="4.5"/>
+    <path d="M292,128 L278,112 L294,106 Z" fill="#f0fdfa" stroke="#0f766e" stroke-width="3.5"/>
+    <path d="M358,140 Q380,148 376,170" fill="none" stroke="#0f766e" stroke-width="7" stroke-linecap="round"/>
+    <!-- juice in jug -->
+    <path d="M298,152 L354,152 L349,218 Q348,226 340,226 L312,226 Q304,226 303,218 Z" fill="url(#gl-juice)" opacity="0.95"/>
+    <ellipse cx="326" cy="152" rx="28" ry="6" fill="#fdba74" stroke="#c2410c" stroke-width="2.5"/>
+    <!-- pour stream -->
+    <path d="M280,110 Q266,116 262,130" fill="none" stroke="#fb923c" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <!-- orange slices on table -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="60" cy="252" r="17" fill="#fb923c" stroke="#c2410c" stroke-width="3"/>
+    <circle cx="60" cy="252" r="12" fill="#fdba74"/>
+    <g stroke="#f97316" stroke-width="2">
+      <line x1="60" y1="240" x2="60" y2="264"/>
+      <line x1="48" y1="252" x2="72" y2="252"/>
+    </g>
+    <path d="M92,262 A15,15 0 0,1 122,262 Z" fill="#fb923c" stroke="#c2410c" stroke-width="3"/>
+    <path d="M96,262 A11,11 0 0,1 118,262 Z" fill="#fdba74"/>
+  </g>
+</svg>

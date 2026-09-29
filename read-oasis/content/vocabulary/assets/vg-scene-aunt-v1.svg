@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-aunt desc-aunt">
+  <title id="title-aunt">Aunt - Aunt hugging her niece with a gift</title>
+  <desc id="desc-aunt">A warm smiling aunt with wavy hair and a flowery dress kneeling to hug her young niece, holding a wrapped gift, with hearts floating above.</desc>
+  <defs>
+    <linearGradient id="au-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fce7f3"/>
+      <stop offset="100%" stop-color="#fbcfe8"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#au-bg)"/>
+  <rect x="0" y="248" width="400" height="52" fill="#f9a8d4"/>
+  <line x1="0" y1="248" x2="400" y2="248" stroke="#be185d" stroke-width="3.5"/>
+  <ellipse cx="200" cy="264" rx="150" ry="12" fill="#0f172a" opacity="0.15"/>
+  <!-- floating hearts -->
+  <g fill="#f472b6" stroke="#be185d" stroke-width="2.5">
+    <path d="M195,52 Q195,40 206,40 Q216,40 216,50 Q216,62 195,74 Q174,62 174,50 Q174,40 184,40 Q195,40 195,52 Z"/>
+    <path d="M300,80 Q300,73 306,73 Q312,73 312,79 Q312,86 300,94 Q288,86 288,79 Q288,73 294,73 Q300,73 300,80 Z"/>
+    <path d="M90,90 Q90,84 95,84 Q100,84 100,89 Q100,95 90,101 Q80,95 80,89 Q80,84 85,84 Q90,84 90,90 Z"/>
+  </g>
+  <!-- aunt kneeling -->
+  <g filter="url(#soft-shadow)">
+    <!-- wavy hair -->
+    <path d="M120,142 Q108,70 168,64 Q228,70 216,142 Q222,160 210,168 Q216,146 208,124 Q168,100 128,124 Q120,146 126,168 Q114,160 120,142 Z" fill="#92400e" stroke="#451a03" stroke-width="3.5"/>
+    <!-- head -->
+    <circle cx="168" cy="112" r="30" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <circle cx="158" cy="108" r="3.5" fill="#0f172a"/>
+    <circle cx="178" cy="108" r="3.5" fill="#0f172a"/>
+    <path d="M156,122 Q168,131 180,122" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="148" cy="116" rx="6" ry="4" fill="#fb7185" opacity="0.55"/>
+    <ellipse cx="188" cy="116" rx="6" ry="4" fill="#fb7185" opacity="0.55"/>
+    <!-- earrings -->
+    <circle cx="140" cy="122" r="4" fill="#fde047" stroke="#a16207" stroke-width="2"/>
+    <circle cx="196" cy="122" r="4" fill="#fde047" stroke="#a16207" stroke-width="2"/>
+    <!-- flowery dress, kneeling shape -->
+    <path d="M146,138 L190,138 L212,220 Q214,240 194,244 L120,244 Q112,228 126,208 Z" fill="#ec4899" stroke="#831843" stroke-width="3.5"/>
+    <!-- flowers on dress -->
+    <g>
+      <circle cx="150" cy="180" r="7" fill="#fde047" stroke="#a16207" stroke-width="2"/>
+      <circle cx="184" cy="200" r="7" fill="#fde047" stroke="#a16207" stroke-width="2"/>
+      <circle cx="156" cy="222" r="7" fill="#fde047" stroke="#a16207" stroke-width="2"/>
+    </g>
+    <!-- hugging arm around niece -->
+    <path d="M190,150 Q234,158 252,186" fill="none" stroke="#fcd9b6" stroke-width="12" stroke-linecap="round"/>
+    <!-- other arm holding gift -->
+    <path d="M146,152 Q118,166 116,190" fill="none" stroke="#fcd9b6" stroke-width="12" stroke-linecap="round"/>
+    <!-- kneeling legs hint -->
+    <ellipse cx="158" cy="244" rx="38" ry="10" fill="#be185d"/>
+  </g>
+  <!-- gift box in aunt's hand -->
+  <g filter="url(#soft-shadow)">
+    <rect x="84" y="186" width="52" height="44" rx="6" fill="#8b5cf6" stroke="#4c1d95" stroke-width="3.5"/>
+    <line x1="110" y1="186" x2="110" y2="230" stroke="#fde047" stroke-width="6"/>
+    <line x1="84" y1="208" x2="136" y2="208" stroke="#fde047" stroke-width="6"/>
+    <path d="M110,186 Q98,170 88,178 Q84,188 100,188 Z" fill="#fde047" stroke="#a16207" stroke-width="2.5"/>
+    <path d="M110,186 Q122,170 132,178 Q136,188 120,188 Z" fill="#fde047" stroke="#a16207" stroke-width="2.5"/>
+  </g>
+  <!-- niece being hugged -->
+  <g filter="url(#soft-shadow)">
+    <!-- pigtails -->
+    <circle cx="252" cy="160" r="11" fill="#451a03" stroke="#1c1917" stroke-width="2.5"/>
+    <circle cx="312" cy="160" r="11" fill="#451a03" stroke="#1c1917" stroke-width="2.5"/>
+    <path d="M256,162 Q256,132 282,132 Q308,132 308,162 L302,170 Q282,152 262,170 Z" fill="#451a03" stroke="#1c1917" stroke-width="3"/>
+    <circle cx="282" cy="172" r="24" fill="#f5c19b" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M272,168 Q276,163 280,168" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M286,168 Q290,163 294,168" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M272,182 Q282,190 292,182" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <ellipse cx="264" cy="178" rx="5" ry="3.5" fill="#fb7185" opacity="0.55"/>
+    <ellipse cx="300" cy="178" rx="5" ry="3.5" fill="#fb7185" opacity="0.55"/>
+    <!-- dress -->
+    <path d="M266,194 L298,194 L312,248 L252,248 Z" fill="#22d3ee" stroke="#155e75" stroke-width="3.5"/>
+    <!-- arms hugging back -->
+    <path d="M268,202 Q244,196 232,180" fill="none" stroke="#f5c19b" stroke-width="9" stroke-linecap="round"/>
+    <path d="M296,202 Q316,210 320,226" fill="none" stroke="#f5c19b" stroke-width="9" stroke-linecap="round"/>
+    <!-- legs -->
+    <line x1="272" y1="248" x2="272" y2="266" stroke="#f5c19b" stroke-width="8" stroke-linecap="round"/>
+    <line x1="292" y1="248" x2="292" y2="266" stroke="#f5c19b" stroke-width="8" stroke-linecap="round"/>
+    <ellipse cx="270" cy="271" rx="11" ry="5" fill="#be185d"/>
+    <ellipse cx="294" cy="271" rx="11" ry="5" fill="#be185d"/>
+  </g>
+</svg>

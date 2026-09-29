@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-school desc-school">
+  <title id="title-school">School - School building with flag and children</title>
+  <desc id="desc-school">A red school building with a clock, a flag on top, big doors, and two children walking toward it with backpacks.</desc>
+  <defs>
+    <linearGradient id="sh-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="sh-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f87171"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#sh-sky)"/>
+  <circle cx="52" cy="46" r="22" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <ellipse cx="330" cy="45" rx="34" ry="12" fill="#ffffff" opacity="0.95"/>
+  <!-- grass -->
+  <rect x="0" y="235" width="400" height="65" fill="#4ade80"/>
+  <line x1="0" y1="235" x2="400" y2="235" stroke="#15803d" stroke-width="3.5"/>
+  <!-- path -->
+  <path d="M175,300 L190,235 L240,235 L265,300 Z" fill="#e7e5e4" stroke="#a8a29e" stroke-width="3"/>
+  <!-- school building -->
+  <g filter="url(#soft-shadow)">
+    <!-- main block -->
+    <rect x="90" y="120" width="250" height="115" fill="url(#sh-wall)" stroke="#7f1d1d" stroke-width="4"/>
+    <!-- roof -->
+    <path d="M78,120 L215,62 L352,120 Z" fill="#92400e" stroke="#451a03" stroke-width="4"/>
+    <!-- clock tower circle -->
+    <circle cx="215" cy="105" r="18" fill="#ffffff" stroke="#7f1d1d" stroke-width="3.5"/>
+    <line x1="215" y1="105" x2="215" y2="94" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <line x1="215" y1="105" x2="223" y2="108" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <!-- flag on roof peak -->
+    <line x1="215" y1="62" x2="215" y2="28" stroke="#78350f" stroke-width="4"/>
+    <path d="M215,28 L248,36 L215,46 Z" fill="#3b82f6" stroke="#1e3a8a" stroke-width="2.5"/>
+    <!-- door -->
+    <rect x="192" y="175" width="46" height="60" rx="4" fill="#78350f" stroke="#451a03" stroke-width="3.5"/>
+    <line x1="215" y1="175" x2="215" y2="235" stroke="#451a03" stroke-width="2.5"/>
+    <circle cx="207" cy="207" r="3" fill="#fbbf24"/>
+    <circle cx="223" cy="207" r="3" fill="#fbbf24"/>
+    <!-- windows -->
+    <g fill="#bae6fd" stroke="#7f1d1d" stroke-width="3">
+      <rect x="108" y="140" width="34" height="34" rx="3"/>
+      <rect x="158" y="140" width="34" height="34" rx="3"/>
+      <rect x="238" y="140" width="34" height="34" rx="3"/>
+      <rect x="288" y="140" width="34" height="34" rx="3"/>
+      <rect x="108" y="192" width="34" height="34" rx="3"/>
+      <rect x="288" y="192" width="34" height="34" rx="3"/>
+    </g>
+    <g stroke="#7f1d1d" stroke-width="2">
+      <line x1="125" y1="140" x2="125" y2="174"/>
+      <line x1="175" y1="140" x2="175" y2="174"/>
+      <line x1="255" y1="140" x2="255" y2="174"/>
+      <line x1="305" y1="140" x2="305" y2="174"/>
+      <line x1="125" y1="192" x2="125" y2="226"/>
+      <line x1="305" y1="192" x2="305" y2="226"/>
+    </g>
+  </g>
+  <!-- child 1 walking with backpack -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="130" cy="252" r="13" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <path d="M117,246 Q124,236 138,240 L142,250 Q133,244 120,252 Z" fill="#451a03"/>
+    <circle cx="126" cy="252" r="2" fill="#0f172a"/>
+    <circle cx="134" cy="252" r="2" fill="#0f172a"/>
+    <path d="M126,259 Q130,262 134,259" fill="none" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/>
+    <path d="M122,264 L138,264 L141,288 L119,288 Z" fill="#3b82f6" stroke="#1e3a8a" stroke-width="2.5"/>
+    <rect x="112" y="264" width="10" height="18" rx="4" fill="#ef4444" stroke="#7f1d1d" stroke-width="2"/>
+    <line x1="124" y1="288" x2="121" y2="298" stroke="#fcd9b6" stroke-width="6" stroke-linecap="round"/>
+    <line x1="136" y1="288" x2="140" y2="298" stroke="#fcd9b6" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <!-- child 2 walking with backpack -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="290" cy="255" r="13" fill="#f5c19b" stroke="#78350f" stroke-width="2.5"/>
+    <path d="M277,250 Q283,239 297,242 L302,252 Q292,246 279,255 Z" fill="#0f172a"/>
+    <circle cx="286" cy="255" r="2" fill="#0f172a"/>
+    <circle cx="294" cy="255" r="2" fill="#0f172a"/>
+    <path d="M286,262 Q290,265 294,262" fill="none" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/>
+    <path d="M282,267 L298,267 L301,291 L279,291 Z" fill="#facc15" stroke="#a16207" stroke-width="2.5"/>
+    <rect x="298" y="267" width="10" height="18" rx="4" fill="#22c55e" stroke="#14532d" stroke-width="2"/>
+    <line x1="284" y1="291" x2="281" y2="300" stroke="#f5c19b" stroke-width="6" stroke-linecap="round"/>
+    <line x1="296" y1="291" x2="300" y2="300" stroke="#f5c19b" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>

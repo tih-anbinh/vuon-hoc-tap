@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-milkshake desc-milkshake">
+  <title id="title-milkshake">Milkshake - A tall pink strawberry milkshake</title>
+  <desc id="desc-milkshake">A tall glass of pink strawberry milkshake with whipped cream on top, a red cherry, a striped straw, and strawberries beside the glass.</desc>
+  <defs>
+    <linearGradient id="ms-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fce7f3"/>
+      <stop offset="100%" stop-color="#fbcfe8"/>
+    </linearGradient>
+    <linearGradient id="ms-shake" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f9a8d4"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#ms-bg)"/>
+  <!-- table -->
+  <rect x="0" y="238" width="400" height="62" fill="#c084fc"/>
+  <line x1="0" y1="238" x2="400" y2="238" stroke="#6d28d9" stroke-width="4"/>
+  <ellipse cx="200" cy="252" rx="150" ry="13" fill="#0f172a" opacity="0.15"/>
+  <!-- MILKSHAKE (hero element) -->
+  <g filter="url(#soft-shadow)">
+    <!-- straw behind cream -->
+    <g transform="rotate(14 232 60)">
+      <rect x="224" y="18" width="16" height="96" rx="7" fill="#f8fafc" stroke="#334155" stroke-width="3.5"/>
+      <g fill="#ef4444">
+        <rect x="224" y="26" width="16" height="9" rx="2"/>
+        <rect x="224" y="44" width="16" height="9" rx="2"/>
+        <rect x="224" y="62" width="16" height="9" rx="2"/>
+        <rect x="224" y="80" width="16" height="9" rx="2"/>
+        <rect x="224" y="98" width="16" height="9" rx="2"/>
+      </g>
+    </g>
+    <!-- glass -->
+    <path d="M142,104 L258,104 L240,244 L160,244 Z" fill="#fdf2f8" fill-opacity="0.5" stroke="#9d174d" stroke-width="5"/>
+    <!-- shake inside -->
+    <path d="M150,124 L250,124 L236,236 L164,236 Z" fill="url(#ms-shake)" stroke="#9d174d" stroke-width="3"/>
+    <!-- bubbles in shake -->
+    <g fill="#fbcfe8" stroke="#be185d" stroke-width="2">
+      <circle cx="182" cy="160" r="7"/>
+      <circle cx="216" cy="180" r="6"/>
+      <circle cx="192" cy="206" r="5"/>
+      <circle cx="222" cy="146" r="5"/>
+    </g>
+    <!-- whipped cream swirl -->
+    <g fill="#fffbeb" stroke="#d6a35c" stroke-width="3.5">
+      <ellipse cx="200" cy="100" rx="62" ry="18"/>
+      <ellipse cx="200" cy="84" rx="46" ry="15"/>
+      <ellipse cx="200" cy="68" rx="30" ry="13"/>
+      <circle cx="200" cy="52" r="13"/>
+    </g>
+    <!-- cherry on top -->
+    <circle cx="200" cy="38" r="10" fill="#dc2626" stroke="#7f1d1d" stroke-width="3"/>
+    <path d="M202,28 Q206,18 214,16" fill="none" stroke="#14532d" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="196" cy="34" r="3" fill="#fca5a5"/>
+    <!-- glass base -->
+    <rect x="172" y="244" width="56" height="10" rx="5" fill="#f9a8d4" stroke="#9d174d" stroke-width="3.5"/>
+  </g>
+  <!-- strawberries beside glass -->
+  <g filter="url(#soft-shadow)">
+    <g transform="translate(96,216)">
+      <path d="M0,-14 Q18,-12 16,6 Q12,22 0,26 Q-12,22 -16,6 Q-18,-12 0,-14 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="3.5"/>
+      <path d="M-10,-13 L0,-22 L10,-13 L4,-9 L0,-14 L-4,-9 Z" fill="#22c55e" stroke="#14532d" stroke-width="2.5"/>
+      <g fill="#fde047">
+        <circle cx="-6" cy="2" r="1.8"/>
+        <circle cx="5" cy="6" r="1.8"/>
+        <circle cx="-2" cy="14" r="1.8"/>
+        <circle cx="7" cy="-4" r="1.8"/>
+      </g>
+    </g>
+    <g transform="translate(310,222) rotate(15)">
+      <path d="M0,-12 Q15,-10 13,5 Q10,18 0,22 Q-10,18 -13,5 Q-15,-10 0,-12 Z" fill="#f87171" stroke="#7f1d1d" stroke-width="3"/>
+      <path d="M-8,-11 L0,-18 L8,-11 L3,-7 L0,-12 L-3,-7 Z" fill="#22c55e" stroke="#14532d" stroke-width="2.5"/>
+      <g fill="#fde047">
+        <circle cx="-4" cy="2" r="1.6"/>
+        <circle cx="4" cy="6" r="1.6"/>
+        <circle cx="0" cy="12" r="1.6"/>
+      </g>
+    </g>
+  </g>
+  <!-- hearts and sparkles -->
+  <g fill="#f472b6" stroke="#be185d" stroke-width="2">
+    <path d="M64,72 C64,66 72,63 76,68 C80,63 88,66 88,72 C88,78 76,86 76,86 C76,86 64,78 64,72 Z"/>
+    <path d="M318,100 C318,96 323,94 326,97 C329,94 334,96 334,100 C334,104 326,109 326,109 C326,109 318,104 318,100 Z"/>
+  </g>
+  <g fill="#fbbf24" stroke="#a16207" stroke-width="2">
+    <path d="M330,40 L334,50 L344,52 L336,59 L338,70 L330,64 L322,70 L324,59 L316,52 L326,50 Z"/>
+  </g>
+</svg>

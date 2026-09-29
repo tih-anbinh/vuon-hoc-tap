@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-shell desc-shell">
+  <title id="title-shell">Shell - Big seashell on the beach</title>
+  <desc id="desc-shell">A large pink fan-shaped seashell with ridges lying on golden beach sand, with a small spiral shell and starfish nearby and the sea behind.</desc>
+  <defs>
+    <linearGradient id="sl-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#bae6fd"/>
+    </linearGradient>
+    <linearGradient id="sl-shell" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbcfe8"/>
+      <stop offset="100%" stop-color="#f472b6"/>
+    </linearGradient>
+    <linearGradient id="sl-sand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#sl-sky)"/>
+  <circle cx="60" cy="48" r="24" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <!-- sea -->
+  <rect x="0" y="95" width="400" height="40" fill="#0ea5e9"/>
+  <g stroke="#7dd3fc" stroke-width="3" stroke-linecap="round" opacity="0.9">
+    <path d="M50,110 Q65,104 80,110"/>
+    <path d="M200,120 Q215,114 230,120"/>
+    <path d="M320,108 Q335,102 350,108"/>
+  </g>
+  <!-- sand -->
+  <path d="M0,135 Q100,125 200,136 T400,134 L400,300 L0,300 Z" fill="url(#sl-sand)"/>
+  <g fill="#d97706" opacity="0.6">
+    <circle cx="50" cy="175" r="2.5"/>
+    <circle cx="340" cy="165" r="2.5"/>
+    <circle cx="370" cy="230" r="2"/>
+    <circle cx="40" cy="260" r="2.5"/>
+    <circle cx="200" cy="288" r="2"/>
+  </g>
+  <ellipse cx="200" cy="262" rx="130" ry="16" fill="#0f172a" opacity="0.2"/>
+  <!-- big fan seashell (dominant) -->
+  <g filter="url(#soft-shadow)">
+    <!-- hinge base -->
+    <path d="M178,258 Q200,272 222,258 L212,240 L188,240 Z" fill="#be185d" stroke="#831843" stroke-width="3.5"/>
+    <!-- fan body -->
+    <path d="M200,252 L92,168 Q86,120 128,98 Q160,78 200,76 Q240,78 272,98 Q314,120 308,168 Z" fill="url(#sl-shell)" stroke="#be185d" stroke-width="4.5"/>
+    <!-- ridges radiating from hinge -->
+    <g fill="none" stroke="#be185d" stroke-width="3.5" stroke-linecap="round">
+      <path d="M200,248 L108,160"/>
+      <path d="M200,248 L138,116"/>
+      <path d="M200,248 L172,88"/>
+      <path d="M200,248 L200,82"/>
+      <path d="M200,248 L228,88"/>
+      <path d="M200,248 L262,116"/>
+      <path d="M200,248 L292,160"/>
+    </g>
+    <!-- scalloped outer edge accents -->
+    <g fill="none" stroke="#831843" stroke-width="3" stroke-linecap="round" opacity="0.7">
+      <path d="M100,150 Q104,136 114,126"/>
+      <path d="M150,96 Q162,88 176,84"/>
+      <path d="M224,84 Q238,88 250,96"/>
+      <path d="M286,126 Q296,136 300,150"/>
+    </g>
+    <!-- highlight -->
+    <path d="M160,110 Q185,95 215,96" fill="none" stroke="#fdf2f8" stroke-width="6" stroke-linecap="round" opacity="0.85"/>
+  </g>
+  <!-- small spiral shell -->
+  <g filter="url(#soft-shadow)">
+    <path d="M62,222 Q54,200 76,194 Q100,188 104,210 Q107,228 88,231 Q72,234 70,220 Q69,210 80,208 Q90,207 91,216" fill="#fef3c7" stroke="#b45309" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M104,210 L122,222" stroke="#b45309" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+  <!-- starfish -->
+  <g filter="url(#soft-shadow)">
+    <path d="M330,215 L338,231 L356,232 L342,244 L346,261 L330,251 L314,261 L318,244 L304,232 L322,231 Z" fill="#fb923c" stroke="#c2410c" stroke-width="2.5"/>
+    <circle cx="330" cy="238" r="2.5" fill="#c2410c"/>
+    <circle cx="324" cy="230" r="2" fill="#c2410c"/>
+    <circle cx="336" cy="230" r="2" fill="#c2410c"/>
+  </g>
+</svg>

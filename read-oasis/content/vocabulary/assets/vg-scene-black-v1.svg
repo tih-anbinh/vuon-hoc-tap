@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-black desc-black">
+  <title id="title-black">Black - The color black shown by a black cat and objects</title>
+  <desc id="desc-black">A big black paint splash swatch with a black cat sitting beside black objects: a black ball and a black hat, showing the color black.</desc>
+  <defs>
+    <linearGradient id="blk-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <radialGradient id="blk-swatch" cx="40%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#blk-bg)"/>
+  <ellipse cx="200" cy="272" rx="160" ry="9" fill="#0f172a" opacity="0.2"/>
+  <!-- big paint splash -->
+  <g filter="url(#soft-shadow)">
+    <path d="M200,40 Q250,50 265,90 Q305,95 300,135 Q330,160 300,185 Q305,225 265,225 Q245,255 205,245 Q165,260 145,230 Q100,230 105,190 Q75,165 100,140 Q90,100 130,92 Q145,52 200,40 Z" fill="url(#blk-swatch)" stroke="#0f172a" stroke-width="4"/>
+    <!-- highlight -->
+    <ellipse cx="165" cy="105" rx="25" ry="15" fill="#64748b" opacity="0.5" transform="rotate(-20 165 105)"/>
+    <!-- drips -->
+    <path d="M170,242 Q168,262 172,272 Q178,276 180,268 L178,244 Z" fill="#0f172a"/>
+    <path d="M235,240 Q236,256 232,264 Q226,268 226,258 L228,240 Z" fill="#0f172a"/>
+  </g>
+  <!-- black cat -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="330" cy="235" rx="38" ry="32" fill="#0f172a" stroke="#334155" stroke-width="3"/>
+    <circle cx="330" cy="185" r="26" fill="#0f172a" stroke="#334155" stroke-width="3"/>
+    <path d="M312,168 L308,145 L325,160 Z" fill="#0f172a" stroke="#334155" stroke-width="2.5"/>
+    <path d="M348,168 L352,145 L335,160 Z" fill="#0f172a" stroke="#334155" stroke-width="2.5"/>
+    <!-- eyes -->
+    <ellipse cx="321" cy="184" rx="5" ry="7" fill="#facc15"/>
+    <ellipse cx="339" cy="184" rx="5" ry="7" fill="#facc15"/>
+    <ellipse cx="321" cy="185" rx="1.8" ry="5" fill="#0f172a"/>
+    <ellipse cx="339" cy="185" rx="1.8" ry="5" fill="#0f172a"/>
+    <!-- whiskers -->
+    <g stroke="#64748b" stroke-width="1.8" stroke-linecap="round">
+      <line x1="302" y1="192" x2="285" y2="189"/>
+      <line x1="302" y1="198" x2="286" y2="200"/>
+      <line x1="358" y1="192" x2="375" y2="189"/>
+      <line x1="358" y1="198" x2="374" y2="200"/>
+    </g>
+    <!-- tail -->
+    <path d="M366,245 Q392,230 385,200" fill="none" stroke="#0f172a" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <!-- black ball -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="65" cy="245" r="26" fill="#0f172a" stroke="#334155" stroke-width="3"/>
+    <ellipse cx="57" cy="236" rx="8" ry="5" fill="#64748b" opacity="0.6" transform="rotate(-25 57 236)"/>
+  </g>
+</svg>

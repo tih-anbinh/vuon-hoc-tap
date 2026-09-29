@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-grandpa desc-grandpa">
+  <title id="title-grandpa">Grandpa - Elderly man reading a story to grandchild</title>
+  <desc id="desc-grandpa">A cheerful grandpa with white hair and moustache sitting in a green armchair, reading an open picture book to his small grandchild sitting on his lap.</desc>
+  <defs>
+    <linearGradient id="gp-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="gp-chair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#86efac"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#gp-bg)"/>
+  <rect x="0" y="255" width="400" height="45" fill="#a16207"/>
+  <ellipse cx="200" cy="262" rx="145" ry="8" fill="#0f172a" opacity="0.25"/>
+  <!-- armchair -->
+  <g filter="url(#soft-shadow)">
+    <path d="M85,120 Q85,95 110,95 L290,95 Q315,95 315,120 L315,235 L85,235 Z" fill="url(#gp-chair)" stroke="#14532d" stroke-width="4"/>
+    <ellipse cx="80" cy="195" rx="20" ry="32" fill="url(#gp-chair)" stroke="#14532d" stroke-width="4"/>
+    <ellipse cx="320" cy="195" rx="20" ry="32" fill="url(#gp-chair)" stroke="#14532d" stroke-width="4"/>
+    <rect x="90" y="235" width="12" height="20" rx="3" fill="#78350f" stroke="#451a03" stroke-width="2"/>
+    <rect x="298" y="235" width="12" height="20" rx="3" fill="#78350f" stroke="#451a03" stroke-width="2"/>
+  </g>
+  <!-- grandpa -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="200" cy="105" r="36" fill="#fcd9b6" stroke="#78350f" stroke-width="4"/>
+    <!-- white side hair -->
+    <path d="M164,100 Q164,80 178,74 Q172,88 174,98 Z" fill="#e5e7eb" stroke="#94a3b8" stroke-width="2"/>
+    <path d="M236,100 Q236,80 222,74 Q228,88 226,98 Z" fill="#e5e7eb" stroke="#94a3b8" stroke-width="2"/>
+    <!-- eyes + smile -->
+    <path d="M182,100 Q187,95 192,100" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M208,100 Q213,95 218,100" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <!-- white moustache -->
+    <path d="M184,116 Q200,126 216,116 Q209,124 200,123 Q191,124 184,116 Z" fill="#e5e7eb" stroke="#94a3b8" stroke-width="2"/>
+    <path d="M192,127 Q200,132 208,127" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <ellipse cx="172" cy="115" rx="7" ry="4.5" fill="#fb923c" opacity="0.5"/>
+    <ellipse cx="228" cy="115" rx="7" ry="4.5" fill="#fb923c" opacity="0.5"/>
+    <!-- cardigan body -->
+    <path d="M170,140 L230,140 L242,225 L158,225 Z" fill="#b45309" stroke="#78350f" stroke-width="3.5"/>
+    <circle cx="200" cy="162" r="3" fill="#78350f"/>
+    <circle cx="200" cy="180" r="3" fill="#78350f"/>
+  </g>
+  <!-- grandchild on lap -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="150" cy="165" r="22" fill="#f5b26b" stroke="#78350f" stroke-width="3"/>
+    <path d="M128,161 Q129,142 150,143 Q171,142 172,161 Q164,150 150,150 Q136,150 128,161 Z" fill="#78350f"/>
+    <circle cx="143" cy="164" r="3" fill="#0f172a"/>
+    <circle cx="157" cy="164" r="3" fill="#0f172a"/>
+    <path d="M143,174 Q150,180 157,174" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <rect x="134" y="187" width="32" height="38" rx="7" fill="#3b82f6" stroke="#1e3a8a" stroke-width="3"/>
+  </g>
+  <!-- open book held in front -->
+  <g filter="url(#soft-shadow)">
+    <path d="M170,210 Q200,196 230,210 L230,242 Q200,228 170,242 Z" fill="#fff" stroke="#0f172a" stroke-width="3"/>
+    <line x1="200" y1="203" x2="200" y2="235" stroke="#0f172a" stroke-width="2.5"/>
+    <!-- tiny picture in book -->
+    <circle cx="185" cy="222" r="5" fill="#f59e0b"/>
+    <path d="M215,226 L221,218 L227,226 Z" fill="#22c55e"/>
+    <!-- grandpa's arms holding book -->
+    <path d="M170,165 Q150,195 172,218" fill="none" stroke="#b45309" stroke-width="9" stroke-linecap="round"/>
+    <path d="M230,165 Q252,195 228,218" fill="none" stroke="#b45309" stroke-width="9" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-sausage desc-sausage">
+  <title id="title-sausage">Sausage - Sausages on a plate with fork</title>
+  <desc id="desc-sausage">Three plump brown sausages steaming on a white plate, with a fork beside it and one sausage in a bread roll.</desc>
+  <defs>
+    <linearGradient id="sa-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="sa-meat" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c2410c"/>
+      <stop offset="100%" stop-color="#7c2d12"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#sa-bg)"/>
+  <!-- table -->
+  <rect x="0" y="225" width="400" height="75" fill="#e8b478"/>
+  <line x1="0" y1="225" x2="400" y2="225" stroke="#a16207" stroke-width="3.5"/>
+  <ellipse cx="185" cy="240" rx="160" ry="12" fill="#0f172a" opacity="0.2"/>
+  <!-- steam -->
+  <g fill="none" stroke="#cbd5e1" stroke-width="4.5" stroke-linecap="round" opacity="0.85">
+    <path d="M135,105 Q128,85 138,66 Q146,52 138,36"/>
+    <path d="M185,98 Q178,78 188,60 Q196,46 188,30"/>
+    <path d="M235,105 Q228,85 238,66"/>
+  </g>
+  <!-- plate -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="185" cy="185" rx="140" ry="52" fill="#f8fafc" stroke="#64748b" stroke-width="4"/>
+    <ellipse cx="185" cy="183" rx="110" ry="38" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+  </g>
+  <!-- sausages on plate -->
+  <g filter="url(#soft-shadow)">
+    <!-- sausage 1 -->
+    <rect x="95" y="140" width="150" height="34" rx="17" fill="url(#sa-meat)" stroke="#451a03" stroke-width="3.5" transform="rotate(-6 170 157)"/>
+    <path d="M110,146 Q170,136 228,142" fill="none" stroke="#ea580c" stroke-width="4" stroke-linecap="round" opacity="0.8" transform="rotate(-6 170 157)"/>
+    <!-- sausage 2 -->
+    <rect x="120" y="172" width="150" height="34" rx="17" fill="url(#sa-meat)" stroke="#451a03" stroke-width="3.5" transform="rotate(4 195 189)"/>
+    <path d="M135,178 Q195,170 253,176" fill="none" stroke="#ea580c" stroke-width="4" stroke-linecap="round" opacity="0.8" transform="rotate(4 195 189)"/>
+    <!-- grill marks -->
+    <g stroke="#451a03" stroke-width="2.5" opacity="0.8">
+      <line x1="130" y1="145" x2="126" y2="166"/>
+      <line x1="165" y1="142" x2="161" y2="163"/>
+      <line x1="200" y1="141" x2="196" y2="162"/>
+      <line x1="155" y1="180" x2="151" y2="201"/>
+      <line x1="192" y1="182" x2="188" y2="203"/>
+      <line x1="228" y1="185" x2="224" y2="206"/>
+    </g>
+  </g>
+  <!-- hot dog: sausage in roll -->
+  <g filter="url(#soft-shadow)">
+    <!-- roll bottom -->
+    <path d="M280,240 Q278,215 310,212 Q368,208 372,232 Q374,252 340,255 Q290,258 280,240 Z" fill="#e8b478" stroke="#92400e" stroke-width="3.5"/>
+    <!-- sausage inside -->
+    <rect x="282" y="208" width="98" height="24" rx="12" fill="url(#sa-meat)" stroke="#451a03" stroke-width="3" transform="rotate(-4 331 220)"/>
+    <!-- roll top behind -->
+    <path d="M285,214 Q288,192 322,190 Q370,188 374,210 L370,218 Q330,204 288,220 Z" fill="#fbbf24" stroke="#92400e" stroke-width="3"/>
+    <!-- mustard zigzag -->
+    <path d="M292,214 L306,206 L318,214 L332,206 L344,214 L358,206 L368,212" fill="none" stroke="#facc15" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- fork -->
+  <g filter="url(#soft-shadow)" stroke="#64748b" stroke-width="4" stroke-linecap="round">
+    <line x1="45" y1="255" x2="45" y2="215"/>
+    <line x1="37" y1="215" x2="37" y2="198"/>
+    <line x1="45" y1="215" x2="45" y2="196"/>
+    <line x1="53" y1="215" x2="53" y2="198"/>
+    <line x1="45" y1="255" x2="45" y2="282"/>
+  </g>
+</svg>

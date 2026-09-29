@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-beautiful desc-beautiful">
+  <title id="title-beautiful">Beautiful - A gorgeous blooming flower with sparkles</title>
+  <desc id="desc-beautiful">A big beautiful pink flower in full bloom with sparkles and hearts around it, under a rainbow arc in a sunny garden.</desc>
+  <defs>
+    <linearGradient id="bt-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#fef3c7"/>
+    </linearGradient>
+    <radialGradient id="bt-petal" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#fbcfe8"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </radialGradient>
+    <radialGradient id="bt-center" cx="40%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#bt-bg)"/>
+  <!-- rainbow arc -->
+  <g fill="none" stroke-width="8" opacity="0.55">
+    <path d="M40,80 Q200,-40 360,80" stroke="#ef4444"/>
+    <path d="M55,85 Q200,-22 345,85" stroke="#f59e0b"/>
+    <path d="M70,90 Q200,-5 330,90" stroke="#22c55e"/>
+    <path d="M85,95 Q200,12 315,95" stroke="#3b82f6"/>
+  </g>
+  <!-- grass -->
+  <rect x="0" y="250" width="400" height="50" fill="#4d7c0f"/>
+  <path d="M0,250 Q100,240 200,250 T400,250 L400,260 L0,260 Z" fill="#65a30d"/>
+  <ellipse cx="200" cy="262" rx="90" ry="8" fill="#0f172a" opacity="0.25"/>
+  <!-- flower -->
+  <g filter="url(#soft-shadow)">
+    <!-- stem -->
+    <path d="M200,255 Q195,215 200,185" fill="none" stroke="#15803d" stroke-width="8" stroke-linecap="round"/>
+    <!-- leaves -->
+    <path d="M200,225 Q160,215 150,235 Q175,245 200,230 Z" fill="#22c55e" stroke="#15803d" stroke-width="3"/>
+    <path d="M199,210 Q240,200 250,220 Q225,230 199,215 Z" fill="#22c55e" stroke="#15803d" stroke-width="3"/>
+    <!-- petals -->
+    <g stroke="#be185d" stroke-width="3.5">
+      <ellipse cx="200" cy="95" rx="24" ry="40" fill="url(#bt-petal)"/>
+      <ellipse cx="200" cy="175" rx="24" ry="40" fill="url(#bt-petal)"/>
+      <ellipse cx="160" cy="135" rx="40" ry="24" fill="url(#bt-petal)"/>
+      <ellipse cx="240" cy="135" rx="40" ry="24" fill="url(#bt-petal)"/>
+      <ellipse cx="172" cy="107" rx="28" ry="28" fill="url(#bt-petal)"/>
+      <ellipse cx="228" cy="107" rx="28" ry="28" fill="url(#bt-petal)"/>
+      <ellipse cx="172" cy="163" rx="28" ry="28" fill="url(#bt-petal)"/>
+      <ellipse cx="228" cy="163" rx="28" ry="28" fill="url(#bt-petal)"/>
+    </g>
+    <!-- center -->
+    <circle cx="200" cy="135" r="26" fill="url(#bt-center)" stroke="#b45309" stroke-width="3.5"/>
+  </g>
+  <!-- sparkles -->
+  <g fill="#facc15" stroke="#b45309" stroke-width="1.5">
+    <path d="M90,150 L95,162 L107,166 L95,170 L90,182 L85,170 L73,166 L85,162 Z"/>
+    <path d="M315,120 L319,130 L329,133 L319,136 L315,146 L311,136 L301,133 L311,130 Z"/>
+    <path d="M300,210 L303,217 L310,219 L303,221 L300,228 L297,221 L290,219 L297,217 Z"/>
+  </g>
+  <!-- small hearts -->
+  <g fill="#f472b6" stroke="#be185d" stroke-width="1.5">
+    <path d="M110,90 C107,84 98,84 98,92 C98,98 110,105 110,105 C110,105 122,98 122,92 C122,84 113,84 110,90 Z"/>
+    <path d="M320,175 C318,171 312,171 312,176 C312,180 320,185 320,185 C320,185 328,180 328,176 C328,171 322,171 320,175 Z"/>
+  </g>
+</svg>

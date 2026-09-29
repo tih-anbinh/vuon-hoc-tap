@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-library desc-library">
+  <title id="title-library">Library - A quiet room full of books</title>
+  <desc id="desc-library">A cosy library with tall bookshelves full of colourful books, and a child sitting at a table quietly reading a big open book.</desc>
+  <defs>
+    <linearGradient id="lb-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#lb-bg)"/>
+  <rect x="0" y="248" width="400" height="52" fill="#d6a35c"/>
+  <line x1="0" y1="248" x2="400" y2="248" stroke="#92400e" stroke-width="3.5"/>
+  <!-- LEFT BOOKSHELF -->
+  <g filter="url(#soft-shadow)">
+    <rect x="24" y="36" width="120" height="212" fill="#92400e" stroke="#451a03" stroke-width="4.5"/>
+    <!-- shelf rows -->
+    <g fill="#78350f">
+      <rect x="30" y="94" width="108" height="8"/>
+      <rect x="30" y="150" width="108" height="8"/>
+      <rect x="30" y="206" width="108" height="8"/>
+    </g>
+    <!-- books row 1 -->
+    <g stroke-width="2.5">
+      <rect x="34" y="52" width="14" height="42" fill="#ef4444" stroke="#7f1d1d"/>
+      <rect x="50" y="56" width="13" height="38" fill="#3b82f6" stroke="#1e3a8a"/>
+      <rect x="65" y="50" width="15" height="44" fill="#22c55e" stroke="#14532d"/>
+      <rect x="82" y="58" width="12" height="36" fill="#f59e0b" stroke="#78350f"/>
+      <rect x="96" y="52" width="14" height="42" fill="#8b5cf6" stroke="#4c1d95"/>
+      <rect x="112" y="56" width="13" height="38" fill="#ec4899" stroke="#831843"/>
+    </g>
+    <!-- books row 2 -->
+    <g stroke-width="2.5">
+      <rect x="34" y="110" width="13" height="40" fill="#f59e0b" stroke="#78350f"/>
+      <rect x="49" y="114" width="14" height="36" fill="#ef4444" stroke="#7f1d1d"/>
+      <rect x="65" y="108" width="12" height="42" fill="#0ea5e9" stroke="#0c4a6e"/>
+      <rect x="79" y="116" width="15" height="34" fill="#22c55e" stroke="#14532d"/>
+      <rect x="96" y="110" width="13" height="40" fill="#a855f7" stroke="#581c87"/>
+      <rect x="111" y="114" width="14" height="36" fill="#fbbf24" stroke="#78350f"/>
+    </g>
+    <!-- books row 3 -->
+    <g stroke-width="2.5">
+      <rect x="34" y="168" width="14" height="38" fill="#06b6d4" stroke="#164e63"/>
+      <rect x="50" y="172" width="12" height="34" fill="#f43f5e" stroke="#881337"/>
+      <rect x="64" y="166" width="15" height="40" fill="#84cc16" stroke="#3f6212"/>
+      <rect x="81" y="174" width="13" height="32" fill="#f97316" stroke="#7c2d12"/>
+      <rect x="96" y="168" width="14" height="38" fill="#2563eb" stroke="#1e3a8a"/>
+      <rect x="112" y="172" width="13" height="34" fill="#d946ef" stroke="#701a75"/>
+    </g>
+  </g>
+  <!-- RIGHT BOOKSHELF -->
+  <g filter="url(#soft-shadow)">
+    <rect x="256" y="36" width="120" height="212" fill="#92400e" stroke="#451a03" stroke-width="4.5"/>
+    <g fill="#78350f">
+      <rect x="262" y="94" width="108" height="8"/>
+      <rect x="262" y="150" width="108" height="8"/>
+      <rect x="262" y="206" width="108" height="8"/>
+    </g>
+    <g stroke-width="2.5">
+      <rect x="266" y="54" width="13" height="40" fill="#22c55e" stroke="#14532d"/>
+      <rect x="281" y="50" width="15" height="44" fill="#f59e0b" stroke="#78350f"/>
+      <rect x="298" y="58" width="12" height="36" fill="#ef4444" stroke="#7f1d1d"/>
+      <rect x="312" y="52" width="14" height="42" fill="#0ea5e9" stroke="#0c4a6e"/>
+      <rect x="328" y="56" width="13" height="38" fill="#a855f7" stroke="#581c87"/>
+      <rect x="343" y="52" width="14" height="42" fill="#fb7185" stroke="#881337"/>
+    </g>
+    <g stroke-width="2.5">
+      <rect x="266" y="112" width="14" height="38" fill="#8b5cf6" stroke="#4c1d95"/>
+      <rect x="282" y="108" width="12" height="42" fill="#fbbf24" stroke="#78350f"/>
+      <rect x="296" y="116" width="15" height="34" fill="#16a34a" stroke="#14532d"/>
+      <rect x="313" y="110" width="13" height="40" fill="#ef4444" stroke="#7f1d1d"/>
+      <rect x="328" y="114" width="14" height="36" fill="#3b82f6" stroke="#1e3a8a"/>
+      <rect x="344" y="110" width="13" height="40" fill="#f97316" stroke="#7c2d12"/>
+    </g>
+    <g stroke-width="2.5">
+      <rect x="266" y="170" width="12" height="36" fill="#f43f5e" stroke="#881337"/>
+      <rect x="280" y="166" width="15" height="40" fill="#06b6d4" stroke="#164e63"/>
+      <rect x="297" y="174" width="13" height="32" fill="#84cc16" stroke="#3f6212"/>
+      <rect x="312" y="168" width="14" height="38" fill="#d946ef" stroke="#701a75"/>
+      <rect x="328" y="172" width="13" height="34" fill="#fbbf24" stroke="#78350f"/>
+      <rect x="343" y="168" width="14" height="38" fill="#2563eb" stroke="#1e3a8a"/>
+    </g>
+  </g>
+  <!-- CHILD READING AT TABLE (center) -->
+  <g filter="url(#soft-shadow)">
+    <!-- child behind table -->
+    <path d="M172,128 Q170,104 200,102 Q230,104 228,128 L222,132 Q200,116 178,132 Z" fill="#451a03" stroke="#1c1917" stroke-width="3"/>
+    <circle cx="200" cy="134" r="24" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <!-- eyes looking down at book -->
+    <path d="M190,136 Q193,140 196,136" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M204,136 Q207,140 210,136" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M193,146 Q200,150 207,146" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- shirt -->
+    <path d="M182,156 L218,156 L224,196 L176,196 Z" fill="#0ea5e9" stroke="#0c4a6e" stroke-width="3.5"/>
+    <!-- arms resting on table holding book -->
+    <path d="M184,164 Q168,176 166,190" fill="none" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+    <path d="M216,164 Q232,176 234,190" fill="none" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+    <!-- table -->
+    <rect x="148" y="196" width="104" height="12" rx="4" fill="#b45309" stroke="#78350f" stroke-width="3.5"/>
+    <line x1="158" y1="208" x2="158" y2="248" stroke="#78350f" stroke-width="7"/>
+    <line x1="242" y1="208" x2="242" y2="248" stroke="#78350f" stroke-width="7"/>
+    <!-- open book on table -->
+    <path d="M164,196 Q182,186 200,193 Q218,186 236,196 L236,192 Q218,181 200,188 Q182,181 164,192 Z"
+          fill="#f8fafc" stroke="#334155" stroke-width="3"/>
+    <line x1="200" y1="188" x2="200" y2="195" stroke="#334155" stroke-width="2.5"/>
+  </g>
+  <!-- quiet: zzz-free, just a star sparkle -->
+  <g fill="#fbbf24" stroke="#a16207" stroke-width="2">
+    <path d="M200,40 L204,52 L216,54 L207,62 L209,74 L200,68 L191,74 L193,62 L184,54 L196,52 Z"/>
+  </g>
+</svg>

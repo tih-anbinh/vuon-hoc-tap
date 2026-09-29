@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-earache desc-earache">
+  <title id="title-earache">Earache - Child holding a sore ear</title>
+  <desc id="desc-earache">A sad child holding one hand over a sore red ear with pain lines around it, sitting with a warm scarf, showing an earache.</desc>
+  <defs>
+    <linearGradient id="ea-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0e7ff"/>
+      <stop offset="100%" stop-color="#c7d2fe"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#ea-bg)"/>
+  <rect x="0" y="248" width="400" height="52" fill="#a5b4fc"/>
+  <line x1="0" y1="248" x2="400" y2="248" stroke="#4338ca" stroke-width="3.5"/>
+  <ellipse cx="200" cy="262" rx="140" ry="12" fill="#0f172a" opacity="0.15"/>
+  <!-- THE CHILD WITH EARACHE (hero element) -->
+  <g filter="url(#soft-shadow)">
+    <!-- hair -->
+    <path d="M126,110 Q122,54 200,50 Q278,54 274,110 Q278,90 266,76 Q256,88 244,80 Q232,92 216,84 Q204,94 188,86 Q174,96 160,86 Q148,94 140,84 Q130,94 126,110 Z"
+          fill="#92400e" stroke="#451a03" stroke-width="3.5"/>
+    <!-- head, large -->
+    <circle cx="200" cy="122" r="62" fill="#fcd9b6" stroke="#78350f" stroke-width="4"/>
+    <!-- sad eyes -->
+    <circle cx="178" cy="114" r="6" fill="#0f172a"/>
+    <circle cx="222" cy="114" r="6" fill="#0f172a"/>
+    <path d="M168,102 Q176,98 184,102" fill="none" stroke="#78350f" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M216,102 Q224,98 232,102" fill="none" stroke="#78350f" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- tear -->
+    <path d="M176,126 Q180,134 176,140 Q170,134 176,126 Z" fill="#38bdf8" stroke="#0c4a6e" stroke-width="2"/>
+    <!-- sad mouth -->
+    <path d="M184,156 Q200,146 216,156" fill="none" stroke="#0f172a" stroke-width="4" stroke-linecap="round"/>
+    <!-- sore ear (left side, red) -->
+    <ellipse cx="136" cy="126" rx="14" ry="20" fill="#f87171" stroke="#7f1d1d" stroke-width="4"/>
+    <path d="M132,118 Q138,126 132,134" fill="none" stroke="#7f1d1d" stroke-width="3" stroke-linecap="round"/>
+    <!-- other ear normal -->
+    <ellipse cx="264" cy="126" rx="12" ry="18" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <!-- pain lines around sore ear -->
+    <g stroke="#dc2626" stroke-width="4.5" stroke-linecap="round" fill="none">
+      <path d="M108,96 L96,84"/>
+      <path d="M100,126 L84,126"/>
+      <path d="M108,156 L96,168"/>
+    </g>
+    <!-- pain star -->
+    <path d="M92,58 L97,70 L110,72 L100,81 L103,94 L92,87 L81,94 L84,81 L74,72 L87,70 Z" fill="#f97316" stroke="#7c2d12" stroke-width="2.5"/>
+    <!-- body with scarf -->
+    <path d="M162,182 L238,182 L252,258 L148,258 Z" fill="#16a34a" stroke="#14532d" stroke-width="4"/>
+    <!-- scarf -->
+    <path d="M158,184 Q200,202 242,184 L242,198 Q200,216 158,198 Z" fill="#f97316" stroke="#7c2d12" stroke-width="3.5"/>
+    <path d="M226,198 L234,232 L218,234 L214,202 Z" fill="#f97316" stroke="#7c2d12" stroke-width="3"/>
+    <g stroke="#7c2d12" stroke-width="2.5">
+      <line x1="222" y1="232" x2="221" y2="240"/>
+      <line x1="228" y1="232" x2="228" y2="240"/>
+    </g>
+    <!-- arm holding sore ear -->
+    <path d="M164,196 Q126,186 122,150" fill="none" stroke="#fcd9b6" stroke-width="12" stroke-linecap="round"/>
+    <ellipse cx="126" cy="140" rx="14" ry="11" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <!-- other arm down -->
+    <path d="M236,196 Q258,214 260,236" fill="none" stroke="#fcd9b6" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="260" cy="240" r="8" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+  </g>
+  <!-- hot water bottle nearby -->
+  <g filter="url(#soft-shadow)">
+    <path d="M312,206 Q312,192 330,192 Q348,192 348,206 L348,240 Q348,252 330,252 Q312,252 312,240 Z" fill="#dc2626" stroke="#7f1d1d" stroke-width="3.5"/>
+    <rect x="324" y="180" width="12" height="14" rx="3" fill="#b91c1c" stroke="#7f1d1d" stroke-width="2.5"/>
+    <g stroke="#7f1d1d" stroke-width="2.5" fill="none">
+      <path d="M318,214 L342,214"/>
+      <path d="M318,226 L342,226"/>
+    </g>
+  </g>
+  <!-- warm steam -->
+  <g stroke="#94a3b8" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.7">
+    <path d="M322,170 Q318,160 324,150"/>
+    <path d="M338,170 Q334,160 340,150"/>
+  </g>
+</svg>

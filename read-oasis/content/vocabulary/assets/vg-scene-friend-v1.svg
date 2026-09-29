@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-friend desc-friend">
+  <title id="title-friend">Friend - Two kids with arms around each other</title>
+  <desc id="desc-friend">Two happy children standing side by side with their arms around each other's shoulders, a heart floating above them.</desc>
+  <defs>
+    <linearGradient id="fr-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#fr-bg)"/>
+  <circle cx="55" cy="50" r="24" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <rect x="0" y="248" width="400" height="52" fill="#4d7c0f"/>
+  <path d="M0,248 Q100,240 200,248 T400,248 L400,258 L0,258 Z" fill="#65a30d"/>
+  <ellipse cx="200" cy="254" rx="130" ry="8" fill="#0f172a" opacity="0.22"/>
+  <!-- heart above -->
+  <path d="M200,60 C193,46 172,46 172,64 C172,78 200,94 200,94 C200,94 228,78 228,64 C228,46 207,46 200,60 Z" fill="#ec4899" stroke="#9d174d" stroke-width="3"/>
+  <!-- kid 1 -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="155" cy="135" r="30" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M125,129 Q127,101 155,102 Q183,101 185,129 Q175,114 155,114 Q135,114 125,129 Z" fill="#0f172a"/>
+    <circle cx="146" cy="133" r="4" fill="#0f172a"/>
+    <circle cx="164" cy="133" r="4" fill="#0f172a"/>
+    <path d="M145,147 Q155,155 165,147" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="136" cy="142" rx="6" ry="4" fill="#fb923c" opacity="0.55"/>
+    <rect x="133" y="167" width="44" height="58" rx="9" fill="#3b82f6" stroke="#1e3a8a" stroke-width="3.5"/>
+    <!-- arm around friend -->
+    <path d="M177,175 Q205,160 228,172" fill="none" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
+    <line x1="133" y1="185" x2="115" y2="210" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
+    <rect x="138" y="225" width="14" height="26" rx="5" fill="#1e40af"/>
+    <rect x="158" y="225" width="14" height="26" rx="5" fill="#1e40af"/>
+  </g>
+  <!-- kid 2 -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="245" cy="135" r="30" fill="#f5b26b" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M215,129 Q216,100 245,101 Q274,100 275,129 Q266,113 245,113 Q224,113 215,129 Z" fill="#78350f"/>
+    <circle cx="217" cy="148" r="9" fill="#78350f"/>
+    <circle cx="273" cy="148" r="9" fill="#78350f"/>
+    <circle cx="236" cy="133" r="4" fill="#0f172a"/>
+    <circle cx="254" cy="133" r="4" fill="#0f172a"/>
+    <path d="M235,147 Q245,155 255,147" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="264" cy="142" rx="6" ry="4" fill="#fb923c" opacity="0.55"/>
+    <path d="M225,167 L265,167 L273,232 L217,232 Z" fill="#ec4899" stroke="#9d174d" stroke-width="3.5"/>
+    <!-- arm around friend -->
+    <path d="M223,175 Q195,160 172,172" fill="none" stroke="#f5b26b" stroke-width="9" stroke-linecap="round"/>
+    <line x1="265" y1="185" x2="285" y2="210" stroke="#f5b26b" stroke-width="9" stroke-linecap="round"/>
+    <line x1="235" y1="232" x2="235" y2="252" stroke="#f5b26b" stroke-width="9" stroke-linecap="round"/>
+    <line x1="255" y1="232" x2="255" y2="252" stroke="#f5b26b" stroke-width="9" stroke-linecap="round"/>
+  </g>
+</svg>

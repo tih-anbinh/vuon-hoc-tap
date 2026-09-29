@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-closed desc-closed">
+  <title id="title-closed">Closed - Shop door shut with a hanging sign</title>
+  <desc id="desc-closed">A firmly shut red shop door with a hanging sign showing a crossed-out open padlock symbol, indicating the shop is closed.</desc>
+  <defs>
+    <linearGradient id="cls-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c7d2fe"/>
+      <stop offset="100%" stop-color="#e0e7ff"/>
+    </linearGradient>
+    <linearGradient id="cls-door" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <linearGradient id="cls-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fcd9b6"/>
+      <stop offset="100%" stop-color="#f5b26b"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#cls-bg)"/>
+  <!-- wall -->
+  <rect x="0" y="30" width="400" height="230" fill="url(#cls-wall)"/>
+  <rect x="0" y="258" width="400" height="42" fill="#94a3b8"/>
+  <line x1="0" y1="258" x2="400" y2="258" stroke="#475569" stroke-width="3"/>
+  <!-- door frame + closed door -->
+  <g filter="url(#soft-shadow)">
+    <rect x="130" y="55" width="140" height="205" rx="8" fill="#78350f" stroke="#451a03" stroke-width="4"/>
+    <rect x="142" y="67" width="116" height="191" rx="5" fill="url(#cls-door)" stroke="#7f1d1d" stroke-width="3.5"/>
+    <!-- door panels -->
+    <rect x="155" y="82" width="90" height="60" rx="5" fill="none" stroke="#7f1d1d" stroke-width="3"/>
+    <rect x="155" y="160" width="90" height="80" rx="5" fill="none" stroke="#7f1d1d" stroke-width="3"/>
+    <!-- knob -->
+    <circle cx="242" cy="165" r="6" fill="#facc15" stroke="#78350f" stroke-width="2.5"/>
+  </g>
+  <!-- hanging sign with closed padlock -->
+  <g filter="url(#soft-shadow)">
+    <line x1="185" y1="82" x2="192" y2="100" stroke="#334155" stroke-width="2.5"/>
+    <line x1="215" y1="82" x2="208" y2="100" stroke="#334155" stroke-width="2.5"/>
+    <rect x="160" y="100" width="80" height="52" rx="8" fill="#fef3c7" stroke="#78350f" stroke-width="3.5"/>
+    <!-- closed padlock icon -->
+    <rect x="186" y="122" width="28" height="22" rx="4" fill="#f59e0b" stroke="#78350f" stroke-width="3"/>
+    <path d="M191,122 L191,115 Q191,105 200,105 Q209,105 209,115 L209,122" fill="none" stroke="#78350f" stroke-width="3.5"/>
+    <circle cx="200" cy="131" r="3.5" fill="#78350f"/>
+    <line x1="200" y1="133" x2="200" y2="139" stroke="#78350f" stroke-width="3"/>
+  </g>
+  <!-- crescent moon: evening = shop shut -->
+  <path d="M340,45 A24,24 0 1,0 364,81 A19,19 0 1,1 340,45 Z" fill="#facc15" stroke="#d97706" stroke-width="2.5"/>
+</svg>

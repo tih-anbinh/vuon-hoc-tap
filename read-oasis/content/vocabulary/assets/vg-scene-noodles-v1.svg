@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-noodles desc-noodles">
+  <title id="title-noodles">Noodles - A steaming bowl of noodles</title>
+  <desc id="desc-noodles">A big red bowl full of long wavy yellow noodles with vegetables, steam rising from the top, and chopsticks lifting some noodles up.</desc>
+  <defs>
+    <linearGradient id="nd-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fef08a"/>
+    </linearGradient>
+    <linearGradient id="nd-bowl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f87171"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#nd-bg)"/>
+  <!-- table -->
+  <rect x="0" y="240" width="400" height="60" fill="#b45309"/>
+  <line x1="0" y1="240" x2="400" y2="240" stroke="#78350f" stroke-width="4"/>
+  <ellipse cx="200" cy="252" rx="160" ry="13" fill="#0f172a" opacity="0.18"/>
+  <!-- steam -->
+  <g stroke="#94a3b8" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.8">
+    <path d="M150,96 Q142,76 152,58 Q160,44 152,28"/>
+    <path d="M200,88 Q192,68 202,50 Q210,36 202,20"/>
+    <path d="M250,96 Q242,76 252,58 Q260,44 252,28"/>
+  </g>
+  <!-- chopsticks lifting noodles -->
+  <g filter="url(#soft-shadow)">
+    <line x1="268" y1="26" x2="216" y2="128" stroke="#92400e" stroke-width="7" stroke-linecap="round"/>
+    <line x1="292" y1="38" x2="234" y2="132" stroke="#78350f" stroke-width="7" stroke-linecap="round"/>
+    <!-- lifted noodles strands -->
+    <g stroke="#fbbf24" stroke-width="5.5" fill="none" stroke-linecap="round">
+      <path d="M220,128 Q212,150 220,168 Q228,184 218,198"/>
+      <path d="M228,130 Q222,152 230,170 Q236,186 228,200"/>
+      <path d="M236,132 Q232,154 238,172 Q244,188 236,198"/>
+    </g>
+  </g>
+  <!-- BOWL OF NOODLES (hero element) -->
+  <g filter="url(#soft-shadow)">
+    <!-- noodles heap above rim -->
+    <g stroke="#fbbf24" stroke-width="6" fill="none" stroke-linecap="round">
+      <path d="M96,142 Q116,120 144,132 Q168,142 192,128 Q220,114 244,132 Q272,150 300,136"/>
+      <path d="M92,156 Q120,136 152,148 Q180,158 208,142 Q238,126 268,146 Q288,158 306,150"/>
+      <path d="M104,128 Q136,110 168,124 Q200,136 232,120 Q260,108 288,124"/>
+    </g>
+    <!-- veggies on top -->
+    <g>
+      <ellipse cx="140" cy="128" rx="11" ry="7" fill="#22c55e" stroke="#14532d" stroke-width="2.5"/>
+      <ellipse cx="252" cy="126" rx="11" ry="7" fill="#22c55e" stroke="#14532d" stroke-width="2.5"/>
+      <circle cx="196" cy="134" r="9" fill="#fb923c" stroke="#9a3412" stroke-width="2.5"/>
+      <circle cx="288" cy="140" r="8" fill="#ef4444" stroke="#7f1d1d" stroke-width="2.5"/>
+      <ellipse cx="112" cy="142" rx="9" ry="6" fill="#f472b6" stroke="#9d174d" stroke-width="2.5"/>
+    </g>
+    <!-- bowl -->
+    <path d="M76,150 L324,150 Q322,214 268,236 L132,236 Q78,214 76,150 Z"
+          fill="url(#nd-bowl)" stroke="#7f1d1d" stroke-width="5"/>
+    <!-- bowl pattern -->
+    <path d="M96,178 Q200,196 304,178" fill="none" stroke="#fde047" stroke-width="5" stroke-linecap="round"/>
+    <g fill="#fde047">
+      <circle cx="140" cy="204" r="5"/>
+      <circle cx="200" cy="210" r="5"/>
+      <circle cx="260" cy="204" r="5"/>
+    </g>
+    <!-- foot -->
+    <rect x="164" y="236" width="72" height="12" rx="5" fill="#b91c1c" stroke="#7f1d1d" stroke-width="3.5"/>
+  </g>
+  <!-- spoon beside -->
+  <g filter="url(#soft-shadow)" transform="rotate(-14 68 216)">
+    <ellipse cx="52" cy="214" rx="17" ry="12" fill="#e2e8f0" stroke="#475569" stroke-width="3.5"/>
+    <rect x="66" y="210" width="52" height="8" rx="4" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  </g>
+  <!-- sparkles -->
+  <g fill="#f59e0b" stroke="#a16207" stroke-width="2">
+    <path d="M62,72 L66,82 L76,84 L68,91 L70,102 L62,96 L54,102 L56,91 L48,84 L58,82 Z"/>
+    <path d="M344,84 L347,91 L354,92 L349,97 L350,105 L344,101 L338,105 L339,97 L334,92 L341,91 Z"/>
+  </g>
+</svg>

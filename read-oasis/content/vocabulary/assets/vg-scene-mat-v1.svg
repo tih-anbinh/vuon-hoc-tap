@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-mat desc-mat">
+  <title id="title-mat">Mat - Doormat in front of a door</title>
+  <desc id="desc-mat">A striped rectangular doormat lying on the floor in front of a wooden door, with a cat sitting beside it.</desc>
+  <defs>
+    <linearGradient id="mt-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="mt-mat" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <!-- wall and floor -->
+  <rect x="0" y="0" width="400" height="195" fill="url(#mt-bg)"/>
+  <rect x="0" y="195" width="400" height="105" fill="#e8b478"/>
+  <line x1="0" y1="195" x2="400" y2="195" stroke="#a16207" stroke-width="3"/>
+  <!-- floor boards -->
+  <g stroke="#d6a35c" stroke-width="2" opacity="0.7">
+    <line x1="0" y1="230" x2="400" y2="230"/>
+    <line x1="0" y1="268" x2="400" y2="268"/>
+  </g>
+  <!-- door -->
+  <g filter="url(#soft-shadow)">
+    <rect x="130" y="20" width="140" height="178" rx="5" fill="#a16207" stroke="#78350f" stroke-width="4.5"/>
+    <rect x="145" y="38" width="46" height="60" rx="4" fill="#c98a3b" stroke="#78350f" stroke-width="3"/>
+    <rect x="209" y="38" width="46" height="60" rx="4" fill="#c98a3b" stroke="#78350f" stroke-width="3"/>
+    <rect x="145" y="115" width="46" height="66" rx="4" fill="#c98a3b" stroke="#78350f" stroke-width="3"/>
+    <rect x="209" y="115" width="46" height="66" rx="4" fill="#c98a3b" stroke="#78350f" stroke-width="3"/>
+    <circle cx="252" cy="112" r="6" fill="#facc15" stroke="#451a03" stroke-width="2.5"/>
+  </g>
+  <!-- doormat: large, front and center, perspective parallelogram -->
+  <g filter="url(#soft-shadow)">
+    <path d="M95,215 L305,215 L330,275 L70,275 Z" fill="url(#mt-mat)" stroke="#78350f" stroke-width="4.5"/>
+    <!-- inner border -->
+    <path d="M112,224 L288,224 L308,266 L92,266 Z" fill="none" stroke="#fde68a" stroke-width="4"/>
+    <!-- stripes -->
+    <g stroke="#b45309" stroke-width="6" opacity="0.85">
+      <line x1="150" y1="228" x2="143" y2="262"/>
+      <line x1="200" y1="228" x2="200" y2="262"/>
+      <line x1="250" y1="228" x2="257" y2="262"/>
+    </g>
+    <!-- fringe -->
+    <g stroke="#92400e" stroke-width="3" stroke-linecap="round">
+      <line x1="80" y1="278" x2="78" y2="286"/>
+      <line x1="110" y1="278" x2="109" y2="286"/>
+      <line x1="140" y1="278" x2="140" y2="286"/>
+      <line x1="170" y1="278" x2="170" y2="286"/>
+      <line x1="200" y1="278" x2="200" y2="286"/>
+      <line x1="230" y1="278" x2="230" y2="286"/>
+      <line x1="260" y1="278" x2="260" y2="286"/>
+      <line x1="290" y1="278" x2="291" y2="286"/>
+      <line x1="320" y1="278" x2="322" y2="286"/>
+    </g>
+  </g>
+  <!-- cat sitting beside the mat -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="352" cy="228" rx="26" ry="30" fill="#78716c" stroke="#44403c" stroke-width="3"/>
+    <circle cx="352" cy="185" r="20" fill="#78716c" stroke="#44403c" stroke-width="3"/>
+    <path d="M336,172 L332,152 L348,166 Z" fill="#78716c" stroke="#44403c" stroke-width="2.5"/>
+    <path d="M368,172 L372,152 L356,166 Z" fill="#78716c" stroke="#44403c" stroke-width="2.5"/>
+    <circle cx="345" cy="184" r="3" fill="#0f172a"/>
+    <circle cx="359" cy="184" r="3" fill="#0f172a"/>
+    <path d="M349,192 L352,195 L355,192" fill="none" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/>
+    <g stroke="#44403c" stroke-width="1.8" stroke-linecap="round">
+      <line x1="332" y1="190" x2="318" y2="188"/>
+      <line x1="332" y1="195" x2="319" y2="197"/>
+      <line x1="372" y1="190" x2="386" y2="188"/>
+      <line x1="372" y1="195" x2="385" y2="197"/>
+    </g>
+    <path d="M375,245 Q395,238 392,218" fill="none" stroke="#78716c" stroke-width="8" stroke-linecap="round"/>
+    <ellipse cx="340" cy="255" rx="9" ry="5" fill="#57534e"/>
+    <ellipse cx="362" cy="255" rx="9" ry="5" fill="#57534e"/>
+  </g>
+</svg>

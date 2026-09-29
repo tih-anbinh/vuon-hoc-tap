@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-food desc-food">
+  <title id="title-food">Food - Table full of different foods</title>
+  <desc id="desc-food">A table spread with different foods: a sandwich, an apple, a bowl of soup, bread, and a banana, showing the category of food.</desc>
+  <defs>
+    <linearGradient id="fd-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="fd-table" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c2955a"/>
+      <stop offset="100%" stop-color="#8a5a24"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#fd-bg)"/>
+  <rect x="0" y="120" width="400" height="180" fill="url(#fd-table)"/>
+  <line x1="0" y1="120" x2="400" y2="120" stroke="#5c3210" stroke-width="4"/>
+  <!-- sandwich -->
+  <g filter="url(#soft-shadow)">
+    <path d="M50,190 L160,190 L105,145 Z" fill="#e8b478" stroke="#78350f" stroke-width="3"/>
+    <path d="M52,190 L158,190 L105,152 Z" fill="#f5d9a8" stroke="#a16207" stroke-width="1.5"/>
+    <rect x="45" y="190" width="120" height="10" rx="3" fill="#22c55e" stroke="#14532d" stroke-width="2"/>
+    <rect x="48" y="200" width="114" height="9" rx="3" fill="#fbbf24" stroke="#b45309" stroke-width="2"/>
+    <rect x="45" y="209" width="120" height="12" rx="4" fill="#e8b478" stroke="#78350f" stroke-width="3"/>
+  </g>
+  <!-- apple -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="215" cy="195" r="30" fill="#ef4444" stroke="#7f1d1d" stroke-width="3.5"/>
+    <path d="M215,165 Q213,152 220,146" fill="none" stroke="#78350f" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="230" cy="150" rx="10" ry="6" fill="#22c55e" stroke="#14532d" stroke-width="2" transform="rotate(-25 230 150)"/>
+    <ellipse cx="204" cy="185" rx="7" ry="10" fill="#fca5a5" opacity="0.7" transform="rotate(-20 204 185)"/>
+  </g>
+  <!-- soup bowl -->
+  <g filter="url(#soft-shadow)">
+    <path d="M270,195 Q270,232 320,232 Q370,232 370,195 Z" fill="#fb923c" stroke="#9a3412" stroke-width="3.5"/>
+    <ellipse cx="320" cy="195" rx="50" ry="12" fill="#fbbf24" stroke="#9a3412" stroke-width="3"/>
+    <g fill="none" stroke="#e2e8f0" stroke-width="2.5" stroke-linecap="round" opacity="0.85">
+      <path d="M305,178 Q300,166 306,155"/>
+      <path d="M332,175 Q338,163 332,152"/>
+    </g>
+  </g>
+  <!-- bread loaf -->
+  <g filter="url(#soft-shadow)">
+    <path d="M60,262 Q55,238 85,236 L150,236 Q172,238 168,262 Q166,272 150,272 L78,272 Q62,272 60,262 Z" fill="#c2955a" stroke="#78350f" stroke-width="3.5"/>
+    <g stroke="#78350f" stroke-width="2" opacity="0.6" fill="none">
+      <path d="M85,240 Q90,250 85,260"/>
+      <path d="M110,238 Q115,250 110,262"/>
+      <path d="M135,238 Q140,250 135,262"/>
+    </g>
+  </g>
+  <!-- banana -->
+  <g filter="url(#soft-shadow)">
+    <path d="M225,265 Q260,288 315,268 Q325,264 320,257 Q272,275 232,254 Q222,256 225,265 Z" fill="#facc15" stroke="#a16207" stroke-width="3"/>
+    <path d="M227,260 L220,252 L226,250 L232,257 Z" fill="#78350f"/>
+  </g>
+  <!-- steam/aroma above -->
+  <g fill="none" stroke="#f59e0b" stroke-width="3" stroke-linecap="round" opacity="0.6">
+    <path d="M115,105 Q110,85 117,68"/>
+    <path d="M200,100 Q206,82 199,64"/>
+    <path d="M300,105 Q294,85 301,68"/>
+  </g>
+</svg>

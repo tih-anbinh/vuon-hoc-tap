@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-alphabet desc-alphabet">
+  <title id="title-alphabet">Alphabet - Colorful ABC blocks</title>
+  <desc id="desc-alphabet">Three colorful wooden alphabet blocks stacked and arranged showing letters A, B, C in a cheerful, playful style.</desc>
+  <defs>
+    <linearGradient id="ab-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="ab-red" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fca5a5"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <linearGradient id="ab-blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#93c5fd"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="ab-green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#bef264"/>
+      <stop offset="100%" stop-color="#65a30d"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <!-- bg -->
+  <rect x="0" y="0" width="400" height="300" fill="url(#ab-bg)"/>
+  <!-- ground shadow -->
+  <ellipse cx="200" cy="260" rx="150" ry="10" fill="#0f172a" opacity="0.15"/>
+  <!-- three blocks -->
+  <g filter="url(#soft-shadow)">
+    <!-- BLOCK A (red, left) -->
+    <rect x="60" y="150" width="90" height="100" rx="10" fill="url(#ab-red)" stroke="#7f1d1d" stroke-width="4"/>
+    <!-- letter A stylized as thick strokes -->
+    <path d="M85,225 L105,175 L125,225 M92,210 L118,210" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- BLOCK B (blue, middle, stacked slightly higher) -->
+    <rect x="155" y="120" width="90" height="100" rx="10" fill="url(#ab-blue)" stroke="#1e3a8a" stroke-width="4"/>
+    <!-- letter B: vertical stroke + two loops -->
+    <path d="M178,145 L178,195 M178,145 Q210,145 210,160 Q210,172 185,172 M178,172 Q214,172 214,185 Q214,198 178,195" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- BLOCK C (green, right) -->
+    <rect x="250" y="150" width="90" height="100" rx="10" fill="url(#ab-green)" stroke="#365314" stroke-width="4"/>
+    <!-- letter C: open arc -->
+    <path d="M317,178 Q317,163 295,163 Q272,163 272,200 Q272,237 295,237 Q317,237 317,222" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <!-- little accent stars -->
+  <g fill="#f59e0b" opacity="0.7">
+    <circle cx="45" cy="90" r="4"/>
+    <circle cx="360" cy="80" r="4"/>
+    <circle cx="200" cy="60" r="4"/>
+  </g>
+</svg>

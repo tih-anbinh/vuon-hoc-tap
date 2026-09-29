@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-onion desc-onion">
+  <title id="title-onion">Onion - Golden onion whole and cut half</title>
+  <desc id="desc-onion">A big golden-brown onion with papery skin and green shoots, next to a cut half showing white rings of layers.</desc>
+  <defs>
+    <linearGradient id="on-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <radialGradient id="on-skin" cx="0.4" cy="0.35" r="0.8">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#on-bg)"/>
+  <!-- table -->
+  <rect x="0" y="235" width="400" height="65" fill="#e8b478"/>
+  <line x1="0" y1="235" x2="400" y2="235" stroke="#a16207" stroke-width="3.5"/>
+  <ellipse cx="200" cy="245" rx="160" ry="11" fill="#0f172a" opacity="0.2"/>
+  <!-- whole onion -->
+  <g filter="url(#soft-shadow)">
+    <!-- green shoots -->
+    <path d="M118,88 Q112,50 122,32" fill="none" stroke="#16a34a" stroke-width="8" stroke-linecap="round"/>
+    <path d="M130,85 Q133,48 128,28" fill="none" stroke="#22c55e" stroke-width="8" stroke-linecap="round"/>
+    <path d="M140,90 Q150,55 146,38" fill="none" stroke="#4ade80" stroke-width="7" stroke-linecap="round"/>
+    <!-- bulb -->
+    <path d="M128,82 Q60,95 58,165 Q58,225 128,230 Q198,225 198,165 Q196,95 128,82 Z" fill="url(#on-skin)" stroke="#78350f" stroke-width="4"/>
+    <!-- papery skin lines -->
+    <g fill="none" stroke="#92400e" stroke-width="2.5" opacity="0.8">
+      <path d="M128,84 Q95,120 96,225"/>
+      <path d="M128,84 Q160,120 160,225"/>
+      <path d="M128,84 Q128,150 128,230"/>
+    </g>
+    <!-- highlight -->
+    <ellipse cx="95" cy="130" rx="15" ry="26" fill="#fde68a" opacity="0.6"/>
+    <!-- root wisps -->
+    <g stroke="#a16207" stroke-width="2" stroke-linecap="round">
+      <line x1="120" y1="230" x2="116" y2="242"/>
+      <line x1="128" y1="231" x2="128" y2="243"/>
+      <line x1="136" y1="230" x2="140" y2="242"/>
+    </g>
+  </g>
+  <!-- half onion showing rings -->
+  <g filter="url(#soft-shadow)">
+    <path d="M295,90 Q232,102 230,168 Q230,224 295,229 Q360,224 360,168 Q358,102 295,90 Z" fill="#fef9c3" stroke="#b45309" stroke-width="4"/>
+    <!-- concentric layer rings -->
+    <g fill="none" stroke="#d6a35c" stroke-width="3">
+      <path d="M295,102 Q245,112 244,168 Q244,214 295,218 Q346,214 346,168 Q345,112 295,102 Z"/>
+      <path d="M295,116 Q258,124 257,168 Q257,204 295,207 Q333,204 333,168 Q332,124 295,116 Z"/>
+      <path d="M295,130 Q270,136 270,168 Q270,193 295,196 Q320,193 320,168 Q320,136 295,130 Z"/>
+      <path d="M295,146 Q282,150 282,168 Q282,182 295,184 Q308,182 308,168 Q308,150 295,146 Z"/>
+    </g>
+    <ellipse cx="295" cy="168" rx="6" ry="9" fill="#fde68a" stroke="#d6a35c" stroke-width="2"/>
+    <!-- little top nub -->
+    <path d="M288,92 Q295,80 302,92" fill="none" stroke="#16a34a" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>

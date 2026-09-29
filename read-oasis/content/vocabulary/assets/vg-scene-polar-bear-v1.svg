@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-polar-bear desc-polar-bear">
+  <title id="title-polar-bear">Polar bear - White bear on the ice</title>
+  <desc id="desc-polar-bear">A big white polar bear with black nose and small round ears standing on an ice floe, with icebergs and snowflakes behind.</desc>
+  <defs>
+    <linearGradient id="pb-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#bae6fd"/>
+    </linearGradient>
+    <radialGradient id="pb-fur" cx="0.4" cy="0.3" r="0.9">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#pb-bg)"/>
+  <!-- icebergs -->
+  <path d="M20,205 L65,140 L110,205 Z" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="3"/>
+  <path d="M300,210 L350,125 L395,210 Z" fill="#f0f9ff" stroke="#7dd3fc" stroke-width="3"/>
+  <!-- sea -->
+  <rect x="0" y="205" width="400" height="95" fill="#0284c7"/>
+  <g stroke="#38bdf8" stroke-width="3" stroke-linecap="round" opacity="0.7">
+    <path d="M20,225 Q35,220 50,225"/>
+    <path d="M330,270 Q345,265 360,270"/>
+    <path d="M50,275 Q65,270 80,275"/>
+  </g>
+  <!-- ice floe -->
+  <ellipse cx="205" cy="245" rx="150" ry="30" fill="#f0f9ff" stroke="#bae6fd" stroke-width="4" filter="url(#soft-shadow)"/>
+  <!-- polar bear -->
+  <g filter="url(#soft-shadow)">
+    <!-- body -->
+    <path d="M120,230 Q112,155 185,148 Q262,142 275,195 Q282,225 268,235 Z" fill="url(#pb-fur)" stroke="#94a3b8" stroke-width="4"/>
+    <!-- head -->
+    <circle cx="290" cy="160" r="42" fill="url(#pb-fur)" stroke="#94a3b8" stroke-width="4"/>
+    <!-- ears -->
+    <circle cx="262" cy="126" r="13" fill="#ffffff" stroke="#94a3b8" stroke-width="3.5"/>
+    <circle cx="262" cy="126" r="6" fill="#cbd5e1"/>
+    <circle cx="316" cy="126" r="13" fill="#ffffff" stroke="#94a3b8" stroke-width="3.5"/>
+    <circle cx="316" cy="126" r="6" fill="#cbd5e1"/>
+    <!-- muzzle -->
+    <ellipse cx="298" cy="178" rx="22" ry="16" fill="#ffffff" stroke="#94a3b8" stroke-width="3"/>
+    <ellipse cx="302" cy="172" rx="9" ry="7" fill="#0f172a"/>
+    <path d="M296,186 Q302,191 308,186" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- eyes -->
+    <circle cx="276" cy="155" r="5" fill="#0f172a"/>
+    <circle cx="306" cy="150" r="5" fill="#0f172a"/>
+    <circle cx="278" cy="153" r="1.8" fill="#ffffff"/>
+    <circle cx="308" cy="148" r="1.8" fill="#ffffff"/>
+    <!-- legs -->
+    <rect x="135" y="218" width="26" height="38" rx="10" fill="url(#pb-fur)" stroke="#94a3b8" stroke-width="3.5"/>
+    <rect x="180" y="222" width="26" height="36" rx="10" fill="url(#pb-fur)" stroke="#94a3b8" stroke-width="3.5"/>
+    <rect x="228" y="222" width="26" height="36" rx="10" fill="url(#pb-fur)" stroke="#94a3b8" stroke-width="3.5"/>
+    <!-- paws -->
+    <ellipse cx="148" cy="256" rx="16" ry="7" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2.5"/>
+    <ellipse cx="193" cy="258" rx="16" ry="7" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2.5"/>
+    <ellipse cx="241" cy="258" rx="16" ry="7" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2.5"/>
+    <!-- stubby tail -->
+    <circle cx="122" cy="205" r="10" fill="#ffffff" stroke="#94a3b8" stroke-width="3"/>
+  </g>
+  <!-- snowflakes -->
+  <g stroke="#ffffff" stroke-width="2.5" stroke-linecap="round">
+    <g transform="translate(70,60)">
+      <line x1="-9" y1="0" x2="9" y2="0"/><line x1="0" y1="-9" x2="0" y2="9"/><line x1="-6" y1="-6" x2="6" y2="6"/><line x1="-6" y1="6" x2="6" y2="-6"/>
+    </g>
+    <g transform="translate(180,45)">
+      <line x1="-7" y1="0" x2="7" y2="0"/><line x1="0" y1="-7" x2="0" y2="7"/><line x1="-5" y1="-5" x2="5" y2="5"/><line x1="-5" y1="5" x2="5" y2="-5"/>
+    </g>
+    <g transform="translate(130,95)">
+      <line x1="-6" y1="0" x2="6" y2="0"/><line x1="0" y1="-6" x2="0" y2="6"/>
+    </g>
+    <g transform="translate(360,70)">
+      <line x1="-6" y1="0" x2="6" y2="0"/><line x1="0" y1="-6" x2="0" y2="6"/><line x1="-4" y1="-4" x2="4" y2="4"/><line x1="-4" y1="4" x2="4" y2="-4"/>
+    </g>
+  </g>
+</svg>

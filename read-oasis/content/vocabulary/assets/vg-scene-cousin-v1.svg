@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-cousin desc-cousin">
+  <title id="title-cousin">Cousin - Two kids from different families playing together</title>
+  <desc id="desc-cousin">Two happy children of similar age standing together with a heart between them, connected by a family-tree line to two small houses above.</desc>
+  <defs>
+    <linearGradient id="cz-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fce7f3"/>
+      <stop offset="100%" stop-color="#fbcfe8"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#cz-bg)"/>
+  <rect x="0" y="250" width="400" height="50" fill="#65a30d"/>
+  <ellipse cx="200" cy="256" rx="150" ry="8" fill="#0f172a" opacity="0.2"/>
+  <!-- two houses (different families) connected -->
+  <g filter="url(#soft-shadow)">
+    <!-- house 1 -->
+    <rect x="70" y="45" width="55" height="42" fill="#93c5fd" stroke="#1e3a8a" stroke-width="3"/>
+    <path d="M62,45 L97,20 L133,45" fill="#3b82f6" stroke="#1e3a8a" stroke-width="3" stroke-linejoin="round"/>
+    <rect x="88" y="62" width="18" height="25" fill="#1e3a8a"/>
+    <!-- house 2 -->
+    <rect x="275" y="45" width="55" height="42" fill="#fca5a5" stroke="#7f1d1d" stroke-width="3"/>
+    <path d="M267,45 L302,20 L338,45" fill="#ef4444" stroke="#7f1d1d" stroke-width="3" stroke-linejoin="round"/>
+    <rect x="293" y="62" width="18" height="25" fill="#7f1d1d"/>
+  </g>
+  <!-- family tree connector -->
+  <g stroke="#78350f" stroke-width="3" fill="none" stroke-dasharray="7,5" opacity="0.75">
+    <path d="M97,90 L97,110 L200,110"/>
+    <path d="M302,90 L302,110 L200,110"/>
+    <path d="M145,110 L145,140"/>
+    <path d="M255,110 L255,140"/>
+  </g>
+  <!-- kid 1 (blue family) -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="145" cy="170" r="28" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M117,164 Q119,138 145,139 Q171,138 173,164 Q163,150 145,150 Q127,150 117,164 Z" fill="#0f172a"/>
+    <circle cx="136" cy="168" r="4" fill="#0f172a"/>
+    <circle cx="154" cy="168" r="4" fill="#0f172a"/>
+    <path d="M136,181 Q145,188 154,181" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <rect x="124" y="200" width="42" height="52" rx="8" fill="#3b82f6" stroke="#1e3a8a" stroke-width="3.5"/>
+    <line x1="166" y1="214" x2="192" y2="222" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+    <line x1="124" y1="214" x2="103" y2="230" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <!-- kid 2 (red family) -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="255" cy="170" r="28" fill="#f5b26b" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M227,164 Q227,136 255,137 Q283,136 283,164 Q275,148 255,148 Q235,148 227,164 Z" fill="#78350f"/>
+    <circle cx="228" cy="182" r="8" fill="#78350f"/>
+    <circle cx="282" cy="182" r="8" fill="#78350f"/>
+    <circle cx="246" cy="168" r="4" fill="#0f172a"/>
+    <circle cx="264" cy="168" r="4" fill="#0f172a"/>
+    <path d="M246,181 Q255,188 264,181" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M236,198 L274,198 L281,252 L229,252 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="3.5"/>
+    <line x1="236" y1="212" x2="208" y2="222" stroke="#f5b26b" stroke-width="8" stroke-linecap="round"/>
+    <line x1="274" y1="212" x2="296" y2="228" stroke="#f5b26b" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <!-- heart between them -->
+  <path d="M200,208 C195,198 180,198 180,211 C180,221 200,232 200,232 C200,232 220,221 220,211 C220,198 205,198 200,208 Z" fill="#ec4899" stroke="#9d174d" stroke-width="2.5"/>
+</svg>

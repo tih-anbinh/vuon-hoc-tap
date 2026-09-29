@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-bookshop desc-bookshop">
+  <title id="title-bookshop">Bookshop - Shop with a book sign and books in the window</title>
+  <desc id="desc-bookshop">A cozy shop front with a striped awning, a big open-book sign above the door, and colorful books displayed in the window.</desc>
+  <defs>
+    <linearGradient id="bsh-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="bsh-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fcd9b6"/>
+      <stop offset="100%" stop-color="#f5b26b"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#bsh-bg)"/>
+  <!-- pavement -->
+  <rect x="0" y="255" width="400" height="45" fill="#94a3b8"/>
+  <line x1="0" y1="255" x2="400" y2="255" stroke="#475569" stroke-width="3"/>
+  <ellipse cx="200" cy="260" rx="150" ry="7" fill="#0f172a" opacity="0.2"/>
+  <!-- shop -->
+  <g filter="url(#soft-shadow)">
+    <!-- building -->
+    <rect x="60" y="70" width="280" height="185" fill="url(#bsh-wall)" stroke="#9a3412" stroke-width="4"/>
+    <!-- awning -->
+    <path d="M50,110 L350,110 L340,80 L60,80 Z" fill="#dc2626" stroke="#7f1d1d" stroke-width="3.5"/>
+    <g fill="#fef2f2">
+      <path d="M78,108 L108,108 L104,83 L84,83 Z"/>
+      <path d="M138,108 L168,108 L164,83 L144,83 Z"/>
+      <path d="M198,108 L228,108 L224,83 L204,83 Z"/>
+      <path d="M258,108 L288,108 L284,83 L264,83 Z"/>
+      <path d="M318,108 L342,108 L338,83 L322,83 Z"/>
+    </g>
+    <path d="M50,110 Q56,122 62,110 Q68,122 74,110 Q80,122 86,110 Q92,122 98,110 Q104,122 110,110 Q116,122 122,110 Q128,122 134,110 Q140,122 146,110 Q152,122 158,110 Q164,122 170,110 Q176,122 182,110 Q188,122 194,110 Q200,122 206,110 Q212,122 218,110 Q224,122 230,110 Q236,122 242,110 Q248,122 254,110 Q260,122 266,110 Q272,122 278,110 Q284,122 290,110 Q296,122 302,110 Q308,122 314,110 Q320,122 326,110 Q332,122 338,110 Q344,122 350,110" fill="#dc2626" stroke="#7f1d1d" stroke-width="2"/>
+    <!-- open book sign -->
+    <g>
+      <rect x="155" y="30" width="90" height="46" rx="8" fill="#fef3c7" stroke="#78350f" stroke-width="3.5"/>
+      <path d="M170,62 Q185,50 200,58 Q215,50 230,62 L230,44 Q215,34 200,42 Q185,34 170,44 Z" fill="#fff" stroke="#0f172a" stroke-width="2.5"/>
+      <line x1="200" y1="42" x2="200" y2="58" stroke="#0f172a" stroke-width="2"/>
+    </g>
+    <!-- window with books -->
+    <rect x="85" y="130" width="130" height="95" rx="6" fill="#e0f2fe" stroke="#78350f" stroke-width="4"/>
+    <g stroke="#0f172a" stroke-width="2">
+      <rect x="97" y="175" width="14" height="44" fill="#ef4444"/>
+      <rect x="112" y="180" width="13" height="39" fill="#3b82f6"/>
+      <rect x="126" y="175" width="14" height="44" fill="#facc15"/>
+      <rect x="141" y="182" width="12" height="37" fill="#22c55e"/>
+      <rect x="154" y="176" width="14" height="43" fill="#a855f7"/>
+      <rect x="169" y="181" width="13" height="38" fill="#fb923c"/>
+      <rect x="183" y="175" width="14" height="44" fill="#14b8a6"/>
+    </g>
+    <line x1="85" y1="222" x2="215" y2="222" stroke="#78350f" stroke-width="3.5"/>
+    <!-- door -->
+    <rect x="245" y="140" width="70" height="115" rx="6" fill="#78350f" stroke="#451a03" stroke-width="4"/>
+    <rect x="255" y="150" width="50" height="55" rx="4" fill="#bae6fd" stroke="#451a03" stroke-width="2.5"/>
+    <circle cx="302" cy="218" r="5" fill="#facc15" stroke="#78350f" stroke-width="2"/>
+  </g>
+</svg>

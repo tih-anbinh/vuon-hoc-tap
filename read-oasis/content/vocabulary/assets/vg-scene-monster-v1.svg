@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-monster desc-monster">
+  <title id="title-monster">Monster - Friendly furry purple monster</title>
+  <desc id="desc-monster">A big friendly purple monster with three eyes, small horns, fuzzy fur, a wide toothy smile and waving arms.</desc>
+  <defs>
+    <linearGradient id="ms-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c4b5fd"/>
+      <stop offset="100%" stop-color="#e9d5ff"/>
+    </linearGradient>
+    <radialGradient id="ms-body" cx="0.5" cy="0.35" r="0.85">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#ms-bg)"/>
+  <!-- stars -->
+  <g fill="#fde047" stroke="#d97706" stroke-width="1.5">
+    <path d="M55,45 L59,55 L70,56 L61,63 L64,74 L55,68 L46,74 L49,63 L40,56 L51,55 Z"/>
+    <path d="M345,60 L348,68 L357,69 L350,74 L352,83 L345,78 L338,83 L340,74 L333,69 L342,68 Z"/>
+  </g>
+  <rect x="0" y="252" width="400" height="48" fill="#6d28d9" opacity="0.4"/>
+  <ellipse cx="200" cy="260" rx="115" ry="11" fill="#0f172a" opacity="0.3"/>
+  <!-- monster -->
+  <g filter="url(#soft-shadow)">
+    <!-- body -->
+    <path d="M105,255 Q90,140 145,85 Q175,52 200,52 Q225,52 255,85 Q310,140 295,255 Z" fill="url(#ms-body)" stroke="#4c1d95" stroke-width="4.5"/>
+    <!-- fuzzy fur edges -->
+    <g fill="#7c3aed" stroke="#4c1d95" stroke-width="2.5">
+      <path d="M105,255 L98,242 L112,246 L108,232 L122,240 Z"/>
+      <path d="M295,255 L302,242 L288,246 L292,232 L278,240 Z"/>
+    </g>
+    <!-- horns -->
+    <path d="M155,72 Q145,48 158,38 Q164,56 170,62 Z" fill="#fbbf24" stroke="#b45309" stroke-width="3"/>
+    <path d="M245,72 Q255,48 242,38 Q236,56 230,62 Z" fill="#fbbf24" stroke="#b45309" stroke-width="3"/>
+    <!-- three eyes -->
+    <circle cx="165" cy="115" r="19" fill="#ffffff" stroke="#4c1d95" stroke-width="3.5"/>
+    <circle cx="200" cy="102" r="23" fill="#ffffff" stroke="#4c1d95" stroke-width="3.5"/>
+    <circle cx="235" cy="115" r="19" fill="#ffffff" stroke="#4c1d95" stroke-width="3.5"/>
+    <circle cx="167" cy="118" r="8" fill="#0f172a"/>
+    <circle cx="200" cy="106" r="10" fill="#0f172a"/>
+    <circle cx="233" cy="118" r="8" fill="#0f172a"/>
+    <circle cx="170" cy="115" r="3" fill="#ffffff"/>
+    <circle cx="204" cy="102" r="3.5" fill="#ffffff"/>
+    <circle cx="236" cy="115" r="3" fill="#ffffff"/>
+    <!-- wide smile with teeth -->
+    <path d="M145,160 Q200,205 255,160 Q252,195 200,200 Q148,195 145,160 Z" fill="#4c1d95" stroke="#2e1065" stroke-width="3"/>
+    <g fill="#ffffff">
+      <path d="M162,170 L172,168 L170,182 Z"/>
+      <path d="M192,178 L204,178 L198,192 Z"/>
+      <path d="M228,170 L238,168 L232,182 Z"/>
+    </g>
+    <!-- belly patch -->
+    <ellipse cx="200" cy="225" rx="52" ry="30" fill="#c4b5fd" stroke="#4c1d95" stroke-width="3" opacity="0.9"/>
+    <circle cx="185" cy="220" r="5" fill="#8b5cf6"/>
+    <circle cx="212" cy="230" r="6" fill="#8b5cf6"/>
+    <!-- arms waving -->
+    <path d="M112,150 Q70,130 58,95" fill="none" stroke="#7c3aed" stroke-width="16" stroke-linecap="round"/>
+    <path d="M288,150 Q330,130 342,95" fill="none" stroke="#7c3aed" stroke-width="16" stroke-linecap="round"/>
+    <!-- claws -->
+    <g fill="#fbbf24" stroke="#b45309" stroke-width="2">
+      <circle cx="55" cy="90" r="9"/>
+      <circle cx="345" cy="90" r="9"/>
+    </g>
+    <!-- feet -->
+    <ellipse cx="150" cy="258" rx="26" ry="12" fill="#7c3aed" stroke="#4c1d95" stroke-width="3.5"/>
+    <ellipse cx="250" cy="258" rx="26" ry="12" fill="#7c3aed" stroke="#4c1d95" stroke-width="3.5"/>
+    <g fill="#fbbf24" stroke="#b45309" stroke-width="1.8">
+      <circle cx="136" cy="253" r="4"/>
+      <circle cx="150" cy="251" r="4"/>
+      <circle cx="164" cy="253" r="4"/>
+      <circle cx="236" cy="253" r="4"/>
+      <circle cx="250" cy="251" r="4"/>
+      <circle cx="264" cy="253" r="4"/>
+    </g>
+  </g>
+</svg>

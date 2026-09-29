@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-car-park desc-car-park">
+  <title id="title-car-park">Car park - Cars parked in marked spaces</title>
+  <desc id="desc-car-park">A car park with white lines marking parking spaces, three colourful cars parked in a row, and a blue parking sign with a car symbol.</desc>
+  <defs>
+    <linearGradient id="cp-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#cp-sky)"/>
+  <circle cx="52" cy="42" r="20" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <ellipse cx="300" cy="44" rx="34" ry="12" fill="#ffffff" opacity="0.95"/>
+  <!-- hedge in background -->
+  <g>
+    <ellipse cx="60" cy="112" rx="42" ry="18" fill="#22c55e" stroke="#15803d" stroke-width="3.5"/>
+    <ellipse cx="140" cy="110" rx="44" ry="19" fill="#4ade80" stroke="#15803d" stroke-width="3.5"/>
+    <ellipse cx="222" cy="112" rx="42" ry="18" fill="#22c55e" stroke="#15803d" stroke-width="3.5"/>
+  </g>
+  <!-- car park tarmac (dominant) -->
+  <rect x="0" y="126" width="400" height="174" fill="#64748b"/>
+  <line x1="0" y1="126" x2="400" y2="126" stroke="#334155" stroke-width="4"/>
+  <!-- parking space lines -->
+  <g stroke="#f8fafc" stroke-width="6" stroke-linecap="round">
+    <line x1="30" y1="150" x2="14" y2="272"/>
+    <line x1="140" y1="150" x2="124" y2="272"/>
+    <line x1="250" y1="150" x2="234" y2="272"/>
+    <line x1="360" y1="150" x2="344" y2="272"/>
+  </g>
+  <!-- car 1: red -->
+  <g filter="url(#soft-shadow)">
+    <path d="M40,206 Q42,184 62,182 L100,182 Q120,184 122,206 L122,228 Q122,236 112,236 L50,236 Q40,236 40,228 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="4"/>
+    <path d="M58,182 Q62,164 80,164 Q98,164 104,182 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="4"/>
+    <path d="M64,180 Q68,170 80,170 Q92,170 96,180 Z" fill="#bae6fd" stroke="#7f1d1d" stroke-width="3"/>
+    <circle cx="62" cy="238" r="12" fill="#1e293b" stroke="#0f172a" stroke-width="3"/>
+    <circle cx="62" cy="238" r="4.5" fill="#94a3b8"/>
+    <circle cx="102" cy="238" r="12" fill="#1e293b" stroke="#0f172a" stroke-width="3"/>
+    <circle cx="102" cy="238" r="4.5" fill="#94a3b8"/>
+    <rect x="44" y="210" width="10" height="7" rx="3" fill="#fde047"/>
+  </g>
+  <!-- car 2: blue -->
+  <g filter="url(#soft-shadow)">
+    <path d="M152,206 Q154,184 174,182 L212,182 Q232,184 234,206 L234,228 Q234,236 224,236 L162,236 Q152,236 152,228 Z" fill="#3b82f6" stroke="#1e3a8a" stroke-width="4"/>
+    <path d="M170,182 Q174,164 192,164 Q210,164 216,182 Z" fill="#3b82f6" stroke="#1e3a8a" stroke-width="4"/>
+    <path d="M176,180 Q180,170 192,170 Q204,170 208,180 Z" fill="#bae6fd" stroke="#1e3a8a" stroke-width="3"/>
+    <circle cx="174" cy="238" r="12" fill="#1e293b" stroke="#0f172a" stroke-width="3"/>
+    <circle cx="174" cy="238" r="4.5" fill="#94a3b8"/>
+    <circle cx="214" cy="238" r="12" fill="#1e293b" stroke="#0f172a" stroke-width="3"/>
+    <circle cx="214" cy="238" r="4.5" fill="#94a3b8"/>
+    <rect x="156" y="210" width="10" height="7" rx="3" fill="#fde047"/>
+  </g>
+  <!-- car 3: green -->
+  <g filter="url(#soft-shadow)">
+    <path d="M264,206 Q266,184 286,182 L324,182 Q344,184 346,206 L346,228 Q346,236 336,236 L274,236 Q264,236 264,228 Z" fill="#22c55e" stroke="#14532d" stroke-width="4"/>
+    <path d="M282,182 Q286,164 304,164 Q322,164 328,182 Z" fill="#22c55e" stroke="#14532d" stroke-width="4"/>
+    <path d="M288,180 Q292,170 304,170 Q316,170 320,180 Z" fill="#bae6fd" stroke="#14532d" stroke-width="3"/>
+    <circle cx="286" cy="238" r="12" fill="#1e293b" stroke="#0f172a" stroke-width="3"/>
+    <circle cx="286" cy="238" r="4.5" fill="#94a3b8"/>
+    <circle cx="326" cy="238" r="12" fill="#1e293b" stroke="#0f172a" stroke-width="3"/>
+    <circle cx="326" cy="238" r="4.5" fill="#94a3b8"/>
+    <rect x="268" y="210" width="10" height="7" rx="3" fill="#fde047"/>
+  </g>
+  <!-- parking sign with car pictogram -->
+  <g filter="url(#soft-shadow)">
+    <rect x="352" y="60" width="10" height="66" fill="#475569" stroke="#1e293b" stroke-width="3"/>
+    <rect x="318" y="24" width="76" height="52" rx="8" fill="#1d4ed8" stroke="#172554" stroke-width="4"/>
+    <!-- car pictogram -->
+    <path d="M330,58 Q332,46 344,45 L366,45 Q378,46 380,58 L380,64 L330,64 Z" fill="#ffffff"/>
+    <path d="M340,45 Q343,36 355,36 Q367,36 370,45 Z" fill="#ffffff"/>
+    <circle cx="340" cy="64" r="6" fill="#0f172a"/>
+    <circle cx="370" cy="64" r="6" fill="#0f172a"/>
+  </g>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-dolphin desc-dolphin">
+  <title id="title-dolphin">Dolphin - Dolphin jumping over the waves</title>
+  <desc id="desc-dolphin">A happy grey-blue dolphin leaping in an arc above ocean waves, with water splashes, sun and seagulls in the sky.</desc>
+  <defs>
+    <linearGradient id="dp-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="dp-sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="dp-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#64748b"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#dp-sky)"/>
+  <circle cx="56" cy="48" r="24" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <!-- seagulls -->
+  <g fill="none" stroke="#334155" stroke-width="3" stroke-linecap="round">
+    <path d="M300,56 Q307,49 314,56 M314,56 Q321,49 328,56"/>
+    <path d="M340,84 Q346,78 352,84 M352,84 Q358,78 364,84"/>
+  </g>
+  <!-- sea -->
+  <path d="M0,210 Q50,196 100,210 Q150,224 200,210 Q250,196 300,210 Q350,224 400,210 L400,300 L0,300 Z" fill="url(#dp-sea)"/>
+  <g fill="none" stroke="#7dd3fc" stroke-width="4" stroke-linecap="round" opacity="0.8">
+    <path d="M20,232 Q45,224 70,232"/>
+    <path d="M120,248 Q145,240 170,248"/>
+    <path d="M240,236 Q265,228 290,236"/>
+    <path d="M320,258 Q345,250 370,258"/>
+    <path d="M60,272 Q85,264 110,272"/>
+  </g>
+  <!-- THE DOLPHIN (hero element) leaping -->
+  <g filter="url(#soft-shadow)">
+    <!-- body in arc -->
+    <path d="M104,150 Q128,72 216,62 Q276,58 306,96 Q296,102 284,100 Q296,116 288,134 Q276,128 270,116 Q252,150 210,158 Q160,166 128,158 Q110,156 104,150 Z"
+          fill="url(#dp-body)" stroke="#334155" stroke-width="4.5"/>
+    <!-- belly -->
+    <path d="M116,148 Q140,90 212,76 Q186,110 168,140 Q142,156 116,148 Z" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2.5"/>
+    <!-- dorsal fin -->
+    <path d="M204,64 Q210,36 234,30 Q228,52 226,66 Z" fill="url(#dp-body)" stroke="#334155" stroke-width="4"/>
+    <!-- side flipper -->
+    <path d="M196,110 Q184,134 160,140 Q172,116 182,104 Z" fill="#64748b" stroke="#334155" stroke-width="3.5"/>
+    <!-- tail fluke -->
+    <path d="M108,152 Q84,138 66,148 Q80,158 90,160 Q76,168 70,182 Q92,180 110,164 Z" fill="url(#dp-body)" stroke="#334155" stroke-width="4"/>
+    <!-- beak/rostrum -->
+    <path d="M296,92 Q316,94 324,104 Q312,110 300,106 Z" fill="#64748b" stroke="#334155" stroke-width="3.5"/>
+    <!-- eye -->
+    <circle cx="282" cy="88" r="6" fill="#0f172a"/>
+    <circle cx="284" cy="86" r="2" fill="#ffffff"/>
+    <!-- smile -->
+    <path d="M296,102 Q306,106 314,104" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  <!-- splash where dolphin exits water -->
+  <g fill="#bae6fd" stroke="#0284c7" stroke-width="2.5">
+    <path d="M96,206 Q90,186 98,172 Q104,186 104,198 Z"/>
+    <path d="M116,208 Q116,190 126,180 Q128,194 124,204 Z"/>
+    <path d="M78,210 Q70,196 72,184 Q80,194 84,204 Z"/>
+  </g>
+  <g fill="#e0f2fe">
+    <circle cx="92" cy="168" r="4"/>
+    <circle cx="112" cy="160" r="3"/>
+    <circle cx="74" cy="178" r="3.5"/>
+    <circle cx="130" cy="172" r="3"/>
+  </g>
+  <!-- water droplets along the arc -->
+  <g fill="#7dd3fc" stroke="#0284c7" stroke-width="2">
+    <path d="M180,48 Q184,54 180,58 Q176,54 180,48 Z"/>
+    <path d="M250,42 Q254,48 250,52 Q246,48 250,42 Z"/>
+    <path d="M148,72 Q152,78 148,82 Q144,78 148,72 Z"/>
+  </g>
+</svg>

@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-nurse desc-nurse">
+  <title id="title-nurse">Nurse - A kind nurse helping a patient</title>
+  <desc id="desc-nurse">A kind smiling nurse in a uniform with a red cross cap, holding a clipboard and a thermometer, next to a child patient sitting on a bed.</desc>
+  <defs>
+    <linearGradient id="nr-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#bae6fd"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#nr-bg)"/>
+  <rect x="0" y="248" width="400" height="52" fill="#7dd3fc"/>
+  <line x1="0" y1="248" x2="400" y2="248" stroke="#0369a1" stroke-width="3.5"/>
+  <!-- window -->
+  <rect x="300" y="40" width="76" height="64" rx="8" fill="#bfdbfe" stroke="#1e3a8a" stroke-width="4"/>
+  <line x1="338" y1="40" x2="338" y2="104" stroke="#1e3a8a" stroke-width="3"/>
+  <line x1="300" y1="72" x2="376" y2="72" stroke="#1e3a8a" stroke-width="3"/>
+  <circle cx="320" cy="56" r="8" fill="#fde047" stroke="#a16207" stroke-width="2.5"/>
+  <!-- NURSE (hero element) -->
+  <g filter="url(#soft-shadow)">
+    <!-- hair -->
+    <path d="M112,84 Q110,52 148,50 Q186,52 184,84 L180,92 Q148,72 116,92 Z" fill="#78350f" stroke="#451a03" stroke-width="3.5"/>
+    <!-- nurse cap with red cross -->
+    <path d="M118,62 Q120,38 148,36 Q176,38 178,62 L172,66 L124,66 Z" fill="#ffffff" stroke="#334155" stroke-width="3.5"/>
+    <path d="M143,44 L153,44 L153,50 L159,50 L159,58 L153,58 L153,64 L143,64 L143,58 L137,58 L137,50 L143,50 Z"
+          fill="#dc2626" stroke="#7f1d1d" stroke-width="2"/>
+    <!-- head -->
+    <circle cx="148" cy="98" r="32" fill="#fcd9b6" stroke="#78350f" stroke-width="4"/>
+    <circle cx="138" cy="94" r="3.5" fill="#0f172a"/>
+    <circle cx="158" cy="94" r="3.5" fill="#0f172a"/>
+    <path d="M136,110 Q148,120 160,110" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="128" cy="104" rx="6" ry="4.5" fill="#fb7185" opacity="0.6"/>
+    <ellipse cx="168" cy="104" rx="6" ry="4.5" fill="#fb7185" opacity="0.6"/>
+    <!-- uniform -->
+    <path d="M124,130 L172,130 L184,232 L112,232 Z" fill="#ffffff" stroke="#334155" stroke-width="4"/>
+    <line x1="148" y1="134" x2="148" y2="228" stroke="#94a3b8" stroke-width="2.5"/>
+    <circle cx="156" cy="152" r="3" fill="#64748b"/>
+    <circle cx="157" cy="176" r="3" fill="#64748b"/>
+    <circle cx="158" cy="200" r="3" fill="#64748b"/>
+    <!-- red cross pocket -->
+    <rect x="120" y="152" width="22" height="22" rx="4" fill="#f1f5f9" stroke="#334155" stroke-width="2.5"/>
+    <path d="M128,156 L134,156 L134,160 L138,160 L138,166 L134,166 L134,170 L128,170 L128,166 L124,166 L124,160 L128,160 Z" fill="#dc2626"/>
+    <!-- arm holding clipboard -->
+    <path d="M126,140 Q104,156 100,176" fill="none" stroke="#ffffff" stroke-width="11" stroke-linecap="round"/>
+    <circle cx="98" cy="182" r="8" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <rect x="72" y="168" width="44" height="58" rx="6" fill="#d6a35c" stroke="#78350f" stroke-width="3.5" transform="rotate(-8 94 197)"/>
+    <rect x="80" y="176" width="30" height="40" rx="3" fill="#f8fafc" stroke="#64748b" stroke-width="2.5" transform="rotate(-8 95 196)"/>
+    <g stroke="#94a3b8" stroke-width="2.5" stroke-linecap="round" transform="rotate(-8 95 196)">
+      <line x1="85" y1="186" x2="105" y2="186"/>
+      <line x1="85" y1="196" x2="105" y2="196"/>
+      <line x1="85" y1="206" x2="99" y2="206"/>
+    </g>
+    <!-- arm holding thermometer toward patient -->
+    <path d="M170,140 Q198,150 214,158" fill="none" stroke="#ffffff" stroke-width="11" stroke-linecap="round"/>
+    <circle cx="218" cy="160" r="8" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <rect x="222" y="152" width="42" height="10" rx="5" fill="#e2e8f0" stroke="#475569" stroke-width="2.5"/>
+    <circle cx="262" cy="157" r="6" fill="#ef4444" stroke="#7f1d1d" stroke-width="2.5"/>
+    <!-- legs -->
+    <line x1="132" y1="232" x2="132" y2="250" stroke="#e2e8f0" stroke-width="9" stroke-linecap="round"/>
+    <line x1="164" y1="232" x2="164" y2="250" stroke="#e2e8f0" stroke-width="9" stroke-linecap="round"/>
+    <ellipse cx="130" cy="256" rx="13" ry="6" fill="#f8fafc" stroke="#334155" stroke-width="2.5"/>
+    <ellipse cx="166" cy="256" rx="13" ry="6" fill="#f8fafc" stroke="#334155" stroke-width="2.5"/>
+  </g>
+  <!-- child patient on bed -->
+  <g filter="url(#soft-shadow)">
+    <!-- bed -->
+    <rect x="252" y="208" width="128" height="42" rx="8" fill="#f8fafc" stroke="#334155" stroke-width="4"/>
+    <rect x="244" y="184" width="14" height="66" rx="5" fill="#64748b" stroke="#1e293b" stroke-width="3.5"/>
+    <rect x="372" y="192" width="14" height="58" rx="5" fill="#64748b" stroke="#1e293b" stroke-width="3.5"/>
+    <!-- pillow -->
+    <rect x="262" y="196" width="40" height="18" rx="7" fill="#e0e7ff" stroke="#4338ca" stroke-width="3"/>
+    <!-- child sitting -->
+    <circle cx="302" cy="164" r="22" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M284,156 Q284,140 302,138 Q320,140 320,156 L315,159 Q302,148 289,159 Z" fill="#1c1917" stroke="#0f172a" stroke-width="3"/>
+    <circle cx="295" cy="162" r="2.8" fill="#0f172a"/>
+    <circle cx="309" cy="162" r="2.8" fill="#0f172a"/>
+    <path d="M296,172 Q302,176 308,172" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- pyjama body under blanket -->
+    <path d="M286,186 L318,186 L322,212 L282,212 Z" fill="#a5f3fc" stroke="#155e75" stroke-width="3.5"/>
+    <!-- blanket over legs -->
+    <path d="M258,212 Q302,202 378,212 L378,244 L258,244 Z" fill="#fbbf24" stroke="#a16207" stroke-width="3.5"/>
+    <path d="M270,224 Q302,218 366,224" fill="none" stroke="#d97706" stroke-width="2.5"/>
+  </g>
+  <!-- caring heart -->
+  <g fill="#f472b6" stroke="#be185d" stroke-width="2.5">
+    <path d="M196,84 C196,76 206,72 211,79 C216,72 226,76 226,84 C226,92 211,102 211,102 C211,102 196,92 196,84 Z"/>
+  </g>
+</svg>

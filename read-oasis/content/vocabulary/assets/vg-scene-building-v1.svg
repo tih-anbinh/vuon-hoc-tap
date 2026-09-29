@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-building desc-building">
+  <title id="title-building">Building - Tall city building with many windows</title>
+  <desc id="desc-building">A tall blue city building with many lit windows and a door, standing between two smaller buildings under a daytime sky.</desc>
+  <defs>
+    <linearGradient id="bg-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="bg-tower" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#bg-sky)"/>
+  <circle cx="52" cy="48" r="22" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <ellipse cx="320" cy="46" rx="36" ry="13" fill="#ffffff" opacity="0.95"/>
+  <ellipse cx="120" cy="72" rx="28" ry="10" fill="#ffffff" opacity="0.9"/>
+  <!-- ground -->
+  <rect x="0" y="262" width="400" height="38" fill="#9ca3af"/>
+  <line x1="0" y1="262" x2="400" y2="262" stroke="#4b5563" stroke-width="4"/>
+  <!-- small building left -->
+  <g>
+    <rect x="30" y="160" width="88" height="102" fill="#fbbf24" stroke="#92400e" stroke-width="4"/>
+    <rect x="30" y="148" width="88" height="12" fill="#b45309" stroke="#92400e" stroke-width="3"/>
+    <g fill="#bae6fd" stroke="#92400e" stroke-width="2.5">
+      <rect x="42" y="172" width="22" height="20"/>
+      <rect x="84" y="172" width="22" height="20"/>
+      <rect x="42" y="206" width="22" height="20"/>
+      <rect x="84" y="206" width="22" height="20"/>
+    </g>
+    <rect x="62" y="232" width="24" height="30" fill="#78350f" stroke="#451a03" stroke-width="3"/>
+  </g>
+  <!-- small building right -->
+  <g>
+    <rect x="288" y="140" width="88" height="122" fill="#f472b6" stroke="#831843" stroke-width="4"/>
+    <rect x="288" y="128" width="88" height="12" fill="#be185d" stroke="#831843" stroke-width="3"/>
+    <g fill="#fef9c3" stroke="#831843" stroke-width="2.5">
+      <rect x="300" y="152" width="22" height="20"/>
+      <rect x="342" y="152" width="22" height="20"/>
+      <rect x="300" y="188" width="22" height="20"/>
+      <rect x="342" y="188" width="22" height="20"/>
+    </g>
+    <rect x="320" y="230" width="24" height="32" fill="#78350f" stroke="#451a03" stroke-width="3"/>
+  </g>
+  <!-- THE TALL BUILDING (hero element) -->
+  <g filter="url(#soft-shadow)">
+    <rect x="146" y="40" width="116" height="222" fill="url(#bg-tower)" stroke="#1e3a8a" stroke-width="5"/>
+    <!-- roof -->
+    <rect x="138" y="28" width="132" height="14" rx="4" fill="#1e3a8a" stroke="#172554" stroke-width="3.5"/>
+    <rect x="196" y="8" width="8" height="22" fill="#1e3a8a"/>
+    <circle cx="200" cy="8" r="5" fill="#ef4444" stroke="#7f1d1d" stroke-width="2"/>
+    <!-- window grid -->
+    <g fill="#fde047" stroke="#1e3a8a" stroke-width="2.5">
+      <rect x="158" y="54" width="22" height="18"/>
+      <rect x="193" y="54" width="22" height="18"/>
+      <rect x="228" y="54" width="22" height="18"/>
+      <rect x="158" y="86" width="22" height="18"/>
+      <rect x="193" y="86" width="22" height="18"/>
+      <rect x="228" y="86" width="22" height="18"/>
+      <rect x="158" y="118" width="22" height="18"/>
+      <rect x="193" y="118" width="22" height="18"/>
+      <rect x="228" y="118" width="22" height="18"/>
+      <rect x="158" y="150" width="22" height="18"/>
+      <rect x="193" y="150" width="22" height="18"/>
+      <rect x="228" y="150" width="22" height="18"/>
+      <rect x="158" y="182" width="22" height="18"/>
+      <rect x="228" y="182" width="22" height="18"/>
+    </g>
+    <!-- some dark windows for variety -->
+    <rect x="193" y="182" width="22" height="18" fill="#93c5fd" stroke="#1e3a8a" stroke-width="2.5"/>
+    <!-- entrance door -->
+    <rect x="182" y="216" width="44" height="46" rx="5" fill="#78350f" stroke="#451a03" stroke-width="4"/>
+    <line x1="204" y1="216" x2="204" y2="262" stroke="#451a03" stroke-width="3"/>
+    <circle cx="197" cy="240" r="3" fill="#fde047"/>
+    <circle cx="211" cy="240" r="3" fill="#fde047"/>
+    <!-- awning over door -->
+    <path d="M174,216 L234,216 L228,204 L180,204 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="3"/>
+  </g>
+  <!-- birds -->
+  <path d="M70,110 Q77,103 84,110 M84,110 Q91,103 98,110" fill="none" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
+  <!-- little tree -->
+  <g>
+    <rect x="270" y="248" width="7" height="14" fill="#78350f"/>
+    <circle cx="273" cy="240" r="13" fill="#22c55e" stroke="#15803d" stroke-width="3"/>
+  </g>
+</svg>

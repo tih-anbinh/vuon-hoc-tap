@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-pie desc-pie">
+  <title id="title-pie">Pie - Golden pie with a slice cut out</title>
+  <desc id="desc-pie">A golden-brown pie in a dish with a lattice crust and steam rising, with one slice cut out on a plate showing red berry filling.</desc>
+  <defs>
+    <linearGradient id="pi-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <radialGradient id="pi-crust" cx="0.45" cy="0.35" r="0.8">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#pi-bg)"/>
+  <!-- table -->
+  <rect x="0" y="225" width="400" height="75" fill="#e8b478"/>
+  <line x1="0" y1="225" x2="400" y2="225" stroke="#a16207" stroke-width="3.5"/>
+  <ellipse cx="185" cy="238" rx="165" ry="12" fill="#0f172a" opacity="0.2"/>
+  <!-- steam -->
+  <g fill="none" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round" opacity="0.85">
+    <path d="M130,95 Q122,75 132,58 Q140,45 132,30"/>
+    <path d="M170,88 Q162,70 172,55 Q180,42 172,28"/>
+    <path d="M210,95 Q202,75 212,58"/>
+  </g>
+  <!-- pie in dish -->
+  <g filter="url(#soft-shadow)">
+    <!-- dish -->
+    <path d="M55,185 L285,185 L270,232 L70,232 Z" fill="#dc2626" stroke="#7f1d1d" stroke-width="4"/>
+    <ellipse cx="170" cy="185" rx="115" ry="24" fill="#ef4444" stroke="#7f1d1d" stroke-width="3.5"/>
+    <!-- pie body with wedge cut out toward viewer-right -->
+    <path d="M170,178 L268,158 A112,42 0 1,0 262,196 Z" fill="url(#pi-crust)" stroke="#92400e" stroke-width="4" transform="translate(0,-14)"/>
+    <!-- filling visible in cut -->
+    <path d="M170,164 L268,144 Q262,168 262,182 Z" fill="#be123c" stroke="#881337" stroke-width="3"/>
+    <g fill="#e11d48">
+      <circle cx="222" cy="158" r="5"/>
+      <circle cx="242" cy="156" r="4.5"/>
+      <circle cx="205" cy="162" r="4"/>
+    </g>
+    <!-- lattice strips -->
+    <g stroke="#b45309" stroke-width="6" opacity="0.9" fill="none">
+      <path d="M85,140 Q140,118 205,124"/>
+      <path d="M75,160 Q135,140 195,148"/>
+      <path d="M110,120 Q108,150 118,176"/>
+      <path d="M150,112 Q148,142 156,170"/>
+    </g>
+    <!-- crimped rim -->
+    <g fill="#f59e0b" stroke="#92400e" stroke-width="2.5">
+      <circle cx="70" cy="158" r="7"/>
+      <circle cx="86" cy="142" r="7"/>
+      <circle cx="106" cy="130" r="7"/>
+      <circle cx="130" cy="120" r="7"/>
+      <circle cx="156" cy="115" r="7"/>
+      <circle cx="182" cy="115" r="7"/>
+      <circle cx="208" cy="120" r="7"/>
+      <circle cx="230" cy="128" r="7"/>
+      <circle cx="250" cy="140" r="7"/>
+    </g>
+  </g>
+  <!-- slice on small plate -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="335" cy="252" rx="52" ry="16" fill="#f8fafc" stroke="#64748b" stroke-width="3.5"/>
+    <!-- wedge slice -->
+    <path d="M300,248 L358,212 L368,242 Q340,258 302,254 Z" fill="url(#pi-crust)" stroke="#92400e" stroke-width="3.5"/>
+    <path d="M300,248 L358,212 L362,224 Q330,244 302,252 Z" fill="#be123c" stroke="#881337" stroke-width="2.5"/>
+    <circle cx="332" cy="234" r="4" fill="#e11d48"/>
+    <circle cx="348" cy="224" r="3.5" fill="#e11d48"/>
+    <!-- fork -->
+    <g stroke="#64748b" stroke-width="3.5" stroke-linecap="round">
+      <line x1="268" y1="268" x2="300" y2="268"/>
+      <line x1="264" y1="262" x2="272" y2="262"/>
+      <line x1="264" y1="268" x2="272" y2="268"/>
+      <line x1="264" y1="274" x2="272" y2="274"/>
+    </g>
+  </g>
+</svg>

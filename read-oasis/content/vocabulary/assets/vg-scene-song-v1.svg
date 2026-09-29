@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-song desc-song">
+  <title id="title-song">Song - Children singing with music notes</title>
+  <desc id="desc-song">Two happy children singing together with open mouths, one holding a microphone, surrounded by big colorful floating music notes.</desc>
+  <defs>
+    <radialGradient id="sg-bg" cx="0.5" cy="0.4" r="0.8">
+      <stop offset="0%" stop-color="#fdf4ff"/>
+      <stop offset="100%" stop-color="#e9d5ff"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#sg-bg)"/>
+  <rect x="0" y="250" width="400" height="50" fill="#c4b5fd"/>
+  <line x1="0" y1="250" x2="400" y2="250" stroke="#7c3aed" stroke-width="3.5"/>
+  <!-- big music notes -->
+  <g filter="url(#soft-shadow)">
+    <!-- eighth note pair -->
+    <g fill="#7c3aed" stroke="#4c1d95" stroke-width="3">
+      <ellipse cx="72" cy="105" rx="15" ry="11" transform="rotate(-20 72 105)"/>
+      <ellipse cx="122" cy="95" rx="15" ry="11" transform="rotate(-20 122 95)"/>
+      <path d="M84,100 L84,42 L134,32 L134,90 L128,90 L128,40 L90,48 L90,100 Z"/>
+    </g>
+    <!-- single note right -->
+    <g fill="#ec4899" stroke="#831843" stroke-width="3">
+      <ellipse cx="320" cy="88" rx="16" ry="12" transform="rotate(-20 320 88)"/>
+      <rect x="331" y="28" width="6" height="58"/>
+      <path d="M331,28 Q352,36 350,54 Q346,42 331,40 Z"/>
+    </g>
+    <!-- small note center top -->
+    <g fill="#f59e0b" stroke="#92400e" stroke-width="2.5">
+      <ellipse cx="212" cy="52" rx="11" ry="8" transform="rotate(-20 212 52)"/>
+      <rect x="219" y="14" width="5" height="36"/>
+    </g>
+  </g>
+  <!-- child 1 singing with microphone -->
+  <g filter="url(#soft-shadow)">
+    <!-- hair -->
+    <path d="M108,132 Q108,98 145,98 Q182,98 182,132 L176,140 Q145,120 114,140 Z" fill="#451a03" stroke="#1c1917" stroke-width="3"/>
+    <circle cx="145" cy="150" r="30" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <!-- closed happy eyes -->
+    <path d="M128,144 Q134,138 140,144" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M150,144 Q156,138 162,144" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <!-- open singing mouth -->
+    <ellipse cx="145" cy="164" rx="9" ry="12" fill="#7f1d1d" stroke="#0f172a" stroke-width="2.5"/>
+    <ellipse cx="145" cy="169" rx="5" ry="5" fill="#fb7185"/>
+    <!-- body -->
+    <path d="M126,180 L164,180 L172,250 L118,250 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="3.5"/>
+    <!-- arm holding microphone -->
+    <path d="M164,192 Q186,186 192,172" fill="none" stroke="#fcd9b6" stroke-width="10" stroke-linecap="round"/>
+    <rect x="188" y="150" width="10" height="24" rx="4" fill="#475569" stroke="#1e293b" stroke-width="2.5"/>
+    <circle cx="193" cy="144" r="11" fill="#94a3b8" stroke="#1e293b" stroke-width="3"/>
+    <!-- other arm -->
+    <path d="M126,192 Q104,200 100,216" fill="none" stroke="#fcd9b6" stroke-width="10" stroke-linecap="round"/>
+    <!-- legs -->
+    <line x1="132" y1="250" x2="132" y2="276" stroke="#1e3a8a" stroke-width="11" stroke-linecap="round"/>
+    <line x1="158" y1="250" x2="158" y2="276" stroke="#1e3a8a" stroke-width="11" stroke-linecap="round"/>
+    <ellipse cx="130" cy="281" rx="12" ry="6" fill="#0f172a"/>
+    <ellipse cx="160" cy="281" rx="12" ry="6" fill="#0f172a"/>
+  </g>
+  <!-- child 2 singing -->
+  <g filter="url(#soft-shadow)">
+    <!-- hair with pigtails -->
+    <circle cx="222" cy="140" r="12" fill="#78350f" stroke="#451a03" stroke-width="2.5"/>
+    <circle cx="298" cy="140" r="12" fill="#78350f" stroke="#451a03" stroke-width="2.5"/>
+    <path d="M226,140 Q226,106 260,106 Q294,106 294,140 L288,148 Q260,128 232,148 Z" fill="#78350f" stroke="#451a03" stroke-width="3"/>
+    <circle cx="260" cy="158" r="30" fill="#f5c19b" stroke="#78350f" stroke-width="3.5"/>
+    <!-- closed happy eyes -->
+    <path d="M243,152 Q249,146 255,152" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M265,152 Q271,146 277,152" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <!-- open singing mouth -->
+    <ellipse cx="260" cy="172" rx="9" ry="12" fill="#7f1d1d" stroke="#0f172a" stroke-width="2.5"/>
+    <!-- body dress -->
+    <path d="M242,188 L278,188 L296,258 L224,258 Z" fill="#f59e0b" stroke="#92400e" stroke-width="3.5"/>
+    <!-- arms raised joyfully -->
+    <path d="M244,196 Q222,182 218,164" fill="none" stroke="#f5c19b" stroke-width="10" stroke-linecap="round"/>
+    <path d="M276,196 Q300,184 306,166" fill="none" stroke="#f5c19b" stroke-width="10" stroke-linecap="round"/>
+    <!-- legs -->
+    <line x1="248" y1="258" x2="248" y2="278" stroke="#f5c19b" stroke-width="10" stroke-linecap="round"/>
+    <line x1="272" y1="258" x2="272" y2="278" stroke="#f5c19b" stroke-width="10" stroke-linecap="round"/>
+    <ellipse cx="246" cy="283" rx="11" ry="6" fill="#be185d"/>
+    <ellipse cx="274" cy="283" rx="11" ry="6" fill="#be185d"/>
+  </g>
+  <!-- small notes near mouths -->
+  <g fill="#7c3aed">
+    <ellipse cx="180" cy="120" rx="7" ry="5" transform="rotate(-20 180 120)"/>
+    <rect x="184.5" y="96" width="3.5" height="24"/>
+    <ellipse cx="300" cy="110" rx="7" ry="5" transform="rotate(-20 300 110)"/>
+    <rect x="304.5" y="86" width="3.5" height="24"/>
+  </g>
+</svg>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-birthday desc-birthday">
+  <title id="title-birthday">Birthday - Cake with candles, balloons and confetti</title>
+  <desc id="desc-birthday">A two-layer birthday cake with three lit candles, surrounded by floating balloons and colorful falling confetti.</desc>
+  <defs>
+    <linearGradient id="bday-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ede9fe"/>
+      <stop offset="100%" stop-color="#fbcfe8"/>
+    </linearGradient>
+    <linearGradient id="bday-cake1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbcfe8"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <linearGradient id="bday-cake2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#bday-bg)"/>
+  <!-- confetti -->
+  <g opacity="0.9">
+    <rect x="50" y="40" width="8" height="8" rx="2" fill="#ef4444" transform="rotate(25 54 44)"/>
+    <rect x="120" y="25" width="8" height="8" rx="2" fill="#3b82f6" transform="rotate(-15 124 29)"/>
+    <rect x="260" y="35" width="8" height="8" rx="2" fill="#22c55e" transform="rotate(40 264 39)"/>
+    <rect x="330" y="55" width="8" height="8" rx="2" fill="#f59e0b" transform="rotate(-30 334 59)"/>
+    <circle cx="90" cy="80" r="4" fill="#a855f7"/>
+    <circle cx="200" cy="30" r="4" fill="#ec4899"/>
+    <circle cx="300" cy="90" r="4" fill="#14b8a6"/>
+    <circle cx="360" cy="120" r="4" fill="#ef4444"/>
+    <circle cx="40" cy="130" r="4" fill="#3b82f6"/>
+  </g>
+  <!-- balloons -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="70" cy="100" rx="26" ry="32" fill="#60a5fa" stroke="#1e40af" stroke-width="3"/>
+    <path d="M70,132 L67,140 L73,140 Z" fill="#1e40af"/>
+    <path d="M70,140 Q80,165 70,190" fill="none" stroke="#334155" stroke-width="2"/>
+    <ellipse cx="335" cy="115" rx="26" ry="32" fill="#4ade80" stroke="#15803d" stroke-width="3"/>
+    <path d="M335,147 L332,155 L338,155 Z" fill="#15803d"/>
+    <path d="M335,155 Q325,180 335,205" fill="none" stroke="#334155" stroke-width="2"/>
+  </g>
+  <!-- table -->
+  <rect x="0" y="255" width="400" height="45" fill="#a16207"/>
+  <ellipse cx="200" cy="258" rx="130" ry="8" fill="#0f172a" opacity="0.25"/>
+  <!-- cake -->
+  <g filter="url(#soft-shadow)">
+    <!-- plate -->
+    <ellipse cx="200" cy="252" rx="115" ry="14" fill="#e2e8f0" stroke="#64748b" stroke-width="3"/>
+    <!-- bottom layer -->
+    <rect x="110" y="200" width="180" height="52" rx="8" fill="url(#bday-cake1)" stroke="#9d174d" stroke-width="3.5"/>
+    <!-- drip icing -->
+    <path d="M110,205 Q120,220 130,205 Q140,222 152,206 Q162,224 174,206 Q184,220 196,206 Q206,224 218,206 Q228,220 240,206 Q250,224 262,206 Q272,220 284,206 L290,205 L290,200 L110,200 Z" fill="#fdf2f8" stroke="#9d174d" stroke-width="2"/>
+    <!-- top layer -->
+    <rect x="145" y="155" width="110" height="45" rx="7" fill="url(#bday-cake2)" stroke="#b45309" stroke-width="3.5"/>
+    <path d="M145,160 Q152,172 160,160 Q168,174 178,161 Q186,172 196,161 Q204,174 214,161 Q222,172 232,161 Q240,174 250,161 L255,160 L255,155 L145,155 Z" fill="#fffbeb" stroke="#b45309" stroke-width="2"/>
+    <!-- candles -->
+    <g stroke-width="2.5">
+      <rect x="165" y="120" width="8" height="35" rx="2" fill="#60a5fa" stroke="#1e40af"/>
+      <rect x="196" y="112" width="8" height="43" rx="2" fill="#f472b6" stroke="#9d174d"/>
+      <rect x="227" y="120" width="8" height="35" rx="2" fill="#4ade80" stroke="#15803d"/>
+    </g>
+    <!-- flames -->
+    <g>
+      <ellipse cx="169" cy="110" rx="5" ry="9" fill="#fbbf24" stroke="#d97706" stroke-width="1.5"/>
+      <ellipse cx="200" cy="102" rx="5" ry="9" fill="#fbbf24" stroke="#d97706" stroke-width="1.5"/>
+      <ellipse cx="231" cy="110" rx="5" ry="9" fill="#fbbf24" stroke="#d97706" stroke-width="1.5"/>
+      <ellipse cx="169" cy="112" rx="2" ry="4" fill="#fff7ed"/>
+      <ellipse cx="200" cy="104" rx="2" ry="4" fill="#fff7ed"/>
+      <ellipse cx="231" cy="112" rx="2" ry="4" fill="#fff7ed"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-headache desc-headache">
+  <title id="title-headache">Headache - Child holding a sore head</title>
+  <desc id="desc-headache">A child with closed eyes holding both hands on a sore head, with red pain zigzags and stars around the forehead, sitting on a sofa.</desc>
+  <defs>
+    <linearGradient id="hd-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ede9fe"/>
+      <stop offset="100%" stop-color="#ddd6fe"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#hd-bg)"/>
+  <rect x="0" y="252" width="400" height="48" fill="#c4b5fd"/>
+  <line x1="0" y1="252" x2="400" y2="252" stroke="#6d28d9" stroke-width="3.5"/>
+  <!-- sofa -->
+  <g filter="url(#soft-shadow)">
+    <rect x="60" y="188" width="280" height="70" rx="14" fill="#0ea5e9" stroke="#0c4a6e" stroke-width="4"/>
+    <rect x="44" y="168" width="36" height="90" rx="12" fill="#38bdf8" stroke="#0c4a6e" stroke-width="4"/>
+    <rect x="320" y="168" width="36" height="90" rx="12" fill="#38bdf8" stroke="#0c4a6e" stroke-width="4"/>
+    <rect x="80" y="170" width="240" height="30" rx="10" fill="#7dd3fc" stroke="#0c4a6e" stroke-width="3.5"/>
+  </g>
+  <!-- CHILD WITH HEADACHE (hero element) -->
+  <g filter="url(#soft-shadow)">
+    <!-- hair -->
+    <path d="M132,102 Q128,44 200,40 Q272,44 268,102 Q272,84 262,70 Q250,82 238,74 Q226,86 210,78 Q198,88 182,80 Q168,90 154,80 Q142,88 136,80 Q132,90 132,102 Z"
+          fill="#1c1917" stroke="#0f172a" stroke-width="3.5"/>
+    <!-- head large -->
+    <circle cx="200" cy="112" r="58" fill="#fcd9b6" stroke="#78350f" stroke-width="4"/>
+    <!-- pained closed eyes (upside-down arcs) -->
+    <path d="M170,108 Q178,102 186,108" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M214,108 Q222,102 230,108" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- worried brows -->
+    <path d="M168,94 Q176,90 184,94" fill="none" stroke="#78350f" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M216,94 Q224,90 232,94" fill="none" stroke="#78350f" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- sad wavy mouth -->
+    <path d="M182,144 Q191,138 200,143 Q209,148 218,142" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- sweat drop -->
+    <path d="M244,120 Q250,130 244,138 Q236,130 244,120 Z" fill="#38bdf8" stroke="#0c4a6e" stroke-width="2"/>
+    <!-- body -->
+    <path d="M166,168 L234,168 L246,238 L154,238 Z" fill="#f97316" stroke="#7c2d12" stroke-width="4"/>
+    <!-- both arms up holding head -->
+    <path d="M168,180 Q136,160 142,116" fill="none" stroke="#fcd9b6" stroke-width="12" stroke-linecap="round"/>
+    <ellipse cx="146" cy="106" rx="14" ry="11" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M232,180 Q264,160 258,116" fill="none" stroke="#fcd9b6" stroke-width="12" stroke-linecap="round"/>
+    <ellipse cx="254" cy="106" rx="14" ry="11" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <!-- legs -->
+    <line x1="182" y1="238" x2="182" y2="252" stroke="#1d4ed8" stroke-width="10" stroke-linecap="round"/>
+    <line x1="218" y1="238" x2="218" y2="252" stroke="#1d4ed8" stroke-width="10" stroke-linecap="round"/>
+    <ellipse cx="180" cy="257" rx="13" ry="6" fill="#334155"/>
+    <ellipse cx="220" cy="257" rx="13" ry="6" fill="#334155"/>
+  </g>
+  <!-- pain zigzags above head -->
+  <g stroke="#dc2626" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M160,44 L168,32 L158,24 L166,12"/>
+    <path d="M240,44 L232,32 L242,24 L234,12"/>
+    <path d="M200,36 L200,22"/>
+  </g>
+  <!-- pain stars -->
+  <g fill="#f97316" stroke="#7c2d12" stroke-width="2.5">
+    <path d="M116,60 L121,72 L134,74 L124,83 L127,96 L116,89 L105,96 L108,83 L98,74 L111,72 Z"/>
+    <path d="M290,64 L294,73 L304,75 L296,82 L298,92 L290,86 L282,92 L284,82 L276,75 L286,73 Z"/>
+  </g>
+</svg>

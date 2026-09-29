@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-comic-book desc-comic-book">
+  <title id="title-comic-book">Comic book - Child reading a comic book</title>
+  <desc id="desc-comic-book">A happy child sitting on a beanbag reading a colourful comic book with a superhero on the cover, with action stars floating around.</desc>
+  <defs>
+    <linearGradient id="cb-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#cb-bg)"/>
+  <rect x="0" y="252" width="400" height="48" fill="#fbbf24"/>
+  <line x1="0" y1="252" x2="400" y2="252" stroke="#b45309" stroke-width="3.5"/>
+  <ellipse cx="200" cy="266" rx="150" ry="13" fill="#0f172a" opacity="0.18"/>
+  <!-- action stars floating -->
+  <g fill="#f97316" stroke="#7c2d12" stroke-width="2.5">
+    <path d="M60,60 L66,76 L82,78 L70,89 L74,105 L60,96 L46,105 L50,89 L38,78 L54,76 Z"/>
+    <path d="M340,44 L345,56 L357,58 L348,66 L351,78 L340,71 L329,78 L332,66 L323,58 L335,56 Z"/>
+    <path d="M354,150 L358,160 L368,162 L361,168 L363,178 L354,173 L345,178 L347,168 L340,162 L350,160 Z"/>
+  </g>
+  <!-- beanbag -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="190" cy="232" rx="120" ry="42" fill="#8b5cf6" stroke="#4c1d95" stroke-width="4.5"/>
+    <path d="M84,220 Q94,180 130,172 L250,172 Q286,180 296,220" fill="#a78bfa" stroke="#4c1d95" stroke-width="4"/>
+  </g>
+  <!-- child sitting -->
+  <g filter="url(#soft-shadow)">
+    <!-- head -->
+    <circle cx="190" cy="96" r="30" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M162,86 Q162,62 190,60 Q218,62 218,86 L212,92 Q190,72 168,92 Z" fill="#92400e" stroke="#451a03" stroke-width="3"/>
+    <!-- eyes looking down at comic -->
+    <path d="M178,98 Q182,102 186,98" fill="none" stroke="#0f172a" stroke-width="2.8" stroke-linecap="round"/>
+    <path d="M194,98 Q198,102 202,98" fill="none" stroke="#0f172a" stroke-width="2.8" stroke-linecap="round"/>
+    <path d="M182,110 Q190,116 198,110" fill="none" stroke="#0f172a" stroke-width="2.8" stroke-linecap="round"/>
+    <ellipse cx="172" cy="104" rx="5.5" ry="4" fill="#fb7185" opacity="0.55"/>
+    <ellipse cx="208" cy="104" rx="5.5" ry="4" fill="#fb7185" opacity="0.55"/>
+    <!-- body -->
+    <path d="M168,124 L212,124 L222,186 L158,186 Z" fill="#16a34a" stroke="#14532d" stroke-width="3.5"/>
+    <!-- crossed legs -->
+    <path d="M160,186 Q140,206 156,218 Q176,226 196,214" fill="none" stroke="#1d4ed8" stroke-width="13" stroke-linecap="round"/>
+    <path d="M220,186 Q240,206 224,218 Q204,226 186,214" fill="none" stroke="#1d4ed8" stroke-width="13" stroke-linecap="round"/>
+    <ellipse cx="158" cy="222" rx="13" ry="7" fill="#ef4444" stroke="#7f1d1d" stroke-width="2.5"/>
+    <ellipse cx="222" cy="222" rx="13" ry="7" fill="#ef4444" stroke="#7f1d1d" stroke-width="2.5"/>
+    <!-- arms holding comic -->
+    <path d="M170,134 Q148,148 146,166" fill="none" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
+    <path d="M210,134 Q232,148 234,166" fill="none" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <!-- THE COMIC BOOK (hero element) held open -->
+  <g filter="url(#soft-shadow)">
+    <path d="M132,150 Q160,136 190,148 Q220,136 248,150 L248,208 Q220,196 190,206 Q160,196 132,208 Z"
+          fill="#fefce8" stroke="#78350f" stroke-width="4.5"/>
+    <line x1="190" y1="148" x2="190" y2="206" stroke="#a8a29e" stroke-width="3"/>
+    <!-- cover panels: superhero -->
+    <rect x="142" y="156" width="40" height="42" rx="3" fill="#7dd3fc" stroke="#0f172a" stroke-width="2.5"/>
+    <ellipse cx="160" cy="176" rx="11" ry="5.5" fill="#ef4444" stroke="#7f1d1d" stroke-width="2"/>
+    <circle cx="172" cy="173" r="5" fill="#fcd9b6" stroke="#78350f" stroke-width="2"/>
+    <path d="M150,175 Q142,170 140,164 L147,163 Q152,169 155,172 Z" fill="#f97316" stroke="#7c2d12" stroke-width="2"/>
+    <!-- right page: burst -->
+    <rect x="198" y="156" width="40" height="42" rx="3" fill="#fbcfe8" stroke="#0f172a" stroke-width="2.5"/>
+    <path d="M214,162 L219,171 L229,168 L224,177 L233,182 L223,183 L224,193 L215,187 L207,193 L209,183 L199,182 L207,177 L203,168 L212,171 Z"
+          fill="#fde047" stroke="#a16207" stroke-width="2"/>
+  </g>
+  <!-- excitement sparkle near head -->
+  <g stroke="#f59e0b" stroke-width="3" stroke-linecap="round" fill="none">
+    <line x1="232" y1="70" x2="240" y2="62"/>
+    <line x1="238" y1="80" x2="248" y2="78"/>
+    <line x1="228" y1="60" x2="230" y2="50"/>
+  </g>
+</svg>

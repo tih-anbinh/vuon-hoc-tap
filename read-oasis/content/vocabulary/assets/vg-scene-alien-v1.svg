@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-alien desc-alien">
+  <title id="title-alien">Alien - Friendly green space visitor</title>
+  <desc id="desc-alien">A friendly, cute, green alien with big black eyes, small antennae, and a round body, standing on a purple planet surface with stars.</desc>
+  <defs>
+    <radialGradient id="al-sky" cx="50%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#312e81"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </radialGradient>
+    <linearGradient id="al-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a3e635"/>
+      <stop offset="100%" stop-color="#65a30d"/>
+    </linearGradient>
+    <linearGradient id="al-ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#4c1d95"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <!-- space sky -->
+  <rect x="0" y="0" width="400" height="300" fill="url(#al-sky)"/>
+  <!-- stars -->
+  <g fill="#fef9c3">
+    <circle cx="40" cy="40" r="2.5"/>
+    <circle cx="90" cy="70" r="1.8"/>
+    <circle cx="350" cy="40" r="2.5"/>
+    <circle cx="370" cy="90" r="1.8"/>
+    <circle cx="30" cy="130" r="1.8"/>
+    <circle cx="380" cy="150" r="2"/>
+    <circle cx="60" cy="200" r="1.5"/>
+  </g>
+  <!-- planet surface -->
+  <path d="M0,240 Q100,215 200,230 Q300,245 400,225 L400,300 L0,300 Z" fill="url(#al-ground)"/>
+  <!-- crater -->
+  <ellipse cx="320" cy="270" rx="30" ry="7" fill="#3b1785" opacity="0.7"/>
+  <!-- ground shadow -->
+  <ellipse cx="180" cy="252" rx="55" ry="7" fill="#0f172a" opacity="0.45"/>
+  <!-- alien body -->
+  <g filter="url(#soft-shadow)">
+    <!-- legs -->
+    <rect x="155" y="215" width="14" height="30" rx="7" fill="#65a30d" stroke="#365314" stroke-width="3"/>
+    <rect x="191" y="215" width="14" height="30" rx="7" fill="#65a30d" stroke="#365314" stroke-width="3"/>
+    <ellipse cx="162" cy="248" rx="14" ry="4" fill="#3f6212" stroke="#365314" stroke-width="2.5"/>
+    <ellipse cx="198" cy="248" rx="14" ry="4" fill="#3f6212" stroke="#365314" stroke-width="2.5"/>
+    <!-- body -->
+    <ellipse cx="180" cy="180" rx="55" ry="55" fill="url(#al-body)" stroke="#365314" stroke-width="4"/>
+    <!-- arms -->
+    <path d="M128,175 Q100,175 92,200" fill="none" stroke="#365314" stroke-width="4" stroke-linecap="round"/>
+    <path d="M232,175 Q260,175 268,200" fill="none" stroke="#365314" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="92" cy="200" r="7" fill="#a3e635" stroke="#365314" stroke-width="2.5"/>
+    <circle cx="268" cy="200" r="7" fill="#a3e635" stroke="#365314" stroke-width="2.5"/>
+    <!-- big eyes -->
+    <ellipse cx="160" cy="170" rx="14" ry="18" fill="#0f172a"/>
+    <ellipse cx="200" cy="170" rx="14" ry="18" fill="#0f172a"/>
+    <circle cx="164" cy="164" r="4" fill="#fff"/>
+    <circle cx="204" cy="164" r="4" fill="#fff"/>
+    <!-- smile -->
+    <path d="M168,200 Q180,208 192,200" fill="none" stroke="#365314" stroke-width="3" stroke-linecap="round"/>
+    <!-- antennae -->
+    <line x1="168" y1="130" x2="160" y2="105" stroke="#365314" stroke-width="3" stroke-linecap="round"/>
+    <line x1="192" y1="130" x2="200" y2="105" stroke="#365314" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="160" cy="102" r="5" fill="#fbbf24" stroke="#78350f" stroke-width="2"/>
+    <circle cx="200" cy="102" r="5" fill="#fbbf24" stroke="#78350f" stroke-width="2"/>
+  </g>
+</svg>

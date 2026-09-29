@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-grandma desc-grandma">
+  <title id="title-grandma">Grandma - Sweet elderly lady with a bun, knitting</title>
+  <desc id="desc-grandma">A smiling grandma with white hair in a bun and round glasses, sitting and knitting a red scarf with knitting needles and a ball of yarn.</desc>
+  <defs>
+    <linearGradient id="gm-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fce7f3"/>
+      <stop offset="100%" stop-color="#fbcfe8"/>
+    </linearGradient>
+    <linearGradient id="gm-dress" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c4b5fd"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#gm-bg)"/>
+  <rect x="0" y="255" width="400" height="45" fill="#a16207"/>
+  <ellipse cx="195" cy="260" rx="130" ry="8" fill="#0f172a" opacity="0.25"/>
+  <g filter="url(#soft-shadow)">
+    <!-- head -->
+    <circle cx="200" cy="100" r="42" fill="#fcd9b6" stroke="#78350f" stroke-width="4"/>
+    <!-- white hair with bun -->
+    <path d="M158,95 Q158,60 200,60 Q242,60 242,95 Q230,74 200,74 Q170,74 158,95 Z" fill="#e5e7eb" stroke="#94a3b8" stroke-width="2.5"/>
+    <circle cx="200" cy="52" r="16" fill="#e5e7eb" stroke="#94a3b8" stroke-width="2.5"/>
+    <!-- glasses -->
+    <g fill="none" stroke="#7c3aed" stroke-width="3.5">
+      <circle cx="184" cy="98" r="12"/>
+      <circle cx="216" cy="98" r="12"/>
+      <line x1="196" y1="98" x2="204" y2="98"/>
+    </g>
+    <circle cx="184" cy="98" r="3.5" fill="#0f172a"/>
+    <circle cx="216" cy="98" r="3.5" fill="#0f172a"/>
+    <!-- rosy cheeks + smile -->
+    <ellipse cx="172" cy="115" rx="8" ry="5" fill="#fb923c" opacity="0.55"/>
+    <ellipse cx="228" cy="115" rx="8" ry="5" fill="#fb923c" opacity="0.55"/>
+    <path d="M186,122 Q200,132 214,122" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <!-- dress body -->
+    <path d="M172,148 L228,148 L252,255 L148,255 Z" fill="url(#gm-dress)" stroke="#5b21b6" stroke-width="4"/>
+    <!-- shawl collar -->
+    <path d="M172,148 Q200,168 228,148 L228,162 Q200,180 172,162 Z" fill="#f9a8d4" stroke="#be185d" stroke-width="2.5"/>
+    <!-- arms holding needles -->
+    <path d="M172,168 Q150,190 165,208" fill="none" stroke="#fcd9b6" stroke-width="10" stroke-linecap="round"/>
+    <path d="M228,168 Q250,190 235,208" fill="none" stroke="#fcd9b6" stroke-width="10" stroke-linecap="round"/>
+    <!-- knitting: needles + red work -->
+    <line x1="165" y1="208" x2="215" y2="178" stroke="#94a3b8" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="235" y1="208" x2="185" y2="178" stroke="#94a3b8" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M178,205 Q200,218 222,205 L222,228 Q200,240 178,228 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="3"/>
+    <g stroke="#7f1d1d" stroke-width="1.5" opacity="0.6">
+      <path d="M180,214 Q200,226 220,214"/>
+      <path d="M180,222 Q200,234 220,222"/>
+    </g>
+  </g>
+  <!-- ball of yarn -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="320" cy="235" r="24" fill="#ef4444" stroke="#7f1d1d" stroke-width="3"/>
+    <g fill="none" stroke="#fca5a5" stroke-width="2.5">
+      <path d="M300,228 Q320,215 340,228"/>
+      <path d="M298,240 Q320,252 342,240"/>
+      <path d="M310,214 Q325,235 312,255"/>
+    </g>
+    <path d="M296,235 Q265,230 245,222" fill="none" stroke="#ef4444" stroke-width="2.5"/>
+  </g>
+</svg>

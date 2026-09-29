@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-dream desc-dream">
+  <title id="title-dream">Dream - Child sleeping and dreaming</title>
+  <desc id="desc-dream">A child asleep in bed at night with a big dream bubble above showing the child flying with a kite among stars and clouds.</desc>
+  <defs>
+    <linearGradient id="dm-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#4338ca"/>
+    </linearGradient>
+    <radialGradient id="dm-bubble" cx="0.5" cy="0.4" r="0.9">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.32"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#dm-bg)"/>
+  <!-- stars and moon -->
+  <g fill="#fefce8">
+    <circle cx="40" cy="40" r="3"/>
+    <circle cx="90" cy="70" r="2.5"/>
+    <circle cx="30" cy="120" r="2.5"/>
+    <circle cx="370" cy="250" r="3"/>
+    <circle cx="340" cy="280" r="2.5"/>
+  </g>
+  <path d="M52,80 A16,16 0 1,1 40,60 A12,12 0 0,0 52,80 Z" fill="#fde047"/>
+  <!-- DREAM BUBBLE (hero element) -->
+  <g filter="url(#soft-shadow)">
+    <path d="M120,110 Q86,110 82,80 Q80,46 116,40 Q124,14 162,14 Q186,2 218,10 Q258,2 276,26 Q316,24 322,58 Q334,86 306,102 Q294,122 262,118 L150,118 Q130,120 120,110 Z"
+          fill="url(#dm-bubble)" stroke="#a16207" stroke-width="4"/>
+    <!-- dream content: child flying with kite -->
+    <g>
+      <!-- clouds in dream -->
+      <ellipse cx="130" cy="90" rx="22" ry="9" fill="#ffffff" opacity="0.9"/>
+      <ellipse cx="286" cy="52" rx="20" ry="8" fill="#ffffff" opacity="0.9"/>
+      <!-- flying child -->
+      <circle cx="190" cy="66" r="14" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+      <path d="M178,60 Q178,50 190,50 Q202,50 202,60 L198,64 Q190,54 182,64 Z" fill="#451a03"/>
+      <circle cx="186" cy="65" r="2" fill="#0f172a"/>
+      <circle cx="195" cy="65" r="2" fill="#0f172a"/>
+      <path d="M186,72 Q190,75 194,72" fill="none" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/>
+      <!-- body horizontal, flying pose -->
+      <path d="M176,78 L204,76 L206,92 L174,94 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="2.5"/>
+      <path d="M174,90 Q160,96 152,92" fill="none" stroke="#1d4ed8" stroke-width="7" stroke-linecap="round"/>
+      <path d="M206,88 Q218,92 226,88" fill="none" stroke="#1d4ed8" stroke-width="7" stroke-linecap="round"/>
+      <!-- arm up holding kite string -->
+      <path d="M202,74 Q216,62 230,52" fill="none" stroke="#fcd9b6" stroke-width="5" stroke-linecap="round"/>
+      <!-- kite -->
+      <line x1="230" y1="52" x2="252" y2="36" stroke="#94a3b8" stroke-width="2"/>
+      <path d="M252,20 L268,36 L252,52 L236,36 Z" fill="#f472b6" stroke="#be185d" stroke-width="2.5"/>
+      <line x1="252" y1="20" x2="252" y2="52" stroke="#be185d" stroke-width="2"/>
+      <line x1="236" y1="36" x2="268" y2="36" stroke="#be185d" stroke-width="2"/>
+      <path d="M252,52 Q248,60 252,66 Q256,72 252,78" fill="none" stroke="#be185d" stroke-width="2"/>
+      <!-- stars in dream -->
+      <path d="M116,58 L119,66 L127,66 L121,71 L123,79 L116,74 L109,79 L111,71 L105,66 L113,66 Z" fill="#f59e0b"/>
+      <circle cx="304" cy="82" r="3.5" fill="#f59e0b"/>
+    </g>
+  </g>
+  <!-- trail bubbles from sleeper to dream -->
+  <g fill="#fde68a" stroke="#a16207" stroke-width="2.5">
+    <circle cx="136" cy="140" r="10"/>
+    <circle cx="118" cy="162" r="7"/>
+    <circle cx="106" cy="180" r="5"/>
+  </g>
+  <!-- bed with sleeping child -->
+  <g filter="url(#soft-shadow)">
+    <!-- headboard -->
+    <path d="M44,180 Q44,160 64,160 Q84,160 84,180 L84,262 L44,262 Z" fill="#92400e" stroke="#451a03" stroke-width="3.5"/>
+    <!-- bed base -->
+    <rect x="44" y="232" width="312" height="32" rx="7" fill="#b45309" stroke="#451a03" stroke-width="3.5"/>
+    <rect x="52" y="264" width="12" height="16" fill="#78350f"/>
+    <rect x="334" y="264" width="12" height="16" fill="#78350f"/>
+    <!-- mattress + pillow -->
+    <rect x="64" y="212" width="292" height="24" rx="8" fill="#f1f5f9" stroke="#64748b" stroke-width="3"/>
+    <ellipse cx="112" cy="204" rx="36" ry="16" fill="#e0f2fe" stroke="#64748b" stroke-width="3"/>
+    <!-- sleeping head -->
+    <circle cx="118" cy="192" r="20" fill="#fcd9b6" stroke="#78350f" stroke-width="3"/>
+    <path d="M100,186 Q100,170 118,168 Q136,170 136,186 L131,189 Q118,177 105,189 Z" fill="#451a03" stroke="#1c1917" stroke-width="2.5"/>
+    <path d="M110,192 Q113,195 116,192" fill="none" stroke="#0f172a" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M121,192 Q124,195 127,192" fill="none" stroke="#0f172a" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M113,200 Q118,203 123,200" fill="none" stroke="#0f172a" stroke-width="2.2" stroke-linecap="round"/>
+    <!-- blanket over body -->
+    <path d="M136,196 Q180,182 250,186 Q330,190 352,206 L352,232 L138,232 Q130,212 136,196 Z"
+          fill="#8b5cf6" stroke="#4c1d95" stroke-width="3.5"/>
+    <g fill="#fde047" opacity="0.9">
+      <circle cx="180" cy="206" r="4.5"/>
+      <circle cx="230" cy="200" r="4.5"/>
+      <circle cx="284" cy="206" r="4.5"/>
+      <circle cx="330" cy="214" r="4.5"/>
+    </g>
+  </g>
+</svg>

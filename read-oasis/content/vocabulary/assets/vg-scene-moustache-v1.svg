@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-moustache desc-moustache">
+  <title id="title-moustache">Moustache - A man with a big curly moustache</title>
+  <desc id="desc-moustache">A close-up of a smiling man's face with a big dark curly moustache above his mouth, wearing a hat, with arrows pointing to the moustache.</desc>
+  <defs>
+    <linearGradient id="mu-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#mu-bg)"/>
+  <!-- decorative circles -->
+  <circle cx="52" cy="60" r="16" fill="#fbbf24" opacity="0.5"/>
+  <circle cx="352" cy="232" r="20" fill="#f59e0b" opacity="0.4"/>
+  <ellipse cx="200" cy="282" rx="130" ry="12" fill="#0f172a" opacity="0.13"/>
+  <!-- MAN'S FACE (hero element) -->
+  <g filter="url(#soft-shadow)">
+    <!-- neck/shoulders -->
+    <path d="M150,262 Q150,240 200,238 Q250,240 250,262 L250,300 L150,300 Z" fill="#16a34a" stroke="#14532d" stroke-width="4"/>
+    <!-- big head -->
+    <ellipse cx="200" cy="150" rx="88" ry="96" fill="#fcd9b6" stroke="#78350f" stroke-width="5"/>
+    <!-- ears -->
+    <ellipse cx="110" cy="156" rx="13" ry="20" fill="#fcd9b6" stroke="#78350f" stroke-width="4"/>
+    <ellipse cx="290" cy="156" rx="13" ry="20" fill="#fcd9b6" stroke="#78350f" stroke-width="4"/>
+    <!-- hat -->
+    <path d="M116,92 Q120,38 200,34 Q280,38 284,92 L284,102 L116,102 Z" fill="#7c3aed" stroke="#4c1d95" stroke-width="4.5"/>
+    <rect x="98" y="96" width="204" height="18" rx="9" fill="#8b5cf6" stroke="#4c1d95" stroke-width="4"/>
+    <rect x="132" y="76" width="136" height="14" rx="6" fill="#fbbf24" stroke="#a16207" stroke-width="3"/>
+    <!-- eyebrows -->
+    <path d="M144,132 Q160,124 176,132" fill="none" stroke="#1c1917" stroke-width="6" stroke-linecap="round"/>
+    <path d="M224,132 Q240,124 256,132" fill="none" stroke="#1c1917" stroke-width="6" stroke-linecap="round"/>
+    <!-- eyes -->
+    <circle cx="160" cy="150" r="7" fill="#0f172a"/>
+    <circle cx="240" cy="150" r="7" fill="#0f172a"/>
+    <circle cx="162" cy="148" r="2.4" fill="#ffffff"/>
+    <circle cx="242" cy="148" r="2.4" fill="#ffffff"/>
+    <!-- nose -->
+    <path d="M200,158 Q192,180 200,188 Q208,184 206,176" fill="none" stroke="#b45309" stroke-width="4" stroke-linecap="round"/>
+    <!-- cheeks -->
+    <ellipse cx="140" cy="176" rx="12" ry="8" fill="#fb7185" opacity="0.55"/>
+    <ellipse cx="260" cy="176" rx="12" ry="8" fill="#fb7185" opacity="0.55"/>
+    <!-- BIG CURLY MOUSTACHE -->
+    <g fill="#1c1917" stroke="#0f172a" stroke-width="3.5">
+      <path d="M200,198
+               Q184,186 164,190 Q140,194 128,206 Q118,216 124,226 Q130,234 142,230 Q134,222 140,214 Q152,202 178,204 Q192,205 200,212
+               Q208,205 222,204 Q248,202 260,214 Q266,222 258,230 Q270,234 276,226 Q282,216 272,206 Q260,194 236,190 Q216,186 200,198 Z"/>
+    </g>
+    <!-- highlight curls on moustache -->
+    <g stroke="#57534e" stroke-width="2.5" fill="none" stroke-linecap="round">
+      <path d="M156,200 Q146,204 140,212"/>
+      <path d="M244,200 Q254,204 260,212"/>
+    </g>
+    <!-- smile under moustache -->
+    <path d="M178,232 Q200,246 222,232" fill="none" stroke="#0f172a" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <!-- arrows pointing at moustache -->
+  <g stroke="#dc2626" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M62,180 Q84,196 108,210"/>
+    <path d="M100,196 L112,212 L92,214"/>
+    <path d="M338,180 Q316,196 292,210"/>
+    <path d="M300,196 L288,212 L308,214"/>
+  </g>
+  <!-- sparkles -->
+  <g fill="#f59e0b" stroke="#a16207" stroke-width="2">
+    <path d="M330,60 L334,70 L344,72 L336,79 L338,90 L330,84 L322,90 L324,79 L316,72 L326,70 Z"/>
+    <path d="M62,244 L65,251 L72,252 L67,257 L68,265 L62,261 L56,265 L57,257 L52,252 L59,251 Z"/>
+  </g>
+</svg>

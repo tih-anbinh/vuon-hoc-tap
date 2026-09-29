@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-young desc-young">
+  <title id="title-young">Young - Young puppy and baby beside old dog and grandpa</title>
+  <desc id="desc-young">A split picture contrasting young and old: on the left a bouncing young puppy and a small child, on the right an old dog and a grandpa with a walking stick.</desc>
+  <defs>
+    <linearGradient id="yg-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bbf7d0"/>
+      <stop offset="100%" stop-color="#86efac"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#yg-bg)"/>
+  <rect x="0" y="245" width="400" height="55" fill="#4ade80"/>
+  <line x1="0" y1="245" x2="400" y2="245" stroke="#15803d" stroke-width="3.5"/>
+  <!-- divider -->
+  <line x1="200" y1="20" x2="200" y2="280" stroke="#94a3b8" stroke-width="3" stroke-dasharray="10,8"/>
+  <!-- LEFT: young child jumping -->
+  <g filter="url(#soft-shadow)">
+    <!-- bouncy hair -->
+    <path d="M64,88 Q62,60 90,58 Q118,60 116,88 L110,94 Q90,76 70,94 Z" fill="#78350f" stroke="#451a03" stroke-width="3"/>
+    <circle cx="90" cy="98" r="26" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <circle cx="81" cy="94" r="3.5" fill="#0f172a"/>
+    <circle cx="99" cy="94" r="3.5" fill="#0f172a"/>
+    <path d="M79,106 Q90,116 101,106" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="72" cy="102" rx="5" ry="4" fill="#fb7185" opacity="0.55"/>
+    <ellipse cx="108" cy="102" rx="5" ry="4" fill="#fb7185" opacity="0.55"/>
+    <!-- body mid-jump -->
+    <path d="M74,122 L106,122 L112,178 L68,178 Z" fill="#f97316" stroke="#c2410c" stroke-width="3.5"/>
+    <!-- arms up -->
+    <path d="M76,128 Q56,112 52,92" fill="none" stroke="#fcd9b6" stroke-width="10" stroke-linecap="round"/>
+    <path d="M104,128 Q124,112 128,92" fill="none" stroke="#fcd9b6" stroke-width="10" stroke-linecap="round"/>
+    <!-- legs bent jumping -->
+    <path d="M78,178 Q70,196 80,206" fill="none" stroke="#fcd9b6" stroke-width="11" stroke-linecap="round"/>
+    <path d="M102,178 Q112,196 100,206" fill="none" stroke="#fcd9b6" stroke-width="11" stroke-linecap="round"/>
+    <ellipse cx="82" cy="212" rx="12" ry="6" fill="#ef4444"/>
+    <ellipse cx="98" cy="212" rx="12" ry="6" fill="#ef4444"/>
+    <!-- jump lines under feet -->
+    <g stroke="#64748b" stroke-width="3" stroke-linecap="round">
+      <line x1="70" y1="228" x2="80" y2="222"/>
+      <line x1="90" y1="230" x2="90" y2="222"/>
+      <line x1="110" y1="228" x2="100" y2="222"/>
+    </g>
+  </g>
+  <!-- young puppy bouncing -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="155" cy="222" rx="24" ry="17" fill="#d6a05c" stroke="#78350f" stroke-width="3"/>
+    <circle cx="175" cy="208" r="14" fill="#d6a05c" stroke="#78350f" stroke-width="3"/>
+    <path d="M166,198 Q160,188 168,186 Q174,192 172,198 Z" fill="#92400e" stroke="#78350f" stroke-width="2"/>
+    <path d="M182,196 Q186,186 192,190 Q192,198 184,200 Z" fill="#92400e" stroke="#78350f" stroke-width="2"/>
+    <circle cx="171" cy="206" r="2.5" fill="#0f172a"/>
+    <circle cx="181" cy="206" r="2.5" fill="#0f172a"/>
+    <ellipse cx="177" cy="213" rx="3" ry="2.5" fill="#0f172a"/>
+    <!-- wagging tail -->
+    <path d="M132,216 Q118,206 120,194" fill="none" stroke="#d6a05c" stroke-width="7" stroke-linecap="round"/>
+    <g stroke="#94a3b8" stroke-width="2" stroke-linecap="round" opacity="0.8">
+      <path d="M112,200 Q108,194 110,188"/>
+      <path d="M124,188 Q122,182 126,177"/>
+    </g>
+    <!-- front paws up -->
+    <line x1="146" y1="235" x2="144" y2="242" stroke="#d6a05c" stroke-width="6" stroke-linecap="round"/>
+    <line x1="164" y1="235" x2="166" y2="242" stroke="#d6a05c" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <!-- RIGHT: grandpa with stick -->
+  <g filter="url(#soft-shadow)">
+    <!-- bald head with white side hair -->
+    <circle cx="266" cy="102" r="26" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M242,96 Q240,84 248,78 M290,96 Q292,84 284,78" fill="none" stroke="#e2e8f0" stroke-width="7" stroke-linecap="round"/>
+    <!-- glasses -->
+    <circle cx="257" cy="99" r="8" fill="none" stroke="#475569" stroke-width="2.5"/>
+    <circle cx="277" cy="99" r="8" fill="none" stroke="#475569" stroke-width="2.5"/>
+    <line x1="265" y1="99" x2="269" y2="99" stroke="#475569" stroke-width="2.5"/>
+    <circle cx="257" cy="99" r="2.5" fill="#0f172a"/>
+    <circle cx="277" cy="99" r="2.5" fill="#0f172a"/>
+    <!-- white moustache + smile -->
+    <path d="M254,112 Q266,120 278,112" fill="none" stroke="#e2e8f0" stroke-width="5" stroke-linecap="round"/>
+    <!-- stooped body -->
+    <path d="M252,126 L282,126 L292,196 L244,196 Z" fill="#57534e" stroke="#292524" stroke-width="3.5"/>
+    <!-- cardigan buttons -->
+    <circle cx="268" cy="146" r="2.5" fill="#e7e5e4"/>
+    <circle cx="269" cy="162" r="2.5" fill="#e7e5e4"/>
+    <!-- arm to walking stick -->
+    <path d="M282,140 Q302,152 306,170" fill="none" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
+    <line x1="308" y1="172" x2="308" y2="240" stroke="#92400e" stroke-width="6" stroke-linecap="round"/>
+    <!-- other arm -->
+    <path d="M252,140 Q238,152 240,168" fill="none" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
+    <!-- legs -->
+    <line x1="258" y1="196" x2="256" y2="234" stroke="#44403c" stroke-width="10" stroke-linecap="round"/>
+    <line x1="278" y1="196" x2="280" y2="234" stroke="#44403c" stroke-width="10" stroke-linecap="round"/>
+    <ellipse cx="254" cy="240" rx="12" ry="6" fill="#292524"/>
+    <ellipse cx="282" cy="240" rx="12" ry="6" fill="#292524"/>
+  </g>
+  <!-- old dog lying down -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="356" cy="230" rx="30" ry="14" fill="#a8a29e" stroke="#57534e" stroke-width="3"/>
+    <circle cx="380" cy="220" r="12" fill="#a8a29e" stroke="#57534e" stroke-width="3"/>
+    <path d="M372,212 Q368,204 374,202 Q380,206 378,212 Z" fill="#78716c" stroke="#57534e" stroke-width="2"/>
+    <!-- closed sleepy eyes -->
+    <path d="M375,218 L381,218 M385,218 L391,218" stroke="#292524" stroke-width="2" stroke-linecap="round"/>
+    <ellipse cx="383" cy="224" rx="2.5" ry="2" fill="#292524"/>
+    <!-- grey muzzle -->
+    <path d="M330,224 Q322,220 324,214" fill="none" stroke="#a8a29e" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>

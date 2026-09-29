@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-hockey desc-hockey">
+  <title id="title-hockey">Hockey - Hockey stick and puck on ice</title>
+  <desc id="desc-hockey">A wooden hockey stick with tape on the blade and a black puck on shiny blue ice, with skate marks curving across the surface.</desc>
+  <defs>
+    <linearGradient id="hk-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#bae6fd"/>
+    </linearGradient>
+    <linearGradient id="hk-ice" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cffafe"/>
+      <stop offset="100%" stop-color="#7dd3fc"/>
+    </linearGradient>
+    <linearGradient id="hk-stick" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e8b478"/>
+      <stop offset="100%" stop-color="#a16207"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="160" fill="url(#hk-bg)"/>
+  <!-- ice rink -->
+  <rect x="0" y="150" width="400" height="150" fill="url(#hk-ice)"/>
+  <line x1="0" y1="150" x2="400" y2="150" stroke="#0369a1" stroke-width="3"/>
+  <!-- rink markings -->
+  <circle cx="200" cy="230" r="55" fill="none" stroke="#ef4444" stroke-width="3" opacity="0.5"/>
+  <line x1="0" y1="230" x2="400" y2="230" stroke="#3b82f6" stroke-width="3" opacity="0.4"/>
+  <!-- skate marks -->
+  <g fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.8">
+    <path d="M40,180 Q90,200 70,250"/>
+    <path d="M48,178 Q98,198 78,248"/>
+    <path d="M330,170 Q300,210 345,260"/>
+  </g>
+  <!-- hockey stick -->
+  <g filter="url(#soft-shadow)">
+    <!-- shaft -->
+    <path d="M295,35 L180,205 L165,196 L280,26 Z" fill="url(#hk-stick)" stroke="#78350f" stroke-width="3.5"/>
+    <!-- blade with tape -->
+    <path d="M180,205 L165,196 Q140,215 105,218 L102,238 Q150,238 180,212 Z" fill="url(#hk-stick)" stroke="#78350f" stroke-width="3.5"/>
+    <g stroke="#1e293b" stroke-width="5" opacity="0.85">
+      <line x1="118" y1="216" x2="115" y2="236"/>
+      <line x1="134" y1="213" x2="130" y2="233"/>
+      <line x1="150" y1="209" x2="145" y2="228"/>
+    </g>
+    <!-- grip tape at top -->
+    <path d="M295,35 L280,26 L288,14 L302,23 Z" fill="#1e293b" stroke="#0f172a" stroke-width="2.5"/>
+  </g>
+  <!-- puck -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="85" cy="262" rx="34" ry="12" fill="#1e293b" stroke="#0f172a" stroke-width="3"/>
+    <path d="M51,252 L51,262 Q51,274 85,274 Q119,274 119,262 L119,252" fill="#0f172a" stroke="#0f172a" stroke-width="2"/>
+    <ellipse cx="85" cy="252" rx="34" ry="12" fill="#334155" stroke="#0f172a" stroke-width="3"/>
+  </g>
+  <!-- motion lines from puck -->
+  <g stroke="#64748b" stroke-width="3" stroke-linecap="round" opacity="0.6">
+    <line x1="130" y1="252" x2="155" y2="250"/>
+    <line x1="128" y1="264" x2="150" y2="263"/>
+  </g>
+  <!-- snowflakes -->
+  <g stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.9">
+    <g transform="translate(60,60)">
+      <line x1="-8" y1="0" x2="8" y2="0"/><line x1="0" y1="-8" x2="0" y2="8"/><line x1="-6" y1="-6" x2="6" y2="6"/><line x1="-6" y1="6" x2="6" y2="-6"/>
+    </g>
+    <g transform="translate(350,90)">
+      <line x1="-7" y1="0" x2="7" y2="0"/><line x1="0" y1="-7" x2="0" y2="7"/><line x1="-5" y1="-5" x2="5" y2="5"/><line x1="-5" y1="5" x2="5" y2="-5"/>
+    </g>
+    <g transform="translate(120,100)">
+      <line x1="-6" y1="0" x2="6" y2="0"/><line x1="0" y1="-6" x2="0" y2="6"/>
+    </g>
+  </g>
+</svg>

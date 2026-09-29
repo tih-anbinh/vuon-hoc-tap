@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-donkey desc-donkey">
+  <title id="title-donkey">Donkey - Gray donkey with long ears</title>
+  <desc id="desc-donkey">A friendly gray donkey with very long upright ears, a pale muzzle, dark mane, and a tufted tail, standing on grass.</desc>
+  <defs>
+    <linearGradient id="dk-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="dk-fur" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a8a29e"/>
+      <stop offset="100%" stop-color="#57534e"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#dk-bg)"/>
+  <circle cx="345" cy="50" r="24" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <rect x="0" y="235" width="400" height="65" fill="#4d7c0f"/>
+  <path d="M0,235 Q100,228 200,235 T400,235 L400,245 L0,245 Z" fill="#65a30d"/>
+  <ellipse cx="200" cy="248" rx="140" ry="9" fill="#0f172a" opacity="0.25"/>
+  <g filter="url(#soft-shadow)">
+    <!-- body -->
+    <ellipse cx="220" cy="180" rx="95" ry="55" fill="url(#dk-fur)" stroke="#292524" stroke-width="4"/>
+    <!-- legs -->
+    <g fill="#78716c" stroke="#292524" stroke-width="3">
+      <rect x="155" y="210" width="18" height="45" rx="6"/>
+      <rect x="195" y="215" width="18" height="42" rx="6"/>
+      <rect x="245" y="215" width="18" height="42" rx="6"/>
+      <rect x="283" y="210" width="18" height="45" rx="6"/>
+    </g>
+    <!-- hooves -->
+    <g fill="#292524">
+      <rect x="155" y="245" width="18" height="12" rx="4"/>
+      <rect x="195" y="248" width="18" height="11" rx="4"/>
+      <rect x="245" y="248" width="18" height="11" rx="4"/>
+      <rect x="283" y="245" width="18" height="12" rx="4"/>
+    </g>
+    <!-- tail with tuft -->
+    <path d="M312,165 Q340,175 338,205" fill="none" stroke="#57534e" stroke-width="7" stroke-linecap="round"/>
+    <ellipse cx="340" cy="212" rx="9" ry="14" fill="#292524"/>
+    <!-- neck -->
+    <path d="M145,165 Q120,125 110,95 L150,85 Q165,125 180,150 Z" fill="url(#dk-fur)" stroke="#292524" stroke-width="4"/>
+    <!-- mane -->
+    <path d="M148,88 Q160,105 172,140 L182,132 Q168,100 158,84 Z" fill="#292524"/>
+    <!-- head -->
+    <ellipse cx="112" cy="85" rx="42" ry="32" fill="url(#dk-fur)" stroke="#292524" stroke-width="4" transform="rotate(-15 112 85)"/>
+    <!-- muzzle -->
+    <ellipse cx="82" cy="98" rx="24" ry="18" fill="#e7e5e4" stroke="#292524" stroke-width="3" transform="rotate(-15 82 98)"/>
+    <ellipse cx="74" cy="94" rx="3.5" ry="5" fill="#292524"/>
+    <ellipse cx="86" cy="103" rx="3.5" ry="5" fill="#292524"/>
+    <!-- eye -->
+    <circle cx="118" cy="72" r="6" fill="#0f172a"/>
+    <circle cx="116" cy="70" r="2" fill="#fff"/>
+    <!-- long ears -->
+    <path d="M120,52 Q115,10 130,5 Q145,12 138,55 Z" fill="url(#dk-fur)" stroke="#292524" stroke-width="3.5"/>
+    <path d="M143,55 Q148,15 163,12 Q175,20 160,60 Z" fill="url(#dk-fur)" stroke="#292524" stroke-width="3.5"/>
+    <path d="M126,48 Q124,20 132,14 Q138,22 134,50 Z" fill="#e7e5e4" opacity="0.8"/>
+    <path d="M149,50 Q152,25 160,20 Q165,28 156,54 Z" fill="#e7e5e4" opacity="0.8"/>
+  </g>
+</svg>

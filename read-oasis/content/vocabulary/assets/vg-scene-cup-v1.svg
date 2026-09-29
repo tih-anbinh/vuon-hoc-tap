@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-cup desc-cup">
+  <title id="title-cup">Cup - Blue cup of tea on a saucer</title>
+  <desc id="desc-cup">A big blue cup with a handle full of warm tea, sitting on a matching saucer with gentle steam rising, next to a small teapot.</desc>
+  <defs>
+    <linearGradient id="cu-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fce7f3"/>
+      <stop offset="100%" stop-color="#fbcfe8"/>
+    </linearGradient>
+    <radialGradient id="cu-tea" cx="0.5" cy="0.4" r="0.8">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#cu-bg)"/>
+  <!-- table -->
+  <rect x="0" y="236" width="400" height="64" fill="#a855f7" opacity="0.4"/>
+  <line x1="0" y1="236" x2="400" y2="236" stroke="#7e22ce" stroke-width="3.5" opacity="0.7"/>
+  <ellipse cx="176" cy="252" rx="150" ry="12" fill="#0f172a" opacity="0.15"/>
+  <!-- steam -->
+  <g stroke="#94a3b8" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.8">
+    <path d="M140,100 Q130,76 142,56 Q152,40 144,20"/>
+    <path d="M182,94 Q172,68 184,48 Q194,32 186,12"/>
+    <path d="M222,100 Q212,76 224,56 Q234,40 226,20"/>
+  </g>
+  <!-- THE CUP (hero element) -->
+  <g filter="url(#soft-shadow)">
+    <!-- saucer -->
+    <ellipse cx="176" cy="240" rx="112" ry="22" fill="#3b82f6" stroke="#1e3a8a" stroke-width="4.5"/>
+    <ellipse cx="176" cy="235" rx="88" ry="15" fill="#93c5fd"/>
+    <!-- cup body -->
+    <path d="M92,118 L260,118 L248,224 Q246,238 230,238 L122,238 Q106,238 104,224 Z"
+          fill="#3b82f6" stroke="#1e3a8a" stroke-width="5"/>
+    <!-- handle -->
+    <path d="M258,138 Q304,138 304,172 Q304,206 250,206" fill="none" stroke="#3b82f6" stroke-width="16"/>
+    <path d="M258,138 Q304,138 304,172 Q304,206 250,206" fill="none" stroke="#1e3a8a" stroke-width="5"/>
+    <path d="M258,146 Q294,146 294,172 Q294,198 252,198" fill="none" stroke="#1e3a8a" stroke-width="4"/>
+    <!-- tea surface -->
+    <ellipse cx="176" cy="118" rx="84" ry="17" fill="url(#cu-tea)" stroke="#92400e" stroke-width="4"/>
+    <path d="M136,116 Q156,108 176,116 Q196,124 216,116" fill="none" stroke="#fde68a" stroke-width="3.5" stroke-linecap="round" opacity="0.9"/>
+    <!-- polka dots -->
+    <g fill="#fefce8">
+      <circle cx="132" cy="158" r="8"/>
+      <circle cx="180" cy="176" r="8"/>
+      <circle cx="228" cy="158" r="8"/>
+      <circle cx="150" cy="204" r="8"/>
+      <circle cx="210" cy="204" r="8"/>
+    </g>
+    <!-- shine -->
+    <path d="M114,134 Q110,168 116,210" fill="none" stroke="#93c5fd" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+  </g>
+  <!-- small teapot -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="338" cy="216" rx="42" ry="32" fill="#f472b6" stroke="#be185d" stroke-width="4"/>
+    <path d="M300,204 L282,188 L296,182 L308,196 Z" fill="#f472b6" stroke="#be185d" stroke-width="3.5"/>
+    <path d="M372,200 Q392,192 390,176" fill="none" stroke="#be185d" stroke-width="7" stroke-linecap="round"/>
+    <ellipse cx="338" cy="188" rx="20" ry="7" fill="#ec4899" stroke="#be185d" stroke-width="3"/>
+    <circle cx="338" cy="180" r="6" fill="#fde047" stroke="#a16207" stroke-width="2.5"/>
+    <circle cx="326" cy="216" r="6" fill="#fefce8" opacity="0.9"/>
+    <ellipse cx="338" cy="246" rx="26" ry="6" fill="#be185d"/>
+  </g>
+  <!-- sugar cubes -->
+  <g filter="url(#soft-shadow)">
+    <rect x="44" y="222" width="20" height="18" rx="3" fill="#fefce8" stroke="#a8a29e" stroke-width="2.5"/>
+    <rect x="60" y="234" width="20" height="18" rx="3" fill="#fefce8" stroke="#a8a29e" stroke-width="2.5"/>
+  </g>
+  <!-- little hearts -->
+  <g fill="#f472b6" stroke="#be185d" stroke-width="2">
+    <path d="M60,80 Q60,74 65,74 Q70,74 70,79 Q70,85 60,91 Q50,85 50,79 Q50,74 55,74 Q60,74 60,80 Z"/>
+    <path d="M330,64 Q330,59 334,59 Q338,59 338,63 Q338,68 330,73 Q322,68 322,63 Q322,59 326,59 Q330,59 330,64 Z"/>
+  </g>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-angry desc-angry">
+  <title id="title-angry">Angry - Face with furrowed brows</title>
+  <desc id="desc-angry">A cartoon child's face showing anger with furrowed eyebrows, a frown, and red steam puffs beside the head.</desc>
+  <defs>
+    <linearGradient id="ang-skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5c98a"/>
+    </linearGradient>
+    <radialGradient id="ang-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#fee2e2"/>
+      <stop offset="100%" stop-color="#fca5a5"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <!-- bg -->
+  <rect x="0" y="0" width="400" height="300" fill="url(#ang-bg)"/>
+  <!-- steam puffs left -->
+  <g fill="#ef4444" opacity="0.7">
+    <ellipse cx="60" cy="80" rx="14" ry="10"/>
+    <ellipse cx="80" cy="60" rx="10" ry="8"/>
+    <ellipse cx="45" cy="55" rx="8" ry="6"/>
+  </g>
+  <!-- steam puffs right -->
+  <g fill="#ef4444" opacity="0.7">
+    <ellipse cx="340" cy="80" rx="14" ry="10"/>
+    <ellipse cx="320" cy="60" rx="10" ry="8"/>
+    <ellipse cx="355" cy="55" rx="8" ry="6"/>
+  </g>
+  <!-- ground shadow -->
+  <ellipse cx="200" cy="270" rx="105" ry="8" fill="#0f172a" opacity="0.2"/>
+  <!-- face -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="200" cy="160" r="95" fill="url(#ang-skin)" stroke="#78350f" stroke-width="4"/>
+    <!-- hair (short tuft on top, angry look) -->
+    <path d="M120,120 Q140,80 175,90 Q200,60 225,90 Q260,80 280,120 Q265,105 240,115 Q210,80 200,100 Q180,90 165,110 Q140,105 120,120 Z" fill="#78350f" stroke="#451a03" stroke-width="3"/>
+    <!-- furrowed brows: diagonal, meeting inward -->
+    <path d="M155,140 L188,155" stroke="#78350f" stroke-width="9" stroke-linecap="round"/>
+    <path d="M245,140 L212,155" stroke="#78350f" stroke-width="9" stroke-linecap="round"/>
+    <!-- angry eyes: squinted -->
+    <path d="M162,165 Q175,172 188,167" fill="none" stroke="#0f172a" stroke-width="5" stroke-linecap="round"/>
+    <path d="M212,167 Q225,172 238,165" fill="none" stroke="#0f172a" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="175" cy="170" r="4" fill="#0f172a"/>
+    <circle cx="225" cy="170" r="4" fill="#0f172a"/>
+    <!-- red cheeks (flushed) -->
+    <circle cx="150" cy="195" r="14" fill="#ef4444" opacity="0.5"/>
+    <circle cx="250" cy="195" r="14" fill="#ef4444" opacity="0.5"/>
+    <!-- angry frown mouth -->
+    <path d="M165,225 Q200,205 235,225" fill="none" stroke="#78350f" stroke-width="6" stroke-linecap="round"/>
+    <!-- little teeth showing -->
+    <path d="M180,220 L180,228 M195,215 L195,224 M210,215 L210,224 M225,220 L225,228" stroke="#78350f" stroke-width="2.5"/>
+  </g>
+</svg>

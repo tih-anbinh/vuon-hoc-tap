@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-ship desc-ship">
+  <title id="title-ship">Ship - Big ship sailing on the sea</title>
+  <desc id="desc-ship">A large ship with a red hull, white cabins and a smoking funnel sailing on blue ocean waves, with seagulls and the sun in the sky.</desc>
+  <defs>
+    <linearGradient id="sp-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="sp-sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="sp-hull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#sp-sky)"/>
+  <circle cx="348" cy="50" r="24" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <!-- seagulls -->
+  <g fill="none" stroke="#334155" stroke-width="3" stroke-linecap="round">
+    <path d="M60,58 Q70,48 80,58 M80,58 Q90,48 100,58"/>
+    <path d="M120,85 Q128,77 136,85 M136,85 Q144,77 152,85"/>
+  </g>
+  <!-- sea -->
+  <rect x="0" y="210" width="400" height="90" fill="url(#sp-sea)"/>
+  <g stroke="#7dd3fc" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.9">
+    <path d="M20,235 Q38,226 56,235 Q74,244 92,235"/>
+    <path d="M290,240 Q308,231 326,240 Q344,249 362,240"/>
+    <path d="M120,270 Q138,261 156,270"/>
+    <path d="M250,278 Q268,269 286,278"/>
+  </g>
+  <!-- smoke from funnel -->
+  <g fill="#cbd5e1" opacity="0.9">
+    <circle cx="236" cy="72" r="11"/>
+    <circle cx="252" cy="56" r="14"/>
+    <circle cx="272" cy="40" r="17"/>
+  </g>
+  <!-- ship -->
+  <g filter="url(#soft-shadow)">
+    <!-- hull -->
+    <path d="M52,190 L348,190 L316,248 L92,248 Z" fill="url(#sp-hull)" stroke="#7f1d1d" stroke-width="4.5"/>
+    <!-- waterline stripe -->
+    <path d="M62,208 L338,208" stroke="#fef3c7" stroke-width="5"/>
+    <!-- portholes -->
+    <g fill="#bae6fd" stroke="#7f1d1d" stroke-width="3">
+      <circle cx="120" cy="225" r="9"/>
+      <circle cx="170" cy="225" r="9"/>
+      <circle cx="220" cy="225" r="9"/>
+      <circle cx="270" cy="225" r="9"/>
+    </g>
+    <!-- lower deck cabin -->
+    <rect x="110" y="152" width="185" height="38" rx="4" fill="#f8fafc" stroke="#475569" stroke-width="4"/>
+    <g fill="#7dd3fc" stroke="#475569" stroke-width="2.5">
+      <rect x="124" y="162" width="22" height="18" rx="2"/>
+      <rect x="158" y="162" width="22" height="18" rx="2"/>
+      <rect x="192" y="162" width="22" height="18" rx="2"/>
+      <rect x="226" y="162" width="22" height="18" rx="2"/>
+      <rect x="260" y="162" width="22" height="18" rx="2"/>
+    </g>
+    <!-- upper deck cabin -->
+    <rect x="140" y="118" width="110" height="34" rx="4" fill="#f8fafc" stroke="#475569" stroke-width="4"/>
+    <g fill="#7dd3fc" stroke="#475569" stroke-width="2.5">
+      <rect x="152" y="127" width="20" height="16" rx="2"/>
+      <rect x="184" y="127" width="20" height="16" rx="2"/>
+      <rect x="216" y="127" width="20" height="16" rx="2"/>
+    </g>
+    <!-- funnel -->
+    <path d="M218,118 L218,82 L248,82 L248,118 Z" fill="#f59e0b" stroke="#92400e" stroke-width="3.5"/>
+    <rect x="214" y="76" width="38" height="12" rx="3" fill="#dc2626" stroke="#7f1d1d" stroke-width="3"/>
+    <!-- mast and flag -->
+    <line x1="150" y1="118" x2="150" y2="70" stroke="#475569" stroke-width="4"/>
+    <path d="M150,70 L178,77 L150,86 Z" fill="#22c55e" stroke="#14532d" stroke-width="2.5"/>
+    <!-- anchor mark on bow -->
+    <g stroke="#fef3c7" stroke-width="3.5" stroke-linecap="round" fill="none">
+      <line x1="86" y1="216" x2="86" y2="236"/>
+      <circle cx="86" cy="212" r="4"/>
+      <path d="M74,230 Q86,242 98,230"/>
+    </g>
+  </g>
+  <!-- bow wave -->
+  <path d="M60,248 Q80,238 100,250 Q90,258 70,256 Z" fill="#e0f2fe" opacity="0.85"/>
+  <path d="M300,250 Q322,240 344,250 Q330,260 308,257 Z" fill="#e0f2fe" opacity="0.85"/>
+</svg>

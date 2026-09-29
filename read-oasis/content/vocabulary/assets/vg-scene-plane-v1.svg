@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-plane desc-plane">
+  <title id="title-plane">Plane - Passenger plane flying in the sky</title>
+  <desc id="desc-plane">A white and blue passenger plane with wings, tail fin and round windows flying through clouds, leaving a trail behind it.</desc>
+  <defs>
+    <linearGradient id="pl-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#bae6fd"/>
+    </linearGradient>
+    <linearGradient id="pl-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#pl-bg)"/>
+  <circle cx="345" cy="45" r="24" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <!-- clouds -->
+  <g fill="#ffffff" opacity="0.95">
+    <ellipse cx="75" cy="235" rx="48" ry="17"/>
+    <ellipse cx="112" cy="224" rx="30" ry="13"/>
+    <ellipse cx="320" cy="250" rx="52" ry="18"/>
+    <ellipse cx="355" cy="238" rx="30" ry="12"/>
+    <ellipse cx="60" cy="80" rx="36" ry="13"/>
+  </g>
+  <!-- contrail -->
+  <g stroke="#f8fafc" stroke-width="7" stroke-linecap="round" opacity="0.85">
+    <path d="M28,190 Q70,180 105,172"/>
+    <path d="M20,168 Q62,160 98,155"/>
+  </g>
+  <!-- plane tilted slightly upward -->
+  <g filter="url(#soft-shadow)" transform="rotate(-8 220 150)">
+    <!-- far wing (behind fuselage, going up-back) -->
+    <path d="M225,138 L162,80 L192,74 L258,128 Z" fill="#cbd5e1" stroke="#475569" stroke-width="3.5"/>
+    <!-- fuselage -->
+    <path d="M92,150 Q95,132 130,128 L295,122 Q345,120 368,138 Q372,146 366,152 Q340,168 292,166 L130,164 Q96,162 92,150 Z" fill="url(#pl-body)" stroke="#475569" stroke-width="4"/>
+    <!-- nose cone -->
+    <path d="M356,132 Q374,138 368,150 Q360,156 350,154 Z" fill="#3b82f6" stroke="#1e3a8a" stroke-width="3"/>
+    <!-- cockpit windows -->
+    <path d="M330,130 Q348,130 356,138 L346,146 Q334,140 328,140 Z" fill="#38bdf8" stroke="#1e3a8a" stroke-width="2.5"/>
+    <!-- tail fin -->
+    <path d="M100,142 L72,90 L106,92 L128,134 Z" fill="#3b82f6" stroke="#1e3a8a" stroke-width="3.5"/>
+    <!-- tail wing -->
+    <path d="M100,152 L62,164 L92,170 L122,160 Z" fill="#60a5fa" stroke="#1e3a8a" stroke-width="3"/>
+    <!-- blue stripe -->
+    <path d="M110,155 L330,148 L330,156 L112,160 Z" fill="#3b82f6" opacity="0.85"/>
+    <!-- near wing (in front, sweeping down-forward) -->
+    <path d="M210,150 L158,222 L192,222 L252,152 Z" fill="#e2e8f0" stroke="#475569" stroke-width="3.5"/>
+    <!-- engine under near wing -->
+    <ellipse cx="196" cy="196" rx="17" ry="11" fill="#94a3b8" stroke="#334155" stroke-width="3"/>
+    <circle cx="182" cy="196" r="7" fill="#1e293b"/>
+    <!-- windows -->
+    <g fill="#38bdf8" stroke="#1e3a8a" stroke-width="2">
+      <circle cx="160" cy="142" r="5.5"/>
+      <circle cx="188" cy="140" r="5.5"/>
+      <circle cx="216" cy="138" r="5.5"/>
+      <circle cx="244" cy="136" r="5.5"/>
+      <circle cx="272" cy="134" r="5.5"/>
+      <circle cx="300" cy="132" r="5.5"/>
+    </g>
+  </g>
+  <!-- birds -->
+  <g fill="none" stroke="#334155" stroke-width="2.5" stroke-linecap="round">
+    <path d="M60,120 Q66,114 72,120 Q78,114 84,120"/>
+    <path d="M100,100 Q105,95 110,100 Q115,95 120,100"/>
+  </g>
+</svg>

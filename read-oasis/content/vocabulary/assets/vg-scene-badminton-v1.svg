@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-badminton desc-badminton">
+  <title id="title-badminton">Badminton - Racket and shuttlecock</title>
+  <desc id="desc-badminton">A badminton racket with an oval strung head and a feathered shuttlecock in mid-air next to it.</desc>
+  <defs>
+    <linearGradient id="bd-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#bfdbfe"/>
+    </linearGradient>
+    <linearGradient id="bd-handle" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#c2410c"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#bd-bg)"/>
+  <!-- motion arcs -->
+  <path d="M300,80 Q220,60 130,110" fill="none" stroke="#60a5fa" stroke-width="3" stroke-linecap="round" stroke-dasharray="6,6" opacity="0.6"/>
+  <!-- ground shadow -->
+  <ellipse cx="200" cy="270" rx="130" ry="8" fill="#0f172a" opacity="0.18"/>
+  <!-- racket -->
+  <g filter="url(#soft-shadow)" transform="rotate(-25 200 180)">
+    <!-- handle -->
+    <rect x="245" y="175" width="90" height="14" rx="7" fill="url(#bd-handle)" stroke="#7c2d12" stroke-width="3"/>
+    <!-- grip wrap lines -->
+    <g stroke="#7c2d12" stroke-width="2" opacity="0.6">
+      <line x1="260" y1="175" x2="260" y2="189"/>
+      <line x1="280" y1="175" x2="280" y2="189"/>
+      <line x1="300" y1="175" x2="300" y2="189"/>
+      <line x1="320" y1="175" x2="320" y2="189"/>
+    </g>
+    <!-- neck -->
+    <path d="M225,180 L245,178 L245,186 L225,184 Z" fill="#78350f" stroke="#451a03" stroke-width="2.5"/>
+    <!-- oval head -->
+    <ellipse cx="160" cy="182" rx="70" ry="55" fill="none" stroke="#0f172a" stroke-width="6"/>
+    <!-- strings (vertical) -->
+    <g stroke="#0f172a" stroke-width="1.2" opacity="0.65">
+      <line x1="120" y1="145" x2="120" y2="220"/>
+      <line x1="140" y1="135" x2="140" y2="230"/>
+      <line x1="160" y1="128" x2="160" y2="236"/>
+      <line x1="180" y1="135" x2="180" y2="230"/>
+      <line x1="200" y1="145" x2="200" y2="220"/>
+    </g>
+    <!-- strings (horizontal) -->
+    <g stroke="#0f172a" stroke-width="1.2" opacity="0.65">
+      <line x1="98" y1="160" x2="222" y2="160"/>
+      <line x1="93" y1="180" x2="227" y2="180"/>
+      <line x1="98" y1="200" x2="222" y2="200"/>
+    </g>
+  </g>
+  <!-- shuttlecock -->
+  <g filter="url(#soft-shadow)">
+    <!-- cork base -->
+    <ellipse cx="315" cy="100" rx="16" ry="12" fill="#fef3c7" stroke="#78350f" stroke-width="3"/>
+    <!-- feather skirt (fan out upward) -->
+    <path d="M300,100 L280,70 L290,68 L302,95 Z" fill="#fff" stroke="#0f172a" stroke-width="2"/>
+    <path d="M308,98 L298,60 L310,60 L315,95 Z" fill="#fff" stroke="#0f172a" stroke-width="2"/>
+    <path d="M320,98 L332,60 L320,60 L318,95 Z" fill="#fff" stroke="#0f172a" stroke-width="2"/>
+    <path d="M330,100 L350,70 L340,68 L328,95 Z" fill="#fff" stroke="#0f172a" stroke-width="2"/>
+  </g>
+</svg>

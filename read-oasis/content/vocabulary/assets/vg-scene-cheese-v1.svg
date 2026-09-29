@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-cheese desc-cheese">
+  <title id="title-cheese">Cheese - Big wedge of yellow cheese with holes</title>
+  <desc id="desc-cheese">A large wedge of yellow cheese with round holes on a wooden board, with a happy little mouse peeking at it and small cheese cubes nearby.</desc>
+  <defs>
+    <linearGradient id="ch-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="ch-cheese" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#facc15"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#ch-bg)"/>
+  <!-- table surface -->
+  <rect x="0" y="234" width="400" height="66" fill="#f472b6" opacity="0.35"/>
+  <line x1="0" y1="234" x2="400" y2="234" stroke="#be185d" stroke-width="3" opacity="0.6"/>
+  <!-- wooden board -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="200" cy="240" rx="168" ry="34" fill="#b45309" stroke="#78350f" stroke-width="4.5"/>
+    <ellipse cx="200" cy="236" rx="158" ry="28" fill="#d97706"/>
+    <path d="M52,236 Q200,252 348,236" fill="none" stroke="#92400e" stroke-width="2.5" opacity="0.7"/>
+  </g>
+  <!-- THE CHEESE WEDGE (hero element) -->
+  <g filter="url(#soft-shadow)">
+    <!-- side face -->
+    <path d="M80,226 L212,90 Q226,80 240,90 L318,196 Q326,212 308,220 L104,240 Q84,240 80,226 Z"
+          fill="url(#ch-cheese)" stroke="#a16207" stroke-width="5"/>
+    <!-- rind edge -->
+    <path d="M212,90 Q226,80 240,90 L318,196 Q326,212 308,220 L300,220 L226,110 Q220,100 212,104 Z"
+          fill="#f59e0b" stroke="#a16207" stroke-width="4"/>
+    <!-- holes -->
+    <g fill="#eab308" stroke="#a16207" stroke-width="3">
+      <circle cx="150" cy="196" r="16"/>
+      <circle cx="212" cy="168" r="13"/>
+      <circle cx="252" cy="200" r="11"/>
+      <circle cx="188" cy="216" r="9"/>
+      <circle cx="222" cy="128" r="8"/>
+      <circle cx="118" cy="222" r="7"/>
+    </g>
+    <!-- highlight -->
+    <path d="M120,204 Q160,150 208,110" fill="none" stroke="#fef9c3" stroke-width="6" stroke-linecap="round" opacity="0.7"/>
+  </g>
+  <!-- cheese cubes -->
+  <g filter="url(#soft-shadow)">
+    <rect x="330" y="216" width="26" height="24" rx="4" fill="#fde047" stroke="#a16207" stroke-width="3"/>
+    <circle cx="340" cy="226" r="4" fill="#eab308" stroke="#a16207" stroke-width="2"/>
+    <rect x="308" y="232" width="20" height="18" rx="3" fill="#facc15" stroke="#a16207" stroke-width="3"/>
+  </g>
+  <!-- little mouse peeking -->
+  <g filter="url(#soft-shadow)">
+    <!-- body -->
+    <ellipse cx="56" cy="212" rx="30" ry="22" fill="#cbd5e1" stroke="#475569" stroke-width="3.5"/>
+    <!-- head -->
+    <path d="M76,196 Q96,192 104,206 Q98,222 78,220 Q70,210 76,196 Z" fill="#cbd5e1" stroke="#475569" stroke-width="3.5"/>
+    <!-- ears -->
+    <circle cx="76" cy="190" r="10" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+    <circle cx="76" cy="190" r="5" fill="#fbcfe8"/>
+    <circle cx="94" cy="188" r="10" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+    <circle cx="94" cy="188" r="5" fill="#fbcfe8"/>
+    <!-- face -->
+    <circle cx="92" cy="204" r="3" fill="#0f172a"/>
+    <circle cx="105" cy="208" r="3.5" fill="#f472b6" stroke="#be185d" stroke-width="1.5"/>
+    <!-- whiskers -->
+    <g stroke="#475569" stroke-width="1.8" stroke-linecap="round">
+      <line x1="102" y1="204" x2="116" y2="200"/>
+      <line x1="102" y1="210" x2="116" y2="212"/>
+    </g>
+    <!-- tail -->
+    <path d="M28,216 Q8,210 10,190" fill="none" stroke="#f9a8d4" stroke-width="5" stroke-linecap="round"/>
+    <!-- feet -->
+    <ellipse cx="46" cy="232" rx="8" ry="4" fill="#f9a8d4" stroke="#be185d" stroke-width="2"/>
+    <ellipse cx="68" cy="232" rx="8" ry="4" fill="#f9a8d4" stroke="#be185d" stroke-width="2"/>
+  </g>
+  <!-- sparkles -->
+  <g fill="#f59e0b" opacity="0.85">
+    <path d="M330,72 L334,82 L344,86 L334,90 L330,100 L326,90 L316,86 L326,82 Z"/>
+    <path d="M70,80 L73,88 L81,91 L73,94 L70,102 L67,94 L59,91 L67,88 Z"/>
+  </g>
+</svg>

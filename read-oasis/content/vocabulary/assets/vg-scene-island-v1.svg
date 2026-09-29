@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-island desc-island">
+  <title id="title-island">Island - A small island in the blue sea</title>
+  <desc id="desc-island">A small sandy island with a tall palm tree in the middle of the blue sea, with waves, a sailboat and seagulls in the sky.</desc>
+  <defs>
+    <linearGradient id="il-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="il-sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#il-sky)"/>
+  <circle cx="340" cy="52" r="24" fill="#fbbf24" stroke="#d97706" stroke-width="3.5"/>
+  <ellipse cx="90" cy="46" rx="34" ry="12" fill="#ffffff" opacity="0.95"/>
+  <!-- sea -->
+  <rect x="0" y="180" width="400" height="120" fill="url(#il-sea)"/>
+  <path d="M0,180 Q200,172 400,180" fill="none" stroke="#0c4a6e" stroke-width="4"/>
+  <!-- ISLAND (hero element) -->
+  <g filter="url(#soft-shadow)">
+    <!-- sand mound -->
+    <path d="M92,196 Q120,158 200,154 Q280,158 308,196 Q310,206 296,208 L104,208 Q90,206 92,196 Z"
+          fill="#fde68a" stroke="#b45309" stroke-width="4.5"/>
+    <path d="M120,186 Q160,172 200,170" fill="none" stroke="#f59e0b" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+    <!-- palm trunk -->
+    <path d="M196,162 Q188,116 204,74 L216,78 Q202,118 210,160 Z" fill="#92400e" stroke="#451a03" stroke-width="3.5"/>
+    <line x1="198" y1="140" x2="208" y2="142" stroke="#451a03" stroke-width="2.5"/>
+    <line x1="200" y1="118" x2="210" y2="120" stroke="#451a03" stroke-width="2.5"/>
+    <line x1="202" y1="96" x2="212" y2="98" stroke="#451a03" stroke-width="2.5"/>
+    <!-- palm leaves -->
+    <g fill="#22c55e" stroke="#15803d" stroke-width="3.5" stroke-linejoin="round">
+      <path d="M210,74 Q160,52 128,72 Q166,74 204,86 Z"/>
+      <path d="M210,74 Q260,50 294,68 Q256,72 216,86 Z"/>
+      <path d="M210,74 Q178,36 140,38 Q176,52 202,80 Z"/>
+      <path d="M210,74 Q244,34 282,38 Q246,52 218,80 Z"/>
+      <path d="M210,74 Q206,30 212,18 Q224,40 218,78 Z"/>
+    </g>
+    <!-- coconuts -->
+    <circle cx="202" cy="82" r="7" fill="#78350f" stroke="#451a03" stroke-width="2.5"/>
+    <circle cx="218" cy="84" r="7" fill="#92400e" stroke="#451a03" stroke-width="2.5"/>
+    <!-- starfish on sand -->
+    <path d="M148,192 L152,184 L156,192 L164,193 L158,198 L160,206 L152,201 L144,206 L146,198 L140,193 Z"
+          fill="#fb923c" stroke="#9a3412" stroke-width="2.5"/>
+    <!-- shell -->
+    <path d="M250,196 Q256,186 262,196 Q256,200 250,196 Z" fill="#f9a8d4" stroke="#9d174d" stroke-width="2.5"/>
+  </g>
+  <!-- waves -->
+  <g stroke="#e0f2fe" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M30,232 Q46,224 62,232 Q78,240 94,232"/>
+    <path d="M300,240 Q316,232 332,240 Q348,248 364,240"/>
+    <path d="M150,258 Q166,250 182,258 Q198,266 214,258"/>
+    <path d="M60,276 Q76,268 92,276"/>
+    <path d="M320,272 Q336,264 352,272"/>
+  </g>
+  <!-- sailboat -->
+  <g filter="url(#soft-shadow)">
+    <path d="M310,206 L354,206 L344,218 L320,218 Z" fill="#dc2626" stroke="#7f1d1d" stroke-width="3"/>
+    <line x1="332" y1="206" x2="332" y2="168" stroke="#451a03" stroke-width="3.5"/>
+    <path d="M332,170 L356,202 L332,202 Z" fill="#f8fafc" stroke="#64748b" stroke-width="2.5"/>
+  </g>
+  <!-- seagulls -->
+  <g stroke="#334155" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M120,96 Q128,88 136,96 Q144,88 152,96"/>
+    <path d="M56,120 Q62,114 68,120 Q74,114 80,120"/>
+  </g>
+</svg>

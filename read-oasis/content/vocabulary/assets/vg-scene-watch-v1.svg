@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-watch desc-watch">
+  <title id="title-watch">Watch - Wristwatch with blue strap</title>
+  <desc id="desc-watch">A big wristwatch with a round face, hour and minute hands, numbers marked as dots, and a blue strap with a buckle, worn on a child's wrist.</desc>
+  <defs>
+    <linearGradient id="wt-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <radialGradient id="wt-face" cx="0.5" cy="0.4" r="0.7">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#wt-bg)"/>
+  <!-- arm/wrist wearing the watch -->
+  <g filter="url(#soft-shadow)">
+    <path d="M0,190 L120,178 Q160,174 200,180 L200,232 Q160,240 120,236 L0,246 Z" fill="#fcd9b6" stroke="#78350f" stroke-width="4"/>
+    <!-- hand fingers hint -->
+    <path d="M200,180 Q236,178 252,192 Q262,202 254,214 Q244,228 222,230 Q210,232 200,232" fill="#fcd9b6" stroke="#78350f" stroke-width="4"/>
+    <path d="M236,192 Q244,200 240,210" fill="none" stroke="#b45309" stroke-width="2.5" opacity="0.7"/>
+    <!-- sleeve -->
+    <path d="M0,182 L44,178 L44,244 L0,250 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="3.5"/>
+  </g>
+  <!-- watch strap around wrist -->
+  <g filter="url(#soft-shadow)">
+    <path d="M116,110 L156,108 L160,178 L120,182 Z" fill="#3b82f6" stroke="#1e3a8a" stroke-width="4"/>
+    <path d="M120,232 L160,230 L158,286 L118,290 Z" fill="#3b82f6" stroke="#1e3a8a" stroke-width="4"/>
+    <!-- strap holes -->
+    <g fill="#1e3a8a">
+      <circle cx="138" cy="126" r="3.5"/>
+      <circle cx="139" cy="144" r="3.5"/>
+      <circle cx="138" cy="252" r="3.5"/>
+      <circle cx="139" cy="268" r="3.5"/>
+    </g>
+    <!-- buckle at top -->
+    <rect x="118" y="100" width="42" height="14" rx="5" fill="#94a3b8" stroke="#475569" stroke-width="3"/>
+  </g>
+  <!-- watch face (dominant) -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="140" cy="204" r="66" fill="#f59e0b" stroke="#92400e" stroke-width="5"/>
+    <circle cx="140" cy="204" r="54" fill="url(#wt-face)" stroke="#475569" stroke-width="3.5"/>
+    <!-- hour markers -->
+    <g fill="#0f172a">
+      <circle cx="140" cy="158" r="4.5"/>
+      <circle cx="186" cy="204" r="4.5"/>
+      <circle cx="140" cy="250" r="4.5"/>
+      <circle cx="94" cy="204" r="4.5"/>
+      <circle cx="163" cy="164" r="3"/>
+      <circle cx="180" cy="181" r="3"/>
+      <circle cx="180" cy="227" r="3"/>
+      <circle cx="163" cy="244" r="3"/>
+      <circle cx="117" cy="244" r="3"/>
+      <circle cx="100" cy="227" r="3"/>
+      <circle cx="100" cy="181" r="3"/>
+      <circle cx="117" cy="164" r="3"/>
+    </g>
+    <!-- hands: 3 o'clock -->
+    <line x1="140" y1="204" x2="140" y2="168" stroke="#0f172a" stroke-width="6" stroke-linecap="round"/>
+    <line x1="140" y1="204" x2="172" y2="204" stroke="#0f172a" stroke-width="4.5" stroke-linecap="round"/>
+    <line x1="140" y1="204" x2="122" y2="228" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="140" cy="204" r="6" fill="#ef4444" stroke="#7f1d1d" stroke-width="2.5"/>
+    <!-- crown -->
+    <rect x="204" y="196" width="12" height="16" rx="4" fill="#94a3b8" stroke="#475569" stroke-width="3"/>
+  </g>
+  <!-- tick-tock sound marks -->
+  <g stroke="#f59e0b" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.9">
+    <path d="M232,120 Q244,110 242,96"/>
+    <path d="M248,138 Q266,126 266,106"/>
+  </g>
+  <!-- sparkle -->
+  <g fill="#f59e0b">
+    <path d="M310,80 L315,93 L328,98 L315,103 L310,116 L305,103 L292,98 L305,93 Z"/>
+    <path d="M340,180 L343,188 L351,191 L343,194 L340,202 L337,194 L329,191 L337,188 Z"/>
+  </g>
+</svg>

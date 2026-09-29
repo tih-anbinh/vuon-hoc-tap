@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-foot-feet desc-foot-feet">
+  <title id="title-foot-feet">Foot, feet - Two bare feet with wiggling toes</title>
+  <desc id="desc-foot-feet">A pair of bare feet seen from above with five toes each, standing on soft green grass with footprints trailing behind.</desc>
+  <defs>
+    <linearGradient id="ft-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d9f99d"/>
+      <stop offset="100%" stop-color="#86efac"/>
+    </linearGradient>
+    <linearGradient id="ft-skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fcd9b6"/>
+      <stop offset="100%" stop-color="#f5b26b"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#ft-bg)"/>
+  <!-- footprints trailing -->
+  <g fill="#4d7c0f" opacity="0.45">
+    <ellipse cx="60" cy="70" rx="14" ry="24" transform="rotate(15 60 70)"/>
+    <ellipse cx="105" cy="45" rx="14" ry="24" transform="rotate(20 105 45)"/>
+    <ellipse cx="320" cy="60" rx="14" ry="24" transform="rotate(-18 320 60)"/>
+    <ellipse cx="355" cy="95" rx="13" ry="22" transform="rotate(-12 355 95)"/>
+  </g>
+  <!-- grass tufts -->
+  <g stroke="#15803d" stroke-width="3" stroke-linecap="round" fill="none">
+    <path d="M40,250 Q38,238 42,230 M48,252 Q50,240 46,232"/>
+    <path d="M355,240 Q353,228 357,220 M363,242 Q365,230 361,222"/>
+    <path d="M200,60 Q198,48 202,40 M208,62 Q210,50 206,42"/>
+  </g>
+  <ellipse cx="200" cy="265" rx="150" ry="12" fill="#0f172a" opacity="0.2"/>
+  <!-- left foot -->
+  <g filter="url(#soft-shadow)">
+    <path d="M115,255 Q95,250 95,210 Q95,150 125,135 Q158,125 165,165 Q170,200 165,235 Q160,258 135,258 Z" fill="url(#ft-skin)" stroke="#78350f" stroke-width="4"/>
+    <!-- toes -->
+    <circle cx="118" cy="126" r="13" fill="url(#ft-skin)" stroke="#78350f" stroke-width="3.5"/>
+    <circle cx="141" cy="119" r="10" fill="url(#ft-skin)" stroke="#78350f" stroke-width="3"/>
+    <circle cx="158" cy="123" r="9" fill="url(#ft-skin)" stroke="#78350f" stroke-width="3"/>
+    <circle cx="170" cy="132" r="8" fill="url(#ft-skin)" stroke="#78350f" stroke-width="3"/>
+    <circle cx="178" cy="145" r="7" fill="url(#ft-skin)" stroke="#78350f" stroke-width="3"/>
+    <!-- arch line -->
+    <path d="M112,200 Q122,215 118,235" fill="none" stroke="#d97706" stroke-width="2.5" opacity="0.6"/>
+  </g>
+  <!-- right foot (mirrored) -->
+  <g filter="url(#soft-shadow)">
+    <path d="M285,255 Q305,250 305,210 Q305,150 275,135 Q242,125 235,165 Q230,200 235,235 Q240,258 265,258 Z" fill="url(#ft-skin)" stroke="#78350f" stroke-width="4"/>
+    <circle cx="282" cy="126" r="13" fill="url(#ft-skin)" stroke="#78350f" stroke-width="3.5"/>
+    <circle cx="259" cy="119" r="10" fill="url(#ft-skin)" stroke="#78350f" stroke-width="3"/>
+    <circle cx="242" cy="123" r="9" fill="url(#ft-skin)" stroke="#78350f" stroke-width="3"/>
+    <circle cx="230" cy="132" r="8" fill="url(#ft-skin)" stroke="#78350f" stroke-width="3"/>
+    <circle cx="222" cy="145" r="7" fill="url(#ft-skin)" stroke="#78350f" stroke-width="3"/>
+    <path d="M288,200 Q278,215 282,235" fill="none" stroke="#d97706" stroke-width="2.5" opacity="0.6"/>
+  </g>
+</svg>

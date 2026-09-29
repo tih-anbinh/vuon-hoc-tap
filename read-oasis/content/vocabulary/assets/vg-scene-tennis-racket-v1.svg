@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-tennis-racket desc-tennis-racket">
+  <title id="title-tennis-racket">Tennis racket - Big racket with tennis ball</title>
+  <desc id="desc-tennis-racket">A large tennis racket with an oval head, criss-cross strings and a brown grip handle, next to a bright yellow tennis ball.</desc>
+  <defs>
+    <linearGradient id="tr-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="tr-frame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f87171"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#tr-bg)"/>
+  <circle cx="55" cy="46" r="22" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <!-- grass -->
+  <rect x="0" y="245" width="400" height="55" fill="#4ade80"/>
+  <line x1="0" y1="245" x2="400" y2="245" stroke="#15803d" stroke-width="3.5"/>
+  <ellipse cx="190" cy="268" rx="150" ry="13" fill="#0f172a" opacity="0.22"/>
+  <!-- racket (dominant, diagonal) -->
+  <g filter="url(#soft-shadow)" transform="rotate(-28 185 150)">
+    <!-- head outer frame -->
+    <ellipse cx="185" cy="105" rx="72" ry="92" fill="url(#tr-frame)" stroke="#7f1d1d" stroke-width="5"/>
+    <!-- string bed -->
+    <ellipse cx="185" cy="105" rx="58" ry="78" fill="#fef9c3" stroke="#7f1d1d" stroke-width="3.5"/>
+    <!-- strings -->
+    <g stroke="#b45309" stroke-width="2" opacity="0.9">
+      <line x1="151" y1="45" x2="151" y2="165"/>
+      <line x1="168" y1="32" x2="168" y2="178"/>
+      <line x1="185" y1="27" x2="185" y2="183"/>
+      <line x1="202" y1="32" x2="202" y2="178"/>
+      <line x1="219" y1="45" x2="219" y2="165"/>
+      <line x1="132" y1="70" x2="238" y2="70"/>
+      <line x1="127" y1="90" x2="243" y2="90"/>
+      <line x1="127" y1="110" x2="243" y2="110"/>
+      <line x1="130" y1="130" x2="240" y2="130"/>
+      <line x1="140" y1="152" x2="230" y2="152"/>
+    </g>
+    <!-- throat -->
+    <path d="M165,192 L185,172 L205,192 L198,214 L172,214 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="4"/>
+    <!-- handle with grip wraps -->
+    <rect x="172" y="212" width="26" height="72" rx="9" fill="#a16207" stroke="#78350f" stroke-width="4"/>
+    <g stroke="#78350f" stroke-width="2.5" opacity="0.8">
+      <line x1="172" y1="226" x2="198" y2="232"/>
+      <line x1="172" y1="242" x2="198" y2="248"/>
+      <line x1="172" y1="258" x2="198" y2="264"/>
+    </g>
+    <rect x="169" y="280" width="32" height="10" rx="5" fill="#1e293b" stroke="#0f172a" stroke-width="2.5"/>
+  </g>
+  <!-- tennis ball -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="322" cy="212" r="34" fill="#bef264" stroke="#4d7c0f" stroke-width="4.5"/>
+    <path d="M296,190 Q322,212 296,234" fill="none" stroke="#ffffff" stroke-width="4.5"/>
+    <path d="M348,190 Q322,212 348,234" fill="none" stroke="#ffffff" stroke-width="4.5"/>
+  </g>
+  <!-- small sparkle -->
+  <g fill="#f59e0b">
+    <path d="M310,120 L314,130 L324,134 L314,138 L310,148 L306,138 L296,134 L306,130 Z"/>
+  </g>
+</svg>

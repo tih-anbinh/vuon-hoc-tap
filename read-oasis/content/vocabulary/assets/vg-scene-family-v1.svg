@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-family desc-family">
+  <title id="title-family">Family - Parents and two children together</title>
+  <desc id="desc-family">A happy family of four standing together in front of their house: dad, mum, a boy and a small girl, all smiling.</desc>
+  <defs>
+    <linearGradient id="fm-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#fm-bg)"/>
+  <circle cx="52" cy="48" r="24" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <!-- house behind -->
+  <g filter="url(#soft-shadow)" opacity="0.9">
+    <rect x="260" y="80" width="120" height="95" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M248,80 L320,25 L392,80 Z" fill="#dc2626" stroke="#7f1d1d" stroke-width="3.5"/>
+    <rect x="278" y="100" width="26" height="26" rx="3" fill="#bae6fd" stroke="#78350f" stroke-width="2.5"/>
+    <rect x="332" y="100" width="26" height="26" rx="3" fill="#bae6fd" stroke="#78350f" stroke-width="2.5"/>
+    <rect x="305" y="135" width="28" height="40" rx="3" fill="#78350f" stroke="#451a03" stroke-width="2.5"/>
+  </g>
+  <rect x="0" y="245" width="400" height="55" fill="#4d7c0f"/>
+  <path d="M0,245 Q100,238 200,245 T400,245 L400,255 L0,255 Z" fill="#65a30d"/>
+  <ellipse cx="165" cy="252" rx="150" ry="8" fill="#0f172a" opacity="0.22"/>
+  <!-- dad (tallest) -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="65" cy="105" r="26" fill="#f5b26b" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M39,100 Q41,76 65,77 Q89,76 91,100 Q82,88 65,88 Q48,88 39,100 Z" fill="#0f172a"/>
+    <circle cx="57" cy="103" r="3.5" fill="#0f172a"/>
+    <circle cx="73" cy="103" r="3.5" fill="#0f172a"/>
+    <path d="M56,115 Q65,122 74,115" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <rect x="45" y="132" width="40" height="72" rx="9" fill="#0e7490" stroke="#164e63" stroke-width="3.5"/>
+    <line x1="85" y1="150" x2="105" y2="168" stroke="#f5b26b" stroke-width="8" stroke-linecap="round"/>
+    <rect x="49" y="204" width="14" height="44" rx="5" fill="#334155"/>
+    <rect x="67" y="204" width="14" height="44" rx="5" fill="#334155"/>
+  </g>
+  <!-- mum -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="130" cy="118" r="24" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M106,113 Q107,90 130,91 Q153,90 154,113 Q146,101 130,101 Q114,101 106,113 Z" fill="#78350f"/>
+    <circle cx="107" cy="130" r="8" fill="#78350f"/>
+    <circle cx="153" cy="130" r="8" fill="#78350f"/>
+    <circle cx="123" cy="116" r="3.5" fill="#0f172a"/>
+    <circle cx="137" cy="116" r="3.5" fill="#0f172a"/>
+    <path d="M122,128 Q130,134 138,128" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M114,142 L146,142 L156,215 L104,215 Z" fill="#ec4899" stroke="#9d174d" stroke-width="3.5"/>
+    <line x1="114" y1="155" x2="105" y2="168" stroke="#fcd9b6" stroke-width="7" stroke-linecap="round"/>
+    <line x1="146" y1="155" x2="163" y2="172" stroke="#fcd9b6" stroke-width="7" stroke-linecap="round"/>
+    <line x1="122" y1="215" x2="122" y2="245" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+    <line x1="138" y1="215" x2="138" y2="245" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <!-- boy -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="192" cy="155" r="20" fill="#f5b26b" stroke="#78350f" stroke-width="3"/>
+    <path d="M172,151 Q173,132 192,133 Q211,132 212,151 Q205,141 192,141 Q179,141 172,151 Z" fill="#a16207"/>
+    <circle cx="186" cy="153" r="3" fill="#0f172a"/>
+    <circle cx="198" cy="153" r="3" fill="#0f172a"/>
+    <path d="M185,163 Q192,169 199,163" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <rect x="176" y="175" width="32" height="42" rx="7" fill="#22c55e" stroke="#14532d" stroke-width="3"/>
+    <line x1="176" y1="186" x2="163" y2="172" stroke="#f5b26b" stroke-width="7" stroke-linecap="round"/>
+    <line x1="208" y1="186" x2="222" y2="198" stroke="#f5b26b" stroke-width="7" stroke-linecap="round"/>
+    <rect x="180" y="217" width="11" height="30" rx="4" fill="#1e40af"/>
+    <rect x="194" y="217" width="11" height="30" rx="4" fill="#1e40af"/>
+  </g>
+  <!-- little girl -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="245" cy="175" r="18" fill="#fcd9b6" stroke="#78350f" stroke-width="3"/>
+    <path d="M227,171 Q228,154 245,155 Q262,154 263,171 Q256,162 245,162 Q234,162 227,171 Z" fill="#78350f"/>
+    <circle cx="228" cy="184" r="6" fill="#78350f"/>
+    <circle cx="262" cy="184" r="6" fill="#78350f"/>
+    <circle cx="240" cy="173" r="3" fill="#0f172a"/>
+    <circle cx="250" cy="173" r="3" fill="#0f172a"/>
+    <path d="M239,183 Q245,188 251,183" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M234,193 L256,193 L263,240 L227,240 Z" fill="#facc15" stroke="#b45309" stroke-width="3"/>
+    <line x1="234" y1="203" x2="222" y2="198" stroke="#fcd9b6" stroke-width="6" stroke-linecap="round"/>
+    <line x1="256" y1="203" x2="268" y2="212" stroke="#fcd9b6" stroke-width="6" stroke-linecap="round"/>
+    <line x1="239" y1="240" x2="239" y2="252" stroke="#fcd9b6" stroke-width="6" stroke-linecap="round"/>
+    <line x1="251" y1="240" x2="251" y2="252" stroke="#fcd9b6" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>

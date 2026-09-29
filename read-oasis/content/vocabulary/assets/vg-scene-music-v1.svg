@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-music desc-music">
+  <title id="title-music">Music - Musical notes and instruments</title>
+  <desc id="desc-music">Large colorful musical notes floating in the air above a guitar and a drum, with sound waves showing music playing.</desc>
+  <defs>
+    <linearGradient id="mu-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c4b5fd"/>
+      <stop offset="100%" stop-color="#ede9fe"/>
+    </linearGradient>
+    <linearGradient id="mu-guitar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8b478"/>
+      <stop offset="100%" stop-color="#a16207"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#mu-bg)"/>
+  <rect x="0" y="250" width="400" height="50" fill="#8b5cf6" opacity="0.35"/>
+  <ellipse cx="200" cy="256" rx="150" ry="9" fill="#0f172a" opacity="0.2"/>
+  <!-- big musical notes -->
+  <g filter="url(#soft-shadow)">
+    <!-- eighth note pair -->
+    <g fill="#7c3aed" stroke="#4c1d95" stroke-width="3">
+      <ellipse cx="95" cy="115" rx="17" ry="13" transform="rotate(-20 95 115)"/>
+      <ellipse cx="155" cy="100" rx="17" ry="13" transform="rotate(-20 155 100)"/>
+    </g>
+    <path d="M110,110 L110,38 L170,25 L170,95" fill="none" stroke="#4c1d95" stroke-width="7" stroke-linecap="round"/>
+    <path d="M110,38 L170,25 L170,45 L110,58 Z" fill="#7c3aed" stroke="#4c1d95" stroke-width="3"/>
+    <!-- single quarter note -->
+    <ellipse cx="255" cy="130" rx="19" ry="14" fill="#ec4899" stroke="#9d174d" stroke-width="3" transform="rotate(-20 255 130)"/>
+    <path d="M272,124 L272,45" fill="none" stroke="#9d174d" stroke-width="7" stroke-linecap="round"/>
+    <path d="M272,45 Q300,55 296,82 Q290,62 272,60 Z" fill="#ec4899" stroke="#9d174d" stroke-width="2.5"/>
+    <!-- small note -->
+    <ellipse cx="340" cy="95" rx="13" ry="10" fill="#f59e0b" stroke="#b45309" stroke-width="3" transform="rotate(-20 340 95)"/>
+    <path d="M352,90 L352,38" fill="none" stroke="#b45309" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <!-- sound waves -->
+  <g fill="none" stroke="#a78bfa" stroke-width="3.5" stroke-linecap="round" opacity="0.85">
+    <path d="M30,90 Q38,80 30,70"/>
+    <path d="M42,100 Q54,80 42,60"/>
+    <path d="M370,150 Q378,140 370,130"/>
+    <path d="M358,160 Q370,140 358,120"/>
+  </g>
+  <!-- guitar -->
+  <g filter="url(#soft-shadow)">
+    <!-- neck -->
+    <path d="M148,148 L212,220 L200,232 L136,160 Z" fill="#78350f" stroke="#451a03" stroke-width="3"/>
+    <!-- headstock -->
+    <path d="M132,138 L154,138 L158,158 L140,162 Z" fill="#451a03" stroke="#2d1204" stroke-width="2.5"/>
+    <circle cx="139" cy="145" r="2.5" fill="#facc15"/>
+    <circle cx="149" cy="143" r="2.5" fill="#facc15"/>
+    <!-- body -->
+    <path d="M185,205 Q160,215 162,240 Q164,268 200,270 Q240,272 248,240 Q252,215 230,205 Q222,196 206,196 Q192,196 185,205 Z" fill="url(#mu-guitar)" stroke="#78350f" stroke-width="4"/>
+    <circle cx="205" cy="237" r="17" fill="#451a03" stroke="#2d1204" stroke-width="3"/>
+    <!-- strings -->
+    <g stroke="#fef3c7" stroke-width="1.8">
+      <line x1="145" y1="150" x2="212" y2="226"/>
+      <line x1="150" y1="146" x2="217" y2="222"/>
+    </g>
+  </g>
+  <!-- drum -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="320" cy="255" rx="45" ry="14" fill="#f8fafc" stroke="#334155" stroke-width="3.5"/>
+    <path d="M275,255 L275,215 Q275,202 320,202 Q365,202 365,215 L365,255" fill="#ef4444" stroke="#7f1d1d" stroke-width="3.5"/>
+    <ellipse cx="320" cy="213" rx="45" ry="13" fill="#fef3c7" stroke="#7f1d1d" stroke-width="3.5"/>
+    <!-- zigzag tension pattern -->
+    <g stroke="#fde047" stroke-width="3">
+      <path d="M280,222 L295,248 L310,222 L325,248 L340,222 L355,248" fill="none"/>
+    </g>
+    <!-- drumsticks -->
+    <line x1="295" y1="208" x2="265" y2="172" stroke="#a16207" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="263" cy="169" r="6" fill="#e8b478" stroke="#78350f" stroke-width="2"/>
+    <line x1="342" y1="206" x2="368" y2="168" stroke="#a16207" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="370" cy="165" r="6" fill="#e8b478" stroke="#78350f" stroke-width="2"/>
+  </g>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-bee desc-bee">
+  <title id="title-bee">Bee - Striped bee flying near a flower</title>
+  <desc id="desc-bee">A chubby yellow and black striped bee with translucent wings and a small stinger, flying in a loop toward a pink flower.</desc>
+  <defs>
+    <linearGradient id="be-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#d9f99d"/>
+    </linearGradient>
+    <radialGradient id="be-body" cx="40%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#be-bg)"/>
+  <!-- dotted flight path -->
+  <path d="M60,60 Q120,30 160,70 Q190,105 160,120" fill="none" stroke="#64748b" stroke-width="2.5" stroke-dasharray="2,8" stroke-linecap="round" opacity="0.7"/>
+  <!-- grass -->
+  <rect x="0" y="260" width="400" height="40" fill="#4d7c0f"/>
+  <!-- flower (bottom-right) -->
+  <g filter="url(#soft-shadow)">
+    <path d="M320,262 Q318,235 320,215" fill="none" stroke="#15803d" stroke-width="6" stroke-linecap="round"/>
+    <g stroke="#be185d" stroke-width="2.5">
+      <ellipse cx="320" cy="185" rx="12" ry="20" fill="#f9a8d4"/>
+      <ellipse cx="320" cy="235" rx="12" ry="20" fill="#f9a8d4" opacity="0.9"/>
+      <ellipse cx="296" cy="210" rx="20" ry="12" fill="#f9a8d4"/>
+      <ellipse cx="344" cy="210" rx="20" ry="12" fill="#f9a8d4"/>
+    </g>
+    <circle cx="320" cy="210" r="13" fill="#facc15" stroke="#b45309" stroke-width="2.5"/>
+  </g>
+  <!-- bee -->
+  <g filter="url(#soft-shadow)">
+    <!-- wings -->
+    <ellipse cx="185" cy="115" rx="30" ry="45" fill="#e0f2fe" stroke="#64748b" stroke-width="2.5" opacity="0.85" transform="rotate(-20 185 115)"/>
+    <ellipse cx="230" cy="112" rx="26" ry="40" fill="#e0f2fe" stroke="#64748b" stroke-width="2.5" opacity="0.85" transform="rotate(15 230 112)"/>
+    <!-- body -->
+    <ellipse cx="205" cy="175" rx="70" ry="52" fill="url(#be-body)" stroke="#78350f" stroke-width="4"/>
+    <!-- stripes -->
+    <path d="M185,124 Q175,175 185,226" fill="none" stroke="#0f172a" stroke-width="16"/>
+    <path d="M228,128 Q222,175 228,222" fill="none" stroke="#0f172a" stroke-width="16"/>
+    <!-- stinger -->
+    <path d="M273,175 L295,175 L275,187 Z" fill="#0f172a"/>
+    <!-- face -->
+    <circle cx="152" cy="162" r="7" fill="#0f172a"/>
+    <circle cx="150" cy="160" r="2.5" fill="#fff"/>
+    <path d="M140,185 Q148,193 158,188" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <!-- cheek -->
+    <ellipse cx="140" cy="176" rx="7" ry="5" fill="#fb923c" opacity="0.6"/>
+    <!-- antennae -->
+    <path d="M150,132 Q140,110 125,102" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M168,128 Q165,105 155,92" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="125" cy="100" r="5" fill="#0f172a"/>
+    <circle cx="154" cy="90" r="5" fill="#0f172a"/>
+  </g>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-baseball-cap desc-baseball-cap">
+  <title id="title-baseball-cap">Baseball cap - Curved-brim sports cap</title>
+  <desc id="desc-baseball-cap">A blue baseball cap with a rounded crown, curved front brim, front seam, and a small button on top.</desc>
+  <defs>
+    <linearGradient id="bc-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="bc-crown" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#1e40af"/>
+    </linearGradient>
+    <linearGradient id="bc-brim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#bc-bg)"/>
+  <!-- ground shadow -->
+  <ellipse cx="200" cy="245" rx="140" ry="9" fill="#0f172a" opacity="0.25"/>
+  <!-- cap -->
+  <g filter="url(#soft-shadow)">
+    <!-- crown (rounded dome) -->
+    <path d="M90,220 Q90,105 200,105 Q310,105 310,220 Z" fill="url(#bc-crown)" stroke="#1e3a8a" stroke-width="4"/>
+    <!-- 6-panel seams -->
+    <g stroke="#1e3a8a" stroke-width="2" opacity="0.6" fill="none">
+      <path d="M200,105 L200,220"/>
+      <path d="M145,110 Q160,160 165,220"/>
+      <path d="M255,110 Q240,160 235,220"/>
+    </g>
+    <!-- button on top -->
+    <circle cx="200" cy="107" r="6" fill="#1e40af" stroke="#1e3a8a" stroke-width="2.5"/>
+    <!-- front logo circle -->
+    <circle cx="200" cy="165" r="22" fill="#fef3c7" stroke="#1e3a8a" stroke-width="3"/>
+    <path d="M188,170 L200,150 L212,170 M193,163 L207,163" fill="none" stroke="#dc2626" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- curved brim -->
+    <path d="M80,215 Q200,270 320,215 Q210,235 80,215 Z" fill="url(#bc-brim)" stroke="#1e3a8a" stroke-width="4"/>
+    <!-- brim underside stitch -->
+    <path d="M92,220 Q200,255 308,220" fill="none" stroke="#1e40af" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
+  </g>
+</svg>

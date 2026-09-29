@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-helmet desc-helmet">
+  <title id="title-helmet">Helmet - A red bicycle helmet</title>
+  <desc id="desc-helmet">A big shiny red bicycle helmet with vents and a chin strap, shown next to a small child wearing the same helmet on a bike.</desc>
+  <defs>
+    <linearGradient id="hm-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#bae6fd"/>
+    </linearGradient>
+    <linearGradient id="hm-shell" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f87171"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#hm-bg)"/>
+  <rect x="0" y="242" width="400" height="58" fill="#86efac"/>
+  <line x1="0" y1="242" x2="400" y2="242" stroke="#15803d" stroke-width="3.5"/>
+  <ellipse cx="160" cy="236" rx="130" ry="14" fill="#0f172a" opacity="0.15"/>
+  <!-- BIG HELMET (hero element) -->
+  <g filter="url(#soft-shadow)">
+    <!-- shell -->
+    <path d="M52,168 Q52,64 160,58 Q268,64 268,168 Q268,186 248,188 L72,188 Q52,186 52,168 Z"
+          fill="url(#hm-shell)" stroke="#7f1d1d" stroke-width="5"/>
+    <!-- vents -->
+    <g fill="#7f1d1d">
+      <path d="M96,92 Q106,78 122,74 L130,92 Q114,96 106,108 Z"/>
+      <path d="M144,70 Q160,66 176,70 L172,92 Q160,88 148,92 Z"/>
+      <path d="M198,74 Q214,78 224,92 L214,108 Q206,96 190,92 Z"/>
+    </g>
+    <!-- highlight -->
+    <path d="M76,140 Q74,92 122,72" fill="none" stroke="#fecaca" stroke-width="7" stroke-linecap="round" opacity="0.9"/>
+    <!-- brim -->
+    <path d="M60,168 L260,168 Q272,168 268,180 Q264,188 248,188 L72,188 Q56,188 52,180 Q48,168 60,168 Z"
+          fill="#fbbf24" stroke="#a16207" stroke-width="4"/>
+    <!-- chin strap -->
+    <path d="M84,188 Q92,226 128,236" fill="none" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+    <path d="M236,188 Q228,226 192,236" fill="none" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+    <rect x="138" y="226" width="44" height="18" rx="5" fill="#64748b" stroke="#1e293b" stroke-width="3.5"/>
+    <line x1="160" y1="226" x2="160" y2="244" stroke="#1e293b" stroke-width="3"/>
+  </g>
+  <!-- child on bike wearing helmet (context) -->
+  <g filter="url(#soft-shadow)">
+    <!-- wheels -->
+    <circle cx="306" cy="246" r="24" fill="none" stroke="#1e293b" stroke-width="5"/>
+    <circle cx="374" cy="246" r="24" fill="none" stroke="#1e293b" stroke-width="5"/>
+    <circle cx="306" cy="246" r="4" fill="#1e293b"/>
+    <circle cx="374" cy="246" r="4" fill="#1e293b"/>
+    <!-- frame -->
+    <path d="M306,246 L332,210 L364,210 L374,246 M332,210 L340,246 L306,246" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round"/>
+    <line x1="364" y1="210" x2="360" y2="196" stroke="#2563eb" stroke-width="5" stroke-linecap="round"/>
+    <line x1="352" y1="196" x2="368" y2="196" stroke="#1e293b" stroke-width="5" stroke-linecap="round"/>
+    <line x1="332" y1="210" x2="328" y2="198" stroke="#1e293b" stroke-width="5" stroke-linecap="round"/>
+    <line x1="320" y1="198" x2="336" y2="198" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+    <!-- rider -->
+    <circle cx="342" cy="160" r="15" fill="#fcd9b6" stroke="#78350f" stroke-width="3"/>
+    <path d="M326,158 Q326,142 342,140 Q358,142 358,158 Q358,162 354,162 L330,162 Q326,162 326,158 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="3"/>
+    <circle cx="338" cy="162" r="2.2" fill="#0f172a"/>
+    <circle cx="348" cy="162" r="2.2" fill="#0f172a"/>
+    <path d="M338,170 Q343,173 348,170" fill="none" stroke="#0f172a" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M342,176 L336,204 L344,224" fill="none" stroke="#16a34a" stroke-width="9" stroke-linecap="round"/>
+    <path d="M340,184 Q330,192 326,198" fill="none" stroke="#fcd9b6" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <!-- sparkles -->
+  <g fill="#fbbf24" stroke="#a16207" stroke-width="2">
+    <path d="M310,64 L314,74 L324,76 L316,83 L318,94 L310,88 L302,94 L304,83 L296,76 L306,74 Z"/>
+    <path d="M354,110 L357,117 L364,118 L359,123 L360,131 L354,127 L348,131 L349,123 L344,118 L351,117 Z"/>
+  </g>
+</svg>

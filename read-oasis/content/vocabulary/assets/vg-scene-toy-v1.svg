@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-toy desc-toy">
+  <title id="title-toy">Toy - Toy box with teddy, blocks and car</title>
+  <desc id="desc-toy">A colorful toy box overflowing with toys: a teddy bear, building blocks, a toy car, a ball and a spinning top.</desc>
+  <defs>
+    <linearGradient id="ty-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fce7f3"/>
+      <stop offset="100%" stop-color="#fbcfe8"/>
+    </linearGradient>
+    <linearGradient id="ty-box" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#ty-bg)"/>
+  <!-- floor -->
+  <rect x="0" y="240" width="400" height="60" fill="#e8b478"/>
+  <line x1="0" y1="240" x2="400" y2="240" stroke="#a16207" stroke-width="3.5"/>
+  <ellipse cx="200" cy="260" rx="165" ry="14" fill="#0f172a" opacity="0.2"/>
+  <!-- toy box -->
+  <g filter="url(#soft-shadow)">
+    <rect x="94" y="150" width="212" height="108" rx="10" fill="url(#ty-box)" stroke="#1e3a8a" stroke-width="4.5"/>
+    <!-- box front stripe + star decoration -->
+    <rect x="94" y="196" width="212" height="20" fill="#fde047" stroke="#1e3a8a" stroke-width="3"/>
+    <path d="M200,222 L206,236 L221,237 L210,247 L213,262 L200,254 L187,262 L190,247 L179,237 L194,236 Z" fill="#f8fafc" stroke="#1e3a8a" stroke-width="2.5"/>
+    <!-- open lid tilted back -->
+    <path d="M94,150 L86,116 L298,116 L306,150 Z" fill="#3b82f6" stroke="#1e3a8a" stroke-width="4"/>
+  </g>
+  <!-- teddy bear leaning out -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="140" cy="118" r="30" fill="#d6a05c" stroke="#78350f" stroke-width="3.5"/>
+    <circle cx="118" cy="94" r="12" fill="#d6a05c" stroke="#78350f" stroke-width="3"/>
+    <circle cx="162" cy="94" r="12" fill="#d6a05c" stroke="#78350f" stroke-width="3"/>
+    <circle cx="118" cy="94" r="5" fill="#fcd9b6"/>
+    <circle cx="162" cy="94" r="5" fill="#fcd9b6"/>
+    <ellipse cx="140" cy="128" rx="13" ry="10" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <circle cx="130" cy="112" r="3.5" fill="#0f172a"/>
+    <circle cx="150" cy="112" r="3.5" fill="#0f172a"/>
+    <ellipse cx="140" cy="124" rx="4.5" ry="3.5" fill="#0f172a"/>
+    <path d="M140,128 Q140,133 146,134" fill="none" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/>
+    <!-- arm over box edge -->
+    <path d="M116,138 Q104,148 108,158" fill="none" stroke="#d6a05c" stroke-width="12" stroke-linecap="round"/>
+  </g>
+  <!-- blocks stacked beside box -->
+  <g filter="url(#soft-shadow)">
+    <rect x="26" y="204" width="38" height="38" rx="5" fill="#ef4444" stroke="#7f1d1d" stroke-width="3.5"/>
+    <rect x="34" y="166" width="38" height="38" rx="5" fill="#22c55e" stroke="#14532d" stroke-width="3.5"/>
+    <circle cx="45" cy="223" r="8" fill="#fecaca" stroke="#7f1d1d" stroke-width="2.5"/>
+    <rect x="45" y="177" width="16" height="16" fill="#bbf7d0" stroke="#14532d" stroke-width="2.5"/>
+  </g>
+  <!-- toy car in front -->
+  <g filter="url(#soft-shadow)">
+    <path d="M232,266 Q236,252 252,250 L286,250 Q302,252 306,266 L312,266 Q318,268 318,276 L318,282 L226,282 L226,276 Q226,268 232,266 Z" fill="#f59e0b" stroke="#92400e" stroke-width="3.5"/>
+    <path d="M254,251 L258,240 L280,240 L285,251 Z" fill="#bae6fd" stroke="#92400e" stroke-width="3"/>
+    <circle cx="248" cy="283" r="10" fill="#1e293b" stroke="#0f172a" stroke-width="2.5"/>
+    <circle cx="292" cy="283" r="10" fill="#1e293b" stroke="#0f172a" stroke-width="2.5"/>
+    <circle cx="248" cy="283" r="4" fill="#94a3b8"/>
+    <circle cx="292" cy="283" r="4" fill="#94a3b8"/>
+  </g>
+  <!-- ball popping out of box -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="258" cy="122" r="24" fill="#ec4899" stroke="#831843" stroke-width="3.5"/>
+    <path d="M236,112 Q258,124 280,112" fill="none" stroke="#fdf2f8" stroke-width="4"/>
+    <path d="M236,132 Q258,120 280,132" fill="none" stroke="#fde047" stroke-width="4"/>
+  </g>
+  <!-- spinning top right -->
+  <g filter="url(#soft-shadow)">
+    <path d="M338,196 Q338,178 356,178 Q374,178 374,196 L356,238 Z" fill="#a78bfa" stroke="#4c1d95" stroke-width="3.5"/>
+    <ellipse cx="356" cy="186" rx="18" ry="8" fill="#c4b5fd" stroke="#4c1d95" stroke-width="3"/>
+    <line x1="356" y1="178" x2="356" y2="166" stroke="#4c1d95" stroke-width="4" stroke-linecap="round"/>
+    <!-- spin lines -->
+    <path d="M330,206 Q322,200 324,192 M382,206 Q390,200 388,192" fill="none" stroke="#7c3aed" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+  </g>
+</svg>

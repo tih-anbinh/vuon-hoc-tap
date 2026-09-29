@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-person-people desc-person-people">
+  <title id="title-person-people">Person and people - One person and a group of people</title>
+  <desc id="desc-person-people">One person standing alone on the left, and a group of four different people together on the right, showing singular and plural.</desc>
+  <defs>
+    <linearGradient id="pe-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#bae6fd"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#pe-bg)"/>
+  <rect x="0" y="248" width="400" height="52" fill="#65a30d"/>
+  <line x1="150" y1="30" x2="150" y2="270" stroke="#94a3b8" stroke-width="3" stroke-dasharray="10,8"/>
+  <ellipse cx="80" cy="255" rx="50" ry="7" fill="#0f172a" opacity="0.22"/>
+  <ellipse cx="278" cy="255" rx="108" ry="7" fill="#0f172a" opacity="0.22"/>
+  <!-- one person (left) -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="80" cy="98" r="30" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M50,92 Q51,64 80,64 Q109,64 110,92 Q100,74 80,74 Q60,74 50,92 Z" fill="#451a03"/>
+    <circle cx="71" cy="100" r="4" fill="#0f172a"/>
+    <circle cx="89" cy="100" r="4" fill="#0f172a"/>
+    <path d="M71,113 Q80,120 89,113" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M60,128 L100,128 L108,208 L52,208 Z" fill="#f59e0b" stroke="#b45309" stroke-width="3.5"/>
+    <path d="M58,140 Q42,168 44,190" fill="none" stroke="#fcd9b6" stroke-width="10" stroke-linecap="round"/>
+    <path d="M102,140 Q118,168 116,190" fill="none" stroke="#fcd9b6" stroke-width="10" stroke-linecap="round"/>
+    <path d="M62,208 L58,250" stroke="#334155" stroke-width="12" stroke-linecap="round"/>
+    <path d="M98,208 L102,250" stroke="#334155" stroke-width="12" stroke-linecap="round"/>
+    <ellipse cx="56" cy="256" rx="11" ry="5.5" fill="#0f172a"/>
+    <ellipse cx="105" cy="256" rx="11" ry="5.5" fill="#0f172a"/>
+  </g>
+  <!-- group of people (right): back row -->
+  <g filter="url(#soft-shadow)">
+    <!-- back person A -->
+    <circle cx="230" cy="105" r="22" fill="#e8b478" stroke="#78350f" stroke-width="3"/>
+    <path d="M208,101 Q209,81 230,81 Q251,81 252,101 Q242,88 230,88 Q218,88 208,101 Z" fill="#0f172a"/>
+    <circle cx="223" cy="107" r="3" fill="#0f172a"/>
+    <circle cx="237" cy="107" r="3" fill="#0f172a"/>
+    <path d="M223,116 Q230,121 237,116" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M214,127 L246,127 L252,200 L208,200 Z" fill="#3b82f6" stroke="#1e3a8a" stroke-width="3"/>
+    <!-- back person B -->
+    <circle cx="330" cy="105" r="22" fill="#fcd9b6" stroke="#78350f" stroke-width="3"/>
+    <path d="M308,101 Q308,79 330,79 Q352,79 352,101 Q352,116 347,122 L347,101 Q340,88 330,88 Q320,88 313,101 L313,122 Q308,116 308,101 Z" fill="#b45309"/>
+    <circle cx="323" cy="107" r="3" fill="#0f172a"/>
+    <circle cx="337" cy="107" r="3" fill="#0f172a"/>
+    <path d="M323,116 Q330,121 337,116" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M314,127 L346,127 L352,200 L308,200 Z" fill="#ec4899" stroke="#9d174d" stroke-width="3"/>
+  </g>
+  <!-- group front row -->
+  <g filter="url(#soft-shadow)">
+    <!-- front person C (child) -->
+    <circle cx="196" cy="170 " r="19" fill="#fcd9b6" stroke="#78350f" stroke-width="3"/>
+    <path d="M177,166 Q178,148 196,148 Q214,148 215,166 Q206,155 196,155 Q186,155 177,166 Z" fill="#78350f"/>
+    <circle cx="190" cy="172" r="3" fill="#0f172a"/>
+    <circle cx="202" cy="172" r="3" fill="#0f172a"/>
+    <path d="M190,180 Q196,185 202,180" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M184,190 L208,190 L214,245 L178,245 Z" fill="#22c55e" stroke="#14532d" stroke-width="3"/>
+    <path d="M188,245 L186,262" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+    <path d="M204,245 L206,262" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+    <ellipse cx="185" cy="266" rx="9" ry="4.5" fill="#1e3a8a"/>
+    <ellipse cx="207" cy="266" rx="9" ry="4.5" fill="#1e3a8a"/>
+    <!-- front person D -->
+    <circle cx="282" cy="162" r="21" fill="#e8b478" stroke="#78350f" stroke-width="3"/>
+    <path d="M261,158 Q262,138 282,138 Q302,138 303,158 Q293,145 282,145 Q271,145 261,158 Z" fill="#451a03"/>
+    <circle cx="275" cy="164" r="3" fill="#0f172a"/>
+    <circle cx="289" cy="164" r="3" fill="#0f172a"/>
+    <path d="M275,173 Q282,178 289,173" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M269,183 L295,183 L301,245 L263,245 Z" fill="#8b5cf6" stroke="#4c1d95" stroke-width="3"/>
+    <path d="M274,245 L272,262" stroke="#e8b478" stroke-width="8" stroke-linecap="round"/>
+    <path d="M290,245 L292,262" stroke="#e8b478" stroke-width="8" stroke-linecap="round"/>
+    <ellipse cx="271" cy="266" rx="9" ry="4.5" fill="#0f172a"/>
+    <ellipse cx="293" cy="266" rx="9" ry="4.5" fill="#0f172a"/>
+    <!-- front person E -->
+    <circle cx="358" cy="168" r="19" fill="#fcd9b6" stroke="#78350f" stroke-width="3"/>
+    <path d="M339,164 Q340,146 358,146 Q376,146 377,164 Q368,153 358,153 Q348,153 339,164 Z" fill="#1e293b"/>
+    <circle cx="352" cy="170" r="3" fill="#0f172a"/>
+    <circle cx="364" cy="170" r="3" fill="#0f172a"/>
+    <path d="M352,178 Q358,183 364,178" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M346,188 L370,188 L376,245 L340,245 Z" fill="#f97316" stroke="#c2410c" stroke-width="3"/>
+    <path d="M350,245 L348,262" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+    <path d="M366,245 L368,262" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+    <ellipse cx="347" cy="266" rx="9" ry="4.5" fill="#7f1d1d"/>
+    <ellipse cx="369" cy="266" rx="9" ry="4.5" fill="#7f1d1d"/>
+  </g>
+</svg>

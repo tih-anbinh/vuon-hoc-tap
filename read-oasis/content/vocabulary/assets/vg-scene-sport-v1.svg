@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-sport desc-sport">
+  <title id="title-sport">Sport - Balls and equipment for many sports</title>
+  <desc id="desc-sport">A collection of sports equipment: a football, basketball, tennis racket with ball, and a child kicking a ball, showing different sports.</desc>
+  <defs>
+    <linearGradient id="st-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#st-bg)"/>
+  <circle cx="55" cy="46" r="22" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <!-- grass field -->
+  <rect x="0" y="190" width="400" height="110" fill="#4ade80"/>
+  <line x1="0" y1="190" x2="400" y2="190" stroke="#15803d" stroke-width="3.5"/>
+  <path d="M0,245 L400,245" stroke="#ffffff" stroke-width="4" opacity="0.85"/>
+  <!-- child kicking ball -->
+  <g filter="url(#soft-shadow)">
+    <!-- hair -->
+    <path d="M92,110 Q92,84 120,84 Q148,84 148,110 L143,116 Q120,100 97,116 Z" fill="#451a03" stroke="#1c1917" stroke-width="2.5"/>
+    <circle cx="120" cy="122" r="24" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <circle cx="112" cy="119" r="3" fill="#0f172a"/>
+    <circle cx="128" cy="119" r="3" fill="#0f172a"/>
+    <path d="M112,131 Q120,137 128,131" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- jersey -->
+    <path d="M104,144 L136,144 L144,200 L96,200 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="3.5"/>
+    <!-- arms swinging -->
+    <path d="M104,152 Q84,164 80,182" fill="none" stroke="#fcd9b6" stroke-width="10" stroke-linecap="round"/>
+    <path d="M136,152 Q158,144 164,126" fill="none" stroke="#fcd9b6" stroke-width="10" stroke-linecap="round"/>
+    <!-- shorts -->
+    <rect x="98" y="200" width="44" height="20" rx="5" fill="#1e3a8a" stroke="#0f172a" stroke-width="3"/>
+    <!-- kicking leg extended -->
+    <path d="M134,218 Q160,228 178,222" fill="none" stroke="#fcd9b6" stroke-width="12" stroke-linecap="round"/>
+    <ellipse cx="186" cy="220" rx="14" ry="8" fill="#0f172a"/>
+    <!-- standing leg -->
+    <path d="M108,220 L104,254" stroke="#fcd9b6" stroke-width="12" stroke-linecap="round"/>
+    <ellipse cx="102" cy="260" rx="14" ry="8" fill="#0f172a"/>
+  </g>
+  <!-- football being kicked -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="228" cy="212" r="26" fill="#ffffff" stroke="#0f172a" stroke-width="4"/>
+    <path d="M228,198 L241,208 L236,223 L220,223 L215,208 Z" fill="#0f172a"/>
+    <g stroke="#0f172a" stroke-width="2.5" fill="none">
+      <path d="M228,198 L228,186"/>
+      <path d="M241,208 L253,203"/>
+      <path d="M236,223 L244,234"/>
+      <path d="M220,223 L212,234"/>
+      <path d="M215,208 L203,203"/>
+    </g>
+    <!-- motion lines -->
+    <g stroke="#64748b" stroke-width="3.5" stroke-linecap="round">
+      <line x1="196" y1="200" x2="182" y2="196"/>
+      <line x1="198" y1="222" x2="184" y2="226"/>
+    </g>
+  </g>
+  <!-- basketball -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="318" cy="230" r="30" fill="#f97316" stroke="#7c2d12" stroke-width="4"/>
+    <path d="M288,230 L348,230 M318,200 L318,260 M296,210 Q318,228 340,210 M296,250 Q318,232 340,250" fill="none" stroke="#7c2d12" stroke-width="3"/>
+  </g>
+  <!-- tennis racket and ball -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="322" cy="92" rx="36" ry="46" fill="#fef3c7" stroke="#b45309" stroke-width="5"/>
+    <g stroke="#b45309" stroke-width="1.8" opacity="0.85">
+      <line x1="302" y1="62" x2="302" y2="122"/>
+      <line x1="315" y1="50" x2="315" y2="134"/>
+      <line x1="329" y1="50" x2="329" y2="134"/>
+      <line x1="342" y1="62" x2="342" y2="122"/>
+      <line x1="290" y1="76" x2="354" y2="76"/>
+      <line x1="287" y1="92" x2="357" y2="92"/>
+      <line x1="290" y1="108" x2="354" y2="108"/>
+    </g>
+    <line x1="322" y1="138" x2="322" y2="176" stroke="#78350f" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="270" cy="152" r="14" fill="#bef264" stroke="#4d7c0f" stroke-width="3.5"/>
+    <path d="M259,143 Q270,152 259,161 M281,143 Q270,152 281,161" fill="none" stroke="#4d7c0f" stroke-width="2.5"/>
+  </g>
+  <!-- flag marker -->
+  <g filter="url(#soft-shadow)">
+    <line x1="40" y1="190" x2="40" y2="140" stroke="#78350f" stroke-width="4"/>
+    <path d="M40,140 L66,147 L40,156 Z" fill="#facc15" stroke="#a16207" stroke-width="2.5"/>
+  </g>
+</svg>

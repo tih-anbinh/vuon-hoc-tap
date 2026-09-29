@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-balcony desc-balcony">
+  <title id="title-balcony">Balcony - Balcony with railing and flower pots</title>
+  <desc id="desc-balcony">A house wall with a balcony sticking out, with iron railings, flower pots, and a child standing on the balcony waving, under a sunny sky.</desc>
+  <defs>
+    <linearGradient id="bc-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="bc-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#bc-sky)"/>
+  <circle cx="60" cy="52" r="24" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <ellipse cx="105" cy="110" rx="34" ry="12" fill="#ffffff" opacity="0.95"/>
+  <!-- house wall on right -->
+  <rect x="170" y="0" width="230" height="300" fill="url(#bc-wall)" stroke="#b45309" stroke-width="4"/>
+  <!-- balcony door -->
+  <rect x="220" y="60" width="82" height="130" rx="5" fill="#78350f" stroke="#451a03" stroke-width="4"/>
+  <rect x="228" y="70" width="30" height="52" rx="3" fill="#bae6fd" stroke="#451a03" stroke-width="3"/>
+  <rect x="264" y="70" width="30" height="52" rx="3" fill="#bae6fd" stroke="#451a03" stroke-width="3"/>
+  <circle cx="292" cy="140" r="4" fill="#fbbf24"/>
+  <!-- upper window -->
+  <rect x="330" y="40" width="50" height="46" rx="4" fill="#bae6fd" stroke="#b45309" stroke-width="3.5"/>
+  <line x1="355" y1="40" x2="355" y2="86" stroke="#b45309" stroke-width="2.5"/>
+  <!-- balcony platform (dominant) -->
+  <g filter="url(#soft-shadow)">
+    <!-- floor slab -->
+    <rect x="176" y="190" width="180" height="16" rx="4" fill="#94a3b8" stroke="#475569" stroke-width="4"/>
+    <!-- support brackets -->
+    <path d="M200,206 L224,240 L224,206 Z" fill="#64748b" stroke="#475569" stroke-width="3"/>
+    <path d="M310,206 L334,240 L334,206 Z" fill="#64748b" stroke="#475569" stroke-width="3"/>
+    <!-- railing -->
+    <rect x="176" y="118" width="180" height="10" rx="4" fill="#334155" stroke="#0f172a" stroke-width="3"/>
+    <g stroke="#334155" stroke-width="5">
+      <line x1="186" y1="128" x2="186" y2="190"/>
+      <line x1="210" y1="128" x2="210" y2="190"/>
+      <line x1="234" y1="128" x2="234" y2="190"/>
+      <line x1="258" y1="128" x2="258" y2="190"/>
+      <line x1="282" y1="128" x2="282" y2="190"/>
+      <line x1="306" y1="128" x2="306" y2="190"/>
+      <line x1="330" y1="128" x2="330" y2="190"/>
+      <line x1="348" y1="128" x2="348" y2="190"/>
+    </g>
+  </g>
+  <!-- child on balcony waving -->
+  <g filter="url(#soft-shadow)">
+    <path d="M240,102 Q238,80 260,78 Q282,80 280,102 L275,108 Q260,92 245,108 Z" fill="#451a03" stroke="#1c1917" stroke-width="2.5"/>
+    <circle cx="260" cy="110" r="20" fill="#fcd9b6" stroke="#78350f" stroke-width="3"/>
+    <circle cx="253" cy="107" r="2.8" fill="#0f172a"/>
+    <circle cx="267" cy="107" r="2.8" fill="#0f172a"/>
+    <path d="M252,118 Q260,124 268,118" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M246,128 L274,128 L280,178 L240,178 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="3"/>
+    <!-- waving arm -->
+    <path d="M272,134 Q292,118 296,98" fill="none" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="298" cy="94" r="7" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <g stroke="#f59e0b" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.9">
+      <path d="M312,86 Q318,94 316,104"/>
+      <path d="M322,78 Q332,90 328,104"/>
+    </g>
+    <!-- other arm on railing -->
+    <path d="M248,134 Q234,144 232,158" fill="none" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <!-- flower pots on balcony -->
+  <g filter="url(#soft-shadow)">
+    <path d="M188,190 L214,190 L210,168 L192,168 Z" fill="#f97316" stroke="#7c2d12" stroke-width="3"/>
+    <circle cx="194" cy="160" r="7" fill="#f472b6" stroke="#be185d" stroke-width="2.5"/>
+    <circle cx="208" cy="160" r="7" fill="#a78bfa" stroke="#6d28d9" stroke-width="2.5"/>
+    <circle cx="201" cy="152" r="7" fill="#fb923c" stroke="#c2410c" stroke-width="2.5"/>
+    <path d="M318,190 L344,190 L340,168 L322,168 Z" fill="#f97316" stroke="#7c2d12" stroke-width="3"/>
+    <circle cx="324" cy="160" r="7" fill="#fb923c" stroke="#c2410c" stroke-width="2.5"/>
+    <circle cx="338" cy="160" r="7" fill="#f472b6" stroke="#be185d" stroke-width="2.5"/>
+    <circle cx="331" cy="152" r="7" fill="#fde047" stroke="#a16207" stroke-width="2.5"/>
+  </g>
+  <!-- bird flying -->
+  <path d="M60,150 Q68,142 76,150 M76,150 Q84,142 92,150" fill="none" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
+  <!-- ground/street below -->
+  <rect x="0" y="280" width="400" height="20" fill="#4ade80"/>
+  <line x1="0" y1="280" x2="400" y2="280" stroke="#15803d" stroke-width="3"/>
+</svg>

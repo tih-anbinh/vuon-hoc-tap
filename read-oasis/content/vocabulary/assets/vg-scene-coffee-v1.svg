@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-coffee desc-coffee">
+  <title id="title-coffee">Coffee - Hot cup of coffee with steam</title>
+  <desc id="desc-coffee">A big red mug of hot brown coffee with rising steam on a saucer, next to a coffee pot and coffee beans on a table.</desc>
+  <defs>
+    <linearGradient id="cf-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <radialGradient id="cf-coffee" cx="0.5" cy="0.4" r="0.8">
+      <stop offset="0%" stop-color="#92400e"/>
+      <stop offset="100%" stop-color="#451a03"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#cf-bg)"/>
+  <!-- table -->
+  <rect x="0" y="238" width="400" height="62" fill="#b45309"/>
+  <line x1="0" y1="238" x2="400" y2="238" stroke="#78350f" stroke-width="4"/>
+  <ellipse cx="180" cy="252" rx="160" ry="12" fill="#0f172a" opacity="0.18"/>
+  <!-- steam from mug -->
+  <g stroke="#94a3b8" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.8">
+    <path d="M140,102 Q128,78 142,56 Q154,38 144,16"/>
+    <path d="M180,96 Q168,70 182,48 Q194,30 184,10"/>
+    <path d="M220,102 Q208,78 222,56 Q234,38 224,16"/>
+  </g>
+  <!-- THE COFFEE MUG (hero element) -->
+  <g filter="url(#soft-shadow)">
+    <!-- saucer -->
+    <ellipse cx="180" cy="242" rx="110" ry="20" fill="#fecaca" stroke="#7f1d1d" stroke-width="4"/>
+    <ellipse cx="180" cy="238" rx="88" ry="14" fill="#fee2e2"/>
+    <!-- mug body -->
+    <path d="M96,120 L264,120 L254,226 Q252,240 236,240 L124,240 Q108,240 106,226 Z"
+          fill="#dc2626" stroke="#7f1d1d" stroke-width="5"/>
+    <!-- handle -->
+    <path d="M262,140 Q310,140 310,176 Q310,212 254,210" fill="none" stroke="#dc2626" stroke-width="16"/>
+    <path d="M262,140 Q310,140 310,176 Q310,212 254,210" fill="none" stroke="#7f1d1d" stroke-width="5"/>
+    <path d="M262,148 Q300,148 300,176 Q300,202 256,202" fill="none" stroke="#7f1d1d" stroke-width="4"/>
+    <!-- coffee surface -->
+    <ellipse cx="180" cy="120" rx="84" ry="18" fill="url(#cf-coffee)" stroke="#451a03" stroke-width="4"/>
+    <!-- crema swirl -->
+    <path d="M140,118 Q160,110 180,118 Q200,126 220,118" fill="none" stroke="#d97706" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+    <!-- heart pattern on mug -->
+    <path d="M180,168 Q180,158 189,158 Q197,158 197,166 Q197,176 180,188 Q163,176 163,166 Q163,158 171,158 Q180,158 180,168 Z"
+          fill="#fef3c7" stroke="#7f1d1d" stroke-width="3"/>
+    <!-- shine -->
+    <path d="M118,136 Q114,170 120,210" fill="none" stroke="#fca5a5" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
+  </g>
+  <!-- coffee pot -->
+  <g filter="url(#soft-shadow)">
+    <path d="M312,158 L376,158 L370,236 Q369,244 360,244 L328,244 Q319,244 318,236 Z"
+          fill="#475569" stroke="#1e293b" stroke-width="4"/>
+    <path d="M312,166 L300,150 L314,146 Z" fill="#475569" stroke="#1e293b" stroke-width="3.5"/>
+    <rect x="322" y="144" width="44" height="14 " rx="5" fill="#334155" stroke="#1e293b" stroke-width="3.5"/>
+    <circle cx="344" cy="138" r="6" fill="#1e293b"/>
+    <path d="M374,170 Q390,178 386,196" fill="none" stroke="#1e293b" stroke-width="8" stroke-linecap="round"/>
+    <!-- window strip showing coffee level -->
+    <rect x="338" y="176" width="12" height="56" rx="5" fill="#fef3c7" stroke="#1e293b" stroke-width="2.5"/>
+    <rect x="340" y="200" width="8" height="30" rx="3" fill="#78350f"/>
+  </g>
+  <!-- coffee beans -->
+  <g fill="#78350f" stroke="#451a03" stroke-width="2.5">
+    <ellipse cx="48" cy="252" rx="12" ry="8" transform="rotate(-20 48 252)"/>
+    <ellipse cx="74" cy="262" rx="12" ry="8" transform="rotate(15 74 262)"/>
+    <ellipse cx="40" cy="274" rx="12" ry="8" transform="rotate(40 40 274)"/>
+  </g>
+  <g stroke="#451a03" stroke-width="2" fill="none">
+    <path d="M42,248 Q48,252 54,256"/>
+    <path d="M68,258 Q74,262 80,266"/>
+    <path d="M34,270 Q40,274 46,278"/>
+  </g>
+</svg>

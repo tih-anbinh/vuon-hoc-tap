@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-bus-station desc-bus-station">
+  <title id="title-bus-station">Bus station - Big station building with buses parked</title>
+  <desc id="desc-bus-station">A large bus station building with a wide roof and clock, two yellow buses parked in the bays, and people waiting on the platform.</desc>
+  <defs>
+    <linearGradient id="bs-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#93c5fd"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+    <linearGradient id="bs-roof" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#bs-sky)"/>
+  <circle cx="360" cy="40" r="20" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <ellipse cx="80" cy="42" rx="32" ry="11" fill="#ffffff" opacity="0.95"/>
+  <!-- road/tarmac -->
+  <rect x="0" y="240" width="400" height="60" fill="#475569"/>
+  <line x1="0" y1="240" x2="400" y2="240" stroke="#1e293b" stroke-width="4"/>
+  <g stroke="#fde047" stroke-width="4" stroke-dasharray="16,12">
+    <line x1="0" y1="272" x2="400" y2="272"/>
+  </g>
+  <!-- station building -->
+  <g filter="url(#soft-shadow)">
+    <!-- big canopy roof -->
+    <path d="M20,96 L380,96 L360,64 L40,64 Z" fill="url(#bs-roof)" stroke="#7f1d1d" stroke-width="4.5"/>
+    <!-- clock on roof front -->
+    <circle cx="200" cy="80" r="14" fill="#ffffff" stroke="#7f1d1d" stroke-width="3.5"/>
+    <line x1="200" y1="80" x2="200" y2="71" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="200" y1="80" x2="207" y2="83" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- support pillars -->
+    <rect x="36" y="96" width="12" height="144" fill="#94a3b8" stroke="#475569" stroke-width="3"/>
+    <rect x="352" y="96" width="12" height="144" fill="#94a3b8" stroke="#475569" stroke-width="3"/>
+    <rect x="194" y="96" width="12" height="60" fill="#94a3b8" stroke="#475569" stroke-width="3"/>
+    <!-- back wall of station -->
+    <rect x="48" y="96" width="304" height="70" fill="#e2e8f0" stroke="#475569" stroke-width="3.5"/>
+    <!-- info sign with bus symbol -->
+    <rect x="164" y="106" width="72" height="40" rx="6" fill="#1d4ed8" stroke="#172554" stroke-width="3"/>
+    <rect x="176" y="114" width="48" height="20" rx="4" fill="#fde047" stroke="#172554" stroke-width="2.5"/>
+    <circle cx="186" cy="136" r="4" fill="#0f172a"/>
+    <circle cx="214" cy="136" r="4" fill="#0f172a"/>
+    <!-- windows -->
+    <rect x="64" y="110" width="60" height="34" fill="#bae6fd" stroke="#475569" stroke-width="3"/>
+    <rect x="276" y="110" width="60" height="34" fill="#bae6fd" stroke="#475569" stroke-width="3"/>
+  </g>
+  <!-- bus 1 (left bay) -->
+  <g filter="url(#soft-shadow)">
+    <rect x="56" y="172" width="130" height="62" rx="10" fill="#facc15" stroke="#a16207" stroke-width="4"/>
+    <g fill="#bae6fd" stroke="#a16207" stroke-width="2.5">
+      <rect x="66" y="182" width="24" height="20" rx="3"/>
+      <rect x="96" y="182" width="24" height="20" rx="3"/>
+      <rect x="126" y="182" width="24" height="20" rx="3"/>
+    </g>
+    <rect x="156" y="182" width="22" height="40" rx="3" fill="#78350f" stroke="#451a03" stroke-width="3"/>
+    <circle cx="86" cy="236" r="13" fill="#334155" stroke="#0f172a" stroke-width="3"/>
+    <circle cx="86" cy="236" r="5" fill="#94a3b8"/>
+    <circle cx="156" cy="236" r="13" fill="#334155" stroke="#0f172a" stroke-width="3"/>
+    <circle cx="156" cy="236" r="5" fill="#94a3b8"/>
+  </g>
+  <!-- bus 2 (right bay) -->
+  <g filter="url(#soft-shadow)">
+    <rect x="214" y="172" width="130" height="62" rx="10" fill="#fb923c" stroke="#7c2d12" stroke-width="4"/>
+    <g fill="#bae6fd" stroke="#7c2d12" stroke-width="2.5">
+      <rect x="224" y="182" width="24" height="20" rx="3"/>
+      <rect x="254" y="182" width="24" height="20" rx="3"/>
+      <rect x="284" y="182" width="24" height="20" rx="3"/>
+    </g>
+    <rect x="314" y="182" width="22" height="40" rx="3" fill="#78350f" stroke="#451a03" stroke-width="3"/>
+    <circle cx="244" cy="236" r="13" fill="#334155" stroke="#0f172a" stroke-width="3"/>
+    <circle cx="244" cy="236" r="5" fill="#94a3b8"/>
+    <circle cx="314" cy="236" r="13" fill="#334155" stroke="#0f172a" stroke-width="3"/>
+    <circle cx="314" cy="236" r="5" fill="#94a3b8"/>
+  </g>
+  <!-- waiting person -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="30" cy="196" r="11" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <path d="M26,190 Q26,182 30,182 Q34,182 34,190 Z" fill="#451a03"/>
+    <rect x="22" y="206" width="16" height="26" rx="5" fill="#16a34a" stroke="#14532d" stroke-width="2.5"/>
+    <line x1="26" y1="232" x2="26" y2="248" stroke="#1e293b" stroke-width="5" stroke-linecap="round"/>
+    <line x1="34" y1="232" x2="34" y2="248" stroke="#1e293b" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>

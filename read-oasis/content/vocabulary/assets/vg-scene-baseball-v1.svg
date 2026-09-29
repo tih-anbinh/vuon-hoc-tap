@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-baseball desc-baseball">
+  <title id="title-baseball">Baseball - White ball with red stitching and wooden bat</title>
+  <desc id="desc-baseball">A white baseball with characteristic red curved stitching next to a tan wooden baseball bat lying on grass.</desc>
+  <defs>
+    <linearGradient id="bs-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#bfdbfe"/>
+    </linearGradient>
+    <linearGradient id="bs-grass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a3e635"/>
+      <stop offset="100%" stop-color="#4d7c0f"/>
+    </linearGradient>
+    <radialGradient id="bs-ball" cx="35%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e5e7eb"/>
+    </radialGradient>
+    <linearGradient id="bs-bat" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8b478"/>
+      <stop offset="100%" stop-color="#a16207"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="200" fill="url(#bs-sky)"/>
+  <rect x="0" y="190" width="400" height="110" fill="url(#bs-grass)"/>
+  <!-- ground shadows -->
+  <ellipse cx="115" cy="228" rx="55" ry="8" fill="#0f172a" opacity="0.25"/>
+  <ellipse cx="260" cy="242" rx="120" ry="8" fill="#0f172a" opacity="0.22"/>
+  <!-- BAT (diagonal, right) -->
+  <g filter="url(#soft-shadow)" transform="rotate(20 260 230)">
+    <!-- barrel -->
+    <path d="M160,222 L340,218 Q355,225 340,232 L160,236 Z" fill="url(#bs-bat)" stroke="#7c2d12" stroke-width="3.5"/>
+    <!-- handle grip -->
+    <rect x="145" y="222" width="20" height="14" rx="4" fill="#78350f" stroke="#451a03" stroke-width="2.5"/>
+    <circle cx="140" cy="229" r="6" fill="#78350f" stroke="#451a03" stroke-width="2.5"/>
+    <!-- wood grain -->
+    <path d="M180,224 Q240,224 320,224" fill="none" stroke="#7c2d12" stroke-width="1" opacity="0.5"/>
+    <path d="M180,230 Q240,230 320,230" fill="none" stroke="#7c2d12" stroke-width="1" opacity="0.5"/>
+  </g>
+  <!-- BASEBALL (left) -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="115" cy="215" r="40" fill="url(#bs-ball)" stroke="#0f172a" stroke-width="3.5"/>
+    <!-- red curved stitching -->
+    <path d="M85,205 Q115,190 145,205" fill="none" stroke="#dc2626" stroke-width="3" stroke-linecap="round"/>
+    <path d="M85,225 Q115,240 145,225" fill="none" stroke="#dc2626" stroke-width="3" stroke-linecap="round"/>
+    <!-- stitch marks -->
+    <g stroke="#dc2626" stroke-width="1.8" stroke-linecap="round">
+      <line x1="92" y1="200" x2="88" y2="197"/>
+      <line x1="105" y1="196" x2="103" y2="192"/>
+      <line x1="125" y1="196" x2="127" y2="192"/>
+      <line x1="138" y1="200" x2="142" y2="197"/>
+      <line x1="92" y1="230" x2="88" y2="233"/>
+      <line x1="105" y1="234" x2="103" y2="238"/>
+      <line x1="125" y1="234" x2="127" y2="238"/>
+      <line x1="138" y1="230" x2="142" y2="233"/>
+    </g>
+  </g>
+</svg>

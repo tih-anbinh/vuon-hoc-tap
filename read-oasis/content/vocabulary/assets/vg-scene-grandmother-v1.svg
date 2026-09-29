@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-grandmother desc-grandmother">
+  <title id="title-grandmother">Grandmother - Elderly lady hugging her grandchild</title>
+  <desc id="desc-grandmother">A warm grandmother with gray hair in a bun and glasses, bending down to hug her small grandchild, with a heart above them.</desc>
+  <defs>
+    <linearGradient id="gmo-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="gmo-dress" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5eead4"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#gmo-bg)"/>
+  <rect x="0" y="252" width="400" height="48" fill="#a16207"/>
+  <ellipse cx="200" cy="258" rx="140" ry="8" fill="#0f172a" opacity="0.25"/>
+  <!-- heart above -->
+  <path d="M200,42 C194,30 176,30 176,46 C176,58 200,72 200,72 C200,72 224,58 224,46 C224,30 206,30 200,42 Z" fill="#ec4899" stroke="#9d174d" stroke-width="2.5"/>
+  <!-- grandmother (left, bending) -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="150" cy="115" r="38" fill="#fcd9b6" stroke="#78350f" stroke-width="4"/>
+    <path d="M113,110 Q113,80 150,80 Q187,80 187,110 Q176,92 150,92 Q124,92 113,110 Z" fill="#d6d3d1" stroke="#78716c" stroke-width="2.5"/>
+    <circle cx="150" cy="74" r="14" fill="#d6d3d1" stroke="#78716c" stroke-width="2.5"/>
+    <!-- glasses -->
+    <g fill="none" stroke="#334155" stroke-width="3">
+      <circle cx="137" cy="112" r="10"/>
+      <circle cx="164" cy="112" r="10"/>
+      <line x1="147" y1="112" x2="154" y2="112"/>
+    </g>
+    <circle cx="137" cy="112" r="3" fill="#0f172a"/>
+    <circle cx="164" cy="112" r="3" fill="#0f172a"/>
+    <ellipse cx="126" cy="127" rx="7" ry="4.5" fill="#fb923c" opacity="0.55"/>
+    <path d="M138,133 Q150,142 162,133" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <!-- dress -->
+    <path d="M124,150 L176,150 L198,252 L102,252 Z" fill="url(#gmo-dress)" stroke="#134e4a" stroke-width="4"/>
+    <!-- flower pattern on dress -->
+    <g fill="#fef3c7" opacity="0.8">
+      <circle cx="135" cy="190" r="4"/>
+      <circle cx="160" cy="210" r="4"/>
+      <circle cx="140" cy="232" r="4"/>
+    </g>
+    <!-- arms hugging -->
+    <path d="M176,165 Q225,175 252,195" fill="none" stroke="#fcd9b6" stroke-width="11" stroke-linecap="round"/>
+    <path d="M170,190 Q215,215 245,215" fill="none" stroke="#fcd9b6" stroke-width="11" stroke-linecap="round"/>
+  </g>
+  <!-- grandchild (right, small) -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="272" cy="168" r="26" fill="#f5b26b" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M246,163 Q247,140 272,141 Q297,140 298,163 Q289,150 272,150 Q255,150 246,163 Z" fill="#78350f"/>
+    <circle cx="264" cy="167" r="3.5" fill="#0f172a"/>
+    <circle cx="280" cy="167" r="3.5" fill="#0f172a"/>
+    <path d="M263,179 Q272,186 281,179" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="290" cy="174" rx="6" ry="4" fill="#fb923c" opacity="0.55"/>
+    <rect x="254" y="194" width="36" height="42" rx="8" fill="#f59e0b" stroke="#b45309" stroke-width="3.5"/>
+    <!-- arms hugging back -->
+    <path d="M254,205 Q220,190 195,180" fill="none" stroke="#f5b26b" stroke-width="8" stroke-linecap="round"/>
+    <line x1="266" y1="236" x2="266" y2="254" stroke="#f5b26b" stroke-width="8" stroke-linecap="round"/>
+    <line x1="280" y1="236" x2="280" y2="254" stroke="#f5b26b" stroke-width="8" stroke-linecap="round"/>
+  </g>
+</svg>

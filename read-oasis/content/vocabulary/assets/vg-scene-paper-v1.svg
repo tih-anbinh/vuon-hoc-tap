@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-paper desc-paper">
+  <title id="title-paper">Paper - Sheets of white paper with pencil</title>
+  <desc id="desc-paper">A stack of white paper sheets with faint ruled lines, one sheet lifted with a curled corner, and a pencil lying beside them on a desk.</desc>
+  <defs>
+    <linearGradient id="pp-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="pp-sheet" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#pp-bg)"/>
+  <!-- desk -->
+  <rect x="0" y="215" width="400" height="85" fill="#e8b478"/>
+  <line x1="0" y1="215" x2="400" y2="215" stroke="#a16207" stroke-width="3.5"/>
+  <ellipse cx="195" cy="228" rx="160" ry="12" fill="#0f172a" opacity="0.18"/>
+  <!-- stack of paper -->
+  <g filter="url(#soft-shadow)">
+    <rect x="92" y="82" width="180" height="230" rx="4" fill="#cbd5e1" stroke="#64748b" stroke-width="3" transform="rotate(-7 182 197)"/>
+    <rect x="100" y="72" width="180" height="230" rx="4" fill="#e2e8f0" stroke="#64748b" stroke-width="3" transform="rotate(-3 190 187)"/>
+    <!-- top sheet with curled corner -->
+    <g transform="rotate(2 200 180)">
+      <path d="M110,62 L286,62 L286,254 Q262,268 244,254 L110,254 Z" fill="url(#pp-sheet)" stroke="#64748b" stroke-width="3.5"/>
+      <!-- curled corner -->
+      <path d="M286,254 Q262,268 244,254 Q260,240 286,254 Z" fill="#cbd5e1" stroke="#64748b" stroke-width="3"/>
+      <!-- ruled lines -->
+      <g stroke="#93c5fd" stroke-width="2.5">
+        <line x1="124" y1="100" x2="272" y2="100"/>
+        <line x1="124" y1="126" x2="272" y2="126"/>
+        <line x1="124" y1="152" x2="272" y2="152"/>
+        <line x1="124" y1="178" x2="272" y2="178"/>
+        <line x1="124" y1="204" x2="250" y2="204"/>
+        <line x1="124" y1="230" x2="236" y2="230"/>
+      </g>
+      <!-- red margin -->
+      <line x1="140" y1="70" x2="140" y2="246" stroke="#fca5a5" stroke-width="2.5"/>
+      <!-- simple doodle: squiggle drawing -->
+      <path d="M156,110 Q170,96 184,110 Q198,124 212,110" fill="none" stroke="#64748b" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+    </g>
+  </g>
+  <!-- pencil beside -->
+  <g filter="url(#soft-shadow)" transform="rotate(18 330 210)">
+    <rect x="300" y="120" width="20" height="140" fill="#fbbf24" stroke="#b45309" stroke-width="3"/>
+    <path d="M300,260 L310,288 L320,260 Z" fill="#fcd9b6" stroke="#b45309" stroke-width="2.5"/>
+    <path d="M306,276 L310,288 L314,276 Z" fill="#334155"/>
+    <rect x="300" y="106" width="20" height="14" fill="#94a3b8" stroke="#475569" stroke-width="2.5"/>
+    <path d="M300,92 Q310,84 320,92 L320,106 L300,106 Z" fill="#f87171" stroke="#b91c1c" stroke-width="2.5"/>
+  </g>
+  <!-- paper plane accent -->
+  <g filter="url(#soft-shadow)">
+    <path d="M28,60 L88,40 L58,86 Z" fill="#ffffff" stroke="#64748b" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M88,40 L58,86 L52,68 Z" fill="#e2e8f0" stroke="#64748b" stroke-width="2.5" stroke-linejoin="round"/>
+  </g>
+  <g stroke="#94a3b8" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="6,6" opacity="0.8">
+    <path d="M20,95 Q35,80 28,66"/>
+  </g>
+</svg>

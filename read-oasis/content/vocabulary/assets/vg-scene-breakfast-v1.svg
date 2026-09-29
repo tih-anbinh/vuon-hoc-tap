@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-breakfast desc-breakfast">
+  <title id="title-breakfast">Breakfast - Morning meal with egg, toast, milk and fruit</title>
+  <desc id="desc-breakfast">A breakfast table in morning sunlight: a plate with a fried egg and toast, a glass of milk, and a banana beside it.</desc>
+  <defs>
+    <linearGradient id="bf-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="bf-table" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c2955a"/>
+      <stop offset="100%" stop-color="#8a5a24"/>
+    </linearGradient>
+    <linearGradient id="bf-toast" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8b478"/>
+      <stop offset="100%" stop-color="#c2955a"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#bf-bg)"/>
+  <!-- morning sun in window corner -->
+  <circle cx="55" cy="55" r="30" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <g stroke="#fbbf24" stroke-width="4" stroke-linecap="round">
+    <line x1="55" y1="10" x2="55" y2="20"/>
+    <line x1="100" y1="55" x2="110" y2="55"/>
+    <line x1="88" y1="22" x2="95" y2="15"/>
+    <line x1="88" y1="88" x2="95" y2="95"/>
+  </g>
+  <!-- table -->
+  <rect x="0" y="160" width="400" height="140" fill="url(#bf-table)"/>
+  <line x1="0" y1="160" x2="400" y2="160" stroke="#5c3210" stroke-width="4"/>
+  <!-- plate with egg + toast -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="185" cy="225" rx="105" ry="42" fill="#f1f5f9" stroke="#94a3b8" stroke-width="3.5"/>
+    <ellipse cx="185" cy="223" rx="88" ry="33" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <!-- toast (two slices) -->
+    <g transform="rotate(-8 240 218)">
+      <rect x="215" y="196" width="58" height="44" rx="10" fill="url(#bf-toast)" stroke="#78350f" stroke-width="3"/>
+      <rect x="222" y="203" width="44" height="30" rx="7" fill="#f5d9a8" stroke="#a16207" stroke-width="1.5"/>
+    </g>
+    <!-- fried egg -->
+    <path d="M110,214 Q112,196 132,194 Q145,182 162,192 Q180,190 184,206 Q194,218 180,230 Q178,244 158,244 Q140,250 128,240 Q108,238 110,214 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="2.5"/>
+    <circle cx="147" cy="216" r="14" fill="#fbbf24" stroke="#d97706" stroke-width="2.5"/>
+    <circle cx="143" cy="212" r="4" fill="#fef3c7" opacity="0.8"/>
+  </g>
+  <!-- glass of milk -->
+  <g filter="url(#soft-shadow)">
+    <path d="M310,150 L346,150 L340,225 L316,225 Z" fill="#e0f2fe" stroke="#64748b" stroke-width="3.5" opacity="0.95"/>
+    <path d="M313,168 L343,168 L339,222 L317,222 Z" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  </g>
+  <!-- banana -->
+  <g filter="url(#soft-shadow)">
+    <path d="M55,255 Q95,285 150,262 Q160,258 155,252 Q105,268 62,244 Q52,246 55,255 Z" fill="#facc15" stroke="#a16207" stroke-width="3"/>
+    <path d="M57,250 L50,242 L56,240 L62,246 Z" fill="#78350f"/>
+  </g>
+</svg>

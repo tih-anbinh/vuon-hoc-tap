@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-evening desc-evening">
+  <title id="title-evening">Evening - Sunset sky with moon appearing and lit house</title>
+  <desc id="desc-evening">An evening scene: the sun setting behind hills in an orange-purple sky, the moon and first stars appearing, and a small house with warm lit windows.</desc>
+  <defs>
+    <linearGradient id="ev-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#312e81"/>
+      <stop offset="45%" stop-color="#7c3aed"/>
+      <stop offset="75%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <linearGradient id="ev-hill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3f6212"/>
+      <stop offset="100%" stop-color="#1a2e05"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#ev-sky)"/>
+  <!-- stars appearing -->
+  <g fill="#fef08a">
+    <circle cx="60" cy="40" r="3"/>
+    <circle cx="140" cy="28" r="2.5"/>
+    <circle cx="250" cy="45" r="3"/>
+    <circle cx="330" cy="25" r="2.5"/>
+    <circle cx="380" cy="60" r="2"/>
+  </g>
+  <!-- moon -->
+  <path d="M310,55 A26,26 0 1,0 336,94 A20,20 0 1,1 310,55 Z" fill="#fef08a" stroke="#d97706" stroke-width="2.5"/>
+  <!-- setting sun half-hidden -->
+  <g>
+    <circle cx="110" cy="205" r="42" fill="#fbbf24" stroke="#d97706" stroke-width="3.5"/>
+    <g stroke="#fbbf24" stroke-width="5" stroke-linecap="round" opacity="0.85">
+      <line x1="110" y1="145" x2="110" y2="132"/>
+      <line x1="55" y1="170" x2="45" y2="162"/>
+      <line x1="165" y1="170" x2="175" y2="162"/>
+    </g>
+  </g>
+  <!-- hills covering sun bottom -->
+  <path d="M0,215 Q100,175 210,215 Q310,248 400,205 L400,300 L0,300 Z" fill="url(#ev-hill)"/>
+  <!-- house with lit windows -->
+  <g filter="url(#soft-shadow)">
+    <rect x="255" y="170" width="95" height="70" fill="#57534e" stroke="#1c1917" stroke-width="3.5"/>
+    <path d="M245,170 L302,125 L360,170 Z" fill="#7f1d1d" stroke="#1c1917" stroke-width="3.5"/>
+    <!-- warm lit windows -->
+    <rect x="268" y="185" width="24" height="24" rx="3" fill="#fbbf24" stroke="#1c1917" stroke-width="2.5"/>
+    <rect x="313" y="185" width="24" height="24" rx="3" fill="#fbbf24" stroke="#1c1917" stroke-width="2.5"/>
+    <line x1="280" y1="185" x2="280" y2="209" stroke="#1c1917" stroke-width="2"/>
+    <line x1="325" y1="185" x2="325" y2="209" stroke="#1c1917" stroke-width="2"/>
+    <!-- door -->
+    <rect x="290" y="212" width="22" height="28" rx="3" fill="#78350f" stroke="#1c1917" stroke-width="2.5"/>
+    <!-- chimney with smoke -->
+    <rect x="330" y="130" width="14" height="28" fill="#57534e" stroke="#1c1917" stroke-width="2.5"/>
+    <g fill="#cbd5e1" opacity="0.7">
+      <circle cx="340" cy="118" r="7"/>
+      <circle cx="348" cy="105" r="9"/>
+      <circle cx="358" cy="90" r="11"/>
+    </g>
+  </g>
+  <!-- bird flying home -->
+  <path d="M175,95 Q182,88 189,95 Q196,88 203,95" fill="none" stroke="#1e1b4b" stroke-width="3" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-farmer desc-farmer">
+  <title id="title-farmer">Farmer - Farmer with straw hat and pitchfork</title>
+  <desc id="desc-farmer">A happy farmer wearing a straw hat and blue overalls holding a pitchfork, standing in a field with a barn, hay and a chicken beside him.</desc>
+  <defs>
+    <linearGradient id="fm-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#fm-sky)"/>
+  <circle cx="348" cy="46" r="22" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <!-- field -->
+  <rect x="0" y="190" width="400" height="110" fill="#4ade80"/>
+  <line x1="0" y1="190" x2="400" y2="190" stroke="#15803d" stroke-width="3.5"/>
+  <ellipse cx="190" cy="272" rx="140" ry="12" fill="#0f172a" opacity="0.15"/>
+  <!-- barn in background -->
+  <g>
+    <rect x="30" y="130" width="90" height="60" fill="#dc2626" stroke="#7f1d1d" stroke-width="4"/>
+    <path d="M22,130 L75,96 L128,130 Z" fill="#b91c1c" stroke="#7f1d1d" stroke-width="4"/>
+    <rect x="60" y="152" width="30" height="38" rx="3" fill="#78350f" stroke="#451a03" stroke-width="3"/>
+  </g>
+  <!-- hay pile -->
+  <g filter="url(#soft-shadow)">
+    <path d="M296,262 Q296,216 336,216 Q376,216 376,262 Z" fill="#fbbf24" stroke="#a16207" stroke-width="3.5"/>
+    <g stroke="#a16207" stroke-width="2.5" fill="none">
+      <path d="M312,250 Q318,238 330,232"/>
+      <path d="M344,252 Q350,238 360,234"/>
+    </g>
+  </g>
+  <!-- THE FARMER (hero element) -->
+  <g filter="url(#soft-shadow)">
+    <!-- straw hat -->
+    <ellipse cx="190" cy="92" rx="52" ry="13" fill="#fbbf24" stroke="#a16207" stroke-width="3.5"/>
+    <path d="M162,90 Q162,58 190,58 Q218,58 218,90 Z" fill="#facc15" stroke="#a16207" stroke-width="3.5"/>
+    <path d="M162,84 L218,84" stroke="#dc2626" stroke-width="5"/>
+    <!-- head -->
+    <circle cx="190" cy="116" r="27" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <circle cx="181" cy="112" r="3.2" fill="#0f172a"/>
+    <circle cx="199" cy="112" r="3.2" fill="#0f172a"/>
+    <path d="M180,126 Q190,133 200,126" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="172" cy="120" rx="5.5" ry="4" fill="#fb7185" opacity="0.55"/>
+    <ellipse cx="208" cy="120" rx="5.5" ry="4" fill="#fb7185" opacity="0.55"/>
+    <!-- shirt -->
+    <path d="M160,142 L220,142 L226,190 L154,190 Z" fill="#f97316" stroke="#7c2d12" stroke-width="3.5"/>
+    <!-- checked pattern -->
+    <g stroke="#7c2d12" stroke-width="2" opacity="0.6">
+      <line x1="176" y1="142" x2="174" y2="190"/>
+      <line x1="204" y1="142" x2="206" y2="190"/>
+      <line x1="157" y1="158" x2="223" y2="158"/>
+      <line x1="155" y1="174" x2="225" y2="174"/>
+    </g>
+    <!-- blue overalls -->
+    <path d="M164,158 L216,158 L224,244 L192,244 L190,208 L188,244 L156,244 Z" fill="#2563eb" stroke="#1e3a8a" stroke-width="4"/>
+    <line x1="168" y1="144" x2="170" y2="162" stroke="#2563eb" stroke-width="8"/>
+    <line x1="212" y1="144" x2="210" y2="162" stroke="#2563eb" stroke-width="8"/>
+    <rect x="178" y="168" width="24" height="20" rx="3" fill="#3b82f6" stroke="#1e3a8a" stroke-width="2.5"/>
+    <!-- arms -->
+    <path d="M160,150 Q136,166 132,188" fill="none" stroke="#fcd9b6" stroke-width="11" stroke-linecap="round"/>
+    <path d="M220,150 Q248,158 256,146" fill="none" stroke="#fcd9b6" stroke-width="11" stroke-linecap="round"/>
+    <!-- hands -->
+    <circle cx="132" cy="192" r="8" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <circle cx="258" cy="144" r="8" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <!-- boots -->
+    <path d="M188,244 L188,262 Q188,268 178,268 L166,268 Q160,268 162,260 L166,244 Z" fill="#78350f" stroke="#451a03" stroke-width="3"/>
+    <path d="M192,244 L192,262 Q192,268 202,268 L214,268 Q220,268 218,260 L214,244 Z" fill="#78350f" stroke="#451a03" stroke-width="3"/>
+    <!-- pitchfork in right hand -->
+    <line x1="258" y1="92" x2="258" y2="240" stroke="#92400e" stroke-width="7" stroke-linecap="round"/>
+    <g stroke="#64748b" stroke-width="5" stroke-linecap="round" fill="none">
+      <line x1="244" y1="92" x2="244" y2="62"/>
+      <line x1="258" y1="92" x2="258" y2="58"/>
+      <line x1="272" y1="92" x2="272" y2="62"/>
+      <path d="M244,92 L272,92"/>
+    </g>
+  </g>
+  <!-- chicken beside farmer -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="110" cy="252" rx="22" ry="17" fill="#f8fafc" stroke="#64748b" stroke-width="3"/>
+    <circle cx="128" cy="238" r="10" fill="#f8fafc" stroke="#64748b" stroke-width="3"/>
+    <path d="M136,236 L146,239 L136,243 Z" fill="#f97316" stroke="#c2410c" stroke-width="2"/>
+    <path d="M126,228 Q124,222 130,222 Q128,228 132,228 Q134,232 128,231 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="1.8"/>
+    <circle cx="130" cy="236" r="2" fill="#0f172a"/>
+    <path d="M92,248 Q84,240 88,232 Q96,238 98,244 Z" fill="#e2e8f0" stroke="#64748b" stroke-width="2.5"/>
+    <line x1="104" y1="268" x2="104" y2="278" stroke="#f97316" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="118" y1="268" x2="118" y2="278" stroke="#f97316" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+</svg>

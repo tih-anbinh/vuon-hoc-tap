@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-lunch desc-lunch">
+  <title id="title-lunch">Lunch - Midday meal with sandwich and juice</title>
+  <desc id="desc-lunch">A lunch tray with a sandwich, an apple and a glass of orange juice on a table, with the midday sun high in the sky through a window.</desc>
+  <defs>
+    <linearGradient id="ln-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="ln-bread" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#e8b478"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#ln-bg)"/>
+  <!-- window with high midday sun -->
+  <g filter="url(#soft-shadow)">
+    <rect x="270" y="25" width="105" height="85" rx="6" fill="#bae6fd" stroke="#78350f" stroke-width="4"/>
+    <line x1="322" y1="25" x2="322" y2="110" stroke="#78350f" stroke-width="3"/>
+    <line x1="270" y1="67" x2="375" y2="67" stroke="#78350f" stroke-width="3"/>
+    <circle cx="322" cy="45" r="14" fill="#fbbf24" stroke="#d97706" stroke-width="2.5"/>
+    <g stroke="#d97706" stroke-width="2" stroke-linecap="round">
+      <line x1="322" y1="27" x2="322" y2="21"/>
+      <line x1="340" y1="45" x2="346" y2="45"/>
+      <line x1="298" y1="45" x2="304" y2="45"/>
+      <line x1="335" y1="32" x2="339" y2="28"/>
+      <line x1="309" y1="32" x2="305" y2="28"/>
+    </g>
+  </g>
+  <!-- clock showing 12 -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="70" cy="60" r="30" fill="#ffffff" stroke="#78350f" stroke-width="4"/>
+    <line x1="70" y1="60" x2="70" y2="40" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="70" y1="60" x2="70" y2="44" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="70" cy="60" r="3" fill="#0f172a"/>
+    <circle cx="70" cy="36" r="2" fill="#0f172a"/>
+    <circle cx="94" cy="60" r="2" fill="#0f172a"/>
+    <circle cx="70" cy="84" r="2" fill="#0f172a"/>
+    <circle cx="46" cy="60" r="2" fill="#0f172a"/>
+  </g>
+  <!-- table -->
+  <rect x="0" y="180" width="400" height="120" fill="#e8b478"/>
+  <line x1="0" y1="180" x2="400" y2="180" stroke="#a16207" stroke-width="3.5"/>
+  <!-- tray -->
+  <g filter="url(#soft-shadow)">
+    <rect x="55" y="195" width="290" height="80" rx="12" fill="#60a5fa" stroke="#1e3a8a" stroke-width="4"/>
+    <rect x="65" y="203" width="270" height="64" rx="8" fill="#93c5fd"/>
+  </g>
+  <!-- sandwich -->
+  <g filter="url(#soft-shadow)">
+    <path d="M85,250 L180,250 L178,240 Q132,232 87,240 Z" fill="url(#ln-bread)" stroke="#a16207" stroke-width="3"/>
+    <path d="M84,240 Q132,246 180,240 L176,233 Q132,238 88,233 Z" fill="#4ade80" stroke="#15803d" stroke-width="2"/>
+    <path d="M88,233 Q132,238 176,233 L174,226 Q132,230 90,226 Z" fill="#f87171" stroke="#b91c1c" stroke-width="2"/>
+    <path d="M90,226 Q132,230 174,226 L172,220 Q132,224 92,220 Z" fill="#fde047" stroke="#ca8a04" stroke-width="2"/>
+    <path d="M92,221 L172,221 Q170,208 132,208 Q94,208 92,221 Z" fill="url(#ln-bread)" stroke="#a16207" stroke-width="3"/>
+  </g>
+  <!-- apple -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="222" cy="238" r="22" fill="#ef4444" stroke="#7f1d1d" stroke-width="3.5"/>
+    <path d="M222,216 Q220,206 226,202" fill="none" stroke="#78350f" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M226,206 Q238,198 242,208 Q234,214 226,206 Z" fill="#22c55e" stroke="#15803d" stroke-width="2"/>
+    <ellipse cx="213" cy="230" rx="6" ry="8" fill="#fca5a5" opacity="0.7"/>
+  </g>
+  <!-- glass of orange juice -->
+  <g filter="url(#soft-shadow)">
+    <path d="M270,205 L306,205 L302,262 L274,262 Z" fill="#e0f2fe" stroke="#0369a1" stroke-width="3.5" opacity="0.95"/>
+    <path d="M272,222 L304,222 L302,262 L274,262 Z" fill="#fb923c" stroke="#c2410c" stroke-width="2"/>
+    <line x1="296" y1="200" x2="286" y2="228" stroke="#ef4444" stroke-width="5" stroke-linecap="round"/>
+    <line x1="296" y1="200" x2="299" y2="192" stroke="#ef4444" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-hit desc-hit">
+  <title id="title-hit">Hit - Child hitting a ball with a bat</title>
+  <desc id="desc-hit">A child swinging a bat and hitting a ball, with an impact star burst at the contact point and motion lines showing the ball flying away.</desc>
+  <defs>
+    <linearGradient id="ht-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="400" height="300" fill="url(#ht-bg)"/>
+  <rect x="0" y="245" width="400" height="55" fill="#4d7c0f"/>
+  <path d="M0,245 Q100,238 200,245 T400,245 L400,255 L0,255 Z" fill="#65a30d"/>
+  <ellipse cx="165" cy="252" rx="95" ry="8" fill="#0f172a" opacity="0.25"/>
+  <!-- ball flying away with motion lines -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="330" cy="75" r="20" fill="#fff" stroke="#0f172a" stroke-width="3.5"/>
+    <path d="M316,68 Q330,60 344,68" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+    <path d="M316,83 Q330,91 344,83" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+  </g>
+  <g stroke="#64748b" stroke-width="4" stroke-linecap="round" opacity="0.7">
+    <line x1="285" y1="95" x2="305" y2="88"/>
+    <line x1="278" y1="112" x2="300" y2="104"/>
+    <line x1="290" y1="128" x2="308" y2="118"/>
+  </g>
+  <!-- impact star burst -->
+  <g fill="#facc15" stroke="#d97706" stroke-width="2.5">
+    <path d="M262,120 L272,98 L276,116 L296,104 L284,122 L304,126 L282,132 L294,150 L272,138 L268,158 L258,136 L238,144 L252,128 L232,120 L254,116 Z"/>
+  </g>
+  <!-- child swinging bat -->
+  <g filter="url(#soft-shadow)">
+    <!-- bat (swung, diagonal toward impact) -->
+    <g transform="rotate(-35 205 160)">
+      <path d="M195,155 L268,151 Q280,157 268,163 L195,159 Z" fill="#e8b478" stroke="#78350f" stroke-width="3.5"/>
+      <rect x="182" y="153" width="15" height="9" rx="3" fill="#78350f" stroke="#451a03" stroke-width="2"/>
+    </g>
+    <!-- head -->
+    <circle cx="150" cy="115" r="30" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <!-- cap -->
+    <path d="M120,110 Q120,82 150,82 Q180,82 180,110 Z" fill="#3b82f6" stroke="#1e3a8a" stroke-width="3"/>
+    <path d="M175,105 Q195,103 198,112 Q180,116 172,112 Z" fill="#2563eb" stroke="#1e3a8a" stroke-width="2.5"/>
+    <circle cx="142" cy="116" r="4" fill="#0f172a"/>
+    <circle cx="160" cy="116" r="4" fill="#0f172a"/>
+    <path d="M142,129 Q151,136 160,129" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <!-- body twisted in swing -->
+    <path d="M132,145 L172,145 L180,215 L128,215 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="3.5"/>
+    <!-- both arms gripping bat -->
+    <path d="M172,155 Q195,150 208,152" fill="none" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
+    <path d="M168,170 Q192,163 206,158" fill="none" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
+    <!-- legs in stance -->
+    <path d="M138,215 L122,248" fill="none" stroke="#1e40af" stroke-width="12" stroke-linecap="round"/>
+    <path d="M166,215 L180,248" fill="none" stroke="#1e40af" stroke-width="12" stroke-linecap="round"/>
+    <!-- shoes -->
+    <ellipse cx="118" cy="252" rx="13" ry="6" fill="#0f172a"/>
+    <ellipse cx="184" cy="252" rx="13" ry="6" fill="#0f172a"/>
+  </g>
+  <!-- swing arc -->
+  <path d="M100,200 Q80,150 115,105" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="7,7" stroke-linecap="round" opacity="0.7"/>
+</svg>
