@@ -27,7 +27,7 @@ export const DEFAULT_SETTINGS = Object.freeze({
   sound_effects: true,
   narration: true,
   accent: 'en-GB',                 // en-GB (default) | en-US - which word clips / TTS voice to prefer
-  default_speed: 'normal',         // normal | slow - initial narration speed
+  default_speed: 'normal',         // slow | normal | fast - initial narration speed (fast = "A bit fast")
   allow_device_tts: true,          // fall back to speechSynthesis when a page has no built audio
   // Learning
   band: null,                      // 'A-C' | 'D-J' | 'K-P' | 'Q-Z' (parent-set after baseline)

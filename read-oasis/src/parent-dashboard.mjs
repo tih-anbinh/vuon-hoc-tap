@@ -200,7 +200,7 @@ function obsForm() {
   const text = h('input', { type: 'text', placeholder: 'One small observation', 'aria-label': 'Observation' }); const rubric = sel(['', 'not_yet', 'with_support', 'independent']);
   return h('div', { class: 'row' }, lab('Note', text), lab('Rubric (optional)', rubric), btn('Add', () => { if (text.value.trim()) { store.addObservation({ text: text.value.trim(), rubric: rubric.value || null }); render(); } }));
 }
-const sel = (opts, val) => h('select', {}, opts.map(o => h('option', { value: o, text: o.replace('_', ' ') || '-', selected: o === val })));
+const sel = (opts, val, labels = null) => h('select', {}, opts.map(o => h('option', { value: o, text: (labels && labels[o]) || o.replace('_', ' ') || '-', selected: o === val })));
 const lab = (t, el) => h('label', { class: 'field' }, h('span', { text: t }), el);
 
 // ---------- Vocabulary Garden (parent view: Layer C progress + enrichment/mapping versions)
@@ -303,7 +303,7 @@ function renderBaseline() {
 function renderSettings() {
   const s = S.settings;
   const num = (k, min, max, step = 1) => { const i = h('input', { type: 'range', min, max, step, value: s[k], 'aria-valuetext': String(s[k]) }); const out = h('output', { text: String(s[k]) }); i.oninput = () => { out.textContent = i.value; store.setSettings({ [k]: Number(i.value) }); }; return h('label', { class: 'field' }, h('span', { text: labelOf(k) + ' ' }), h('span', { class: 'row' }, i, out)); };
-  const choice = (k, opts) => { const e = sel(opts, s[k]); e.onchange = () => store.setSettings({ [k]: e.value }); return lab(labelOf(k), e); };
+  const choice = (k, opts, labels = null) => { const e = sel(opts, s[k], labels); e.onchange = () => store.setSettings({ [k]: e.value }); return lab(labelOf(k), e); };
   const check = (k) => { const c = h('input', { type: 'checkbox', checked: !!s[k] }); c.onchange = () => store.setSettings({ [k]: c.checked }); return h('label', { class: 'check' }, c, h('span', { text: labelOf(k) })); };
   return h('section', { class: 'fade' },
     h('div', { class: 'card' }, h('h3', { text: 'Display (testing defaults, tune with the child on the real device)' }),
@@ -314,9 +314,9 @@ function renderSettings() {
     h('div', { class: 'card', style: 'margin-top:1rem' }, h('h3', { text: 'Session' }), num('break_minutes', 0, 60, 5), num('session_minutes', 5, 60, 5), h('p', { class: 'muted', text: 'Break cue is a dismissible reminder, never a lock. 0 disables it.' })),
     h('div', { class: 'card', style: 'margin-top:1rem' }, h('h3', { text: 'Sound and pronunciation' }),
       check('narration'), check('greeting_audio'), check('sound_effects'),
-      choice('accent', ['en-GB', 'en-US']), choice('default_speed', ['normal', 'slow']), check('allow_device_tts'),
-      h('p', { class: 'explain' }, h('b', { text: 'How narration works. ' }), 'Books with built audio play studio-rendered British English clips (made from the pronunciation lexicon with the configured TTS provider, see README §TTS). Pages without built audio fall back to this device\'s voice: ',
-        h('b', { text: narratorDescribe(s.accent || 'en-GB') }), '. Turn the fallback off if that voice is poor; the child can still read.'),
+      choice('accent', ['en-GB', 'en-US']), choice('default_speed', ['slow', 'normal', 'fast'], { slow: 'Slow', normal: 'Normal', fast: 'A bit fast' }), check('allow_device_tts'),
+      h('p', { class: 'explain' }, h('b', { text: 'How narration works. ' }), 'Books with built audio play studio-rendered British English clips (made from the pronunciation lexicon with the configured TTS provider, see README §TTS). Pages without built audio fall back to this device\'s best English voice: ',
+        h('b', { text: narratorDescribe(s.accent || 'en-GB') }), '. On iPad/iPhone and Android you can add much nicer voices in the system settings (look for "Enhanced" or "Premium" English voices) - the app will automatically prefer them. Turn the fallback off if the voice is still poor; the child can always read the words.'),
       h('div', { class: 'row' }, btn('Test device voice', () => { narrator.accent = s.accent || 'en-GB'; narrator.deviceAllowed = true; narrator.speak('My name is Yuki. I go to school every day.', { speed: s.default_speed || 'normal', accent: s.accent || 'en-GB' }); }, { ic: 'ear' }))),
     h('div', { class: 'card', style: 'margin-top:1rem' }, h('h3', { text: 'Rewards and mascot' }), check('rewards_enabled'), check('mascot_enabled')),
     h('div', { class: 'card', style: 'margin-top:1rem' }, h('h3', { text: 'Recording (not yet enabled in this build)' }), h('p', { class: 'muted', text: 'Microphone recording is absent in this release until gates R06, D03 and D07 pass. Nothing is simulated.' })),

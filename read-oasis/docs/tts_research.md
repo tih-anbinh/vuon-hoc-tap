@@ -85,8 +85,34 @@ tools/tts/providers/local.py        offline silent provider for tests / dry runs
 ```
 Switch with `TTS_PROVIDER=azure|google|elevenlabs|openai|polly|watson|local`. The UI (`src/kid-app.mjs`)
 knows nothing about providers: it plays `audio_asset` / `audio_slow_asset` / vocabulary clips from the book
-JSON, and only falls back to the device's `speechSynthesis` (preferring a native en-GB voice) when a page has
-no built clip. The parent can disable that fallback.
+JSON, and only falls back to the device's `speechSynthesis` when a page has no built clip. The parent can
+disable that fallback.
+
+### Runtime device-voice fallback (`narrator` in `src/ui.mjs`)
+
+When there is no built clip we must use whatever voices the child's device has. Quality varies wildly, so
+`narrator._pickVoice(accent)` **scores** every installed voice instead of taking the first match:
+
+- Exact accent match (`en-GB`) beats same-language-other-region (`en-US`) beats non-English (rejected).
+- **Apple "Enhanced"/"Premium"** and any "Neural"/"Natural" voice get a big bonus. On iPad/iPhone the parent
+  can install these under *Settings → Accessibility → Spoken Content → Voices*; once installed the app picks
+  them automatically (e.g. *Daniel (Enhanced)*, *Serena*, *Kate*, *Arthur* for en-GB; *Samantha (Enhanced)*,
+  *Ava (Premium)* for en-US). Apple's built-in *compact* voice is penalised.
+- Known pleasant named voices are boosted: Windows/Edge (Sonia, Libby, Ryan, Maisie, Hazel, Aria, Guy),
+  Google network voices on Android/Chrome ("Google UK/US English"), and the Apple names above.
+- Novelty/joke voices (Zarvox, Bells, Bad News, Albert, …) are strongly penalised — never for a child.
+- A network/remote voice (`localService === false`) gets a small bonus, since it is usually the natural one.
+
+`getVoices()` is empty on the first call in many mobile browsers and populates asynchronously; we listen for
+`voiceschanged`, clear the per-accent voice cache, and re-pick once the full list has loaded.
+
+### Reading speed (three child-facing speeds)
+
+`SPEED_RATE` in `src/ui.mjs` is the single source of truth, shared by the reader, the word card and parent
+settings: `very_slow 0.6` (word-study only), **`slow 0.72`, `normal 0.95`, `fast 1.12` ("A bit fast")**. `slow`
+is deliberately a touch slower than the old 0.8 so a struggling reader can follow every syllable; `fast` stays
+gentle so it never sounds rushed. The reader's speed button cycles Slow → Normal → A bit fast; when a page has
+a built clip the same rate is applied via `<audio>.playbackRate` (relative to the normal clip).
 
 Mirror of the TypeScript interface from the brief: `TTSRequest{text, language, voice?, speed, pronunciation?, format}`,
 `PronunciationConfig{ipa?, phoneme?, alphabet, substitutions}`, `AudioResult{audio_bytes, content_type, duration?}`.

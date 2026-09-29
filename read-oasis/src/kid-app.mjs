@@ -299,9 +299,18 @@ function renderReader(book) {
     story.addEventListener('click', e => { const b = e.target.closest('button.w'); if (b?.dataset.word) { store.setPage(book.book_id, book.revision, i, { vocab_tap: true }); showVocab(pg, b.dataset.word, vocabBox, b); } });
     const parentPrompt = (book.reading_mode === 'shared_reading' || book.reading_mode === 'read_aloud') && book.parent_prompts?.[Math.min(i, book.parent_prompts.length - 1)];
     const hasSound = S.settings.narration && (narrator.supported || pg.audio_asset);
-    // Listen bar: Play/Pause, Again, Slow/Normal toggle. Built clips first (see narrator), device voice as fallback.
+    // Listen bar: Play/Pause, Again, and a speed button that cycles Slow -> Normal -> A bit fast.
+    // Built clips play first (see narrator); on iPad/iPhone/Android the device's best English voice is the fallback.
     const playBtn = btn('Listen', () => togglePlay(pg, playBtn), { primary: true, ic: 'play', attrs: { 'aria-pressed': 'false' } });
-    const speedBtn = btn(speed === 'slow' ? 'Slow' : 'Normal', () => { speed = speed === 'slow' ? 'normal' : 'slow'; speedBtn.querySelector('span').textContent = speed === 'slow' ? 'Slow' : 'Normal'; speedBtn.setAttribute('aria-pressed', String(speed === 'slow')); if (narrator.speaking) { narrator.stop(); togglePlay(pg, playBtn); } }, { quiet: true, ic: 'turtle', attrs: { 'aria-pressed': String(speed === 'slow'), 'aria-label': 'Reading speed: ' + speed + '. Tap to change.' } });
+    const speedLabel = sp => sp === 'slow' ? 'Slow' : sp === 'fast' ? 'A bit fast' : 'Normal';
+    const speedIcon = sp => sp === 'slow' ? 'turtle' : sp === 'fast' ? 'rabbit' : 'turtle';
+    const speedBtn = btn(speedLabel(speed), () => {
+      speed = speed === 'slow' ? 'normal' : speed === 'normal' ? 'fast' : 'slow'; // cycle Slow -> Normal -> A bit fast -> Slow
+      speedBtn.querySelector('span').textContent = speedLabel(speed);
+      const useEl = speedBtn.querySelector('use'); if (useEl) useEl.setAttribute('href', '#i-' + speedIcon(speed));
+      speedBtn.setAttribute('aria-label', 'Reading speed: ' + speedLabel(speed) + '. Tap to change.');
+      if (narrator.speaking) { narrator.stop(); togglePlay(pg, playBtn); }
+    }, { quiet: true, ic: speedIcon(speed), attrs: { 'aria-label': 'Reading speed: ' + speedLabel(speed) + '. Tap to change.' } });
     const srcTag = h('span', { class: 'chip src-tag hidden', 'aria-live': 'polite' });
     const listenBar = hasSound ? h('div', { class: 'listen-bar' }, playBtn, btn('Again', () => { narrator.stop(); togglePlay(pg, playBtn); }, { quiet: true, ic: 'replay', attrs: { 'aria-label': 'Play this page again' } }), speedBtn, srcTag) : null;
     const nav = h('nav', { class: 'reader-nav', 'aria-label': 'Pages' },
@@ -350,7 +359,7 @@ function showVocab(pg, word, box, anchor) {
   const redraw = () => {
     ipa.textContent = accent === 'en-US' ? (v.ipa_us ? '/' + v.ipa_us + '/' : '') : (v.ipa_uk ? '/' + v.ipa_uk + '/' : '');
     ctl.replaceChildren(
-      h('div', { class: 'seg', role: 'group', 'aria-label': 'Speed' }, seg('Slow', spd === 'very_slow', () => { spd = 'very_slow'; redraw(); say(); }, { ic: 'turtle' }), seg('Normal', spd === 'normal', () => { spd = 'normal'; redraw(); say(); })),
+      h('div', { class: 'seg', role: 'group', 'aria-label': 'Speed' }, seg('Slow', spd === 'slow', () => { spd = 'slow'; redraw(); say(); }, { ic: 'turtle' }), seg('Normal', spd === 'normal', () => { spd = 'normal'; redraw(); say(); }), seg('A bit fast', spd === 'fast', () => { spd = 'fast'; redraw(); say(); }, { ic: 'rabbit' })),
       h('div', { class: 'seg', role: 'group', 'aria-label': 'Accent' }, seg('British', accent === 'en-GB', () => { accent = 'en-GB'; redraw(); say(); }), seg('American', accent === 'en-US', () => { accent = 'en-US'; redraw(); say(); }, { disabled: !clips.us && !narrator.supported })));
   };
   const ctl = h('div', { class: 'card-controls' });

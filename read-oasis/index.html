@@ -52,6 +52,7 @@ Read Oasis - child app (library, reader, activities, quiz). Local-first; no netw
     <symbol id="i-up" viewBox="0 0 64 64"><path d="M12 40 L32 20 L52 40" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-down" viewBox="0 0 64 64"><path d="M12 24 L32 44 L52 24" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-turtle" viewBox="0 0 64 64"><ellipse cx="30" cy="34" rx="18" ry="12" fill="currentColor" opacity=".25"/><path d="M12 34 a18 12 0 0 1 36 0" fill="none" stroke="currentColor" stroke-width="5"/><circle cx="52" cy="34" r="6" fill="currentColor"/><path d="M18 44 l-3 8 M42 44 l3 8" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></symbol>
+    <symbol id="i-rabbit" viewBox="0 0 64 64"><ellipse cx="30" cy="42" rx="16" ry="12" fill="currentColor" opacity=".25"/><path d="M14 42 a16 12 0 0 1 32 0" fill="none" stroke="currentColor" stroke-width="5"/><circle cx="46" cy="40" r="5" fill="currentColor"/><path d="M22 30 q-3 -18 4 -20 q4 8 1 18 M30 30 q1 -18 8 -18 q2 9 -3 18" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-image-missing" viewBox="0 0 64 64"><rect x="8" y="12" width="48" height="40" rx="4" fill="none" stroke="currentColor" stroke-width="5"/><path d="M14 46 L28 30 L38 40 L46 34 L52 40" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="22" cy="24" r="4" fill="currentColor"/></symbol>
     <symbol id="i-mascot" viewBox="0 0 64 64"><ellipse cx="32" cy="36" rx="22" ry="20" fill="#F7D154" stroke="#1B2B34" stroke-width="3"/><path d="M14 40 q-10 -6 -6 -16" fill="none" stroke="#1B2B34" stroke-width="3" stroke-linecap="round"/><ellipse cx="26" cy="42" rx="9" ry="7" fill="#FBE7A6"/><circle cx="40" cy="30" r="4" fill="#1B2B34"/><circle cx="41.5" cy="28.5" r="1.3" fill="#fff"/><path d="M52 34 L63 38 L52 42 Z" fill="#F2A541" stroke="#1B2B34" stroke-width="2.5" stroke-linejoin="round"/><path d="M22 14 q4 -8 8 0 q4 -8 8 0" fill="none" stroke="#1B2B34" stroke-width="3" stroke-linecap="round"/><circle cx="46" cy="38" r="3" fill="#F08A7E" opacity=".7"/></symbol>
   </svg>
@@ -126,10 +127,11 @@ Read Oasis - child app (library, reader, activities, quiz). Local-first; no netw
         <p class="letter-quote-en" lang="en">“A child’s future is built one story, one question, and one word at a time.”</p>
         <p class="letter-quote-vi" lang="vi">“Tương lai của một đứa trẻ được xây nên từ từng câu chuyện, từng câu hỏi và từng từ ngữ mới mỗi ngày.”</p>
       </blockquote>
-
-      <!-- native garden hill along the bottom edge -->
-      <div class="letter-hill" aria-hidden="true"></div>
     </div>
+
+    <!-- native garden hill along the bottom edge (direct child of the footer so it
+         pins to the footer's bottom padding, never rising into the closing quote) -->
+    <div class="letter-hill" aria-hidden="true"></div>
   </footer>
 
   <script type="module" src="src/kid-app.mjs"></script>
