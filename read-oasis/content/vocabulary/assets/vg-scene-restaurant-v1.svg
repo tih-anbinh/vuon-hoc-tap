@@ -1,52 +1,76 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-restaurant desc-restaurant">
   <title id="title-restaurant">Restaurant</title>
-  <desc id="desc-restaurant">A restaurant table set with a plate, cutlery, a glass, and a candle, near a big window.</desc>
+  <desc id="desc-restaurant">A restaurant building with a big storefront window, a canopy sign with a fork-and-knife symbol, several small dining tables with plates inside, and a waiter carrying a tray, showing a place where people go to eat.</desc>
   <defs>
     <linearGradient id="restaurant-bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7c2d12"/>
-      <stop offset="100%" stop-color="#a16207"/>
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#fef3c7"/>
     </linearGradient>
-    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    <filter id="restaurant-sh" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.22"/>
     </filter>
   </defs>
 
   <rect x="0" y="0" width="400" height="300" fill="url(#restaurant-bg)"/>
-  <!-- Window with evening view -->
-  <g filter="url(#soft-shadow)">
-    <rect x="240" y="30" width="130" height="120" rx="6" fill="#1e3a8a" stroke="#78350f" stroke-width="5"/>
-    <circle cx="345" cy="55" r="12" fill="#fde047" opacity="0.9"/>
-    <g fill="#fbbf24" opacity="0.7"><circle cx="260" cy="90" r="2"/><circle cx="290" cy="110" r="2"/><circle cx="320" cy="130" r="2"/></g>
-    <rect x="255" y="120" width="14" height="30" fill="#fbbf24" opacity="0.6"/>
-    <rect x="280" y="115" width="14" height="35" fill="#fbbf24" opacity="0.6"/>
+  <rect x="0" y="258" width="400" height="42" fill="#94a3b8"/>
+  <line x1="0" y1="258" x2="400" y2="258" stroke="#475569" stroke-width="3"/>
+
+  <!-- Building shell -->
+  <g filter="url(#restaurant-sh)">
+    <rect x="40" y="70" width="320" height="188" rx="6" fill="#fef9c3" stroke="#78350f" stroke-width="5"/>
+    <!-- Roof / awning band -->
+    <rect x="30" y="52" width="340" height="26" rx="6" fill="#dc2626" stroke="#7f1d1d" stroke-width="4"/>
+    <!-- scalloped awning -->
+    <g fill="#ef4444" stroke="#7f1d1d" stroke-width="2">
+      <path d="M40,78 q15,18 30,0 z"/>
+      <path d="M100,78 q15,18 30,0 z"/>
+      <path d="M160,78 q15,18 30,0 z"/>
+      <path d="M220,78 q15,18 30,0 z"/>
+      <path d="M280,78 q15,18 30,0 z"/>
+      <path d="M340,78 q-15,18 -30,0 z"/>
+    </g>
+    <!-- fork & knife sign symbol on the awning -->
+    <g stroke="#ffffff" stroke-width="3" stroke-linecap="round" fill="none">
+      <line x1="192" y1="58" x2="192" y2="72"/>
+      <line x1="188" y1="58" x2="188" y2="63"/><line x1="196" y1="58" x2="196" y2="63"/>
+      <line x1="208" y1="58" x2="208" y2="72"/>
+      <path d="M208,58 q6,2 6,8 q0,4 -6,4"/>
+    </g>
   </g>
 
-  <!-- Table -->
-  <g filter="url(#soft-shadow)">
-    <ellipse cx="200" cy="230" rx="175" ry="55" fill="#f8fafc" stroke="#cbd5e1" stroke-width="3"/>
+  <!-- Big storefront window -->
+  <g filter="url(#restaurant-sh)">
+    <rect x="60" y="92" width="220" height="120" rx="4" fill="#bae6fd" stroke="#78350f" stroke-width="4"/>
+    <line x1="170" y1="92" x2="170" y2="212" stroke="#78350f" stroke-width="3"/>
+    <!-- interior: two dining tables -->
+    <g>
+      <ellipse cx="112" cy="176" rx="34" ry="12" fill="#f8fafc" stroke="#94a3b8" stroke-width="2.5"/>
+      <ellipse cx="112" cy="174" rx="14" ry="5" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+      <line x1="112" y1="176" x2="112" y2="200" stroke="#a16207" stroke-width="4"/>
+      <ellipse cx="228" cy="176" rx="34" ry="12" fill="#f8fafc" stroke="#94a3b8" stroke-width="2.5"/>
+      <ellipse cx="228" cy="174" rx="14" ry="5" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+      <line x1="228" y1="176" x2="228" y2="200" stroke="#a16207" stroke-width="4"/>
+    </g>
+    <!-- warm lamp -->
+    <circle cx="170" cy="108" r="7" fill="#fde047" stroke="#a16207" stroke-width="2"/>
+  </g>
 
-    <!-- Plate -->
-    <ellipse cx="200" cy="230" rx="70" ry="26" fill="#e2e8f0" stroke="#94a3b8" stroke-width="3"/>
-    <ellipse cx="200" cy="230" rx="48" ry="17" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
-    <!-- Food -->
-    <ellipse cx="200" cy="228" rx="28" ry="10" fill="#f97316" opacity="0.85"/>
-    <circle cx="188" cy="226" r="5" fill="#22c55e"/>
-    <circle cx="212" cy="228" r="5" fill="#dc2626"/>
+  <!-- Door -->
+  <g filter="url(#restaurant-sh)">
+    <rect x="296" y="150" width="52" height="108" rx="4" fill="#a16207" stroke="#78350f" stroke-width="4"/>
+    <rect x="304" y="160" width="36" height="60" rx="3" fill="#bae6fd" stroke="#78350f" stroke-width="2.5"/>
+    <circle cx="340" cy="205" r="3" fill="#fef9c3"/>
+  </g>
 
-    <!-- Fork -->
-    <rect x="100" y="212" width="5" height="40" rx="2" fill="#94a3b8"/>
-    <g stroke="#94a3b8" stroke-width="2"><line x1="97" y1="212" x2="97" y2="222"/><line x1="102" y1="212" x2="102" y2="222"/><line x1="108" y1="212" x2="108" y2="222"/></g>
-    <!-- Knife -->
-    <rect x="292" y="212" width="6" height="40" rx="2" fill="#94a3b8"/>
-    <path d="M292 212 Q288 222 295 232" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1.5"/>
-
-    <!-- Glass -->
-    <path d="M310 195 L326 195 L322 225 L314 225 Z" fill="#bae6fd" stroke="#7dd3fc" stroke-width="2" opacity="0.85"/>
-    <rect x="316" y="200" width="4" height="18" fill="#38bdf8" opacity="0.6"/>
-
-    <!-- Candle -->
-    <rect x="86" y="180" width="14" height="30" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
-    <path d="M93 165 Q100 176 93 180 Q86 176 93 165 Z" fill="#fbbf24"/>
-    <ellipse cx="93" cy="211" rx="12" ry="4" fill="#e2e8f0"/>
+  <!-- Waiter with a tray by the door -->
+  <g filter="url(#restaurant-sh)">
+    <circle cx="322" cy="228" r="10" fill="#fcd9b6" stroke="#78350f" stroke-width="3"/>
+    <path d="M322,238 L322,215 Q322,208 330,208 Q338,208 337,215" fill="#0f172a"/>
+    <path d="M314,244 L330,244 L332,262 L312,262 Z" fill="#1e293b" stroke="#0f172a" stroke-width="2.5"/>
+    <!-- raised arm + tray -->
+    <path d="M314,246 Q300,240 296,234" fill="none" stroke="#fcd9b6" stroke-width="6" stroke-linecap="round"/>
+    <ellipse cx="292" cy="232" rx="18" ry="5" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2.5"/>
+    <circle cx="288" cy="229" r="4" fill="#f97316"/>
+    <circle cx="298" cy="229" r="4" fill="#22c55e"/>
   </g>
 </svg>

@@ -14,42 +14,68 @@
       <stop offset="0%" stop-color="#d6d3d1"/>
       <stop offset="100%" stop-color="#a8a29e"/>
     </linearGradient>
-    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    <filter id="bridge-sh" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
     </filter>
   </defs>
 
   <rect x="0" y="0" width="400" height="300" fill="url(#bridge-bg)"/>
   <!-- Sun -->
   <circle cx="60" cy="55" r="28" fill="#fde047"/>
-  <!-- Water -->
-  <rect x="0" y="200" width="400" height="100" fill="url(#bridge-water)"/>
+  <!-- Water fills bottom; arches will reveal it -->
+  <rect x="0" y="175" width="400" height="125" fill="url(#bridge-water)"/>
   <g stroke="#7dd3fc" stroke-width="3" stroke-linecap="round">
-    <line x1="30" y1="230" x2="70" y2="230"/>
-    <line x1="120" y1="250" x2="170" y2="250"/>
-    <line x1="250" y1="235" x2="300" y2="235"/>
-    <line x1="330" y1="265" x2="375" y2="265"/>
+    <line x1="20" y1="250" x2="70" y2="250"/>
+    <line x1="150" y1="268" x2="205" y2="268"/>
+    <line x1="300" y1="252" x2="355" y2="252"/>
+    <line x1="90" y1="282" x2="145" y2="282"/>
   </g>
 
-  <g filter="url(#soft-shadow)">
-    <!-- Bridge deck + arches -->
-    <path d="M30 200 L30 150 L370 150 L370 200
-             L300 200 A70 55 0 0 0 230 200
-             L170 200 A70 55 0 0 0 100 200 Z"
-          fill="url(#bridge-stone)" stroke="#57534e" stroke-width="4"/>
-    <!-- Railing -->
-    <rect x="30" y="135" width="340" height="16" rx="4" fill="#e7e5e4" stroke="#57534e" stroke-width="3"/>
+  <!-- Bridge body with TWO real open arches (water shows through) -->
+  <g filter="url(#bridge-sh)">
+    <path d="M20,230 L20,120 L380,120 L380,230
+             L318,230 A62 52 0 0 0 194 230
+             L206,230 A62 52 0 0 0 82 230 Z"
+          fill="url(#bridge-stone)" stroke="#57534e" stroke-width="4.5" fill-rule="evenodd"/>
+    <!-- arch inner outlines for depth -->
+    <path d="M82,230 A62 52 0 0 1 206 230" fill="none" stroke="#57534e" stroke-width="4"/>
+    <path d="M194,230 A62 52 0 0 1 318 230" fill="none" stroke="#57534e" stroke-width="4"/>
+    <!-- central pier + end piers -->
+    <rect x="192" y="178" width="16" height="52" fill="url(#bridge-stone)" stroke="#57534e" stroke-width="3"/>
+  </g>
+
+  <!-- Deck top with roadway + railing -->
+  <g filter="url(#bridge-sh)">
+    <rect x="20" y="120" width="360" height="18" fill="#d6d3d1" stroke="#57534e" stroke-width="3"/>
+    <!-- roadway centre line -->
+    <line x1="30" y1="129" x2="370" y2="129" stroke="#a8a29e" stroke-width="2" stroke-dasharray="14,10"/>
+    <!-- railing posts + top rail -->
+    <rect x="20" y="104" width="360" height="8" rx="3" fill="#e7e5e4" stroke="#57534e" stroke-width="2.5"/>
     <g stroke="#57534e" stroke-width="4">
-      <line x1="60" y1="151" x2="60" y2="135"/>
-      <line x1="120" y1="151" x2="120" y2="135"/>
-      <line x1="200" y1="151" x2="200" y2="135"/>
-      <line x1="280" y1="151" x2="280" y2="135"/>
-      <line x1="340" y1="151" x2="340" y2="135"/>
+      <line x1="50"  y1="120" x2="50"  y2="104"/>
+      <line x1="110" y1="120" x2="110" y2="104"/>
+      <line x1="170" y1="120" x2="170" y2="104"/>
+      <line x1="230" y1="120" x2="230" y2="104"/>
+      <line x1="290" y1="120" x2="290" y2="104"/>
+      <line x1="350" y1="120" x2="350" y2="104"/>
     </g>
-    <!-- Stone blocks -->
+    <!-- stone-block seams -->
     <g stroke="#78716c" stroke-width="2">
-      <line x1="70" y1="150" x2="70" y2="200"/>
-      <line x1="330" y1="150" x2="330" y2="200"/>
+      <line x1="70"  y1="138" x2="70"  y2="230"/>
+      <line x1="330" y1="138" x2="330" y2="230"/>
     </g>
+  </g>
+
+  <!-- Person walking across the bridge -->
+  <g filter="url(#bridge-sh)">
+    <circle cx="150" cy="84" r="11" fill="#fcd9b6" stroke="#78350f" stroke-width="3"/>
+    <!-- hair cap on top of head -->
+    <path d="M139,80 Q139,71 150,71 Q161,71 161,80 Q155,75 150,75 Q145,75 139,80 Z" fill="#0f172a"/>
+    <circle cx="146" cy="84" r="1.8" fill="#0f172a"/>
+    <circle cx="154" cy="84" r="1.8" fill="#0f172a"/>
+    <path d="M146,90 Q150,93 154,90" fill="none" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/>
+    <path d="M142,98 L158,98 L160,118 L140,118 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="3"/>
+    <line x1="150" y1="118" x2="144" y2="132" stroke="#1e293b" stroke-width="6" stroke-linecap="round"/>
+    <line x1="150" y1="118" x2="158" y2="130" stroke="#1e293b" stroke-width="6" stroke-linecap="round"/>
   </g>
 </svg>

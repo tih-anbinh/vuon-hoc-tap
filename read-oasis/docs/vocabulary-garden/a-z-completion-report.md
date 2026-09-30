@@ -156,8 +156,8 @@ concept words), **12 `not_applicable`**, and **14 flagged for follow-up** — 1
 doubles as the redraw worklist: it surfaces only those **14** open words (plus any
 never-reviewed or missing-asset ones) so fixed art gets re-confirmed in place.
 
-**Priority redraws done (3 of 14).** The three genuine defects were redrawn and
-verified rendering in a browser:
+**All 14 redraws done (14 of 14).** Every flagged picture was redrawn and
+verified rendering in a browser. The three genuine defects first:
 - `bat` — was drawing the flying animal (wrong sense); now a **wooden sports bat
   hitting a ball** matching the definition “a stick you use to hit a ball”.
 - `airport` — the airplane was small/ambiguous; now a **large prototypical jet**
@@ -167,10 +167,34 @@ verified rendering in a browser:
   visibly juts out** from the building wall with under-support brackets, a
   waist-high railing on top, and a child standing on it.
 
-Rather than fabricate a human approval, these three were reset to
-`needs_human_review` so their **new** art gets a final human tick in the gallery
-(the honest, fail-closed choice). Remaining open worklist: 11 `redraw_later`
-(acceptable art, cosmetic polish only) + these 3 awaiting re-confirmation.
+Then the 11 `redraw_later` items:
+- `net` — was a butterfly/catching net (wrong sense for “the ball goes into the
+  net”); now a **white soccer goal with a mesh net and a ball flying in**.
+- `friday` / `monday` — both used an unreadable dot-counting calendar; now a
+  **position-based week strip** where the correct day is the big highlighted card
+  (Friday = last school card before the blue weekend + cheering child; Monday =
+  first card with a sunrise “start” cue + child walking to school).
+- `cousin` — was too abstract (dashed family-tree to houses, read as “friends”);
+  now **two grandparents at the top joined by solid lines down to two kids**, so
+  the shared-grandparents relationship is legible.
+- `chess` — flat striped board read like a ribbon; now a **square checkered board
+  with a king, queen, knight and pawns**.
+- `chopsticks` — tips splayed apart from the food; now the **tips converge to grip
+  one dumpling** over a centered bowl.
+- `sandwich` — top bread floated above a gap; now a **clean stacked cross-section**
+  (bread, lettuce, tomato, cheese, ham, bread) with every layer aligned.
+- `bridge` — read as a flat box; now a **stone arch bridge with two open arches**
+  (water visible through them), a deck with roadway + railing, and a person crossing.
+- `restaurant` — read as a home dinner table; now a **storefront** (red awning,
+  fork-and-knife sign, big window showing dining tables, door, waiter with a tray).
+- `mango` — too red (looked like an orange); now **yellow-dominant with a cut-half
+  showing the flat pit**.
+- `meatballs` — already clear (plate + sauce + balls + basil); kept as-is.
+
+Rather than fabricate human approval, all 14 were reset to `needs_human_review`
+so their **new** art gets a final human tick in the gallery (the honest,
+fail-closed choice). The review-gallery worklist now holds these 14 awaiting
+re-confirmation; no picture is claimed correct until a human confirms it.
 
 ## Book-page mapping coverage (verified)
 
@@ -188,12 +212,13 @@ single-sense match yet, so they are honestly left unmapped rather than guessed.
 
 - **742 draft words** have full disposition but no teaching content yet. They
   require human authoring before they can appear in a child's garden.
-- **14 pictures are flagged for redraw / wrong-sense** and are honestly held back
-  from being called correct: 1 `redraw_now` (`airport`), 2 `wrong_sense`
-  (`balcony`, `bat`), 11 `redraw_later`. Their content is child-ready and
+- **14 pictures were redrawn and now await a final human tick.** All 14 formerly
+  flagged pictures (1 `redraw_now`, 2 `wrong_sense`, 11 `redraw_later`) have new
+  art that renders correctly in a browser, but are held at `needs_human_review`
+  rather than fabricating approval. Their content is child-ready and
   `editorially_approved`; only their `teaching.visual.status` gates the art. They
-  remain on the review-gallery worklist until the art is fixed and re-confirmed.
-  (The other 457 human-reviewed pictures are now `approved`.)
+  remain on the review-gallery worklist until a human confirms the new art.
+  (The other 457 human-reviewed pictures are already `approved`.)
 - **Batch-2 words are not yet book-mapped.** They power the standalone garden
   games now; they will auto-map into a reader only when a published book page
   uses them. Book-mapping coverage below is unchanged (still 14 / 92).

@@ -2511,7 +2511,7 @@
         "asset_id": "vg-scene-chess-v1",
         "asset": "vocabulary/assets/vg-scene-chess-v1.svg",
         "alt": "A game for two people on a board with small pieces like kings and queens.",
-        "status": "redraw_later",
+        "status": "needs_human_review",
         "kind": "scene",
         "template": null,
         "anchor_objects": []
@@ -2934,7 +2934,7 @@
         "asset_id": "vg-scene-chopsticks-v1",
         "asset": "vocabulary/assets/vg-scene-chopsticks-v1.svg",
         "alt": "Two thin sticks you hold in one hand to pick up food.",
-        "status": "redraw_later",
+        "status": "needs_human_review",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -6614,7 +6614,7 @@
         "asset_id": "vg-scene-cousin-v1",
         "asset": "vocabulary/assets/vg-scene-cousin-v1.svg",
         "alt": "The child of your aunt or uncle.",
-        "status": "redraw_later",
+        "status": "needs_human_review",
         "kind": "scene",
         "template": null,
         "anchor_objects": []

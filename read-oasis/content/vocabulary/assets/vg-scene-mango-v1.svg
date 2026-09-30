@@ -4,39 +4,51 @@
   <defs>
     <linearGradient id="mango-grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#fde047"/>
-      <stop offset="40%" stop-color="#fb923c"/>
-      <stop offset="100%" stop-color="#ef4444"/>
+      <stop offset="55%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f97316"/>
     </linearGradient>
-    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+    <linearGradient id="mango-flesh" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <filter id="mango-sh" x="-10%" y="-10%" width="120%" height="120%">
       <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
     </filter>
   </defs>
 
-  <line x1="60" y1="260" x2="340" y2="260" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
-  <ellipse cx="200" cy="260" rx="70" ry="7" fill="#0f172a" opacity="0.1"/>
+  <line x1="40" y1="262" x2="360" y2="262" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="150" cy="262" rx="70" ry="7" fill="#0f172a" opacity="0.1"/>
+  <ellipse cx="300" cy="262" rx="52" ry="6" fill="#0f172a" opacity="0.1"/>
 
-  <g id="mango-figure" filter="url(#soft-shadow)">
-    <!-- Mango body (kidney/oval shape) -->
-    <path d="M120 150 C100 100 140 55 200 55 C260 55 310 100 300 160 C290 220 240 250 200 250 C160 250 110 220 120 150 Z" fill="url(#mango-grad)" stroke="#c2410c" stroke-width="3.5"/>
+  <!-- Whole ripe mango (yellow-dominant) -->
+  <g id="mango-figure" filter="url(#mango-sh)">
+    <path d="M70 150 C52 104 92 62 150 62 C208 62 254 104 246 162 C238 218 190 250 150 250 C112 250 62 220 70 150 Z"
+          fill="url(#mango-grad)" stroke="#ca8a04" stroke-width="3.5"/>
+    <!-- ripe red blush -->
+    <ellipse cx="106" cy="120" rx="34" ry="30" fill="#f87171" opacity="0.35"/>
+    <!-- highlight -->
+    <path d="M110 96 Q150 80 190 96" fill="none" stroke="#fef9c3" stroke-width="6" stroke-linecap="round" opacity="0.5"/>
+    <!-- stem -->
+    <path d="M150 64 C148 50 145 44 150 38" fill="none" stroke="#78350f" stroke-width="4" stroke-linecap="round"/>
+    <!-- leaves -->
+    <path d="M150 42 C166 26 192 24 202 31 C196 42 176 46 150 42 Z" fill="#4ade80" stroke="#16a34a" stroke-width="2"/>
+    <path d="M148 44 C130 30 108 30 103 38 C109 47 128 49 148 44 Z" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
+  </g>
 
-    <!-- Highlight -->
-    <path d="M160 90 Q200 72 240 90" fill="none" stroke="#fef9c3" stroke-width="6" stroke-linecap="round" opacity="0.4"/>
-
-    <!-- Subtle blush area -->
-    <ellipse cx="250" cy="120" rx="40" ry="35" fill="#ef4444" opacity="0.2"/>
-
-    <!-- Stem -->
-    <path d="M200 58 C198 45 195 38 200 32" fill="none" stroke="#78350f" stroke-width="4" stroke-linecap="round"/>
-
-    <!-- Leaf -->
-    <path d="M200 35 C215 20 240 18 250 25 C245 35 225 40 200 35 Z" fill="#4ade80" stroke="#16a34a" stroke-width="2"/>
-    <path d="M200 35 C220 25 240 22 248 26" fill="none" stroke="#16a34a" stroke-width="1.5" stroke-linecap="round"/>
-
-    <!-- Second leaf -->
-    <path d="M198 38 C180 25 160 25 155 32 C160 40 178 42 198 38 Z" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
-    <path d="M198 38 C178 30 162 28 157 32" fill="none" stroke="#16a34a" stroke-width="1.5" stroke-linecap="round"/>
-
-    <!-- Sap drop -->
-    <ellipse cx="200" cy="48" rx="3" ry="4" fill="#fbbf24" opacity="0.6"/>
+  <!-- Cut-half showing the flat mango pit (iconic cue) -->
+  <g filter="url(#mango-sh)">
+    <!-- skin edge -->
+    <path d="M262 170 C258 128 292 104 320 108 C352 112 366 150 356 190 C348 224 314 244 288 236 C266 230 264 200 262 170 Z"
+          fill="url(#mango-grad)" stroke="#ca8a04" stroke-width="3.5"/>
+    <!-- yellow flesh -->
+    <path d="M272 170 C270 136 296 118 318 121 C344 125 354 154 346 186 C339 214 312 230 292 224 C276 219 274 196 272 170 Z"
+          fill="url(#mango-flesh)" stroke="#eab308" stroke-width="2.5"/>
+    <!-- flat oval pit -->
+    <ellipse cx="308" cy="172" rx="18" ry="34" fill="#fef9c3" stroke="#d4a017" stroke-width="2.5"/>
+    <g stroke="#d4a017" stroke-width="1.5" fill="none" opacity="0.7">
+      <path d="M308 142 Q318 172 308 202"/>
+      <path d="M300 148 Q306 172 300 196"/>
+      <path d="M316 148 Q310 172 316 196"/>
+    </g>
   </g>
 </svg>

@@ -10,29 +10,42 @@
       <stop offset="0%" stop-color="#fcd34d"/>
       <stop offset="100%" stop-color="#d97706"/>
     </linearGradient>
-    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+    <filter id="sandwich-sh" x="-10%" y="-10%" width="120%" height="120%">
       <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
     </filter>
   </defs>
 
   <rect x="0" y="0" width="400" height="300" fill="url(#sandwich-bg)"/>
-  <ellipse cx="200" cy="255" rx="150" ry="18" fill="#0f172a" opacity="0.12"/>
+  <ellipse cx="200" cy="256" rx="140" ry="16" fill="#0f172a" opacity="0.12"/>
 
-  <g filter="url(#soft-shadow)">
-    <!-- Bottom bread -->
-    <path d="M70 220 L330 220 L200 250 Z" fill="url(#sandwich-bread)" stroke="#92400e" stroke-width="4"/>
+  <!-- Clean stacked sandwich cross-section: every layer sits on the one below -->
+  <g filter="url(#sandwich-sh)" stroke-linejoin="round">
+    <!-- Bottom bread slice -->
+    <path d="M84,214 Q80,238 100,240 L300,240 Q320,238 316,214 Q200,224 84,214 Z"
+          fill="url(#sandwich-bread)" stroke="#92400e" stroke-width="4"/>
     <!-- Ham -->
-    <path d="M78 210 L322 210 L200 236 Z" fill="#fca5a5" stroke="#dc2626" stroke-width="2.5"/>
-    <!-- Cheese -->
-    <path d="M85 198 L315 198 L200 222 Z" fill="#fde047" stroke="#ca8a04" stroke-width="2.5"/>
-    <!-- Tomato slices -->
-    <path d="M92 186 L308 186 L200 208 Z" fill="#ef4444" stroke="#991b1b" stroke-width="2.5"/>
-    <!-- Lettuce (wavy) -->
-    <path d="M92 178 Q120 168 150 178 Q180 168 210 178 Q240 168 270 178 Q290 172 308 178 L200 198 Z" fill="#65a30d" stroke="#3f6212" stroke-width="2.5"/>
-    <!-- Top bread -->
-    <path d="M110 100 L290 100 L305 165 L95 165 Z" fill="url(#sandwich-bread)" stroke="#92400e" stroke-width="4"/>
-    <path d="M110 100 Q200 78 290 100" fill="url(#sandwich-bread)" stroke="#92400e" stroke-width="4"/>
+    <path d="M86,206 Q200,214 314,206 L316,214 Q200,224 84,214 Z"
+          fill="#fca5a5" stroke="#dc2626" stroke-width="2.5"/>
+    <!-- Cheese with drips -->
+    <path d="M88,196 L312,196 L318,206 Q290,214 296,222 Q286,212 278,206 Q200,214 86,206 Z"
+          fill="#fde047" stroke="#ca8a04" stroke-width="2.5"/>
+    <!-- Tomato slice -->
+    <ellipse cx="140" cy="192" rx="20" ry="9" fill="#ef4444" stroke="#991b1b" stroke-width="2.5"/>
+    <ellipse cx="200" cy="194" rx="20" ry="9" fill="#ef4444" stroke="#991b1b" stroke-width="2.5"/>
+    <ellipse cx="260" cy="192" rx="20" ry="9" fill="#ef4444" stroke="#991b1b" stroke-width="2.5"/>
+    <!-- Lettuce (wavy, frills over the edge) -->
+    <path d="M86,186 Q104,172 124,184 Q146,170 168,184 Q192,170 214,184 Q238,170 260,184 Q282,172 314,186 Q200,196 86,186 Z"
+          fill="#65a30d" stroke="#3f6212" stroke-width="2.5"/>
+    <!-- Top bread dome sitting directly on lettuce -->
+    <path d="M92,178 Q92,130 200,124 Q308,130 308,178 Q200,168 92,178 Z"
+          fill="url(#sandwich-bread)" stroke="#92400e" stroke-width="4"/>
     <!-- Sesame seeds -->
-    <g fill="#fef9c3"><ellipse cx="160" cy="95" rx="4" ry="2.5"/><ellipse cx="200" cy="88" rx="4" ry="2.5"/><ellipse cx="240" cy="95" rx="4" ry="2.5"/><ellipse cx="180" cy="100" rx="4" ry="2.5"/><ellipse cx="220" cy="100" rx="4" ry="2.5"/></g>
+    <g fill="#fef9c3">
+      <ellipse cx="160" cy="150" rx="4" ry="2.5"/>
+      <ellipse cx="200" cy="140" rx="4" ry="2.5"/>
+      <ellipse cx="240" cy="150" rx="4" ry="2.5"/>
+      <ellipse cx="180" cy="158" rx="4" ry="2.5"/>
+      <ellipse cx="220" cy="158" rx="4" ry="2.5"/>
+    </g>
   </g>
 </svg>

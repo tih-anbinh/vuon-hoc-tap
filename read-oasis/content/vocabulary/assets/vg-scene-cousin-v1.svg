@@ -1,60 +1,69 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-cousin desc-cousin">
-  <title id="title-cousin">Cousin - Two kids from different families playing together</title>
-  <desc id="desc-cousin">Two happy children of similar age standing together with a heart between them, connected by a family-tree line to two small houses above.</desc>
+  <title id="title-cousin">Cousin - Two children who share the same grandparents</title>
+  <desc id="desc-cousin">A smiling grandmother and grandfather at the top, with two simple lines joining down to two happy children of similar age standing side by side, showing the children are cousins because they share the same grandparents.</desc>
   <defs>
     <linearGradient id="cz-bg" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#fce7f3"/>
       <stop offset="100%" stop-color="#fbcfe8"/>
     </linearGradient>
-    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+    <filter id="cz-sh" x="-10%" y="-10%" width="120%" height="120%">
       <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.22"/>
     </filter>
   </defs>
   <rect x="0" y="0" width="400" height="300" fill="url(#cz-bg)"/>
-  <rect x="0" y="250" width="400" height="50" fill="#65a30d"/>
-  <ellipse cx="200" cy="256" rx="150" ry="8" fill="#0f172a" opacity="0.2"/>
-  <!-- two houses (different families) connected -->
-  <g filter="url(#soft-shadow)">
-    <!-- house 1 -->
-    <rect x="70" y="45" width="55" height="42" fill="#93c5fd" stroke="#1e3a8a" stroke-width="3"/>
-    <path d="M62,45 L97,20 L133,45" fill="#3b82f6" stroke="#1e3a8a" stroke-width="3" stroke-linejoin="round"/>
-    <rect x="88" y="62" width="18" height="25" fill="#1e3a8a"/>
-    <!-- house 2 -->
-    <rect x="275" y="45" width="55" height="42" fill="#fca5a5" stroke="#7f1d1d" stroke-width="3"/>
-    <path d="M267,45 L302,20 L338,45" fill="#ef4444" stroke="#7f1d1d" stroke-width="3" stroke-linejoin="round"/>
-    <rect x="293" y="62" width="18" height="25" fill="#7f1d1d"/>
+  <rect x="0" y="256" width="400" height="44" fill="#86efac"/>
+  <line x1="0" y1="256" x2="400" y2="256" stroke="#15803d" stroke-width="3"/>
+
+  <!-- Grandparents at the top (the shared link) -->
+  <g filter="url(#cz-sh)">
+    <!-- grandma -->
+    <circle cx="170" cy="56" r="22" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M148,54 Q148,30 170,30 Q192,30 192,54 Q182,44 170,44 Q158,44 148,54 Z" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+    <circle cx="163" cy="55" r="3" fill="#0f172a"/>
+    <circle cx="177" cy="55" r="3" fill="#0f172a"/>
+    <path d="M162,65 Q170,71 178,65" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M152,78 L188,78 L192,110 L148,110 Z" fill="#a855f7" stroke="#6b21a8" stroke-width="3"/>
+    <!-- grandpa -->
+    <circle cx="230" cy="56" r="22" fill="#f5b26b" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M208,54 Q208,32 230,32 Q252,32 252,54 Q242,46 230,46 Q218,46 208,54 Z" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+    <circle cx="223" cy="55" r="3" fill="#0f172a"/>
+    <circle cx="237" cy="55" r="3" fill="#0f172a"/>
+    <!-- glasses -->
+    <g stroke="#334155" stroke-width="2" fill="none"><circle cx="223" cy="55" r="6"/><circle cx="237" cy="55" r="6"/><line x1="229" y1="55" x2="231" y2="55"/></g>
+    <path d="M222,66 Q230,72 238,66" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M212,78 L248,78 L252,110 L208,110 Z" fill="#0ea5e9" stroke="#0c4a6e" stroke-width="3"/>
   </g>
-  <!-- family tree connector -->
-  <g stroke="#78350f" stroke-width="3" fill="none" stroke-dasharray="7,5" opacity="0.75">
-    <path d="M97,90 L97,110 L200,110"/>
-    <path d="M302,90 L302,110 L200,110"/>
-    <path d="M145,110 L145,140"/>
-    <path d="M255,110 L255,140"/>
+
+  <!-- simple SOLID connector: grandparents -> both kids (shared line = cousins) -->
+  <g stroke="#be185d" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M200,112 L200,130"/>
+    <path d="M120,150 L200,130 L280,150"/>
   </g>
-  <!-- kid 1 (blue family) -->
-  <g filter="url(#soft-shadow)">
-    <circle cx="145" cy="170" r="28" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
-    <path d="M117,164 Q119,138 145,139 Q171,138 173,164 Q163,150 145,150 Q127,150 117,164 Z" fill="#0f172a"/>
-    <circle cx="136" cy="168" r="4" fill="#0f172a"/>
-    <circle cx="154" cy="168" r="4" fill="#0f172a"/>
-    <path d="M136,181 Q145,188 154,181" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
-    <rect x="124" y="200" width="42" height="52" rx="8" fill="#3b82f6" stroke="#1e3a8a" stroke-width="3.5"/>
-    <line x1="166" y1="214" x2="192" y2="222" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
-    <line x1="124" y1="214" x2="103" y2="230" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- kid 1 -->
+  <g filter="url(#cz-sh)">
+    <circle cx="118" cy="180" r="27" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M91,174 Q93,150 118,151 Q143,150 145,174 Q135,160 118,160 Q101,160 91,174 Z" fill="#0f172a"/>
+    <circle cx="109" cy="179" r="4" fill="#0f172a"/>
+    <circle cx="127" cy="179" r="4" fill="#0f172a"/>
+    <path d="M109,191 Q118,198 127,191" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <rect x="98" y="208" width="40" height="48" rx="8" fill="#3b82f6" stroke="#1e3a8a" stroke-width="3.5"/>
+    <line x1="138" y1="220" x2="164" y2="228" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+    <line x1="98" y1="220" x2="80" y2="234" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
   </g>
-  <!-- kid 2 (red family) -->
-  <g filter="url(#soft-shadow)">
-    <circle cx="255" cy="170" r="28" fill="#f5b26b" stroke="#78350f" stroke-width="3.5"/>
-    <path d="M227,164 Q227,136 255,137 Q283,136 283,164 Q275,148 255,148 Q235,148 227,164 Z" fill="#78350f"/>
-    <circle cx="228" cy="182" r="8" fill="#78350f"/>
-    <circle cx="282" cy="182" r="8" fill="#78350f"/>
-    <circle cx="246" cy="168" r="4" fill="#0f172a"/>
-    <circle cx="264" cy="168" r="4" fill="#0f172a"/>
-    <path d="M246,181 Q255,188 264,181" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
-    <path d="M236,198 L274,198 L281,252 L229,252 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="3.5"/>
-    <line x1="236" y1="212" x2="208" y2="222" stroke="#f5b26b" stroke-width="8" stroke-linecap="round"/>
-    <line x1="274" y1="212" x2="296" y2="228" stroke="#f5b26b" stroke-width="8" stroke-linecap="round"/>
+  <!-- kid 2 -->
+  <g filter="url(#cz-sh)">
+    <circle cx="282" cy="180" r="27" fill="#f5b26b" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M255,174 Q255,148 282,149 Q309,148 309,174 Q301,158 282,158 Q263,158 255,174 Z" fill="#78350f"/>
+    <circle cx="255" cy="190" r="7" fill="#78350f"/>
+    <circle cx="309" cy="190" r="7" fill="#78350f"/>
+    <circle cx="273" cy="179" r="4" fill="#0f172a"/>
+    <circle cx="291" cy="179" r="4" fill="#0f172a"/>
+    <path d="M273,191 Q282,198 291,191" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M263,208 L301,208 L307,256 L257,256 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="3.5"/>
+    <line x1="263" y1="220" x2="236" y2="228" stroke="#f5b26b" stroke-width="8" stroke-linecap="round"/>
+    <line x1="301" y1="220" x2="320" y2="234" stroke="#f5b26b" stroke-width="8" stroke-linecap="round"/>
   </g>
-  <!-- heart between them -->
-  <path d="M200,208 C195,198 180,198 180,211 C180,221 200,232 200,232 C200,232 220,221 220,211 C220,198 205,198 200,208 Z" fill="#ec4899" stroke="#9d174d" stroke-width="2.5"/>
+  <!-- heart between the two cousins -->
+  <path d="M200,214 C196,206 184,206 184,216 C184,224 200,233 200,233 C200,233 216,224 216,216 C216,206 204,206 200,214 Z" fill="#ec4899" stroke="#9d174d" stroke-width="2.5"/>
 </svg>

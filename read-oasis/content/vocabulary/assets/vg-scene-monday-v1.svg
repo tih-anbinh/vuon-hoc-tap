@@ -1,101 +1,49 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-monday desc-monday">
   <title id="title-monday">Monday - The first day of the school week</title>
-  <desc id="desc-monday">A wall calendar showing a week of seven day cards, with the first card circled in red and marked with one dot, and a child walking to school with a backpack, showing Monday as the first school day.</desc>
+  <desc id="desc-monday">A weekly strip of seven day cards. The very first card is big and highlighted with a sunrise, an arrow points to it, and a child walks to school with a backpack, showing Monday as the first school day.</desc>
   <defs>
     <linearGradient id="mo-bg" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dbeafe"/>
       <stop offset="100%" stop-color="#bfdbfe"/>
     </linearGradient>
-    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+    <filter id="mo-sh" x="-10%" y="-10%" width="120%" height="120%">
       <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
     </filter>
   </defs>
   <rect x="0" y="0" width="400" height="300" fill="url(#mo-bg)"/>
-  <circle cx="352" cy="46" r="20" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
   <rect x="0" y="246" width="400" height="54" fill="#86efac"/>
   <line x1="0" y1="246" x2="400" y2="246" stroke="#15803d" stroke-width="3.5"/>
-  <!-- CALENDAR (hero element) -->
-  <g filter="url(#soft-shadow)">
-    <rect x="40" y="40" width="248" height="160" rx="12" fill="#ffffff" stroke="#334155" stroke-width="5"/>
-    <rect x="40" y="40" width="248" height="36" rx="12" fill="#3b82f6" stroke="#334155" stroke-width="5"/>
-    <rect x="40" y="64" width="248" height="12" fill="#3b82f6"/>
-    <!-- hanging rings -->
-    <g stroke="#64748b" stroke-width="4" fill="none">
-      <path d="M84,40 Q84,24 92,24 Q100,24 100,40"/>
-      <path d="M216,40 Q216,24 224,24 Q232,24 232,40"/>
-    </g>
-    <!-- sun symbol in header -->
-    <circle cx="164" cy="58" r="9" fill="#fde047" stroke="#a16207" stroke-width="2.5"/>
-    <g stroke="#fde047" stroke-width="2.5" stroke-linecap="round">
-      <line x1="164" y1="44" x2="164" y2="40"/>
-      <line x1="178" y1="58" x2="182" y2="58"/>
-      <line x1="150" y1="58" x2="146" y2="58"/>
-    </g>
-    <!-- 7 day cards -->
-    <g>
-      <!-- day 1: MONDAY highlighted -->
-      <rect x="52" y="92" width="28" height="44" rx="5" fill="#fef9c3" stroke="#a16207" stroke-width="3"/>
-      <circle cx="66" cy="114" r="6" fill="#dc2626"/>
-      <!-- day 2 -->
-      <rect x="85" y="92" width="28" height="44" rx="5" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2.5"/>
-      <g fill="#64748b">
-        <circle cx="94" cy="114" r="4"/>
-        <circle cx="105" cy="114" r="4"/>
-      </g>
-      <!-- day 3 -->
-      <rect x="118" y="92" width="28" height="44" rx="5" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2.5"/>
-      <g fill="#64748b">
-        <circle cx="126" cy="114" r="4"/>
-        <circle cx="137" cy="114" r="4"/>
-        <circle cx="132" cy="124" r="4"/>
-      </g>
-      <!-- day 4 -->
-      <rect x="151" y="92" width="28" height="44" rx="5" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2.5"/>
-      <g fill="#64748b">
-        <circle cx="160" cy="108" r="4"/>
-        <circle cx="171" cy="108" r="4"/>
-        <circle cx="160" cy="120" r="4"/>
-        <circle cx="171" cy="120" r="4"/>
-      </g>
-      <!-- day 5 -->
-      <rect x="184" y="92" width="28" height="44" rx="5" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2.5"/>
-      <g fill="#64748b">
-        <circle cx="192" cy="108" r="4"/>
-        <circle cx="203" cy="108" r="4"/>
-        <circle cx="198" cy="114" r="4"/>
-        <circle cx="192" cy="122" r="4"/>
-        <circle cx="203" cy="122" r="4"/>
-      </g>
-      <!-- day 6 weekend -->
-      <rect x="217" y="92" width="28" height="44" rx="5" fill="#fee2e2" stroke="#f87171" stroke-width="2.5"/>
-      <g fill="#f87171">
-        <circle cx="225" cy="106" r="4"/>
-        <circle cx="236" cy="106" r="4"/>
-        <circle cx="225" cy="116" r="4"/>
-        <circle cx="236" cy="116" r="4"/>
-        <circle cx="225" cy="126" r="4"/>
-        <circle cx="236" cy="126" r="4"/>
-      </g>
-      <!-- day 7 weekend -->
-      <rect x="250" y="92" width="28" height="44" rx="5" fill="#fee2e2" stroke="#f87171" stroke-width="2.5"/>
-      <g fill="#f87171">
-        <circle cx="258" cy="104" r="4"/>
-        <circle cx="269" cy="104" r="4"/>
-        <circle cx="258" cy="114" r="4"/>
-        <circle cx="269" cy="114" r="4"/>
-        <circle cx="258" cy="124" r="4"/>
-        <circle cx="269" cy="124" r="4"/>
-        <circle cx="263" cy="131" r="3.5"/>
-      </g>
-    </g>
-    <!-- big red circle around Monday -->
-    <ellipse cx="66" cy="114" rx="24" ry="32" fill="none" stroke="#dc2626" stroke-width="5"/>
-    <!-- arrow pointing to Monday -->
-    <path d="M66,172 L66,150 M58,158 L66,148 L74,158" fill="none" stroke="#dc2626" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- sunrise band at bottom of calendar = start -->
-    <path d="M52,186 Q66,174 80,186" fill="none" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/>
-    <circle cx="66" cy="184" r="6" fill="#fbbf24" stroke="#a16207" stroke-width="2.5"/>
+
+  <!-- Week strip of 7 day cards (position, not counting) -->
+  <g filter="url(#mo-sh)">
+    <rect x="20" y="60" width="252" height="100" rx="12" fill="#ffffff" stroke="#334155" stroke-width="5"/>
   </g>
+  <g stroke="#94a3b8" stroke-width="2.5">
+    <!-- MONDAY: big highlighted first card -->
+    <rect x="28"  y="66" width="40" height="88" rx="7" fill="#fde047" stroke="#dc2626" stroke-width="5"/>
+    <!-- other 4 weekdays -->
+    <rect x="74"  y="72" width="34" height="76" rx="5" fill="#e2e8f0"/>
+    <rect x="112" y="72" width="34" height="76" rx="5" fill="#e2e8f0"/>
+    <rect x="150" y="72" width="34" height="76" rx="5" fill="#e2e8f0"/>
+    <rect x="188" y="72" width="34" height="76" rx="5" fill="#e2e8f0"/>
+    <!-- 2 weekend cards -->
+    <rect x="226" y="72" width="34" height="76" rx="5" fill="#bae6fd"/>
+    <!-- 7th weekend card peeking -->
+  </g>
+  <!-- sunrise on Monday card = the day starts -->
+  <g>
+    <circle cx="48" cy="118" r="14" fill="#fbbf24" stroke="#a16207" stroke-width="3"/>
+    <g stroke="#f59e0b" stroke-width="3" stroke-linecap="round">
+      <line x1="48" y1="96" x2="48" y2="90"/>
+      <line x1="30" y1="118" x2="24" y2="118"/>
+      <line x1="66" y1="118" x2="72" y2="118"/>
+      <line x1="34" y1="104" x2="30" y2="100"/>
+      <line x1="62" y1="104" x2="66" y2="100"/>
+    </g>
+    <path d="M30,132 L66,132" stroke="#a16207" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <!-- big red arrow pointing DOWN to the first (Monday) card -->
+  <path d="M48,190 L48,166 M38,176 L48,164 L58,176" fill="none" stroke="#dc2626" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
   <!-- child walking to school with backpack -->
   <g filter="url(#soft-shadow)">
     <path d="M316,128 Q314,108 338,106 Q362,108 360,128 L354,132 Q338,120 322,132 Z" fill="#451a03" stroke="#1c1917" stroke-width="3"/>

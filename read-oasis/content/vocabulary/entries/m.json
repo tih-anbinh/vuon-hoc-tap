@@ -467,7 +467,7 @@
         "asset_id": "vg-scene-mango-v1",
         "asset": "vocabulary/assets/vg-scene-mango-v1.svg",
         "alt": "A sweet fruit with soft yellow inside that grows in hot places.",
-        "status": "redraw_later",
+        "status": "needs_human_review",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -1922,7 +1922,7 @@
         "asset_id": "vg-scene-meatballs-v1",
         "asset": "vocabulary/assets/vg-scene-meatballs-v1.svg",
         "alt": "Small round balls made of meat.",
-        "status": "redraw_later",
+        "status": "needs_human_review",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -3665,7 +3665,7 @@
         "asset_id": "vg-scene-monday-v1",
         "asset": "vocabulary/assets/vg-scene-monday-v1.svg",
         "alt": "The day of the week after Sunday, when school often starts again.",
-        "status": "redraw_later",
+        "status": "needs_human_review",
         "kind": "time",
         "template": null,
         "anchor_objects": []

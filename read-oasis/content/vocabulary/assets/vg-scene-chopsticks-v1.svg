@@ -10,28 +10,33 @@
       <stop offset="0%" stop-color="#d97706"/>
       <stop offset="100%" stop-color="#92400e"/>
     </linearGradient>
-    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+    <filter id="chopsticks-sh" x="-10%" y="-10%" width="120%" height="120%">
       <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
     </filter>
   </defs>
 
   <rect x="0" y="0" width="400" height="300" fill="url(#chopsticks-bg)"/>
-  <ellipse cx="200" cy="262" rx="130" ry="16" fill="#0f172a" opacity="0.12"/>
+  <ellipse cx="200" cy="268" rx="120" ry="14" fill="#0f172a" opacity="0.12"/>
 
-  <g filter="url(#soft-shadow)">
-    <!-- Chopsticks -->
-    <rect x="120" y="55" width="12" height="150" rx="5" fill="url(#chopsticks-wood)" stroke="#7c2d12" stroke-width="2.5" transform="rotate(12 126 130)"/>
-    <rect x="150" y="55" width="12" height="150" rx="5" fill="url(#chopsticks-wood)" stroke="#7c2d12" stroke-width="2.5" transform="rotate(20 156 130)"/>
-    <!-- Dumpling held -->
-    <ellipse cx="185" cy="150" rx="38" ry="30" fill="#fde68a" stroke="#ca8a04" stroke-width="3.5"/>
-    <path d="M155 138 Q185 122 215 138" fill="none" stroke="#ca8a04" stroke-width="3"/>
-    <path d="M160 150 Q170 143 180 150 Q190 143 200 150 Q210 143 218 150" fill="none" stroke="#ca8a04" stroke-width="2.5"/>
+  <!-- Bowl centered under the food -->
+  <g filter="url(#chopsticks-sh)">
+    <path d="M148 218 A52 30 0 0 0 252 218 Z" fill="#ffffff" stroke="#1e293b" stroke-width="4"/>
+    <ellipse cx="200" cy="218" rx="52" ry="15" fill="#f1f5f9" stroke="#1e293b" stroke-width="4"/>
+    <path d="M162 218 A38 11 0 0 0 238 218" fill="none" stroke="#3b82f6" stroke-width="3"/>
   </g>
 
-  <!-- Bowl -->
-  <g filter="url(#soft-shadow)">
-    <path d="M230 210 A55 32 0 0 0 340 210 Z" fill="#ffffff" stroke="#1e293b" stroke-width="4"/>
-    <ellipse cx="285" cy="210" rx="55" ry="16" fill="#f1f5f9" stroke="#1e293b" stroke-width="4"/>
-    <path d="M245 210 A40 12 0 0 0 325 210" fill="none" stroke="#3b82f6" stroke-width="3"/>
+  <!-- Chopsticks: two sticks whose TIPS CONVERGE to grip one dumpling -->
+  <g filter="url(#chopsticks-sh)">
+    <!-- left stick: top-left wide, tip meets food at (192,158) -->
+    <path d="M118,50 L132,50 L198,152 L190,160 Z" fill="url(#chopsticks-wood)" stroke="#7c2d12" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- right stick: top-right wide, tip meets food at (208,158) -->
+    <path d="M282,50 L268,50 L202,152 L210,160 Z" fill="url(#chopsticks-wood)" stroke="#7c2d12" stroke-width="2.5" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Dumpling gripped exactly where the tips meet -->
+  <g filter="url(#chopsticks-sh)">
+    <ellipse cx="200" cy="168" rx="34" ry="27" fill="#fde68a" stroke="#ca8a04" stroke-width="3.5"/>
+    <path d="M172,156 Q200,140 228,156" fill="none" stroke="#ca8a04" stroke-width="3"/>
+    <path d="M176,168 Q186,161 196,168 Q206,161 216,168 Q224,161 230,168" fill="none" stroke="#ca8a04" stroke-width="2.5"/>
   </g>
 </svg>

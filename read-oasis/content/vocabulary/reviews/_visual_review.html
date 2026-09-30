@@ -331,7 +331,7 @@
       </div>
     </article>
 
-    <article class="card" data-wid="cyle25:v2:bridge:noun:unqualified" data-prev="redraw_later">
+    <article class="card" data-wid="cyle25:v2:bridge:noun:unqualified" data-prev="needs_human_review">
       <div class="art"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-bridge desc-bridge">
   <title id="title-bridge">Bridge</title>
   <desc id="desc-bridge">A stone arch bridge crossing over a blue river under a sunny sky.</desc>
@@ -348,43 +348,69 @@
       <stop offset="0%" stop-color="#d6d3d1"/>
       <stop offset="100%" stop-color="#a8a29e"/>
     </linearGradient>
-    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    <filter id="bridge-sh" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
     </filter>
   </defs>
 
   <rect x="0" y="0" width="400" height="300" fill="url(#bridge-bg)"/>
   <!-- Sun -->
   <circle cx="60" cy="55" r="28" fill="#fde047"/>
-  <!-- Water -->
-  <rect x="0" y="200" width="400" height="100" fill="url(#bridge-water)"/>
+  <!-- Water fills bottom; arches will reveal it -->
+  <rect x="0" y="175" width="400" height="125" fill="url(#bridge-water)"/>
   <g stroke="#7dd3fc" stroke-width="3" stroke-linecap="round">
-    <line x1="30" y1="230" x2="70" y2="230"/>
-    <line x1="120" y1="250" x2="170" y2="250"/>
-    <line x1="250" y1="235" x2="300" y2="235"/>
-    <line x1="330" y1="265" x2="375" y2="265"/>
+    <line x1="20" y1="250" x2="70" y2="250"/>
+    <line x1="150" y1="268" x2="205" y2="268"/>
+    <line x1="300" y1="252" x2="355" y2="252"/>
+    <line x1="90" y1="282" x2="145" y2="282"/>
   </g>
 
-  <g filter="url(#soft-shadow)">
-    <!-- Bridge deck + arches -->
-    <path d="M30 200 L30 150 L370 150 L370 200
-             L300 200 A70 55 0 0 0 230 200
-             L170 200 A70 55 0 0 0 100 200 Z"
-          fill="url(#bridge-stone)" stroke="#57534e" stroke-width="4"/>
-    <!-- Railing -->
-    <rect x="30" y="135" width="340" height="16" rx="4" fill="#e7e5e4" stroke="#57534e" stroke-width="3"/>
+  <!-- Bridge body with TWO real open arches (water shows through) -->
+  <g filter="url(#bridge-sh)">
+    <path d="M20,230 L20,120 L380,120 L380,230
+             L318,230 A62 52 0 0 0 194 230
+             L206,230 A62 52 0 0 0 82 230 Z"
+          fill="url(#bridge-stone)" stroke="#57534e" stroke-width="4.5" fill-rule="evenodd"/>
+    <!-- arch inner outlines for depth -->
+    <path d="M82,230 A62 52 0 0 1 206 230" fill="none" stroke="#57534e" stroke-width="4"/>
+    <path d="M194,230 A62 52 0 0 1 318 230" fill="none" stroke="#57534e" stroke-width="4"/>
+    <!-- central pier + end piers -->
+    <rect x="192" y="178" width="16" height="52" fill="url(#bridge-stone)" stroke="#57534e" stroke-width="3"/>
+  </g>
+
+  <!-- Deck top with roadway + railing -->
+  <g filter="url(#bridge-sh)">
+    <rect x="20" y="120" width="360" height="18" fill="#d6d3d1" stroke="#57534e" stroke-width="3"/>
+    <!-- roadway centre line -->
+    <line x1="30" y1="129" x2="370" y2="129" stroke="#a8a29e" stroke-width="2" stroke-dasharray="14,10"/>
+    <!-- railing posts + top rail -->
+    <rect x="20" y="104" width="360" height="8" rx="3" fill="#e7e5e4" stroke="#57534e" stroke-width="2.5"/>
     <g stroke="#57534e" stroke-width="4">
-      <line x1="60" y1="151" x2="60" y2="135"/>
-      <line x1="120" y1="151" x2="120" y2="135"/>
-      <line x1="200" y1="151" x2="200" y2="135"/>
-      <line x1="280" y1="151" x2="280" y2="135"/>
-      <line x1="340" y1="151" x2="340" y2="135"/>
+      <line x1="50"  y1="120" x2="50"  y2="104"/>
+      <line x1="110" y1="120" x2="110" y2="104"/>
+      <line x1="170" y1="120" x2="170" y2="104"/>
+      <line x1="230" y1="120" x2="230" y2="104"/>
+      <line x1="290" y1="120" x2="290" y2="104"/>
+      <line x1="350" y1="120" x2="350" y2="104"/>
     </g>
-    <!-- Stone blocks -->
+    <!-- stone-block seams -->
     <g stroke="#78716c" stroke-width="2">
-      <line x1="70" y1="150" x2="70" y2="200"/>
-      <line x1="330" y1="150" x2="330" y2="200"/>
+      <line x1="70"  y1="138" x2="70"  y2="230"/>
+      <line x1="330" y1="138" x2="330" y2="230"/>
     </g>
+  </g>
+
+  <!-- Person walking across the bridge -->
+  <g filter="url(#bridge-sh)">
+    <circle cx="150" cy="84" r="11" fill="#fcd9b6" stroke="#78350f" stroke-width="3"/>
+    <!-- hair cap on top of head -->
+    <path d="M139,80 Q139,71 150,71 Q161,71 161,80 Q155,75 150,75 Q145,75 139,80 Z" fill="#0f172a"/>
+    <circle cx="146" cy="84" r="1.8" fill="#0f172a"/>
+    <circle cx="154" cy="84" r="1.8" fill="#0f172a"/>
+    <path d="M146,90 Q150,93 154,90" fill="none" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/>
+    <path d="M142,98 L158,98 L160,118 L140,118 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="3"/>
+    <line x1="150" y1="118" x2="144" y2="132" stroke="#1e293b" stroke-width="6" stroke-linecap="round"/>
+    <line x1="150" y1="118" x2="158" y2="130" stroke="#1e293b" stroke-width="6" stroke-linecap="round"/>
   </g>
 </svg></div>
       <div class="info">
@@ -399,61 +425,101 @@
       </div>
     </article>
 
-    <article class="card" data-wid="cyle25:v2:chess:noun:unqualified" data-prev="redraw_later">
+    <article class="card" data-wid="cyle25:v2:chess:noun:unqualified" data-prev="needs_human_review">
       <div class="art"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-chess desc-chess">
   <title id="title-chess">Chess</title>
-  <desc id="desc-chess">A black and white chessboard with a tall king and knight chess pieces on it.</desc>
+  <desc id="desc-chess">A square black-and-white checkered chessboard seen from above, with several chess pieces (a king, a queen, a knight and pawns) standing on the squares.</desc>
   <defs>
     <linearGradient id="chess-bg" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#e0e7ff"/>
       <stop offset="100%" stop-color="#f1f5f9"/>
     </linearGradient>
-    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+    <filter id="chess-sh" x="-10%" y="-10%" width="120%" height="120%">
       <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
     </filter>
   </defs>
 
   <rect x="0" y="0" width="400" height="300" fill="url(#chess-bg)"/>
-  <ellipse cx="200" cy="270" rx="150" ry="14" fill="#0f172a" opacity="0.12"/>
+  <ellipse cx="200" cy="278" rx="140" ry="12" fill="#0f172a" opacity="0.12"/>
 
-  <g filter="url(#soft-shadow)">
-    <!-- Board -->
-    <rect x="90" y="195" width="220" height="70" fill="#f5f5f4" stroke="#1e293b" stroke-width="4"/>
+  <!-- Square checkered board (6x6), clear grid -->
+  <g filter="url(#chess-sh)">
+    <rect x="80" y="66" width="240" height="200" rx="6" fill="#f5f5f4" stroke="#1e293b" stroke-width="5"/>
     <g fill="#44403c">
-      <rect x="90" y="195" width="27.5" height="17.5"/>
-      <rect x="145" y="195" width="27.5" height="17.5"/>
-      <rect x="200" y="195" width="27.5" height="17.5"/>
-      <rect x="255" y="195" width="27.5" height="17.5"/>
-      <rect x="117.5" y="212.5" width="27.5" height="17.5"/>
-      <rect x="172.5" y="212.5" width="27.5" height="17.5"/>
-      <rect x="227.5" y="212.5" width="27.5" height="17.5"/>
-      <rect x="282.5" y="212.5" width="27.5" height="17.5"/>
-      <rect x="90" y="230" width="27.5" height="17.5"/>
-      <rect x="145" y="230" width="27.5" height="17.5"/>
-      <rect x="200" y="230" width="27.5" height="17.5"/>
-      <rect x="255" y="230" width="27.5" height="17.5"/>
-      <rect x="117.5" y="247.5" width="27.5" height="17.5"/>
-      <rect x="172.5" y="247.5" width="27.5" height="17.5"/>
-      <rect x="227.5" y="247.5" width="27.5" height="17.5"/>
-      <rect x="282.5" y="247.5" width="27.5" height="17.5"/>
+      <!-- row 1 -->
+      <rect x="80"  y="66"  width="40" height="33.3"/>
+      <rect x="160" y="66"  width="40" height="33.3"/>
+      <rect x="240" y="66"  width="40" height="33.3"/>
+      <!-- row 2 -->
+      <rect x="120" y="99.3" width="40" height="33.3"/>
+      <rect x="200" y="99.3" width="40" height="33.3"/>
+      <rect x="280" y="99.3" width="40" height="33.3"/>
+      <!-- row 3 -->
+      <rect x="80"  y="132.6" width="40" height="33.3"/>
+      <rect x="160" y="132.6" width="40" height="33.3"/>
+      <rect x="240" y="132.6" width="40" height="33.3"/>
+      <!-- row 4 -->
+      <rect x="120" y="165.9" width="40" height="33.3"/>
+      <rect x="200" y="165.9" width="40" height="33.3"/>
+      <rect x="280" y="165.9" width="40" height="33.3"/>
+      <!-- row 5 -->
+      <rect x="80"  y="199.2" width="40" height="33.3"/>
+      <rect x="160" y="199.2" width="40" height="33.3"/>
+      <rect x="240" y="199.2" width="40" height="33.3"/>
+      <!-- row 6 -->
+      <rect x="120" y="232.5" width="40" height="33.5"/>
+      <rect x="200" y="232.5" width="40" height="33.5"/>
+      <rect x="280" y="232.5" width="40" height="33.5"/>
     </g>
+    <!-- grid lines for clarity -->
+    <g stroke="#1e293b" stroke-width="1.5" opacity="0.55">
+      <line x1="120" y1="66" x2="120" y2="266"/>
+      <line x1="160" y1="66" x2="160" y2="266"/>
+      <line x1="200" y1="66" x2="200" y2="266"/>
+      <line x1="240" y1="66" x2="240" y2="266"/>
+      <line x1="280" y1="66" x2="280" y2="266"/>
+      <line x1="80" y1="99.3"  x2="320" y2="99.3"/>
+      <line x1="80" y1="132.6" x2="320" y2="132.6"/>
+      <line x1="80" y1="165.9" x2="320" y2="165.9"/>
+      <line x1="80" y1="199.2" x2="320" y2="199.2"/>
+      <line x1="80" y1="232.5" x2="320" y2="232.5"/>
+    </g>
+  </g>
 
-    <!-- White King -->
-    <g fill="#f8fafc" stroke="#1e293b" stroke-width="3.5">
-      <ellipse cx="150" cy="195" rx="26" ry="9"/>
-      <path d="M132 190 L138 130 L162 130 L168 190 Z"/>
-      <circle cx="150" cy="120" r="16"/>
-      <rect x="145" y="82" width="10" height="26"/>
-      <rect x="136" y="90" width="28" height="10"/>
-    </g>
+  <!-- White King (front-left) -->
+  <g filter="url(#chess-sh)" fill="#f8fafc" stroke="#1e293b" stroke-width="3">
+    <ellipse cx="140" cy="222" rx="20" ry="7"/>
+    <path d="M126 218 L131 176 L149 176 L154 218 Z"/>
+    <circle cx="140" cy="168" r="12"/>
+    <rect x="136" y="140" width="8" height="20"/>
+    <rect x="130" y="146" width="20" height="8"/>
+  </g>
+  <!-- White Queen -->
+  <g filter="url(#chess-sh)" fill="#f8fafc" stroke="#1e293b" stroke-width="3">
+    <ellipse cx="200" cy="222" rx="18" ry="6.5"/>
+    <path d="M188 218 L193 182 L207 182 L212 218 Z"/>
+    <circle cx="200" cy="174" r="11"/>
+    <path d="M191 168 L194 156 L200 164 L206 156 L209 168 Z"/>
+  </g>
 
-    <!-- Black Knight -->
-    <g fill="#334155" stroke="#0f172a" stroke-width="3.5">
-      <ellipse cx="250" cy="195" rx="24" ry="9"/>
-      <path d="M234 190 L240 155 L262 155 L266 190 Z"/>
-      <path d="M240 155 Q232 120 258 108 Q276 104 270 128 L268 140 Q280 138 274 150 L262 155 Z"/>
-      <circle cx="262" cy="120" r="3" fill="#f8fafc"/>
-    </g>
+  <!-- Black Knight (right) -->
+  <g filter="url(#chess-sh)" fill="#334155" stroke="#0f172a" stroke-width="3">
+    <ellipse cx="262" cy="150" rx="19" ry="6.5"/>
+    <path d="M248 146 L253 118 L271 118 L275 146 Z"/>
+    <path d="M253 118 Q246 88 270 78 Q287 74 281 96 L279 106 Q290 104 284 116 L272 118 Z"/>
+    <circle cx="272" cy="92" r="2.6" fill="#f8fafc"/>
+  </g>
+  <!-- Black Pawn -->
+  <g filter="url(#chess-sh)" fill="#334155" stroke="#0f172a" stroke-width="3">
+    <ellipse cx="150" cy="120" rx="14" ry="5"/>
+    <path d="M141 117 L145 100 L155 100 L159 117 Z"/>
+    <circle cx="150" cy="94" r="9"/>
+  </g>
+  <!-- White Pawn -->
+  <g filter="url(#chess-sh)" fill="#f8fafc" stroke="#1e293b" stroke-width="3">
+    <ellipse cx="228" cy="200" rx="14" ry="5"/>
+    <path d="M219 197 L223 180 L233 180 L237 197 Z"/>
+    <circle cx="228" cy="174" r="9"/>
   </g>
 </svg></div>
       <div class="info">
@@ -468,7 +534,7 @@
       </div>
     </article>
 
-    <article class="card" data-wid="cyle25:v2:chopsticks:noun:unqualified" data-prev="redraw_later">
+    <article class="card" data-wid="cyle25:v2:chopsticks:noun:unqualified" data-prev="needs_human_review">
       <div class="art"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-chopsticks desc-chopsticks">
   <title id="title-chopsticks">Chopsticks</title>
   <desc id="desc-chopsticks">A pair of wooden chopsticks holding a dumpling above a small round bowl.</desc>
@@ -481,29 +547,34 @@
       <stop offset="0%" stop-color="#d97706"/>
       <stop offset="100%" stop-color="#92400e"/>
     </linearGradient>
-    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+    <filter id="chopsticks-sh" x="-10%" y="-10%" width="120%" height="120%">
       <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
     </filter>
   </defs>
 
   <rect x="0" y="0" width="400" height="300" fill="url(#chopsticks-bg)"/>
-  <ellipse cx="200" cy="262" rx="130" ry="16" fill="#0f172a" opacity="0.12"/>
+  <ellipse cx="200" cy="268" rx="120" ry="14" fill="#0f172a" opacity="0.12"/>
 
-  <g filter="url(#soft-shadow)">
-    <!-- Chopsticks -->
-    <rect x="120" y="55" width="12" height="150" rx="5" fill="url(#chopsticks-wood)" stroke="#7c2d12" stroke-width="2.5" transform="rotate(12 126 130)"/>
-    <rect x="150" y="55" width="12" height="150" rx="5" fill="url(#chopsticks-wood)" stroke="#7c2d12" stroke-width="2.5" transform="rotate(20 156 130)"/>
-    <!-- Dumpling held -->
-    <ellipse cx="185" cy="150" rx="38" ry="30" fill="#fde68a" stroke="#ca8a04" stroke-width="3.5"/>
-    <path d="M155 138 Q185 122 215 138" fill="none" stroke="#ca8a04" stroke-width="3"/>
-    <path d="M160 150 Q170 143 180 150 Q190 143 200 150 Q210 143 218 150" fill="none" stroke="#ca8a04" stroke-width="2.5"/>
+  <!-- Bowl centered under the food -->
+  <g filter="url(#chopsticks-sh)">
+    <path d="M148 218 A52 30 0 0 0 252 218 Z" fill="#ffffff" stroke="#1e293b" stroke-width="4"/>
+    <ellipse cx="200" cy="218" rx="52" ry="15" fill="#f1f5f9" stroke="#1e293b" stroke-width="4"/>
+    <path d="M162 218 A38 11 0 0 0 238 218" fill="none" stroke="#3b82f6" stroke-width="3"/>
   </g>
 
-  <!-- Bowl -->
-  <g filter="url(#soft-shadow)">
-    <path d="M230 210 A55 32 0 0 0 340 210 Z" fill="#ffffff" stroke="#1e293b" stroke-width="4"/>
-    <ellipse cx="285" cy="210" rx="55" ry="16" fill="#f1f5f9" stroke="#1e293b" stroke-width="4"/>
-    <path d="M245 210 A40 12 0 0 0 325 210" fill="none" stroke="#3b82f6" stroke-width="3"/>
+  <!-- Chopsticks: two sticks whose TIPS CONVERGE to grip one dumpling -->
+  <g filter="url(#chopsticks-sh)">
+    <!-- left stick: top-left wide, tip meets food at (192,158) -->
+    <path d="M118,50 L132,50 L198,152 L190,160 Z" fill="url(#chopsticks-wood)" stroke="#7c2d12" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- right stick: top-right wide, tip meets food at (208,158) -->
+    <path d="M282,50 L268,50 L202,152 L210,160 Z" fill="url(#chopsticks-wood)" stroke="#7c2d12" stroke-width="2.5" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Dumpling gripped exactly where the tips meet -->
+  <g filter="url(#chopsticks-sh)">
+    <ellipse cx="200" cy="168" rx="34" ry="27" fill="#fde68a" stroke="#ca8a04" stroke-width="3.5"/>
+    <path d="M172,156 Q200,140 228,156" fill="none" stroke="#ca8a04" stroke-width="3"/>
+    <path d="M176,168 Q186,161 196,168 Q206,161 216,168 Q224,161 230,168" fill="none" stroke="#ca8a04" stroke-width="2.5"/>
   </g>
 </svg></div>
       <div class="info">
@@ -518,66 +589,75 @@
       </div>
     </article>
 
-    <article class="card" data-wid="cyle25:v2:cousin:noun:unqualified" data-prev="redraw_later">
+    <article class="card" data-wid="cyle25:v2:cousin:noun:unqualified" data-prev="needs_human_review">
       <div class="art"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-cousin desc-cousin">
-  <title id="title-cousin">Cousin - Two kids from different families playing together</title>
-  <desc id="desc-cousin">Two happy children of similar age standing together with a heart between them, connected by a family-tree line to two small houses above.</desc>
+  <title id="title-cousin">Cousin - Two children who share the same grandparents</title>
+  <desc id="desc-cousin">A smiling grandmother and grandfather at the top, with two simple lines joining down to two happy children of similar age standing side by side, showing the children are cousins because they share the same grandparents.</desc>
   <defs>
     <linearGradient id="cz-bg" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#fce7f3"/>
       <stop offset="100%" stop-color="#fbcfe8"/>
     </linearGradient>
-    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+    <filter id="cz-sh" x="-10%" y="-10%" width="120%" height="120%">
       <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.22"/>
     </filter>
   </defs>
   <rect x="0" y="0" width="400" height="300" fill="url(#cz-bg)"/>
-  <rect x="0" y="250" width="400" height="50" fill="#65a30d"/>
-  <ellipse cx="200" cy="256" rx="150" ry="8" fill="#0f172a" opacity="0.2"/>
-  <!-- two houses (different families) connected -->
-  <g filter="url(#soft-shadow)">
-    <!-- house 1 -->
-    <rect x="70" y="45" width="55" height="42" fill="#93c5fd" stroke="#1e3a8a" stroke-width="3"/>
-    <path d="M62,45 L97,20 L133,45" fill="#3b82f6" stroke="#1e3a8a" stroke-width="3" stroke-linejoin="round"/>
-    <rect x="88" y="62" width="18" height="25" fill="#1e3a8a"/>
-    <!-- house 2 -->
-    <rect x="275" y="45" width="55" height="42" fill="#fca5a5" stroke="#7f1d1d" stroke-width="3"/>
-    <path d="M267,45 L302,20 L338,45" fill="#ef4444" stroke="#7f1d1d" stroke-width="3" stroke-linejoin="round"/>
-    <rect x="293" y="62" width="18" height="25" fill="#7f1d1d"/>
+  <rect x="0" y="256" width="400" height="44" fill="#86efac"/>
+  <line x1="0" y1="256" x2="400" y2="256" stroke="#15803d" stroke-width="3"/>
+
+  <!-- Grandparents at the top (the shared link) -->
+  <g filter="url(#cz-sh)">
+    <!-- grandma -->
+    <circle cx="170" cy="56" r="22" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M148,54 Q148,30 170,30 Q192,30 192,54 Q182,44 170,44 Q158,44 148,54 Z" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+    <circle cx="163" cy="55" r="3" fill="#0f172a"/>
+    <circle cx="177" cy="55" r="3" fill="#0f172a"/>
+    <path d="M162,65 Q170,71 178,65" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M152,78 L188,78 L192,110 L148,110 Z" fill="#a855f7" stroke="#6b21a8" stroke-width="3"/>
+    <!-- grandpa -->
+    <circle cx="230" cy="56" r="22" fill="#f5b26b" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M208,54 Q208,32 230,32 Q252,32 252,54 Q242,46 230,46 Q218,46 208,54 Z" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+    <circle cx="223" cy="55" r="3" fill="#0f172a"/>
+    <circle cx="237" cy="55" r="3" fill="#0f172a"/>
+    <!-- glasses -->
+    <g stroke="#334155" stroke-width="2" fill="none"><circle cx="223" cy="55" r="6"/><circle cx="237" cy="55" r="6"/><line x1="229" y1="55" x2="231" y2="55"/></g>
+    <path d="M222,66 Q230,72 238,66" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M212,78 L248,78 L252,110 L208,110 Z" fill="#0ea5e9" stroke="#0c4a6e" stroke-width="3"/>
   </g>
-  <!-- family tree connector -->
-  <g stroke="#78350f" stroke-width="3" fill="none" stroke-dasharray="7,5" opacity="0.75">
-    <path d="M97,90 L97,110 L200,110"/>
-    <path d="M302,90 L302,110 L200,110"/>
-    <path d="M145,110 L145,140"/>
-    <path d="M255,110 L255,140"/>
+
+  <!-- simple SOLID connector: grandparents -> both kids (shared line = cousins) -->
+  <g stroke="#be185d" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M200,112 L200,130"/>
+    <path d="M120,150 L200,130 L280,150"/>
   </g>
-  <!-- kid 1 (blue family) -->
-  <g filter="url(#soft-shadow)">
-    <circle cx="145" cy="170" r="28" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
-    <path d="M117,164 Q119,138 145,139 Q171,138 173,164 Q163,150 145,150 Q127,150 117,164 Z" fill="#0f172a"/>
-    <circle cx="136" cy="168" r="4" fill="#0f172a"/>
-    <circle cx="154" cy="168" r="4" fill="#0f172a"/>
-    <path d="M136,181 Q145,188 154,181" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
-    <rect x="124" y="200" width="42" height="52" rx="8" fill="#3b82f6" stroke="#1e3a8a" stroke-width="3.5"/>
-    <line x1="166" y1="214" x2="192" y2="222" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
-    <line x1="124" y1="214" x2="103" y2="230" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- kid 1 -->
+  <g filter="url(#cz-sh)">
+    <circle cx="118" cy="180" r="27" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M91,174 Q93,150 118,151 Q143,150 145,174 Q135,160 118,160 Q101,160 91,174 Z" fill="#0f172a"/>
+    <circle cx="109" cy="179" r="4" fill="#0f172a"/>
+    <circle cx="127" cy="179" r="4" fill="#0f172a"/>
+    <path d="M109,191 Q118,198 127,191" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <rect x="98" y="208" width="40" height="48" rx="8" fill="#3b82f6" stroke="#1e3a8a" stroke-width="3.5"/>
+    <line x1="138" y1="220" x2="164" y2="228" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
+    <line x1="98" y1="220" x2="80" y2="234" stroke="#fcd9b6" stroke-width="8" stroke-linecap="round"/>
   </g>
-  <!-- kid 2 (red family) -->
-  <g filter="url(#soft-shadow)">
-    <circle cx="255" cy="170" r="28" fill="#f5b26b" stroke="#78350f" stroke-width="3.5"/>
-    <path d="M227,164 Q227,136 255,137 Q283,136 283,164 Q275,148 255,148 Q235,148 227,164 Z" fill="#78350f"/>
-    <circle cx="228" cy="182" r="8" fill="#78350f"/>
-    <circle cx="282" cy="182" r="8" fill="#78350f"/>
-    <circle cx="246" cy="168" r="4" fill="#0f172a"/>
-    <circle cx="264" cy="168" r="4" fill="#0f172a"/>
-    <path d="M246,181 Q255,188 264,181" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
-    <path d="M236,198 L274,198 L281,252 L229,252 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="3.5"/>
-    <line x1="236" y1="212" x2="208" y2="222" stroke="#f5b26b" stroke-width="8" stroke-linecap="round"/>
-    <line x1="274" y1="212" x2="296" y2="228" stroke="#f5b26b" stroke-width="8" stroke-linecap="round"/>
+  <!-- kid 2 -->
+  <g filter="url(#cz-sh)">
+    <circle cx="282" cy="180" r="27" fill="#f5b26b" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M255,174 Q255,148 282,149 Q309,148 309,174 Q301,158 282,158 Q263,158 255,174 Z" fill="#78350f"/>
+    <circle cx="255" cy="190" r="7" fill="#78350f"/>
+    <circle cx="309" cy="190" r="7" fill="#78350f"/>
+    <circle cx="273" cy="179" r="4" fill="#0f172a"/>
+    <circle cx="291" cy="179" r="4" fill="#0f172a"/>
+    <path d="M273,191 Q282,198 291,191" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M263,208 L301,208 L307,256 L257,256 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="3.5"/>
+    <line x1="263" y1="220" x2="236" y2="228" stroke="#f5b26b" stroke-width="8" stroke-linecap="round"/>
+    <line x1="301" y1="220" x2="320" y2="234" stroke="#f5b26b" stroke-width="8" stroke-linecap="round"/>
   </g>
-  <!-- heart between them -->
-  <path d="M200,208 C195,198 180,198 180,211 C180,221 200,232 200,232 C200,232 220,221 220,211 C220,198 205,198 200,208 Z" fill="#ec4899" stroke="#9d174d" stroke-width="2.5"/>
+  <!-- heart between the two cousins -->
+  <path d="M200,214 C196,206 184,206 184,216 C184,224 200,233 200,233 C200,233 216,224 216,216 C216,206 204,206 200,214 Z" fill="#ec4899" stroke="#9d174d" stroke-width="2.5"/>
 </svg></div>
       <div class="info">
         <h2>cousin</h2>
@@ -591,99 +671,83 @@
       </div>
     </article>
 
-    <article class="card" data-wid="cyle25:v2:friday:noun:unqualified" data-prev="redraw_later">
+    <article class="card" data-wid="cyle25:v2:friday:noun:unqualified" data-prev="needs_human_review">
       <div class="art"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-friday desc-friday">
-  <title id="title-friday">Friday - Fifth day of the week on the calendar</title>
-  <desc id="desc-friday">A wall calendar showing a week of seven day squares with the fifth day circled in red and marked with five dots and a star, while a happy child celebrates because the weekend is coming.</desc>
+  <title id="title-friday">Friday - The last school day before the weekend</title>
+  <desc id="desc-friday">A weekly strip of seven day cards. Four school days are already ticked, the fifth card is the big highlighted day with a happy face, and the last two weekend cards show a sun and a ball. A cheering child stands beside it.</desc>
   <defs>
     <linearGradient id="fr-bg" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#fef9c3"/>
       <stop offset="100%" stop-color="#fde68a"/>
     </linearGradient>
-    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+    <filter id="fr-sh" x="-10%" y="-10%" width="120%" height="120%">
       <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
     </filter>
   </defs>
   <rect x="0" y="0" width="400" height="300" fill="url(#fr-bg)"/>
-  <rect x="0" y="252" width="400" height="48" fill="#fbbf24"/>
-  <line x1="0" y1="252" x2="400" y2="252" stroke="#b45309" stroke-width="3.5"/>
-  <!-- THE CALENDAR (hero element) -->
-  <g filter="url(#soft-shadow)">
-    <!-- board -->
-    <rect x="36" y="36" width="328" height="160" rx="12" fill="#ffffff" stroke="#334155" stroke-width="5"/>
-    <!-- header band -->
-    <rect x="36" y="36" width="328" height="34" rx="12" fill="#3b82f6" stroke="#334155" stroke-width="5"/>
-    <rect x="36" y="56" width="328" height="14" fill="#3b82f6"/>
-    <!-- hanging rings -->
-    <circle cx="110" cy="36" r="8" fill="none" stroke="#334155" stroke-width="4"/>
-    <circle cx="290" cy="36" r="8" fill="none" stroke="#334155" stroke-width="4"/>
-    <!-- sun icon in header -->
-    <circle cx="200" cy="53" r="9" fill="#fde047" stroke="#a16207" stroke-width="2.5"/>
-    <g stroke="#fde047" stroke-width="2.5" stroke-linecap="round">
-      <line x1="200" y1="38" x2="200" y2="42"/>
-      <line x1="200" y1="64" x2="200" y2="68"/>
-      <line x1="186" y1="53" x2="182" y2="53"/>
-      <line x1="214" y1="53" x2="218" y2="53"/>
-    </g>
-    <!-- 7 day squares -->
-    <g fill="#f1f5f9" stroke="#64748b" stroke-width="3">
-      <rect x="48" y="86" width="38" height="52" rx="5"/>
-      <rect x="92" y="86" width="38" height="52" rx="5"/>
-      <rect x="136" y="86" width="38" height="52" rx="5"/>
-      <rect x="180" y="86" width="38" height="52" rx="5"/>
-      <rect x="224" y="86" width="38" height="52" rx="5" fill="#fef08a"/>
-      <rect x="268" y="86" width="38" height="52" rx="5" fill="#e0f2fe"/>
-      <rect x="312" y="86" width="38" height="52" rx="5" fill="#e0f2fe"/>
-    </g>
-    <!-- day-count dots: 1..7 -->
-    <g fill="#475569">
-      <circle cx="67" cy="106" r="4"/>
-      <circle cx="105" cy="106" r="4"/><circle cx="117" cy="106" r="4"/>
-      <circle cx="147" cy="106" r="4"/><circle cx="155" cy="106" r="4"/><circle cx="163" cy="106" r="4"/>
-      <circle cx="189" cy="106" r="4"/><circle cx="197" cy="106" r="4"/><circle cx="189" cy="118" r="4"/><circle cx="197" cy="118" r="4"/>
-    </g>
-    <!-- FRIDAY: five dots + star -->
-    <g fill="#b45309">
-      <circle cx="233" cy="102" r="4"/><circle cx="243" cy="102" r="4"/><circle cx="253" cy="102" r="4"/>
-      <circle cx="238" cy="114" r="4"/><circle cx="248" cy="114" r="4"/>
-    </g>
-    <path d="M243,120 L246,128 L254,128 L248,133 L250,141 L243,136 L236,141 L238,133 L232,128 L240,128 Z" fill="#f59e0b" stroke="#a16207" stroke-width="2"/>
-    <!-- weekend days: 6 and 7 dots -->
-    <g fill="#0284c7">
-      <circle cx="279" cy="102" r="3.5"/><circle cx="288" cy="102" r="3.5"/><circle cx="297" cy="102" r="3.5"/>
-      <circle cx="279" cy="113" r="3.5"/><circle cx="288" cy="113" r="3.5"/><circle cx="297" cy="113" r="3.5"/>
-      <circle cx="323" cy="102" r="3.5"/><circle cx="331" cy="102" r="3.5"/><circle cx="339" cy="102" r="3.5"/>
-      <circle cx="323" cy="113" r="3.5"/><circle cx="331" cy="113" r="3.5"/><circle cx="339" cy="113" r="3.5"/>
-      <circle cx="331" cy="124" r="3.5"/>
-    </g>
-    <!-- big red circle around Friday -->
-    <ellipse cx="243" cy="112" rx="30" ry="38" fill="none" stroke="#dc2626" stroke-width="5"/>
-    <!-- checkmarks on past days -->
-    <g stroke="#16a34a" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M56,124 L63,131 L78,116"/>
-      <path d="M100,124 L107,131 L122,116"/>
-      <path d="M144,124 L151,131 L166,116"/>
-      <path d="M188,128 L193,133 L206,122"/>
-    </g>
+  <rect x="0" y="256" width="400" height="44" fill="#fbbf24"/>
+  <line x1="0" y1="256" x2="400" y2="256" stroke="#b45309" stroke-width="3.5"/>
+
+  <!-- Week strip of 7 day cards (position, not counting) -->
+  <g filter="url(#fr-sh)">
+    <rect x="24" y="70" width="352" height="96" rx="12" fill="#ffffff" stroke="#334155" stroke-width="5"/>
   </g>
+  <!-- 5 weekday cards (grey), 4 already ticked -->
+  <g stroke="#64748b" stroke-width="3">
+    <rect x="36"  y="82" width="44" height="72" rx="6" fill="#e2e8f0"/>
+    <rect x="86"  y="82" width="44" height="72" rx="6" fill="#e2e8f0"/>
+    <rect x="136" y="82" width="44" height="72" rx="6" fill="#e2e8f0"/>
+    <rect x="186" y="82" width="44" height="72" rx="6" fill="#e2e8f0"/>
+    <!-- FRIDAY: the big highlighted 5th weekday -->
+    <rect x="236" y="76" width="48" height="84" rx="7" fill="#fde047" stroke="#dc2626" stroke-width="5"/>
+    <!-- 2 weekend cards (blue) -->
+    <rect x="290" y="82" width="40" height="72" rx="6" fill="#bae6fd"/>
+    <rect x="336" y="82" width="40" height="72" rx="6" fill="#bae6fd"/>
+  </g>
+  <!-- ticks on the 4 finished weekdays -->
+  <g stroke="#16a34a" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M46,118 L54,127 L70,108"/>
+    <path d="M96,118 L104,127 L120,108"/>
+    <path d="M146,118 L154,127 L170,108"/>
+    <path d="M196,118 L204,127 L220,108"/>
+  </g>
+  <!-- Friday card: big happy face (this is the day!) -->
+  <g>
+    <circle cx="260" cy="112" r="20" fill="#fbbf24" stroke="#a16207" stroke-width="3"/>
+    <circle cx="253" cy="108" r="2.8" fill="#0f172a"/>
+    <circle cx="267" cy="108" r="2.8" fill="#0f172a"/>
+    <path d="M250,118 Q260,128 270,118" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <!-- weekend icons: sun + play ball (fun is coming) -->
+  <g>
+    <circle cx="310" cy="112" r="12" fill="#fde047" stroke="#a16207" stroke-width="2.5"/>
+    <g stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round">
+      <line x1="310" y1="94" x2="310" y2="88"/><line x1="310" y1="130" x2="310" y2="136"/>
+      <line x1="292" y1="112" x2="286" y2="112"/><line x1="328" y1="112" x2="334" y2="112"/>
+    </g>
+    <circle cx="356" cy="114" r="13" fill="#ef4444" stroke="#7f1d1d" stroke-width="3"/>
+    <path d="M356,101 L356,127 M343,114 L369,114" stroke="#7f1d1d" stroke-width="2" opacity="0.6"/>
+  </g>
+  <!-- arrow from Friday toward the weekend (fun soon) -->
+  <path d="M262,182 Q300,196 330,186" fill="none" stroke="#ec4899" stroke-width="5" stroke-linecap="round"/>
+  <path d="M330,186 l-12,-4 M330,186 l-8,10" stroke="#ec4899" stroke-width="5" stroke-linecap="round" fill="none"/>
+
   <!-- celebrating child -->
-  <g filter="url(#soft-shadow)">
-    <circle cx="110" cy="216" r="22" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
-    <path d="M90,208 Q90,190 110,188 Q130,190 130,208 L124,212 Q110,198 96,212 Z" fill="#451a03" stroke="#1c1917" stroke-width="2.5"/>
+  <g filter="url(#fr-sh)">
+    <circle cx="96" cy="216" r="22" fill="#fcd9b6" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M76,208 Q76,190 96,188 Q116,190 116,208 L110,212 Q96,198 82,212 Z" fill="#451a03" stroke="#1c1917" stroke-width="2.5"/>
+    <circle cx="89" cy="213" r="2.8" fill="#0f172a"/>
     <circle cx="103" cy="213" r="2.8" fill="#0f172a"/>
-    <circle cx="117" cy="213" r="2.8" fill="#0f172a"/>
-    <path d="M101,222 Q110,230 119,222" fill="none" stroke="#0f172a" stroke-width="2.8" stroke-linecap="round"/>
-    <path d="M94,238 L126,238 L132,278 L88,278 Z" fill="#ec4899" stroke="#831843" stroke-width="3.5"/>
-    <!-- arms raised in joy -->
-    <path d="M96,244 Q76,228 72,208" fill="none" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
-    <path d="M124,244 Q144,228 148,208" fill="none" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
-    <circle cx="72" cy="204" r="7" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
-    <circle cx="148" cy="204" r="7" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <path d="M87,222 Q96,231 105,222" fill="none" stroke="#0f172a" stroke-width="2.8" stroke-linecap="round"/>
+    <path d="M80,238 L112,238 L118,282 L74,282 Z" fill="#ec4899" stroke="#831843" stroke-width="3.5"/>
+    <path d="M82,244 Q62,228 58,208" fill="none" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
+    <path d="M110,244 Q130,228 134,208" fill="none" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="58" cy="204" r="7" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <circle cx="134" cy="204" r="7" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
   </g>
-  <!-- celebration sparks -->
   <g fill="#f472b6" stroke="#be185d" stroke-width="2">
-    <path d="M170,218 L173,226 L181,228 L173,230 L170,238 L167,230 L159,228 L167,226 Z"/>
-    <path d="M56,182 L58,188 L64,190 L58,192 L56,198 L54,192 L48,190 L54,188 Z"/>
+    <path d="M150,214 L153,222 L161,224 L153,226 L150,234 L147,226 L139,224 L147,222 Z"/>
+    <path d="M44,182 L46,188 L52,190 L46,192 L44,198 L42,192 L36,190 L42,188 Z"/>
   </g>
 </svg></div>
       <div class="info">
@@ -698,47 +762,59 @@
       </div>
     </article>
 
-    <article class="card" data-wid="cyle25:v2:mango:noun:unqualified" data-prev="redraw_later">
+    <article class="card" data-wid="cyle25:v2:mango:noun:unqualified" data-prev="needs_human_review">
       <div class="art"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-mango desc-mango">
   <title id="title-mango">Mango - Ripe yellow-red mango</title>
   <desc id="desc-mango">A large ripe mango with a gradient from yellow to red-orange, a small stem, and a green leaf.</desc>
   <defs>
     <linearGradient id="mango-grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#fde047"/>
-      <stop offset="40%" stop-color="#fb923c"/>
-      <stop offset="100%" stop-color="#ef4444"/>
+      <stop offset="55%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f97316"/>
     </linearGradient>
-    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+    <linearGradient id="mango-flesh" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <filter id="mango-sh" x="-10%" y="-10%" width="120%" height="120%">
       <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
     </filter>
   </defs>
 
-  <line x1="60" y1="260" x2="340" y2="260" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
-  <ellipse cx="200" cy="260" rx="70" ry="7" fill="#0f172a" opacity="0.1"/>
+  <line x1="40" y1="262" x2="360" y2="262" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="150" cy="262" rx="70" ry="7" fill="#0f172a" opacity="0.1"/>
+  <ellipse cx="300" cy="262" rx="52" ry="6" fill="#0f172a" opacity="0.1"/>
 
-  <g id="mango-figure" filter="url(#soft-shadow)">
-    <!-- Mango body (kidney/oval shape) -->
-    <path d="M120 150 C100 100 140 55 200 55 C260 55 310 100 300 160 C290 220 240 250 200 250 C160 250 110 220 120 150 Z" fill="url(#mango-grad)" stroke="#c2410c" stroke-width="3.5"/>
+  <!-- Whole ripe mango (yellow-dominant) -->
+  <g id="mango-figure" filter="url(#mango-sh)">
+    <path d="M70 150 C52 104 92 62 150 62 C208 62 254 104 246 162 C238 218 190 250 150 250 C112 250 62 220 70 150 Z"
+          fill="url(#mango-grad)" stroke="#ca8a04" stroke-width="3.5"/>
+    <!-- ripe red blush -->
+    <ellipse cx="106" cy="120" rx="34" ry="30" fill="#f87171" opacity="0.35"/>
+    <!-- highlight -->
+    <path d="M110 96 Q150 80 190 96" fill="none" stroke="#fef9c3" stroke-width="6" stroke-linecap="round" opacity="0.5"/>
+    <!-- stem -->
+    <path d="M150 64 C148 50 145 44 150 38" fill="none" stroke="#78350f" stroke-width="4" stroke-linecap="round"/>
+    <!-- leaves -->
+    <path d="M150 42 C166 26 192 24 202 31 C196 42 176 46 150 42 Z" fill="#4ade80" stroke="#16a34a" stroke-width="2"/>
+    <path d="M148 44 C130 30 108 30 103 38 C109 47 128 49 148 44 Z" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
+  </g>
 
-    <!-- Highlight -->
-    <path d="M160 90 Q200 72 240 90" fill="none" stroke="#fef9c3" stroke-width="6" stroke-linecap="round" opacity="0.4"/>
-
-    <!-- Subtle blush area -->
-    <ellipse cx="250" cy="120" rx="40" ry="35" fill="#ef4444" opacity="0.2"/>
-
-    <!-- Stem -->
-    <path d="M200 58 C198 45 195 38 200 32" fill="none" stroke="#78350f" stroke-width="4" stroke-linecap="round"/>
-
-    <!-- Leaf -->
-    <path d="M200 35 C215 20 240 18 250 25 C245 35 225 40 200 35 Z" fill="#4ade80" stroke="#16a34a" stroke-width="2"/>
-    <path d="M200 35 C220 25 240 22 248 26" fill="none" stroke="#16a34a" stroke-width="1.5" stroke-linecap="round"/>
-
-    <!-- Second leaf -->
-    <path d="M198 38 C180 25 160 25 155 32 C160 40 178 42 198 38 Z" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
-    <path d="M198 38 C178 30 162 28 157 32" fill="none" stroke="#16a34a" stroke-width="1.5" stroke-linecap="round"/>
-
-    <!-- Sap drop -->
-    <ellipse cx="200" cy="48" rx="3" ry="4" fill="#fbbf24" opacity="0.6"/>
+  <!-- Cut-half showing the flat mango pit (iconic cue) -->
+  <g filter="url(#mango-sh)">
+    <!-- skin edge -->
+    <path d="M262 170 C258 128 292 104 320 108 C352 112 366 150 356 190 C348 224 314 244 288 236 C266 230 264 200 262 170 Z"
+          fill="url(#mango-grad)" stroke="#ca8a04" stroke-width="3.5"/>
+    <!-- yellow flesh -->
+    <path d="M272 170 C270 136 296 118 318 121 C344 125 354 154 346 186 C339 214 312 230 292 224 C276 219 274 196 272 170 Z"
+          fill="url(#mango-flesh)" stroke="#eab308" stroke-width="2.5"/>
+    <!-- flat oval pit -->
+    <ellipse cx="308" cy="172" rx="18" ry="34" fill="#fef9c3" stroke="#d4a017" stroke-width="2.5"/>
+    <g stroke="#d4a017" stroke-width="1.5" fill="none" opacity="0.7">
+      <path d="M308 142 Q318 172 308 202"/>
+      <path d="M300 148 Q306 172 300 196"/>
+      <path d="M316 148 Q310 172 316 196"/>
+    </g>
   </g>
 </svg></div>
       <div class="info">
@@ -753,7 +829,7 @@
       </div>
     </article>
 
-    <article class="card" data-wid="cyle25:v2:meatballs:noun:unqualified" data-prev="redraw_later">
+    <article class="card" data-wid="cyle25:v2:meatballs:noun:unqualified" data-prev="needs_human_review">
       <div class="art"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t-meatballs d-meatballs">
   <title id="t-meatballs">Meatballs</title>
   <desc id="d-meatballs">A white plate of round brown meatballs in red tomato sauce, topped with green basil leaves.</desc>
@@ -807,105 +883,53 @@
       </div>
     </article>
 
-    <article class="card" data-wid="cyle25:v2:monday:noun:unqualified" data-prev="redraw_later">
+    <article class="card" data-wid="cyle25:v2:monday:noun:unqualified" data-prev="needs_human_review">
       <div class="art"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-monday desc-monday">
   <title id="title-monday">Monday - The first day of the school week</title>
-  <desc id="desc-monday">A wall calendar showing a week of seven day cards, with the first card circled in red and marked with one dot, and a child walking to school with a backpack, showing Monday as the first school day.</desc>
+  <desc id="desc-monday">A weekly strip of seven day cards. The very first card is big and highlighted with a sunrise, an arrow points to it, and a child walks to school with a backpack, showing Monday as the first school day.</desc>
   <defs>
     <linearGradient id="mo-bg" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#dbeafe"/>
       <stop offset="100%" stop-color="#bfdbfe"/>
     </linearGradient>
-    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+    <filter id="mo-sh" x="-10%" y="-10%" width="120%" height="120%">
       <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.28"/>
     </filter>
   </defs>
   <rect x="0" y="0" width="400" height="300" fill="url(#mo-bg)"/>
-  <circle cx="352" cy="46" r="20" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
   <rect x="0" y="246" width="400" height="54" fill="#86efac"/>
   <line x1="0" y1="246" x2="400" y2="246" stroke="#15803d" stroke-width="3.5"/>
-  <!-- CALENDAR (hero element) -->
-  <g filter="url(#soft-shadow)">
-    <rect x="40" y="40" width="248" height="160" rx="12" fill="#ffffff" stroke="#334155" stroke-width="5"/>
-    <rect x="40" y="40" width="248" height="36" rx="12" fill="#3b82f6" stroke="#334155" stroke-width="5"/>
-    <rect x="40" y="64" width="248" height="12" fill="#3b82f6"/>
-    <!-- hanging rings -->
-    <g stroke="#64748b" stroke-width="4" fill="none">
-      <path d="M84,40 Q84,24 92,24 Q100,24 100,40"/>
-      <path d="M216,40 Q216,24 224,24 Q232,24 232,40"/>
-    </g>
-    <!-- sun symbol in header -->
-    <circle cx="164" cy="58" r="9" fill="#fde047" stroke="#a16207" stroke-width="2.5"/>
-    <g stroke="#fde047" stroke-width="2.5" stroke-linecap="round">
-      <line x1="164" y1="44" x2="164" y2="40"/>
-      <line x1="178" y1="58" x2="182" y2="58"/>
-      <line x1="150" y1="58" x2="146" y2="58"/>
-    </g>
-    <!-- 7 day cards -->
-    <g>
-      <!-- day 1: MONDAY highlighted -->
-      <rect x="52" y="92" width="28" height="44" rx="5" fill="#fef9c3" stroke="#a16207" stroke-width="3"/>
-      <circle cx="66" cy="114" r="6" fill="#dc2626"/>
-      <!-- day 2 -->
-      <rect x="85" y="92" width="28" height="44" rx="5" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2.5"/>
-      <g fill="#64748b">
-        <circle cx="94" cy="114" r="4"/>
-        <circle cx="105" cy="114" r="4"/>
-      </g>
-      <!-- day 3 -->
-      <rect x="118" y="92" width="28" height="44" rx="5" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2.5"/>
-      <g fill="#64748b">
-        <circle cx="126" cy="114" r="4"/>
-        <circle cx="137" cy="114" r="4"/>
-        <circle cx="132" cy="124" r="4"/>
-      </g>
-      <!-- day 4 -->
-      <rect x="151" y="92" width="28" height="44" rx="5" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2.5"/>
-      <g fill="#64748b">
-        <circle cx="160" cy="108" r="4"/>
-        <circle cx="171" cy="108" r="4"/>
-        <circle cx="160" cy="120" r="4"/>
-        <circle cx="171" cy="120" r="4"/>
-      </g>
-      <!-- day 5 -->
-      <rect x="184" y="92" width="28" height="44" rx="5" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2.5"/>
-      <g fill="#64748b">
-        <circle cx="192" cy="108" r="4"/>
-        <circle cx="203" cy="108" r="4"/>
-        <circle cx="198" cy="114" r="4"/>
-        <circle cx="192" cy="122" r="4"/>
-        <circle cx="203" cy="122" r="4"/>
-      </g>
-      <!-- day 6 weekend -->
-      <rect x="217" y="92" width="28" height="44" rx="5" fill="#fee2e2" stroke="#f87171" stroke-width="2.5"/>
-      <g fill="#f87171">
-        <circle cx="225" cy="106" r="4"/>
-        <circle cx="236" cy="106" r="4"/>
-        <circle cx="225" cy="116" r="4"/>
-        <circle cx="236" cy="116" r="4"/>
-        <circle cx="225" cy="126" r="4"/>
-        <circle cx="236" cy="126" r="4"/>
-      </g>
-      <!-- day 7 weekend -->
-      <rect x="250" y="92" width="28" height="44" rx="5" fill="#fee2e2" stroke="#f87171" stroke-width="2.5"/>
-      <g fill="#f87171">
-        <circle cx="258" cy="104" r="4"/>
-        <circle cx="269" cy="104" r="4"/>
-        <circle cx="258" cy="114" r="4"/>
-        <circle cx="269" cy="114" r="4"/>
-        <circle cx="258" cy="124" r="4"/>
-        <circle cx="269" cy="124" r="4"/>
-        <circle cx="263" cy="131" r="3.5"/>
-      </g>
-    </g>
-    <!-- big red circle around Monday -->
-    <ellipse cx="66" cy="114" rx="24" ry="32" fill="none" stroke="#dc2626" stroke-width="5"/>
-    <!-- arrow pointing to Monday -->
-    <path d="M66,172 L66,150 M58,158 L66,148 L74,158" fill="none" stroke="#dc2626" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- sunrise band at bottom of calendar = start -->
-    <path d="M52,186 Q66,174 80,186" fill="none" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/>
-    <circle cx="66" cy="184" r="6" fill="#fbbf24" stroke="#a16207" stroke-width="2.5"/>
+
+  <!-- Week strip of 7 day cards (position, not counting) -->
+  <g filter="url(#mo-sh)">
+    <rect x="20" y="60" width="252" height="100" rx="12" fill="#ffffff" stroke="#334155" stroke-width="5"/>
   </g>
+  <g stroke="#94a3b8" stroke-width="2.5">
+    <!-- MONDAY: big highlighted first card -->
+    <rect x="28"  y="66" width="40" height="88" rx="7" fill="#fde047" stroke="#dc2626" stroke-width="5"/>
+    <!-- other 4 weekdays -->
+    <rect x="74"  y="72" width="34" height="76" rx="5" fill="#e2e8f0"/>
+    <rect x="112" y="72" width="34" height="76" rx="5" fill="#e2e8f0"/>
+    <rect x="150" y="72" width="34" height="76" rx="5" fill="#e2e8f0"/>
+    <rect x="188" y="72" width="34" height="76" rx="5" fill="#e2e8f0"/>
+    <!-- 2 weekend cards -->
+    <rect x="226" y="72" width="34" height="76" rx="5" fill="#bae6fd"/>
+    <!-- 7th weekend card peeking -->
+  </g>
+  <!-- sunrise on Monday card = the day starts -->
+  <g>
+    <circle cx="48" cy="118" r="14" fill="#fbbf24" stroke="#a16207" stroke-width="3"/>
+    <g stroke="#f59e0b" stroke-width="3" stroke-linecap="round">
+      <line x1="48" y1="96" x2="48" y2="90"/>
+      <line x1="30" y1="118" x2="24" y2="118"/>
+      <line x1="66" y1="118" x2="72" y2="118"/>
+      <line x1="34" y1="104" x2="30" y2="100"/>
+      <line x1="62" y1="104" x2="66" y2="100"/>
+    </g>
+    <path d="M30,132 L66,132" stroke="#a16207" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <!-- big red arrow pointing DOWN to the first (Monday) card -->
+  <path d="M48,190 L48,166 M38,176 L48,164 L58,176" fill="none" stroke="#dc2626" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
   <!-- child walking to school with backpack -->
   <g filter="url(#soft-shadow)">
     <path d="M316,128 Q314,108 338,106 Q362,108 360,128 L354,132 Q338,120 322,132 Z" fill="#451a03" stroke="#1c1917" stroke-width="3"/>
@@ -938,39 +962,59 @@
       </div>
     </article>
 
-    <article class="card" data-wid="cyle25:v2:net:noun:unqualified" data-prev="redraw_later">
+    <article class="card" data-wid="cyle25:v2:net:noun:unqualified" data-prev="needs_human_review">
       <div class="art"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t-net d-net">
   <title id="t-net">Net</title>
-  <desc id="d-net">A butterfly net with a long wooden handle and a round hoop filled with a fine diamond mesh, catching a butterfly.</desc>
+  <desc id="d-net">A white soccer goal net with a red-and-white ball flying into it, showing the ball going into the net.</desc>
   <defs>
-    <pattern id="mesh" width="18" height="18" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <path d="M0 0 H18 M0 0 V18" stroke="#94a3b8" stroke-width="1.6" fill="none"/>
+    <pattern id="net-mesh" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M0 0 H20 M0 0 V20" stroke="#cbd5e1" stroke-width="1.8" fill="none"/>
     </pattern>
+    <radialGradient id="net-ball" cx="0.35" cy="0.3" r="0.9">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </radialGradient>
     <filter id="net-sh" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
     </filter>
   </defs>
-  <rect x="8" y="8" width="384" height="284" rx="20" fill="#e0f2fe"/>
-  <ellipse cx="240" cy="272" rx="120" ry="13" fill="#0f172a" opacity="0.1"/>
+  <rect x="0" y="0" width="400" height="300" fill="#bbf7d0"/>
+  <rect x="0" y="232" width="400" height="68" fill="#4ade80"/>
+  <line x1="0" y1="232" x2="400" y2="232" stroke="#15803d" stroke-width="3"/>
+  <ellipse cx="200" cy="262" rx="170" ry="14" fill="#0f172a" opacity="0.12"/>
 
+  <!-- ===== GOAL with net (dominant) ===== -->
   <g filter="url(#net-sh)">
-    <!-- Handle -->
-    <rect x="70" y="190" width="150" height="16" rx="8" fill="#a16207" stroke="#78350f" stroke-width="4" transform="rotate(28 145 198)"/>
-    <!-- Mesh bag (cone) -->
-    <path d="M232 92 Q300 96 316 156 Q296 210 236 214 Q214 154 232 92 Z" fill="url(#mesh)" stroke="#64748b" stroke-width="3"/>
-    <path d="M232 92 Q300 96 316 156 Q296 210 236 214 Q214 154 232 92 Z" fill="#e0f2fe" opacity="0.25"/>
-    <!-- Hoop ring (thick) -->
-    <ellipse cx="256" cy="120" rx="58" ry="46" fill="none" stroke="#0ea5e9" stroke-width="10" transform="rotate(-18 256 120)"/>
-    <!-- ring-to-handle joint -->
-    <path d="M210 150 L232 168" stroke="#0ea5e9" stroke-width="8" stroke-linecap="round"/>
+    <!-- net mesh panel filling the goal mouth -->
+    <path d="M70,80 L330,80 L330,232 L70,232 Z" fill="url(#net-mesh)"/>
+    <!-- side/top depth mesh -->
+    <path d="M330,80 L360,64 L360,216 L330,232 Z" fill="url(#net-mesh)" opacity="0.75"/>
+    <path d="M70,80 L100,64 L360,64 L330,80 Z" fill="url(#net-mesh)" opacity="0.6"/>
+  </g>
+  <!-- goal frame posts (drawn on top so they read as the goal) -->
+  <g stroke="#f1f5f9" stroke-width="10" stroke-linecap="round" filter="url(#net-sh)">
+    <line x1="70" y1="80" x2="70" y2="232"/>
+    <line x1="330" y1="80" x2="330" y2="232"/>
+    <line x1="70" y1="80" x2="330" y2="80"/>
+  </g>
+  <g stroke="#cbd5e1" stroke-width="6" stroke-linecap="round">
+    <line x1="330" y1="80" x2="360" y2="64"/>
+    <line x1="70" y1="80" x2="100" y2="64"/>
   </g>
 
-  <!-- Butterfly inside -->
-  <g stroke="#0f172a" stroke-width="3">
-    <path d="M256 120 Q232 96 236 128 Q248 136 256 120 Z" fill="#f472b6"/>
-    <path d="M256 120 Q280 96 276 128 Q264 136 256 120 Z" fill="#a855f7"/>
-    <line x1="256" y1="108" x2="256" y2="134" stroke-width="4"/>
-    <path d="M256 108 l-6 -8 M256 108 l6 -8" fill="none" stroke-linecap="round"/>
+  <!-- ball flying INTO the net -->
+  <g filter="url(#net-sh)">
+    <!-- motion streaks -->
+    <g stroke="#f59e0b" stroke-width="4" stroke-linecap="round" opacity="0.75">
+      <line x1="150" y1="150" x2="120" y2="150"/>
+      <line x1="150" y1="168" x2="126" y2="172"/>
+      <line x1="150" y1="132" x2="126" y2="126"/>
+    </g>
+    <circle cx="200" cy="150" r="30" fill="url(#net-ball)" stroke="#0f172a" stroke-width="3.5"/>
+    <!-- classic soccer-ball black pentagon patches -->
+    <path d="M200,134 L214,144 L208,161 L192,161 L186,144 Z" fill="#1e293b"/>
+    <path d="M200,127 L200,134 M214,144 L226,140 M208,161 L216,173 M192,161 L184,173 M186,144 L174,140"
+          stroke="#1e293b" stroke-width="3" fill="none" stroke-linecap="round"/>
   </g>
 </svg></div>
       <div class="info">
@@ -985,57 +1029,81 @@
       </div>
     </article>
 
-    <article class="card" data-wid="cyle25:v2:restaurant:noun:unqualified" data-prev="redraw_later">
+    <article class="card" data-wid="cyle25:v2:restaurant:noun:unqualified" data-prev="needs_human_review">
       <div class="art"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-restaurant desc-restaurant">
   <title id="title-restaurant">Restaurant</title>
-  <desc id="desc-restaurant">A restaurant table set with a plate, cutlery, a glass, and a candle, near a big window.</desc>
+  <desc id="desc-restaurant">A restaurant building with a big storefront window, a canopy sign with a fork-and-knife symbol, several small dining tables with plates inside, and a waiter carrying a tray, showing a place where people go to eat.</desc>
   <defs>
     <linearGradient id="restaurant-bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7c2d12"/>
-      <stop offset="100%" stop-color="#a16207"/>
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#fef3c7"/>
     </linearGradient>
-    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    <filter id="restaurant-sh" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.22"/>
     </filter>
   </defs>
 
   <rect x="0" y="0" width="400" height="300" fill="url(#restaurant-bg)"/>
-  <!-- Window with evening view -->
-  <g filter="url(#soft-shadow)">
-    <rect x="240" y="30" width="130" height="120" rx="6" fill="#1e3a8a" stroke="#78350f" stroke-width="5"/>
-    <circle cx="345" cy="55" r="12" fill="#fde047" opacity="0.9"/>
-    <g fill="#fbbf24" opacity="0.7"><circle cx="260" cy="90" r="2"/><circle cx="290" cy="110" r="2"/><circle cx="320" cy="130" r="2"/></g>
-    <rect x="255" y="120" width="14" height="30" fill="#fbbf24" opacity="0.6"/>
-    <rect x="280" y="115" width="14" height="35" fill="#fbbf24" opacity="0.6"/>
+  <rect x="0" y="258" width="400" height="42" fill="#94a3b8"/>
+  <line x1="0" y1="258" x2="400" y2="258" stroke="#475569" stroke-width="3"/>
+
+  <!-- Building shell -->
+  <g filter="url(#restaurant-sh)">
+    <rect x="40" y="70" width="320" height="188" rx="6" fill="#fef9c3" stroke="#78350f" stroke-width="5"/>
+    <!-- Roof / awning band -->
+    <rect x="30" y="52" width="340" height="26" rx="6" fill="#dc2626" stroke="#7f1d1d" stroke-width="4"/>
+    <!-- scalloped awning -->
+    <g fill="#ef4444" stroke="#7f1d1d" stroke-width="2">
+      <path d="M40,78 q15,18 30,0 z"/>
+      <path d="M100,78 q15,18 30,0 z"/>
+      <path d="M160,78 q15,18 30,0 z"/>
+      <path d="M220,78 q15,18 30,0 z"/>
+      <path d="M280,78 q15,18 30,0 z"/>
+      <path d="M340,78 q-15,18 -30,0 z"/>
+    </g>
+    <!-- fork & knife sign symbol on the awning -->
+    <g stroke="#ffffff" stroke-width="3" stroke-linecap="round" fill="none">
+      <line x1="192" y1="58" x2="192" y2="72"/>
+      <line x1="188" y1="58" x2="188" y2="63"/><line x1="196" y1="58" x2="196" y2="63"/>
+      <line x1="208" y1="58" x2="208" y2="72"/>
+      <path d="M208,58 q6,2 6,8 q0,4 -6,4"/>
+    </g>
   </g>
 
-  <!-- Table -->
-  <g filter="url(#soft-shadow)">
-    <ellipse cx="200" cy="230" rx="175" ry="55" fill="#f8fafc" stroke="#cbd5e1" stroke-width="3"/>
+  <!-- Big storefront window -->
+  <g filter="url(#restaurant-sh)">
+    <rect x="60" y="92" width="220" height="120" rx="4" fill="#bae6fd" stroke="#78350f" stroke-width="4"/>
+    <line x1="170" y1="92" x2="170" y2="212" stroke="#78350f" stroke-width="3"/>
+    <!-- interior: two dining tables -->
+    <g>
+      <ellipse cx="112" cy="176" rx="34" ry="12" fill="#f8fafc" stroke="#94a3b8" stroke-width="2.5"/>
+      <ellipse cx="112" cy="174" rx="14" ry="5" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+      <line x1="112" y1="176" x2="112" y2="200" stroke="#a16207" stroke-width="4"/>
+      <ellipse cx="228" cy="176" rx="34" ry="12" fill="#f8fafc" stroke="#94a3b8" stroke-width="2.5"/>
+      <ellipse cx="228" cy="174" rx="14" ry="5" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+      <line x1="228" y1="176" x2="228" y2="200" stroke="#a16207" stroke-width="4"/>
+    </g>
+    <!-- warm lamp -->
+    <circle cx="170" cy="108" r="7" fill="#fde047" stroke="#a16207" stroke-width="2"/>
+  </g>
 
-    <!-- Plate -->
-    <ellipse cx="200" cy="230" rx="70" ry="26" fill="#e2e8f0" stroke="#94a3b8" stroke-width="3"/>
-    <ellipse cx="200" cy="230" rx="48" ry="17" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
-    <!-- Food -->
-    <ellipse cx="200" cy="228" rx="28" ry="10" fill="#f97316" opacity="0.85"/>
-    <circle cx="188" cy="226" r="5" fill="#22c55e"/>
-    <circle cx="212" cy="228" r="5" fill="#dc2626"/>
+  <!-- Door -->
+  <g filter="url(#restaurant-sh)">
+    <rect x="296" y="150" width="52" height="108" rx="4" fill="#a16207" stroke="#78350f" stroke-width="4"/>
+    <rect x="304" y="160" width="36" height="60" rx="3" fill="#bae6fd" stroke="#78350f" stroke-width="2.5"/>
+    <circle cx="340" cy="205" r="3" fill="#fef9c3"/>
+  </g>
 
-    <!-- Fork -->
-    <rect x="100" y="212" width="5" height="40" rx="2" fill="#94a3b8"/>
-    <g stroke="#94a3b8" stroke-width="2"><line x1="97" y1="212" x2="97" y2="222"/><line x1="102" y1="212" x2="102" y2="222"/><line x1="108" y1="212" x2="108" y2="222"/></g>
-    <!-- Knife -->
-    <rect x="292" y="212" width="6" height="40" rx="2" fill="#94a3b8"/>
-    <path d="M292 212 Q288 222 295 232" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1.5"/>
-
-    <!-- Glass -->
-    <path d="M310 195 L326 195 L322 225 L314 225 Z" fill="#bae6fd" stroke="#7dd3fc" stroke-width="2" opacity="0.85"/>
-    <rect x="316" y="200" width="4" height="18" fill="#38bdf8" opacity="0.6"/>
-
-    <!-- Candle -->
-    <rect x="86" y="180" width="14" height="30" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
-    <path d="M93 165 Q100 176 93 180 Q86 176 93 165 Z" fill="#fbbf24"/>
-    <ellipse cx="93" cy="211" rx="12" ry="4" fill="#e2e8f0"/>
+  <!-- Waiter with a tray by the door -->
+  <g filter="url(#restaurant-sh)">
+    <circle cx="322" cy="228" r="10" fill="#fcd9b6" stroke="#78350f" stroke-width="3"/>
+    <path d="M322,238 L322,215 Q322,208 330,208 Q338,208 337,215" fill="#0f172a"/>
+    <path d="M314,244 L330,244 L332,262 L312,262 Z" fill="#1e293b" stroke="#0f172a" stroke-width="2.5"/>
+    <!-- raised arm + tray -->
+    <path d="M314,246 Q300,240 296,234" fill="none" stroke="#fcd9b6" stroke-width="6" stroke-linecap="round"/>
+    <ellipse cx="292" cy="232" rx="18" ry="5" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2.5"/>
+    <circle cx="288" cy="229" r="4" fill="#f97316"/>
+    <circle cx="298" cy="229" r="4" fill="#22c55e"/>
   </g>
 </svg></div>
       <div class="info">
@@ -1050,7 +1118,7 @@
       </div>
     </article>
 
-    <article class="card" data-wid="cyle25:v2:sandwich:noun:unqualified" data-prev="redraw_later">
+    <article class="card" data-wid="cyle25:v2:sandwich:noun:unqualified" data-prev="needs_human_review">
       <div class="art"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-sandwich desc-sandwich">
   <title id="title-sandwich">Sandwich</title>
   <desc id="desc-sandwich">A triangular sandwich with layers of lettuce, tomato, cheese, and ham between bread slices.</desc>
@@ -1063,30 +1131,43 @@
       <stop offset="0%" stop-color="#fcd34d"/>
       <stop offset="100%" stop-color="#d97706"/>
     </linearGradient>
-    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+    <filter id="sandwich-sh" x="-10%" y="-10%" width="120%" height="120%">
       <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
     </filter>
   </defs>
 
   <rect x="0" y="0" width="400" height="300" fill="url(#sandwich-bg)"/>
-  <ellipse cx="200" cy="255" rx="150" ry="18" fill="#0f172a" opacity="0.12"/>
+  <ellipse cx="200" cy="256" rx="140" ry="16" fill="#0f172a" opacity="0.12"/>
 
-  <g filter="url(#soft-shadow)">
-    <!-- Bottom bread -->
-    <path d="M70 220 L330 220 L200 250 Z" fill="url(#sandwich-bread)" stroke="#92400e" stroke-width="4"/>
+  <!-- Clean stacked sandwich cross-section: every layer sits on the one below -->
+  <g filter="url(#sandwich-sh)" stroke-linejoin="round">
+    <!-- Bottom bread slice -->
+    <path d="M84,214 Q80,238 100,240 L300,240 Q320,238 316,214 Q200,224 84,214 Z"
+          fill="url(#sandwich-bread)" stroke="#92400e" stroke-width="4"/>
     <!-- Ham -->
-    <path d="M78 210 L322 210 L200 236 Z" fill="#fca5a5" stroke="#dc2626" stroke-width="2.5"/>
-    <!-- Cheese -->
-    <path d="M85 198 L315 198 L200 222 Z" fill="#fde047" stroke="#ca8a04" stroke-width="2.5"/>
-    <!-- Tomato slices -->
-    <path d="M92 186 L308 186 L200 208 Z" fill="#ef4444" stroke="#991b1b" stroke-width="2.5"/>
-    <!-- Lettuce (wavy) -->
-    <path d="M92 178 Q120 168 150 178 Q180 168 210 178 Q240 168 270 178 Q290 172 308 178 L200 198 Z" fill="#65a30d" stroke="#3f6212" stroke-width="2.5"/>
-    <!-- Top bread -->
-    <path d="M110 100 L290 100 L305 165 L95 165 Z" fill="url(#sandwich-bread)" stroke="#92400e" stroke-width="4"/>
-    <path d="M110 100 Q200 78 290 100" fill="url(#sandwich-bread)" stroke="#92400e" stroke-width="4"/>
+    <path d="M86,206 Q200,214 314,206 L316,214 Q200,224 84,214 Z"
+          fill="#fca5a5" stroke="#dc2626" stroke-width="2.5"/>
+    <!-- Cheese with drips -->
+    <path d="M88,196 L312,196 L318,206 Q290,214 296,222 Q286,212 278,206 Q200,214 86,206 Z"
+          fill="#fde047" stroke="#ca8a04" stroke-width="2.5"/>
+    <!-- Tomato slice -->
+    <ellipse cx="140" cy="192" rx="20" ry="9" fill="#ef4444" stroke="#991b1b" stroke-width="2.5"/>
+    <ellipse cx="200" cy="194" rx="20" ry="9" fill="#ef4444" stroke="#991b1b" stroke-width="2.5"/>
+    <ellipse cx="260" cy="192" rx="20" ry="9" fill="#ef4444" stroke="#991b1b" stroke-width="2.5"/>
+    <!-- Lettuce (wavy, frills over the edge) -->
+    <path d="M86,186 Q104,172 124,184 Q146,170 168,184 Q192,170 214,184 Q238,170 260,184 Q282,172 314,186 Q200,196 86,186 Z"
+          fill="#65a30d" stroke="#3f6212" stroke-width="2.5"/>
+    <!-- Top bread dome sitting directly on lettuce -->
+    <path d="M92,178 Q92,130 200,124 Q308,130 308,178 Q200,168 92,178 Z"
+          fill="url(#sandwich-bread)" stroke="#92400e" stroke-width="4"/>
     <!-- Sesame seeds -->
-    <g fill="#fef9c3"><ellipse cx="160" cy="95" rx="4" ry="2.5"/><ellipse cx="200" cy="88" rx="4" ry="2.5"/><ellipse cx="240" cy="95" rx="4" ry="2.5"/><ellipse cx="180" cy="100" rx="4" ry="2.5"/><ellipse cx="220" cy="100" rx="4" ry="2.5"/></g>
+    <g fill="#fef9c3">
+      <ellipse cx="160" cy="150" rx="4" ry="2.5"/>
+      <ellipse cx="200" cy="140" rx="4" ry="2.5"/>
+      <ellipse cx="240" cy="150" rx="4" ry="2.5"/>
+      <ellipse cx="180" cy="158" rx="4" ry="2.5"/>
+      <ellipse cx="220" cy="158" rx="4" ry="2.5"/>
+    </g>
   </g>
 </svg></div>
       <div class="info">
