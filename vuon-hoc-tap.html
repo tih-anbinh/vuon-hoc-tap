@@ -1539,13 +1539,37 @@ const SFX={
 
 /* ---------- 4. GIỌNG ĐỌC TIẾNG VIỆT ---------- */
 let VOICES=[], VI=[], _vPoll=0, _vWarnShown=false;
+/* Chấm điểm giọng tiếng Việt theo chất lượng (dựa trên readium/speech vi.json):
+   veryHigh MS HoaiMy/NamMinh Online (Natural) [Edge] > high Google Tiếng Việt (Natural) >
+   normal MS An [Windows] > low Apple "Linh" (compact) [iPhone/iPad].
+   Edge luôn tự có HoaiMy/NamMinh nên vẫn được chọn — Edge KHÔNG đổi hành vi. */
+function vnScore(v){
+  if(!v) return -1;
+  const name=(v.name||"").toLowerCase();
+  let sc=10;
+  if(/\(natural\)/.test(name)) sc+=50;
+  if(/\bonline\b/.test(name)) sc+=20;
+  if(/hoaimy|hoài my|nammin|nam minh/.test(name)) sc+=30;
+  if(/google/.test(name)) sc+=15;
+  if(/\bneural\b|premium|enhanced/.test(name)) sc+=25;
+  if(/\bcompact\b|eloquence/.test(name)) sc-=20;
+  if(v.localService===false) sc+=8;
+  return sc;
+}
+/* Giọng tiếng Việt tốt nhất trong danh sách VI (đã lọc sẵn theo lang vi). */
+function pickBestVi(){
+  if(!VI.length) return null;
+  let best=VI[0], bestScore=vnScore(VI[0]);
+  for(const v of VI){ const sc=vnScore(v); if(sc>bestScore){ bestScore=sc; best=v; } }
+  return best;
+}
 function loadVoices(){
   if(!("speechSynthesis" in window)) return;
   VOICES = speechSynthesis.getVoices()||[];
   VI = VOICES.filter(v=>/^vi(-|_|$)/i.test(v.lang||"") || /vietnam/i.test(v.name||""));
   if(!VI.length && _vPoll<20){_vPoll++;setTimeout(loadVoices,300);return;}
   if(!ST.voice && VI.length){
-    const uu = VI.find(v=>/hoaimy|nammin|natural|online/i.test(v.name)) || VI[0];
+    const uu = pickBestVi() || VI[0];
     ST.voice = uu.name; save();
   }
   if(!VI.length && !_vWarnShown){
@@ -1575,7 +1599,7 @@ function doc(txt, opt){
   if(!txt) return;
   const u=new SpeechSynthesisUtterance(String(txt));
   u.lang="vi-VN"; u.rate=opt.rate||ST.rate; u.pitch=opt.pitch||1.05; u.volume=ST.sound?1:0;
-  const v = VI.find(x=>x.name===ST.voice) || VI[0];
+  const v = VI.find(x=>x.name===ST.voice) || pickBestVi();
   if(v) u.voice=v;   // không set voice nếu không có VI → browser tự dùng vi-VN tốt nhất
   if(opt.xong) u.onend=opt.xong;
   dangDoc=u; speechSynthesis.speak(u);
@@ -4169,7 +4193,7 @@ function _hpSpeakOffline(txt){
   speechSynthesis.cancel();
   const u=new SpeechSynthesisUtterance(txt);
   u.lang='vi-VN';u.rate=0.68;u.pitch=1.05;
-  const v=VI[0]||null; if(v)u.voice=v;
+  const v=pickBestVi(); if(v)u.voice=v;
   speechSynthesis.speak(u);
 }
 
@@ -4220,9 +4244,7 @@ function hpSpeakStroke(ch,k){
   if(window.speechSynthesis)speechSynthesis.cancel();
   const mode=(document.getElementById('hpVoiceMode')||{}).value||'auto';
   const rate=0.78;
-  const viVoice=window.speechSynthesis&&(
-    speechSynthesis.getVoices().find(v=>v.lang==='vi-VN')||
-    speechSynthesis.getVoices().find(v=>v.lang.startsWith('vi')))||null;
+  const viVoice=pickBestVi();
   const sentences=txt.split(/(?<=\. )|(?<=\.$)/);
   if(mode==='google'){_hpGoogleTTS(sentences,0,txt,rate);return;}
   if(mode==='local'||viVoice){
@@ -4240,9 +4262,7 @@ function hpSpeak(ch){
   if(window.speechSynthesis)speechSynthesis.cancel();
   const mode=(document.getElementById('hpVoiceMode')||{}).value||'auto';
   const rate=_hpSyncRate(txt); // đồng bộ với tốc độ viết
-  const viVoice=window.speechSynthesis&&(
-    speechSynthesis.getVoices().find(v=>v.lang==='vi-VN')||
-    speechSynthesis.getVoices().find(v=>v.lang.startsWith('vi')))||null;
+  const viVoice=pickBestVi();
   const sentences=txt.split(/(?<=\. )|(?<=\.$)/);
   if(mode==='google'){_hpGoogleTTS(sentences,0,txt,rate);return;}
   if(mode==='local'||viVoice){
@@ -5492,6 +5512,7 @@ window.GV = {
     if (!window.speechSynthesis) return;
     const u = new SpeechSynthesisUtterance(text);
     u.lang = 'vi-VN'; u.rate = 0.85; u.pitch = 1.2; u.volume = 0.9;
+    try { const v = (typeof pickBestVi==='function') ? pickBestVi() : null; if (v) u.voice = v; } catch(e){}
     window.speechSynthesis.cancel(); window.speechSynthesis.speak(u);
   },
   initState(gameId, totalQ) {
