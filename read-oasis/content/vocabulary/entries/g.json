@@ -114,13 +114,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-garden-v1",
-        "asset": "vocabulary/assets/vg-scene-garden-v1.svg",
-        "alt": "A cheerful garden scene with colourful flowers, a small tree, a butterfly, and a fence.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -130,7 +130,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -183,13 +183,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-gate-v1",
-        "asset": "vocabulary/assets/vg-scene-gate-v1.svg",
-        "alt": "A wooden garden gate set in a fence, standing open on green grass.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -199,7 +199,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -861,13 +861,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-giraffe-v1",
-        "asset": "vocabulary/assets/vg-scene-giraffe-v1.svg",
-        "alt": "A tall yellow giraffe with brown patches, a very long neck, two small horns, and a gentle smiling face.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -877,7 +877,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -888,8 +888,8 @@
   {
     "entry_id": "ro-vocab:girl:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:girl:noun:unqualified",
@@ -904,7 +904,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "girl (noun)",
+    "sense_label": "a female child",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -915,11 +915,11 @@
       "cyle25-theme:family-friends"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
-      "nonexample_en": null,
+      "definition_en": "A young female child.",
+      "explanation_vi": "Một đứa trẻ là con gái (cô bé).",
+      "example_en": "The girl is reading a book.",
+      "example_vi": "Cô bé đang đọc một quyển sách.",
+      "nonexample_en": "The boy is reading a book.",
       "contrast_entry_ids": [],
       "usage_notes": [],
       "pronunciation": {
@@ -934,19 +934,23 @@
         "visual_priority": "high",
         "asset_id": "vg-scene-girl-v1",
         "asset": "vocabulary/assets/vg-scene-girl-v1.svg",
-        "alt": "A cheerful girl with brown pigtails tied with ribbons, wearing a pink dress, waving hello in a sunny meadow.",
-        "status": "draft",
-        "kind": "scene",
+        "alt": "A young female child.",
+        "status": "needs_human_review",
+        "kind": "person",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
-      "media_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1064,13 +1068,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-glass-v1",
-        "asset": "vocabulary/assets/vg-scene-glass-v1.svg",
-        "alt": "A big clear glass filled with orange juice and a striped straw, next to a jug pouring more juice and orange slices on the table.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1080,7 +1084,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1134,13 +1138,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-glass-v1",
-        "asset": "vocabulary/assets/vg-scene-glass-v1.svg",
-        "alt": "A big clear glass filled with orange juice and a striped straw, next to a jug pouring more juice and orange slices on the table.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1150,7 +1154,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1203,13 +1207,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-glasses-v1",
-        "asset": "vocabulary/assets/vg-scene-glasses-v1.svg",
-        "alt": "A pair of round eyeglasses with colourful frames, seen from the front.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1219,7 +1223,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1272,13 +1276,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-glove-v1",
-        "asset": "vocabulary/assets/vg-scene-glove-v1.svg",
-        "alt": "A warm blue winter glove with a thumb, four fingers, and a fluffy white cuff.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1288,7 +1292,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1342,13 +1346,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-glue-v1",
-        "asset": "vocabulary/assets/vg-scene-glue-v1.svg",
-        "alt": "A bottle of white school glue with an orange twist cap and a drip of glue on the tip.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1358,7 +1362,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1817,13 +1821,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-goal-v1",
-        "asset": "vocabulary/assets/vg-scene-goal-v1.svg",
-        "alt": "A football goal net with a ball flying into the back of the net on green grass.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1833,7 +1837,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1844,8 +1848,8 @@
   {
     "entry_id": "ro-vocab:goat:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:goat:noun:unqualified",
@@ -1860,7 +1864,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "goat (noun)",
+    "sense_label": "a farm animal with horns",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -1871,10 +1875,10 @@
       "cyle25-theme:animals"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A farm animal with horns that gives us milk.",
+      "explanation_vi": "Con vật nuôi ở trang trại, có sừng, cho ta sữa (con dê).",
+      "example_en": "The goat eats grass on the hill.",
+      "example_vi": "Con dê ăn cỏ trên đồi.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1887,22 +1891,26 @@
       },
       "visual": {
         "representation_type": "scene_svg",
-        "visual_priority": "high",
+        "visual_priority": "medium",
         "asset_id": "vg-scene-goat-v1",
         "asset": "vocabulary/assets/vg-scene-goat-v1.svg",
-        "alt": "A white goat with curved horns, a small beard, upright ears, and a short tail standing on grass.",
-        "status": "draft",
-        "kind": "scene",
+        "alt": "A farm animal with horns that gives us milk.",
+        "status": "needs_human_review",
+        "kind": "animal",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
-      "media_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1957,13 +1965,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-gold-v1",
-        "asset": "vocabulary/assets/vg-scene-gold-v1.svg",
-        "alt": "A shiny stack of gold bars and gold coins glinting with sparkles.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1973,7 +1981,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2026,13 +2034,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-golf-v1",
-        "asset": "vocabulary/assets/vg-scene-golf-v1.svg",
-        "alt": "A golf club leaning by a white golf ball on a tee, beside a flag in a hole on the green.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -2042,7 +2050,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2298,13 +2306,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-granddaughter-v1",
-        "asset": "vocabulary/assets/vg-scene-granddaughter-v1.svg",
-        "alt": "A grandmother and grandfather with grey hair smiling at their little granddaughter, who runs to them with open arms, hearts floating above.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -2314,7 +2322,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2325,8 +2333,8 @@
   {
     "entry_id": "ro-vocab:grandfather:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:grandfather:noun:unqualified",
@@ -2341,7 +2349,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "grandfather (noun)",
+    "sense_label": "the father of your mother or father",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -2352,11 +2360,11 @@
       "cyle25-theme:family-friends"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
-      "nonexample_en": null,
+      "definition_en": "The father of your mother or your father.",
+      "explanation_vi": "Bố của mẹ hoặc bố của bố bạn (ông).",
+      "example_en": "My grandfather works in the garden.",
+      "example_vi": "Ông làm việc trong khu vườn.",
+      "nonexample_en": "My grandmother works in the garden.",
       "contrast_entry_ids": [],
       "usage_notes": [],
       "pronunciation": {
@@ -2371,19 +2379,23 @@
         "visual_priority": "high",
         "asset_id": "vg-scene-grandfather-v1",
         "asset": "vocabulary/assets/vg-scene-grandfather-v1.svg",
-        "alt": "A kind elderly grandfather with white hair, a bushy white beard and glasses, standing with a wooden walking cane.",
-        "status": "draft",
-        "kind": "scene",
+        "alt": "The father of your mother or your father.",
+        "status": "needs_human_review",
+        "kind": "person",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
-      "media_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2436,13 +2448,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-grandma-v1",
-        "asset": "vocabulary/assets/vg-scene-grandma-v1.svg",
-        "alt": "A smiling grandma with white hair in a bun and round glasses, sitting and knitting a red scarf with knitting needles and a ball of yarn.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -2452,7 +2464,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2463,8 +2475,8 @@
   {
     "entry_id": "ro-vocab:grandmother:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:grandmother:noun:unqualified",
@@ -2479,7 +2491,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "grandmother (noun)",
+    "sense_label": "the mother of your mother or father",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -2490,11 +2502,11 @@
       "cyle25-theme:family-friends"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
-      "nonexample_en": null,
+      "definition_en": "The mother of your mother or your father.",
+      "explanation_vi": "Mẹ của mẹ hoặc mẹ của bố bạn (bà).",
+      "example_en": "My grandmother tells me nice stories.",
+      "example_vi": "Bà kể cho em nghe những câu chuyện hay.",
+      "nonexample_en": "My grandfather tells me nice stories.",
       "contrast_entry_ids": [],
       "usage_notes": [],
       "pronunciation": {
@@ -2509,19 +2521,23 @@
         "visual_priority": "high",
         "asset_id": "vg-scene-grandmother-v1",
         "asset": "vocabulary/assets/vg-scene-grandmother-v1.svg",
-        "alt": "A warm grandmother with gray hair in a bun and glasses, bending down to hug her small grandchild, with a heart above them.",
-        "status": "draft",
-        "kind": "scene",
+        "alt": "The mother of your mother or your father.",
+        "status": "needs_human_review",
+        "kind": "person",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
-      "media_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2574,13 +2590,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-grandpa-v1",
-        "asset": "vocabulary/assets/vg-scene-grandpa-v1.svg",
-        "alt": "A cheerful grandpa with white hair and moustache sitting in a green armchair, reading an open picture book to his small grandchild sitting on his lap.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -2590,7 +2606,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2643,13 +2659,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-grandparent-v1",
-        "asset": "vocabulary/assets/vg-scene-grandparent-v1.svg",
-        "alt": "A smiling grandmother with a hair bun and a grandfather with glasses and a walking stick standing side by side, both with grey hair, with a heart between them.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -2659,7 +2675,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2712,13 +2728,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-grandson-v1",
-        "asset": "vocabulary/assets/vg-scene-grandson-v1.svg",
-        "alt": "A grandfather with grey hair and glasses gently rolling a ball to his little grandson, who kneels ready to catch it in the garden.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -2728,7 +2744,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2781,13 +2797,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-grape-v1",
-        "asset": "vocabulary/assets/vg-scene-grape-v1.svg",
-        "alt": "A bunch of round purple grapes hanging from a green stem with a curly tendril and a green leaf.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -2797,7 +2813,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2850,13 +2866,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-grass-v1",
-        "asset": "vocabulary/assets/vg-scene-grass-v1.svg",
-        "alt": "A close-up of bright green grass blades growing in a field, with a ladybird on one blade, small flowers, and a child lying happily on the lawn.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -2866,7 +2882,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3196,13 +3212,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-ground-v1",
-        "asset": "vocabulary/assets/vg-scene-ground-v1.svg",
-        "alt": "A cross-section of the ground showing grass on top, brown soil, and rocks and roots below.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -3212,7 +3228,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3265,13 +3281,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-group-v1",
-        "asset": "vocabulary/assets/vg-scene-group-v1.svg",
-        "alt": "A group of four smiling children of different colours standing close together.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -3281,7 +3297,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3332,13 +3348,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "action_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-action-grow-v1",
-        "asset": "vocabulary/assets/vg-action-grow-v1.svg",
-        "alt": "Three stages of a plant growing bigger, from a small sprout to a tall flowering plant, with up arrows.",
-        "status": "draft",
-        "kind": "action",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -3348,7 +3364,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3538,13 +3554,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-guitar-v1",
-        "asset": "vocabulary/assets/vg-scene-guitar-v1.svg",
-        "alt": "A wooden acoustic guitar with a sound hole, six strings, tuning pegs and a decorative rosette.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -3554,7 +3570,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3607,13 +3623,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-gym-v1",
-        "asset": "vocabulary/assets/vg-scene-gym-v1.svg",
-        "alt": "A gym scene with a black dumbbell, a blue exercise mat, and a red bouncing exercise ball.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -3623,7 +3639,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {

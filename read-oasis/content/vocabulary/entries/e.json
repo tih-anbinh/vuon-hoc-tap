@@ -179,13 +179,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-eagle-v1",
-        "asset": "vocabulary/assets/vg-scene-eagle-v1.svg",
-        "alt": "A brown eagle with a white head, yellow beak, and spread wings, flying in the sky.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -195,7 +195,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -321,13 +321,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-earache-v1",
-        "asset": "vocabulary/assets/vg-scene-earache-v1.svg",
-        "alt": "A sad child holding one hand over a sore red ear with pain lines around it, sitting with a warm scarf, showing an earache.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -337,7 +337,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -623,8 +623,8 @@
   {
     "entry_id": "ro-vocab:eat:verb:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:eat:verb:unqualified",
@@ -639,7 +639,7 @@
       "verb"
     ],
     "source_qualifier": null,
-    "sense_label": "eat (verb)",
+    "sense_label": "to put food in your mouth",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -650,11 +650,11 @@
       "cyle25-theme:food-drink"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
-      "nonexample_en": null,
+      "definition_en": "To put food in your mouth and swallow it.",
+      "explanation_vi": "Đưa thức ăn vào miệng và nuốt (ăn).",
+      "example_en": "We eat breakfast in the morning.",
+      "example_vi": "Chúng em ăn sáng vào buổi sáng.",
+      "nonexample_en": "We drink water when we are thirsty.",
       "contrast_entry_ids": [],
       "usage_notes": [],
       "pronunciation": {
@@ -669,19 +669,23 @@
         "visual_priority": "high",
         "asset_id": "vg-action-eat-v1",
         "asset": "vocabulary/assets/vg-action-eat-v1.svg",
-        "alt": "A happy child holding a spoon to their open mouth, a bowl of food in front of them.",
-        "status": "draft",
+        "alt": "To put food in your mouth and swallow it.",
+        "status": "needs_human_review",
         "kind": "action",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "read_in_context",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
-      "media_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -807,13 +811,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-elbow-v1",
-        "asset": "vocabulary/assets/vg-scene-elbow-v1.svg",
-        "alt": "A bent arm with the elbow joint highlighted by a red circle in the middle of the bend.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -823,7 +827,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1221,13 +1225,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
+        "representation_type": "concept_card",
         "visual_priority": "high",
-        "asset_id": "vg-scene-empty-v1",
-        "asset": "vocabulary/assets/vg-scene-empty-v1.svg",
-        "alt": "An empty clear glass with no liquid inside, tilted slightly, with a small \"nothing here\" mark and dust motes.",
-        "status": "draft",
-        "kind": "scene",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "contrast",
         "template": null,
         "anchor_objects": []
       },
@@ -1241,7 +1245,7 @@
       "language_review": "approved",
       "sense_review": "approved",
       "child_suitability_review": "approved",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1429,13 +1433,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-engine-v1",
-        "asset": "vocabulary/assets/vg-scene-engine-v1.svg",
-        "alt": "A red steam train engine with a chimney puffing smoke, big wheels, and a headlamp.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1445,7 +1449,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1978,13 +1982,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-envelope-v1",
-        "asset": "vocabulary/assets/vg-scene-envelope-v1.svg",
-        "alt": "A white envelope with an open flap, a red heart seal, and a small stamp in the corner.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1994,7 +1998,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2115,13 +2119,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-eraser-v1",
-        "asset": "vocabulary/assets/vg-scene-eraser-v1.svg",
-        "alt": "A pink and white rubber eraser with rounded corners and eraser crumbs beside it.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -2131,7 +2135,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2253,13 +2257,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-evening-v1",
-        "asset": "vocabulary/assets/vg-scene-evening-v1.svg",
-        "alt": "An evening scene: the sun setting behind hills in an orange-purple sky, the moon and first stars appearing, and a small house with warm lit windows.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -2269,7 +2273,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {

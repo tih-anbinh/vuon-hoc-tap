@@ -2,8 +2,8 @@
   {
     "entry_id": "ro-vocab:rabbit:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:rabbit:noun:unqualified",
@@ -18,7 +18,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "rabbit (noun)",
+    "sense_label": "a small animal with long ears",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -29,10 +29,10 @@
       "cyle25-theme:animals"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A small furry animal with long ears that likes to jump.",
+      "explanation_vi": "Con vật nhỏ có lông, tai dài, thích nhảy (con thỏ).",
+      "example_en": "The rabbit jumps across the grass.",
+      "example_vi": "Con thỏ nhảy qua bãi cỏ.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -48,19 +48,23 @@
         "visual_priority": "high",
         "asset_id": "vg-scene-rabbit-v1",
         "asset": "vocabulary/assets/vg-scene-rabbit-v1.svg",
-        "alt": "A fluffy white rabbit with long ears, a pink nose, and a round cotton tail nibbling a carrot.",
-        "status": "draft",
-        "kind": "scene",
+        "alt": "A small furry animal with long ears that likes to jump.",
+        "status": "needs_human_review",
+        "kind": "animal",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
-      "media_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -114,13 +118,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-race-v1",
-        "asset": "vocabulary/assets/vg-scene-race-v1.svg",
-        "alt": "Two runners sprinting toward a checkered finish line, with a numbered lane and speed lines.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -130,7 +134,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -251,13 +255,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-radio-v1",
-        "asset": "vocabulary/assets/vg-scene-radio-v1.svg",
-        "alt": "A red retro radio with a round speaker, tuning dial, two knobs and an antenna, with musical notes floating out of it.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -267,7 +271,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -320,13 +324,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-railway-v1",
-        "asset": "vocabulary/assets/vg-scene-railway-v1.svg",
-        "alt": "A railway track with two shiny steel rails and wooden sleepers stretching into the distance.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -336,7 +340,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -390,13 +394,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-rain-v1",
-        "asset": "vocabulary/assets/vg-scene-rain-v1.svg",
-        "alt": "A gray rain cloud with many blue raindrops falling and splashing into puddles below.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -406,7 +410,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -459,13 +463,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-rainbow-v1",
-        "asset": "vocabulary/assets/vg-scene-rainbow-v1.svg",
-        "alt": "A bright arching rainbow with seven colored bands, fluffy clouds at each end, and a sun.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -475,7 +479,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -486,8 +490,8 @@
   {
     "entry_id": "ro-vocab:read:verb:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:read:verb:unqualified",
@@ -502,7 +506,7 @@
       "verb"
     ],
     "source_qualifier": null,
-    "sense_label": "read (verb)",
+    "sense_label": "to look at words and understand them",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -514,11 +518,11 @@
       "cyle25-theme:sports-leisure"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
-      "nonexample_en": null,
+      "definition_en": "To look at words in a book and understand them.",
+      "explanation_vi": "Nhìn vào chữ trong sách và hiểu nghĩa (đọc).",
+      "example_en": "I read a story before bed.",
+      "example_vi": "Em đọc một câu chuyện trước khi đi ngủ.",
+      "nonexample_en": "I write my name with a pen.",
       "contrast_entry_ids": [],
       "usage_notes": [],
       "pronunciation": {
@@ -533,19 +537,23 @@
         "visual_priority": "high",
         "asset_id": "vg-action-read-v1",
         "asset": "vocabulary/assets/vg-action-read-v1.svg",
-        "alt": "A happy child sitting and holding an open book, looking down at the colourful pages.",
-        "status": "draft",
+        "alt": "To look at words in a book and understand them.",
+        "status": "needs_human_review",
         "kind": "action",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "read_in_context",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
-      "media_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1006,13 +1014,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-restaurant-v1",
-        "asset": "vocabulary/assets/vg-scene-restaurant-v1.svg",
-        "alt": "A restaurant table set with a plate, cutlery, a glass, and a candle, near a big window.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1022,7 +1030,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1033,8 +1041,8 @@
   {
     "entry_id": "ro-vocab:rice:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:rice:noun:unqualified",
@@ -1049,7 +1057,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "rice (noun)",
+    "sense_label": "small white grains we eat",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -1060,10 +1068,10 @@
       "cyle25-theme:food-drink"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "Small white grains that we cook and eat.",
+      "explanation_vi": "Những hạt nhỏ màu trắng được nấu chín để ăn (cơm, gạo).",
+      "example_en": "We eat rice for dinner.",
+      "example_vi": "Chúng em ăn cơm vào bữa tối.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1079,19 +1087,23 @@
         "visual_priority": "high",
         "asset_id": "vg-scene-rice-v1",
         "asset": "vocabulary/assets/vg-scene-rice-v1.svg",
-        "alt": "A big blue bowl full of fluffy white rice with steam rising, chopsticks resting beside it and grains of rice on the table.",
-        "status": "draft",
-        "kind": "scene",
+        "alt": "Small white grains that we cook and eat.",
+        "status": "needs_human_review",
+        "kind": "food",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
-      "media_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1283,13 +1295,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "action_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-action-ride-v1",
-        "asset": "vocabulary/assets/vg-action-ride-v1.svg",
-        "alt": "A cheerful child riding a red bicycle, with wind lines showing movement.",
-        "status": "draft",
-        "kind": "action",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1299,7 +1311,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1350,13 +1362,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "action_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-action-ride-v1",
-        "asset": "vocabulary/assets/vg-action-ride-v1.svg",
-        "alt": "A cheerful child riding a red bicycle, with wind lines showing movement.",
-        "status": "draft",
-        "kind": "action",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1366,7 +1378,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1687,13 +1699,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-ring-v1",
-        "asset": "vocabulary/assets/vg-scene-ring-v1.svg",
-        "alt": "A shiny gold ring with a large sparkling blue diamond gem set on top.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1703,7 +1715,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1756,13 +1768,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-river-v1",
-        "asset": "vocabulary/assets/vg-scene-river-v1.svg",
-        "alt": "A winding blue river flowing through green grassy banks between rolling hills.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1772,7 +1784,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1825,13 +1837,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-road-v1",
-        "asset": "vocabulary/assets/vg-scene-road-v1.svg",
-        "alt": "A gray paved road with a dashed white center line stretching into the distance with a car.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1841,7 +1853,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1963,13 +1975,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-robot-v1",
-        "asset": "vocabulary/assets/vg-scene-robot-v1.svg",
-        "alt": "A friendly blue robot with an antenna, glowing eyes, a control panel with buttons, claw hands and track feet, waving hello with gears floating around.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1979,7 +1991,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2101,13 +2113,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-rock-v1",
-        "asset": "vocabulary/assets/vg-scene-rock-v1.svg",
-        "alt": "A big gray boulder rock with cracks and smaller stones resting on grassy ground.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -2117,7 +2129,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2171,13 +2183,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-rocket-v1",
-        "asset": "vocabulary/assets/vg-scene-rocket-v1.svg",
-        "alt": "A white and red space rocket blasting off with orange flames and stars around it.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -2187,7 +2199,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2378,13 +2390,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-roof-v1",
-        "asset": "vocabulary/assets/vg-scene-roof-v1.svg",
-        "alt": "A house with its red tiled triangular roof highlighted on top, with a chimney.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -2394,7 +2406,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2447,13 +2459,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-room-v1",
-        "asset": "vocabulary/assets/vg-scene-room-v1.svg",
-        "alt": "A cozy room seen from inside with walls and floor, a bed, a window with curtains, a wardrobe, a rug and a teddy bear on the floor.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -2463,7 +2475,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2652,13 +2664,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-rucksack-v1",
-        "asset": "vocabulary/assets/vg-scene-rucksack-v1.svg",
-        "alt": "A green hiking rucksack backpack with buckles, side pockets, and a sleeping roll on top.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -2668,7 +2680,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2721,13 +2733,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-rug-v1",
-        "asset": "vocabulary/assets/vg-scene-rug-v1.svg",
-        "alt": "A big colorful oval rug with rings of red, yellow and teal and fringe at the ends, lying on a wooden floor with a cat napping on it.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -2737,7 +2749,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2790,13 +2802,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-ruler-v1",
-        "asset": "vocabulary/assets/vg-scene-ruler-v1.svg",
-        "alt": "A big yellow ruler with evenly spaced measuring tick marks lying diagonally on a desk, next to a pencil drawing a straight line.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -2806,7 +2818,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {

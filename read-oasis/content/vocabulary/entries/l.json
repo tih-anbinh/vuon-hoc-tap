@@ -44,13 +44,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-lake-v1",
-        "asset": "vocabulary/assets/vg-scene-lake-v1.svg",
-        "alt": "A big calm blue lake surrounded by green hills and trees, with ducks swimming, a small wooden boat, and mountains in the distance.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -60,7 +60,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -71,8 +71,8 @@
   {
     "entry_id": "ro-vocab:lamp:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:lamp:noun:unqualified",
@@ -87,7 +87,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "lamp (noun)",
+    "sense_label": "a thing that gives light",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -98,10 +98,10 @@
       "cyle25-theme:the-home"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A thing that gives light in a room.",
+      "explanation_vi": "Vật phát ra ánh sáng trong phòng (cái đèn).",
+      "example_en": "I turn on the lamp to read at night.",
+      "example_vi": "Em bật đèn để đọc sách vào ban đêm.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -114,22 +114,26 @@
       },
       "visual": {
         "representation_type": "scene_svg",
-        "visual_priority": "high",
+        "visual_priority": "medium",
         "asset_id": "vg-scene-lamp-v1",
         "asset": "vocabulary/assets/vg-scene-lamp-v1.svg",
-        "alt": "A warm table lamp with a fabric shade, a slender stand, a heavy base, and a warm glow of light.",
-        "status": "draft",
-        "kind": "scene",
+        "alt": "A thing that gives light in a room.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
-      "media_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -318,13 +322,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-laptop-v1",
-        "asset": "vocabulary/assets/vg-scene-laptop-v1.svg",
-        "alt": "A big open laptop computer on a desk, with a bright screen showing a picture of a sun over hills, a keyboard and touchpad below.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -334,7 +338,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -660,13 +664,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-laugh-v1",
-        "asset": "vocabulary/assets/vg-scene-laugh-v1.svg",
-        "alt": "A child laughing happily with a wide open smile, head tilted back, and little laughter marks.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -676,7 +680,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -796,13 +800,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-leaf-leaves-v1",
-        "asset": "vocabulary/assets/vg-scene-leaf-leaves-v1.svg",
-        "alt": "A split picture: on the left one big green leaf with veins, on the right many colourful autumn leaves falling from a branch.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -812,7 +816,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1069,13 +1073,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-leg-v1",
-        "asset": "vocabulary/assets/vg-scene-leg-v1.svg",
-        "alt": "A smiling child in shorts pointing down at one leg, which is highlighted with a dashed ring to show the body part clearly.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1085,7 +1089,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1138,13 +1142,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-lemon-v1",
-        "asset": "vocabulary/assets/vg-scene-lemon-v1.svg",
-        "alt": "A bright yellow lemon with a pointed tip, a small green leaf, and a cut half showing the segments inside.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1154,7 +1158,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1207,13 +1211,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-lemonade-v1",
-        "asset": "vocabulary/assets/vg-scene-lemonade-v1.svg",
-        "alt": "A tall glass of pale yellow lemonade with ice cubes, a lemon slice, and a green mint leaf garnish.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1223,7 +1227,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1477,13 +1481,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-letter-v1",
-        "asset": "vocabulary/assets/vg-scene-letter-v1.svg",
-        "alt": "A folded paper letter with writing lines coming out of an opened envelope.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1493,7 +1497,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1544,13 +1548,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-letter-v1",
-        "asset": "vocabulary/assets/vg-scene-letter-v1.svg",
-        "alt": "A folded paper letter with writing lines coming out of an opened envelope.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1560,7 +1564,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1613,13 +1617,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-library-v1",
-        "asset": "vocabulary/assets/vg-scene-library-v1.svg",
-        "alt": "A cosy library with tall bookshelves full of colourful books, and a child sitting at a table quietly reading a big open book.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1629,7 +1633,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2156,13 +2160,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-lime-v1",
-        "asset": "vocabulary/assets/vg-scene-lime-v1.svg",
-        "alt": "A bright green lime with a cut half showing pale green segments, and a small leaf on the stem.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -2172,7 +2176,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2252,8 +2256,8 @@
   {
     "entry_id": "ro-vocab:lion:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:lion:noun:unqualified",
@@ -2268,7 +2272,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "lion (noun)",
+    "sense_label": "a big wild cat with a mane",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -2279,10 +2283,10 @@
       "cyle25-theme:animals"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A big wild cat with golden fur; the male has long hair around its head.",
+      "explanation_vi": "Con mèo lớn hoang dã, lông vàng; con đực có bờm quanh đầu (con sư tử).",
+      "example_en": "The lion is sleeping in the sun.",
+      "example_vi": "Con sư tử đang ngủ dưới nắng.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2298,19 +2302,23 @@
         "visual_priority": "high",
         "asset_id": "vg-scene-lion-v1",
         "asset": "vocabulary/assets/vg-scene-lion-v1.svg",
-        "alt": "A big friendly lion with a fluffy golden-orange mane, standing proudly on the sunny savannah with a tufted tail.",
-        "status": "draft",
-        "kind": "scene",
+        "alt": "A big wild cat with golden fur; the male has long hair around its head.",
+        "status": "needs_human_review",
+        "kind": "animal",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
-      "media_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2364,13 +2372,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "action_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-action-listen-v1",
-        "asset": "vocabulary/assets/vg-action-listen-v1.svg",
-        "alt": "A child with hand cupped near their ear, listening intently, with concentric sound waves and musical notes.",
-        "status": "draft",
-        "kind": "action",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -2380,7 +2388,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2500,13 +2508,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "action_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-action-live-v1",
-        "asset": "vocabulary/assets/vg-action-live-v1.svg",
-        "alt": "A family of three standing happily in front of their house with a heart above them, showing that they live there together.",
-        "status": "draft",
-        "kind": "action",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -2516,7 +2524,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2569,13 +2577,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-living-room-v1",
-        "asset": "vocabulary/assets/vg-scene-living-room-v1.svg",
-        "alt": "A cozy living room with a green sofa, cushions, a television on a stand, a rug, a lamp and a picture on the wall.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -2585,7 +2593,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2638,13 +2646,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-lizard-v1",
-        "asset": "vocabulary/assets/vg-scene-lizard-v1.svg",
-        "alt": "A small bright green lizard with a long tail, four splayed legs with tiny toes, and alert round eyes, basking on a warm rock.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -2654,7 +2662,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3179,13 +3187,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-lorry-v1",
-        "asset": "vocabulary/assets/vg-scene-lorry-v1.svg",
-        "alt": "A big blue delivery lorry (truck) with a large cargo box and six wheels.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -3195,7 +3203,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3921,13 +3929,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-lunch-v1",
-        "asset": "vocabulary/assets/vg-scene-lunch-v1.svg",
-        "alt": "A lunch tray with a sandwich, an apple and a glass of orange juice on a table, with the midday sun high in the sky through a window.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -3937,7 +3945,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {

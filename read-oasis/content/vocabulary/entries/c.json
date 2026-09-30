@@ -113,13 +113,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-cage-v1",
-        "asset": "vocabulary/assets/vg-scene-cage-v1.svg",
-        "alt": "A large golden bird cage with vertical bars hanging from a stand, with a happy yellow bird sitting on a perch inside.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -129,7 +129,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -140,8 +140,8 @@
   {
     "entry_id": "ro-vocab:cake:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:cake:noun:unqualified",
@@ -156,7 +156,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "cake (noun)",
+    "sense_label": "a sweet food for parties",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -167,10 +167,10 @@
       "cyle25-theme:food-drink"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A sweet food that we often eat at a birthday party.",
+      "explanation_vi": "Món ăn ngọt thường ăn trong tiệc sinh nhật (cái bánh ngọt).",
+      "example_en": "I eat cake on my birthday.",
+      "example_vi": "Em ăn bánh vào ngày sinh nhật.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -186,19 +186,23 @@
         "visual_priority": "high",
         "asset_id": "vg-scene-cake-v1",
         "asset": "vocabulary/assets/vg-scene-cake-v1.svg",
-        "alt": "A round birthday cake with pink frosting, white cream layers, colourful sprinkles, and three lit candles on top.",
-        "status": "draft",
-        "kind": "scene",
+        "alt": "A sweet food that we often eat at a birthday party.",
+        "status": "needs_human_review",
+        "kind": "food",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
-      "media_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -251,13 +255,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-calendar-v1",
-        "asset": "vocabulary/assets/vg-scene-calendar-v1.svg",
-        "alt": "A wall calendar with a red header, hanging rings, and a grid of day squares with one circled.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -267,7 +271,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -387,13 +391,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-camel-v1",
-        "asset": "vocabulary/assets/vg-scene-camel-v1.svg",
-        "alt": "A tan camel with two humps, long legs, and a long neck standing on desert sand.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -403,7 +407,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -457,13 +461,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-camera-v1",
-        "asset": "vocabulary/assets/vg-scene-camera-v1.svg",
-        "alt": "A friendly retro photo camera with a big round lens, flash, shutter button, and neck strap.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -473,7 +477,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -524,13 +528,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "action_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-action-camp-v1",
-        "asset": "vocabulary/assets/vg-action-camp-v1.svg",
-        "alt": "A camping tent beside a campfire and pine trees at night with stars.",
-        "status": "draft",
-        "kind": "action",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -540,7 +544,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -659,13 +663,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-candy-v1",
-        "asset": "vocabulary/assets/vg-scene-candy-v1.svg",
-        "alt": "A wrapped sweet candy with twisted ends and a striped swirl lollipop beside it.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -675,7 +679,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -728,13 +732,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-car-park-v1",
-        "asset": "vocabulary/assets/vg-scene-car-park-v1.svg",
-        "alt": "A car park with white lines marking parking spaces, three colourful cars parked in a row, and a blue parking sign with a car symbol.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -744,7 +748,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -755,8 +759,8 @@
   {
     "entry_id": "ro-vocab:car:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:car:noun:unqualified",
@@ -771,7 +775,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "car (noun)",
+    "sense_label": "a thing with four wheels you ride in",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -783,11 +787,11 @@
       "cyle25-theme:transport"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
-      "nonexample_en": null,
+      "definition_en": "A thing with four wheels that takes people from place to place.",
+      "explanation_vi": "Xe có bốn bánh chở người đi lại (chiếc ô tô, xe hơi).",
+      "example_en": "We go to the beach in the car.",
+      "example_vi": "Chúng em đi ra biển bằng ô tô.",
+      "nonexample_en": "We ride our bikes to the park.",
       "contrast_entry_ids": [],
       "usage_notes": [],
       "pronunciation": {
@@ -802,19 +806,23 @@
         "visual_priority": "high",
         "asset_id": "vg-scene-car-v1",
         "asset": "vocabulary/assets/vg-scene-car-v1.svg",
-        "alt": "A friendly red family car with windows, wheels, headlights, and a shiny body.",
-        "status": "draft",
-        "kind": "scene",
+        "alt": "A thing with four wheels that takes people from place to place.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
-      "media_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -867,13 +875,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-card-v1",
-        "asset": "vocabulary/assets/vg-scene-card-v1.svg",
-        "alt": "A folded greeting card standing open with a red heart on the front.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -883,7 +891,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1070,13 +1078,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-carrot-v1",
-        "asset": "vocabulary/assets/vg-scene-carrot-v1.svg",
-        "alt": "A large bright orange carrot with a pointed tip, horizontal lines, and bushy green leaves on top.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1086,7 +1094,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1137,13 +1145,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "action_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-action-carry-v1",
-        "asset": "vocabulary/assets/vg-action-carry-v1.svg",
-        "alt": "A child walking while carrying a big brown box in both arms.",
-        "status": "draft",
-        "kind": "action",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1153,7 +1161,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1206,13 +1214,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-cartoon-v1",
-        "asset": "vocabulary/assets/vg-scene-cartoon-v1.svg",
-        "alt": "A television screen showing a smiling cartoon star character with a speech bubble.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1222,7 +1230,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1276,13 +1284,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-castle-v1",
-        "asset": "vocabulary/assets/vg-scene-castle-v1.svg",
-        "alt": "A grey stone castle with tall towers, pointed flags, a big gate, and battlements.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1292,7 +1300,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1416,13 +1424,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "action_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-action-catch-v1",
-        "asset": "vocabulary/assets/vg-action-catch-v1.svg",
-        "alt": "A child reaching up with both hands to catch a falling ball, with motion lines.",
-        "status": "draft",
-        "kind": "action",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1432,7 +1440,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1483,13 +1491,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "action_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-action-catch-v1",
-        "asset": "vocabulary/assets/vg-action-catch-v1.svg",
-        "alt": "A child reaching up with both hands to catch a falling ball, with motion lines.",
-        "status": "draft",
-        "kind": "action",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1499,7 +1507,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1552,13 +1560,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-cave-v1",
-        "asset": "vocabulary/assets/vg-scene-cave-v1.svg",
-        "alt": "A dark cave opening in a rocky brown mountain with stalactites and stalagmites inside.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1568,7 +1576,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1827,13 +1835,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-cereal-v1",
-        "asset": "vocabulary/assets/vg-scene-cereal-v1.svg",
-        "alt": "A white bowl full of round cereal loops in milk with a spoon resting in it.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1843,7 +1851,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2308,13 +2316,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-cheese-v1",
-        "asset": "vocabulary/assets/vg-scene-cheese-v1.svg",
-        "alt": "A large wedge of yellow cheese with round holes on a wooden board, with a happy little mouse peeking at it and small cheese cubes nearby.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -2324,7 +2332,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2444,13 +2452,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-chess-v1",
-        "asset": "vocabulary/assets/vg-scene-chess-v1.svg",
-        "alt": "A black and white chessboard with a tall king and knight chess pieces on it.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -2460,7 +2468,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2471,8 +2479,8 @@
   {
     "entry_id": "ro-vocab:chicken:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:chicken:noun:unqualified",
@@ -2487,7 +2495,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "chicken (noun)",
+    "sense_label": "a farm bird that gives eggs",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -2499,10 +2507,10 @@
       "cyle25-theme:food-drink"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A farm bird that gives us eggs.",
+      "explanation_vi": "Loài chim nuôi ở trang trại, cho ta trứng (con gà).",
+      "example_en": "The chicken lays an egg.",
+      "example_vi": "Con gà đẻ một quả trứng.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2518,19 +2526,23 @@
         "visual_priority": "high",
         "asset_id": "vg-scene-chicken-v1",
         "asset": "vocabulary/assets/vg-scene-chicken-v1.svg",
-        "alt": "A plump white chicken with a red comb and wattle, orange beak, yellow legs, and tail feathers, standing on the ground.",
-        "status": "draft",
-        "kind": "scene",
+        "alt": "A farm bird that gives us eggs.",
+        "status": "needs_human_review",
+        "kind": "animal",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
-      "media_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2583,13 +2595,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-child-children-v1",
-        "asset": "vocabulary/assets/vg-scene-child-children-v1.svg",
-        "alt": "Three smiling children of different heights standing together holding hands on green grass under a sunny sky.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -2599,7 +2611,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2651,13 +2663,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-chips-v1",
-        "asset": "vocabulary/assets/vg-scene-chips-v1.svg",
-        "alt": "A red carton of golden French fries chips with a small blob of red ketchup.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -2667,7 +2679,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2720,13 +2732,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-chocolate-v1",
-        "asset": "vocabulary/assets/vg-scene-chocolate-v1.svg",
-        "alt": "A partially unwrapped chocolate bar showing brown squares in a grid pattern, with colourful foil wrapper peeled back.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -2736,7 +2748,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2856,13 +2868,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-chopsticks-v1",
-        "asset": "vocabulary/assets/vg-scene-chopsticks-v1.svg",
-        "alt": "A pair of wooden chopsticks holding a dumpling above a small round bowl.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -2872,7 +2884,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2926,13 +2938,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-cinema-v1",
-        "asset": "vocabulary/assets/vg-scene-cinema-v1.svg",
-        "alt": "Inside a dark cinema, a big bright screen shows a rocket film while children sit in red seats eating popcorn.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -2942,7 +2954,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2995,13 +3007,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-circle-v1",
-        "asset": "vocabulary/assets/vg-scene-circle-v1.svg",
-        "alt": "A large bright blue circle shape centred on a plain light background.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -3011,7 +3023,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3065,13 +3077,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-circus-v1",
-        "asset": "vocabulary/assets/vg-scene-circus-v1.svg",
-        "alt": "A red and yellow striped circus big top tent with flags and a star entrance.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -3081,7 +3093,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3202,13 +3214,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-city-v1",
-        "asset": "vocabulary/assets/vg-scene-city-v1.svg",
-        "alt": "A city skyline of tall skyscrapers with many lit windows under a blue sky.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -3218,7 +3230,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3229,8 +3241,8 @@
   {
     "entry_id": "ro-vocab:clap:verb:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:clap:verb:unqualified",
@@ -3245,7 +3257,7 @@
       "verb"
     ],
     "source_qualifier": null,
-    "sense_label": "clap (verb)",
+    "sense_label": "to hit your hands together",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -3254,10 +3266,10 @@
     },
     "theme_ids": [],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "To hit your two hands together to make a sound.",
+      "explanation_vi": "Đập hai bàn tay vào nhau tạo ra tiếng (vỗ tay).",
+      "example_en": "We clap our hands to the song.",
+      "example_vi": "Chúng em vỗ tay theo bài hát.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -3270,22 +3282,26 @@
       },
       "visual": {
         "representation_type": "action_svg",
-        "visual_priority": "high",
+        "visual_priority": "medium",
         "asset_id": "vg-action-clap-v1",
         "asset": "vocabulary/assets/vg-action-clap-v1.svg",
-        "alt": "Two hands coming together to clap, with radiating sound lines and small stars showing the noise.",
-        "status": "draft",
+        "alt": "To hit your two hands together to make a sound.",
+        "status": "needs_human_review",
         "kind": "action",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "read_in_context",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
-      "media_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3545,13 +3561,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-classroom-v1",
-        "asset": "vocabulary/assets/vg-scene-classroom-v1.svg",
-        "alt": "A school classroom scene with a green chalkboard, a teacher's desk with an apple, two student desks and chairs.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -3561,7 +3577,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3613,13 +3629,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-clean-v1",
-        "asset": "vocabulary/assets/vg-scene-clean-v1.svg",
-        "alt": "A bright white sparkling-clean t-shirt on a hanger with shine sparkles, soap bubbles floating around it.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -3629,7 +3645,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3747,13 +3763,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "action_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-action-climb-v1",
-        "asset": "vocabulary/assets/vg-action-climb-v1.svg",
-        "alt": "A cheerful child climbing up a tall ladder, one hand and foot reaching upward.",
-        "status": "draft",
-        "kind": "action",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -3763,7 +3779,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3774,8 +3790,8 @@
   {
     "entry_id": "ro-vocab:clock:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:clock:noun:unqualified",
@@ -3790,7 +3806,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "clock (noun)",
+    "sense_label": "a thing that shows the time",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -3802,10 +3818,10 @@
       "cyle25-theme:time"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A thing on a wall or table that shows you the time.",
+      "explanation_vi": "Vật trên tường hoặc trên bàn cho biết giờ (cái đồng hồ).",
+      "example_en": "The clock says it is three o'clock.",
+      "example_vi": "Đồng hồ chỉ ba giờ.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -3818,22 +3834,26 @@
       },
       "visual": {
         "representation_type": "scene_svg",
-        "visual_priority": "high",
+        "visual_priority": "medium",
         "asset_id": "vg-scene-clock-v1",
         "asset": "vocabulary/assets/vg-scene-clock-v1.svg",
-        "alt": "A friendly round wall clock with numbered hour marks and hour and minute hands showing 10 past 10.",
-        "status": "draft",
-        "kind": "scene",
+        "alt": "A thing on a wall or table that shows you the time.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
-      "media_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3953,13 +3973,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-closed-v1",
-        "asset": "vocabulary/assets/vg-scene-closed-v1.svg",
-        "alt": "A firmly shut red shop door with a hanging sign showing a crossed-out open padlock symbol, indicating the shop is closed.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -3969,7 +3989,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -4022,13 +4042,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-clothes-v1",
-        "asset": "vocabulary/assets/vg-scene-clothes-v1.svg",
-        "alt": "A wooden hanger holding a colourful t-shirt and shorts, representing clothes.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -4038,7 +4058,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -4049,8 +4069,8 @@
   {
     "entry_id": "ro-vocab:cloud:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:cloud:noun:unqualified",
@@ -4065,7 +4085,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "cloud (noun)",
+    "sense_label": "a white or grey shape in the sky",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -4076,10 +4096,10 @@
       "cyle25-theme:weather"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A white or grey shape in the sky that rain comes from.",
+      "explanation_vi": "Khối màu trắng hoặc xám trên trời, nơi mưa rơi xuống (đám mây).",
+      "example_en": "There is one white cloud in the sky.",
+      "example_vi": "Có một đám mây trắng trên bầu trời.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -4092,22 +4112,26 @@
       },
       "visual": {
         "representation_type": "scene_svg",
-        "visual_priority": "high",
+        "visual_priority": "medium",
         "asset_id": "vg-scene-cloud-v1",
         "asset": "vocabulary/assets/vg-scene-cloud-v1.svg",
-        "alt": "One big fluffy white cloud with a happy face floating in a bright blue sky above green hills, with smaller clouds and birds around it.",
-        "status": "draft",
-        "kind": "scene",
+        "alt": "A white or grey shape in the sky that rain comes from.",
+        "status": "needs_human_review",
+        "kind": "nature",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
-      "media_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -4229,13 +4253,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-clown-v1",
-        "asset": "vocabulary/assets/vg-scene-clown-v1.svg",
-        "alt": "A happy circus clown with a red nose, colourful curly hair, a pointed hat and big shoes, juggling three colourful balls.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -4245,7 +4269,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -4368,13 +4392,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-coat-v1",
-        "asset": "vocabulary/assets/vg-scene-coat-v1.svg",
-        "alt": "A big warm red winter coat with buttons, pockets and a fluffy hood hanging on a wall hook, with snowflakes visible through a window.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -4384,7 +4408,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -4437,13 +4461,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-coconut-v1",
-        "asset": "vocabulary/assets/vg-scene-coconut-v1.svg",
-        "alt": "A brown hairy coconut split in half showing the white flesh inside, with a whole coconut beside it.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -4453,7 +4477,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -4506,13 +4530,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-coffee-v1",
-        "asset": "vocabulary/assets/vg-scene-coffee-v1.svg",
-        "alt": "A big red mug of hot brown coffee with rising steam on a saucer, next to a coffee pot and coffee beans on a table.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -4522,7 +4546,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -4854,13 +4878,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-comb-v1",
-        "asset": "vocabulary/assets/vg-scene-comb-v1.svg",
-        "alt": "A blue hair comb with a row of teeth and a handle, lying on a light surface.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -4870,7 +4894,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -5057,13 +5081,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-comic-book-v1",
-        "asset": "vocabulary/assets/vg-scene-comic-book-v1.svg",
-        "alt": "A happy child sitting on a beanbag reading a colourful comic book with a superhero on the cover, with action stars floating around.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -5073,7 +5097,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -5126,13 +5150,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-comic-v1",
-        "asset": "vocabulary/assets/vg-scene-comic-v1.svg",
-        "alt": "An open comic spread showing colourful picture panels with a superhero flying, action stars and speech bubbles, read by no one so the panels are the focus.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -5142,7 +5166,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -5195,13 +5219,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-competition-v1",
-        "asset": "vocabulary/assets/vg-scene-competition-v1.svg",
-        "alt": "A winner's podium with three steps, a gold trophy on top, and medals.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -5211,7 +5235,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -5332,13 +5356,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-computer-v1",
-        "asset": "vocabulary/assets/vg-scene-computer-v1.svg",
-        "alt": "A friendly desktop computer with a monitor showing a colourful screen, a stand, and a keyboard.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -5348,7 +5372,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -5401,13 +5425,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-concert-v1",
-        "asset": "vocabulary/assets/vg-scene-concert-v1.svg",
-        "alt": "A lit concert stage with a singer at a microphone, spotlights, and floating music notes.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -5417,7 +5441,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -5538,13 +5562,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "action_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-action-cook-v1",
-        "asset": "vocabulary/assets/vg-action-cook-v1.svg",
-        "alt": "A cheerful child chef wearing a hat, stirring a pot with a spoon, steam rising from the food.",
-        "status": "draft",
-        "kind": "action",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -5554,7 +5578,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -5607,13 +5631,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-cooker-v1",
-        "asset": "vocabulary/assets/vg-scene-cooker-v1.svg",
-        "alt": "A kitchen cooker or stove with four burners on top and an oven door below.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -5623,7 +5647,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -5675,13 +5699,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-cookie-v1",
-        "asset": "vocabulary/assets/vg-scene-cookie-v1.svg",
-        "alt": "A round golden-brown chocolate chip cookie with a bite taken out of it.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -5691,7 +5715,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -5812,13 +5836,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-corner-v1",
-        "asset": "vocabulary/assets/vg-scene-corner-v1.svg",
-        "alt": "Two walls meeting at a right-angle corner of a room, with a highlighted L-shaped edge.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -5828,7 +5852,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -5950,13 +5974,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-costume-v1",
-        "asset": "vocabulary/assets/vg-scene-costume-v1.svg",
-        "alt": "A superhero costume on a hanger with a cape, mask, and a star emblem on the chest.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -5966,7 +5990,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -6019,13 +6043,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-cough-v1",
-        "asset": "vocabulary/assets/vg-scene-cough-v1.svg",
-        "alt": "A child coughing into a hand, with air puffs coming from the mouth.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -6035,7 +6059,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -6358,13 +6382,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-countryside-v1",
-        "asset": "vocabulary/assets/vg-scene-countryside-v1.svg",
-        "alt": "A peaceful countryside scene with green rolling hills, a farmhouse, trees, and the sun.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -6374,7 +6398,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -6427,13 +6451,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-cousin-v1",
-        "asset": "vocabulary/assets/vg-scene-cousin-v1.svg",
-        "alt": "Two happy children of similar age standing together with a heart between them, connected by a family-tree line to two small houses above.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -6443,7 +6467,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -6569,13 +6593,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-crayon-v1",
-        "asset": "vocabulary/assets/vg-scene-crayon-v1.svg",
-        "alt": "A bright orange wax crayon with a paper wrapper, a sharp tip, and a small colourful scribble beside it.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -6585,7 +6609,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -6707,13 +6731,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-crocodile-v1",
-        "asset": "vocabulary/assets/vg-scene-crocodile-v1.svg",
-        "alt": "A large green crocodile with bumpy scales, a long snout with visible teeth, four short legs, and a powerful tail.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -6723,7 +6747,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -6850,13 +6874,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-crown-v1",
-        "asset": "vocabulary/assets/vg-scene-crown-v1.svg",
-        "alt": "A shiny gold crown with three points, round jewels, and a padded base.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -6866,7 +6890,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -6919,13 +6943,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "action_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-action-cry-v1",
-        "asset": "vocabulary/assets/vg-action-cry-v1.svg",
-        "alt": "A sad child crying, with big tears falling from closed eyes and a downturned mouth.",
-        "status": "draft",
-        "kind": "action",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -6935,7 +6959,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -6946,8 +6970,8 @@
   {
     "entry_id": "ro-vocab:cup:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:cup:noun:unqualified",
@@ -6962,7 +6986,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "cup (noun)",
+    "sense_label": "a small thing you drink from",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -6973,11 +6997,11 @@
       "cyle25-theme:food-drink"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
-      "nonexample_en": null,
+      "definition_en": "A small round thing with a handle that you drink from.",
+      "explanation_vi": "Vật nhỏ có quai để uống nước (cái cốc, cái tách).",
+      "example_en": "I drink milk from my cup.",
+      "example_vi": "Em uống sữa từ cái cốc của mình.",
+      "nonexample_en": "I eat rice from a bowl.",
       "contrast_entry_ids": [],
       "usage_notes": [],
       "pronunciation": {
@@ -6989,22 +7013,26 @@
       },
       "visual": {
         "representation_type": "scene_svg",
-        "visual_priority": "high",
+        "visual_priority": "medium",
         "asset_id": "vg-scene-cup-v1",
         "asset": "vocabulary/assets/vg-scene-cup-v1.svg",
-        "alt": "A big blue cup with a handle full of warm tea, sitting on a matching saucer with gentle steam rising, next to a small teapot.",
-        "status": "draft",
-        "kind": "scene",
+        "alt": "A small round thing with a handle that you drink from.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
-      "media_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -7058,13 +7086,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-cupboard-v1",
-        "asset": "vocabulary/assets/vg-scene-cupboard-v1.svg",
-        "alt": "A wooden kitchen cupboard with two doors, one open to reveal plates and cups stacked neatly on shelves inside.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -7074,7 +7102,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -7196,13 +7224,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-cushion-v1",
-        "asset": "vocabulary/assets/vg-scene-cushion-v1.svg",
-        "alt": "A soft square cushion with a tassel at each corner and a button in the middle.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -7212,7 +7240,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {

@@ -248,13 +248,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "action_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-action-walk-v1",
-        "asset": "vocabulary/assets/vg-action-walk-v1.svg",
-        "alt": "A cheerful child walking mid-stride, one arm swinging forward, the other back, with footprints trailing behind.",
-        "status": "draft",
-        "kind": "action",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -264,7 +264,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -275,8 +275,8 @@
   {
     "entry_id": "ro-vocab:walk:verb:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:walk:verb:unqualified",
@@ -291,7 +291,7 @@
       "verb"
     ],
     "source_qualifier": null,
-    "sense_label": "walk (verb)",
+    "sense_label": "to move on your feet, not fast",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -300,11 +300,11 @@
     },
     "theme_ids": [],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
-      "nonexample_en": null,
+      "definition_en": "To move along on your feet, one step after another.",
+      "explanation_vi": "Di chuyển bằng chân, từng bước một (đi bộ).",
+      "example_en": "We walk to school every day.",
+      "example_vi": "Chúng em đi bộ đến trường mỗi ngày.",
+      "nonexample_en": "We run fast in the race.",
       "contrast_entry_ids": [],
       "usage_notes": [],
       "pronunciation": {
@@ -319,19 +319,23 @@
         "visual_priority": "high",
         "asset_id": "vg-action-walk-v1",
         "asset": "vocabulary/assets/vg-action-walk-v1.svg",
-        "alt": "A cheerful child walking mid-stride, one arm swinging forward, the other back, with footprints trailing behind.",
-        "status": "draft",
+        "alt": "To move along on your feet, one step after another.",
+        "status": "needs_human_review",
         "kind": "action",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "read_in_context",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
-      "media_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -385,13 +389,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-wall-v1",
-        "asset": "vocabulary/assets/vg-scene-wall-v1.svg",
-        "alt": "A big red brick wall across a garden with a cat sitting on top, flowers growing at its base, and a ladder leaning against it.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -401,7 +405,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -661,13 +665,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-watch-v1",
-        "asset": "vocabulary/assets/vg-scene-watch-v1.svg",
-        "alt": "A big wristwatch with a round face, hour and minute hands, numbers marked as dots, and a blue strap with a buckle, worn on a child's wrist.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -677,7 +681,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -688,8 +692,8 @@
   {
     "entry_id": "ro-vocab:water:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:water:noun:unqualified",
@@ -704,7 +708,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "water (noun)",
+    "sense_label": "the clear drink with no colour",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -716,11 +720,11 @@
       "cyle25-theme:the-world-around-us"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
-      "nonexample_en": null,
+      "definition_en": "The clear liquid with no colour that we drink.",
+      "explanation_vi": "Chất lỏng trong suốt, không màu mà ta uống (nước).",
+      "example_en": "I drink water when I am thirsty.",
+      "example_vi": "Em uống nước khi khát.",
+      "nonexample_en": "I drink milk in the morning.",
       "contrast_entry_ids": [],
       "usage_notes": [],
       "pronunciation": {
@@ -735,19 +739,23 @@
         "visual_priority": "high",
         "asset_id": "vg-scene-water-v1",
         "asset": "vocabulary/assets/vg-scene-water-v1.svg",
-        "alt": "A tall clear glass full of water with a droplet splashing, bubbles, and cool blue tones.",
-        "status": "draft",
-        "kind": "scene",
+        "alt": "The clear liquid with no colour that we drink.",
+        "status": "needs_human_review",
+        "kind": "food",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
-      "media_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -798,13 +806,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-water-v1",
-        "asset": "vocabulary/assets/vg-scene-water-v1.svg",
-        "alt": "A tall clear glass full of water with a droplet splashing, bubbles, and cool blue tones.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -814,7 +822,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -936,13 +944,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-watermelon-v1",
-        "asset": "vocabulary/assets/vg-scene-watermelon-v1.svg",
-        "alt": "A juicy triangular slice of watermelon with bright red flesh, black seeds, and green rind.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -952,7 +960,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1005,13 +1013,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "action_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-action-wave-v1",
-        "asset": "vocabulary/assets/vg-action-wave-v1.svg",
-        "alt": "A cheerful child with arm raised high, waving an open hand to say hello, with motion arcs around the hand, greeting a friend across the street.",
-        "status": "draft",
-        "kind": "action",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1021,7 +1029,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1072,13 +1080,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "action_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-action-wave-v1",
-        "asset": "vocabulary/assets/vg-action-wave-v1.svg",
-        "alt": "A cheerful child with arm raised high, waving an open hand to say hello, with motion arcs around the hand, greeting a friend across the street.",
-        "status": "draft",
-        "kind": "action",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1088,7 +1096,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2839,13 +2847,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-white-v1",
-        "asset": "vocabulary/assets/vg-scene-white-v1.svg",
-        "alt": "A central white paint splash surrounded by white things: a snowman, a fluffy sheep, a glass of milk and a cloud, all on a colorful background.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -2855,7 +2863,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3611,8 +3619,8 @@
   {
     "entry_id": "ro-vocab:window:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:window:noun:unqualified",
@@ -3627,7 +3635,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "window (noun)",
+    "sense_label": "the glass part you look through",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -3639,11 +3647,11 @@
       "cyle25-theme:the-home"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
-      "nonexample_en": null,
+      "definition_en": "The part of a wall made of glass that you look through.",
+      "explanation_vi": "Phần trên tường làm bằng kính để bạn nhìn ra ngoài (cửa sổ).",
+      "example_en": "I can see a bird through the window.",
+      "example_vi": "Em có thể nhìn thấy một con chim qua cửa sổ.",
+      "nonexample_en": "I open the door to go outside.",
       "contrast_entry_ids": [],
       "usage_notes": [],
       "pronunciation": {
@@ -3658,19 +3666,23 @@
         "visual_priority": "high",
         "asset_id": "vg-scene-window-v1",
         "asset": "vocabulary/assets/vg-scene-window-v1.svg",
-        "alt": "A big window with yellow curtains and a flower pot on the sill, looking out at a sunny garden with a tree and a bird flying by.",
-        "status": "draft",
-        "kind": "scene",
+        "alt": "The part of a wall made of glass that you look through.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
-      "media_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -4201,13 +4213,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-woman-women-v1",
-        "asset": "vocabulary/assets/vg-scene-woman-women-v1.svg",
-        "alt": "A split picture: on the left one woman standing alone, and on the right three women standing together, showing singular and plural.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -4217,7 +4229,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {

@@ -44,13 +44,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-t-shirt-v1",
-        "asset": "vocabulary/assets/vg-scene-t-shirt-v1.svg",
-        "alt": "A big green short-sleeved t-shirt with a yellow star on the chest hanging on a clothesline with pegs, drying in the sun.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -60,7 +60,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -113,13 +113,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-table-tennis-v1",
-        "asset": "vocabulary/assets/vg-scene-table-tennis-v1.svg",
-        "alt": "A blue table tennis table with a net in the middle, two red and black paddles, and a small white ball bouncing across.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -129,7 +129,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -140,8 +140,8 @@
   {
     "entry_id": "ro-vocab:table:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:table:noun:unqualified",
@@ -156,7 +156,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "table (noun)",
+    "sense_label": "furniture with a flat top and legs",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -167,11 +167,11 @@
       "cyle25-theme:the-home"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
-      "nonexample_en": null,
+      "definition_en": "A piece of furniture with a flat top and legs that you put things on.",
+      "explanation_vi": "Đồ vật có mặt phẳng và chân, để đặt đồ lên (cái bàn).",
+      "example_en": "We eat dinner at the table.",
+      "example_vi": "Chúng em ăn tối ở bàn.",
+      "nonexample_en": "We sit on a chair.",
       "contrast_entry_ids": [],
       "usage_notes": [],
       "pronunciation": {
@@ -186,19 +186,23 @@
         "visual_priority": "high",
         "asset_id": "vg-scene-table-v1",
         "asset": "vocabulary/assets/vg-scene-table-v1.svg",
-        "alt": "A big brown wooden table with four sturdy legs, holding a vase of flowers and a bowl of fruit, in a warm room.",
-        "status": "draft",
-        "kind": "scene",
+        "alt": "A piece of furniture with a flat top and legs that you put things on.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
-      "media_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -249,13 +253,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-tablet-v1",
-        "asset": "vocabulary/assets/vg-scene-tablet-v1.svg",
-        "alt": "A big tablet computer with a bright touchscreen showing colorful app icons, and a child's finger tapping the screen.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -265,7 +269,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1072,13 +1076,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-teacher-v1",
-        "asset": "vocabulary/assets/vg-scene-teacher-v1.svg",
-        "alt": "A friendly teacher standing at a green chalkboard holding a pointer stick and a book, teaching shapes drawn on the board to pupils at a desk.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1088,7 +1092,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1347,13 +1351,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-television-tv-v1",
-        "asset": "vocabulary/assets/vg-scene-television-tv-v1.svg",
-        "alt": "A big television on a wooden stand showing a colorful cartoon with a smiling sun and hills, with a remote control nearby.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1363,7 +1367,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1554,13 +1558,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-tennis-racket-v1",
-        "asset": "vocabulary/assets/vg-scene-tennis-racket-v1.svg",
-        "alt": "A large tennis racket with an oval head, criss-cross strings and a brown grip handle, next to a bright yellow tennis ball.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1570,7 +1574,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1623,13 +1627,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-tennis-v1",
-        "asset": "vocabulary/assets/vg-scene-tennis-v1.svg",
-        "alt": "A child swinging a tennis racket to hit a yellow ball over the net on a green tennis court with white lines.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -1639,7 +1643,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3522,13 +3526,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "action_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-action-throw-v1",
-        "asset": "vocabulary/assets/vg-action-throw-v1.svg",
-        "alt": "A child in mid-throw motion, arm raised with a ball leaving their hand along a motion arc.",
-        "status": "draft",
-        "kind": "action",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -3538,7 +3542,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3867,13 +3871,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-tiger-v1",
-        "asset": "vocabulary/assets/vg-scene-tiger-v1.svg",
-        "alt": "A big friendly orange tiger with black stripes, white belly and long striped tail, standing in tall jungle grass.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -3883,7 +3887,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -4485,13 +4489,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-tomato-v1",
-        "asset": "vocabulary/assets/vg-scene-tomato-v1.svg",
-        "alt": "A large shiny red tomato with a green star-shaped stem, next to a sliced half showing seeds, on a kitchen table.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -4501,7 +4505,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -5587,13 +5591,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-toy-v1",
-        "asset": "vocabulary/assets/vg-scene-toy-v1.svg",
-        "alt": "A colorful toy box overflowing with toys: a teddy bear, building blocks, a toy car, a ball and a spinning top.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -5603,7 +5607,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -5752,8 +5756,8 @@
   {
     "entry_id": "ro-vocab:train:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:train:noun:unqualified",
@@ -5768,7 +5772,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "train (noun)",
+    "sense_label": "a long vehicle that runs on rails",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -5780,10 +5784,10 @@
       "cyle25-theme:transport"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A long vehicle with many parts that runs on rails.",
+      "explanation_vi": "Xe dài gồm nhiều toa chạy trên đường ray (tàu hỏa, xe lửa).",
+      "example_en": "The train goes very fast.",
+      "example_vi": "Tàu hỏa chạy rất nhanh.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -5799,19 +5803,23 @@
         "visual_priority": "high",
         "asset_id": "vg-scene-train-v1",
         "asset": "vocabulary/assets/vg-scene-train-v1.svg",
-        "alt": "A cheerful blue steam train with a red engine cab and two carriages, puffing white smoke as it rides along railway tracks through green hills.",
-        "status": "draft",
-        "kind": "scene",
+        "alt": "A long vehicle with many parts that runs on rails.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
-      "media_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -6210,13 +6218,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-trousers-v1",
-        "asset": "vocabulary/assets/vg-scene-trousers-v1.svg",
-        "alt": "A big pair of blue trousers with pockets and a brown belt hanging on a wooden hanger, with a smaller red pair folded nearby.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -6226,7 +6234,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -6755,13 +6763,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "scene_svg",
-        "visual_priority": "high",
-        "asset_id": "vg-scene-tv-television-v1",
-        "asset": "vocabulary/assets/vg-scene-tv-television-v1.svg",
-        "alt": "A child sitting on a red sofa watching a big television showing a colorful cartoon rocket flying among stars, in a cozy evening room.",
-        "status": "draft",
-        "kind": "scene",
+        "representation_type": "no_visual_needed",
+        "visual_priority": "none",
+        "asset_id": null,
+        "asset": null,
+        "alt": null,
+        "status": "not_applicable",
+        "kind": "none",
         "template": null,
         "anchor_objects": []
       },
@@ -6771,7 +6779,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "pending",
+      "media_review": "not_applicable",
       "parent_approval": "pending"
     },
     "provenance": {
