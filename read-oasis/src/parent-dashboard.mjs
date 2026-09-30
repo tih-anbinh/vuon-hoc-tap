@@ -31,7 +31,10 @@ function renderAccountChip(account) {
   document.getElementById('acctChip')?.remove();
   const chip = h('span', { class: 'acct-chip', id: 'acctChip', title: account.email },
     h('span', { class: 'acct-name', text: account.name || account.email }),
-    btn('Sign out', () => { if (confirm('Sign out of the family account on this device?')) signOutAndReload(); }, { quiet: true, attrs: { class: 'quiet acct-out' } }));
+    // Icon + aria-label so the button still reads as "Sign out" on tiny screens, where the topbar hides
+    // the text span (icon-only rule). Without an icon it rendered as an empty pill on iPhone/iPad.
+    btn('Sign out', () => { if (confirm('Sign out of the family account on this device?')) signOutAndReload(); },
+      { quiet: true, ic: 'exit', attrs: { class: 'quiet acct-out', 'aria-label': 'Sign out' } }));
   lock.before(chip);
 }
 
