@@ -1,69 +1,54 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-tail desc-tail">
-  <title id="title-tail">Tail - Upright wagging animal tail</title>
-  <desc id="desc-tail">A friendly cat looking back at its long, fluffy striped tail that curls high in the air with wagging motion lines, occupying the center of the frame.</desc>
+  <title id="title-tail">Tail</title>
+  <desc id="desc-tail">A cheerful cat seen from behind with its long curved tail raised high and highlighted by a bright ring, clearly pointing out the tail.</desc>
   <defs>
-    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    <radialGradient id="tail-bg" cx="50%" cy="40%" r="75%">
+      <stop offset="0%" stop-color="#dcfce7"/>
+      <stop offset="100%" stop-color="#bbf7d0"/>
+    </radialGradient>
+    <linearGradient id="tail-cat" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.18"/>
     </filter>
   </defs>
 
-  <!-- Ground line -->
-  <line x1="30" y1="265" x2="370" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
+  <rect x="0" y="0" width="400" height="300" fill="url(#tail-bg)"/>
+  <ellipse cx="190" cy="272" rx="120" ry="16" fill="#0f172a" opacity="0.12"/>
 
-  <!-- Ground shadow -->
-  <ellipse cx="170" cy="265" rx="75" ry="12" fill="#0f172a" opacity="0.15"/>
+  <g id="cat" filter="url(#soft-shadow)">
+    <!-- Cat body seen from behind (rounded rump) -->
+    <ellipse cx="180" cy="200" rx="98" ry="72" fill="url(#tail-cat)" stroke="#9a3412" stroke-width="4"/>
+    <!-- Back stripes -->
+    <path d="M130 150 Q150 160 130 172" fill="none" stroke="#9a3412" stroke-width="4" stroke-linecap="round"/>
+    <path d="M180 138 Q198 150 180 162" fill="none" stroke="#9a3412" stroke-width="4" stroke-linecap="round"/>
+    <path d="M228 150 Q246 162 228 174" fill="none" stroke="#9a3412" stroke-width="4" stroke-linecap="round"/>
+    <!-- Small ears peeking over the top -->
+    <polygon points="150,138 140,108 172,130" fill="#ea580c" stroke="#9a3412" stroke-width="3.5" stroke-linejoin="round"/>
+    <polygon points="210,138 220,108 188,130" fill="#ea580c" stroke="#9a3412" stroke-width="3.5" stroke-linejoin="round"/>
+    <!-- Back paws at bottom -->
+    <ellipse cx="140" cy="266" rx="20" ry="12" fill="#fff7ed" stroke="#9a3412" stroke-width="3"/>
+    <ellipse cx="220" cy="266" rx="20" ry="12" fill="#fff7ed" stroke="#9a3412" stroke-width="3"/>
 
-  <!-- Motion Wag Lines around the Tail (Dynamic action cues) -->
-  <path d="M285 55 C305 75 315 105 310 135" fill="none" stroke="#f59e0b" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="6 4"/>
-  <path d="M305 70 C325 95 330 120 325 145" fill="none" stroke="#f59e0b" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 4"/>
-  <!-- Focus Sparkles highlighting the tail -->
-  <polygon points="265,35 269,25 273,35 283,38 273,41 269,51 265,41 255,38" fill="#fbbf24"/>
-  <circle cx="230" cy="30" r="3.5" fill="#f59e0b"/>
-
-  <!-- TARGET OBJECT: CAT & PROMINENT TAIL (Occupying 70% canvas) -->
-  <g id="tail-figure" filter="url(#soft-shadow)">
-    <!-- Cat Body from Back / 3-quarter View (Muted, secondary context) -->
-    <!-- Rear Haunches -->
-    <ellipse cx="160" cy="215" rx="55" ry="42" fill="#fed7aa" stroke="#c2410c" stroke-width="3.5"/>
-    <ellipse cx="125" cy="235" rx="28" ry="18" fill="#fdba74" stroke="#c2410c" stroke-width="3"/>
-    <ellipse cx="195" cy="235" rx="28" ry="18" fill="#fdba74" stroke="#c2410c" stroke-width="3"/>
-
-    <!-- Paws tucked under -->
-    <ellipse cx="120" cy="255" rx="15" ry="8" fill="#ffffff" stroke="#c2410c" stroke-width="2.5"/>
-    <ellipse cx="200" cy="255" rx="15" ry="8" fill="#ffffff" stroke="#c2410c" stroke-width="2.5"/>
-
-    <!-- Cat Head Turned Back, Looking Lovingly at its Tail -->
-    <circle cx="115" cy="150" r="36" fill="#fed7aa" stroke="#c2410c" stroke-width="3.5"/>
-    <!-- Pointed Cat Ears -->
-    <polygon points="85,130 85,95 110,115" fill="#fed7aa" stroke="#c2410c" stroke-width="3"/>
-    <polygon points="88,124 88,102 104,115" fill="#fbcfe8"/>
-    <polygon points="120,115 140,95 145,130" fill="#fed7aa" stroke="#c2410c" stroke-width="3"/>
-    <polygon points="124,116 138,102 142,124" fill="#fbcfe8"/>
-
-    <!-- Curious Cat Eye Looking Up/Right at Tail -->
-    <circle cx="128" cy="145" r="7" fill="#15803d"/>
-    <circle cx="130" cy="143" r="4" fill="#0f172a"/>
-    <circle cx="132" cy="141" r="1.5" fill="#ffffff"/>
-
-    <!-- Cute Cat Snout & Whiskers -->
-    <ellipse cx="140" cy="155" rx="4" ry="3" fill="#f43f5e"/>
-    <line x1="145" y1="152" x2="165" y2="148" stroke="#78350f" stroke-width="2" stroke-linecap="round"/>
-    <line x1="145" y1="157" x2="165" y2="158" stroke="#78350f" stroke-width="2" stroke-linecap="round"/>
-
-    <!-- PROMINENT LONG STRIPED TAIL (The primary subject, sweeping high and bold) -->
-    <!-- Tail Base -> High S-Curve -> Plump Rounded Tip -->
-    <path d="M190 220
-             C240 215 270 180 250 120
-             C235 75 250 45 280 50
-             C300 55 295 90 280 125
-             C260 170 230 235 185 242 Z"
-          fill="#f97316" stroke="#c2410c" stroke-width="4.5" stroke-linejoin="round"/>
-
-    <!-- Dark Tabby Stripes on Tail -->
-    <path d="M198 228 C215 220 225 210 232 200" fill="none" stroke="#7c2d12" stroke-width="5" stroke-linecap="round"/>
-    <path d="M222 185 C238 175 248 160 252 145" fill="none" stroke="#7c2d12" stroke-width="5" stroke-linecap="round"/>
-    <path d="M242 130 C250 115 252 98 250 85" fill="none" stroke="#7c2d12" stroke-width="5" stroke-linecap="round"/>
-    <!-- Fluffy White Tip on Tail -->
-    <path d="M265 52 C275 48 285 52 288 65 C282 72 272 70 262 62 Z" fill="#ffffff" stroke="#c2410c" stroke-width="2.5"/>
+    <!-- TARGET: TAIL (long curved, raised high) -->
+    <path d="M262 220
+             C320 210 348 150 330 100
+             C320 70 288 66 282 92
+             C278 112 300 118 306 100
+             C314 132 296 176 258 190"
+          fill="none" stroke="#ea580c" stroke-width="26" stroke-linecap="round"/>
+    <path d="M262 220
+             C320 210 348 150 330 100
+             C320 70 288 66 282 92
+             C278 112 300 118 306 100
+             C314 132 296 176 258 190"
+          fill="none" stroke="#9a3412" stroke-width="4" stroke-linecap="round"/>
+    <!-- Tail tip stripes -->
+    <path d="M330 108 L346 112 M326 128 L344 132 M316 148 L332 156" stroke="#9a3412" stroke-width="4" stroke-linecap="round"/>
   </g>
+
+  <!-- Highlight ring around the tail -->
+  <ellipse cx="308" cy="140" rx="62" ry="82" fill="none" stroke="#ef4444" stroke-width="5" stroke-dasharray="12 8" transform="rotate(12 308 140)"/>
 </svg>
