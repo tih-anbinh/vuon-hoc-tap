@@ -38,7 +38,7 @@
 </header>
 <main class="grid">
 
-    <article class="card" data-wid="cyle25:v2:airport:noun:unqualified" data-prev="redraw_now">
+    <article class="card" data-wid="cyle25:v2:airport:noun:unqualified" data-prev="needs_human_review">
       <div class="art"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-airport desc-airport">
   <title id="title-airport">Airport</title>
   <desc id="desc-airport">An airport control tower and terminal building with a jet airplane on the runway under a blue sky.</desc>
@@ -57,33 +57,74 @@
   </defs>
 
   <rect x="0" y="0" width="400" height="300" fill="url(#airport-sky)"/>
-  <rect x="0" y="215" width="400" height="85" fill="#94a3b8"/>
-  <ellipse cx="200" cy="278" rx="170" ry="16" fill="#0f172a" opacity="0.12"/>
+  <!-- clouds -->
+  <ellipse cx="70" cy="52" rx="34" ry="13" fill="#ffffff" opacity="0.9"/>
+  <ellipse cx="96" cy="46" rx="24" ry="12" fill="#ffffff" opacity="0.9"/>
+  <!-- runway tarmac -->
+  <rect x="0" y="205" width="400" height="95" fill="#64748b"/>
+  <rect x="0" y="205" width="400" height="10" fill="#475569"/>
+  <!-- runway centre-line dashes -->
+  <g fill="#fde047">
+    <rect x="30" y="252" width="40" height="9" rx="2"/>
+    <rect x="110" y="252" width="40" height="9" rx="2"/>
+    <rect x="190" y="252" width="40" height="9" rx="2"/>
+    <rect x="270" y="252" width="40" height="9" rx="2"/>
+    <rect x="350" y="252" width="40" height="9" rx="2"/>
+  </g>
+  <ellipse cx="205" cy="240" rx="150" ry="16" fill="#0f172a" opacity="0.15"/>
 
+  <!-- terminal + control tower (background context, smaller) -->
   <g filter="url(#soft-shadow)">
-    <!-- Terminal building -->
-    <rect x="40" y="150" width="180" height="70" rx="6" fill="url(#airport-tower)" stroke="#1e293b" stroke-width="3.5"/>
-    <rect x="55" y="165" width="24" height="24" rx="3" fill="#38bdf8" stroke="#1e293b" stroke-width="2"/>
-    <rect x="90" y="165" width="24" height="24" rx="3" fill="#38bdf8" stroke="#1e293b" stroke-width="2"/>
-    <rect x="125" y="165" width="24" height="24" rx="3" fill="#38bdf8" stroke="#1e293b" stroke-width="2"/>
-    <rect x="160" y="165" width="24" height="24" rx="3" fill="#38bdf8" stroke="#1e293b" stroke-width="2"/>
+    <rect x="18" y="150" width="130" height="58" rx="6" fill="url(#airport-tower)" stroke="#1e293b" stroke-width="3"/>
+    <rect x="30" y="162" width="18" height="20" rx="3" fill="#38bdf8" stroke="#1e293b" stroke-width="1.8"/>
+    <rect x="56" y="162" width="18" height="20" rx="3" fill="#38bdf8" stroke="#1e293b" stroke-width="1.8"/>
+    <rect x="82" y="162" width="18" height="20" rx="3" fill="#38bdf8" stroke="#1e293b" stroke-width="1.8"/>
+    <rect x="108" y="162" width="18" height="20" rx="3" fill="#38bdf8" stroke="#1e293b" stroke-width="1.8"/>
+    <!-- control tower -->
+    <rect x="150" y="112" width="26" height="96" fill="url(#airport-tower)" stroke="#1e293b" stroke-width="3"/>
+    <path d="M142 112 L184 112 L179 88 L147 88 Z" fill="#e2e8f0" stroke="#1e293b" stroke-width="3"/>
+    <rect x="149" y="92" width="28" height="15" rx="2" fill="#38bdf8" stroke="#1e293b" stroke-width="1.8"/>
+    <line x1="163" y1="88" x2="163" y2="72" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="163" cy="70" r="4" fill="#ef4444"/>
+  </g>
 
-    <!-- Control tower -->
-    <rect x="235" y="90" width="34" height="130" fill="url(#airport-tower)" stroke="#1e293b" stroke-width="3.5"/>
-    <path d="M225 90 L279 90 L272 60 L232 60 Z" fill="#e2e8f0" stroke="#1e293b" stroke-width="3.5"/>
-    <rect x="234" y="66" width="36" height="18" rx="2" fill="#38bdf8" stroke="#1e293b" stroke-width="2"/>
-    <line x1="252" y1="60" x2="252" y2="42" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
-    <circle cx="252" cy="40" r="4" fill="#ef4444"/>
-
-    <!-- Airplane -->
-    <g>
-      <ellipse cx="330" cy="185" rx="58" ry="16" fill="#f1f5f9" stroke="#1e293b" stroke-width="3.5"/>
-      <path d="M285 185 L268 172 L282 183 Z" fill="#f1f5f9" stroke="#1e293b" stroke-width="2.5"/>
-      <path d="M330 175 L318 150 L336 174 Z" fill="#cbd5e1" stroke="#1e293b" stroke-width="2.5"/>
-      <path d="M330 195 L340 178 L356 194 Z" fill="#93c5fd" stroke="#1e293b" stroke-width="2.5"/>
-      <circle cx="320" cy="185" r="4" fill="#38bdf8" stroke="#1e293b" stroke-width="1.5"/>
-      <circle cx="335" cy="185" r="4" fill="#38bdf8" stroke="#1e293b" stroke-width="1.5"/>
+  <!-- BIG airplane (dominant subject) taking off -->
+  <g filter="url(#soft-shadow)" transform="rotate(-8 245 165)">
+    <!-- fuselage -->
+    <path d="M120,168
+             Q118,150 150,148
+             L330,150
+             Q372,152 378,166
+             Q372,180 330,182
+             L150,184
+             Q118,182 120,168 Z"
+          fill="#f8fafc" stroke="#1e293b" stroke-width="4" stroke-linejoin="round"/>
+    <!-- nose cone accent -->
+    <path d="M360,152 Q378,152 378,166 Q378,180 360,180 Z" fill="#3b82f6" stroke="#1e293b" stroke-width="3"/>
+    <!-- cockpit window -->
+    <path d="M352,156 Q366,156 368,166 Q366,176 352,176 Z" fill="#bae6fd" stroke="#1e293b" stroke-width="2"/>
+    <!-- tail fin -->
+    <path d="M126,166 L104,116 L138,120 L150,166 Z" fill="#3b82f6" stroke="#1e293b" stroke-width="3.5" stroke-linejoin="round"/>
+    <!-- tail plane -->
+    <path d="M128,172 L108,188 L142,180 Z" fill="#93c5fd" stroke="#1e293b" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- main wing (swept back, toward viewer) -->
+    <path d="M232,178 L200,224 L264,196 Z" fill="#60a5fa" stroke="#1e293b" stroke-width="3.5" stroke-linejoin="round"/>
+    <!-- far wing hint (up) -->
+    <path d="M244,158 L224,120 L272,150 Z" fill="#93c5fd" stroke="#1e293b" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- engine under wing -->
+    <ellipse cx="238" cy="188" rx="16" ry="9" fill="#cbd5e1" stroke="#1e293b" stroke-width="3"/>
+    <!-- windows row -->
+    <g fill="#38bdf8" stroke="#1e293b" stroke-width="1.5">
+      <circle cx="180" cy="166" r="5"/>
+      <circle cx="204" cy="166" r="5"/>
+      <circle cx="228" cy="166" r="5"/>
+      <circle cx="252" cy="166" r="5"/>
+      <circle cx="276" cy="166" r="5"/>
+      <circle cx="300" cy="166" r="5"/>
+      <circle cx="324" cy="166" r="5"/>
     </g>
+    <!-- cheat-line -->
+    <line x1="150" y1="176" x2="352" y2="176" stroke="#3b82f6" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
   </g>
 </svg></div>
       <div class="info">
@@ -98,7 +139,7 @@
       </div>
     </article>
 
-    <article class="card" data-wid="cyle25:v2:balcony:noun:unqualified" data-prev="wrong_sense">
+    <article class="card" data-wid="cyle25:v2:balcony:noun:unqualified" data-prev="needs_human_review">
       <div class="art"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-balcony desc-balcony">
   <title id="title-balcony">Balcony - Balcony with railing and flower pots</title>
   <desc id="desc-balcony">A house wall with a balcony sticking out, with iron railings, flower pots, and a child standing on the balcony waving, under a sunny sky.</desc>
@@ -116,72 +157,81 @@
     </filter>
   </defs>
   <rect x="0" y="0" width="400" height="300" fill="url(#bc-sky)"/>
-  <circle cx="60" cy="52" r="24" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
-  <ellipse cx="105" cy="110" rx="34" ry="12" fill="#ffffff" opacity="0.95"/>
-  <!-- house wall on right -->
-  <rect x="170" y="0" width="230" height="300" fill="url(#bc-wall)" stroke="#b45309" stroke-width="4"/>
-  <!-- balcony door -->
-  <rect x="220" y="60" width="82" height="130" rx="5" fill="#78350f" stroke="#451a03" stroke-width="4"/>
-  <rect x="228" y="70" width="30" height="52" rx="3" fill="#bae6fd" stroke="#451a03" stroke-width="3"/>
-  <rect x="264" y="70" width="30" height="52" rx="3" fill="#bae6fd" stroke="#451a03" stroke-width="3"/>
-  <circle cx="292" cy="140" r="4" fill="#fbbf24"/>
-  <!-- upper window -->
-  <rect x="330" y="40" width="50" height="46" rx="4" fill="#bae6fd" stroke="#b45309" stroke-width="3.5"/>
-  <line x1="355" y1="40" x2="355" y2="86" stroke="#b45309" stroke-width="2.5"/>
-  <!-- balcony platform (dominant) -->
+  <circle cx="52" cy="48" r="22" fill="#fbbf24" stroke="#d97706" stroke-width="3"/>
+  <ellipse cx="96" cy="70" rx="30" ry="11" fill="#ffffff" opacity="0.95"/>
+
+  <!-- ===== BUILDING WALL (flat facade, left/back plane) ===== -->
+  <rect x="0" y="0" width="250" height="300" fill="url(#bc-wall)" stroke="#b45309" stroke-width="4"/>
+  <!-- upper window on the facade -->
+  <rect x="40" y="34" width="52" height="48" rx="4" fill="#bae6fd" stroke="#b45309" stroke-width="3.5"/>
+  <line x1="66" y1="34" x2="66" y2="82" stroke="#b45309" stroke-width="2.5"/>
+  <line x1="40" y1="58" x2="92" y2="58" stroke="#b45309" stroke-width="2.5"/>
+  <!-- balcony door set INTO the wall, opening onto the platform -->
+  <rect x="120" y="70" width="86" height="120" rx="5" fill="#78350f" stroke="#451a03" stroke-width="4"/>
+  <rect x="128" y="80" width="32" height="54" rx="3" fill="#bae6fd" stroke="#451a03" stroke-width="3"/>
+  <rect x="166" y="80" width="32" height="54" rx="3" fill="#bae6fd" stroke="#451a03" stroke-width="3"/>
+  <circle cx="196" cy="150" r="4" fill="#fbbf24"/>
+
+  <!-- ===== BALCONY PLATFORM JUTTING OUT toward the viewer (right, 3/4 view) ===== -->
   <g filter="url(#soft-shadow)">
-    <!-- floor slab -->
-    <rect x="176" y="190" width="180" height="16" rx="4" fill="#94a3b8" stroke="#475569" stroke-width="4"/>
-    <!-- support brackets -->
-    <path d="M200,206 L224,240 L224,206 Z" fill="#64748b" stroke="#475569" stroke-width="3"/>
-    <path d="M310,206 L334,240 L334,206 Z" fill="#64748b" stroke="#475569" stroke-width="3"/>
-    <!-- railing -->
-    <rect x="176" y="118" width="180" height="10" rx="4" fill="#334155" stroke="#0f172a" stroke-width="3"/>
-    <g stroke="#334155" stroke-width="5">
-      <line x1="186" y1="128" x2="186" y2="190"/>
-      <line x1="210" y1="128" x2="210" y2="190"/>
-      <line x1="234" y1="128" x2="234" y2="190"/>
-      <line x1="258" y1="128" x2="258" y2="190"/>
-      <line x1="282" y1="128" x2="282" y2="190"/>
-      <line x1="306" y1="128" x2="306" y2="190"/>
-      <line x1="330" y1="128" x2="330" y2="190"/>
-      <line x1="348" y1="128" x2="348" y2="190"/>
+    <!-- projecting floor slab: top face (parallelogram) shows it sticking OUT from the wall -->
+    <path d="M120,196 L360,196 L396,224 L156,224 Z"
+          fill="#cbd5e1" stroke="#475569" stroke-width="4" stroke-linejoin="round"/>
+    <!-- slab front edge (thickness) -->
+    <path d="M156,224 L396,224 L396,240 L156,240 Z"
+          fill="#94a3b8" stroke="#475569" stroke-width="4" stroke-linejoin="round"/>
+    <!-- under-support brackets showing it hangs off the wall -->
+    <path d="M180,240 L206,284 L214,240 Z" fill="#64748b" stroke="#475569" stroke-width="3"/>
+    <path d="M330,240 L356,284 L364,240 Z" fill="#64748b" stroke="#475569" stroke-width="3"/>
+  </g>
+
+  <!-- railing sitting ON TOP of the projecting slab (waist-high, front edge) -->
+  <g filter="url(#soft-shadow)">
+    <!-- top rail follows the front edge of the slab -->
+    <path d="M156,168 L396,168 L396,178 L156,178 Z" fill="#334155" stroke="#0f172a" stroke-width="3"/>
+    <g stroke="#334155" stroke-width="5" stroke-linecap="round">
+      <line x1="164" y1="178" x2="164" y2="224"/>
+      <line x1="196" y1="178" x2="200" y2="224"/>
+      <line x1="228" y1="178" x2="236" y2="224"/>
+      <line x1="260" y1="178" x2="272" y2="224"/>
+      <line x1="292" y1="178" x2="308" y2="224"/>
+      <line x1="324" y1="178" x2="344" y2="224"/>
+      <line x1="356" y1="178" x2="380" y2="224"/>
+      <line x1="388" y1="178" x2="394" y2="224"/>
     </g>
   </g>
-  <!-- child on balcony waving -->
+
+  <!-- child STANDING ON the balcony, waving -->
   <g filter="url(#soft-shadow)">
-    <path d="M240,102 Q238,80 260,78 Q282,80 280,102 L275,108 Q260,92 245,108 Z" fill="#451a03" stroke="#1c1917" stroke-width="2.5"/>
-    <circle cx="260" cy="110" r="20" fill="#fcd9b6" stroke="#78350f" stroke-width="3"/>
-    <circle cx="253" cy="107" r="2.8" fill="#0f172a"/>
-    <circle cx="267" cy="107" r="2.8" fill="#0f172a"/>
-    <path d="M252,118 Q260,124 268,118" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
-    <path d="M246,128 L274,128 L280,178 L240,178 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="3"/>
+    <path d="M250,120 Q248,98 270,96 Q292,98 290,120 L285,126 Q270,110 255,126 Z" fill="#451a03" stroke="#1c1917" stroke-width="2.5"/>
+    <circle cx="270" cy="128" r="20" fill="#fcd9b6" stroke="#78350f" stroke-width="3"/>
+    <circle cx="263" cy="125" r="2.8" fill="#0f172a"/>
+    <circle cx="277" cy="125" r="2.8" fill="#0f172a"/>
+    <path d="M262,136 Q270,142 278,136" fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- body (torso ends just above rail so child clearly stands behind/on the balcony) -->
+    <path d="M256,146 L284,146 L290,196 L250,196 Z" fill="#ef4444" stroke="#7f1d1d" stroke-width="3"/>
     <!-- waving arm -->
-    <path d="M272,134 Q292,118 296,98" fill="none" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
-    <circle cx="298" cy="94" r="7" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
+    <path d="M282,152 Q302,136 306,116" fill="none" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="308" cy="112" r="7" fill="#fcd9b6" stroke="#78350f" stroke-width="2.5"/>
     <g stroke="#f59e0b" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.9">
-      <path d="M312,86 Q318,94 316,104"/>
-      <path d="M322,78 Q332,90 328,104"/>
+      <path d="M320,104 Q326,112 324,122"/>
+      <path d="M330,96 Q340,108 336,122"/>
     </g>
-    <!-- other arm on railing -->
-    <path d="M248,134 Q234,144 232,158" fill="none" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
+    <!-- other arm resting on rail -->
+    <path d="M258,152 Q244,162 242,172" fill="none" stroke="#fcd9b6" stroke-width="9" stroke-linecap="round"/>
   </g>
-  <!-- flower pots on balcony -->
+
+  <!-- flower pots ON the balcony slab -->
   <g filter="url(#soft-shadow)">
-    <path d="M188,190 L214,190 L210,168 L192,168 Z" fill="#f97316" stroke="#7c2d12" stroke-width="3"/>
-    <circle cx="194" cy="160" r="7" fill="#f472b6" stroke="#be185d" stroke-width="2.5"/>
-    <circle cx="208" cy="160" r="7" fill="#a78bfa" stroke="#6d28d9" stroke-width="2.5"/>
-    <circle cx="201" cy="152" r="7" fill="#fb923c" stroke="#c2410c" stroke-width="2.5"/>
-    <path d="M318,190 L344,190 L340,168 L322,168 Z" fill="#f97316" stroke="#7c2d12" stroke-width="3"/>
-    <circle cx="324" cy="160" r="7" fill="#fb923c" stroke="#c2410c" stroke-width="2.5"/>
-    <circle cx="338" cy="160" r="7" fill="#f472b6" stroke="#be185d" stroke-width="2.5"/>
-    <circle cx="331" cy="152" r="7" fill="#fde047" stroke="#a16207" stroke-width="2.5"/>
+    <path d="M330,196 L360,196 L356,174 L336,174 Z" fill="#f97316" stroke="#7c2d12" stroke-width="3"/>
+    <circle cx="338" cy="166" r="7" fill="#fb923c" stroke="#c2410c" stroke-width="2.5"/>
+    <circle cx="352" cy="166" r="7" fill="#f472b6" stroke="#be185d" stroke-width="2.5"/>
+    <circle cx="345" cy="158" r="7" fill="#fde047" stroke="#a16207" stroke-width="2.5"/>
   </g>
-  <!-- bird flying -->
-  <path d="M60,150 Q68,142 76,150 M76,150 Q84,142 92,150" fill="none" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
-  <!-- ground/street below -->
-  <rect x="0" y="280" width="400" height="20" fill="#4ade80"/>
-  <line x1="0" y1="280" x2="400" y2="280" stroke="#15803d" stroke-width="3"/>
+
+  <!-- ground/street far below (emphasises the balcony is up high & sticking out) -->
+  <rect x="0" y="284" width="400" height="16" fill="#86efac"/>
+  <line x1="0" y1="284" x2="400" y2="284" stroke="#15803d" stroke-width="3"/>
 </svg></div>
       <div class="info">
         <h2>balcony</h2>
@@ -195,83 +245,78 @@
       </div>
     </article>
 
-    <article class="card" data-wid="cyle25:v2:bat:noun:unqualified" data-prev="wrong_sense">
+    <article class="card" data-wid="cyle25:v2:bat:noun:unqualified" data-prev="needs_human_review">
       <div class="art"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-bat desc-bat">
-  <title id="title-bat">Bat - Bat flying at night with open wings</title>
-  <desc id="desc-bat">A friendly purple bat with big open wings and pointed ears flying in the night sky with a full moon and stars behind it.</desc>
+  <title id="title-bat">Bat - Wooden bat hitting a ball</title>
+  <desc id="desc-bat">A big wooden baseball bat swinging and hitting a red ball, with motion lines showing the swing.</desc>
   <defs>
     <linearGradient id="bt-sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e1b4b"/>
-      <stop offset="100%" stop-color="#4c1d95"/>
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
     </linearGradient>
-    <radialGradient id="bt-moon" cx="0.4" cy="0.4" r="0.9">
-      <stop offset="0%" stop-color="#fefce8"/>
-      <stop offset="100%" stop-color="#fde047"/>
+    <linearGradient id="bt-wood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fcd9a5"/>
+      <stop offset="55%" stop-color="#d9a25f"/>
+      <stop offset="100%" stop-color="#a9702f"/>
+    </linearGradient>
+    <radialGradient id="bt-ball" cx="0.35" cy="0.3" r="0.9">
+      <stop offset="0%" stop-color="#fca5a5"/>
+      <stop offset="100%" stop-color="#dc2626"/>
     </radialGradient>
     <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.35"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.3"/>
     </filter>
   </defs>
   <rect x="0" y="0" width="400" height="300" fill="url(#bt-sky)"/>
-  <!-- moon -->
-  <circle cx="200" cy="140" r="86" fill="url(#bt-moon)" stroke="#a16207" stroke-width="3" opacity="0.95"/>
-  <circle cx="170" cy="112" r="12" fill="#facc15" opacity="0.6"/>
-  <circle cx="234" cy="170" r="16" fill="#facc15" opacity="0.6"/>
-  <circle cx="212" cy="98" r="8" fill="#facc15" opacity="0.6"/>
-  <!-- stars -->
-  <g fill="#fefce8">
-    <circle cx="46" cy="46" r="3.5"/>
-    <circle cx="90" cy="90" r="2.5"/>
-    <circle cx="350" cy="60" r="3.5"/>
-    <circle cx="320" cy="120" r="2.5"/>
-    <circle cx="60" cy="200" r="3"/>
-    <circle cx="360" cy="220" r="3"/>
-    <circle cx="330" cy="260" r="2.5"/>
-    <circle cx="40" cy="264" r="2.5"/>
-    <path d="M300,30 L303,38 L311,38 L305,43 L307,51 L300,46 L293,51 L295,43 L289,38 L297,38 Z"/>
-    <path d="M84,140 L86,146 L92,146 L87,150 L89,156 L84,152 L79,156 L81,150 L76,146 L82,146 Z"/>
+  <!-- grass ground -->
+  <rect x="0" y="248" width="400" height="52" fill="#4ade80"/>
+  <line x1="0" y1="248" x2="400" y2="248" stroke="#15803d" stroke-width="3"/>
+  <ellipse cx="200" cy="270" rx="150" ry="14" fill="#0f172a" opacity="0.12"/>
+
+  <!-- swing motion arc behind the bat -->
+  <g stroke="#38bdf8" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.55" stroke-dasharray="4 14">
+    <path d="M96,232 Q120,120 250,96"/>
   </g>
-  <!-- bat silhouetted on moon (dominant) -->
-  <g filter="url(#soft-shadow)">
-    <!-- left wing -->
-    <path d="M170,150 Q110,110 66,132 Q92,140 88,160 Q116,152 118,172 Q146,164 156,184 Q162,166 170,150 Z"
-          fill="#7c3aed" stroke="#2e1065" stroke-width="4.5" stroke-linejoin="round"/>
-    <!-- right wing -->
-    <path d="M230,150 Q290,110 334,132 Q308,140 312,160 Q284,152 282,172 Q254,164 244,184 Q238,166 230,150 Z"
-          fill="#7c3aed" stroke="#2e1065" stroke-width="4.5" stroke-linejoin="round"/>
-    <!-- wing membrane lines -->
-    <g stroke="#2e1065" stroke-width="3" fill="none" opacity="0.7">
-      <path d="M160,158 Q128,142 100,144"/>
-      <path d="M240,158 Q272,142 300,144"/>
+
+  <!-- big wooden bat (dominant, angled swing) -->
+  <g filter="url(#soft-shadow)" transform="rotate(-32 210 170)">
+    <!-- barrel to handle -->
+    <path d="M118,150
+             Q116,138 128,136
+             L292,150
+             Q312,151 312,166
+             Q312,181 292,182
+             L128,196
+             Q116,194 118,182 Z"
+          fill="url(#bt-wood)" stroke="#7c4a1e" stroke-width="5" stroke-linejoin="round"/>
+    <!-- knob at the handle end (thin end) -->
+    <ellipse cx="120" cy="166" rx="12" ry="18" fill="#c98a4b" stroke="#7c4a1e" stroke-width="5"/>
+    <!-- grip tape lines on handle -->
+    <g stroke="#7c4a1e" stroke-width="3" opacity="0.7">
+      <line x1="140" y1="150" x2="140" y2="182"/>
+      <line x1="152" y1="149" x2="152" y2="183"/>
+      <line x1="164" y1="149" x2="164" y2="184"/>
     </g>
-    <!-- body -->
-    <ellipse cx="200" cy="176" rx="34" ry="44" fill="#8b5cf6" stroke="#2e1065" stroke-width="4.5"/>
-    <!-- belly -->
-    <ellipse cx="200" cy="188" rx="20" ry="26" fill="#c4b5fd" stroke="#2e1065" stroke-width="3"/>
-    <!-- head -->
-    <circle cx="200" cy="132" r="30" fill="#8b5cf6" stroke="#2e1065" stroke-width="4.5"/>
-    <!-- pointed ears -->
-    <path d="M180,112 L170,80 L196,102 Z" fill="#8b5cf6" stroke="#2e1065" stroke-width="4" stroke-linejoin="round"/>
-    <path d="M220,112 L230,80 L204,102 Z" fill="#8b5cf6" stroke="#2e1065" stroke-width="4" stroke-linejoin="round"/>
-    <path d="M182,106 L176,88 L192,102 Z" fill="#c4b5fd"/>
-    <path d="M218,106 L224,88 L208,102 Z" fill="#c4b5fd"/>
-    <!-- face -->
-    <circle cx="189" cy="128" r="6" fill="#0f172a"/>
-    <circle cx="211" cy="128" r="6" fill="#0f172a"/>
-    <circle cx="191" cy="126" r="2" fill="#ffffff"/>
-    <circle cx="213" cy="126" r="2" fill="#ffffff"/>
-    <path d="M196,140 Q200,144 204,140" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
-    <!-- tiny fangs -->
-    <path d="M194,143 L196,149 L199,143 Z" fill="#ffffff" stroke="#2e1065" stroke-width="1.5"/>
-    <path d="M201,143 L204,149 L206,143 Z" fill="#ffffff" stroke="#2e1065" stroke-width="1.5"/>
-    <!-- little feet -->
-    <path d="M190,218 Q188,228 182,230" fill="none" stroke="#2e1065" stroke-width="4" stroke-linecap="round"/>
-    <path d="M210,218 Q212,228 218,230" fill="none" stroke="#2e1065" stroke-width="4" stroke-linecap="round"/>
+    <!-- wood grain on barrel -->
+    <g stroke="#a9702f" stroke-width="2.5" fill="none" opacity="0.55">
+      <path d="M210,146 Q250,150 300,152"/>
+      <path d="M210,166 Q250,166 302,166"/>
+      <path d="M210,186 Q250,182 300,180"/>
+    </g>
   </g>
-  <!-- motion swishes -->
-  <g stroke="#c4b5fd" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.7">
-    <path d="M70,190 Q80,196 92,194"/>
-    <path d="M308,190 Q320,196 332,192"/>
+
+  <!-- red ball being hit (top-right) -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="300" cy="96" r="26" fill="url(#bt-ball)" stroke="#7f1d1d" stroke-width="4"/>
+    <path d="M286,80 Q300,90 288,110" fill="none" stroke="#7f1d1d" stroke-width="2.5" opacity="0.7"/>
+    <path d="M314,82 Q302,92 314,112" fill="none" stroke="#7f1d1d" stroke-width="2.5" opacity="0.7"/>
+    <circle cx="292" cy="88" r="4" fill="#ffffff" opacity="0.85"/>
+  </g>
+  <!-- impact sparkle where bat meets ball -->
+  <g stroke="#f59e0b" stroke-width="4" stroke-linecap="round" opacity="0.9">
+    <line x1="270" y1="96" x2="256" y2="96"/>
+    <line x1="276" y1="78" x2="268" y2="66"/>
+    <line x1="276" y1="114" x2="268" y2="126"/>
   </g>
 </svg></div>
       <div class="info">

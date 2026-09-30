@@ -541,7 +541,7 @@
         "asset_id": "vg-scene-balcony-v1",
         "asset": "vocabulary/assets/vg-scene-balcony-v1.svg",
         "alt": "A small floor with a rail that sticks out from a high part of a building.",
-        "status": "wrong_sense",
+        "status": "needs_human_review",
         "kind": "place",
         "template": null,
         "anchor_objects": []
@@ -1407,7 +1407,7 @@
         "asset_id": "vg-scene-bat-v1",
         "asset": "vocabulary/assets/vg-scene-bat-v1.svg",
         "alt": "A wooden or metal stick you use to hit a ball in a game.",
-        "status": "wrong_sense",
+        "status": "needs_human_review",
         "kind": "object",
         "template": null,
         "anchor_objects": []

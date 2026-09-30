@@ -156,6 +156,22 @@ concept words), **12 `not_applicable`**, and **14 flagged for follow-up** — 1
 doubles as the redraw worklist: it surfaces only those **14** open words (plus any
 never-reviewed or missing-asset ones) so fixed art gets re-confirmed in place.
 
+**Priority redraws done (3 of 14).** The three genuine defects were redrawn and
+verified rendering in a browser:
+- `bat` — was drawing the flying animal (wrong sense); now a **wooden sports bat
+  hitting a ball** matching the definition “a stick you use to hit a ball”.
+- `airport` — the airplane was small/ambiguous; now a **large prototypical jet**
+  (fuselage, tail fin, swept wings, engine, window row) over a runway with a
+  control tower + terminal, so the scene unmistakably reads “airport”.
+- `balcony` — the old platform did not clearly project; now a **3/4-view slab that
+  visibly juts out** from the building wall with under-support brackets, a
+  waist-high railing on top, and a child standing on it.
+
+Rather than fabricate a human approval, these three were reset to
+`needs_human_review` so their **new** art gets a final human tick in the gallery
+(the honest, fail-closed choice). Remaining open worklist: 11 `redraw_later`
+(acceptable art, cosmetic polish only) + these 3 awaiting re-confirmation.
+
 ## Book-page mapping coverage (verified)
 
 - Book vocabulary occurrences examined: **92** (91 unique surface forms).

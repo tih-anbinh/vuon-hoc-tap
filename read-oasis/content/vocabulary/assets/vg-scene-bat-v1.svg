@@ -1,78 +1,73 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-bat desc-bat">
-  <title id="title-bat">Bat - Bat flying at night with open wings</title>
-  <desc id="desc-bat">A friendly purple bat with big open wings and pointed ears flying in the night sky with a full moon and stars behind it.</desc>
+  <title id="title-bat">Bat - Wooden bat hitting a ball</title>
+  <desc id="desc-bat">A big wooden baseball bat swinging and hitting a red ball, with motion lines showing the swing.</desc>
   <defs>
     <linearGradient id="bt-sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e1b4b"/>
-      <stop offset="100%" stop-color="#4c1d95"/>
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
     </linearGradient>
-    <radialGradient id="bt-moon" cx="0.4" cy="0.4" r="0.9">
-      <stop offset="0%" stop-color="#fefce8"/>
-      <stop offset="100%" stop-color="#fde047"/>
+    <linearGradient id="bt-wood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fcd9a5"/>
+      <stop offset="55%" stop-color="#d9a25f"/>
+      <stop offset="100%" stop-color="#a9702f"/>
+    </linearGradient>
+    <radialGradient id="bt-ball" cx="0.35" cy="0.3" r="0.9">
+      <stop offset="0%" stop-color="#fca5a5"/>
+      <stop offset="100%" stop-color="#dc2626"/>
     </radialGradient>
     <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.35"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.3"/>
     </filter>
   </defs>
   <rect x="0" y="0" width="400" height="300" fill="url(#bt-sky)"/>
-  <!-- moon -->
-  <circle cx="200" cy="140" r="86" fill="url(#bt-moon)" stroke="#a16207" stroke-width="3" opacity="0.95"/>
-  <circle cx="170" cy="112" r="12" fill="#facc15" opacity="0.6"/>
-  <circle cx="234" cy="170" r="16" fill="#facc15" opacity="0.6"/>
-  <circle cx="212" cy="98" r="8" fill="#facc15" opacity="0.6"/>
-  <!-- stars -->
-  <g fill="#fefce8">
-    <circle cx="46" cy="46" r="3.5"/>
-    <circle cx="90" cy="90" r="2.5"/>
-    <circle cx="350" cy="60" r="3.5"/>
-    <circle cx="320" cy="120" r="2.5"/>
-    <circle cx="60" cy="200" r="3"/>
-    <circle cx="360" cy="220" r="3"/>
-    <circle cx="330" cy="260" r="2.5"/>
-    <circle cx="40" cy="264" r="2.5"/>
-    <path d="M300,30 L303,38 L311,38 L305,43 L307,51 L300,46 L293,51 L295,43 L289,38 L297,38 Z"/>
-    <path d="M84,140 L86,146 L92,146 L87,150 L89,156 L84,152 L79,156 L81,150 L76,146 L82,146 Z"/>
+  <!-- grass ground -->
+  <rect x="0" y="248" width="400" height="52" fill="#4ade80"/>
+  <line x1="0" y1="248" x2="400" y2="248" stroke="#15803d" stroke-width="3"/>
+  <ellipse cx="200" cy="270" rx="150" ry="14" fill="#0f172a" opacity="0.12"/>
+
+  <!-- swing motion arc behind the bat -->
+  <g stroke="#38bdf8" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.55" stroke-dasharray="4 14">
+    <path d="M96,232 Q120,120 250,96"/>
   </g>
-  <!-- bat silhouetted on moon (dominant) -->
-  <g filter="url(#soft-shadow)">
-    <!-- left wing -->
-    <path d="M170,150 Q110,110 66,132 Q92,140 88,160 Q116,152 118,172 Q146,164 156,184 Q162,166 170,150 Z"
-          fill="#7c3aed" stroke="#2e1065" stroke-width="4.5" stroke-linejoin="round"/>
-    <!-- right wing -->
-    <path d="M230,150 Q290,110 334,132 Q308,140 312,160 Q284,152 282,172 Q254,164 244,184 Q238,166 230,150 Z"
-          fill="#7c3aed" stroke="#2e1065" stroke-width="4.5" stroke-linejoin="round"/>
-    <!-- wing membrane lines -->
-    <g stroke="#2e1065" stroke-width="3" fill="none" opacity="0.7">
-      <path d="M160,158 Q128,142 100,144"/>
-      <path d="M240,158 Q272,142 300,144"/>
+
+  <!-- big wooden bat (dominant, angled swing) -->
+  <g filter="url(#soft-shadow)" transform="rotate(-32 210 170)">
+    <!-- barrel to handle -->
+    <path d="M118,150
+             Q116,138 128,136
+             L292,150
+             Q312,151 312,166
+             Q312,181 292,182
+             L128,196
+             Q116,194 118,182 Z"
+          fill="url(#bt-wood)" stroke="#7c4a1e" stroke-width="5" stroke-linejoin="round"/>
+    <!-- knob at the handle end (thin end) -->
+    <ellipse cx="120" cy="166" rx="12" ry="18" fill="#c98a4b" stroke="#7c4a1e" stroke-width="5"/>
+    <!-- grip tape lines on handle -->
+    <g stroke="#7c4a1e" stroke-width="3" opacity="0.7">
+      <line x1="140" y1="150" x2="140" y2="182"/>
+      <line x1="152" y1="149" x2="152" y2="183"/>
+      <line x1="164" y1="149" x2="164" y2="184"/>
     </g>
-    <!-- body -->
-    <ellipse cx="200" cy="176" rx="34" ry="44" fill="#8b5cf6" stroke="#2e1065" stroke-width="4.5"/>
-    <!-- belly -->
-    <ellipse cx="200" cy="188" rx="20" ry="26" fill="#c4b5fd" stroke="#2e1065" stroke-width="3"/>
-    <!-- head -->
-    <circle cx="200" cy="132" r="30" fill="#8b5cf6" stroke="#2e1065" stroke-width="4.5"/>
-    <!-- pointed ears -->
-    <path d="M180,112 L170,80 L196,102 Z" fill="#8b5cf6" stroke="#2e1065" stroke-width="4" stroke-linejoin="round"/>
-    <path d="M220,112 L230,80 L204,102 Z" fill="#8b5cf6" stroke="#2e1065" stroke-width="4" stroke-linejoin="round"/>
-    <path d="M182,106 L176,88 L192,102 Z" fill="#c4b5fd"/>
-    <path d="M218,106 L224,88 L208,102 Z" fill="#c4b5fd"/>
-    <!-- face -->
-    <circle cx="189" cy="128" r="6" fill="#0f172a"/>
-    <circle cx="211" cy="128" r="6" fill="#0f172a"/>
-    <circle cx="191" cy="126" r="2" fill="#ffffff"/>
-    <circle cx="213" cy="126" r="2" fill="#ffffff"/>
-    <path d="M196,140 Q200,144 204,140" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
-    <!-- tiny fangs -->
-    <path d="M194,143 L196,149 L199,143 Z" fill="#ffffff" stroke="#2e1065" stroke-width="1.5"/>
-    <path d="M201,143 L204,149 L206,143 Z" fill="#ffffff" stroke="#2e1065" stroke-width="1.5"/>
-    <!-- little feet -->
-    <path d="M190,218 Q188,228 182,230" fill="none" stroke="#2e1065" stroke-width="4" stroke-linecap="round"/>
-    <path d="M210,218 Q212,228 218,230" fill="none" stroke="#2e1065" stroke-width="4" stroke-linecap="round"/>
+    <!-- wood grain on barrel -->
+    <g stroke="#a9702f" stroke-width="2.5" fill="none" opacity="0.55">
+      <path d="M210,146 Q250,150 300,152"/>
+      <path d="M210,166 Q250,166 302,166"/>
+      <path d="M210,186 Q250,182 300,180"/>
+    </g>
   </g>
-  <!-- motion swishes -->
-  <g stroke="#c4b5fd" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.7">
-    <path d="M70,190 Q80,196 92,194"/>
-    <path d="M308,190 Q320,196 332,192"/>
+
+  <!-- red ball being hit (top-right) -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="300" cy="96" r="26" fill="url(#bt-ball)" stroke="#7f1d1d" stroke-width="4"/>
+    <path d="M286,80 Q300,90 288,110" fill="none" stroke="#7f1d1d" stroke-width="2.5" opacity="0.7"/>
+    <path d="M314,82 Q302,92 314,112" fill="none" stroke="#7f1d1d" stroke-width="2.5" opacity="0.7"/>
+    <circle cx="292" cy="88" r="4" fill="#ffffff" opacity="0.85"/>
+  </g>
+  <!-- impact sparkle where bat meets ball -->
+  <g stroke="#f59e0b" stroke-width="4" stroke-linecap="round" opacity="0.9">
+    <line x1="270" y1="96" x2="256" y2="96"/>
+    <line x1="276" y1="78" x2="268" y2="66"/>
+    <line x1="276" y1="114" x2="268" y2="126"/>
   </g>
 </svg>
