@@ -832,7 +832,27 @@ const TTS=(function(){
   if(!s) return{speak:()=>{},say:()=>{},stop:()=>{}};
   const isAndroid=/Android/i.test(navigator.userAgent);
   let viVoice=null, unlocked=false;
-  function pickVoice(){const vs=s.getVoices()||[];viVoice=vs.find(v=>/vi[-_]?VN/i.test(v.lang))||vs.find(v=>/vietnam/i.test(v.name))||vs.find(v=>/^vi\b/i.test(v.lang))||null;}
+  /* Chấm điểm giọng tiếng Việt theo chất lượng (dựa trên readium/speech vi.json):
+     veryHigh MS HoaiMy/NamMinh Online (Natural) [Edge] > high Google Tiếng Việt (Natural) >
+     normal MS An [Windows] > low Apple "Linh" (compact) [iPhone/iPad]. Trả -1 nếu không phải tiếng Việt.
+     Edge luôn tự có HoaiMy/NamMinh nên vẫn được chọn — Edge KHÔNG đổi hành vi. */
+  function vnScore(v){
+    if(!v||!v.lang) return -1;
+    const lang=(v.lang||'').replace('_','-').toLowerCase();
+    const name=(v.name||'').toLowerCase();
+    const isVi=lang.startsWith('vi')||/vietnam|tiếng việt|tieng viet/i.test(v.name||'');
+    if(!isVi) return -1;
+    let sc=10;
+    if(/\(natural\)/.test(name)) sc+=50;
+    if(/\bonline\b/.test(name)) sc+=20;
+    if(/hoaimy|hoài my|nammin|nam minh/.test(name)) sc+=30;
+    if(/google/.test(name)) sc+=15;
+    if(/\bneural\b|premium|enhanced/.test(name)) sc+=25;
+    if(/\bcompact\b|eloquence/.test(name)) sc-=20;
+    if(v.localService===false) sc+=8;
+    return sc;
+  }
+  function pickVoice(){const vs=s.getVoices()||[];let best=null,bestScore=-Infinity;for(const v of vs){const sc=vnScore(v);if(sc>bestScore){bestScore=sc;best=v;}}viVoice=(best&&bestScore>=0)?best:null;}
   pickVoice();
   try{s.addEventListener('voiceschanged',pickVoice);}catch(e){s.onvoiceschanged=pickVoice;}
   function unlock(){if(unlocked)return;unlocked=true;try{const u=new SpeechSynthesisUtterance(' ');u.volume=0;s.speak(u);}catch(e){}}
@@ -2654,7 +2674,24 @@ async function progressSync(){
     skills:skillSummary(),writing_count:(G.writings||[]).length,
     vault_learned:Object.values(G.vault||{}).filter(s=>(s.box||0)>=3).length,   /* số thẻ từ đã nhớ (hộp ≥3) */
     updated_at:new Date().toISOString()};
-  try{await supa.from(PROGRESS_TABLE).upsert(row);}catch(e){}
+  try{
+    const {error}=await supa.from(PROGRESS_TABLE).upsert(row);
+    if(error){
+      /* Nếu DB thiếu cột (vd xp/xu/skills/writing_count/vault_learned chưa migrate) PostgREST
+         trả PGRST204 và TỪ CHỐI cả dòng → số phút/Thi đua không lên server. Thử lại BỎ các cột
+         phụ để tối thiểu vẫn đồng bộ. */
+      const msg=(error.message||'')+' '+(error.details||'');
+      if(error.code==='PGRST204' || /column|schema cache/i.test(msg)){
+        const {id,full_name,stars,best,unlocked,streak,last_day,total_stars,total_minutes,daily,ex_attempted,ex_correct,updated_at}=row;
+        const core={id,full_name,stars,best,unlocked,streak,last_day,total_stars,total_minutes,daily,ex_attempted,ex_correct,updated_at};
+        const r2=await supa.from(PROGRESS_TABLE).upsert(core);
+        if(r2.error) console.warn('[tv3] progressSync core upsert failed:',r2.error);
+        else console.warn('[tv3] progressSync: DB thiếu cột (xp/xu/skills/writing_count/vault_learned?) — đã đồng bộ tối thiểu. Hãy chạy supabase_tv3_progress.sql để thêm cột.',error);
+      }else{
+        console.warn('[tv3] progressSync error:',error);
+      }
+    }
+  }catch(e){console.warn('[tv3] progressSync exception:',e);}
 }
 async function progressLoad(){
   if(!supa||!AUTH_ME)return;
