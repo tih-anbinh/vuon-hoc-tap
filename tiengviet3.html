@@ -858,7 +858,14 @@ const TTS=(function(){
   function unlock(){if(unlocked)return;unlocked=true;try{const u=new SpeechSynthesisUtterance(' ');u.volume=0;s.speak(u);}catch(e){}}
   try{document.addEventListener('touchstart',unlock,{once:true,passive:true});document.addEventListener('click',unlock,{once:true});}catch(e){}
   function utter(t,rate){const u=new SpeechSynthesisUtterance(t);if(viVoice)u.voice=viVoice;u.lang='vi-VN';u.rate=rate||0.92;u.pitch=1.03;return u;}
-  function say2(u){unlock();s.cancel();if(isAndroid){setTimeout(()=>{try{s.resume();}catch(e){}s.speak(u);},120);}else s.speak(u);}
+  /* ---- Fallback Google Translate TTS (khi máy KHÔNG có giọng vi-VN) ----
+     Chrome/Firefox trên máy chưa cài gói giọng tiếng Việt sẽ im lặng. Khi đó phát audio
+     tiếng Việt qua Google Translate (cần mạng). Edge/Windows/Android có giọng vi thì KHÔNG dùng. */
+  let _gAudio=null, _gToken=null;
+  function gStop(){_gToken=null;if(_gAudio){try{_gAudio.pause();}catch(e){}_gAudio=null;}}
+  function gChunks(text){const out=[];let t=String(text).trim();while(t.length>180){let cut=t.lastIndexOf(' ',180);if(cut<80)cut=180;out.push(t.slice(0,cut).trim());t=t.slice(cut).trim();}if(t)out.push(t);return out;}
+  function googleTTS(text,rate){gStop();const parts=gChunks(text);if(!parts.length)return;let i=0;const token={};_gToken=token;const play=async()=>{if(token!==_gToken)return;if(i>=parts.length){_gAudio=null;return;}const url='https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=vi&q='+encodeURIComponent(parts[i]);try{const resp=await fetch(url);if(!resp.ok||token!==_gToken)return;const burl=URL.createObjectURL(await resp.blob());const a=new Audio(burl);_gAudio=a;a.playbackRate=rate||0.9;a.onended=()=>{URL.revokeObjectURL(burl);i++;play();};a.onerror=()=>{URL.revokeObjectURL(burl);_gAudio=null;};a.play().catch(()=>{URL.revokeObjectURL(burl);_gAudio=null;});}catch(e){_gAudio=null;}};play();}
+  function say2(u,rawText,gRate){unlock();s.cancel();gStop();if(!viVoice&&rawText){googleTTS(rawText,gRate||0.9);return;}if(isAndroid){setTimeout(()=>{try{s.resume();}catch(e){}s.speak(u);},120);}else s.speak(u);}
   function clean(raw){return raw
     .replace(/[\u{1F000}-\u{1FFFF}]|[\u{2300}-\u{27FF}]|️/gu,' ')
     .replace(/…/g,' ').replace(/\.{3,}/g,' chỗ trống ')
@@ -868,9 +875,9 @@ const TTS=(function(){
     /* #16: có giọng Việt CỤC BỘ không? (không hứa đọc offline nếu chỉ có giọng qua mạng) */
     hasLocalVi(){return !!(viVoice&&viVoice.localService);},
     hasVi(){return !!viVoice;},
-    speak(src,rate){const raw=typeof src==='string'?src:(src.innerText||src.textContent||'');say2(utter(clean(raw),rate||0.9));},
-    say(t,rate){const x=String(t).replace(/[^\p{L}\p{N}\s,.!?]/gu,' ').replace(/\s+/g,' ').trim();if(x)say2(utter(x,rate||0.98));},
-    stop(){s.cancel();}
+    speak(src,rate){const raw=typeof src==='string'?src:(src.innerText||src.textContent||'');const txt=clean(raw);say2(utter(txt,rate||0.9),txt,rate||0.9);},
+    say(t,rate){const x=String(t).replace(/[^\p{L}\p{N}\s,.!?]/gu,' ').replace(/\s+/g,' ').trim();if(x)say2(utter(x,rate||0.98),x,rate||0.98);},
+    stop(){s.cancel();gStop();}
   };
 })();
 const SFX=(function(){
