@@ -1,48 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-banana desc-banana">
-  <title id="title-banana">Banana - Ripe yellow bananas</title>
-  <desc id="desc-banana">A vibrant bunch of ripe yellow bananas with green stem and brown tips, with one banana peeled open showing creamy fruit, occupying the center of the frame.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t-banana d-banana">
+  <title id="t-banana">Banana</title>
+  <desc id="d-banana">A single big ripe yellow banana with a brown stem and tip, curved across the centre of the card.</desc>
   <defs>
-    <linearGradient id="banana-peel" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="ban-peel" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#fde047"/>
-      <stop offset="60%" stop-color="#eab308"/>
+      <stop offset="55%" stop-color="#facc15"/>
       <stop offset="100%" stop-color="#ca8a04"/>
     </linearGradient>
-    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    <filter id="ban-sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.15"/>
     </filter>
   </defs>
+  <rect x="8" y="8" width="384" height="284" rx="20" fill="#fef9c3"/>
+  <ellipse cx="200" cy="238" rx="150" ry="20" fill="#0f172a" opacity="0.1"/>
 
-  <!-- Ground line -->
-  <line x1="30" y1="265" x2="370" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
-
-  <!-- Ground shadow -->
-  <ellipse cx="205" cy="265" rx="110" ry="12" fill="#0f172a" opacity="0.15"/>
-
-  <!-- TARGET OBJECT: BANANAS (Occupying 70% canvas) -->
-  <g id="banana-figure" filter="url(#soft-shadow)">
-    <!-- Background Banana (Full curved) -->
-    <path d="M125 105 C150 160 215 220 305 210 C240 230 160 185 115 110 Z" fill="#ca8a04" stroke="#854d0e" stroke-width="3"/>
-
-    <!-- Main Front Banana (Graceful bold curve) -->
-    <path d="M110 95 C145 165 210 235 325 215 C230 250 140 190 98 105 Z" fill="url(#banana-peel)" stroke="#854d0e" stroke-width="4"/>
-    <!-- Ridge line down center -->
-    <path d="M104 100 C145 180 220 238 318 217" fill="none" stroke="#fef08a" stroke-width="3" stroke-linecap="round"/>
-
-    <!-- Stem Crown (Joining the cluster) -->
-    <path d="M95 105 C85 95 80 80 85 70 C95 65 110 70 115 85 Z" fill="#65a30d" stroke="#3f6212" stroke-width="3"/>
-    <rect x="85" y="65" width="12" height="15" rx="3" fill="#4d7c0f" stroke="#365314" stroke-width="2"/>
-
-    <!-- Bottom Brown Tips -->
-    <circle cx="324" cy="216" r="5" fill="#713f12"/>
-    <circle cx="304" cy="211" r="4" fill="#713f12"/>
-
-    <!-- Peeled Forefront Banana Section (Showing edible fruit inside) -->
-    <!-- Creamy Edible Fruit Core -->
-    <path d="M140 120 C180 160 230 185 280 185 C240 195 180 170 135 130 Z" fill="#fef9c3" stroke="#fef08a" stroke-width="3"/>
-    <!-- Peel Flaps peeled back -->
-    <path d="M130 125 C120 150 100 170 85 175 C105 160 125 140 135 125 Z" fill="url(#banana-peel)" stroke="#854d0e" stroke-width="2.5"/>
-    <path d="M145 135 C155 170 175 195 190 210 C175 185 155 160 145 135 Z" fill="url(#banana-peel)" stroke="#854d0e" stroke-width="2.5"/>
-    <!-- Inner peel cream surface -->
-    <path d="M88 173 C105 162 120 148 132 130" fill="none" stroke="#fef9c3" stroke-width="2.5"/>
+  <g filter="url(#ban-sh)">
+    <!-- Single clean banana body -->
+    <path d="M78 120
+             C96 74 150 62 208 76
+             C286 96 330 156 336 200
+             C338 214 324 220 314 210
+             C300 176 262 130 200 116
+             C150 106 116 122 108 152
+             C104 168 86 166 82 148
+             C80 138 78 128 78 120 Z"
+          fill="url(#ban-peel)" stroke="#854d0e" stroke-width="5"/>
+    <!-- Highlight ridge -->
+    <path d="M108 118 C160 104 250 128 306 196" fill="none" stroke="#fef08a" stroke-width="5" stroke-linecap="round"/>
+    <!-- Stem (top-left) -->
+    <path d="M78 122 C68 108 66 92 74 82 L92 88 C88 100 90 112 100 122 Z" fill="#65a30d" stroke="#3f6212" stroke-width="4"/>
+    <rect x="70" y="76" width="16" height="16" rx="4" fill="#4d7c0f" stroke="#365314" stroke-width="3"/>
+    <!-- Brown tip (bottom-right) -->
+    <path d="M314 210 q14 6 18 0 q-2 -10 -12 -14 Z" fill="#78350f" stroke="#451a03" stroke-width="3"/>
   </g>
 </svg>
