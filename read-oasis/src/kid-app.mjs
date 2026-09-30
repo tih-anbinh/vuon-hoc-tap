@@ -283,8 +283,10 @@ function renderReader(book) {
   setTitle(book.title);
   const wrap = h('section', { class: 'fade' });
   app.replaceChildren(wrap);
+  let reader_clearHighlight = () => {};
   const draw = () => {
     narrator.stop();
+    reader_clearHighlight();
     const pg = book.pages[i];
     store.setPage(book.book_id, book.revision, i, { audio: listenMode && S.settings.narration });
     const illus = h('figure', { class: 'illus', style: 'margin:0' });
@@ -299,20 +301,26 @@ function renderReader(book) {
     story.addEventListener('click', e => { const b = e.target.closest('button.w'); if (b?.dataset.word) { store.setPage(book.book_id, book.revision, i, { vocab_tap: true }); showVocab(pg, b.dataset.word, vocabBox, b); } });
     const parentPrompt = (book.reading_mode === 'shared_reading' || book.reading_mode === 'read_aloud') && book.parent_prompts?.[Math.min(i, book.parent_prompts.length - 1)];
     const hasSound = S.settings.narration && (narrator.supported || pg.audio_asset);
-    // Listen bar: Play/Pause, Again, and a speed button that cycles Slow -> Normal -> A bit fast.
-    // Built clips play first (see narrator); on iPad/iPhone/Android the device's best English voice is the fallback.
+    // Listen bar: Play/Pause, Again, a speed button that cycles Very slow -> Slow -> Normal -> A bit fast,
+    // and (when the device supports voices) a Voice button to pick any installed device voice.
+    // Built clips play first (see narrator); on iPad/iPhone/Android the device's best English voice is the
+    // fallback, unless the user has picked a specific device voice (then that voice is always used).
     const playBtn = btn('Listen', () => togglePlay(pg, playBtn), { primary: true, ic: 'play', attrs: { 'aria-pressed': 'false' } });
-    const speedLabel = sp => sp === 'slow' ? 'Slow' : sp === 'fast' ? 'A bit fast' : 'Normal';
-    const speedIcon = sp => sp === 'slow' ? 'turtle' : sp === 'fast' ? 'rabbit' : 'turtle';
+    const SPEED_CYCLE = ['very_slow', 'slow', 'normal', 'fast'];
+    const speedLabel = sp => sp === 'very_slow' ? 'Very slow' : sp === 'slow' ? 'Slow' : sp === 'fast' ? 'A bit fast' : 'Normal';
+    const speedIcon = sp => sp === 'fast' ? 'rabbit' : 'turtle';
     const speedBtn = btn(speedLabel(speed), () => {
-      speed = speed === 'slow' ? 'normal' : speed === 'normal' ? 'fast' : 'slow'; // cycle Slow -> Normal -> A bit fast -> Slow
+      speed = SPEED_CYCLE[(SPEED_CYCLE.indexOf(speed) + 1) % SPEED_CYCLE.length]; // Very slow -> Slow -> Normal -> A bit fast -> ...
       speedBtn.querySelector('span').textContent = speedLabel(speed);
       const useEl = speedBtn.querySelector('use'); if (useEl) useEl.setAttribute('href', '#i-' + speedIcon(speed));
       speedBtn.setAttribute('aria-label', 'Reading speed: ' + speedLabel(speed) + '. Tap to change.');
       if (narrator.speaking) { narrator.stop(); togglePlay(pg, playBtn); }
     }, { quiet: true, ic: speedIcon(speed), attrs: { 'aria-label': 'Reading speed: ' + speedLabel(speed) + '. Tap to change.' } });
     const srcTag = h('span', { class: 'chip src-tag hidden', 'aria-live': 'polite' });
-    const listenBar = hasSound ? h('div', { class: 'listen-bar' }, playBtn, btn('Again', () => { narrator.stop(); togglePlay(pg, playBtn); }, { quiet: true, ic: 'replay', attrs: { 'aria-label': 'Play this page again' } }), speedBtn, srcTag) : null;
+    const voiceBtn = (narrator.supported && narrator.deviceAllowed)
+      ? btn('Voice', () => showVoicePicker(voiceBtn), { quiet: true, ic: 'ear', attrs: { 'aria-label': 'Choose the reading voice from this device' } })
+      : null;
+    const listenBar = hasSound ? h('div', { class: 'listen-bar' }, playBtn, btn('Again', () => { narrator.stop(); togglePlay(pg, playBtn); }, { quiet: true, ic: 'replay', attrs: { 'aria-label': 'Play this page again' } }), speedBtn, voiceBtn, srcTag) : null;
     const nav = h('nav', { class: 'reader-nav', 'aria-label': 'Pages' },
       btn('Back', () => { if (i > 0) { i--; draw(); } else back(); }, { quiet: true, ic: 'back' }),
       h('span', { class: 'pagecount', text: `${i + 1} / ${book.pages.length}` }),
@@ -323,29 +331,83 @@ function renderReader(book) {
       h('div', { class: 'reader' }, illus, h('div', { class: 'reader-copy' }, h('div', { class: 'story-card fade' }, h('span', { class: 'story-eyebrow', text: 'PAGE ' + (i + 1) + ' · ' + book.title }), story, listenBar), vocabBox, parentPrompt && i > 0 ? h('p', { class: 'parent-prompt', text: 'Grown-up: ' + parentPrompt }) : null)),
       dots, nav);
     narrator.onstart = () => { srcTag.textContent = narrator.lastSource === 'built' ? 'British English' : 'device voice'; srcTag.classList.remove('hidden'); };
+    // Word-by-word highlight while the device voice reads. Only meaningful when the spoken text matches the
+    // rendered page text (no separate audio_script) and the device path is used (built clips have no timings).
+    const wordEls = [...story.querySelectorAll('.w[data-start]')].map(el => ({ el, start: Number(el.dataset.start), end: Number(el.dataset.start) + el.textContent.length }));
+    const clearHighlight = () => wordEls.forEach(w => w.el.classList.remove('reading'));
+    const canHighlight = S.settings.highlight_words !== false && !pg.audio_script;
+    narrator.onboundary = canHighlight ? (charIndex) => {
+      clearHighlight();
+      const w = wordEls.find(w => charIndex >= w.start && charIndex < w.end) || wordEls.find(w => charIndex <= w.start);
+      if (w) { w.el.classList.add('reading'); w.el.scrollIntoView?.({ block: 'nearest', behavior: 'smooth' }); }
+    } : null;
+    reader_clearHighlight = clearHighlight;
     if (listenMode && S.settings.narration) setTimeout(() => togglePlay(pg, playBtn), 150);
     story.focus?.();
   };
   let speed = S.settings.default_speed || 'normal';
   narrator.deviceAllowed = S.settings.allow_device_tts !== false; narrator.accent = S.settings.accent || 'en-GB';
+  narrator.voiceURI = S.settings.voice_uri || null;
   const togglePlay = (pg, b) => {
-    if (narrator.speaking) { narrator.stop(); b.setAttribute('aria-pressed', 'false'); b.querySelector('span').textContent = 'Listen'; return; }
+    if (narrator.speaking) { narrator.stop(); reader_clearHighlight(); b.setAttribute('aria-pressed', 'false'); b.querySelector('span').textContent = 'Listen'; return; }
     audioUsedThisBook = true; store.setPage(book.book_id, book.revision, i, { audio: true });
-    narrator.onend = () => { b.setAttribute('aria-pressed', 'false'); b.querySelector('span').textContent = 'Listen'; };
+    narrator.onend = () => { reader_clearHighlight(); b.setAttribute('aria-pressed', 'false'); b.querySelector('span').textContent = 'Listen'; };
     const ok = narrator.speak(pg.audio_script || pg.text, { clips: { normal: pg.audio_asset ? assetUrl(pg.audio_asset) : null, slow: pg.audio_slow_asset ? assetUrl(pg.audio_slow_asset) : null }, speed });
     if (!ok) toast('Sound is not available on this device. You can read the words yourself.');
     else { b.setAttribute('aria-pressed', 'true'); b.querySelector('span').textContent = 'Pause'; }
   };
   draw();
 }
+
+/** Small voice picker: lists the device's English voices and lets the child/grown-up choose one. The choice
+ * is saved (settings.voice_uri) and, once set, is always used for reading so it also enables word highlight. */
+function showVoicePicker(anchorBtn) {
+  const voices = narrator.listVoices();
+  const overlay = h('div', { class: 'voice-overlay', role: 'dialog', 'aria-modal': 'true', 'aria-label': 'Choose a reading voice' });
+  const close = () => overlay.remove();
+  const current = S.settings.voice_uri || null;
+  const pick = (uri) => {
+    store.setSettings({ voice_uri: uri });
+    narrator.voiceURI = uri;
+    close();
+    narrator.accent = S.settings.accent || 'en-GB';
+    narrator.speak('Hello! I will read with this voice.', { speed: S.settings.default_speed || 'normal', accent: narrator.accent });
+    if (anchorBtn) anchorBtn.focus?.();
+  };
+  const list = h('div', { class: 'voice-list' });
+  if (!voices.length) {
+    list.append(h('p', { class: 'muted', text: 'No device voices found yet. On iPhone/iPad add voices in Settings › Accessibility › Spoken Content › Voices, then reopen this. On Android use Settings › Accessibility › Text-to-speech.' }));
+  } else {
+    // "Auto (best voice)" resets to the smart picker.
+    const autoRow = h('button', { class: 'voice-row' + (!current ? ' on' : ''), type: 'button' }, h('span', { class: 'voice-name', text: 'Auto (best voice)' }), h('span', { class: 'voice-meta', text: 'let the app choose' }));
+    autoRow.onclick = () => pick(null);
+    list.append(autoRow);
+    for (const v of voices) {
+      const row = h('button', { class: 'voice-row' + (v.uri === current ? ' on' : ''), type: 'button' },
+        h('span', { class: 'voice-name', text: v.name }),
+        h('span', { class: 'voice-meta', text: v.lang + (v.online ? ' · online' : ' · on device') }));
+      row.onclick = () => pick(v.uri);
+      list.append(row);
+    }
+  }
+  const card = h('div', { class: 'voice-card' },
+    h('div', { class: 'voice-head' }, h('b', { text: 'Reading voice' }), btn('', close, { quiet: true, ic: 'x', attrs: { 'aria-label': 'Close' } })),
+    h('p', { class: 'muted', text: 'Tap a voice to hear it and use it for reading. Add more voices in your device settings.' }),
+    list);
+  overlay.append(card);
+  overlay.addEventListener('click', e => { if (e.target === overlay) close(); });
+  document.body.append(overlay);
+}
 function wordSpans(pg) {
   const vocab = new Map((pg.vocabulary || []).map(v => [v.word.toLowerCase(), v]));
+  let offset = 0; // running character index into pg.text, so speech 'boundary' events can find each word
   return pg.text.split(/(\s+)/).map(tok => {
+    const start = offset; offset += tok.length;
     if (!tok.trim()) return tok;
     const key = tok.toLowerCase().replace(/[^a-z']/g, '');
     const v = vocab.get(key);
-    if (!v) return h('span', { class: 'w', text: tok });
-    return h('button', { class: 'w vocab', type: 'button', text: tok, dataset: { word: v.word }, 'aria-label': `${tok}. Tap to hear the word and what it means.` });
+    if (!v) return h('span', { class: 'w', text: tok, dataset: { start: String(start) } });
+    return h('button', { class: 'w vocab', type: 'button', text: tok, dataset: { word: v.word, start: String(start) }, 'aria-label': `${tok}. Tap to hear the word and what it means.` });
   });
 }
 /** Learning card (brief §7): word, UK IPA, Slow / Normal, British / American, Repeat. Built from the page's vocabulary entry. */

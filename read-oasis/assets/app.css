@@ -131,6 +131,9 @@ html[data-illus="hidden"] .illus { display: none; }
 .story .w:hover { transform: none; background: var(--chip); }
 .story .w.vocab { text-decoration: underline dotted; text-decoration-color: var(--accent); text-decoration-thickness: 3px; text-underline-offset: .2em; }
 .story .w:focus-visible { outline: 3px solid var(--focus); }
+/* Word being read aloud (device voice only): a soft highlight that follows the narration. */
+.story .w.reading { background: var(--primary-soft, #ffe9b3); color: var(--primary, #b45309); box-shadow: 0 0 0 2px var(--primary, #f59e0b); border-radius: 8px; }
+html[data-motion="reduce"] .story .w.reading { transition: none; }
 .reader-nav { display: flex; justify-content: space-between; gap: .5rem; padding: .7rem .5rem; position: sticky; bottom: .5rem; background: color-mix(in srgb, var(--surface) 85%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--line); border-radius: 999px; box-shadow: var(--shadow); margin-top: 1rem; }
 .reader-nav .mid { display: flex; gap: .5rem; }
 .pagecount { color: var(--muted); align-self: center; font-weight: 800; }
@@ -144,6 +147,18 @@ html[data-illus="hidden"] .illus { display: none; }
 .listen-bar { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin-top: 1rem; padding-top: .9rem; border-top: 1px dashed var(--line); }
 .listen-bar .src-tag { margin-left: auto; }
 button[aria-pressed="true"].quiet { border-color: var(--primary); background: var(--primary-soft); color: var(--primary); }
+
+/* Voice picker overlay (choose any installed device voice) */
+.voice-overlay { position: fixed; inset: 0; z-index: 60; display: flex; align-items: center; justify-content: center; padding: 1rem; background: color-mix(in srgb, #0f172a 45%, transparent); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); animation: fade var(--dur) var(--ease); }
+.voice-card { background: var(--surface); border: 2px solid var(--line); border-radius: var(--r-lg); box-shadow: var(--shadow); width: min(30rem, 100%); max-height: 80vh; display: flex; flex-direction: column; padding: 1rem 1.1rem; gap: .5rem; }
+.voice-head { display: flex; align-items: center; justify-content: space-between; gap: .6rem; }
+.voice-list { overflow: auto; display: grid; gap: .4rem; margin-top: .3rem; }
+.voice-row { display: flex; flex-direction: column; align-items: flex-start; gap: .1rem; text-align: left; width: 100%; padding: .6rem .8rem; border: 2px solid var(--line); border-radius: var(--r-sm); background: var(--surface); color: var(--ink); cursor: pointer; font: inherit; transition: background var(--dur), border-color var(--dur); }
+.voice-row:hover { background: var(--chip); }
+.voice-row:focus-visible { outline: 3px solid var(--focus); }
+.voice-row.on { border-color: var(--primary); background: var(--primary-soft); }
+.voice-row .voice-name { font-weight: 800; }
+.voice-row .voice-meta { color: var(--muted); font-size: .85em; }
 
 /* Learning card (word, IPA, speed, accent, repeat) below the text; never covers story */
 .vocab-box { border: 2px solid var(--accent); border-radius: var(--r-lg); padding: 1rem 1.1rem; background: linear-gradient(160deg, var(--surface), var(--accent-soft)); margin-top: .7rem; box-shadow: var(--shadow); animation: fade var(--dur) var(--ease); display: grid; gap: .5rem; }

@@ -314,7 +314,8 @@ function renderSettings() {
     h('div', { class: 'card', style: 'margin-top:1rem' }, h('h3', { text: 'Session' }), num('break_minutes', 0, 60, 5), num('session_minutes', 5, 60, 5), h('p', { class: 'muted', text: 'Break cue is a dismissible reminder, never a lock. 0 disables it.' })),
     h('div', { class: 'card', style: 'margin-top:1rem' }, h('h3', { text: 'Sound and pronunciation' }),
       check('narration'), check('greeting_audio'), check('sound_effects'),
-      choice('accent', ['en-GB', 'en-US']), choice('default_speed', ['slow', 'normal', 'fast'], { slow: 'Slow', normal: 'Normal', fast: 'A bit fast' }), check('allow_device_tts'),
+      choice('accent', ['en-GB', 'en-US']), choice('default_speed', ['very_slow', 'slow', 'normal', 'fast'], { very_slow: 'Very slow', slow: 'Slow', normal: 'Normal', fast: 'A bit fast' }), check('allow_device_tts'), check('highlight_words'),
+      voiceField(s),
       h('p', { class: 'explain' }, h('b', { text: 'How narration works. ' }), 'Books with built audio play studio-rendered British English clips (made from the pronunciation lexicon with the configured TTS provider, see README §TTS). Pages without built audio fall back to this device\'s best English voice: ',
         h('b', { text: narratorDescribe(s.accent || 'en-GB') }), '. On iPad/iPhone and Android you can add much nicer voices in the system settings (look for "Enhanced" or "Premium" English voices) - the app will automatically prefer them. Turn the fallback off if the voice is still poor; the child can always read the words.'),
       h('div', { class: 'row' }, btn('Test device voice', () => { narrator.accent = s.accent || 'en-GB'; narrator.deviceAllowed = true; narrator.speak('My name is Yuki. I go to school every day.', { speed: s.default_speed || 'normal', accent: s.accent || 'en-GB' }); }, { ic: 'ear' }))),
@@ -322,8 +323,34 @@ function renderSettings() {
     h('div', { class: 'card', style: 'margin-top:1rem' }, h('h3', { text: 'Recording (not yet enabled in this build)' }), h('p', { class: 'muted', text: 'Microphone recording is absent in this release until gates R06, D03 and D07 pass. Nothing is simulated.' })),
     h('div', { class: 'card', style: 'margin-top:1rem' }, btn('Reset display defaults', () => { const d = {}; for (const k of ['font_family', 'story_font_px', 'control_font_px', 'line_height', 'column_ch', 'illustration_size', 'theme', 'reduced_motion']) d[k] = DEFAULT_SETTINGS[k]; store.setSettings(d); render(); }, { quiet: true })));
 }
-function narratorDescribe(accent) { try { return narrator.describe(accent); } catch { return 'unknown'; } }
-const labelOf = k => ({ greeting_audio: 'Spoken greeting when the library opens', accent: 'Preferred accent for words', default_speed: 'Starting narration speed', allow_device_tts: 'Allow device voice when a page has no built audio', story_font_px: 'Story text size (px)', control_font_px: 'Button text size (px)', line_height: 'Line spacing', column_ch: 'Line width (characters)', font_family: 'Font', theme: 'Theme', illustration_size: 'Illustration size', reduced_motion: 'Reduce motion', break_minutes: 'Break cue every (minutes)', session_minutes: 'Suggested session length (minutes)', sound_effects: 'Sound effects', narration: 'Narration / read-aloud button', rewards_enabled: 'Stars enabled', mascot_enabled: 'Mascot shown' }[k] || k);
+function narratorDescribe(accent) { try { narrator.voiceURI = S.settings.voice_uri || null; return narrator.describe(accent); } catch { return 'unknown'; } }
+/**
+ * Device-voice picker for parent settings. Lists every installed English voice so a grown-up can pick a
+ * specific one (e.g. an iOS "Enhanced" voice, an Android Google voice, or a Windows Natural voice). Saving
+ * a voice makes the app always use device TTS for reading (so the chosen voice AND word highlight apply).
+ * 'Auto (best voice)' resets to the smart picker. The list refreshes on 'voiceschanged' (mobile loads async).
+ */
+function voiceField(s) {
+  const wrap = h('div', { class: 'field' });
+  const build = () => {
+    const voices = (() => { try { return narrator.listVoices(); } catch { return []; } })();
+    const cur = s.voice_uri || null;
+    if (!narrator.supported) { wrap.replaceChildren(lab('Reading voice', h('span', { class: 'muted', text: 'This browser has no device voices.' }))); return; }
+    const opts = ['', ...voices.map(v => v.uri)];
+    const labels = { '': 'Auto (best voice)' };
+    for (const v of voices) labels[v.uri] = `${v.name} — ${v.lang}${v.online ? ' (online)' : ''}`;
+    const e = sel(opts, cur || '', labels);
+    e.onchange = () => { const uri = e.value || null; store.setSettings({ voice_uri: uri }); narrator.voiceURI = uri; narrator.accent = s.accent || 'en-GB'; narrator.deviceAllowed = true; narrator.speak('Hello! I will read with this voice.', { speed: s.default_speed || 'normal', accent: narrator.accent }); };
+    const note = h('p', { class: 'muted', text: voices.length ? 'Pick a voice, then tap "Test device voice" to hear it. Add more voices on your device (iOS: Settings › Accessibility › Spoken Content › Voices; Android: Settings › Accessibility › Text-to-speech).' : 'No voices yet — add English voices in your device settings, then reopen this screen.' });
+    wrap.replaceChildren(lab(labelOf('voice_uri'), e), note);
+  };
+  build();
+  if (narrator.supported && typeof speechSynthesis !== 'undefined' && typeof speechSynthesis.addEventListener === 'function') {
+    speechSynthesis.addEventListener('voiceschanged', build, { once: true });
+  }
+  return wrap;
+}
+const labelOf = k => ({ greeting_audio: 'Spoken greeting when the library opens', accent: 'Preferred accent for words', default_speed: 'Starting narration speed', allow_device_tts: 'Allow device voice when a page has no built audio', highlight_words: 'Highlight each word while reading aloud', voice_uri: 'Reading voice (device)', story_font_px: 'Story text size (px)', control_font_px: 'Button text size (px)', line_height: 'Line spacing', column_ch: 'Line width (characters)', font_family: 'Font', theme: 'Theme', illustration_size: 'Illustration size', reduced_motion: 'Reduce motion', break_minutes: 'Break cue every (minutes)', session_minutes: 'Suggested session length (minutes)', sound_effects: 'Sound effects', narration: 'Narration / read-aloud button', rewards_enabled: 'Stars enabled', mascot_enabled: 'Mascot shown' }[k] || k);
 
 // ---------- content studio (pipeline; only PUBLISHED reaches content/index.json via tools/validate_content.py)
 function loadStudio() { try { return JSON.parse(localStorage.getItem(STUDIO_KEY)) || { drafts: [] }; } catch { return { drafts: [] }; } }

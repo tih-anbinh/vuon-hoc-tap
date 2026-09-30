@@ -27,8 +27,10 @@ export const DEFAULT_SETTINGS = Object.freeze({
   sound_effects: true,
   narration: true,
   accent: 'en-GB',                 // en-GB (default) | en-US - which word clips / TTS voice to prefer
-  default_speed: 'normal',         // slow | normal | fast - initial narration speed (fast = "A bit fast")
+  default_speed: 'normal',         // very_slow | slow | normal | fast - initial narration speed (fast = "A bit fast")
   allow_device_tts: true,          // fall back to speechSynthesis when a page has no built audio
+  voice_uri: null,                 // explicit device voice (voiceURI) chosen in settings; null = auto-pick best
+  highlight_words: true,           // highlight each word as the device voice reads it (device TTS only)
   // Learning
   band: null,                      // 'A-C' | 'D-J' | 'K-P' | 'Q-Z' (parent-set after baseline)
   independent_track_band: null,    // may differ from read-aloud track (L02)

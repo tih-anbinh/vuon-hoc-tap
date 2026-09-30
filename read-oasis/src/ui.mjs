@@ -58,11 +58,12 @@ export function toast(msg, ms = 3500) {
 
 /**
  * Reading speed -> speechSynthesis rate (and <audio>.playbackRate) map. Single source of truth so the
- * kid reader, word cards and parent settings all agree. Three child-facing speeds plus 'very_slow' for
- * the word-study card. 'slow' is intentionally a touch slower than the old 0.8 so struggling readers can
- * follow every syllable; 'fast' ("A bit fast") stays gentle so it never sounds rushed for a young child.
+ * kid reader, word cards and parent settings all agree. Four child-facing speeds. 'very_slow' (0.5) is
+ * for children who need to follow every single syllable; it is now a first-class choice in the reader's
+ * speed cycle, not just the word-study card. 'slow' is a touch slower than before so struggling readers
+ * can keep up; 'fast' ("A bit fast") stays gentle so it never sounds rushed for a young child.
  */
-export const SPEED_RATE = { very_slow: 0.6, slow: 0.72, normal: 0.95, fast: 1.12 };
+export const SPEED_RATE = { very_slow: 0.5, slow: 0.68, normal: 0.95, fast: 1.12 };
 export const rateFor = (speed) => SPEED_RATE[speed] ?? SPEED_RATE.normal;
 
 /**
@@ -70,16 +71,39 @@ export const rateFor = (speed) => SPEED_RATE[speed] ?? SPEED_RATE.normal;
  * lexicon by tools/build_audio.py). Device speechSynthesis is only a fallback. When it is used we score the
  * device's installed voices and pick the best English one, strongly preferring Apple "Enhanced"/"Premium"
  * and Google network voices (much nicer on iPad/iPhone/Android than the tiny default "compact" voice), and
- * preferring the parent-chosen accent (en-GB, then en-US, then any English). Word highlighting is intentionally
- * NOT done (R02).
+ * preferring the parent-chosen accent (en-GB, then en-US, then any English). A specific device voice can be
+ * chosen (narrator.voiceURI) which overrides the auto-picker and forces the device path so it always applies.
+ * Word-by-word highlight is available via the 'boundary' event and surfaced through narrator.onboundary; it
+ * only fires on the device voice path (pre-rendered clips carry no per-word timings).
  */
 export const narrator = {
   supported: typeof speechSynthesis !== 'undefined' && typeof SpeechSynthesisUtterance !== 'undefined',
-  audio: null, speaking: false, onend: null, onstart: null, lastSource: null, deviceAllowed: true, accent: 'en-GB',
+  audio: null, speaking: false, onend: null, onstart: null, onboundary: null, lastSource: null, deviceAllowed: true, accent: 'en-GB',
+  voiceURI: null, // when set, the parent/child explicitly chose this device voice; it overrides the auto-picker
   _voiceCache: {}, // accent -> chosen SpeechSynthesisVoice (invalidated on 'voiceschanged')
+  /**
+   * List the device's installed English voices, best first, for a voice-picker UI. Each item is
+   * { uri, name, lang, online }. Returns [] when the engine has no voices yet (retry on 'voiceschanged').
+   */
+  listVoices() {
+    if (!this.supported) return [];
+    const voices = speechSynthesis.getVoices() || [];
+    return voices
+      .filter(v => v.lang && v.lang.toLowerCase().startsWith('en'))
+      .map(v => ({ uri: v.voiceURI, name: v.name, lang: v.lang, online: v.localService === false }))
+      .sort((a, b) => a.lang.localeCompare(b.lang) || a.name.localeCompare(b.name));
+  },
+  /** True when a specific device voice is chosen AND still installed — then we always use device TTS. */
+  hasChosenVoice() {
+    if (!this.supported || !this.voiceURI) return false;
+    return (speechSynthesis.getVoices() || []).some(v => v.voiceURI === this.voiceURI);
+  },
   /** clips: { normal, slow, us } -> urls (any may be null). speed: 'very_slow'|'slow'|'normal'|'fast'. */
   speak(text, { clips = {}, speed = 'normal', accent = this.accent } = {}) {
     this.stop();
+    // When the user has explicitly picked a device voice, honour it: skip the pre-rendered clips and use
+    // device TTS so the chosen voice AND word-by-word highlighting (onboundary) both work.
+    if (this.hasChosenVoice()) return this._tts(text, speed, accent);
     const url = accent === 'en-US' && clips.us ? clips.us : (speed !== 'normal' && clips.slow) ? clips.slow : clips.normal;
     if (url) {
       this.lastSource = 'built';
@@ -108,6 +132,11 @@ export const narrator = {
    */
   _pickVoice(accent) {
     if (!this.supported) return null;
+    // An explicitly chosen device voice always wins (if it is still installed).
+    if (this.voiceURI) {
+      const chosen = (speechSynthesis.getVoices() || []).find(v => v.voiceURI === this.voiceURI);
+      if (chosen) return chosen;
+    }
     if (this._voiceCache[accent]) return this._voiceCache[accent];
     const voices = speechSynthesis.getVoices();
     if (!voices.length) return null; // voices not ready yet; 'voiceschanged' will retry
@@ -143,6 +172,9 @@ export const narrator = {
     const v = this._pickVoice(accent); if (v) u.voice = v; u.lang = accent;
     u.rate = rateFor(speed); u.pitch = 1;
     u.onstart = () => this.onstart?.();
+    // Word-by-word highlight: only the device voice fires 'boundary'. We forward the character offset
+    // and length so the caller can map it to a rendered word span. (Pre-rendered clips have no timings.)
+    u.onboundary = (e) => { if (e.name === 'word' || e.name === undefined) this.onboundary?.(e.charIndex, e.charLength || 0); };
     u.onend = u.onerror = () => { this.speaking = false; this.onend?.(); };
     this.speaking = true; speechSynthesis.speak(u); return true;
   },
@@ -150,7 +182,7 @@ export const narrator = {
   resume() { if (this.audio) this.audio.play().catch(() => {}); else if (this.supported) speechSynthesis.resume(); },
   stop() { if (this.audio) { this.audio.pause(); this.audio = null; } if (this.supported) speechSynthesis.cancel(); this.speaking = false; },
   /** Human-readable description of what will play, for the parent settings screen. */
-  describe(accent = this.accent) { const v = this._pickVoice(accent); return v ? `${v.name} (${v.lang}${v.localService === false ? ', online' : ', on device'})` : 'no matching device voice'; },
+  describe(accent = this.accent) { const v = this._pickVoice(accent); if (!v) return 'no matching device voice'; const chosen = this.voiceURI && v.voiceURI === this.voiceURI ? ' — your choice' : ''; return `${v.name} (${v.lang}${v.localService === false ? ', online' : ', on device'})${chosen}`; },
 };
 // getVoices() is empty on the first call in many mobile browsers; it populates asynchronously and fires
 // 'voiceschanged'. Clear the cache then so the best voice is re-picked once the full list has loaded.
