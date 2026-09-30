@@ -1,56 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-lemon desc-lemon">
-  <title id="title-lemon">Lemon - Bright yellow lemon</title>
-  <desc id="desc-lemon">A bright yellow lemon with a pointed tip, a small green leaf, and a cut half showing the segments inside.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t-lemon d-lemon">
+  <title id="t-lemon">Lemon</title>
+  <desc id="d-lemon">A bright yellow lemon with pointed tips and a green leaf, next to a cut lemon half showing juicy segments.</desc>
   <defs>
-    <linearGradient id="lemon-yellow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#fde047"/>
-      <stop offset="100%" stop-color="#eab308"/>
-    </linearGradient>
-    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    <radialGradient id="lm-body" cx="40%" cy="35%" r="72%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="70%" stop-color="#facc15"/>
+      <stop offset="100%" stop-color="#ca8a04"/>
+    </radialGradient>
+    <filter id="lm-sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.15"/>
     </filter>
   </defs>
+  <rect x="8" y="8" width="384" height="284" rx="20" fill="#fefce8"/>
+  <ellipse cx="200" cy="252" rx="150" ry="16" fill="#0f172a" opacity="0.1"/>
 
-  <line x1="60" y1="260" x2="340" y2="260" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
-  <ellipse cx="200" cy="260" rx="90" ry="8" fill="#0f172a" opacity="0.1"/>
-
-  <g id="lemon-figure" filter="url(#soft-shadow)">
-    <!-- Cut half (behind, showing segments) -->
-    <circle cx="280" cy="175" r="50" fill="#fef9c3" stroke="#d97706" stroke-width="3"/>
-    <!-- Rind ring -->
-    <circle cx="280" cy="175" r="50" fill="none" stroke="#eab308" stroke-width="8"/>
-    <!-- Inner circle -->
-    <circle cx="280" cy="175" r="38" fill="#fef9c3" stroke="#fde047" stroke-width="2"/>
-    <!-- Segments -->
-    <line x1="280" y1="137" x2="280" y2="213" stroke="#eab308" stroke-width="2" opacity="0.6"/>
-    <line x1="242" y1="175" x2="318" y2="175" stroke="#eab308" stroke-width="2" opacity="0.6"/>
-    <line x1="253" y1="148" x2="307" y2="202" stroke="#eab308" stroke-width="2" opacity="0.6"/>
-    <line x1="253" y1="202" x2="307" y2="148" stroke="#eab308" stroke-width="2" opacity="0.6"/>
-    <!-- Center pip -->
-    <circle cx="280" cy="175" r="6" fill="#fde047"/>
-
-    <!-- Whole lemon (foreground) -->
-    <ellipse cx="160" cy="175" rx="75" ry="50" fill="url(#lemon-yellow)" stroke="#ca8a04" stroke-width="3.5"/>
-
-    <!-- Pointed tips -->
-    <ellipse cx="82" cy="175" rx="12" ry="6" fill="#eab308" stroke="#ca8a04" stroke-width="2"/>
-    <ellipse cx="238" cy="175" rx="10" ry="5" fill="#eab308" stroke="#ca8a04" stroke-width="2"/>
-
-    <!-- Highlight -->
-    <path d="M120 150 Q160 135 200 150" fill="none" stroke="#fef9c3" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
-
-    <!-- Subtle texture bumps -->
-    <circle cx="130" cy="165" r="2" fill="#ca8a04" opacity="0.2"/>
-    <circle cx="150" cy="158" r="2" fill="#ca8a04" opacity="0.2"/>
-    <circle cx="170" cy="162" r="2" fill="#ca8a04" opacity="0.2"/>
-    <circle cx="145" cy="185" r="2" fill="#ca8a04" opacity="0.2"/>
-    <circle cx="175" cy="180" r="2" fill="#ca8a04" opacity="0.2"/>
-
-    <!-- Stem nub -->
-    <ellipse cx="236" cy="172" rx="4" ry="3" fill="#65a30d" stroke="#4d7c0f" stroke-width="1.5"/>
-
-    <!-- Leaf -->
-    <path d="M238 170 C250 155 270 148 280 152 C275 160 255 165 238 170 Z" fill="#4ade80" stroke="#16a34a" stroke-width="2"/>
-    <path d="M238 170 C255 158 270 152 278 153" fill="none" stroke="#16a34a" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Cut half (right, behind) -->
+  <g filter="url(#lm-sh)" stroke="#ca8a04" stroke-width="4">
+    <circle cx="296" cy="178" r="54" fill="#fef9c3"/>
+    <circle cx="296" cy="178" r="54" fill="none" stroke="#facc15" stroke-width="8"/>
+    <g stroke="#eab308" stroke-width="3" fill="#fef08a">
+      <path d="M296 178 L296 128 A50 50 0 0 1 332 148 Z"/>
+      <path d="M296 178 L332 148 A50 50 0 0 1 344 190 Z"/>
+      <path d="M296 178 L344 190 A50 50 0 0 1 318 222 Z"/>
+      <path d="M296 178 L318 222 A50 50 0 0 1 276 224 Z"/>
+      <path d="M296 178 L276 224 A50 50 0 0 1 250 190 Z"/>
+      <path d="M296 178 L250 190 A50 50 0 0 1 260 148 Z"/>
+      <path d="M296 178 L260 148 A50 50 0 0 1 296 128 Z"/>
+    </g>
+    <circle cx="296" cy="178" r="6" fill="#fde047"/>
   </g>
+
+  <!-- Whole lemon (left, front) -->
+  <g filter="url(#lm-sh)" stroke="#a16207" stroke-width="5">
+    <path d="M96 158
+             C96 122 132 110 168 118
+             C210 128 224 158 224 182
+             C224 214 190 230 156 226
+             C112 220 96 190 96 158 Z" fill="url(#lm-body)"/>
+    <!-- pointed tips -->
+    <path d="M96 158 q-14 0 -18 8 q14 4 20 2 Z" fill="url(#lm-body)"/>
+    <path d="M222 176 q14 -2 20 6 q-14 6 -22 2 Z" fill="url(#lm-body)"/>
+    <!-- highlight -->
+    <ellipse cx="128" cy="146" rx="18" ry="12" fill="#fef9c3" opacity="0.7" stroke="none" transform="rotate(-24 128 146)"/>
+  </g>
+  <!-- leaf -->
+  <path d="M150 110 Q182 78 220 92 Q192 118 154 120 Z" fill="#22c55e" stroke="#15803d" stroke-width="4"/>
+  <path d="M158 114 Q188 104 214 94" fill="none" stroke="#15803d" stroke-width="3"/>
 </svg>
