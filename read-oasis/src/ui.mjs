@@ -112,7 +112,8 @@ function friendlyVoiceLabel(v) {
   const lang = (v.lang || '').toLowerCase();
   const region = lang.includes('gb') ? 'UK' : lang.includes('au') ? 'Australia' : lang.includes('ca') ? 'Canada'
     : lang.includes('in') ? 'India' : lang.includes('ie') ? 'Ireland' : lang.includes('za') ? 'S.Africa'
-    : lang.includes('nz') ? 'NZ' : lang.includes('us') ? 'US' : (v.lang || '').toUpperCase();
+    : lang.includes('nz') ? 'NZ' : lang.includes('sg') ? 'Singapore' : lang.includes('us') ? 'US'
+    : lang === 'en' ? 'English' : (v.lang || 'EN').toUpperCase();
   let name = v.name || 'Voice';
   // "Microsoft Ana Online (Natural) - English (United States)" -> "Ana"
   let m = name.match(/^Microsoft\s+([A-Za-z]+?)(?:Multilingual)?\s+(?:Online\b|-)/i);

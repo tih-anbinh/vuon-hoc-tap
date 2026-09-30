@@ -164,6 +164,10 @@ function setTitle(t) { titleEl.textContent = t; document.title = t + ' - Read Oa
 
 async function render() {
   narrator.stop();
+  // Always start a new view at the top. The father's letter (<footer class="oasis-letter">) is a tall
+  // static element below #app; without this, clicking a button re-renders #app but keeps the old scroll
+  // position, which can leave the viewport parked down in the letter. Reset before drawing the new view.
+  try { window.scrollTo({ top: 0, left: 0, behavior: 'auto' }); } catch { window.scrollTo(0, 0); }
   app.replaceChildren(h('p', { class: 'muted', text: 'Loading...' }));
   switch (route.view) {
     case 'library': return renderLibrary();
@@ -335,7 +339,11 @@ function renderReader(book) {
     // rendered page text (no separate audio_script) and the device path is used (built clips have no timings).
     const wordEls = [...story.querySelectorAll('.w[data-start]')].map(el => ({ el, start: Number(el.dataset.start), end: Number(el.dataset.start) + el.textContent.length }));
     const clearHighlight = () => wordEls.forEach(w => w.el.classList.remove('reading'));
-    const canHighlight = S.settings.highlight_words !== false && !pg.audio_script;
+    // Highlight needs the spoken text to line up character-for-character with the rendered page text so the
+    // 'boundary' charIndex maps to the right word. Our books set audio_script === text, so highlight is on;
+    // only disable it when a page deliberately reads a DIFFERENT script than it shows (offsets wouldn't match).
+    const scriptMatchesText = !pg.audio_script || pg.audio_script === pg.text;
+    const canHighlight = S.settings.highlight_words !== false && scriptMatchesText;
     narrator.onboundary = canHighlight ? (charIndex) => {
       clearHighlight();
       const w = wordEls.find(w => charIndex >= w.start && charIndex < w.end) || wordEls.find(w => charIndex <= w.start);
