@@ -1,111 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-zoo desc-zoo">
-  <title id="title-zoo">Zoo - Zoo entrance with animals</title>
-  <desc id="desc-zoo">A cheerful zoo entrance with a decorative arch, an elephant and a lion peeking out, and animal cage bars.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t-zoo d-zoo">
+  <title id="t-zoo">Zoo</title>
+  <desc id="d-zoo">A welcoming zoo entrance arch with flags, with a friendly lion and a giraffe peeking out from behind it.</desc>
   <defs>
-    <linearGradient id="sky-zoo" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#fef3c7"/>
-      <stop offset="100%" stop-color="#bae6fd"/>
+    <linearGradient id="zoo-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="60%" stop-color="#e0f2fe"/>
+      <stop offset="60%" stop-color="#86efac"/>
+      <stop offset="100%" stop-color="#4ade80"/>
     </linearGradient>
-    <linearGradient id="ground-zoo" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#4ade80"/>
-      <stop offset="100%" stop-color="#15803d"/>
-    </linearGradient>
-    <linearGradient id="arch-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#f97316"/>
-      <stop offset="100%" stop-color="#c2410c"/>
-    </linearGradient>
-    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+    <filter id="zoo-sh" x="-10%" y="-10%" width="120%" height="120%">
       <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
     </filter>
   </defs>
-  <!-- Sky -->
-  <rect x="0" y="0" width="400" height="220" fill="url(#sky-zoo)"/>
-  <!-- Ground -->
-  <rect x="0" y="220" width="400" height="80" fill="url(#ground-zoo)"/>
-  <line x1="0" y1="220" x2="400" y2="220" stroke="#166534" stroke-width="2"/>
-  <!-- Clouds -->
-  <g fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" opacity="0.9">
-    <ellipse cx="60" cy="40" rx="18" ry="10"/>
-    <ellipse cx="78" cy="45" rx="15" ry="9"/>
-    <ellipse cx="340" cy="55" rx="16" ry="9"/>
+  <rect x="8" y="8" width="384" height="284" rx="20" fill="url(#zoo-bg)"/>
+  <ellipse cx="200" cy="280" rx="160" ry="12" fill="#0f172a" opacity="0.1"/>
+
+  <!-- Giraffe peeking (left, tall) -->
+  <g filter="url(#zoo-sh)" stroke="#0f172a" stroke-width="4">
+    <rect x="70" y="120" width="22" height="120" rx="10" fill="#f5c451"/>
+    <path d="M66 128 Q60 108 78 100 Q96 104 96 124 Z" fill="#f5c451"/>
+    <path d="M70 112 l-4 -12 M92 112 l4 -12" stroke="#a16207" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="82" cy="118" r="3.5" fill="#0f172a"/>
+    <g fill="#c2872a"><circle cx="76" cy="150" r="4"/><circle cx="86" cy="172" r="4"/><circle cx="78" cy="196" r="4"/></g>
   </g>
-  <g filter="url(#soft-shadow)">
-    <!-- Left arch pillar -->
-    <rect x="55" y="80" width="30" height="145" rx="4" fill="url(#arch-grad)" stroke="#7c2d12" stroke-width="3.5"/>
-    <!-- Right arch pillar -->
-    <rect x="315" y="80" width="30" height="145" rx="4" fill="url(#arch-grad)" stroke="#7c2d12" stroke-width="3.5"/>
-    <!-- Arch top -->
-    <path d="M55 90 Q200 20 345 90 L345 105 Q200 40 55 105 Z" fill="url(#arch-grad)" stroke="#7c2d12" stroke-width="3.5"/>
-    <!-- Arch decorative flags -->
-    <path d="M80 75 L90 90 L100 75 Z" fill="#dc2626" stroke="#7f1d1d" stroke-width="1.5"/>
-    <path d="M150 55 L160 70 L170 55 Z" fill="#3b82f6" stroke="#1e3a8a" stroke-width="1.5"/>
-    <path d="M200 45 L210 60 L220 45 Z" fill="#fde047" stroke="#a16207" stroke-width="1.5"/>
-    <path d="M240 55 L250 70 L260 55 Z" fill="#22c55e" stroke="#166534" stroke-width="1.5"/>
-    <path d="M310 75 L320 90 L330 75 Z" fill="#a855f7" stroke="#7e22ce" stroke-width="1.5"/>
-    <!-- Sign on arch (animal footprint shape as sign) -->
-    <ellipse cx="200" cy="80" rx="30" ry="18" fill="#fef3c7" stroke="#7c2d12" stroke-width="3"/>
-    <circle cx="188" cy="75" r="3" fill="#7c2d12"/>
-    <circle cx="212" cy="75" r="3" fill="#7c2d12"/>
-    <ellipse cx="200" cy="85" rx="10" ry="6" fill="#7c2d12"/>
-    <!-- Cage bars in center (behind arch) -->
-    <g stroke="#525252" stroke-width="4" opacity="0.6">
-      <line x1="110" y1="105" x2="110" y2="225"/>
-      <line x1="130" y1="105" x2="130" y2="225"/>
-      <line x1="150" y1="105" x2="150" y2="225"/>
-      <line x1="250" y1="105" x2="250" y2="225"/>
-      <line x1="270" y1="105" x2="270" y2="225"/>
-      <line x1="290" y1="105" x2="290" y2="225"/>
-    </g>
 
-    <!-- Elephant (peeking from left) -->
-    <ellipse cx="175" cy="200" rx="35" ry="25" fill="#94a3b8" stroke="#475569" stroke-width="3"/>
-    <circle cx="150" cy="180" r="22" fill="#94a3b8" stroke="#475569" stroke-width="3"/>
-    <!-- Elephant ear -->
-    <ellipse cx="135" cy="175" rx="12" ry="15" fill="#64748b" stroke="#475569" stroke-width="2.5"/>
-    <!-- Elephant trunk -->
-    <path d="M140 195 Q130 210 135 225 Q140 232 148 225" fill="none" stroke="#475569" stroke-width="10" stroke-linecap="round"/>
-    <path d="M140 195 Q130 210 135 225 Q140 232 148 225" fill="none" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
-    <!-- Elephant eye -->
-    <circle cx="145" cy="175" r="3" fill="#0c0a09"/>
-    <circle cx="146" cy="174" r="1" fill="#ffffff"/>
-    <!-- Elephant tusk -->
-    <path d="M145 195 L142 205 L146 203 Z" fill="#fefce8" stroke="#a8a29e" stroke-width="1.5"/>
+  <!-- Entrance arch (center, target landmark) -->
+  <g filter="url(#zoo-sh)" stroke="#0f172a" stroke-width="4">
+    <rect x="128" y="120" width="26" height="120" rx="4" fill="#f97316"/>
+    <rect x="246" y="120" width="26" height="120" rx="4" fill="#f97316"/>
+    <path d="M120 122 Q200 66 280 122 L280 138 Q200 86 120 138 Z" fill="#fb923c"/>
+    <!-- flags on the arch -->
+    <path d="M200 78 L200 58" stroke="#0f172a" stroke-width="3"/>
+    <path d="M200 60 L222 66 L200 72 Z" fill="#ef4444"/>
+    <path d="M150 96 L150 80" stroke="#0f172a" stroke-width="3"/><path d="M150 82 L168 86 L150 92 Z" fill="#3b82f6"/>
+    <path d="M250 96 L250 80" stroke="#0f172a" stroke-width="3"/><path d="M250 82 L232 86 L250 92 Z" fill="#22c55e"/>
+    <!-- paw sign -->
+    <circle cx="200" cy="150" r="16" fill="#fde68a"/>
+    <g fill="#78350f"><circle cx="200" cy="152" r="6"/><circle cx="193" cy="144" r="2.5"/><circle cx="200" cy="141" r="2.5"/><circle cx="207" cy="144" r="2.5"/></g>
+  </g>
 
-    <!-- Lion (peeking from right) -->
-    <circle cx="280" cy="185" r="28" fill="#f59e0b" stroke="#78350f" stroke-width="3"/>
-    <!-- Mane -->
-    <g fill="#a16207" stroke="#78350f" stroke-width="2">
-      <circle cx="255" cy="170" r="9"/>
-      <circle cx="255" cy="200" r="9"/>
-      <circle cx="305" cy="170" r="9"/>
-      <circle cx="305" cy="200" r="9"/>
-      <circle cx="280" cy="155" r="9"/>
-      <circle cx="270" cy="215" r="9"/>
-      <circle cx="290" cy="215" r="9"/>
-      <circle cx="245" cy="185" r="9"/>
-      <circle cx="315" cy="185" r="9"/>
-    </g>
-    <!-- Lion face (front on top) -->
-    <circle cx="280" cy="185" r="24" fill="#fbbf24" stroke="#78350f" stroke-width="2.5"/>
-    <!-- Ears -->
-    <circle cx="265" cy="167" r="6" fill="#f59e0b" stroke="#78350f" stroke-width="2"/>
-    <circle cx="295" cy="167" r="6" fill="#f59e0b" stroke="#78350f" stroke-width="2"/>
-    <circle cx="265" cy="167" r="3" fill="#dc2626"/>
-    <circle cx="295" cy="167" r="3" fill="#dc2626"/>
-    <!-- Eyes -->
-    <circle cx="270" cy="180" r="3.5" fill="#0c0a09"/>
-    <circle cx="290" cy="180" r="3.5" fill="#0c0a09"/>
-    <circle cx="271" cy="179" r="1.2" fill="#ffffff"/>
-    <circle cx="291" cy="179" r="1.2" fill="#ffffff"/>
-    <!-- Nose -->
-    <path d="M275 190 L285 190 L280 197 Z" fill="#78350f" stroke="#451a03" stroke-width="1.5"/>
-    <!-- Mouth -->
-    <path d="M280 197 L280 202" stroke="#451a03" stroke-width="1.5"/>
-    <path d="M275 202 Q280 207 285 202" fill="none" stroke="#451a03" stroke-width="1.5" stroke-linecap="round"/>
-    <!-- Whiskers -->
-    <line x1="260" y1="195" x2="248" y2="193" stroke="#292524" stroke-width="1"/>
-    <line x1="260" y1="198" x2="248" y2="200" stroke="#292524" stroke-width="1"/>
-    <line x1="300" y1="195" x2="312" y2="193" stroke="#292524" stroke-width="1"/>
-    <line x1="300" y1="198" x2="312" y2="200" stroke="#292524" stroke-width="1"/>
+  <!-- Lion peeking (right) -->
+  <g filter="url(#zoo-sh)" stroke="#0f172a" stroke-width="4">
+    <circle cx="322" cy="210" r="40" fill="#f59e0b"/>
+    <g fill="#b45309"><path d="M322 170 l-8 -18 12 10 z"/><path d="M362 210 l18 -8 -10 12 z"/><path d="M322 250 l-8 18 12 -10 z"/><path d="M282 210 l-18 -8 10 12 z"/><path d="M292 180 l-14 -12 16 4z"/><path d="M352 180 l14 -12 -16 4z"/></g>
+    <circle cx="322" cy="212" r="30" fill="#fbbf24"/>
+    <circle cx="312" cy="206" r="4.5" fill="#0f172a"/>
+    <circle cx="332" cy="206" r="4.5" fill="#0f172a"/>
+    <path d="M322 216 l-6 6 12 0 z" fill="#7c2d12"/>
+    <path d="M322 222 Q314 232 306 226 M322 222 Q330 232 338 226" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
   </g>
 </svg>
