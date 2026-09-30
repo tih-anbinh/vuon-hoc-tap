@@ -69,8 +69,8 @@
   {
     "entry_id": "ro-vocab:ice-cream:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:ice-cream:noun:unqualified",
@@ -85,7 +85,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "ice cream (noun)",
+    "sense_label": "a cold sweet food",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -96,10 +96,10 @@
       "cyle25-theme:food-drink"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A cold, sweet food that melts when it is warm.",
+      "explanation_vi": "Món ngọt lạnh, tan chảy khi gặp nóng (kem).",
+      "example_en": "I want a big ice cream.",
+      "example_vi": "Em muốn một cây kem to.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -111,22 +111,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-ice-cream-v1",
+        "asset": "vocabulary/assets/vg-scene-ice-cream-v1.svg",
+        "alt": "A cold, sweet food that melts when it is warm.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -138,8 +142,8 @@
   {
     "entry_id": "ro-vocab:ice-skates:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:ice-skates:noun:unqualified",
@@ -154,7 +158,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "ice skates (noun)",
+    "sense_label": "boots with blades for ice",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -165,10 +169,10 @@
       "cyle25-theme:sports-leisure"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "Special boots with metal blades for moving on ice.",
+      "explanation_vi": "Đôi giày đặc biệt có lưỡi kim loại để trượt trên băng (giày trượt băng).",
+      "example_en": "I put on my ice skates.",
+      "example_vi": "Em mang giày trượt băng vào.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -180,22 +184,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-ice-skates-v1",
+        "asset": "vocabulary/assets/vg-scene-ice-skates-v1.svg",
+        "alt": "Special boots with metal blades for moving on ice.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -207,8 +214,8 @@
   {
     "entry_id": "ro-vocab:ice-skating:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:ice-skating:noun:unqualified",
@@ -223,7 +230,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "ice skating (noun)",
+    "sense_label": "moving on ice on skates",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -234,10 +241,10 @@
       "cyle25-theme:sports-leisure"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "The activity of moving on ice on special boots with blades.",
+      "explanation_vi": "Việc trượt trên băng bằng giày có lưỡi (trượt băng).",
+      "example_en": "We go ice skating in winter.",
+      "example_vi": "Chúng em đi trượt băng vào mùa đông.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -249,22 +256,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "action_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-action-ice-skating-v1",
+        "asset": "vocabulary/assets/vg-action-ice-skating-v1.svg",
+        "alt": "The activity of moving on ice on special boots with blades.",
+        "status": "needs_human_review",
+        "kind": "action",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -276,8 +286,8 @@
   {
     "entry_id": "ro-vocab:ice:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:ice:noun:unqualified",
@@ -292,7 +302,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "ice (noun)",
+    "sense_label": "very cold water that is hard",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -303,10 +313,10 @@
       "cyle25-theme:weather"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "Water that has become very cold and hard.",
+      "explanation_vi": "Nước đông lại thành thể cứng khi rất lạnh (băng/đá).",
+      "example_en": "The ice is cold and hard.",
+      "example_vi": "Băng vừa lạnh vừa cứng.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -318,22 +328,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-ice-v1",
+        "asset": "vocabulary/assets/vg-scene-ice-v1.svg",
+        "alt": "Water that has become very cold and hard.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1022,8 +1036,8 @@
   {
     "entry_id": "ro-vocab:insect:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:insect:noun:unqualified",
@@ -1038,7 +1052,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "insect (noun)",
+    "sense_label": "a very small animal with six legs",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -1049,11 +1063,11 @@
       "cyle25-theme:animals"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
-      "nonexample_en": null,
+      "definition_en": "A very small animal with six legs, such as a bee or an ant.",
+      "explanation_vi": "Con vật rất nhỏ có sáu chân, như ong hay kiến (côn trùng).",
+      "example_en": "A bee is an insect.",
+      "example_vi": "Con ong là một loài côn trùng.",
+      "nonexample_en": "A dog is not an insect.",
       "contrast_entry_ids": [],
       "usage_notes": [],
       "pronunciation": {
@@ -1064,22 +1078,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-insect-v1",
+        "asset": "vocabulary/assets/vg-scene-insect-v1.svg",
+        "alt": "A very small animal with six legs, such as a bee or an ant.",
+        "status": "needs_human_review",
+        "kind": "animal",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1234,8 +1252,8 @@
   {
     "entry_id": "ro-vocab:instrument:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:instrument:noun:unqualified",
@@ -1250,7 +1268,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "instrument (noun)",
+    "sense_label": "a thing you make music with",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -1261,10 +1279,10 @@
       "cyle25-theme:sports-leisure"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A thing like a drum or a guitar that you use to make music.",
+      "explanation_vi": "Vật như trống hay đàn ghi-ta dùng để tạo ra nhạc (nhạc cụ).",
+      "example_en": "A piano is a big instrument.",
+      "example_vi": "Đàn piano là một nhạc cụ to.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1276,22 +1294,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-instrument-v1",
+        "asset": "vocabulary/assets/vg-scene-instrument-v1.svg",
+        "alt": "A thing like a drum or a guitar that you use to make music.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1776,8 +1797,8 @@
   {
     "entry_id": "ro-vocab:island:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:island:noun:unqualified",
@@ -1792,7 +1813,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "island (noun)",
+    "sense_label": "land with water all around it",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -1803,10 +1824,10 @@
       "cyle25-theme:the-world-around-us"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A piece of land with water all around it.",
+      "explanation_vi": "Vùng đất có nước bao quanh mọi phía (hòn đảo).",
+      "example_en": "We go to a small island.",
+      "example_vi": "Chúng em đến một hòn đảo nhỏ.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1818,22 +1839,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-island-v1",
+        "asset": "vocabulary/assets/vg-scene-island-v1.svg",
+        "alt": "A piece of land with water all around it.",
+        "status": "needs_human_review",
+        "kind": "place",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },

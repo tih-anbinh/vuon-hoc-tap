@@ -18,10 +18,10 @@ fabricated as reviewed.
 - Source records processed: **1403** (all 26 letters).
 - Enrichment entries produced: **1403** (one per source record).
 - Dispositions:
-  - `draft`: **1167**
+  - `draft`: **742**
   - `blocked_source_review`: **77** (source `review_required` / quarantined)
   - `not_teachable_as_standalone`: **53** (proper names / titles)
-  - `editorially_approved`: **106** (hand-authored, sense-verified)
+  - `editorially_approved`: **531** (hand-authored, sense-verified)
 - Idempotent: re-running the builder produces byte-identical output (verified by
   `test_enrichment_is_idempotent`).
 - Validator: all 8 fail-closed gates **PASS** (exit 0).
@@ -30,40 +30,40 @@ fabricated as reviewed.
 
 | Letter | Total | Approved | Draft | Blocked (source) | Not teachable |
 |:------:|------:|---------:|------:|-----------------:|--------------:|
-| A | 71 | 3 | 63 | 2 | 3 |
-| B | 108 | 18 | 82 | 5 | 3 |
-| C | 107 | 12 | 82 | 11 | 2 |
-| D | 56 | 7 | 44 | 2 | 3 |
-| E | 49 | 6 | 38 | 3 | 2 |
-| F | 78 | 4 | 61 | 11 | 2 |
-| G | 53 | 5 | 44 | 2 | 2 |
-| H | 69 | 6 | 58 | 1 | 4 |
-| I | 29 | 1 | 28 | 0 | 0 |
-| J | 20 | 1 | 13 | 1 | 5 |
-| K | 20 | 2 | 14 | 2 | 2 |
-| L | 58 | 2 | 47 | 7 | 2 |
-| M | 79 | 6 | 61 | 5 | 7 |
-| N | 32 | 2 | 29 | 0 | 1 |
-| O | 34 | 1 | 32 | 0 | 1 |
-| P | 91 | 2 | 83 | 3 | 3 |
-| Q | 9 | 0 | 9 | 0 | 0 |
-| R | 42 | 5 | 30 | 5 | 2 |
-| S | 178 | 13 | 152 | 8 | 5 |
-| T | 101 | 4 | 88 | 8 | 1 |
-| U | 18 | 2 | 16 | 0 | 0 |
+| A | 71 | 12 | 54 | 2 | 3 |
+| B | 108 | 63 | 37 | 5 | 3 |
+| C | 107 | 61 | 33 | 11 | 2 |
+| D | 56 | 28 | 23 | 2 | 3 |
+| E | 49 | 12 | 32 | 3 | 2 |
+| F | 78 | 30 | 35 | 11 | 2 |
+| G | 53 | 28 | 21 | 2 | 2 |
+| H | 69 | 26 | 38 | 1 | 4 |
+| I | 29 | 8 | 21 | 0 | 0 |
+| J | 20 | 7 | 7 | 1 | 5 |
+| K | 20 | 12 | 4 | 2 | 2 |
+| L | 58 | 16 | 33 | 7 | 2 |
+| M | 79 | 30 | 37 | 5 | 7 |
+| N | 32 | 11 | 20 | 0 | 1 |
+| O | 34 | 8 | 25 | 0 | 1 |
+| P | 91 | 51 | 34 | 3 | 3 |
+| Q | 9 | 1 | 8 | 0 | 0 |
+| R | 42 | 23 | 12 | 5 | 2 |
+| S | 178 | 69 | 96 | 8 | 5 |
+| T | 101 | 15 | 77 | 8 | 1 |
+| U | 18 | 3 | 15 | 0 | 0 |
 | V | 9 | 0 | 8 | 0 | 1 |
-| W | 76 | 3 | 71 | 1 | 1 |
+| W | 76 | 12 | 62 | 1 | 1 |
 | X | 1 | 0 | 1 | 0 | 0 |
-| Y | 11 | 1 | 10 | 0 | 0 |
-| Z | 4 | 0 | 3 | 0 | 1 |
-| **All** | **1403** | **106** | **1167** | **77** | **53** |
+| Y | 11 | 3 | 8 | 0 | 0 |
+| Z | 4 | 2 | 1 | 0 | 1 |
+| **All** | **1403** | **531** | **742** | **77** | **53** |
 
 Every letter has full disposition coverage (`Total = Approved + Draft + Blocked +
 Not teachable` in every row).
 
-## The 106 approved words
+## The 531 approved words
 
-Approved words come from three authoring batches, all hand-written and
+Approved words come from four authoring batches, all hand-written and
 sense-verified against a single eligible Cambridge sense:
 
 **Batch 1 — book-anchored (14).** Words that appear in a real Read Oasis book
@@ -122,6 +122,25 @@ file is absent, instead of falsely claiming it is approved.
 no source record and had silently never applied; the fish noun sense is now
 authored under its correct qualifier (`fish:noun:s-pl`).
 
+**Batch 4 — SVG-having draft words, authored to land content + art together (+214).**
+Every remaining `draft` word that *already had a matching SVG on disk* was
+hand-authored so its teaching content and picture ship in the same pass. This is
+the fast path that directly serves both "finish A–Z content" and "finish visuals
+for words that truly need one." Themes span time & days, meals, family, people &
+jobs (`doctor`, `nurse`, `farmer`, `pilot`, `teacher`…), fantasy, an expanded
+transport / school / books / tech / music set, sports, shapes, extended colours &
+materials, weather, descriptive adjectives, everyday objects, health, and a large
+action-verb set (`bounce`…`race`). Dual-POS words carry BOTH senses where the
+source lists them (e.g. `drive`, `fly`, `kick`, `ride`, `swim`, `wave` as
+noun+verb). As with Batch 3, each Batch-4 entry is emitted with
+`teaching.visual.status = "needs_human_review"` — the builder links the SVG by
+name but cannot see it, so a human still confirms every picture in the review
+gallery before it flips to `approved`. Content itself is child-ready and
+`editorially_approved` now.
+
+With Batch 4, approvals rose from 106 → **531** and drafts fell from 1167 → 742;
+the review gallery now surfaces **471** words whose art awaits a human verdict.
+
 ## Book-page mapping coverage (verified)
 
 - Book vocabulary occurrences examined: **92** (91 unique surface forms).
@@ -136,11 +155,12 @@ single-sense match yet, so they are honestly left unmapped rather than guessed.
 
 ## Honest gaps (not fabricated as complete)
 
-- **1167 draft words** have full disposition but no teaching content yet. They
+- **742 draft words** have full disposition but no teaching content yet. They
   require human authoring before they can appear in a child's garden.
-- **46 Batch-3 pictures await a human verdict.** Their content is child-ready and
-  they are `editorially_approved`, but their `teaching.visual.status` is
-  `needs_human_review` until a human confirms each SVG in the review gallery.
+- **471 approved pictures await a human verdict.** Their content is child-ready
+  and they are `editorially_approved`, but their `teaching.visual.status` is
+  `needs_human_review` until a human confirms each SVG in the review gallery
+  (`tools/vocab/build_visual_review.py`).
 - **Batch-2 words are not yet book-mapped.** They power the standalone garden
   games now; they will auto-map into a reader only when a published book page
   uses them. Book-mapping coverage below is unchanged (still 14 / 92).

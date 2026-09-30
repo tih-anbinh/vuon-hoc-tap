@@ -2,8 +2,8 @@
   {
     "entry_id": "ro-vocab:lake:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:lake:noun:unqualified",
@@ -18,7 +18,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "lake (noun)",
+    "sense_label": "a big area of water with land around it",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -29,10 +29,10 @@
       "cyle25-theme:the-world-around-us"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A big area of water with land all around it.",
+      "explanation_vi": "Vùng nước lớn có đất bao quanh (cái hồ).",
+      "example_en": "Ducks swim on the lake.",
+      "example_vi": "Đàn vịt bơi trên hồ.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -44,22 +44,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-lake-v1",
+        "asset": "vocabulary/assets/vg-scene-lake-v1.svg",
+        "alt": "A big area of water with land all around it.",
+        "status": "needs_human_review",
+        "kind": "place",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -282,8 +286,8 @@
   {
     "entry_id": "ro-vocab:laptop:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:laptop:noun:unqualified",
@@ -298,7 +302,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "laptop (noun)",
+    "sense_label": "a computer you can carry",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -307,10 +311,10 @@
     },
     "theme_ids": [],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A small computer that folds and you can carry.",
+      "explanation_vi": "Máy tính nhỏ gập lại được và mang đi được (máy tính xách tay).",
+      "example_en": "Mum works on her laptop.",
+      "example_vi": "Mẹ làm việc trên máy tính xách tay.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -322,22 +326,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-laptop-v1",
+        "asset": "vocabulary/assets/vg-scene-laptop-v1.svg",
+        "alt": "A small computer that folds and you can carry.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -623,8 +630,8 @@
   {
     "entry_id": "ro-vocab:laugh:noun-verb:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:laugh:noun-verb:unqualified",
@@ -640,7 +647,7 @@
       "verb"
     ],
     "source_qualifier": null,
-    "sense_label": "laugh (noun/verb)",
+    "sense_label": "to make happy sounds when something is funny",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -649,11 +656,11 @@
     },
     "theme_ids": [],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
-      "nonexample_en": null,
+      "definition_en": "To make happy sounds with your voice when something is funny.",
+      "explanation_vi": "Phát ra tiếng vui khi thấy điều gì buồn cười (cười).",
+      "example_en": "We laugh at the funny clown.",
+      "example_vi": "Chúng em cười với chú hề vui nhộn.",
+      "nonexample_en": "The baby cries when he is sad.",
       "contrast_entry_ids": [],
       "usage_notes": [],
       "pronunciation": {
@@ -664,22 +671,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-laugh-v1",
+        "asset": "vocabulary/assets/vg-scene-laugh-v1.svg",
+        "alt": "To make happy sounds with your voice when something is funny.",
+        "status": "needs_human_review",
+        "kind": "action",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -758,8 +768,8 @@
   {
     "entry_id": "ro-vocab:leaf-leaves:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:leaf-leaves:noun:unqualified",
@@ -774,7 +784,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "leaf/leaves (noun)",
+    "sense_label": "the flat green part of a plant",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -785,10 +795,10 @@
       "cyle25-theme:the-world-around-us"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "The flat, thin, usually green part that grows on a plant or tree.",
+      "explanation_vi": "Phần dẹt mỏng, thường màu xanh, mọc trên cây (chiếc lá).",
+      "example_en": "The leaf falls from the tree.",
+      "example_vi": "Chiếc lá rơi từ trên cây.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -800,22 +810,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-leaf-leaves-v1",
+        "asset": "vocabulary/assets/vg-scene-leaf-leaves-v1.svg",
+        "alt": "The flat, thin, usually green part that grows on a plant or tree.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1031,8 +1045,8 @@
   {
     "entry_id": "ro-vocab:leg:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:leg:noun:unqualified",
@@ -1047,7 +1061,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "leg (noun)",
+    "sense_label": "the part of your body you walk on",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -1058,10 +1072,10 @@
       "cyle25-theme:the-body-and-the-face"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "One of the two long parts of your body that you use to walk.",
+      "explanation_vi": "Một trong hai phần dài của cơ thể dùng để đi (cái chân).",
+      "example_en": "I stand on two legs.",
+      "example_vi": "Em đứng bằng hai chân.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1073,22 +1087,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-leg-v1",
+        "asset": "vocabulary/assets/vg-scene-leg-v1.svg",
+        "alt": "One of the two long parts of your body that you use to walk.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1100,8 +1118,8 @@
   {
     "entry_id": "ro-vocab:lemon:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:lemon:noun:unqualified",
@@ -1116,7 +1134,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "lemon (noun)",
+    "sense_label": "a sour yellow fruit",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -1127,10 +1145,10 @@
       "cyle25-theme:food-drink"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A yellow fruit with a sour taste.",
+      "explanation_vi": "Quả màu vàng có vị chua (quả chanh vàng).",
+      "example_en": "The lemon is very sour.",
+      "example_vi": "Quả chanh rất chua.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1142,22 +1160,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-lemon-v1",
+        "asset": "vocabulary/assets/vg-scene-lemon-v1.svg",
+        "alt": "A yellow fruit with a sour taste.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1169,8 +1191,8 @@
   {
     "entry_id": "ro-vocab:lemonade:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:lemonade:noun:unqualified",
@@ -1185,7 +1207,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "lemonade (noun)",
+    "sense_label": "a sweet drink made with lemons",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -1196,10 +1218,10 @@
       "cyle25-theme:food-drink"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A sweet cold drink made with lemons.",
+      "explanation_vi": "Thức uống lạnh ngọt làm từ chanh (nước chanh).",
+      "example_en": "I drink cold lemonade.",
+      "example_vi": "Em uống nước chanh mát lạnh.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1211,22 +1233,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-lemonade-v1",
+        "asset": "vocabulary/assets/vg-scene-lemonade-v1.svg",
+        "alt": "A sweet cold drink made with lemons.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1575,8 +1601,8 @@
   {
     "entry_id": "ro-vocab:library:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:library:noun:unqualified",
@@ -1591,7 +1617,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "library (noun)",
+    "sense_label": "the place with many books to borrow",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -1602,10 +1628,10 @@
       "cyle25-theme:places-directions"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A place with many books you can read or borrow.",
+      "explanation_vi": "Nơi có nhiều sách để đọc hoặc mượn (thư viện).",
+      "example_en": "I read books at the library.",
+      "example_vi": "Em đọc sách ở thư viện.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1617,22 +1643,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-library-v1",
+        "asset": "vocabulary/assets/vg-scene-library-v1.svg",
+        "alt": "A place with many books you can read or borrow.",
+        "status": "needs_human_review",
+        "kind": "place",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2118,8 +2148,8 @@
   {
     "entry_id": "ro-vocab:lime:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:lime:noun:unqualified",
@@ -2134,7 +2164,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "lime (noun)",
+    "sense_label": "a small sour green fruit",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -2145,10 +2175,10 @@
       "cyle25-theme:food-drink"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A small green fruit with a sour taste.",
+      "explanation_vi": "Quả nhỏ màu xanh có vị chua (quả chanh xanh).",
+      "example_en": "I squeeze a lime.",
+      "example_vi": "Em vắt quả chanh xanh.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2160,22 +2190,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-lime-v1",
+        "asset": "vocabulary/assets/vg-scene-lime-v1.svg",
+        "alt": "A small green fruit with a sour taste.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2329,8 +2363,8 @@
   {
     "entry_id": "ro-vocab:listen:verb:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:listen:verb:unqualified",
@@ -2345,7 +2379,7 @@
       "verb"
     ],
     "source_qualifier": null,
-    "sense_label": "listen (verb)",
+    "sense_label": "to try hard to hear something",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -2357,10 +2391,10 @@
       "cyle25-theme:sports-leisure"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "To pay careful attention so you can hear something.",
+      "explanation_vi": "Chú ý để nghe điều gì đó (lắng nghe).",
+      "example_en": "We listen to the teacher.",
+      "example_vi": "Chúng em lắng nghe cô giáo.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2372,22 +2406,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "action_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-action-listen-v1",
+        "asset": "vocabulary/assets/vg-action-listen-v1.svg",
+        "alt": "To pay careful attention so you can hear something.",
+        "status": "needs_human_review",
+        "kind": "action",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2466,8 +2503,8 @@
   {
     "entry_id": "ro-vocab:live:verb:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:live:verb:unqualified",
@@ -2482,7 +2519,7 @@
       "verb"
     ],
     "source_qualifier": null,
-    "sense_label": "live (verb)",
+    "sense_label": "to have your home in a place",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -2493,10 +2530,10 @@
       "cyle25-theme:family-friends"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "To have your home in a place.",
+      "explanation_vi": "Có nhà và sống ở một nơi (sống, ở).",
+      "example_en": "We live in a small house.",
+      "example_vi": "Chúng em sống trong một ngôi nhà nhỏ.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2508,22 +2545,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "action_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-action-live-v1",
+        "asset": "vocabulary/assets/vg-action-live-v1.svg",
+        "alt": "To have your home in a place.",
+        "status": "needs_human_review",
+        "kind": "action",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2535,8 +2575,8 @@
   {
     "entry_id": "ro-vocab:living-room:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:living-room:noun:unqualified",
@@ -2551,7 +2591,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "living room (noun)",
+    "sense_label": "the room where the family sits together",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -2562,10 +2602,10 @@
       "cyle25-theme:the-home"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "The room in a house where the family sits and relaxes together.",
+      "explanation_vi": "Phòng trong nhà nơi cả nhà ngồi nghỉ ngơi (phòng khách).",
+      "example_en": "We watch TV in the living room.",
+      "example_vi": "Chúng em xem tivi ở phòng khách.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2577,22 +2617,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-living-room-v1",
+        "asset": "vocabulary/assets/vg-scene-living-room-v1.svg",
+        "alt": "The room in a house where the family sits and relaxes together.",
+        "status": "needs_human_review",
+        "kind": "place",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2604,8 +2648,8 @@
   {
     "entry_id": "ro-vocab:lizard:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:lizard:noun:unqualified",
@@ -2620,7 +2664,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "lizard (noun)",
+    "sense_label": "a small animal with a long tail and four legs",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -2631,10 +2675,10 @@
       "cyle25-theme:animals"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A small animal with dry skin, four legs, and a long tail.",
+      "explanation_vi": "Con vật nhỏ da khô, bốn chân, đuôi dài (con thằn lằn).",
+      "example_en": "The lizard sits on the warm rock.",
+      "example_vi": "Con thằn lằn nằm trên tảng đá ấm.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2646,22 +2690,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-lizard-v1",
+        "asset": "vocabulary/assets/vg-scene-lizard-v1.svg",
+        "alt": "A small animal with dry skin, four legs, and a long tail.",
+        "status": "needs_human_review",
+        "kind": "animal",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -3887,8 +3935,8 @@
   {
     "entry_id": "ro-vocab:lunch:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:lunch:noun:unqualified",
@@ -3903,7 +3951,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "lunch (noun)",
+    "sense_label": "the midday meal",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -3914,10 +3962,10 @@
       "cyle25-theme:food-drink"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "The food you eat in the middle of the day.",
+      "explanation_vi": "Bữa ăn vào giữa ngày (bữa trưa).",
+      "example_en": "We eat lunch at school.",
+      "example_vi": "Chúng em ăn trưa ở trường.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -3929,22 +3977,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-lunch-v1",
+        "asset": "vocabulary/assets/vg-scene-lunch-v1.svg",
+        "alt": "The food you eat in the middle of the day.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },

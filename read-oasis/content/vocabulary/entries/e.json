@@ -137,8 +137,8 @@
   {
     "entry_id": "ro-vocab:eagle:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:eagle:noun:unqualified",
@@ -153,7 +153,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "eagle (noun)",
+    "sense_label": "a big strong bird that flies high",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -164,10 +164,10 @@
       "cyle25-theme:animals"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A big strong bird that flies very high and has sharp claws.",
+      "explanation_vi": "Loài chim to khỏe, bay rất cao, có móng vuốt sắc (đại bàng).",
+      "example_en": "The eagle flies high in the sky.",
+      "example_vi": "Đại bàng bay cao trên trời.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -179,22 +179,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-eagle-v1",
+        "asset": "vocabulary/assets/vg-scene-eagle-v1.svg",
+        "alt": "A big strong bird that flies very high and has sharp claws.",
+        "status": "needs_human_review",
+        "kind": "animal",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -279,8 +283,8 @@
   {
     "entry_id": "ro-vocab:earache:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:earache:noun:unqualified",
@@ -295,7 +299,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "earache (noun)",
+    "sense_label": "a pain in your ear",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -306,10 +310,10 @@
       "cyle25-theme:health"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A pain you feel in your ear.",
+      "explanation_vi": "Cơn đau bạn cảm thấy ở tai (đau tai).",
+      "example_en": "My earache hurts a lot.",
+      "example_vi": "Cơn đau tai làm em đau nhiều.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -321,22 +325,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-earache-v1",
+        "asset": "vocabulary/assets/vg-scene-earache-v1.svg",
+        "alt": "A pain you feel in your ear.",
+        "status": "needs_human_review",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -769,8 +776,8 @@
   {
     "entry_id": "ro-vocab:elbow:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:elbow:noun:unqualified",
@@ -785,7 +792,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "elbow (noun)",
+    "sense_label": "the middle bending part of your arm",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -796,10 +803,10 @@
       "cyle25-theme:the-body-and-the-face"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "The part in the middle of your arm where it bends.",
+      "explanation_vi": "Chỗ giữa cánh tay có thể gập lại (khuỷu tay).",
+      "example_en": "I bend my elbow.",
+      "example_vi": "Em gập khuỷu tay.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -811,22 +818,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-elbow-v1",
+        "asset": "vocabulary/assets/vg-scene-elbow-v1.svg",
+        "alt": "The part in the middle of your arm where it bends.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1393,8 +1404,8 @@
   {
     "entry_id": "ro-vocab:engine:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:engine:noun:unqualified",
@@ -1409,7 +1420,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "engine (noun)",
+    "sense_label": "the part that makes a vehicle go",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -1418,10 +1429,10 @@
     },
     "theme_ids": [],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "The part of a car or train that makes it move.",
+      "explanation_vi": "Bộ phận làm cho xe hơi hay tàu chuyển động (động cơ, đầu máy).",
+      "example_en": "The engine makes the car go.",
+      "example_vi": "Động cơ làm xe chạy.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1433,22 +1444,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-engine-v1",
+        "asset": "vocabulary/assets/vg-scene-engine-v1.svg",
+        "alt": "The part of a car or train that makes it move.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1940,8 +1954,8 @@
   {
     "entry_id": "ro-vocab:envelope:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:envelope:noun:unqualified",
@@ -1956,7 +1970,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "envelope (noun)",
+    "sense_label": "a paper cover for a letter",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -1967,10 +1981,10 @@
       "cyle25-theme:the-home"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A paper cover that you put a letter inside to post it.",
+      "explanation_vi": "Bao giấy để đựng thư trước khi gửi (phong bì).",
+      "example_en": "I put the card in an envelope.",
+      "example_vi": "Em bỏ tấm thiệp vào phong bì.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1982,22 +1996,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-envelope-v1",
+        "asset": "vocabulary/assets/vg-scene-envelope-v1.svg",
+        "alt": "A paper cover that you put a letter inside to post it.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2215,8 +2233,8 @@
   {
     "entry_id": "ro-vocab:evening:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:evening:noun:unqualified",
@@ -2231,7 +2249,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "evening (noun)",
+    "sense_label": "the end part of the day",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -2242,10 +2260,10 @@
       "cyle25-theme:time"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "The part of the day when it gets dark and before you sleep.",
+      "explanation_vi": "Phần cuối ngày khi trời tối dần, trước khi đi ngủ (buổi tối).",
+      "example_en": "We have dinner in the evening.",
+      "example_vi": "Chúng em ăn tối vào buổi tối.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2257,22 +2275,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-evening-v1",
+        "asset": "vocabulary/assets/vg-scene-evening-v1.svg",
+        "alt": "The part of the day when it gets dark and before you sleep.",
+        "status": "needs_human_review",
+        "kind": "time",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },

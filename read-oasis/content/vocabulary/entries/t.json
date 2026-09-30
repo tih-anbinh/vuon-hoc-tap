@@ -2,8 +2,8 @@
   {
     "entry_id": "ro-vocab:t-shirt:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:t-shirt:noun:unqualified",
@@ -18,7 +18,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "t-shirt (noun)",
+    "sense_label": "a soft top with short sleeves",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -29,10 +29,10 @@
       "cyle25-theme:clothes"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A soft top with short sleeves and no buttons.",
+      "explanation_vi": "Áo mềm tay ngắn, không có cúc (áo thun).",
+      "example_en": "I wear a blue t-shirt.",
+      "example_vi": "Em mặc áo thun xanh.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -44,22 +44,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-t-shirt-v1",
+        "asset": "vocabulary/assets/vg-scene-t-shirt-v1.svg",
+        "alt": "A soft top with short sleeves and no buttons.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -71,8 +75,8 @@
   {
     "entry_id": "ro-vocab:table-tennis:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:table-tennis:noun:unqualified",
@@ -87,7 +91,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "table tennis (noun)",
+    "sense_label": "a game hitting a small ball on a table",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -98,10 +102,10 @@
       "cyle25-theme:sports-leisure"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A game where you hit a small light ball over a net on a table.",
+      "explanation_vi": "Trò chơi đánh quả bóng nhỏ nhẹ qua lưới trên bàn (bóng bàn).",
+      "example_en": "We play table tennis after school.",
+      "example_vi": "Chúng em chơi bóng bàn sau giờ học.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -113,22 +117,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-table-tennis-v1",
+        "asset": "vocabulary/assets/vg-scene-table-tennis-v1.svg",
+        "alt": "A game where you hit a small light ball over a net on a table.",
+        "status": "needs_human_review",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -213,8 +220,8 @@
   {
     "entry_id": "ro-vocab:tablet:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:tablet:noun:unqualified",
@@ -229,7 +236,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "tablet (noun)",
+    "sense_label": "a flat computer with a touch screen",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -238,10 +245,10 @@
     },
     "theme_ids": [],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A flat computer with a screen you touch with your finger.",
+      "explanation_vi": "Máy tính dẹt có màn hình chạm bằng ngón tay (máy tính bảng).",
+      "example_en": "I read a book on the tablet.",
+      "example_vi": "Em đọc sách trên máy tính bảng.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -253,22 +260,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-tablet-v1",
+        "asset": "vocabulary/assets/vg-scene-tablet-v1.svg",
+        "alt": "A flat computer with a screen you touch with your finger.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1033,8 +1043,8 @@
   {
     "entry_id": "ro-vocab:teacher:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:teacher:noun:unqualified",
@@ -1049,7 +1059,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "teacher (noun)",
+    "sense_label": "a person who helps you learn",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -1061,10 +1071,10 @@
       "cyle25-theme:work"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A person whose job is to help children learn at school.",
+      "explanation_vi": "Người có công việc dạy trẻ học ở trường (giáo viên, thầy cô).",
+      "example_en": "My teacher helps me read.",
+      "example_vi": "Cô giáo giúp em tập đọc.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1076,22 +1086,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-teacher-v1",
+        "asset": "vocabulary/assets/vg-scene-teacher-v1.svg",
+        "alt": "A person whose job is to help children learn at school.",
+        "status": "needs_human_review",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1516,8 +1530,8 @@
   {
     "entry_id": "ro-vocab:tennis-racket:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:tennis-racket:noun:unqualified",
@@ -1532,7 +1546,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "tennis racket (noun)",
+    "sense_label": "a bat with strings for tennis",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -1543,10 +1557,10 @@
       "cyle25-theme:sports-leisure"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A bat with strings that you use to hit the ball in tennis.",
+      "explanation_vi": "Cây vợt có dây dùng để đánh bóng trong quần vợt (vợt tennis).",
+      "example_en": "I hit the ball with my tennis racket.",
+      "example_vi": "Em đánh bóng bằng vợt tennis.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1558,22 +1572,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-tennis-racket-v1",
+        "asset": "vocabulary/assets/vg-scene-tennis-racket-v1.svg",
+        "alt": "A bat with strings that you use to hit the ball in tennis.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1585,8 +1603,8 @@
   {
     "entry_id": "ro-vocab:tennis:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:tennis:noun:unqualified",
@@ -1601,7 +1619,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "tennis (noun)",
+    "sense_label": "a game hitting a ball over a net with a racket",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -1612,10 +1630,10 @@
       "cyle25-theme:sports-leisure"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A game where two people hit a ball over a net with rackets.",
+      "explanation_vi": "Trò chơi hai người dùng vợt đánh bóng qua lưới (quần vợt).",
+      "example_en": "We play tennis at the club.",
+      "example_vi": "Chúng em chơi quần vợt ở câu lạc bộ.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1627,22 +1645,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-tennis-v1",
+        "asset": "vocabulary/assets/vg-scene-tennis-v1.svg",
+        "alt": "A game where two people hit a ball over a net with rackets.",
+        "status": "needs_human_review",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -3484,8 +3505,8 @@
   {
     "entry_id": "ro-vocab:throw:verb:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:throw:verb:unqualified",
@@ -3500,7 +3521,7 @@
       "verb"
     ],
     "source_qualifier": null,
-    "sense_label": "throw (verb)",
+    "sense_label": "to send something through the air with your hand",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -3511,10 +3532,10 @@
       "cyle25-theme:sports-leisure"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "To send something through the air with your hand.",
+      "explanation_vi": "Dùng tay tung/ném một vật đi trong không khí (ném).",
+      "example_en": "I throw the ball to my friend.",
+      "example_vi": "Em ném quả bóng cho bạn.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -3526,22 +3547,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "action_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-action-throw-v1",
+        "asset": "vocabulary/assets/vg-action-throw-v1.svg",
+        "alt": "To send something through the air with your hand.",
+        "status": "needs_human_review",
+        "kind": "action",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "position_action_play",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -3829,8 +3854,8 @@
   {
     "entry_id": "ro-vocab:tiger:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:tiger:noun:unqualified",
@@ -3845,7 +3870,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "tiger (noun)",
+    "sense_label": "a big wild cat with stripes",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -3856,10 +3881,10 @@
       "cyle25-theme:animals"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A big wild cat with orange fur and black stripes.",
+      "explanation_vi": "Con mèo lớn hoang dã, lông cam có sọc đen (con hổ).",
+      "example_en": "The tiger runs fast in the jungle.",
+      "example_vi": "Con hổ chạy nhanh trong rừng.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -3871,22 +3896,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-tiger-v1",
+        "asset": "vocabulary/assets/vg-scene-tiger-v1.svg",
+        "alt": "A big wild cat with orange fur and black stripes.",
+        "status": "needs_human_review",
+        "kind": "animal",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -4447,8 +4476,8 @@
   {
     "entry_id": "ro-vocab:tomato:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:tomato:noun:unqualified",
@@ -4463,7 +4492,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "tomato (noun)",
+    "sense_label": "a round red vegetable",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -4474,10 +4503,10 @@
       "cyle25-theme:food-drink"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A round, soft, red vegetable.",
+      "explanation_vi": "Quả tròn, mềm, màu đỏ (cà chua).",
+      "example_en": "I cut the red tomato.",
+      "example_vi": "Em cắt quả cà chua đỏ.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -4489,22 +4518,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-tomato-v1",
+        "asset": "vocabulary/assets/vg-scene-tomato-v1.svg",
+        "alt": "A round, soft, red vegetable.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -5547,8 +5580,8 @@
   {
     "entry_id": "ro-vocab:toy:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:toy:noun:unqualified",
@@ -5563,7 +5596,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "toy (noun)",
+    "sense_label": "a thing children play with",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -5576,10 +5609,10 @@
       "cyle25-theme:toys"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A thing that children play with, like a ball or a doll.",
+      "explanation_vi": "Vật để trẻ em chơi, như quả bóng hay con búp bê (đồ chơi).",
+      "example_en": "I put my toys in the box.",
+      "example_vi": "Em cất đồ chơi vào hộp.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -5591,22 +5624,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-toy-v1",
+        "asset": "vocabulary/assets/vg-scene-toy-v1.svg",
+        "alt": "A thing that children play with, like a ball or a doll.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -6176,8 +6213,8 @@
   {
     "entry_id": "ro-vocab:trousers:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:trousers:noun:unqualified",
@@ -6192,7 +6229,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "trousers (noun)",
+    "sense_label": "clothes for your legs",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -6203,10 +6240,10 @@
       "cyle25-theme:clothes"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A piece of clothing that covers both legs, from the waist down.",
+      "explanation_vi": "Trang phục che cả hai chân, từ eo xuống (quần dài).",
+      "example_en": "He wears black trousers.",
+      "example_vi": "Anh ấy mặc quần dài màu đen.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -6218,22 +6255,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-trousers-v1",
+        "asset": "vocabulary/assets/vg-scene-trousers-v1.svg",
+        "alt": "A piece of clothing that covers both legs, from the waist down.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },

@@ -71,8 +71,8 @@
   {
     "entry_id": "ro-vocab:paint:noun-verb:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:paint:noun-verb:unqualified",
@@ -88,7 +88,7 @@
       "verb"
     ],
     "source_qualifier": null,
-    "sense_label": "paint (noun/verb)",
+    "sense_label": "to put colour on with a brush",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -97,10 +97,10 @@
     },
     "theme_ids": [],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "To put coloured paint on something with a brush.",
+      "explanation_vi": "Dùng cọ quét màu lên vật gì đó (vẽ/sơn màu).",
+      "example_en": "I paint a big yellow sun.",
+      "example_vi": "Em vẽ một ông mặt trời vàng to.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -112,22 +112,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "action_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-action-paint-v1",
+        "asset": "vocabulary/assets/vg-action-paint-v1.svg",
+        "alt": "To put coloured paint on something with a brush.",
+        "status": "needs_human_review",
+        "kind": "action",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "position_action_play",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -139,8 +143,8 @@
   {
     "entry_id": "ro-vocab:painting:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:painting:noun:unqualified",
@@ -155,7 +159,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "painting (noun)",
+    "sense_label": "a picture made with paint",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -166,10 +170,10 @@
       "cyle25-theme:school"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A picture you make with paint and a brush.",
+      "explanation_vi": "Bức tranh bạn vẽ bằng màu nước và cọ (bức tranh sơn).",
+      "example_en": "Her painting of the sea is beautiful.",
+      "example_vi": "Bức tranh biển của cô ấy thật đẹp.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -181,22 +185,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-painting-v1",
+        "asset": "vocabulary/assets/vg-scene-painting-v1.svg",
+        "alt": "A picture you make with paint and a brush.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -345,8 +352,8 @@
   {
     "entry_id": "ro-vocab:pancake:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:pancake:noun:unqualified",
@@ -361,7 +368,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "pancake (noun)",
+    "sense_label": "a thin round cake cooked in a pan",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -372,10 +379,10 @@
       "cyle25-theme:food-drink"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A thin, round, flat cake cooked in a pan.",
+      "explanation_vi": "Bánh tròn mỏng dẹt rán trong chảo (bánh kếp).",
+      "example_en": "We eat pancakes for breakfast.",
+      "example_vi": "Chúng em ăn bánh kếp vào bữa sáng.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -387,22 +394,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-pancake-v1",
+        "asset": "vocabulary/assets/vg-scene-pancake-v1.svg",
+        "alt": "A thin, round, flat cake cooked in a pan.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -414,8 +425,8 @@
   {
     "entry_id": "ro-vocab:panda:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:panda:noun:unqualified",
@@ -430,7 +441,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "panda (noun)",
+    "sense_label": "a black and white bear that eats bamboo",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -441,10 +452,10 @@
       "cyle25-theme:animals"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A black and white bear that eats bamboo.",
+      "explanation_vi": "Con gấu đen trắng, ăn tre (gấu trúc).",
+      "example_en": "The panda eats bamboo all day.",
+      "example_vi": "Gấu trúc ăn tre cả ngày.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -456,22 +467,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-panda-v1",
+        "asset": "vocabulary/assets/vg-scene-panda-v1.svg",
+        "alt": "A black and white bear that eats bamboo.",
+        "status": "needs_human_review",
+        "kind": "animal",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -483,8 +498,8 @@
   {
     "entry_id": "ro-vocab:paper:adjective-noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:paper:adjective-noun:unqualified",
@@ -500,7 +515,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "paper (adjective/noun)",
+    "sense_label": "thin material you write and draw on",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -512,10 +527,10 @@
       "cyle25-theme:school"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "Thin flat material that you write, draw and print on.",
+      "explanation_vi": "Vật liệu mỏng, phẳng dùng để viết, vẽ và in (giấy).",
+      "example_en": "I draw on a white piece of paper.",
+      "example_vi": "Em vẽ lên tờ giấy trắng.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -527,22 +542,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-paper-v1",
+        "asset": "vocabulary/assets/vg-scene-paper-v1.svg",
+        "alt": "Thin flat material that you write, draw and print on.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -621,8 +640,8 @@
   {
     "entry_id": "ro-vocab:parent:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:parent:noun:unqualified",
@@ -637,7 +656,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "parent (noun)",
+    "sense_label": "a mother or a father",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -648,10 +667,10 @@
       "cyle25-theme:family-friends"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A mother or a father of a child.",
+      "explanation_vi": "Bố hoặc mẹ của một đứa trẻ (phụ huynh).",
+      "example_en": "My parents take me to school.",
+      "example_vi": "Bố mẹ đưa em đến trường.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -663,22 +682,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-parent-v1",
+        "asset": "vocabulary/assets/vg-scene-parent-v1.svg",
+        "alt": "A mother or a father of a child.",
+        "status": "needs_human_review",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -690,8 +712,8 @@
   {
     "entry_id": "ro-vocab:park:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:park:noun:unqualified",
@@ -706,7 +728,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "park (noun)",
+    "sense_label": "a green place in a town to play",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -717,10 +739,10 @@
       "cyle25-theme:places-directions"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A green open place in a town where people walk and play.",
+      "explanation_vi": "Khoảng xanh mở trong phố để đi dạo và chơi (công viên).",
+      "example_en": "We play in the park.",
+      "example_vi": "Chúng em chơi ở công viên.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -732,22 +754,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-park-v1",
+        "asset": "vocabulary/assets/vg-scene-park-v1.svg",
+        "alt": "A green open place in a town where people walk and play.",
+        "status": "needs_human_review",
+        "kind": "place",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -759,8 +785,8 @@
   {
     "entry_id": "ro-vocab:parrot:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:parrot:noun:unqualified",
@@ -775,7 +801,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "parrot (noun)",
+    "sense_label": "a colourful bird that can copy words",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -786,10 +812,10 @@
       "cyle25-theme:animals"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A colourful bird that can copy the words people say.",
+      "explanation_vi": "Loài chim nhiều màu, biết bắt chước lời người nói (con vẹt).",
+      "example_en": "The parrot says hello.",
+      "example_vi": "Con vẹt nói xin chào.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -801,22 +827,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-parrot-v1",
+        "asset": "vocabulary/assets/vg-scene-parrot-v1.svg",
+        "alt": "A colourful bird that can copy the words people say.",
+        "status": "needs_human_review",
+        "kind": "animal",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -897,8 +927,8 @@
   {
     "entry_id": "ro-vocab:party:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:party:noun:unqualified",
@@ -913,7 +943,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "party (noun)",
+    "sense_label": "a fun time with friends and food",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -924,10 +954,10 @@
       "cyle25-theme:sports-leisure"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A happy time when friends come together to play and eat.",
+      "explanation_vi": "Dịp vui khi bạn bè tụ họp để chơi và ăn (buổi tiệc).",
+      "example_en": "We dance at the party.",
+      "example_vi": "Chúng em nhảy ở buổi tiệc.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -939,22 +969,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-party-v1",
+        "asset": "vocabulary/assets/vg-scene-party-v1.svg",
+        "alt": "A happy time when friends come together to play and eat.",
+        "status": "needs_human_review",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1105,8 +1139,8 @@
   {
     "entry_id": "ro-vocab:pasta:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:pasta:noun:unqualified",
@@ -1121,7 +1155,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "pasta (noun)",
+    "sense_label": "an Italian food made from flour",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -1132,10 +1166,10 @@
       "cyle25-theme:food-drink"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A food made from flour, boiled in water, such as spaghetti.",
+      "explanation_vi": "Món ăn làm từ bột, luộc trong nước, như mì Ý (mì pasta).",
+      "example_en": "We eat pasta with sauce.",
+      "example_vi": "Chúng em ăn mì pasta với sốt.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1147,22 +1181,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-pasta-v1",
+        "asset": "vocabulary/assets/vg-scene-pasta-v1.svg",
+        "alt": "A food made from flour, boiled in water, such as spaghetti.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1381,8 +1419,8 @@
   {
     "entry_id": "ro-vocab:pea:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:pea:noun:unqualified",
@@ -1397,7 +1435,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "pea (noun)",
+    "sense_label": "a small round green vegetable",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -1408,10 +1446,10 @@
       "cyle25-theme:food-drink"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A small, round, green vegetable that grows in a pod.",
+      "explanation_vi": "Hạt nhỏ tròn màu xanh mọc trong vỏ (hạt đậu Hà Lan).",
+      "example_en": "I eat green peas.",
+      "example_vi": "Em ăn đậu Hà Lan.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1423,22 +1461,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-pea-v1",
+        "asset": "vocabulary/assets/vg-scene-pea-v1.svg",
+        "alt": "A small, round, green vegetable that grows in a pod.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1450,8 +1492,8 @@
   {
     "entry_id": "ro-vocab:pear:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:pear:noun:unqualified",
@@ -1466,7 +1508,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "pear (noun)",
+    "sense_label": "a sweet green fruit",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -1477,10 +1519,10 @@
       "cyle25-theme:food-drink"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A sweet green fruit that is round at the bottom and thin at the top.",
+      "explanation_vi": "Quả ngọt màu xanh, phình to phía dưới, thon ở trên (quả lê).",
+      "example_en": "I eat a juicy pear.",
+      "example_vi": "Em ăn một quả lê mọng nước.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1492,22 +1534,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-pear-v1",
+        "asset": "vocabulary/assets/vg-scene-pear-v1.svg",
+        "alt": "A sweet green fruit that is round at the bottom and thin at the top.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1519,8 +1565,8 @@
   {
     "entry_id": "ro-vocab:pen:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:pen:noun:unqualified",
@@ -1535,7 +1581,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "pen (noun)",
+    "sense_label": "a thing you write with using ink",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -1546,10 +1592,10 @@
       "cyle25-theme:school"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A thing you hold to write with ink.",
+      "explanation_vi": "Vật cầm tay dùng mực để viết (cây bút mực).",
+      "example_en": "I write my name with a pen.",
+      "example_vi": "Em viết tên mình bằng bút.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1561,22 +1607,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-pen-v1",
+        "asset": "vocabulary/assets/vg-scene-pen-v1.svg",
+        "alt": "A thing you hold to write with ink.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1588,8 +1638,8 @@
   {
     "entry_id": "ro-vocab:pencil:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:pencil:noun:unqualified",
@@ -1604,7 +1654,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "pencil (noun)",
+    "sense_label": "a wooden stick you write and draw with",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -1615,10 +1665,10 @@
       "cyle25-theme:school"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A thin wooden stick you use to write and draw, and you can rub it out.",
+      "explanation_vi": "Que gỗ nhỏ dùng để viết và vẽ, có thể tẩy đi (bút chì).",
+      "example_en": "I draw a cat with my pencil.",
+      "example_vi": "Em vẽ con mèo bằng bút chì.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1630,22 +1680,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-pencil-v1",
+        "asset": "vocabulary/assets/vg-scene-pencil-v1.svg",
+        "alt": "A thin wooden stick you use to write and draw, and you can rub it out.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1657,8 +1711,8 @@
   {
     "entry_id": "ro-vocab:penguin:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:penguin:noun:unqualified",
@@ -1673,7 +1727,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "penguin (noun)",
+    "sense_label": "a black and white bird that cannot fly",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -1684,10 +1738,10 @@
       "cyle25-theme:animals"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A black and white bird that swims but cannot fly.",
+      "explanation_vi": "Loài chim đen trắng biết bơi nhưng không bay được (chim cánh cụt).",
+      "example_en": "The penguin walks on the ice.",
+      "example_vi": "Chim cánh cụt đi trên băng.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1699,22 +1753,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-penguin-v1",
+        "asset": "vocabulary/assets/vg-scene-penguin-v1.svg",
+        "alt": "A black and white bird that swims but cannot fly.",
+        "status": "needs_human_review",
+        "kind": "animal",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1726,8 +1784,8 @@
   {
     "entry_id": "ro-vocab:pepper:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:pepper:noun:unqualified",
@@ -1742,7 +1800,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "pepper (noun)",
+    "sense_label": "a spice that makes food hot",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -1753,10 +1811,10 @@
       "cyle25-theme:food-drink"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A spice that makes food taste hot and strong.",
+      "explanation_vi": "Gia vị làm món ăn có vị cay, nồng (tiêu/ớt).",
+      "example_en": "Add a little pepper to the soup.",
+      "example_vi": "Cho một chút tiêu vào súp.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1768,22 +1826,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-pepper-v1",
+        "asset": "vocabulary/assets/vg-scene-pepper-v1.svg",
+        "alt": "A spice that makes food taste hot and strong.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1862,8 +1924,8 @@
   {
     "entry_id": "ro-vocab:person-people:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:person-people:noun:unqualified",
@@ -1878,7 +1940,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "person/people (noun)",
+    "sense_label": "a human being",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -1889,10 +1951,10 @@
       "cyle25-theme:family-friends"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A human being; one of us.",
+      "explanation_vi": "Một con người (người).",
+      "example_en": "There are many people at the party.",
+      "example_vi": "Có nhiều người ở buổi tiệc.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1904,22 +1966,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-person-people-v1",
+        "asset": "vocabulary/assets/vg-scene-person-people-v1.svg",
+        "alt": "A human being; one of us.",
+        "status": "needs_human_review",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1931,8 +1996,8 @@
   {
     "entry_id": "ro-vocab:pet:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:pet:noun:unqualified",
@@ -1947,7 +2012,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "pet (noun)",
+    "sense_label": "an animal you keep at home",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -1958,10 +2023,10 @@
       "cyle25-theme:animals"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "An animal you keep at home and take care of.",
+      "explanation_vi": "Con vật bạn nuôi trong nhà và chăm sóc (thú cưng).",
+      "example_en": "My pet is a small dog.",
+      "example_vi": "Thú cưng của em là một chú chó nhỏ.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1973,22 +2038,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-pet-v1",
+        "asset": "vocabulary/assets/vg-scene-pet-v1.svg",
+        "alt": "An animal you keep at home and take care of.",
+        "status": "needs_human_review",
+        "kind": "concept",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2139,8 +2208,8 @@
   {
     "entry_id": "ro-vocab:photo:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:photo:noun:unqualified",
@@ -2155,7 +2224,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "photo (noun)",
+    "sense_label": "a picture taken with a camera",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -2166,10 +2235,10 @@
       "cyle25-theme:sports-leisure"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A picture you make with a camera.",
+      "explanation_vi": "Bức hình chụp bằng máy ảnh (tấm ảnh).",
+      "example_en": "This is a photo of my family.",
+      "example_vi": "Đây là tấm ảnh gia đình em.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2181,22 +2250,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-photo-v1",
+        "asset": "vocabulary/assets/vg-scene-photo-v1.svg",
+        "alt": "A picture you make with a camera.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2277,8 +2349,8 @@
   {
     "entry_id": "ro-vocab:piano:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:piano:noun:unqualified",
@@ -2293,7 +2365,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "piano (noun)",
+    "sense_label": "a big instrument with black and white keys",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -2304,10 +2376,10 @@
       "cyle25-theme:sports-leisure"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A big instrument you play by pressing black and white keys.",
+      "explanation_vi": "Nhạc cụ to chơi bằng cách nhấn các phím đen trắng (đàn piano).",
+      "example_en": "She plays a song on the piano.",
+      "example_vi": "Cô ấy chơi một bài trên đàn piano.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2319,22 +2391,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-piano-v1",
+        "asset": "vocabulary/assets/vg-scene-piano-v1.svg",
+        "alt": "A big instrument you play by pressing black and white keys.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2413,8 +2489,8 @@
   {
     "entry_id": "ro-vocab:picnic:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:picnic:noun:unqualified",
@@ -2429,7 +2505,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "picnic (noun)",
+    "sense_label": "a meal eaten outside",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -2440,10 +2516,10 @@
       "cyle25-theme:food-drink"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A meal you take outside to eat in a park or a field.",
+      "explanation_vi": "Bữa ăn mang ra ngoài trời để ăn ở công viên hay cánh đồng (buổi dã ngoại).",
+      "example_en": "We have a picnic in the park.",
+      "example_vi": "Chúng em đi dã ngoại ở công viên.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2455,22 +2531,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-picnic-v1",
+        "asset": "vocabulary/assets/vg-scene-picnic-v1.svg",
+        "alt": "A meal you take outside to eat in a park or a field.",
+        "status": "needs_human_review",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2554,8 +2634,8 @@
   {
     "entry_id": "ro-vocab:pie:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:pie:noun:unqualified",
@@ -2570,7 +2650,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "pie (noun)",
+    "sense_label": "a food baked in pastry",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -2581,10 +2661,10 @@
       "cyle25-theme:food-drink"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "Fruit or meat baked inside pastry.",
+      "explanation_vi": "Trái cây hoặc thịt bọc trong lớp bột nướng (bánh nhân).",
+      "example_en": "We eat apple pie.",
+      "example_vi": "Chúng em ăn bánh nhân táo.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2596,22 +2676,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-pie-v1",
+        "asset": "vocabulary/assets/vg-scene-pie-v1.svg",
+        "alt": "Fruit or meat baked inside pastry.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2623,8 +2707,8 @@
   {
     "entry_id": "ro-vocab:piece:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:piece:noun:unqualified",
@@ -2639,7 +2723,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "piece (noun)",
+    "sense_label": "a part of a bigger thing",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -2650,10 +2734,10 @@
       "cyle25-theme:food-drink"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A part or bit of a bigger thing.",
+      "explanation_vi": "Một phần hoặc mảnh của vật lớn hơn (một miếng, một mảnh).",
+      "example_en": "I eat a piece of cake.",
+      "example_vi": "Em ăn một miếng bánh.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2665,22 +2749,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-piece-v1",
+        "asset": "vocabulary/assets/vg-scene-piece-v1.svg",
+        "alt": "A part or bit of a bigger thing.",
+        "status": "needs_human_review",
+        "kind": "concept",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2692,8 +2779,8 @@
   {
     "entry_id": "ro-vocab:pilot:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:pilot:noun:unqualified",
@@ -2708,7 +2795,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "pilot (noun)",
+    "sense_label": "a person who flies a plane",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -2719,10 +2806,10 @@
       "cyle25-theme:work"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A person whose job is to fly a plane.",
+      "explanation_vi": "Người có công việc lái máy bay (phi công).",
+      "example_en": "The pilot flies the plane in the sky.",
+      "example_vi": "Phi công lái máy bay trên bầu trời.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2734,22 +2821,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-pilot-v1",
+        "asset": "vocabulary/assets/vg-scene-pilot-v1.svg",
+        "alt": "A person whose job is to fly a plane.",
+        "status": "needs_human_review",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2761,8 +2852,8 @@
   {
     "entry_id": "ro-vocab:pineapple:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:pineapple:noun:unqualified",
@@ -2777,7 +2868,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "pineapple (noun)",
+    "sense_label": "a spiky fruit with sweet yellow inside",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -2788,10 +2879,10 @@
       "cyle25-theme:food-drink"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A large fruit with a rough spiky skin and sweet yellow inside.",
+      "explanation_vi": "Quả to, vỏ gai, ruột vàng ngọt (quả dứa/thơm).",
+      "example_en": "The pineapple is sweet.",
+      "example_vi": "Quả dứa rất ngọt.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2803,22 +2894,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-pineapple-v1",
+        "asset": "vocabulary/assets/vg-scene-pineapple-v1.svg",
+        "alt": "A large fruit with a rough spiky skin and sweet yellow inside.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2830,8 +2925,8 @@
   {
     "entry_id": "ro-vocab:pink:adjective:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:pink:adjective:unqualified",
@@ -2846,7 +2941,7 @@
       "adjective"
     ],
     "source_qualifier": null,
-    "sense_label": "pink (adjective)",
+    "sense_label": "a light red colour",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -2857,10 +2952,10 @@
       "cyle25-theme:colours"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A soft light-red colour, like many flowers.",
+      "explanation_vi": "Màu đỏ nhạt dịu, như nhiều loài hoa (màu hồng).",
+      "example_en": "The flower is pink.",
+      "example_vi": "Bông hoa màu hồng.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2872,22 +2967,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-pink-v1",
+        "asset": "vocabulary/assets/vg-scene-pink-v1.svg",
+        "alt": "A soft light-red colour, like many flowers.",
+        "status": "needs_human_review",
+        "kind": "colour",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2899,8 +2998,8 @@
   {
     "entry_id": "ro-vocab:pirate:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:pirate:noun:unqualified",
@@ -2915,7 +3014,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "pirate (noun)",
+    "sense_label": "a robber who sails the sea",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -2926,10 +3025,10 @@
       "cyle25-theme:work"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A person in stories who sails the sea and looks for treasure.",
+      "explanation_vi": "Nhân vật trong truyện đi biển và tìm kho báu (cướp biển).",
+      "example_en": "The pirate has a map of the treasure.",
+      "example_vi": "Tên cướp biển có tấm bản đồ kho báu.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2941,22 +3040,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-pirate-v1",
+        "asset": "vocabulary/assets/vg-scene-pirate-v1.svg",
+        "alt": "A person in stories who sails the sea and looks for treasure.",
+        "status": "needs_human_review",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2968,8 +3071,8 @@
   {
     "entry_id": "ro-vocab:pizza:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:pizza:noun:unqualified",
@@ -2984,7 +3087,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "pizza (noun)",
+    "sense_label": "a round flat food with cheese on top",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -2995,10 +3098,10 @@
       "cyle25-theme:food-drink"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A round flat bread with cheese and other food on top.",
+      "explanation_vi": "Bánh tròn dẹt có phô mai và đồ ăn ở trên (pizza).",
+      "example_en": "We share a big pizza.",
+      "example_vi": "Chúng em cùng ăn một cái pizza to.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -3010,22 +3113,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-pizza-v1",
+        "asset": "vocabulary/assets/vg-scene-pizza-v1.svg",
+        "alt": "A round flat bread with cheese and other food on top.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -3180,8 +3287,8 @@
   {
     "entry_id": "ro-vocab:planet:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:planet:noun:unqualified",
@@ -3196,7 +3303,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "planet (noun)",
+    "sense_label": "a big round world in space",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -3207,10 +3314,10 @@
       "cyle25-theme:the-world-around-us"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A big round world in space that goes around a star, like Earth.",
+      "explanation_vi": "Khối tròn to trong không gian quay quanh một ngôi sao, như Trái Đất (hành tinh).",
+      "example_en": "Earth is our planet.",
+      "example_vi": "Trái Đất là hành tinh của chúng ta.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -3222,22 +3329,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-planet-v1",
+        "asset": "vocabulary/assets/vg-scene-planet-v1.svg",
+        "alt": "A big round world in space that goes around a star, like Earth.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -3249,8 +3360,8 @@
   {
     "entry_id": "ro-vocab:plant:noun-verb:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:plant:noun-verb:unqualified",
@@ -3266,7 +3377,7 @@
       "verb"
     ],
     "source_qualifier": null,
-    "sense_label": "plant (noun/verb)",
+    "sense_label": "to put a seed in the ground to grow",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -3277,10 +3388,10 @@
       "cyle25-theme:the-world-around-us"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "To put a seed or small plant in the ground so it can grow.",
+      "explanation_vi": "Đặt hạt hoặc cây nhỏ xuống đất để nó lớn lên (trồng cây).",
+      "example_en": "We plant seeds in the garden.",
+      "example_vi": "Chúng em gieo hạt trong vườn.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -3292,22 +3403,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-plant-v1",
+        "asset": "vocabulary/assets/vg-scene-plant-v1.svg",
+        "alt": "To put a seed or small plant in the ground so it can grow.",
+        "status": "needs_human_review",
+        "kind": "action",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -3462,8 +3576,8 @@
   {
     "entry_id": "ro-vocab:platform:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:platform:noun:unqualified",
@@ -3478,7 +3592,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "platform (noun)",
+    "sense_label": "where you wait to get on a train",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -3489,10 +3603,10 @@
       "cyle25-theme:transport"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "The flat place at a station where you wait to get on a train.",
+      "explanation_vi": "Chỗ phẳng ở ga nơi đợi lên tàu (sân ga).",
+      "example_en": "We wait on the platform.",
+      "example_vi": "Chúng em đợi trên sân ga.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -3504,22 +3618,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-platform-v1",
+        "asset": "vocabulary/assets/vg-scene-platform-v1.svg",
+        "alt": "The flat place at a station where you wait to get on a train.",
+        "status": "needs_human_review",
+        "kind": "place",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -3531,8 +3649,8 @@
   {
     "entry_id": "ro-vocab:play:verb:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:play:verb:unqualified",
@@ -3547,7 +3665,7 @@
       "verb"
     ],
     "source_qualifier": null,
-    "sense_label": "play (verb)",
+    "sense_label": "to have fun with games or toys",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -3558,10 +3676,10 @@
       "cyle25-theme:sports-leisure"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "To have fun with games, toys or friends.",
+      "explanation_vi": "Vui chơi với trò chơi, đồ chơi hay bạn bè (chơi).",
+      "example_en": "The children play in the garden.",
+      "example_vi": "Bọn trẻ chơi trong vườn.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -3573,22 +3691,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "action_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-action-play-v1",
+        "asset": "vocabulary/assets/vg-action-play-v1.svg",
+        "alt": "To have fun with games, toys or friends.",
+        "status": "needs_human_review",
+        "kind": "action",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "position_action_play",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -3600,8 +3722,8 @@
   {
     "entry_id": "ro-vocab:player:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:player:noun:unqualified",
@@ -3616,7 +3738,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "player (noun)",
+    "sense_label": "a person who plays a game or sport",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -3627,10 +3749,10 @@
       "cyle25-theme:sports-leisure"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A person who plays a game or a sport.",
+      "explanation_vi": "Người chơi một trò chơi hoặc môn thể thao (người chơi, cầu thủ).",
+      "example_en": "The player kicks the ball into the goal.",
+      "example_vi": "Cầu thủ sút bóng vào khung thành.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -3642,22 +3764,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-player-v1",
+        "asset": "vocabulary/assets/vg-scene-player-v1.svg",
+        "alt": "A person who plays a game or a sport.",
+        "status": "needs_human_review",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -3669,8 +3795,8 @@
   {
     "entry_id": "ro-vocab:playground:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:playground:noun:unqualified",
@@ -3685,7 +3811,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "playground (noun)",
+    "sense_label": "a place outside where children play",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -3697,10 +3823,10 @@
       "cyle25-theme:school"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A place outside with swings and slides where children play.",
+      "explanation_vi": "Nơi ngoài trời có xích đu, cầu trượt để trẻ chơi (sân chơi).",
+      "example_en": "We play at the playground.",
+      "example_vi": "Chúng em chơi ở sân chơi.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -3712,22 +3838,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-playground-v1",
+        "asset": "vocabulary/assets/vg-scene-playground-v1.svg",
+        "alt": "A place outside with swings and slides where children play.",
+        "status": "needs_human_review",
+        "kind": "place",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -3873,8 +4003,8 @@
   {
     "entry_id": "ro-vocab:pocket:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:pocket:noun:unqualified",
@@ -3889,7 +4019,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "pocket (noun)",
+    "sense_label": "a small bag in your clothes",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -3900,10 +4030,10 @@
       "cyle25-theme:clothes"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A small bag sewn into your clothes to hold things.",
+      "explanation_vi": "Túi nhỏ may vào quần áo để đựng đồ (cái túi áo/quần).",
+      "example_en": "I put my key in my pocket.",
+      "example_vi": "Em bỏ chìa khóa vào túi áo.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -3915,22 +4045,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-pocket-v1",
+        "asset": "vocabulary/assets/vg-scene-pocket-v1.svg",
+        "alt": "A small bag sewn into your clothes to hold things.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -4009,8 +4142,8 @@
   {
     "entry_id": "ro-vocab:polar-bear:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:polar-bear:noun:unqualified",
@@ -4025,7 +4158,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "polar bear (noun)",
+    "sense_label": "a big white bear from cold places",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -4036,10 +4169,10 @@
       "cyle25-theme:animals"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A big white bear that lives where it is very cold.",
+      "explanation_vi": "Con gấu to màu trắng sống ở nơi rất lạnh (gấu Bắc Cực).",
+      "example_en": "The polar bear lives on the ice.",
+      "example_vi": "Gấu Bắc Cực sống trên băng.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -4051,22 +4184,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-polar-bear-v1",
+        "asset": "vocabulary/assets/vg-scene-polar-bear-v1.svg",
+        "alt": "A big white bear that lives where it is very cold.",
+        "status": "needs_human_review",
+        "kind": "animal",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -4217,8 +4354,8 @@
   {
     "entry_id": "ro-vocab:pond:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:pond:noun:unqualified",
@@ -4233,7 +4370,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "pond (noun)",
+    "sense_label": "a small area of water",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -4244,10 +4381,10 @@
       "cyle25-theme:the-world-around-us"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A small area of water, smaller than a lake.",
+      "explanation_vi": "Vùng nước nhỏ, bé hơn hồ (cái ao).",
+      "example_en": "Frogs live in the pond.",
+      "example_vi": "Ếch sống ở cái ao.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -4259,22 +4396,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-pond-v1",
+        "asset": "vocabulary/assets/vg-scene-pond-v1.svg",
+        "alt": "A small area of water, smaller than a lake.",
+        "status": "needs_human_review",
+        "kind": "place",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -4286,8 +4427,8 @@
   {
     "entry_id": "ro-vocab:pool:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:pool:noun:unqualified",
@@ -4302,7 +4443,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "pool (noun)",
+    "sense_label": "a big place of water for swimming",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -4313,10 +4454,10 @@
       "cyle25-theme:sports-leisure"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A big place full of water that you swim in.",
+      "explanation_vi": "Nơi chứa đầy nước để bơi (hồ bơi, bể bơi).",
+      "example_en": "We swim in the pool.",
+      "example_vi": "Chúng em bơi trong hồ bơi.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -4328,22 +4469,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-pool-v1",
+        "asset": "vocabulary/assets/vg-scene-pool-v1.svg",
+        "alt": "A big place full of water that you swim in.",
+        "status": "needs_human_review",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -4763,8 +4908,8 @@
   {
     "entry_id": "ro-vocab:postcard:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:postcard:noun:unqualified",
@@ -4779,7 +4924,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "postcard (noun)",
+    "sense_label": "a card you post with a picture",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -4788,10 +4933,10 @@
     },
     "theme_ids": [],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A card with a picture on one side that you post to a friend.",
+      "explanation_vi": "Tấm thiệp có hình một mặt, gửi qua bưu điện cho bạn (bưu thiếp).",
+      "example_en": "I send a postcard from the beach.",
+      "example_vi": "Em gửi bưu thiếp từ bãi biển.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -4803,22 +4948,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-postcard-v1",
+        "asset": "vocabulary/assets/vg-scene-postcard-v1.svg",
+        "alt": "A card with a picture on one side that you post to a friend.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -4830,8 +4978,8 @@
   {
     "entry_id": "ro-vocab:poster:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:poster:noun:unqualified",
@@ -4846,7 +4994,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "poster (noun)",
+    "sense_label": "a big picture for the wall",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -4857,10 +5005,10 @@
       "cyle25-theme:school"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A big printed picture that you put on a wall.",
+      "explanation_vi": "Bức hình to in ra để dán lên tường (áp phích).",
+      "example_en": "I put a poster of a lion on my wall.",
+      "example_vi": "Em dán một tấm áp phích con sư tử lên tường.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -4872,22 +5020,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-poster-v1",
+        "asset": "vocabulary/assets/vg-scene-poster-v1.svg",
+        "alt": "A big printed picture that you put on a wall.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -4899,8 +5050,8 @@
   {
     "entry_id": "ro-vocab:potato:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:potato:noun:unqualified",
@@ -4915,7 +5066,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "potato (noun)",
+    "sense_label": "a round vegetable that grows in the ground",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -4926,10 +5077,10 @@
       "cyle25-theme:food-drink"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A round vegetable that grows under the ground.",
+      "explanation_vi": "Củ tròn mọc dưới đất (khoai tây).",
+      "example_en": "We cook the potato.",
+      "example_vi": "Chúng em nấu củ khoai tây.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -4941,22 +5092,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-potato-v1",
+        "asset": "vocabulary/assets/vg-scene-potato-v1.svg",
+        "alt": "A round vegetable that grows under the ground.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -5240,8 +5395,8 @@
   {
     "entry_id": "ro-vocab:present:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:present:noun:unqualified",
@@ -5256,7 +5411,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "present (noun)",
+    "sense_label": "a gift you give someone",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -5267,10 +5422,10 @@
       "cyle25-theme:sports-leisure"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A thing you give to someone you like, often wrapped up.",
+      "explanation_vi": "Món quà tặng cho người bạn quý, thường được gói lại (món quà).",
+      "example_en": "I give my friend a birthday present.",
+      "example_vi": "Em tặng bạn một món quà sinh nhật.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -5282,22 +5437,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-present-v1",
+        "asset": "vocabulary/assets/vg-scene-present-v1.svg",
+        "alt": "A thing you give to someone you like, often wrapped up.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -5376,8 +5535,8 @@
   {
     "entry_id": "ro-vocab:prize:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:prize:noun:unqualified",
@@ -5392,7 +5551,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "prize (noun)",
+    "sense_label": "a reward for winning",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -5403,10 +5562,10 @@
       "cyle25-theme:sports-leisure"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A thing you get for winning a game or a competition.",
+      "explanation_vi": "Vật bạn nhận được khi thắng một trò chơi hay cuộc thi (giải thưởng).",
+      "example_en": "She wins a prize for her painting.",
+      "example_vi": "Cô ấy được giải thưởng cho bức tranh.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -5418,22 +5577,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-prize-v1",
+        "asset": "vocabulary/assets/vg-scene-prize-v1.svg",
+        "alt": "A thing you get for winning a game or a competition.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -5649,8 +5811,8 @@
   {
     "entry_id": "ro-vocab:pull:verb:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:pull:verb:unqualified",
@@ -5665,7 +5827,7 @@
       "verb"
     ],
     "source_qualifier": null,
-    "sense_label": "pull (verb)",
+    "sense_label": "to move something toward you",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -5674,11 +5836,11 @@
     },
     "theme_ids": [],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
-      "nonexample_en": null,
+      "definition_en": "To move something toward you, not away.",
+      "explanation_vi": "Kéo một vật về phía mình (kéo).",
+      "example_en": "The dog pulls the rope.",
+      "example_vi": "Con chó kéo sợi dây thừng.",
+      "nonexample_en": "She pushes the door away.",
       "contrast_entry_ids": [],
       "usage_notes": [],
       "pronunciation": {
@@ -5689,22 +5851,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "action_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-action-pull-v1",
+        "asset": "vocabulary/assets/vg-action-pull-v1.svg",
+        "alt": "To move something toward you, not away.",
+        "status": "needs_human_review",
+        "kind": "action",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "position_action_play",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -5716,8 +5882,8 @@
   {
     "entry_id": "ro-vocab:puppy:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:puppy:noun:unqualified",
@@ -5732,7 +5898,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "puppy (noun)",
+    "sense_label": "a baby dog",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -5743,10 +5909,10 @@
       "cyle25-theme:animals"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A baby dog.",
+      "explanation_vi": "Con chó con.",
+      "example_en": "The puppy runs to me.",
+      "example_vi": "Con chó con chạy đến chỗ em.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -5758,22 +5924,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-puppy-v1",
+        "asset": "vocabulary/assets/vg-scene-puppy-v1.svg",
+        "alt": "A baby dog.",
+        "status": "needs_human_review",
+        "kind": "animal",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -5785,8 +5955,8 @@
   {
     "entry_id": "ro-vocab:purple:adjective:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:purple:adjective:unqualified",
@@ -5801,7 +5971,7 @@
       "adjective"
     ],
     "source_qualifier": null,
-    "sense_label": "purple (adjective)",
+    "sense_label": "a colour of red and blue mixed",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -5812,10 +5982,10 @@
       "cyle25-theme:colours"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "The colour you get when you mix red and blue.",
+      "explanation_vi": "Màu có được khi trộn đỏ với xanh dương (màu tím).",
+      "example_en": "The grapes are purple.",
+      "example_vi": "Chùm nho màu tím.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -5827,22 +5997,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-purple-v1",
+        "asset": "vocabulary/assets/vg-scene-purple-v1.svg",
+        "alt": "The colour you get when you mix red and blue.",
+        "status": "needs_human_review",
+        "kind": "colour",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -5854,8 +6028,8 @@
   {
     "entry_id": "ro-vocab:push:verb:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:push:verb:unqualified",
@@ -5870,7 +6044,7 @@
       "verb"
     ],
     "source_qualifier": null,
-    "sense_label": "push (verb)",
+    "sense_label": "to move something away from you",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -5879,11 +6053,11 @@
     },
     "theme_ids": [],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
-      "nonexample_en": null,
+      "definition_en": "To move something away from you with your hands.",
+      "explanation_vi": "Dùng tay đẩy một vật ra xa mình (đẩy).",
+      "example_en": "He pushes the box across the floor.",
+      "example_vi": "Cậu ấy đẩy cái hộp trên sàn.",
+      "nonexample_en": "The dog pulls the rope toward it.",
       "contrast_entry_ids": [],
       "usage_notes": [],
       "pronunciation": {
@@ -5894,22 +6068,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "action_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-action-push-v1",
+        "asset": "vocabulary/assets/vg-action-push-v1.svg",
+        "alt": "To move something away from you with your hands.",
+        "status": "needs_human_review",
+        "kind": "action",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "position_action_play",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -6055,8 +6233,8 @@
   {
     "entry_id": "ro-vocab:puzzle:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:puzzle:noun:unqualified",
@@ -6071,7 +6249,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "puzzle (noun)",
+    "sense_label": "pieces you join to make a picture",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -6082,10 +6260,10 @@
       "cyle25-theme:sports-leisure"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A game with pieces you fit together to make a picture.",
+      "explanation_vi": "Trò chơi gồm các mảnh ghép lại thành một bức hình (trò xếp hình).",
+      "example_en": "I do a puzzle of a big lion.",
+      "example_vi": "Em xếp hình một con sư tử to.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -6097,22 +6275,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-puzzle-v1",
+        "asset": "vocabulary/assets/vg-scene-puzzle-v1.svg",
+        "alt": "A game with pieces you fit together to make a picture.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -6192,8 +6373,8 @@
   {
     "entry_id": "ro-vocab:pyramid:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:pyramid:noun:unqualified",
@@ -6208,7 +6389,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "pyramid (noun)",
+    "sense_label": "a big stone building with a pointed top",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -6219,10 +6400,10 @@
       "cyle25-theme:sports-leisure"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A very big old stone building with a wide base and a pointed top.",
+      "explanation_vi": "Công trình đá to cổ xưa, đáy rộng và đỉnh nhọn (kim tự tháp).",
+      "example_en": "The pyramid is very old and tall.",
+      "example_vi": "Kim tự tháp rất cổ và cao.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -6234,22 +6415,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-pyramid-v1",
+        "asset": "vocabulary/assets/vg-scene-pyramid-v1.svg",
+        "alt": "A very big old stone building with a wide base and a pointed top.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },

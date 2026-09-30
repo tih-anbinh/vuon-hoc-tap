@@ -72,8 +72,8 @@
   {
     "entry_id": "ro-vocab:garden:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:garden:noun:unqualified",
@@ -88,7 +88,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "garden (noun)",
+    "sense_label": "a place with plants next to a house",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -99,10 +99,10 @@
       "cyle25-theme:the-home"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A piece of land next to a house where plants and flowers grow.",
+      "explanation_vi": "Mảnh đất cạnh nhà trồng cây và hoa (khu vườn).",
+      "example_en": "Flowers grow in the garden.",
+      "example_vi": "Hoa mọc trong vườn.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -114,22 +114,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-garden-v1",
+        "asset": "vocabulary/assets/vg-scene-garden-v1.svg",
+        "alt": "A piece of land next to a house where plants and flowers grow.",
+        "status": "needs_human_review",
+        "kind": "place",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -141,8 +145,8 @@
   {
     "entry_id": "ro-vocab:gate:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:gate:noun:unqualified",
@@ -157,7 +161,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "gate (noun)",
+    "sense_label": "a door in a wall or fence outside",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -168,10 +172,10 @@
       "cyle25-theme:the-home"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A door in a wall or fence that you go through to enter a garden or yard.",
+      "explanation_vi": "Cánh cửa ở tường hay hàng rào để đi vào sân, vườn (cái cổng).",
+      "example_en": "Open the garden gate.",
+      "example_vi": "Mở cổng vườn ra.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -183,22 +187,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-gate-v1",
+        "asset": "vocabulary/assets/vg-scene-gate-v1.svg",
+        "alt": "A door in a wall or fence that you go through to enter a garden or yard.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -819,8 +827,8 @@
   {
     "entry_id": "ro-vocab:giraffe:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:giraffe:noun:unqualified",
@@ -835,7 +843,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "giraffe (noun)",
+    "sense_label": "a tall animal with a very long neck",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -846,10 +854,10 @@
       "cyle25-theme:animals"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A very tall animal with a long neck and long legs.",
+      "explanation_vi": "Con vật rất cao, cổ dài và chân dài (hươu cao cổ).",
+      "example_en": "The giraffe eats leaves from the tall tree.",
+      "example_vi": "Hươu cao cổ ăn lá trên cây cao.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -861,22 +869,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-giraffe-v1",
+        "asset": "vocabulary/assets/vg-scene-giraffe-v1.svg",
+        "alt": "A very tall animal with a long neck and long legs.",
+        "status": "needs_human_review",
+        "kind": "animal",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1028,8 +1040,8 @@
   {
     "entry_id": "ro-vocab:glass:adjective:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:glass:adjective:unqualified",
@@ -1044,7 +1056,7 @@
       "adjective"
     ],
     "source_qualifier": null,
-    "sense_label": "glass (adjective)",
+    "sense_label": "made of the clear hard material",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -1053,10 +1065,10 @@
     },
     "theme_ids": [],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "Made of the clear, hard material you can see through.",
+      "explanation_vi": "Được làm bằng vật liệu trong suốt, cứng, nhìn xuyên qua được (bằng thủy tinh).",
+      "example_en": "The window is made of glass.",
+      "example_vi": "Cửa sổ làm bằng thủy tinh.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1068,22 +1080,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-glass-v1",
+        "asset": "vocabulary/assets/vg-scene-glass-v1.svg",
+        "alt": "Made of the clear, hard material you can see through.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1095,8 +1110,8 @@
   {
     "entry_id": "ro-vocab:glass:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:glass:noun:unqualified",
@@ -1111,7 +1126,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "glass (noun)",
+    "sense_label": "a cup you drink from",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -1123,10 +1138,10 @@
       "cyle25-theme:materials"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A cup made of clear, hard material that you drink from.",
+      "explanation_vi": "Cái cốc làm bằng vật liệu trong và cứng để uống nước (cái ly).",
+      "example_en": "I drink water from a glass.",
+      "example_vi": "Em uống nước từ cái ly.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1138,22 +1153,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-glass-v1",
+        "asset": "vocabulary/assets/vg-scene-glass-v1.svg",
+        "alt": "A cup made of clear, hard material that you drink from.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1165,8 +1184,8 @@
   {
     "entry_id": "ro-vocab:glasses:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:glasses:noun:unqualified",
@@ -1181,7 +1200,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "glasses (noun)",
+    "sense_label": "you wear these to see better",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -1192,10 +1211,10 @@
       "cyle25-theme:clothes"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "Two round pieces of glass you wear over your eyes to see better.",
+      "explanation_vi": "Hai mắt kính đeo trước mắt để nhìn rõ hơn (cái kính).",
+      "example_en": "Grandma wears glasses to read.",
+      "example_vi": "Bà đeo kính để đọc.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1207,22 +1226,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-glasses-v1",
+        "asset": "vocabulary/assets/vg-scene-glasses-v1.svg",
+        "alt": "Two round pieces of glass you wear over your eyes to see better.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1234,8 +1257,8 @@
   {
     "entry_id": "ro-vocab:glove:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:glove:noun:unqualified",
@@ -1250,7 +1273,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "glove (noun)",
+    "sense_label": "clothes for your hands",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -1261,10 +1284,10 @@
       "cyle25-theme:clothes"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A piece of clothing that covers your hand and each finger.",
+      "explanation_vi": "Đồ che bàn tay và từng ngón tay (găng tay).",
+      "example_en": "I wear warm gloves.",
+      "example_vi": "Em đeo găng tay ấm.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1276,22 +1299,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-glove-v1",
+        "asset": "vocabulary/assets/vg-scene-glove-v1.svg",
+        "alt": "A piece of clothing that covers your hand and each finger.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1303,8 +1330,8 @@
   {
     "entry_id": "ro-vocab:glue:noun-verb:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:glue:noun-verb:unqualified",
@@ -1320,7 +1347,7 @@
       "verb"
     ],
     "source_qualifier": null,
-    "sense_label": "glue (noun/verb)",
+    "sense_label": "a sticky liquid that joins things",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -1331,10 +1358,10 @@
       "cyle25-theme:school"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A sticky liquid you use to join paper or things together.",
+      "explanation_vi": "Chất lỏng dính dùng để dán giấy hay đồ vật với nhau (keo dán).",
+      "example_en": "I use glue to stick the paper.",
+      "example_vi": "Em dùng keo để dán giấy.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1346,22 +1373,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-glue-v1",
+        "asset": "vocabulary/assets/vg-scene-glue-v1.svg",
+        "alt": "A sticky liquid you use to join paper or things together.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1779,8 +1810,8 @@
   {
     "entry_id": "ro-vocab:goal:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:goal:noun:unqualified",
@@ -1795,7 +1826,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "goal (noun)",
+    "sense_label": "the net you score into in a game",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -1806,10 +1837,10 @@
       "cyle25-theme:sports-leisure"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "The net that you put the ball into to win a point in football.",
+      "explanation_vi": "Khung lưới mà bạn đưa bóng vào để ghi điểm trong bóng đá (khung thành, bàn thắng).",
+      "example_en": "He kicks the ball into the goal.",
+      "example_vi": "Cậu ấy sút bóng vào khung thành.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1821,22 +1852,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-goal-v1",
+        "asset": "vocabulary/assets/vg-scene-goal-v1.svg",
+        "alt": "The net that you put the ball into to win a point in football.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1921,8 +1955,8 @@
   {
     "entry_id": "ro-vocab:gold:adjective-noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:gold:adjective-noun:unqualified",
@@ -1938,7 +1972,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "gold (adjective/noun)",
+    "sense_label": "a shiny yellow metal that is special",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -1950,10 +1984,10 @@
       "cyle25-theme:materials"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A shiny yellow metal that costs a lot and is used for rings.",
+      "explanation_vi": "Kim loại màu vàng bóng, quý giá, dùng làm nhẫn (vàng).",
+      "example_en": "The ring is made of gold.",
+      "example_vi": "Chiếc nhẫn làm bằng vàng.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1965,22 +1999,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-gold-v1",
+        "asset": "vocabulary/assets/vg-scene-gold-v1.svg",
+        "alt": "A shiny yellow metal that costs a lot and is used for rings.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1992,8 +2029,8 @@
   {
     "entry_id": "ro-vocab:golf:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:golf:noun:unqualified",
@@ -2008,7 +2045,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "golf (noun)",
+    "sense_label": "a game hitting a small ball into holes",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -2019,10 +2056,10 @@
       "cyle25-theme:sports-leisure"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A game where you hit a small ball into holes with a club.",
+      "explanation_vi": "Trò chơi dùng gậy đánh quả bóng nhỏ vào lỗ (gôn).",
+      "example_en": "He plays golf on the green field.",
+      "example_vi": "Ông ấy chơi gôn trên cánh đồng xanh.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2034,22 +2071,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-golf-v1",
+        "asset": "vocabulary/assets/vg-scene-golf-v1.svg",
+        "alt": "A game where you hit a small ball into holes with a club.",
+        "status": "needs_human_review",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2264,8 +2304,8 @@
   {
     "entry_id": "ro-vocab:granddaughter:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:granddaughter:noun:unqualified",
@@ -2280,7 +2320,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "granddaughter (noun)",
+    "sense_label": "the daughter of your child",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -2291,10 +2331,10 @@
       "cyle25-theme:family-friends"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "The daughter of your son or daughter.",
+      "explanation_vi": "Con gái của con bạn (cháu gái).",
+      "example_en": "She is my grandma's granddaughter.",
+      "example_vi": "Bạn ấy là cháu gái của bà em.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2306,22 +2346,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-granddaughter-v1",
+        "asset": "vocabulary/assets/vg-scene-granddaughter-v1.svg",
+        "alt": "The daughter of your son or daughter.",
+        "status": "needs_human_review",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2406,8 +2449,8 @@
   {
     "entry_id": "ro-vocab:grandma:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:grandma:noun:unqualified",
@@ -2422,7 +2465,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "grandma (noun)",
+    "sense_label": "your mother's or father's mother",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -2433,10 +2476,10 @@
       "cyle25-theme:family-friends"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "The mother of your mother or father.",
+      "explanation_vi": "Mẹ của bố hoặc mẹ bạn (bà).",
+      "example_en": "My grandma tells me old stories.",
+      "example_vi": "Bà kể cho em nghe những câu chuyện xưa.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2448,22 +2491,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-grandma-v1",
+        "asset": "vocabulary/assets/vg-scene-grandma-v1.svg",
+        "alt": "The mother of your mother or father.",
+        "status": "needs_human_review",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2548,8 +2595,8 @@
   {
     "entry_id": "ro-vocab:grandpa:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:grandpa:noun:unqualified",
@@ -2564,7 +2611,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "grandpa (noun)",
+    "sense_label": "your mother's or father's father",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -2575,10 +2622,10 @@
       "cyle25-theme:family-friends"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "The father of your mother or father.",
+      "explanation_vi": "Bố của bố hoặc mẹ bạn (ông).",
+      "example_en": "My grandpa walks in the garden.",
+      "example_vi": "Ông đi dạo trong vườn.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2590,22 +2637,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-grandpa-v1",
+        "asset": "vocabulary/assets/vg-scene-grandpa-v1.svg",
+        "alt": "The father of your mother or father.",
+        "status": "needs_human_review",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2617,8 +2668,8 @@
   {
     "entry_id": "ro-vocab:grandparent:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:grandparent:noun:unqualified",
@@ -2633,7 +2684,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "grandparent (noun)",
+    "sense_label": "a grandmother or grandfather",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -2644,10 +2695,10 @@
       "cyle25-theme:family-friends"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "The mother or father of one of your parents.",
+      "explanation_vi": "Ông hoặc bà của bạn (ông bà).",
+      "example_en": "I visit my grandparents on holidays.",
+      "example_vi": "Em thăm ông bà vào dịp lễ.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2659,22 +2710,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-grandparent-v1",
+        "asset": "vocabulary/assets/vg-scene-grandparent-v1.svg",
+        "alt": "The mother or father of one of your parents.",
+        "status": "needs_human_review",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2686,8 +2740,8 @@
   {
     "entry_id": "ro-vocab:grandson:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:grandson:noun:unqualified",
@@ -2702,7 +2756,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "grandson (noun)",
+    "sense_label": "the son of your child",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -2713,10 +2767,10 @@
       "cyle25-theme:family-friends"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "The son of your son or daughter.",
+      "explanation_vi": "Con trai của con bạn (cháu trai).",
+      "example_en": "He is my grandpa's grandson.",
+      "example_vi": "Bạn ấy là cháu trai của ông em.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2728,22 +2782,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-grandson-v1",
+        "asset": "vocabulary/assets/vg-scene-grandson-v1.svg",
+        "alt": "The son of your son or daughter.",
+        "status": "needs_human_review",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2755,8 +2812,8 @@
   {
     "entry_id": "ro-vocab:grape:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:grape:noun:unqualified",
@@ -2771,7 +2828,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "grape (noun)",
+    "sense_label": "a small round fruit in a bunch",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -2782,10 +2839,10 @@
       "cyle25-theme:food-drink"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A small round fruit that grows in a bunch.",
+      "explanation_vi": "Quả tròn nhỏ mọc thành chùm (quả nho).",
+      "example_en": "I eat purple grapes.",
+      "example_vi": "Em ăn nho tím.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2797,22 +2854,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-grape-v1",
+        "asset": "vocabulary/assets/vg-scene-grape-v1.svg",
+        "alt": "A small round fruit that grows in a bunch.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2824,8 +2885,8 @@
   {
     "entry_id": "ro-vocab:grass:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:grass:noun:unqualified",
@@ -2840,7 +2901,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "grass (noun)",
+    "sense_label": "the short green plant on the ground",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -2851,10 +2912,10 @@
       "cyle25-theme:the-world-around-us"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "The short green plant that grows over the ground.",
+      "explanation_vi": "Loài cây thấp màu xanh mọc trên mặt đất (cỏ).",
+      "example_en": "We sit on the green grass.",
+      "example_vi": "Chúng em ngồi trên cỏ xanh.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2866,22 +2927,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-grass-v1",
+        "asset": "vocabulary/assets/vg-scene-grass-v1.svg",
+        "alt": "The short green plant that grows over the ground.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -3170,8 +3235,8 @@
   {
     "entry_id": "ro-vocab:ground:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:ground:noun:unqualified",
@@ -3186,7 +3251,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "ground (noun)",
+    "sense_label": "the top of the earth you stand on",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -3197,10 +3262,10 @@
       "cyle25-theme:the-world-around-us"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "The top of the earth that you stand and walk on.",
+      "explanation_vi": "Bề mặt đất mà bạn đứng và đi trên đó (mặt đất).",
+      "example_en": "The ball is on the ground.",
+      "example_vi": "Quả bóng nằm trên mặt đất.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -3212,22 +3277,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-ground-v1",
+        "asset": "vocabulary/assets/vg-scene-ground-v1.svg",
+        "alt": "The top of the earth that you stand and walk on.",
+        "status": "needs_human_review",
+        "kind": "place",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -3239,8 +3308,8 @@
   {
     "entry_id": "ro-vocab:group:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:group:noun:unqualified",
@@ -3255,7 +3324,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "group (noun)",
+    "sense_label": "several people or things together",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -3266,10 +3335,10 @@
       "cyle25-theme:school"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A number of people or things that are together.",
+      "explanation_vi": "Nhiều người hoặc vật ở cùng nhau (nhóm).",
+      "example_en": "A group of children sings a song.",
+      "example_vi": "Một nhóm trẻ hát một bài hát.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -3281,22 +3350,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-group-v1",
+        "asset": "vocabulary/assets/vg-scene-group-v1.svg",
+        "alt": "A number of people or things that are together.",
+        "status": "needs_human_review",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -3308,8 +3380,8 @@
   {
     "entry_id": "ro-vocab:grow:verb:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:grow:verb:unqualified",
@@ -3324,7 +3396,7 @@
       "verb"
     ],
     "source_qualifier": null,
-    "sense_label": "grow (verb)",
+    "sense_label": "to get bigger",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -3333,10 +3405,10 @@
     },
     "theme_ids": [],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "To get bigger and taller over time.",
+      "explanation_vi": "Lớn lên, to và cao dần theo thời gian (lớn lên, mọc lên).",
+      "example_en": "Plants grow in the sun.",
+      "example_vi": "Cây lớn lên dưới ánh nắng.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -3348,22 +3420,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "action_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-action-grow-v1",
+        "asset": "vocabulary/assets/vg-action-grow-v1.svg",
+        "alt": "To get bigger and taller over time.",
+        "status": "needs_human_review",
+        "kind": "action",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -3512,8 +3587,8 @@
   {
     "entry_id": "ro-vocab:guitar:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:guitar:noun:unqualified",
@@ -3528,7 +3603,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "guitar (noun)",
+    "sense_label": "an instrument with strings you pluck",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -3539,10 +3614,10 @@
       "cyle25-theme:sports-leisure"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A wooden instrument with strings that you pluck to make music.",
+      "explanation_vi": "Nhạc cụ bằng gỗ có dây, gảy để tạo nhạc (đàn ghi-ta).",
+      "example_en": "He plays the guitar and sings.",
+      "example_vi": "Anh ấy chơi ghi-ta và hát.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -3554,22 +3629,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-guitar-v1",
+        "asset": "vocabulary/assets/vg-scene-guitar-v1.svg",
+        "alt": "A wooden instrument with strings that you pluck to make music.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -3581,8 +3660,8 @@
   {
     "entry_id": "ro-vocab:gym:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:gym:noun:unqualified",
@@ -3597,7 +3676,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "gym (noun)",
+    "sense_label": "a place where people do exercise",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -3608,10 +3687,10 @@
       "cyle25-theme:school"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A room or place where people go to do sport and exercise.",
+      "explanation_vi": "Nơi mọi người tập thể thao và luyện tập (phòng tập).",
+      "example_en": "We play sport in the gym.",
+      "example_vi": "Chúng em chơi thể thao ở phòng tập.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -3623,22 +3702,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-gym-v1",
+        "asset": "vocabulary/assets/vg-scene-gym-v1.svg",
+        "alt": "A room or place where people go to do sport and exercise.",
+        "status": "needs_human_review",
+        "kind": "place",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },

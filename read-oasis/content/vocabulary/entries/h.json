@@ -143,8 +143,8 @@
   {
     "entry_id": "ro-vocab:hall:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:hall:noun:unqualified",
@@ -159,7 +159,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "hall (noun)",
+    "sense_label": "the space just inside the front door",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -170,10 +170,10 @@
       "cyle25-theme:the-home"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "The space inside the front door of a building, before the other rooms.",
+      "explanation_vi": "Khoảng ngay bên trong cửa chính, trước các phòng khác (sảnh/hành lang).",
+      "example_en": "I leave my shoes in the hall.",
+      "example_vi": "Em để giày ở sảnh.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -185,22 +185,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-hall-v1",
+        "asset": "vocabulary/assets/vg-scene-hall-v1.svg",
+        "alt": "The space inside the front door of a building, before the other rooms.",
+        "status": "needs_human_review",
+        "kind": "place",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -285,8 +289,8 @@
   {
     "entry_id": "ro-vocab:handbag:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:handbag:noun:unqualified",
@@ -301,7 +305,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "handbag (noun)",
+    "sense_label": "a small bag you carry in your hand",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -312,10 +316,10 @@
       "cyle25-theme:clothes"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A small bag with a handle that you carry in your hand or on your arm.",
+      "explanation_vi": "Túi nhỏ có quai xách ở tay hoặc trên cánh tay (túi xách tay).",
+      "example_en": "Mum carries a red handbag.",
+      "example_vi": "Mẹ xách túi màu đỏ.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -327,22 +331,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-handbag-v1",
+        "asset": "vocabulary/assets/vg-scene-handbag-v1.svg",
+        "alt": "A small bag with a handle that you carry in your hand or on your arm.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1037,8 +1045,8 @@
   {
     "entry_id": "ro-vocab:head:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:head:noun:unqualified",
@@ -1053,7 +1061,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "head (noun)",
+    "sense_label": "the top part of your body",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -1064,10 +1072,10 @@
       "cyle25-theme:the-body-and-the-face"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "The part of your body above your neck, with your eyes and mouth.",
+      "explanation_vi": "Phần cơ thể ở trên cổ, có mắt và miệng (cái đầu).",
+      "example_en": "I put a hat on my head.",
+      "example_vi": "Em đội mũ lên đầu.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1079,22 +1087,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-head-v1",
+        "asset": "vocabulary/assets/vg-scene-head-v1.svg",
+        "alt": "The part of your body above your neck, with your eyes and mouth.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1106,8 +1118,8 @@
   {
     "entry_id": "ro-vocab:headache:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:headache:noun:unqualified",
@@ -1122,7 +1134,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "headache (noun)",
+    "sense_label": "a pain in your head",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -1133,10 +1145,10 @@
       "cyle25-theme:health"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A pain you feel in your head.",
+      "explanation_vi": "Cơn đau bạn cảm thấy ở đầu (đau đầu).",
+      "example_en": "I have a headache, so I rest.",
+      "example_vi": "Em bị đau đầu nên em nghỉ ngơi.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1148,22 +1160,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-headache-v1",
+        "asset": "vocabulary/assets/vg-scene-headache-v1.svg",
+        "alt": "A pain you feel in your head.",
+        "status": "needs_human_review",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1382,8 +1397,8 @@
   {
     "entry_id": "ro-vocab:helicopter:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:helicopter:noun:unqualified",
@@ -1398,7 +1413,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "helicopter (noun)",
+    "sense_label": "a flying vehicle with spinning blades",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -1410,10 +1425,10 @@
       "cyle25-theme:transport"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A flying vehicle that goes up with big spinning blades on top.",
+      "explanation_vi": "Phương tiện bay lên nhờ cánh quạt to quay trên nóc (máy bay trực thăng).",
+      "example_en": "The helicopter flies over the city.",
+      "example_vi": "Máy bay trực thăng bay trên thành phố.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1425,22 +1440,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-helicopter-v1",
+        "asset": "vocabulary/assets/vg-scene-helicopter-v1.svg",
+        "alt": "A flying vehicle that goes up with big spinning blades on top.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1519,8 +1538,8 @@
   {
     "entry_id": "ro-vocab:helmet:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:helmet:noun:unqualified",
@@ -1535,7 +1554,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "helmet (noun)",
+    "sense_label": "a hard hat that keeps your head safe",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -1546,10 +1565,10 @@
       "cyle25-theme:clothes"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A hard hat you wear to keep your head safe.",
+      "explanation_vi": "Mũ cứng đội để bảo vệ đầu (mũ bảo hiểm).",
+      "example_en": "I wear a helmet on my bike.",
+      "example_vi": "Em đội mũ bảo hiểm khi đi xe đạp.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1561,22 +1580,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-helmet-v1",
+        "asset": "vocabulary/assets/vg-scene-helmet-v1.svg",
+        "alt": "A hard hat you wear to keep your head safe.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1926,8 +1949,8 @@
   {
     "entry_id": "ro-vocab:hide:verb:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:hide:verb:unqualified",
@@ -1942,7 +1965,7 @@
       "verb"
     ],
     "source_qualifier": null,
-    "sense_label": "hide (verb)",
+    "sense_label": "to go where no one can see you",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -1951,10 +1974,10 @@
     },
     "theme_ids": [],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "To go to a place where no one can see you.",
+      "explanation_vi": "Đi đến chỗ không ai nhìn thấy (trốn, nấp).",
+      "example_en": "The child hides behind the tree.",
+      "example_vi": "Đứa trẻ nấp sau cái cây.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1966,22 +1989,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "action_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-action-hide-v1",
+        "asset": "vocabulary/assets/vg-action-hide-v1.svg",
+        "alt": "To go to a place where no one can see you.",
+        "status": "needs_human_review",
+        "kind": "action",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "position_action_play",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2060,8 +2087,8 @@
   {
     "entry_id": "ro-vocab:hill:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:hill:noun:unqualified",
@@ -2076,7 +2103,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "hill (noun)",
+    "sense_label": "a small mountain",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -2087,10 +2114,10 @@
       "cyle25-theme:the-world-around-us"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A piece of land higher than the ground around it, but smaller than a mountain.",
+      "explanation_vi": "Vùng đất cao hơn xung quanh, nhỏ hơn núi (ngọn đồi).",
+      "example_en": "We run up the hill.",
+      "example_vi": "Chúng em chạy lên đồi.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2102,22 +2129,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-hill-v1",
+        "asset": "vocabulary/assets/vg-scene-hill-v1.svg",
+        "alt": "A piece of land higher than the ground around it, but smaller than a mountain.",
+        "status": "needs_human_review",
+        "kind": "place",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2196,8 +2227,8 @@
   {
     "entry_id": "ro-vocab:hippo:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:hippo:noun:unqualified",
@@ -2212,7 +2243,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "hippo (noun)",
+    "sense_label": "a big heavy animal that likes water",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -2223,10 +2254,10 @@
       "cyle25-theme:animals"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A very big, heavy animal that likes to sit in water.",
+      "explanation_vi": "Con vật rất to và nặng, thích ngâm mình trong nước (hà mã).",
+      "example_en": "The hippo sits in the river.",
+      "example_vi": "Con hà mã ngâm mình dưới sông.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2238,22 +2269,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-hippo-v1",
+        "asset": "vocabulary/assets/vg-scene-hippo-v1.svg",
+        "alt": "A very big, heavy animal that likes to sit in water.",
+        "status": "needs_human_review",
+        "kind": "animal",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2402,8 +2437,8 @@
   {
     "entry_id": "ro-vocab:hit:verb:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:hit:verb:unqualified",
@@ -2418,7 +2453,7 @@
       "verb"
     ],
     "source_qualifier": null,
-    "sense_label": "hit (verb)",
+    "sense_label": "to touch something hard and fast",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -2427,10 +2462,10 @@
     },
     "theme_ids": [],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "To touch something hard and fast with your hand or a bat.",
+      "explanation_vi": "Đánh vào vật gì đó mạnh và nhanh bằng tay hoặc gậy (đánh, đập).",
+      "example_en": "He hits the ball with the bat.",
+      "example_vi": "Cậu ấy đánh bóng bằng gậy.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2442,22 +2477,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "action_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-action-hit-v1",
+        "asset": "vocabulary/assets/vg-action-hit-v1.svg",
+        "alt": "To touch something hard and fast with your hand or a bat.",
+        "status": "needs_human_review",
+        "kind": "action",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "position_action_play",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2538,8 +2577,8 @@
   {
     "entry_id": "ro-vocab:hockey:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:hockey:noun:unqualified",
@@ -2554,7 +2593,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "hockey (noun)",
+    "sense_label": "a game hitting a ball with a stick",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -2565,10 +2604,10 @@
       "cyle25-theme:sports-leisure"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A game where two teams hit a small ball with long sticks.",
+      "explanation_vi": "Trò chơi hai đội dùng gậy dài đánh quả bóng nhỏ (khúc côn cầu).",
+      "example_en": "They play hockey on the grass.",
+      "example_vi": "Họ chơi khúc côn cầu trên cỏ.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2580,22 +2619,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-hockey-v1",
+        "asset": "vocabulary/assets/vg-scene-hockey-v1.svg",
+        "alt": "A game where two teams hit a small ball with long sticks.",
+        "status": "needs_human_review",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2674,8 +2716,8 @@
   {
     "entry_id": "ro-vocab:hole:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:hole:noun:unqualified",
@@ -2690,7 +2732,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "hole (noun)",
+    "sense_label": "an empty space in something",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -2699,10 +2741,10 @@
     },
     "theme_ids": [],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "An empty space or gap in something.",
+      "explanation_vi": "Khoảng trống hoặc lỗ hổng trong một vật (cái lỗ).",
+      "example_en": "There is a hole in my sock.",
+      "example_vi": "Có một cái lỗ trên tất của em.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2714,22 +2756,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-hole-v1",
+        "asset": "vocabulary/assets/vg-scene-hole-v1.svg",
+        "alt": "An empty space or gap in something.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2741,8 +2787,8 @@
   {
     "entry_id": "ro-vocab:holiday:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:holiday:noun:unqualified",
@@ -2757,7 +2803,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "holiday (noun)",
+    "sense_label": "days off for rest and fun",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -2768,10 +2814,10 @@
       "cyle25-theme:sports-leisure"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "Days when you do not go to school or work and can rest and have fun.",
+      "explanation_vi": "Những ngày không đi học hay đi làm, để nghỉ và vui chơi (ngày nghỉ, kỳ nghỉ).",
+      "example_en": "We go to the beach on holiday.",
+      "example_vi": "Chúng em ra biển vào kỳ nghỉ.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2783,22 +2829,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-holiday-v1",
+        "asset": "vocabulary/assets/vg-scene-holiday-v1.svg",
+        "alt": "Days when you do not go to school or work and can rest and have fun.",
+        "status": "needs_human_review",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2879,8 +2928,8 @@
   {
     "entry_id": "ro-vocab:home:noun-adverb:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:home:noun-adverb:unqualified",
@@ -2896,7 +2945,7 @@
       "adverb"
     ],
     "source_qualifier": null,
-    "sense_label": "home (noun/adverb)",
+    "sense_label": "the place where you live",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -2907,10 +2956,10 @@
       "cyle25-theme:the-home"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "The place where you live with your family.",
+      "explanation_vi": "Nơi bạn sống cùng gia đình (nhà, tổ ấm).",
+      "example_en": "I go home after school.",
+      "example_vi": "Em về nhà sau giờ học.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2922,22 +2971,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-home-v1",
+        "asset": "vocabulary/assets/vg-scene-home-v1.svg",
+        "alt": "The place where you live with your family.",
+        "status": "needs_human_review",
+        "kind": "place",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -3018,8 +3071,8 @@
   {
     "entry_id": "ro-vocab:honey:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:honey:noun:unqualified",
@@ -3034,7 +3087,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "honey (noun)",
+    "sense_label": "a sweet food made by bees",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -3045,10 +3098,10 @@
       "cyle25-theme:food-drink"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A sweet, sticky food made by bees.",
+      "explanation_vi": "Món ngọt dính do ong làm ra (mật ong).",
+      "example_en": "I like honey on my bread.",
+      "example_vi": "Em thích ăn mật ong với bánh mì.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -3060,22 +3113,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-honey-v1",
+        "asset": "vocabulary/assets/vg-scene-honey-v1.svg",
+        "alt": "A sweet, sticky food made by bees.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -3154,8 +3211,8 @@
   {
     "entry_id": "ro-vocab:hop:verb:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:hop:verb:unqualified",
@@ -3170,7 +3227,7 @@
       "verb"
     ],
     "source_qualifier": null,
-    "sense_label": "hop (verb)",
+    "sense_label": "to jump on one foot or like a rabbit",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -3181,10 +3238,10 @@
       "cyle25-theme:sports-leisure"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "To jump on one foot, or like a rabbit on two feet.",
+      "explanation_vi": "Nhảy bằng một chân, hoặc nhảy như con thỏ (nhảy lò cò).",
+      "example_en": "The rabbit hops across the grass.",
+      "example_vi": "Con thỏ nhảy qua bãi cỏ.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -3196,22 +3253,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "action_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-action-hop-v1",
+        "asset": "vocabulary/assets/vg-action-hop-v1.svg",
+        "alt": "To jump on one foot, or like a rabbit on two feet.",
+        "status": "needs_human_review",
+        "kind": "action",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "position_action_play",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -3430,8 +3491,8 @@
   {
     "entry_id": "ro-vocab:hospital:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:hospital:noun:unqualified",
@@ -3446,7 +3507,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "hospital (noun)",
+    "sense_label": "the place where doctors help sick people",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -3459,10 +3520,10 @@
       "cyle25-theme:work"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A place where doctors and nurses help people who are ill or hurt.",
+      "explanation_vi": "Nơi bác sĩ và y tá giúp người bệnh hay bị thương (bệnh viện).",
+      "example_en": "The doctor works in a hospital.",
+      "example_vi": "Bác sĩ làm việc ở bệnh viện.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -3474,22 +3535,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-hospital-v1",
+        "asset": "vocabulary/assets/vg-scene-hospital-v1.svg",
+        "alt": "A place where doctors and nurses help people who are ill or hurt.",
+        "status": "needs_human_review",
+        "kind": "place",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -3568,8 +3633,8 @@
   {
     "entry_id": "ro-vocab:hotel:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:hotel:noun:unqualified",
@@ -3584,7 +3649,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "hotel (noun)",
+    "sense_label": "a place to sleep when away from home",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -3596,10 +3661,10 @@
       "cyle25-theme:sports-leisure"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A place where people pay to sleep when they are away from home.",
+      "explanation_vi": "Nơi người ta trả tiền để ngủ khi đi xa nhà (khách sạn).",
+      "example_en": "We stay in a hotel on holiday.",
+      "example_vi": "Chúng em ở khách sạn khi đi nghỉ.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -3611,22 +3676,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-hotel-v1",
+        "asset": "vocabulary/assets/vg-scene-hotel-v1.svg",
+        "alt": "A place where people pay to sleep when they are away from home.",
+        "status": "needs_human_review",
+        "kind": "place",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -3707,8 +3776,8 @@
   {
     "entry_id": "ro-vocab:house:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:house:noun:unqualified",
@@ -3723,7 +3792,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "house (noun)",
+    "sense_label": "a building where people live",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -3734,10 +3803,10 @@
       "cyle25-theme:the-home"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A building where a family lives.",
+      "explanation_vi": "Tòa nhà nơi một gia đình sinh sống (ngôi nhà).",
+      "example_en": "My house has a red roof.",
+      "example_vi": "Nhà em có mái đỏ.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -3749,22 +3818,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-house-v1",
+        "asset": "vocabulary/assets/vg-scene-house-v1.svg",
+        "alt": "A building where a family lives.",
+        "status": "needs_human_review",
+        "kind": "place",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -4658,8 +4731,8 @@
   {
     "entry_id": "ro-vocab:husband:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:husband:noun:unqualified",
@@ -4674,7 +4747,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "husband (noun)",
+    "sense_label": "the man a woman is married to",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -4685,10 +4758,10 @@
       "cyle25-theme:family-friends"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "The man that a woman is married to.",
+      "explanation_vi": "Người đàn ông mà một người phụ nữ kết hôn (chồng).",
+      "example_en": "He is my aunt's husband.",
+      "example_vi": "Ông ấy là chồng của cô em.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -4700,22 +4773,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-husband-v1",
+        "asset": "vocabulary/assets/vg-scene-husband-v1.svg",
+        "alt": "The man that a woman is married to.",
+        "status": "needs_human_review",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },

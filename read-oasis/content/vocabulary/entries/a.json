@@ -1150,8 +1150,8 @@
   {
     "entry_id": "ro-vocab:afternoon:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:afternoon:noun:unqualified",
@@ -1166,7 +1166,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "afternoon (noun)",
+    "sense_label": "the middle part of the day",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -1177,10 +1177,10 @@
       "cyle25-theme:time"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "The part of the day after midday and before evening.",
+      "explanation_vi": "Phần giữa ngày, sau trưa và trước tối (buổi chiều).",
+      "example_en": "We play outside in the afternoon.",
+      "example_vi": "Chúng em chơi ngoài trời vào buổi chiều.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1192,22 +1192,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-afternoon-v1",
+        "asset": "vocabulary/assets/vg-scene-afternoon-v1.svg",
+        "alt": "The part of the day after midday and before evening.",
+        "status": "needs_human_review",
+        "kind": "time",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1558,8 +1562,8 @@
   {
     "entry_id": "ro-vocab:airport:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:airport:noun:unqualified",
@@ -1574,7 +1578,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "airport (noun)",
+    "sense_label": "the place where planes take off and land",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -1586,10 +1590,10 @@
       "cyle25-theme:work"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A big place where planes take off and land and people get on them.",
+      "explanation_vi": "Nơi rộng để máy bay cất cánh, hạ cánh và đón khách (sân bay).",
+      "example_en": "We fly from the airport.",
+      "example_vi": "Chúng em bay đi từ sân bay.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1601,22 +1605,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-airport-v1",
+        "asset": "vocabulary/assets/vg-scene-airport-v1.svg",
+        "alt": "A big place where planes take off and land and people get on them.",
+        "status": "needs_human_review",
+        "kind": "place",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1766,8 +1774,8 @@
   {
     "entry_id": "ro-vocab:alien:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:alien:noun:unqualified",
@@ -1782,7 +1790,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "alien (noun)",
+    "sense_label": "a being from another planet",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -1793,10 +1801,10 @@
       "cyle25-theme:toys"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A being in stories that comes from another planet.",
+      "explanation_vi": "Sinh vật trong truyện đến từ hành tinh khác (người ngoài hành tinh).",
+      "example_en": "The alien comes from space.",
+      "example_vi": "Người ngoài hành tinh đến từ vũ trụ.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1808,22 +1816,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-alien-v1",
+        "asset": "vocabulary/assets/vg-scene-alien-v1.svg",
+        "alt": "A being in stories that comes from another planet.",
+        "status": "needs_human_review",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2107,8 +2119,8 @@
   {
     "entry_id": "ro-vocab:alphabet:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:alphabet:noun:unqualified",
@@ -2123,7 +2135,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "alphabet (noun)",
+    "sense_label": "all the letters from A to Z",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -2134,10 +2146,10 @@
       "cyle25-theme:school"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "All the letters from A to Z, in order.",
+      "explanation_vi": "Tất cả các chữ cái từ A đến Z, theo thứ tự (bảng chữ cái).",
+      "example_en": "We sing the alphabet song.",
+      "example_vi": "Chúng em hát bài hát bảng chữ cái.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2149,22 +2161,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-alphabet-v1",
+        "asset": "vocabulary/assets/vg-scene-alphabet-v1.svg",
+        "alt": "All the letters from A to Z, in order.",
+        "status": "needs_human_review",
+        "kind": "concept",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2447,8 +2462,8 @@
   {
     "entry_id": "ro-vocab:ambulance:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:ambulance:noun:unqualified",
@@ -2463,7 +2478,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "ambulance (noun)",
+    "sense_label": "a van that takes sick people to hospital",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -2475,10 +2490,10 @@
       "cyle25-theme:work"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A special van that takes sick or hurt people to hospital quickly.",
+      "explanation_vi": "Xe đặc biệt chở người bệnh hoặc bị thương đến bệnh viện nhanh (xe cứu thương).",
+      "example_en": "The ambulance goes fast to the hospital.",
+      "example_vi": "Xe cứu thương chạy nhanh đến bệnh viện.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2490,22 +2505,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-ambulance-v1",
+        "asset": "vocabulary/assets/vg-scene-ambulance-v1.svg",
+        "alt": "A special van that takes sick or hurt people to hospital quickly.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2651,8 +2670,8 @@
   {
     "entry_id": "ro-vocab:angry:adjective:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:angry:adjective:unqualified",
@@ -2667,7 +2686,7 @@
       "adjective"
     ],
     "source_qualifier": null,
-    "sense_label": "angry (adjective)",
+    "sense_label": "feeling very cross",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -2676,11 +2695,11 @@
     },
     "theme_ids": [],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
-      "nonexample_en": null,
+      "definition_en": "Feeling very cross and not happy.",
+      "explanation_vi": "Cảm thấy rất bực và không vui (tức giận).",
+      "example_en": "He is angry because he lost his toy.",
+      "example_vi": "Cậu ấy tức giận vì làm mất đồ chơi.",
+      "nonexample_en": "She is happy and smiles.",
       "contrast_entry_ids": [],
       "usage_notes": [],
       "pronunciation": {
@@ -2691,22 +2710,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-angry-v1",
+        "asset": "vocabulary/assets/vg-scene-angry-v1.svg",
+        "alt": "Feeling very cross and not happy.",
+        "status": "needs_human_review",
+        "kind": "contrast",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2718,8 +2741,8 @@
   {
     "entry_id": "ro-vocab:animal:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:animal:noun:unqualified",
@@ -2734,7 +2757,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "animal (noun)",
+    "sense_label": "a living thing that is not a plant",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -2745,11 +2768,11 @@
       "cyle25-theme:animals"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
-      "nonexample_en": null,
+      "definition_en": "A living thing that can move, like a dog, a bird, or a fish.",
+      "explanation_vi": "Sinh vật sống biết di chuyển, như chó, chim hay cá (con vật, động vật).",
+      "example_en": "A cat is an animal.",
+      "example_vi": "Con mèo là một con vật.",
+      "nonexample_en": "A tree is not an animal.",
       "contrast_entry_ids": [],
       "usage_notes": [],
       "pronunciation": {
@@ -2760,22 +2783,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-animal-v1",
+        "asset": "vocabulary/assets/vg-scene-animal-v1.svg",
+        "alt": "A living thing that can move, like a dog, a bird, or a fish.",
+        "status": "needs_human_review",
+        "kind": "concept",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -3680,8 +3707,8 @@
   {
     "entry_id": "ro-vocab:armchair:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:armchair:noun:unqualified",
@@ -3696,7 +3723,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "armchair (noun)",
+    "sense_label": "a soft chair with side rests for arms",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -3707,10 +3734,10 @@
       "cyle25-theme:the-home"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A soft comfortable chair with places to rest your arms.",
+      "explanation_vi": "Ghế mềm êm có chỗ tựa hai tay (ghế bành).",
+      "example_en": "Grandpa sits in the armchair.",
+      "example_vi": "Ông ngồi trong ghế bành.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -3722,22 +3749,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-armchair-v1",
+        "asset": "vocabulary/assets/vg-scene-armchair-v1.svg",
+        "alt": "A soft comfortable chair with places to rest your arms.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -4291,8 +4322,8 @@
   {
     "entry_id": "ro-vocab:astronaut:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:astronaut:noun:unqualified",
@@ -4307,7 +4338,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "astronaut (noun)",
+    "sense_label": "a person who travels in space",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -4318,10 +4349,10 @@
       "cyle25-theme:work"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A person who travels into space in a rocket.",
+      "explanation_vi": "Người đi vào vũ trụ bằng tên lửa (phi hành gia).",
+      "example_en": "The astronaut floats in space.",
+      "example_vi": "Phi hành gia trôi trong không gian.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -4333,22 +4364,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-astronaut-v1",
+        "asset": "vocabulary/assets/vg-scene-astronaut-v1.svg",
+        "alt": "A person who travels into space in a rocket.",
+        "status": "needs_human_review",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },

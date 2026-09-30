@@ -206,8 +206,8 @@
   {
     "entry_id": "ro-vocab:neck:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:neck:noun:unqualified",
@@ -222,7 +222,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "neck (noun)",
+    "sense_label": "the part between your head and body",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -233,10 +233,10 @@
       "cyle25-theme:the-body-and-the-face"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "The part of your body that joins your head to your shoulders.",
+      "explanation_vi": "Phần nối đầu với vai (cái cổ).",
+      "example_en": "I turn my neck to look.",
+      "example_vi": "Em quay cổ để nhìn.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -248,22 +248,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-neck-v1",
+        "asset": "vocabulary/assets/vg-scene-neck-v1.svg",
+        "alt": "The part of your body that joins your head to your shoulders.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -275,8 +279,8 @@
   {
     "entry_id": "ro-vocab:necklace:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:necklace:noun:unqualified",
@@ -291,7 +295,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "necklace (noun)",
+    "sense_label": "something pretty you wear on your neck",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -302,10 +306,10 @@
       "cyle25-theme:clothes"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A pretty thing you wear around your neck.",
+      "explanation_vi": "Đồ trang sức đẹp đeo quanh cổ (dây chuyền).",
+      "example_en": "She wears a gold necklace.",
+      "example_vi": "Cô ấy đeo dây chuyền vàng.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -317,22 +321,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-necklace-v1",
+        "asset": "vocabulary/assets/vg-scene-necklace-v1.svg",
+        "alt": "A pretty thing you wear around your neck.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -411,8 +419,8 @@
   {
     "entry_id": "ro-vocab:nest:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:nest:noun:unqualified",
@@ -427,7 +435,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "nest (noun)",
+    "sense_label": "the home a bird makes",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -438,10 +446,10 @@
       "cyle25-theme:animals"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "The home a bird makes to lay its eggs in.",
+      "explanation_vi": "Nơi ở chim làm để đẻ trứng (tổ chim).",
+      "example_en": "The bird sits in its nest.",
+      "example_vi": "Con chim đậu trong tổ.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -453,22 +461,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-nest-v1",
+        "asset": "vocabulary/assets/vg-scene-nest-v1.svg",
+        "alt": "The home a bird makes to lay its eggs in.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -480,8 +492,8 @@
   {
     "entry_id": "ro-vocab:net:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:net:noun:unqualified",
@@ -496,7 +508,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "net (noun)",
+    "sense_label": "many strings joined with holes",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -507,10 +519,10 @@
       "cyle25-theme:sports-leisure"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "Many strings joined together with holes, used in sport or to catch fish.",
+      "explanation_vi": "Nhiều sợi dây đan lại có lỗ, dùng trong thể thao hay để bắt cá (cái lưới).",
+      "example_en": "The ball goes into the net.",
+      "example_vi": "Quả bóng bay vào lưới.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -522,22 +534,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-net-v1",
+        "asset": "vocabulary/assets/vg-scene-net-v1.svg",
+        "alt": "Many strings joined together with holes, used in sport or to catch fish.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -758,8 +774,8 @@
   {
     "entry_id": "ro-vocab:newspaper:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:newspaper:noun:unqualified",
@@ -774,7 +790,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "newspaper (noun)",
+    "sense_label": "printed sheets with the news",
     "level_metadata": {
       "first_listed_level": "A2 Flyers",
       "listed_at_levels": [
@@ -785,10 +801,10 @@
       "cyle25-theme:work"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "Large sheets of paper that tell people the news.",
+      "explanation_vi": "Những tờ giấy to đăng tin tức cho mọi người đọc (báo).",
+      "example_en": "Dad reads the newspaper in the morning.",
+      "example_vi": "Bố đọc báo vào buổi sáng.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -800,22 +816,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-newspaper-v1",
+        "asset": "vocabulary/assets/vg-scene-newspaper-v1.svg",
+        "alt": "Large sheets of paper that tell people the news.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1098,8 +1117,8 @@
   {
     "entry_id": "ro-vocab:night:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:night:noun:unqualified",
@@ -1114,7 +1133,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "night (noun)",
+    "sense_label": "the dark part of the day",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -1125,11 +1144,11 @@
       "cyle25-theme:time"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
-      "nonexample_en": null,
+      "definition_en": "The dark part of the day, when you sleep.",
+      "explanation_vi": "Phần tối của ngày, khi bạn ngủ (ban đêm).",
+      "example_en": "The stars shine at night.",
+      "example_vi": "Những ngôi sao lấp lánh vào ban đêm.",
+      "nonexample_en": "The sun shines in the day.",
       "contrast_entry_ids": [],
       "usage_notes": [],
       "pronunciation": {
@@ -1140,22 +1159,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-night-v1",
+        "asset": "vocabulary/assets/vg-scene-night-v1.svg",
+        "alt": "The dark part of the day, when you sleep.",
+        "status": "needs_human_review",
+        "kind": "time",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1369,8 +1392,8 @@
   {
     "entry_id": "ro-vocab:noise:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:noise:noun:unqualified",
@@ -1385,7 +1408,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "noise (noun)",
+    "sense_label": "a loud or unpleasant sound",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -1394,10 +1417,10 @@
     },
     "theme_ids": [],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A loud sound that is often not nice to hear.",
+      "explanation_vi": "Âm thanh to, thường khó nghe (tiếng ồn).",
+      "example_en": "The truck makes a lot of noise.",
+      "example_vi": "Chiếc xe tải gây ra nhiều tiếng ồn.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1409,22 +1432,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-noise-v1",
+        "asset": "vocabulary/assets/vg-scene-noise-v1.svg",
+        "alt": "A loud sound that is often not nice to hear.",
+        "status": "needs_human_review",
+        "kind": "concept",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -1503,8 +1529,8 @@
   {
     "entry_id": "ro-vocab:noodles:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:noodles:noun:unqualified",
@@ -1519,7 +1545,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "noodles (noun)",
+    "sense_label": "long thin food you eat",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -1530,10 +1556,10 @@
       "cyle25-theme:food-drink"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "Long, thin pieces of food made from flour.",
+      "explanation_vi": "Sợi dài mảnh làm từ bột để ăn (mì/bún).",
+      "example_en": "I eat noodles with a fork.",
+      "example_vi": "Em ăn mì bằng nĩa.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -1545,22 +1571,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-noodles-v1",
+        "asset": "vocabulary/assets/vg-scene-noodles-v1.svg",
+        "alt": "Long, thin pieces of food made from flour.",
+        "status": "needs_human_review",
+        "kind": "object",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -2120,8 +2150,8 @@
   {
     "entry_id": "ro-vocab:nurse:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:nurse:noun:unqualified",
@@ -2136,7 +2166,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "nurse (noun)",
+    "sense_label": "a person who cares for sick people",
     "level_metadata": {
       "first_listed_level": "A1 Movers",
       "listed_at_levels": [
@@ -2148,10 +2178,10 @@
       "cyle25-theme:work"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A person who looks after people who are sick, often with a doctor.",
+      "explanation_vi": "Người chăm sóc người bệnh, thường làm cùng bác sĩ (y tá).",
+      "example_en": "The nurse is kind to me.",
+      "example_vi": "Cô y tá rất dịu dàng với em.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -2163,22 +2193,26 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "medium",
+        "asset_id": "vg-scene-nurse-v1",
+        "asset": "vocabulary/assets/vg-scene-nurse-v1.svg",
+        "alt": "A person who looks after people who are sick, often with a doctor.",
+        "status": "needs_human_review",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "look_and_say",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },

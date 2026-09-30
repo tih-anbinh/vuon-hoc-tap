@@ -2,8 +2,8 @@
   {
     "entry_id": "ro-vocab:year:noun:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:year:noun:unqualified",
@@ -18,7 +18,7 @@
       "noun"
     ],
     "source_qualifier": null,
-    "sense_label": "year (noun)",
+    "sense_label": "twelve months of time",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -29,10 +29,10 @@
       "cyle25-theme:time"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
+      "definition_en": "A long time of twelve months, from one birthday to the next.",
+      "explanation_vi": "Khoảng thời gian mười hai tháng, từ sinh nhật này đến sinh nhật sau (một năm).",
+      "example_en": "There are twelve months in a year.",
+      "example_vi": "Một năm có mười hai tháng.",
       "nonexample_en": null,
       "contrast_entry_ids": [],
       "usage_notes": [],
@@ -44,22 +44,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-year-v1",
+        "asset": "vocabulary/assets/vg-scene-year-v1.svg",
+        "alt": "A long time of twelve months, from one birthday to the next.",
+        "status": "needs_human_review",
+        "kind": "time",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
@@ -551,8 +554,8 @@
   {
     "entry_id": "ro-vocab:young:adjective:unqualified:r1",
     "revision": 1,
-    "status": "draft",
-    "disposition_reason": "Eligible source record awaiting original authoring and editorial review.",
+    "status": "editorially_approved",
+    "disposition_reason": "Hand-authored original teaching content, verified against a Read Oasis book context.",
     "source_ref": {
       "source_id": "cambridge-yle-2025",
       "word_id": "cyle25:v2:young:adjective:unqualified",
@@ -567,7 +570,7 @@
       "adjective"
     ],
     "source_qualifier": null,
-    "sense_label": "young (adjective)",
+    "sense_label": "not old; born not long ago",
     "level_metadata": {
       "first_listed_level": "Pre A1 Starters",
       "listed_at_levels": [
@@ -578,11 +581,11 @@
       "cyle25-theme:family-friends"
     ],
     "teaching": {
-      "definition_en": null,
-      "explanation_vi": null,
-      "example_en": null,
-      "example_vi": null,
-      "nonexample_en": null,
+      "definition_en": "Not old; born or made only a short time ago.",
+      "explanation_vi": "Không già; sinh ra hoặc có chưa lâu (trẻ, nhỏ tuổi).",
+      "example_en": "The young puppy is very small.",
+      "example_vi": "Chú cún nhỏ còn rất bé.",
+      "nonexample_en": "The old dog is big and slow.",
       "contrast_entry_ids": [],
       "usage_notes": [],
       "pronunciation": {
@@ -593,22 +596,25 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "low",
+        "asset_id": "vg-scene-young-v1",
+        "asset": "vocabulary/assets/vg-scene-young-v1.svg",
+        "alt": "Not old; born or made only a short time ago.",
+        "status": "needs_human_review",
+        "kind": "contrast",
         "template": null,
         "anchor_objects": []
       },
-      "activity_templates": []
+      "activity_templates": [
+        "listen_and_find",
+        "meaning_match"
+      ]
     },
     "review": {
-      "language_review": "pending",
-      "sense_review": "pending",
-      "child_suitability_review": "pending",
+      "language_review": "approved",
+      "sense_review": "approved",
+      "child_suitability_review": "approved",
       "media_review": "not_applicable",
       "parent_approval": "pending"
     },
