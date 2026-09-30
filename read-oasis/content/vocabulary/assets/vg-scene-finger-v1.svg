@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-finger desc-finger">
+  <title id="title-finger">Finger</title>
+  <desc id="desc-finger">A hand with the index finger pointing up, highlighted with a red circle.</desc>
+  <defs>
+    <linearGradient id="finger-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0f9ff"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="finger-skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5d0a9"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#finger-bg)"/>
+  <ellipse cx="200" cy="272" rx="90" ry="14" fill="#0f172a" opacity="0.1"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Palm/fist -->
+    <path d="M155 190 Q150 150 175 145 L175 230 Q175 265 205 265 Q245 265 245 225 L245 175 Q265 168 265 195 L265 230 Q265 275 210 275 L185 275 Q145 275 145 230 Z" fill="url(#finger-skin)" stroke="#d4a574" stroke-width="4"/>
+    <!-- Folded finger knuckles -->
+    <path d="M188 170 q8 -8 16 0 M210 170 q8 -8 16 0 M232 172 q7 -8 14 0" fill="none" stroke="#d4a574" stroke-width="3" stroke-linecap="round"/>
+    <!-- Thumb -->
+    <path d="M155 200 Q125 210 130 235" fill="none" stroke="url(#finger-skin)" stroke-width="24" stroke-linecap="round"/>
+    <!-- Pointing index finger -->
+    <rect x="163" y="70" width="26" height="105" rx="13" fill="url(#finger-skin)" stroke="#d4a574" stroke-width="4"/>
+    <!-- Nail -->
+    <ellipse cx="176" cy="82" rx="8" ry="11" fill="#fecdd3" stroke="#d4a574" stroke-width="1.5"/>
+  </g>
+
+  <!-- Highlight ring -->
+  <circle cx="176" cy="105" r="34" fill="none" stroke="#ef4444" stroke-width="5"/>
+</svg>

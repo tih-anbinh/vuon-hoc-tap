@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-cartoon desc-cartoon">
+  <title id="title-cartoon">Cartoon</title>
+  <desc id="desc-cartoon">A television screen showing a smiling cartoon star character with a speech bubble.</desc>
+  <defs>
+    <linearGradient id="cartoon-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ede9fe"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#cartoon-bg)"/>
+  <ellipse cx="200" cy="268" rx="140" ry="14" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- TV body -->
+    <rect x="70" y="70" width="260" height="175" rx="14" fill="#334155" stroke="#1e293b" stroke-width="4"/>
+    <!-- Screen -->
+    <rect x="90" y="88" width="220" height="140" rx="8" fill="#7dd3fc" stroke="#1e293b" stroke-width="3"/>
+    <!-- Cartoon star character -->
+    <path d="M200 105 l14 30 l33 4 l-24 23 l6 33 l-29 -16 l-29 16 l6 -33 l-24 -23 l33 -4 Z" fill="#fbbf24" stroke="#b45309" stroke-width="3"/>
+    <circle cx="192" cy="150" r="4" fill="#1e293b"/>
+    <circle cx="208" cy="150" r="4" fill="#1e293b"/>
+    <path d="M190 162 Q200 172 210 162" fill="none" stroke="#1e293b" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Speech bubble -->
+    <ellipse cx="270" cy="115" rx="26" ry="18" fill="#ffffff" stroke="#1e293b" stroke-width="2.5"/>
+    <path d="M252 128 L245 140 L262 130 Z" fill="#ffffff" stroke="#1e293b" stroke-width="2.5"/>
+    <circle cx="262" cy="115" r="3" fill="#1e293b"/>
+    <circle cx="272" cy="115" r="3" fill="#1e293b"/>
+    <circle cx="282" cy="115" r="3" fill="#1e293b"/>
+    <!-- Legs / stand -->
+    <line x1="140" y1="245" x2="120" y2="265" stroke="#1e293b" stroke-width="6" stroke-linecap="round"/>
+    <line x1="260" y1="245" x2="280" y2="265" stroke="#1e293b" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>

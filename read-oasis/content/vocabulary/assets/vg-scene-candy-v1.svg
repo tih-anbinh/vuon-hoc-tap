@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-candy desc-candy">
+  <title id="title-candy">Candy</title>
+  <desc id="desc-candy">A wrapped sweet candy with twisted ends and a striped swirl lollipop beside it.</desc>
+  <defs>
+    <linearGradient id="candy-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fce7f3"/>
+      <stop offset="100%" stop-color="#fdf2f8"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#candy-bg)"/>
+  <ellipse cx="200" cy="255" rx="150" ry="16" fill="#0f172a" opacity="0.1"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Wrapped candy (tilted) -->
+    <g transform="rotate(-15 130 160)">
+      <!-- Left twist -->
+      <path d="M60 160 L95 140 L95 180 Z" fill="#f472b6" stroke="#1e293b" stroke-width="3"/>
+      <!-- Right twist -->
+      <path d="M200 160 L165 140 L165 180 Z" fill="#f472b6" stroke="#1e293b" stroke-width="3"/>
+      <!-- Center -->
+      <ellipse cx="130" cy="160" rx="42" ry="34" fill="#ec4899" stroke="#1e293b" stroke-width="4"/>
+      <path d="M112 130 Q120 160 112 190" fill="none" stroke="#fbcfe8" stroke-width="5"/>
+      <path d="M148 130 Q140 160 148 190" fill="none" stroke="#fbcfe8" stroke-width="5"/>
+    </g>
+  </g>
+
+  <!-- Swirl lollipop -->
+  <g filter="url(#soft-shadow)">
+    <line x1="290" y1="180" x2="290" y2="255" stroke="#e2e8f0" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="290" cy="135" r="48" fill="#ffffff" stroke="#1e293b" stroke-width="4"/>
+    <path d="M290 135 m0 -40 a40 40 0 1 1 -0.1 0 a30 30 0 1 0 0.1 0 a20 20 0 1 1 0 0"
+          fill="none" stroke="#ef4444" stroke-width="9" stroke-linecap="round"/>
+  </g>
+</svg>

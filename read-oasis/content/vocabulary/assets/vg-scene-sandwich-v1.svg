@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-sandwich desc-sandwich">
+  <title id="title-sandwich">Sandwich</title>
+  <desc id="desc-sandwich">A triangular sandwich with layers of lettuce, tomato, cheese, and ham between bread slices.</desc>
+  <defs>
+    <linearGradient id="sandwich-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fffbeb"/>
+    </linearGradient>
+    <linearGradient id="sandwich-bread" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fcd34d"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#sandwich-bg)"/>
+  <ellipse cx="200" cy="255" rx="150" ry="18" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Bottom bread -->
+    <path d="M70 220 L330 220 L200 250 Z" fill="url(#sandwich-bread)" stroke="#92400e" stroke-width="4"/>
+    <!-- Ham -->
+    <path d="M78 210 L322 210 L200 236 Z" fill="#fca5a5" stroke="#dc2626" stroke-width="2.5"/>
+    <!-- Cheese -->
+    <path d="M85 198 L315 198 L200 222 Z" fill="#fde047" stroke="#ca8a04" stroke-width="2.5"/>
+    <!-- Tomato slices -->
+    <path d="M92 186 L308 186 L200 208 Z" fill="#ef4444" stroke="#991b1b" stroke-width="2.5"/>
+    <!-- Lettuce (wavy) -->
+    <path d="M92 178 Q120 168 150 178 Q180 168 210 178 Q240 168 270 178 Q290 172 308 178 L200 198 Z" fill="#65a30d" stroke="#3f6212" stroke-width="2.5"/>
+    <!-- Top bread -->
+    <path d="M110 100 L290 100 L305 165 L95 165 Z" fill="url(#sandwich-bread)" stroke="#92400e" stroke-width="4"/>
+    <path d="M110 100 Q200 78 290 100" fill="url(#sandwich-bread)" stroke="#92400e" stroke-width="4"/>
+    <!-- Sesame seeds -->
+    <g fill="#fef9c3"><ellipse cx="160" cy="95" rx="4" ry="2.5"/><ellipse cx="200" cy="88" rx="4" ry="2.5"/><ellipse cx="240" cy="95" rx="4" ry="2.5"/><ellipse cx="180" cy="100" rx="4" ry="2.5"/><ellipse cx="220" cy="100" rx="4" ry="2.5"/></g>
+  </g>
+</svg>

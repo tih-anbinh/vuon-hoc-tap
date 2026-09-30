@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-soccer desc-soccer">
+  <title id="title-soccer">Soccer</title>
+  <desc id="desc-soccer">A black-and-white soccer ball on green grass in front of a goal net.</desc>
+  <defs>
+    <linearGradient id="soccer-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="60%" stop-color="#bae6fd"/>
+      <stop offset="60%" stop-color="#86efac"/>
+      <stop offset="100%" stop-color="#4ade80"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#soccer-bg)"/>
+
+  <!-- Goal -->
+  <g stroke="#f8fafc" stroke-width="6" fill="none">
+    <rect x="90" y="70" width="220" height="110"/>
+  </g>
+  <!-- Net lines -->
+  <g stroke="#cbd5e1" stroke-width="1.5" opacity="0.8">
+    <line x1="120" y1="76" x2="120" y2="174"/><line x1="155" y1="76" x2="155" y2="174"/><line x1="200" y1="76" x2="200" y2="174"/><line x1="245" y1="76" x2="245" y2="174"/><line x1="280" y1="76" x2="280" y2="174"/>
+    <line x1="96" y1="105" x2="304" y2="105"/><line x1="96" y1="140" x2="304" y2="140"/>
+  </g>
+
+  <ellipse cx="200" cy="255" rx="55" ry="14" fill="#0f172a" opacity="0.18"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Soccer ball -->
+    <circle cx="200" cy="220" r="48" fill="#f8fafc" stroke="#1e293b" stroke-width="4"/>
+    <!-- Central pentagon -->
+    <path d="M200 195 L221 210 L213 234 L187 234 L179 210 Z" fill="#1e293b"/>
+    <!-- Outer patches -->
+    <path d="M200 172 L179 182 L179 210 L200 195 L221 210 L221 182 Z" fill="#1e293b" opacity="0.85"/>
+    <path d="M160 220 L172 205 L187 234 L165 245 Z" fill="#1e293b" opacity="0.85"/>
+    <path d="M240 220 L228 205 L213 234 L235 245 Z" fill="#1e293b" opacity="0.85"/>
+    <!-- Seam lines -->
+    <g stroke="#1e293b" stroke-width="2.5" fill="none">
+      <path d="M200 195 L200 172"/><path d="M179 210 L160 220"/><path d="M221 210 L240 220"/>
+      <path d="M187 234 L177 250"/><path d="M213 234 L223 250"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-gold desc-gold">
+  <title id="title-gold">Gold</title>
+  <desc id="desc-gold">A shiny stack of gold bars and gold coins glinting with sparkles.</desc>
+  <defs>
+    <linearGradient id="gold-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <linearGradient id="gold-bar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#gold-bg)"/>
+  <ellipse cx="200" cy="258" rx="150" ry="18" fill="#000000" opacity="0.25"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Bottom row of bars -->
+    <path d="M100 200 L200 200 L220 235 L80 235 Z" fill="url(#gold-bar)" stroke="#b45309" stroke-width="3.5"/>
+    <path d="M200 200 L300 200 L320 235 L220 235 Z" fill="url(#gold-bar)" stroke="#b45309" stroke-width="3.5"/>
+    <path d="M100 190 L200 190 L200 200 L100 200 Z" fill="#fcd34d" stroke="#b45309" stroke-width="3"/>
+    <path d="M200 190 L300 190 L300 200 L200 200 Z" fill="#fcd34d" stroke="#b45309" stroke-width="3"/>
+    <!-- Top bar -->
+    <path d="M150 160 L250 160 L268 195 L132 195 Z" fill="url(#gold-bar)" stroke="#b45309" stroke-width="3.5"/>
+    <path d="M150 150 L250 150 L250 160 L150 160 Z" fill="#fcd34d" stroke="#b45309" stroke-width="3"/>
+    <!-- Highlights -->
+    <line x1="160" y1="168" x2="240" y2="168" stroke="#fffbeb" stroke-width="3" opacity="0.6"/>
+    <line x1="110" y1="208" x2="190" y2="208" stroke="#fffbeb" stroke-width="3" opacity="0.6"/>
+  </g>
+
+  <!-- Coins -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="90" cy="240" rx="26" ry="12" fill="url(#gold-bar)" stroke="#b45309" stroke-width="3"/>
+    <ellipse cx="90" cy="232" rx="26" ry="12" fill="#fcd34d" stroke="#b45309" stroke-width="3"/>
+    <ellipse cx="320" cy="242" rx="24" ry="11" fill="url(#gold-bar)" stroke="#b45309" stroke-width="3"/>
+    <ellipse cx="320" cy="234" rx="24" ry="11" fill="#fcd34d" stroke="#b45309" stroke-width="3"/>
+  </g>
+
+  <!-- Sparkles -->
+  <g fill="#fffbeb">
+    <path d="M180 100 l4 10 l10 4 l-10 4 l-4 10 l-4 -10 l-10 -4 l10 -4 Z"/>
+    <path d="M290 120 l3 7 l7 3 l-7 3 l-3 7 l-3 -7 l-7 -3 l7 -3 Z"/>
+    <path d="M120 130 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z"/>
+  </g>
+</svg>

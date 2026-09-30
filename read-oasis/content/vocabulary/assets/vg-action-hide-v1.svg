@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-hide desc-hide">
+  <title id="title-hide">Hide</title>
+  <desc id="desc-hide">A child hiding behind a large box, peeking out with just the head and one hand showing.</desc>
+  <defs>
+    <linearGradient id="hide-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fefce8"/>
+    </linearGradient>
+    <linearGradient id="hide-skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5d0a9"/>
+    </linearGradient>
+    <linearGradient id="hide-box" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d6a860"/>
+      <stop offset="100%" stop-color="#a16207"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#hide-bg)"/>
+  <rect x="0" y="255" width="400" height="45" fill="#86efac"/>
+  <ellipse cx="200" cy="262" rx="150" ry="12" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Head peeking above box -->
+    <circle cx="150" cy="110" r="40" fill="url(#hide-skin)" stroke="#d4a574" stroke-width="3.5"/>
+    <path d="M112 100 Q114 72 150 72 Q186 72 188 100 Q170 82 150 82 Q130 82 112 100 Z" fill="#5b3a1a" stroke="#3d2109" stroke-width="2.5"/>
+    <circle cx="140" cy="112" r="4.5" fill="#1e293b"/>
+    <circle cx="160" cy="112" r="4.5" fill="#1e293b"/>
+    <path d="M138 128 Q150 136 162 128" fill="none" stroke="#7f1d1d" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Box (in front) -->
+  <g filter="url(#soft-shadow)">
+    <path d="M90 150 L280 150 L280 255 L90 255 Z" fill="url(#hide-box)" stroke="#78350f" stroke-width="4"/>
+    <!-- Box flaps open at top -->
+    <path d="M90 150 L120 128 L250 128 L280 150 Z" fill="#c68a3e" stroke="#78350f" stroke-width="3.5"/>
+    <!-- Tape line -->
+    <line x1="185" y1="150" x2="185" y2="255" stroke="#92400e" stroke-width="3"/>
+    <path d="M120 195 L250 195" stroke="#92400e" stroke-width="2.5" opacity="0.6"/>
+  </g>
+
+  <!-- Peeking hand on box edge -->
+  <g filter="url(#soft-shadow)">
+    <path d="M240 150 q14 -12 26 0 q-4 14 -26 8 Z" fill="url(#hide-skin)" stroke="#d4a574" stroke-width="3"/>
+  </g>
+</svg>

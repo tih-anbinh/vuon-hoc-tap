@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-belt desc-belt">
+  <title id="title-belt">Belt</title>
+  <desc id="desc-belt">A brown leather belt curved into an oval with a shiny gold buckle and holes.</desc>
+  <defs>
+    <linearGradient id="belt-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fefce8"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#belt-bg)"/>
+  <ellipse cx="200" cy="255" rx="140" ry="18" fill="#0f172a" opacity="0.1"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Belt loop (thick oval strap) -->
+    <ellipse cx="210" cy="150" rx="130" ry="70" fill="none" stroke="#78350f" stroke-width="26"/>
+    <ellipse cx="210" cy="150" rx="130" ry="70" fill="none" stroke="#92400e" stroke-width="18"/>
+    <!-- Stitch line -->
+    <ellipse cx="210" cy="150" rx="130" ry="70" fill="none" stroke="#fcd34d" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <!-- Holes on the tail -->
+    <g fill="#451a03">
+      <circle cx="120" cy="150" r="4"/>
+      <circle cx="105" cy="150" r="4"/>
+      <circle cx="90" cy="150" r="4"/>
+    </g>
+    <!-- Buckle -->
+    <rect x="60" y="122" width="60" height="56" rx="8" fill="none" stroke="#facc15" stroke-width="12"/>
+    <rect x="60" y="122" width="60" height="56" rx="8" fill="none" stroke="#eab308" stroke-width="4"/>
+    <line x1="90" y1="130" x2="90" y2="170" stroke="#facc15" stroke-width="8"/>
+    <line x1="90" y1="150" x2="130" y2="150" stroke="#facc15" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>

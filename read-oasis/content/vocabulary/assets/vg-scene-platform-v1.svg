@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-platform desc-platform">
+  <title id="title-platform">Platform</title>
+  <desc id="desc-platform">A train station platform with a train beside it and a raised edge with a yellow safety line.</desc>
+  <defs>
+    <linearGradient id="platform-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0e7ff"/>
+      <stop offset="100%" stop-color="#eef2ff"/>
+    </linearGradient>
+    <linearGradient id="platform-train" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#platform-bg)"/>
+  <!-- Roof canopy -->
+  <path d="M20 70 L380 70 L380 84 L20 84 Z" fill="#64748b" stroke="#475569" stroke-width="2"/>
+  <rect x="40" y="84" width="10" height="80" fill="#94a3b8"/>
+  <rect x="350" y="84" width="10" height="80" fill="#94a3b8"/>
+
+  <!-- Train on the left -->
+  <g filter="url(#soft-shadow)">
+    <rect x="10" y="110" width="160" height="110" rx="10" fill="url(#platform-train)" stroke="#7f1d1d" stroke-width="4"/>
+    <rect x="30" y="125" width="40" height="40" rx="5" fill="#bae6fd" stroke="#1e293b" stroke-width="3"/>
+    <rect x="90" y="125" width="40" height="40" rx="5" fill="#bae6fd" stroke="#1e293b" stroke-width="3"/>
+    <!-- Open door -->
+    <rect x="138" y="120" width="28" height="90" rx="4" fill="#7f1d1d" stroke="#450a0a" stroke-width="3"/>
+    <rect x="145" y="130" width="16" height="70" fill="#1e293b"/>
+  </g>
+
+  <!-- Platform floor (raised) -->
+  <g filter="url(#soft-shadow)">
+    <rect x="170" y="220" width="230" height="60" fill="#cbd5e1" stroke="#94a3b8" stroke-width="3"/>
+    <rect x="170" y="210" width="230" height="14" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2.5"/>
+    <!-- Yellow safety line -->
+    <rect x="175" y="212" width="14" height="10" fill="#fbbf24"/>
+    <!-- Tiles -->
+    <g stroke="#94a3b8" stroke-width="2">
+      <line x1="210" y1="224" x2="210" y2="280"/>
+      <line x1="260" y1="224" x2="260" y2="280"/>
+      <line x1="310" y1="224" x2="310" y2="280"/>
+      <line x1="360" y1="224" x2="360" y2="280"/>
+      <line x1="170" y1="250" x2="400" y2="250"/>
+    </g>
+  </g>
+
+  <!-- Bench -->
+  <g filter="url(#soft-shadow)">
+    <rect x="290" y="180" width="70" height="10" rx="3" fill="#a16207" stroke="#78350f" stroke-width="2.5"/>
+    <rect x="294" y="190" width="6" height="26" fill="#78350f"/>
+    <rect x="350" y="190" width="6" height="26" fill="#78350f"/>
+  </g>
+</svg>

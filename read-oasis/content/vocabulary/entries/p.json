@@ -112,13 +112,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "action_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-action-paint-v1",
+        "asset": "vocabulary/assets/vg-action-paint-v1.svg",
+        "alt": "A hand holding a paintbrush painting colorful strokes on an easel with a rainbow.",
+        "status": "draft",
+        "kind": "action",
         "template": null,
         "anchor_objects": []
       },
@@ -128,7 +128,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -318,13 +318,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-pajamas-v1",
+        "asset": "vocabulary/assets/vg-scene-pajamas-v1.svg",
+        "alt": "A cozy striped pajama set with a buttoned top and matching bottoms and a moon.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -334,7 +334,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -663,13 +663,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-parent-v1",
+        "asset": "vocabulary/assets/vg-scene-parent-v1.svg",
+        "alt": "A tall grown-up parent holding hands with a small smiling child beside them.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -679,7 +679,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -732,13 +732,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-park-v1",
+        "asset": "vocabulary/assets/vg-scene-park-v1.svg",
+        "alt": "A sunny park with a slide, a swing, a green tree, a bench, and cheerful flowers on the grass.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -748,7 +748,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -801,13 +801,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-parrot-v1",
+        "asset": "vocabulary/assets/vg-scene-parrot-v1.svg",
+        "alt": "A colorful red, blue and yellow parrot with a curved beak perched on a branch.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -817,7 +817,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -939,13 +939,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-party-v1",
+        "asset": "vocabulary/assets/vg-scene-party-v1.svg",
+        "alt": "A festive party scene with colorful balloons, a bunting flag banner, and confetti.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -955,7 +955,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1147,13 +1147,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-pasta-v1",
+        "asset": "vocabulary/assets/vg-scene-pasta-v1.svg",
+        "alt": "A big bowl of spaghetti pasta with red tomato sauce and a fork twirling noodles.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -1163,7 +1163,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1423,13 +1423,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-pea-v1",
+        "asset": "vocabulary/assets/vg-scene-pea-v1.svg",
+        "alt": "An open green pea pod showing five round bright green peas inside, with curly tendrils.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -1439,7 +1439,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1492,13 +1492,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-pear-v1",
+        "asset": "vocabulary/assets/vg-scene-pear-v1.svg",
+        "alt": "A large green pear with a classic bell shape, a brown stem, and a small leaf on top.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -1508,7 +1508,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1561,13 +1561,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-pen-v1",
+        "asset": "vocabulary/assets/vg-scene-pen-v1.svg",
+        "alt": "A blue ballpoint pen with a cap clip and a fine writing tip, alongside a small line of ink.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -1577,7 +1577,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1630,13 +1630,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-pencil-v1",
+        "asset": "vocabulary/assets/vg-scene-pencil-v1.svg",
+        "alt": "A yellow wooden pencil with a sharp graphite tip, a metal ferrule, and a pink eraser on the end.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -1646,7 +1646,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1699,13 +1699,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-penguin-v1",
+        "asset": "vocabulary/assets/vg-scene-penguin-v1.svg",
+        "alt": "A cute black and white penguin with an orange beak and feet standing on ice.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -1715,7 +1715,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1768,13 +1768,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-pepper-v1",
+        "asset": "vocabulary/assets/vg-scene-pepper-v1.svg",
+        "alt": "A shiny red bell pepper with a green stem next to a green bell pepper.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -1784,7 +1784,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2112,13 +2112,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-phone-v1",
+        "asset": "vocabulary/assets/vg-scene-phone-v1.svg",
+        "alt": "A friendly smartphone with a colourful screen showing icons, a home button and a camera dot.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -2128,7 +2128,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2319,13 +2319,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-piano-v1",
+        "asset": "vocabulary/assets/vg-scene-piano-v1.svg",
+        "alt": "A dark wooden upright piano with white and black keys, music stand, pedals, and a small piano stool.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -2335,7 +2335,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2455,13 +2455,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-picnic-v1",
+        "asset": "vocabulary/assets/vg-scene-picnic-v1.svg",
+        "alt": "A red checkered picnic blanket on grass with a basket, sandwiches, and an apple.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -2471,7 +2471,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2665,13 +2665,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-piece-v1",
+        "asset": "vocabulary/assets/vg-scene-piece-v1.svg",
+        "alt": "One single slice of cake separated from the rest of a whole round cake.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -2681,7 +2681,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2734,13 +2734,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-pilot-v1",
+        "asset": "vocabulary/assets/vg-scene-pilot-v1.svg",
+        "alt": "A smiling airplane pilot wearing a captain's cap and blue uniform with wings badge.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -2750,7 +2750,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2941,13 +2941,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-pirate-v1",
+        "asset": "vocabulary/assets/vg-scene-pirate-v1.svg",
+        "alt": "A friendly cartoon pirate with a hat, eye patch, and a red bandana smiling.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -2957,7 +2957,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3010,13 +3010,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-pizza-v1",
+        "asset": "vocabulary/assets/vg-scene-pizza-v1.svg",
+        "alt": "A round cheesy pizza with red pepperoni slices, cut into eight triangular pieces.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -3026,7 +3026,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3218,13 +3218,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-planet-v1",
+        "asset": "vocabulary/assets/vg-scene-planet-v1.svg",
+        "alt": "A big ringed planet like Saturn with swirling bands, surrounded by stars in space.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -3234,7 +3234,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3288,13 +3288,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-plant-v1",
+        "asset": "vocabulary/assets/vg-scene-plant-v1.svg",
+        "alt": "A leafy green potted plant growing in a brown flower pot with a few small buds.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -3304,7 +3304,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3427,13 +3427,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-plate-v1",
+        "asset": "vocabulary/assets/vg-scene-plate-v1.svg",
+        "alt": "A round white dinner plate seen from above with a decorative blue rim.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -3443,7 +3443,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3496,13 +3496,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-platform-v1",
+        "asset": "vocabulary/assets/vg-scene-platform-v1.svg",
+        "alt": "A train station platform with a train beside it and a raised edge with a yellow safety line.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -3512,7 +3512,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3565,13 +3565,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "action_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-action-play-v1",
+        "asset": "vocabulary/assets/vg-action-play-v1.svg",
+        "alt": "A happy child playing with blocks and a ball, surrounded by scattered toys and sparkles of fun.",
+        "status": "draft",
+        "kind": "action",
         "template": null,
         "anchor_objects": []
       },
@@ -3581,7 +3581,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3634,13 +3634,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-player-v1",
+        "asset": "vocabulary/assets/vg-scene-player-v1.svg",
+        "alt": "A soccer player in a striped jersey and shorts kicking a ball on a field.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -3650,7 +3650,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3907,13 +3907,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-pocket-v1",
+        "asset": "vocabulary/assets/vg-scene-pocket-v1.svg",
+        "alt": "A pair of blue jeans with a front pocket highlighted, with a red handkerchief peeking out.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -3923,7 +3923,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -4251,13 +4251,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-pond-v1",
+        "asset": "vocabulary/assets/vg-scene-pond-v1.svg",
+        "alt": "A small round pond with lily pads, a pink flower, cattails, and a frog on a leaf.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -4267,7 +4267,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -4320,13 +4320,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-pool-v1",
+        "asset": "vocabulary/assets/vg-scene-pool-v1.svg",
+        "alt": "A blue swimming pool with a ladder, a beach ball floating, and a diving board.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -4336,7 +4336,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -4795,13 +4795,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-postcard-v1",
+        "asset": "vocabulary/assets/vg-scene-postcard-v1.svg",
+        "alt": "A holiday postcard showing a beach scene with a stamp and address lines on the corner.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -4811,7 +4811,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -5274,13 +5274,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-present-v1",
+        "asset": "vocabulary/assets/vg-scene-present-v1.svg",
+        "alt": "A wrapped gift present box with shiny paper, a big ribbon, and a bow on top.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -5290,7 +5290,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -5410,13 +5410,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-prize-v1",
+        "asset": "vocabulary/assets/vg-scene-prize-v1.svg",
+        "alt": "A shiny golden winner's trophy cup with handles and a star, on a base, with a medal.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -5426,7 +5426,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -5681,13 +5681,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "action_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-action-pull-v1",
+        "asset": "vocabulary/assets/vg-action-pull-v1.svg",
+        "alt": "A child leaning back and pulling hard on a rope, with motion lines showing the pulling force.",
+        "status": "draft",
+        "kind": "action",
         "template": null,
         "anchor_objects": []
       },
@@ -5697,7 +5697,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -5750,13 +5750,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-puppy-v1",
+        "asset": "vocabulary/assets/vg-scene-puppy-v1.svg",
+        "alt": "A cute little brown puppy with floppy ears, a wagging tail, and a big happy smile.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -5766,7 +5766,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -5886,13 +5886,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "action_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-action-push-v1",
+        "asset": "vocabulary/assets/vg-action-push-v1.svg",
+        "alt": "A child leaning forward and pushing a big box, with motion lines showing it sliding forward.",
+        "status": "draft",
+        "kind": "action",
         "template": null,
         "anchor_objects": []
       },
@@ -5902,7 +5902,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -6089,13 +6089,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-puzzle-v1",
+        "asset": "vocabulary/assets/vg-scene-puzzle-v1.svg",
+        "alt": "Four colorful jigsaw puzzle pieces, with one piece being fitted into the last empty gap.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -6105,7 +6105,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -6226,13 +6226,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-pyramid-v1",
+        "asset": "vocabulary/assets/vg-scene-pyramid-v1.svg",
+        "alt": "A great sandy Egyptian pyramid in the desert with a bright sun and a small camel.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -6242,7 +6242,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {

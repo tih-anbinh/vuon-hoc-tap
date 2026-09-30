@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-golf desc-golf">
+  <title id="title-golf">Golf</title>
+  <desc id="desc-golf">A golf club leaning by a white golf ball on a tee, beside a flag in a hole on the green.</desc>
+  <defs>
+    <linearGradient id="golf-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="200" fill="url(#golf-bg)"/>
+  <path d="M0 200 Q200 175 400 200 L400 300 L0 300 Z" fill="#4ade80"/>
+  <ellipse cx="120" cy="248" rx="40" ry="8" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Golf club -->
+    <line x1="200" y1="60" x2="130" y2="230" stroke="#94a3b8" stroke-width="7" stroke-linecap="round"/>
+    <rect x="194" y="52" width="14" height="30" rx="6" fill="#1e293b"/>
+    <path d="M120 225 Q105 235 118 248 L140 240 Z" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+  </g>
+
+  <!-- Golf ball on tee -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="120" cy="230" r="16" fill="#f8fafc" stroke="#94a3b8" stroke-width="3"/>
+    <g fill="#cbd5e1">
+      <circle cx="115" cy="226" r="2"/>
+      <circle cx="124" cy="227" r="2"/>
+      <circle cx="119" cy="234" r="2"/>
+      <circle cx="127" cy="232" r="2"/>
+    </g>
+    <path d="M114 246 L120 262 L126 246 Z" fill="#ef4444" stroke="#991b1b" stroke-width="2"/>
+  </g>
+
+  <!-- Flag & hole -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="320" cy="240" rx="22" ry="8" fill="#166534"/>
+    <ellipse cx="320" cy="238" rx="14" ry="5" fill="#1e293b"/>
+    <line x1="320" y1="238" x2="320" y2="120" stroke="#78350f" stroke-width="4"/>
+    <path d="M320 122 L360 132 L320 148 Z" fill="#ef4444" stroke="#991b1b" stroke-width="2.5"/>
+  </g>
+</svg>

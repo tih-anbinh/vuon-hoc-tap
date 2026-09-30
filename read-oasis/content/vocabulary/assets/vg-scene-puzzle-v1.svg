@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-puzzle desc-puzzle">
+  <title id="title-puzzle">Puzzle</title>
+  <desc id="desc-puzzle">Four colorful jigsaw puzzle pieces, with one piece being fitted into the last empty gap.</desc>
+  <defs>
+    <linearGradient id="puzzle-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0e7ff"/>
+      <stop offset="100%" stop-color="#eef2ff"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#puzzle-bg)"/>
+  <ellipse cx="200" cy="270" rx="150" ry="14" fill="#0f172a" opacity="0.1"/>
+
+  <g filter="url(#soft-shadow)" stroke="#1e293b" stroke-width="3.5">
+    <!-- Top-left piece (red) -->
+    <path d="M110 100 L180 100 Q175 118 190 118 Q205 118 200 100 L200 165 Q182 160 182 175 Q182 190 200 185 L110 185 L110 145 Q92 150 92 132 Q92 115 110 120 Z" fill="#ef4444"/>
+    <!-- Top-right piece (blue) -->
+    <path d="M200 100 Q205 118 220 118 Q235 118 230 100 L290 100 L290 145 Q308 140 308 158 Q308 175 290 170 L290 185 L200 185 Q205 168 190 168 Q182 168 182 175 L182 118 Q182 118 200 118 Z" fill="#3b82f6"/>
+    <!-- Bottom-left piece (green) -->
+    <path d="M110 185 L182 185 Q182 200 200 200 Q205 200 200 185 L200 250 L130 250 Q135 232 120 232 Q105 232 110 250 L110 210 Q92 215 92 197 Q92 180 110 185 Z" fill="#22c55e"/>
+  </g>
+
+  <!-- Empty gap outline (bottom-right) -->
+  <path d="M200 200 Q205 200 200 185 L290 185 L290 220 Q308 215 308 233 Q308 250 290 245 L290 250 L200 250 Q205 232 190 232 Q182 232 182 245 Z" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="8 6"/>
+
+  <!-- Floating piece (yellow) being placed -->
+  <g filter="url(#soft-shadow)" transform="translate(28 -32) rotate(12 250 220)">
+    <path d="M215 190 Q220 205 235 205 Q250 205 245 190 L300 190 L300 220 Q318 215 318 233 Q318 250 300 245 L300 250 L215 250 Q220 235 205 235 Q195 235 200 250 Z" fill="#fbbf24" stroke="#a16207" stroke-width="3.5"/>
+  </g>
+
+  <!-- Arrow -->
+  <g stroke="#7e22ce" stroke-width="4" stroke-linecap="round" fill="#7e22ce">
+    <path d="M310 165 L288 200" fill="none"/>
+    <path d="M288 200 L296 182 L307 190 Z" stroke="none"/>
+  </g>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-jam desc-jam">
+  <title id="title-jam">Jam</title>
+  <desc id="desc-jam">A glass jar of red strawberry jam with a checkered lid and a strawberry on the front.</desc>
+  <defs>
+    <linearGradient id="jam-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef2f2"/>
+      <stop offset="100%" stop-color="#fee2e2"/>
+    </linearGradient>
+    <linearGradient id="jam-fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f87171"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#jam-bg)"/>
+  <ellipse cx="200" cy="262" rx="90" ry="14" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Jar body -->
+    <rect x="135" y="110" width="130" height="150" rx="16" fill="url(#jam-fill)" stroke="#7f1d1d" stroke-width="4"/>
+    <!-- Glass highlight -->
+    <rect x="146" y="122" width="14" height="120" rx="7" fill="#fca5a5" opacity="0.5"/>
+    <!-- Jar rim -->
+    <rect x="128" y="96" width="144" height="18" rx="6" fill="#94a3b8" stroke="#475569" stroke-width="3"/>
+    <!-- Cloth lid -->
+    <path d="M130 96 Q200 74 270 96 Q262 86 200 82 Q138 86 130 96 Z" fill="#fca5a5" stroke="#991b1b" stroke-width="3"/>
+    <g stroke="#dc2626" stroke-width="2" opacity="0.7">
+      <line x1="150" y1="84" x2="150" y2="98"/>
+      <line x1="175" y1="80" x2="175" y2="98"/>
+      <line x1="200" y1="79" x2="200" y2="98"/>
+      <line x1="225" y1="80" x2="225" y2="98"/>
+      <line x1="250" y1="84" x2="250" y2="98"/>
+      <line x1="138" y1="90" x2="262" y2="90"/>
+    </g>
+    <!-- Label -->
+    <rect x="155" y="150" width="90" height="70" rx="8" fill="#fef9c3" stroke="#7f1d1d" stroke-width="2.5"/>
+    <!-- Strawberry on label -->
+    <path d="M200 175 Q182 175 182 192 Q182 208 200 212 Q218 208 218 192 Q218 175 200 175 Z" fill="#dc2626" stroke="#991b1b" stroke-width="2.5"/>
+    <path d="M188 172 L200 178 L212 172 L206 165 L200 172 L194 165 Z" fill="#22c55e"/>
+    <g fill="#fde047">
+      <circle cx="194" cy="188" r="1.5"/>
+      <circle cx="206" cy="188" r="1.5"/>
+      <circle cx="200" cy="198" r="1.5"/>
+      <circle cx="190" cy="200" r="1.5"/>
+      <circle cx="210" cy="200" r="1.5"/>
+    </g>
+  </g>
+</svg>

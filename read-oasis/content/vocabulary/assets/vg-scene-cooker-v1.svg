@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-cooker desc-cooker">
+  <title id="title-cooker">Cooker</title>
+  <desc id="desc-cooker">A kitchen cooker or stove with four burners on top and an oven door below.</desc>
+  <defs>
+    <linearGradient id="cooker-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f1f5f9"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="cooker-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#cooker-bg)"/>
+  <ellipse cx="200" cy="272" rx="130" ry="14" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Body -->
+    <rect x="110" y="90" width="180" height="180" rx="10" fill="url(#cooker-body)" stroke="#1e293b" stroke-width="4"/>
+    <!-- Cooktop -->
+    <rect x="110" y="90" width="180" height="55" rx="10" fill="#64748b" stroke="#1e293b" stroke-width="4"/>
+    <!-- Burners -->
+    <circle cx="150" cy="118" r="16" fill="#334155" stroke="#0f172a" stroke-width="2.5"/>
+    <circle cx="150" cy="118" r="7" fill="#f97316"/>
+    <circle cx="250" cy="118" r="16" fill="#334155" stroke="#0f172a" stroke-width="2.5"/>
+    <circle cx="250" cy="118" r="7" fill="#334155"/>
+    <!-- Control knobs -->
+    <circle cx="140" cy="162" r="8" fill="#334155" stroke="#0f172a" stroke-width="2"/>
+    <circle cx="165" cy="162" r="8" fill="#334155" stroke="#0f172a" stroke-width="2"/>
+    <circle cx="235" cy="162" r="8" fill="#334155" stroke="#0f172a" stroke-width="2"/>
+    <circle cx="260" cy="162" r="8" fill="#334155" stroke="#0f172a" stroke-width="2"/>
+    <!-- Oven door -->
+    <rect x="128" y="182" width="144" height="78" rx="8" fill="#cbd5e1" stroke="#1e293b" stroke-width="3.5"/>
+    <rect x="140" y="195" width="120" height="40" rx="5" fill="#1e293b" opacity="0.7"/>
+    <rect x="150" y="200" width="100" height="8" rx="4" fill="#334155"/>
+  </g>
+</svg>

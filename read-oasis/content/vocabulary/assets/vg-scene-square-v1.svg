@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-square desc-square">
+  <title id="title-square">Square</title>
+  <desc id="desc-square">A big blue square shape with four equal sides and right-angle corners marked.</desc>
+  <defs>
+    <linearGradient id="square-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="square-fill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#square-bg)"/>
+  <ellipse cx="200" cy="272" rx="130" ry="14" fill="#0f172a" opacity="0.1"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Square -->
+    <rect x="110" y="60" width="180" height="180" rx="6" fill="url(#square-fill)" stroke="#1e40af" stroke-width="5"/>
+    <!-- Right-angle corner marks -->
+    <g fill="none" stroke="#fde047" stroke-width="4">
+      <path d="M128 78 L128 96 L146 96"/>
+      <path d="M272 78 L272 96 L254 96"/>
+      <path d="M128 222 L128 204 L146 204"/>
+      <path d="M272 222 L272 204 L254 204"/>
+    </g>
+    <!-- Equal-side tick marks -->
+    <g stroke="#ffffff" stroke-width="4" stroke-linecap="round">
+      <line x1="196" y1="55" x2="204" y2="65"/>
+      <line x1="196" y1="235" x2="204" y2="245"/>
+      <line x1="105" y1="146" x2="115" y2="154"/>
+      <line x1="285" y1="146" x2="295" y2="154"/>
+    </g>
+  </g>
+</svg>

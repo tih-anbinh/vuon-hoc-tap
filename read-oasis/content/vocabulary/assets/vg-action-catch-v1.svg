@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-catch desc-catch">
+  <title id="title-catch">Catch</title>
+  <desc id="desc-catch">A child reaching up with both hands to catch a falling ball, with motion lines.</desc>
+  <defs>
+    <linearGradient id="catch-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#f0fdf4"/>
+    </linearGradient>
+    <linearGradient id="catch-skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5d0a9"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#catch-bg)"/>
+  <rect x="0" y="260" width="400" height="40" fill="#86efac"/>
+  <ellipse cx="190" cy="266" rx="110" ry="14" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Legs -->
+    <rect x="172" y="215" width="18" height="48" rx="8" fill="#1e40af" stroke="#1e293b" stroke-width="3"/>
+    <rect x="200" y="215" width="18" height="48" rx="8" fill="#1e40af" stroke="#1e293b" stroke-width="3"/>
+    <ellipse cx="180" cy="264" rx="15" ry="8" fill="#ef4444" stroke="#1e293b" stroke-width="2.5"/>
+    <ellipse cx="210" cy="264" rx="15" ry="8" fill="#ef4444" stroke="#1e293b" stroke-width="2.5"/>
+    <!-- Body -->
+    <path d="M168 155 Q195 145 222 155 L218 218 L172 218 Z" fill="#f97316" stroke="#1e293b" stroke-width="3.5"/>
+    <!-- Arms reaching up -->
+    <path d="M175 160 Q160 120 168 90" fill="none" stroke="#f97316" stroke-width="15" stroke-linecap="round"/>
+    <path d="M215 160 Q230 120 222 90" fill="none" stroke="#f97316" stroke-width="15" stroke-linecap="round"/>
+    <circle cx="167" cy="86" r="11" fill="url(#catch-skin)" stroke="#d4a574" stroke-width="2.5"/>
+    <circle cx="223" cy="86" r="11" fill="url(#catch-skin)" stroke="#d4a574" stroke-width="2.5"/>
+    <!-- Head -->
+    <circle cx="195" cy="120" r="30" fill="url(#catch-skin)" stroke="#d4a574" stroke-width="3.5"/>
+    <path d="M167 114 Q167 88 195 88 Q223 88 223 114 Q212 100 195 100 Q178 100 167 114 Z" fill="#5c3310" stroke="#3d2109" stroke-width="2.5"/>
+    <circle cx="186" cy="118" r="5" fill="#1e293b"/>
+    <circle cx="204" cy="118" r="5" fill="#1e293b"/>
+    <path d="M185 130 Q195 138 205 130" fill="none" stroke="#78350f" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Ball falling -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="195" cy="55" r="26" fill="#facc15" stroke="#a16207" stroke-width="3.5"/>
+    <path d="M180 45 Q195 55 210 45" fill="none" stroke="#a16207" stroke-width="2.5"/>
+  </g>
+  <!-- Motion lines -->
+  <g stroke="#38bdf8" stroke-width="3" stroke-linecap="round">
+    <line x1="230" y1="30" x2="220" y2="48"/>
+    <line x1="245" y1="45" x2="232" y2="60"/>
+  </g>
+</svg>

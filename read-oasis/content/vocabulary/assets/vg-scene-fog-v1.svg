@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-fog desc-fog">
+  <title id="title-fog">Fog</title>
+  <desc id="desc-fog">Thick grey fog covering hills and trees so they are dim and hard to see.</desc>
+  <defs>
+    <linearGradient id="fog-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#fog-bg)"/>
+
+  <!-- Dim hills -->
+  <path d="M0 230 Q100 180 200 220 Q300 255 400 210 L400 300 L0 300 Z" fill="#94a3b8" opacity="0.6"/>
+
+  <!-- Faint trees -->
+  <g opacity="0.4" filter="url(#soft-shadow)">
+    <rect x="90" y="200" width="10" height="40" fill="#475569"/>
+    <circle cx="95" cy="192" r="26" fill="#64748b"/>
+    <rect x="290" y="205" width="9" height="35" fill="#475569"/>
+    <circle cx="294" cy="198" r="22" fill="#64748b"/>
+  </g>
+
+  <!-- Fog bands -->
+  <g fill="#f1f5f9">
+    <ellipse cx="120" cy="130" rx="130" ry="26" opacity="0.75"/>
+    <ellipse cx="300" cy="110" rx="140" ry="24" opacity="0.7"/>
+    <ellipse cx="200" cy="175" rx="180" ry="30" opacity="0.7"/>
+    <ellipse cx="90" cy="215" rx="120" ry="24" opacity="0.65"/>
+    <ellipse cx="320" cy="205" rx="130" ry="26" opacity="0.65"/>
+    <ellipse cx="200" cy="250" rx="200" ry="30" opacity="0.6"/>
+  </g>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-glue desc-glue">
+  <title id="title-glue">Glue</title>
+  <desc id="desc-glue">A bottle of white school glue with an orange twist cap and a drip of glue on the tip.</desc>
+  <defs>
+    <linearGradient id="glue-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fefce8"/>
+    </linearGradient>
+    <linearGradient id="glue-bottle" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#glue-bg)"/>
+  <ellipse cx="200" cy="262" rx="80" ry="14" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Bottle body -->
+    <path d="M160 130 Q160 110 175 108 L225 108 Q240 110 240 130 L240 250 Q240 258 232 258 L168 258 Q160 258 160 250 Z" fill="url(#glue-bottle)" stroke="#64748b" stroke-width="4"/>
+    <!-- Label -->
+    <rect x="168" y="150" width="64" height="80" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="2.5"/>
+    <path d="M180 200 q20 -25 40 0" fill="none" stroke="#3b82f6" stroke-width="3"/>
+    <circle cx="200" cy="175" r="10" fill="#3b82f6"/>
+    <!-- Shoulder -->
+    <path d="M178 108 Q200 96 222 108 Z" fill="#cbd5e1" stroke="#64748b" stroke-width="3"/>
+    <!-- Orange cap -->
+    <rect x="188" y="72" width="24" height="38" rx="4" fill="#f97316" stroke="#c2410c" stroke-width="3"/>
+    <path d="M195 72 L205 72 L200 52 Z" fill="#fb923c" stroke="#c2410c" stroke-width="2.5"/>
+  </g>
+
+  <!-- Glue drip -->
+  <path d="M200 50 q-4 14 0 20 q4 -6 0 -20 Z" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+</svg>

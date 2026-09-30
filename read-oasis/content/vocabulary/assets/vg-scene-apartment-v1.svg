@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-apartment desc-apartment">
+  <title id="title-apartment">Apartment building</title>
+  <desc id="desc-apartment">A tall apartment building with many lit windows, a front door, and a small balcony.</desc>
+  <defs>
+    <linearGradient id="apartment-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <linearGradient id="apartment-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fcd9b6"/>
+      <stop offset="100%" stop-color="#f0b27a"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#apartment-bg)"/>
+  <rect x="0" y="262" width="400" height="38" fill="#a3a3a3"/>
+  <ellipse cx="200" cy="270" rx="150" ry="14" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <rect x="120" y="40" width="160" height="222" rx="6" fill="url(#apartment-wall)" stroke="#1e293b" stroke-width="4"/>
+    <rect x="112" y="30" width="176" height="16" rx="3" fill="#c2703f" stroke="#1e293b" stroke-width="3"/>
+    <!-- Windows grid -->
+    <g fill="#7dd3fc" stroke="#1e293b" stroke-width="2.5">
+      <rect x="138" y="62" width="30" height="30" rx="3"/>
+      <rect x="185" y="62" width="30" height="30" rx="3"/>
+      <rect x="232" y="62" width="30" height="30" rx="3"/>
+      <rect x="138" y="110" width="30" height="30" rx="3"/>
+      <rect x="185" y="110" width="30" height="30" rx="3"/>
+      <rect x="232" y="110" width="30" height="30" rx="3"/>
+      <rect x="138" y="158" width="30" height="30" rx="3"/>
+      <rect x="232" y="158" width="30" height="30" rx="3"/>
+    </g>
+    <!-- Balcony -->
+    <rect x="180" y="158" width="40" height="30" fill="#93c5fd" stroke="#1e293b" stroke-width="2.5"/>
+    <rect x="176" y="186" width="48" height="8" fill="#c2703f" stroke="#1e293b" stroke-width="2"/>
+    <line x1="182" y1="186" x2="182" y2="200" stroke="#1e293b" stroke-width="2"/>
+    <line x1="200" y1="186" x2="200" y2="200" stroke="#1e293b" stroke-width="2"/>
+    <line x1="218" y1="186" x2="218" y2="200" stroke="#1e293b" stroke-width="2"/>
+    <line x1="176" y1="200" x2="224" y2="200" stroke="#1e293b" stroke-width="2.5"/>
+    <!-- Door -->
+    <rect x="182" y="210" width="36" height="52" rx="3" fill="#7c4a1e" stroke="#1e293b" stroke-width="3"/>
+    <circle cx="210" cy="238" r="3" fill="#fde047"/>
+  </g>
+</svg>

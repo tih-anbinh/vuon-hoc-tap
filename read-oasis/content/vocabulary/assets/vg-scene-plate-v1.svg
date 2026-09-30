@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-plate desc-plate">
+  <title id="title-plate">Plate</title>
+  <desc id="desc-plate">A round white dinner plate seen from above with a decorative blue rim.</desc>
+  <defs>
+    <linearGradient id="plate-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <radialGradient id="plate-body" cx="45%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#plate-bg)"/>
+  <ellipse cx="200" cy="230" rx="130" ry="30" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Outer plate -->
+    <circle cx="200" cy="150" r="120" fill="url(#plate-body)" stroke="#94a3b8" stroke-width="4"/>
+    <!-- Blue decorative rim -->
+    <circle cx="200" cy="150" r="120" fill="none" stroke="#2563eb" stroke-width="8" stroke-dasharray="14 10"/>
+    <!-- Inner well -->
+    <circle cx="200" cy="150" r="82" fill="#f8fafc" stroke="#cbd5e1" stroke-width="3"/>
+    <circle cx="200" cy="150" r="60" fill="none" stroke="#93c5fd" stroke-width="3" opacity="0.6"/>
+    <!-- Shine highlight -->
+    <path d="M150 100 Q180 85 220 92" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
+  </g>
+</svg>

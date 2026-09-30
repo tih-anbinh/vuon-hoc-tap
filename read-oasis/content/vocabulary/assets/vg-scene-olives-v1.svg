@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-olives desc-olives">
+  <title id="title-olives">Olives</title>
+  <desc id="desc-olives">A small white bowl full of shiny green and black olives with a leafy sprig.</desc>
+  <defs>
+    <linearGradient id="olives-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ecfccb"/>
+      <stop offset="100%" stop-color="#f7fee7"/>
+    </linearGradient>
+    <radialGradient id="olives-green" cx="38%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#bef264"/>
+      <stop offset="100%" stop-color="#4d7c0f"/>
+    </radialGradient>
+    <radialGradient id="olives-black" cx="38%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#57534e"/>
+      <stop offset="100%" stop-color="#1c1917"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#olives-bg)"/>
+  <ellipse cx="200" cy="255" rx="130" ry="16" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Bowl -->
+    <path d="M90 175 Q200 165 310 175 Q300 240 200 245 Q100 240 90 175 Z" fill="#f8fafc" stroke="#94a3b8" stroke-width="4"/>
+    <ellipse cx="200" cy="175" rx="110" ry="26" fill="#e2e8f0" stroke="#94a3b8" stroke-width="3"/>
+
+    <!-- Olives inside -->
+    <ellipse cx="160" cy="168" rx="24" ry="20" fill="url(#olives-green)" stroke="#365314" stroke-width="2.5"/>
+    <ellipse cx="205" cy="160" rx="24" ry="20" fill="url(#olives-black)" stroke="#1c1917" stroke-width="2.5"/>
+    <ellipse cx="248" cy="170" rx="24" ry="20" fill="url(#olives-green)" stroke="#365314" stroke-width="2.5"/>
+    <ellipse cx="182" cy="180" rx="22" ry="18" fill="url(#olives-black)" stroke="#1c1917" stroke-width="2.5"/>
+    <ellipse cx="226" cy="182" rx="22" ry="18" fill="url(#olives-green)" stroke="#365314" stroke-width="2.5"/>
+    <!-- Pimento holes -->
+    <ellipse cx="152" cy="165" rx="6" ry="8" fill="#ef4444"/>
+    <ellipse cx="240" cy="167" rx="6" ry="8" fill="#ef4444"/>
+    <ellipse cx="218" cy="179" rx="5" ry="7" fill="#ef4444"/>
+  </g>
+
+  <!-- Leafy sprig -->
+  <g stroke="#4d7c0f" stroke-width="3" fill="#65a30d">
+    <path d="M280 130 Q300 100 320 90"/>
+    <ellipse cx="300" cy="106" rx="12" ry="6" transform="rotate(-40 300 106)"/>
+    <ellipse cx="318" cy="92" rx="12" ry="6" transform="rotate(-30 318 92)"/>
+  </g>
+</svg>

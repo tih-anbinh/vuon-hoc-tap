@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-pool desc-pool">
+  <title id="title-pool">Pool</title>
+  <desc id="desc-pool">A blue swimming pool with a ladder, a beach ball floating, and a diving board.</desc>
+  <defs>
+    <linearGradient id="pool-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="pool-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#pool-bg)"/>
+  <!-- Deck -->
+  <rect x="0" y="120" width="400" height="180" fill="#fed7aa"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Pool -->
+    <rect x="50" y="150" width="300" height="120" rx="14" fill="url(#pool-water)" stroke="#075985" stroke-width="5"/>
+    <!-- Tile rim -->
+    <rect x="50" y="150" width="300" height="120" rx="14" fill="none" stroke="#f8fafc" stroke-width="4" opacity="0.6"/>
+    <!-- Water ripples -->
+    <g fill="none" stroke="#bae6fd" stroke-width="3" stroke-linecap="round" opacity="0.7">
+      <path d="M70 185 q20 -10 40 0 t40 0 t40 0 t40 0 t40 0"/>
+      <path d="M65 215 q22 -10 44 0 t44 0 t44 0 t44 0"/>
+      <path d="M70 245 q20 -10 40 0 t40 0 t40 0 t40 0 t40 0"/>
+    </g>
+  </g>
+
+  <!-- Ladder -->
+  <g stroke="#94a3b8" stroke-width="5" stroke-linecap="round">
+    <path d="M300 130 L300 200" fill="none"/>
+    <path d="M320 130 L320 200" fill="none"/>
+    <line x1="300" y1="150" x2="320" y2="150"/>
+    <line x1="300" y1="170" x2="320" y2="170"/>
+    <path d="M300 130 Q310 118 320 130" fill="none"/>
+  </g>
+
+  <!-- Diving board -->
+  <g filter="url(#soft-shadow)">
+    <rect x="30" y="140" width="70" height="12" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="3"/>
+    <rect x="45" y="152" width="8" height="30" fill="#64748b"/>
+  </g>
+
+  <!-- Beach ball -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="200" cy="205" r="26" fill="#f8fafc" stroke="#1e293b" stroke-width="3"/>
+    <path d="M200 179 A26 26 0 0 1 224 200 L200 205 Z" fill="#ef4444"/>
+    <path d="M200 231 A26 26 0 0 1 176 210 L200 205 Z" fill="#fbbf24"/>
+    <path d="M174 205 A26 26 0 0 1 200 179 L200 205 Z" fill="#3b82f6"/>
+  </g>
+</svg>

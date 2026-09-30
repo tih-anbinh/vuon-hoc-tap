@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-piece desc-piece">
+  <title id="title-piece">Piece</title>
+  <desc id="desc-piece">One single slice of cake separated from the rest of a whole round cake.</desc>
+  <defs>
+    <linearGradient id="piece-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fce7f3"/>
+      <stop offset="100%" stop-color="#fdf2f8"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#piece-bg)"/>
+  <ellipse cx="200" cy="258" rx="160" ry="16" fill="#0f172a" opacity="0.12"/>
+
+  <!-- Whole cake (missing a slice) -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="130" cy="215" rx="80" ry="26" fill="#f472b6" stroke="#be185d" stroke-width="3"/>
+    <path d="M50 215 L50 165 A80 26 0 0 1 210 165 L210 215 A80 26 0 0 1 50 215 Z" fill="#fbcfe8" stroke="#be185d" stroke-width="3"/>
+    <!-- Missing wedge (dark cut) -->
+    <path d="M130 165 L130 190 L200 175 A80 26 0 0 0 170 152 Z" fill="#831843" opacity="0.4"/>
+    <!-- Frosting top -->
+    <ellipse cx="130" cy="165" rx="80" ry="26" fill="#f9a8d4" stroke="#be185d" stroke-width="3"/>
+    <!-- Cherries -->
+    <circle cx="90" cy="158" r="7" fill="#dc2626"/>
+    <circle cx="130" cy="152" r="7" fill="#dc2626"/>
+    <circle cx="105" cy="170" r="7" fill="#dc2626"/>
+  </g>
+
+  <!-- The separated PIECE (highlighted) -->
+  <g filter="url(#soft-shadow)">
+    <!-- Slice front -->
+    <path d="M270 175 L340 200 L305 235 Z" fill="#fbcfe8" stroke="#be185d" stroke-width="4"/>
+    <!-- Layers -->
+    <path d="M270 175 L340 200 L340 210 L270 185 Z" fill="#f9a8d4"/>
+    <path d="M270 195 L328 216" stroke="#f472b6" stroke-width="4"/>
+    <!-- Frosting top of slice -->
+    <path d="M270 175 L340 200 L332 190 L280 168 Z" fill="#f9a8d4" stroke="#be185d" stroke-width="3"/>
+    <circle cx="300" cy="184" r="7" fill="#dc2626"/>
+  </g>
+
+  <!-- Arrow highlighting the piece -->
+  <g stroke="#22c55e" stroke-width="5" stroke-linecap="round" fill="#22c55e">
+    <path d="M300 90 Q305 130 305 160" fill="none"/>
+    <path d="M305 160 L296 145 L314 145 Z" stroke="none"/>
+  </g>
+</svg>

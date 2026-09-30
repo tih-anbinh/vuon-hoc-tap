@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-hill desc-hill">
+  <title id="title-hill">Hill</title>
+  <desc id="desc-hill">A big rounded green hill with a winding path and a single tree on top under the sun.</desc>
+  <defs>
+    <linearGradient id="hill-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#93c5fd"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+    <linearGradient id="hill-grass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#hill-sky)"/>
+  <circle cx="330" cy="60" r="30" fill="#fde047"/>
+  <g fill="#ffffff" opacity="0.9">
+    <ellipse cx="90" cy="55" rx="32" ry="15"/>
+    <ellipse cx="122" cy="55" rx="22" ry="12"/>
+  </g>
+
+  <!-- Big hill -->
+  <path d="M-20 300 Q200 100 420 300 Z" fill="url(#hill-grass)" stroke="#166534" stroke-width="3"/>
+  <!-- Smaller hill behind -->
+  <path d="M-40 300 Q60 200 160 300 Z" fill="#22c55e" opacity="0.7"/>
+
+  <!-- Winding path -->
+  <path d="M200 130 Q160 180 210 220 Q255 255 200 300" fill="none" stroke="#d6a860" stroke-width="16" stroke-linecap="round"/>
+  <path d="M200 130 Q160 180 210 220 Q255 255 200 300" fill="none" stroke="#e7d5a8" stroke-width="8" stroke-linecap="round" stroke-dasharray="6 10"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Tree on top -->
+    <rect x="194" y="110" width="12" height="35" fill="#78350f"/>
+    <circle cx="200" cy="102" r="30" fill="#16a34a" stroke="#166534" stroke-width="3"/>
+    <circle cx="182" cy="112" r="20" fill="#22c55e" stroke="#166534" stroke-width="2.5"/>
+    <circle cx="218" cy="112" r="20" fill="#22c55e" stroke="#166534" stroke-width="2.5"/>
+  </g>
+</svg>

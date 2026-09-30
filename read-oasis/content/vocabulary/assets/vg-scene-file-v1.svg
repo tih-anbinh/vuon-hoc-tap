@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-file desc-file">
+  <title id="title-file">File</title>
+  <desc id="desc-file">A cardboard document file folder holding papers, with a labelled tab on top.</desc>
+  <defs>
+    <linearGradient id="file-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fefce8"/>
+      <stop offset="100%" stop-color="#fef9c3"/>
+    </linearGradient>
+    <linearGradient id="file-folder" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#file-bg)"/>
+  <ellipse cx="200" cy="255" rx="130" ry="16" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Papers poking out -->
+    <rect x="115" y="95" width="150" height="130" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-width="2.5"/>
+    <line x1="130" y1="118" x2="250" y2="118" stroke="#cbd5e1" stroke-width="3"/>
+    <line x1="130" y1="135" x2="250" y2="135" stroke="#cbd5e1" stroke-width="3"/>
+    <line x1="130" y1="152" x2="220" y2="152" stroke="#cbd5e1" stroke-width="3"/>
+    <!-- Back folder flap with tab -->
+    <path d="M95 120 L150 120 L165 105 L305 105 L305 240 L95 240 Z" fill="url(#file-folder)" stroke="#92400e" stroke-width="4"/>
+    <!-- Front folder flap -->
+    <path d="M95 135 L305 135 L285 240 L115 240 Z" fill="#f59e0b" stroke="#92400e" stroke-width="4"/>
+    <!-- Label on tab -->
+    <rect x="175" y="110" width="70" height="16" rx="3" fill="#f8fafc" stroke="#92400e" stroke-width="2"/>
+    <line x1="182" y1="118" x2="238" y2="118" stroke="#94a3b8" stroke-width="2.5"/>
+  </g>
+</svg>

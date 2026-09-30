@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-circus desc-circus">
+  <title id="title-circus">Circus</title>
+  <desc id="desc-circus">A red and yellow striped circus big top tent with flags and a star entrance.</desc>
+  <defs>
+    <linearGradient id="circus-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fce7f3"/>
+      <stop offset="100%" stop-color="#fef9c3"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#circus-bg)"/>
+  <rect x="0" y="255" width="400" height="45" fill="#86efac"/>
+  <ellipse cx="200" cy="262" rx="160" ry="14" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Tent roof -->
+    <path d="M80 130 Q200 60 320 130 Z" fill="#ef4444" stroke="#1e293b" stroke-width="4"/>
+    <!-- Roof stripes -->
+    <g fill="#fde047">
+      <path d="M200 78 L215 130 L185 130 Z"/>
+      <path d="M140 95 L155 130 L128 130 Z"/>
+      <path d="M260 95 L272 130 L245 130 Z"/>
+    </g>
+    <!-- Tent body -->
+    <path d="M90 130 L90 255 L310 255 L310 130 Z" fill="#f8fafc" stroke="#1e293b" stroke-width="4"/>
+    <!-- Body stripes -->
+    <g fill="#ef4444">
+      <rect x="90" y="130" width="24" height="125"/>
+      <rect x="138" y="130" width="24" height="125"/>
+      <rect x="286" y="130" width="24" height="125"/>
+    </g>
+    <!-- Entrance (star curtain) -->
+    <path d="M170 255 L170 180 Q200 165 230 180 L230 255 Z" fill="#1d4ed8" stroke="#1e293b" stroke-width="3.5"/>
+    <path d="M200 190 l7 15 l16 2 l-12 11 l3 16 l-14 -8 l-14 8 l3 -16 l-12 -11 l16 -2 Z" fill="#fde047"/>
+    <!-- Flag on top -->
+    <line x1="200" y1="70" x2="200" y2="45" stroke="#78350f" stroke-width="3"/>
+    <path d="M200 46 L224 53 L200 60 Z" fill="#22c55e"/>
+    <line x1="90" y1="130" x2="90" y2="110" stroke="#78350f" stroke-width="2.5"/>
+    <path d="M90 111 L106 116 L90 121 Z" fill="#3b82f6"/>
+    <line x1="310" y1="130" x2="310" y2="110" stroke="#78350f" stroke-width="2.5"/>
+    <path d="M310 111 L294 116 L310 121 Z" fill="#3b82f6"/>
+  </g>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-honey desc-honey">
+  <title id="title-honey">Honey</title>
+  <desc id="desc-honey">A glass jar of golden honey with a wooden honey dipper and a bee flying nearby.</desc>
+  <defs>
+    <linearGradient id="honey-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fefce8"/>
+    </linearGradient>
+    <linearGradient id="honey-fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#honey-bg)"/>
+  <ellipse cx="185" cy="262" rx="90" ry="14" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Jar -->
+    <rect x="130" y="120" width="110" height="140" rx="16" fill="url(#honey-fill)" stroke="#92400e" stroke-width="4"/>
+    <!-- Glass highlight -->
+    <rect x="140" y="130" width="14" height="115" rx="7" fill="#fef3c7" opacity="0.5"/>
+    <!-- Lid -->
+    <rect x="122" y="100" width="126" height="26" rx="8" fill="#dc2626" stroke="#7f1d1d" stroke-width="3.5"/>
+    <!-- Label with hexagon -->
+    <rect x="150" y="170" width="70" height="60" rx="6" fill="#fef9c3" stroke="#92400e" stroke-width="2.5"/>
+    <path d="M185 182 l16 9 l0 18 l-16 9 l-16 -9 l0 -18 Z" fill="#f59e0b" stroke="#b45309" stroke-width="2"/>
+  </g>
+
+  <!-- Dipper with dripping honey -->
+  <g filter="url(#soft-shadow)">
+    <line x1="290" y1="80" x2="290" y2="150" stroke="#a16207" stroke-width="8" stroke-linecap="round"/>
+    <g stroke="#92400e" stroke-width="2.5">
+      <line x1="278" y1="155" x2="302" y2="155"/>
+      <line x1="278" y1="168" x2="302" y2="168"/>
+      <line x1="280" y1="181" x2="300" y2="181"/>
+    </g>
+    <ellipse cx="290" cy="188" rx="14" ry="12" fill="url(#honey-fill)" stroke="#92400e" stroke-width="2.5"/>
+    <path d="M290 200 q-4 16 0 22 q4 -6 0 -22 Z" fill="url(#honey-fill)"/>
+  </g>
+
+  <!-- Bee -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="90" cy="90" rx="22" ry="15" fill="#fde047" stroke="#78350f" stroke-width="3"/>
+    <rect x="78" y="76" width="8" height="28" fill="#1e293b"/>
+    <rect x="94" y="76" width="8" height="28" fill="#1e293b"/>
+    <ellipse cx="82" cy="72" rx="14" ry="8" fill="#f8fafc" opacity="0.7" stroke="#94a3b8" stroke-width="1.5"/>
+    <ellipse cx="98" cy="72" rx="14" ry="8" fill="#f8fafc" opacity="0.7" stroke="#94a3b8" stroke-width="1.5"/>
+    <circle cx="111" cy="88" r="3" fill="#1e293b"/>
+  </g>
+</svg>

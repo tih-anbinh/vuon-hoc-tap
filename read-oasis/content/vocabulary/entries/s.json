@@ -42,13 +42,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "concept_card",
+        "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "contrast",
+        "asset_id": "vg-scene-sad-v1",
+        "asset": "vocabulary/assets/vg-scene-sad-v1.svg",
+        "alt": "A blue-tinted face with a frowning mouth, downturned eyes, tears rolling down, and a rain cloud above.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -62,7 +62,7 @@
       "language_review": "approved",
       "sense_review": "approved",
       "child_suitability_review": "approved",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -252,13 +252,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-salad-v1",
+        "asset": "vocabulary/assets/vg-scene-salad-v1.svg",
+        "alt": "A big bowl of fresh green salad with lettuce, red tomatoes, cucumber slices, and carrot.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -268,7 +268,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -390,13 +390,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-salt-v1",
+        "asset": "vocabulary/assets/vg-scene-salt-v1.svg",
+        "alt": "A glass salt shaker with a metal top sprinkling white salt grains onto food.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -406,7 +406,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -664,13 +664,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-sandwich-v1",
+        "asset": "vocabulary/assets/vg-scene-sandwich-v1.svg",
+        "alt": "A triangular sandwich with layers of lettuce, tomato, cheese, and ham between bread slices.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -680,7 +680,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -871,13 +871,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-sauce-v1",
+        "asset": "vocabulary/assets/vg-scene-sauce-v1.svg",
+        "alt": "A red squeeze bottle of ketchup sauce pouring a stream onto a plate of fries.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -887,7 +887,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1143,13 +1143,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-scarf-v1",
+        "asset": "vocabulary/assets/vg-scene-scarf-v1.svg",
+        "alt": "A long striped woolly winter scarf wrapped in a loop with fringed tasseled ends.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -1159,7 +1159,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1417,13 +1417,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-scissors-v1",
+        "asset": "vocabulary/assets/vg-scene-scissors-v1.svg",
+        "alt": "A pair of open scissors with silver blades and orange finger-loop handles.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -1433,7 +1433,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1624,13 +1624,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-screen-v1",
+        "asset": "vocabulary/assets/vg-scene-screen-v1.svg",
+        "alt": "A large flat monitor screen on a stand showing a bright colorful picture.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -1640,7 +1640,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1693,13 +1693,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-sea-v1",
+        "asset": "vocabulary/assets/vg-scene-sea-v1.svg",
+        "alt": "A wide blue sea with rolling waves, a sailboat on the horizon, sun, and a seagull flying overhead.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -1709,7 +1709,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1830,13 +1830,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-seat-v1",
+        "asset": "vocabulary/assets/vg-scene-seat-v1.svg",
+        "alt": "A padded cushioned chair seat with a backrest, shown as a place to sit down.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -1846,7 +1846,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2576,13 +2576,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-shampoo-v1",
+        "asset": "vocabulary/assets/vg-scene-shampoo-v1.svg",
+        "alt": "A pump bottle of shampoo with soapy bubbles beside it for washing hair.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -2592,7 +2592,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2643,13 +2643,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-shape-v1",
+        "asset": "vocabulary/assets/vg-scene-shape-v1.svg",
+        "alt": "A group of colorful basic shapes: a red circle, blue square, yellow triangle, and green star.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -2659,7 +2659,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2712,13 +2712,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-shark-v1",
+        "asset": "vocabulary/assets/vg-scene-shark-v1.svg",
+        "alt": "A grey shark swimming underwater with a tall dorsal fin and sharp toothy grin.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -2728,7 +2728,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2848,13 +2848,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-sheep-v1",
+        "asset": "vocabulary/assets/vg-scene-sheep-v1.svg",
+        "alt": "A fluffy white sheep with a woolly cloud-like body, dark face and legs, and a gentle expression standing on green grass.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -2864,7 +2864,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2918,13 +2918,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-shelf-v1",
+        "asset": "vocabulary/assets/vg-scene-shelf-v1.svg",
+        "alt": "A wooden wall shelf holding a row of colorful books, a plant, and a clock.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -2934,7 +2934,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3125,13 +3125,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-shirt-v1",
+        "asset": "vocabulary/assets/vg-scene-shirt-v1.svg",
+        "alt": "A light blue collared button-up shirt with short sleeves and a chest pocket.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -3141,7 +3141,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3194,13 +3194,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-shoe-v1",
+        "asset": "vocabulary/assets/vg-scene-shoe-v1.svg",
+        "alt": "A colourful red sneaker with white laces and a rubber sole, seen from the side.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -3210,7 +3210,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3600,13 +3600,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-shorts-v1",
+        "asset": "vocabulary/assets/vg-scene-shorts-v1.svg",
+        "alt": "A pair of orange casual shorts with an elastic waistband, pockets, and a drawstring.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -3616,7 +3616,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3736,13 +3736,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-shoulder-v1",
+        "asset": "vocabulary/assets/vg-scene-shoulder-v1.svg",
+        "alt": "A child pointing to the shoulder, the body part between the neck and the arm, highlighted.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -3752,7 +3752,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3803,13 +3803,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "action_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-action-shout-v1",
+        "asset": "vocabulary/assets/vg-action-shout-v1.svg",
+        "alt": "A child shouting loudly with a wide-open mouth and cupped hands, with sound waves flying out.",
+        "status": "draft",
+        "kind": "action",
         "template": null,
         "anchor_objects": []
       },
@@ -3819,7 +3819,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3939,13 +3939,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-shower-v1",
+        "asset": "vocabulary/assets/vg-scene-shower-v1.svg",
+        "alt": "A shower head on the wall spraying streams of water down into a tiled shower stall.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -3955,7 +3955,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -4146,13 +4146,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-silver-v1",
+        "asset": "vocabulary/assets/vg-scene-silver-v1.svg",
+        "alt": "A shiny silver medal and stack of silver-grey metal coins gleaming with highlights.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -4162,7 +4162,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -4355,13 +4355,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-singer-v1",
+        "asset": "vocabulary/assets/vg-scene-singer-v1.svg",
+        "alt": "A happy singer holding a microphone and singing with music notes floating around.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -4371,7 +4371,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -4571,13 +4571,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-skate-v1",
+        "asset": "vocabulary/assets/vg-scene-skate-v1.svg",
+        "alt": "A white ice skate boot with a shiny silver blade, laced up ready for skating.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -4587,7 +4587,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -4779,13 +4779,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-ski-v1",
+        "asset": "vocabulary/assets/vg-scene-ski-v1.svg",
+        "alt": "A pair of long snow skis standing upright in the snow with two ski poles beside them.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -4795,7 +4795,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -4917,13 +4917,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-skirt-v1",
+        "asset": "vocabulary/assets/vg-scene-skirt-v1.svg",
+        "alt": "A purple pleated skirt with a waistband, displayed flat showing the flared shape.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -4933,7 +4933,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -4987,13 +4987,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-sky-v1",
+        "asset": "vocabulary/assets/vg-scene-sky-v1.svg",
+        "alt": "A wide blue sky with a bright sun, fluffy white clouds, and birds flying above the ground.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -5003,7 +5003,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -5056,13 +5056,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-skyscraper-v1",
+        "asset": "vocabulary/assets/vg-scene-skyscraper-v1.svg",
+        "alt": "A very tall city skyscraper tower with many rows of windows rising high into the sky.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -5072,7 +5072,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -5126,13 +5126,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-sledge-v1",
+        "asset": "vocabulary/assets/vg-scene-sledge-v1.svg",
+        "alt": "A red wooden sledge with curved runners resting on white snow, ready to slide downhill.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -5142,7 +5142,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -5266,13 +5266,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "concept_card",
-        "visual_priority": "medium",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "contrast",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-slow-v1",
+        "asset": "vocabulary/assets/vg-scene-slow-v1.svg",
+        "alt": "A friendly turtle moving slowly with a big rounded shell, one small foot lifted, gentle short motion lines behind.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -5286,7 +5286,7 @@
       "language_review": "approved",
       "sense_review": "approved",
       "child_suitability_review": "approved",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -5404,13 +5404,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "concept_card",
+        "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "contrast",
+        "asset_id": "vg-scene-small-v1",
+        "asset": "vocabulary/assets/vg-scene-small-v1.svg",
+        "alt": "A small friendly mouse in the foreground beside a much larger elephant behind, showing the concept of small by size contrast.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -5424,7 +5424,7 @@
       "language_review": "approved",
       "sense_review": "approved",
       "child_suitability_review": "approved",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -5617,13 +5617,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-snack-v1",
+        "asset": "vocabulary/assets/vg-scene-snack-v1.svg",
+        "alt": "A small bowl of snacks with pretzels, crackers, and popcorn, plus a juice box beside it.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -5633,7 +5633,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -5686,13 +5686,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-snail-v1",
+        "asset": "vocabulary/assets/vg-scene-snail-v1.svg",
+        "alt": "A friendly snail with a spiral swirl shell, two eye stalks, crawling on a green leaf.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -5702,7 +5702,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -5755,13 +5755,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-snake-v1",
+        "asset": "vocabulary/assets/vg-scene-snake-v1.svg",
+        "alt": "A bright green snake with a yellow belly, coiled in an S-shape with its head raised and a flickering red tongue.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -5771,7 +5771,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -5825,13 +5825,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-snow-v1",
+        "asset": "vocabulary/assets/vg-scene-snow-v1.svg",
+        "alt": "White snowflakes falling from a grey sky onto snow-covered ground and a little pine tree.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -5841,7 +5841,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -5894,13 +5894,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-snowball-v1",
+        "asset": "vocabulary/assets/vg-scene-snowball-v1.svg",
+        "alt": "Two hands packing a round white snowball, with smaller snowballs on the snowy ground.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -5910,7 +5910,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -6101,13 +6101,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-snowman-v1",
+        "asset": "vocabulary/assets/vg-scene-snowman-v1.svg",
+        "alt": "A cheerful snowman with a carrot nose, coal buttons, stick arms, scarf, and a top hat.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -6117,7 +6117,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -6305,13 +6305,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-soap-v1",
+        "asset": "vocabulary/assets/vg-scene-soap-v1.svg",
+        "alt": "A bar of pink soap with foamy white bubbles on top, sitting in a soap dish.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -6321,7 +6321,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -6373,13 +6373,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-soccer-v1",
+        "asset": "vocabulary/assets/vg-scene-soccer-v1.svg",
+        "alt": "A black-and-white soccer ball on green grass in front of a goal net.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -6389,7 +6389,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -6984,13 +6984,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-son-v1",
+        "asset": "vocabulary/assets/vg-scene-son-v1.svg",
+        "alt": "A young boy, the son, standing happily next to and holding hands with his taller parent.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -7000,7 +7000,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -7461,13 +7461,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-soup-v1",
+        "asset": "vocabulary/assets/vg-scene-soup-v1.svg",
+        "alt": "A steaming bowl of hot vegetable soup with a spoon resting in it, on a plate.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -7477,7 +7477,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -7599,13 +7599,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-space-v1",
+        "asset": "vocabulary/assets/vg-scene-space-v1.svg",
+        "alt": "Outer space with planets, a ringed planet, stars, and a crescent moon in the dark sky.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -7615,7 +7615,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -7668,13 +7668,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-spaceship-v1",
+        "asset": "vocabulary/assets/vg-scene-spaceship-v1.svg",
+        "alt": "A shiny silver flying-saucer spaceship with a glass dome and glowing lights zooming past stars.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -7684,7 +7684,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -8007,13 +8007,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-spider-v1",
+        "asset": "vocabulary/assets/vg-scene-spider-v1.svg",
+        "alt": "A round black spider with eight legs hanging from a silk thread, with a partial web in the corner, friendly big eyes.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -8023,7 +8023,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -8076,13 +8076,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-spoon-v1",
+        "asset": "vocabulary/assets/vg-scene-spoon-v1.svg",
+        "alt": "A shiny silver spoon with a rounded scoop bowl and a long handle, lying on a table.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -8092,7 +8092,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -8492,13 +8492,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-square-v1",
+        "asset": "vocabulary/assets/vg-scene-square-v1.svg",
+        "alt": "A big blue square shape with four equal sides and right-angle corners marked.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -8508,7 +8508,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -8561,13 +8561,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-stadium-v1",
+        "asset": "vocabulary/assets/vg-scene-stadium-v1.svg",
+        "alt": "A large sports stadium with curved tiers of seats around a green field under bright floodlights.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -8577,7 +8577,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -9242,13 +9242,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "concept_card",
-        "visual_priority": "low",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "contrast",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-still-v1",
+        "asset": "vocabulary/assets/vg-scene-still-v1.svg",
+        "alt": "A completely still, mirror-flat pond reflecting a tree and the sun perfectly, with no wind or motion — everything is still.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -9261,7 +9261,7 @@
       "language_review": "approved",
       "sense_review": "approved",
       "child_suitability_review": "approved",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -11926,13 +11926,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "action_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-action-swim-v1",
+        "asset": "vocabulary/assets/vg-action-swim-v1.svg",
+        "alt": "A child doing freestyle swimming through wavy blue water with splashes and bubbles.",
+        "status": "draft",
+        "kind": "action",
         "template": null,
         "anchor_objects": []
       },
@@ -11942,7 +11942,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -11993,13 +11993,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "action_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-action-swim-v1",
+        "asset": "vocabulary/assets/vg-action-swim-v1.svg",
+        "alt": "A child doing freestyle swimming through wavy blue water with splashes and bubbles.",
+        "status": "draft",
+        "kind": "action",
         "template": null,
         "anchor_objects": []
       },
@@ -12009,7 +12009,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {

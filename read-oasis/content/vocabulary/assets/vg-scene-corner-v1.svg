@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-corner desc-corner">
+  <title id="title-corner">Corner</title>
+  <desc id="desc-corner">Two walls meeting at a right-angle corner of a room, with a highlighted L-shaped edge.</desc>
+  <defs>
+    <linearGradient id="corner-left" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c7d2fe"/>
+      <stop offset="100%" stop-color="#a5b4fc"/>
+    </linearGradient>
+    <linearGradient id="corner-right" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="#eef2ff"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Floor -->
+    <path d="M40 200 L200 250 L360 200 L360 260 L40 260 Z" fill="#e0c9a6" stroke="#1e293b" stroke-width="3"/>
+    <!-- Left wall -->
+    <path d="M40 60 L200 100 L200 250 L40 200 Z" fill="url(#corner-left)" stroke="#1e293b" stroke-width="3.5"/>
+    <!-- Right wall -->
+    <path d="M360 60 L200 100 L200 250 L360 200 Z" fill="url(#corner-right)" stroke="#1e293b" stroke-width="3.5"/>
+    <!-- Corner edge highlight -->
+    <line x1="200" y1="100" x2="200" y2="250" stroke="#fde047" stroke-width="6"/>
+  </g>
+  <!-- Emphasis arrow pointing to corner -->
+  <g filter="url(#soft-shadow)">
+    <path d="M200 170 m-16 0 a16 16 0 1 0 32 0 a16 16 0 1 0 -32 0" fill="#ef4444" stroke="#991b1b" stroke-width="2.5"/>
+    <path d="M200 158 l6 10 l-12 0 Z" fill="#fff"/>
+  </g>
+</svg>

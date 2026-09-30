@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-gym desc-gym">
+  <title id="title-gym">Gym</title>
+  <desc id="desc-gym">A gym scene with a black dumbbell, a blue exercise mat, and a red bouncing exercise ball.</desc>
+  <defs>
+    <linearGradient id="gym-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <radialGradient id="gym-ball" cx="40%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#fca5a5"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#gym-bg)"/>
+  <rect x="0" y="250" width="400" height="50" fill="#94a3b8"/>
+  <ellipse cx="200" cy="255" rx="170" ry="12" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Exercise mat -->
+    <path d="M40 250 L150 250 L170 225 L60 225 Z" fill="#3b82f6" stroke="#1e3a8a" stroke-width="3.5"/>
+    <path d="M62 232 L160 232 M62 242 L155 242" stroke="#60a5fa" stroke-width="2"/>
+
+    <!-- Dumbbell -->
+    <rect x="150" y="185" width="90" height="16" rx="6" fill="#334155" stroke="#0f172a" stroke-width="3"/>
+    <rect x="138" y="168" width="22" height="50" rx="6" fill="#1e293b" stroke="#0f172a" stroke-width="3"/>
+    <rect x="230" y="168" width="22" height="50" rx="6" fill="#1e293b" stroke="#0f172a" stroke-width="3"/>
+    <rect x="126" y="176" width="16" height="34" rx="5" fill="#334155" stroke="#0f172a" stroke-width="3"/>
+    <rect x="248" y="176" width="16" height="34" rx="5" fill="#334155" stroke="#0f172a" stroke-width="3"/>
+
+    <!-- Exercise ball -->
+    <circle cx="320" cy="210" r="42" fill="url(#gym-ball)" stroke="#991b1b" stroke-width="4"/>
+    <path d="M320 168 Q345 210 320 252 M278 210 Q320 195 362 210" fill="none" stroke="#991b1b" stroke-width="2.5" opacity="0.6"/>
+    <ellipse cx="306" cy="196" rx="12" ry="8" fill="#ffffff" opacity="0.4"/>
+  </g>
+</svg>

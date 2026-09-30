@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-roof desc-roof">
+  <title id="title-roof">Roof</title>
+  <desc id="desc-roof">A house with its red tiled triangular roof highlighted on top, with a chimney.</desc>
+  <defs>
+    <linearGradient id="roof-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="roof-tile" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f87171"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#roof-bg)"/>
+  <circle cx="330" cy="55" r="24" fill="#fde047" stroke="#f59e0b" stroke-width="3"/>
+  <ellipse cx="200" cy="278" rx="150" ry="14" fill="#0f172a" opacity="0.1"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- House walls -->
+    <rect x="110" y="180" width="180" height="100" fill="#fde68a" stroke="#a16207" stroke-width="4"/>
+    <!-- Door -->
+    <rect x="180" y="220" width="40" height="60" rx="4" fill="#78350f" stroke="#451a03" stroke-width="3"/>
+    <circle cx="212" cy="252" r="3" fill="#fde047"/>
+    <!-- Windows -->
+    <rect x="130" y="205" width="34" height="34" rx="3" fill="#bae6fd" stroke="#a16207" stroke-width="3"/>
+    <rect x="236" y="205" width="34" height="34" rx="3" fill="#bae6fd" stroke="#a16207" stroke-width="3"/>
+    <line x1="147" y1="205" x2="147" y2="239" stroke="#a16207" stroke-width="2"/>
+    <line x1="253" y1="205" x2="253" y2="239" stroke="#a16207" stroke-width="2"/>
+
+    <!-- ROOF (highlighted) -->
+    <path d="M90 185 L200 90 L310 185 Z" fill="url(#roof-tile)" stroke="#7f1d1d" stroke-width="5"/>
+    <!-- Tile rows -->
+    <g stroke="#7f1d1d" stroke-width="2" opacity="0.5">
+      <path d="M120 160 L280 160"/>
+      <path d="M140 138 L260 138"/>
+      <path d="M160 116 L240 116"/>
+    </g>
+    <!-- Chimney -->
+    <rect x="245" y="105" width="26" height="45" fill="#92400e" stroke="#451a03" stroke-width="3"/>
+    <g fill="#e2e8f0" opacity="0.7"><circle cx="258" cy="98" r="7"/><circle cx="268" cy="88" r="6"/></g>
+  </g>
+
+  <!-- Highlight brace on roof -->
+  <path d="M90 185 L200 90 L310 185" fill="none" stroke="#22c55e" stroke-width="4" stroke-dasharray="10 7"/>
+</svg>

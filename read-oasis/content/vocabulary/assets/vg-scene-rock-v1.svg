@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-rock desc-rock">
+  <title id="title-rock">Rock</title>
+  <desc id="desc-rock">A big gray boulder rock with cracks and smaller stones resting on grassy ground.</desc>
+  <defs>
+    <linearGradient id="rock-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#dcfce7"/>
+    </linearGradient>
+    <linearGradient id="rock-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#64748b"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="220" fill="url(#rock-bg)"/>
+  <rect x="0" y="210" width="400" height="90" fill="#65a30d"/>
+  <ellipse cx="200" cy="235" rx="160" ry="18" fill="#0f172a" opacity="0.14"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Big boulder -->
+    <path d="M90 220 Q75 150 130 110 Q190 80 250 105 Q315 130 310 190 Q308 215 280 220 Z" fill="url(#rock-body)" stroke="#334155" stroke-width="4"/>
+    <!-- Cracks -->
+    <g stroke="#334155" stroke-width="2.5" fill="none" opacity="0.6">
+      <path d="M160 110 L175 160 L155 200"/>
+      <path d="M230 115 L215 155 L240 195"/>
+      <path d="M175 160 L215 155"/>
+    </g>
+    <!-- Highlight -->
+    <path d="M130 130 Q160 110 195 115" fill="none" stroke="#e2e8f0" stroke-width="5" stroke-linecap="round" opacity="0.7"/>
+    <!-- Moss -->
+    <ellipse cx="120" cy="205" rx="22" ry="9" fill="#4d7c0f" opacity="0.6"/>
+    <ellipse cx="270" cy="208" rx="18" ry="8" fill="#4d7c0f" opacity="0.6"/>
+  </g>
+
+  <!-- Small stones -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="340" cy="225" rx="34" ry="20" fill="#94a3b8" stroke="#475569" stroke-width="3"/>
+    <ellipse cx="60" cy="230" rx="28" ry="16" fill="#94a3b8" stroke="#475569" stroke-width="3"/>
+  </g>
+</svg>

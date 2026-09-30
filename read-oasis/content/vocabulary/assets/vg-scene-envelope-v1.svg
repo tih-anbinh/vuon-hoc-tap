@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-envelope desc-envelope">
+  <title id="title-envelope">Envelope</title>
+  <desc id="desc-envelope">A white envelope with an open flap, a red heart seal, and a small stamp in the corner.</desc>
+  <defs>
+    <linearGradient id="envelope-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fefce8"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#envelope-bg)"/>
+  <ellipse cx="200" cy="245" rx="140" ry="16" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Envelope body -->
+    <rect x="75" y="95" width="250" height="145" rx="8" fill="#f8fafc" stroke="#1e293b" stroke-width="4"/>
+    <!-- Bottom fold lines -->
+    <path d="M75 240 L200 155 L325 240" fill="none" stroke="#94a3b8" stroke-width="3"/>
+    <!-- Open flap -->
+    <path d="M75 95 L200 175 L325 95 Z" fill="#e2e8f0" stroke="#1e293b" stroke-width="4"/>
+    <!-- Heart seal -->
+    <path d="M200 160 c-10 -14 -30 -6 -30 8 c0 12 18 22 30 32 c12 -10 30 -20 30 -32 c0 -14 -20 -22 -30 -8 Z" fill="#ef4444" stroke="#991b1b" stroke-width="2.5"/>
+    <!-- Stamp -->
+    <rect x="285" y="108" width="30" height="34" rx="2" fill="#fca5a5" stroke="#b91c1c" stroke-width="2" stroke-dasharray="3 2"/>
+    <circle cx="300" cy="125" r="9" fill="#dc2626"/>
+  </g>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-nest desc-nest">
+  <title id="title-nest">Nest</title>
+  <desc id="desc-nest">A round bird's nest made of twigs holding three speckled eggs, resting on a branch.</desc>
+  <defs>
+    <linearGradient id="nest-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#eff6ff"/>
+    </linearGradient>
+    <linearGradient id="nest-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a16207"/>
+      <stop offset="100%" stop-color="#78350f"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#nest-bg)"/>
+
+  <!-- Branch -->
+  <path d="M20 250 Q150 230 280 240 L400 230 L400 275 L20 275 Z" fill="#166534" opacity="0.15"/>
+  <path d="M40 245 Q200 220 380 235" fill="none" stroke="#78350f" stroke-width="14" stroke-linecap="round"/>
+  <g stroke="#166534" stroke-width="4" fill="#22c55e">
+    <ellipse cx="90" cy="228" rx="16" ry="8" transform="rotate(-20 90 228)"/>
+    <ellipse cx="330" cy="222" rx="16" ry="8" transform="rotate(20 330 222)"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Nest outer -->
+    <ellipse cx="200" cy="185" rx="120" ry="60" fill="url(#nest-body)" stroke="#451a03" stroke-width="4"/>
+    <!-- Nest inner cup -->
+    <ellipse cx="200" cy="170" rx="88" ry="40" fill="#92400e" stroke="#451a03" stroke-width="3"/>
+    <ellipse cx="200" cy="172" rx="72" ry="30" fill="#a16207"/>
+    <!-- Twig strokes -->
+    <g stroke="#451a03" stroke-width="3" stroke-linecap="round" opacity="0.6">
+      <path d="M100 200 Q150 210 210 205"/>
+      <path d="M120 220 Q200 228 290 215"/>
+      <path d="M90 175 Q140 185 180 180"/>
+    </g>
+    <!-- Eggs -->
+    <ellipse cx="170" cy="160" rx="22" ry="26" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="2.5"/>
+    <ellipse cx="210" cy="152" rx="22" ry="26" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="2.5"/>
+    <ellipse cx="240" cy="165" rx="22" ry="26" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="2.5"/>
+    <!-- Speckles -->
+    <g fill="#0369a1">
+      <circle cx="164" cy="152" r="2.5"/><circle cx="176" cy="162" r="2"/><circle cx="170" cy="170" r="2.5"/>
+      <circle cx="204" cy="146" r="2.5"/><circle cx="216" cy="155" r="2"/><circle cx="210" cy="162" r="2.5"/>
+      <circle cx="236" cy="158" r="2.5"/><circle cx="246" cy="168" r="2"/><circle cx="240" cy="176" r="2.5"/>
+    </g>
+  </g>
+</svg>

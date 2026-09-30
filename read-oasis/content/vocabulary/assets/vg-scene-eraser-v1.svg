@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-eraser desc-eraser">
+  <title id="title-eraser">Eraser</title>
+  <desc id="desc-eraser">A pink and white rubber eraser with rounded corners and eraser crumbs beside it.</desc>
+  <defs>
+    <linearGradient id="eraser-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fdf2f8"/>
+      <stop offset="100%" stop-color="#fce7f3"/>
+    </linearGradient>
+    <linearGradient id="eraser-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbcfe8"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#eraser-bg)"/>
+  <ellipse cx="200" cy="215" rx="140" ry="18" fill="#0f172a" opacity="0.1"/>
+
+  <g filter="url(#soft-shadow)">
+    <g transform="rotate(-10 200 150)">
+      <!-- Eraser body -->
+      <rect x="90" y="115" width="220" height="80" rx="18" fill="url(#eraser-body)" stroke="#9d174d" stroke-width="4"/>
+      <!-- White band -->
+      <rect x="180" y="115" width="55" height="80" fill="#f8fafc" stroke="#9d174d" stroke-width="3"/>
+      <!-- Top highlight -->
+      <rect x="100" y="124" width="200" height="12" rx="6" fill="#fbcfe8" opacity="0.7"/>
+      <!-- Worn corner -->
+      <path d="M90 133 Q100 118 118 117" fill="none" stroke="#f8fafc" stroke-width="3" opacity="0.6"/>
+    </g>
+  </g>
+
+  <!-- Eraser crumbs -->
+  <g fill="#f472b6" stroke="#9d174d" stroke-width="1.5">
+    <ellipse cx="90" cy="215" rx="9" ry="5"/>
+    <ellipse cx="115" cy="222" rx="6" ry="4"/>
+    <ellipse cx="70" cy="223" rx="5" ry="3"/>
+  </g>
+</svg>

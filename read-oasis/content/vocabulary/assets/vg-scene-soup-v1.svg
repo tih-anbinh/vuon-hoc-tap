@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-soup desc-soup">
+  <title id="title-soup">Soup</title>
+  <desc id="desc-soup">A steaming bowl of hot vegetable soup with a spoon resting in it, on a plate.</desc>
+  <defs>
+    <linearGradient id="soup-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fffbeb"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#soup-bg)"/>
+  <ellipse cx="200" cy="262" rx="150" ry="18" fill="#0f172a" opacity="0.12"/>
+
+  <!-- Steam -->
+  <g fill="none" stroke="#cbd5e1" stroke-width="5" stroke-linecap="round" opacity="0.8">
+    <path d="M160 130 Q150 105 165 85 Q178 65 168 45"/>
+    <path d="M215 130 Q205 105 220 85 Q233 65 223 45"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Plate -->
+    <ellipse cx="200" cy="235" rx="140" ry="26" fill="#f8fafc" stroke="#cbd5e1" stroke-width="3"/>
+    <!-- Bowl -->
+    <path d="M100 175 Q200 165 300 175 Q288 235 200 240 Q112 235 100 175 Z" fill="#f8fafc" stroke="#94a3b8" stroke-width="4"/>
+    <!-- Soup surface -->
+    <ellipse cx="200" cy="175" rx="100" ry="24" fill="#f97316" stroke="#c2410c" stroke-width="3"/>
+    <!-- Veggie bits -->
+    <g stroke="#9a3412" stroke-width="1.5">
+      <circle cx="165" cy="172" r="8" fill="#22c55e"/>
+      <circle cx="215" cy="180" r="8" fill="#dc2626"/>
+      <circle cx="240" cy="170" r="7" fill="#fbbf24"/>
+      <circle cx="140" cy="180" r="6" fill="#22c55e"/>
+      <rect x="188" y="168" width="12" height="8" rx="2" fill="#fbbf24"/>
+    </g>
+
+    <!-- Spoon -->
+    <g transform="rotate(28 260 190)">
+      <ellipse cx="260" cy="185" rx="18" ry="12" fill="#cbd5e1" stroke="#64748b" stroke-width="3"/>
+      <rect x="256" y="120" width="8" height="70" rx="4" fill="#cbd5e1" stroke="#64748b" stroke-width="2.5"/>
+    </g>
+  </g>
+</svg>

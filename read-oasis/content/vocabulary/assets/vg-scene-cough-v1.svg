@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-cough desc-cough">
+  <title id="title-cough">Cough</title>
+  <desc id="desc-cough">A child coughing into a hand, with air puffs coming from the mouth.</desc>
+  <defs>
+    <linearGradient id="cough-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#f0f9ff"/>
+    </linearGradient>
+    <linearGradient id="cough-skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5d0a9"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#cough-bg)"/>
+  <ellipse cx="180" cy="272" rx="120" ry="14" fill="#0f172a" opacity="0.12"/>
+
+  <!-- Cough puffs -->
+  <g fill="#cbd5e1" opacity="0.85">
+    <circle cx="300" cy="120" r="18"/>
+    <circle cx="330" cy="135" r="14"/>
+    <circle cx="320" cy="105" r="11"/>
+    <circle cx="352" cy="125" r="9"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Body -->
+    <path d="M120 190 Q170 175 220 190 L212 265 L128 265 Z" fill="#22c55e" stroke="#166534" stroke-width="3.5"/>
+    <!-- Head tilted -->
+    <circle cx="180" cy="130" r="45" fill="url(#cough-skin)" stroke="#d4a574" stroke-width="3.5"/>
+    <path d="M138 118 Q140 82 180 82 Q220 82 222 118 Q205 98 180 98 Q155 98 138 118 Z" fill="#5b3a1a" stroke="#3d2109" stroke-width="2.5"/>
+    <circle cx="168" cy="128" r="4.5" fill="#1e293b"/>
+    <circle cx="196" cy="128" r="4.5" fill="#1e293b"/>
+    <!-- Open coughing mouth -->
+    <ellipse cx="205" cy="150" rx="13" ry="10" fill="#7f1d1d"/>
+    <!-- Fist to mouth -->
+    <circle cx="225" cy="150" r="18" fill="url(#cough-skin)" stroke="#d4a574" stroke-width="3"/>
+    <path d="M225 168 Q240 190 218 195" fill="none" stroke="#d4a574" stroke-width="14" stroke-linecap="round"/>
+  </g>
+</svg>

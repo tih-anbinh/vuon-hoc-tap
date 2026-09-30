@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-rain desc-rain">
+  <title id="title-rain">Rain</title>
+  <desc id="desc-rain">A gray rain cloud with many blue raindrops falling and splashing into puddles below.</desc>
+  <defs>
+    <linearGradient id="rain-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+    <linearGradient id="rain-cloud" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#rain-bg)"/>
+
+  <!-- Puddles -->
+  <ellipse cx="120" cy="272" rx="60" ry="12" fill="#38bdf8" opacity="0.6"/>
+  <ellipse cx="280" cy="278" rx="70" ry="12" fill="#38bdf8" opacity="0.6"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Cloud -->
+    <ellipse cx="150" cy="90" rx="55" ry="40" fill="url(#rain-cloud)"/>
+    <ellipse cx="210" cy="75" rx="65" ry="48" fill="url(#rain-cloud)"/>
+    <ellipse cx="270" cy="95" rx="50" ry="38" fill="url(#rain-cloud)"/>
+    <ellipse cx="210" cy="110" rx="100" ry="34" fill="url(#rain-cloud)" stroke="#64748b" stroke-width="3"/>
+  </g>
+
+  <!-- Raindrops -->
+  <g fill="#38bdf8" stroke="#0284c7" stroke-width="1.5">
+    <path d="M110 150 q-6 12 0 16 q6 -4 0 -16 Z"/>
+    <path d="M150 175 q-6 12 0 16 q6 -4 0 -16 Z"/>
+    <path d="M190 155 q-6 12 0 16 q6 -4 0 -16 Z"/>
+    <path d="M230 180 q-6 12 0 16 q6 -4 0 -16 Z"/>
+    <path d="M270 158 q-6 12 0 16 q6 -4 0 -16 Z"/>
+    <path d="M305 178 q-6 12 0 16 q6 -4 0 -16 Z"/>
+    <path d="M130 205 q-6 12 0 16 q6 -4 0 -16 Z"/>
+    <path d="M175 220 q-6 12 0 16 q6 -4 0 -16 Z"/>
+    <path d="M215 210 q-6 12 0 16 q6 -4 0 -16 Z"/>
+    <path d="M255 225 q-6 12 0 16 q6 -4 0 -16 Z"/>
+    <path d="M290 215 q-6 12 0 16 q6 -4 0 -16 Z"/>
+  </g>
+
+  <!-- Splashes -->
+  <g fill="none" stroke="#7dd3fc" stroke-width="2.5" stroke-linecap="round">
+    <path d="M115 258 q5 -8 10 0"/>
+    <path d="M275 262 q5 -8 10 0"/>
+  </g>
+</svg>

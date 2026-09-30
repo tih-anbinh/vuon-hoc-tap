@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-competition desc-competition">
+  <title id="title-competition">Competition</title>
+  <desc id="desc-competition">A winner's podium with three steps, a gold trophy on top, and medals.</desc>
+  <defs>
+    <linearGradient id="competition-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <linearGradient id="competition-gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#competition-bg)"/>
+  <ellipse cx="200" cy="272" rx="160" ry="14" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Podium steps -->
+    <rect x="80" y="200" width="80" height="65" fill="#94a3b8" stroke="#1e293b" stroke-width="4"/>
+    <rect x="160" y="160" width="80" height="105" fill="#cbd5e1" stroke="#1e293b" stroke-width="4"/>
+    <rect x="240" y="220" width="80" height="45" fill="#64748b" stroke="#1e293b" stroke-width="4"/>
+  </g>
+
+  <!-- Trophy on center podium -->
+  <g filter="url(#soft-shadow)">
+    <path d="M175 70 L225 70 L221 105 A22 22 0 0 1 179 105 Z" fill="url(#competition-gold)" stroke="#b45309" stroke-width="3.5"/>
+    <path d="M175 78 Q158 80 158 95 Q158 108 176 106" fill="none" stroke="#b45309" stroke-width="4"/>
+    <path d="M225 78 Q242 80 242 95 Q242 108 224 106" fill="none" stroke="#b45309" stroke-width="4"/>
+    <rect x="194" y="122" width="12" height="18" fill="#d97706" stroke="#b45309" stroke-width="2.5"/>
+    <rect x="180" y="140" width="40" height="14" rx="3" fill="url(#competition-gold)" stroke="#b45309" stroke-width="3"/>
+    <path d="M190 82 l5 11 l12 1 l-9 8 l3 12 l-11 -6 l-11 6 l3 -12 l-9 -8 l12 -1 Z" fill="#fffbeb"/>
+  </g>
+
+  <!-- Medals -->
+  <g filter="url(#soft-shadow)">
+    <path d="M115 195 L108 175 M125 195 L132 175" stroke="#ef4444" stroke-width="4"/>
+    <circle cx="120" cy="205" r="16" fill="url(#competition-gold)" stroke="#b45309" stroke-width="3"/>
+    <path d="M280 215 L273 200 M290 215 L297 200" stroke="#3b82f6" stroke-width="4"/>
+    <circle cx="285" cy="222" r="14" fill="#cbd5e1" stroke="#64748b" stroke-width="3"/>
+  </g>
+</svg>

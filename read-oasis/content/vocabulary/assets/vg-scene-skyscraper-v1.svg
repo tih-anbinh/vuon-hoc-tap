@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-skyscraper desc-skyscraper">
+  <title id="title-skyscraper">Skyscraper</title>
+  <desc id="desc-skyscraper">A very tall city skyscraper tower with many rows of windows rising high into the sky.</desc>
+  <defs>
+    <linearGradient id="skyscraper-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="skyscraper-tower" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#64748b"/>
+      <stop offset="50%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#475569"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#skyscraper-bg)"/>
+  <circle cx="330" cy="55" r="26" fill="#fde047" stroke="#f59e0b" stroke-width="3"/>
+  <ellipse cx="200" cy="285" rx="180" ry="12" fill="#0f172a" opacity="0.12"/>
+
+  <!-- Side smaller buildings -->
+  <rect x="60" y="180" width="70" height="110" fill="#cbd5e1" stroke="#64748b" stroke-width="3"/>
+  <rect x="280" y="150" width="70" height="140" fill="#cbd5e1" stroke="#64748b" stroke-width="3"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Main tower -->
+    <rect x="150" y="35" width="110" height="255" fill="url(#skyscraper-tower)" stroke="#334155" stroke-width="4"/>
+    <!-- Antenna -->
+    <rect x="200" y="10" width="10" height="28" fill="#334155"/>
+    <circle cx="205" cy="8" r="5" fill="#ef4444"/>
+    <!-- Windows grid -->
+    <g fill="#bae6fd" stroke="#475569" stroke-width="1.5">
+      <rect x="162" y="55" width="18" height="22"/><rect x="191" y="55" width="18" height="22"/><rect x="220" y="55" width="18" height="22"/>
+      <rect x="162" y="90" width="18" height="22"/><rect x="191" y="90" width="18" height="22"/><rect x="220" y="90" width="18" height="22"/>
+      <rect x="162" y="125" width="18" height="22"/><rect x="191" y="125" width="18" height="22"/><rect x="220" y="125" width="18" height="22"/>
+      <rect x="162" y="160" width="18" height="22"/><rect x="191" y="160" width="18" height="22"/><rect x="220" y="160" width="18" height="22"/>
+      <rect x="162" y="195" width="18" height="22"/><rect x="191" y="195" width="18" height="22"/><rect x="220" y="195" width="18" height="22"/>
+      <rect x="162" y="230" width="18" height="22"/><rect x="191" y="230" width="18" height="22"/><rect x="220" y="230" width="18" height="22"/>
+    </g>
+    <!-- lit windows -->
+    <g fill="#fde047"><rect x="191" y="90" width="18" height="22"/><rect x="162" y="160" width="18" height="22"/><rect x="220" y="195" width="18" height="22"/></g>
+    <!-- Entrance -->
+    <rect x="188" y="262" width="34" height="28" fill="#1e293b"/>
+  </g>
+</svg>

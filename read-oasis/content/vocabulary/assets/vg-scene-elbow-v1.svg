@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-elbow desc-elbow">
+  <title id="title-elbow">Elbow</title>
+  <desc id="desc-elbow">A bent arm with the elbow joint highlighted by a red circle in the middle of the bend.</desc>
+  <defs>
+    <linearGradient id="elbow-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0f9ff"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="elbow-skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5d0a9"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#elbow-bg)"/>
+  <ellipse cx="200" cy="265" rx="120" ry="16" fill="#0f172a" opacity="0.1"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Upper arm (shoulder to elbow) -->
+    <path d="M90 90 Q120 130 150 165" fill="none" stroke="url(#elbow-skin)" stroke-width="46" stroke-linecap="round"/>
+    <!-- Forearm (elbow to hand) -->
+    <path d="M150 165 Q210 180 285 150" fill="none" stroke="url(#elbow-skin)" stroke-width="42" stroke-linecap="round"/>
+    <!-- Outline -->
+    <path d="M90 90 Q120 130 150 165 Q210 180 285 150" fill="none" stroke="#d4a574" stroke-width="3" opacity="0.5"/>
+    <!-- Hand (fist) -->
+    <circle cx="295" cy="148" r="26" fill="url(#elbow-skin)" stroke="#d4a574" stroke-width="3"/>
+  </g>
+
+  <!-- Elbow highlight -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="150" cy="165" r="30" fill="none" stroke="#ef4444" stroke-width="6"/>
+    <path d="M150 135 L150 118 M150 118 l-7 8 M150 118 l7 8" stroke="#ef4444" stroke-width="5" stroke-linecap="round" fill="none"/>
+  </g>
+</svg>

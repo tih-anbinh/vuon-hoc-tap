@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-bank desc-bank">
+  <title id="title-bank">Bank</title>
+  <desc id="desc-bank">A bank building with tall columns, a triangular roof, steps, and gold coins in front.</desc>
+  <defs>
+    <linearGradient id="bank-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <linearGradient id="bank-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#bank-bg)"/>
+  <rect x="0" y="255" width="400" height="45" fill="#a3a3a3"/>
+  <ellipse cx="200" cy="262" rx="160" ry="14" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Roof pediment -->
+    <path d="M90 110 L200 55 L310 110 Z" fill="#f59e0b" stroke="#1e293b" stroke-width="4"/>
+    <rect x="95" y="108" width="210" height="14" fill="#fbbf24" stroke="#1e293b" stroke-width="3"/>
+    <!-- Columns -->
+    <g fill="url(#bank-wall)" stroke="#1e293b" stroke-width="3.5">
+      <rect x="105" y="122" width="24" height="110"/>
+      <rect x="150" y="122" width="24" height="110"/>
+      <rect x="195" y="122" width="24" height="110"/>
+      <rect x="240" y="122" width="24" height="110"/>
+      <rect x="285" y="122" width="24" height="110"/>
+    </g>
+    <!-- Base steps -->
+    <rect x="88" y="232" width="228" height="12" fill="#cbd5e1" stroke="#1e293b" stroke-width="3"/>
+    <rect x="78" y="244" width="248" height="12" fill="#94a3b8" stroke="#1e293b" stroke-width="3"/>
+  </g>
+
+  <!-- Gold coins -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="120" cy="250" rx="22" ry="8" fill="#fbbf24" stroke="#b45309" stroke-width="2.5"/>
+    <ellipse cx="120" cy="244" rx="22" ry="8" fill="#fcd34d" stroke="#b45309" stroke-width="2.5"/>
+    <ellipse cx="120" cy="238" rx="22" ry="8" fill="#fde68a" stroke="#b45309" stroke-width="2.5"/>
+  </g>
+</svg>

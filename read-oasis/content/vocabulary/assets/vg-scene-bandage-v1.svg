@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-bandage desc-bandage">
+  <title id="title-bandage">Bandage</title>
+  <desc id="desc-bandage">A sticking plaster bandage with a soft pad, shown next to a bandaged finger.</desc>
+  <defs>
+    <linearGradient id="bandage-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffe4e6"/>
+      <stop offset="100%" stop-color="#fef2f2"/>
+    </linearGradient>
+    <linearGradient id="bandage-strip" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fcd9b6"/>
+      <stop offset="100%" stop-color="#f5c087"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#bandage-bg)"/>
+  <ellipse cx="200" cy="235" rx="150" ry="18" fill="#0f172a" opacity="0.1"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Large plaster (tilted) -->
+    <g transform="rotate(-18 200 150)">
+      <rect x="80" y="120" width="240" height="70" rx="35" fill="url(#bandage-strip)" stroke="#1e293b" stroke-width="4"/>
+      <!-- Pad -->
+      <rect x="160" y="130" width="80" height="50" rx="6" fill="#fafaf9" stroke="#e7e5e4" stroke-width="2.5"/>
+      <!-- Holes -->
+      <g fill="#e0b880">
+        <circle cx="110" cy="140" r="3"/>
+        <circle cx="110" cy="155" r="3"/>
+        <circle cx="110" cy="170" r="3"/>
+        <circle cx="125" cy="140" r="3"/>
+        <circle cx="125" cy="155" r="3"/>
+        <circle cx="125" cy="170" r="3"/>
+        <circle cx="275" cy="140" r="3"/>
+        <circle cx="275" cy="155" r="3"/>
+        <circle cx="275" cy="170" r="3"/>
+        <circle cx="290" cy="140" r="3"/>
+        <circle cx="290" cy="155" r="3"/>
+        <circle cx="290" cy="170" r="3"/>
+      </g>
+      <!-- Red cross on pad -->
+      <rect x="195" y="140" width="10" height="30" fill="#ef4444"/>
+      <rect x="185" y="150" width="30" height="10" fill="#ef4444"/>
+    </g>
+  </g>
+</svg>

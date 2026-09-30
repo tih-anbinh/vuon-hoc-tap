@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-glove desc-glove">
+  <title id="title-glove">Glove</title>
+  <desc id="desc-glove">A warm blue winter glove with a thumb, four fingers, and a fluffy white cuff.</desc>
+  <defs>
+    <linearGradient id="glove-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#f0f9ff"/>
+    </linearGradient>
+    <linearGradient id="glove-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#glove-bg)"/>
+  <ellipse cx="200" cy="262" rx="90" ry="14" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Fingers -->
+    <rect x="150" y="55" width="24" height="90" rx="12" fill="url(#glove-body)" stroke="#1e3a8a" stroke-width="3.5"/>
+    <rect x="178" y="45" width="24" height="100" rx="12" fill="url(#glove-body)" stroke="#1e3a8a" stroke-width="3.5"/>
+    <rect x="206" y="50" width="24" height="95" rx="12" fill="url(#glove-body)" stroke="#1e3a8a" stroke-width="3.5"/>
+    <rect x="234" y="65" width="24" height="82" rx="12" fill="url(#glove-body)" stroke="#1e3a8a" stroke-width="3.5"/>
+    <!-- Palm -->
+    <rect x="148" y="130" width="112" height="80" rx="20" fill="url(#glove-body)" stroke="#1e3a8a" stroke-width="4"/>
+    <!-- Thumb -->
+    <path d="M148 165 Q110 175 118 210 Q125 232 155 218" fill="url(#glove-body)" stroke="#1e3a8a" stroke-width="4"/>
+    <!-- Fluffy cuff -->
+    <path d="M140 205 Q150 195 165 205 Q180 195 195 205 Q210 195 225 205 Q240 195 255 205 Q270 200 268 235 L142 235 Q138 210 140 205 Z" fill="#f8fafc" stroke="#cbd5e1" stroke-width="3.5"/>
+    <!-- Palm crease -->
+    <path d="M175 160 Q205 175 235 160" fill="none" stroke="#1d4ed8" stroke-width="2.5"/>
+  </g>
+</svg>

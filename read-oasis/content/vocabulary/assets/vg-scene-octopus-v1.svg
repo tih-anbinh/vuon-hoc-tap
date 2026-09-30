@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-octopus desc-octopus">
+  <title id="title-octopus">Octopus</title>
+  <desc id="desc-octopus">A smiling purple octopus with a big round head and eight curly tentacles underwater.</desc>
+  <defs>
+    <linearGradient id="octopus-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#075985"/>
+    </linearGradient>
+    <radialGradient id="octopus-body" cx="40%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#7e22ce"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#octopus-bg)"/>
+  <!-- Bubbles -->
+  <g fill="#e0f2fe" opacity="0.5">
+    <circle cx="70" cy="70" r="10"/><circle cx="95" cy="45" r="6"/>
+    <circle cx="330" cy="90" r="12"/><circle cx="350" cy="60" r="7"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Tentacles -->
+    <g fill="url(#octopus-body)" stroke="#581c87" stroke-width="3">
+      <path d="M140 190 q-40 30 -30 80 q10 -20 24 -22 q-18 24 -6 40 q6 -30 22 -40 Z"/>
+      <path d="M165 200 q-30 40 -34 78 q14 -22 26 -22 q-8 26 6 38 q-2 -32 14 -50 Z"/>
+      <path d="M200 205 q-8 44 -6 80 q10 -22 18 -24 q0 26 12 34 q6 -34 -2 -60 Z"/>
+      <path d="M235 200 q30 40 34 78 q-14 -22 -26 -22 q8 26 -6 38 q2 -32 -14 -50 Z"/>
+      <path d="M260 190 q40 30 30 80 q-10 -20 -24 -22 q18 24 6 40 q-6 -30 -22 -40 Z"/>
+      <path d="M180 208 q-4 48 -12 76 q4 -26 16 -30 Z"/>
+      <path d="M220 208 q4 48 12 76 q-4 -26 -16 -30 Z"/>
+    </g>
+    <!-- Head/body -->
+    <path d="M120 155 Q120 75 200 75 Q280 75 280 155 Q280 200 200 205 Q120 200 120 155 Z" fill="url(#octopus-body)" stroke="#581c87" stroke-width="4"/>
+    <!-- Eyes -->
+    <circle cx="172" cy="140" r="22" fill="#f8fafc" stroke="#1e293b" stroke-width="3"/>
+    <circle cx="228" cy="140" r="22" fill="#f8fafc" stroke="#1e293b" stroke-width="3"/>
+    <circle cx="176" cy="144" r="9" fill="#1e293b"/>
+    <circle cx="224" cy="144" r="9" fill="#1e293b"/>
+    <!-- Smile -->
+    <path d="M180 172 Q200 190 220 172" fill="none" stroke="#581c87" stroke-width="4" stroke-linecap="round"/>
+    <!-- Cheeks -->
+    <circle cx="150" cy="162" r="9" fill="#f472b6" opacity="0.6"/>
+    <circle cx="250" cy="162" r="9" fill="#f472b6" opacity="0.6"/>
+  </g>
+</svg>

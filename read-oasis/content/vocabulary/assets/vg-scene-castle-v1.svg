@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-castle desc-castle">
+  <title id="title-castle">Castle</title>
+  <desc id="desc-castle">A grey stone castle with tall towers, pointed flags, a big gate, and battlements.</desc>
+  <defs>
+    <linearGradient id="castle-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="castle-stone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#castle-bg)"/>
+  <rect x="0" y="255" width="400" height="45" fill="#86efac"/>
+  <ellipse cx="200" cy="262" rx="170" ry="14" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Left tower -->
+    <rect x="60" y="110" width="60" height="145" fill="url(#castle-stone)" stroke="#475569" stroke-width="4"/>
+    <path d="M55 110 L90 70 L125 110 Z" fill="#dc2626" stroke="#475569" stroke-width="3.5"/>
+    <!-- Right tower -->
+    <rect x="280" y="110" width="60" height="145" fill="url(#castle-stone)" stroke="#475569" stroke-width="4"/>
+    <path d="M275 110 L310 70 L345 110 Z" fill="#dc2626" stroke="#475569" stroke-width="3.5"/>
+    <!-- Center keep -->
+    <rect x="120" y="140" width="160" height="115" fill="url(#castle-stone)" stroke="#475569" stroke-width="4"/>
+    <!-- Battlements center -->
+    <g fill="url(#castle-stone)" stroke="#475569" stroke-width="3">
+      <rect x="120" y="125" width="24" height="18"/>
+      <rect x="158" y="125" width="24" height="18"/>
+      <rect x="196" y="125" width="24" height="18"/>
+      <rect x="234" y="125" width="24" height="18"/>
+      <rect x="256" y="125" width="24" height="18"/>
+    </g>
+    <!-- Flags -->
+    <line x1="90" y1="70" x2="90" y2="45" stroke="#78350f" stroke-width="3"/>
+    <path d="M90 46 L112 52 L90 58 Z" fill="#3b82f6"/>
+    <line x1="310" y1="70" x2="310" y2="45" stroke="#78350f" stroke-width="3"/>
+    <path d="M310 46 L332 52 L310 58 Z" fill="#3b82f6"/>
+    <!-- Tower windows -->
+    <rect x="80" y="150" width="20" height="30" rx="10" fill="#1e293b"/>
+    <rect x="300" y="150" width="20" height="30" rx="10" fill="#1e293b"/>
+    <!-- Gate -->
+    <path d="M170 255 L170 195 A30 30 0 0 1 230 195 L230 255 Z" fill="#5c3310" stroke="#1e293b" stroke-width="4"/>
+    <line x1="200" y1="170" x2="200" y2="255" stroke="#3d2109" stroke-width="2.5"/>
+    <line x1="172" y1="210" x2="228" y2="210" stroke="#3d2109" stroke-width="2.5"/>
+  </g>
+</svg>

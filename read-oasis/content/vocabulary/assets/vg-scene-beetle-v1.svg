@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-beetle desc-beetle">
+  <title id="title-beetle">Beetle</title>
+  <desc id="desc-beetle">A round red ladybird beetle with black spots, six legs, and antennae on a green leaf.</desc>
+  <defs>
+    <linearGradient id="beetle-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dcfce7"/>
+      <stop offset="100%" stop-color="#f0fdf4"/>
+    </linearGradient>
+    <radialGradient id="beetle-shell" cx="40%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#f87171"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#beetle-bg)"/>
+  <!-- Leaf -->
+  <path d="M60 240 Q200 180 340 240 Q200 270 60 240 Z" fill="#4ade80" stroke="#16a34a" stroke-width="3"/>
+  <line x1="80" y1="238" x2="320" y2="238" stroke="#16a34a" stroke-width="2.5"/>
+  <ellipse cx="200" cy="250" rx="120" ry="14" fill="#0f172a" opacity="0.1"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Legs -->
+    <g stroke="#1e293b" stroke-width="5" stroke-linecap="round">
+      <line x1="150" y1="180" x2="110" y2="210"/>
+      <line x1="150" y1="150" x2="105" y2="150"/>
+      <line x1="150" y1="120" x2="115" y2="95"/>
+      <line x1="250" y1="180" x2="290" y2="210"/>
+      <line x1="250" y1="150" x2="295" y2="150"/>
+      <line x1="250" y1="120" x2="285" y2="95"/>
+    </g>
+    <!-- Shell body -->
+    <ellipse cx="200" cy="150" rx="85" ry="75" fill="url(#beetle-shell)" stroke="#1e293b" stroke-width="4"/>
+    <!-- Center line -->
+    <line x1="200" y1="80" x2="200" y2="222" stroke="#1e293b" stroke-width="4"/>
+    <!-- Head -->
+    <ellipse cx="200" cy="82" rx="30" ry="22" fill="#1f2937" stroke="#0f172a" stroke-width="3"/>
+    <circle cx="188" cy="80" r="5" fill="#ffffff"/>
+    <circle cx="212" cy="80" r="5" fill="#ffffff"/>
+    <!-- Antennae -->
+    <path d="M188 68 Q180 50 170 48" fill="none" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+    <path d="M212 68 Q220 50 230 48" fill="none" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="170" cy="48" r="4" fill="#1e293b"/>
+    <circle cx="230" cy="48" r="4" fill="#1e293b"/>
+    <!-- Spots -->
+    <g fill="#1f2937">
+      <circle cx="160" cy="130" r="13"/>
+      <circle cx="160" cy="180" r="11"/>
+      <circle cx="240" cy="130" r="13"/>
+      <circle cx="240" cy="180" r="11"/>
+    </g>
+  </g>
+</svg>

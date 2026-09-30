@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-biscuit desc-biscuit">
+  <title id="title-biscuit">Biscuit</title>
+  <desc id="desc-biscuit">A round golden biscuit with chocolate chips and a bite taken out of it.</desc>
+  <defs>
+    <linearGradient id="biscuit-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fefce8"/>
+    </linearGradient>
+    <radialGradient id="biscuit-body" cx="40%" cy="35%" r="75%">
+      <stop offset="0%" stop-color="#f5cf7f"/>
+      <stop offset="100%" stop-color="#d19a4a"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#biscuit-bg)"/>
+  <ellipse cx="200" cy="255" rx="120" ry="18" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Cookie with bite (path) -->
+    <path d="M200 55
+             A95 95 0 1 1 305 175
+             A28 28 0 0 0 275 140
+             A28 28 0 0 1 245 105
+             A95 95 0 0 0 200 55 Z"
+          fill="url(#biscuit-body)" stroke="#8a5a24" stroke-width="4"/>
+    <!-- Chocolate chips -->
+    <g fill="#5c2e0e">
+      <circle cx="160" cy="120" r="12"/>
+      <circle cx="215" cy="150" r="14"/>
+      <circle cx="145" cy="185" r="11"/>
+      <circle cx="200" cy="210" r="13"/>
+      <circle cx="120" cy="150" r="9"/>
+      <circle cx="250" cy="200" r="10"/>
+    </g>
+  </g>
+</svg>

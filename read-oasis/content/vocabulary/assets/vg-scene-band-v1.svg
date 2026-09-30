@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-band desc-band">
+  <title id="title-band">Band</title>
+  <desc id="desc-band">A music band with a guitar, drum, and microphone on a stage with musical notes.</desc>
+  <defs>
+    <linearGradient id="band-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ede9fe"/>
+      <stop offset="100%" stop-color="#fae8ff"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#band-bg)"/>
+  <rect x="0" y="250" width="400" height="50" fill="#a16207"/>
+  <ellipse cx="200" cy="258" rx="160" ry="14" fill="#0f172a" opacity="0.12"/>
+  <!-- Musical notes -->
+  <g fill="#7c3aed">
+    <circle cx="70" cy="60" r="8"/>
+    <rect x="76" y="30" width="4" height="32"/>
+    <circle cx="330" cy="80" r="8"/>
+    <rect x="336" y="50" width="4" height="32"/>
+    <circle cx="300" cy="45" r="6"/>
+    <rect x="304" y="22" width="3" height="26"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Guitar -->
+    <g>
+      <ellipse cx="110" cy="185" rx="42" ry="52" fill="#f97316" stroke="#1e293b" stroke-width="4"/>
+      <circle cx="110" cy="195" r="16" fill="#7c2d12" stroke="#1e293b" stroke-width="2.5"/>
+      <rect x="100" y="70" width="20" height="80" rx="4" fill="#92400e" stroke="#1e293b" stroke-width="3"/>
+      <rect x="96" y="58" width="28" height="18" rx="3" fill="#78350f" stroke="#1e293b" stroke-width="2.5"/>
+      <line x1="107" y1="80" x2="107" y2="150" stroke="#fef3c7" stroke-width="1.5"/>
+      <line x1="113" y1="80" x2="113" y2="150" stroke="#fef3c7" stroke-width="1.5"/>
+    </g>
+    <!-- Drum -->
+    <ellipse cx="215" cy="205" rx="52" ry="20" fill="#e2e8f0" stroke="#1e293b" stroke-width="3.5"/>
+    <path d="M163 205 L163 235 A52 20 0 0 0 267 235 L267 205" fill="#ef4444" stroke="#1e293b" stroke-width="3.5"/>
+    <path d="M163 205 A52 20 0 0 0 267 205" fill="#fca5a5" stroke="#1e293b" stroke-width="2.5"/>
+    <line x1="180" y1="212" x2="172" y2="238" stroke="#fde047" stroke-width="3"/>
+    <line x1="215" y1="215" x2="215" y2="242" stroke="#fde047" stroke-width="3"/>
+    <line x1="250" y1="212" x2="258" y2="238" stroke="#fde047" stroke-width="3"/>
+    <!-- Microphone -->
+    <line x1="320" y1="240" x2="320" y2="150" stroke="#374151" stroke-width="5" stroke-linecap="round"/>
+    <ellipse cx="320" cy="140" rx="16" ry="20" fill="#6b7280" stroke="#1e293b" stroke-width="3"/>
+    <line x1="310" y1="132" x2="330" y2="132" stroke="#1e293b" stroke-width="1.5"/>
+    <line x1="308" y1="140" x2="332" y2="140" stroke="#1e293b" stroke-width="1.5"/>
+    <line x1="310" y1="148" x2="330" y2="148" stroke="#1e293b" stroke-width="1.5"/>
+    <ellipse cx="320" cy="248" rx="24" ry="8" fill="#374151" stroke="#1e293b" stroke-width="2.5"/>
+  </g>
+</svg>

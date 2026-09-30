@@ -44,13 +44,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-face-v1",
+        "asset": "vocabulary/assets/vg-scene-face-v1.svg",
+        "alt": "A large, friendly child's face showing eyes, eyebrows, nose, mouth, ears, and rosy cheeks in a front view.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -60,7 +60,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -114,13 +114,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-factory-v1",
+        "asset": "vocabulary/assets/vg-scene-factory-v1.svg",
+        "alt": "A factory building with a sawtooth roof, tall chimneys puffing smoke, and rows of windows.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -130,7 +130,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1211,13 +1211,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "action_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-action-feed-v1",
+        "asset": "vocabulary/assets/vg-action-feed-v1.svg",
+        "alt": "A child holding out a bowl and giving food to a small pet cat that is eating.",
+        "status": "draft",
+        "kind": "action",
         "template": null,
         "anchor_objects": []
       },
@@ -1227,7 +1227,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1347,13 +1347,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-festival-v1",
+        "asset": "vocabulary/assets/vg-scene-festival-v1.svg",
+        "alt": "A festive outdoor scene with colourful bunting flags, balloons, and fireworks in the sky.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -1363,7 +1363,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1483,13 +1483,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-field-v1",
+        "asset": "vocabulary/assets/vg-scene-field-v1.svg",
+        "alt": "A wide green farm field with rows of crops, a fence, and hay bales under a blue sky.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -1499,7 +1499,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1550,13 +1550,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-file-v1",
+        "asset": "vocabulary/assets/vg-scene-file-v1.svg",
+        "alt": "A cardboard document file folder holding papers, with a labelled tab on top.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -1566,7 +1566,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1687,13 +1687,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-film-v1",
+        "asset": "vocabulary/assets/vg-scene-film-v1.svg",
+        "alt": "A movie film reel with strips of film unwinding, and a clapperboard beside it.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -1703,7 +1703,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1962,13 +1962,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-finger-v1",
+        "asset": "vocabulary/assets/vg-scene-finger-v1.svg",
+        "alt": "A hand with the index finger pointing up, highlighted with a red circle.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -1978,7 +1978,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2304,13 +2304,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-fire-v1",
+        "asset": "vocabulary/assets/vg-scene-fire-v1.svg",
+        "alt": "A glowing campfire with orange and yellow flames rising above stacked logs.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -2320,7 +2320,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2443,13 +2443,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-fish-v1",
+        "asset": "vocabulary/assets/vg-scene-fish-v1.svg",
+        "alt": "A bright orange swimming fish with bold white stripes, waving translucent fins, and rising water bubbles, occupying the center of the frame.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -2459,7 +2459,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2510,13 +2510,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-fish-v1",
+        "asset": "vocabulary/assets/vg-scene-fish-v1.svg",
+        "alt": "A bright orange swimming fish with bold white stripes, waving translucent fins, and rising water bubbles, occupying the center of the frame.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -2526,7 +2526,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2715,13 +2715,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-flag-v1",
+        "asset": "vocabulary/assets/vg-scene-flag-v1.svg",
+        "alt": "A bright red flag with a yellow star, waving on a tall pole with a gold top.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -2731,7 +2731,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2783,13 +2783,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-flashlight-v1",
+        "asset": "vocabulary/assets/vg-scene-flashlight-v1.svg",
+        "alt": "A handheld flashlight shining a bright yellow beam of light out of its lens.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -2799,7 +2799,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3056,13 +3056,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-flour-v1",
+        "asset": "vocabulary/assets/vg-scene-flour-v1.svg",
+        "alt": "An open paper bag of white flour with a scoop and a small pile of flour spilled beside it.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -3072,7 +3072,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3125,13 +3125,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-flower-v1",
+        "asset": "vocabulary/assets/vg-scene-flower-v1.svg",
+        "alt": "A cheerful pink daisy flower with a smiling yellow centre, green stem and two leaves on grass.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -3141,7 +3141,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3196,13 +3196,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "action_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-action-fly-v1",
+        "asset": "vocabulary/assets/vg-action-fly-v1.svg",
+        "alt": "A colourful bird with spread wings flying through the sky with clouds and motion trails.",
+        "status": "draft",
+        "kind": "action",
         "template": null,
         "anchor_objects": []
       },
@@ -3212,7 +3212,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3263,13 +3263,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "action_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-action-fly-v1",
+        "asset": "vocabulary/assets/vg-action-fly-v1.svg",
+        "alt": "A colourful bird with spread wings flying through the sky with clouds and motion trails.",
+        "status": "draft",
+        "kind": "action",
         "template": null,
         "anchor_objects": []
       },
@@ -3279,7 +3279,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3332,13 +3332,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-fog-v1",
+        "asset": "vocabulary/assets/vg-scene-fog-v1.svg",
+        "alt": "Thick grey fog covering hills and trees so they are dim and hard to see.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -3348,7 +3348,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3674,13 +3674,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-football-v1",
+        "asset": "vocabulary/assets/vg-scene-football-v1.svg",
+        "alt": "A classic black and white football (soccer ball) resting on green grass.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -3690,7 +3690,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3947,13 +3947,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-fork-v1",
+        "asset": "vocabulary/assets/vg-scene-fork-v1.svg",
+        "alt": "A shiny silver dining fork with four prongs and a long handle.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -3963,7 +3963,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -4223,13 +4223,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-fridge-v1",
+        "asset": "vocabulary/assets/vg-scene-fridge-v1.svg",
+        "alt": "A tall two-door refrigerator with a freezer on top, handles, and a magnet on the door.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -4239,7 +4239,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -4427,13 +4427,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-fries-v1",
+        "asset": "vocabulary/assets/vg-scene-fries-v1.svg",
+        "alt": "A red carton of golden French fries poking out over the top of the box.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -4443,7 +4443,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {

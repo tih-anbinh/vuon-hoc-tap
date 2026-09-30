@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-postcard desc-postcard">
+  <title id="title-postcard">Postcard</title>
+  <desc id="desc-postcard">A holiday postcard showing a beach scene with a stamp and address lines on the corner.</desc>
+  <defs>
+    <linearGradient id="postcard-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#postcard-bg)"/>
+  <ellipse cx="200" cy="258" rx="150" ry="16" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)" transform="rotate(-4 200 150)">
+    <!-- Card -->
+    <rect x="60" y="70" width="280" height="170" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="4"/>
+
+    <!-- Picture area (left 60%) -->
+    <rect x="72" y="82" width="150" height="146" rx="4" fill="#38bdf8"/>
+    <!-- Sun -->
+    <circle cx="105" cy="112" r="16" fill="#fde047"/>
+    <!-- Sea + beach -->
+    <rect x="72" y="160" width="150" height="30" fill="#0284c7"/>
+    <rect x="72" y="185" width="150" height="43" fill="#fcd34d"/>
+    <!-- Palm tree -->
+    <path d="M180 190 Q182 160 185 150" stroke="#78350f" stroke-width="6" fill="none"/>
+    <path d="M185 150 Q165 142 150 150 M185 150 Q205 142 220 150 M185 150 Q178 135 172 128" stroke="#166534" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+    <!-- Right side: address + stamp -->
+    <!-- Vertical divider -->
+    <line x1="234" y1="90" x2="234" y2="220" stroke="#cbd5e1" stroke-width="2"/>
+    <!-- Stamp -->
+    <rect x="290" y="90" width="40" height="46" rx="2" fill="#fca5a5" stroke="#dc2626" stroke-width="2" stroke-dasharray="3 2"/>
+    <circle cx="310" cy="110" r="10" fill="#dc2626"/>
+    <!-- Address lines -->
+    <g stroke="#cbd5e1" stroke-width="4" stroke-linecap="round">
+      <line x1="248" y1="155" x2="320" y2="155"/>
+      <line x1="248" y1="175" x2="320" y2="175"/>
+      <line x1="248" y1="195" x2="300" y2="195"/>
+    </g>
+  </g>
+</svg>

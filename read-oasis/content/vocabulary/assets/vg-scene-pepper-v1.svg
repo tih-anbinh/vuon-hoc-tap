@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-pepper desc-pepper">
+  <title id="title-pepper">Pepper</title>
+  <desc id="desc-pepper">A shiny red bell pepper with a green stem next to a green bell pepper.</desc>
+  <defs>
+    <linearGradient id="pepper-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dcfce7"/>
+      <stop offset="100%" stop-color="#f0fdf4"/>
+    </linearGradient>
+    <radialGradient id="pepper-red" cx="38%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#fca5a5"/>
+      <stop offset="55%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </radialGradient>
+    <radialGradient id="pepper-green" cx="38%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#86efac"/>
+      <stop offset="55%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#pepper-bg)"/>
+  <ellipse cx="200" cy="262" rx="150" ry="16" fill="#0f172a" opacity="0.12"/>
+
+  <!-- Green pepper (behind) -->
+  <g filter="url(#soft-shadow)">
+    <path d="M255 130 Q235 118 250 105 L258 108 Q250 120 262 128 Z" fill="#166534" stroke="#14532d" stroke-width="3"/>
+    <path d="M240 128 Q200 118 180 155 Q168 195 195 235 Q225 260 260 245 Q300 230 305 185 Q308 145 275 130 Q258 122 240 128 Z" fill="url(#pepper-green)" stroke="#14532d" stroke-width="4"/>
+    <path d="M215 150 Q205 200 225 240" fill="none" stroke="#bbf7d0" stroke-width="5" stroke-linecap="round" opacity="0.7"/>
+  </g>
+
+  <!-- Red pepper (front) -->
+  <g filter="url(#soft-shadow)">
+    <path d="M140 122 Q120 108 135 95 L143 98 Q135 110 148 120 Z" fill="#166534" stroke="#14532d" stroke-width="3"/>
+    <path d="M125 120 Q85 112 70 155 Q60 200 92 240 Q125 268 160 250 Q200 232 200 185 Q200 140 165 122 Q145 114 125 120 Z" fill="url(#pepper-red)" stroke="#7f1d1d" stroke-width="4"/>
+    <path d="M100 145 Q88 195 108 240" fill="none" stroke="#fecaca" stroke-width="6" stroke-linecap="round" opacity="0.7"/>
+    <path d="M150 145 Q160 190 148 235" fill="none" stroke="#7f1d1d" stroke-width="3" opacity="0.4"/>
+  </g>
+</svg>

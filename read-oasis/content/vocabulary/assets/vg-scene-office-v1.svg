@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-office desc-office">
+  <title id="title-office">Office</title>
+  <desc id="desc-office">An office desk with a computer monitor, a chair, papers, and a window in the background.</desc>
+  <defs>
+    <linearGradient id="office-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f1f5f9"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#office-bg)"/>
+  <rect x="0" y="230" width="400" height="70" fill="#cbd5e1"/>
+
+  <!-- Window -->
+  <g filter="url(#soft-shadow)">
+    <rect x="40" y="40" width="120" height="90" rx="4" fill="#bae6fd" stroke="#475569" stroke-width="4"/>
+    <line x1="100" y1="40" x2="100" y2="130" stroke="#475569" stroke-width="3"/>
+    <line x1="40" y1="85" x2="160" y2="85" stroke="#475569" stroke-width="3"/>
+    <circle cx="130" cy="62" r="10" fill="#fde047"/>
+  </g>
+
+  <!-- Desk -->
+  <g filter="url(#soft-shadow)">
+    <rect x="70" y="200" width="270" height="16" rx="4" fill="#a16207" stroke="#78350f" stroke-width="3.5"/>
+    <rect x="82" y="216" width="12" height="60" fill="#a16207" stroke="#78350f" stroke-width="3"/>
+    <rect x="316" y="216" width="12" height="60" fill="#a16207" stroke="#78350f" stroke-width="3"/>
+
+    <!-- Monitor -->
+    <rect x="130" y="120" width="130" height="80" rx="6" fill="#1e293b" stroke="#0f172a" stroke-width="4"/>
+    <rect x="140" y="130" width="110" height="60" rx="3" fill="#38bdf8"/>
+    <rect x="150" y="140" width="60" height="8" rx="2" fill="#f8fafc" opacity="0.9"/>
+    <rect x="150" y="155" width="80" height="6" rx="2" fill="#f8fafc" opacity="0.7"/>
+    <rect x="150" y="167" width="70" height="6" rx="2" fill="#f8fafc" opacity="0.7"/>
+    <rect x="185" y="200" width="20" height="8" fill="#475569"/>
+
+    <!-- Papers -->
+    <rect x="278" y="188" width="44" height="14" rx="2" fill="#f8fafc" stroke="#94a3b8" stroke-width="2" transform="rotate(-6 300 195)"/>
+    <rect x="280" y="182" width="44" height="14" rx="2" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  </g>
+
+  <!-- Chair -->
+  <g filter="url(#soft-shadow)">
+    <rect x="175" y="230" width="60" height="12" rx="4" fill="#3b82f6" stroke="#1d4ed8" stroke-width="3"/>
+    <rect x="178" y="240" width="8" height="44" fill="#475569"/>
+    <rect x="224" y="240" width="8" height="44" fill="#475569"/>
+    <rect x="178" y="196" width="54" height="38" rx="6" fill="#60a5fa" stroke="#1d4ed8" stroke-width="3"/>
+  </g>
+</svg>

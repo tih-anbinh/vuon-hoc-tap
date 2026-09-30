@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-scissors desc-scissors">
+  <title id="title-scissors">Scissors</title>
+  <desc id="desc-scissors">A pair of open scissors with silver blades and orange finger-loop handles.</desc>
+  <defs>
+    <linearGradient id="scissors-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f1f5f9"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="scissors-blade" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#scissors-bg)"/>
+  <ellipse cx="200" cy="260" rx="120" ry="16" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Blade 1 (upper) -->
+    <path d="M200 155 L90 60 Q78 68 84 82 L195 168 Z" fill="url(#scissors-blade)" stroke="#475569" stroke-width="3.5"/>
+    <!-- Blade 2 (lower) -->
+    <path d="M200 165 L90 240 Q78 232 84 218 L195 152 Z" fill="url(#scissors-blade)" stroke="#475569" stroke-width="3.5"/>
+
+    <!-- Handles (orange loops) -->
+    <path d="M205 158 Q270 130 300 100 Q330 130 300 155 Q280 172 240 175 Z" fill="none" stroke="#ea580c" stroke-width="18" stroke-linejoin="round"/>
+    <path d="M205 162 Q270 190 300 220 Q330 190 300 165 Q280 148 240 145 Z" fill="none" stroke="#ea580c" stroke-width="18" stroke-linejoin="round"/>
+
+    <!-- Pivot screw -->
+    <circle cx="200" cy="160" r="11" fill="#64748b" stroke="#334155" stroke-width="3"/>
+    <circle cx="200" cy="160" r="4" fill="#334155"/>
+  </g>
+</svg>

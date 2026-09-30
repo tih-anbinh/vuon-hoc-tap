@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-concert desc-concert">
+  <title id="title-concert">Concert</title>
+  <desc id="desc-concert">A lit concert stage with a singer at a microphone, spotlights, and floating music notes.</desc>
+  <defs>
+    <linearGradient id="concert-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#312e81"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+    <linearGradient id="concert-skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5d0a9"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#concert-bg)"/>
+  <!-- Spotlights -->
+  <path d="M40 0 L10 200 L120 200 Z" fill="#fde047" opacity="0.2"/>
+  <path d="M360 0 L390 200 L280 200 Z" fill="#f472b6" opacity="0.2"/>
+  <!-- Stage -->
+  <rect x="0" y="235" width="400" height="65" fill="#1e1b4b"/>
+  <ellipse cx="200" cy="242" rx="170" ry="12" fill="#000000" opacity="0.25"/>
+
+  <!-- Music notes -->
+  <g fill="#fde047">
+    <circle cx="80" cy="70" r="8"/>
+    <rect x="86" y="42" width="4" height="30"/>
+    <circle cx="320" cy="90" r="8"/>
+    <rect x="326" y="62" width="4" height="30"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Singer -->
+    <rect x="188" y="215" width="24" height="30" fill="#7c3aed" stroke="#0f172a" stroke-width="2.5"/>
+    <path d="M172 150 Q200 138 228 150 L214 218 L186 218 Z" fill="#ec4899" stroke="#0f172a" stroke-width="3"/>
+    <!-- Arm to mic -->
+    <path d="M180 160 Q160 175 158 195" fill="none" stroke="#ec4899" stroke-width="13" stroke-linecap="round"/>
+    <path d="M220 158 Q240 145 245 128" fill="none" stroke="#ec4899" stroke-width="13" stroke-linecap="round"/>
+    <circle cx="247" cy="124" r="9" fill="url(#concert-skin)" stroke="#d4a574" stroke-width="2.5"/>
+    <!-- Head -->
+    <circle cx="200" cy="120" r="30" fill="url(#concert-skin)" stroke="#d4a574" stroke-width="3"/>
+    <path d="M170 116 Q170 88 200 88 Q230 88 230 116 Q216 100 200 100 Q184 100 170 116 Z" fill="#3d2109" stroke="#27150a" stroke-width="2.5"/>
+    <circle cx="191" cy="120" r="4" fill="#1e293b"/>
+    <circle cx="209" cy="120" r="4" fill="#1e293b"/>
+    <path d="M191 132 Q200 140 209 132" fill="none" stroke="#78350f" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Microphone -->
+    <line x1="158" y1="195" x2="150" y2="150" stroke="#e2e8f0" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="149" cy="143" rx="11" ry="14" fill="#94a3b8" stroke="#1e293b" stroke-width="2.5"/>
+  </g>
+</svg>

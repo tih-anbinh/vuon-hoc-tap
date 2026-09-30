@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-pocket desc-pocket">
+  <title id="title-pocket">Pocket</title>
+  <desc id="desc-pocket">A pair of blue jeans with a front pocket highlighted, with a red handkerchief peeking out.</desc>
+  <defs>
+    <linearGradient id="pocket-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <linearGradient id="pocket-denim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#pocket-bg)"/>
+  <ellipse cx="200" cy="282" rx="120" ry="12" fill="#0f172a" opacity="0.1"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Jeans -->
+    <path d="M120 60 L280 60 L280 100 L275 285 L215 285 L200 140 L185 285 L125 285 L120 100 Z" fill="url(#pocket-denim)" stroke="#1e3a8a" stroke-width="4"/>
+    <!-- Waistband -->
+    <rect x="118" y="58" width="164" height="22" rx="4" fill="#1e40af" stroke="#1e3a8a" stroke-width="3"/>
+    <!-- Zipper -->
+    <line x1="200" y1="82" x2="200" y2="130" stroke="#1e3a8a" stroke-width="3"/>
+    <!-- Seams -->
+    <g stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="4 3">
+      <line x1="128" y1="90" x2="128" y2="280"/>
+      <line x1="272" y1="90" x2="272" y2="280"/>
+    </g>
+  </g>
+
+  <!-- Highlighted pocket -->
+  <g filter="url(#soft-shadow)">
+    <path d="M135 90 Q135 145 175 150 Q175 100 165 90 Z" fill="#2563eb" stroke="#1e3a8a" stroke-width="3.5"/>
+    <path d="M135 90 Q135 145 175 150" fill="none" stroke="#fbbf24" stroke-width="2" stroke-dasharray="4 3"/>
+    <!-- Red handkerchief peeking -->
+    <path d="M144 92 Q152 78 162 88 Q158 96 150 100 Q144 98 144 92 Z" fill="#ef4444" stroke="#991b1b" stroke-width="2"/>
+  </g>
+
+  <!-- Highlight ring -->
+  <ellipse cx="155" cy="118" rx="42" ry="46" fill="none" stroke="#f97316" stroke-width="4" stroke-dasharray="8 6"/>
+</svg>

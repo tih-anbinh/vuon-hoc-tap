@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-grow desc-grow">
+  <title id="title-grow">Grow</title>
+  <desc id="desc-grow">Three stages of a plant growing bigger, from a small sprout to a tall flowering plant, with up arrows.</desc>
+  <defs>
+    <linearGradient id="grow-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#eff6ff"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#grow-bg)"/>
+  <rect x="0" y="230" width="400" height="70" fill="#a16207"/>
+  <rect x="0" y="230" width="400" height="12" fill="#78350f"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Stage 1: sprout -->
+    <path d="M85 230 L85 195" stroke="#166534" stroke-width="6" stroke-linecap="round"/>
+    <path d="M85 200 q-16 -6 -20 -20 q16 -2 20 12" fill="#4ade80" stroke="#166534" stroke-width="2"/>
+    <path d="M85 205 q16 -6 20 -20 q-16 -2 -20 12" fill="#4ade80" stroke="#166534" stroke-width="2"/>
+
+    <!-- Stage 2: medium -->
+    <path d="M200 230 L200 140" stroke="#166534" stroke-width="8" stroke-linecap="round"/>
+    <path d="M200 170 q-26 -8 -34 -30 q26 -4 34 18" fill="#22c55e" stroke="#166534" stroke-width="2.5"/>
+    <path d="M200 180 q26 -8 34 -30 q-26 -4 -34 18" fill="#22c55e" stroke="#166534" stroke-width="2.5"/>
+    <circle cx="200" cy="130" r="18" fill="#4ade80" stroke="#166534" stroke-width="2.5"/>
+
+    <!-- Stage 3: tall flowering -->
+    <path d="M320 230 L320 90" stroke="#166534" stroke-width="10" stroke-linecap="round"/>
+    <path d="M320 150 q-32 -10 -42 -36 q32 -5 42 22" fill="#16a34a" stroke="#166534" stroke-width="3"/>
+    <path d="M320 165 q32 -10 42 -36 q-32 -5 -42 22" fill="#16a34a" stroke="#166534" stroke-width="3"/>
+    <!-- Flower -->
+    <g fill="#f472b6" stroke="#9d174d" stroke-width="2">
+      <circle cx="320" cy="60" r="14"/>
+      <circle cx="298" cy="72" r="14"/>
+      <circle cx="342" cy="72" r="14"/>
+      <circle cx="306" cy="94" r="14"/>
+      <circle cx="334" cy="94" r="14"/>
+    </g>
+    <circle cx="320" cy="82" r="12" fill="#fde047" stroke="#ca8a04" stroke-width="2"/>
+  </g>
+
+  <!-- Up arrows -->
+  <g stroke="#3b82f6" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.8">
+    <path d="M140 200 L140 160 M132 172 L140 160 L148 172"/>
+    <path d="M258 160 L258 110 M250 124 L258 110 L266 124"/>
+  </g>
+</svg>

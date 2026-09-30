@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-spaceship desc-spaceship">
+  <title id="title-spaceship">Spaceship</title>
+  <desc id="desc-spaceship">A shiny silver flying-saucer spaceship with a glass dome and glowing lights zooming past stars.</desc>
+  <defs>
+    <radialGradient id="spaceship-bg" cx="50%" cy="40%" r="75%">
+      <stop offset="0%" stop-color="#312e81"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </radialGradient>
+    <linearGradient id="spaceship-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#spaceship-bg)"/>
+  <!-- Stars -->
+  <g fill="#fef9c3"><circle cx="60" cy="60" r="3"/><circle cx="130" cy="50" r="2"/><circle cx="340" cy="70" r="3"/><circle cx="70" cy="220" r="2.5"/><circle cx="330" cy="230" r="2.5"/><circle cx="200" cy="40" r="2"/></g>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Glow beam -->
+    <path d="M155 190 L245 190 L285 265 L115 265 Z" fill="#38bdf8" opacity="0.25"/>
+
+    <!-- Saucer body -->
+    <ellipse cx="200" cy="180" rx="120" ry="34" fill="url(#spaceship-body)" stroke="#475569" stroke-width="4"/>
+    <ellipse cx="200" cy="172" rx="90" ry="22" fill="#cbd5e1" stroke="#64748b" stroke-width="2"/>
+    <!-- Dome -->
+    <path d="M155 165 Q200 110 245 165 Z" fill="#7dd3fc" stroke="#0369a1" stroke-width="4" opacity="0.9"/>
+    <ellipse cx="185" cy="145" rx="14" ry="8" fill="#ffffff" opacity="0.6"/>
+
+    <!-- Lights -->
+    <g stroke="#0f172a" stroke-width="1.5">
+      <circle cx="130" cy="185" r="8" fill="#fde047"/>
+      <circle cx="165" cy="195" r="8" fill="#ef4444"/>
+      <circle cx="200" cy="198" r="8" fill="#22c55e"/>
+      <circle cx="235" cy="195" r="8" fill="#ef4444"/>
+      <circle cx="270" cy="185" r="8" fill="#fde047"/>
+    </g>
+  </g>
+</svg>

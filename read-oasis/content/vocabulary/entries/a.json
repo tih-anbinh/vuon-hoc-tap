@@ -1601,13 +1601,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-airport-v1",
+        "asset": "vocabulary/assets/vg-scene-airport-v1.svg",
+        "alt": "An airport control tower and terminal building with a jet airplane on the runway under a blue sky.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -1617,7 +1617,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2490,13 +2490,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-ambulance-v1",
+        "asset": "vocabulary/assets/vg-scene-ambulance-v1.svg",
+        "alt": "A white ambulance van with a red cross, flashing blue light, and big black wheels.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -2506,7 +2506,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3304,13 +3304,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-apartment-v1",
+        "asset": "vocabulary/assets/vg-scene-apartment-v1.svg",
+        "alt": "A tall apartment building with many lit windows, a front door, and a small balcony.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -3320,7 +3320,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -4333,13 +4333,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-astronaut-v1",
+        "asset": "vocabulary/assets/vg-scene-astronaut-v1.svg",
+        "alt": "A friendly astronaut in a white spacesuit and round helmet floating among stars in space.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -4349,7 +4349,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {

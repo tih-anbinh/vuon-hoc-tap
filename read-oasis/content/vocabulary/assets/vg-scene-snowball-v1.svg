@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-snowball desc-snowball">
+  <title id="title-snowball">Snowball</title>
+  <desc id="desc-snowball">Two hands packing a round white snowball, with smaller snowballs on the snowy ground.</desc>
+  <defs>
+    <linearGradient id="snowball-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <radialGradient id="snowball-ball" cx="40%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#snowball-bg)"/>
+  <!-- snow ground -->
+  <path d="M0 235 Q200 210 400 235 L400 300 L0 300 Z" fill="#ffffff"/>
+  <ellipse cx="200" cy="235" rx="120" ry="14" fill="#0f172a" opacity="0.06"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Big snowball -->
+    <circle cx="200" cy="150" r="62" fill="url(#snowball-ball)" stroke="#94a3b8" stroke-width="4"/>
+    <!-- texture -->
+    <g fill="#e2e8f0"><circle cx="180" cy="140" r="6"/><circle cx="215" cy="160" r="5"/><circle cx="200" cy="180" r="5"/></g>
+
+    <!-- Left hand cupping -->
+    <path d="M140 150 Q110 145 105 175 Q108 205 145 205 L160 200 Q145 175 150 150 Z" fill="#fcd9b6" stroke="#c07b48" stroke-width="4"/>
+    <!-- Right hand cupping -->
+    <path d="M260 150 Q290 145 295 175 Q292 205 255 205 L240 200 Q255 175 250 150 Z" fill="#fcd9b6" stroke="#c07b48" stroke-width="4"/>
+
+    <!-- Small snowballs on ground -->
+    <circle cx="90" cy="235" r="20" fill="url(#snowball-ball)" stroke="#94a3b8" stroke-width="3"/>
+    <circle cx="310" cy="240" r="24" fill="url(#snowball-ball)" stroke="#94a3b8" stroke-width="3"/>
+    <circle cx="130" cy="252" r="15" fill="url(#snowball-ball)" stroke="#94a3b8" stroke-width="3"/>
+  </g>
+</svg>

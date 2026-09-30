@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-comb desc-comb">
+  <title id="title-comb">Comb</title>
+  <desc id="desc-comb">A blue hair comb with a row of teeth and a handle, lying on a light surface.</desc>
+  <defs>
+    <linearGradient id="comb-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#f0f9ff"/>
+    </linearGradient>
+    <linearGradient id="comb-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#comb-bg)"/>
+  <ellipse cx="200" cy="215" rx="160" ry="18" fill="#0f172a" opacity="0.1"/>
+
+  <g filter="url(#soft-shadow)">
+    <g transform="rotate(-8 200 150)">
+      <!-- Spine -->
+      <rect x="60" y="120" width="280" height="34" rx="12" fill="url(#comb-body)" stroke="#1e293b" stroke-width="4"/>
+      <!-- Handle -->
+      <rect x="300" y="126" width="60" height="22" rx="10" fill="url(#comb-body)" stroke="#1e293b" stroke-width="4"/>
+      <!-- Teeth -->
+      <g fill="url(#comb-body)" stroke="#1e293b" stroke-width="2.5">
+        <rect x="70" y="152" width="9" height="46" rx="4"/>
+        <rect x="88" y="152" width="9" height="46" rx="4"/>
+        <rect x="106" y="152" width="9" height="46" rx="4"/>
+        <rect x="124" y="152" width="9" height="46" rx="4"/>
+        <rect x="142" y="152" width="9" height="46" rx="4"/>
+        <rect x="160" y="152" width="9" height="46" rx="4"/>
+        <rect x="178" y="152" width="9" height="46" rx="4"/>
+        <rect x="196" y="152" width="9" height="46" rx="4"/>
+        <rect x="214" y="152" width="9" height="46" rx="4"/>
+        <rect x="232" y="152" width="9" height="46" rx="4"/>
+        <rect x="250" y="152" width="9" height="46" rx="4"/>
+        <rect x="268" y="152" width="9" height="46" rx="4"/>
+        <rect x="286" y="152" width="9" height="46" rx="4"/>
+      </g>
+      <!-- Highlight -->
+      <rect x="72" y="126" width="220" height="6" rx="3" fill="#93c5fd" opacity="0.7"/>
+    </g>
+  </g>
+</svg>

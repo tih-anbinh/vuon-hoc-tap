@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-king desc-king">
+  <title id="title-king">King</title>
+  <desc id="desc-king">A friendly king wearing a gold crown, a red robe with fur trim, holding a sceptre.</desc>
+  <defs>
+    <linearGradient id="king-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#faf5ff"/>
+      <stop offset="100%" stop-color="#f3e8ff"/>
+    </linearGradient>
+    <linearGradient id="king-skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5d0a9"/>
+    </linearGradient>
+    <linearGradient id="king-gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#king-bg)"/>
+  <ellipse cx="200" cy="280" rx="120" ry="14" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Robe -->
+    <path d="M130 200 Q200 180 270 200 L285 290 L115 290 Z" fill="#dc2626" stroke="#991b1b" stroke-width="3.5"/>
+    <!-- Fur trim -->
+    <path d="M175 195 L165 290 L145 290 L155 195 Z" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2.5"/>
+    <path d="M225 195 L235 290 L255 290 L245 195 Z" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2.5"/>
+    <!-- Head -->
+    <circle cx="200" cy="135" r="46" fill="url(#king-skin)" stroke="#d4a574" stroke-width="3.5"/>
+    <!-- Beard -->
+    <path d="M162 150 Q160 200 200 205 Q240 200 238 150 Q220 175 200 175 Q180 175 162 150 Z" fill="#e5e7eb" stroke="#9ca3af" stroke-width="2.5"/>
+    <!-- Eyes -->
+    <circle cx="186" cy="130" r="4.5" fill="#1e293b"/>
+    <circle cx="214" cy="130" r="4.5" fill="#1e293b"/>
+    <!-- Smile -->
+    <path d="M186 148 Q200 156 214 148" fill="none" stroke="#7f1d1d" stroke-width="3" stroke-linecap="round"/>
+    <!-- Crown -->
+    <path d="M158 100 L162 62 L182 88 L200 52 L218 88 L238 62 L242 100 Z" fill="url(#king-gold)" stroke="#b45309" stroke-width="4" stroke-linejoin="round"/>
+    <rect x="156" y="98" width="88" height="14" rx="4" fill="url(#king-gold)" stroke="#b45309" stroke-width="3"/>
+    <circle cx="200" cy="52" r="7" fill="#ef4444" stroke="#991b1b" stroke-width="2"/>
+    <circle cx="162" cy="62" r="5" fill="#3b82f6"/>
+    <circle cx="238" cy="62" r="5" fill="#3b82f6"/>
+
+    <!-- Sceptre -->
+    <line x1="290" y1="120" x2="290" y2="260" stroke="#a16207" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="290" cy="110" r="14" fill="url(#king-gold)" stroke="#b45309" stroke-width="3"/>
+    <circle cx="290" cy="110" r="6" fill="#ef4444"/>
+  </g>
+</svg>

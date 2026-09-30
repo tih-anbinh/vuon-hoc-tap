@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-parent desc-parent">
+  <title id="title-parent">Parent</title>
+  <desc id="desc-parent">A tall grown-up parent holding hands with a small smiling child beside them.</desc>
+  <defs>
+    <linearGradient id="parent-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fefce8"/>
+    </linearGradient>
+    <linearGradient id="parent-skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5d0a9"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#parent-bg)"/>
+  <ellipse cx="200" cy="282" rx="150" ry="12" fill="#0f172a" opacity="0.1"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Parent (tall) -->
+    <path d="M110 285 Q110 190 155 180 Q200 190 200 285 Z" fill="#0ea5e9" stroke="#075985" stroke-width="4"/>
+    <circle cx="155" cy="120" r="48" fill="url(#parent-skin)" stroke="#d4a574" stroke-width="4"/>
+    <path d="M110 112 Q112 72 155 72 Q198 72 200 112 Q178 88 155 88 Q132 88 110 112 Z" fill="#3d2109" stroke="#2a1607" stroke-width="3"/>
+    <circle cx="142" cy="118" r="5" fill="#1e293b"/>
+    <circle cx="168" cy="118" r="5" fill="#1e293b"/>
+    <path d="M143 138 Q155 148 167 138" fill="none" stroke="#1e293b" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Parent arm reaching down -->
+    <path d="M175 210 Q210 235 235 250" fill="none" stroke="url(#parent-skin)" stroke-width="16" stroke-linecap="round"/>
+
+    <!-- Child (small) -->
+    <path d="M235 285 Q235 235 262 228 Q290 235 290 285 Z" fill="#f97316" stroke="#c2410c" stroke-width="4"/>
+    <circle cx="262" cy="200" r="32" fill="url(#parent-skin)" stroke="#d4a574" stroke-width="3.5"/>
+    <path d="M232 195 Q234 168 262 168 Q290 168 292 195 Q276 178 262 178 Q248 178 232 195 Z" fill="#5b3a1a" stroke="#3d2109" stroke-width="2.5"/>
+    <circle cx="252" cy="200" r="4" fill="#1e293b"/>
+    <circle cx="272" cy="200" r="4" fill="#1e293b"/>
+    <path d="M253 214 Q262 222 271 214" fill="none" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+    <!-- Child arm reaching up -->
+    <path d="M240 240 Q228 250 218 253" fill="none" stroke="url(#parent-skin)" stroke-width="12" stroke-linecap="round"/>
+  </g>
+</svg>

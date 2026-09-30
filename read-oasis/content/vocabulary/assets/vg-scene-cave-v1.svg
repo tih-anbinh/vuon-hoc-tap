@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-cave desc-cave">
+  <title id="title-cave">Cave</title>
+  <desc id="desc-cave">A dark cave opening in a rocky brown mountain with stalactites and stalagmites inside.</desc>
+  <defs>
+    <linearGradient id="cave-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="cave-rock" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a8a29e"/>
+      <stop offset="100%" stop-color="#78716c"/>
+    </linearGradient>
+    <radialGradient id="cave-hole" cx="50%" cy="55%" r="60%">
+      <stop offset="0%" stop-color="#1c1917"/>
+      <stop offset="100%" stop-color="#44403c"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#cave-bg)"/>
+  <rect x="0" y="255" width="400" height="45" fill="#65a30d"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Mountain -->
+    <path d="M40 255 Q60 120 200 80 Q340 120 360 255 Z" fill="url(#cave-rock)" stroke="#57534e" stroke-width="4"/>
+    <!-- Cave hole -->
+    <path d="M130 255 Q130 155 200 150 Q270 155 270 255 Z" fill="url(#cave-hole)" stroke="#292524" stroke-width="3"/>
+    <!-- Stalactites (top) -->
+    <path d="M155 168 L162 200 L169 168 Z" fill="#57534e"/>
+    <path d="M195 158 L202 195 L209 158 Z" fill="#57534e"/>
+    <path d="M232 168 L239 200 L246 168 Z" fill="#57534e"/>
+    <!-- Stalagmites (bottom) -->
+    <path d="M160 255 L167 225 L174 255 Z" fill="#44403c"/>
+    <path d="M225 255 L232 228 L239 255 Z" fill="#44403c"/>
+    <!-- Rock cracks -->
+    <path d="M90 150 L110 175 M300 150 L285 178" stroke="#57534e" stroke-width="2.5" fill="none"/>
+  </g>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-countryside desc-countryside">
+  <title id="title-countryside">Countryside</title>
+  <desc id="desc-countryside">A peaceful countryside scene with green rolling hills, a farmhouse, trees, and the sun.</desc>
+  <defs>
+    <linearGradient id="countryside-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#93c5fd"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#countryside-sky)"/>
+  <circle cx="330" cy="60" r="30" fill="#fde047"/>
+  <!-- Clouds -->
+  <g fill="#ffffff" opacity="0.9">
+    <ellipse cx="90" cy="55" rx="30" ry="16"/>
+    <ellipse cx="120" cy="55" rx="24" ry="14"/>
+  </g>
+
+  <!-- Rolling hills -->
+  <path d="M0 200 Q100 150 200 190 Q300 230 400 175 L400 300 L0 300 Z" fill="#4ade80" stroke="#166534" stroke-width="2"/>
+  <path d="M0 240 Q120 200 250 235 Q330 258 400 235 L400 300 L0 300 Z" fill="#22c55e" stroke="#166534" stroke-width="2"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Farmhouse -->
+    <rect x="60" y="175" width="80" height="60" fill="#fef3c7" stroke="#1e293b" stroke-width="3"/>
+    <path d="M52 175 L100 140 L148 175 Z" fill="#dc2626" stroke="#1e293b" stroke-width="3"/>
+    <rect x="88" y="200" width="24" height="35" fill="#78350f" stroke="#1e293b" stroke-width="2.5"/>
+    <rect x="66" y="185" width="16" height="16" fill="#60a5fa" stroke="#1e293b" stroke-width="2"/>
+    <!-- Tree -->
+    <rect x="290" y="175" width="14" height="50" fill="#78350f"/>
+    <circle cx="297" cy="160" r="34" fill="#16a34a" stroke="#166534" stroke-width="3"/>
+  </g>
+</svg>

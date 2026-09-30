@@ -113,13 +113,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-queen-v1",
+        "asset": "vocabulary/assets/vg-scene-queen-v1.svg",
+        "alt": "A smiling queen wearing a golden jeweled crown and a royal purple robe.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -129,7 +129,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-bridge desc-bridge">
+  <title id="title-bridge">Bridge</title>
+  <desc id="desc-bridge">A stone arch bridge crossing over a blue river under a sunny sky.</desc>
+  <defs>
+    <linearGradient id="bridge-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="bridge-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="bridge-stone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d6d3d1"/>
+      <stop offset="100%" stop-color="#a8a29e"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#bridge-bg)"/>
+  <!-- Sun -->
+  <circle cx="60" cy="55" r="28" fill="#fde047"/>
+  <!-- Water -->
+  <rect x="0" y="200" width="400" height="100" fill="url(#bridge-water)"/>
+  <g stroke="#7dd3fc" stroke-width="3" stroke-linecap="round">
+    <line x1="30" y1="230" x2="70" y2="230"/>
+    <line x1="120" y1="250" x2="170" y2="250"/>
+    <line x1="250" y1="235" x2="300" y2="235"/>
+    <line x1="330" y1="265" x2="375" y2="265"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Bridge deck + arches -->
+    <path d="M30 200 L30 150 L370 150 L370 200
+             L300 200 A70 55 0 0 0 230 200
+             L170 200 A70 55 0 0 0 100 200 Z"
+          fill="url(#bridge-stone)" stroke="#57534e" stroke-width="4"/>
+    <!-- Railing -->
+    <rect x="30" y="135" width="340" height="16" rx="4" fill="#e7e5e4" stroke="#57534e" stroke-width="3"/>
+    <g stroke="#57534e" stroke-width="4">
+      <line x1="60" y1="151" x2="60" y2="135"/>
+      <line x1="120" y1="151" x2="120" y2="135"/>
+      <line x1="200" y1="151" x2="200" y2="135"/>
+      <line x1="280" y1="151" x2="280" y2="135"/>
+      <line x1="340" y1="151" x2="340" y2="135"/>
+    </g>
+    <!-- Stone blocks -->
+    <g stroke="#78716c" stroke-width="2">
+      <line x1="70" y1="150" x2="70" y2="200"/>
+      <line x1="330" y1="150" x2="330" y2="200"/>
+    </g>
+  </g>
+</svg>

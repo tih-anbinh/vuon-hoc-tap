@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-shoulder desc-shoulder">
+  <title id="title-shoulder">Shoulder</title>
+  <desc id="desc-shoulder">A child pointing to the shoulder, the body part between the neck and the arm, highlighted.</desc>
+  <defs>
+    <linearGradient id="shoulder-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#f0f9ff"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#shoulder-bg)"/>
+  <ellipse cx="200" cy="278" rx="120" ry="14" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Head -->
+    <circle cx="200" cy="90" r="42" fill="#fcd9b6" stroke="#c07b48" stroke-width="4"/>
+    <!-- Hair -->
+    <path d="M158 82 Q160 45 200 45 Q240 45 242 82 Q225 62 200 62 Q175 62 158 82 Z" fill="#78350f" stroke="#451a03" stroke-width="3"/>
+    <!-- Face -->
+    <circle cx="185" cy="90" r="4" fill="#1e293b"/>
+    <circle cx="215" cy="90" r="4" fill="#1e293b"/>
+    <path d="M188 108 Q200 118 212 108" fill="none" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+    <!-- Neck -->
+    <rect x="185" y="128" width="30" height="26" fill="#fcd9b6" stroke="#c07b48" stroke-width="3"/>
+    <!-- Torso / shirt -->
+    <path d="M120 200 Q125 158 200 152 Q275 158 280 200 L280 265 L120 265 Z" fill="#3b82f6" stroke="#1e40af" stroke-width="4"/>
+    <!-- Right arm -->
+    <path d="M120 175 Q95 200 100 245 L125 245 Q122 205 145 185 Z" fill="#3b82f6" stroke="#1e40af" stroke-width="4"/>
+  </g>
+
+  <!-- Highlighted shoulder -->
+  <circle cx="140" cy="172" r="26" fill="none" stroke="#dc2626" stroke-width="5"/>
+  <line x1="140" y1="172" x2="110" y2="130" stroke="#dc2626" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="108" cy="126" r="7" fill="#dc2626"/>
+</svg>

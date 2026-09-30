@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-race desc-race">
+  <title id="title-race">Race</title>
+  <desc id="desc-race">Two runners sprinting toward a checkered finish line, with a numbered lane and speed lines.</desc>
+  <defs>
+    <linearGradient id="race-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#dcfce7"/>
+    </linearGradient>
+    <linearGradient id="race-skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5d0a9"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="210" fill="url(#race-bg)"/>
+  <rect x="0" y="210" width="400" height="90" fill="#fb923c"/>
+  <!-- Lane lines -->
+  <g stroke="#f8fafc" stroke-width="3" opacity="0.7">
+    <line x1="0" y1="240" x2="400" y2="240"/>
+    <line x1="0" y1="270" x2="400" y2="270"/>
+  </g>
+
+  <!-- Finish line pole -->
+  <rect x="330" y="70" width="8" height="180" fill="#64748b"/>
+  <!-- Checkered flag -->
+  <g>
+    <rect x="290" y="70" width="48" height="36" fill="#f8fafc" stroke="#1e293b" stroke-width="2"/>
+    <g fill="#1e293b">
+      <rect x="290" y="70" width="12" height="12"/><rect x="314" y="70" width="12" height="12"/>
+      <rect x="302" y="82" width="12" height="12"/><rect x="326" y="82" width="12" height="12"/>
+      <rect x="290" y="94" width="12" height="12"/><rect x="314" y="94" width="12" height="12"/>
+    </g>
+  </g>
+
+  <!-- Runner 1 (red) leading -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="230" cy="120" r="26" fill="url(#race-skin)" stroke="#d4a574" stroke-width="3.5"/>
+    <path d="M206 116 Q208 96 230 96 Q252 96 254 116 Q242 102 230 102 Q218 102 206 116 Z" fill="#3d2109"/>
+    <circle cx="240" cy="118" r="3.5" fill="#1e293b"/>
+    <path d="M232 130 Q240 135 248 130" fill="none" stroke="#1e293b" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M212 150 Q230 138 250 150 L246 200 L214 200 Z" fill="#dc2626" stroke="#991b1b" stroke-width="3"/>
+    <path d="M245 160 Q270 155 285 145" fill="none" stroke="url(#race-skin)" stroke-width="11" stroke-linecap="round"/>
+    <path d="M215 158 Q195 165 185 178" fill="none" stroke="url(#race-skin)" stroke-width="11" stroke-linecap="round"/>
+    <path d="M225 200 L200 235" stroke="url(#race-skin)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M240 200 Q265 215 280 210" stroke="url(#race-skin)" stroke-width="12" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- Runner 2 (blue) behind -->
+  <g filter="url(#soft-shadow)" opacity="0.95">
+    <circle cx="110" cy="140" r="24" fill="url(#race-skin)" stroke="#d4a574" stroke-width="3.5"/>
+    <path d="M88 136 Q90 118 110 118 Q130 118 132 136 Q120 124 110 124 Q100 124 88 136 Z" fill="#5b3a1a"/>
+    <circle cx="120" cy="138" r="3.5" fill="#1e293b"/>
+    <path d="M94 168 Q110 156 128 168 L124 215 L96 215 Z" fill="#2563eb" stroke="#1e3a8a" stroke-width="3"/>
+    <path d="M124 178 Q148 172 160 162" fill="none" stroke="url(#race-skin)" stroke-width="10" stroke-linecap="round"/>
+    <path d="M100 215 L78 248" stroke="url(#race-skin)" stroke-width="11" stroke-linecap="round"/>
+    <path d="M118 215 Q140 228 152 222" stroke="url(#race-skin)" stroke-width="11" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- Speed lines -->
+  <g stroke="#ef4444" stroke-width="4" stroke-linecap="round" opacity="0.8">
+    <line x1="160" y1="130" x2="195" y2="128"/>
+    <line x1="150" y1="155" x2="188" y2="153"/>
+    <line x1="55" y1="150" x2="88" y2="148"/>
+  </g>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-noise desc-noise">
+  <title id="title-noise">Noise</title>
+  <desc id="desc-noise">A loud speaker with big sound waves and jagged symbols showing a loud noise.</desc>
+  <defs>
+    <linearGradient id="noise-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fffbeb"/>
+    </linearGradient>
+    <linearGradient id="noise-spk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#noise-bg)"/>
+  <ellipse cx="130" cy="262" rx="90" ry="14" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Speaker body -->
+    <path d="M50 120 L90 120 L140 80 L140 220 L90 180 L50 180 Z" fill="url(#noise-spk)" stroke="#0f172a" stroke-width="4"/>
+    <circle cx="105" cy="150" r="18" fill="#64748b" stroke="#0f172a" stroke-width="2.5"/>
+  </g>
+
+  <!-- Sound waves -->
+  <g fill="none" stroke="#f97316" stroke-width="6" stroke-linecap="round">
+    <path d="M170 110 Q195 150 170 190"/>
+    <path d="M205 90 Q245 150 205 210"/>
+    <path d="M240 72 Q295 150 240 228"/>
+  </g>
+
+  <!-- Jagged loud symbols -->
+  <g fill="#dc2626" stroke="#991b1b" stroke-width="2.5">
+    <path d="M300 90 l14 26 l16 -8 l-10 24 l18 6 l-22 12 l6 20 l-24 -14 l-14 16 l2 -24 l-20 -4 l18 -14 l-12 -22 l24 8 Z" opacity="0.9"/>
+  </g>
+  <g fill="#f59e0b" stroke="#b45309" stroke-width="2">
+    <path d="M340 180 l8 16 l10 -4 l-6 14 l12 4 l-14 8 l4 12 l-14 -8 l-8 10 l0 -14 l-12 -2 l10 -8 l-6 -14 l14 4 Z"/>
+  </g>
+</svg>

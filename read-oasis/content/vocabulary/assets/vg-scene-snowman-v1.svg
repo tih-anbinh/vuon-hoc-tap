@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-snowman desc-snowman">
+  <title id="title-snowman">Snowman</title>
+  <desc id="desc-snowman">A cheerful snowman with a carrot nose, coal buttons, stick arms, scarf, and a top hat.</desc>
+  <defs>
+    <linearGradient id="snowman-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <radialGradient id="snowman-body" cx="40%" cy="35%" r="75%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#snowman-bg)"/>
+  <path d="M0 245 Q200 220 400 245 L400 300 L0 300 Z" fill="#ffffff"/>
+  <ellipse cx="200" cy="252" rx="90" ry="14" fill="#0f172a" opacity="0.08"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Stick arms -->
+    <path d="M138 175 L80 145 M85 155 L75 138 M85 155 L100 150" fill="none" stroke="#78350f" stroke-width="5" stroke-linecap="round"/>
+    <path d="M262 175 L320 145 M315 155 L325 138 M315 155 L300 150" fill="none" stroke="#78350f" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Bottom ball -->
+    <circle cx="200" cy="215" r="55" fill="url(#snowman-body)" stroke="#94a3b8" stroke-width="4"/>
+    <!-- Middle ball -->
+    <circle cx="200" cy="150" r="42" fill="url(#snowman-body)" stroke="#94a3b8" stroke-width="4"/>
+    <!-- Head -->
+    <circle cx="200" cy="90" r="32" fill="url(#snowman-body)" stroke="#94a3b8" stroke-width="4"/>
+
+    <!-- Coal buttons -->
+    <g fill="#1e293b"><circle cx="200" cy="135" r="5"/><circle cx="200" cy="155" r="5"/><circle cx="200" cy="175" r="5"/></g>
+    <!-- Face -->
+    <circle cx="190" cy="84" r="4.5" fill="#1e293b"/>
+    <circle cx="210" cy="84" r="4.5" fill="#1e293b"/>
+    <!-- Carrot nose -->
+    <path d="M200 92 L232 100 L200 104 Z" fill="#f97316" stroke="#c2410c" stroke-width="2"/>
+    <!-- Smile -->
+    <g fill="#1e293b"><circle cx="186" cy="102" r="2"/><circle cx="193" cy="106" r="2"/><circle cx="200" cy="107" r="2"/><circle cx="207" cy="106" r="2"/><circle cx="214" cy="102" r="2"/></g>
+
+    <!-- Scarf -->
+    <path d="M168 116 Q200 128 232 116 L232 128 Q200 140 168 128 Z" fill="#dc2626" stroke="#991b1b" stroke-width="3"/>
+    <path d="M225 122 L240 165 L222 165 L214 124 Z" fill="#dc2626" stroke="#991b1b" stroke-width="3"/>
+
+    <!-- Top hat -->
+    <rect x="165" y="48" width="70" height="10" rx="3" fill="#1e293b"/>
+    <rect x="178" y="18" width="44" height="34" rx="3" fill="#1e293b"/>
+    <rect x="178" y="42" width="44" height="8" fill="#dc2626"/>
+  </g>
+</svg>

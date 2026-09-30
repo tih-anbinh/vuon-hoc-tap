@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-ring desc-ring">
+  <title id="title-ring">Ring</title>
+  <desc id="desc-ring">A shiny gold ring with a large sparkling blue diamond gem set on top.</desc>
+  <defs>
+    <linearGradient id="ring-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fce7f3"/>
+      <stop offset="100%" stop-color="#fdf2f8"/>
+    </linearGradient>
+    <linearGradient id="ring-gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <radialGradient id="ring-gem" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="60%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#ring-bg)"/>
+  <ellipse cx="200" cy="255" rx="90" ry="14" fill="#0f172a" opacity="0.12"/>
+
+  <!-- Sparkles -->
+  <g fill="#fde047">
+    <path d="M120 90 l4 10 l10 4 l-10 4 l-4 10 l-4 -10 l-10 -4 l10 -4 Z"/>
+    <path d="M290 100 l3 8 l8 3 l-8 3 l-3 8 l-3 -8 l-8 -3 l8 -3 Z"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Gold band -->
+    <ellipse cx="200" cy="200" rx="70" ry="55" fill="none" stroke="url(#ring-gold)" stroke-width="20"/>
+    <ellipse cx="200" cy="200" rx="70" ry="55" fill="none" stroke="#92400e" stroke-width="2" opacity="0.4"/>
+
+    <!-- Prongs -->
+    <g stroke="#eab308" stroke-width="5" stroke-linecap="round">
+      <line x1="182" y1="140" x2="176" y2="120"/>
+      <line x1="218" y1="140" x2="224" y2="120"/>
+    </g>
+
+    <!-- Diamond gem -->
+    <path d="M170 110 L230 110 L240 128 L200 165 L160 128 Z" fill="url(#ring-gem)" stroke="#1e3a8a" stroke-width="3"/>
+    <!-- Facets -->
+    <g stroke="#1e3a8a" stroke-width="1.5" opacity="0.6">
+      <line x1="170" y1="110" x2="200" y2="128"/>
+      <line x1="230" y1="110" x2="200" y2="128"/>
+      <line x1="160" y1="128" x2="240" y2="128"/>
+      <line x1="200" y1="128" x2="200" y2="165"/>
+    </g>
+    <!-- Shine -->
+    <path d="M182 116 L196 124" stroke="#f8fafc" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+  </g>
+</svg>

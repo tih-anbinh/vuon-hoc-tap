@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-plant desc-plant">
+  <title id="title-plant">Plant</title>
+  <desc id="desc-plant">A leafy green potted plant growing in a brown flower pot with a few small buds.</desc>
+  <defs>
+    <linearGradient id="plant-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dcfce7"/>
+      <stop offset="100%" stop-color="#f0fdf4"/>
+    </linearGradient>
+    <linearGradient id="plant-pot" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#c2410c"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#plant-bg)"/>
+  <ellipse cx="200" cy="272" rx="120" ry="14" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Stems + leaves -->
+    <g stroke="#166534" stroke-width="5" fill="#22c55e">
+      <path d="M200 175 Q200 120 200 90" fill="none"/>
+      <path d="M200 130 Q160 100 130 110 Q160 130 200 135 Z" stroke="#166534" stroke-width="3"/>
+      <path d="M200 130 Q240 100 270 110 Q240 130 200 135 Z" stroke="#166534" stroke-width="3"/>
+      <path d="M200 105 Q170 78 148 82 Q172 102 200 108 Z" stroke="#166534" stroke-width="3"/>
+      <path d="M200 105 Q230 78 252 82 Q228 102 200 108 Z" stroke="#166534" stroke-width="3"/>
+      <path d="M200 90 Q185 60 200 48 Q215 60 200 90 Z" stroke="#166534" stroke-width="3"/>
+    </g>
+    <!-- Leaf veins -->
+    <g stroke="#166534" stroke-width="2" opacity="0.5" fill="none">
+      <path d="M160 118 L195 132"/>
+      <path d="M240 118 L205 132"/>
+      <path d="M200 55 L200 85"/>
+    </g>
+    <!-- Buds -->
+    <circle cx="148" cy="90" r="7" fill="#f472b6" stroke="#be185d" stroke-width="2"/>
+    <circle cx="252" cy="90" r="7" fill="#f472b6" stroke="#be185d" stroke-width="2"/>
+
+    <!-- Pot -->
+    <path d="M150 175 L250 175 L235 255 L165 255 Z" fill="url(#plant-pot)" stroke="#7c2d12" stroke-width="4"/>
+    <rect x="142" y="168" width="116" height="18" rx="4" fill="#ea580c" stroke="#7c2d12" stroke-width="3.5"/>
+    <!-- Soil -->
+    <ellipse cx="200" cy="176" rx="52" ry="8" fill="#5b3a1a"/>
+  </g>
+</svg>

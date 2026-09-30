@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-pizza desc-pizza">
+  <title id="title-pizza">Pizza</title>
+  <desc id="desc-pizza">A round cheesy pizza with red pepperoni slices, cut into eight triangular pieces.</desc>
+  <defs>
+    <linearGradient id="pizza-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fffbeb"/>
+    </linearGradient>
+    <radialGradient id="pizza-cheese" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#eab308"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#pizza-bg)"/>
+  <ellipse cx="200" cy="230" rx="130" ry="24" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Crust -->
+    <circle cx="200" cy="150" r="115" fill="#d6a860" stroke="#92400e" stroke-width="5"/>
+    <!-- Cheese -->
+    <circle cx="200" cy="150" r="98" fill="url(#pizza-cheese)" stroke="#ca8a04" stroke-width="2"/>
+    <!-- Sauce edge -->
+    <circle cx="200" cy="150" r="98" fill="none" stroke="#dc2626" stroke-width="4" opacity="0.4"/>
+
+    <!-- Cut lines (8 slices) -->
+    <g stroke="#ca8a04" stroke-width="3">
+      <line x1="200" y1="52" x2="200" y2="248"/>
+      <line x1="102" y1="150" x2="298" y2="150"/>
+      <line x1="131" y1="81" x2="269" y2="219"/>
+      <line x1="269" y1="81" x2="131" y2="219"/>
+    </g>
+
+    <!-- Pepperoni -->
+    <g fill="#dc2626" stroke="#991b1b" stroke-width="2">
+      <circle cx="160" cy="115" r="14"/>
+      <circle cx="235" cy="120" r="14"/>
+      <circle cx="150" cy="180" r="14"/>
+      <circle cx="245" cy="185" r="14"/>
+      <circle cx="200" cy="150" r="14"/>
+      <circle cx="200" cy="205" r="12"/>
+      <circle cx="200" cy="95" r="12"/>
+    </g>
+    <!-- Basil -->
+    <g fill="#16a34a">
+      <ellipse cx="180" cy="145" rx="7" ry="4" transform="rotate(30 180 145)"/>
+      <ellipse cx="222" cy="160" rx="7" ry="4" transform="rotate(-20 222 160)"/>
+      <ellipse cx="175" cy="200" rx="6" ry="4" transform="rotate(15 175 200)"/>
+    </g>
+  </g>
+</svg>

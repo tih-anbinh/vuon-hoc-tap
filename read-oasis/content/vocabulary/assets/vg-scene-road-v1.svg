@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-road desc-road">
+  <title id="title-road">Road</title>
+  <desc id="desc-road">A gray paved road with a dashed white center line stretching into the distance with a car.</desc>
+  <defs>
+    <linearGradient id="road-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="140" fill="url(#road-sky)"/>
+  <circle cx="60" cy="55" r="26" fill="#fde047" stroke="#f59e0b" stroke-width="3"/>
+  <!-- Hills -->
+  <path d="M0 140 Q120 95 240 140 T400 130 L400 140 Z" fill="#4ade80"/>
+  <!-- Grass -->
+  <rect x="0" y="130" width="400" height="170" fill="#65a30d"/>
+
+  <!-- Road (converging) -->
+  <g filter="url(#soft-shadow)">
+    <path d="M40 300 L175 130 L225 130 L360 300 Z" fill="#57534e" stroke="#292524" stroke-width="3"/>
+  </g>
+  <!-- Center dashes -->
+  <g fill="#fbbf24">
+    <path d="M196 300 L204 300 L202 255 L198 255 Z"/>
+    <path d="M198 230 L202 230 L201 200 L199 200 Z"/>
+    <path d="M199 182 L201 182 L200.5 160 L199.5 160 Z"/>
+    <path d="M199.5 148 L200.5 148 L200.3 135 L199.7 135 Z"/>
+  </g>
+  <!-- Road edges -->
+  <line x1="42" y1="298" x2="176" y2="132" stroke="#f8fafc" stroke-width="2" opacity="0.6"/>
+  <line x1="358" y1="298" x2="224" y2="132" stroke="#f8fafc" stroke-width="2" opacity="0.6"/>
+
+  <!-- Car -->
+  <g filter="url(#soft-shadow)">
+    <rect x="150" y="215" width="100" height="35" rx="10" fill="#ef4444" stroke="#991b1b" stroke-width="3.5"/>
+    <path d="M165 215 Q180 190 220 190 L235 215 Z" fill="#f87171" stroke="#991b1b" stroke-width="3"/>
+    <path d="M178 213 L205 213 L205 195 L190 195 Z" fill="#bae6fd" stroke="#1e293b" stroke-width="2"/>
+    <circle cx="175" cy="250" r="15" fill="#334155" stroke="#1e293b" stroke-width="3"/>
+    <circle cx="175" cy="250" r="6" fill="#94a3b8"/>
+    <circle cx="225" cy="250" r="15" fill="#334155" stroke="#1e293b" stroke-width="3"/>
+    <circle cx="225" cy="250" r="6" fill="#94a3b8"/>
+    <circle cx="243" cy="228" r="5" fill="#fde047"/>
+  </g>
+</svg>

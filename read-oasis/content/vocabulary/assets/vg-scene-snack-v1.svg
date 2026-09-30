@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-snack desc-snack">
+  <title id="title-snack">Snack</title>
+  <desc id="desc-snack">A small bowl of snacks with pretzels, crackers, and popcorn, plus a juice box beside it.</desc>
+  <defs>
+    <linearGradient id="snack-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fffbeb"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#snack-bg)"/>
+  <ellipse cx="200" cy="262" rx="150" ry="18" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Bowl -->
+    <path d="M75 165 Q180 155 285 165 Q272 240 180 245 Q88 240 75 165 Z" fill="#ea580c" stroke="#9a3412" stroke-width="4"/>
+    <ellipse cx="180" cy="165" rx="105" ry="26" fill="#fb923c" stroke="#9a3412" stroke-width="3"/>
+
+    <!-- Popcorn -->
+    <g fill="#fef9c3" stroke="#d97706" stroke-width="2">
+      <circle cx="130" cy="158" r="13"/><circle cx="165" cy="150" r="13"/><circle cx="200" cy="158" r="13"/><circle cx="235" cy="152" r="13"/>
+    </g>
+    <!-- Pretzels -->
+    <g fill="none" stroke="#a16207" stroke-width="6" stroke-linecap="round">
+      <path d="M110 172 q10 -14 22 -2 q12 -12 22 2 q-16 6 -22 -4 q-6 10 -22 4"/>
+      <path d="M215 174 q10 -14 22 -2 q12 -12 22 2 q-16 6 -22 -4 q-6 10 -22 4"/>
+    </g>
+    <!-- Crackers -->
+    <rect x="152" y="168" width="26" height="26" rx="4" fill="#fbbf24" stroke="#b45309" stroke-width="2.5"/>
+    <g fill="#b45309"><circle cx="160" cy="176" r="1.5"/><circle cx="170" cy="180" r="1.5"/><circle cx="162" cy="188" r="1.5"/></g>
+
+    <!-- Juice box -->
+    <rect x="300" y="160" width="55" height="85" rx="6" fill="#3b82f6" stroke="#1e40af" stroke-width="4"/>
+    <rect x="312" y="185" width="31" height="34" rx="3" fill="#f8fafc"/>
+    <ellipse cx="327" cy="202" rx="10" ry="7" fill="#f97316"/>
+    <!-- Straw -->
+    <line x1="345" y1="130" x2="335" y2="162" stroke="#ef4444" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>

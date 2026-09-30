@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-instrument desc-instrument">
+  <title id="title-instrument">Instrument</title>
+  <desc id="desc-instrument">A group of musical instruments together: a trumpet, a violin, and musical notes.</desc>
+  <defs>
+    <linearGradient id="instrument-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#faf5ff"/>
+      <stop offset="100%" stop-color="#f3e8ff"/>
+    </linearGradient>
+    <linearGradient id="instrument-brass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="instrument-wood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c2703a"/>
+      <stop offset="100%" stop-color="#7c2d12"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#instrument-bg)"/>
+  <ellipse cx="200" cy="262" rx="160" ry="16" fill="#0f172a" opacity="0.12"/>
+
+  <!-- Music notes -->
+  <g fill="#a855f7">
+    <circle cx="200" cy="60" r="9"/><rect x="207" y="30" width="4" height="32"/>
+    <circle cx="240" cy="50" r="8"/><rect x="246" y="24" width="3.5" height="28"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Violin (left) -->
+    <g transform="rotate(-20 110 170)">
+      <path d="M95 130 Q75 145 82 168 Q70 178 78 198 Q70 216 95 226 Q120 216 112 198 Q120 178 108 168 Q115 145 95 130 Z" fill="url(#instrument-wood)" stroke="#451a03" stroke-width="3.5"/>
+      <rect x="90" y="70" width="10" height="62" fill="#3d2109"/>
+      <path d="M88 66 q7 -10 14 0 l-3 8 l-8 0 Z" fill="#1e293b"/>
+      <line x1="93" y1="132" x2="93" y2="215" stroke="#1e293b" stroke-width="1.5"/>
+      <line x1="97" y1="132" x2="97" y2="215" stroke="#1e293b" stroke-width="1.5"/>
+    </g>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Trumpet (right) -->
+    <path d="M200 150 L290 150" stroke="url(#instrument-brass)" stroke-width="14" stroke-linecap="round"/>
+    <path d="M290 130 A30 30 0 0 1 290 190 Z" fill="url(#instrument-brass)" stroke="#92400e" stroke-width="4"/>
+    <!-- Valves -->
+    <rect x="228" y="120" width="10" height="32" rx="4" fill="#d97706" stroke="#92400e" stroke-width="2"/>
+    <rect x="244" y="120" width="10" height="32" rx="4" fill="#d97706" stroke="#92400e" stroke-width="2"/>
+    <rect x="260" y="120" width="10" height="32" rx="4" fill="#d97706" stroke="#92400e" stroke-width="2"/>
+    <!-- Mouthpiece -->
+    <circle cx="196" cy="150" r="9" fill="#fde68a" stroke="#92400e" stroke-width="3"/>
+    <!-- Loop tube -->
+    <path d="M215 157 Q230 200 260 185" fill="none" stroke="url(#instrument-brass)" stroke-width="9" stroke-linecap="round"/>
+  </g>
+</svg>

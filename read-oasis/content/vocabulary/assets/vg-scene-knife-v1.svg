@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-knife desc-knife">
+  <title id="title-knife">Knife</title>
+  <desc id="desc-knife">A dining table knife with a shiny silver blade and a dark handle, lying flat.</desc>
+  <defs>
+    <linearGradient id="knife-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f1f5f9"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="knife-blade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+    <linearGradient id="knife-handle" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#knife-bg)"/>
+  <ellipse cx="200" cy="200" rx="160" ry="14" fill="#0f172a" opacity="0.1"/>
+
+  <g filter="url(#soft-shadow)">
+    <g transform="rotate(-14 200 150)">
+      <!-- Blade -->
+      <path d="M55 140 Q55 118 130 122 L235 130 L235 155 L130 160 Q55 162 55 140 Z" fill="url(#knife-blade)" stroke="#64748b" stroke-width="3.5"/>
+      <!-- Blade edge highlight -->
+      <path d="M70 128 L228 135" stroke="#ffffff" stroke-width="2.5" opacity="0.7"/>
+      <!-- Handle -->
+      <rect x="235" y="126" width="115" height="34" rx="14" fill="url(#knife-handle)" stroke="#0f172a" stroke-width="3.5"/>
+      <!-- Rivets -->
+      <circle cx="265" cy="143" r="4" fill="#94a3b8"/>
+      <circle cx="300" cy="143" r="4" fill="#94a3b8"/>
+      <circle cx="335" cy="143" r="4" fill="#94a3b8"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-build desc-build">
+  <title id="title-build">Build</title>
+  <desc id="desc-build">A child stacking colourful toy blocks to build a tall tower.</desc>
+  <defs>
+    <linearGradient id="build-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#f0fdf4"/>
+    </linearGradient>
+    <linearGradient id="build-skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5d0a9"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#build-bg)"/>
+  <rect x="0" y="255" width="400" height="45" fill="#d6d3d1"/>
+  <ellipse cx="200" cy="262" rx="160" ry="14" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Block tower -->
+    <rect x="230" y="210" width="70" height="45" rx="4" fill="#ef4444" stroke="#1e293b" stroke-width="3.5"/>
+    <rect x="238" y="165" width="54" height="45" rx="4" fill="#facc15" stroke="#1e293b" stroke-width="3.5"/>
+    <rect x="244" y="120" width="42" height="45" rx="4" fill="#22c55e" stroke="#1e293b" stroke-width="3.5"/>
+    <!-- Floating block being placed -->
+    <rect x="252" y="72" width="34" height="36" rx="4" fill="#3b82f6" stroke="#1e293b" stroke-width="3.5"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Child kneeling -->
+    <ellipse cx="120" cy="240" rx="40" ry="18" fill="#f97316" stroke="#1e293b" stroke-width="3"/>
+    <!-- Body -->
+    <path d="M92 175 Q120 165 148 175 L152 225 L88 225 Z" fill="#a855f7" stroke="#1e293b" stroke-width="3.5"/>
+    <!-- Reaching arm -->
+    <path d="M148 182 Q200 150 245 95" fill="none" stroke="#a855f7" stroke-width="15" stroke-linecap="round"/>
+    <circle cx="248" cy="92" r="11" fill="url(#build-skin)" stroke="#d4a574" stroke-width="2.5"/>
+    <!-- Other arm -->
+    <path d="M92 182 Q75 200 82 220" fill="none" stroke="#a855f7" stroke-width="15" stroke-linecap="round"/>
+    <circle cx="82" cy="222" r="9" fill="url(#build-skin)" stroke="#d4a574" stroke-width="2.5"/>
+    <!-- Head -->
+    <circle cx="120" cy="140" r="34" fill="url(#build-skin)" stroke="#d4a574" stroke-width="3.5"/>
+    <path d="M88 132 Q88 102 120 102 Q152 102 152 132 Q140 116 120 116 Q100 116 88 132 Z" fill="#78350f" stroke="#451a03" stroke-width="2.5"/>
+    <circle cx="110" cy="140" r="5" fill="#1e293b"/>
+    <circle cx="132" cy="140" r="5" fill="#1e293b"/>
+    <path d="M108 155 Q120 165 132 155" fill="none" stroke="#78350f" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+</svg>

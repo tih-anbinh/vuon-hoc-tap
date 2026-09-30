@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-model desc-model">
+  <title id="title-model">Model</title>
+  <desc id="desc-model">A small toy model airplane on a display stand, a miniature version of a real plane.</desc>
+  <defs>
+    <linearGradient id="model-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#f0f9ff"/>
+    </linearGradient>
+    <linearGradient id="model-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f87171"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#model-bg)"/>
+  <ellipse cx="200" cy="268" rx="120" ry="14" fill="#0f172a" opacity="0.12"/>
+
+  <!-- Display stand -->
+  <g filter="url(#soft-shadow)">
+    <rect x="150" y="240" width="100" height="20" rx="6" fill="#a16207" stroke="#78350f" stroke-width="3.5"/>
+    <rect x="192" y="180" width="16" height="65" fill="#ca8a04" stroke="#78350f" stroke-width="3"/>
+  </g>
+
+  <!-- Toy plane -->
+  <g filter="url(#soft-shadow)">
+    <!-- Fuselage -->
+    <ellipse cx="200" cy="150" rx="90" ry="26" fill="url(#model-body)" stroke="#991b1b" stroke-width="4"/>
+    <!-- Nose -->
+    <path d="M290 150 q25 0 25 -6 l0 12 q0 -6 -25 -6 Z" fill="#b91c1c"/>
+    <!-- Windows -->
+    <circle cx="180" cy="145" r="6" fill="#bae6fd" stroke="#1e293b" stroke-width="2"/>
+    <circle cx="205" cy="145" r="6" fill="#bae6fd" stroke="#1e293b" stroke-width="2"/>
+    <circle cx="230" cy="145" r="6" fill="#bae6fd" stroke="#1e293b" stroke-width="2"/>
+    <!-- Wings -->
+    <path d="M180 150 L150 200 L200 165 Z" fill="#f8fafc" stroke="#1e293b" stroke-width="3.5"/>
+    <path d="M200 150 L255 118 L215 145 Z" fill="#fecaca" stroke="#991b1b" stroke-width="3"/>
+    <!-- Tail -->
+    <path d="M120 150 L100 118 L135 145 Z" fill="#f8fafc" stroke="#1e293b" stroke-width="3.5"/>
+  </g>
+</svg>

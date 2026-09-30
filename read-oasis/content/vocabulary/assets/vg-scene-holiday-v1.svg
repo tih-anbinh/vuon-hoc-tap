@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-holiday desc-holiday">
+  <title id="title-holiday">Holiday</title>
+  <desc id="desc-holiday">A sunny beach holiday scene with a beach umbrella, a deck chair, a bucket, and the sea.</desc>
+  <defs>
+    <linearGradient id="holiday-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="180" fill="url(#holiday-sky)"/>
+  <circle cx="330" cy="55" r="28" fill="#fde047"/>
+  <!-- Sea -->
+  <rect x="0" y="150" width="400" height="60" fill="#38bdf8"/>
+  <path d="M0 158 q25 -8 50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0" fill="none" stroke="#0ea5e9" stroke-width="3"/>
+  <!-- Sand -->
+  <rect x="0" y="205" width="400" height="95" fill="#fde68a"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Umbrella -->
+    <line x1="140" y1="90" x2="140" y2="240" stroke="#78350f" stroke-width="6"/>
+    <path d="M60 92 Q140 55 220 92 Z" fill="#ef4444" stroke="#991b1b" stroke-width="3.5"/>
+    <path d="M85 90 Q140 72 140 55 M140 55 Q140 72 195 90" fill="#f8fafc" opacity="0.5"/>
+    <path d="M60 92 Q90 78 115 92 Q140 78 165 92 Q195 78 220 92" fill="none" stroke="#991b1b" stroke-width="2"/>
+
+    <!-- Deck chair -->
+    <path d="M230 240 L260 175 L285 180 L262 240 Z" fill="#3b82f6" stroke="#1e3a8a" stroke-width="3.5"/>
+    <line x1="230" y1="240" x2="258" y2="215" stroke="#78350f" stroke-width="5"/>
+    <line x1="285" y1="240" x2="262" y2="215" stroke="#78350f" stroke-width="5"/>
+
+    <!-- Bucket -->
+    <path d="M300 210 L340 210 L334 245 L306 245 Z" fill="#facc15" stroke="#a16207" stroke-width="3"/>
+    <path d="M303 210 Q320 195 337 210" fill="none" stroke="#a16207" stroke-width="3"/>
+    <!-- Spade -->
+    <line x1="352" y1="245" x2="360" y2="205" stroke="#ef4444" stroke-width="5" stroke-linecap="round"/>
+    <path d="M348 245 q-6 8 4 14 l10 -8 Z" fill="#ef4444"/>
+  </g>
+</svg>

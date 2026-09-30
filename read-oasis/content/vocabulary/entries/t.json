@@ -3522,13 +3522,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "action_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-action-throw-v1",
+        "asset": "vocabulary/assets/vg-action-throw-v1.svg",
+        "alt": "A child in mid-throw motion, arm raised with a ball leaving their hand along a motion arc.",
+        "status": "draft",
+        "kind": "action",
         "template": null,
         "anchor_objects": []
       },
@@ -3538,7 +3538,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {

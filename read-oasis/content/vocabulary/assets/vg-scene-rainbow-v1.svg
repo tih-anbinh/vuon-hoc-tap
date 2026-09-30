@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-rainbow desc-rainbow">
+  <title id="title-rainbow">Rainbow</title>
+  <desc id="desc-rainbow">A bright arching rainbow with seven colored bands, fluffy clouds at each end, and a sun.</desc>
+  <defs>
+    <linearGradient id="rainbow-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#rainbow-bg)"/>
+  <rect x="0" y="255" width="400" height="45" fill="#4ade80"/>
+
+  <!-- Sun -->
+  <circle cx="340" cy="55" r="26" fill="#fde047" stroke="#f59e0b" stroke-width="3"/>
+
+  <!-- Rainbow arcs -->
+  <g fill="none" stroke-width="15" stroke-linecap="butt">
+    <path d="M50 260 A150 150 0 0 1 350 260" stroke="#ef4444"/>
+    <path d="M65 260 A135 135 0 0 1 335 260" stroke="#f97316"/>
+    <path d="M80 260 A120 120 0 0 1 320 260" stroke="#fde047"/>
+    <path d="M95 260 A105 105 0 0 1 305 260" stroke="#22c55e"/>
+    <path d="M110 260 A90 90 0 0 1 290 260" stroke="#3b82f6"/>
+    <path d="M125 260 A75 75 0 0 1 275 260" stroke="#6366f1"/>
+    <path d="M140 260 A60 60 0 0 1 260 260" stroke="#a855f7"/>
+  </g>
+
+  <!-- Clouds at ends -->
+  <g filter="url(#soft-shadow)" fill="#f8fafc">
+    <ellipse cx="55" cy="258" rx="42" ry="26"/>
+    <ellipse cx="90" cy="250" rx="34" ry="22"/>
+    <ellipse cx="345" cy="258" rx="42" ry="26"/>
+    <ellipse cx="310" cy="250" rx="34" ry="22"/>
+  </g>
+</svg>

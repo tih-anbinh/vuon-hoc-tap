@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-son desc-son">
+  <title id="title-son">Son</title>
+  <desc id="desc-son">A young boy, the son, standing happily next to and holding hands with his taller parent.</desc>
+  <defs>
+    <linearGradient id="son-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#f0f9ff"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#son-bg)"/>
+  <ellipse cx="200" cy="280" rx="140" ry="14" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Parent (taller, faded to keep focus on son) -->
+    <g opacity="0.85">
+      <path d="M235 285 Q238 195 275 190 Q312 195 315 285 Z" fill="#94a3b8" stroke="#475569" stroke-width="4"/>
+      <circle cx="275" cy="150" r="36" fill="#fcd9b6" stroke="#c07b48" stroke-width="4"/>
+      <path d="M239 148 Q240 112 275 112 Q310 112 311 148 Q292 128 275 128 Q258 128 239 148 Z" fill="#451a03"/>
+      <circle cx="265" cy="150" r="3.5" fill="#1e293b"/><circle cx="285" cy="150" r="3.5" fill="#1e293b"/>
+      <path d="M263 165 Q275 173 287 165" fill="none" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+    </g>
+
+    <!-- Son (highlighted, front) -->
+    <path d="M95 285 Q98 220 135 216 Q172 220 175 285 Z" fill="#f59e0b" stroke="#b45309" stroke-width="4"/>
+    <circle cx="135" cy="180" r="42" fill="#fcd9b6" stroke="#c07b48" stroke-width="4"/>
+    <path d="M93 178 Q95 138 135 138 Q175 138 177 178 Q156 156 135 156 Q114 156 93 178 Z" fill="#78350f" stroke="#451a03" stroke-width="3"/>
+    <circle cx="122" cy="180" r="4" fill="#1e293b"/><circle cx="148" cy="180" r="4" fill="#1e293b"/>
+    <path d="M120 198 Q135 210 150 198" fill="none" stroke="#1e293b" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Holding hands -->
+  <path d="M172 240 Q205 250 238 240" fill="none" stroke="#fcd9b6" stroke-width="14" stroke-linecap="round"/>
+</svg>

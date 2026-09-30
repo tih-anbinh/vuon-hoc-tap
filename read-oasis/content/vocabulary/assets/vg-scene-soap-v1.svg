@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-soap desc-soap">
+  <title id="title-soap">Soap</title>
+  <desc id="desc-soap">A bar of pink soap with foamy white bubbles on top, sitting in a soap dish.</desc>
+  <defs>
+    <linearGradient id="soap-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cffafe"/>
+      <stop offset="100%" stop-color="#ecfeff"/>
+    </linearGradient>
+    <linearGradient id="soap-bar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f9a8d4"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#soap-bg)"/>
+  <ellipse cx="200" cy="255" rx="130" ry="16" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Soap dish -->
+    <path d="M100 210 Q200 200 300 210 L290 240 Q200 252 110 240 Z" fill="#93c5fd" stroke="#2563eb" stroke-width="4"/>
+    <ellipse cx="200" cy="210" rx="100" ry="14" fill="#bfdbfe" stroke="#2563eb" stroke-width="3"/>
+
+    <!-- Soap bar -->
+    <rect x="135" y="150" width="130" height="60" rx="24" fill="url(#soap-bar)" stroke="#be185d" stroke-width="4"/>
+    <!-- shine -->
+    <ellipse cx="165" cy="168" rx="22" ry="8" fill="#ffffff" opacity="0.5"/>
+
+    <!-- Foam bubbles on top -->
+    <g fill="#ffffff" opacity="0.95" stroke="#e2e8f0" stroke-width="2">
+      <circle cx="160" cy="140" r="20"/>
+      <circle cx="195" cy="128" r="24"/>
+      <circle cx="235" cy="142" r="18"/>
+      <circle cx="215" cy="150" r="14"/>
+    </g>
+    <g fill="#ffffff" opacity="0.6"><circle cx="153" cy="133" r="6"/><circle cx="188" cy="120" r="7"/></g>
+  </g>
+
+  <!-- Floating bubbles -->
+  <g fill="#ffffff" opacity="0.7" stroke="#a5f3fc" stroke-width="2">
+    <circle cx="300" cy="120" r="14"/><circle cx="90" cy="130" r="11"/>
+  </g>
+</svg>

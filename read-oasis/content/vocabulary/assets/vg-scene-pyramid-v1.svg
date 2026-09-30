@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-pyramid desc-pyramid">
+  <title id="title-pyramid">Pyramid</title>
+  <desc id="desc-pyramid">A great sandy Egyptian pyramid in the desert with a bright sun and a small camel.</desc>
+  <defs>
+    <linearGradient id="pyramid-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#fef3c7"/>
+    </linearGradient>
+    <linearGradient id="pyramid-lit" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fcd34d"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="210" fill="url(#pyramid-sky)"/>
+  <!-- Sun -->
+  <circle cx="320" cy="60" r="34" fill="#fef08a" stroke="#f59e0b" stroke-width="3"/>
+  <!-- Desert sand -->
+  <rect x="0" y="200" width="400" height="100" fill="#fcd34d"/>
+  <path d="M0 210 Q100 195 200 210 T400 205 L400 300 L0 300 Z" fill="#fbbf24"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Big pyramid -->
+    <path d="M100 210 L200 70 L300 210 Z" fill="url(#pyramid-lit)" stroke="#b45309" stroke-width="4"/>
+    <!-- Shaded face -->
+    <path d="M200 70 L300 210 L200 210 Z" fill="#d97706" opacity="0.55"/>
+    <!-- Brick lines -->
+    <g stroke="#b45309" stroke-width="1.5" opacity="0.5">
+      <path d="M150 140 L250 140"/>
+      <path d="M130 170 L270 170"/>
+      <path d="M115 195 L285 195"/>
+    </g>
+
+    <!-- Small pyramid behind -->
+    <path d="M30 210 L85 130 L140 210 Z" fill="#fbbf24" stroke="#b45309" stroke-width="3.5"/>
+  </g>
+
+  <!-- Camel -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="330" cy="245" rx="34" ry="16" fill="#a16207" stroke="#78350f" stroke-width="2.5"/>
+    <path d="M312 240 Q318 222 326 238 Q334 220 342 238" fill="#a16207" stroke="#78350f" stroke-width="2.5"/>
+    <path d="M348 240 Q356 218 360 232 L358 240" fill="#a16207" stroke="#78350f" stroke-width="2.5"/>
+    <g stroke="#78350f" stroke-width="5" stroke-linecap="round">
+      <line x1="318" y1="255" x2="316" y2="272"/>
+      <line x1="342" y1="255" x2="344" y2="272"/>
+    </g>
+  </g>
+</svg>

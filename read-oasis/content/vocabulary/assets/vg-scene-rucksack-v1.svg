@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-rucksack desc-rucksack">
+  <title id="title-rucksack">Rucksack</title>
+  <desc id="desc-rucksack">A green hiking rucksack backpack with buckles, side pockets, and a sleeping roll on top.</desc>
+  <defs>
+    <linearGradient id="rucksack-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ecfccb"/>
+      <stop offset="100%" stop-color="#f7fee7"/>
+    </linearGradient>
+    <linearGradient id="rucksack-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4d7c0f"/>
+      <stop offset="100%" stop-color="#365314"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#rucksack-bg)"/>
+  <ellipse cx="200" cy="272" rx="110" ry="16" fill="#0f172a" opacity="0.14"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Straps -->
+    <path d="M155 90 Q130 140 140 220" fill="none" stroke="#365314" stroke-width="12" stroke-linecap="round"/>
+    <path d="M245 90 Q270 140 260 220" fill="none" stroke="#365314" stroke-width="12" stroke-linecap="round"/>
+
+    <!-- Main body -->
+    <rect x="120" y="100" width="160" height="160" rx="24" fill="url(#rucksack-body)" stroke="#1a2e05" stroke-width="4"/>
+    <!-- Top flap -->
+    <path d="M120 130 Q120 90 200 88 Q280 90 280 130 L280 145 L120 145 Z" fill="#65a30d" stroke="#1a2e05" stroke-width="4"/>
+    <!-- Sleeping roll on top -->
+    <rect x="130" y="66" width="140" height="26" rx="13" fill="#f59e0b" stroke="#b45309" stroke-width="3.5"/>
+    <line x1="150" y1="66" x2="150" y2="92" stroke="#b45309" stroke-width="2"/>
+    <line x1="250" y1="66" x2="250" y2="92" stroke="#b45309" stroke-width="2"/>
+
+    <!-- Front pocket -->
+    <rect x="155" y="170" width="90" height="70" rx="12" fill="#65a30d" stroke="#1a2e05" stroke-width="3.5"/>
+    <!-- Buckles -->
+    <rect x="145" y="140" width="20" height="14" rx="3" fill="#334155"/>
+    <rect x="235" y="140" width="20" height="14" rx="3" fill="#334155"/>
+    <rect x="190" y="198" width="20" height="14" rx="3" fill="#334155"/>
+    <!-- Zippers -->
+    <path d="M165 180 L235 180" stroke="#1a2e05" stroke-width="2" stroke-dasharray="4 3"/>
+
+    <!-- Side pockets -->
+    <path d="M120 190 Q100 195 100 230 L120 230 Z" fill="#4d7c0f" stroke="#1a2e05" stroke-width="3"/>
+    <path d="M280 190 Q300 195 300 230 L280 230 Z" fill="#4d7c0f" stroke="#1a2e05" stroke-width="3"/>
+  </g>
+</svg>

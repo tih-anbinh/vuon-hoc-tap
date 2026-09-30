@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-shark desc-shark">
+  <title id="title-shark">Shark</title>
+  <desc id="desc-shark">A grey shark swimming underwater with a tall dorsal fin and sharp toothy grin.</desc>
+  <defs>
+    <linearGradient id="shark-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="shark-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#475569"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#shark-bg)"/>
+  <g fill="#ffffff" opacity="0.2"><circle cx="60" cy="60" r="10"/><circle cx="340" cy="90" r="8"/><circle cx="300" cy="250" r="12"/></g>
+  <ellipse cx="200" cy="278" rx="140" ry="14" fill="#0f172a" opacity="0.15"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Tail -->
+    <path d="M75 150 L35 110 L50 155 L35 200 Z" fill="url(#shark-body)" stroke="#334155" stroke-width="4"/>
+    <!-- Body -->
+    <path d="M70 155 Q160 100 300 130 Q345 148 330 165 Q345 182 300 190 Q160 215 70 160 Z" fill="url(#shark-body)" stroke="#334155" stroke-width="4"/>
+    <!-- Belly -->
+    <path d="M120 180 Q210 210 300 188 Q250 200 130 190 Z" fill="#e2e8f0"/>
+    <!-- Dorsal fin -->
+    <path d="M170 110 L200 50 L225 118 Z" fill="url(#shark-body)" stroke="#334155" stroke-width="4"/>
+    <!-- Pectoral fin -->
+    <path d="M200 185 L215 230 L245 190 Z" fill="#64748b" stroke="#334155" stroke-width="4"/>
+    <!-- Gills -->
+    <g stroke="#334155" stroke-width="3" fill="none"><path d="M250 140 Q248 155 252 172"/><path d="M262 138 Q260 155 264 174"/></g>
+    <!-- Eye -->
+    <circle cx="300" cy="148" r="9" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+    <circle cx="302" cy="149" r="4.5" fill="#0f172a"/>
+    <!-- Mouth with teeth -->
+    <path d="M300 168 Q330 172 340 165 Q325 185 300 180 Z" fill="#7f1d1d" stroke="#450a0a" stroke-width="2.5"/>
+    <g fill="#ffffff"><path d="M305 170 L309 176 L313 170 Z"/><path d="M315 170 L319 177 L323 170 Z"/><path d="M325 169 L329 175 L333 168 Z"/></g>
+  </g>
+</svg>

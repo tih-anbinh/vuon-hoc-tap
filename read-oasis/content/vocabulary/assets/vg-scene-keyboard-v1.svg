@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-keyboard desc-keyboard">
+  <title id="title-keyboard">Keyboard</title>
+  <desc id="desc-keyboard">A computer keyboard shown at an angle with rows of square keys and a long space bar.</desc>
+  <defs>
+    <linearGradient id="keyboard-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <linearGradient id="keyboard-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#keyboard-bg)"/>
+  <ellipse cx="200" cy="250" rx="170" ry="16" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Keyboard base (angled) -->
+    <path d="M50 130 L350 120 L370 210 L60 235 Z" fill="url(#keyboard-body)" stroke="#0f172a" stroke-width="4"/>
+    <!-- Keys rows -->
+    <g fill="#cbd5e1" stroke="#64748b" stroke-width="1.5">
+      <!-- Row 1 -->
+      <rect x="72" y="140" width="24" height="20" rx="4"/>
+      <rect x="102" y="139" width="24" height="20" rx="4"/>
+      <rect x="132" y="138" width="24" height="20" rx="4"/>
+      <rect x="162" y="137" width="24" height="20" rx="4"/>
+      <rect x="192" y="136" width="24" height="20" rx="4"/>
+      <rect x="222" y="135" width="24" height="20" rx="4"/>
+      <rect x="252" y="134" width="24" height="20" rx="4"/>
+      <rect x="282" y="133" width="24" height="20" rx="4"/>
+      <rect x="312" y="132" width="24" height="20" rx="4"/>
+      <!-- Row 2 -->
+      <rect x="76" y="166" width="24" height="20" rx="4"/>
+      <rect x="106" y="165" width="24" height="20" rx="4"/>
+      <rect x="136" y="164" width="24" height="20" rx="4"/>
+      <rect x="166" y="163" width="24" height="20" rx="4"/>
+      <rect x="196" y="162" width="24" height="20" rx="4"/>
+      <rect x="226" y="161" width="24" height="20" rx="4"/>
+      <rect x="256" y="160" width="24" height="20" rx="4"/>
+      <rect x="286" y="159" width="24" height="20" rx="4"/>
+      <rect x="316" y="158" width="24" height="20" rx="4"/>
+      <!-- Space bar -->
+      <rect x="120" y="192" width="180" height="22" rx="5"/>
+    </g>
+  </g>
+</svg>

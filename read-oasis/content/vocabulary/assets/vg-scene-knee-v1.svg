@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-knee desc-knee">
+  <title id="title-knee">Knee</title>
+  <desc id="desc-knee">A bent leg with the knee joint highlighted by a red circle, wearing shorts and a shoe.</desc>
+  <defs>
+    <linearGradient id="knee-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0f9ff"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="knee-skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5d0a9"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#knee-bg)"/>
+  <ellipse cx="240" cy="270" rx="90" ry="14" fill="#0f172a" opacity="0.1"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Thigh (shorts) -->
+    <path d="M90 90 Q140 100 175 155" fill="none" stroke="#3b82f6" stroke-width="52" stroke-linecap="round"/>
+    <!-- Upper leg skin near knee -->
+    <path d="M155 140 Q170 155 180 175" fill="none" stroke="url(#knee-skin)" stroke-width="44" stroke-linecap="round"/>
+    <!-- Lower leg (shin) -->
+    <path d="M180 175 Q220 210 250 255" fill="none" stroke="url(#knee-skin)" stroke-width="40" stroke-linecap="round"/>
+    <!-- Shoe -->
+    <path d="M235 250 Q235 268 260 268 L295 268 Q305 268 302 255 L280 245 Z" fill="#ef4444" stroke="#991b1b" stroke-width="3.5"/>
+    <path d="M235 262 L302 262" stroke="#f8fafc" stroke-width="4"/>
+  </g>
+
+  <!-- Knee highlight -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="178" cy="168" r="34" fill="none" stroke="#ef4444" stroke-width="6"/>
+    <path d="M178 134 L178 116 M178 116 l-7 8 M178 116 l7 8" stroke="#ef4444" stroke-width="5" stroke-linecap="round" fill="none"/>
+  </g>
+</svg>

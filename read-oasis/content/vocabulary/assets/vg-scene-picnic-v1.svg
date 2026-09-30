@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-picnic desc-picnic">
+  <title id="title-picnic">Picnic</title>
+  <desc id="desc-picnic">A red checkered picnic blanket on grass with a basket, sandwiches, and an apple.</desc>
+  <defs>
+    <linearGradient id="picnic-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#dcfce7"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="180" fill="url(#picnic-bg)"/>
+  <circle cx="330" cy="55" r="30" fill="#fde047" stroke="#f59e0b" stroke-width="3"/>
+  <rect x="0" y="170" width="400" height="130" fill="#4ade80"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Blanket -->
+    <path d="M50 200 L350 200 L370 275 L30 275 Z" fill="#ef4444" stroke="#991b1b" stroke-width="3"/>
+    <!-- Checker pattern -->
+    <g stroke="#f8fafc" stroke-width="4" opacity="0.85">
+      <line x1="100" y1="200" x2="80" y2="275"/>
+      <line x1="150" y1="200" x2="135" y2="275"/>
+      <line x1="200" y1="200" x2="200" y2="275"/>
+      <line x1="250" y1="200" x2="265" y2="275"/>
+      <line x1="300" y1="200" x2="320" y2="275"/>
+      <line x1="60" y1="222" x2="360" y2="222"/>
+      <line x1="45" y1="250" x2="368" y2="250"/>
+    </g>
+  </g>
+
+  <!-- Basket -->
+  <g filter="url(#soft-shadow)">
+    <path d="M70 180 Q130 165 190 180 L180 235 L80 235 Z" fill="#d6a860" stroke="#78350f" stroke-width="3.5"/>
+    <path d="M75 195 L185 195" stroke="#78350f" stroke-width="2"/>
+    <path d="M85 215 L175 215" stroke="#78350f" stroke-width="2"/>
+    <path d="M95 170 Q130 130 165 170" fill="none" stroke="#78350f" stroke-width="6"/>
+    <!-- Cloth -->
+    <path d="M100 178 Q130 172 160 178 L150 188 L110 188 Z" fill="#f8fafc" opacity="0.85"/>
+  </g>
+
+  <!-- Sandwich -->
+  <g filter="url(#soft-shadow)">
+    <path d="M215 230 L265 230 L240 200 Z" fill="#fde68a" stroke="#b45309" stroke-width="3"/>
+    <path d="M222 224 L258 224 L240 210 Z" fill="#22c55e"/>
+    <path d="M225 220 L255 220 L240 213 Z" fill="#dc2626"/>
+  </g>
+
+  <!-- Apple -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="300" cy="225" r="24" fill="#ef4444" stroke="#991b1b" stroke-width="3"/>
+    <path d="M300 201 Q305 190 315 192" fill="none" stroke="#166534" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="312" cy="195" rx="8" ry="4" fill="#22c55e" transform="rotate(-30 312 195)"/>
+  </g>
+</svg>

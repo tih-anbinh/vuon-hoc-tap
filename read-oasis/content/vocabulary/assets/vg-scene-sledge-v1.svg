@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-sledge desc-sledge">
+  <title id="title-sledge">Sledge</title>
+  <desc id="desc-sledge">A red wooden sledge with curved runners resting on white snow, ready to slide downhill.</desc>
+  <defs>
+    <linearGradient id="sledge-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#f0f9ff"/>
+    </linearGradient>
+    <linearGradient id="sledge-wood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f87171"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#sledge-bg)"/>
+  <!-- snow ground -->
+  <path d="M0 235 Q200 205 400 235 L400 300 L0 300 Z" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+  <ellipse cx="200" cy="250" rx="150" ry="16" fill="#0f172a" opacity="0.08"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Seat slats -->
+    <g fill="url(#sledge-wood)" stroke="#7f1d1d" stroke-width="3">
+      <rect x="90" y="150" width="220" height="16" rx="6"/>
+      <rect x="90" y="172" width="220" height="16" rx="6"/>
+    </g>
+    <!-- Runners (curved) -->
+    <path d="M90 200 L300 200 Q340 200 345 165 Q348 150 335 150 Q330 175 300 178 L100 178 Q80 178 80 195 Q80 205 90 205 Z" fill="#7f1d1d" stroke="#450a0a" stroke-width="3" opacity="0"/>
+    <path d="M95 205 L305 205 Q345 205 352 168 Q354 155 342 155" fill="none" stroke="#78350f" stroke-width="10" stroke-linecap="round"/>
+    <!-- Support posts -->
+    <rect x="105" y="188" width="12" height="20" fill="#92400e"/>
+    <rect x="280" y="188" width="12" height="20" fill="#92400e"/>
+    <!-- Pull rope -->
+    <path d="M345 158 Q375 145 372 120" fill="none" stroke="#a16207" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="371" cy="115" r="8" fill="#a16207"/>
+  </g>
+
+  <!-- snowflakes -->
+  <g fill="#ffffff" opacity="0.85"><circle cx="90" cy="70" r="5"/><circle cx="330" cy="90" r="5"/><circle cx="150" cy="50" r="4"/><circle cx="250" cy="60" r="4"/></g>
+</svg>

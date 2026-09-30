@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-cry desc-cry">
+  <title id="title-cry">Cry</title>
+  <desc id="desc-cry">A sad child crying, with big tears falling from closed eyes and a downturned mouth.</desc>
+  <defs>
+    <linearGradient id="cry-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#f0f9ff"/>
+    </linearGradient>
+    <linearGradient id="cry-skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5d0a9"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#cry-bg)"/>
+  <ellipse cx="200" cy="275" rx="110" ry="14" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Body -->
+    <path d="M140 210 Q200 195 260 210 L252 275 L148 275 Z" fill="#a855f7" stroke="#6b21a8" stroke-width="3.5"/>
+    <!-- Head -->
+    <circle cx="200" cy="140" r="60" fill="url(#cry-skin)" stroke="#d4a574" stroke-width="4"/>
+    <path d="M144 128 Q146 82 200 82 Q254 82 256 128 Q232 100 200 100 Q168 100 144 128 Z" fill="#5b3a1a" stroke="#3d2109" stroke-width="3"/>
+    <!-- Closed sad eyes -->
+    <path d="M164 140 Q176 130 188 140" fill="none" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+    <path d="M212 140 Q224 130 236 140" fill="none" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+    <!-- Sad mouth -->
+    <path d="M182 172 Q200 160 218 172" fill="none" stroke="#7f1d1d" stroke-width="4" stroke-linecap="round"/>
+    <!-- Eyebrows -->
+    <path d="M162 122 L186 130" stroke="#5b3a1a" stroke-width="4" stroke-linecap="round"/>
+    <path d="M238 122 L214 130" stroke="#5b3a1a" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Big tears -->
+  <g fill="#38bdf8" stroke="#0284c7" stroke-width="2">
+    <path d="M170 152 q-10 20 0 26 q10 -6 0 -26 Z"/>
+    <path d="M172 188 q-8 16 0 20 q8 -4 0 -20 Z"/>
+    <path d="M230 152 q10 20 0 26 q-10 -6 0 -26 Z"/>
+    <path d="M228 188 q8 16 0 20 q-8 -4 0 -20 Z"/>
+  </g>
+</svg>

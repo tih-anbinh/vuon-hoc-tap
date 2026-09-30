@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-factory desc-factory">
+  <title id="title-factory">Factory</title>
+  <desc id="desc-factory">A factory building with a sawtooth roof, tall chimneys puffing smoke, and rows of windows.</desc>
+  <defs>
+    <linearGradient id="factory-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#factory-bg)"/>
+  <!-- Smoke -->
+  <g fill="#94a3b8" opacity="0.75">
+    <circle cx="110" cy="55" r="14"/>
+    <circle cx="128" cy="42" r="10"/>
+    <circle cx="95" cy="42" r="9"/>
+    <circle cx="165" cy="50" r="13"/>
+    <circle cx="180" cy="38" r="9"/>
+  </g>
+
+  <rect x="0" y="255" width="400" height="45" fill="#64748b"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Chimneys -->
+    <rect x="98" y="70" width="24" height="90" fill="#b91c1c" stroke="#1e293b" stroke-width="3.5"/>
+    <rect x="94" y="66" width="32" height="10" fill="#7f1d1d"/>
+    <rect x="155" y="80" width="24" height="80" fill="#b91c1c" stroke="#1e293b" stroke-width="3.5"/>
+    <rect x="151" y="76" width="32" height="10" fill="#7f1d1d"/>
+    <!-- Sawtooth roof -->
+    <path d="M60 160 L90 130 L90 160 M120 160 L150 130 L150 160 M180 160 L210 130 L210 160 M240 160 L270 130 L270 160 M300 160 L330 130 L330 160" fill="#475569" stroke="#1e293b" stroke-width="3"/>
+    <path d="M60 160 L90 130 L120 160 L150 130 L180 160 L210 130 L240 160 L270 130 L300 160 L330 130 L340 160 Z" fill="#64748b" stroke="#1e293b" stroke-width="3.5"/>
+    <!-- Building body -->
+    <rect x="60" y="160" width="280" height="95" fill="#f1f5f9" stroke="#1e293b" stroke-width="4"/>
+    <!-- Windows -->
+    <g fill="#60a5fa" stroke="#1e293b" stroke-width="2.5">
+      <rect x="80" y="180" width="30" height="30"/>
+      <rect x="130" y="180" width="30" height="30"/>
+      <rect x="180" y="180" width="30" height="30"/>
+      <rect x="230" y="180" width="30" height="30"/>
+      <rect x="280" y="180" width="30" height="30"/>
+    </g>
+    <!-- Big door -->
+    <rect x="175" y="220" width="50" height="35" fill="#78350f" stroke="#1e293b" stroke-width="3"/>
+  </g>
+</svg>

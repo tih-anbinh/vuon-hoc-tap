@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-astronaut desc-astronaut">
+  <title id="title-astronaut">Astronaut</title>
+  <desc id="desc-astronaut">A friendly astronaut in a white spacesuit and round helmet floating among stars in space.</desc>
+  <defs>
+    <radialGradient id="astronaut-space" cx="50%" cy="40%" r="75%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#0b1120"/>
+    </radialGradient>
+    <linearGradient id="astronaut-suit" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#d1d5db"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#astronaut-space)"/>
+  <g fill="#fde047">
+    <circle cx="50" cy="50" r="3"/>
+    <circle cx="340" cy="70" r="3"/>
+    <circle cx="360" cy="200" r="2.5"/>
+    <circle cx="60" cy="230" r="2.5"/>
+    <circle cx="300" cy="40" r="2"/>
+    <circle cx="90" cy="120" r="2"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Backpack -->
+    <rect x="165" y="120" width="70" height="80" rx="12" fill="#9ca3af" stroke="#1e293b" stroke-width="3.5"/>
+    <!-- Body -->
+    <rect x="158" y="130" width="84" height="95" rx="26" fill="url(#astronaut-suit)" stroke="#1e293b" stroke-width="4"/>
+    <!-- Arms -->
+    <rect x="120" y="140" width="42" height="26" rx="13" fill="url(#astronaut-suit)" stroke="#1e293b" stroke-width="3.5"/>
+    <rect x="238" y="140" width="42" height="26" rx="13" fill="url(#astronaut-suit)" stroke="#1e293b" stroke-width="3.5"/>
+    <circle cx="118" cy="153" r="14" fill="#e5e7eb" stroke="#1e293b" stroke-width="3"/>
+    <circle cx="282" cy="153" r="14" fill="#e5e7eb" stroke="#1e293b" stroke-width="3"/>
+    <!-- Legs -->
+    <rect x="165" y="215" width="30" height="46" rx="12" fill="url(#astronaut-suit)" stroke="#1e293b" stroke-width="3.5"/>
+    <rect x="205" y="215" width="30" height="46" rx="12" fill="url(#astronaut-suit)" stroke="#1e293b" stroke-width="3.5"/>
+    <ellipse cx="180" cy="264" rx="18" ry="10" fill="#6b7280" stroke="#1e293b" stroke-width="3"/>
+    <ellipse cx="220" cy="264" rx="18" ry="10" fill="#6b7280" stroke="#1e293b" stroke-width="3"/>
+    <!-- Helmet -->
+    <circle cx="200" cy="90" r="52" fill="url(#astronaut-suit)" stroke="#1e293b" stroke-width="4"/>
+    <path d="M162 82 A44 44 0 0 1 238 82 L238 105 A44 44 0 0 1 162 105 Z" fill="#38bdf8" stroke="#1e293b" stroke-width="3"/>
+    <ellipse cx="182" cy="88" rx="10" ry="16" fill="#e0f2fe" opacity="0.7"/>
+    <!-- Chest control -->
+    <rect x="180" y="150" width="40" height="24" rx="4" fill="#cbd5e1" stroke="#1e293b" stroke-width="2.5"/>
+    <circle cx="192" cy="162" r="4" fill="#ef4444"/>
+    <circle cx="208" cy="162" r="4" fill="#22c55e"/>
+  </g>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-hop desc-hop">
+  <title id="title-hop">Hop</title>
+  <desc id="desc-hop">A rabbit hopping through the air above the grass, with a dotted arc showing its jump.</desc>
+  <defs>
+    <linearGradient id="hop-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#hop-bg)"/>
+  <rect x="0" y="240" width="400" height="60" fill="#4ade80"/>
+  <rect x="0" y="240" width="400" height="12" fill="#22c55e"/>
+
+  <!-- Hop arc -->
+  <path d="M70 245 Q200 90 330 245" fill="none" stroke="#60a5fa" stroke-width="4" stroke-dasharray="6 10" opacity="0.8"/>
+
+  <!-- Start & end footprints -->
+  <ellipse cx="70" cy="248" rx="16" ry="5" fill="#0f172a" opacity="0.15"/>
+  <ellipse cx="330" cy="248" rx="16" ry="5" fill="#0f172a" opacity="0.15"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Rabbit mid-hop (top of arc) -->
+    <g transform="rotate(-8 200 130)">
+      <!-- Body -->
+      <ellipse cx="200" cy="140" rx="48" ry="34" fill="#f8fafc" stroke="#94a3b8" stroke-width="3.5"/>
+      <!-- Head -->
+      <circle cx="248" cy="120" r="28" fill="#f8fafc" stroke="#94a3b8" stroke-width="3.5"/>
+      <!-- Ears -->
+      <path d="M245 96 Q238 55 250 52 Q262 58 255 98 Z" fill="#f8fafc" stroke="#94a3b8" stroke-width="3"/>
+      <path d="M258 96 Q262 58 274 58 Q282 68 268 100 Z" fill="#f8fafc" stroke="#94a3b8" stroke-width="3"/>
+      <path d="M248 92 Q244 62 252 60" fill="#fbcfe8"/>
+      <!-- Face -->
+      <circle cx="258" cy="116" r="4" fill="#1e293b"/>
+      <ellipse cx="265" cy="124" rx="4" ry="3" fill="#fb7185"/>
+      <!-- Front legs tucked, back legs stretched -->
+      <path d="M165 160 Q135 175 150 190" fill="none" stroke="#f8fafc" stroke-width="16" stroke-linecap="round"/>
+      <ellipse cx="152" cy="192" rx="14" ry="9" fill="#f8fafc" stroke="#94a3b8" stroke-width="3"/>
+      <!-- Tail -->
+      <circle cx="158" cy="130" r="12" fill="#f8fafc" stroke="#94a3b8" stroke-width="2.5"/>
+    </g>
+  </g>
+
+  <!-- Motion swoosh -->
+  <g stroke="#facc15" stroke-width="4" stroke-linecap="round" opacity="0.75">
+    <path d="M130 150 q-12 6 -18 18"/>
+    <path d="M120 175 q-14 4 -20 16"/>
+  </g>
+</svg>

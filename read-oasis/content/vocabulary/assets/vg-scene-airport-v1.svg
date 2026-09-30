@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-airport desc-airport">
+  <title id="title-airport">Airport</title>
+  <desc id="desc-airport">An airport control tower and terminal building with a jet airplane on the runway under a blue sky.</desc>
+  <defs>
+    <linearGradient id="airport-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="airport-tower" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#airport-sky)"/>
+  <rect x="0" y="215" width="400" height="85" fill="#94a3b8"/>
+  <ellipse cx="200" cy="278" rx="170" ry="16" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Terminal building -->
+    <rect x="40" y="150" width="180" height="70" rx="6" fill="url(#airport-tower)" stroke="#1e293b" stroke-width="3.5"/>
+    <rect x="55" y="165" width="24" height="24" rx="3" fill="#38bdf8" stroke="#1e293b" stroke-width="2"/>
+    <rect x="90" y="165" width="24" height="24" rx="3" fill="#38bdf8" stroke="#1e293b" stroke-width="2"/>
+    <rect x="125" y="165" width="24" height="24" rx="3" fill="#38bdf8" stroke="#1e293b" stroke-width="2"/>
+    <rect x="160" y="165" width="24" height="24" rx="3" fill="#38bdf8" stroke="#1e293b" stroke-width="2"/>
+
+    <!-- Control tower -->
+    <rect x="235" y="90" width="34" height="130" fill="url(#airport-tower)" stroke="#1e293b" stroke-width="3.5"/>
+    <path d="M225 90 L279 90 L272 60 L232 60 Z" fill="#e2e8f0" stroke="#1e293b" stroke-width="3.5"/>
+    <rect x="234" y="66" width="36" height="18" rx="2" fill="#38bdf8" stroke="#1e293b" stroke-width="2"/>
+    <line x1="252" y1="60" x2="252" y2="42" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="252" cy="40" r="4" fill="#ef4444"/>
+
+    <!-- Airplane -->
+    <g>
+      <ellipse cx="330" cy="185" rx="58" ry="16" fill="#f1f5f9" stroke="#1e293b" stroke-width="3.5"/>
+      <path d="M285 185 L268 172 L282 183 Z" fill="#f1f5f9" stroke="#1e293b" stroke-width="2.5"/>
+      <path d="M330 175 L318 150 L336 174 Z" fill="#cbd5e1" stroke="#1e293b" stroke-width="2.5"/>
+      <path d="M330 195 L340 178 L356 194 Z" fill="#93c5fd" stroke="#1e293b" stroke-width="2.5"/>
+      <circle cx="320" cy="185" r="4" fill="#38bdf8" stroke="#1e293b" stroke-width="1.5"/>
+      <circle cx="335" cy="185" r="4" fill="#38bdf8" stroke="#1e293b" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

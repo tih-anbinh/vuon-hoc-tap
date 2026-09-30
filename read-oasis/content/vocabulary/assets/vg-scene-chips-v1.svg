@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-chips desc-chips">
+  <title id="title-chips">Chips</title>
+  <desc id="desc-chips">A red carton of golden French fries chips with a small blob of red ketchup.</desc>
+  <defs>
+    <linearGradient id="chips-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fefce8"/>
+    </linearGradient>
+    <linearGradient id="chips-carton" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#chips-bg)"/>
+  <ellipse cx="200" cy="262" rx="130" ry="16" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Fries sticking out -->
+    <g fill="#fbbf24" stroke="#b45309" stroke-width="2.5">
+      <rect x="150" y="80" width="14" height="90" rx="4"/>
+      <rect x="170" y="65" width="14" height="105" rx="4"/>
+      <rect x="190" y="72" width="14" height="98" rx="4"/>
+      <rect x="210" y="60" width="14" height="110" rx="4"/>
+      <rect x="230" y="78" width="14" height="92" rx="4"/>
+      <rect x="160" y="95" width="14" height="75" rx="4"/>
+      <rect x="220" y="90" width="14" height="80" rx="4"/>
+    </g>
+    <!-- Carton -->
+    <path d="M140 150 L260 150 L245 255 L155 255 Z" fill="url(#chips-carton)" stroke="#1e293b" stroke-width="4"/>
+    <rect x="140" y="150" width="120" height="26" fill="#dc2626" stroke="#1e293b" stroke-width="3.5"/>
+    <!-- White stripe accents -->
+    <rect x="175" y="185" width="12" height="60" fill="#fef2f2" opacity="0.7"/>
+    <rect x="213" y="185" width="12" height="60" fill="#fef2f2" opacity="0.7"/>
+  </g>
+
+  <!-- Ketchup blob -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="310" cy="245" rx="30" ry="14" fill="#dc2626" stroke="#991b1b" stroke-width="2.5"/>
+    <ellipse cx="305" cy="242" rx="10" ry="5" fill="#f87171"/>
+  </g>
+</svg>

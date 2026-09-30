@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-shout desc-shout">
+  <title id="title-shout">Shout</title>
+  <desc id="desc-shout">A child shouting loudly with a wide-open mouth and cupped hands, with sound waves flying out.</desc>
+  <defs>
+    <linearGradient id="shout-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fffbeb"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#shout-bg)"/>
+  <ellipse cx="160" cy="278" rx="110" ry="14" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Torso -->
+    <path d="M95 260 Q100 195 165 190 Q225 195 225 260 Z" fill="#22c55e" stroke="#15803d" stroke-width="4"/>
+    <!-- Head -->
+    <circle cx="160" cy="130" r="52" fill="#fcd9b6" stroke="#c07b48" stroke-width="4"/>
+    <!-- Hair -->
+    <path d="M108 122 Q110 78 160 78 Q210 78 212 122 Q190 98 160 98 Q130 98 108 122 Z" fill="#78350f" stroke="#451a03" stroke-width="3"/>
+    <!-- Eyes (scrunched) -->
+    <path d="M130 120 Q140 112 150 120" fill="none" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+    <path d="M172 120 Q182 112 192 120" fill="none" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+    <!-- Eyebrows -->
+    <path d="M128 108 L150 112" stroke="#1e293b" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M172 112 L194 108" stroke="#1e293b" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Wide-open shouting mouth -->
+    <ellipse cx="160" cy="152" rx="20" ry="26" fill="#7f1d1d" stroke="#450a0a" stroke-width="3"/>
+    <ellipse cx="160" cy="162" rx="11" ry="10" fill="#ef4444"/>
+    <path d="M143 143 Q160 138 177 143" fill="#f8fafc"/>
+
+    <!-- Cupped hand near mouth -->
+    <path d="M205 155 Q235 150 245 165 Q240 185 215 180 Q200 172 205 155 Z" fill="#fcd9b6" stroke="#c07b48" stroke-width="4"/>
+  </g>
+
+  <!-- Sound waves -->
+  <g fill="none" stroke="#f97316" stroke-width="5" stroke-linecap="round">
+    <path d="M255 130 Q280 150 255 175"/>
+    <path d="M285 110 Q325 150 285 195"/>
+    <path d="M315 90 Q370 150 315 215"/>
+  </g>
+</svg>

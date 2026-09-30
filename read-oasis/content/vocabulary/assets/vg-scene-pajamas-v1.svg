@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-pajamas desc-pajamas">
+  <title id="title-pajamas">Pajamas</title>
+  <desc id="desc-pajamas">A cozy striped pajama set with a buttoned top and matching bottoms and a moon.</desc>
+  <defs>
+    <linearGradient id="pajamas-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0e7ff"/>
+      <stop offset="100%" stop-color="#eef2ff"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#pajamas-bg)"/>
+  <!-- Moon + stars -->
+  <path d="M340 50 a26 26 0 1 0 8 40 a20 20 0 1 1 -8 -40 Z" fill="#fde047"/>
+  <g fill="#a5b4fc">
+    <path d="M60 60 l4 10 l10 4 l-10 4 l-4 10 l-4 -10 l-10 -4 l10 -4 Z"/>
+    <path d="M100 100 l3 7 l7 3 l-7 3 l-3 7 l-3 -7 l-7 -3 l7 -3 Z"/>
+  </g>
+  <ellipse cx="200" cy="272" rx="140" ry="14" fill="#0f172a" opacity="0.1"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Top -->
+    <path d="M110 90 L150 70 L170 90 L230 90 L250 70 L290 90 L275 110 L255 100 L255 175 L145 175 L145 100 L125 110 Z" fill="#c084fc" stroke="#7e22ce" stroke-width="4"/>
+    <!-- Stripes on top -->
+    <g stroke="#e9d5ff" stroke-width="6">
+      <line x1="150" y1="120" x2="250" y2="120"/>
+      <line x1="145" y1="140" x2="255" y2="140"/>
+      <line x1="145" y1="160" x2="255" y2="160"/>
+    </g>
+    <!-- Buttons -->
+    <circle cx="200" cy="112" r="4" fill="#fde047"/>
+    <circle cx="200" cy="135" r="4" fill="#fde047"/>
+    <circle cx="200" cy="158" r="4" fill="#fde047"/>
+
+    <!-- Bottoms -->
+    <path d="M150 190 L250 190 L245 265 L212 265 L200 215 L188 265 L155 265 Z" fill="#a78bfa" stroke="#6d28d9" stroke-width="4"/>
+    <g stroke="#ddd6fe" stroke-width="6">
+      <line x1="155" y1="210" x2="245" y2="210"/>
+      <line x1="160" y1="230" x2="240" y2="230"/>
+    </g>
+    <rect x="150" y="188" width="100" height="12" rx="4" fill="#7c3aed"/>
+  </g>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-camel desc-camel">
+  <title id="title-camel">Camel</title>
+  <desc id="desc-camel">A tan camel with two humps, long legs, and a long neck standing on desert sand.</desc>
+  <defs>
+    <linearGradient id="camel-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="camel-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4a373"/>
+      <stop offset="100%" stop-color="#b08050"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#camel-bg)"/>
+  <circle cx="330" cy="55" r="26" fill="#fbbf24"/>
+  <path d="M0 245 Q100 225 200 245 Q300 265 400 245 L400 300 L0 300 Z" fill="#eab308"/>
+  <ellipse cx="200" cy="255" rx="150" ry="14" fill="#0f172a" opacity="0.1"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Legs -->
+    <rect x="115" y="180" width="16" height="72" rx="6" fill="url(#camel-body)" stroke="#8a5a24" stroke-width="3"/>
+    <rect x="150" y="180" width="16" height="72" rx="6" fill="url(#camel-body)" stroke="#8a5a24" stroke-width="3"/>
+    <rect x="225" y="180" width="16" height="72" rx="6" fill="url(#camel-body)" stroke="#8a5a24" stroke-width="3"/>
+    <rect x="260" y="180" width="16" height="72" rx="6" fill="url(#camel-body)" stroke="#8a5a24" stroke-width="3"/>
+    <!-- Body with two humps -->
+    <path d="M110 190
+             Q100 150 140 145
+             Q155 110 180 145
+             Q205 108 230 145
+             Q275 140 285 185
+             Q285 195 270 190
+             L120 190 Z"
+          fill="url(#camel-body)" stroke="#8a5a24" stroke-width="4"/>
+    <!-- Neck + head -->
+    <path d="M270 175 Q300 150 305 110 Q307 90 320 88 L332 92 Q338 100 330 108 L322 112 Q322 145 300 170 Z"
+          fill="url(#camel-body)" stroke="#8a5a24" stroke-width="4"/>
+    <!-- Snout -->
+    <ellipse cx="330" cy="100" rx="14" ry="10" fill="#c9986a" stroke="#8a5a24" stroke-width="2.5"/>
+    <!-- Eye -->
+    <circle cx="316" cy="98" r="4" fill="#1e293b"/>
+    <!-- Ear -->
+    <path d="M310 88 L305 78 L314 84 Z" fill="url(#camel-body)" stroke="#8a5a24" stroke-width="2"/>
+    <!-- Tail -->
+    <path d="M110 175 Q95 190 100 210" fill="none" stroke="#8a5a24" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>

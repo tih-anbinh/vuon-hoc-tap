@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-goal desc-goal">
+  <title id="title-goal">Goal</title>
+  <desc id="desc-goal">A football goal net with a ball flying into the back of the net on green grass.</desc>
+  <defs>
+    <linearGradient id="goal-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="215" fill="url(#goal-bg)"/>
+  <rect x="0" y="215" width="400" height="85" fill="#4ade80"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Goal frame -->
+    <rect x="70" y="90" width="10" height="150" fill="#f8fafc" stroke="#1e293b" stroke-width="3"/>
+    <rect x="320" y="90" width="10" height="150" fill="#f8fafc" stroke="#1e293b" stroke-width="3"/>
+    <rect x="70" y="85" width="260" height="10" fill="#f8fafc" stroke="#1e293b" stroke-width="3"/>
+    <!-- Net (grid) -->
+    <g stroke="#cbd5e1" stroke-width="1.5" opacity="0.9">
+      <line x1="95" y1="95" x2="95" y2="235"/>
+      <line x1="120" y1="95" x2="120" y2="235"/>
+      <line x1="145" y1="95" x2="145" y2="235"/>
+      <line x1="170" y1="95" x2="170" y2="235"/>
+      <line x1="195" y1="95" x2="195" y2="235"/>
+      <line x1="220" y1="95" x2="220" y2="235"/>
+      <line x1="245" y1="95" x2="245" y2="235"/>
+      <line x1="270" y1="95" x2="270" y2="235"/>
+      <line x1="295" y1="95" x2="295" y2="235"/>
+      <line x1="80" y1="115" x2="320" y2="115"/>
+      <line x1="80" y1="140" x2="320" y2="140"/>
+      <line x1="80" y1="165" x2="320" y2="165"/>
+      <line x1="80" y1="190" x2="320" y2="190"/>
+      <line x1="80" y1="215" x2="320" y2="215"/>
+    </g>
+  </g>
+
+  <!-- Ball entering the net -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="230" cy="175" r="30" fill="#f8fafc" stroke="#1e293b" stroke-width="4"/>
+    <path d="M230 150 l14 10 l-6 17 l-16 0 l-6 -17 Z" fill="#1e293b"/>
+    <path d="M230 150 L230 175 M244 160 L230 175 M214 160 L230 175" stroke="#1e293b" stroke-width="2"/>
+  </g>
+  <!-- Motion lines -->
+  <g stroke="#facc15" stroke-width="4" stroke-linecap="round" opacity="0.8">
+    <line x1="185" y1="160" x2="200" y2="165"/>
+    <line x1="180" y1="180" x2="198" y2="180"/>
+    <line x1="185" y1="200" x2="200" y2="192"/>
+  </g>
+</svg>

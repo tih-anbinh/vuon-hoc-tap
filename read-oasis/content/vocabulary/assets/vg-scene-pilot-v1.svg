@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-pilot desc-pilot">
+  <title id="title-pilot">Pilot</title>
+  <desc id="desc-pilot">A smiling airplane pilot wearing a captain's cap and blue uniform with wings badge.</desc>
+  <defs>
+    <linearGradient id="pilot-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#eff6ff"/>
+    </linearGradient>
+    <linearGradient id="pilot-skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5d0a9"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#pilot-bg)"/>
+  <!-- Cloud -->
+  <g fill="#f8fafc" opacity="0.8">
+    <ellipse cx="80" cy="70" rx="34" ry="20"/><ellipse cx="110" cy="65" rx="26" ry="18"/>
+    <ellipse cx="330" cy="90" rx="30" ry="18"/><ellipse cx="355" cy="85" rx="22" ry="15"/>
+  </g>
+  <ellipse cx="200" cy="285" rx="110" ry="12" fill="#0f172a" opacity="0.1"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Uniform shoulders -->
+    <path d="M110 300 Q110 210 200 200 Q290 210 290 300 Z" fill="#1e3a8a" stroke="#172554" stroke-width="4"/>
+    <!-- Lapels -->
+    <path d="M175 205 L200 250 L165 235 Z" fill="#1e40af"/>
+    <path d="M225 205 L200 250 L235 235 Z" fill="#1e40af"/>
+    <!-- Wings badge -->
+    <path d="M180 265 L200 260 L220 265 L200 272 Z" fill="#fde047" stroke="#a16207" stroke-width="2"/>
+    <circle cx="200" cy="266" r="4" fill="#dc2626"/>
+
+    <!-- Head -->
+    <circle cx="200" cy="130" r="55" fill="url(#pilot-skin)" stroke="#d4a574" stroke-width="4"/>
+    <circle cx="182" cy="128" r="5" fill="#1e293b"/>
+    <circle cx="218" cy="128" r="5" fill="#1e293b"/>
+    <path d="M184 150 Q200 162 216 150" fill="none" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="172" cy="145" r="7" fill="#fca5a5" opacity="0.5"/>
+    <circle cx="228" cy="145" r="7" fill="#fca5a5" opacity="0.5"/>
+
+    <!-- Captain's cap -->
+    <path d="M148 100 Q200 60 252 100 L252 88 Q200 55 148 88 Z" fill="#1e3a8a" stroke="#172554" stroke-width="3.5"/>
+    <rect x="145" y="98" width="110" height="16" rx="4" fill="#0f172a"/>
+    <!-- Cap badge -->
+    <rect x="188" y="78" width="24" height="16" rx="3" fill="#fde047" stroke="#a16207" stroke-width="2"/>
+    <path d="M195 82 l5 8 l5 -8 Z" fill="#1e293b"/>
+    <!-- Visor -->
+    <path d="M150 114 Q200 130 250 114 L250 120 Q200 138 150 120 Z" fill="#334155"/>
+  </g>
+</svg>

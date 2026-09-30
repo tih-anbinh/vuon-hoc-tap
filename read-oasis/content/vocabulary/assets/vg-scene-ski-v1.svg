@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-ski desc-ski">
+  <title id="title-ski">Ski</title>
+  <desc id="desc-ski">A pair of long snow skis standing upright in the snow with two ski poles beside them.</desc>
+  <defs>
+    <linearGradient id="ski-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#f0f9ff"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#ski-bg)"/>
+  <!-- snow ground -->
+  <path d="M0 240 Q200 215 400 240 L400 300 L0 300 Z" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+  <ellipse cx="200" cy="255" rx="140" ry="14" fill="#0f172a" opacity="0.08"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Ski 1 -->
+    <path d="M150 245 L150 70 Q150 45 140 40 Q133 55 140 75 L140 245 Z" fill="#ef4444" stroke="#991b1b" stroke-width="4"/>
+    <!-- Ski 2 -->
+    <path d="M185 245 L185 70 Q185 45 175 40 Q168 55 175 75 L175 245 Z" fill="#3b82f6" stroke="#1e40af" stroke-width="4"/>
+    <!-- Bindings -->
+    <rect x="136" y="150" width="20" height="16" rx="3" fill="#334155"/>
+    <rect x="171" y="150" width="20" height="16" rx="3" fill="#334155"/>
+
+    <!-- Ski poles -->
+    <line x1="240" y1="55" x2="230" y2="245" stroke="#64748b" stroke-width="7" stroke-linecap="round"/>
+    <line x1="275" y1="55" x2="285" y2="245" stroke="#64748b" stroke-width="7" stroke-linecap="round"/>
+    <!-- Handles -->
+    <rect x="234" y="50" width="14" height="20" rx="6" fill="#dc2626"/>
+    <rect x="269" y="50" width="14" height="20" rx="6" fill="#dc2626"/>
+    <!-- Baskets -->
+    <ellipse cx="231" cy="228" rx="14" ry="5" fill="#94a3b8" stroke="#475569" stroke-width="2"/>
+    <ellipse cx="284" cy="228" rx="14" ry="5" fill="#94a3b8" stroke="#475569" stroke-width="2"/>
+  </g>
+
+  <!-- snowflakes -->
+  <g fill="#ffffff" opacity="0.8"><circle cx="80" cy="90" r="5"/><circle cx="330" cy="120" r="5"/><circle cx="100" cy="170" r="4"/><circle cx="340" cy="190" r="4"/></g>
+</svg>

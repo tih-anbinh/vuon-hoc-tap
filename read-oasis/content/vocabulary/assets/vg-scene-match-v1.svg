@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-match desc-match">
+  <title id="title-match">Match</title>
+  <desc id="desc-match">A single wooden match with a red tip and a small orange flame, beside a matchbox.</desc>
+  <defs>
+    <linearGradient id="match-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <radialGradient id="match-glow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#fde047" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#fde047" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="match-flame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="60%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#match-bg)"/>
+  <ellipse cx="170" cy="90" rx="90" ry="90" fill="url(#match-glow)"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Match stick -->
+    <rect x="160" y="110" width="20" height="150" rx="6" fill="#d6a860" stroke="#92400e" stroke-width="3.5"/>
+    <!-- Match head -->
+    <ellipse cx="170" cy="108" rx="16" ry="20" fill="#dc2626" stroke="#7f1d1d" stroke-width="3"/>
+    <!-- Flame -->
+    <path d="M170 55 C186 78 190 92 184 105 C180 116 176 122 170 122 C164 122 160 116 156 105 C150 92 154 78 170 55 Z" fill="url(#match-flame)"/>
+    <path d="M170 75 C178 92 180 100 176 110 C174 116 172 118 170 118 C168 118 166 116 164 110 C160 100 162 92 170 75 Z" fill="#fef9c3"/>
+  </g>
+
+  <!-- Matchbox -->
+  <g filter="url(#soft-shadow)">
+    <rect x="250" y="200" width="110" height="55" rx="6" fill="#f59e0b" stroke="#b45309" stroke-width="3.5"/>
+    <rect x="258" y="212" width="94" height="32" rx="3" fill="#fbbf24"/>
+    <!-- Strike strip -->
+    <rect x="250" y="200" width="14" height="55" fill="#7c2d12"/>
+    <g stroke="#451a03" stroke-width="1.5">
+      <line x1="253" y1="205" x2="253" y2="250"/>
+      <line x1="257" y1="205" x2="257" y2="250"/>
+      <line x1="261" y1="205" x2="261" y2="250"/>
+    </g>
+  </g>
+</svg>

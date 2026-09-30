@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-letter desc-letter">
+  <title id="title-letter">Letter</title>
+  <desc id="desc-letter">A folded paper letter with writing lines coming out of an opened envelope.</desc>
+  <defs>
+    <linearGradient id="letter-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fefce8"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#letter-bg)"/>
+  <ellipse cx="200" cy="255" rx="140" ry="16" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Paper letter behind -->
+    <rect x="130" y="60" width="140" height="170" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="3"/>
+    <!-- Writing lines -->
+    <g stroke="#cbd5e1" stroke-width="4" stroke-linecap="round">
+      <line x1="148" y1="85" x2="252" y2="85"/>
+      <line x1="148" y1="105" x2="240" y2="105"/>
+      <line x1="148" y1="125" x2="252" y2="125"/>
+      <line x1="148" y1="145" x2="225" y2="145"/>
+    </g>
+    <!-- Heart signature -->
+    <path d="M200 175 c-8 -10 -22 -3 -22 7 c0 10 14 16 22 24 c8 -8 22 -14 22 -24 c0 -10 -14 -17 -22 -7 Z" fill="#ef4444" opacity="0.8"/>
+
+    <!-- Envelope in front (open) -->
+    <path d="M100 150 L300 150 L300 245 L100 245 Z" fill="#e2e8f0" stroke="#1e293b" stroke-width="4"/>
+    <path d="M100 245 L200 185 L300 245" fill="none" stroke="#94a3b8" stroke-width="3"/>
+    <path d="M100 150 L200 200 L300 150" fill="#cbd5e1" stroke="#1e293b" stroke-width="3.5"/>
+  </g>
+</svg>

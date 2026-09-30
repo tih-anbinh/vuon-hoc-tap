@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-queen desc-queen">
+  <title id="title-queen">Queen</title>
+  <desc id="desc-queen">A smiling queen wearing a golden jeweled crown and a royal purple robe.</desc>
+  <defs>
+    <linearGradient id="queen-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5d0fe"/>
+      <stop offset="100%" stop-color="#fae8ff"/>
+    </linearGradient>
+    <linearGradient id="queen-skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5d0a9"/>
+    </linearGradient>
+    <linearGradient id="queen-crown" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#queen-bg)"/>
+  <ellipse cx="200" cy="288" rx="130" ry="10" fill="#0f172a" opacity="0.1"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Royal robe -->
+    <path d="M110 300 Q110 200 200 190 Q290 200 290 300 Z" fill="#7e22ce" stroke="#581c87" stroke-width="4"/>
+    <!-- Fur trim -->
+    <path d="M175 195 L200 250 L165 235 Z" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+    <path d="M225 195 L200 250 L235 235 Z" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+    <!-- Jewel on robe -->
+    <circle cx="200" cy="265" r="8" fill="#ef4444" stroke="#fde047" stroke-width="2"/>
+
+    <!-- Hair -->
+    <path d="M138 130 Q135 90 200 88 Q265 90 262 130 L262 175 Q245 150 200 148 Q155 150 138 175 Z" fill="#78350f" stroke="#5b3a1a" stroke-width="3"/>
+    <!-- Head -->
+    <circle cx="200" cy="135" r="52" fill="url(#queen-skin)" stroke="#d4a574" stroke-width="4"/>
+    <circle cx="183" cy="133" r="5" fill="#1e293b"/>
+    <circle cx="217" cy="133" r="5" fill="#1e293b"/>
+    <path d="M185 155 Q200 166 215 155" fill="none" stroke="#be185d" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="172" cy="148" r="7" fill="#fca5a5" opacity="0.6"/>
+    <circle cx="228" cy="148" r="7" fill="#fca5a5" opacity="0.6"/>
+
+    <!-- Crown -->
+    <path d="M150 92 L160 55 L178 82 L200 48 L222 82 L240 55 L250 92 Z" fill="url(#queen-crown)" stroke="#92400e" stroke-width="3.5"/>
+    <rect x="148" y="90" width="104" height="14" rx="3" fill="#eab308" stroke="#92400e" stroke-width="3"/>
+    <!-- Crown jewels -->
+    <circle cx="160" cy="55" r="6" fill="#ef4444" stroke="#f8fafc" stroke-width="1.5"/>
+    <circle cx="200" cy="48" r="7" fill="#3b82f6" stroke="#f8fafc" stroke-width="1.5"/>
+    <circle cx="240" cy="55" r="6" fill="#22c55e" stroke="#f8fafc" stroke-width="1.5"/>
+    <circle cx="175" cy="97" r="4" fill="#ef4444"/>
+    <circle cx="225" cy="97" r="4" fill="#3b82f6"/>
+  </g>
+</svg>

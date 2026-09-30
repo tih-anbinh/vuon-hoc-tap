@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-sky desc-sky">
+  <title id="title-sky">Sky</title>
+  <desc id="desc-sky">A wide blue sky with a bright sun, fluffy white clouds, and birds flying above the ground.</desc>
+  <defs>
+    <linearGradient id="sky-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="70%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#sky-bg)"/>
+  <!-- ground strip -->
+  <path d="M0 262 Q200 250 400 262 L400 300 L0 300 Z" fill="#65a30d"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Sun -->
+    <circle cx="315" cy="70" r="40" fill="#fde047" stroke="#f59e0b" stroke-width="3"/>
+    <g stroke="#fde047" stroke-width="6" stroke-linecap="round">
+      <line x1="315" y1="12" x2="315" y2="0"/>
+      <line x1="368" y1="30" x2="380" y2="20"/>
+      <line x1="375" y1="70" x2="392" y2="70"/>
+      <line x1="262" y1="30" x2="250" y2="20"/>
+    </g>
+
+    <!-- Clouds -->
+    <g fill="#ffffff">
+      <ellipse cx="110" cy="90" rx="45" ry="26"/>
+      <ellipse cx="80" cy="100" rx="30" ry="20"/>
+      <ellipse cx="145" cy="100" rx="30" ry="20"/>
+      <ellipse cx="220" cy="160" rx="38" ry="22"/>
+      <ellipse cx="195" cy="168" rx="26" ry="17"/>
+      <ellipse cx="248" cy="168" rx="26" ry="17"/>
+    </g>
+  </g>
+
+  <!-- Birds -->
+  <g fill="none" stroke="#1e293b" stroke-width="4" stroke-linecap="round">
+    <path d="M60 150 Q72 140 84 150 Q96 140 108 150"/>
+    <path d="M280 200 Q290 192 300 200 Q310 192 320 200"/>
+  </g>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-eagle desc-eagle">
+  <title id="title-eagle">Eagle</title>
+  <desc id="desc-eagle">A brown eagle with a white head, yellow beak, and spread wings, flying in the sky.</desc>
+  <defs>
+    <linearGradient id="eagle-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="eagle-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a16207"/>
+      <stop offset="100%" stop-color="#78350f"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#eagle-bg)"/>
+  <g fill="#ffffff" opacity="0.85">
+    <ellipse cx="330" cy="60" rx="34" ry="16"/>
+    <ellipse cx="360" cy="60" rx="24" ry="12"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Wings spread -->
+    <path d="M200 150 Q110 90 40 130 Q90 145 120 165 Q80 165 55 190 Q120 185 200 175 Z" fill="url(#eagle-body)" stroke="#451a03" stroke-width="3.5"/>
+    <path d="M200 150 Q290 90 360 130 Q310 145 280 165 Q320 165 345 190 Q280 185 200 175 Z" fill="url(#eagle-body)" stroke="#451a03" stroke-width="3.5"/>
+    <!-- Body -->
+    <ellipse cx="200" cy="185" rx="34" ry="50" fill="url(#eagle-body)" stroke="#451a03" stroke-width="4"/>
+    <!-- White head -->
+    <circle cx="200" cy="130" r="30" fill="#f8fafc" stroke="#cbd5e1" stroke-width="3"/>
+    <!-- Beak -->
+    <path d="M200 125 L228 135 Q214 148 200 142 Z" fill="#f59e0b" stroke="#b45309" stroke-width="2.5"/>
+    <!-- Eye -->
+    <circle cx="212" cy="122" r="5" fill="#1e293b"/>
+    <circle cx="214" cy="120" r="1.8" fill="#fff"/>
+    <!-- Tail -->
+    <path d="M180 228 L200 250 L220 228 Z" fill="#f8fafc" stroke="#cbd5e1" stroke-width="3"/>
+    <!-- Talons -->
+    <path d="M188 230 L185 250 M212 230 L215 250" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-player desc-player">
+  <title id="title-player">Player</title>
+  <desc id="desc-player">A soccer player in a striped jersey and shorts kicking a ball on a field.</desc>
+  <defs>
+    <linearGradient id="player-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#dcfce7"/>
+    </linearGradient>
+    <linearGradient id="player-skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5d0a9"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="190" fill="url(#player-bg)"/>
+  <rect x="0" y="190" width="400" height="110" fill="#4ade80"/>
+  <line x1="0" y1="230" x2="400" y2="230" stroke="#22c55e" stroke-width="4" opacity="0.6"/>
+  <ellipse cx="200" cy="270" rx="130" ry="14" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Head -->
+    <circle cx="180" cy="80" r="30" fill="url(#player-skin)" stroke="#d4a574" stroke-width="3.5"/>
+    <path d="M152 74 Q154 48 180 48 Q206 48 208 74 Q194 58 180 58 Q166 58 152 74 Z" fill="#3d2109" stroke="#2a1607" stroke-width="2.5"/>
+    <circle cx="174" cy="80" r="4" fill="#1e293b"/>
+    <circle cx="190" cy="80" r="4" fill="#1e293b"/>
+    <path d="M172 92 Q180 98 188 92" fill="none" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Jersey (striped) -->
+    <path d="M148 118 Q180 105 212 118 L222 185 L138 185 Z" fill="#dc2626" stroke="#7f1d1d" stroke-width="3.5"/>
+    <g fill="#f8fafc">
+      <rect x="155" y="118" width="12" height="67"/>
+      <rect x="185" y="112" width="12" height="73"/>
+    </g>
+    <!-- Arms -->
+    <path d="M150 125 Q125 145 118 175" fill="none" stroke="url(#player-skin)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M212 125 Q235 140 245 165" fill="none" stroke="url(#player-skin)" stroke-width="12" stroke-linecap="round"/>
+
+    <!-- Shorts -->
+    <path d="M145 185 L215 185 L212 218 L182 218 L178 200 L172 218 L148 218 Z" fill="#1e293b" stroke="#0f172a" stroke-width="3"/>
+    <!-- Legs -->
+    <path d="M160 218 L155 258" stroke="url(#player-skin)" stroke-width="14" stroke-linecap="round"/>
+    <path d="M195 218 Q225 235 250 240" stroke="url(#player-skin)" stroke-width="14" stroke-linecap="round" fill="none"/>
+    <!-- Boots -->
+    <ellipse cx="152" cy="262" rx="16" ry="8" fill="#0f172a"/>
+    <ellipse cx="258" cy="245" rx="16" ry="8" fill="#0f172a"/>
+  </g>
+
+  <!-- Ball -->
+  <g filter="url(#soft-shadow)">
+    <circle cx="290" cy="245" r="24" fill="#f8fafc" stroke="#1e293b" stroke-width="3"/>
+    <path d="M290 245 l10 -8 l8 10 l-6 12 l-14 0 l-6 -12 Z" fill="#1e293b"/>
+  </g>
+</svg>

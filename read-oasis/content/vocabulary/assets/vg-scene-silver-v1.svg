@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-silver desc-silver">
+  <title id="title-silver">Silver</title>
+  <desc id="desc-silver">A shiny silver medal and stack of silver-grey metal coins gleaming with highlights.</desc>
+  <defs>
+    <linearGradient id="silver-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="silver-metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="45%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#silver-bg)"/>
+  <ellipse cx="200" cy="270" rx="140" ry="18" fill="#0f172a" opacity="0.14"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Ribbon -->
+    <path d="M150 55 L175 120 L200 105 L225 120 L250 55 Z" fill="#3b82f6" stroke="#1e40af" stroke-width="3"/>
+    <!-- Medal -->
+    <circle cx="200" cy="170" r="68" fill="url(#silver-metal)" stroke="#64748b" stroke-width="5"/>
+    <circle cx="200" cy="170" r="50" fill="none" stroke="#94a3b8" stroke-width="3"/>
+    <!-- Star emboss -->
+    <path d="M200 138 L210 162 L236 162 L215 178 L223 204 L200 188 L177 204 L185 178 L164 162 L190 162 Z" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+    <!-- Shine -->
+    <path d="M170 150 Q185 135 205 140" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.85"/>
+  </g>
+
+  <!-- Silver coins -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="300" cy="238" rx="42" ry="14" fill="url(#silver-metal)" stroke="#64748b" stroke-width="3"/>
+    <ellipse cx="300" cy="228" rx="42" ry="14" fill="url(#silver-metal)" stroke="#64748b" stroke-width="3"/>
+    <ellipse cx="300" cy="218" rx="42" ry="14" fill="url(#silver-metal)" stroke="#64748b" stroke-width="3"/>
+  </g>
+
+  <!-- Sparkles -->
+  <g fill="#ffffff"><path d="M120 130 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4 z"/><path d="M285 175 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3 z"/></g>
+</svg>

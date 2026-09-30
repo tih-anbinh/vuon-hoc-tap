@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-lorry desc-lorry">
+  <title id="title-lorry">Lorry</title>
+  <desc id="desc-lorry">A big blue delivery lorry (truck) with a large cargo box and six wheels.</desc>
+  <defs>
+    <linearGradient id="lorry-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#eff6ff"/>
+    </linearGradient>
+    <linearGradient id="lorry-cab" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#lorry-bg)"/>
+  <rect x="0" y="235" width="400" height="12" fill="#64748b"/>
+  <ellipse cx="200" cy="255" rx="170" ry="12" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Cargo box -->
+    <rect x="40" y="90" width="200" height="145" rx="6" fill="#f8fafc" stroke="#1e293b" stroke-width="4"/>
+    <line x1="140" y1="90" x2="140" y2="235" stroke="#cbd5e1" stroke-width="3"/>
+    <rect x="60" y="110" width="160" height="10" fill="#e2e8f0"/>
+    <!-- Cab -->
+    <path d="M240 130 L300 130 L340 175 L340 235 L240 235 Z" fill="url(#lorry-cab)" stroke="#1e3a8a" stroke-width="4"/>
+    <!-- Window -->
+    <path d="M250 140 L294 140 L322 172 L250 172 Z" fill="#bae6fd" stroke="#1e293b" stroke-width="3"/>
+    <!-- Headlight -->
+    <circle cx="332" cy="200" r="9" fill="#fde047" stroke="#a16207" stroke-width="2.5"/>
+    <!-- Wheels -->
+    <circle cx="90" cy="235" r="28" fill="#334155" stroke="#1e293b" stroke-width="4"/>
+    <circle cx="90" cy="235" r="11" fill="#94a3b8"/>
+    <circle cx="160" cy="235" r="28" fill="#334155" stroke="#1e293b" stroke-width="4"/>
+    <circle cx="160" cy="235" r="11" fill="#94a3b8"/>
+    <circle cx="300" cy="235" r="28" fill="#334155" stroke="#1e293b" stroke-width="4"/>
+    <circle cx="300" cy="235" r="11" fill="#94a3b8"/>
+  </g>
+</svg>

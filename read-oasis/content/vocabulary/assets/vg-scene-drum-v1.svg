@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-drum desc-drum">
+  <title id="title-drum">Drum</title>
+  <desc id="desc-drum">A red and white striped drum with two crossed drumsticks resting on top.</desc>
+  <defs>
+    <linearGradient id="drum-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fefce8"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#drum-bg)"/>
+  <ellipse cx="200" cy="258" rx="115" ry="16" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Drum body -->
+    <path d="M110 120 L290 120 L290 210 L110 210 Z" fill="#f8fafc" stroke="#1e293b" stroke-width="4"/>
+    <!-- Zigzag rope pattern -->
+    <path d="M110 130 L155 200 L200 130 L245 200 L290 130" fill="none" stroke="#dc2626" stroke-width="5"/>
+    <path d="M110 200 L155 130 L200 200 L245 130 L290 200" fill="none" stroke="#dc2626" stroke-width="5"/>
+    <!-- Top rim -->
+    <ellipse cx="200" cy="120" rx="90" ry="26" fill="#fef3c7" stroke="#1e293b" stroke-width="4"/>
+    <ellipse cx="200" cy="120" rx="78" ry="18" fill="#fefce8" stroke="#facc15" stroke-width="3"/>
+    <!-- Bottom rim -->
+    <path d="M110 210 A90 24 0 0 0 290 210" fill="#e2e8f0" stroke="#1e293b" stroke-width="4"/>
+    <!-- Rim bolts -->
+    <g fill="#facc15" stroke="#ca8a04" stroke-width="1.5">
+      <circle cx="120" cy="128" r="5"/>
+      <circle cx="200" cy="145" r="5"/>
+      <circle cx="280" cy="128" r="5"/>
+      <circle cx="160" cy="140" r="5"/>
+      <circle cx="240" cy="140" r="5"/>
+    </g>
+    <!-- Crossed drumsticks -->
+    <line x1="130" y1="60" x2="250" y2="130" stroke="#a16207" stroke-width="7" stroke-linecap="round"/>
+    <line x1="270" y1="60" x2="150" y2="130" stroke="#a16207" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="130" cy="60" r="9" fill="#78350f"/>
+    <circle cx="270" cy="60" r="9" fill="#78350f"/>
+  </g>
+</svg>

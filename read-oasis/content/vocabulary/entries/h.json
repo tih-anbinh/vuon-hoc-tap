@@ -461,13 +461,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "concept_card",
+        "representation_type": "scene_svg",
         "visual_priority": "high",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "contrast",
+        "asset_id": "vg-scene-happy-v1",
+        "asset": "vocabulary/assets/vg-scene-happy-v1.svg",
+        "alt": "A cheerful round face with a big open smile, sparkling eyes, and colourful hearts and stars showing joy.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -481,7 +481,7 @@
       "language_review": "approved",
       "sense_review": "approved",
       "child_suitability_review": "approved",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -671,13 +671,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-hat-v1",
+        "asset": "vocabulary/assets/vg-scene-hat-v1.svg",
+        "alt": "A wide-brimmed straw sun hat with a colourful ribbon band, seen from a slight angle.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -687,7 +687,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1278,13 +1278,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "concept_card",
-        "visual_priority": "medium",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "contrast",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-heavy-v1",
+        "asset": "vocabulary/assets/vg-scene-heavy-v1.svg",
+        "alt": "A child struggling to hold a large black weight, arms bent, face straining, showing something is heavy.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -1298,7 +1298,7 @@
       "language_review": "approved",
       "sense_review": "approved",
       "child_suitability_review": "approved",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -1962,13 +1962,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "action_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-action-hide-v1",
+        "asset": "vocabulary/assets/vg-action-hide-v1.svg",
+        "alt": "A child hiding behind a large box, peeking out with just the head and one hand showing.",
+        "status": "draft",
+        "kind": "action",
         "template": null,
         "anchor_objects": []
       },
@@ -1978,7 +1978,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2098,13 +2098,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-hill-v1",
+        "asset": "vocabulary/assets/vg-scene-hill-v1.svg",
+        "alt": "A big rounded green hill with a winding path and a single tree on top under the sun.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -2114,7 +2114,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2234,13 +2234,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-hippo-v1",
+        "asset": "vocabulary/assets/vg-scene-hippo-v1.svg",
+        "alt": "A large, round purple-grey hippopotamus with a wide snout, small ears, tiny eyes, and stubby legs, partially in water.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -2250,7 +2250,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2710,13 +2710,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-hole-v1",
+        "asset": "vocabulary/assets/vg-scene-hole-v1.svg",
+        "alt": "A deep dark hole dug in the green ground, with a pile of dug-out soil and a shovel beside it.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -2726,7 +2726,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -2779,13 +2779,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-holiday-v1",
+        "asset": "vocabulary/assets/vg-scene-holiday-v1.svg",
+        "alt": "A sunny beach holiday scene with a beach umbrella, a deck chair, a bucket, and the sea.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -2795,7 +2795,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3056,13 +3056,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-honey-v1",
+        "asset": "vocabulary/assets/vg-scene-honey-v1.svg",
+        "alt": "A glass jar of golden honey with a wooden honey dipper and a bee flying nearby.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -3072,7 +3072,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3192,13 +3192,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "action_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-action-hop-v1",
+        "asset": "vocabulary/assets/vg-action-hop-v1.svg",
+        "alt": "A rabbit hopping through the air above the grass, with a dotted arc showing its jump.",
+        "status": "draft",
+        "kind": "action",
         "template": null,
         "anchor_objects": []
       },
@@ -3208,7 +3208,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -3607,13 +3607,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-hotel-v1",
+        "asset": "vocabulary/assets/vg-scene-hotel-v1.svg",
+        "alt": "A tall hotel building with many balcony windows, a red entrance awning, and a star sign.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -3623,7 +3623,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {
@@ -4696,13 +4696,13 @@
         "syllable_hint": null
       },
       "visual": {
-        "representation_type": "no_visual_needed",
-        "visual_priority": "none",
-        "asset_id": null,
-        "asset": null,
-        "alt": null,
-        "status": "not_applicable",
-        "kind": "none",
+        "representation_type": "scene_svg",
+        "visual_priority": "high",
+        "asset_id": "vg-scene-husband-v1",
+        "asset": "vocabulary/assets/vg-scene-husband-v1.svg",
+        "alt": "A smiling man wearing a shirt and a wedding ring on his hand, with a small heart symbol.",
+        "status": "draft",
+        "kind": "scene",
         "template": null,
         "anchor_objects": []
       },
@@ -4712,7 +4712,7 @@
       "language_review": "pending",
       "sense_review": "pending",
       "child_suitability_review": "pending",
-      "media_review": "not_applicable",
+      "media_review": "pending",
       "parent_approval": "pending"
     },
     "provenance": {

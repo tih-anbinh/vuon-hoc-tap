@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-salad desc-salad">
+  <title id="title-salad">Salad</title>
+  <desc id="desc-salad">A big bowl of fresh green salad with lettuce, red tomatoes, cucumber slices, and carrot.</desc>
+  <defs>
+    <linearGradient id="salad-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ecfccb"/>
+      <stop offset="100%" stop-color="#f7fee7"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#salad-bg)"/>
+  <ellipse cx="200" cy="255" rx="150" ry="18" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Bowl -->
+    <path d="M70 165 Q200 155 330 165 Q318 245 200 250 Q82 245 70 165 Z" fill="#f8fafc" stroke="#94a3b8" stroke-width="4"/>
+    <ellipse cx="200" cy="165" rx="130" ry="32" fill="#e2e8f0" stroke="#94a3b8" stroke-width="3"/>
+
+    <!-- Lettuce leaves -->
+    <g fill="#65a30d" stroke="#3f6212" stroke-width="2">
+      <path d="M110 165 Q95 135 130 130 Q145 155 135 175 Z"/>
+      <path d="M155 160 Q150 128 185 128 Q190 155 175 172 Z"/>
+      <path d="M215 158 Q220 126 255 132 Q252 158 235 172 Z"/>
+      <path d="M265 162 Q285 135 300 155 Q290 172 270 175 Z"/>
+    </g>
+    <g fill="#84cc16" opacity="0.8">
+      <path d="M130 170 Q120 148 145 145 Q155 165 145 178 Z"/>
+      <path d="M195 168 Q195 145 225 148 Q220 168 205 178 Z"/>
+    </g>
+
+    <!-- Tomatoes -->
+    <circle cx="155" cy="168" r="14" fill="#dc2626" stroke="#991b1b" stroke-width="2"/>
+    <circle cx="245" cy="172" r="14" fill="#dc2626" stroke="#991b1b" stroke-width="2"/>
+    <!-- Cucumber slices -->
+    <circle cx="200" cy="178" r="13" fill="#bef264" stroke="#4d7c0f" stroke-width="2.5"/>
+    <circle cx="200" cy="178" r="7" fill="#d9f99d"/>
+    <circle cx="115" cy="180" r="11" fill="#bef264" stroke="#4d7c0f" stroke-width="2.5"/>
+    <!-- Carrot shreds -->
+    <g stroke="#f97316" stroke-width="4" stroke-linecap="round">
+      <line x1="270" y1="160" x2="290" y2="172"/>
+      <line x1="180" y1="158" x2="165" y2="150"/>
+    </g>
+  </g>
+</svg>

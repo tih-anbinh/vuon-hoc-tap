@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-bracelet desc-bracelet">
+  <title id="title-bracelet">Bracelet</title>
+  <desc id="desc-bracelet">A colourful beaded bracelet forming a circle with a shiny heart charm.</desc>
+  <defs>
+    <linearGradient id="bracelet-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fce7f3"/>
+      <stop offset="100%" stop-color="#fdf2f8"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#bracelet-bg)"/>
+  <ellipse cx="200" cy="255" rx="120" ry="16" fill="#0f172a" opacity="0.1"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Beads around a circle radius 90 center 200,150 -->
+    <circle cx="200" cy="60" r="18" fill="#ef4444" stroke="#1e293b" stroke-width="2.5"/>
+    <circle cx="245" cy="72" r="18" fill="#f59e0b" stroke="#1e293b" stroke-width="2.5"/>
+    <circle cx="278" cy="105" r="18" fill="#facc15" stroke="#1e293b" stroke-width="2.5"/>
+    <circle cx="290" cy="150" r="18" fill="#22c55e" stroke="#1e293b" stroke-width="2.5"/>
+    <circle cx="278" cy="195" r="18" fill="#0ea5e9" stroke="#1e293b" stroke-width="2.5"/>
+    <circle cx="245" cy="228" r="18" fill="#6366f1" stroke="#1e293b" stroke-width="2.5"/>
+    <circle cx="200" cy="240" r="18" fill="#a855f7" stroke="#1e293b" stroke-width="2.5"/>
+    <circle cx="155" cy="228" r="18" fill="#ec4899" stroke="#1e293b" stroke-width="2.5"/>
+    <circle cx="122" cy="195" r="18" fill="#ef4444" stroke="#1e293b" stroke-width="2.5"/>
+    <circle cx="110" cy="150" r="18" fill="#f59e0b" stroke="#1e293b" stroke-width="2.5"/>
+    <circle cx="122" cy="105" r="18" fill="#22c55e" stroke="#1e293b" stroke-width="2.5"/>
+    <circle cx="155" cy="72" r="18" fill="#0ea5e9" stroke="#1e293b" stroke-width="2.5"/>
+    <!-- Bead highlights -->
+    <g fill="#ffffff" opacity="0.5">
+      <circle cx="195" cy="54" r="5"/>
+      <circle cx="285" cy="144" r="5"/>
+      <circle cx="195" cy="234" r="5"/>
+      <circle cx="105" cy="144" r="5"/>
+    </g>
+    <!-- Heart charm -->
+    <path d="M200 175 C185 158 160 168 160 188 C160 205 200 228 200 228 C200 228 240 205 240 188 C240 168 215 158 200 175 Z" fill="#f472b6" stroke="#be185d" stroke-width="3"/>
+  </g>
+</svg>

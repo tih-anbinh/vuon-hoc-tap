@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-feed desc-feed">
+  <title id="title-feed">Feed</title>
+  <desc id="desc-feed">A child holding out a bowl and giving food to a small pet cat that is eating.</desc>
+  <defs>
+    <linearGradient id="feed-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fefce8"/>
+    </linearGradient>
+    <linearGradient id="feed-skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5d0a9"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#feed-bg)"/>
+  <rect x="0" y="255" width="400" height="45" fill="#86efac"/>
+  <ellipse cx="200" cy="262" rx="160" ry="12" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Child -->
+    <path d="M70 175 Q110 160 150 175 L142 255 L78 255 Z" fill="#3b82f6" stroke="#1e3a8a" stroke-width="3.5"/>
+    <circle cx="110" cy="120" r="42" fill="url(#feed-skin)" stroke="#d4a574" stroke-width="3.5"/>
+    <path d="M70 110 Q72 78 110 78 Q148 78 150 110 Q130 90 110 90 Q90 90 70 110 Z" fill="#5b3a1a" stroke="#3d2109" stroke-width="2.5"/>
+    <circle cx="100" cy="120" r="4.5" fill="#1e293b"/>
+    <circle cx="122" cy="120" r="4.5" fill="#1e293b"/>
+    <path d="M100 134 Q111 143 122 134" fill="none" stroke="#7f1d1d" stroke-width="3" stroke-linecap="round"/>
+    <!-- Arm holding out bowl -->
+    <path d="M145 175 Q185 185 210 210" fill="none" stroke="url(#feed-skin)" stroke-width="14" stroke-linecap="round"/>
+    <!-- Bowl -->
+    <path d="M195 210 A38 20 0 0 0 273 210 Z" fill="#22c55e" stroke="#166534" stroke-width="3.5"/>
+    <ellipse cx="234" cy="210" rx="38" ry="9" fill="#a16207" stroke="#166534" stroke-width="3"/>
+    <circle cx="222" cy="207" r="4" fill="#78350f"/>
+    <circle cx="240" cy="209" r="4" fill="#78350f"/>
+  </g>
+
+  <!-- Cat eating -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="325" cy="235" rx="40" ry="26" fill="#fb923c" stroke="#9a3412" stroke-width="3.5"/>
+    <circle cx="290" cy="220" r="24" fill="#fb923c" stroke="#9a3412" stroke-width="3.5"/>
+    <path d="M275 202 L270 188 L283 200 Z" fill="#fb923c" stroke="#9a3412" stroke-width="2.5"/>
+    <path d="M300 202 L305 188 L292 200 Z" fill="#fb923c" stroke="#9a3412" stroke-width="2.5"/>
+    <circle cx="283" cy="220" r="3.5" fill="#1e293b"/>
+    <path d="M340 210 Q365 195 358 225" fill="none" stroke="#fb923c" stroke-width="10" stroke-linecap="round"/>
+  </g>
+</svg>

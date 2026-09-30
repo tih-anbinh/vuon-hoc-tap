@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-ocean desc-ocean">
+  <title id="title-ocean">Ocean</title>
+  <desc id="desc-ocean">A wide deep blue ocean with big rolling waves, a bright sun, and a small sailboat.</desc>
+  <defs>
+    <linearGradient id="ocean-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="ocean-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#075985"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="150" fill="url(#ocean-sky)"/>
+  <!-- Sun -->
+  <circle cx="320" cy="60" r="34" fill="#fde047" stroke="#f59e0b" stroke-width="3"/>
+
+  <!-- Ocean -->
+  <rect x="0" y="130" width="400" height="170" fill="url(#ocean-water)"/>
+
+  <!-- Waves -->
+  <g fill="none" stroke="#7dd3fc" stroke-width="4" stroke-linecap="round" opacity="0.8">
+    <path d="M20 170 q30 -18 60 0 t60 0 t60 0 t60 0 t60 0 t60 0"/>
+    <path d="M0 210 q35 -20 70 0 t70 0 t70 0 t70 0 t70 0"/>
+    <path d="M20 250 q30 -16 60 0 t60 0 t60 0 t60 0 t60 0 t60 0"/>
+  </g>
+
+  <!-- Sailboat -->
+  <g filter="url(#soft-shadow)">
+    <path d="M120 158 L200 158 L185 178 L135 178 Z" fill="#ef4444" stroke="#991b1b" stroke-width="3"/>
+    <rect x="157" y="100" width="6" height="58" fill="#78350f"/>
+    <path d="M163 105 L210 150 L163 150 Z" fill="#f8fafc" stroke="#94a3b8" stroke-width="2.5"/>
+    <path d="M157 105 L120 150 L157 150 Z" fill="#fca5a5" stroke="#991b1b" stroke-width="2.5"/>
+  </g>
+</svg>

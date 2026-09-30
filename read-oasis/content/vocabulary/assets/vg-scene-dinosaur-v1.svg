@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-dinosaur desc-dinosaur">
+  <title id="title-dinosaur">Dinosaur</title>
+  <desc id="desc-dinosaur">A friendly green long-necked dinosaur with plates on its back and a long tail.</desc>
+  <defs>
+    <linearGradient id="dinosaur-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dcfce7"/>
+      <stop offset="100%" stop-color="#f0fdf4"/>
+    </linearGradient>
+    <linearGradient id="dinosaur-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#dinosaur-bg)"/>
+  <ellipse cx="200" cy="262" rx="160" ry="16" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Tail -->
+    <path d="M60 220 Q30 200 55 175 Q80 190 120 210 Z" fill="url(#dinosaur-body)" stroke="#166534" stroke-width="3.5"/>
+    <!-- Body -->
+    <ellipse cx="175" cy="200" rx="90" ry="55" fill="url(#dinosaur-body)" stroke="#166534" stroke-width="4"/>
+    <!-- Neck and head -->
+    <path d="M240 175 Q290 130 300 90 Q325 90 320 120 Q315 155 265 200 Z" fill="url(#dinosaur-body)" stroke="#166534" stroke-width="4"/>
+    <circle cx="305" cy="98" r="26" fill="url(#dinosaur-body)" stroke="#166534" stroke-width="4"/>
+    <circle cx="314" cy="92" r="5" fill="#1e293b"/>
+    <circle cx="315" cy="90" r="1.8" fill="#fff"/>
+    <path d="M300 108 Q312 114 324 108" fill="none" stroke="#166534" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Back plates -->
+    <g fill="#f59e0b" stroke="#b45309" stroke-width="2.5">
+      <path d="M120 150 L135 118 L150 150 Z"/>
+      <path d="M155 143 L172 108 L189 143 Z"/>
+      <path d="M195 145 L212 112 L229 145 Z"/>
+    </g>
+    <!-- Legs -->
+    <rect x="135" y="235" width="24" height="30" rx="8" fill="#16a34a" stroke="#166534" stroke-width="3"/>
+    <rect x="195" y="235" width="24" height="30" rx="8" fill="#16a34a" stroke="#166534" stroke-width="3"/>
+    <!-- Tummy spots -->
+    <circle cx="160" cy="215" r="7" fill="#86efac"/>
+    <circle cx="190" cy="225" r="6" fill="#86efac"/>
+  </g>
+</svg>

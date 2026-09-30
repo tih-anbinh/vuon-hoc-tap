@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-film desc-film">
+  <title id="title-film">Film</title>
+  <desc id="desc-film">A movie film reel with strips of film unwinding, and a clapperboard beside it.</desc>
+  <defs>
+    <linearGradient id="film-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#film-bg)"/>
+  <ellipse cx="200" cy="258" rx="150" ry="16" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Film reel -->
+    <circle cx="140" cy="150" r="78" fill="#1e293b" stroke="#0f172a" stroke-width="4"/>
+    <circle cx="140" cy="150" r="22" fill="#94a3b8" stroke="#475569" stroke-width="3"/>
+    <g fill="#94a3b8">
+      <circle cx="140" cy="100" r="14"/>
+      <circle cx="188" cy="135" r="14"/>
+      <circle cx="170" cy="192" r="14"/>
+      <circle cx="110" cy="192" r="14"/>
+      <circle cx="92" cy="135" r="14"/>
+    </g>
+    <!-- Film strip -->
+    <path d="M205 130 L320 120 L320 175 L205 185 Z" fill="#334155" stroke="#0f172a" stroke-width="3"/>
+    <g fill="#f8fafc">
+      <rect x="212" y="124" width="10" height="10"/>
+      <rect x="212" y="172" width="10" height="10"/>
+      <rect x="240" y="122" width="10" height="10"/>
+      <rect x="240" y="170" width="10" height="10"/>
+      <rect x="268" y="121" width="10" height="10"/>
+      <rect x="268" y="169" width="10" height="10"/>
+      <rect x="296" y="119" width="10" height="10"/>
+      <rect x="296" y="167" width="10" height="10"/>
+    </g>
+    <g fill="#64748b">
+      <rect x="228" y="140" width="22" height="24"/>
+      <rect x="256" y="138" width="22" height="24"/>
+      <rect x="284" y="136" width="22" height="24"/>
+    </g>
+  </g>
+</svg>

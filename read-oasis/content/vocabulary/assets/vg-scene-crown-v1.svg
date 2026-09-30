@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-crown desc-crown">
+  <title id="title-crown">Crown</title>
+  <desc id="desc-crown">A shiny gold crown with three points, round jewels, and a padded base.</desc>
+  <defs>
+    <linearGradient id="crown-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#faf5ff"/>
+      <stop offset="100%" stop-color="#f3e8ff"/>
+    </linearGradient>
+    <linearGradient id="crown-gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#crown-bg)"/>
+  <ellipse cx="200" cy="245" rx="120" ry="16" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Crown body -->
+    <path d="M90 220 L100 110 L150 165 L200 90 L250 165 L300 110 L310 220 Z" fill="url(#crown-gold)" stroke="#b45309" stroke-width="4.5" stroke-linejoin="round"/>
+    <!-- Base band -->
+    <rect x="88" y="215" width="224" height="32" rx="8" fill="url(#crown-gold)" stroke="#b45309" stroke-width="4"/>
+    <!-- Point jewels -->
+    <circle cx="100" cy="108" r="9" fill="#ef4444" stroke="#991b1b" stroke-width="2"/>
+    <circle cx="200" cy="86" r="11" fill="#3b82f6" stroke="#1e3a8a" stroke-width="2"/>
+    <circle cx="300" cy="108" r="9" fill="#ef4444" stroke="#991b1b" stroke-width="2"/>
+    <!-- Band jewels -->
+    <circle cx="140" cy="231" r="8" fill="#22c55e" stroke="#166534" stroke-width="2"/>
+    <circle cx="200" cy="231" r="9" fill="#ef4444" stroke="#991b1b" stroke-width="2"/>
+    <circle cx="260" cy="231" r="8" fill="#3b82f6" stroke="#1e3a8a" stroke-width="2"/>
+    <!-- Highlight -->
+    <path d="M110 130 L120 200" stroke="#fffbeb" stroke-width="4" opacity="0.6" stroke-linecap="round"/>
+  </g>
+</svg>

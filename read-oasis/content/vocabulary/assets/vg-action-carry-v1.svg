@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-carry desc-carry">
+  <title id="title-carry">Carry</title>
+  <desc id="desc-carry">A child walking while carrying a big brown box in both arms.</desc>
+  <defs>
+    <linearGradient id="carry-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#f0fdf4"/>
+    </linearGradient>
+    <linearGradient id="carry-skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5d0a9"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#carry-bg)"/>
+  <rect x="0" y="258" width="400" height="42" fill="#d6d3d1"/>
+  <ellipse cx="200" cy="264" rx="120" ry="14" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Legs (walking) -->
+    <path d="M180 215 L165 258" stroke="#1e40af" stroke-width="18" stroke-linecap="round"/>
+    <path d="M215 215 L235 255" stroke="#1e40af" stroke-width="18" stroke-linecap="round"/>
+    <ellipse cx="162" cy="260" rx="15" ry="8" fill="#ef4444" stroke="#1e293b" stroke-width="2.5"/>
+    <ellipse cx="238" cy="258" rx="15" ry="8" fill="#ef4444" stroke="#1e293b" stroke-width="2.5"/>
+    <!-- Body -->
+    <path d="M172 150 Q200 140 228 150 L224 215 L176 215 Z" fill="#22c55e" stroke="#1e293b" stroke-width="3.5"/>
+    <!-- Arms holding box -->
+    <path d="M175 165 Q160 185 175 200" fill="none" stroke="#22c55e" stroke-width="15" stroke-linecap="round"/>
+    <path d="M225 165 Q240 185 225 200" fill="none" stroke="#22c55e" stroke-width="15" stroke-linecap="round"/>
+    <!-- Head -->
+    <circle cx="200" cy="112" r="34" fill="url(#carry-skin)" stroke="#d4a574" stroke-width="3.5"/>
+    <path d="M168 104 Q168 74 200 74 Q232 74 232 104 Q220 88 200 88 Q180 88 168 104 Z" fill="#5c3310" stroke="#3d2109" stroke-width="2.5"/>
+    <circle cx="190" cy="112" r="5" fill="#1e293b"/>
+    <circle cx="210" cy="112" r="5" fill="#1e293b"/>
+    <path d="M190 126 Q200 134 210 126" fill="none" stroke="#78350f" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Box being carried (in front) -->
+  <g filter="url(#soft-shadow)">
+    <rect x="158" y="170" width="84" height="60" rx="4" fill="#d99a5b" stroke="#8a5a24" stroke-width="4"/>
+    <path d="M158 170 L200 185 L242 170" fill="none" stroke="#8a5a24" stroke-width="3"/>
+    <line x1="200" y1="185" x2="200" y2="230" stroke="#8a5a24" stroke-width="3"/>
+    <path d="M185 168 L215 168 L210 158 L190 158 Z" fill="#c2703f" stroke="#8a5a24" stroke-width="2.5"/>
+  </g>
+</svg>

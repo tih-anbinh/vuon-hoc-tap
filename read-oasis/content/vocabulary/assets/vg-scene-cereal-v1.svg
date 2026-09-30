@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-cereal desc-cereal">
+  <title id="title-cereal">Cereal</title>
+  <desc id="desc-cereal">A white bowl full of round cereal loops in milk with a spoon resting in it.</desc>
+  <defs>
+    <linearGradient id="cereal-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fefce8"/>
+    </linearGradient>
+    <linearGradient id="cereal-bowl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#cereal-bg)"/>
+  <ellipse cx="200" cy="255" rx="140" ry="16" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Bowl body -->
+    <path d="M90 150 A110 60 0 0 0 310 150 Z" fill="url(#cereal-bowl)" stroke="#1e293b" stroke-width="4"/>
+    <!-- Milk surface -->
+    <ellipse cx="200" cy="150" rx="110" ry="30" fill="#f8fafc" stroke="#1e293b" stroke-width="4"/>
+    <!-- Cereal loops -->
+    <g stroke="#c2410c" stroke-width="5" fill="none">
+      <circle cx="155" cy="145" r="11"/>
+      <circle cx="195" cy="152" r="11"/>
+      <circle cx="235" cy="145" r="11"/>
+      <circle cx="175" cy="158" r="9"/>
+      <circle cx="218" cy="158" r="9"/>
+    </g>
+    <g stroke="#eab308" stroke-width="5" fill="none">
+      <circle cx="130" cy="150" r="9"/>
+      <circle cx="260" cy="150" r="9"/>
+      <circle cx="205" cy="140" r="9"/>
+    </g>
+    <!-- Spoon -->
+    <ellipse cx="285" cy="130" rx="22" ry="14" fill="#cbd5e1" stroke="#1e293b" stroke-width="3" transform="rotate(30 285 130)"/>
+    <rect x="295" y="95" width="10" height="45" rx="5" fill="#cbd5e1" stroke="#1e293b" stroke-width="3" transform="rotate(30 300 118)"/>
+  </g>
+</svg>

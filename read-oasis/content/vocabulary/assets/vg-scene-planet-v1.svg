@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-planet desc-planet">
+  <title id="title-planet">Planet</title>
+  <desc id="desc-planet">A big ringed planet like Saturn with swirling bands, surrounded by stars in space.</desc>
+  <defs>
+    <linearGradient id="planet-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#312e81"/>
+    </linearGradient>
+    <radialGradient id="planet-body" cx="38%" cy="35%" r="75%">
+      <stop offset="0%" stop-color="#fcd34d"/>
+      <stop offset="60%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#planet-bg)"/>
+  <!-- Stars -->
+  <g fill="#f8fafc">
+    <circle cx="60" cy="60" r="3"/><circle cx="120" cy="40" r="2"/><circle cx="340" cy="70" r="3"/>
+    <circle cx="360" cy="150" r="2"/><circle cx="50" cy="200" r="2.5"/><circle cx="90" cy="250" r="2"/>
+    <circle cx="320" cy="240" r="2.5"/><circle cx="360" cy="220" r="2"/>
+    <path d="M155 50 l3 7 l7 3 l-7 3 l-3 7 l-3 -7 l-7 -3 l7 -3 Z" fill="#fde047"/>
+    <path d="M300 100 l3 6 l6 3 l-6 3 l-3 6 l-3 -6 l-6 -3 l6 -3 Z" fill="#fde047"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Ring behind -->
+    <ellipse cx="200" cy="155" rx="150" ry="42" fill="none" stroke="#c084fc" stroke-width="12" opacity="0.7" transform="rotate(-18 200 155)"/>
+    <!-- Planet body -->
+    <circle cx="200" cy="150" r="80" fill="url(#planet-body)" stroke="#92400e" stroke-width="4"/>
+    <!-- Bands -->
+    <g stroke="#b45309" stroke-width="6" fill="none" opacity="0.6">
+      <path d="M128 130 Q200 120 272 138"/>
+      <path d="M124 155 Q200 148 276 162"/>
+      <path d="M132 185 Q200 195 268 182"/>
+    </g>
+    <ellipse cx="175" cy="120" rx="16" ry="10" fill="#fcd34d" opacity="0.7"/>
+    <!-- Ring front -->
+    <path d="M60 168 A150 42 -18 0 0 340 142" fill="none" stroke="#a855f7" stroke-width="12" opacity="0.9"/>
+  </g>
+</svg>

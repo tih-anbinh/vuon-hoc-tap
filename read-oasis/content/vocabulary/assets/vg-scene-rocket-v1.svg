@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-rocket desc-rocket">
+  <title id="title-rocket">Rocket</title>
+  <desc id="desc-rocket">A white and red space rocket blasting off with orange flames and stars around it.</desc>
+  <defs>
+    <linearGradient id="rocket-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#312e81"/>
+    </linearGradient>
+    <linearGradient id="rocket-body" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#cbd5e1"/>
+      <stop offset="50%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+    <linearGradient id="rocket-flame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="60%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#rocket-bg)"/>
+  <!-- Stars -->
+  <g fill="#f8fafc">
+    <circle cx="70" cy="70" r="3"/><circle cx="330" cy="90" r="3"/><circle cx="90" cy="180" r="2"/>
+    <circle cx="320" cy="200" r="2.5"/><circle cx="60" cy="130" r="2"/>
+    <path d="M110 110 l3 7 l7 3 l-7 3 l-3 7 l-3 -7 l-7 -3 l7 -3 Z" fill="#fde047"/>
+    <path d="M300 140 l3 6 l6 3 l-6 3 l-3 6 l-3 -6 l-6 -3 l6 -3 Z" fill="#fde047"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Flame -->
+    <path d="M175 235 Q200 300 225 235 Q212 258 200 258 Q188 258 175 235 Z" fill="url(#rocket-flame)"/>
+    <path d="M185 235 Q200 275 215 235 Q207 252 200 252 Q193 252 185 235 Z" fill="#fef9c3"/>
+
+    <!-- Body -->
+    <path d="M200 40 Q235 90 235 180 L235 235 L165 235 L165 180 Q165 90 200 40 Z" fill="url(#rocket-body)" stroke="#475569" stroke-width="4"/>
+    <!-- Nose tip -->
+    <path d="M200 40 Q222 78 228 120 L172 120 Q178 78 200 40 Z" fill="#ef4444" stroke="#991b1b" stroke-width="3"/>
+    <!-- Window -->
+    <circle cx="200" cy="150" r="22" fill="#38bdf8" stroke="#1e293b" stroke-width="4"/>
+    <circle cx="200" cy="150" r="12" fill="#bae6fd"/>
+    <!-- Fins -->
+    <path d="M165 190 L130 245 L165 235 Z" fill="#ef4444" stroke="#991b1b" stroke-width="3.5"/>
+    <path d="M235 190 L270 245 L235 235 Z" fill="#ef4444" stroke="#991b1b" stroke-width="3.5"/>
+    <!-- Booster ring -->
+    <rect x="165" y="220" width="70" height="15" fill="#64748b" stroke="#334155" stroke-width="2.5"/>
+  </g>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-prize desc-prize">
+  <title id="title-prize">Prize</title>
+  <desc id="desc-prize">A shiny golden winner's trophy cup with handles and a star, on a base, with a medal.</desc>
+  <defs>
+    <linearGradient id="prize-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fffbeb"/>
+    </linearGradient>
+    <linearGradient id="prize-gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#prize-bg)"/>
+  <ellipse cx="200" cy="272" rx="120" ry="14" fill="#0f172a" opacity="0.12"/>
+
+  <!-- Sparkles -->
+  <g fill="#fde047">
+    <path d="M110 70 l4 10 l10 4 l-10 4 l-4 10 l-4 -10 l-10 -4 l10 -4 Z"/>
+    <path d="M295 90 l3 8 l8 3 l-8 3 l-3 8 l-3 -8 l-8 -3 l8 -3 Z"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Cup bowl -->
+    <path d="M150 90 L250 90 L242 155 Q200 180 158 155 Z" fill="url(#prize-gold)" stroke="#92400e" stroke-width="4"/>
+    <!-- Handles -->
+    <path d="M150 100 Q118 100 120 130 Q122 150 150 145" fill="none" stroke="#b45309" stroke-width="8"/>
+    <path d="M250 100 Q282 100 280 130 Q278 150 250 145" fill="none" stroke="#b45309" stroke-width="8"/>
+    <!-- Star -->
+    <path d="M200 105 l7 16 l17 2 l-13 12 l4 17 l-15 -9 l-15 9 l4 -17 l-13 -12 l17 -2 Z" fill="#fef9c3" stroke="#b45309" stroke-width="1.5"/>
+    <!-- Stem -->
+    <rect x="192" y="178" width="16" height="26" fill="#ca8a04" stroke="#92400e" stroke-width="3"/>
+    <!-- Base -->
+    <path d="M160 204 L240 204 L250 230 L150 230 Z" fill="#b45309" stroke="#78350f" stroke-width="4"/>
+    <rect x="145" y="230" width="110" height="16" rx="4" fill="#92400e" stroke="#78350f" stroke-width="3"/>
+  </g>
+
+  <!-- Medal -->
+  <g filter="url(#soft-shadow)">
+    <path d="M310 140 L322 190 M340 140 L328 190" stroke="#dc2626" stroke-width="8"/>
+    <circle cx="325" cy="205" r="26" fill="url(#prize-gold)" stroke="#92400e" stroke-width="3.5"/>
+    <path d="M325 190 l4 11 l11 0 l-9 7 l3 11 l-9 -7 l-9 7 l3 -11 l-9 -7 l11 0 Z" fill="#fef9c3"/>
+  </g>
+</svg>

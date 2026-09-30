@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-fire desc-fire">
+  <title id="title-fire">Fire</title>
+  <desc id="desc-fire">A glowing campfire with orange and yellow flames rising above stacked logs.</desc>
+  <defs>
+    <linearGradient id="fire-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <radialGradient id="fire-glow" cx="50%" cy="70%" r="60%">
+      <stop offset="0%" stop-color="#fde047" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#fde047" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fire-flame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="60%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#fire-bg)"/>
+  <ellipse cx="200" cy="170" rx="150" ry="120" fill="url(#fire-glow)"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Outer flame -->
+    <path d="M200 60 C240 120 260 150 250 190 C245 225 220 245 200 245 C180 245 155 225 150 190 C140 150 160 120 200 60 Z" fill="url(#fire-flame)" stroke="#b91c1c" stroke-width="4"/>
+    <!-- Inner flame -->
+    <path d="M200 110 C222 150 230 175 222 200 C218 220 210 232 200 232 C190 232 182 220 178 200 C170 175 178 150 200 110 Z" fill="#fde047"/>
+    <!-- Logs -->
+    <rect x="130" y="235" width="140" height="20" rx="10" fill="#78350f" stroke="#451a03" stroke-width="3" transform="rotate(-8 200 245)"/>
+    <rect x="130" y="245" width="140" height="20" rx="10" fill="#92400e" stroke="#451a03" stroke-width="3" transform="rotate(8 200 255)"/>
+    <ellipse cx="135" cy="248" rx="9" ry="7" fill="#a16207"/>
+    <ellipse cx="268" cy="258" rx="9" ry="7" fill="#a16207"/>
+  </g>
+
+  <!-- Sparks -->
+  <g fill="#fde047">
+    <circle cx="150" cy="80" r="3"/>
+    <circle cx="260" cy="95" r="4"/>
+    <circle cx="180" cy="45" r="2.5"/>
+    <circle cx="230" cy="55" r="3"/>
+  </g>
+</svg>

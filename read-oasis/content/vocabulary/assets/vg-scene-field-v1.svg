@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-field desc-field">
+  <title id="title-field">Field</title>
+  <desc id="desc-field">A wide green farm field with rows of crops, a fence, and hay bales under a blue sky.</desc>
+  <defs>
+    <linearGradient id="field-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#93c5fd"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+    <linearGradient id="field-grass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="160" fill="url(#field-sky)"/>
+  <circle cx="330" cy="55" r="28" fill="#fde047"/>
+  <g fill="#ffffff" opacity="0.9">
+    <ellipse cx="90" cy="50" rx="30" ry="15"/>
+    <ellipse cx="120" cy="50" rx="22" ry="12"/>
+  </g>
+
+  <!-- Field -->
+  <rect x="0" y="150" width="400" height="150" fill="url(#field-grass)"/>
+  <!-- Crop rows (perspective) -->
+  <g stroke="#166534" stroke-width="2.5" opacity="0.7">
+    <path d="M40 300 L170 160"/>
+    <path d="M130 300 L188 160"/>
+    <path d="M220 300 L206 160"/>
+    <path d="M310 300 L224 160"/>
+    <path d="M395 300 L242 160"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Fence -->
+    <rect x="30" y="165" width="6" height="30" fill="#a16207"/>
+    <rect x="80" y="165" width="6" height="30" fill="#a16207"/>
+    <rect x="130" y="165" width="6" height="30" fill="#a16207"/>
+    <rect x="20" y="172" width="126" height="5" fill="#a16207"/>
+    <rect x="20" y="184" width="126" height="5" fill="#a16207"/>
+    <!-- Hay bales -->
+    <ellipse cx="300" cy="220" rx="34" ry="30" fill="#fde047" stroke="#a16207" stroke-width="3.5"/>
+    <ellipse cx="300" cy="220" rx="16" ry="14" fill="none" stroke="#ca8a04" stroke-width="2.5"/>
+    <ellipse cx="345" cy="235" rx="26" ry="24" fill="#facc15" stroke="#a16207" stroke-width="3.5"/>
+  </g>
+</svg>

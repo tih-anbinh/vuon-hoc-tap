@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-present desc-present">
+  <title id="title-present">Present</title>
+  <desc id="desc-present">A wrapped gift present box with shiny paper, a big ribbon, and a bow on top.</desc>
+  <defs>
+    <linearGradient id="present-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fce7f3"/>
+      <stop offset="100%" stop-color="#fdf2f8"/>
+    </linearGradient>
+    <linearGradient id="present-box" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f87171"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <linearGradient id="present-lid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fca5a5"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#present-bg)"/>
+  <ellipse cx="200" cy="262" rx="120" ry="16" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Box body -->
+    <rect x="115" y="130" width="170" height="120" rx="6" fill="url(#present-box)" stroke="#991b1b" stroke-width="4"/>
+    <!-- Lid -->
+    <rect x="105" y="108" width="190" height="34" rx="6" fill="url(#present-lid)" stroke="#991b1b" stroke-width="4"/>
+    <!-- Vertical ribbon -->
+    <rect x="185" y="108" width="30" height="142" fill="#fde047" stroke="#a16207" stroke-width="2.5"/>
+    <!-- Horizontal ribbon on lid -->
+    <rect x="105" y="118" width="190" height="16" fill="#fde047" stroke="#a16207" stroke-width="2"/>
+
+    <!-- Bow -->
+    <path d="M200 105 C165 70 130 92 155 108 C175 118 195 110 200 105 Z" fill="#fbbf24" stroke="#a16207" stroke-width="3"/>
+    <path d="M200 105 C235 70 270 92 245 108 C225 118 205 110 200 105 Z" fill="#fbbf24" stroke="#a16207" stroke-width="3"/>
+    <circle cx="200" cy="105" r="12" fill="#f59e0b" stroke="#a16207" stroke-width="3"/>
+  </g>
+</svg>

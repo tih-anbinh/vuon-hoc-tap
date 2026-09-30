@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-museum desc-museum">
+  <title id="title-museum">Museum</title>
+  <desc id="desc-museum">A grand museum building with tall columns, a triangular roof, and wide front steps.</desc>
+  <defs>
+    <linearGradient id="museum-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#f0f9ff"/>
+    </linearGradient>
+    <linearGradient id="museum-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f5f4"/>
+      <stop offset="100%" stop-color="#e7e5e4"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#museum-bg)"/>
+  <ellipse cx="200" cy="275" rx="180" ry="14" fill="#0f172a" opacity="0.1"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Steps -->
+    <rect x="60" y="245" width="280" height="14" fill="#d6d3d1" stroke="#78716c" stroke-width="2.5"/>
+    <rect x="80" y="232" width="240" height="14" fill="#e7e5e4" stroke="#78716c" stroke-width="2.5"/>
+    <!-- Base -->
+    <rect x="90" y="130" width="220" height="102" fill="url(#museum-wall)" stroke="#a8a29e" stroke-width="3"/>
+    <!-- Columns -->
+    <g fill="#fafaf9" stroke="#a8a29e" stroke-width="3">
+      <rect x="102" y="135" width="24" height="95"/>
+      <rect x="142" y="135" width="24" height="95"/>
+      <rect x="182" y="135" width="24" height="95"/>
+      <rect x="222" y="135" width="24" height="95"/>
+      <rect x="262" y="135" width="24" height="95"/>
+    </g>
+    <!-- Column capitals -->
+    <rect x="90" y="126" width="220" height="12" fill="#e7e5e4" stroke="#a8a29e" stroke-width="2.5"/>
+    <!-- Pediment (triangular roof) -->
+    <path d="M78 128 L200 60 L322 128 Z" fill="#f5f5f4" stroke="#78716c" stroke-width="4"/>
+    <!-- Roof decoration -->
+    <circle cx="200" cy="105" r="12" fill="#fbbf24" stroke="#a16207" stroke-width="2.5"/>
+  </g>
+</svg>

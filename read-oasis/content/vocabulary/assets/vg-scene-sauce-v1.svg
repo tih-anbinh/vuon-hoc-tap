@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-sauce desc-sauce">
+  <title id="title-sauce">Sauce</title>
+  <desc id="desc-sauce">A red squeeze bottle of ketchup sauce pouring a stream onto a plate of fries.</desc>
+  <defs>
+    <linearGradient id="sauce-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fffbeb"/>
+    </linearGradient>
+    <linearGradient id="sauce-bottle" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f87171"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#sauce-bg)"/>
+  <ellipse cx="220" cy="272" rx="130" ry="16" fill="#0f172a" opacity="0.12"/>
+
+  <!-- Squeeze bottle (tilted) -->
+  <g filter="url(#soft-shadow)" transform="rotate(-35 130 130)">
+    <rect x="95" y="70" width="70" height="130" rx="20" fill="url(#sauce-bottle)" stroke="#991b1b" stroke-width="4"/>
+    <!-- Cap/nozzle -->
+    <path d="M118 70 L142 70 L138 45 L122 45 Z" fill="#7f1d1d" stroke="#450a0a" stroke-width="3"/>
+    <rect x="124" y="35" width="12" height="14" rx="3" fill="#450a0a"/>
+    <!-- Label -->
+    <rect x="102" y="110" width="56" height="50" rx="6" fill="#f8fafc" stroke="#991b1b" stroke-width="2.5"/>
+    <ellipse cx="130" cy="135" rx="18" ry="12" fill="#dc2626"/>
+  </g>
+
+  <!-- Sauce stream -->
+  <path d="M155 105 Q185 150 210 200" fill="none" stroke="#dc2626" stroke-width="9" stroke-linecap="round"/>
+
+  <!-- Plate with fries -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="235" cy="240" rx="95" ry="30" fill="#f8fafc" stroke="#cbd5e1" stroke-width="3.5"/>
+    <ellipse cx="235" cy="238" rx="65" ry="18" fill="#fef9c3"/>
+    <!-- Fries -->
+    <g fill="#fbbf24" stroke="#b45309" stroke-width="2">
+      <rect x="200" y="205" width="10" height="40" rx="3" transform="rotate(-15 205 225)"/>
+      <rect x="220" y="200" width="10" height="45" rx="3" transform="rotate(5 225 222)"/>
+      <rect x="242" y="205" width="10" height="42" rx="3" transform="rotate(20 247 226)"/>
+      <rect x="215" y="215" width="10" height="38" rx="3" transform="rotate(-8 220 234)"/>
+    </g>
+    <!-- Ketchup pool -->
+    <ellipse cx="212" cy="225" rx="16" ry="8" fill="#dc2626" opacity="0.9"/>
+  </g>
+</svg>

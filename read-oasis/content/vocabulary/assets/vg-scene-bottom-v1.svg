@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-bottom desc-bottom">
+  <title id="title-bottom">Bottom</title>
+  <desc id="desc-bottom">A stack of three boxes with a big red arrow pointing down to the box at the bottom.</desc>
+  <defs>
+    <linearGradient id="bottom-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#bottom-bg)"/>
+  <ellipse cx="200" cy="268" rx="130" ry="16" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Top box -->
+    <rect x="150" y="70" width="100" height="60" rx="6" fill="#fde68a" stroke="#1e293b" stroke-width="3.5"/>
+    <!-- Middle box -->
+    <rect x="150" y="135" width="100" height="60" rx="6" fill="#93c5fd" stroke="#1e293b" stroke-width="3.5"/>
+    <!-- Bottom box (highlighted) -->
+    <rect x="150" y="200" width="100" height="60" rx="6" fill="#fca5a5" stroke="#dc2626" stroke-width="5"/>
+    <line x1="200" y1="200" x2="200" y2="260" stroke="#b91c1c" stroke-width="1.5" stroke-dasharray="4 3"/>
+  </g>
+
+  <!-- Down arrow pointing to bottom -->
+  <g filter="url(#soft-shadow)">
+    <line x1="310" y1="130" x2="310" y2="215" stroke="#ef4444" stroke-width="10" stroke-linecap="round"/>
+    <path d="M290 205 L310 240 L330 205 Z" fill="#ef4444" stroke="#b91c1c" stroke-width="2"/>
+  </g>
+</svg>

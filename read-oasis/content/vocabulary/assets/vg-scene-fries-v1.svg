@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-fries desc-fries">
+  <title id="title-fries">Fries</title>
+  <desc id="desc-fries">A red carton of golden French fries poking out over the top of the box.</desc>
+  <defs>
+    <linearGradient id="fries-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fefce8"/>
+    </linearGradient>
+    <linearGradient id="fries-carton" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <linearGradient id="fries-fry" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#eab308"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#fries-bg)"/>
+  <ellipse cx="200" cy="262" rx="110" ry="16" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Fries poking up -->
+    <g fill="url(#fries-fry)" stroke="#a16207" stroke-width="2.5">
+      <rect x="150" y="70" width="16" height="110" rx="4"/>
+      <rect x="172" y="55" width="16" height="125" rx="4"/>
+      <rect x="194" y="62" width="16" height="118" rx="4"/>
+      <rect x="216" y="52" width="16" height="128" rx="4"/>
+      <rect x="238" y="72" width="16" height="108" rx="4" transform="rotate(6 246 126)"/>
+      <rect x="132" y="85" width="16" height="95" rx="4" transform="rotate(-6 140 132)"/>
+    </g>
+    <!-- Carton -->
+    <path d="M130 150 L270 150 L255 260 L145 260 Z" fill="url(#fries-carton)" stroke="#7f1d1d" stroke-width="4"/>
+    <!-- Carton top flap -->
+    <path d="M130 150 L270 150 L262 170 L138 170 Z" fill="#dc2626" stroke="#7f1d1d" stroke-width="3"/>
+    <!-- White stripes -->
+    <rect x="165" y="180" width="12" height="70" fill="#f8fafc" opacity="0.85"/>
+    <rect x="195" y="180" width="12" height="70" fill="#f8fafc" opacity="0.85"/>
+    <rect x="225" y="180" width="12" height="70" fill="#f8fafc" opacity="0.85"/>
+  </g>
+</svg>

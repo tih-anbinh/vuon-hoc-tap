@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-movie desc-movie">
+  <title id="title-movie">Movie</title>
+  <desc id="desc-movie">A big cinema screen showing a bright picture, with a film clapperboard in front.</desc>
+  <defs>
+    <linearGradient id="movie-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#312e81"/>
+    </linearGradient>
+    <linearGradient id="movie-screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#movie-bg)"/>
+  <ellipse cx="200" cy="272" rx="150" ry="14" fill="#000000" opacity="0.3"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Screen frame -->
+    <rect x="60" y="45" width="280" height="150" rx="6" fill="#0f172a" stroke="#475569" stroke-width="6"/>
+    <!-- Screen picture -->
+    <rect x="72" y="57" width="256" height="126" rx="3" fill="url(#movie-screen)"/>
+    <!-- Simple scene on screen -->
+    <circle cx="120" cy="90" r="18" fill="#f97316"/>
+    <path d="M72 160 L150 110 L210 145 L280 95 L328 130 L328 183 L72 183 Z" fill="#65a30d"/>
+    <path d="M240 183 L240 130 L260 130 L260 183 Z" fill="#78350f"/>
+  </g>
+
+  <!-- Clapperboard -->
+  <g filter="url(#soft-shadow)" transform="rotate(-8 200 240)">
+    <rect x="130" y="210" width="140" height="70" rx="6" fill="#1e293b" stroke="#000000" stroke-width="3"/>
+    <!-- Clapper top -->
+    <rect x="130" y="196" width="140" height="20" rx="3" fill="#1e293b" stroke="#000000" stroke-width="3"/>
+    <g fill="#f8fafc">
+      <path d="M134 196 L150 216 L164 196 L148 196 Z"/>
+      <path d="M168 196 L184 216 L198 196 L182 196 Z"/>
+      <path d="M202 196 L218 216 L232 196 L216 196 Z"/>
+      <path d="M236 196 L252 216 L266 196 L250 196 Z"/>
+    </g>
+    <!-- lines on board -->
+    <g stroke="#64748b" stroke-width="4" stroke-linecap="round">
+      <line x1="145" y1="235" x2="255" y2="235"/>
+      <line x1="145" y1="255" x2="230" y2="255"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-engine desc-engine">
+  <title id="title-engine">Engine</title>
+  <desc id="desc-engine">A red steam train engine with a chimney puffing smoke, big wheels, and a headlamp.</desc>
+  <defs>
+    <linearGradient id="engine-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#eff6ff"/>
+    </linearGradient>
+    <linearGradient id="engine-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#engine-bg)"/>
+  <!-- Smoke -->
+  <g fill="#cbd5e1" opacity="0.85">
+    <circle cx="130" cy="70" r="16"/>
+    <circle cx="110" cy="55" r="12"/>
+    <circle cx="150" cy="50" r="14"/>
+    <circle cx="95" cy="42" r="9"/>
+  </g>
+
+  <rect x="0" y="240" width="400" height="12" fill="#78350f"/>
+  <ellipse cx="200" cy="255" rx="150" ry="12" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Main boiler -->
+    <rect x="80" y="150" width="180" height="70" rx="30" fill="url(#engine-body)" stroke="#7f1d1d" stroke-width="4"/>
+    <!-- Cab -->
+    <rect x="250" y="115" width="80" height="105" rx="8" fill="url(#engine-body)" stroke="#7f1d1d" stroke-width="4"/>
+    <rect x="265" y="130" width="50" height="40" rx="5" fill="#bae6fd" stroke="#1e293b" stroke-width="3"/>
+    <!-- Roof -->
+    <rect x="242" y="100" width="96" height="18" rx="6" fill="#334155" stroke="#1e293b" stroke-width="3"/>
+    <!-- Chimney -->
+    <rect x="110" y="105" width="30" height="48" rx="4" fill="#334155" stroke="#1e293b" stroke-width="3.5"/>
+    <ellipse cx="125" cy="105" rx="20" ry="7" fill="#1e293b"/>
+    <!-- Dome -->
+    <path d="M175 150 q20 -30 40 0 Z" fill="#facc15" stroke="#a16207" stroke-width="3"/>
+    <!-- Headlamp -->
+    <circle cx="90" cy="185" r="14" fill="#fde047" stroke="#a16207" stroke-width="3"/>
+    <!-- Wheels -->
+    <circle cx="120" cy="225" r="28" fill="#334155" stroke="#1e293b" stroke-width="4"/>
+    <circle cx="120" cy="225" r="10" fill="#94a3b8"/>
+    <circle cx="200" cy="225" r="28" fill="#334155" stroke="#1e293b" stroke-width="4"/>
+    <circle cx="200" cy="225" r="10" fill="#94a3b8"/>
+    <circle cx="290" cy="225" r="28" fill="#334155" stroke="#1e293b" stroke-width="4"/>
+    <circle cx="290" cy="225" r="10" fill="#94a3b8"/>
+  </g>
+</svg>

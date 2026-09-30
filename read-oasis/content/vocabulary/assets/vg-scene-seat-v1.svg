@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-seat desc-seat">
+  <title id="title-seat">Seat</title>
+  <desc id="desc-seat">A padded cushioned chair seat with a backrest, shown as a place to sit down.</desc>
+  <defs>
+    <linearGradient id="seat-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fffbeb"/>
+    </linearGradient>
+    <linearGradient id="seat-cushion" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#seat-bg)"/>
+  <ellipse cx="200" cy="272" rx="120" ry="16" fill="#0f172a" opacity="0.14"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Backrest -->
+    <rect x="120" y="70" width="160" height="90" rx="18" fill="url(#seat-cushion)" stroke="#1e40af" stroke-width="4"/>
+    <!-- Tufting lines -->
+    <g stroke="#1e40af" stroke-width="2" opacity="0.5">
+      <line x1="160" y1="80" x2="160" y2="150"/>
+      <line x1="200" y1="80" x2="200" y2="150"/>
+      <line x1="240" y1="80" x2="240" y2="150"/>
+    </g>
+    <!-- Seat cushion -->
+    <path d="M105 160 Q200 148 295 160 L285 205 Q200 218 115 205 Z" fill="url(#seat-cushion)" stroke="#1e40af" stroke-width="4"/>
+    <ellipse cx="200" cy="162" rx="95" ry="14" fill="#3b82f6"/>
+
+    <!-- Legs -->
+    <rect x="128" y="205" width="16" height="55" rx="4" fill="#78350f" stroke="#451a03" stroke-width="3"/>
+    <rect x="256" y="205" width="16" height="55" rx="4" fill="#78350f" stroke="#451a03" stroke-width="3"/>
+  </g>
+</svg>

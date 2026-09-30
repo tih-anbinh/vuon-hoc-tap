@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-pasta desc-pasta">
+  <title id="title-pasta">Pasta</title>
+  <desc id="desc-pasta">A big bowl of spaghetti pasta with red tomato sauce and a fork twirling noodles.</desc>
+  <defs>
+    <linearGradient id="pasta-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fffbeb"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#pasta-bg)"/>
+  <ellipse cx="200" cy="252" rx="150" ry="18" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Bowl -->
+    <path d="M75 165 Q200 155 325 165 Q315 240 200 248 Q85 240 75 165 Z" fill="#f8fafc" stroke="#94a3b8" stroke-width="4"/>
+    <ellipse cx="200" cy="165" rx="125" ry="30" fill="#fef9c3" stroke="#94a3b8" stroke-width="3"/>
+
+    <!-- Spaghetti strands -->
+    <g fill="none" stroke="#fbbf24" stroke-width="7" stroke-linecap="round">
+      <path d="M110 168 Q140 145 180 165 Q220 185 260 160"/>
+      <path d="M120 178 Q160 158 200 178 Q240 195 285 172"/>
+      <path d="M110 158 Q150 175 195 155 Q240 138 280 160"/>
+      <path d="M130 190 Q175 170 215 190 Q255 208 290 185"/>
+    </g>
+    <g fill="none" stroke="#fde68a" stroke-width="3" stroke-linecap="round">
+      <path d="M115 165 Q155 143 195 163"/>
+      <path d="M140 185 Q185 165 225 185"/>
+    </g>
+
+    <!-- Tomato sauce blobs -->
+    <ellipse cx="175" cy="172" rx="20" ry="14" fill="#dc2626" opacity="0.9"/>
+    <ellipse cx="235" cy="180" rx="18" ry="12" fill="#dc2626" opacity="0.9"/>
+    <ellipse cx="200" cy="195" rx="16" ry="10" fill="#b91c1c" opacity="0.85"/>
+    <!-- Herbs -->
+    <circle cx="180" cy="160" r="3" fill="#16a34a"/>
+    <circle cx="230" cy="172" r="3" fill="#16a34a"/>
+  </g>
+
+  <!-- Fork with twirl -->
+  <g filter="url(#soft-shadow)">
+    <rect x="300" y="80" width="10" height="120" rx="4" fill="#cbd5e1" stroke="#64748b" stroke-width="2.5" transform="rotate(20 305 140)"/>
+    <g stroke="#64748b" stroke-width="3" stroke-linecap="round">
+      <line x1="285" y1="78" x2="290" y2="98" transform="rotate(20 305 140)"/>
+      <line x1="295" y1="76" x2="298" y2="98" transform="rotate(20 305 140)"/>
+      <line x1="305" y1="76" x2="306" y2="98" transform="rotate(20 305 140)"/>
+      <line x1="315" y1="78" x2="314" y2="98" transform="rotate(20 305 140)"/>
+    </g>
+    <path d="M270 130 Q250 120 262 138 Q275 150 268 132" fill="none" stroke="#fbbf24" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>

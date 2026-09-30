@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-football desc-football">
+  <title id="title-football">Football</title>
+  <desc id="desc-football">A classic black and white football (soccer ball) resting on green grass.</desc>
+  <defs>
+    <linearGradient id="football-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bbf7d0"/>
+      <stop offset="100%" stop-color="#86efac"/>
+    </linearGradient>
+    <radialGradient id="football-fill" cx="40%" cy="35%" r="75%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#football-bg)"/>
+  <ellipse cx="200" cy="248" rx="105" ry="20" fill="#0f172a" opacity="0.18"/>
+
+  <g filter="url(#soft-shadow)">
+    <circle cx="200" cy="150" r="95" fill="url(#football-fill)" stroke="#1e293b" stroke-width="4.5"/>
+    <!-- Central black pentagon -->
+    <path d="M200 110 l38 28 l-15 45 l-46 0 l-15 -45 Z" fill="#1e293b"/>
+    <!-- Surrounding black pentagons (partial) -->
+    <path d="M200 60 l20 15 l-8 24 l-24 0 l-8 -24 Z" fill="#1e293b"/>
+    <path d="M118 145 l22 -8 l14 20 l-14 20 l-22 -8 Z" fill="#1e293b"/>
+    <path d="M282 145 l-22 -8 l-14 20 l14 20 l22 -8 Z" fill="#1e293b"/>
+    <path d="M155 225 l18 -18 l24 8 l0 22 l-30 6 Z" fill="#1e293b"/>
+    <path d="M245 225 l-18 -18 l-24 8 l0 22 l30 6 Z" fill="#1e293b"/>
+    <!-- Seam lines -->
+    <g stroke="#1e293b" stroke-width="2.5" fill="none">
+      <path d="M200 110 L200 90"/>
+      <path d="M238 138 L258 130"/>
+      <path d="M223 183 L235 200"/>
+      <path d="M177 183 L165 200"/>
+      <path d="M162 138 L142 130"/>
+    </g>
+    <ellipse cx="170" cy="118" rx="16" ry="10" fill="#ffffff" opacity="0.5"/>
+  </g>
+</svg>

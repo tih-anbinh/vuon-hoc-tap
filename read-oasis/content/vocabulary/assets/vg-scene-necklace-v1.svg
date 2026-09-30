@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-necklace desc-necklace">
+  <title id="title-necklace">Necklace</title>
+  <desc id="desc-necklace">A gold chain necklace with round beads and a red heart pendant hanging in the middle.</desc>
+  <defs>
+    <linearGradient id="necklace-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fce7f3"/>
+      <stop offset="100%" stop-color="#fdf2f8"/>
+    </linearGradient>
+    <radialGradient id="necklace-bead" cx="35%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#necklace-bg)"/>
+  <ellipse cx="200" cy="270" rx="130" ry="14" fill="#0f172a" opacity="0.1"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Chain arc -->
+    <path d="M110 70 Q200 250 290 70" fill="none" stroke="#f59e0b" stroke-width="6"/>
+    <!-- Beads along chain -->
+    <circle cx="118" cy="88" r="9" fill="url(#necklace-bead)" stroke="#92400e" stroke-width="2"/>
+    <circle cx="132" cy="128" r="9" fill="url(#necklace-bead)" stroke="#92400e" stroke-width="2"/>
+    <circle cx="152" cy="165" r="9" fill="url(#necklace-bead)" stroke="#92400e" stroke-width="2"/>
+    <circle cx="178" cy="196" r="9" fill="url(#necklace-bead)" stroke="#92400e" stroke-width="2"/>
+    <circle cx="222" cy="196" r="9" fill="url(#necklace-bead)" stroke="#92400e" stroke-width="2"/>
+    <circle cx="248" cy="165" r="9" fill="url(#necklace-bead)" stroke="#92400e" stroke-width="2"/>
+    <circle cx="268" cy="128" r="9" fill="url(#necklace-bead)" stroke="#92400e" stroke-width="2"/>
+    <circle cx="282" cy="88" r="9" fill="url(#necklace-bead)" stroke="#92400e" stroke-width="2"/>
+
+    <!-- Heart pendant -->
+    <path d="M200 210 c-14 -18 -40 -6 -40 14 c0 20 26 32 40 46 c14 -14 40 -26 40 -46 c0 -20 -26 -32 -40 -14 Z" fill="#ef4444" stroke="#991b1b" stroke-width="4"/>
+    <circle cx="184" cy="228" r="6" fill="#fecaca" opacity="0.8"/>
+  </g>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-cookie desc-cookie">
+  <title id="title-cookie">Cookie</title>
+  <desc id="desc-cookie">A round golden-brown chocolate chip cookie with a bite taken out of it.</desc>
+  <defs>
+    <linearGradient id="cookie-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fefce8"/>
+    </linearGradient>
+    <radialGradient id="cookie-fill" cx="40%" cy="35%" r="75%">
+      <stop offset="0%" stop-color="#e0a458"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </radialGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#cookie-bg)"/>
+  <ellipse cx="200" cy="250" rx="105" ry="16" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <path d="M295 150 A95 95 0 1 1 258 92 A22 22 0 0 0 288 118 A22 22 0 0 0 295 150 Z" fill="url(#cookie-fill)" stroke="#7c3a06" stroke-width="4"/>
+    <!-- Chocolate chips -->
+    <g fill="#3d2109">
+      <circle cx="165" cy="115" r="11"/>
+      <circle cx="220" cy="140" r="10"/>
+      <circle cx="150" cy="175" r="9"/>
+      <circle cx="200" cy="195" r="11"/>
+      <circle cx="245" cy="185" r="9"/>
+      <circle cx="130" cy="140" r="8"/>
+      <circle cx="185" cy="155" r="7"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-gate desc-gate">
+  <title id="title-gate">Gate</title>
+  <desc id="desc-gate">A wooden garden gate set in a fence, standing open on green grass.</desc>
+  <defs>
+    <linearGradient id="gate-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="gate-wood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d6a860"/>
+      <stop offset="100%" stop-color="#a16207"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="220" fill="url(#gate-bg)"/>
+  <rect x="0" y="220" width="400" height="80" fill="#86efac"/>
+  <ellipse cx="200" cy="245" rx="150" ry="12" fill="#0f172a" opacity="0.1"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Fence posts -->
+    <rect x="50" y="110" width="16" height="120" rx="4" fill="url(#gate-wood)" stroke="#78350f" stroke-width="3"/>
+    <rect x="334" y="110" width="16" height="120" rx="4" fill="url(#gate-wood)" stroke="#78350f" stroke-width="3"/>
+    <!-- Fence rails on sides -->
+    <rect x="50" y="140" width="60" height="8" fill="#c68a3e"/>
+    <rect x="50" y="170" width="60" height="8" fill="#c68a3e"/>
+    <rect x="290" y="140" width="60" height="8" fill="#c68a3e"/>
+    <rect x="290" y="170" width="60" height="8" fill="#c68a3e"/>
+    <g fill="#c68a3e" stroke="#78350f" stroke-width="1.5">
+      <rect x="72" y="120" width="10" height="110"/>
+      <rect x="92" y="120" width="10" height="110"/>
+      <rect x="298" y="120" width="10" height="110"/>
+      <rect x="318" y="120" width="10" height="110"/>
+    </g>
+    <!-- The gate (slightly open, angled) -->
+    <g transform="rotate(-14 130 230)">
+      <rect x="120" y="120" width="90" height="110" rx="4" fill="url(#gate-wood)" stroke="#78350f" stroke-width="4"/>
+      <g fill="#c68a3e" stroke="#78350f" stroke-width="2">
+        <rect x="128" y="128" width="12" height="94"/>
+        <rect x="148" y="128" width="12" height="94"/>
+        <rect x="168" y="128" width="12" height="94"/>
+        <rect x="188" y="128" width="12" height="94"/>
+      </g>
+      <!-- Diagonal brace -->
+      <path d="M124 220 L206 128" stroke="#78350f" stroke-width="6" stroke-linecap="round"/>
+      <!-- Latch -->
+      <circle cx="203" cy="175" r="5" fill="#334155"/>
+    </g>
+  </g>
+</svg>

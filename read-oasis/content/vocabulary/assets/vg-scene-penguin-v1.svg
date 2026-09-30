@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-penguin desc-penguin">
+  <title id="title-penguin">Penguin</title>
+  <desc id="desc-penguin">A cute black and white penguin with an orange beak and feet standing on ice.</desc>
+  <defs>
+    <linearGradient id="penguin-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#f0f9ff"/>
+    </linearGradient>
+    <linearGradient id="penguin-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#penguin-bg)"/>
+  <!-- Ice -->
+  <ellipse cx="200" cy="270" rx="150" ry="26" fill="#bae6fd" stroke="#7dd3fc" stroke-width="3"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Feet -->
+    <ellipse cx="175" cy="262" rx="20" ry="10" fill="#f97316" stroke="#c2410c" stroke-width="3"/>
+    <ellipse cx="225" cy="262" rx="20" ry="10" fill="#f97316" stroke="#c2410c" stroke-width="3"/>
+    <!-- Body -->
+    <ellipse cx="200" cy="165" rx="72" ry="95" fill="url(#penguin-body)" stroke="#0f172a" stroke-width="4"/>
+    <!-- White belly -->
+    <ellipse cx="200" cy="180" rx="48" ry="78" fill="#f8fafc"/>
+    <!-- Wings -->
+    <path d="M130 130 Q108 190 132 240 Q140 200 145 160 Z" fill="#1e293b" stroke="#0f172a" stroke-width="3"/>
+    <path d="M270 130 Q292 190 268 240 Q260 200 255 160 Z" fill="#1e293b" stroke="#0f172a" stroke-width="3"/>
+    <!-- Eyes -->
+    <circle cx="182" cy="120" r="12" fill="#f8fafc" stroke="#1e293b" stroke-width="2"/>
+    <circle cx="218" cy="120" r="12" fill="#f8fafc" stroke="#1e293b" stroke-width="2"/>
+    <circle cx="184" cy="123" r="6" fill="#1e293b"/>
+    <circle cx="216" cy="123" r="6" fill="#1e293b"/>
+    <!-- Beak -->
+    <path d="M188 138 L212 138 L200 158 Z" fill="#f97316" stroke="#c2410c" stroke-width="3"/>
+    <!-- Cheeks -->
+    <circle cx="168" cy="140" r="8" fill="#fca5a5" opacity="0.6"/>
+    <circle cx="232" cy="140" r="8" fill="#fca5a5" opacity="0.6"/>
+  </g>
+
+  <!-- Snowflakes -->
+  <g fill="#7dd3fc" opacity="0.7">
+    <circle cx="70" cy="80" r="5"/><circle cx="330" cy="100" r="5"/><circle cx="90" cy="150" r="4"/>
+  </g>
+</svg>

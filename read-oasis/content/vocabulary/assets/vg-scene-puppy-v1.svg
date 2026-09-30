@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-puppy desc-puppy">
+  <title id="title-puppy">Puppy</title>
+  <desc id="desc-puppy">A cute little brown puppy with floppy ears, a wagging tail, and a big happy smile.</desc>
+  <defs>
+    <linearGradient id="puppy-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fffbeb"/>
+    </linearGradient>
+    <linearGradient id="puppy-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d6a860"/>
+      <stop offset="100%" stop-color="#a16207"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#puppy-bg)"/>
+  <ellipse cx="200" cy="268" rx="130" ry="16" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Tail -->
+    <path d="M280 210 Q325 185 320 155" fill="none" stroke="#a16207" stroke-width="14" stroke-linecap="round"/>
+    <!-- Body -->
+    <ellipse cx="220" cy="215" rx="75" ry="52" fill="url(#puppy-body)" stroke="#78350f" stroke-width="4"/>
+    <!-- Front legs -->
+    <rect x="175" y="230" width="20" height="40" rx="8" fill="#d6a860" stroke="#78350f" stroke-width="3"/>
+    <rect x="235" y="230" width="20" height="40" rx="8" fill="#d6a860" stroke="#78350f" stroke-width="3"/>
+    <!-- Head -->
+    <circle cx="130" cy="150" r="60" fill="url(#puppy-body)" stroke="#78350f" stroke-width="4"/>
+    <!-- Ears -->
+    <path d="M85 110 Q60 130 75 185 Q95 160 105 130 Z" fill="#92400e" stroke="#78350f" stroke-width="3"/>
+    <path d="M175 110 Q200 130 185 185 Q165 160 155 130 Z" fill="#92400e" stroke="#78350f" stroke-width="3"/>
+    <!-- Muzzle -->
+    <ellipse cx="130" cy="170" rx="32" ry="24" fill="#fde68a"/>
+    <!-- Eyes -->
+    <circle cx="110" cy="140" r="9" fill="#1e293b"/>
+    <circle cx="150" cy="140" r="9" fill="#1e293b"/>
+    <circle cx="107" cy="137" r="3" fill="#f8fafc"/>
+    <circle cx="147" cy="137" r="3" fill="#f8fafc"/>
+    <!-- Nose -->
+    <ellipse cx="130" cy="160" rx="11" ry="8" fill="#1e293b"/>
+    <!-- Tongue smile -->
+    <path d="M118 172 Q130 188 142 172" fill="none" stroke="#1e293b" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M126 180 Q130 195 134 180 Z" fill="#fb7185"/>
+    <!-- Cheeks -->
+    <circle cx="95" cy="162" r="8" fill="#fca5a5" opacity="0.5"/>
+    <circle cx="165" cy="162" r="8" fill="#fca5a5" opacity="0.5"/>
+  </g>
+</svg>

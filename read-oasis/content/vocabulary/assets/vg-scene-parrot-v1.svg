@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-parrot desc-parrot">
+  <title id="title-parrot">Parrot</title>
+  <desc id="desc-parrot">A colorful red, blue and yellow parrot with a curved beak perched on a branch.</desc>
+  <defs>
+    <linearGradient id="parrot-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dcfce7"/>
+      <stop offset="100%" stop-color="#f0fdf4"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#parrot-bg)"/>
+
+  <!-- Branch -->
+  <path d="M60 250 Q200 240 360 255" fill="none" stroke="#78350f" stroke-width="14" stroke-linecap="round"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Tail -->
+    <path d="M180 220 Q140 270 110 290 L145 265 Q160 245 185 235 Z" fill="#3b82f6" stroke="#1d4ed8" stroke-width="3"/>
+    <path d="M195 225 Q170 280 155 295 L180 265 Q195 245 210 235 Z" fill="#fde047" stroke="#a16207" stroke-width="3"/>
+    <!-- Body -->
+    <ellipse cx="220" cy="175" rx="55" ry="72" fill="#ef4444" stroke="#991b1b" stroke-width="4"/>
+    <!-- Wing -->
+    <path d="M235 130 Q290 150 275 220 Q250 200 235 175 Z" fill="#22c55e" stroke="#166534" stroke-width="3.5"/>
+    <path d="M245 150 Q275 165 268 205" fill="none" stroke="#fde047" stroke-width="5"/>
+    <!-- Head -->
+    <circle cx="200" cy="105" r="42" fill="#ef4444" stroke="#991b1b" stroke-width="4"/>
+    <!-- Face patch -->
+    <circle cx="185" cy="108" r="20" fill="#fef3c7" stroke="#d4a574" stroke-width="2"/>
+    <circle cx="182" cy="105" r="7" fill="#1e293b"/>
+    <circle cx="180" cy="103" r="2.5" fill="#f8fafc"/>
+    <!-- Curved beak -->
+    <path d="M158 105 Q135 100 138 120 Q150 128 162 120 Z" fill="#334155" stroke="#1e293b" stroke-width="3"/>
+    <path d="M158 116 Q148 122 155 128" fill="none" stroke="#1e293b" stroke-width="2.5"/>
+    <!-- Feet -->
+    <path d="M210 245 l0 14 M225 245 l0 14" stroke="#334155" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>

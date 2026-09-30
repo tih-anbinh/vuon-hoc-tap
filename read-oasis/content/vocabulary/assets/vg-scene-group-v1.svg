@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-group desc-group">
+  <title id="title-group">Group</title>
+  <desc id="desc-group">A group of four smiling children of different colours standing close together.</desc>
+  <defs>
+    <linearGradient id="group-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fefce8"/>
+    </linearGradient>
+    <linearGradient id="group-skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5d0a9"/>
+    </linearGradient>
+    <linearGradient id="group-skin2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d9a066"/>
+      <stop offset="100%" stop-color="#a16207"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#group-bg)"/>
+  <ellipse cx="200" cy="272" rx="170" ry="16" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Person 1 (back left) -->
+    <path d="M55 190 Q90 178 125 190 L120 270 L60 270 Z" fill="#ef4444" stroke="#991b1b" stroke-width="3"/>
+    <circle cx="90" cy="150" r="32" fill="url(#group-skin)" stroke="#d4a574" stroke-width="3"/>
+    <path d="M60 142 Q62 116 90 116 Q118 116 120 142 Q104 126 90 126 Q76 126 60 142 Z" fill="#5b3a1a"/>
+    <circle cx="82" cy="150" r="3.5" fill="#1e293b"/><circle cx="98" cy="150" r="3.5" fill="#1e293b"/>
+    <path d="M82 160 Q90 167 98 160" fill="none" stroke="#7f1d1d" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Person 2 -->
+    <path d="M130 200 Q165 188 200 200 L195 270 L135 270 Z" fill="#3b82f6" stroke="#1e3a8a" stroke-width="3"/>
+    <circle cx="165" cy="160" r="32" fill="url(#group-skin2)" stroke="#7c4a12" stroke-width="3"/>
+    <path d="M135 152 Q137 126 165 126 Q193 126 195 152 Q179 136 165 136 Q151 136 135 152 Z" fill="#1e293b"/>
+    <circle cx="157" cy="160" r="3.5" fill="#1e293b"/><circle cx="173" cy="160" r="3.5" fill="#1e293b"/>
+    <path d="M157 170 Q165 177 173 170" fill="none" stroke="#5b2c0a" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Person 3 -->
+    <path d="M200 200 Q235 188 270 200 L265 270 L205 270 Z" fill="#22c55e" stroke="#166534" stroke-width="3"/>
+    <circle cx="235" cy="160" r="32" fill="url(#group-skin)" stroke="#d4a574" stroke-width="3"/>
+    <path d="M205 152 Q207 122 235 122 Q263 122 265 152 Q249 132 235 132 Q221 132 205 152 Z" fill="#a16207"/>
+    <circle cx="227" cy="160" r="3.5" fill="#1e293b"/><circle cx="243" cy="160" r="3.5" fill="#1e293b"/>
+    <path d="M227 170 Q235 177 243 170" fill="none" stroke="#7f1d1d" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Person 4 (back right) -->
+    <path d="M275 190 Q310 178 345 190 L340 270 L280 270 Z" fill="#a855f7" stroke="#6b21a8" stroke-width="3"/>
+    <circle cx="310" cy="150" r="32" fill="url(#group-skin2)" stroke="#7c4a12" stroke-width="3"/>
+    <path d="M280 142 Q282 116 310 116 Q338 116 340 142 Q324 126 310 126 Q296 126 280 142 Z" fill="#3d2109"/>
+    <circle cx="302" cy="150" r="3.5" fill="#1e293b"/><circle cx="318" cy="150" r="3.5" fill="#1e293b"/>
+    <path d="M302 160 Q310 167 318 160" fill="none" stroke="#5b2c0a" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+</svg>

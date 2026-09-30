@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-stadium desc-stadium">
+  <title id="title-stadium">Stadium</title>
+  <desc id="desc-stadium">A large sports stadium with curved tiers of seats around a green field under bright floodlights.</desc>
+  <defs>
+    <linearGradient id="stadium-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="stadium-stand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#stadium-bg)"/>
+
+  <!-- Floodlights -->
+  <g filter="url(#soft-shadow)">
+    <line x1="70" y1="90" x2="70" y2="150" stroke="#475569" stroke-width="6"/>
+    <rect x="48" y="60" width="44" height="26" rx="4" fill="#334155"/>
+    <g fill="#fde047"><circle cx="58" cy="68" r="3"/><circle cx="70" cy="68" r="3"/><circle cx="82" cy="68" r="3"/><circle cx="58" cy="78" r="3"/><circle cx="70" cy="78" r="3"/><circle cx="82" cy="78" r="3"/></g>
+    <path d="M48 62 L20 40 M92 62 L120 40" stroke="#fde047" stroke-width="4" opacity="0.4"/>
+
+    <line x1="330" y1="90" x2="330" y2="150" stroke="#475569" stroke-width="6"/>
+    <rect x="308" y="60" width="44" height="26" rx="4" fill="#334155"/>
+    <g fill="#fde047"><circle cx="318" cy="68" r="3"/><circle cx="330" cy="68" r="3"/><circle cx="342" cy="68" r="3"/><circle cx="318" cy="78" r="3"/><circle cx="330" cy="78" r="3"/><circle cx="342" cy="78" r="3"/></g>
+    <path d="M352 62 L380 40 M308 62 L280 40" stroke="#fde047" stroke-width="4" opacity="0.4"/>
+  </g>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Outer bowl stands -->
+    <ellipse cx="200" cy="205" rx="170" ry="80" fill="url(#stadium-stand)" stroke="#64748b" stroke-width="4"/>
+    <!-- Seat tiers -->
+    <ellipse cx="200" cy="205" rx="140" ry="64" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2.5"/>
+    <ellipse cx="200" cy="205" rx="110" ry="50" fill="#cbd5e1" stroke="#94a3b8" stroke-width="2.5"/>
+    <!-- crowd dots -->
+    <g fill="#f87171"><circle cx="90" cy="175" r="4"/><circle cx="310" cy="175" r="4"/><circle cx="130" cy="150" r="4"/><circle cx="270" cy="150" r="4"/></g>
+    <g fill="#60a5fa"><circle cx="110" cy="170" r="4"/><circle cx="290" cy="168" r="4"/><circle cx="200" cy="145" r="4"/></g>
+
+    <!-- Green field -->
+    <ellipse cx="200" cy="210" rx="86" ry="40" fill="#4ade80" stroke="#15803d" stroke-width="3"/>
+    <line x1="200" y1="172" x2="200" y2="248" stroke="#ffffff" stroke-width="2.5"/>
+    <ellipse cx="200" cy="210" rx="18" ry="9" fill="none" stroke="#ffffff" stroke-width="2.5"/>
+  </g>
+</svg>

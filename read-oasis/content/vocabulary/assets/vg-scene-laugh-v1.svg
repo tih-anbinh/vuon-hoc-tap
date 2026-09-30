@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-laugh desc-laugh">
+  <title id="title-laugh">Laugh</title>
+  <desc id="desc-laugh">A child laughing happily with a wide open smile, head tilted back, and little laughter marks.</desc>
+  <defs>
+    <linearGradient id="laugh-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fefce8"/>
+    </linearGradient>
+    <linearGradient id="laugh-skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5d0a9"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#laugh-bg)"/>
+  <ellipse cx="200" cy="278" rx="110" ry="14" fill="#0f172a" opacity="0.12"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Body -->
+    <path d="M135 215 Q200 200 265 215 L258 285 L142 285 Z" fill="#22c55e" stroke="#166534" stroke-width="3.5"/>
+    <!-- Head slightly tilted back -->
+    <g transform="rotate(8 200 140)">
+      <circle cx="200" cy="140" r="60" fill="url(#laugh-skin)" stroke="#d4a574" stroke-width="4"/>
+      <path d="M144 128 Q146 82 200 82 Q254 82 256 128 Q232 100 200 100 Q168 100 144 128 Z" fill="#5b3a1a" stroke="#3d2109" stroke-width="3"/>
+      <!-- Happy squeezed eyes -->
+      <path d="M162 132 Q174 122 186 132" fill="none" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+      <path d="M214 132 Q226 122 238 132" fill="none" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+      <!-- Big open laughing mouth -->
+      <path d="M170 158 Q200 200 230 158 Q200 172 170 158 Z" fill="#7f1d1d" stroke="#5a0f0f" stroke-width="2.5"/>
+      <path d="M180 168 Q200 180 220 168" fill="#fb7185"/>
+      <!-- Cheeks -->
+      <circle cx="160" cy="152" r="8" fill="#fb7185" opacity="0.5"/>
+      <circle cx="240" cy="152" r="8" fill="#fb7185" opacity="0.5"/>
+    </g>
+  </g>
+
+  <!-- Laughter marks -->
+  <g stroke="#f59e0b" stroke-width="4" stroke-linecap="round" fill="none">
+    <path d="M95 110 q-14 0 -20 12"/>
+    <path d="M100 140 q-16 4 -18 18"/>
+    <path d="M305 110 q14 0 20 12"/>
+    <path d="M300 140 q16 4 18 18"/>
+  </g>
+</svg>

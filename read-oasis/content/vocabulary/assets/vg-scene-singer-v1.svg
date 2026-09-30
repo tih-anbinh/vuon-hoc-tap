@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-singer desc-singer">
+  <title id="title-singer">Singer</title>
+  <desc id="desc-singer">A happy singer holding a microphone and singing with music notes floating around.</desc>
+  <defs>
+    <linearGradient id="singer-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ede9fe"/>
+      <stop offset="100%" stop-color="#f5f3ff"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#singer-bg)"/>
+  <!-- stage spotlight -->
+  <path d="M200 0 L120 300 L280 300 Z" fill="#fef08a" opacity="0.25"/>
+  <ellipse cx="180" cy="278" rx="100" ry="14" fill="#0f172a" opacity="0.14"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Dress/body -->
+    <path d="M130 265 Q135 185 180 178 Q225 185 230 265 Z" fill="#db2777" stroke="#9d174d" stroke-width="4"/>
+    <!-- Head -->
+    <circle cx="180" cy="120" r="46" fill="#fcd9b6" stroke="#c07b48" stroke-width="4"/>
+    <!-- Hair -->
+    <path d="M134 118 Q135 72 180 72 Q225 72 226 118 Q205 92 180 92 Q155 92 134 118 Z" fill="#78350f" stroke="#451a03" stroke-width="3"/>
+    <!-- Eyes -->
+    <circle cx="166" cy="118" r="4" fill="#1e293b"/>
+    <circle cx="194" cy="118" r="4" fill="#1e293b"/>
+    <!-- Singing mouth -->
+    <ellipse cx="180" cy="140" rx="12" ry="15" fill="#7f1d1d" stroke="#450a0a" stroke-width="2.5"/>
+    <ellipse cx="180" cy="146" rx="6" ry="6" fill="#ef4444"/>
+    <!-- Arm holding mic -->
+    <path d="M215 200 Q245 185 248 155" fill="none" stroke="#fcd9b6" stroke-width="16" stroke-linecap="round"/>
+    <!-- Microphone -->
+    <circle cx="250" cy="145" r="16" fill="#334155" stroke="#0f172a" stroke-width="3"/>
+    <rect x="245" y="158" width="10" height="35" rx="4" fill="#64748b" stroke="#0f172a" stroke-width="2.5" transform="rotate(-15 250 175)"/>
+  </g>
+
+  <!-- Music notes -->
+  <g fill="#7c3aed" stroke="#5b21b6" stroke-width="2">
+    <g transform="translate(300 90)"><ellipse cx="0" cy="20" rx="9" ry="7"/><rect x="7" y="-14" width="4" height="34"/><path d="M11 -14 q18 4 14 20 q-2 -12 -14 -12 z"/></g>
+    <g transform="translate(75 100)"><ellipse cx="0" cy="16" rx="8" ry="6"/><rect x="6" y="-10" width="3.5" height="26"/></g>
+    <g transform="translate(320 180)"><ellipse cx="0" cy="14" rx="7" ry="5.5"/><rect x="5" y="-8" width="3.5" height="22"/></g>
+  </g>
+</svg>

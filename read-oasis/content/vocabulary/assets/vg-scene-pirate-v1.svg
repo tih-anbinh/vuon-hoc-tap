@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-pirate desc-pirate">
+  <title id="title-pirate">Pirate</title>
+  <desc id="desc-pirate">A friendly cartoon pirate with a hat, eye patch, and a red bandana smiling.</desc>
+  <defs>
+    <linearGradient id="pirate-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bae6fd"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="pirate-skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde8cd"/>
+      <stop offset="100%" stop-color="#f5d0a9"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#pirate-bg)"/>
+  <ellipse cx="200" cy="288" rx="110" ry="10" fill="#0f172a" opacity="0.1"/>
+
+  <g filter="url(#soft-shadow)">
+    <!-- Shoulders / coat -->
+    <path d="M120 300 Q120 220 200 210 Q280 220 280 300 Z" fill="#7f1d1d" stroke="#450a0a" stroke-width="4"/>
+    <path d="M175 215 L200 260 L165 245 Z" fill="#991b1b"/>
+    <path d="M225 215 L200 260 L235 245 Z" fill="#991b1b"/>
+    <!-- Buttons -->
+    <circle cx="200" cy="255" r="4" fill="#fde047"/>
+    <circle cx="200" cy="275" r="4" fill="#fde047"/>
+
+    <!-- Head -->
+    <circle cx="200" cy="135" r="56" fill="url(#pirate-skin)" stroke="#d4a574" stroke-width="4"/>
+    <!-- Eye patch -->
+    <circle cx="180" cy="132" r="13" fill="#1e293b"/>
+    <line x1="152" y1="118" x2="240" y2="122" stroke="#1e293b" stroke-width="4"/>
+    <!-- Good eye -->
+    <circle cx="222" cy="133" r="6" fill="#1e293b"/>
+    <!-- Smile -->
+    <path d="M182 160 Q200 174 218 160" fill="none" stroke="#1e293b" stroke-width="4" stroke-linecap="round"/>
+    <!-- Stubble/beard hint -->
+    <path d="M160 165 Q200 200 240 165 Q200 185 160 165 Z" fill="#78350f" opacity="0.35"/>
+
+    <!-- Red bandana under hat -->
+    <path d="M144 110 Q200 82 256 110 L256 96 Q200 74 144 96 Z" fill="#dc2626" stroke="#991b1b" stroke-width="3"/>
+    <g fill="#f8fafc" opacity="0.5"><circle cx="165" cy="100" r="3"/><circle cx="235" cy="100" r="3"/></g>
+
+    <!-- Pirate hat -->
+    <path d="M120 92 Q200 40 280 92 Q240 68 200 68 Q160 68 120 92 Z" fill="#1e293b" stroke="#0f172a" stroke-width="4"/>
+    <!-- Skull emblem -->
+    <circle cx="200" cy="70" r="12" fill="#f8fafc"/>
+    <circle cx="196" cy="68" r="2.5" fill="#1e293b"/>
+    <circle cx="204" cy="68" r="2.5" fill="#1e293b"/>
+    <line x1="188" y1="80" x2="212" y2="80" stroke="#1e293b" stroke-width="2.5"/>
+  </g>
+</svg>

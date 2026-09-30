@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-party desc-party">
+  <title id="title-party">Party</title>
+  <desc id="desc-party">A festive party scene with colorful balloons, a bunting flag banner, and confetti.</desc>
+  <defs>
+    <linearGradient id="party-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fce7f3"/>
+      <stop offset="100%" stop-color="#fdf2f8"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="400" height="300" fill="url(#party-bg)"/>
+
+  <!-- Bunting banner -->
+  <path d="M20 50 Q200 90 380 50" fill="none" stroke="#94a3b8" stroke-width="3"/>
+  <g stroke="#475569" stroke-width="2">
+    <path d="M50 58 L70 58 L60 82 Z" fill="#ef4444"/>
+    <path d="M100 68 L120 68 L110 92 Z" fill="#f59e0b"/>
+    <path d="M150 74 L170 74 L160 98 Z" fill="#22c55e"/>
+    <path d="M200 76 L220 76 L210 100 Z" fill="#3b82f6"/>
+    <path d="M250 74 L270 74 L260 98 Z" fill="#a855f7"/>
+    <path d="M300 68 L320 68 L310 92 Z" fill="#ec4899"/>
+  </g>
+
+  <!-- Balloons -->
+  <g filter="url(#soft-shadow)">
+    <ellipse cx="90" cy="160" rx="38" ry="46" fill="#ef4444" stroke="#991b1b" stroke-width="3"/>
+    <path d="M90 206 l-6 10 l12 0 Z" fill="#991b1b"/>
+    <path d="M90 216 Q100 250 85 285" fill="none" stroke="#94a3b8" stroke-width="2"/>
+    <ellipse cx="80" cy="148" rx="10" ry="14" fill="#fca5a5" opacity="0.6"/>
+
+    <ellipse cx="200" cy="145" rx="42" ry="52" fill="#3b82f6" stroke="#1d4ed8" stroke-width="3"/>
+    <path d="M200 197 l-6 10 l12 0 Z" fill="#1d4ed8"/>
+    <path d="M200 207 Q210 250 195 288" fill="none" stroke="#94a3b8" stroke-width="2"/>
+    <ellipse cx="188" cy="130" rx="11" ry="16" fill="#93c5fd" opacity="0.6"/>
+
+    <ellipse cx="310" cy="165" rx="38" ry="46" fill="#22c55e" stroke="#166534" stroke-width="3"/>
+    <path d="M310 211 l-6 10 l12 0 Z" fill="#166534"/>
+    <path d="M310 221 Q320 255 305 288" fill="none" stroke="#94a3b8" stroke-width="2"/>
+    <ellipse cx="300" cy="153" rx="10" ry="14" fill="#86efac" opacity="0.6"/>
+  </g>
+
+  <!-- Confetti -->
+  <g>
+    <rect x="150" y="220" width="10" height="10" fill="#f59e0b" transform="rotate(25 155 225)"/>
+    <rect x="250" y="240" width="10" height="10" fill="#ec4899" transform="rotate(-20 255 245)"/>
+    <circle cx="130" cy="250" r="6" fill="#a855f7"/>
+    <circle cx="270" cy="215" r="6" fill="#fde047"/>
+    <rect x="60" y="230" width="9" height="9" fill="#22c55e" transform="rotate(40 64 234)"/>
+  </g>
+</svg>
