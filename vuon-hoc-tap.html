@@ -1592,15 +1592,49 @@ if("speechSynthesis" in window){
 }
 
 let dangDoc=null;
+/* ---- Fallback Google Translate TTS (khi máy KHÔNG có giọng vi-VN) ----
+   Chrome/Firefox trên máy chưa cài gói giọng tiếng Việt sẽ im lặng vì VI rỗng.
+   Khi đó phát audio tiếng Việt qua Google Translate (cần mạng). Edge/Windows/Android
+   có giọng vi thì KHÔNG dùng nhánh này. */
+let _docAudio=null, _docToken=null;
+function _gStopDoc(){ _docToken=null; if(_docAudio){ try{ _docAudio.pause(); }catch(e){} _docAudio=null; } }
+function _gChunks(text){ const out=[]; let t=String(text).trim(); while(t.length>180){ let cut=t.lastIndexOf(' ',180); if(cut<80) cut=180; out.push(t.slice(0,cut).trim()); t=t.slice(cut).trim(); } if(t) out.push(t); return out; }
+function _gDoc(text, rate, xong){
+  _gStopDoc();
+  const parts=_gChunks(text); if(!parts.length){ xong&&xong(); return; }
+  let i=0; const token={}; _docToken=token;
+  const play=async()=>{
+    if(token!==_docToken) return;
+    if(i>=parts.length){ _docAudio=null; xong&&xong(); return; }
+    const url='https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=vi&q='+encodeURIComponent(parts[i]);
+    try{
+      /* fetch -> blob -> Audio(blobURL): phát được cross-origin (Audio(url) trực tiếp bị chặn) */
+      const resp=await fetch(url); if(!resp.ok||token!==_docToken) return;
+      const burl=URL.createObjectURL(await resp.blob());
+      const a=new Audio(burl); _docAudio=a; a.playbackRate=rate||1;
+      a.onended=()=>{ URL.revokeObjectURL(burl); i++; play(); };
+      a.onerror=()=>{ URL.revokeObjectURL(burl); _docAudio=null; };
+      a.play().catch(()=>{ URL.revokeObjectURL(burl); _docAudio=null; });
+    }catch(e){ _docAudio=null; }
+  };
+  play();
+}
 function doc(txt, opt){
   opt=opt||{};
   if(!("speechSynthesis" in window)) return;
   speechSynthesis.cancel();
+  _gStopDoc();
   if(!txt) return;
+  const v = VI.find(x=>x.name===ST.voice) || pickBestVi();
+  // Không có giọng vi trong máy → dùng Google TTS (cần mạng) để vẫn đọc được tiếng Việt.
+  if(!v){
+    if(ST.sound) _gDoc(String(txt), (opt.rate||ST.rate)||1, opt.xong);
+    else opt.xong&&opt.xong();
+    return;
+  }
   const u=new SpeechSynthesisUtterance(String(txt));
   u.lang="vi-VN"; u.rate=opt.rate||ST.rate; u.pitch=opt.pitch||1.05; u.volume=ST.sound?1:0;
-  const v = VI.find(x=>x.name===ST.voice) || pickBestVi();
-  if(v) u.voice=v;   // không set voice nếu không có VI → browser tự dùng vi-VN tốt nhất
+  u.voice=v;
   if(opt.xong) u.onend=opt.xong;
   dangDoc=u; speechSynthesis.speak(u);
 }
@@ -1611,7 +1645,7 @@ function docChuoi(list, nghi, xong){
     doc(list[i++], {xong:()=>setTimeout(chay, nghi||220)});
   }; chay();
 }
-function dungDoc(){ if("speechSynthesis" in window) speechSynthesis.cancel(); }
+function dungDoc(){ if("speechSynthesis" in window) speechSynthesis.cancel(); _gStopDoc(); }
 
 /* ---------- 5. TIẾNG VIỆT: tách thanh, đánh vần ---------- */
 const THANH=[
@@ -5510,10 +5544,14 @@ window.GV = {
   playStar() { [800,1000,1200,1000,1200].forEach((f,i) => setTimeout(() => this.playBeep(f, 0.08, 'sine', 0.2), i*80)); },
   speak(text) {
     if (!window.speechSynthesis) return;
+    window.speechSynthesis.cancel();
+    let v = null; try { v = (typeof pickBestVi==='function') ? pickBestVi() : null; } catch(e){}
+    // Không có giọng vi trong máy (vd Chrome chưa cài gói giọng VN) → dùng Google TTS (cần mạng).
+    if (!v && typeof _gDoc === 'function') { _gDoc(String(text), 0.9); return; }
     const u = new SpeechSynthesisUtterance(text);
     u.lang = 'vi-VN'; u.rate = 0.85; u.pitch = 1.2; u.volume = 0.9;
-    try { const v = (typeof pickBestVi==='function') ? pickBestVi() : null; if (v) u.voice = v; } catch(e){}
-    window.speechSynthesis.cancel(); window.speechSynthesis.speak(u);
+    if (v) u.voice = v;
+    window.speechSynthesis.speak(u);
   },
   initState(gameId, totalQ) {
     this.current = gameId;
