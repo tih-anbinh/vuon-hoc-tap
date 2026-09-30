@@ -159,6 +159,9 @@ button[aria-pressed="true"].quiet { border-color: var(--primary); background: va
 .voice-row.on { border-color: var(--primary); background: var(--primary-soft); }
 .voice-row .voice-name { font-weight: 800; }
 .voice-row .voice-meta { color: var(--muted); font-size: .85em; }
+/* Kid-friendly voices (Ana / Maisie / Joelle) get a soft star badge and are listed first. */
+.voice-row.kid .voice-name::after { content: " ⭐"; }
+.voice-row.kid { border-color: var(--primary); }
 
 /* Learning card (word, IPA, speed, accent, repeat) below the text; never covers story */
 .vocab-box { border: 2px solid var(--accent); border-radius: var(--r-lg); padding: 1rem 1.1rem; background: linear-gradient(160deg, var(--surface), var(--accent-soft)); margin-top: .7rem; box-shadow: var(--shadow); animation: fade var(--dur) var(--ease); display: grid; gap: .5rem; }

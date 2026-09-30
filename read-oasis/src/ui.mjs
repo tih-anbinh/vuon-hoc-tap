@@ -67,6 +67,66 @@ export const SPEED_RATE = { very_slow: 0.5, slow: 0.68, normal: 0.95, fast: 1.12
 export const rateFor = (speed) => SPEED_RATE[speed] ?? SPEED_RATE.normal;
 
 /**
+ * Voice classification — distilled from the community "recommended voices for the Web Speech API"
+ * dataset (github.com/HadrienGardeur/web-speech-recommended-voices, now maintained under readium/speech,
+ * CC0). The Web Speech API returns dozens of voices per device with unfriendly names and no quality
+ * signal, so we curate them for a 6-year-old ESL reader:
+ *   - FILTER OUT junk: Apple "novelty" voices (Bad News, Bubbles, Zarvox, Whisper, Albert…), Apple
+ *     "Eloquence"/very-low-quality (Eddy, Flo, Grandma/Grandpa, Reed, Rocko, Sandy, Shelley, Fred,
+ *     Junior, Kathy, Ralph) and ChromeOS "eSpeak *" — all harsh/robotic and confusing for a child.
+ *   - RANK by quality: children voices first (they sound friendly & age-appropriate), then very-high
+ *     (MS Natural / Apple Premium / Google Natural), high, normal, low.
+ *   - LABEL nicely: "Microsoft Ana Online (Natural) - English (United States)" -> "Ana (US) · kid voice";
+ *     "Google US English" -> "Google voice (US)". Region is kept because a child may prefer UK vs US.
+ */
+// Voices that must never be offered to a child (regex over voice.name). From novelty.json + veryLowQuality.json.
+const VOICE_REJECT = /\bnovelty\b|eloquence|espeak|\bbad news\b|\bgood news\b|\bbahh\b|\bboing\b|\bbubbles\b|\bcellos\b|\bwobble\b|\bwhisper\b|\borgan\b|\bbells\b|\bsuperstar\b|\bjester\b|\bzarvox\b|\btrinoids\b|\balbert\b|\bfred\b|\bjunior\b|\bkathy\b|\bralph\b|\beddy\b|\bflo\b|\bgrandma\b|\bgrandpa\b|\breed\b|\brocko\b|\bsandy\b|\bshelley\b/i;
+// Named children's voices across platforms (Microsoft Ana/Maisie, Apple Joelle) — ideal for our audience.
+const VOICE_CHILDREN = /\bana\b|\bmaisie\b|\bjoelle\b/i;
+// Very-high / premium quality markers (Microsoft Natural, Apple Premium/Enhanced, Google Natural).
+const VOICE_VERY_HIGH = /\(natural\)|premium|enhanced|neural/i;
+// Pleasant, well-known named voices worth a small boost (kept broad; region-agnostic).
+const VOICE_GOOD_NAMES = /sonia|libby|ryan|aria|guy|jenny|emma|andrew|brian|natasha|clara|neerja|daniel|serena|kate|arthur|oliver|stephanie|samantha|ava|allison|nicky|zoe|matilda|karen|moira|tessa|google (uk|us|australian) english|google (us|uk) english/i;
+const VOICE_COMPACT = /\bcompact\b/i;
+
+/** Score a raw SpeechSynthesisVoice for a wanted accent. Higher = better. Returns -1 for reject/non-English. */
+function scoreVoice(v, wantAccent) {
+  if (!v || !v.lang) return -1;
+  if (VOICE_REJECT.test(v.name)) return -1;                 // never offer junk/novelty to a child
+  const vlang = v.lang.replace('_', '-').toLowerCase();
+  const base = vlang.slice(0, 2);
+  if (base !== 'en') return -1;                             // English only
+  const want = (wantAccent || 'en-GB').replace('_', '-').toLowerCase();
+  let s = 0;
+  if (vlang === want) s += 100; else s += 40;               // exact accent match beats other English region
+  if (VOICE_CHILDREN.test(v.name)) s += 60;                 // a friendly kid voice is best for our readers
+  if (VOICE_VERY_HIGH.test(v.name)) s += 50;                // MS Natural / Apple Premium/Enhanced / Google Natural
+  if (VOICE_GOOD_NAMES.test(v.name)) s += 20;               // known pleasant named voices
+  if (VOICE_COMPACT.test(v.name)) s -= 15;                  // Apple's low-quality compact fallback
+  if (v.localService === false) s += 8;                     // network voice is usually the natural one
+  return s;
+}
+
+/** Turn an ugly engine voice name into a short, child/parent-friendly label with region + kid tag. */
+function friendlyVoiceLabel(v) {
+  const lang = (v.lang || '').toLowerCase();
+  const region = lang.includes('gb') ? 'UK' : lang.includes('au') ? 'Australia' : lang.includes('ca') ? 'Canada'
+    : lang.includes('in') ? 'India' : lang.includes('ie') ? 'Ireland' : lang.includes('za') ? 'S.Africa'
+    : lang.includes('nz') ? 'NZ' : lang.includes('us') ? 'US' : (v.lang || '').toUpperCase();
+  let name = v.name || 'Voice';
+  // "Microsoft Ana Online (Natural) - English (United States)" -> "Ana"
+  let m = name.match(/^Microsoft\s+([A-Za-z]+?)(?:Multilingual)?\s+(?:Online\b|-)/i);
+  if (m) name = m[1];
+  else if (/^Microsoft\s+/i.test(name)) name = name.replace(/^Microsoft\s+/i, '').replace(/\s*-\s*English.*$/i, '').trim();
+  // "Google US English Female" / "Google UK English" -> "Google voice"
+  else if (/^Google\b/i.test(name)) name = 'Google voice';
+  // ChromeOS "Female voice 1 (US)" style already friendly; Apple names ("Samantha", "Ava (Enhanced)") -> strip variant tag
+  else name = name.replace(/\s*\((Enhanced|Premium|English \([^)]*\))\)\s*$/i, '').trim();
+  const kid = VOICE_CHILDREN.test(v.name) ? ' · kid voice' : '';
+  return `${name} (${region})${kid}`;
+}
+
+/**
  * Narrator. Source of truth for sound is the BUILT audio (content/audio/*, rendered from the pronunciation
  * lexicon by tools/build_audio.py). Device speechSynthesis is only a fallback. When it is used we score the
  * device's installed voices and pick the best English one, strongly preferring Apple "Enhanced"/"Premium"
@@ -82,16 +142,23 @@ export const narrator = {
   voiceURI: null, // when set, the parent/child explicitly chose this device voice; it overrides the auto-picker
   _voiceCache: {}, // accent -> chosen SpeechSynthesisVoice (invalidated on 'voiceschanged')
   /**
-   * List the device's installed English voices, best first, for a voice-picker UI. Each item is
-   * { uri, name, lang, online }. Returns [] when the engine has no voices yet (retry on 'voiceschanged').
+   * List the device's installed English voices, best first, for a voice-picker UI. Junk (novelty /
+   * very-low-quality / eSpeak) voices are filtered out and each voice gets a short, friendly label; the
+   * child-friendly voices (Ana / Maisie / Joelle) are flagged and float to the top, then higher-quality
+   * voices. Each item is { uri, name, label, lang, online, kid }. Returns [] when the engine has no voices
+   * yet (retry on 'voiceschanged'). accent biases the ordering toward the parent's chosen region.
    */
-  listVoices() {
+  listVoices(accent = this.accent) {
     if (!this.supported) return [];
     const voices = speechSynthesis.getVoices() || [];
     return voices
-      .filter(v => v.lang && v.lang.toLowerCase().startsWith('en'))
-      .map(v => ({ uri: v.voiceURI, name: v.name, lang: v.lang, online: v.localService === false }))
-      .sort((a, b) => a.lang.localeCompare(b.lang) || a.name.localeCompare(b.name));
+      .map(v => ({ v, sc: scoreVoice(v, accent) }))
+      .filter(x => x.sc >= 0)                                    // drop non-English + rejected junk voices
+      .sort((a, b) => b.sc - a.sc || (a.v.lang || '').localeCompare(b.v.lang) || (a.v.name || '').localeCompare(b.v.name))
+      .map(({ v }) => ({
+        uri: v.voiceURI, name: v.name, label: friendlyVoiceLabel(v),
+        lang: v.lang, online: v.localService === false, kid: VOICE_CHILDREN.test(v.name),
+      }));
   },
   /** True when a specific device voice is chosen AND still installed — then we always use device TTS. */
   hasChosenVoice() {
@@ -140,28 +207,11 @@ export const narrator = {
     if (this._voiceCache[accent]) return this._voiceCache[accent];
     const voices = speechSynthesis.getVoices();
     if (!voices.length) return null; // voices not ready yet; 'voiceschanged' will retry
-    const want = accent.replace('_', '-').toLowerCase();       // e.g. 'en-gb'
-    const base = want.slice(0, 2);                              // 'en'
-    const premium = /premium|enhanced|neural|natural/i;
-    const goodNames = /sonia|libby|ryan|maisie|hazel|susan|george|aria|guy|jenny|daniel|serena|kate|arthur|oliver|stephanie|martha|shelley|samantha|ava|allison|susan|nicky|aaron|zoe|evan|google (uk|us) english/i;
-    const novelty = /novelty|eloquence|zarvox|trinoids|bells|bad news|good news|bahh|boing|bubbles|cellos|wobble|whisper|organ|superstar|jester|albert|fred|junior|ralph|kathy|princess|deranged|hysterical/i;
-    const score = (v) => {
-      const vlang = v.lang.replace('_', '-').toLowerCase();
-      let s = 0;
-      if (vlang === want) s += 100;                 // exact accent match
-      else if (vlang.startsWith(base)) s += 40;     // same language, other region
-      else return -1;                               // not English at all -> reject
-      if (novelty.test(v.name)) s -= 80;            // never pick a joke voice for a child
-      if (premium.test(v.name)) s += 50;            // Apple Enhanced/Premium, Neural
-      if (goodNames.test(v.name)) s += 25;          // known pleasant named voices
-      if (/compact/i.test(v.name)) s -= 15;         // Apple's low-quality fallback
-      // A network/remote voice is usually the natural one; a purely local generic voice is often robotic.
-      if (v.localService === false) s += 8;
-      return s;
-    };
+    // Reuse the shared curated scorer (children-first, quality-ranked, junk filtered out).
     let best = null, bestScore = -Infinity;
-    for (const v of voices) { const sc = score(v); if (sc > bestScore) { bestScore = sc; best = v; } }
-    if (!best || bestScore < 0) best = voices.find(v => v.lang.toLowerCase().startsWith(base)) || null;
+    for (const v of voices) { const sc = scoreVoice(v, accent); if (sc > bestScore) { bestScore = sc; best = v; } }
+    // Fallback: if everything scored as reject (all junk/non-English), take any English voice at all.
+    if (!best || bestScore < 0) best = voices.find(v => (v.lang || '').toLowerCase().startsWith('en')) || null;
     if (best) this._voiceCache[accent] = best;
     return best;
   },
@@ -182,7 +232,7 @@ export const narrator = {
   resume() { if (this.audio) this.audio.play().catch(() => {}); else if (this.supported) speechSynthesis.resume(); },
   stop() { if (this.audio) { this.audio.pause(); this.audio = null; } if (this.supported) speechSynthesis.cancel(); this.speaking = false; },
   /** Human-readable description of what will play, for the parent settings screen. */
-  describe(accent = this.accent) { const v = this._pickVoice(accent); if (!v) return 'no matching device voice'; const chosen = this.voiceURI && v.voiceURI === this.voiceURI ? ' — your choice' : ''; return `${v.name} (${v.lang}${v.localService === false ? ', online' : ', on device'})${chosen}`; },
+  describe(accent = this.accent) { const v = this._pickVoice(accent); if (!v) return 'no matching device voice'; const chosen = this.voiceURI && v.voiceURI === this.voiceURI ? ' — your choice' : ''; return `${friendlyVoiceLabel(v)}${v.localService === false ? ', online' : ', on device'}${chosen}`; },
 };
 // getVoices() is empty on the first call in many mobile browsers; it populates asynchronously and fires
 // 'voiceschanged'. Clear the cache then so the best voice is re-picked once the full list has loaded.

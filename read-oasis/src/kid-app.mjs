@@ -362,7 +362,7 @@ function renderReader(book) {
 /** Small voice picker: lists the device's English voices and lets the child/grown-up choose one. The choice
  * is saved (settings.voice_uri) and, once set, is always used for reading so it also enables word highlight. */
 function showVoicePicker(anchorBtn) {
-  const voices = narrator.listVoices();
+  const voices = narrator.listVoices(S.settings.accent || 'en-GB');
   const overlay = h('div', { class: 'voice-overlay', role: 'dialog', 'aria-modal': 'true', 'aria-label': 'Choose a reading voice' });
   const close = () => overlay.remove();
   const current = S.settings.voice_uri || null;
@@ -383,9 +383,9 @@ function showVoicePicker(anchorBtn) {
     autoRow.onclick = () => pick(null);
     list.append(autoRow);
     for (const v of voices) {
-      const row = h('button', { class: 'voice-row' + (v.uri === current ? ' on' : ''), type: 'button' },
-        h('span', { class: 'voice-name', text: v.name }),
-        h('span', { class: 'voice-meta', text: v.lang + (v.online ? ' · online' : ' · on device') }));
+      const row = h('button', { class: 'voice-row' + (v.uri === current ? ' on' : '') + (v.kid ? ' kid' : ''), type: 'button' },
+        h('span', { class: 'voice-name', text: v.label }),
+        h('span', { class: 'voice-meta', text: (v.kid ? 'made for kids · ' : '') + (v.online ? 'online' : 'on device') }));
       row.onclick = () => pick(v.uri);
       list.append(row);
     }
