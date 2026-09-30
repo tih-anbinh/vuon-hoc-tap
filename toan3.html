@@ -1770,10 +1770,49 @@ const TTS=(function(){
     u.lang='vi-VN'; u.rate=rate||0.9; u.pitch=1.05;
     return u;
   }
+  /* ---- Fallback Google Translate TTS (khi máy KHÔNG có giọng vi-VN) ----
+     Chrome/Firefox trên máy chưa cài gói giọng tiếng Việt sẽ im lặng vì Web Speech
+     không có voice vi nào. Khi đó phát audio tiếng Việt qua Google Translate (cần mạng).
+     Edge/Windows/Android có giọng vi thì KHÔNG dùng nhánh này. */
+  let _gAudio=null, _gToken=null;
+  function gStop(){ _gToken=null; if(_gAudio){ try{ _gAudio.pause(); }catch(e){} _gAudio=null; } }
+  function gChunks(text){
+    /* tách ~180 ký tự theo ranh giới câu/dấu cách để tránh giới hạn URL của Google TTS */
+    const out=[]; let t=String(text).trim();
+    while(t.length>180){
+      let cut=t.lastIndexOf(' ',180); if(cut<80) cut=180;
+      out.push(t.slice(0,cut).trim()); t=t.slice(cut).trim();
+    }
+    if(t) out.push(t);
+    return out;
+  }
+  function googleTTS(text,rate){
+    gStop();
+    const parts=gChunks(text); if(!parts.length) return;
+    let i=0; const token={};  _gToken=token;
+    const play=async()=>{
+      if(token!==_gToken) return;              /* đã bị stop/replace */
+      if(i>=parts.length){ _gAudio=null; return; }
+      const url='https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=vi&q='+encodeURIComponent(parts[i]);
+      try{
+        /* fetch -> blob -> Audio(blobURL): phát được cross-origin (Audio(url) trực tiếp bị chặn) */
+        const resp=await fetch(url); if(!resp.ok||token!==_gToken) return;
+        const burl=URL.createObjectURL(await resp.blob());
+        const a=new Audio(burl); _gAudio=a; a.playbackRate=rate||0.9;
+        a.onended=()=>{ URL.revokeObjectURL(burl); i++; play(); };
+        a.onerror=()=>{ URL.revokeObjectURL(burl); _gAudio=null; };
+        a.play().catch(()=>{ URL.revokeObjectURL(burl); _gAudio=null; });
+      }catch(e){ _gAudio=null; }
+    };
+    play();
+  }
   /* Android hay "kẹt" sau cancel(): đọc sau một nhịp ngắn để queue rảnh. */
-  function say2(u){
+  function say2(u,rawText,gRate){
     unlock();
     s.cancel();
+    gStop();
+    /* Không có giọng vi trong máy → dùng Google TTS (cần mạng) để vẫn đọc được tiếng Việt. */
+    if(!viVoice && rawText){ googleTTS(rawText, gRate||0.9); return; }
     if(isAndroid){ setTimeout(()=>{ try{ s.resume(); }catch(e){} s.speak(u); },120); }
     else s.speak(u);
   }
@@ -1806,13 +1845,14 @@ const TTS=(function(){
   return{
     speak(src,rate){
       const raw=typeof src==='string'?src:(src.innerText||src.textContent||'');
-      say2(utter(clean(raw), rate||0.85));
+      const txt=clean(raw);
+      say2(utter(txt, rate||0.85), txt, rate||0.85);
     },
     say(text,rate){   /* đọc lời khen: bỏ emoji, giữ nguyên chữ */
       const t=String(text).replace(/[^\p{L}\p{N}\s,.!?]/gu,' ').replace(/\s+/g,' ').trim();
-      if(t) say2(utter(t, rate||0.98));
+      if(t) say2(utter(t, rate||0.98), t, rate||0.98);
     },
-    stop(){ s.cancel(); }
+    stop(){ s.cancel(); gStop(); }
   };
 })();
 
