@@ -139,7 +139,22 @@ gallery before it flips to `approved`. Content itself is child-ready and
 `editorially_approved` now.
 
 With Batch 4, approvals rose from 106 → **531** and drafts fell from 1167 → 742;
-the review gallery now surfaces **471** words whose art awaits a human verdict.
+the review gallery surfaced **471** words whose art awaited a human verdict.
+
+**Human visual verdicts applied (review loop closed).** A human worked the review
+gallery and exported a durable
+`content/vocabulary/reviews/visual-review-state.json` (471 verdicts). The builder
+now reads that file (`load_visual_verdicts()`) and each human verdict *overrides*
+the authored placeholder, so confirmed pictures flip to their real status on the
+next build with zero code changes — future rounds just re-export the JSON and
+re-run the builder. Result across the 531 approved entries:
+**505 pictures `approved`** (457 freshly human-confirmed + earlier confirmed +
+concept words), **12 `not_applicable`**, and **14 flagged for follow-up** — 1
+`redraw_now` (`airport`), 2 `wrong_sense` (`balcony`, `bat`), and 11
+`redraw_later` (`bridge`, `chess`, `chopsticks`, `cousin`, `friday`, `mango`,
+`meatballs`, `monday`, `net`, `restaurant`, `sandwich`). The review gallery now
+doubles as the redraw worklist: it surfaces only those **14** open words (plus any
+never-reviewed or missing-asset ones) so fixed art gets re-confirmed in place.
 
 ## Book-page mapping coverage (verified)
 
@@ -157,10 +172,12 @@ single-sense match yet, so they are honestly left unmapped rather than guessed.
 
 - **742 draft words** have full disposition but no teaching content yet. They
   require human authoring before they can appear in a child's garden.
-- **471 approved pictures await a human verdict.** Their content is child-ready
-  and they are `editorially_approved`, but their `teaching.visual.status` is
-  `needs_human_review` until a human confirms each SVG in the review gallery
-  (`tools/vocab/build_visual_review.py`).
+- **14 pictures are flagged for redraw / wrong-sense** and are honestly held back
+  from being called correct: 1 `redraw_now` (`airport`), 2 `wrong_sense`
+  (`balcony`, `bat`), 11 `redraw_later`. Their content is child-ready and
+  `editorially_approved`; only their `teaching.visual.status` gates the art. They
+  remain on the review-gallery worklist until the art is fixed and re-confirmed.
+  (The other 457 human-reviewed pictures are now `approved`.)
 - **Batch-2 words are not yet book-mapped.** They power the standalone garden
   games now; they will auto-map into a reader only when a published book page
   uses them. Book-mapping coverage below is unchanged (still 14 / 92).

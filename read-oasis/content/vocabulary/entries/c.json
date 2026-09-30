@@ -118,7 +118,7 @@
         "asset_id": "vg-scene-cage-v1",
         "asset": "vocabulary/assets/vg-scene-cage-v1.svg",
         "alt": "A box made of bars for keeping birds or animals inside.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -191,7 +191,7 @@
         "asset_id": "vg-scene-cake-v1",
         "asset": "vocabulary/assets/vg-scene-cake-v1.svg",
         "alt": "A sweet food that we often eat at a birthday party.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "food",
         "template": null,
         "anchor_objects": []
@@ -264,7 +264,7 @@
         "asset_id": "vg-scene-calendar-v1",
         "asset": "vocabulary/assets/vg-scene-calendar-v1.svg",
         "alt": "A chart that shows the days, weeks and months of the year.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -404,7 +404,7 @@
         "asset_id": "vg-scene-camel-v1",
         "asset": "vocabulary/assets/vg-scene-camel-v1.svg",
         "alt": "A big animal with one or two humps on its back that lives in the desert.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "animal",
         "template": null,
         "anchor_objects": []
@@ -478,7 +478,7 @@
         "asset_id": "vg-scene-camera-v1",
         "asset": "vocabulary/assets/vg-scene-camera-v1.svg",
         "alt": "A thing you use to take photos and films.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -549,7 +549,7 @@
         "asset_id": "vg-action-camp-v1",
         "asset": "vocabulary/assets/vg-action-camp-v1.svg",
         "alt": "To live and sleep outside in a tent for a short time.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "action",
         "template": null,
         "anchor_objects": []
@@ -756,7 +756,7 @@
         "asset_id": "vg-scene-car-park-v1",
         "asset": "vocabulary/assets/vg-scene-car-park-v1.svg",
         "alt": "A place where people leave their cars for a time.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "place",
         "template": null,
         "anchor_objects": []
@@ -830,7 +830,7 @@
         "asset_id": "vg-scene-car-v1",
         "asset": "vocabulary/assets/vg-scene-car-v1.svg",
         "alt": "A thing with four wheels that takes people from place to place.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -903,7 +903,7 @@
         "asset_id": "vg-scene-card-v1",
         "asset": "vocabulary/assets/vg-scene-card-v1.svg",
         "alt": "A folded piece of thick paper with a nice message inside.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -1110,7 +1110,7 @@
         "asset_id": "vg-scene-carrot-v1",
         "asset": "vocabulary/assets/vg-scene-carrot-v1.svg",
         "alt": "A long, orange vegetable that grows under the ground.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -1181,7 +1181,7 @@
         "asset_id": "vg-action-carry-v1",
         "asset": "vocabulary/assets/vg-action-carry-v1.svg",
         "alt": "To hold something and take it from one place to another.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "action",
         "template": null,
         "anchor_objects": []
@@ -1254,7 +1254,7 @@
         "asset_id": "vg-scene-cartoon-v1",
         "asset": "vocabulary/assets/vg-scene-cartoon-v1.svg",
         "alt": "A funny film made of drawn pictures that move.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -1327,7 +1327,7 @@
         "asset_id": "vg-scene-castle-v1",
         "asset": "vocabulary/assets/vg-scene-castle-v1.svg",
         "alt": "A big, strong, old building with high walls where kings and queens lived.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "place",
         "template": null,
         "anchor_objects": []
@@ -1607,7 +1607,7 @@
         "asset_id": "vg-scene-cave-v1",
         "asset": "vocabulary/assets/vg-scene-cave-v1.svg",
         "alt": "A big hole in the side of a hill or under the ground.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "place",
         "template": null,
         "anchor_objects": []
@@ -1886,7 +1886,7 @@
         "asset_id": "vg-scene-cereal-v1",
         "asset": "vocabulary/assets/vg-scene-cereal-v1.svg",
         "alt": "A breakfast food, often small and dry, eaten with milk.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -2371,7 +2371,7 @@
         "asset_id": "vg-scene-cheese-v1",
         "asset": "vocabulary/assets/vg-scene-cheese-v1.svg",
         "alt": "A yellow food made from milk.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -2511,7 +2511,7 @@
         "asset_id": "vg-scene-chess-v1",
         "asset": "vocabulary/assets/vg-scene-chess-v1.svg",
         "alt": "A game for two people on a board with small pieces like kings and queens.",
-        "status": "needs_human_review",
+        "status": "redraw_later",
         "kind": "scene",
         "template": null,
         "anchor_objects": []
@@ -2584,7 +2584,7 @@
         "asset_id": "vg-scene-chicken-v1",
         "asset": "vocabulary/assets/vg-scene-chicken-v1.svg",
         "alt": "A farm bird that gives us eggs.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "animal",
         "template": null,
         "anchor_objects": []
@@ -2794,7 +2794,7 @@
         "asset_id": "vg-scene-chocolate-v1",
         "asset": "vocabulary/assets/vg-scene-chocolate-v1.svg",
         "alt": "A sweet brown food that many children love.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -2934,7 +2934,7 @@
         "asset_id": "vg-scene-chopsticks-v1",
         "asset": "vocabulary/assets/vg-scene-chopsticks-v1.svg",
         "alt": "Two thin sticks you hold in one hand to pick up food.",
-        "status": "needs_human_review",
+        "status": "redraw_later",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -3008,7 +3008,7 @@
         "asset_id": "vg-scene-cinema-v1",
         "asset": "vocabulary/assets/vg-scene-cinema-v1.svg",
         "alt": "A place where you go to watch films on a big screen.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "place",
         "template": null,
         "anchor_objects": []
@@ -3081,7 +3081,7 @@
         "asset_id": "vg-scene-circle-v1",
         "asset": "vocabulary/assets/vg-scene-circle-v1.svg",
         "alt": "A perfectly round shape, like a ring.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -3155,7 +3155,7 @@
         "asset_id": "vg-scene-circus-v1",
         "asset": "vocabulary/assets/vg-scene-circus-v1.svg",
         "alt": "A fun show with clowns, acrobats, and animals, often in a big tent.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "place",
         "template": null,
         "anchor_objects": []
@@ -3296,7 +3296,7 @@
         "asset_id": "vg-scene-city-v1",
         "asset": "vocabulary/assets/vg-scene-city-v1.svg",
         "alt": "A very big town with many people, buildings, and roads.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "place",
         "template": null,
         "anchor_objects": []
@@ -3367,7 +3367,7 @@
         "asset_id": "vg-action-clap-v1",
         "asset": "vocabulary/assets/vg-action-clap-v1.svg",
         "alt": "To hit your two hands together to make a sound.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "action",
         "template": null,
         "anchor_objects": []
@@ -3647,7 +3647,7 @@
         "asset_id": "vg-scene-classroom-v1",
         "asset": "vocabulary/assets/vg-scene-classroom-v1.svg",
         "alt": "The room in a school where a class learns together.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "place",
         "template": null,
         "anchor_objects": []
@@ -3719,7 +3719,7 @@
         "asset_id": "vg-scene-clean-v1",
         "asset": "vocabulary/assets/vg-scene-clean-v1.svg",
         "alt": "With no dirt on it; nice and fresh.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "contrast",
         "template": null,
         "anchor_objects": []
@@ -3857,7 +3857,7 @@
         "asset_id": "vg-action-climb-v1",
         "asset": "vocabulary/assets/vg-action-climb-v1.svg",
         "alt": "To go up something using your hands and feet.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "action",
         "template": null,
         "anchor_objects": []
@@ -3931,7 +3931,7 @@
         "asset_id": "vg-scene-clock-v1",
         "asset": "vocabulary/assets/vg-scene-clock-v1.svg",
         "alt": "A thing on a wall or table that shows you the time.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -4071,7 +4071,7 @@
         "asset_id": "vg-scene-closed-v1",
         "asset": "vocabulary/assets/vg-scene-closed-v1.svg",
         "alt": "Shut so you cannot go through or in.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "contrast",
         "template": null,
         "anchor_objects": []
@@ -4143,7 +4143,7 @@
         "asset_id": "vg-scene-clothes-v1",
         "asset": "vocabulary/assets/vg-scene-clothes-v1.svg",
         "alt": "Things you wear on your body, like shirts and trousers.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "concept",
         "template": null,
         "anchor_objects": []
@@ -4216,7 +4216,7 @@
         "asset_id": "vg-scene-cloud-v1",
         "asset": "vocabulary/assets/vg-scene-cloud-v1.svg",
         "alt": "A white or grey shape in the sky that rain comes from.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "nature",
         "template": null,
         "anchor_objects": []
@@ -4358,7 +4358,7 @@
         "asset_id": "vg-scene-clown-v1",
         "asset": "vocabulary/assets/vg-scene-clown-v1.svg",
         "alt": "A funny person who makes people laugh, often at a circus.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "scene",
         "template": null,
         "anchor_objects": []
@@ -4501,7 +4501,7 @@
         "asset_id": "vg-scene-coat-v1",
         "asset": "vocabulary/assets/vg-scene-coat-v1.svg",
         "alt": "A warm piece of clothing you wear over other clothes when you go outside.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -4574,7 +4574,7 @@
         "asset_id": "vg-scene-coconut-v1",
         "asset": "vocabulary/assets/vg-scene-coconut-v1.svg",
         "alt": "A big brown fruit with a hard shell and white food and juice inside.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -4647,7 +4647,7 @@
         "asset_id": "vg-scene-coffee-v1",
         "asset": "vocabulary/assets/vg-scene-coffee-v1.svg",
         "alt": "A hot brown drink that many grown-ups like.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -4999,7 +4999,7 @@
         "asset_id": "vg-scene-comb-v1",
         "asset": "vocabulary/assets/vg-scene-comb-v1.svg",
         "alt": "A flat tool with thin teeth that you use to tidy your hair.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -5205,7 +5205,7 @@
         "asset_id": "vg-scene-comic-book-v1",
         "asset": "vocabulary/assets/vg-scene-comic-book-v1.svg",
         "alt": "A book full of stories told in pictures.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -5277,7 +5277,7 @@
         "asset_id": "vg-scene-comic-v1",
         "asset": "vocabulary/assets/vg-scene-comic-v1.svg",
         "alt": "A fun story told in a row of pictures.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -5349,7 +5349,7 @@
         "asset_id": "vg-scene-competition-v1",
         "asset": "vocabulary/assets/vg-scene-competition-v1.svg",
         "alt": "A game or test to see who is the best at something.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "concept",
         "template": null,
         "anchor_objects": []
@@ -5489,7 +5489,7 @@
         "asset_id": "vg-scene-computer-v1",
         "asset": "vocabulary/assets/vg-scene-computer-v1.svg",
         "alt": "A machine with a screen that you use for games and work.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -5562,7 +5562,7 @@
         "asset_id": "vg-scene-concert-v1",
         "asset": "vocabulary/assets/vg-scene-concert-v1.svg",
         "alt": "A show where people play music and sing for other people.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "scene",
         "template": null,
         "anchor_objects": []
@@ -5702,7 +5702,7 @@
         "asset_id": "vg-action-cook-v1",
         "asset": "vocabulary/assets/vg-action-cook-v1.svg",
         "alt": "To make food ready to eat by heating it.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "action",
         "template": null,
         "anchor_objects": []
@@ -5775,7 +5775,7 @@
         "asset_id": "vg-scene-cooker-v1",
         "asset": "vocabulary/assets/vg-scene-cooker-v1.svg",
         "alt": "A machine in the kitchen that you use to cook food.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -5984,7 +5984,7 @@
         "asset_id": "vg-scene-corner-v1",
         "asset": "vocabulary/assets/vg-scene-corner-v1.svg",
         "alt": "The place where two walls, sides, or roads meet.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "place",
         "template": null,
         "anchor_objects": []
@@ -6126,7 +6126,7 @@
         "asset_id": "vg-scene-costume-v1",
         "asset": "vocabulary/assets/vg-scene-costume-v1.svg",
         "alt": "Special clothes you wear to look like someone or something else.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -6199,7 +6199,7 @@
         "asset_id": "vg-scene-cough-v1",
         "asset": "vocabulary/assets/vg-scene-cough-v1.svg",
         "alt": "A sudden loud sound you make from your throat when you are sick.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "scene",
         "template": null,
         "anchor_objects": []
@@ -6541,7 +6541,7 @@
         "asset_id": "vg-scene-countryside-v1",
         "asset": "vocabulary/assets/vg-scene-countryside-v1.svg",
         "alt": "Land away from towns, with fields, farms, and trees.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "place",
         "template": null,
         "anchor_objects": []
@@ -6614,7 +6614,7 @@
         "asset_id": "vg-scene-cousin-v1",
         "asset": "vocabulary/assets/vg-scene-cousin-v1.svg",
         "alt": "The child of your aunt or uncle.",
-        "status": "needs_human_review",
+        "status": "redraw_later",
         "kind": "scene",
         "template": null,
         "anchor_objects": []
@@ -6759,7 +6759,7 @@
         "asset_id": "vg-scene-crayon-v1",
         "asset": "vocabulary/assets/vg-scene-crayon-v1.svg",
         "alt": "A coloured stick of wax that children use to draw and colour.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -6901,7 +6901,7 @@
         "asset_id": "vg-scene-crocodile-v1",
         "asset": "vocabulary/assets/vg-scene-crocodile-v1.svg",
         "alt": "A big animal with a long mouth and sharp teeth that lives in rivers.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "animal",
         "template": null,
         "anchor_objects": []
@@ -7048,7 +7048,7 @@
         "asset_id": "vg-scene-crown-v1",
         "asset": "vocabulary/assets/vg-scene-crown-v1.svg",
         "alt": "A special gold hat that a king or queen wears.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -7121,7 +7121,7 @@
         "asset_id": "vg-action-cry-v1",
         "asset": "vocabulary/assets/vg-action-cry-v1.svg",
         "alt": "To make tears fall from your eyes when you are sad or hurt.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "action",
         "template": null,
         "anchor_objects": []
@@ -7193,7 +7193,7 @@
         "asset_id": "vg-scene-cup-v1",
         "asset": "vocabulary/assets/vg-scene-cup-v1.svg",
         "alt": "A small round thing with a handle that you drink from.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -7267,7 +7267,7 @@
         "asset_id": "vg-scene-cupboard-v1",
         "asset": "vocabulary/assets/vg-scene-cupboard-v1.svg",
         "alt": "A piece of furniture with doors and shelves for keeping things.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
@@ -7409,7 +7409,7 @@
         "asset_id": "vg-scene-cushion-v1",
         "asset": "vocabulary/assets/vg-scene-cushion-v1.svg",
         "alt": "A soft bag filled with something soft that you sit on or lean on.",
-        "status": "needs_human_review",
+        "status": "approved",
         "kind": "object",
         "template": null,
         "anchor_objects": []
