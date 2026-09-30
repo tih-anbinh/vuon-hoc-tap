@@ -1719,10 +1719,35 @@ const TTS=(function(){
   if(!s) return{speak:()=>{},say:()=>{},stop:()=>{}};
   const isAndroid=/Android/i.test(navigator.userAgent);
   let viVoice=null, voicesReady=false, unlocked=false;
+  /* Chấm điểm giọng tiếng Việt theo chất lượng (dựa trên readium/speech vi.json):
+     - veryHigh: Microsoft HoaiMy/NamMinh Online (Natural)  → Edge tự có, luôn thắng (Edge KHÔNG đổi gì)
+     - high:     Google Tiếng Việt N (Natural)              → Chrome/Android
+     - normal:   Microsoft An (Windows)
+     - low:      giọng Apple "Linh" (compact) trên iPhone/iPad → điểm thấp nhất nhưng vẫn nhận nếu là lựa chọn vi duy nhất
+     Trả -1 nếu KHÔNG phải tiếng Việt. */
+  function vnScore(v){
+    if(!v||!v.lang) return -1;
+    const lang=(v.lang||'').replace('_','-').toLowerCase();
+    const name=(v.name||'').toLowerCase();
+    const isVi = lang.startsWith('vi') || /vietnam|tiếng việt|tieng viet/i.test(v.name||'');
+    if(!isVi) return -1;
+    let sc=10;
+    if(/\(natural\)/.test(name)) sc+=50;                 /* MS/Google Natural */
+    if(/\bonline\b/.test(name)) sc+=20;                  /* MS *Online* (Natural) — Edge veryHigh */
+    if(/hoaimy|hoài my|nammin|nam minh/.test(name)) sc+=30; /* 2 giọng Edge tốt nhất */
+    if(/google/.test(name)) sc+=15;                      /* Google Tiếng Việt (Natural) */
+    if(/\bneural\b|premium|enhanced/.test(name)) sc+=25;
+    if(/\bcompact\b|eloquence/.test(name)) sc-=20;       /* giọng Apple chất lượng thấp */
+    if(v.localService===false) sc+=8;                    /* giọng mạng thường tự nhiên hơn */
+    return sc;
+  }
   function pickVoice(){
     const vs=s.getVoices()||[];
     if(vs.length) voicesReady=true;
-    viVoice = vs.find(v=>/vi[-_]?VN/i.test(v.lang)) || vs.find(v=>/vietnam/i.test(v.name)) || vs.find(v=>/^vi\b/i.test(v.lang)) || null;
+    let best=null, bestScore=-Infinity;
+    for(const v of vs){ const sc=vnScore(v); if(sc>bestScore){ bestScore=sc; best=v; } }
+    /* Nếu không có giọng vi nào (bestScore<0), để engine tự chọn theo lang (viVoice=null). */
+    viVoice = (best && bestScore>=0) ? best : null;
   }
   pickVoice();
   try{ s.addEventListener('voiceschanged', pickVoice); }catch(e){ s.onvoiceschanged=pickVoice; }
@@ -4402,7 +4427,23 @@ async function progressSync(){
     last_day:G.lastDay||null, total_stars:gTotalStars(),
     total_minutes:G.totalMin||0, daily:G.mins||{}, ex_correct:G.exCorrect||0,
     xp:G.xp||0, xu:G.xu||0, updated_at:new Date().toISOString() };
-  try{ await supa.from('toan3_progress').upsert(row); }catch(e){}
+  try{
+    const {error}=await supa.from('toan3_progress').upsert(row);
+    if(error){
+      /* Nếu DB thiếu cột (vd xp/xu chưa migrate) PostgREST trả PGRST204 và TỪ CHỐI cả dòng
+         → số phút/Thi đua không lên server. Thử lại BỎ các cột phụ để tối thiểu vẫn đồng bộ. */
+      const msg=(error.message||'')+' '+(error.details||'');
+      if(error.code==='PGRST204' || /column|schema cache/i.test(msg)){
+        const {id,full_name,stars,best,unlocked,streak,last_day,total_stars,total_minutes,daily,ex_correct,updated_at}=row;
+        const core={id,full_name,stars,best,unlocked,streak,last_day,total_stars,total_minutes,daily,ex_correct,updated_at};
+        const r2=await supa.from('toan3_progress').upsert(core);
+        if(r2.error) console.warn('[toan3] progressSync core upsert failed:', r2.error);
+        else console.warn('[toan3] progressSync: DB thiếu cột (xp/xu?) — đã đồng bộ tối thiểu. Hãy chạy supabase_progress.sql để thêm cột.', error);
+      }else{
+        console.warn('[toan3] progressSync error:', error);
+      }
+    }
+  }catch(e){ console.warn('[toan3] progressSync exception:', e); }
 }
 async function progressLoad(){
   if(!supa||!AUTH_ME) return;
