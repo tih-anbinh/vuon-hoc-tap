@@ -1,53 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title-egg desc-egg">
-  <title id="title-egg">Egg - Whole egg and golden yolk</title>
-  <desc id="desc-egg">A smooth brown egg in an egg cup next to a cracked egg shell displaying a bright golden yolk, occupying the center of the frame.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t-egg d-egg">
+  <title id="t-egg">Egg</title>
+  <desc id="d-egg">One large smooth white egg standing upright in the centre of the card.</desc>
   <defs>
-    <radialGradient id="egg-shell" cx="40%" cy="35%" r="60%">
-      <stop offset="0%" stop-color="#ffedd5"/>
-      <stop offset="65%" stop-color="#fed7aa"/>
-      <stop offset="100%" stop-color="#fba462"/>
+    <radialGradient id="egg-body" cx="42%" cy="35%" r="75%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#fdf2e3"/>
+      <stop offset="100%" stop-color="#f5d9b0"/>
     </radialGradient>
-    <radialGradient id="yolk-grad" cx="35%" cy="35%" r="65%">
-      <stop offset="0%" stop-color="#fef08a"/>
-      <stop offset="40%" stop-color="#facc15"/>
-      <stop offset="100%" stop-color="#ea580c"/>
-    </radialGradient>
-    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.15"/>
+    <filter id="egg-sh" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.15"/>
     </filter>
   </defs>
+  <rect x="8" y="8" width="384" height="284" rx="20" fill="#fef3c7"/>
+  <ellipse cx="200" cy="258" rx="90" ry="16" fill="#0f172a" opacity="0.1"/>
 
-  <!-- Ground line -->
-  <line x1="30" y1="265" x2="370" y2="265" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round"/>
-
-  <!-- Ground shadows -->
-  <ellipse cx="140" cy="265" rx="55" ry="10" fill="#0f172a" opacity="0.15"/>
-  <ellipse cx="275" cy="265" rx="75" ry="12" fill="#0f172a" opacity="0.15"/>
-
-  <!-- TARGET OBJECT: EGG (Occupying 70% canvas) -->
-  <g id="egg-figure" filter="url(#soft-shadow)">
-    <!-- WHOLE EGG IN CERAMIC CUP -->
-    <!-- Upright Whole Egg -->
-    <path d="M140 60 C180 60 190 145 185 180 C180 205 100 205 95 180 C90 145 100 60 140 60 Z" fill="url(#egg-shell)" stroke="#ea580c" stroke-width="3.5"/>
-    <!-- Egg gentle highlight -->
-    <path d="M125 80 C115 100 112 135 115 155" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
-
-    <!-- Ceramic Egg Cup -->
-    <path d="M92 175 C92 165 188 165 188 175 C188 215 160 230 148 240 L155 255 L125 255 L132 240 C120 230 92 215 92 175 Z" fill="#38bdf8" stroke="#0284c7" stroke-width="3.5"/>
-    <ellipse cx="140" cy="175" rx="48" ry="10" fill="#7dd3fc" stroke="#0284c7" stroke-width="3"/>
-    <ellipse cx="140" cy="255" rx="25" ry="6" fill="#0284c7"/>
-
-    <!-- CRACKED EGG WITH GOLDEN YOLK (Beside it) -->
-    <!-- Egg White / Albumen Pool -->
-    <path d="M225 240 C200 245 210 262 235 260 C260 258 290 265 320 260 C345 255 355 240 335 235 C310 230 280 232 260 230 C240 228 235 238 225 240 Z" fill="#f8fafc" stroke="#cbd5e1" stroke-width="3"/>
-
-    <!-- Bright Round Golden Yolk -->
-    <circle cx="280" cy="225" r="32" fill="url(#yolk-grad)" stroke="#c2410c" stroke-width="3"/>
-    <circle cx="270" cy="215" r="8" fill="#ffffff" opacity="0.7"/>
-    <circle cx="288" cy="235" r="3" fill="#ffffff" opacity="0.6"/>
-
-    <!-- Cracked Half Shell Beside It -->
-    <path d="M310 185 L320 170 L330 190 L345 168 L355 195 C365 215 350 245 325 245 C305 245 295 220 310 185 Z" fill="url(#egg-shell)" stroke="#ea580c" stroke-width="3.5" stroke-linejoin="round"/>
-    <path d="M318 182 L324 176 L332 188 L342 174 L348 190" fill="none" stroke="#fff7ed" stroke-width="2"/>
+  <g filter="url(#egg-sh)">
+    <!-- Egg: narrower top, rounder bottom -->
+    <path d="M200 52
+             C150 52 118 132 118 178
+             C118 222 154 256 200 256
+             C246 256 282 222 282 178
+             C282 132 250 52 200 52 Z"
+          fill="url(#egg-body)" stroke="#d6ad78" stroke-width="5"/>
+    <!-- soft highlight -->
+    <ellipse cx="172" cy="120" rx="24" ry="38" fill="#ffffff" opacity="0.55" transform="rotate(-18 172 120)"/>
   </g>
 </svg>
