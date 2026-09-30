@@ -335,19 +335,23 @@ function renderReader(book) {
       h('div', { class: 'reader' }, illus, h('div', { class: 'reader-copy' }, h('div', { class: 'story-card fade' }, h('span', { class: 'story-eyebrow', text: 'PAGE ' + (i + 1) + ' · ' + book.title }), story, listenBar), vocabBox, parentPrompt && i > 0 ? h('p', { class: 'parent-prompt', text: 'Grown-up: ' + parentPrompt }) : null)),
       dots, nav);
     narrator.onstart = () => { srcTag.textContent = narrator.lastSource === 'built' ? 'British English' : 'device voice'; srcTag.classList.remove('hidden'); };
-    // Word-by-word highlight while the device voice reads. Only meaningful when the spoken text matches the
-    // rendered page text (no separate audio_script) and the device path is used (built clips have no timings).
-    const wordEls = [...story.querySelectorAll('.w[data-start]')].map(el => ({ el, start: Number(el.dataset.start), end: Number(el.dataset.start) + el.textContent.length }));
-    const clearHighlight = () => wordEls.forEach(w => w.el.classList.remove('reading'));
-    // Highlight needs the spoken text to line up character-for-character with the rendered page text so the
-    // 'boundary' charIndex maps to the right word. Our books set audio_script === text, so highlight is on;
-    // only disable it when a page deliberately reads a DIFFERENT script than it shows (offsets wouldn't match).
-    const scriptMatchesText = !pg.audio_script || pg.audio_script === pg.text;
-    const canHighlight = S.settings.highlight_words !== false && scriptMatchesText;
-    narrator.onboundary = canHighlight ? (charIndex) => {
+    // Word-by-word highlight while the DEVICE voice reads (built clips carry no per-word timings, so no
+    // boundary fires for them). The .w spans are the whitespace-separated tokens of pg.text, in reading order.
+    // The narrator forwards a WORD INDEX (Nth spoken token) rather than a raw char offset, so highlight stays
+    // correct even when the spoken audio_script differs from the shown text by punctuation only (e.g. quotes
+    // stripped for smoother speech) — the Nth spoken token lines up with the Nth rendered token.
+    const wordEls = [...story.querySelectorAll('.w[data-start]')];
+    const clearHighlight = () => wordEls.forEach(el => el.classList.remove('reading'));
+    // Alignment guard: highlight only when the spoken string has the SAME number of whitespace tokens as the
+    // rendered words. That is true for plain pages (audio_script === text) and for our punctuation-only
+    // audio_script rewrites; it stays off only if a page genuinely adds/removes spoken words vs what it shows.
+    const spoken = pg.audio_script || pg.text || '';
+    const spokenTokenCount = (spoken.trim().match(/\S+/g) || []).length;
+    const canHighlight = S.settings.highlight_words !== false && spokenTokenCount === wordEls.length && wordEls.length > 0;
+    narrator.onboundary = canHighlight ? (_charIndex, _charLen, wordIndex) => {
       clearHighlight();
-      const w = wordEls.find(w => charIndex >= w.start && charIndex < w.end) || wordEls.find(w => charIndex <= w.start);
-      if (w) { w.el.classList.add('reading'); w.el.scrollIntoView?.({ block: 'nearest', behavior: 'smooth' }); }
+      const el = wordEls[wordIndex];
+      if (el) { el.classList.add('reading'); el.scrollIntoView?.({ block: 'nearest', behavior: 'smooth' }); }
     } : null;
     reader_clearHighlight = clearHighlight;
     if (listenMode && S.settings.narration) setTimeout(() => togglePlay(pg, playBtn), 150);

@@ -223,9 +223,27 @@ export const narrator = {
     const v = this._pickVoice(accent); if (v) u.voice = v; u.lang = accent;
     u.rate = rateFor(speed); u.pitch = 1;
     u.onstart = () => this.onstart?.();
-    // Word-by-word highlight: only the device voice fires 'boundary'. We forward the character offset
-    // and length so the caller can map it to a rendered word span. (Pre-rendered clips have no timings.)
-    u.onboundary = (e) => { if (e.name === 'word' || e.name === undefined) this.onboundary?.(e.charIndex, e.charLength || 0); };
+    // Word-by-word highlight: only the device voice fires 'boundary'. The spoken string (`text`, i.e. the
+    // page's audio_script) may differ from the RENDERED page text by punctuation only (e.g. quotes stripped
+    // for smoother reading), so a raw character offset would drift. Instead we convert charIndex into a
+    // WORD INDEX (how many whitespace-separated tokens start at or before this offset) — the Nth spoken word
+    // maps to the Nth rendered word because both have the same token count. We forward (charIndex, length,
+    // wordIndex); callers highlight by word index. (Pre-rendered clips have no timings, so no boundary fires.)
+    const spoken = text || '';
+    const isWs = (c) => c === ' ' || c === '\n' || c === '\t' || c === '\r' || c === '\f' || c === '\v';
+    u.onboundary = (e) => {
+      if (e.name !== 'word' && e.name !== undefined) return;
+      let ci = e.charIndex || 0;
+      if (ci >= spoken.length) ci = spoken.length - 1;
+      // 0-based index of the token that starts at ci = (number of token-starts in [0..ci]) - 1.
+      // A token starts at position p when spoken[p] is non-whitespace and (p===0 or spoken[p-1] is whitespace).
+      let starts = 0;
+      for (let k = 0; k <= ci; k++) {
+        if (!isWs(spoken[k]) && (k === 0 || isWs(spoken[k - 1]))) starts++;
+      }
+      const wordIndex = Math.max(0, starts - 1);
+      this.onboundary?.(e.charIndex || 0, e.charLength || 0, wordIndex);
+    };
     u.onend = u.onerror = () => { this.speaking = false; this.onend?.(); };
     this.speaking = true; speechSynthesis.speak(u); return true;
   },
