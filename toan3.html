@@ -4340,12 +4340,14 @@ function renderParent(){
     <h3>🧩 Ma trận kĩ năng (chi tiết)</h3>
     ${matrix}
     <div style="font-size:12px;color:var(--muted);margin-top:4px">Trạng thái tăng dần: <b>Chưa làm → Mới làm → Đang luyện → Vững</b> (tính theo số câu con <i>tự làm đúng</i>, không tính câu dùng gợi ý).</div>
+    ${(AUTH_ME&&AUTH_ME.is_admin)?`<h3>🛡️ Quản trị · Duyệt tài khoản</h3><div id="pcAdmin"><div style="color:var(--muted);font-size:13px">Đang tải danh sách…</div></div>`:''}
     <h3>⚙️ Lịch &amp; dữ liệu</h3>
     <div class="card" style="margin-top:6px">
       <div style="margin-bottom:8px">Trạm đang mở cho con: <b>${G.unlocked}</b>/35</div>
       <button class="pur" onclick="parentSetUnlock()">📅 Đặt trạm bắt đầu</button>
       <button class="gry" onclick="resetGame()">↺ Đặt lại tiến độ</button>
     </div>`;
+  if(AUTH_ME && AUTH_ME.is_admin) renderAdminPanel();
 }
 function parentSetUnlock(){
   const v=prompt('Cho con bắt đầu từ trạm (tuần) nào? (1–35)', G.unlocked);
@@ -4353,6 +4355,59 @@ function parentSetUnlock(){
   const n=parseInt(v,10);
   if(n>=1 && n<=35){ G.unlocked=n; gSave(); gRenderMap(); renderParent(); }
   else alert('Số trạm phải từ 1 đến 35.');
+}
+
+/* ---------- Quản trị: duyệt tài khoản (chỉ hiện khi is_admin). ----------
+   Dựa trên RLS có sẵn: toan3_is_admin() cho phép admin SELECT/UPDATE mọi hồ sơ.
+   Dùng chung bảng toan3_profiles cho cả toan3/tiengviet3/read-oasis. */
+async function renderAdminPanel(){
+  const box=document.getElementById('pcAdmin'); if(!box) return;
+  if(!supa){ box.innerHTML='<div style="color:#c62828;font-size:13px">Cần đăng nhập Supabase để quản trị.</div>'; return; }
+  box.innerHTML='<div style="color:var(--muted);font-size:13px">Đang tải danh sách…</div>';
+  const {data,error}=await supa.from('toan3_profiles')
+    .select('id,email,full_name,approved,is_admin,created_at').order('created_at',{ascending:false});
+  if(error){ box.innerHTML='<div style="color:#c62828;font-size:13px">Không tải được danh sách (kiểm tra quyền admin / RLS).</div>'; return; }
+  const rows=data||[];
+  const pending=rows.filter(r=>!r.approved);
+  const approved=rows.filter(r=>r.approved);
+  const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const fmtD=t=>{try{return new Date(t).toLocaleDateString('vi-VN');}catch(e){return '';}};
+  let html='';
+  html+=`<div class="pc-weak" style="background:#fff3e0;border-color:#ffcc80"><b>⏳ Chờ duyệt (${pending.length})</b>`;
+  if(!pending.length){ html+=`<div style="margin-top:4px;color:var(--muted)">Không có tài khoản nào đang chờ. 🎉</div>`; }
+  else{
+    html+=`<div class="tbl-scroll"><table class="matrix" style="margin-top:6px"><tr><th style="text-align:left">Tên</th><th style="text-align:left">Email</th><th>Ngày ĐK</th><th>Duyệt</th></tr>`;
+    pending.forEach(r=>{ html+=`<tr>
+      <td class="lbl">${esc(r.full_name)||'<i>(chưa đặt tên)</i>'}</td>
+      <td class="lbl">${esc(r.email)}</td>
+      <td>${fmtD(r.created_at)}</td>
+      <td><button class="grn" style="padding:4px 10px;font-size:12.5px" onclick="adminApprove('${r.id}')">✅ Duyệt</button></td></tr>`; });
+    html+=`</table></div>`;
+  }
+  html+=`</div>`;
+  html+=`<details style="margin-top:8px"><summary style="cursor:pointer;font-weight:700;color:#5e35b1">✅ Đã duyệt (${approved.length})</summary>`;
+  html+=`<div class="tbl-scroll"><table class="matrix" style="margin-top:6px"><tr><th style="text-align:left">Tên</th><th style="text-align:left">Email</th><th>Vai trò</th><th>Thu hồi</th></tr>`;
+  approved.forEach(r=>{ const me=(AUTH_ME&&r.id===AUTH_ME.id);
+    html+=`<tr>
+      <td class="lbl">${esc(r.full_name)||'<i>(chưa đặt tên)</i>'}${me?' 👈':''}</td>
+      <td class="lbl">${esc(r.email)}</td>
+      <td>${r.is_admin?'🛡️ admin':'học sinh'}</td>
+      <td>${(me||r.is_admin)?'<span style="color:var(--muted)">—</span>':`<button class="gry" style="padding:4px 10px;font-size:12.5px" onclick="adminReject('${r.id}')">↩ Thu hồi</button>`}</td></tr>`; });
+  html+=`</table></div></details>`;
+  box.innerHTML=html;
+}
+async function adminApprove(id){
+  if(!supa) return;
+  const {error}=await supa.from('toan3_profiles').update({approved:true}).eq('id',id);
+  if(error){ alert('Không duyệt được: '+(error.message||'lỗi quyền')); return; }
+  renderAdminPanel();
+}
+async function adminReject(id){
+  if(!supa) return;
+  if(!confirm('Thu hồi quyền truy cập của tài khoản này? Lần sau họ sẽ phải chờ duyệt lại.')) return;
+  const {error}=await supa.from('toan3_profiles').update({approved:false}).eq('id',id);
+  if(error){ alert('Không thu hồi được: '+(error.message||'lỗi quyền')); return; }
+  renderAdminPanel();
 }
 
 /* ---------- Khởi tạo trang ---------- */
@@ -4536,10 +4591,10 @@ async function authSubmitSupabase(){
         else authMsg('err','Sai email hoặc mật khẩu.');
         return;
       }
-      const {data:prof,error:pe}=await supa.from('toan3_profiles').select('approved,full_name').eq('id',data.user.id).single();
+      const {data:prof,error:pe}=await supa.from('toan3_profiles').select('approved,full_name,is_admin').eq('id',data.user.id).single();
       if(pe || !prof || !prof.approved){ await supa.auth.signOut(); authMsg('err','Tài khoản đang chờ admin duyệt 🕒'); return; }
       document.getElementById('authPass').value='';
-      AUTH_ME={id:data.user.id, email:data.user.email, name:(prof.full_name||data.user.email)};
+      AUTH_ME={id:data.user.id, email:data.user.email, name:(prof.full_name||data.user.email), is_admin:!!prof.is_admin};
       enterApp(AUTH_ME.name);
     }
   }catch(ex){ authMsg('err','Lỗi kết nối. Kiểm tra mạng rồi thử lại.'); }
@@ -4760,8 +4815,8 @@ async function authBoot(){
     try{
       const {data}=await supa.auth.getSession();
       if(data && data.session){
-        const {data:prof}=await supa.from('toan3_profiles').select('approved,full_name').eq('id',data.session.user.id).single();
-        if(prof && prof.approved){ AUTH_ME={id:data.session.user.id, email:data.session.user.email, name:(prof.full_name||data.session.user.email)}; enterApp(AUTH_ME.name); return; }
+        const {data:prof}=await supa.from('toan3_profiles').select('approved,full_name,is_admin').eq('id',data.session.user.id).single();
+        if(prof && prof.approved){ AUTH_ME={id:data.session.user.id, email:data.session.user.email, name:(prof.full_name||data.session.user.email), is_admin:!!prof.is_admin}; enterApp(AUTH_ME.name); return; }
         await supa.auth.signOut();
       }
     }catch(e){}
