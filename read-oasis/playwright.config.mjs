@@ -1,6 +1,5 @@
 // Author: Huy Tran
-// Company: Cadence Design Systems Vietnam
-// Email: huytran@cadence.com
+// Email: hqt.msg@gmail.com
 // Created: 2026-09-29
 //
 // Playwright config for Read Oasis browser end-to-end tests.

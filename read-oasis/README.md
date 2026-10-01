@@ -1,6 +1,6 @@
 # Read Oasis — local-first reading companion (baseline, milestone 1)
 
-Author: Huy Tran · Cadence Design Systems Vietnam · huytran@cadence.com · Created: 2026-09-27
+Author: Huy Tran · hqt.msg@gmail.com · Created: 2026-09-27
 Spec: `../ref_docs/ReadOasis_Three_Year_Learning_App_Spec.md` (v1.0)
 
 > Not a medical product. Display defaults are testing defaults to tune with the child on the real device.

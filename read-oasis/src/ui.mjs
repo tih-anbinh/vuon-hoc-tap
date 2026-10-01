@@ -1,6 +1,5 @@
 // Author: Huy Tran
-// Company: Cadence Design Systems Vietnam
-// Email: huytran@cadence.com
+// Email: hqt.msg@gmail.com
 // Created: 2026-09-27
 //
 // Shared browser helpers: DOM builder, settings -> CSS variables, narration, toast, break timer,

@@ -1,6 +1,5 @@
 // Author: Huy Tran
-// Company: Cadence Design Systems Vietnam
-// Email: huytran@cadence.com
+// Email: hqt.msg@gmail.com
 // Created: 2026-09-27
 //
 // Parent area: PIN gate (local only), baseline (L01), settings, evidence (L03), review of open answers,

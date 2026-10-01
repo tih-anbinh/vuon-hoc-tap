@@ -1,12 +1,11 @@
 // Author: Huy Tran
-// Company: Cadence Design Systems Vietnam
-// Email: huytran@cadence.com
+// Email: hqt.msg@gmail.com
 // Created: 2026-09-27
 //
 // Read Oasis service worker: cache app shell + published content for offline use (R07).
 // Same-origin only. No analytics, no external requests.
 // VERSION is stamped automatically by tools/validate_content.py --index (content hash + shell hash); do not edit by hand.
-const VERSION = 'ro-2a6c163583b1-fbf9a253';
+const VERSION = 'ro-2a6c163583b1-628eff39';
 const SHELL = ['./', 'index.html', 'parent.html', 'manifest.webmanifest', 'assets/app.css',
   'src/kid-app.mjs', 'src/parent-dashboard.mjs', 'src/progress-store.mjs', 'src/schema.mjs', 'src/ui.mjs', 'src/sync.mjs', 'src/config.mjs', 'src/auth-gate.mjs', 'src/vocab-garden.mjs', 'content/index.json'];
 

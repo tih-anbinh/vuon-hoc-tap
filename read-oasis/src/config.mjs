@@ -1,6 +1,5 @@
 // Author: Huy Tran
-// Company: Cadence Design Systems Vietnam
-// Email: huytran@cadence.com
+// Email: hqt.msg@gmail.com
 // Created: 2026-09-27
 //
 // Deployment configuration. Same Supabase project as toan3.html / tiengviet3.html (anon key is public by design;

@@ -1,6 +1,6 @@
 # Read Oasis — Library Collection Brief (Year 1)
 
-Author: Huy Tran · Cadence Design Systems Vietnam · huytran@cadence.com · Created: 2026-09-27
+Author: Huy Tran · hqt.msg@gmail.com · Created: 2026-09-27
 For: a content-authoring agent producing original English books for the Read Oasis child reader.
 Owner/approver: the parent. Nothing you produce is published; it enters the pipeline as `DRAFT`.
 

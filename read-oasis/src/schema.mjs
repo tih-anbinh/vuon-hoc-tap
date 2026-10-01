@@ -1,6 +1,5 @@
 // Author: Huy Tran
-// Company: Cadence Design Systems Vietnam
-// Email: huytran@cadence.com
+// Email: hqt.msg@gmail.com
 // Created: 2026-09-27
 //
 // Read Oasis book schema v1 + validator (Gate A: C01, C03, C04, C05).
