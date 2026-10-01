@@ -19,6 +19,16 @@ const store = new ProgressStore(window.localStorage);
 const S = store.load();
 applySettings(S.settings);
 
+// Push the parent-chosen reading voice / accent / device-TTS flag into the shared narrator.
+// Done at startup AND on every settings change so EVERY route — reader, quiz, AND the Vocabulary
+// Garden — speaks with the same chosen voice (single source of truth = S.settings.voice_uri).
+function syncNarrator(s) {
+  narrator.deviceAllowed = s.allow_device_tts !== false;
+  narrator.accent = s.accent || 'en-GB';
+  narrator.voiceURI = s.voice_uri || null;
+}
+syncNarrator(S.settings);
+
 const app = document.getElementById('app');
 const titleEl = document.getElementById('titleText') || document.getElementById('title');
 let library = [];                      // published book summaries
@@ -32,7 +42,7 @@ let session = null;
 let breakTimer = null;
 let gardenAvailable = false;           // true when content/vocabulary/manifest.json loads (Phase 4)
 
-store.onChange(d => { applySettings(d.settings); renderStars(); if (breakTimer && breakTimer.minutes !== d.settings.break_minutes) breakTimer.setMinutes(d.settings.break_minutes); });
+store.onChange(d => { applySettings(d.settings); syncNarrator(d.settings); renderStars(); if (breakTimer && breakTimer.minutes !== d.settings.break_minutes) breakTimer.setMinutes(d.settings.break_minutes); });
 session = store.startSession();
 breakTimer = new BreakTimer({ minutes: S.settings.break_minutes, onCue: showBreak });
 
@@ -358,8 +368,7 @@ function renderReader(book) {
     story.focus?.();
   };
   let speed = S.settings.default_speed || 'normal';
-  narrator.deviceAllowed = S.settings.allow_device_tts !== false; narrator.accent = S.settings.accent || 'en-GB';
-  narrator.voiceURI = S.settings.voice_uri || null;
+  syncNarrator(S.settings);   // chosen voice / accent / device-TTS (single source of truth)
   const togglePlay = (pg, b) => {
     if (narrator.speaking) { narrator.stop(); reader_clearHighlight(); b.setAttribute('aria-pressed', 'false'); b.querySelector('span').textContent = 'Listen'; return; }
     audioUsedThisBook = true; store.setPage(book.book_id, book.revision, i, { audio: true });
@@ -374,10 +383,11 @@ function renderReader(book) {
 /** Small voice picker: lists the device's English voices and lets the child/grown-up choose one. The choice
  * is saved (settings.voice_uri) and, once set, is always used for reading so it also enables word highlight. */
 function showVoicePicker(anchorBtn) {
-  const voices = narrator.listVoices(S.settings.accent || 'en-GB');
+  const current = S.settings.voice_uri || null;
+  // Pass current so the chosen voice floats to the TOP of the list (default on top).
+  const voices = narrator.listVoices(S.settings.accent || 'en-GB', current);
   const overlay = h('div', { class: 'voice-overlay', role: 'dialog', 'aria-modal': 'true', 'aria-label': 'Choose a reading voice' });
   const close = () => overlay.remove();
-  const current = S.settings.voice_uri || null;
   const pick = (uri) => {
     store.setSettings({ voice_uri: uri });
     narrator.voiceURI = uri;

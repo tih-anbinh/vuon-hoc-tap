@@ -1511,16 +1511,22 @@ const narrator = {
    * voices. Each item is { uri, name, label, lang, online, kid }. Returns [] when the engine has no voices
    * yet (retry on 'voiceschanged'). accent biases the ordering toward the parent's chosen region.
    */
-  listVoices(accent = this.accent) {
+  listVoices(accent = this.accent, currentUri = this.voiceURI) {
     if (!this.supported) return [];
     const voices = speechSynthesis.getVoices() || [];
     return voices
       .map(v => ({ v, sc: scoreVoice(v, accent) }))
       .filter(x => x.sc >= 0)                                    // drop non-English + rejected junk voices
-      .sort((a, b) => b.sc - a.sc || (a.v.lang || '').localeCompare(b.v.lang) || (a.v.name || '').localeCompare(b.v.name))
+      // The currently-chosen voice floats to the very top; the rest follow by score, then lang, then name.
+      .sort((a, b) =>
+        ((b.v.voiceURI === currentUri) - (a.v.voiceURI === currentUri))
+        || b.sc - a.sc
+        || (a.v.lang || '').localeCompare(b.v.lang)
+        || (a.v.name || '').localeCompare(b.v.name))
       .map(({ v }) => ({
         uri: v.voiceURI, name: v.name, label: friendlyVoiceLabel(v),
         lang: v.lang, online: v.localService === false, kid: VOICE_CHILDREN.test(v.name),
+        current: v.voiceURI === currentUri,
       }));
   },
   /** True when a specific device voice is chosen AND still installed — then we always use device TTS. */
@@ -2283,12 +2289,13 @@ function narratorDescribe(accent) { try { narrator.voiceURI = S.settings.voice_u
 function voiceField(s) {
   const wrap = h('div', { class: 'field' });
   const build = () => {
-    const voices = (() => { try { return narrator.listVoices(s.accent || 'en-GB'); } catch { return []; } })();
     const cur = s.voice_uri || null;
+    // Pass cur so the currently-chosen voice floats to the TOP of the list (default on top).
+    const voices = (() => { try { return narrator.listVoices(s.accent || 'en-GB', cur); } catch { return []; } })();
     if (!narrator.supported) { wrap.replaceChildren(lab('Reading voice', h('span', { class: 'muted', text: 'This browser has no device voices.' }))); return; }
     const opts = ['', ...voices.map(v => v.uri)];
     const labels = { '': 'Auto (best voice)' };
-    for (const v of voices) labels[v.uri] = `${v.label}${v.online ? ' (online)' : ''}`;
+    for (const v of voices) labels[v.uri] = `${v.current ? '✓ ' : ''}${v.label}${v.online ? ' (online)' : ''}`;
     const e = sel(opts, cur || '', labels);
     e.onchange = () => { const uri = e.value || null; store.setSettings({ voice_uri: uri }); narrator.voiceURI = uri; narrator.accent = s.accent || 'en-GB'; narrator.deviceAllowed = true; narrator.speak('Hello! I will read with this voice.', { speed: s.default_speed || 'normal', accent: narrator.accent }); };
     const note = h('p', { class: 'muted', text: voices.length ? 'Pick a voice, then tap "Test device voice" to hear it. Add more voices on your device (iOS: Settings › Accessibility › Spoken Content › Voices; Android: Settings › Accessibility › Text-to-speech).' : 'No voices yet — add English voices in your device settings, then reopen this screen.' });

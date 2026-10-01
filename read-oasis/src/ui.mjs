@@ -149,16 +149,22 @@ export const narrator = {
    * voices. Each item is { uri, name, label, lang, online, kid }. Returns [] when the engine has no voices
    * yet (retry on 'voiceschanged'). accent biases the ordering toward the parent's chosen region.
    */
-  listVoices(accent = this.accent) {
+  listVoices(accent = this.accent, currentUri = this.voiceURI) {
     if (!this.supported) return [];
     const voices = speechSynthesis.getVoices() || [];
     return voices
       .map(v => ({ v, sc: scoreVoice(v, accent) }))
       .filter(x => x.sc >= 0)                                    // drop non-English + rejected junk voices
-      .sort((a, b) => b.sc - a.sc || (a.v.lang || '').localeCompare(b.v.lang) || (a.v.name || '').localeCompare(b.v.name))
+      // The currently-chosen voice floats to the very top; the rest follow by score, then lang, then name.
+      .sort((a, b) =>
+        ((b.v.voiceURI === currentUri) - (a.v.voiceURI === currentUri))
+        || b.sc - a.sc
+        || (a.v.lang || '').localeCompare(b.v.lang)
+        || (a.v.name || '').localeCompare(b.v.name))
       .map(({ v }) => ({
         uri: v.voiceURI, name: v.name, label: friendlyVoiceLabel(v),
         lang: v.lang, online: v.localService === false, kid: VOICE_CHILDREN.test(v.name),
+        current: v.voiceURI === currentUri,
       }));
   },
   /** True when a specific device voice is chosen AND still installed — then we always use device TTS. */

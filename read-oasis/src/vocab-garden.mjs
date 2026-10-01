@@ -156,7 +156,9 @@ function renderVisualArea(entry) {
 }
 
 // ---------- rendering helpers -------------------------------------------------
-function say(entry, { accent = 'en-GB' } = {}) {
+// accent defaults to the narrator's current accent (parent's chosen region) — NOT a hardcoded en-GB —
+// so the garden speaks with the same voice/accent the parent picked for the book reader.
+function say(entry, { accent = narrator.accent } = {}) {
   const t = entry.teaching || {};
   const clips = { normal: t.pronunciation?.audio_uk || null, us: t.pronunciation?.audio_us || null };
   narrator.speak(entry.headword, { clips, accent });

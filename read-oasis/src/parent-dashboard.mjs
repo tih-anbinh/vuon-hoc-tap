@@ -336,12 +336,13 @@ function narratorDescribe(accent) { try { narrator.voiceURI = S.settings.voice_u
 function voiceField(s) {
   const wrap = h('div', { class: 'field' });
   const build = () => {
-    const voices = (() => { try { return narrator.listVoices(s.accent || 'en-GB'); } catch { return []; } })();
     const cur = s.voice_uri || null;
+    // Pass cur so the currently-chosen voice floats to the TOP of the list (default on top).
+    const voices = (() => { try { return narrator.listVoices(s.accent || 'en-GB', cur); } catch { return []; } })();
     if (!narrator.supported) { wrap.replaceChildren(lab('Reading voice', h('span', { class: 'muted', text: 'This browser has no device voices.' }))); return; }
     const opts = ['', ...voices.map(v => v.uri)];
     const labels = { '': 'Auto (best voice)' };
-    for (const v of voices) labels[v.uri] = `${v.label}${v.online ? ' (online)' : ''}`;
+    for (const v of voices) labels[v.uri] = `${v.current ? '✓ ' : ''}${v.label}${v.online ? ' (online)' : ''}`;
     const e = sel(opts, cur || '', labels);
     e.onchange = () => { const uri = e.value || null; store.setSettings({ voice_uri: uri }); narrator.voiceURI = uri; narrator.accent = s.accent || 'en-GB'; narrator.deviceAllowed = true; narrator.speak('Hello! I will read with this voice.', { speed: s.default_speed || 'normal', accent: narrator.accent }); };
     const note = h('p', { class: 'muted', text: voices.length ? 'Pick a voice, then tap "Test device voice" to hear it. Add more voices on your device (iOS: Settings › Accessibility › Spoken Content › Voices; Android: Settings › Accessibility › Text-to-speech).' : 'No voices yet — add English voices in your device settings, then reopen this screen.' });
