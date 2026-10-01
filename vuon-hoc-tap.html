@@ -5446,7 +5446,7 @@ function openTool(b64){var by=Uint8Array.from(atob(b64),function(c){return c.cha
 // ============================================================
 // VUON GAME — Phase 1 JavaScript
 // Math Engine PCG + Game Hub + 3 Core Games
-// Author: Huy Tran | Cadence Design Systems Vietnam
+// Author: Huy Tran
 // ============================================================
 
 const _GV_KEY = 'vhq_garden_v1';
@@ -5994,7 +5994,7 @@ function g3Tap(chosen, correct, padEl) {
 // VUON GAME — Phase 2 JavaScript
 // Game 4: Cay Tao Ky Dieu (number decomposition / Tach-Gop)
 // Game 5: Tho Xay Ti Hon (2D/3D shape recognition)
-// Author: Huy Tran | Cadence Design Systems Vietnam
+// Author: Huy Tran
 // ============================================================
 
 MathEng.genSplit = function(range) {
@@ -6167,7 +6167,7 @@ function g5Answer(chosen, correct, btn) {
 // VUON GAME — Phase 3 JavaScript
 // Game 6: Tho Con Dong Tai (phonics)
 // Game 7: Tho Tim Duong (spelling)
-// Author: Huy Tran | Cadence Design Systems Vietnam
+// Author: Huy Tran
 // ============================================================
 const PHONICS_DB = [
   { word: 'bò',    emoji: '🐄', initial: 'b',  group: 'animal' },
@@ -6354,7 +6354,7 @@ function g7Answer(chosen, correct, btn) {
 // VUON GAME — Phase 4 JavaScript
 // Game 8: So Vui (numbers 11-100)
 // Game 9: Dong Ho Ky Dieu (clock reading)
-// Author: Huy Tran | Cadence Design Systems Vietnam
+// Author: Huy Tran
 // ============================================================
 MathEng.genPlaceValue = function() {
   const num = this.rnd(11,99); const tens = Math.floor(num/10); const ones = num%10;
@@ -6518,7 +6518,7 @@ function g9Answer(chosen,correct,btn){
 // ============================================================
 // VUON GAME — Phase 5: Full Gamification System
 // Streak tracking, Badges, Daily Challenge, Mascot Chú Ong
-// Author: Huy Tran | Cadence Design Systems Vietnam
+// Author: Huy Tran
 // ============================================================
 const GV5_BADGES = [
   { id:'first_win', icon:'🌟', name:'Bé Giỏi Đầu Tiên', desc:'Hoàn thành trò chơi đầu tiên', check:s=>(s.gamesCompleted||0)>=1 },
