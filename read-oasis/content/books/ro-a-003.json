@@ -10,110 +10,91 @@
   "topic": "nature",
   "genre": "fiction",
   "learning_objectives": [
-    "Follow a simple beginning-middle-end story.",
-    "Use picture-free text clues to identify where the leaf moves.",
-    "Retell three events in order using short sentences."
+    "Follow a simple beginning, change, and resolution.",
+    "Retell the leaf’s movement using position words."
   ],
-  "prerequisite_skills": [
-    "Listen to or read one short sentence at a time.",
-    "Recognize common words such as is, on, and in."
-  ],
+  "prerequisite_skills": [],
   "target_phonics": [],
   "irregular_words": [
-    "the"
+    "the",
+    "little"
   ],
   "difficulty": {
     "text": "low",
     "conceptual": "low",
-    "visual_support": "low"
+    "visual_support": "high"
   },
   "rights": {
     "text_author": "Read Oasis (original)",
     "text_license": "family-use, all rights reserved",
-    "media_license": "family-use, no media assets included",
+    "media_license": "family-use, original SVG",
     "original": true
   },
   "parent_prompts": [
-    "Ask your child to point to the words that tell where the leaf is.",
-    "After reading, invite your child to retell the leaf's trip in three steps.",
-    "Find a safe fallen leaf outdoors and describe its color and size together."
+    "Before reading: What might wind do to a leaf?",
+    "During reading: Trace the leaf’s path with one finger.",
+    "After reading: Where did the leaf start and finish?"
   ],
   "pages": [
     {
       "page_id": "p01",
-      "text": "A little green leaf is on a tree.",
-      "vocabulary": [
-        {
-          "word": "leaf",
-          "definition": "A flat part of a plant that grows from a stem or branch.",
-          "example": "The leaf is green."
-        }
-      ]
+      "text": "A little green leaf sits high.",
+      "image_asset": "images/ro-a-003-p01.svg",
+      "image_alt": "A small bright green leaf sits high on a sunlit tree branch in a gentle garden.",
+      "image_provenance": "original SVG by Read Oasis, 2026-10-01",
+      "audio_script": "A little green leaf sits high.",
+      "timing_segments": [],
+      "vocabulary": []
     },
     {
       "page_id": "p02",
-      "text": "The wind blows.",
-      "vocabulary": [
-        {
-          "word": "wind",
-          "definition": "Moving air.",
-          "example": "The wind moves the leaf."
-        }
-      ]
+      "text": "A strong wind shakes the tree.",
+      "image_asset": "images/ro-a-003-p02.svg",
+      "image_alt": "A visible gust bends the branches and shakes the little green leaf on the tree.",
+      "image_provenance": "original SVG by Read Oasis, 2026-10-01",
+      "audio_script": "A strong wind shakes the tree.",
+      "timing_segments": [],
+      "vocabulary": []
     },
     {
       "page_id": "p03",
-      "text": "The leaf goes up.",
-      "vocabulary": [
-        {
-          "word": "up",
-          "definition": "Toward a higher place.",
-          "example": "The leaf goes up."
-        }
-      ]
+      "text": "The little leaf lets go.",
+      "image_asset": "images/ro-a-003-p03.svg",
+      "image_alt": "The little green leaf breaks free from its twig and floats into the soft blue sky.",
+      "image_provenance": "original SVG by Read Oasis, 2026-10-01",
+      "audio_script": "The little leaf lets go.",
+      "timing_segments": [],
+      "vocabulary": []
     },
     {
       "page_id": "p04",
-      "text": "The leaf goes down.",
-      "vocabulary": [
-        {
-          "word": "down",
-          "definition": "Toward a lower place.",
-          "example": "The leaf goes down."
-        }
-      ]
+      "text": "It spins above Mo’s red hat.",
+      "image_asset": "images/ro-a-003-p04.svg",
+      "image_alt": "The green leaf circles clearly above Mo’s red hat while Mo looks upward.",
+      "image_provenance": "original SVG by Read Oasis, 2026-10-01",
+      "audio_script": "It spins above Mo’s red hat.",
+      "timing_segments": [],
+      "vocabulary": []
     },
     {
       "page_id": "p05",
-      "text": "It lands on Mo's red hat.",
-      "vocabulary": [
-        {
-          "word": "lands",
-          "definition": "Comes down onto a place.",
-          "example": "The leaf lands on the hat."
-        }
-      ]
+      "text": "The leaf lands on the hat.",
+      "image_asset": "images/ro-a-003-p05.svg",
+      "image_alt": "The green leaf rests clearly on top of Mo’s red hat while Mo looks upward.",
+      "image_provenance": "original SVG by Read Oasis, 2026-10-01",
+      "audio_script": "The leaf lands on the hat.",
+      "timing_segments": [],
+      "vocabulary": []
     },
     {
       "page_id": "p06",
-      "text": "Mo looks up.",
-      "vocabulary": []
-    },
-    {
-      "page_id": "p07",
-      "text": "Mo sees the little leaf.",
-      "vocabulary": []
-    },
-    {
-      "page_id": "p08",
       "text": "Mo puts it by the tree.",
-      "vocabulary": [
-        {
-          "word": "by",
-          "definition": "Next to something.",
-          "example": "The leaf is by the tree."
-        }
-      ]
+      "image_asset": "images/ro-a-003-p06.svg",
+      "image_alt": "Mo kneels and gently places the green leaf on the grass beside the same tree.",
+      "image_provenance": "original SVG by Read Oasis, 2026-10-01",
+      "audio_script": "Mo puts it by the tree.",
+      "timing_segments": [],
+      "vocabulary": []
     }
   ],
   "quiz": [
@@ -121,67 +102,79 @@
       "question_id": "q01",
       "skill": "explicit_detail",
       "difficulty": "easy",
-      "prompt": "Where is the leaf at the start?",
+      "prompt": "Where is the leaf at first?",
       "options": [
         {
-          "id": "tree",
-          "text": "On a tree"
+          "id": "a",
+          "text": "High in a tree"
         },
         {
-          "id": "hat",
-          "text": "On Mo's hat"
+          "id": "b",
+          "text": "Under a chair"
+        },
+        {
+          "id": "c",
+          "text": "Inside a bag"
         }
       ],
-      "correct_option_id": "tree",
+      "correct_option_id": "a",
       "evidence_page_ids": [
         "p01"
       ],
-      "explanation": "Page 1 says the little green leaf is on a tree.",
+      "explanation": "Page 1 says the leaf sits high.",
       "distractors_reviewed": true
     },
     {
       "question_id": "q02",
-      "skill": "sequence",
+      "skill": "cause_effect",
       "difficulty": "easy",
-      "prompt": "What happens after the wind blows?",
+      "prompt": "What shakes the tree?",
       "options": [
         {
-          "id": "goes_up",
-          "text": "The leaf goes up"
+          "id": "a",
+          "text": "A strong wind"
         },
         {
-          "id": "by_tree",
-          "text": "Mo puts the leaf by the tree"
+          "id": "b",
+          "text": "A blue bird"
+        },
+        {
+          "id": "c",
+          "text": "A small ball"
         }
       ],
-      "correct_option_id": "goes_up",
+      "correct_option_id": "a",
       "evidence_page_ids": [
-        "p02",
-        "p03"
+        "p02"
       ],
-      "explanation": "Page 2 says the wind blows, and page 3 says the leaf goes up.",
+      "explanation": "Page 2 says a strong wind shakes the tree.",
       "distractors_reviewed": true
     },
     {
       "question_id": "q03",
-      "skill": "explicit_detail",
+      "skill": "sequence",
       "difficulty": "easy",
-      "prompt": "Where does the leaf land?",
+      "prompt": "What happens after the leaf spins?",
       "options": [
         {
-          "id": "red_hat",
-          "text": "On Mo's red hat"
+          "id": "a",
+          "text": "It lands on the hat"
         },
         {
-          "id": "blue_box",
-          "text": "In a blue box"
+          "id": "b",
+          "text": "It grows on the tree"
+        },
+        {
+          "id": "c",
+          "text": "It falls into a cup"
         }
       ],
-      "correct_option_id": "red_hat",
+      "correct_option_id": "a",
       "evidence_page_ids": [
+        "p04",
         "p05"
       ],
-      "explanation": "Page 5 says the leaf lands on Mo's red hat.",
+      "explanation": "Page 4 shows the spin, and page 5 says the leaf lands on the hat.",
       "distractors_reviewed": true
     },
     {
@@ -189,9 +182,9 @@
       "skill": "expression",
       "difficulty": "easy",
       "response_type": "open",
-      "prompt": "Tell the leaf's trip in your own words.",
-      "rubric": "Not yet: names no clear event. With support: tells one or two events with prompts. Independent: tells at least three events in a logical order.",
-      "explanation": "A complete response can say that the wind blows, the leaf moves up and down, it lands on Mo's hat, and Mo puts it by the tree."
+      "prompt": "Tell the leaf’s trip to a grown-up.",
+      "rubric": "Not yet: names no clear event. With support: tells one or two events with prompts. Independent: tells at least three events in the correct order.",
+      "explanation": "A complete retell includes the tree, wind, spinning leaf, red hat, and the leaf beside the tree."
     }
   ],
   "activities": [
@@ -202,18 +195,18 @@
       "items": [
         {
           "id": "s1",
-          "text": "The wind blows.",
+          "text": "The wind shakes the tree.",
           "page_id": "p02"
         },
         {
           "id": "s2",
-          "text": "The leaf lands on Mo's hat.",
-          "page_id": "p05"
+          "text": "The leaf spins above Mo.",
+          "page_id": "p04"
         },
         {
           "id": "s3",
           "text": "Mo puts the leaf by the tree.",
-          "page_id": "p08"
+          "page_id": "p06"
         }
       ],
       "correct_order": [
@@ -224,40 +217,21 @@
     },
     {
       "activity_id": "a02",
-      "type": "word_to_meaning",
-      "skill": "word_knowledge",
-      "pairs": [
-        {
-          "left": "wind",
-          "right": "moving air"
-        },
-        {
-          "left": "up",
-          "right": "toward a higher place"
-        },
-        {
-          "left": "by",
-          "right": "next to something"
-        }
-      ]
-    },
-    {
-      "activity_id": "a03",
       "type": "discussion",
       "skill": "expression",
       "prompts": [
-        "Why do you think Mo puts the leaf by the tree?",
-        "Where might the wind carry another leaf?"
+        "Show how the leaf moves with your hand.",
+        "Why does Mo put the leaf by the tree?"
       ]
     }
   ],
-  "off_screen_prompt": "Find a safe fallen leaf with an adult. Put it above, below, and beside a small box while saying each position word.",
+  "off_screen_prompt": "Find a safe fallen leaf with an adult and move it up, down, and around.",
   "review": {
     "content_approved": true,
     "media_approved": true,
     "parent_approved": true,
-    "published_at": "2026-10-01T09:00:00+07:00",
-    "reviewer": "parent (Content Studio)",
+    "published_at": "2026-10-01T08:50:42+07:00",
+    "reviewer": "agent (daily pack)",
     "review_date": "2026-10-01"
   }
 }
