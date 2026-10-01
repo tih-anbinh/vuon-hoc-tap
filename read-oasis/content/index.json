@@ -1,7 +1,7 @@
 {
   "index_version": 1,
   "generated_by": "tools/validate_content.py",
-  "content_hash": "9fefa35ed312",
+  "content_hash": "3febc8c3df8b",
   "greetings": {},
   "books": [
     {
@@ -811,6 +811,31 @@
       ]
     },
     {
+      "book_id": "ro-m-031",
+      "revision": 1,
+      "file": "books/ro-m-031.json",
+      "title": "The Tide Clock and the Heron",
+      "level": "M",
+      "reading_mode": "independent_reading",
+      "topic": "nature and careful problem-solving",
+      "genre": "fiction",
+      "pages": 9,
+      "sha256": "2481a6f6246bc99aca0386a28b134802f1568a85b3934db1410ebe66c3242dcb",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
+      "assets": [
+        "images/ro-m-031-p01.svg",
+        "images/ro-m-031-p02.svg",
+        "images/ro-m-031-p03.svg",
+        "images/ro-m-031-p04.svg",
+        "images/ro-m-031-p05.svg",
+        "images/ro-m-031-p06.svg",
+        "images/ro-m-031-p07.svg",
+        "images/ro-m-031-p08.svg",
+        "images/ro-m-031-p09.svg"
+      ]
+    },
+    {
       "book_id": "ro-n-030",
       "revision": 1,
       "file": "books/ro-n-030.json",
@@ -1032,6 +1057,33 @@
         "images/ro-w-030-p06.svg",
         "images/ro-w-030-p07.svg",
         "images/ro-w-030-p08.svg"
+      ]
+    },
+    {
+      "book_id": "ro-w-031",
+      "revision": 1,
+      "file": "books/ro-w-031.json",
+      "title": "The Hour Luma Gave Back to the Sky",
+      "level": "W",
+      "reading_mode": "independent_reading",
+      "topic": "community decisions and responsible lighting",
+      "genre": "fiction",
+      "pages": 11,
+      "sha256": "87f9f554069d6ff794aa258f05fcccb1ddde55a9b771cba8d67cd5b330a784ed",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
+      "assets": [
+        "images/ro-w-031-p01.svg",
+        "images/ro-w-031-p02.svg",
+        "images/ro-w-031-p03.svg",
+        "images/ro-w-031-p04.svg",
+        "images/ro-w-031-p05.svg",
+        "images/ro-w-031-p06.svg",
+        "images/ro-w-031-p07.svg",
+        "images/ro-w-031-p08.svg",
+        "images/ro-w-031-p09.svg",
+        "images/ro-w-031-p10.svg",
+        "images/ro-w-031-p11.svg"
       ]
     }
   ]

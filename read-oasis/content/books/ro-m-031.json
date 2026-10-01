@@ -1,0 +1,275 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-m-031",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "The Tide Clock and the Heron",
+  "language": "en",
+  "level": "M",
+  "reading_mode": "independent_reading",
+  "topic": "nature and careful problem-solving",
+  "genre": "fiction",
+  "learning_objectives": [
+    "Infer why Lin pauses before acting.",
+    "Explain how observation and timing support a safe solution.",
+    "Summarize the story’s problem, response, and resolution."
+  ],
+  "prerequisite_skills": [
+    "Read short narrative paragraphs independently."
+  ],
+  "target_phonics": [],
+  "irregular_words": [
+    "young",
+    "caught",
+    "thought"
+  ],
+  "difficulty": {
+    "text": "medium",
+    "conceptual": "medium",
+    "visual_support": "high"
+  },
+  "rights": {
+    "text_author": "Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
+  "parent_prompts": [
+    "Before reading: When can slowing down make a problem easier?",
+    "During reading: What clues show that the tide is changing?",
+    "After reading: Which choice made the rescue safer?"
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "Lin followed the wooden walkway into the mangroves, carrying Grandfather’s old tide clock. Its brass hand pointed toward low tide, when hidden roots rose from the water like crooked fingers.",
+      "image_asset": "images/ro-m-031-p01.svg",
+      "image_alt": "Lin walks on a wooden mangrove path carrying a round brass tide clock while exposed roots rise from shallow water.",
+      "image_provenance": "original SVG by Read Oasis, 2026-10-01",
+      "audio_script": "Lin followed the wooden walkway into the mangroves, carrying Grandfather’s old tide clock. Its brass hand pointed toward low tide, when hidden roots rose from the water like crooked fingers.",
+      "timing_segments": [],
+      "vocabulary": []
+    },
+    {
+      "page_id": "p02",
+      "text": "At the observation hut, Lin found a young heron tangled in a loop of fishing line. The frightened bird pulled harder whenever Lin stepped close.",
+      "image_asset": "images/ro-m-031-p02.svg",
+      "image_alt": "A young heron stands tangled in fishing line beside a small observation hut while Lin notices from the walkway.",
+      "image_provenance": "original SVG by Read Oasis, 2026-10-01",
+      "audio_script": "At the observation hut, Lin found a young heron tangled in a loop of fishing line. The frightened bird pulled harder whenever Lin stepped close.",
+      "timing_segments": [],
+      "vocabulary": []
+    },
+    {
+      "page_id": "p03",
+      "text": "Lin wanted to rush forward, but the tide clock warned that water would soon return. Lin stopped, breathed slowly, and studied where the line crossed the roots.",
+      "image_asset": "images/ro-m-031-p03.svg",
+      "image_alt": "Lin pauses thoughtfully beside the tide clock, studying fishing line wrapped around mangrove roots as water begins to rise.",
+      "image_provenance": "original SVG by Read Oasis, 2026-10-01",
+      "audio_script": "Lin wanted to rush forward, but the tide clock warned that water would soon return. Lin stopped, breathed slowly, and studied where the line crossed the roots.",
+      "timing_segments": [],
+      "vocabulary": []
+    },
+    {
+      "page_id": "p04",
+      "text": "Using a long fallen branch, Lin lifted the loose loop without touching the sharp beak. The heron stood still, yet one knot remained beneath the dark water.",
+      "image_asset": "images/ro-m-031-p04.svg",
+      "image_alt": "Lin carefully uses a long branch to lift fishing line away from a heron while keeping a safe distance from its beak.",
+      "image_provenance": "original SVG by Read Oasis, 2026-10-01",
+      "audio_script": "Using a long fallen branch, Lin lifted the loose loop without touching the sharp beak. The heron stood still, yet one knot remained beneath the dark water.",
+      "timing_segments": [],
+      "vocabulary": []
+    },
+    {
+      "page_id": "p05",
+      "text": "Grandfather arrived with garden gloves and small scissors. Together, they waited for the bird to face away, then cut the last knot with one quick snip.",
+      "image_asset": "images/ro-m-031-p05.svg",
+      "image_alt": "Grandfather wearing gloves cuts the final fishing-line knot while Lin holds the branch and the heron faces away.",
+      "image_provenance": "original SVG by Read Oasis, 2026-10-01",
+      "audio_script": "Grandfather arrived with garden gloves and small scissors. Together, they waited for the bird to face away, then cut the last knot with one quick snip.",
+      "timing_segments": [],
+      "vocabulary": []
+    },
+    {
+      "page_id": "p06",
+      "text": "The heron opened its wings but did not fly. For one worried moment, Lin wondered whether the wing was hurt. Then the bird stepped onto a root and balanced.",
+      "image_asset": "images/ro-m-031-p06.svg",
+      "image_alt": "The freed heron opens wide wings and balances on a mangrove root while Lin and Grandfather watch from nearby.",
+      "image_provenance": "original SVG by Read Oasis, 2026-10-01",
+      "audio_script": "The heron opened its wings but did not fly. For one worried moment, Lin wondered whether the wing was hurt. Then the bird stepped onto a root and balanced.",
+      "timing_segments": [],
+      "vocabulary": []
+    },
+    {
+      "page_id": "p07",
+      "text": "A silver fish flashed in the returning water. The heron struck, caught it, and lifted into the warm air. Lin’s worry loosened as the bird crossed the creek.",
+      "image_asset": "images/ro-m-031-p07.svg",
+      "image_alt": "The heron catches a silver fish and flies over the returning blue water while Lin watches from the boardwalk.",
+      "image_provenance": "original SVG by Read Oasis, 2026-10-01",
+      "audio_script": "A silver fish flashed in the returning water. The heron struck, caught it, and lifted into the warm air. Lin’s worry loosened as the bird crossed the creek.",
+      "timing_segments": [],
+      "vocabulary": []
+    },
+    {
+      "page_id": "p08",
+      "text": "Lin wound the cut line into a tight bundle. On the walk home, Lin noticed more scraps caught among the roots and planned a careful cleanup with neighbors.",
+      "image_asset": "images/ro-m-031-p08.svg",
+      "image_alt": "Lin gathers cut fishing line into a safe bundle and notices other small scraps among mangrove roots.",
+      "image_provenance": "original SVG by Read Oasis, 2026-10-01",
+      "audio_script": "Lin wound the cut line into a tight bundle. On the walk home, Lin noticed more scraps caught among the roots and planned a careful cleanup with neighbors.",
+      "timing_segments": [],
+      "vocabulary": []
+    },
+    {
+      "page_id": "p09",
+      "text": "The tide clock had not rescued the heron, but it had helped Lin slow down, observe, and choose the safest moment. Sometimes a useful tool changes how we think.",
+      "image_asset": "images/ro-m-031-p09.svg",
+      "image_alt": "At sunset Lin holds the brass tide clock beside Grandfather as the freed heron flies over the peaceful mangroves.",
+      "image_provenance": "original SVG by Read Oasis, 2026-10-01",
+      "audio_script": "The tide clock had not rescued the heron, but it had helped Lin slow down, observe, and choose the safest moment. Sometimes a useful tool changes how we think.",
+      "timing_segments": [],
+      "vocabulary": []
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "cause_effect",
+      "difficulty": "medium",
+      "prompt": "Why does Lin stop before approaching the heron?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The tide will return soon, and rushing may frighten the bird"
+        },
+        {
+          "id": "b",
+          "text": "Lin wants to polish the tide clock first"
+        },
+        {
+          "id": "c",
+          "text": "The walkway has completely disappeared"
+        }
+      ],
+      "correct_option_id": "a",
+      "evidence_page_ids": [
+        "p02",
+        "p03"
+      ],
+      "explanation": "Pages 2 and 3 show that the bird pulls harder when approached and that the tide will soon return.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "inference",
+      "difficulty": "medium",
+      "prompt": "What proves that the heron can probably fly safely?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It balances, catches a fish, and lifts into the air"
+        },
+        {
+          "id": "b",
+          "text": "It stands near the observation hut"
+        },
+        {
+          "id": "c",
+          "text": "It looks at the brass clock"
+        }
+      ],
+      "correct_option_id": "a",
+      "evidence_page_ids": [
+        "p06",
+        "p07"
+      ],
+      "explanation": "Pages 6 and 7 show the heron balancing, hunting, and flying across the creek.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "main_idea",
+      "difficulty": "medium",
+      "prompt": "What is the story mainly about?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Careful observation helps Lin solve a problem safely"
+        },
+        {
+          "id": "b",
+          "text": "A clock can speak to wild birds"
+        },
+        {
+          "id": "c",
+          "text": "Mangrove paths are always dangerous"
+        }
+      ],
+      "correct_option_id": "a",
+      "evidence_page_ids": [
+        "p03",
+        "p04",
+        "p05",
+        "p09"
+      ],
+      "explanation": "Those pages show Lin studying the situation, acting carefully, and reflecting on the value of slowing down.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "expression",
+      "difficulty": "medium",
+      "response_type": "open",
+      "prompt": "Retell the rescue and explain which choice mattered most.",
+      "rubric": "Not yet: gives an unrelated detail. With support: tells the problem and one rescue action. Independent: retells the problem, key actions, resolution, and explains one important choice with evidence.",
+      "explanation": "A strong response explains the tangled line, Lin’s pause, the careful cutting, and the heron’s successful flight."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "items": [
+        {
+          "id": "s1",
+          "text": "Lin studies the line and rising water.",
+          "page_id": "p03"
+        },
+        {
+          "id": "s2",
+          "text": "Grandfather cuts the final knot.",
+          "page_id": "p05"
+        },
+        {
+          "id": "s3",
+          "text": "The heron catches a fish and flies.",
+          "page_id": "p07"
+        }
+      ],
+      "correct_order": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "discussion",
+      "skill": "inference",
+      "prompts": [
+        "Why was distance from the heron’s beak important?",
+        "How did the tide clock affect Lin’s thinking even though it did not touch the bird?"
+      ]
+    }
+  ],
+  "off_screen_prompt": "With an adult, inspect a safe outdoor place and list one thing people could remove to protect animals.",
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-10-01T08:50:42+07:00",
+    "reviewer": "agent (daily pack)",
+    "review_date": "2026-10-01"
+  }
+}
