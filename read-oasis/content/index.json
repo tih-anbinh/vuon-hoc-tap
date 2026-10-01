@@ -1,7 +1,7 @@
 {
   "index_version": 1,
   "generated_by": "tools/validate_content.py",
-  "content_hash": "3febc8c3df8b",
+  "content_hash": "05e7741cbe9a",
   "greetings": {},
   "books": [
     {
@@ -133,6 +133,28 @@
         "images/ro-a-030-p04.svg",
         "images/ro-a-030-p05.svg",
         "images/ro-a-030-p06.svg"
+      ]
+    },
+    {
+      "book_id": "ro-a-031",
+      "revision": 1,
+      "file": "books/ro-a-031.json",
+      "title": "Dad Fixes the Chair",
+      "level": "A",
+      "reading_mode": "shared_reading",
+      "topic": "helping at home",
+      "genre": "fiction",
+      "pages": 6,
+      "sha256": "f53e61c3212ff727ad84074a2f91ffbdc30b4576860327dabe0385da7c9887c4",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
+      "assets": [
+        "images/ro-a-031-p01.svg",
+        "images/ro-a-031-p02.svg",
+        "images/ro-a-031-p03.svg",
+        "images/ro-a-031-p04.svg",
+        "images/ro-a-031-p05.svg",
+        "images/ro-a-031-p06.svg"
       ]
     },
     {
@@ -491,6 +513,28 @@
       ]
     },
     {
+      "book_id": "ro-d-032",
+      "revision": 1,
+      "file": "books/ro-d-032.json",
+      "title": "The Lost Duckling",
+      "level": "D",
+      "reading_mode": "independent_reading",
+      "topic": "animal families",
+      "genre": "fiction",
+      "pages": 6,
+      "sha256": "f37dea27d50ced8a5b52f655f4219919848feab3bc81a8510c55dcc97bce4d22",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
+      "assets": [
+        "images/ro-d-032-p01.svg",
+        "images/ro-d-032-p02.svg",
+        "images/ro-d-032-p03.svg",
+        "images/ro-d-032-p04.svg",
+        "images/ro-d-032-p05.svg",
+        "images/ro-d-032-p06.svg"
+      ]
+    },
+    {
       "book_id": "ro-e-030",
       "revision": 1,
       "file": "books/ro-e-030.json",
@@ -684,6 +728,29 @@
       ]
     },
     {
+      "book_id": "ro-h-031",
+      "revision": 1,
+      "file": "books/ro-h-031.json",
+      "title": "The Garden Signal",
+      "level": "H",
+      "reading_mode": "independent_reading",
+      "topic": "smart garden",
+      "genre": "fiction",
+      "pages": 7,
+      "sha256": "c62c1ee7b6830b3139a71518639b0caf844245c8a03ba75b4e8a2642b2863821",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
+      "assets": [
+        "images/ro-h-031-p01.svg",
+        "images/ro-h-031-p02.svg",
+        "images/ro-h-031-p03.svg",
+        "images/ro-h-031-p04.svg",
+        "images/ro-h-031-p05.svg",
+        "images/ro-h-031-p06.svg",
+        "images/ro-h-031-p07.svg"
+      ]
+    },
+    {
       "book_id": "ro-i-030",
       "revision": 1,
       "file": "books/ro-i-030.json",
@@ -833,6 +900,30 @@
         "images/ro-m-031-p07.svg",
         "images/ro-m-031-p08.svg",
         "images/ro-m-031-p09.svg"
+      ]
+    },
+    {
+      "book_id": "ro-m-032",
+      "revision": 1,
+      "file": "books/ro-m-032.json",
+      "title": "The Paper Bridge Test",
+      "level": "M",
+      "reading_mode": "independent_reading",
+      "topic": "structures",
+      "genre": "fiction",
+      "pages": 8,
+      "sha256": "d9a3046e519c919f39594c5376c7f818f188b1562a8a920521071f5f19b15424",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
+      "assets": [
+        "images/ro-m-032-p01.svg",
+        "images/ro-m-032-p02.svg",
+        "images/ro-m-032-p03.svg",
+        "images/ro-m-032-p04.svg",
+        "images/ro-m-032-p05.svg",
+        "images/ro-m-032-p06.svg",
+        "images/ro-m-032-p07.svg",
+        "images/ro-m-032-p08.svg"
       ]
     },
     {
@@ -1084,6 +1175,33 @@
         "images/ro-w-031-p09.svg",
         "images/ro-w-031-p10.svg",
         "images/ro-w-031-p11.svg"
+      ]
+    },
+    {
+      "book_id": "ro-w-032",
+      "revision": 1,
+      "file": "books/ro-w-032.json",
+      "title": "The Empty Flower Patch",
+      "level": "W",
+      "reading_mode": "independent_reading",
+      "topic": "school garden",
+      "genre": "fiction",
+      "pages": 11,
+      "sha256": "65e523922257b0356a063c79dc6ac10cd3e7734f39840196f9d0963c30943372",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
+      "assets": [
+        "images/ro-w-032-p01.svg",
+        "images/ro-w-032-p02.svg",
+        "images/ro-w-032-p03.svg",
+        "images/ro-w-032-p04.svg",
+        "images/ro-w-032-p05.svg",
+        "images/ro-w-032-p06.svg",
+        "images/ro-w-032-p07.svg",
+        "images/ro-w-032-p08.svg",
+        "images/ro-w-032-p09.svg",
+        "images/ro-w-032-p10.svg",
+        "images/ro-w-032-p11.svg"
       ]
     }
   ]
