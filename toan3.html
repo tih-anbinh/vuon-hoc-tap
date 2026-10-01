@@ -4360,8 +4360,43 @@ function parentSetUnlock(){
 /* ---------- Quản trị: duyệt tài khoản (chỉ hiện khi is_admin). ----------
    Dựa trên RLS có sẵn: toan3_is_admin() cho phép admin SELECT/UPDATE mọi hồ sơ.
    Dùng chung bảng toan3_profiles cho cả toan3/tiengviet3/read-oasis. */
+/* Khóa phụ cho khu Quản trị: vì ba có thể đăng nhập TK admin ngay trên máy con,
+   cần 1 mã PIN thứ 2 để mở duyệt. KHÔNG lưu PIN trong code — chỉ lưu hash SHA-256,
+   so khớp bằng Web Crypto. ADMIN_UNLOCKED chỉ sống trong phiên (reload là khóa lại). */
+let ADMIN_UNLOCKED=false;
+const ADMIN_PIN_HASH='517ca63ae9457a8c49a478ff435daac2a555f62f10998b7a9829a29ddfe3dcd5';
+async function sha256Hex(s){
+  const buf=await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
+  return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+}
+async function adminCheckPin(){
+  const inp=document.getElementById('adminPin'); const msg=document.getElementById('adminPinMsg');
+  if(!inp) return;
+  const val=(inp.value||'').trim();
+  if(!val){ if(msg) msg.textContent='Nhập mã rồi bấm Mở nhé.'; return; }
+  let ok=false;
+  try{ ok=(await sha256Hex(val))===ADMIN_PIN_HASH; }catch(e){ ok=false; }
+  inp.value='';
+  if(ok){ ADMIN_UNLOCKED=true; renderAdminPanel(); }
+  else{ if(msg){ msg.textContent='Mã không đúng. Thử lại.'; msg.style.color='#c62828'; } inp.focus(); }
+}
+function adminLock(){ ADMIN_UNLOCKED=false; renderAdminPanel(); }
+function renderAdminGate(box){
+  box.innerHTML=`<div class="pc-weak" style="background:#ede7f6;border-color:#b39ddb">
+    <b>🔒 Khu Quản trị cần mã mở</b>
+    <div style="margin-top:4px;color:var(--muted);font-size:12.5px">Nhập mã quản trị để xem và duyệt tài khoản.</div>
+    <div style="display:flex;gap:8px;align-items:center;margin-top:8px;flex-wrap:wrap">
+      <input id="adminPin" type="password" inputmode="numeric" autocomplete="off"
+        placeholder="Mã quản trị" style="padding:8px 10px;border:1px solid var(--line);border-radius:10px;font-size:15px;width:160px"
+        onkeydown="if(event.key==='Enter'){event.preventDefault();adminCheckPin();}">
+      <button class="pur" style="padding:6px 14px" onclick="adminCheckPin()">Mở 🔓</button>
+      <span id="adminPinMsg" style="font-size:12.5px;color:var(--muted)"></span>
+    </div></div>`;
+  const inp=document.getElementById('adminPin'); if(inp) inp.focus();
+}
 async function renderAdminPanel(){
   const box=document.getElementById('pcAdmin'); if(!box) return;
+  if(!ADMIN_UNLOCKED){ renderAdminGate(box); return; }
   if(!supa){ box.innerHTML='<div style="color:#c62828;font-size:13px">Cần đăng nhập Supabase để quản trị.</div>'; return; }
   box.innerHTML='<div style="color:var(--muted);font-size:13px">Đang tải danh sách…</div>';
   const {data,error}=await supa.from('toan3_profiles')
@@ -4394,16 +4429,17 @@ async function renderAdminPanel(){
       <td>${r.is_admin?'🛡️ admin':'học sinh'}</td>
       <td>${(me||r.is_admin)?'<span style="color:var(--muted)">—</span>':`<button class="gry" style="padding:4px 10px;font-size:12.5px" onclick="adminReject('${r.id}')">↩ Thu hồi</button>`}</td></tr>`; });
   html+=`</table></div></details>`;
+  html+=`<div style="margin-top:8px;text-align:right"><button class="gry" style="padding:5px 12px;font-size:12.5px" onclick="adminLock()">🔒 Khóa lại</button></div>`;
   box.innerHTML=html;
 }
 async function adminApprove(id){
-  if(!supa) return;
+  if(!supa||!ADMIN_UNLOCKED) return;
   const {error}=await supa.from('toan3_profiles').update({approved:true}).eq('id',id);
   if(error){ alert('Không duyệt được: '+(error.message||'lỗi quyền')); return; }
   renderAdminPanel();
 }
 async function adminReject(id){
-  if(!supa) return;
+  if(!supa||!ADMIN_UNLOCKED) return;
   if(!confirm('Thu hồi quyền truy cập của tài khoản này? Lần sau họ sẽ phải chờ duyệt lại.')) return;
   const {error}=await supa.from('toan3_profiles').update({approved:false}).eq('id',id);
   if(error){ alert('Không thu hồi được: '+(error.message||'lỗi quyền')); return; }
