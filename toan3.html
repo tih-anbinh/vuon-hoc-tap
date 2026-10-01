@@ -574,6 +574,25 @@ body.locked{overflow:hidden}
 /* Lấp lánh trong hero (SVG động nhẹ) */
 .twinkle{position:absolute;font-size:14px;opacity:.85;animation:twk 2.4s ease-in-out infinite}
 @keyframes twk{0%,100%{opacity:.25;transform:scale(.7)}50%{opacity:1;transform:scale(1.15)}}
+/* Góc phụ huynh */
+.pc-overlay{position:fixed;inset:0;background:rgba(0,40,50,.5);display:none;align-items:center;justify-content:center;z-index:5600;padding:14px}
+.pc-overlay.open{display:flex}
+.pc-card{background:#fff;border-radius:18px;max-width:660px;width:100%;max-height:92vh;overflow-y:auto;padding:18px;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.pc-card h2{margin:0 0 8px;color:#5e35b1;font-family:var(--font-display)}
+.pc-card h3{margin:16px 0 6px;color:#5e35b1;font-size:16px}
+.pc-note{font-size:12.5px;color:var(--muted);background:#f3effa;border:1px solid #d6c8ee;border-radius:10px;padding:8px 10px;margin:6px 0}
+.pc-sum{display:flex;flex-wrap:wrap;gap:8px 16px;background:linear-gradient(135deg,#ede7f6,#e3f2fd);border:1.5px solid #c6b8e8;border-radius:14px;padding:11px 14px;font-size:14px;color:#37474f}
+.pc-sum b{color:#5e35b1}
+.pc-weak{background:#fff8e1;border:1.5px solid #ffe082;border-radius:12px;padding:10px 12px;margin:8px 0;font-size:14px}
+.pc-weak ul{margin:6px 0 0;padding-left:20px} .pc-weak li{margin:3px 0}
+.tbl-scroll{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:8px 0}
+.matrix{border-collapse:collapse;font-size:12.5px;width:100%;min-width:420px}
+.matrix th,.matrix td{border:1px solid var(--line);padding:5px 6px;text-align:center}
+.matrix th{background:#ede7f6;color:#5e35b1;position:sticky;top:0}
+.matrix td.lbl{text-align:left;font-weight:600;color:var(--ink)}
+.mx-0{background:#fafafa;color:#90a4ae}.mx-1{background:#fff9c4}.mx-2{background:#dcedc8}.mx-3{background:#a5d6a7;font-weight:800}
+.pc-st{font-weight:700;font-size:11.5px;padding:1px 7px;border-radius:999px;white-space:nowrap}
+.pc-st.s0{background:#eceff1;color:#78909c}.pc-st.s1{background:#fff3c4;color:#8d6e00}.pc-st.s2{background:#dcedc8;color:#4b7a1e}.pc-st.s3{background:#a5d6a7;color:#1b5e20}
 </style>
 </head>
 <body>
@@ -602,6 +621,7 @@ body.locked{overflow:hidden}
 </div>
 <div class="acct-chip" id="acctChip">
   <span class="acct-who">👤 <b id="acctName"></b></span>
+  <button class="acct-btn" title="Góc phụ huynh" onclick="openParent()" style="background:#ede7f6;color:#5e35b1">👨‍👩‍👧</button>
   <button class="acct-btn" title="Bảng thi đua" onclick="openDash()">🏆</button>
   <button class="acct-btn" id="warmBtn" title="Chế độ mắt dịu" onclick="toggleWarm()">🌙</button>
   <button class="acct-btn" title="Đăng xuất" onclick="authLogout()">⏻</button>
@@ -630,6 +650,16 @@ body.locked{overflow:hidden}
     </div>
     <div id="dashBody"></div>
     <div style="font-size:11.5px;color:#90a4ae;margin-top:10px">⏱️ Thời gian tính khi app đang mở & đang học. Tiến trình tự đồng bộ khi bé chơi.</div>
+  </div>
+</div>
+<!-- Góc phụ huynh -->
+<div class="pc-overlay" id="pcOverlay">
+  <div class="pc-card">
+    <div style="display:flex;align-items:center;gap:8px">
+      <h2 style="flex:1">👨‍👩‍👧 Góc phụ huynh</h2>
+      <button class="acct-btn" onclick="closeParent()" title="Đóng">✕</button>
+    </div>
+    <div id="pcBody"></div>
   </div>
 </div>
 <button id="navToggle" type="button" aria-label="Thu gọn / mở mục lục" title="Thu gọn / mở mục lục" onclick="toggleSideNav()">☰</button>
@@ -4229,6 +4259,100 @@ function resetGame(){
      mins:{}, totalMin:0, exCorrect:0, goal, goalDay:null,
       xp:0, xu:0, level:1, reviewQueue:[], skills:{}, daily:{}, bossWins:0, bossDay:null};
   gSave(); gRenderMap();
+  if(document.getElementById('pcOverlay')?.classList.contains('open')) renderParent();
+}
+
+/* ---------- Góc phụ huynh: tổng hợp con yếu/mạnh chỗ nào ---------- */
+/* Trạng thái kĩ năng suy ra từ số câu tự làm đúng (independent). toan3 không lưu 'state'
+   nên tính tại chỗ: new -> learning -> practicing -> stable. */
+function pcState(s){
+  if(!s||!s.attempts) return 0;                 // 0 = chưa làm
+  if(s.independent>=6) return 3;                 // 3 = vững
+  if(s.independent>=3) return 2;                 // 2 = đang luyện
+  return 1;                                      // 1 = mới làm
+}
+const PC_STATE_LABEL=['Chưa làm','Mới làm','Đang luyện','Vững'];
+/* Nhóm kĩ năng theo 5 chủ đề để phụ huynh dễ đọc. Bỏ 2 chế độ tổng hợp (đấu nhanh, đề KT). */
+const PC_GROUPS=[
+  {name:'1 · Số trong phạm vi 100 000', ids:['cautao','sosanh','lamtron','roman']},
+  {name:'2 · Bốn phép tính', ids:['bangnhanchia','congtru','nhanchia','bieuthuc','timx','phanmay']},
+  {name:'3 · Hình học & Đo lường', ids:['hinhhoc','chuvidt','donvi','thoigian','tientevn']},
+  {name:'4 · Toán có lời văn', ids:['gapgiam','haibuoc','loivanhinh','rutvedv']},
+  {name:'5 · Xác suất & Thống kê', ids:['bangsolieu','xacsuatcoban','bieudocot']}
+];
+function pcLabel(gen){ return (TITLE[gen]||gen).replace(/^Luyện tập · |^✍️ Luyện viết bài giải · /,''); }
+function openParent(){ const ov=document.getElementById('pcOverlay'); if(ov){ov.classList.add('open'); renderParent();} }
+function closeParent(){ const ov=document.getElementById('pcOverlay'); if(ov) ov.classList.remove('open'); }
+function renderParent(){
+  const body=document.getElementById('pcBody'); if(!body) return;
+  const ALL=PC_GROUPS.reduce((a,g)=>a.concat(g.ids),[]);
+  /* Tổng quan: số lượt làm & tỉ lệ tự làm đúng trên các kĩ năng (không tính đấu nhanh / đề KT) */
+  let attempts=0, correct=0, indep=0;
+  ALL.forEach(gen=>{ const s=G.skills[gen]; if(s){attempts+=s.attempts||0; correct+=s.correct||0; indep+=s.independent||0;} });
+  const acc = attempts ? Math.round(correct/attempts*100) : 0;
+  const stationsDone = Object.keys(G.stars||{}).filter(k=>G.stars[k]>0).length;
+
+  /* Con YẾU chỗ nào — dùng đúng công thức gWeakSkills, chỉ xét các kĩ năng trong nhóm */
+  const weak = gWeakSkills().filter(w=>ALL.includes(w.gen)).slice(0,5);
+  let weakHtml;
+  if(!attempts){
+    weakHtml = `<div class="pc-weak">Con chưa làm bài nào trong phần <b>🎮 Học mà chơi</b> hoặc <b>✏️ Luyện Tập</b>. Khi con bắt đầu làm, mục này sẽ tự tổng hợp những phần con cần luyện thêm.</div>`;
+  } else if(!weak.length){
+    weakHtml = `<div class="pc-weak" style="background:#e8f5e9;border-color:#a5d6a7">🎉 Hiện tại con làm khá đều tay — chưa có phần nào nổi bật là yếu. Cứ duy trì mỗi ngày một ít nhé!</div>`;
+  } else {
+    weakHtml = `<div class="pc-weak"><b>👀 Nên luyện thêm với con:</b><ul>`+
+      weak.map(w=>{ const s=w.s; const sup=GEN_SUPPORT[w.gen];
+        const why = s.wrong>0 ? `sai ${s.wrong} lần` : (s.hints>0?`còn cần gợi ý ${s.hints} lần`:`mới tự làm đúng ${s.independent} câu`);
+        const tip = sup?` · gợi ý: ${sup.tip}`:'';
+        return `<li><b>${pcLabel(w.gen)}</b> — ${why}${tip}</li>`;
+      }).join('')+`</ul></div>`;
+  }
+
+  /* Ma trận kĩ năng đầy đủ theo nhóm */
+  let matrix = `<div class="tbl-scroll"><table class="matrix">
+    <tr><th style="text-align:left">Kĩ năng</th><th>Đã làm</th><th>Đúng</th><th>Tự làm đúng</th><th>Trạng thái</th></tr>`;
+  PC_GROUPS.forEach(grp=>{
+    matrix += `<tr><td class="lbl" colspan="5" style="background:#f3effa;color:#5e35b1;font-weight:800">${grp.name}</td></tr>`;
+    grp.ids.forEach(gen=>{
+      const s=G.skills[gen]; const lvl=pcState(s);
+      matrix += `<tr>
+        <td class="lbl">${pcLabel(gen)}</td>
+        <td class="mx-${lvl}">${s?s.attempts:0}</td>
+        <td>${s?s.correct:0}</td>
+        <td>${s?s.independent:0}</td>
+        <td><span class="pc-st s${lvl}">${PC_STATE_LABEL[lvl]}</span></td></tr>`;
+    });
+  });
+  matrix += `</table></div>`;
+
+  body.innerHTML = `
+    <div class="pc-note">Toàn bộ dữ liệu học của con được lưu <b>cục bộ trên máy này</b> (và đồng bộ riêng cho tài khoản của con). Cơ chế này chỉ giúp ba/mẹ theo dõi, <b>không phải khoá bảo mật</b>.</div>
+    <div class="pc-sum">
+      <span>Số lượt làm: <b>${attempts}</b></span>
+      <span>Tỉ lệ đúng: <b>${acc}%</b></span>
+      <span>Câu con tự làm đúng: <b>${indep}</b></span>
+      <span>⭐ Sao: <b>${gTotalStars()}</b></span>
+      <span>Trạm đã qua: <b>${stationsDone}</b>/35</span>
+      <span>🔥 Chuỗi ngày: <b>${G.streak||0}</b></span>
+    </div>
+    <h3>🚩 Con đang yếu ở đâu?</h3>
+    ${weakHtml}
+    <h3>🧩 Ma trận kĩ năng (chi tiết)</h3>
+    ${matrix}
+    <div style="font-size:12px;color:var(--muted);margin-top:4px">Trạng thái tăng dần: <b>Chưa làm → Mới làm → Đang luyện → Vững</b> (tính theo số câu con <i>tự làm đúng</i>, không tính câu dùng gợi ý).</div>
+    <h3>⚙️ Lịch &amp; dữ liệu</h3>
+    <div class="card" style="margin-top:6px">
+      <div style="margin-bottom:8px">Trạm đang mở cho con: <b>${G.unlocked}</b>/35</div>
+      <button class="pur" onclick="parentSetUnlock()">📅 Đặt trạm bắt đầu</button>
+      <button class="gry" onclick="resetGame()">↺ Đặt lại tiến độ</button>
+    </div>`;
+}
+function parentSetUnlock(){
+  const v=prompt('Cho con bắt đầu từ trạm (tuần) nào? (1–35)', G.unlocked);
+  if(v==null) return;
+  const n=parseInt(v,10);
+  if(n>=1 && n<=35){ G.unlocked=n; gSave(); gRenderMap(); renderParent(); }
+  else alert('Số trạm phải từ 1 đến 35.');
 }
 
 /* ---------- Khởi tạo trang ---------- */
