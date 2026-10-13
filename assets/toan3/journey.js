@@ -53,6 +53,8 @@ export function mountJourney({ container, phases, weeks, onSelect, onArrive, onE
   const geometries = new Map();
   const terrainGeometry = new Set();
   const textures = new Set();
+  const ambient = [];
+  let ambientTime = 0;
   const pale = new THREE.Color('#b9c9ca');
   function material(color, locked = false) {
     const key = `${color}:${locked}`;
@@ -98,8 +100,12 @@ export function mountJourney({ container, phases, weeks, onSelect, onArrive, onE
     const plant = group(parent, position);
     plant.scale.setScalar(size);
     cylinder(plant, .085, .12, .9, '#bd9473', [0, .45, 0], locked);
-    sphere(plant, .55, '#79b792', [0, 1.12, 0], [1, 1.25, .85], locked);
-    if (!locked) sphere(plant, .34, '#9acb9a', [-.3, 1, .16], [1, 1, 1]);
+    const crown = group(plant, [0, .85, 0]);
+    sphere(crown, .55, '#79b792', [0, .27, 0], [1, 1.25, .85], locked);
+    if (!locked) {
+      sphere(crown, .34, '#9acb9a', [-.3, .15, .16], [1, 1, 1]);
+      ambient.push({ object: crown, kind: 'sway', offset: position[0] });
+    }
   }
   function flower(parent, position, color, size = 1) {
     const plant = group(parent, position);
@@ -110,6 +116,27 @@ export function mountJourney({ container, phases, weeks, onSelect, onArrive, onE
       sphere(plant, .11, color, [Math.cos(angle) * .12, .38, Math.sin(angle) * .12], [1, .5, 1]);
     }
     sphere(plant, .075, '#efd073', [0, .42, 0], [1, .6, 1]);
+    ambient.push({ object: plant, kind: 'sway', offset: position[0] + position[2] });
+  }
+  function flag(parent, position, color) {
+    const hinge = group(parent, position);
+    box(hinge, [.32, .2, .035], color, [.16, 0, 0]);
+    ambient.push({ object: hinge, kind: 'flag', offset: position[0] });
+  }
+  function windmill(parent, position) {
+    const mill = group(parent, position);
+    cylinder(mill, .33, .52, 1.6, '#eee1c2', [0, .8, 0]);
+    cylinder(mill, 0, .56, .6, '#c87666', [0, 1.85, 0]);
+    box(mill, [.24, .48, .08], '#688f88', [0, .24, .49]);
+    const rotor = group(mill, [0, 1.52, .49]);
+    for (let blade = 0; blade < 4; blade++) {
+      const spoke = group(rotor);
+      spoke.rotation.z = blade * Math.PI / 2;
+      box(spoke, [.06, 1.02, .07], '#a58564', [0, .51, 0]);
+      box(spoke, [.23, .65, .045], '#fff0cf', [.09, .7, .015]);
+    }
+    sphere(rotor, .12, '#a58564', [0, 0, .07]);
+    ambient.push({ object: rotor, kind: 'rotor', offset: 0 });
   }
   function house(parent, position, color, locked = false, size = 1) {
     const building = group(parent, position);
@@ -154,7 +181,14 @@ export function mountJourney({ container, phases, weeks, onSelect, onArrive, onE
         break;
       }
       case 2: {
-        box(site, [2.1, .06, 1.2], '#89cbd2', [0, .02, 0], false, .2);
+        const water = sphere(site, 1, '#72b9c5', [0, .025, 0], [1.22, .045, .83]);
+        water.castShadow = false;
+        for (let ripple = 0; ripple < 3; ripple++) {
+          const wave = mesh(site, geometry('water-ripple', () => new THREE.TorusGeometry(.2, .012, 4, 16, Math.PI * 1.4)), '#b9e1dc', [-.72 + ripple * .66, .079, ripple % 2 ? .58 : -.56]);
+          wave.rotation.x = -Math.PI / 2;
+          wave.castShadow = false;
+          ambient.push({ object: wave, kind: 'water', offset: ripple * 2, origin: wave.position.x });
+        }
         for (let plank = 0; plank < 7; plank++) {
           const offset = -.78 + plank * .26;
           box(site, [.25, .1, .7], '#e0ba8b', [offset, .2 + Math.cos(offset * 1.8) * .18, 0]);
@@ -172,8 +206,12 @@ export function mountJourney({ container, phases, weeks, onSelect, onArrive, onE
         break;
       }
       case 4: {
-        house(site, [-.36, 0, 0], '#f3dbaa', false, .9);
-        house(site, [.64, 0, -.26], '#aad1c0', false, .65);
+        if (variant === 0) windmill(site, [0, 0, 0]);
+        else {
+          house(site, [-.36, 0, 0], variant % 2 ? '#f3dbaa' : '#d1dfd7', false, .9);
+          if (variant % 2) house(site, [.64, 0, -.26], '#aad1c0', false, .65);
+          else tree(site, [.8, 0, -.3], .65);
+        }
         box(site, [1.9, .08, .33], '#d3d9d0', [0, .04, .78]);
         break;
       }
@@ -198,7 +236,7 @@ export function mountJourney({ container, phases, weeks, onSelect, onArrive, onE
           cylinder(site, .29, .34, 1.5, '#e5c9b2', [offset, .75, 0]);
           cylinder(site, 0, .4, .6, '#96bcc7', [offset, 1.8, 0]);
           cylinder(site, .025, .025, .45, '#ab987e', [offset, 2.16, 0]);
-          box(site, [.28, .17, .035], '#e7ae87', [offset + .13, 2.26, 0]);
+          flag(site, [offset, 2.26, 0], '#e7ae87');
         });
         box(site, [.42, .65, .09], '#90b6b1', [0, .32, .44], false, .14);
         for (let merlon = 0; merlon < 4; merlon++) box(site, [.19, .2, .85], '#f0d8bd', [-.48 + merlon * .32, 1.1, 0]);
@@ -233,6 +271,7 @@ export function mountJourney({ container, phases, weeks, onSelect, onArrive, onE
 
   let terrain = null, route = null, stations = [], entrance = 0;
   let state = null, pending = null, avatarWeek = null;
+  let roam = null, revision = 0;
   const seen = new Map();
   const media = window.matchMedia('(prefers-reduced-motion: reduce)');
   let requestedMotion = true, motion = !media.matches;
@@ -243,6 +282,11 @@ export function mountJourney({ container, phases, weeks, onSelect, onArrive, onE
   const projected = new THREE.Vector3();
   const tangent = new THREE.Vector3();
   const viewPoint = new THREE.Vector3();
+  const raycaster = new THREE.Raycaster();
+  const roadPlane = new THREE.Plane(new THREE.Vector3(0, 1, 0), -.38);
+  const pointer = new THREE.Vector2();
+  const hitPoint = new THREE.Vector3();
+  const samplePoint = new THREE.Vector3();
   const blockedSelector = '#gModal.open,#gardenOv.open,#dashOv.open,#pcOverlay.open,#introOverlay.open';
   function active() {
     return !disposed && !lost && visible && width > 0 && height > 0 && !document.hidden &&
@@ -255,7 +299,11 @@ export function mountJourney({ container, phases, weeks, onSelect, onArrive, onE
     return pending && pending.owner === state?.owner && phaseFor(pending.to) === phase;
   }
   function removeTerrain() {
-    if (terrain) scene.remove(terrain);
+    if (terrain) {
+      terrain.traverse(object => { if (object.isInstancedMesh) object.dispose(); });
+      scene.remove(terrain);
+    }
+    ambient.length = 0;
     terrainGeometry.forEach(shape => shape.dispose());
     terrainGeometry.clear();
     labels.replaceChildren();
@@ -301,12 +349,12 @@ export function mountJourney({ container, phases, weeks, onSelect, onArrive, onE
       return THREE.MathUtils.lerp(distances[lower], distances[upper], scaled - lower) / total;
     }
     entrance = 0;
-    const road = new THREE.TubeGeometry(route, mobile ? 120 : 100, .24, 8, false);
+    const road = new THREE.TubeGeometry(route, mobile ? 120 : 100, .38, 8, false);
+    const roadPositions = road.attributes.position;
+    for (let vertex = 0; vertex < roadPositions.count; vertex++) roadPositions.setY(vertex, .38 + (roadPositions.getY(vertex) - .38) * .12);
+    road.computeVertexNormals();
     terrainGeometry.add(road);
-    mesh(terrain, road, '#f4dfb5', [0, 0, 0], lockedRegion);
-    const seam = new THREE.TubeGeometry(route, 100, .035, 5, false);
-    terrainGeometry.add(seam);
-    mesh(terrain, seam, '#fff1d3', [0, .235, 0], lockedRegion);
+    mesh(terrain, road, '#dfcdab', [0, 0, 0], lockedRegion);
     positions.forEach((position, index) => {
       const week = region.from + index;
       const locked = week > unlocked;
@@ -320,7 +368,7 @@ export function mountJourney({ container, phases, weeks, onSelect, onArrive, onE
       cylinder(terrain, .6, .65, .12, locked ? '#d6dfde' : '#fff0cc', [position.x, .56, position.z]);
       if (!locked) {
         cylinder(terrain, .028, .035, .85, '#a38c71', [position.x - .72, .59, position.z - .25]);
-        box(terrain, [.32, .22, .04], complete ? '#81b4a3' : '#eab675', [position.x - .56, .91, position.z - .25]);
+        flag(terrain, [position.x - .72, .91, position.z - .25], complete ? '#81b4a3' : '#eab675');
       }
       const landmarkPosition = mobile ? [position.x > 0 ? -1.55 : 1.55, .17, position.z - .25] : [position.x, .17, position.z - 1.85];
       landmark(terrain, phase % 8, landmarkPosition, locked, index);
@@ -348,8 +396,53 @@ export function mountJourney({ container, phases, weeks, onSelect, onArrive, onE
       labels.appendChild(button);
       stations.push({ week, position, button, distance: distanceAt((index + 1) / (count + 1)) });
     });
+    addGroundDetails(landWidth, landDepth, lockedRegion);
     terrain.updateMatrixWorld(true);
     fitCamera();
+  }
+  function addGroundDetails(landWidth, landDepth, locked) {
+    const stamp = new THREE.Object3D();
+    const ground = new THREE.InstancedMesh(geometry('ground-patch', () => new THREE.CircleGeometry(1, 7)), material('#85ac70', locked), 48);
+    ground.rotation.x = -Math.PI / 2;
+    ground.position.y = .285;
+    let accepted = 0;
+    for (let patch = 0; patch < 80 && accepted < 48; patch++) {
+      const horizontal = (Math.sin(patch * 12.9898 + 1) * 43758.5453 % 1) * landWidth * .4;
+      const depth = (Math.sin(patch * 7.233 + 5) * 19413.171 % 1) * landDepth * .38;
+      if (stations.some(station => Math.hypot(horizontal - station.position.x, depth - station.position.z) < 1.15)) continue;
+      stamp.position.set(horizontal, -depth, 0);
+      stamp.rotation.set(0, 0, patch * 2.4);
+      stamp.scale.set(.22 + (patch % 4) * .13, .13 + (patch % 3) * .1, 1);
+      stamp.updateMatrix();
+      ground.setMatrixAt(accepted, stamp.matrix);
+      ground.setColorAt(accepted++, new THREE.Color(patch % 2 ? '#b1c897' : '#83ab73'));
+    }
+    ground.count = accepted;
+    terrain.add(ground);
+    const gravel = new THREE.InstancedMesh(geometry('route-gravel', () => new THREE.IcosahedronGeometry(1, 0)), material('#e9dfc8', locked), 90);
+    for (let stone = 0; stone < 90; stone++) {
+      route.getPointAt((stone + .5) / 90, samplePoint);
+      route.getTangentAt((stone + .5) / 90, tangent);
+      const offset = Math.sin(stone * 2.4) * .28;
+      stamp.position.set(samplePoint.x + tangent.z * offset, .428, samplePoint.z - tangent.x * offset);
+      stamp.rotation.set(0, stone * 1.7, 0);
+      stamp.scale.set(.025 + (stone % 3) * .009, .014, .025);
+      stamp.updateMatrix();
+      gravel.setMatrixAt(stone, stamp.matrix);
+    }
+    terrain.add(gravel);
+    const grass = new THREE.InstancedMesh(geometry('grass-blade', () => new THREE.ConeGeometry(.055, .27, 3)), material('#608e58', locked), 54);
+    for (let blade = 0; blade < 54; blade++) {
+      route.getPointAt((blade + .5) / 54, samplePoint);
+      route.getTangentAt((blade + .5) / 54, tangent);
+      const offset = (blade % 2 ? 1 : -1) * (.55 + (blade % 3) * .13);
+      stamp.position.set(samplePoint.x + tangent.z * offset, .39, samplePoint.z - tangent.x * offset);
+      stamp.rotation.set(.15, blade * 2.4, .18 * Math.sin(blade));
+      stamp.scale.setScalar(.6 + (blade % 4) * .15);
+      stamp.updateMatrix();
+      grass.setMatrixAt(blade, stamp.matrix);
+    }
+    terrain.add(grass);
   }
   function fitCamera() {
     if (!width || !height || !terrain) return;
@@ -383,6 +476,13 @@ export function mountJourney({ container, phases, weeks, onSelect, onArrive, onE
     body.position.y = .57;
     body.rotation.z = 0;
   }
+  function stridePose(elapsed) {
+    const stride = Math.sin(elapsed * Math.PI * 8);
+    legs[0].rotation.x = stride * .55; legs[1].rotation.x = -stride * .55;
+    arms[0].rotation.x = -stride * .35; arms[1].rotation.x = stride * .35;
+    body.position.y += Math.abs(stride) * .045;
+    body.rotation.z = stride * .035;
+  }
   function placeAvatar() {
     resetPose();
     if (!state || !route) { explorer.visible = false; return; }
@@ -395,12 +495,14 @@ export function mountJourney({ container, phases, weeks, onSelect, onArrive, onE
       route.getTangentAt(THREE.MathUtils.lerp(source?.distance ?? entrance, destination.distance, eased), tangent);
       explorer.rotation.y = Math.atan2(tangent.x, tangent.z);
       if (motion && pending.elapsed > 0) {
-        const stride = Math.sin(pending.elapsed * Math.PI * 8);
-        legs[0].rotation.x = stride * .55; legs[1].rotation.x = -stride * .55;
-        arms[0].rotation.x = -stride * .35; arms[1].rotation.x = stride * .35;
-        body.position.y += Math.abs(stride) * .045;
-        body.rotation.z = stride * .035;
+        stridePose(pending.elapsed);
       }
+      explorer.visible = true;
+    } else if (roam && !pending) {
+      route.getPointAt(roam.distance, explorer.position);
+      route.getTangentAt(roam.distance, tangent);
+      explorer.rotation.y = Math.atan2(tangent.x, tangent.z) + (roam.target < roam.from ? Math.PI : 0);
+      if (motion && !roam.complete) stridePose(roam.elapsed);
       explorer.visible = true;
     } else {
       const station = stations.find(entry => entry.week === avatarWeek);
@@ -409,6 +511,68 @@ export function mountJourney({ container, phases, weeks, onSelect, onArrive, onE
       explorer.rotation.y = .18;
     }
     explorer.position.y += .24;
+  }
+  function lastUnlockedStation() {
+    return stations.filter(station => station.week <= state?.unlocked).at(-1);
+  }
+  function startRoam(distance, week = null) {
+    const limit = lastUnlockedStation();
+    if (!active() || !state || !route || pending || !limit || !Number.isFinite(distance) || distance < entrance || distance > limit.distance) return false;
+    const source = stations.find(station => station.week === avatarWeek) || limit;
+    const from = roam?.distance ?? source.distance;
+    roam = { from, distance: from, target: distance, targetWeek: week, elapsed: 0,
+      duration: Math.max(.2, Math.abs(distance - from) * route.getLength() / 2.4), complete: false };
+    lastStep = null;
+    placeAvatar();
+    sync();
+    return true;
+  }
+  function walkTo(week) {
+    const station = stations.find(entry => entry.week === week);
+    return !!station && startRoam(station.distance, week);
+  }
+  function home() {
+    if (disposed || lost) return;
+    roam = null;
+    cancelPress();
+    avatarWeek = pending ? pending.from : state?.unlocked;
+    placeAvatar();
+    sync();
+  }
+  function roamAt(event) {
+    if (!active() || pending || !route) return;
+    const bounds = canvas.getBoundingClientRect();
+    if (!bounds.width || !bounds.height) return;
+    pointer.set((event.clientX - bounds.left) / bounds.width * 2 - 1, 1 - (event.clientY - bounds.top) / bounds.height * 2);
+    raycaster.setFromCamera(pointer, camera);
+    if (!raycaster.ray.intersectPlane(roadPlane, hitPoint)) return;
+    let nearest = 0, nearestSquared = Infinity;
+    const samples = 480;
+    for (let sample = 0; sample <= samples; sample++) {
+      route.getPointAt(sample / samples, samplePoint);
+      const squared = samplePoint.distanceToSquared(hitPoint);
+      if (squared < nearestSquared) { nearestSquared = squared; nearest = sample / samples; }
+    }
+    const lower = Math.max(0, nearest - 1 / samples), upper = Math.min(1, nearest + 1 / samples);
+    for (let sample = 0; sample <= 24; sample++) {
+      const distance = THREE.MathUtils.lerp(lower, upper, sample / 24);
+      route.getPointAt(distance, samplePoint);
+      const squared = samplePoint.distanceToSquared(hitPoint);
+      if (squared < nearestSquared) { nearestSquared = squared; nearest = distance; }
+    }
+    if (nearestSquared <= .55 * .55) startRoam(nearest);
+  }
+  function animateAmbient(delta) {
+    if (motion) ambientTime += delta;
+    for (const item of ambient) {
+      const wave = motion ? Math.sin(ambientTime * 1.4 + item.offset) : 0;
+      if (item.kind === 'rotor') item.object.rotation.z = motion ? ambientTime * .45 : .35;
+      else if (item.kind === 'water') {
+        item.object.position.x = item.origin + wave * .12;
+        item.object.scale.setScalar(1 + wave * .15);
+      } else if (item.kind === 'flag') item.object.rotation.y = wave * .18;
+      else item.object.rotation.z = wave * .045;
+    }
   }
   function projectLabels() {
     stations.forEach(station => {
@@ -439,6 +603,8 @@ export function mountJourney({ container, phases, weeks, onSelect, onArrive, onE
     lost = true;
     stop();
     pending = null;
+    roam = null;
+    cancelPress();
     container.classList.remove('journey-ready');
     labels.style.display = 'none';
     nameplate.hidden = true;
@@ -455,12 +621,18 @@ export function mountJourney({ container, phases, weeks, onSelect, onArrive, onE
     if (travelingHere()) {
       pending.elapsed = motion ? Math.min(1.6, pending.elapsed + delta) : 1.6;
       if (pending.elapsed >= 1.6) {
-        arrival = { id: pending.id, owner: pending.owner };
+        arrival = { id: pending.id, owner: pending.owner, revision };
         avatarWeek = pending.to;
         pending = null;
       }
+    } else if (roam && !pending && !roam.complete) {
+      roam.elapsed = motion ? Math.min(roam.duration, roam.elapsed + delta) : roam.duration;
+      const progress = roam.elapsed / roam.duration;
+      roam.distance = THREE.MathUtils.lerp(roam.from, roam.target, progress * progress * (3 - 2 * progress));
+      roam.complete = progress >= 1;
     }
     placeAvatar();
+    animateAmbient(delta);
     dirty = false;
     try {
       renderer.render(scene, camera);
@@ -470,8 +642,10 @@ export function mountJourney({ container, phases, weeks, onSelect, onArrive, onE
       projectLabels();
       container.classList.add('journey-ready');
     } catch (error) { fail(error); return; }
-    if (arrival && !disposed && !lost && arrival.owner === state?.owner) onArrive?.(arrival.id);
-    if (active() && (dirty || (motion && travelingHere()))) {
+    if (arrival && !disposed && !lost && arrival.owner === state?.owner && arrival.revision === revision) {
+      try { onArrive?.(arrival.id); } catch (error) { fail(error); return; }
+    }
+    if (active() && (dirty || (motion && (travelingHere() || (roam && !roam.complete) || ambient.length)))) {
       if (frame === null) frame = requestAnimationFrame(tick);
     } else {
       lastStep = null;
@@ -480,7 +654,7 @@ export function mountJourney({ container, phases, weeks, onSelect, onArrive, onE
   function sync() {
     if (disposed || lost) return;
     dirty = true;
-    if (!active()) { stop(); return; }
+    if (!active()) { cancelPress(); stop(); return; }
     if (frame === null) frame = requestAnimationFrame(tick);
   }
   function resize() {
@@ -500,6 +674,14 @@ export function mountJourney({ container, phases, weeks, onSelect, onArrive, onE
     if (disposed || lost) return;
     if (!next || !Number.isInteger(next.phase) || !phases[next.phase]) throw new TypeError('Journey state.phase must be a valid zero-based index');
     const ownerChanged = !state || state.owner !== next.owner;
+    const contextChanged = ownerChanged || state.phase !== next.phase || state.unlocked !== next.unlocked;
+    if (contextChanged) {
+      revision++;
+      roam = null;
+      if (pending) seen.get(pending.owner)?.delete(pending.id);
+      pending = null;
+      cancelPress();
+    }
     if (ownerChanged) {
       stop();
       pending = null;
@@ -510,15 +692,25 @@ export function mountJourney({ container, phases, weeks, onSelect, onArrive, onE
     phase = state.phase;
     nameplate.textContent = state.name;
     const travel = next.travel;
+    if (pending && (!travel || travel.id !== pending.id || travel.owner !== pending.owner ||
+      travel.from !== pending.from || travel.to !== pending.to)) {
+      revision++;
+      pending = null;
+    }
     if (travel && travel.id != null && travel.owner === state.owner && Number.isInteger(travel.from) &&
       Number.isInteger(travel.to) && travel.to === travel.from + 1 && travel.to <= state.unlocked &&
       phaseFor(travel.from) >= 0 && phaseFor(travel.to) >= 0) {
       if (!seen.has(state.owner)) seen.set(state.owner, new Set());
       const ownerTrips = seen.get(state.owner);
       if (!ownerTrips.has(travel.id)) {
-        ownerTrips.add(travel.id);
-        pending = { id: travel.id, owner: travel.owner, from: travel.from, to: travel.to, elapsed: 0 };
-        lastStep = null;
+        if (phaseFor(travel.to) === phase) {
+          ownerTrips.add(travel.id);
+          revision++;
+          roam = null;
+          cancelPress();
+          pending = { id: travel.id, owner: travel.owner, from: travel.from, to: travel.to, elapsed: 0 };
+          lastStep = null;
+        }
       }
     }
     avatarWeek = pending ? pending.from : state.unlocked;
@@ -531,8 +723,8 @@ export function mountJourney({ container, phases, weeks, onSelect, onArrive, onE
 
   let press = null, release = null;
   function beginPress(event) {
-    if (!event.isPrimary || event.button !== 0) { press = null; release = null; return; }
-    press = { id: event.pointerId, x: event.clientX, y: event.clientY, target: event.target.closest?.('button[data-week]'), moved: false };
+    if (!active() || !event.isPrimary || event.button !== 0) { cancelPress(); return; }
+    press = { id: event.pointerId, x: event.clientX, y: event.clientY, target: event.target.closest?.('button[data-week]'), canvas: event.target === canvas, moved: false };
     release = null;
   }
   function movePress(event) {
@@ -543,6 +735,10 @@ export function mountJourney({ container, phases, weeks, onSelect, onArrive, onE
     movePress(event);
     release = press;
     press = null;
+    if (release.canvas && event.target === canvas && !release.moved) {
+      release = null;
+      roamAt(event);
+    }
   }
   function cancelPress() { press = null; release = null; }
   function select(event) {
@@ -581,10 +777,14 @@ export function mountJourney({ container, phases, weeks, onSelect, onArrive, onE
   resize();
   return {
     update,
+    home,
+    walkTo,
     setMotion(value) { if (disposed || lost) return; requestedMotion = !!value; motionChanged(); },
     sync,
     stats() {
-      return { frames, running: frame !== null, motion, walking: !!(motion && travelingHere() && active()),
+      return { frames, running: frame !== null, motion, walking: !!(motion && (travelingHere() || (roam && !roam.complete)) && active()),
+        roaming: !!roam, walkTarget: roam ? { phase, week: roam.targetWeek, distance: roam.target } : null,
+        walkDistance: roam?.distance ?? null,
         avatarWeek, position: explorer.visible ? explorer.position.toArray() : null,
         drawCalls: renderer.info.render.calls, triangles: renderer.info.render.triangles, phase, lost };
     },
@@ -593,6 +793,8 @@ export function mountJourney({ container, phases, weeks, onSelect, onArrive, onE
       disposed = true;
       stop();
       pending = null;
+      roam = null;
+      cancelPress();
       intersection.disconnect(); sizeObserver.disconnect(); stateObserver.disconnect();
       document.removeEventListener('visibilitychange', sync);
       media.removeEventListener('change', motionChanged);

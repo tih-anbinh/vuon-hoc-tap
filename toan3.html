@@ -392,6 +392,17 @@ body.mode-game #tab-game{display:block}
 .col-cell{width:42px;height:46px;display:flex;align-items:center;justify-content:center;font-size:27px;font-weight:800;color:#0d47a1;font-family:'Courier New',monospace}
 .col-op{width:26px;height:46px;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:900;color:#c62828}
 .col-line{border-top:3px solid #37474f;margin:5px 0 7px}
+.division-work{--division-digit:26px;display:flex;justify-content:center;align-items:flex-start;gap:8px;margin:14px auto;font-variant-numeric:tabular-nums}
+.division-left{display:grid;grid-auto-rows:36px;align-items:center;font-size:22px;font-weight:800}
+.division-right{border-left:2px solid #37474f;padding-left:8px;text-align:left}
+.division-divisor{height:36px;border-bottom:2px solid #37474f;font-size:22px;font-weight:800}
+.division-quotient{display:flex;padding-top:4px}
+.division-number{display:flex;justify-content:flex-end}
+.division-number>span,.division-box{width:var(--division-digit);flex:none;text-align:center;box-sizing:border-box}
+.division-box{height:32px;padding:0;border:1.5px solid #1565c0;border-radius:4px;background:white;font-family:inherit;font-size:20px;font-weight:700;color:#0d47a1}
+.division-minus{border-bottom:1.5px solid #37474f;padding-bottom:2px}
+.division-mark{font-size:12px;text-align:center}
+@media(max-width:600px){.division-work{--division-digit:22px;gap:5px}.division-right{padding-left:5px}.division-box{font-size:18px}}
 .col-box{width:42px;height:46px;font-size:26px;font-weight:800;text-align:center;border:2.5px solid var(--blue);border-radius:9px;color:#c62828;background:#fff;font-family:inherit;padding:0}
 .col-box:focus{outline:none;border-color:#ff8f00;box-shadow:0 0 0 3px #ffe082;background:#fffde7}
 /* Hàng chấm nhớ (toán có nhớ) */
@@ -1814,7 +1825,7 @@ function gWorldInit(){
   try{gWorldMotionOn=localStorage.getItem('toan3_world_motion')!=='off'&&!matchMedia('(prefers-reduced-motion: reduce)').matches;}catch(error){gWorldMotionOn=false;}
   document.getElementById('worldMotion').checked=gWorldMotionOn;
   gWorldLoading=true;
-  const script=document.createElement('script');script.src='assets/toan3/world.bundle.js?v=20261013b';script.async=true;
+  const script=document.createElement('script');script.src='assets/toan3/world.bundle.js?v=20261014a';script.async=true;
   script.onload=gWorldMount;script.onerror=()=>{script.remove();gWorldFallback(new Error('3D bundle unavailable'));};document.head.appendChild(script);
 }
 function gWorldMotion(value){gWorldMotionOn=value;try{localStorage.setItem('toan3_world_motion',value?'on':'off');}catch(error){console.warn('[toan3] motion preference not saved:',error);}gWorld?.setMotion(value);if(typeof gJourneyMotion==='function')gJourneyMotion(value);}
@@ -2012,11 +2023,11 @@ function gVibe(p){ try{ if(!G.mute && navigator.vibrate) navigator.vibrate(p); }
 
 const R = (a,b)=> a + Math.floor(Math.random()*(b-a+1));
 /* Key duy nhất cho dedupe câu hỏi — dùng a,b,op cho dạng column để tránh trùng */
-function qKey(q){ return (q.type==='column'||q.type==='column_timx'||q.kind==='column') ? `col:${q.a}${q.op}${q.b}` : q.q; }
+function qKey(q){ return (q.type==='column'||q.type==='column_timx'||q.kind==='column'||q.kind==='division') ? `col:${q.a}${q.op}${q.b}` : q.q; }
 const pick = a => a[Math.floor(Math.random()*a.length)];
 const shuffle = a => a.map(v=>[Math.random(),v]).sort((x,y)=>x[0]-y[0]).map(v=>v[1]);
 const fmt = n => String(n).replace(/\B(?=(\d{3})+(?!\d))/g,' ');
-const norm = s => String(s).toLowerCase().trim()
+const norm = s => String(s).normalize('NFKC').toLowerCase().trim()
       .replace(/\s+/g,'').replace(/\./g,'').replace(/,/g,'')
       .replace(/đ$/,'').replace(/²/g,'2');
 /* bỏ dấu tiếng Việt để so khớp câu lời giải */
@@ -2254,12 +2265,12 @@ GEN.nhanchia = function(){
   const t=R(1,3);
   if(t<=2){
     const d=R(2,9), a=R(1000, Math.floor(99999/d));
-    return {q:`Đặt tính rồi tính:&nbsp; <b>${fmt(a)} × ${d} = ?</b>`, ans:String(a*d),
+    return {calculation:{a,b:d,op:'×'},q:`Đặt tính rồi tính:&nbsp; <b>${fmt(a)} × ${d} = ?</b>`, ans:String(a*d),
       hint:'Nhân từ hàng đơn vị trở đi, nhớ cộng thêm phần nhớ.', sol:`${fmt(a)} × ${d} = <b>${fmt(a*d)}</b>`};
   }
   const d=R(2,9), q0=R(1000,11000), a=q0*d + (Math.random()<0.35?R(1,d-1):0);
   const th=Math.floor(a/d), du=a%d;
-  return {q:`Đặt tính rồi tính:&nbsp; <b>${fmt(a)} : ${d} = ?</b>${du?' <i>(ghi dạng thương r dư – ví dụ 125r2)</i>':''}`,
+  return {calculation:{a,b:d,op:':'},q:`Đặt tính rồi tính:&nbsp; <b>${fmt(a)} : ${d} = ?</b>${du?' <i>(ghi dạng thương r dư – ví dụ 125r2)</i>':''}`,
     ans: du? `${th}r${du}` : String(th), alt: du?[`${th}r${du}`,`${th} dư ${du}`,`${th}du${du}`]:[String(th)],
     hint:'Lặp 4 nhịp: Chia → Nhân → Trừ → Hạ. Số dư luôn bé hơn số chia.',
     sol:`${fmt(a)} : ${d} = <b>${fmt(th)}</b>${du?` dư <b>${du}</b>`:''} (thử lại: ${fmt(th)} × ${d}${du?` + ${du}`:''} = ${fmt(a)})`};
@@ -3354,11 +3365,11 @@ function gJourneyAdvance(from,to){
 }
 function gJourneyMotion(value){gJourney?.setMotion(value);}
 function gJourneyReset(){gJourneyPending=null;gJourneyOwner=null;gJourneyPhase=null;gJourney?.update({owner:'signed-out',name:'',unlocked:0,stars:{},phase:0,travel:null});const status=document.getElementById('journeyStatus');if(status)status.textContent='';}
-function gJourneyFallback(error){if(error)console.warn('[toan3] journey unavailable:',error);if(gJourney){gJourney.dispose();gJourney=null;}}
+function gJourneyFallback(error){if(error)console.warn('[toan3] journey unavailable:',error);if(gJourney){gJourney.dispose();gJourney=null;}const action=document.getElementById('journeyAction');if(action)action.disabled=true;}
 function gJourneyMount(){
   if(gJourney||gWorldLight||!window.Toan3World?.mountJourney)return;
   const container=document.getElementById('journeyStage');if(!container)return;
-  try{gJourney=Toan3World.mountJourney({container,phases:GPHASES,weeks:WEEKS,onSelect:week=>{if(week<=G.unlocked)gStart(week);},onArrive:id=>{if(gJourneyPending?.id===id){gJourneyPending=null;document.getElementById('journeyStatus').textContent=`${gJourneyState().name} · Đã đến trạm ${G.unlocked}`;}},onError:gJourneyFallback});gJourney.setMotion(gWorldMotionOn);gJourneyRender();}catch(error){gJourneyFallback(error);}
+  try{gJourney=Toan3World.mountJourney({container,phases:GPHASES,weeks:WEEKS,onSelect:week=>{if(week<=G.unlocked){if(document.getElementById('journeyAction')?.value==='walk')gJourney.walkTo(week);else gStart(week);}},onArrive:id=>{if(gJourneyPending?.id===id){gJourneyPending=null;document.getElementById('journeyStatus').textContent=`${gJourneyState().name} · Đã đến trạm ${G.unlocked}`;}},onError:gJourneyFallback});gJourney.setMotion(gWorldMotionOn);gJourneyRender();}catch(error){gJourneyFallback(error);}
 }
 function gJourneyRender(){
   const host=document.getElementById('gameMap');if(!host)return;
@@ -3366,6 +3377,8 @@ function gJourneyRender(){
   if(gJourneyOwner!==state.owner){gJourneyOwner=state.owner;gJourneyPhase=null;gJourneyPending=null;}
   if(gJourneyPhase===null)gJourneyPhase=gJourneyPhaseFor(state.unlocked);
   if(!document.getElementById('journeyStage'))host.innerHTML=`<section class="journey" aria-labelledby="journeyTitle"><div class="journey-heading"><div><p id="journeyIndex"></p><h2 id="journeyTitle"></h2><p id="journeyRange"></p></div><button onclick="gJourneyHome()">Về vị trí của con</button></div><nav class="journey-chapters" id="journeyChapters" aria-label="Tám vùng hành trình"></nav><div class="journey-stage" id="journeyStage"><picture><source id="journeySource" media="(max-width:700px)"><img id="journeyPoster" class="journey-poster" alt="Bản đồ hành trình" width="1028" height="450" loading="lazy"></picture></div><div class="journey-status" id="journeyStatus" role="status"></div><ol class="journey-stops" id="journeyStops"></ol></section>`;
+  if(!document.getElementById('journeyAction'))host.querySelector('.journey-heading').insertAdjacentHTML('afterend','<label>Chạm trạm: <select id="journeyAction"><option value="learn">Vào bài</option><option value="walk">Đi dạo</option></select></label>');
+  document.getElementById('journeyAction').disabled=!gJourney;
   const phase=GPHASES[gJourneyPhase];
   const poster=document.getElementById('journeyPoster'),source=document.getElementById('journeySource');
   const image=`assets/toan3/journey-${gJourneyPhase+1}`;
@@ -3380,7 +3393,7 @@ function gJourneyRender(){
   if(gJourney)gJourney.update({...state,phase:gJourneyPhase,travel:gJourneyPending});
 }
 function gJourneySelect(index){if(!GPHASES[index])return;gJourneyPhase=index;gJourneyRender();}
-function gJourneyHome(){gJourneyPhase=gJourneyPhaseFor(G.unlocked);gJourneyRender();document.getElementById('gameMap')?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});}
+function gJourneyHome(){gJourneyPhase=gJourneyPhaseFor(G.unlocked);gJourneyRender();gJourney?.home();document.getElementById('gameMap')?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});}
 /* --- tạo bộ câu hỏi cho 1 trạm ---
    70% review queue (nếu có) + 65% tuần hiện tại + 35% ôn xoay vòng
    Mỗi câu sai sẽ bị đưa vào reviewQueue; chỉ xoá khi trả lời đúng không cần gợi ý */
@@ -3528,7 +3541,6 @@ function gMakeQ(gen){
   if(gen==='bieuthuc' && roll<0.45) return gOrderQ();
   if((gen==='hinhhoc'||gen==='chuvidt') && roll<0.4) return gCountShapesQ();
   if(gen==='congtru3'||gen==='congtru') return gColumnQ(gen);      /* đặt tính: điền ô */
-  if(gen==='nhanchia' && roll<0.6) return gColumnQ('nhanchia');
   /* --- các mini-game mới, bám sát chủ đề tuần --- */
   if(gen==='cautao' && roll<0.55) return gBuildNumberQ();                          /* xây số */
   if(gen==='sosanh' && roll<0.6)  return gCompareQ(roll<0.3?9999:99999);           /* cân so sánh */
@@ -3536,6 +3548,7 @@ function gMakeQ(gen){
   if(gen==='tientevn' && roll<0.45) return gMoneyPayQ();                           /* trả tiền */
   if(gen==='lamtron' && roll<0.6) return gNumLineQ();                              /* tia số / làm tròn */
   const o=GEN[gen]();
+  if(o.calculation) return gArithmeticQ(o.calculation);
   if(o.type==='mc') return {kind:'mc', q:o.q, opts:o.opts, ansIdx:o.ansIdx, sol:o.sol};
   if(o.type==='solve'){
     const acc=[String(o.dapso.val), fmt(o.dapso.val)].map(norm);
@@ -3638,6 +3651,68 @@ function gCountShapesQ(){
     sol:`Có <b>${cnt}</b> ${target} trong hình.`};
 }
 /* Mini-game 5: Đặt tính rồi tính – điền số vào từng ô hàng */
+function gArithmeticQ({a,b,op}){
+  if(op==='×') return {kind:'column',a,b,op,ans:a*b,q:'Đặt tính rồi tính',
+    sol:`${fmt(a)} × ${b} = <b>${fmt(a*b)}</b>`,
+    workHint:'Nhân từng chữ số từ phải sang trái, cộng phần nhớ rồi ghi chữ số hàng đơn vị của tích.'};
+  const steps=[];
+  let remainder=0;
+  const digits=String(a).split('').map(Number);
+  digits.forEach((digit,end)=>{
+    const partial=remainder*10+digit;
+    if(steps.length || partial>=b || end===digits.length-1){
+      const quotientDigit=Math.floor(partial/b), product=quotientDigit*b;
+      remainder=partial-product;
+      steps.push({end,partial,digit:quotientDigit,product,remainder});
+    }else remainder=partial;
+  });
+  const ans=Math.floor(a/b);
+  return {kind:'division',a,b,op:':',ans,remainder,steps,q:'Đặt tính rồi tính',
+    workHint:'Chia từ trái sang phải: chia, nhân, trừ rồi hạ chữ số tiếp theo. Số dư phải bé hơn số chia.',
+    sol:`${fmt(a)} : ${b} = <b>${fmt(ans)}</b>${remainder?` dư <b>${remainder}</b>`:''}`};
+}
+function gDivisionFields(q){
+  const fields=[];
+  q.steps.forEach((step,index)=>{
+    if(index) fields.push({key:`partial-${index}`,value:step.partial,label:`Lần ${index+1}, hạ được`,end:step.end});
+    fields.push({key:`quotient-${index}`,value:step.digit,label:`Chữ số thương thứ ${index+1}`});
+    fields.push({key:`product-${index}`,value:step.product,label:`Lần ${index+1}, tích`,end:step.end});
+    fields.push({key:`remainder-${index}`,value:step.remainder,label:`Lần ${index+1}, còn dư`,end:step.end});
+  });
+  return fields;
+}
+function gDivisionBody(q){
+  const fields=gDivisionFields(q);
+  let tab=0;
+  const inputs=new Map(fields.map(field=>[field.key,String(field.value).split('').map((digit,index)=>
+    `<input class="division-box" data-field="${field.key}" data-order="${tab++}" inputmode="numeric" maxlength="1" autocomplete="off" aria-label="${field.label}, ô ${index+1}">`).join('')]));
+  const number=(value,end,row,extra='')=>`<span class="division-number ${extra}" style="grid-column:${end-String(value).length+3} / span ${String(value).length};grid-row:${row}">${String(value).split('').map(digit=>`<span>${digit}</span>`).join('')}</span>`;
+  const fieldRow=(key,row,extra='')=>{
+    const field=fields.find(item=>item.key===key);
+    return `<span class="division-number ${extra}" style="grid-column:${field.end-String(field.value).length+3} / span ${String(field.value).length};grid-row:${row}">${inputs.get(key)}</span>`;
+  };
+  let row=2, left=number(q.a,String(q.a).length-1,1);
+  q.steps.forEach((step,index)=>{
+    if(index){left+=`<span class="division-mark" style="grid-row:${row}">Hạ</span>`+fieldRow(`partial-${index}`,row++);}
+    left+=`<span class="division-mark" style="grid-row:${row}">−</span>`+fieldRow(`product-${index}`,row++,'division-minus');
+    left+=fieldRow(`remainder-${index}`,row++);
+  });
+  return `<div class="division-work"><div class="division-left" style="grid-template-columns:repeat(${String(q.a).length+1},var(--division-digit))">${left}</div><div class="division-right"><div class="division-divisor">${q.b}</div><div class="division-quotient">${q.steps.map((step,index)=>inputs.get(`quotient-${index}`)).join('')}</div></div></div><div class="col-hint">${q.workHint}</div>`;
+}
+function gCheckDivision(q,values){
+  return gDivisionFields(q).every(field=>/^\d+$/.test(values[field.key]||'') && Number(values[field.key])===field.value);
+}
+function gWireDivision(){
+  const boxes=[...document.querySelectorAll('#gCard .division-box')].sort((left,right)=>Number(left.dataset.order)-Number(right.dataset.order));
+  boxes.forEach((box,index)=>{
+    box.addEventListener('input',()=>{box.value=box.value.replace(/\D/g,'').slice(0,1);if(box.value) boxes[index+1]?.focus();});
+    box.addEventListener('keydown',event=>{
+      if(event.key==='Backspace'&&!box.value) boxes[index-1]?.focus();
+      if(event.key==='Enter'){event.preventDefault();gSubmit();}
+    });
+  });
+  boxes[0]?.focus();
+}
 function gColumnQ(gen){
   let a,b,op,ans;
   if(gen==='congtru3'){
@@ -3650,7 +3725,7 @@ function gColumnQ(gen){
   return {kind:'column', a, b, op, ans,
     q:`📝 Đặt tính rồi tính — điền kết quả vào <b>từng ô</b> (đơn vị bên phải):`,
     sol:`${fmt(a)} ${op} ${fmt(b)} = <b>${fmt(ans)}</b>.`,
-    workHint:op==='−'?'Nếu hàng trên bé hơn hàng dưới, mượn 1 ở hàng bên trái. Ô ↙ chỉ để nhắc con đã mượn, không phải số để trừ thêm.':'Nếu tổng ở một hàng từ 10 trở lên, ghi số nhớ ở ô đỏ phía trên.'};
+    workHint:op==='−'?'Nếu hàng trên bé hơn hàng dưới, mượn 1 ở hàng bên trái. Ô ↙ chỉ để nhắc con đã mượn, không phải số để trừ thêm.':op==='×'?'Nhân từng chữ số từ phải sang trái rồi cộng phần nhớ.':'Nếu tổng ở một hàng từ 10 trở lên, ghi số nhớ ở ô đỏ phía trên.'};
 }
 function gColRow(str, width, opChar, inputs){
   let cells=`<span class="col-op">${opChar||''}</span>`;
@@ -3994,6 +4069,8 @@ function gRenderQ(){
     body=`<div class="count-grid">`+q.shapes.map((t,i)=>`<button class="shp" data-i="${i}" onclick="gCountTap(${i})">${gShapeSVG(t,i)}</button>`).join('')+`</div>`;
   }else if(q.kind==='column'){
     body=`<div style="text-align:center">${gColumnBody(q)}</div>`;
+  }else if(q.kind==='division'){
+    body=gDivisionBody(q);
   }else if(q.kind==='build'){
     body=`<div class="build-wrap">
       <div class="build-slots" id="buildSlots">`+q.targetArr.map((_,i)=>{
@@ -4070,6 +4147,7 @@ function gRenderQ(){
   if(q.kind==='flash') gStartFlash(q.secs);
   if(q.kind==='dnd') gWireDnd();
   if(q.kind==='column') gWireColumn();
+  if(q.kind==='division') gWireDivision();
 }
 /* --- Tương tác mini-game mới --- */
 function gBuildTap(i,d){
@@ -4326,6 +4404,13 @@ function gSubmit(){
     ok=(want.size===got.size) && [...want].every(i=>got.has(i));
     document.querySelectorAll('.shp').forEach(b=>{ const i=+b.dataset.i;
       if(q.shapes[i]===q.target) b.classList.add('right'); else if(got.has(i)) b.classList.add('wrong'); b.onclick=null; });
+  }else if(q.kind==='division'){
+    const boxes=[...document.querySelectorAll('#gCard .division-box')];
+    if(boxes.some(box=>!/^\d$/.test(box.value.trim()))) return;
+    const values={};
+    boxes.forEach(box=>{values[box.dataset.field]=(values[box.dataset.field]||'')+box.value;});
+    ok=gCheckDivision(q,values);
+    boxes.forEach(box=>{box.disabled=true;box.style.borderColor=ok?'#2e7d32':'#d32f2f';});
   }else if(q.kind==='column'){
     const card=document.getElementById('gCard');
     const boxes=[...card.querySelectorAll('.col-box')];
