@@ -593,6 +593,20 @@ body.locked{overflow:hidden}
 .mx-0{background:#fafafa;color:#90a4ae}.mx-1{background:#fff9c4}.mx-2{background:#dcedc8}.mx-3{background:#a5d6a7;font-weight:800}
 .pc-st{font-weight:700;font-size:11.5px;padding:1px 7px;border-radius:999px;white-space:nowrap}
 .pc-st.s0{background:#eceff1;color:#78909c}.pc-st.s1{background:#fff3c4;color:#8d6e00}.pc-st.s2{background:#dcedc8;color:#4b7a1e}.pc-st.s3{background:#a5d6a7;color:#1b5e20}
+.garden-card{width:min(820px,96vw);max-width:820px;padding:18px;letter-spacing:0}
+.garden-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.garden-head h2{flex:1;margin:0;font-size:24px;color:#176049}
+.garden-scene{display:block;width:100%;aspect-ratio:720/300;background:#e5f6fa;border-radius:8px}
+.garden-items{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:14px}
+.garden-item{border:1px solid #cbded5;border-radius:8px;padding:10px;text-align:center;min-width:0;background:#fff}
+.garden-item svg{display:block;width:100%;height:80px}
+.garden-item b{display:block;min-height:44px;font-size:15px;color:#254b3d}
+.garden-item button{width:100%;min-height:40px;white-space:normal}
+.garden-item label{display:flex;align-items:center;justify-content:center;gap:6px;min-height:40px;font-weight:700}
+.garden-status{min-height:24px;margin:8px 0;color:#954b15;font-size:14px}
+.rank-bubble{position:fixed;right:16px;bottom:18px;z-index:5700;max-width:min(360px,calc(100vw - 32px));padding:14px 16px;background:#fff;border:2px solid #27816b;border-radius:8px;box-shadow:0 8px 28px #18372e33;color:#214b3d;font-size:15px;letter-spacing:0}
+.rank-bubble[hidden]{display:none}.rank-bubble p{margin:0 0 10px}.rank-bubble button{min-height:36px;margin-right:6px}
+@media(max-width:540px){.garden-items{grid-template-columns:repeat(2,minmax(0,1fr))}.garden-head h2{font-size:21px}.garden-card{padding:12px}.garden-scene{aspect-ratio:720/360}}
 </style>
 </head>
 <body>
@@ -1673,6 +1687,7 @@ Một bài giải đầy đủ <b>luôn có 3 phần</b>:<br>
     <button class="gmute" style="background:#c62828;box-shadow:0 3px 0 #8e0000" onclick="gBossStart()" id="gBossBtn" title="Thử sức Boss hàng ngày!">👹 Boss</button>
     <button class="gmute" style="background:#8e24aa;box-shadow:0 3px 0 #6a1b9a" onclick="openDash()">🏆 Thi đua</button>
     <button class="gmute" id="gMuteBtn" onclick="gToggleMute()">🔊 Âm thanh: Bật</button>
+    <button class="gmute" onclick="openGarden()">Vườn của con</button>
     <button class="game-reset" onclick="resetGame()">↺ Chơi lại</button>
   </div>
   <div class="gxp-strip" title="Kinh nghiệm (XP)">
@@ -1685,7 +1700,7 @@ Một bài giải đầy đủ <b>luôn có 3 phần</b>:<br>
     <div class="realm-grid" id="realmGrid"></div>
   </section>
   <section class="coach-panel" aria-labelledby="coachTitle">
-    <div class="coach-head"><div><h3 id="coachTitle">Luyện điều con đang học</h3><p>Không gọi là “lỗi”. Mỗi câu chưa đúng sẽ đổi thành câu mới, cùng cách làm, để con hiểu thật.</p></div><div class="coach-actions"><button class="daily" onclick="gDailyStart()">Học 5 phút hôm nay</button><button onclick="gStartSkillPractice()">Luyện phần cần ôn</button></div></div>
+    <div class="coach-head"><div><h3 id="coachTitle">Luyện điều con đang học</h3><p>Không gọi là “lỗi”. Mỗi câu chưa đúng sẽ đổi thành câu mới, cùng cách làm, để con hiểu thật.</p></div><div class="coach-actions"><button class="daily" onclick="gChooseDaily()">Nhiệm vụ hôm nay</button><button onclick="gStartSkillPractice()">Luyện phần cần ôn</button></div></div>
     <div id="skillList"></div>
   </section>
   <div id="gameMap" class="map"></div>
@@ -1695,6 +1710,8 @@ Một bài giải đầy đủ <b>luôn có 3 phần</b>:<br>
   <footer>🎮 Học mà chơi · 35 trạm bám sát SGK · Ôn tập xoay vòng · Hoạt động offline · Rev 3.0</footer>
 </div>
 <div class="gmodal" id="gModal"><div class="gcard" id="gCard"></div></div>
+<div class="gmodal" id="gardenOv" role="dialog" aria-modal="true" aria-labelledby="gardenTitle"><div class="gcard garden-card"><div class="garden-head"><h2 id="gardenTitle">Vườn của con</h2><button class="gry" onclick="closeGarden()">Đóng</button></div><div id="gardenBody"></div><div id="gardenStatus" class="garden-status" role="status" aria-live="polite"></div></div></div>
+<aside class="rank-bubble" id="rankBubble" role="status" aria-live="polite" hidden><p id="rankMessage"></p><button class="grn" onclick="document.getElementById('rankBubble').hidden=true;openDash()">Xem thi đua</button><button class="gry" onclick="document.getElementById('rankBubble').hidden=true">Đóng</button></aside>
 <div class="gp-overlay" id="gPauseOverlay">
   <div class="gp-card">
     <div class="gp-icon">⏸️</div>
@@ -1910,7 +1927,7 @@ function gVibe(p){ try{ if(!G.mute && navigator.vibrate) navigator.vibrate(p); }
 
 const R = (a,b)=> a + Math.floor(Math.random()*(b-a+1));
 /* Key duy nhất cho dedupe câu hỏi — dùng a,b,op cho dạng column để tránh trùng */
-function qKey(q){ return (q.type==='column'||q.type==='column_timx') ? `col:${q.a}${q.op}${q.b}` : q.q; }
+function qKey(q){ return (q.type==='column'||q.type==='column_timx'||q.kind==='column') ? `col:${q.a}${q.op}${q.b}` : q.q; }
 const pick = a => a[Math.floor(Math.random()*a.length)];
 const shuffle = a => a.map(v=>[Math.random(),v]).sort((x,y)=>x[0]-y[0]).map(v=>v[1]);
 const fmt = n => String(n).replace(/\B(?=(\d{3})+(?!\d))/g,' ');
@@ -3296,9 +3313,89 @@ function gBuildRealmQuestions(realm){
   }
   return qs;
 }
-function gBuildSkillQuestions(gens,n){
+const GARDEN_ITEMS=[
+  {id:'tulips',name:'Khóm tulip',price:60},
+  {id:'sunflowers',name:'Hoa hướng dương',price:100},
+  {id:'bench',name:'Ghế đọc sách',price:160},
+  {id:'fountain',name:'Đài phun nước',price:240}
+];
+let gardenState=null,gardenUser=null,gardenBusy=false,gardenReady=false;
+function gardenArt(id){
+  if(id==='tulips') return `<g stroke-linejoin="round"><path d="M32 84V41M60 84V32M87 84V44" stroke="#32875b" stroke-width="4"/><path d="M31 72Q8 48 16 72Q23 86 32 82M60 65Q85 45 79 67Q73 80 60 80M86 76Q106 56 103 75Q98 86 87 85" fill="#60ac61"/><path d="M18 25L29 33L34 20L40 34L48 26Q48 56 33 56Q18 55 18 25" fill="#e74c65"/><path d="M45 13L57 23L63 10L69 24L78 16Q77 47 62 47Q46 46 45 13" fill="#f8ad36"/><path d="M73 29L84 37L89 24L95 37L104 29Q103 59 89 59Q74 58 73 29" fill="#d84b7c"/><ellipse cx="61" cy="89" rx="48" ry="6" fill="#4d9155" opacity=".22"/></g>`;
+  if(id==='sunflowers') return `<g><path d="M43 87V37M83 87V51" stroke="#448847" stroke-width="5"/><path d="M42 70Q13 45 15 69Q20 85 42 80M82 76Q112 58 109 78Q95 89 83 84" fill="#73ad47"/>${[[43,32,1],[83,49,.8]].map(([x,y,scale])=>`<g transform="translate(${x} ${y}) scale(${scale})">${Array.from({length:10},(_,index)=>`<ellipse cx="0" cy="-17" rx="7" ry="12" fill="${index%2?'#ffbe32':'#ffda55'}" transform="rotate(${index*36})"/>`).join('')}<circle r="13" fill="#684431"/><circle r="8" fill="#9e6336"/><path d="M-5 -3H5M-5 3H5M-3 -5V5M3 -5V5" stroke="#d69e52" stroke-width="1.4"/></g>`).join('')}</g>`;
+  if(id==='bench') return `<g stroke-linejoin="round"><path d="M22 55V85M98 55V85M29 30V63M91 30V63" stroke="#315264" stroke-width="6"/><path d="M18 62H103L98 72H23Z" fill="#d6a168"/><path d="M23 31H98V41H23ZM23 45H98V55H23Z" fill="#e2b783" stroke="#bd8252" stroke-width="1.5"/><path d="M37 67L54 60L70 64V69L55 67L39 72Z" fill="#fff6dc"/><path d="M37 67L39 72L55 67L70 69" fill="none" stroke="#327d99" stroke-width="3"/></g>`;
+  if(id==='fountain') return `<g><ellipse cx="60" cy="84" rx="52" ry="11" fill="#43747a" opacity=".2"/><path d="M13 70Q17 94 60 94Q105 94 108 70Z" fill="#91b5c3"/><ellipse cx="60" cy="70" rx="47" ry="12" fill="#d9eef1"/><ellipse cx="60" cy="70" rx="39" ry="8" fill="#58bbd3"/><path d="M53 43L48 72Q59 77 73 72L66 43Z" fill="#cce1e4"/><path d="M35 37Q38 55 60 55Q83 55 87 37Z" fill="#9fc6ce"/><ellipse cx="61" cy="37" rx="26" ry="7" fill="#d9f3f6"/><path d="M60 36V14M59 20Q35 4 35 31M62 21Q86 5 88 31" fill="none" stroke="#309fbf" stroke-width="3" stroke-linecap="round"/><circle cx="35" cy="34" r="3" fill="#68cfe3"/><circle cx="88" cy="34" r="3" fill="#68cfe3"/></g>`;
+  return '';
+}
+function gardenScene(placed=[]){
+  const locations={tulips:[95,195,1],sunflowers:[525,153,1.25],bench:[190,176,1.15],fountain:[367,164,1.3]};
+  return `<svg class="garden-scene" viewBox="0 0 720 300" role="img" aria-label="Khu vườn với ${placed.length} món trang trí"><rect width="720" height="300" fill="#e5f6fa"/><circle cx="611" cy="48" r="25" fill="#ffdc72"/><path d="M0 145Q125 80 258 143T515 130T720 135V300H0Z" fill="#b5dba5"/><path d="M0 184Q169 136 335 180T720 175V300H0Z" fill="#83c28c"/><path d="M350 178Q309 217 343 300H508Q394 242 391 178Z" fill="#e3e6d8"/><path d="M349 191L391 191M337 218L411 218M342 250L450 250M361 280L483 280" stroke="#c2cfbc" stroke-width="2"/><path d="M49 118V214M116 116V198M634 110V190M693 118V205" stroke="#986f4c" stroke-width="7"/><path d="M0 164Q166 134 286 159M0 187Q163 157 272 181M503 147L720 159M518 171L720 182" fill="none" stroke="#f6f4e3" stroke-width="10"/><path d="M61 198V90M62 147L32 125" stroke="#916748" stroke-width="11"/><path d="M2 100Q-3 65 32 55Q28 18 69 20Q99 12 112 51Q149 64 135 98Q131 128 86 128Q41 146 15 121Z" fill="#3f9769"/><path d="M21 85Q25 47 62 50Q98 31 112 72Q121 99 88 103Q42 120 21 85" fill="#69b778"/><circle cx="45" cy="86" r="6" fill="#ee7a5f"/><circle cx="91" cy="66" r="6" fill="#ee7a5f"/><circle cx="93" cy="107" r="6" fill="#ee7a5f"/>${placed.filter(id=>locations[id]).map(id=>{const [x,y,scale]=locations[id];return `<g transform="translate(${x} ${y}) scale(${scale})">${gardenArt(id)}</g>`;}).join('')}<path d="M29 267l4 -9 4 9M580 274l4 -10 5 10M668 249l4 -8 4 8" stroke="#449360" stroke-width="2" fill="none"/></svg>`;
+}
+function gardenRender(){
+  if(!AUTH_ME||gardenUser!==AUTH_ME.id){gardenReady=false;gardenState=null;}
+  const state=gardenState||{owned:[],placed:[],spent:0},balance=Math.max(0,(G.xu||0)-state.spent);
+  document.getElementById('gardenBody').innerHTML=gardenScene(state.placed)+`<p>${gardenReady?`<b>${balance} xu</b> có thể dùng trong vườn`:'Chưa xác nhận số xu có thể dùng.'}</p><div class="garden-items">`+GARDEN_ITEMS.map(item=>{
+    const owned=state.owned.includes(item.id),disabled=gardenBusy||!gardenReady||(!owned&&balance<item.price);
+    return `<article class="garden-item"><svg viewBox="0 0 120 100" aria-hidden="true">${gardenArt(item.id)}</svg><b>${item.name}</b>${owned?`<label><input type="checkbox" ${state.placed.includes(item.id)?'checked':''} ${disabled?'disabled':''} onchange="gardenAction('${item.id}','toggle')"> Trong vườn</label>`:`<button class="grn" ${disabled?'disabled':''} onclick="gardenAction('${item.id}','buy')">Đổi ${item.price} xu</button>`}</article>`;
+  }).join('')+'</div>';
+}
+async function openGarden(){
+  document.getElementById('gardenOv').classList.add('open');
+  if(gardenBusy) return;
+  gardenReady=false;gardenState=null;gardenUser=AUTH_ME?AUTH_ME.id:null;
+  gardenRender();
+  const status=document.getElementById('gardenStatus'),userId=gardenUser;
+  status.textContent='Đang tải khu vườn...';
+  if(!supa||!userId){status.textContent='Đăng nhập để lưu khu vườn của con.';return;}
+  gardenBusy=true;
+  try{
+    const {data,error}=await supa.from('toan3_gardens').select('owned,placed,spent').eq('id',userId).maybeSingle();
+    if(!AUTH_ME||AUTH_ME.id!==userId) return;
+    if(error) throw error;
+    gardenState=data||{owned:[],placed:[],spent:0};gardenReady=true;
+    status.textContent='';
+  }catch(error){console.warn('[toan3] garden unavailable:',error);status.textContent='Cửa hàng chưa sẵn sàng. Xu của con vẫn được giữ nguyên.';}
+  finally{gardenBusy=false;gardenRender();}
+}
+function closeGarden(){document.getElementById('gardenOv').classList.remove('open');}
+async function gardenAction(itemId,action){
+  if(gardenBusy||!gardenReady||!AUTH_ME||gardenUser!==AUTH_ME.id||_progressLoadedFor!==AUTH_ME.id) return;
+  const item=GARDEN_ITEMS.find(entry=>entry.id===itemId);
+  if(!item||!['buy','toggle'].includes(action)) return;
+  const userId=AUTH_ME.id,status=document.getElementById('gardenStatus');
+  gardenBusy=true;gardenRender();status.textContent='Đang lưu...';
+  try{
+    await progressSync();
+    if(!AUTH_ME||AUTH_ME.id!==userId) return;
+    const {data,error}=await supa.rpc('toan3_garden_action',{item_id:itemId,operation:action});
+    if(!AUTH_ME||AUTH_ME.id!==userId) return;
+    if(error) throw error;
+    gardenState=data;status.textContent=action==='buy'?`Đã thêm ${item.name.toLowerCase()} vào vườn!`:'Đã lưu khu vườn.';
+  }catch(error){console.warn('[toan3] garden action failed:',error);status.textContent='Chưa xác nhận được giao dịch. Đóng và mở lại vườn để kiểm tra trước khi thử lại.';gardenReady=false;}
+  finally{gardenBusy=false;gardenRender();}
+}
+function gPracticeQ(gen){
+  if(gen==='congtru3'||gen==='congtru'){
+    const first=R(2,5)*10+R(2,4),second=R(1,2)*10+R(1,2),add=Math.random()<0.5;
+    const answer=add?first+second:first-second,op=add?'+':'−';
+    return {kind:'column',a:first,b:second,op,ans:answer,q:'Đặt tính rồi tính:',
+      sol:`${first} ${op} ${second} = <b>${answer}</b>.`,
+      workHint:'Đặt thẳng hàng chục và hàng đơn vị. Tính hàng đơn vị trước, rồi tính hàng chục.'};
+  }
+  if(['bangnhanchia','dauNhanh','nhanchia'].includes(gen)){
+    const first=R(2,5),second=R(2,5),product=first*second,multiply=Math.random()<0.5;
+    const answer=multiply?product:second;
+    return {kind:'input',q:multiply?`${first} × ${second} = ?`:`${product} : ${first} = ?`,accept:[String(answer)],
+      sol:multiply?`${first} × ${second} = <b>${product}</b>.`:`${product} : ${first} = <b>${second}</b>.`,
+      _a:first,_b:second,_p:product,_mul:multiply};
+  }
+  const question=gMakeQ(gen);
+  if(question.kind==='flash') question.kind='mc';
+  return question;
+}
+function gBuildSkillQuestions(gens,n,gentle=false){
   const usable=gens.filter(gen=>typeof GEN[gen]==='function'),qs=[];let guard=0;
-  while(qs.length<n&&guard<n*50){guard++;const gen=pick(usable),q=gMakeQ(gen);q._gen=gen;if(!qs.some(old=>qKey(old)===qKey(q)))qs.push(q);}
+  while(qs.length<n&&guard<n*50){guard++;const gen=pick(usable),q=gentle?gPracticeQ(gen):gMakeQ(gen);q._gen=gen;if(!qs.some(old=>qKey(old)===qKey(q)))qs.push(q);}
   return qs;
 }
 /* --- Lời khen của Ba dành cho con --- */
@@ -3685,15 +3782,43 @@ function gStartRealm(id){
 }
 function gStartSkillPractice(gen){
   const earlyAllowed=new Set(WEEKS.slice(0,Math.min(G.unlocked,4)).flatMap(w=>w.gens));
-  const selected=(gen?[gen]:gWeakSkills().slice(0,3).map(x=>x.gen)).filter(x=>G.unlocked>4||earlyAllowed.has(x)),fallback=WEEKS[Math.max(0,G.unlocked-1)].gens,qs=gBuildSkillQuestions(selected.length?selected:fallback,3);
+  const selected=(gen?[gen]:gWeakSkills().slice(0,3).map(x=>x.gen)).filter(x=>G.unlocked>4||earlyAllowed.has(x)),fallback=WEEKS[Math.max(0,G.unlocked-1)].gens,qs=gBuildSkillQuestions(selected.length?selected:fallback,3,true);
   if(qs.length<3){alert('Chưa tạo đủ câu mới. Con thử lại nhé.');return;}
+  qs.forEach(q=>{ if(q.kind==='flash') q.kind='mc'; });
   GS={w:G.unlocked,qs,i:0,correct:0,hearts:3,answered:false,picked:null,dndSel:null,countSel:new Set(),buildSeq:[],cmpSel:null,clockH:null,clockM:null,moneySel:[],numlineSel:null,dead:false,timer:null,combo:0,usedHint:false,wrongInSession:new Set(),hintStep:0,warmupCount:0,isBoss:false,isSkillPractice:true};
   document.getElementById('gModal').classList.add('open');gRenderQ();
 }
-function gDailyStart(){
-  const today=new Date().toISOString().slice(0,10),earlyAllowed=new Set(WEEKS.slice(0,Math.min(G.unlocked,4)).flatMap(w=>w.gens)),weak=gWeakSkills().slice(0,3).map(x=>x.gen).filter(x=>G.unlocked>4||earlyAllowed.has(x)),current=WEEKS[Math.max(0,G.unlocked-1)].gens,qs=gBuildSkillQuestions(weak.length?weak:current,5);
+function gActivityLog(){
+  const owner=AUTH_ME?AUTH_ME.id:(softUser()?.u||'offline');
+  G.activity=G.activity||{};
+  return G.activity[owner]||(G.activity[owner]={daily:{},bossDay:null});
+}
+const DAILY_THEMES=[
+  {id:'market',name:'Tiệm trái cây',story:'Chuẩn bị năm đơn hàng cho cửa tiệm.',gens:['congtru3','congtru','bangnhanchia','tientevn','loivanhinh']},
+  {id:'build',name:'Xây sân chơi',story:'Hoàn thành năm công việc ở sân chơi mới.',gens:['cautao','sosanh','hinhhoc','chuvidt','donvi']},
+  {id:'explore',name:'Chuyến thám hiểm',story:'Tìm năm dấu mốc trên hành trình hôm nay.',gens:['thoigian','phanmay','haibuoc','gapgiam','bangsolieu']}
+];
+function gChooseDaily(){
+  gClearTimer();gStopActivityWatch();GS=null;
+  document.getElementById('gModal').classList.add('open');
+  document.getElementById('gCard').innerHTML=`<h2>Hôm nay con chọn hành trình nào?</h2><div class="gbtn-row">${DAILY_THEMES.map(theme=>`<button class="grn" onclick="gDailyStart('${theme.id}')">${theme.name}</button>`).join('')}</div><div class="gbtn-row" style="margin-top:18px"><button class="gry" onclick="gClose()">Để sau</button></div>`;
+}
+function gDailyQuestions(theme){
+  const allowed=[...new Set(WEEKS.slice(0,Math.min(G.unlocked,WEEKS.length)).flatMap(week=>week.gens))].filter(gen=>typeof GEN[gen]==='function');
+  const preferred=theme.gens.filter(gen=>allowed.includes(gen));
+  const choices=preferred.length?preferred:allowed;
+  const familiar=choices.slice().sort((first,second)=>((G.skills||{})[second]?.independent||0)-((G.skills||{})[first]?.independent||0));
+  const weak=gWeakSkills().map(entry=>entry.gen).filter(gen=>choices.includes(gen)).slice(0,2);
+  const questions=gBuildSkillQuestions(familiar.slice(0,2),2,true);
+  const remainder=gBuildSkillQuestions(weak.length?weak:choices,8);
+  for(const question of remainder){if(questions.length===5) break;if(!questions.some(old=>qKey(old)===qKey(question))) questions.push(question);}
+  questions.forEach(question=>{if(question.kind==='flash') question.kind='mc';});
+  return questions;
+}
+function gDailyStart(themeId='market'){
+  const today=new Date().toISOString().slice(0,10),theme=DAILY_THEMES.find(entry=>entry.id===themeId)||DAILY_THEMES[0],qs=gDailyQuestions(theme);
   if(qs.length<5){alert('Chưa tạo đủ câu hôm nay. Con thử lại nhé.');return;}
-  GS={w:G.unlocked,qs,i:0,correct:0,hearts:3,answered:false,picked:null,dndSel:null,countSel:new Set(),buildSeq:[],cmpSel:null,clockH:null,clockM:null,moneySel:[],numlineSel:null,dead:false,timer:null,combo:0,usedHint:false,wrongInSession:new Set(),hintStep:0,warmupCount:0,isBoss:false,isDaily:true,dailyDay:today};
+  GS={w:G.unlocked,qs,i:0,correct:0,hearts:3,answered:false,picked:null,dndSel:null,countSel:new Set(),buildSeq:[],cmpSel:null,clockH:null,clockM:null,moneySel:[],numlineSel:null,dead:false,timer:null,combo:0,usedHint:false,wrongInSession:new Set(),hintStep:0,warmupCount:0,isBoss:false,isDaily:true,dailyDay:today,dailyTitle:theme.name,dailyStory:theme.story};
   document.getElementById('gModal').classList.add('open');gRenderQ();
 }
 function gClearTimer(){ if(GS && GS.timer){ clearInterval(GS.timer); GS.timer=null; } }
@@ -3810,15 +3935,17 @@ function gRenderQ(){
     <div style="display:flex;align-items:center;gap:10px">
       <button class="gry" style="padding:6px 11px" onclick="gClose()">✕</button>
       <div class="gbar" style="flex:1"><i style="width:${pct}%"></i></div>
-      <span class="ghearts">${hearts}</span>
+      <span class="ghearts">${gGentleMode()?'Từng bước':hearts}</span>
     </div>
-    <div style="text-align:right;font-size:12px;color:#5b7086;font-weight:700;margin-top:3px">${q._warmup?'<span style="color:#ef6c00">Khởi động</span>':'Câu '+(GS.i+1-GS.warmupCount)+'/'+(GS.qs.length-GS.warmupCount)} · ${GS.isBoss?'Boss':(GS.isRealm?GS.realm.name:'Tuần '+GS.w)}</div>
+    <div style="text-align:right;font-size:12px;color:#5b7086;font-weight:700;margin-top:3px">${q._warmup?'<span style="color:#ef6c00">Khởi động</span>':'Câu '+(GS.i+1-GS.warmupCount)+'/'+(GS.qs.length-GS.warmupCount)} · ${GS.isDaily?GS.dailyTitle:GS.isSkillPractice?'Luyện từng bước':GS.bossPractice?'Luyện boss':GS.isBoss?'Boss':(GS.isRealm?GS.realm.name:'Tuần '+GS.w)}</div>
+    ${GS.isDaily&&GS.i===0?`<p>${GS.dailyStory}</p>`:''}
     ${q._warmup?'<div style="background:#fff3e0;border-radius:10px;padding:6px 12px;margin-bottom:6px;font-size:13px;font-weight:700;color:#e65100;text-align:center">🔥 Khởi động — không mất tim, không tính điểm</div>':''}
     <div class="gqtext">${q.q}</div>
+    ${GS.isSkillPractice?`<div class="ghint-area">${q.workHint||(GEN_SUPPORT[q._gen]||{}).tip||'Con có thể xem lại cách làm rồi thử từng bước.'}</div>`:''}
     ${body}
     <div id="gHintArea"></div>
     <div class="gfeed" id="gFeed"></div>
-    <div class="gbtn-row">${gHintData(q)&&!GS.isBoss?'<button class="ghint-btn" id="gHintBtn" onclick="gHint()">💡 Gợi ý</button>':''}<button class="grn gbig" id="gCheck" onclick="gSubmit()">Kiểm tra</button></div>`;
+    <div class="gbtn-row">${gHintData(q)&&(!GS.isBoss||GS.bossPractice)?'<button class="ghint-btn" id="gHintBtn" onclick="gHint()">💡 Gợi ý</button>':''}<button class="grn gbig" id="gCheck" onclick="gSubmit()">Kiểm tra</button></div>`;
   GS.answered=false; GS.picked=null; GS.dndSel=null; GS.countSel=new Set();
   GS.buildSeq=[]; GS.cmpSel=null; GS.clockH=(q.kind==='clock'?q.curH:null); GS.clockM=(q.kind==='clock'?q.curM:null); GS.moneySel=[]; GS.numlineSel=null; GS.hintStep=0;
   GS.qStart=performance.now(); /* F3: response-time tracking */
@@ -3968,10 +4095,12 @@ function gAfterAnswer(ok, headline){
   const q=GS.qs[GS.i], fb=document.getElementById('gFeed');
   const curGen=q._gen||WEEKS[GS.w-1].gens[0]; /* genre thực tế của câu → dùng cho ôn tập thích ứng */
   const isWarm=!!q._warmup; /* F5: warm-up câu → không tính điểm, không mất tim */
-  const xpMul=GS.isBoss?3:1; /* F7: boss → x3 XP */
+  const xpMul=GS.isBoss&&!GS.bossPractice?3:1;
+  const wasReview=(G.reviewQueue||[]).includes(curGen);
   if(ok){
     gRecordSkill(curGen,true,{hinted:GS.usedHint});
     if(!isWarm) GS.correct++;
+    if(!isWarm&&!GS.usedHint) GS.independent=(GS.independent||0)+1;
     GS.combo=(GS.combo||0)+1;
     /* Xoá khỏi review queue nếu đúng mà không dùng gợi ý */
     if(!GS.usedHint && G.reviewQueue){
@@ -4008,16 +4137,16 @@ function gAfterAnswer(ok, headline){
       }
     }
     const comboStr=GS.combo>=3?` <span class="combo-badge">x${GS.combo} liên tiếp!</span>`:'';
-    const m=pick(GPRAISE);
+    const m=GS.usedHint?'Con đã dùng gợi ý để tìm ra đáp án!':wasReview?'Con vừa tự làm đúng dạng bài cần ôn!':'Con đã tự tìm ra đáp án, không cần gợi ý!';
     fb.className='gfeed ok';
     fb.innerHTML=`<span class="fb-owl">🦉</span> ✅ <b>${m}</b>${comboStr}${isWarm?' <span style="color:#ef6c00;font-size:12px">(khởi động)</span>':''}`;
     gSay(m); if(!G.mute) SFX.correct(); gVibe(35);
   }else{
     /* F4: Retry-on-wrong — lần sai đầu tiên ở MC/flash có hint data → cho thử lại */
-    const canRetry = !GS.retried && !isWarm && !GS.isBoss && (q.kind==='mc'||q.kind==='flash') && gHintData(q);
+    const canRetry=gCanRetry(q);
     if(canRetry){
       GS.retried=true;
-      GS.hearts-=0.5; /* nửa tim */
+      if(!gGentleMode()) GS.hearts-=0.5;
       GS.usedHint=true;
       GS.combo=0;
       /* Disable nút sai, giữ các nút khác */
@@ -4034,11 +4163,11 @@ function gAfterAnswer(ok, headline){
       if(!G.mute) SFX.wrong(); gVibe([30,30,30]);
       GS.answered=false; GS.picked=null; /* cho phép chọn lại */
       const he2=document.querySelector('#gCard .ghearts');
-      if(he2) he2.textContent='❤️'.repeat(Math.max(0,Math.ceil(GS.hearts)))+'🤍'.repeat(3-Math.max(0,Math.ceil(GS.hearts)));
+      if(he2) he2.textContent=gGentleMode()?'Từng bước':'❤️'.repeat(Math.max(0,Math.ceil(GS.hearts)))+'🤍'.repeat(3-Math.max(0,Math.ceil(GS.hearts)));
       return; /* không chạy tiếp — chờ bé chọn lại */
     }
     gRecordSkill(curGen,false,{hinted:GS.usedHint});
-    if(!isWarm) GS.hearts=Math.floor(GS.hearts)-1+(GS.hearts%1); /* trừ 1 tim (giữ phần lẻ nếu có) */
+    if(!isWarm&&!gGentleMode()) GS.hearts=Math.floor(GS.hearts)-1+(GS.hearts%1);
     GS.combo=0;
     /* Đưa gen vào review queue nếu chưa có */
     if(G.reviewQueue && !G.reviewQueue.includes(curGen)){
@@ -4050,7 +4179,7 @@ function gAfterAnswer(ok, headline){
     gSave();
     fb.className='gfeed no';
     const support=GEN_SUPPORT[curGen];
-    const help=support?`<div style="margin-top:8px"><button class="grn" onclick="gStartSkillPractice('${curGen}')">Luyện 3 câu dễ hơn</button> <button class="pur" onclick="gReadTheory('${support.anchor}')">Xem lại cách làm</button></div>`:'';
+    const help=support?`<div style="margin-top:8px"><button class="grn" onclick="gStartSkillPractice('${curGen}')">Luyện 3 câu từng bước</button> <button class="pur" onclick="gReadTheory('${support.anchor}')">Xem lại cách làm</button></div>`:'';
     fb.innerHTML='<span class="fb-owl sad">🦉</span> '+(headline||'❌ Chưa đúng nhé.')+'<br>'+q.sol+help+(isWarm?' <span style="color:#ef6c00;font-size:12px">(khởi động — không mất tim)</span>':'');
     if(!G.mute) SFX.wrong(); gVibe([30,30,30]);
   }
@@ -4059,10 +4188,12 @@ function gAfterAnswer(ok, headline){
   const maxH2=GS.isBoss?2:3;
   const hFull=Math.floor(Math.max(0,GS.hearts)), hHalf=(GS.hearts%1>=0.5)?1:0;
   const he=document.querySelector('#gCard .ghearts');
-  if(he) he.textContent='❤️'.repeat(hFull)+(hHalf?'💔':'')+'🤍'.repeat(Math.max(0,maxH2-hFull-hHalf));
+  if(he) he.textContent=gGentleMode()?'Từng bước':'❤️'.repeat(hFull)+(hHalf?'💔':'')+'🤍'.repeat(Math.max(0,maxH2-hFull-hHalf));
   const btn=document.getElementById('gCheck');
   if(btn){ if(!ok && GS.hearts<=0){ GS.dead=true; btn.textContent='Xem kết quả →'; } else btn.textContent=(GS.i>=GS.qs.length-1)?'Xem kết quả →':'Câu tiếp →'; }
 }
+function gGentleMode(){return !!GS&&(GS.isSkillPractice||GS.isDaily||GS.bossPractice);}
+function gCanRetry(question){return !GS.retried&&!question._warmup&&(!GS.isBoss||GS.bossPractice)&&(question.kind==='mc'||question.kind==='flash')&&!!gHintData(question);}
 function gSubmit(){
   if(GS.answered){ gNext(); return; }
   if(GS.timingPaused) return; /* fair-play: chờ bé thao tác lại rồi mới chấm */
@@ -4070,8 +4201,9 @@ function gSubmit(){
   if(q.kind==='mc'||q.kind==='flash'){
     if(GS.picked==null) return;
     ok=(GS.picked===q.ansIdx);
+    const retry=!ok&&gCanRetry(q);
     document.querySelectorAll('.gopt').forEach(b=>{ const j=+b.dataset.j;
-      if(j===q.ansIdx) b.classList.add('right'); if(j===GS.picked && !ok) b.classList.add('wrong'); b.disabled=true; b.onclick=null; });
+      if(!retry&&j===q.ansIdx) b.classList.add('right'); if(j===GS.picked && !ok) b.classList.add('wrong'); b.disabled=!retry||j===GS.picked; if(b.disabled) b.onclick=null; });
   }else if(q.kind==='dnd'){
     if(GS.dndSel==null) return;
     ok=(GS.dndSel===q.correctIdx);
@@ -4131,11 +4263,20 @@ function gFinish(){
   gClearTimer(); gStopActivityWatch();
   const _ov=document.getElementById('gPauseOverlay'); if(_ov) _ov.classList.remove('open');
   if(GS.isBoss){ gBossFinish(); return; }
+  if(GS.isSkillPractice){
+    gTouchStreak();gSave();gRenderMap();
+    document.getElementById('gCard').innerHTML=`<div class="gresult"><div class="praise">Con đã luyện xong!</div><div>Con làm đúng ${GS.correct}/${GS.qs.length} câu.</div><div class="gbtn-row" style="margin-top:16px"><button class="org" onclick="gStartSkillPractice()">Luyện tiếp 3 câu</button><button class="grn" onclick="gClose()">Xong</button></div></div>`;
+    return;
+  }
   if(GS.isDaily){
+    if(GS.finished) return;
+    GS.finished=true;
     const total=GS.qs.length,pct=Math.round(GS.correct/total*100),day=GS.dailyDay;
-    G.daily=G.daily||{};G.daily[day]={completed:true,attempted:total,correct:GS.correct};
-    G.xp=(G.xp||0)+20;G.xu=(G.xu||0)+5;gTouchStreak();gSave();gRenderMap();
-    document.getElementById('gCard').innerHTML=`<div class="gresult"><div style="font-size:42px">🌿</div><div class="praise" style="color:#00838f">Con đã hoàn thành buổi học hôm nay!</div><div style="font-weight:800;color:#0d47a1">Đúng ${GS.correct}/${total} câu (${pct}%)</div><div style="color:#5b7086;margin-top:7px">Cảm ơn con đã kiên trì. Ngày mai mình học tiếp một ít nhé.</div><div style="color:#ef6c00;font-weight:700;margin-top:6px">+20 XP · +5 xu vì đã hoàn thành</div><div class="gbtn-row" style="margin-top:16px"><button class="grn gbig" onclick="gClose()">✓ Xong</button></div></div>`;
+    const activity=gActivityLog(),firstCompletion=!activity.daily[day];
+    activity.daily[day]=true;G.daily=G.daily||{};
+    G.daily[day]={completed:true,attempted:total,correct:Math.max(G.daily[day]?.correct||0,GS.correct)};
+    if(firstCompletion){G.xp=(G.xp||0)+20;G.xu=(G.xu||0)+5;}gTouchStreak();gSave();gRenderMap();
+    document.getElementById('gCard').innerHTML=`<div class="gresult"><div style="font-size:42px">🌿</div><div class="praise" style="color:#00838f">Con đã hoàn thành buổi học hôm nay!</div><div style="font-weight:800;color:#0d47a1">Đúng ${GS.correct}/${total} câu (${pct}%)</div><div style="color:#5b7086;margin-top:7px">Cảm ơn con đã kiên trì. Ngày mai mình học tiếp một ít nhé.</div><div style="color:#ef6c00;font-weight:700;margin-top:6px">${firstCompletion?'+20 XP · +5 xu vì đã hoàn thành':'Con đã nhận quà hoàn thành hôm nay rồi.'}</div><div class="gbtn-row" style="margin-top:16px"><button class="grn gbig" onclick="gClose()">✓ Xong</button></div></div>`;
     if(!G.mute)SFX.win();return;
   }
   const total=GS.qs.length-(GS.warmupCount||0), pct=Math.round(GS.correct/total*100);
@@ -4199,10 +4340,7 @@ function gClose(){ gClearTimer(); gStopActivityWatch(); const m=document.getElem
 function gBossToday(){ return new Date().toISOString().slice(0,10); }
 function gBossStart(){
   const today=gBossToday();
-  if(G.bossDay===today){
-    alert('Hôm nay con đã thử Boss rồi! Quay lại vào ngày mai nhé 💪');
-    return;
-  }
+  const practice=gActivityLog().bossDay===today;
   if(G.unlocked<2){
     alert('Cần mở ít nhất Tuần 2 để thử Boss nhé!');
     return;
@@ -4216,36 +4354,39 @@ function gBossStart(){
     const gen=pick(unique);
     let q=gMakeQ(gen);
     /* Flash card: timer ngắn hơn (5s) */
-    if(q.kind==='flash') q.secs=5;
+    if(q.kind==='flash'){if(practice) q.kind='mc';else q.secs=5;}
     if(qs.some(o=>qKey(o)===qKey(q))) continue;
     qs.push(q);
   }
-  GS={w:G.unlocked, qs, i:0, correct:0, hearts:2, answered:false, picked:null, dndSel:null, countSel:new Set(),
+  if(qs.length<5){alert('Chưa tạo đủ câu thử thách. Con thử lại nhé.');return;}
+  GS={w:G.unlocked, qs, i:0, correct:0, hearts:practice?3:2, answered:false, picked:null, dndSel:null, countSel:new Set(),
       buildSeq:[], cmpSel:null, clockH:null, clockM:null, moneySel:[], numlineSel:null, dead:false, timer:null,
-      combo:0, usedHint:false, wrongInSession:new Set(), hintStep:0, warmupCount:0, isBoss:true};
+      combo:0, usedHint:false, wrongInSession:new Set(), hintStep:0, warmupCount:0, isBoss:true,bossPractice:practice,bossDay:today};
   document.getElementById('gModal').classList.add('open');
   gRenderQ();
 }
 function gBossFinish(){
-  /* Ghi nhận boss đã chơi hôm nay */
-  G.bossDay=gBossToday();
+  if(GS.finished) return;
+  GS.finished=true;
+  const day=GS.bossDay||gBossToday(),activity=gActivityLog(),rewarded=!GS.bossPractice&&activity.bossDay!==day;
+  if(rewarded){G.bossDay=day;activity.bossDay=day;}
   const pct=Math.round(GS.correct/GS.qs.length*100);
   const won=pct>=80;
   let bonusXP=0, bonusXu=0;
-  if(won){ bonusXP=90; bonusXu=30; }
-  else { bonusXP=20; bonusXu=5; }
+  if(rewarded){if(won){ bonusXP=90; bonusXu=30; }else{ bonusXP=20; bonusXu=5; }}
   G.xp=(G.xp||0)+bonusXP; G.xu=(G.xu||0)+bonusXu;
   if(!G.bossWins) G.bossWins=0;
-  if(won) G.bossWins++;
+  if(won&&rewarded) G.bossWins++;
   gSave(); gRenderTop();
   const lv=gLevel(G.xp);
   document.getElementById('gCard').innerHTML=`<div class="gresult">
     <div style="font-size:42px">${won?'👹🏆':'👹🌱'}</div>
-    <div class="praise" style="color:${won?'#c62828':'#ef6c00'}">${won?'Con đã hạ Boss! Xuất sắc!':'Boss quá mạnh, ngày mai thử lại nhé!'}</div>
+    <div class="praise" style="color:${won?'#c62828':'#ef6c00'}">${won?'Con đã vượt thử thách!':'Con có thể luyện từng bước rồi thử lại nhé!'}</div>
     <div style="font-size:17px;font-weight:800;color:#0d47a1">Đúng ${GS.correct}/${GS.qs.length} câu (${pct}%)</div>
-    <div style="color:#ef6c00;font-weight:700;margin-top:4px">+${bonusXP} XP · +${bonusXu} xu · Cấp: <b>${GLEVELS[lv][1]}</b></div>
+    <div style="color:#ef6c00;font-weight:700;margin-top:4px">${rewarded?`+${bonusXP} XP · +${bonusXu} xu`:'Lượt luyện tập · quà lớn đã nhận hôm nay'} · Cấp: <b>${GLEVELS[lv][1]}</b></div>
     <div style="color:#5b7086;font-weight:600;margin-top:4px">👹 Boss đã thắng: <b>${G.bossWins}</b> lần</div>
     <div class="gbtn-row" style="margin-top:16px">
+      <button class="org gbig" onclick="gBossStart()">Luyện boss lại</button>
       <button class="grn gbig" onclick="gClose()">✓ Xong</button>
     </div></div>`;
   if(won) gConfetti();
@@ -4583,7 +4724,7 @@ function authMsg(kind,text){
   if(err){ err.style.display=kind==='err'?'block':'none'; if(kind==='err') err.textContent=text; }
   if(ok){ ok.style.display=kind==='ok'?'block':'none'; if(kind==='ok') ok.innerHTML=text; }
 }
-function enterApp(name){ authShowGate(false); authRenderChip(name); maybeOnboard(); if(AUTH_ME) progressLoad(); startTimeTracker(); }
+function enterApp(name){ authShowGate(false); authRenderChip(name); maybeOnboard(); if(AUTH_ME) progressLoad().then(loaded=>{if(loaded) rankWatch();}); startTimeTracker(); }
 
 /* --- Login / Register mode (khi có Supabase) --- */
 let authMode='login';
@@ -4656,6 +4797,12 @@ async function authLoginSoft(){
 }
 
 async function authLogout(){
+  AUTH_ME=null;_progressLoadedFor=null;clearTimeout(_syncT);
+  gardenReady=false;gardenState=null;gardenUser=null;closeGarden();gardenRender();
+  document.getElementById('rankBubble').hidden=true;
+  clearTimeout(rankBubbleTimer);clearTimeout(rankDebounce);clearInterval(rankTimer);rankTimer=null;
+  if(rankChannel){const channel=rankChannel;rankChannel=null;try{await supa.removeChannel(channel);}catch(error){console.warn('[toan3] rank channel cleanup failed:',error);}}
+  gClose();closeDash();
   try{ if(supa) await supa.auth.signOut(); }catch(e){}
   try{ localStorage.removeItem(AUTH_KEY); sessionStorage.removeItem(AUTH_KEY); }catch(e){}
   try{ TTS.stop(); }catch(e){}
@@ -4673,17 +4820,18 @@ function applyWarm(){ document.body.classList.toggle('warm', warmOn()); const b=
 function toggleWarm(){ try{ localStorage.setItem('toan3_warm', warmOn()?'0':'1'); }catch(e){} applyWarm(); }
 
 /* ===== Đồng bộ tiến trình lên Supabase + Thi đua ===== */
-let _syncT=null, _timeTracker=null;
-function progressSyncSoon(){ if(!supa||!AUTH_ME) return; clearTimeout(_syncT); _syncT=setTimeout(progressSync, 4000); }
-async function progressSync(){
-  if(!supa||!AUTH_ME) return;
+let _syncT=null, _timeTracker=null, _progressLoadedFor=null;
+function progressSyncSoon(){ if(!supa||!AUTH_ME||_progressLoadedFor!==AUTH_ME.id) return; clearTimeout(_syncT); _syncT=setTimeout(progressSync, 4000); }
+async function progressSync(createOnly=false){
+  if(!supa||!AUTH_ME||(!createOnly&&_progressLoadedFor!==AUTH_ME.id)) return;
+  const options=createOnly?{onConflict:'id',ignoreDuplicates:true}:{};
   const row={ id:AUTH_ME.id, full_name:AUTH_ME.name||AUTH_ME.email,
     stars:G.stars||{}, best:G.best||{}, unlocked:G.unlocked||1, streak:G.streak||0,
     last_day:G.lastDay||null, total_stars:gTotalStars(),
     total_minutes:G.totalMin||0, daily:G.mins||{}, ex_correct:G.exCorrect||0,
     xp:G.xp||0, xu:G.xu||0, updated_at:new Date().toISOString() };
   try{
-    const {error}=await supa.from('toan3_progress').upsert(row);
+    const {error}=await supa.from('toan3_progress').upsert(row,options);
     if(error){
       /* Nếu DB thiếu cột (vd xp/xu chưa migrate) PostgREST trả PGRST204 và TỪ CHỐI cả dòng
          → số phút/Thi đua không lên server. Thử lại BỎ các cột phụ để tối thiểu vẫn đồng bộ. */
@@ -4691,7 +4839,7 @@ async function progressSync(){
       if(error.code==='PGRST204' || /column|schema cache/i.test(msg)){
         const {id,full_name,stars,best,unlocked,streak,last_day,total_stars,total_minutes,daily,ex_correct,updated_at}=row;
         const core={id,full_name,stars,best,unlocked,streak,last_day,total_stars,total_minutes,daily,ex_correct,updated_at};
-        const r2=await supa.from('toan3_progress').upsert(core);
+        const r2=await supa.from('toan3_progress').upsert(core,options);
         if(r2.error) console.warn('[toan3] progressSync core upsert failed:', r2.error);
         else console.warn('[toan3] progressSync: DB thiếu cột (xp/xu?) — đã đồng bộ tối thiểu. Hãy chạy supabase_progress.sql để thêm cột.', error);
       }else{
@@ -4701,9 +4849,21 @@ async function progressSync(){
   }catch(e){ console.warn('[toan3] progressSync exception:', e); }
 }
 async function progressLoad(){
-  if(!supa||!AUTH_ME) return;
+  _progressLoadedFor=null;
+  clearTimeout(_syncT);
+  if(!supa||!AUTH_ME) return false;
+  const userId=AUTH_ME.id;
   try{
-    const {data}=await supa.from('toan3_progress').select('*').eq('id',AUTH_ME.id).maybeSingle();
+    let {data,error}=await supa.from('toan3_progress').select('*').eq('id',userId).maybeSingle();
+    if(error){ console.warn('[toan3] progressLoad failed; sync paused:', error); return false; }
+    if(!AUTH_ME||AUTH_ME.id!==userId) return false;
+    if(!data){
+      await progressSync(true);
+      if(!AUTH_ME||AUTH_ME.id!==userId) return false;
+      ({data,error}=await supa.from('toan3_progress').select('*').eq('id',userId).maybeSingle());
+      if(error||!data){ console.warn('[toan3] progress row not readable; sync paused:', error); return false; }
+      if(!AUTH_ME||AUTH_ME.id!==userId) return false;
+    }
     if(data){
       G.stars=data.stars||{}; G.best=data.best||{}; G.unlocked=data.unlocked||1;
       G.streak=data.streak||0; G.lastDay=data.last_day||null;
@@ -4711,14 +4871,17 @@ async function progressLoad(){
       if(data.xp!=null) G.xp=data.xp; if(data.xu!=null) G.xu=data.xu;
       try{ localStorage.setItem(GKEY,JSON.stringify(G)); }catch(e){}
       gRenderMap();
-    }else{ progressSync(); }  /* lần đầu: tạo dòng từ tiến trình cục bộ */
-  }catch(e){}
+    }
+    _progressLoadedFor=userId;
+    return true;
+  }catch(e){ console.warn('[toan3] progressLoad exception; sync paused:', e); return false; }
 }
 function startTimeTracker(){
   if(_timeTracker) return;
   _timeTracker=setInterval(()=>{
     if(document.visibilityState!=='visible') return;
     if(document.body.classList.contains('locked')) return;
+    if(AUTH_ME&&_progressLoadedFor!==AUTH_ME.id) return;
     const t=new Date().toISOString().slice(0,10);
     G.mins=G.mins||{}; G.mins[t]=(G.mins[t]||0)+1; G.totalMin=(G.totalMin||0)+1;
     const goal=G.goal||15;
@@ -4744,11 +4907,14 @@ async function openDash(){
   if(!ov||!body) return;
   ov.classList.add('open');
   body.innerHTML='<div style="text-align:center;padding:22px;color:var(--muted)">Đang tải bảng thi đua… ⏳</div>';
-  if(!supa){ body.innerHTML='<div style="padding:16px;color:#c62828">Cần đăng nhập Supabase để xem thi đua.</div>'; return; }
+  if(!supa||!AUTH_ME){ body.innerHTML='<div style="padding:16px;color:#c62828">Cần đăng nhập Supabase để xem thi đua.</div>'; return; }
+  if(_progressLoadedFor!==AUTH_ME.id && !await progressLoad()){
+    body.innerHTML='<div style="padding:16px;color:#c62828">Chưa tải được tiến trình đã lưu. Đồng bộ đang tạm dừng để bảo vệ lịch sử học. Kiểm tra kết nối và quyền truy cập Supabase. <button class="acct-btn" onclick="openDash()">Thử lại</button></div>'; return;
+  }
   try{ await progressSync(); }catch(e){}
   try{
     const {data,error}=await supa.from('toan3_progress').select('*');
-    if(error){ body.innerHTML='<div style="padding:16px;color:#c62828">Không tải được dữ liệu.</div>'; return; }
+    if(error){ console.warn('[toan3] leaderboard load failed:', error); body.innerHTML='<div style="padding:16px;color:#c62828">Không tải được dữ liệu. Kiểm tra kết nối và quyền đọc bảng toan3_progress.</div>'; return; }
     dashRender(data||[]);
   }catch(e){ body.innerHTML='<div style="padding:16px;color:#c62828">Lỗi kết nối.</div>'; }
 }
@@ -4811,7 +4977,7 @@ function dashMeSection(){
     </div>
   </div>`;
 }
-function dashRender(raw){
+function dashRankRows(raw){
   const today=new Date().toISOString().slice(0,10);
   const rows=(raw||[]).map(r=>{
     const stars=r.stars||{}; const done=Object.keys(stars).filter(k=>stars[k]>0).length;
@@ -4819,6 +4985,58 @@ function dashRender(raw){
     return {name:r.full_name||'(chưa đặt tên)', id:r.id, totalStars, done, week:r.unlocked||1,
       streak:r.streak||0, totalMin:r.total_minutes||0, todayMin:(r.daily||{})[today]||0, ex:r.ex_correct||0};
   }).sort((a,b)=> b.totalStars-a.totalStars || b.ex-a.ex || b.done-a.done || b.totalMin-a.totalMin);
+  rows.forEach((row,index)=>{
+    const previous=rows[index-1];
+    row.rank=previous&&row.totalStars===previous.totalStars&&row.ex===previous.ex&&row.done===previous.done&&row.totalMin===previous.totalMin?previous.rank:index+1;
+  });
+  return rows;
+}
+let rankTimer=null,rankChannel=null,rankDebounce=null,rankBusy=false,rankBubbleTimer=null;
+function rankMovement(previous,current){
+  if(!previous||!current||previous.roster!==current.roster||current.time-previous.time>864e5||current.time<previous.time) return null;
+  if(previous.rank===current.rank) return null;
+  return {from:previous.rank,to:current.rank,up:current.rank<previous.rank};
+}
+function rankRemember(rows){
+  if(!AUTH_ME) return;
+  const mine=rows.find(row=>row.id===AUTH_ME.id);
+  if(!mine) return;
+  const key='toan3_rank_v1:'+AUTH_ME.id,current={rank:mine.rank,roster:rows.map(row=>row.id).sort().join(','),time:Date.now()};
+  try{
+    const previous=JSON.parse(sessionStorage.getItem(key)||'null');
+    sessionStorage.setItem(key,JSON.stringify(current));
+    const movement=rankMovement(previous,current);
+    if(movement){
+      document.getElementById('rankMessage').textContent=movement.up?`Con vừa lên hạng ${movement.to}, từ hạng ${movement.from}!`:`Bảng thi đua vừa cập nhật: con đang ở hạng ${movement.to}, trước đó hạng ${movement.from}. Mình cứ học theo nhịp của con nhé.`;
+      const bubble=document.getElementById('rankBubble');bubble.hidden=false;
+      clearTimeout(rankBubbleTimer);rankBubbleTimer=setTimeout(()=>{bubble.hidden=true;},10000);
+    }
+  }catch(error){console.warn('[toan3] rank snapshot unavailable:',error);}
+}
+async function rankRefresh(){
+  if(rankBusy||!supa||!AUTH_ME||document.visibilityState!=='visible'||document.body.classList.contains('locked')) return;
+  const userId=AUTH_ME.id;rankBusy=true;
+  try{
+    const {data,error}=await supa.from('toan3_progress').select('id,full_name,stars,unlocked,streak,total_minutes,daily,ex_correct');
+    if(error) throw error;
+    if(!AUTH_ME||AUTH_ME.id!==userId||!Array.isArray(data)||!data.length) return;
+    if(!GS) rankRemember(dashRankRows(data));
+  }catch(error){console.warn('[toan3] rank refresh failed:',error);}
+  finally{rankBusy=false;}
+}
+function rankWatch(){
+  rankRefresh();
+  if(!rankTimer) rankTimer=setInterval(rankRefresh,60000);
+  if(!rankChannel&&typeof supa.channel==='function'){
+    rankChannel=supa.channel('toan3-rank-notices').on('postgres_changes',{event:'*',schema:'public',table:'toan3_progress'},()=>{
+      clearTimeout(rankDebounce);rankDebounce=setTimeout(rankRefresh,1000);
+    }).subscribe();
+  }
+}
+function dashEscape(value){return String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));}
+function dashRender(raw){
+  const rows=dashRankRows(raw);
+  rankRemember(rows);
   const medal=i=> i===0?'🥇':i===1?'🥈':i===2?'🥉':(i+1)+'.';
   let html=`<div id="dashMe">${dashMeSection()}</div>`;
   if(!rows.length){
@@ -4830,7 +5048,7 @@ function dashRender(raw){
     <th>#</th><th>Bé</th><th>⭐</th><th>🏅 Trạm</th><th>✏️ Câu đúng</th><th>Tuần</th><th>🔥</th><th>⏱️ Hôm nay</th><th>Tổng giờ</th></tr></thead><tbody>`;
   rows.forEach((r,i)=>{
     const me=(AUTH_ME && r.id===AUTH_ME.id)?' class="me"':'';
-    html+=`<tr${me}><td>${medal(i)}</td><td style="text-align:left">${r.name}</td><td><b>${r.totalStars}</b></td><td>${r.done}/35</td><td>${r.ex}</td><td>${r.week}</td><td>${r.streak}</td><td>${dashFmtMin(r.todayMin)}</td><td>${dashFmtMin(r.totalMin)}</td></tr>`;
+    html+=`<tr${me}><td>${medal(r.rank-1)}</td><td style="text-align:left">${dashEscape(r.name)}</td><td><b>${r.totalStars}</b></td><td>${r.done}/35</td><td>${r.ex}</td><td>${r.week}</td><td>${r.streak}</td><td>${dashFmtMin(r.todayMin)}</td><td>${dashFmtMin(r.totalMin)}</td></tr>`;
   });
   html+=`</tbody></table></div>`;
   document.getElementById('dashBody').innerHTML=html;
