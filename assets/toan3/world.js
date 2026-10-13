@@ -5,6 +5,7 @@ Created: 2026-10-13
 */
 import * as THREE from 'three';
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
+export { mountJourney } from './journey.js';
 
 export function mountWorld({ container, realms, onSelect, onError }) {
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false, powerPreference: 'low-power' });

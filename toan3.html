@@ -644,6 +644,24 @@ body.locked{overflow:hidden}
 @keyframes world-breathe{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
 @media(max-width:620px){.world-heading{padding:18px 14px 0;flex-wrap:wrap}.world-heading h2{font-size:25px;max-width:280px}.world-controls{justify-content:flex-start}.world-stage{height:540px;min-height:540px}.world-pin{min-width:90px;font-size:12px;max-width:128px}.world-actions{padding-bottom:18px;gap:9px}.world-actions button{padding:10px 13px;font-size:13px}.world-heading p{font-size:13px}}
 @media(prefers-reduced-motion:reduce){.toan3-canvas,.world-actions button,#tab-game .station,#tab-game .realm{transition:none}#tab-game .station.current{animation:none}}
+.journey{margin:0;background:#edf5f2;border-top:1px solid #d4e4da;letter-spacing:0}
+.journey-heading{padding:22px 20px 14px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.journey-heading h2{font-size:23px;color:#245b50;margin:4px 0;font-family:var(--font-display);letter-spacing:0}
+.journey-heading p{margin:0;font-size:13px;color:#53746a}.journey-heading button{background:#fff;color:#286452;border:1px solid #aacbbb;border-radius:8px;padding:9px 12px;box-shadow:none;flex-shrink:0}
+.journey-chapters{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:5px;padding:0 14px 14px}
+.journey-chapters button{border:1px solid #d0e0d6;border-bottom-width:3px;background:#fff;color:#426c60;border-radius:8px;min-height:58px;box-shadow:none;padding:7px 3px;font-size:11px;line-height:1.3;letter-spacing:0}
+.journey-chapters b{display:block;font-size:15px}.journey-chapters button[aria-current="true"]{background:#267e65;color:#fff;border-color:#1a614b}.journey-chapters .unexplored{background:#e5ecec;color:#708281}
+.journey-stage{height:450px;position:relative;overflow:hidden;contain:layout paint;background:#e7f2f4}
+.journey-canvas,.journey-pins,.journey-poster{position:absolute;inset:0;width:100%;height:100%;display:block}.journey-canvas{touch-action:pan-y;opacity:0;transition:opacity .45s}.journey-ready .journey-canvas{opacity:1}.journey-ready .journey-poster{visibility:hidden}.journey-poster{object-fit:contain}
+.journey-unexplored .journey-poster{filter:grayscale(1);opacity:.5}
+.journey-pins{pointer-events:none}.journey-pin{position:absolute;transform:translate(-50%,-50%);pointer-events:auto;min-width:42px;min-height:38px;padding:5px 8px;background:#fffef5;color:#306d59;border:1px solid #9bbcaa;border-bottom:3px solid #7da28c;border-radius:8px;font-size:14px;font-weight:800;box-shadow:0 3px 9px #284b461a}.journey-pin:disabled{color:#697a7d;background:#e5ecec;border-color:#b7c6c9}.journey-pin[aria-current="step"]{background:#ffd67a;color:#62502a;border-color:#c99d43}.journey-pin small{display:block;line-height:1;font-size:10px}
+.journey-name{position:absolute;transform:translate(-50%,-100%);background:#fff;color:#265e50;border:1px solid #c3d8cd;border-radius:6px;padding:4px 8px;font-size:12px;line-height:1.2;font-weight:800;max-width:150px;overflow-wrap:anywhere;text-align:center;pointer-events:none;box-shadow:0 3px 9px #284b461a}
+.journey-status{padding:12px 18px;color:#326450;font-weight:700;font-size:14px;min-height:44px;border-bottom:1px solid #d9e6df}
+.journey-stops{list-style:none;margin:0;padding:6px 16px 18px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:20px}
+.journey-stops li{border-bottom:1px solid #d7e4dc}.journey-stops button{display:flex;gap:10px;align-items:center;width:100%;text-align:left;background:transparent;color:#315f52;padding:11px 0;min-height:56px;box-shadow:none;border-radius:0;font-size:13px;font-weight:600;line-height:1.45}.journey-stops b{flex:0 0 30px;height:30px;display:grid;place-items:center;background:#d6e9dc;border-radius:50%}.journey-stops span{flex:1;min-width:0;overflow-wrap:anywhere}.journey-stops small{flex-shrink:0;font-size:11px}.journey-stops button:disabled{color:#7b8d88;cursor:default}.journey-stops [aria-current="step"] b{background:#ffd67a;color:#5f4b1b}
+#gameMap.map{background:transparent;margin:0;padding:0;border-radius:0;box-shadow:none;overflow:visible}#gameMap.map::before{display:none}
+@media(max-width:700px){.journey-chapters{grid-template-columns:repeat(4,minmax(0,1fr))}.journey-heading{padding:18px 14px 12px;align-items:flex-start;flex-wrap:wrap}.journey-heading h2{font-size:21px}.journey-stage{height:500px}.journey-stops{grid-template-columns:minmax(0,1fr)}.journey-name{max-width:124px}.journey-pin{min-width:40px}}
+@media(prefers-reduced-motion:reduce){.journey-canvas{transition:none}}
 </style>
 </head>
 <body>
@@ -1776,6 +1794,7 @@ function gWorldUpdate(){
 function gWorldFallback(error){
   if(error)console.warn('[toan3] 3D unavailable; classic controls remain active:',error);
   if(gWorld){gWorld.dispose();gWorld=null;}
+  if(typeof gJourneyFallback==='function')gJourneyFallback();
   gWorldLoading=false;document.getElementById('worldStage').classList.remove('world-ready');
   document.getElementById('worldView').textContent='Bật 3D';
 }
@@ -1785,6 +1804,7 @@ function gWorldMount(){
     gWorld=Toan3World.mountWorld({container:document.getElementById('worldStage'),realms:GREALMS,onSelect:id=>gStartRealm(id),onError:gWorldFallback});
     gWorld.setMotion(gWorldMotionOn);gWorld.update(gWorldState());
     document.getElementById('worldView').textContent='Bản nhẹ';
+    if(typeof gJourneyMount==='function')gJourneyMount();
   }catch(error){gWorldFallback(error);}
 }
 function gWorldInit(){
@@ -1794,10 +1814,10 @@ function gWorldInit(){
   try{gWorldMotionOn=localStorage.getItem('toan3_world_motion')!=='off'&&!matchMedia('(prefers-reduced-motion: reduce)').matches;}catch(error){gWorldMotionOn=false;}
   document.getElementById('worldMotion').checked=gWorldMotionOn;
   gWorldLoading=true;
-  const script=document.createElement('script');script.src='assets/toan3/world.bundle.js?v=20261013a';script.async=true;
+  const script=document.createElement('script');script.src='assets/toan3/world.bundle.js?v=20261013b';script.async=true;
   script.onload=gWorldMount;script.onerror=()=>{script.remove();gWorldFallback(new Error('3D bundle unavailable'));};document.head.appendChild(script);
 }
-function gWorldMotion(value){gWorldMotionOn=value;try{localStorage.setItem('toan3_world_motion',value?'on':'off');}catch(error){console.warn('[toan3] motion preference not saved:',error);}gWorld?.setMotion(value);}
+function gWorldMotion(value){gWorldMotionOn=value;try{localStorage.setItem('toan3_world_motion',value?'on':'off');}catch(error){console.warn('[toan3] motion preference not saved:',error);}gWorld?.setMotion(value);if(typeof gJourneyMotion==='function')gJourneyMotion(value);}
 function gWorldToggle(){if(gWorld){gWorldLight=true;gWorldFallback();}else{gWorldLight=false;gWorldInit();}try{localStorage.setItem('toan3_world_view',gWorldLight?'light':'3d');}catch(error){console.warn('[toan3] view preference not saved:',error);}}
 /* --- Nav links: auto-switch to Lý Thuyết tab + close mobile menu --- */
 document.addEventListener('click', function(e){
@@ -3165,6 +3185,7 @@ document.addEventListener('click',e=>{
 /* =====================================================================
    HỌC MÀ CHƠI – bản đồ 35 trạm (tuần), ôn tập xoay vòng, streak & sao
    ===================================================================== */
+let AUTH_ME=null;   /* {id,email,name} khi đăng nhập Supabase */
 const GPHASES=[
   {from:1,to:4,name:'Khởi động & Cửu chương',color:'#c62828',emoji:'🚀'},
   {from:5,to:9,name:'Tư duy & Toán lời văn',color:'#6a1b9a',emoji:'🧠'},
@@ -3313,31 +3334,53 @@ function gRenderRealms(){
 }
 function gRenderMap(){
   const map=document.getElementById('gameMap'); if(!map) return;
-  let html='', curPh=-1;
-  WEEKS.forEach((wk,idx)=>{
-    const ph=GPHASES.findIndex(p=>wk.w>=p.from && wk.w<=p.to);
-    if(ph!==curPh){ curPh=ph; const p=GPHASES[ph];
-      html+=`<div class="phase-band" style="background:linear-gradient(90deg,${p.color},${p.color}bb)">${p.emoji} Giai đoạn ${ph+1}: ${p.name} <span style="opacity:.85;font-weight:600">· Tuần ${p.from}–${p.to}</span></div>`; }
-    const p=GPHASES[ph], st=G.stars[wk.w]||0, locked=wk.w>G.unlocked, isCur=wk.w===G.unlocked;
-    const cls='station'+(locked?' locked':'')+(isCur&&!locked?' current':'');
-    const bg=locked?'':`background:linear-gradient(180deg,${p.color},${p.color}cc);box-shadow:0 6px 0 ${p.color}99`;
-    const side=(idx%2===0)?'flex-start':'flex-end';
-    const stars=st>0?`<span class="ministars">${'⭐'.repeat(st)}</span>`:'';
-    const medal=st===3?'<span class="medal">👑</span>':'';
-    const inner=locked?'🔒':wk.icon;
-    html+=`<div class="map-row" style="justify-content:${side}">
-      <button class="${cls}" style="${bg}" ${locked?'disabled':''} onclick="gStart(${wk.w})" title="Tuần ${wk.w}: ${wk.title}">
-        <span>${inner}</span><span class="wk">T${wk.w}</span>${stars}${medal}
-      </button></div>
-      <div class="map-cap">${wk.title}</div>`;
-  });
-  map.innerHTML=html;
+  gJourneyRender();
   gRenderTop();
   gRenderProgress();
   gRenderRealms();
   gRenderSkillCoach();
   gWorldUpdate();
 }
+let gJourney=null,gJourneyPhase=null,gJourneyOwner=null,gJourneyPending=null,gJourneySerial=0;
+const GJOURNEY_NAMES=['Đồng cỏ','Rừng tre','Bến sông','Vườn hình','Thị trấn','Chợ xu','Đồng hoa','Lâu đài'];
+function gJourneyState(){
+  const user=AUTH_ME||softUser()||{};
+  return {owner:user.id||user.u||'offline',name:user.name||user.full_name||user.n||user.u||'Nhà thám hiểm',unlocked:Math.max(1,Math.min(WEEKS.length,G.unlocked||1)),stars:{...G.stars}};
+}
+function gJourneyPhaseFor(week){return Math.max(0,GPHASES.findIndex(phase=>week>=phase.from&&week<=phase.to));}
+function gJourneyAdvance(from,to){
+  const state=gJourneyState();
+  if(to===from+1){gJourneyPending={id:++gJourneySerial,owner:state.owner,from,to};gJourneyPhase=gJourneyPhaseFor(to);}
+}
+function gJourneyMotion(value){gJourney?.setMotion(value);}
+function gJourneyReset(){gJourneyPending=null;gJourneyOwner=null;gJourneyPhase=null;gJourney?.update({owner:'signed-out',name:'',unlocked:0,stars:{},phase:0,travel:null});const status=document.getElementById('journeyStatus');if(status)status.textContent='';}
+function gJourneyFallback(error){if(error)console.warn('[toan3] journey unavailable:',error);if(gJourney){gJourney.dispose();gJourney=null;}}
+function gJourneyMount(){
+  if(gJourney||gWorldLight||!window.Toan3World?.mountJourney)return;
+  const container=document.getElementById('journeyStage');if(!container)return;
+  try{gJourney=Toan3World.mountJourney({container,phases:GPHASES,weeks:WEEKS,onSelect:week=>{if(week<=G.unlocked)gStart(week);},onArrive:id=>{if(gJourneyPending?.id===id){gJourneyPending=null;document.getElementById('journeyStatus').textContent=`${gJourneyState().name} · Đã đến trạm ${G.unlocked}`;}},onError:gJourneyFallback});gJourney.setMotion(gWorldMotionOn);gJourneyRender();}catch(error){gJourneyFallback(error);}
+}
+function gJourneyRender(){
+  const host=document.getElementById('gameMap');if(!host)return;
+  const state=gJourneyState();
+  if(gJourneyOwner!==state.owner){gJourneyOwner=state.owner;gJourneyPhase=null;gJourneyPending=null;}
+  if(gJourneyPhase===null)gJourneyPhase=gJourneyPhaseFor(state.unlocked);
+  if(!document.getElementById('journeyStage'))host.innerHTML=`<section class="journey" aria-labelledby="journeyTitle"><div class="journey-heading"><div><p id="journeyIndex"></p><h2 id="journeyTitle"></h2><p id="journeyRange"></p></div><button onclick="gJourneyHome()">Về vị trí của con</button></div><nav class="journey-chapters" id="journeyChapters" aria-label="Tám vùng hành trình"></nav><div class="journey-stage" id="journeyStage"><picture><source id="journeySource" media="(max-width:700px)"><img id="journeyPoster" class="journey-poster" alt="Bản đồ hành trình" width="1028" height="450" loading="lazy"></picture></div><div class="journey-status" id="journeyStatus" role="status"></div><ol class="journey-stops" id="journeyStops"></ol></section>`;
+  const phase=GPHASES[gJourneyPhase];
+  const poster=document.getElementById('journeyPoster'),source=document.getElementById('journeySource');
+  const image=`assets/toan3/journey-${gJourneyPhase+1}`;
+  if(poster.getAttribute('src')!==`${image}.png`){source.srcset=`${image}-mobile.png`;poster.src=`${image}.png`;}
+  document.getElementById('journeyStage').classList.toggle('journey-unexplored',phase.from>state.unlocked);
+  document.getElementById('journeyIndex').textContent=`Giai đoạn ${gJourneyPhase+1} / ${GPHASES.length}`;
+  document.getElementById('journeyTitle').textContent=phase.name;
+  document.getElementById('journeyRange').textContent=`${GJOURNEY_NAMES[gJourneyPhase]} · Trạm ${phase.from}–${phase.to}`;
+  document.getElementById('journeyChapters').innerHTML=GPHASES.map((region,index)=>`<button aria-current="${index===gJourneyPhase}" class="${region.from>state.unlocked?'unexplored':''}" onclick="gJourneySelect(${index})" aria-label="Giai đoạn ${index+1}: ${region.name}${region.from>state.unlocked?', chưa mở':''}"><b>${index+1}</b>${GJOURNEY_NAMES[index]}</button>`).join('');
+  document.getElementById('journeyStatus').textContent=phase.from>state.unlocked?`Vùng đất chưa mở · Cần đến trạm ${phase.from}`:`${state.name} · Đang ở trạm ${state.unlocked}`;
+  document.getElementById('journeyStops').innerHTML=WEEKS.filter(week=>week.w>=phase.from&&week.w<=phase.to).map(week=>`<li><button onclick="gStart(${week.w})" ${week.w>state.unlocked?'disabled':''} aria-current="${week.w===state.unlocked?'step':'false'}"><b>${week.w}</b><span>${week.title}</span><small>${week.w>state.unlocked?'Chưa mở':state.stars[week.w]?`${state.stars[week.w]}/3 sao`:'Vào trạm'}</small></button></li>`).join('');
+  if(gJourney)gJourney.update({...state,phase:gJourneyPhase,travel:gJourneyPending});
+}
+function gJourneySelect(index){if(!GPHASES[index])return;gJourneyPhase=index;gJourneyRender();}
+function gJourneyHome(){gJourneyPhase=gJourneyPhaseFor(G.unlocked);gJourneyRender();document.getElementById('gameMap')?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});}
 /* --- tạo bộ câu hỏi cho 1 trạm ---
    70% review queue (nếu có) + 65% tuần hiện tại + 35% ôn xoay vòng
    Mỗi câu sai sẽ bị đưa vào reviewQueue; chỉ xoá khi trả lời đúng không cần gợi ý */
@@ -4354,7 +4397,7 @@ function gFinish(){
   if(passed){
     G.stars[GS.w]=Math.max(G.stars[GS.w]||0, stars);
     G.best[GS.w]=Math.max(G.best[GS.w]||0, pct);
-    if(!GS.isRealm && GS.w===G.unlocked && GS.w<WEEKS.length) G.unlocked=GS.w+1;
+    if(!GS.isRealm && GS.w===G.unlocked && GS.w<WEEKS.length){G.unlocked=GS.w+1;gJourneyAdvance(GS.w,G.unlocked);}
     gTouchStreak();
     /* Bonus hoàn thành trạm: 30 XP + 10 xu; perfect = thêm 20 XP */
     bonusXP=30+(pct===100?20:0); bonusXu=10;
@@ -4400,7 +4443,7 @@ function gConfetti(){
     setTimeout(()=>s.remove(),3600);
   }
 }
-function gClose(){ gClearTimer(); gStopActivityWatch(); const m=document.getElementById('gModal'); if(m) m.classList.remove('open'); const ov=document.getElementById('gPauseOverlay'); if(ov) ov.classList.remove('open'); GS=null; gRenderMap(); }
+function gClose(){ const showJourney=!!gJourneyPending;gClearTimer(); gStopActivityWatch(); const m=document.getElementById('gModal'); if(m) m.classList.remove('open'); const ov=document.getElementById('gPauseOverlay'); if(ov) ov.classList.remove('open'); GS=null; gRenderMap();if(showJourney){gJourneyHome();if(!gJourney)gJourneyPending=null;} }
 
 /* ============ F7: Daily Boss Challenge ============
    5 câu khó hỗn hợp từ tất cả tuần đã mở, flash timer ngắn hơn (5s),
@@ -4773,7 +4816,6 @@ async function hashPw(pw){
 const SUPA_URL='https://wbcszbyhsvhrkyyvkzfc.supabase.co';
 const SUPA_ANON='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndiY3N6Ynloc3Zocmt5eXZremZjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk4OTA1MDcsImV4cCI6MjEwNTQ2NjUwN30.K0uYmd7HjjQTMSjipkTQdxnrzuE0CCby2GeEX872l8I';   /* anon public key */
 let supa=null;
-let AUTH_ME=null;   /* {id,email,name} khi đăng nhập Supabase */
 function supaReady(){ return !!(SUPA_ANON && window.supabase && window.supabase.createClient); }
 if(supaReady()){ try{ supa=window.supabase.createClient(SUPA_URL, SUPA_ANON); }catch(e){ supa=null; } }
 
@@ -4875,6 +4917,7 @@ async function authLogout(){
   try{ localStorage.removeItem(AUTH_KEY); sessionStorage.removeItem(AUTH_KEY); }catch(e){}
   try{ TTS.stop(); }catch(e){}
   AUTH_ME=null;
+  gJourneyReset();
   authRenderChip(null); authShowGate(true);
 }
 
