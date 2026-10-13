@@ -607,6 +607,43 @@ body.locked{overflow:hidden}
 .rank-bubble{position:fixed;right:16px;bottom:18px;z-index:5700;max-width:min(360px,calc(100vw - 32px));padding:14px 16px;background:#fff;border:2px solid #27816b;border-radius:8px;box-shadow:0 8px 28px #18372e33;color:#214b3d;font-size:15px;letter-spacing:0}
 .rank-bubble[hidden]{display:none}.rank-bubble p{margin:0 0 10px}.rank-bubble button{min-height:36px;margin-right:6px}
 @media(max-width:540px){.garden-items{grid-template-columns:repeat(2,minmax(0,1fr))}.garden-head h2{font-size:21px}.garden-card{padding:12px}.garden-scene{aspect-ratio:720/360}}
+.world-section{position:relative;background:#e7f2f4;isolation:isolate;overflow:hidden;letter-spacing:0}
+.world-heading{position:relative;z-index:2;display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:22px 22px 0}
+.world-heading h2{font-family:var(--font-display);font-size:30px;line-height:1.2;color:#21544d;margin:0;letter-spacing:0;max-width:420px}
+.world-heading p{color:#52736e;margin:7px 0 0;font-size:14px;font-weight:700}
+.world-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.world-controls label{display:flex;align-items:center;gap:6px;font-size:12px;color:#315e59;white-space:nowrap;font-weight:700}
+.world-controls input{accent-color:#278574;width:16px;height:16px}
+.world-controls button{font-size:12px;padding:7px 11px;min-height:34px;background:#fff;color:#315e59;border:1px solid #b5cec6;border-radius:8px;box-shadow:none}
+.world-stage{position:relative;width:100%;height:480px;min-height:480px;contain:layout paint}
+.toan3-canvas,.world-poster,.world-pins{position:absolute;inset:0;width:100%;height:100%;display:block}
+.toan3-canvas{opacity:0;transition:opacity .7s ease;touch-action:pan-y}
+.world-ready .toan3-canvas{opacity:1}.world-ready .world-poster{visibility:hidden}
+.world-poster{object-fit:contain;object-position:center;pointer-events:none}
+.world-pins{pointer-events:none}
+.world-pin{position:absolute;transform:translate(-50%,0);pointer-events:auto;border:1px solid #c3dacf;border-bottom:3px solid #a6c7b9;box-shadow:0 3px 10px #315a4712;background:#fffef9;color:#286354;border-radius:8px;min-width:98px;max-width:146px;min-height:36px;padding:7px 10px;line-height:1.2;font-size:13px;font-weight:800;letter-spacing:0;white-space:nowrap;transition:background .2s,border-color .2s}
+.world-pin:hover:not(:disabled){background:#e7f8ed;border-color:#4e9a78}.world-pin:focus-visible{outline:3px solid #d29332;outline-offset:4px}
+.world-pin.is-locked{background:#eff3ef;color:#71847c;border-color:#d3ded7;opacity:.85;cursor:default}
+.world-actions{position:relative;display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap;padding:0 16px 22px}
+.world-actions button{min-height:44px;border-radius:8px;font-size:14px;padding:11px 20px;letter-spacing:0;transition:transform .2s,box-shadow .2s}
+.world-actions .world-continue{background:#288970;color:#fff;box-shadow:0 4px 0 #176852}
+.world-actions .world-daily{background:#ffda86;color:#665027;box-shadow:0 4px 0 #d9b56a}
+.world-actions button:hover{transform:translateY(-2px)}.world-actions button:active{transform:translateY(2px);box-shadow:none}
+#tab-game .game-top{background:#fff;border:0;border-bottom:1px solid #dfebe5;border-radius:0;box-shadow:none;margin:0;padding:14px}
+#tab-game .gxp-strip{border-radius:0;box-shadow:none;margin-top:0;background:#f5faf7}
+#tab-game .kingdom-panel,#tab-game .coach-panel{border:0;border-radius:0;box-shadow:none;background:#f7faf7;padding:20px 16px;margin:0;border-top:1px solid #dce9e1}
+#tab-game .kingdom-title,#tab-game .coach-head h3{color:#286354;font-size:21px}
+#tab-game .kingdom-note{display:none}
+#tab-game .realm{border-radius:8px;background:#fff;border-color:#d2e2d8;box-shadow:0 3px 0 #d4e3da;transition:transform .2s,box-shadow .2s}
+#tab-game .realm::after{display:none}#tab-game .realm:hover:not(.locked){transform:translateY(-3px);box-shadow:0 6px 0 #d4e3da}
+#tab-game .realm button{border-radius:8px}#tab-game .skill-card{border-radius:8px;background:#fff;border-color:#d2e2d8}
+#tab-game .skill-card b{color:#286354}#tab-game .coach-actions button,#tab-game .skill-card button{background:#278775;border-radius:8px}
+#tab-game .station{transition:transform .22s cubic-bezier(.2,.8,.2,1),filter .22s}
+#tab-game .station:hover:not(:disabled){filter:brightness(1.07)}#tab-game .station.current{animation:world-breathe 4s ease-in-out infinite}
+#tab-game .phase-band{border-radius:8px;box-shadow:none}
+@keyframes world-breathe{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@media(max-width:620px){.world-heading{padding:18px 14px 0;flex-wrap:wrap}.world-heading h2{font-size:25px;max-width:280px}.world-controls{justify-content:flex-start}.world-stage{height:540px;min-height:540px}.world-pin{min-width:90px;font-size:12px;max-width:128px}.world-actions{padding-bottom:18px;gap:9px}.world-actions button{padding:10px 13px;font-size:13px}.world-heading p{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.toan3-canvas,.world-actions button,#tab-game .station,#tab-game .realm{transition:none}#tab-game .station.current{animation:none}}
 </style>
 </head>
 <body>
@@ -1666,18 +1703,11 @@ Một bài giải đầy đủ <b>luôn có 3 phần</b>:<br>
 </div><!-- /tab-bt -->
 
 <div id="tab-game">
-  <div class="game-hero">
-    <span class="cloud">☁️</span>
-    <span class="cloud" style="top:32px;animation-delay:5s">☁️</span>
-    <span class="sun">☀️</span>
-    <span class="twinkle" style="left:18%;top:14px">✨</span>
-    <span class="twinkle" style="left:40%;top:40px;animation-delay:.8s">⭐</span>
-    <span class="twinkle" style="left:72%;top:20px;animation-delay:1.4s">✨</span>
-    <span class="twinkle" style="left:86%;top:52px;animation-delay:.5s">🌟</span>
-    <div class="htitle">🎮 Vườn Toán Phiêu Lưu</div>
-    <div class="hsub">Mỗi tuần là một trạm · Vượt trạm gom sao ⭐ · Giữ chuỗi ngày 🔥</div>
-    <div class="mascot">🦉</div>
-  </div>
+  <section class="world-section" aria-labelledby="worldTitle">
+    <div class="world-heading"><div><h2 id="worldTitle">Vườn Toán Phiêu Lưu</h2><p id="worldProgress">Hành trình của con</p></div><div class="world-controls"><label><input id="worldMotion" type="checkbox" checked onchange="gWorldMotion(this.checked)">Chuyển động</label><button type="button" id="worldView" onclick="gWorldToggle()">Bản nhẹ</button></div></div>
+    <div class="world-stage" id="worldStage"><picture><source media="(max-width: 1024px)" srcset="assets/toan3/world-fallback-mobile.png"><img class="world-poster" src="assets/toan3/world-fallback.png" width="1028" height="480" loading="lazy" alt="Sáu đảo học tập: số học, xưởng phép tính, cầu nhân chia, đồng hồ, hình khối và sách"></picture></div>
+    <div class="world-actions"><button class="world-continue" onclick="gStart(G.unlocked)" id="worldContinue">Tiếp tục hành trình</button><button class="world-daily" onclick="gChooseDaily()">Nhiệm vụ hôm nay</button></div>
+  </section>
   <div class="game-top">
     <span class="stat streak" title="Chuỗi ngày học liên tiếp">🔥 <span id="gStreak">0</span></span>
     <span class="stat stars" title="Tổng số sao">⭐ <span id="gStars">0</span></span>
@@ -1732,8 +1762,43 @@ function switchTab(mode, btn){
   document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
   window.scrollTo({top:0, behavior:'smooth'});
-  if(mode==='game' && typeof gRenderMap==='function') gRenderMap();
+  if(mode==='game' && typeof gRenderMap==='function'){gRenderMap();gWorldInit();}
 }
+let gWorld=null,gWorldLoading=false,gWorldLight=false,gWorldMotionOn=true;
+try{gWorldLight=localStorage.getItem('toan3_world_view')==='light';}catch(error){gWorldLight=true;}
+function gWorldState(){return GREALMS.map(realm=>({...realm,open:gRealmAvailable(realm)}));}
+function gWorldUpdate(){
+  const label=document.getElementById('worldProgress'),button=document.getElementById('worldContinue');
+  if(label)label.textContent=`Trạm ${Math.min(G.unlocked,WEEKS.length)} / ${WEEKS.length} · ${gTotalStars()} sao đã gom`;
+  if(button)button.textContent=`Tiếp tục trạm ${Math.min(G.unlocked,WEEKS.length)}`;
+  if(gWorld)gWorld.update(gWorldState());
+}
+function gWorldFallback(error){
+  if(error)console.warn('[toan3] 3D unavailable; classic controls remain active:',error);
+  if(gWorld){gWorld.dispose();gWorld=null;}
+  gWorldLoading=false;document.getElementById('worldStage').classList.remove('world-ready');
+  document.getElementById('worldView').textContent='Bật 3D';
+}
+function gWorldMount(){
+  gWorldLoading=false;if(gWorldLight||gWorld)return;
+  try{
+    gWorld=Toan3World.mountWorld({container:document.getElementById('worldStage'),realms:GREALMS,onSelect:id=>gStartRealm(id),onError:gWorldFallback});
+    gWorld.setMotion(gWorldMotionOn);gWorld.update(gWorldState());
+    document.getElementById('worldView').textContent='Bản nhẹ';
+  }catch(error){gWorldFallback(error);}
+}
+function gWorldInit(){
+  if(gWorldLight){document.getElementById('worldView').textContent='Bật 3D';return;}
+  if(gWorld||gWorldLoading)return;
+  if(window.Toan3World){gWorldMount();return;}
+  try{gWorldMotionOn=localStorage.getItem('toan3_world_motion')!=='off'&&!matchMedia('(prefers-reduced-motion: reduce)').matches;}catch(error){gWorldMotionOn=false;}
+  document.getElementById('worldMotion').checked=gWorldMotionOn;
+  gWorldLoading=true;
+  const script=document.createElement('script');script.src='assets/toan3/world.bundle.js?v=20261013a';script.async=true;
+  script.onload=gWorldMount;script.onerror=()=>{script.remove();gWorldFallback(new Error('3D bundle unavailable'));};document.head.appendChild(script);
+}
+function gWorldMotion(value){gWorldMotionOn=value;try{localStorage.setItem('toan3_world_motion',value?'on':'off');}catch(error){console.warn('[toan3] motion preference not saved:',error);}gWorld?.setMotion(value);}
+function gWorldToggle(){if(gWorld){gWorldLight=true;gWorldFallback();}else{gWorldLight=false;gWorldInit();}try{localStorage.setItem('toan3_world_view',gWorldLight?'light':'3d');}catch(error){console.warn('[toan3] view preference not saved:',error);}}
 /* --- Nav links: auto-switch to Lý Thuyết tab + close mobile menu --- */
 document.addEventListener('click', function(e){
   const link = e.target.closest('nav.side a[href^="#"]');
@@ -3271,6 +3336,7 @@ function gRenderMap(){
   gRenderProgress();
   gRenderRealms();
   gRenderSkillCoach();
+  gWorldUpdate();
 }
 /* --- tạo bộ câu hỏi cho 1 trạm ---
    70% review queue (nếu có) + 65% tuần hiện tại + 35% ôn xoay vòng
@@ -3302,6 +3368,8 @@ function gBuildRealmQuestions(realm){
   /* Bốn tuần đầu chỉ luyện nội dung đã học; đặc biệt không đưa phép nhân/chia nhiều chữ số vào Cầu Nhân chia. */
   const earlyAllowed=new Set(WEEKS.slice(0,Math.min(G.unlocked,4)).flatMap(w=>w.gens));
   const choices=realm.gens.filter(gen=>typeof GEN[gen]==='function' && (G.unlocked>4 || earlyAllowed.has(gen)));
+  if(!choices.length)choices.push(...[...earlyAllowed].filter(gen=>typeof GEN[gen]==='function'));
+  if(!choices.length)return [];
   const N=6, qs=[]; let guard=0;
   while(qs.length<N && guard<N*40){
     guard++;
