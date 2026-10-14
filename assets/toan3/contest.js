@@ -115,6 +115,7 @@
   function contestError(error){
     const message=String(error?.message||error||'');
     const rules=[
+      [/Host is observer only/i,'Cần chạy lại SQL phòng thi bản mới để chủ phòng được tham gia.'],
       [/Stale answers/i,'Bài đã thay đổi ở cửa sổ khác. Bấm "Tải bản đã lưu" trước khi làm tiếp.'],
       [/PGRST202|schema cache|does not exist/i,'Phòng thi chưa được kích hoạt trên máy chủ. Nhờ người quản lý chạy migration phòng thi.'],
       [/too many join/i,'Bạn thử mã phòng nhiều lần. Chờ một phút rồi thử lại nhé.'],
@@ -141,7 +142,7 @@
   const user=()=>typeof AUTH_ME==='undefined'?null:AUTH_ME;
   const api=()=>typeof supa==='undefined'?null:supa;
   let client,home=true,index=0,viewKey='',channel=null,channelRoom=null,saveTimer=null,refreshTimer=null;
-  let reviewAll=false,practice=null,localMessage='',wireVersion=0;
+  let reviewAll=false,practice=null,localMessage='',wireVersion=0,hostAlias='',hostAvatar=0;
   let storage;
   try{storage=root.localStorage;}catch(error){storage=null;}
   client=new ContestClient({user,supa:api,storage,clock:()=>performance.now(),change:()=>{if(client)render();}});
@@ -187,7 +188,7 @@
   }
   function reset(){
     clearTimeout(saveTimer);clearTimeout(refreshTimer);stopChannel();
-    home=true;viewKey='';index=0;practice=null;localMessage='';
+    home=true;viewKey='';index=0;practice=null;localMessage='';hostAlias='';hostAvatar=0;
     client.reset();render();
   }
   function open(){
@@ -197,14 +198,17 @@
   function heading(title,detail,actions=''){
     return `<div class="contest-heading"><div><h2>${escape(title)}</h2><p>${escape(detail)}</p></div><div class="contest-actions">${actions}</div></div>`;
   }
+  function playerFields(alias='',selected=0){
+    return `<label>Biệt danh<input name="alias" required maxlength="20" autocomplete="off" placeholder="Tên gọi trong phòng" value="${escape(alias)}"></label>
+      <fieldset><legend>Huy hiệu của con</legend><div class="contest-avatar-options">${avatarNames.map((name,number)=>`<label title="${name}"><input type="radio" name="avatar" value="${number}" ${number===selected?'checked':''}>${avatar(number)}</label>`).join('')}</div></fieldset>`;
+  }
   function renderHome(){
     const remembered=client.read(client.rememberKey());
     element.innerHTML=heading('Hẹn Thi Cuối Tuần','Phòng riêng · 2–6 bạn')+
       (!user()||!api()?'<p class="contest-empty">Cần đăng nhập bằng tài khoản đã được duyệt để vào phòng thi.</p>':
       `<div class="contest-entry"><section aria-labelledby="contestJoinTitle"><h3 id="contestJoinTitle">Vào cùng bạn</h3>
         <form id="contestJoin"><label>Mã phòng<input name="code" required maxlength="8" minlength="8" pattern="[a-fA-F0-9]{8}" autocomplete="off" autocapitalize="characters" placeholder="Mã 8 ký tự"></label>
-        <label>Biệt danh<input name="alias" required maxlength="20" autocomplete="off" placeholder="Tên gọi trong phòng"></label>
-        <fieldset><legend>Huy hiệu của con</legend><div class="contest-avatar-options">${avatarNames.map((name,number)=>`<label title="${name}"><input type="radio" name="avatar" value="${number}" ${number===0?'checked':''}>${avatar(number)}</label>`).join('')}</div></fieldset>
+        ${playerFields()}
         <button type="submit">Vào phòng</button></form>
         ${remembered?'<button type="button" class="contest-secondary" data-action="resume">Mở lại phòng gần nhất</button>':''}</section>
         ${user().is_admin?`<section aria-labelledby="contestCreateTitle"><h3 id="contestCreateTitle">Mở lượt thi</h3><form id="contestCreate">
@@ -231,22 +235,29 @@
       '<button type="button" class="contest-secondary" data-action="home">Về sảnh</button>')+
       `<div class="contest-room-code"><span>Mã mời</span><strong>${escape(room.code)}</strong><button type="button" class="contest-secondary" data-action="copy">Chép mã</button></div>`+
       playersMarkup(snapshot)+`<div class="contest-actions">${is_host?
-        `<button type="button" data-action="start" ${canStart?'':'disabled'}>Bắt đầu lượt thi</button><button type="button" class="contest-secondary" data-action="cancel">Hủy phòng</button>`:
-        me?`<button type="button" data-action="ready">${me.ready?'Chưa sẵn sàng':'Con sẵn sàng'}</button><button type="button" class="contest-secondary" data-action="leave">Rời phòng</button>`:''}</div>`;
+        `<button type="button" data-action="start" ${canStart?'':'disabled'}>Bắt đầu lượt thi</button><button type="button" class="contest-secondary" data-action="cancel">Hủy phòng</button>`:''}
+        ${me?`<button type="button" data-action="ready">${me.ready?'Chưa sẵn sàng':'Con sẵn sàng'}</button><button type="button" class="contest-secondary" data-action="leave">${is_host?'Chỉ điều hành':'Rời phòng'}</button>`:''}</div>`+
+      (is_host&&!me?`<div class="contest-entry"><section><form id="contestHostJoin">${playerFields(hostAlias,hostAvatar)}<button type="submit" ${snapshot.players.length>=6?'disabled':''}>Con cũng tham gia</button></form></section></div>`:'');
+    const form=element.querySelector('#contestHostJoin');
+    form?.addEventListener('input',()=>{const fields=new FormData(form);hostAlias=String(fields.get('alias'));hostAvatar=Number(fields.get('avatar'));});
+    form?.addEventListener('submit',async event=>{
+      event.preventDefault();const fields=new FormData(form);
+      await run('join',{code:room.code,alias:String(fields.get('alias')).trim(),avatar:Number(fields.get('avatar'))},null);
+    });
   }
   function renderActive(snapshot){
-    const {room,me,is_host}=snapshot;
+    const {room,me}=snapshot;
     const countdown=client.now()<Date.parse(room.starts_at);
     const ended=client.now()>=Date.parse(room.ends_at);
-    element.innerHTML=heading(countdown?'Chuẩn bị bắt đầu':me?.submitted_at?'Đã nộp bài':is_host?'Lượt thi đang diễn ra':'Bài thi của con',
+    element.innerHTML=heading(countdown?'Chuẩn bị bắt đầu':me?.submitted_at?'Đã nộp bài':!me?'Lượt thi đang diễn ra':'Bài thi của con',
       'Phòng '+room.code+' · '+topics[room.topic],'<strong id="contestClock" class="contest-clock" role="timer"></strong>')+
       (countdown?'<div class="contest-countdown" id="contestCountdown"></div>':ended?'<p class="contest-empty">Đã hết giờ. Đang chốt bài đã lưu trên máy chủ.</p>':
-        is_host||me?.submitted_at?'<p class="contest-empty">Chờ các bạn hoàn thành để mở kết quả.</p>':
+        !me||me.submitted_at?'<p class="contest-empty">Chờ các bạn hoàn thành để mở kết quả.</p>':
         `<div class="contest-work"><nav class="contest-question-nav" aria-label="Các câu trong bài">${snapshot.questions.map((question,position)=>`<button type="button" class="contest-qnav" data-question="${position}" aria-label="Câu ${position+1}">${position+1}</button>`).join('')}</nav>
         <section class="contest-question" aria-labelledby="contestPrompt"><span id="contestQuestionNumber"></span><h3 id="contestPrompt"></h3>
         <label for="contestAnswer">Đáp án của con</label><input id="contestAnswer" inputmode="numeric" pattern="[0-9]*" maxlength="6" autocomplete="off">
         <div class="contest-actions"><button type="button" class="contest-secondary" data-action="previous">Câu trước</button><button type="button" class="contest-secondary" data-action="next">Câu tiếp</button><button type="button" data-action="submit">Nộp bài</button></div></section></div>`)+
-      ((is_host||me?.submitted_at||countdown)?playersMarkup(snapshot):'');
+      ((!me||me.submitted_at||countdown)?playersMarkup(snapshot):'');
     const answer=element.querySelector('#contestAnswer');
     if(answer){
       paintQuestion(false);
@@ -303,7 +314,7 @@
     const phase=home||!snapshot?'home':snapshot.room.status==='active'?
       (client.now()<Date.parse(snapshot.room.starts_at)?'countdown':client.now()>=Date.parse(snapshot.room.ends_at)?'deadline':snapshot.me?.submitted_at?'submitted':'working'):snapshot.room.status;
     const nextKey=JSON.stringify([client.owner,home,snapshot?.room.id,phase,snapshot?.questions.length,
-      phase==='waiting'||phase==='submitted'||phase==='countdown'||snapshot?.is_host?snapshot?.players:null,reviewAll]);
+      phase==='waiting'||phase==='submitted'||phase==='countdown'||!snapshot?.me?snapshot?.players:null,reviewAll]);
     if(nextKey!==viewKey){
       viewKey=nextKey;
       if(phase==='home')renderHome();
@@ -315,6 +326,8 @@
     element.querySelectorAll('button[type="submit"], [data-action="ready"], [data-action="submit"], [data-action="cancel"], [data-action="leave"], [data-action="resume"]').forEach(button=>{button.disabled=client.busy;});
     const start=element.querySelector('[data-action="start"]');
     if(start)start.disabled=client.busy||snapshot.players.length<2||!snapshot.players.every(player=>player.ready);
+    const hostJoin=element.querySelector('#contestHostJoin button[type="submit"]');
+    if(hostJoin)hostJoin.disabled=client.busy||snapshot.players.length>=6;
     const answer=element.querySelector('#contestAnswer');
     if(answer)answer.disabled=!client.editable();
     const submit=element.querySelector('[data-action="submit"]');
@@ -358,7 +371,10 @@
     else if(action==='ready')await run('ready',{ready:!client.snapshot.me.ready});
     else if(action==='start')await run('start');
     else if(action==='cancel'&&root.confirm('Hủy phòng đang chờ này?'))await run('cancel');
-    else if(action==='leave'){if(await run('leave')){home=true;client.write(client.rememberKey(),null);client.reset();stopChannel();render();}}
+    else if(action==='leave'){
+      const result=await run('leave');
+      if(result&&!result.is_host){home=true;client.write(client.rememberKey(),null);client.reset();stopChannel();render();}
+    }
     else if(action==='previous')move(-1);
     else if(action==='next')move(1);
     else if(action==='submit'){

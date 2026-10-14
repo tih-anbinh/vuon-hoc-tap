@@ -311,6 +311,14 @@ body.mode-game #tab-game{display:block}
 .ghearts{font-size:17px;letter-spacing:1px;white-space:nowrap}
 .gqtext{font-size:18px;font-weight:700;margin:14px 0;line-height:1.5}
 .gqtext svg{max-width:100%}
+.math-practice-controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:12px 0}
+.math-practice-controls label{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.math-practice-controls select{max-width:100%;min-width:0;padding:8px;font:inherit;border:1px solid #90a4ae;border-radius:6px;background:#fff}
+.math-language{margin:10px 0;padding:10px 0;border-top:1px solid #cfd8dc;border-bottom:1px solid #cfd8dc;overflow-wrap:anywhere}
+.math-language .gbtn-row{flex-wrap:wrap}
+.math-language p{margin:8px 0}
+.math-steps{margin-top:10px;text-align:left;line-height:1.6;overflow-wrap:anywhere}
+.math-steps ol{padding-left:24px}
 .gopts{display:grid;gap:10px}
 .gopt{padding:14px 15px;border:2px solid var(--line);border-radius:14px;font-weight:700;font-size:17px;cursor:pointer;background:#fff;color:#20303f;text-align:left;transition:all .12s;font-family:inherit;-webkit-tap-highlight-color:transparent}
 .gopt:hover{border-color:var(--blue);background:var(--blue-l)}
@@ -1763,6 +1771,7 @@ Một bài giải đầy đủ <b>luôn có 3 phần</b>:<br>
   <section class="coach-panel" aria-labelledby="coachTitle">
     <div class="coach-head"><div><h3 id="coachTitle">Luyện điều con đang học</h3><p>Không gọi là “lỗi”. Mỗi câu chưa đúng sẽ đổi thành câu mới, cùng cách làm, để con hiểu thật.</p></div><div class="coach-actions"><button class="daily" onclick="gChooseDaily()">Nhiệm vụ hôm nay</button><button onclick="gStartSkillPractice()">Luyện phần cần ôn</button></div></div>
     <div id="skillList"></div>
+    <div id="mathPracticeControls"></div>
   </section>
   <div id="gameMap" class="map"></div>
   <details style="margin:12px 14px 0;background:rgba(255,255,255,.92);border-radius:14px;padding:0 2px"><summary style="cursor:pointer;font-weight:800;color:#0d47a1;font-size:14px;padding:10px 12px">📖 Sổ cửu chương</summary>
@@ -1867,9 +1876,9 @@ document.addEventListener('click', function(e){
 /* --- Text-to-Speech (giọng đọc tiếng Việt) --- */
 const TTS=(function(){
   const s=window.speechSynthesis;
-  if(!s) return{speak:()=>{},say:()=>{},stop:()=>{}};
+  if(!s) return{speak:()=>{},say:()=>{},english:()=>false,stop:()=>{}};
   const isAndroid=/Android/i.test(navigator.userAgent);
-  let viVoice=null, voicesReady=false, unlocked=false;
+  let viVoice=null, voicesReady=false, unlocked=false, speechVersion=0;
   /* Chấm điểm giọng tiếng Việt theo chất lượng (dựa trên readium/speech vi.json):
      - veryHigh: Microsoft HoaiMy/NamMinh Online (Natural)  → Edge tự có, luôn thắng (Edge KHÔNG đổi gì)
      - high:     Google Tiếng Việt N (Natural)              → Chrome/Android
@@ -1959,12 +1968,13 @@ const TTS=(function(){
   }
   /* Android hay "kẹt" sau cancel(): đọc sau một nhịp ngắn để queue rảnh. */
   function say2(u,rawText,gRate){
+    const version=++speechVersion;
     unlock();
     s.cancel();
     gStop();
     /* Không có giọng vi trong máy → dùng Google TTS (cần mạng) để vẫn đọc được tiếng Việt. */
     if(!viVoice && rawText){ googleTTS(rawText, gRate||0.9); return; }
-    if(isAndroid){ setTimeout(()=>{ try{ s.resume(); }catch(e){} s.speak(u); },120); }
+    if(isAndroid){ setTimeout(()=>{ if(version!==speechVersion)return;try{ s.resume(); }catch(e){} s.speak(u); },120); }
     else s.speak(u);
   }
   function clean(raw){
@@ -2003,7 +2013,16 @@ const TTS=(function(){
       const t=String(text).replace(/[^\p{L}\p{N}\s,.!?]/gu,' ').replace(/\s+/g,' ').trim();
       if(t) say2(utter(t, rate||0.98), t, rate||0.98);
     },
-    stop(){ s.cancel(); gStop(); }
+    english(text,onError){
+      const voices=s.getVoices()||[];
+      const voice=voices.find(entry=>/^en[-_]GB$/i.test(entry.lang))||voices.find(entry=>/^en([-_]|$)/i.test(entry.lang));
+      if(!voice){speechVersion++;s.cancel();gStop();return false;}
+      const utterance=new SpeechSynthesisUtterance(text);
+      utterance.voice=voice;utterance.lang=voice.lang;utterance.rate=0.85;
+      utterance.onerror=event=>{if(!['canceled','interrupted'].includes(event.error)&&onError)onError();};
+      say2(utterance);return true;
+    },
+    stop(){ speechVersion++;s.cancel(); gStop(); }
   };
 })();
 
@@ -3296,6 +3315,7 @@ function gWeakSkills(){
     .filter(x=>x.score>0).sort((a,b)=>b.score-a.score||a.s.independent-b.s.independent);
 }
 function gRenderSkillCoach(){
+  gRenderMathPractice();
   const el=document.getElementById('skillList');if(!el)return;
   const weak=gWeakSkills().slice(0,3);
   if(!weak.length){el.innerHTML='<div class="skill-empty">Mỗi lần con làm bài, Vườn Toán sẽ gợi ý phần nên luyện ở đây. Con cứ làm từng câu, không cần vội nhé.</div>';return;}
@@ -3506,11 +3526,112 @@ async function gardenAction(itemId,action){
   }catch(error){console.warn('[toan3] garden action failed:',error);status.textContent='Chưa xác nhận được giao dịch. Đóng và mở lại vườn để kiểm tra trước khi thử lại.';gardenReady=false;}
   finally{gardenBusy=false;gardenRender();}
 }
+function gEnglishKey(){const local=AUTH_ME?null:softUser();return 'toan3_math_practice_v1:'+(AUTH_ME?AUTH_ME.id:local?.u?'soft:'+local.u:'offline');}
+function gEnglishState(){
+  try{const state=JSON.parse(localStorage.getItem(gEnglishKey())||'{}');return state&&typeof state==='object'&&!Array.isArray(state)?state:{};}
+  catch(error){console.warn('[toan3] Cannot read math practice preferences',error);return {};}
+}
+function gStoreEnglish(state){
+  try{localStorage.setItem(gEnglishKey(),JSON.stringify(state));return true;}
+  catch(error){console.warn('[toan3] Cannot save math practice preferences',error);return false;}
+}
+function gSetEnglish(enabled){
+  const state=gEnglishState();state.enabled=!!enabled;
+  if(!gStoreEnglish(state))alert('Không lưu được lựa chọn trên thiết bị này. Con kiểm tra dung lượng lưu trữ nhé.');
+  gRenderMathPractice();
+}
+function gMicroSkills(){return [
+  {id:'times25',label:'A.1 · Nhân 2 và 5',week:2},
+  {id:'times9',label:'A.2 · Bảng nhân 9',week:5},
+  {id:'family',label:'A.3 · Quan hệ nhân và chia',week:2}
+];}
+function gRenderMathPractice(){
+  const target=document.getElementById('mathPracticeControls');if(!target)return;
+  const selected=document.getElementById('mathMicroSkill')?.value,state=gEnglishState();
+  const skills=gMicroSkills().filter(skill=>G.unlocked>=skill.week);
+  target.innerHTML=`<div class="math-practice-controls"><label><input id="mathEnglish" type="checkbox" ${state.enabled===true?'checked':''} onchange="gSetEnglish(this.checked)"> Làm quen toán tiếng Anh</label></div>
+    ${skills.length?`<div class="math-practice-controls"><label for="mathMicroSkill">Kỹ năng nhỏ</label><select id="mathMicroSkill">${skills.map(skill=>`<option value="${skill.id}" ${skill.id===selected?'selected':''}>${skill.label}</option>`).join('')}</select><button class="grn" onclick="gStartSkillPractice('bangnhanchia',document.getElementById('mathMicroSkill').value)">Luyện 10 câu</button></div>`:''}
+    <div>${skills.map(skill=>{const stats=state.skills?.[skill.id];return stats?`<p>${skill.label}: ${Number(stats.correct)||0}/${Number(stats.attempts)||0} câu đúng · Tự làm: ${Number(stats.independent)||0}</p>`:'';}).join('')}</div>
+    ${state.english?.attempts?`<p>Đề Anh trên thiết bị này: ${Number(state.english.attempts)||0} câu · Đã xem bản dịch: ${Number(state.english.translated)||0}</p>`:''}`;
+}
+function gMicroQuestion(id){
+  const first=id==='times9'?9:pick(id==='family'?[2,3,5]:[2,5]),second=R(1,10),product=first*second;
+  const variant=id==='family'?R(0,2):R(0,1);
+  const multiply=id!=='family'||variant===0,missing=id==='family'&&variant===2;
+  let prompt=multiply?`${first} × ${second} = ?`:missing?`${first} × ? = ${product}`:`${product} : ${first} = ?`;
+  let english=multiply?`What is ${first} times ${second}?`:missing?`Find the missing number: ${first} times what number equals ${product}?`:`What is ${product} divided by ${first}?`;
+  if(id!=='family'&&variant===1){
+    prompt=`Có ${first} hộp, mỗi hộp có ${second} bút chì. Có tất cả bao nhiêu bút chì?`;
+    english=`There are ${first} boxes. Each box has ${second} ${second===1?'pencil':'pencils'}. How many pencils are there altogether?`;
+  }
+  const steps=id==='times9'?[
+    `Tính 10 × ${second} = ${10*second}.`,
+    `9 nhóm ít hơn 10 nhóm một nhóm ${second}: ${10*second} − ${second} = ${product}.`,
+    `Vậy 9 × ${second} = ${product}.`
+  ]:multiply?[
+    `Có ${first} nhóm, mỗi nhóm ${second} phần tử.`,
+    `${Array(first).fill(second).join(' + ')} = ${product}.`,
+    `${first} × ${second} = ${product}.`
+  ]:[
+    `Tìm số phần tử trong mỗi nhóm khi chia đều ${product} phần tử vào ${first} nhóm.`,
+    `${first} × ${second} = ${product}.`,
+    `${product} : ${first} = ${second}${missing?`, nên số cần điền là ${second}`:''}.`
+  ];
+  return {kind:'input',q:prompt,accept:[String(multiply?product:second)],
+    english:{prompt:english,vocab:missing?'missing number: số còn thiếu':multiply?'times: nhân với · each: mỗi · altogether: tất cả':'divided by: chia cho'},
+    sol:`<ol>${steps.map(step=>`<li>${step}</li>`).join('')}</ol>`,
+    workHint:id==='times9'?'Nhân với 10 rồi bớt một nhóm.':multiply?'Đếm các nhóm bằng nhau hoặc cộng các số bằng nhau.':'Dùng phép nhân để kiểm tra phép chia.',
+    _gen:'bangnhanchia',_micro:id,_a:first,_b:second,_p:product,_mul:multiply};
+}
+function gPrepareEnglish(questions){
+  questions.forEach(question=>{question.inEnglish=false;question.translationViewed=false;question.mathRecorded=false;question.translationCounted=false;});
+  if(gEnglishState().enabled!==true)return questions;
+  const eligible=questions.filter(question=>question.english&&question.kind!=='flash');
+  const count=Math.min(eligible.length,questions.length<10?1:Math.floor(questions.length/5));
+  for(let index=0;index<count;index++)eligible[Math.floor((index+0.5)*eligible.length/count)].inEnglish=true;
+  return questions;
+}
+function gTranslateQuestion(button){
+  const question=GS?.qs[GS.i],translation=document.getElementById('mathTranslation');
+  if(!question?.inEnglish||!translation)return;
+  translation.hidden=!translation.hidden;
+  if(!translation.hidden){
+    question.translationViewed=true;
+    if(question.mathRecorded&&!question.translationCounted&&GS.practiceOwner===gEnglishKey()){
+      const state=gEnglishState(),previous=state.english||{};
+      state.english={attempts:Number(previous.attempts)||0,translated:(Number(previous.translated)||0)+1};
+      question.translationCounted=gStoreEnglish(state);
+      if(!question.translationCounted)document.getElementById('mathAudioStatus').textContent='Chưa lưu được thống kê trên thiết bị này.';
+    }
+  }
+  button.setAttribute('aria-expanded',String(!translation.hidden));
+  button.textContent=translation.hidden?'Xem tiếng Việt':'Ẩn tiếng Việt';
+}
+function gReadEnglish(){
+  const session=GS,question=session?.qs[session.i];if(!question?.inEnglish)return;
+  const report=()=>{if(GS===session&&GS.qs[GS.i]===question){const status=document.getElementById('mathAudioStatus');if(status)status.textContent='Chưa đọc được. Con kiểm tra giọng tiếng Anh trên thiết bị hoặc xem bản dịch nhé.';}};
+  const status=document.getElementById('mathAudioStatus');if(status)status.textContent='';
+  if(!TTS.english(question.english.prompt,report))report();
+}
+function gRecordMathPractice(question,ok){
+  if(!GS.practiceOwner||GS.practiceOwner!==gEnglishKey()||(!question._micro&&!question.inEnglish))return;
+  const state=gEnglishState();
+  if(question._micro){
+    state.skills=state.skills&&typeof state.skills==='object'&&!Array.isArray(state.skills)?state.skills:{};
+    const previous=state.skills[question._micro]||{};
+    state.skills[question._micro]={attempts:(Number(previous.attempts)||0)+1,correct:(Number(previous.correct)||0)+(ok?1:0),independent:(Number(previous.independent)||0)+(ok&&!GS.usedHint?1:0)};
+  }
+  if(question.inEnglish){const previous=state.english||{};state.english={attempts:(Number(previous.attempts)||0)+1,translated:(Number(previous.translated)||0)+(question.translationViewed?1:0)};}
+  question.mathRecorded=gStoreEnglish(state);
+  question.translationCounted=question.mathRecorded&&question.translationViewed;
+  if(!question.mathRecorded){const status=document.getElementById('mathAudioStatus');if(status)status.textContent='Chưa lưu được thống kê trên thiết bị này.';}
+}
 function gPracticeQ(gen){
   if(gen==='congtru3'||gen==='congtru'){
     const first=R(2,5)*10+R(2,4),second=R(1,2)*10+R(1,2),add=Math.random()<0.5;
     const answer=add?first+second:first-second,op=add?'+':'−';
     return {kind:'column',a:first,b:second,op,ans:answer,q:'Đặt tính rồi tính:',
+      english:{prompt:`${add?`Add ${first} and ${second}`:`Subtract ${second} from ${first}`}. Write the calculation in columns.`,vocab:add?'add: cộng':'subtract: trừ'},
       sol:`${first} ${op} ${second} = <b>${answer}</b>.`,
       workHint:'Đặt thẳng hàng chục và hàng đơn vị. Tính hàng đơn vị trước, rồi tính hàng chục.'};
   }
@@ -3518,7 +3639,8 @@ function gPracticeQ(gen){
     const first=R(2,5),second=R(2,5),product=first*second,multiply=Math.random()<0.5;
     const answer=multiply?product:second;
     return {kind:'input',q:multiply?`${first} × ${second} = ?`:`${product} : ${first} = ?`,accept:[String(answer)],
-      sol:multiply?`${first} × ${second} = <b>${product}</b>.`:`${product} : ${first} = <b>${second}</b>.`,
+      english:{prompt:multiply?`What is ${first} times ${second}?`:`What is ${product} divided by ${first}?`,vocab:multiply?'times: nhân với':'divided by: chia cho'},
+      sol:multiply?`<ol><li>Có ${first} nhóm, mỗi nhóm ${second} phần tử.</li><li>Cộng ${first} số ${second}: ${Array(first).fill(second).join(' + ')} = ${product}.</li><li>${first} × ${second} = <b>${product}</b>.</li></ol>`:`<ol><li>Chia đều ${product} phần tử vào ${first} nhóm.</li><li>Tìm số nhân với ${first} được ${product}: ${first} × ${second} = ${product}.</li><li>Mỗi nhóm có ${second} phần tử: ${product} : ${first} = <b>${second}</b>.</li></ol>`,
       _a:first,_b:second,_p:product,_mul:multiply};
   }
   const question=gMakeQ(gen);
@@ -3974,12 +4096,18 @@ function gStartRealm(id){
   document.getElementById('gModal').classList.add('open');
   gRenderQ();
 }
-function gStartSkillPractice(gen){
+function gStartSkillPractice(gen,microId){
+  gClearTimer();gStopActivityWatch();
+  const micro=microId&&gMicroSkills().find(skill=>skill.id===microId&&G.unlocked>=skill.week);
+  if(microId&&!micro)return;
   const earlyAllowed=new Set(WEEKS.slice(0,Math.min(G.unlocked,4)).flatMap(w=>w.gens));
-  const selected=(gen?[gen]:gWeakSkills().slice(0,3).map(x=>x.gen)).filter(x=>G.unlocked>4||earlyAllowed.has(x)),fallback=WEEKS[Math.max(0,G.unlocked-1)].gens,qs=gBuildSkillQuestions(selected.length?selected:fallback,3,true);
-  if(qs.length<3){alert('Chưa tạo đủ câu mới. Con thử lại nhé.');return;}
+  const selected=(gen?[gen]:gWeakSkills().slice(0,3).map(x=>x.gen)).filter(x=>G.unlocked>4||earlyAllowed.has(x)),fallback=WEEKS[Math.max(0,G.unlocked-1)].gens,qs=micro?[]:gBuildSkillQuestions(selected.length?selected:fallback,3,true);
+  if(micro){for(let tries=0;qs.length<10&&tries<500;tries++){const question=gMicroQuestion(micro.id);if(!qs.some(previous=>qKey(previous)===qKey(question)))qs.push(question);}}
+  if(qs.length<(micro?10:3)){alert('Chưa tạo đủ câu mới. Con thử lại nhé.');return;}
   qs.forEach(q=>{ if(q.kind==='flash') q.kind='mc'; });
+  gPrepareEnglish(qs);
   GS={w:G.unlocked,qs,i:0,correct:0,hearts:3,answered:false,picked:null,dndSel:null,countSel:new Set(),buildSeq:[],cmpSel:null,clockH:null,clockM:null,moneySel:[],numlineSel:null,dead:false,timer:null,combo:0,usedHint:false,wrongInSession:new Set(),hintStep:0,warmupCount:0,isBoss:false,isSkillPractice:true};
+  GS.practiceOwner=gEnglishKey();GS.microTitle=micro?micro.label:null;
   document.getElementById('gModal').classList.add('open');gRenderQ();
 }
 function gActivityLog(){
@@ -4012,7 +4140,9 @@ function gDailyQuestions(theme){
 function gDailyStart(themeId='market'){
   const today=new Date().toISOString().slice(0,10),theme=DAILY_THEMES.find(entry=>entry.id===themeId)||DAILY_THEMES[0],qs=gDailyQuestions(theme);
   if(qs.length<5){alert('Chưa tạo đủ câu hôm nay. Con thử lại nhé.');return;}
+  gPrepareEnglish(qs);
   GS={w:G.unlocked,qs,i:0,correct:0,hearts:3,answered:false,picked:null,dndSel:null,countSel:new Set(),buildSeq:[],cmpSel:null,clockH:null,clockM:null,moneySel:[],numlineSel:null,dead:false,timer:null,combo:0,usedHint:false,wrongInSession:new Set(),hintStep:0,warmupCount:0,isBoss:false,isDaily:true,dailyDay:today,dailyTitle:theme.name,dailyStory:theme.story};
+  GS.practiceOwner=gEnglishKey();
   document.getElementById('gModal').classList.add('open');gRenderQ();
 }
 function gClearTimer(){ if(GS && GS.timer){ clearInterval(GS.timer); GS.timer=null; } }
@@ -4060,6 +4190,7 @@ window.addEventListener('blur',()=>gPauseTiming('Con qua ứng dụng khác — 
   document.addEventListener(t, gTimingActivity, {passive:true});
 });
 function gRenderQ(){
+  TTS.stop();
   gClearTimer();
   const q=GS.qs[GS.i], pct=Math.round(GS.i/GS.qs.length*100);
   const maxH=GS.isBoss?2:3;
@@ -4136,7 +4267,9 @@ function gRenderQ(){
     <div style="text-align:right;font-size:12px;color:#5b7086;font-weight:700;margin-top:3px">${q._warmup?'<span style="color:#ef6c00">Khởi động</span>':'Câu '+(GS.i+1-GS.warmupCount)+'/'+(GS.qs.length-GS.warmupCount)} · ${GS.isDaily?GS.dailyTitle:GS.isSkillPractice?'Luyện từng bước':GS.bossPractice?'Luyện boss':GS.isBoss?'Boss':(GS.isRealm?GS.realm.name:'Tuần '+GS.w)}</div>
     ${GS.isDaily&&GS.i===0?`<p>${GS.dailyStory}</p>`:''}
     ${q._warmup?'<div style="background:#fff3e0;border-radius:10px;padding:6px 12px;margin-bottom:6px;font-size:13px;font-weight:700;color:#e65100;text-align:center">🔥 Khởi động — không mất tim, không tính điểm</div>':''}
-    <div class="gqtext">${q.q}</div>
+    ${GS.microTitle?`<h3>${GS.microTitle}</h3>`:''}
+    <div class="gqtext" ${q.inEnglish?'lang="en"':''}>${q.inEnglish?q.english.prompt:q.q}</div>
+    ${q.inEnglish?`<div class="math-language"><div class="gbtn-row"><button type="button" class="gry" onclick="gReadEnglish()">Nghe đề Anh</button><button type="button" class="gry" aria-expanded="false" aria-controls="mathTranslation" onclick="gTranslateQuestion(this)">Xem tiếng Việt</button></div><p id="mathTranslation" lang="vi" hidden>${q.q}</p><p>${q.english.vocab}</p><div id="mathAudioStatus" role="status" aria-live="polite"></div></div>`:''}
     ${GS.isSkillPractice?`<div class="ghint-area">${q.workHint||(GEN_SUPPORT[q._gen]||{}).tip||'Con có thể xem lại cách làm rồi thử từng bước.'}</div>`:''}
     ${body}
     <div id="gHintArea"></div>
@@ -4309,7 +4442,7 @@ function gAfterAnswer(ok, headline){
     const _now=performance.now();
     const _pausedMs=(GS.qPausedMs||0)+(GS.timingPaused&&GS.timingPauseStarted?(_now-GS.timingPauseStarted):0);
     const respTime=GS.qStart?((_now-GS.qStart-_pausedMs)/1000):0;
-    if(respTime>15 && q._a!=null && G.reviewQueue && !G.reviewQueue.includes(curGen)){
+    if(respTime>15 && !q.inEnglish && q._a!=null && G.reviewQueue && !G.reviewQueue.includes(curGen)){
       G.reviewQueue.push(curGen);
       if(G.reviewQueue.length>6) G.reviewQueue.shift();
     }
@@ -4380,6 +4513,8 @@ function gAfterAnswer(ok, headline){
     fb.innerHTML='<span class="fb-owl sad">🦉</span> '+(headline||'❌ Chưa đúng nhé.')+'<br>'+q.sol+help+(isWarm?' <span style="color:#ef6c00;font-size:12px">(khởi động — không mất tim)</span>':'');
     if(!G.mute) SFX.wrong(); gVibe([30,30,30]);
   }
+  if(GS.practiceOwner)gRecordMathPractice(q,ok);
+  if(ok&&q._micro)fb.innerHTML+=`<details class="math-steps"><summary>Xem từng bước</summary>${q.sol}</details>`;
   GS.usedHint=false; GS.hintStep=0; GS.retried=false; /* reset cho câu kế */
   const hb=document.getElementById('gHintBtn'); if(hb){ hb.disabled=true; }
   const maxH2=GS.isBoss?2:3;
@@ -4536,7 +4671,7 @@ function gConfetti(){
     setTimeout(()=>s.remove(),3600);
   }
 }
-function gClose(){ const showJourney=!!gJourneyPending;gClearTimer(); gStopActivityWatch(); const m=document.getElementById('gModal'); if(m) m.classList.remove('open'); const ov=document.getElementById('gPauseOverlay'); if(ov) ov.classList.remove('open'); GS=null; gRenderMap();if(showJourney){gJourneyHome();if(!gJourney)gJourneyPending=null;} }
+function gClose(){ TTS.stop();const showJourney=!!gJourneyPending;gClearTimer(); gStopActivityWatch(); const m=document.getElementById('gModal'); if(m) m.classList.remove('open'); const ov=document.getElementById('gPauseOverlay'); if(ov) ov.classList.remove('open'); GS=null; gRenderMap();if(showJourney){gJourneyHome();if(!gJourney)gJourneyPending=null;} }
 
 /* ============ F7: Daily Boss Challenge ============
    5 câu khó hỗn hợp từ tất cả tuần đã mở, flash timer ngắn hơn (5s),
@@ -4927,7 +5062,7 @@ function authMsg(kind,text){
   if(err){ err.style.display=kind==='err'?'block':'none'; if(kind==='err') err.textContent=text; }
   if(ok){ ok.style.display=kind==='ok'?'block':'none'; if(kind==='ok') ok.innerHTML=text; }
 }
-function enterApp(name){ authShowGate(false); authRenderChip(name); maybeOnboard(); if(window.Toan3Contest)Toan3Contest.reset(); if(AUTH_ME) progressLoad().then(loaded=>{if(loaded) rankWatch();}); startTimeTracker(); }
+function enterApp(name){ authShowGate(false); authRenderChip(name); maybeOnboard(); gRenderMathPractice();if(window.Toan3Contest)Toan3Contest.reset(); if(AUTH_ME) progressLoad().then(loaded=>{if(loaded) rankWatch();}); startTimeTracker(); }
 
 /* --- Login / Register mode (khi có Supabase) --- */
 let authMode='login';
@@ -5336,6 +5471,6 @@ function scrollToTop(){ window.scrollTo({top:0, behavior:'smooth'}); }
 })();
 
 </script>
-<script src="assets/toan3/contest.js?v=20261014a"></script>
+<script src="assets/toan3/contest.js?v=20261014b"></script>
 </body>
 </html>
