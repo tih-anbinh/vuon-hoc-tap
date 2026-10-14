@@ -1,0 +1,67 @@
+/* Author: Huy Tran | Email: hqt.msg@gmail.com | Created: 2026-10-14 */
+#tab-contest{display:none;--contest-green:#216957;--contest-line:#ccdcd5;--contest-red:#9e303c;color:#233d34}
+body.mode-contest #tab-lt,body.mode-contest #tab-bt,body.mode-contest #tab-game{display:none}
+body.mode-contest #tab-contest{display:block}
+body.mode-contest .progress-strip{display:none}
+#tab-contest *{box-sizing:border-box;letter-spacing:0}
+#tab-contest [hidden]{display:none!important}
+.contest-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:0 0 22px}
+.contest-heading h2{font-size:26px;margin:0;color:var(--contest-green);line-height:1.25}
+.contest-heading h3{margin:0;font-size:20px}
+.contest-heading p{margin:6px 0 0;font-size:14px;color:#50685d}
+#tab-contest button{border:1px solid transparent;border-radius:7px;background:var(--contest-green);color:white;font:inherit;font-weight:700;padding:10px 16px;min-height:44px;cursor:pointer;white-space:normal;box-shadow:none}
+#tab-contest button.contest-secondary{background:white;color:var(--contest-green);border-color:var(--contest-line)}
+#tab-contest button:disabled{opacity:.5;cursor:default}
+#tab-contest button:focus-visible,#tab-contest input:focus-visible,#tab-contest select:focus-visible{outline:3px solid #e8a315;outline-offset:3px}
+.contest-entry{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:32px;border-block:1px solid var(--contest-line);padding:24px 0;background:linear-gradient(115deg,#f4faf6,white 70%)}
+.contest-entry section{padding:0 16px;min-width:0}
+.contest-entry h3{font-size:21px;margin:0 0 18px}
+.contest-entry form{display:grid;gap:16px}
+.contest-entry>section>button{margin-top:16px}
+#tab-contest label{display:block;font-weight:600;font-size:15px}
+#tab-contest input:not([type=radio]):not([type=checkbox]),#tab-contest select{display:block;width:100%;min-width:0;background:#fff;color:#233d34;border:1px solid #839b8e;border-radius:6px;min-height:46px;font:inherit;font-size:17px;padding:10px;margin-top:6px}
+#tab-contest fieldset{border:0;padding:0;margin:0;min-width:0}
+#tab-contest legend{font-size:15px;font-weight:600;margin-bottom:8px}
+.contest-form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.contest-avatar-options{display:flex;gap:10px;flex-wrap:wrap}
+.contest-avatar-options label{cursor:pointer;display:flex!important;align-items:center;gap:2px}
+.contest-avatar-options input{accent-color:var(--contest-green);margin:0}
+.contest-avatar{width:38px;height:38px;flex:0 0 38px;display:inline-grid;place-items:center;border-radius:50%;font-weight:800;border:2px solid currentColor}
+.avatar-0{color:#216957;background:#d8eee3}.avatar-1{color:#815300;background:#fff0bb}.avatar-2{color:#1a6688;background:#daedf7}.avatar-3{color:#a13555;background:#ffe2ec}.avatar-4{color:#5d467e;background:#eee5f9}.avatar-5{color:#546c23;background:#eaf2d2}
+.contest-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.contest-room-code{display:flex;align-items:center;flex-wrap:wrap;gap:16px;padding:18px 0;border-block:1px solid var(--contest-line)}
+.contest-room-code strong{font-size:26px;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.contest-players{padding:0;margin:20px 0;list-style:none}
+.contest-players li{display:flex;gap:12px;align-items:center;border-bottom:1px solid var(--contest-line);padding:14px 0;flex-wrap:wrap}
+.contest-players li>div{flex:1;min-width:100px;overflow-wrap:anywhere}
+.contest-players b,.contest-players div span{display:block}
+.contest-players div span{font-size:14px;color:#54685e}
+.contest-presence{font-size:12px;color:var(--contest-red)}.contest-presence.online{color:var(--contest-green)}
+.contest-status-row{display:flex;gap:12px;align-items:center;justify-content:space-between;border-top:1px solid var(--contest-line);margin-top:24px;padding-top:16px;font-size:14px}
+#contestStatus{overflow-wrap:anywhere;flex:1;min-height:22px}.contest-warning{color:var(--contest-red)}
+.contest-empty{padding:30px 0;font-size:18px;line-height:1.6}
+.contest-clock{font-size:25px;min-width:94px;text-align:center;font-variant-numeric:tabular-nums;color:#9e303c;background:#fff0ed;padding:8px;border-radius:6px}
+.contest-countdown{font-size:64px;text-align:center;min-height:160px;padding:32px;color:var(--contest-green);font-variant-numeric:tabular-nums}
+.contest-question-nav{display:flex;gap:8px;flex-wrap:wrap;padding:12px 0 24px;border-bottom:1px solid var(--contest-line)}
+#tab-contest .contest-qnav{width:44px;height:44px;padding:0;background:white;color:var(--contest-green);border:1px solid var(--contest-line)}
+#tab-contest .contest-qnav.answered{background:#d8eee3}
+#tab-contest .contest-qnav[aria-current=step]{border:3px solid var(--contest-green)}
+.contest-question{padding:26px 0;min-height:300px}
+.contest-question>span{font-size:14px;color:#50685d}
+.contest-question h3{font-size:26px;line-height:1.5;overflow-wrap:anywhere;margin:12px 0 24px}
+#tab-contest #contestAnswer{max-width:300px;font-size:26px;font-variant-numeric:tabular-nums;margin-bottom:24px}
+.contest-results{list-style:none;padding:0;margin:0 0 28px}
+.contest-results li{display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--contest-line)}
+.contest-results li>span:not(.contest-avatar){flex:1;min-width:0;overflow-wrap:anywhere}
+.contest-rank{min-width:24px;text-align:center;color:#815300}
+.contest-results li>b{font-size:21px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.contest-review{border-top:2px solid var(--contest-line);padding-top:24px}
+.contest-review .contest-heading label{font-size:14px}
+.contest-review-item{padding:20px 0;border-bottom:1px solid var(--contest-line)}
+.contest-review-item h4{font-size:19px;line-height:1.5;margin:0 0 8px;overflow-wrap:anywhere}
+.contest-answer-state{font-weight:700;color:#815300}
+.contest-review-item dl{display:flex;gap:30px;flex-wrap:wrap}.contest-review-item dt{font-size:14px;color:#50685d}.contest-review-item dd{margin:4px 0;font-size:22px;font-weight:700}
+.contest-review-item p{line-height:1.7}
+.contest-practice{padding:24px 0;border-top:2px solid #e3b040;margin-top:24px}
+.contest-practice form{max-width:300px;display:grid;gap:12px}.contest-practice>p{font-size:22px}
+@media(max-width:600px){.contest-heading h2{font-size:23px}.contest-entry{gap:24px}.contest-entry section{padding:0}.contest-form-row{gap:10px}.contest-question h3{font-size:23px}.contest-status-row{align-items:flex-start}.contest-avatar-options{gap:6px}.contest-results li{gap:8px}}

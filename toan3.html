@@ -674,6 +674,7 @@ body.locked{overflow:hidden}
 @media(max-width:700px){.journey-chapters{grid-template-columns:repeat(4,minmax(0,1fr))}.journey-heading{padding:18px 14px 12px;align-items:flex-start;flex-wrap:wrap}.journey-heading h2{font-size:21px}.journey-stage{height:500px}.journey-stops{grid-template-columns:minmax(0,1fr)}.journey-name{max-width:124px}.journey-pin{min-width:40px}}
 @media(prefers-reduced-motion:reduce){.journey-canvas{transition:none}}
 </style>
+<link rel="stylesheet" href="assets/toan3/contest.css?v=20261014a">
 </head>
 <body>
 <div id="warmLayer"></div>
@@ -787,6 +788,7 @@ body.locked{overflow:hidden}
   <button class="tab-btn active" onclick="switchTab('lt',this)">📖 Lý Thuyết</button>
   <button class="tab-btn" onclick="switchTab('bt',this)">✏️ Luyện Tập</button>
   <button class="tab-btn" onclick="switchTab('game',this)">🎮 Học mà chơi</button>
+  <button class="tab-btn" onclick="switchTab('contest',this)">Thi cuối tuần</button>
 </div>
 <div class="progress-strip" id="progStrip" title="Bấm để vào Học mà chơi" onclick="switchTab('game',document.querySelectorAll('.tab-btn')[2])">
   <span class="ps-label">🗺️ <span class="pstx">Hành trình</span></span>
@@ -1768,6 +1770,10 @@ Một bài giải đầy đủ <b>luôn có 3 phần</b>:<br>
   </details>
   <footer>🎮 Học mà chơi · 35 trạm bám sát SGK · Ôn tập xoay vòng · Hoạt động offline · Rev 3.0</footer>
 </div>
+<section id="tab-contest" aria-label="Thi cuối tuần">
+  <div id="contestBody"></div>
+  <div class="contest-status-row"><div id="contestStatus" role="status" aria-live="polite"></div><div class="contest-actions"><button type="button" id="contestDiscard" class="contest-secondary" hidden>Tải bản đã lưu</button><button type="button" id="contestRefresh" class="contest-secondary">Cập nhật</button></div></div>
+</section>
 <div class="gmodal" id="gModal"><div class="gcard" id="gCard"></div></div>
 <div class="gmodal" id="gardenOv" role="dialog" aria-modal="true" aria-labelledby="gardenTitle"><div class="gcard garden-card"><div class="garden-head"><h2 id="gardenTitle">Vườn của con</h2><button class="gry" onclick="closeGarden()">Đóng</button></div><div id="gardenBody"></div><div id="gardenStatus" class="garden-status" role="status" aria-live="polite"></div></div></div>
 <aside class="rank-bubble" id="rankBubble" role="status" aria-live="polite" hidden><p id="rankMessage"></p><button class="grn" onclick="document.getElementById('rankBubble').hidden=true;openDash()">Xem thi đua</button><button class="gry" onclick="document.getElementById('rankBubble').hidden=true">Đóng</button></aside>
@@ -1785,13 +1791,15 @@ Một bài giải đầy đủ <b>luôn có 3 phần</b>:<br>
 <script>
 /* --- Tab switcher (3 tab: lt / bt / game) --- */
 function switchTab(mode, btn){
-  document.body.classList.remove('mode-bt','mode-game');
+  document.body.classList.remove('mode-bt','mode-game','mode-contest');
   if(mode==='bt') document.body.classList.add('mode-bt');
   else if(mode==='game') document.body.classList.add('mode-game');
+  else if(mode==='contest') document.body.classList.add('mode-contest');
   document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
   window.scrollTo({top:0, behavior:'smooth'});
   if(mode==='game' && typeof gRenderMap==='function'){gRenderMap();gWorldInit();}
+  if(mode==='contest' && window.Toan3Contest)Toan3Contest.open();
 }
 let gWorld=null,gWorldLoading=false,gWorldLight=false,gWorldMotionOn=true;
 try{gWorldLight=localStorage.getItem('toan3_world_view')==='light';}catch(error){gWorldLight=true;}
@@ -4919,7 +4927,7 @@ function authMsg(kind,text){
   if(err){ err.style.display=kind==='err'?'block':'none'; if(kind==='err') err.textContent=text; }
   if(ok){ ok.style.display=kind==='ok'?'block':'none'; if(kind==='ok') ok.innerHTML=text; }
 }
-function enterApp(name){ authShowGate(false); authRenderChip(name); maybeOnboard(); if(AUTH_ME) progressLoad().then(loaded=>{if(loaded) rankWatch();}); startTimeTracker(); }
+function enterApp(name){ authShowGate(false); authRenderChip(name); maybeOnboard(); if(window.Toan3Contest)Toan3Contest.reset(); if(AUTH_ME) progressLoad().then(loaded=>{if(loaded) rankWatch();}); startTimeTracker(); }
 
 /* --- Login / Register mode (khi có Supabase) --- */
 let authMode='login';
@@ -4993,6 +5001,7 @@ async function authLoginSoft(){
 
 async function authLogout(){
   AUTH_ME=null;_progressLoadedFor=null;clearTimeout(_syncT);
+  if(window.Toan3Contest)Toan3Contest.reset();
   gardenReady=false;gardenState=null;gardenUser=null;closeGarden();gardenRender();
   document.getElementById('rankBubble').hidden=true;
   clearTimeout(rankBubbleTimer);clearTimeout(rankDebounce);clearInterval(rankTimer);rankTimer=null;
@@ -5327,5 +5336,6 @@ function scrollToTop(){ window.scrollTo({top:0, behavior:'smooth'}); }
 })();
 
 </script>
+<script src="assets/toan3/contest.js?v=20261014a"></script>
 </body>
 </html>
