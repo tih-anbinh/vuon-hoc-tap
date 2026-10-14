@@ -314,6 +314,9 @@ body.mode-game #tab-game{display:block}
 .math-practice-controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:12px 0}
 .math-practice-controls label{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .math-practice-controls select{max-width:100%;min-width:0;padding:8px;font:inherit;border:1px solid #90a4ae;border-radius:6px;background:#fff}
+.math-mastery-row{padding:10px 0;border-top:1px solid #cfd8dc;overflow-wrap:anywhere}
+.math-mastery-row p{margin:4px 0;line-height:1.5}
+.math-mastery-row meter{display:block;width:100%;height:18px;margin:4px 0}
 .math-language{margin:10px 0;padding:10px 0;border-top:1px solid #cfd8dc;border-bottom:1px solid #cfd8dc;overflow-wrap:anywhere}
 .math-language .gbtn-row{flex-wrap:wrap}
 .math-language p{margin:8px 0}
@@ -3545,13 +3548,23 @@ function gMicroSkills(){return [
   {id:'times9',label:'A.2 · Bảng nhân 9',week:5},
   {id:'family',label:'A.3 · Quan hệ nhân và chia',week:2}
 ];}
+function gMicroMastery(stats){
+  const saved=stats?.mastery;
+  const recent=saved?.version===1&&Array.isArray(saved.recent)?saved.recent.filter(value=>value===0||value===0.5||value===1).slice(-20):[];
+  return {recent,score:recent.length?Math.round(recent.reduce((total,value)=>total+value,0)*5):null};
+}
 function gRenderMathPractice(){
   const target=document.getElementById('mathPracticeControls');if(!target)return;
   const selected=document.getElementById('mathMicroSkill')?.value,state=gEnglishState();
   const skills=gMicroSkills().filter(skill=>G.unlocked>=skill.week);
   target.innerHTML=`<div class="math-practice-controls"><label><input id="mathEnglish" type="checkbox" ${state.enabled===true?'checked':''} onchange="gSetEnglish(this.checked)"> Làm quen toán tiếng Anh</label></div>
     ${skills.length?`<div class="math-practice-controls"><label for="mathMicroSkill">Kỹ năng nhỏ</label><select id="mathMicroSkill">${skills.map(skill=>`<option value="${skill.id}" ${skill.id===selected?'selected':''}>${skill.label}</option>`).join('')}</select><button class="grn" onclick="gStartSkillPractice('bangnhanchia',document.getElementById('mathMicroSkill').value)">Luyện 10 câu</button></div>`:''}
-    <div>${skills.map(skill=>{const stats=state.skills?.[skill.id];return stats?`<p>${skill.label}: ${Number(stats.correct)||0}/${Number(stats.attempts)||0} câu đúng · Tự làm: ${Number(stats.independent)||0}</p>`:'';}).join('')}</div>
+    <div>${skills.length?'<p><b>Thành thạo toán · Trên thiết bị này</b></p>':''}${skills.map(skill=>{
+      const stats=state.skills?.[skill.id],mastery=gMicroMastery(stats);
+      const level=mastery.score===null?'Chưa có điểm':mastery.score===100?'Thành thạo':mastery.score>=80?'Vững dần':mastery.score>=50?'Tiến bộ':'Đang luyện';
+      const value=mastery.score===null?level:`${mastery.score}/100 · ${level}`;
+      return `<div class="math-mastery-row" data-micro="${skill.id}"><p id="mathSkill-${skill.id}"><b>${skill.label}</b></p><p class="math-mastery-value">${value}</p><meter min="0" max="100" low="50" high="80" optimum="100" value="${mastery.score??0}" aria-labelledby="mathSkill-${skill.id}" aria-valuetext="${value}"></meter><p>${mastery.recent.length}/20 câu gần nhất</p>${stats?`<p>Tổng: ${Number(stats.correct)||0}/${Number(stats.attempts)||0} câu đúng · Tự làm: ${Number(stats.independent)||0}</p>`:''}</div>`;
+    }).join('')}</div>
     ${state.english?.attempts?`<p>Đề Anh trên thiết bị này: ${Number(state.english.attempts)||0} câu · Đã xem bản dịch: ${Number(state.english.translated)||0}</p>`:''}`;
 }
 function gMicroQuestion(id){
@@ -3614,12 +3627,13 @@ function gReadEnglish(){
   if(!TTS.english(question.english.prompt,report))report();
 }
 function gRecordMathPractice(question,ok){
-  if(!GS.practiceOwner||GS.practiceOwner!==gEnglishKey()||(!question._micro&&!question.inEnglish))return;
+  if(question.mathRecorded||!GS.practiceOwner||GS.practiceOwner!==gEnglishKey()||(!question._micro&&!question.inEnglish))return;
   const state=gEnglishState();
   if(question._micro){
     state.skills=state.skills&&typeof state.skills==='object'&&!Array.isArray(state.skills)?state.skills:{};
     const previous=state.skills[question._micro]||{};
-    state.skills[question._micro]={attempts:(Number(previous.attempts)||0)+1,correct:(Number(previous.correct)||0)+(ok?1:0),independent:(Number(previous.independent)||0)+(ok&&!GS.usedHint?1:0)};
+    const recent=[...gMicroMastery(previous).recent,ok?(GS.usedHint?0.5:1):0].slice(-20);
+    state.skills[question._micro]={...previous,attempts:(Number(previous.attempts)||0)+1,correct:(Number(previous.correct)||0)+(ok?1:0),independent:(Number(previous.independent)||0)+(ok&&!GS.usedHint?1:0),mastery:{version:1,recent}};
   }
   if(question.inEnglish){const previous=state.english||{};state.english={attempts:(Number(previous.attempts)||0)+1,translated:(Number(previous.translated)||0)+(question.translationViewed?1:0)};}
   question.mathRecorded=gStoreEnglish(state);
