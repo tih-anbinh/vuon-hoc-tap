@@ -3546,29 +3546,92 @@ function gSetEnglish(enabled){
 function gMicroSkills(){return [
   {id:'times25',label:'A.1 · Nhân 2 và 5',week:2},
   {id:'times9',label:'A.2 · Bảng nhân 9',week:5},
-  {id:'family',label:'A.3 · Quan hệ nhân và chia',week:2}
+  {id:'family',label:'A.3 · Quan hệ nhân và chia',week:2},
+  {id:'times3',label:'A.4 · Bảng nhân 3',week:2,factors:[3]},
+  {id:'times4',label:'A.5 · Bảng nhân 4',week:3,factors:[4]},
+  {id:'times67',label:'A.6 · Bảng nhân 6 và 7',week:4,factors:[6,7]},
+  {id:'times8',label:'A.7 · Bảng nhân 8',week:5,factors:[8]},
+  {id:'add3',label:'B.1 · Cộng trong 1 000',week:1,topic:'add',max:1000,gen:'congtru3'},
+  {id:'sub3',label:'B.2 · Trừ trong 1 000',week:1,topic:'subtract',max:1000,gen:'congtru3'},
+  {id:'missingAdd',label:'B.3 · Tìm thành phần cộng, trừ',week:1,topic:'missing',gen:'timx'},
+  {id:'fraction',label:'B.4 · Một phần mấy',week:6,topic:'fraction',gen:'phanmay'},
+  {id:'circleMiddle',label:'B.5 · Hình tròn và trung điểm',week:7,topic:'geometry',gen:'hinhhoc'},
+  {id:'shapes',label:'B.6 · Góc, hình phẳng và khối',week:8,topic:'source',gen:'hinhhoc'},
+  {id:'mul2',label:'C.1 · Nhân số có 2 chữ số',week:9,topic:'multiply',digits:2,gen:'nhanchia'},
+  {id:'div2',label:'C.2 · Chia số có 2 chữ số',week:10,topic:'divide',digits:2,gen:'nhanchia'},
+  {id:'scale',label:'C.3 · Gấp và giảm một số lần',week:10,topic:'scale',gen:'gapgiam'},
+  {id:'twoStep',label:'C.4 · Bài toán hai bước tính',week:11,topic:'source',gen:'haibuoc'},
+  {id:'measure',label:'C.5 · Độ dài, khối lượng, dung tích',week:13,topic:'measure',gen:'donvi'},
+  {id:'temperature',label:'C.6 · Nhiệt độ',week:13,topic:'temperature',gen:'donvi'},
+  {id:'mul3',label:'C.7 · Nhân số có 3 chữ số',week:14,topic:'multiply',digits:3,gen:'nhanchia'},
+  {id:'div3',label:'C.8 · Chia số có 3 chữ số',week:14,topic:'divide',digits:3,gen:'nhanchia'},
+  {id:'expression',label:'C.9 · Biểu thức và dấu ngoặc',week:15,topic:'source',gen:'bieuthuc'},
+  {id:'place4',label:'D.1 · Cấu tạo số có 4 chữ số',week:19,topic:'place',digits:4,gen:'cautao'},
+  {id:'compare4',label:'D.2 · So sánh số có 4 chữ số',week:19,topic:'compare',digits:4,gen:'sosanh'},
+  {id:'roman',label:'D.3 · Chữ số La Mã',week:19,topic:'source',gen:'roman'},
+  {id:'round4',label:'D.4 · Làm tròn số có 4 chữ số',week:20,topic:'round',digits:4,gen:'lamtron'},
+  {id:'add4',label:'D.5 · Cộng trong 10 000',week:22,topic:'add',max:10000,gen:'congtru'},
+  {id:'sub4',label:'D.6 · Trừ trong 10 000',week:23,topic:'subtract',max:10000,gen:'congtru'},
+  {id:'mul4',label:'D.7 · Nhân số có 4 chữ số',week:23,topic:'multiply',digits:4,gen:'nhanchia'},
+  {id:'div4',label:'D.8 · Chia số có 4 chữ số',week:24,topic:'divide',digits:4,gen:'nhanchia'},
+  {id:'perimeter',label:'E.1 · Chu vi hình',week:20,topic:'perimeter',gen:'chuvidt'},
+  {id:'area',label:'E.2 · Diện tích hình',week:21,topic:'area',gen:'chuvidt'},
+  {id:'geometryWord',label:'E.3 · Lời văn về chu vi, diện tích',week:22,topic:'geometryWord',gen:'loivanhinh'},
+  {id:'place5',label:'F.1 · Cấu tạo số có 5 chữ số',week:25,topic:'place',digits:5,gen:'cautao'},
+  {id:'compare5',label:'F.2 · So sánh số có 5 chữ số',week:26,topic:'compare',digits:5,gen:'sosanh'},
+  {id:'round5',label:'F.3 · Làm tròn số có 5 chữ số',week:26,topic:'round',digits:5,gen:'lamtron'},
+  {id:'add5',label:'F.4 · Cộng trong 100 000',week:27,topic:'add',max:100000,gen:'congtru'},
+  {id:'sub5',label:'F.5 · Trừ trong 100 000',week:27,topic:'subtract',max:100000,gen:'congtru'},
+  {id:'mul5',label:'F.6 · Nhân số có 5 chữ số',week:30,topic:'multiply',digits:5,gen:'nhanchia'},
+  {id:'div5',label:'F.7 · Chia số có 5 chữ số',week:31,topic:'divide',digits:5,gen:'nhanchia'},
+  {id:'clock',label:'G.1 · Đọc đồng hồ',week:28,topic:'clock',gen:'thoigian'},
+  {id:'calendar',label:'G.2 · Ngày, tháng và lịch',week:29,topic:'calendar',gen:'thoigian'},
+  {id:'money',label:'G.3 · Tiền Việt Nam',week:29,topic:'source',gen:'tientevn'},
+  {id:'unitRate',label:'G.4 · Luyện rút về đơn vị',week:31,topic:'unitRate',gen:'rutvedv'},
+  {id:'data',label:'H.1 · Đọc bảng số liệu',week:32,topic:'data',gen:'bangsolieu'},
+  {id:'chance',label:'H.2 · Khả năng xảy ra',week:32,topic:'chance',gen:'xacsuatcoban'}
 ];}
 function gMicroMastery(stats){
   const saved=stats?.mastery;
   const recent=saved?.version===1&&Array.isArray(saved.recent)?saved.recent.filter(value=>value===0||value===0.5||value===1).slice(-20):[];
   return {recent,score:recent.length?Math.round(recent.reduce((total,value)=>total+value,0)*5):null};
 }
-function gRenderMathPractice(){
+function gMicroGroups(){return [
+  {id:'A',term:1,label:'Bảng nhân và chia'},
+  {id:'B',term:1,label:'Số, phân số và hình học'},
+  {id:'C',term:1,label:'Phép tính, đo lường và lời văn'},
+  {id:'D',term:2,label:'Số và phép tính trong 10 000'},
+  {id:'E',term:2,label:'Chu vi và diện tích'},
+  {id:'F',term:2,label:'Số và phép tính trong 100 000'},
+  {id:'G',term:2,label:'Thời gian, tiền và rút về đơn vị'},
+  {id:'H',term:2,label:'Số liệu và khả năng xảy ra'}
+];}
+function gRenderMathPractice(focusGroup=false){
   const target=document.getElementById('mathPracticeControls');if(!target)return;
   const selected=document.getElementById('mathMicroSkill')?.value,state=gEnglishState();
-  const skills=gMicroSkills().filter(skill=>G.unlocked>=skill.week);
+  const allSkills=gMicroSkills(),groups=gMicroGroups();
+  const previousGroup=document.getElementById('mathMicroGroup')?.value;
+  const group=groups.some(entry=>entry.id===previousGroup)?previousGroup:groups.find(entry=>allSkills.some(skill=>skill.label.startsWith(entry.id+'.')&&G.unlocked>=skill.week))?.id||'A';
+  const groupSkills=allSkills.filter(skill=>skill.label.startsWith(group+'.'));
+  const skills=groupSkills.filter(skill=>G.unlocked>=skill.week);
   target.innerHTML=`<div class="math-practice-controls"><label><input id="mathEnglish" type="checkbox" ${state.enabled===true?'checked':''} onchange="gSetEnglish(this.checked)"> Làm quen toán tiếng Anh</label></div>
-    ${skills.length?`<div class="math-practice-controls"><label for="mathMicroSkill">Kỹ năng nhỏ</label><select id="mathMicroSkill">${skills.map(skill=>`<option value="${skill.id}" ${skill.id===selected?'selected':''}>${skill.label}</option>`).join('')}</select><button class="grn" onclick="gStartSkillPractice('bangnhanchia',document.getElementById('mathMicroSkill').value)">Luyện 10 câu</button></div>`:''}
-    <div>${skills.length?'<p><b>Thành thạo toán · Trên thiết bị này</b></p>':''}${skills.map(skill=>{
+    <div class="math-practice-controls"><label for="mathMicroGroup">Nhóm kỹ năng</label><select id="mathMicroGroup" onchange="gRenderMathPractice(true)">${[1,2].map(term=>`<optgroup label="Học kỳ ${term}">${groups.filter(entry=>entry.term===term).map(entry=>`<option value="${entry.id}" ${entry.id===group?'selected':''}>${entry.id} · ${entry.label}</option>`).join('')}</optgroup>`).join('')}</select></div>
+    <div class="math-practice-controls"><label for="mathMicroSkill">Kỹ năng nhỏ</label><select id="mathMicroSkill" ${skills.length?'':'disabled'}>${skills.length?skills.map(skill=>`<option value="${skill.id}" ${skill.id===selected?'selected':''}>${skill.label}</option>`).join(''):'<option value="">Chưa mở nhóm này</option>'}</select><button class="grn" ${skills.length?'':'disabled'} onclick="gStartSkillPractice('bangnhanchia',document.getElementById('mathMicroSkill').value)">Luyện 10 câu</button></div>
+    <div><p><b>Thành thạo toán · Trên thiết bị này</b></p>${groupSkills.map(skill=>{
+      if(G.unlocked<skill.week)return `<div class="math-mastery-row" data-micro="${skill.id}"><p><b>${skill.label}</b></p><p>Chưa mở · Tuần ${skill.week}</p></div>`;
       const stats=state.skills?.[skill.id],mastery=gMicroMastery(stats);
       const level=mastery.score===null?'Chưa có điểm':mastery.score===100?'Thành thạo':mastery.score>=80?'Vững dần':mastery.score>=50?'Tiến bộ':'Đang luyện';
       const value=mastery.score===null?level:`${mastery.score}/100 · ${level}`;
       return `<div class="math-mastery-row" data-micro="${skill.id}"><p id="mathSkill-${skill.id}"><b>${skill.label}</b></p><p class="math-mastery-value">${value}</p><meter min="0" max="100" low="50" high="80" optimum="100" value="${mastery.score??0}" aria-labelledby="mathSkill-${skill.id}" aria-valuetext="${value}"></meter><p>${mastery.recent.length}/20 câu gần nhất</p>${stats?`<p>Tổng: ${Number(stats.correct)||0}/${Number(stats.attempts)||0} câu đúng · Tự làm: ${Number(stats.independent)||0}</p>`:''}</div>`;
     }).join('')}</div>
     ${state.english?.attempts?`<p>Đề Anh trên thiết bị này: ${Number(state.english.attempts)||0} câu · Đã xem bản dịch: ${Number(state.english.translated)||0}</p>`:''}`;
+  if(focusGroup)document.getElementById('mathMicroGroup').focus();
 }
 function gMicroQuestion(id){
-  const first=id==='times9'?9:pick(id==='family'?[2,3,5]:[2,5]),second=R(1,10),product=first*second;
+  const skill=gMicroSkills().find(skill=>skill.id===id);
+  if(!skill)throw new Error('Unknown micro-skill: '+id);
+  if(skill.topic)return gCurriculumMicroQuestion(skill);
+  const first=id==='times9'?9:pick(skill?.factors||(id==='family'?[2,3,5]:[2,5])),second=R(1,10),product=first*second;
   const variant=id==='family'?R(0,2):R(0,1);
   const multiply=id!=='family'||variant===0,missing=id==='family'&&variant===2;
   let prompt=multiply?`${first} × ${second} = ?`:missing?`${first} × ? = ${product}`:`${product} : ${first} = ?`;
@@ -3595,6 +3658,134 @@ function gMicroQuestion(id){
     sol:`<ol>${steps.map(step=>`<li>${step}</li>`).join('')}</ol>`,
     workHint:id==='times9'?'Nhân với 10 rồi bớt một nhóm.':multiply?'Đếm các nhóm bằng nhau hoặc cộng các số bằng nhau.':'Dùng phép nhân để kiểm tra phép chia.',
     _gen:'bangnhanchia',_micro:id,_a:first,_b:second,_p:product,_mul:multiply};
+}
+function gMicroInput(skill,prompt,answer,steps,data,english){
+  return {kind:'input',q:prompt,accept:[String(answer)],sol:`<ol>${steps.map(step=>`<li>${step}</li>`).join('')}</ol>`,
+    _micro:skill.id,_gen:skill.gen,_microData:{topic:skill.topic,...data},...(english?{english:{prompt:english,vocab:''}}:{})};
+}
+function gCurriculumMicroQuestion(skill){
+  const topic=skill.topic;
+  if(topic==='source'){
+    const raw=GEN[skill.gen](),base={q:raw.q,sol:`<ol><li>${raw.hint}</li><li>${raw.sol}</li></ol>`,_micro:skill.id,_gen:skill.gen};
+    if(raw.type==='mc')return {...base,kind:'mc',opts:raw.opts,ansIdx:raw.ansIdx};
+    if(raw.type==='solve')return {...base,kind:'input',accept:[norm(String(raw.dapso.val))],unit:raw.dapso.dv};
+    return {...base,kind:'input',accept:(raw.alt?.length?raw.alt:[String(raw.ans)]).map(norm)};
+  }
+  if(topic==='add'||topic==='subtract'){
+    const first=R(Math.floor(skill.max/10),skill.max-1),second=R(1,topic==='add'?skill.max-first:first);
+    const answer=topic==='add'?first+second:first-second,op=topic==='add'?'+':'−';
+    return {kind:'column',a:first,b:second,op,ans:answer,q:'Đặt tính rồi tính:',_micro:skill.id,_gen:skill.gen,
+      sol:`<ol><li>Đặt các chữ số cùng hàng thẳng cột.</li><li>Tính từ phải sang trái, nhớ hoặc mượn khi cần.</li><li>${first} ${op} ${second} = ${answer}.</li></ol>`,
+      english:{prompt:topic==='add'?`Add ${first} and ${second}. Write the calculation in columns.`:`Subtract ${second} from ${first}. Write the calculation in columns.`,vocab:'columns: các cột'}};
+  }
+  if(topic==='multiply'||topic==='divide'){
+    const factor=R(2,9),limit=10**skill.digits-1;
+    const ceiling=10**Math.max(3,skill.digits)-1;
+    const first=R(10**(skill.digits-1),topic==='multiply'?Math.min(limit,Math.floor(ceiling/factor)):limit);
+    const question=gArithmeticQ({a:first,b:factor,op:topic==='multiply'?'×':':'});
+    question.sol=`<ol><li>${question.workHint}</li><li>${question.sol}</li><li>${topic==='multiply'?`Kiểm tra: ${question.ans} : ${factor} = ${first}.`:`Kiểm tra: ${question.ans} × ${factor} + ${question.remainder} = ${first}; số dư bé hơn ${factor}.`}</li></ol>`;
+    return {...question,_micro:skill.id,_gen:skill.gen};
+  }
+  if(topic==='place'||topic==='compare'||topic==='round'){
+    const first=R(10**(skill.digits-1),10**skill.digits-1);
+    if(topic==='place'){
+      const power=10**R(0,skill.digits-1),digit=Math.floor(first/power)%10,names={1:'đơn vị',10:'chục',100:'trăm',1000:'nghìn',10000:'chục nghìn'};
+      const value=R(0,1)===1,answer=value?digit*power:digit;
+      return gMicroInput(skill,`Trong số ${first}, chữ số hàng ${names[power]} ${value?'có giá trị bằng bao nhiêu':'là chữ số nào'}?`,answer,
+        [`Xác định hàng ${names[power]} từ phải sang trái.`,`Chữ số ở hàng đó là ${digit}.`,value?`${digit} × ${power} = ${answer}.`:`Đáp án: ${answer}.`],{first,power,value});
+    }
+    if(topic==='compare'){
+      const second=R(1,5)===1?first:R(10**(skill.digits-1),10**skill.digits-1),answer=first>second?'>':first<second?'<':'=';
+      const question=gMicroInput(skill,`Chọn dấu thích hợp: ${first} ..... ${second}`,answer,
+        ['So sánh số chữ số.','Nếu bằng nhau, so từng hàng từ trái sang phải.',`${first} ${answer==='<'?'&lt;':answer} ${second}.`],{first,second});
+      return {...question,kind:'mc',opts:['>','<','='],ansIdx:['>','<','='].indexOf(answer)};
+    }
+    const power=pick(skill.digits===4?[10,100]:[10,100,1000,10000]),names={10:'chục',100:'trăm',1000:'nghìn',10000:'chục nghìn'};
+    const following=Math.floor(first/(power/10))%10,answer=Math.round(first/power)*power;
+    return gMicroInput(skill,`Làm tròn ${first} đến hàng ${names[power]}.`,answer,
+      [`Chữ số liền sau hàng ${names[power]} là ${following}.`,following<5?'Bé hơn 5: làm tròn xuống.':'Từ 5 trở lên: làm tròn lên.',`Kết quả: ${answer}.`],{first,power});
+  }
+  if(topic==='missing'){
+    const first=R(10,400),second=R(10,400),total=first+second,variant=R(0,2);
+    const prompt=variant===0?`? + ${second} = ${total}`:variant===1?`? − ${second} = ${first}`:`${total} − ? = ${first}`;
+    const answer=variant===0?first:variant===1?total:second;
+    return gMicroInput(skill,`Tìm số còn thiếu: ${prompt}`,answer,
+      [variant===1?'Số bị trừ bằng hiệu cộng số trừ.':variant===0?'Số hạng bằng tổng trừ số hạng kia.':'Số trừ bằng số bị trừ trừ hiệu.',variant===1?`${first} + ${second} = ${answer}.`:`${total} − ${variant===0?second:first} = ${answer}.`,`Thay ${answer} vào chỗ trống để kiểm tra.`],{first,second,variant});
+  }
+  if(topic==='fraction'){
+    const denominator=R(2,9),part=R(1,10),total=denominator*part,visual=R(0,1)===1;
+    return gMicroInput(skill,visual?`Hình tròn chia đều, phần tô màu là một phần mấy? (Viết 1/n)<br>${svgFrac(denominator,1,120)}`:`Tìm 1/${denominator} của ${total}.`,visual?`1/${denominator}`:part,
+      [`Chia thành ${denominator} phần bằng nhau.`,visual?'Có 1 phần được tô màu.':`${total} : ${denominator} = ${part}.`,visual?`Phần tô màu là 1/${denominator}.`:`Một phần có ${part}.`],{denominator,total,visual});
+  }
+  if(topic==='geometry'){
+    const half=R(2,40),whole=half*2,variant=R(0,3),answer=variant%2===0?whole:half;
+    const prompts=[`Hình tròn có bán kính ${half} cm. Đường kính dài bao nhiêu cm?`,`Hình tròn có đường kính ${whole} cm. Bán kính dài bao nhiêu cm?`,`M là trung điểm AB, AM = ${half} cm. AB dài bao nhiêu cm?`,`M là trung điểm AB, AB = ${whole} cm. AM dài bao nhiêu cm?`];
+    return gMicroInput(skill,prompts[variant],answer,['Đường kính bằng hai bán kính; trung điểm chia đoạn thành hai phần bằng nhau.',variant%2===0?`${half} × 2 = ${whole}.`:`${whole} : 2 = ${half}.`,`Đáp số: ${answer} cm.`],{half,variant});
+  }
+  if(topic==='scale'){
+    const base=R(2,10),factor=R(2,9),large=base*factor,variant=R(0,3);
+    const prompts=[`Lan có ${base} bút. Mai có số bút gấp ${factor} lần Lan. Mai có bao nhiêu bút?`,`Mai có ${large} bút, gấp ${factor} lần Lan. Lan có bao nhiêu bút?`,`Có ${large} bút, giảm số bút đi ${factor} lần. Còn bao nhiêu bút?`,`Sau khi giảm số bút đi ${factor} lần còn ${base} bút. Lúc đầu có bao nhiêu bút?`];
+    const multiply=variant===0||variant===3,answer=multiply?large:base;
+    return gMicroInput(skill,prompts[variant],answer,[multiply?'Tìm số lớn bằng phép nhân.':'Tìm số nhỏ bằng phép chia.',multiply?`${base} × ${factor} = ${large}.`:`${large} : ${factor} = ${base}.`,`Đáp số: ${answer} bút.`],{base,factor,variant});
+  }
+  if(topic==='measure'){
+    const [large,small,factor]=pick([['m','cm',100],['dm','cm',10],['cm','mm',10],['kg','g',1000],['l','ml',1000]]),count=R(1,9),reverse=R(0,1)===1;
+    return gMicroInput(skill,reverse?`Đổi ${count*factor} ${small} = ... ${large}`:`Đổi ${count} ${large} = ... ${small}`,reverse?count:count*factor,
+      [`1 ${large} = ${factor} ${small}.`,reverse?'Đổi sang đơn vị lớn: chia.':'Đổi sang đơn vị nhỏ: nhân.',reverse?`${count*factor} : ${factor} = ${count}.`:`${count} × ${factor} = ${count*factor}.`],{count,factor,reverse});
+  }
+  if(topic==='temperature'){
+    const initial=R(10,35),change=R(1,9),increase=R(0,1)===1,answer=initial+(increase?change:-change);
+    return gMicroInput(skill,`Buổi sáng ${initial} °C. Buổi trưa nhiệt độ ${increase?'tăng':'giảm'} ${change} °C. Buổi trưa bao nhiêu °C?`,answer,
+      [increase?'Nhiệt độ tăng: cộng thêm.':'Nhiệt độ giảm: trừ đi.',`${initial} ${increase?'+':'−'} ${change} = ${answer}.`,`Đáp số: ${answer} °C.`],{initial,change,increase});
+  }
+  if(topic==='perimeter'||topic==='area'){
+    const square=R(0,1)===1,length=R(3,topic==='area'&&square?9:30),width=R(2,Math.min(length-1,topic==='area'?9:30)),shortSide=square?length:width;
+    const area=topic==='area',answer=area?length*shortSide:2*(length+shortSide),unit=area?'cm²':'cm';
+    return gMicroInput(skill,`${square?`Hình vuông cạnh ${length} cm`:`Hình chữ nhật dài ${length} cm, rộng ${width} cm`}. Tính ${area?'diện tích':'chu vi'} (${unit}).`,answer,
+      [area?'Diện tích = chiều dài × chiều rộng.':'Chu vi = (chiều dài + chiều rộng) × 2.',area?`${length} × ${shortSide} = ${answer}.`:`(${length} + ${shortSide}) × 2 = ${answer}.`,`Đáp số: ${answer} ${unit}.`],{length,width:shortSide});
+  }
+  if(topic==='geometryWord'){
+    const length=R(10,30),width=R(2,9),area=R(0,1)===1,reverse=R(0,1)===1;
+    const total=area?length*width:2*(length+width),unit=area?'cm²':'cm',answer=reverse?length:total;
+    const prompt=reverse?`Mảnh bìa hình chữ nhật có ${area?'diện tích':'chu vi'} ${total} ${unit}, rộng ${width} cm. Chiều dài là bao nhiêu cm?`:`Mảnh bìa hình chữ nhật dài ${length} cm, rộng ${width} cm. ${area?'Diện tích':'Chu vi'} là bao nhiêu ${unit}?`;
+    return gMicroInput(skill,prompt,answer,reverse?(area?[
+      'Chiều dài = diện tích : chiều rộng.',`${total} : ${width} = ${length}.`,`Đáp số: ${length} cm.`
+    ]:[`Nửa chu vi: ${total} : 2 = ${length+width} (cm).`,`Chiều dài: ${length+width} − ${width} = ${length} (cm).`,`Đáp số: ${length} cm.`]):[
+      area?'Diện tích = chiều dài × chiều rộng.':'Chu vi = (chiều dài + chiều rộng) × 2.',area?`${length} × ${width} = ${total}.`:`(${length} + ${width}) × 2 = ${total}.`,`Đáp số: ${total} ${unit}.`
+    ],{length,width,area,reverse});
+  }
+  if(topic==='unitRate'){
+    const reverse=R(0,1)===1,firstCount=R(2,9),perBox=reverse?R(2,9):R(100,9000),secondCount=reverse?R(10,9000):R(2,9);
+    const firstTotal=firstCount*perBox,secondTotal=secondCount*perBox,answer=reverse?secondCount:secondTotal;
+    return gMicroInput(skill,`Có ${firstCount} hộp đựng đều ${firstTotal} chiếc bút. ${reverse?`Để đựng ${secondTotal} chiếc bút như vậy cần bao nhiêu hộp?`:`${secondCount} hộp như vậy đựng bao nhiêu chiếc bút?`}`,answer,[
+      `Mỗi hộp có: ${firstTotal} : ${firstCount} = ${perBox} (chiếc bút).`,reverse?`Số hộp cần: ${secondTotal} : ${perBox} = ${secondCount} (hộp).`:`Số bút: ${perBox} × ${secondCount} = ${secondTotal} (chiếc bút).`,`Đáp số: ${answer} ${reverse?'hộp':'chiếc bút'}.`
+    ],{firstCount,perBox,secondCount,reverse});
+  }
+  if(topic==='clock'){
+    const hour=R(1,12),minute=R(0,11)*5,askHour=R(0,1)===1;
+    return gMicroInput(skill,`Đọc đồng hồ: điền số ${askHour?'giờ':'phút'}.<br>${svgClock(hour,minute)}`,askHour?hour:minute,
+      ['Kim ngắn chỉ giờ, kim dài chỉ phút.',`Đồng hồ chỉ ${hour} giờ ${minute} phút.`,`Số cần điền: ${askHour?hour:minute}.`],{hour,minute,askHour});
+  }
+  if(topic==='calendar'){
+    const month=R(1,12),days=[31,28,31,30,31,30,31,31,30,31,30,31][month-1],date=R(1,days-7),weekday=R(2,7);
+    const count=R(0,1)===1,answer=count?days:date+7;
+    return gMicroInput(skill,count?`Trong năm không nhuận, tháng ${month} có bao nhiêu ngày?`:`Thứ ${weekday} tuần này là ngày ${date} tháng ${month}. Thứ ${weekday} tuần sau là ngày mấy trong cùng tháng?`,answer,
+      [count?'Tháng 2 năm không nhuận có 28 ngày; tháng 4, 6, 9, 11 có 30 ngày; các tháng còn lại có 31 ngày.':'Một tuần có 7 ngày.',count?`Tháng ${month} có ${days} ngày.`:`${date} + 7 = ${answer}.`,`Đáp số: ${answer}.`],{month,date,count});
+  }
+  if(topic==='data'){
+    const values=Array.from({length:4},()=>R(2,30)),variant=R(0,2),position=R(0,3);
+    const table=`<table class="t"><tr><th>Nhóm</th><th>Số quyển sách</th></tr>${values.map((value,index)=>`<tr><td>${index+1}</td><td>${value}</td></tr>`).join('')}</table>`;
+    const answer=variant===0?values[position]:variant===1?values.reduce((sum,value)=>sum+value,0):Math.max(...values)-Math.min(...values);
+    const prompt=variant===0?`Nhóm ${position+1} có bao nhiêu quyển sách?`:variant===1?'Cả bốn nhóm có bao nhiêu quyển sách?':'Nhóm nhiều nhất hơn nhóm ít nhất bao nhiêu quyển sách?';
+    return gMicroInput(skill,table+prompt,answer,['Đọc số liệu đúng hàng và cột.',variant===0?`Nhóm ${position+1}: ${answer} quyển.`:variant===1?`${values.join(' + ')} = ${answer}.`:`${Math.max(...values)} − ${Math.min(...values)} = ${answer}.`,`Đáp số: ${answer} quyển.`],{values,variant,position});
+  }
+  if(topic==='chance'){
+    const red=R(0,9),blue=R(red?0:1,9),answer=red===0?2:blue===0?0:1,opts=['Chắc chắn','Có thể','Không thể'];
+    const question=gMicroInput(skill,`Hộp có ${red} thẻ đỏ và ${blue} thẻ xanh. Lấy ngẫu nhiên 1 thẻ: lấy được thẻ đỏ là việc thế nào?`,opts[answer],
+      [`Có ${red} thẻ đỏ trong ${red+blue} thẻ.`,red===0?'Không có thẻ đỏ.':blue===0?'Tất cả thẻ đều đỏ.':'Có cả thẻ đỏ và thẻ không đỏ.',`Kết luận: ${opts[answer]}.`],{red,blue});
+    return {...question,kind:'mc',opts,ansIdx:answer};
+  }
+  throw new Error('Unknown micro-skill topic: '+topic);
 }
 function gPrepareEnglish(questions){
   questions.forEach(question=>{question.inEnglish=false;question.translationViewed=false;question.mathRecorded=false;question.translationCounted=false;});
