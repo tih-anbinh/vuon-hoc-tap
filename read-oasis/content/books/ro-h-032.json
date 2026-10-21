@@ -1,0 +1,293 @@
+{
+  "schema_version": 1,
+  "revision": 1,
+  "status": "PUBLISHED",
+  "language": "en",
+  "genre": "fiction",
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": {
+    "text": "medium",
+    "conceptual": "medium",
+    "visual_support": "high"
+  },
+  "rights": {
+    "text_author": "GitHub Copilot (AI) for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG by GitHub Copilot (AI)",
+    "original": true
+  },
+  "book_id": "ro-h-032",
+  "title": "Mo's Quiet Turn",
+  "level": "H",
+  "reading_mode": "read_aloud",
+  "topic": "rainy day game",
+  "learning_objectives": [
+    "Explain why Mo stops guessing even though he knows the answer.",
+    "Connect Mo's wish to act with his idea of guessing objects."
+  ],
+  "parent_prompts": [
+    "Before reading: In a game where one friend acts and the other guesses, which job would you like to try first?",
+    "After page 4: Mo knows the answer but stays quiet. Why? Which words tell you what he wants?",
+    "After reading: Compare the first animal turn with the umbrella and teapot turns. What changes, and which rule stays the same?"
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "Rain taps the window. Sam wants a game without pieces, so he suggests guessing pretend animals.",
+      "image_alt": "Sam sits on a coral rug facing Mo, the round yellow bird, with open palms and rain on the window behind them.",
+      "vocabulary": [],
+      "image_asset": "images/ro-h-032-p01.svg",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Rain taps the window. Sam wants a game without pieces, so he suggests guessing pretend animals.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p02",
+      "text": "Sam explains the rules. One player acts without speaking, while the other watches and guesses aloud.",
+      "image_alt": "Sam points to himself and then toward Mo as the yellow bird looks up attentively from the rug.",
+      "vocabulary": [
+        {
+          "word": "rules",
+          "definition": "Instructions that tell you how to play.",
+          "example": "The rules say the actor must stay silent."
+        }
+      ],
+      "image_asset": "images/ro-h-032-p02.svg",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Sam explains the rules. One player acts without speaking, while the other watches and guesses aloud.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p03",
+      "text": "Sam bends his knees and makes a trunk with his arm. Mo guesses elephant. Next, Sam waddles like a penguin.",
+      "image_alt": "Sam bends his knees, raises one arm from his shoulder to his nose, then lets the forearm hang and curl like a trunk. Mo watches with an open beak.",
+      "vocabulary": [
+        {
+          "word": "trunk",
+          "definition": "An elephant's long nose.",
+          "example": "Sam makes an elephant trunk with his arm."
+        }
+      ],
+      "image_asset": "images/ro-h-032-p03.svg",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Sam bends his knees and makes a trunk with his arm. Mo guesses elephant. Next, Sam waddles like a penguin.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p04",
+      "text": "Mo knows the answer, but he stays quiet. He wants to act instead of always guessing.",
+      "image_alt": "Sam takes a short waddling step with bent knees, feet turned outward and arms held like short wings. Mo stands with a closed beak and one wing lifted.",
+      "vocabulary": [],
+      "image_asset": "images/ro-h-032-p04.svg",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Mo knows the answer, but he stays quiet. He wants to act instead of always guessing.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p05",
+      "text": "Mo points to himself, eager for a turn. Sam remembers the two jobs and invites Mo to act.",
+      "image_alt": "Sam kneels and holds out an inviting hand while Mo touches his own chest with one yellow wing.",
+      "vocabulary": [
+        {
+          "word": "invites",
+          "definition": "Asks someone to join in or do something.",
+          "example": "Sam invites Mo to take a turn."
+        }
+      ],
+      "image_asset": "images/ro-h-032-p05.svg",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Mo points to himself, eager for a turn. Sam remembers the two jobs and invites Mo to act.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p06",
+      "text": "Mo curves both wings above his head, then slowly opens them. This time, he is not an animal.",
+      "image_alt": "Mo raises his flexible yellow wings in a large rounded arch above his visible face, with their tips nearly meeting. Sam watches from the rug; there is no umbrella prop.",
+      "vocabulary": [
+        {
+          "word": "curves",
+          "definition": "Bends into a rounded shape.",
+          "example": "Mo curves a wing above his head."
+        }
+      ],
+      "image_asset": "images/ro-h-032-p06.svg",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Mo curves both wings above his head, then slowly opens them. This time, he is not an animal.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p07",
+      "text": "Sam guesses an umbrella opening. Mo nods, pleased that their animal game can include other things now.",
+      "image_alt": "Mo nods with a closed beak beneath a broad overhead arch made by his two yellow wings. Sam guesses aloud, gesturing toward the rain; no real umbrella is present.",
+      "vocabulary": [],
+      "image_asset": "images/ro-h-032-p07.svg",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Sam guesses an umbrella opening. Mo nods, pleased that their animal game can include other things now.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p08",
+      "text": "Now Sam bends like a teapot, making a handle and spout. Mo guesses, then takes another turn.",
+      "image_alt": "Sam bends his knees with one hand on his hip and that elbow out as a handle. His other arm forms a rising spout with a bent elbow and visible hand; his face stays clear while Mo guesses.",
+      "vocabulary": [],
+      "image_asset": "images/ro-h-032-p08.svg",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Now Sam bends like a teapot, making a handle and spout. Mo guesses, then takes another turn.",
+      "timing_segments": []
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "cause_effect",
+      "difficulty": "medium",
+      "prompt": "Why does Sam suggest an animal guessing game?",
+      "options": [
+        {
+          "id": "a",
+          "text": "He wants to play without pieces"
+        },
+        {
+          "id": "b",
+          "text": "The rain has spoiled his cards"
+        },
+        {
+          "id": "c",
+          "text": "Mo has asked to play it"
+        }
+      ],
+      "correct_option_id": "a",
+      "evidence_page_ids": [
+        "p01"
+      ],
+      "explanation": "Page 1 says Sam wants a game without pieces, so he suggests guessing pretend animals.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "cause_effect",
+      "difficulty": "medium",
+      "prompt": "Why does Mo stay quiet during the penguin turn?",
+      "options": [
+        {
+          "id": "a",
+          "text": "He needs a harder animal clue"
+        },
+        {
+          "id": "b",
+          "text": "He wants the rain to stop"
+        },
+        {
+          "id": "c",
+          "text": "He wants a turn at acting"
+        }
+      ],
+      "correct_option_id": "c",
+      "evidence_page_ids": [
+        "p02",
+        "p04"
+      ],
+      "explanation": "Page 2 gives acting and guessing as the two jobs. Page 4 says Mo knows the answer but wants to act instead of always guessing.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "inference",
+      "difficulty": "medium",
+      "prompt": "Which plan matches Mo's wish and new idea?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Taking acting turns and guessing only animals"
+        },
+        {
+          "id": "b",
+          "text": "Taking acting turns and guessing objects too"
+        },
+        {
+          "id": "c",
+          "text": "Only guessing and adding objects"
+        }
+      ],
+      "correct_option_id": "b",
+      "evidence_page_ids": [
+        "p04",
+        "p07"
+      ],
+      "explanation": "Page 4 says Mo wants to act instead of always guessing. Page 7 says he is pleased that the game can include other things, not just animals.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "expression",
+      "difficulty": "medium",
+      "response_type": "open",
+      "prompt": "Explain how Mo went from a quiet guesser to an actor with a new idea for the game.",
+      "evidence_page_ids": [
+        "p04",
+        "p05",
+        "p06",
+        "p07"
+      ],
+      "rubric": "not yet: names an animal without explaining Mo's quiet turn; with support: says Mo wanted to act and Sam let him, with prompting; independent: links Mo's wish to act, Sam's invitation, and Mo's umbrella idea that expands the game beyond animals",
+      "explanation": "Page 4 gives Mo's wish, page 5 gives Sam's invitation, and pages 6 and 7 show how Mo adds a new kind of thing to guess."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "prompt": "Arrange the changes in the rainy day game.",
+      "items": [
+        {
+          "id": "s1",
+          "text": "Sam suggests pretending to be animals.",
+          "page_id": "p01"
+        },
+        {
+          "id": "s2",
+          "text": "Mo stays quiet during the penguin turn.",
+          "page_id": "p04"
+        },
+        {
+          "id": "s3",
+          "text": "Sam invites Mo to act.",
+          "page_id": "p05"
+        },
+        {
+          "id": "s4",
+          "text": "Sam pretends to be a teapot.",
+          "page_id": "p08"
+        }
+      ],
+      "correct_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "discussion",
+      "skill": "listening_comprehension",
+      "prompts": [
+        "Would choosing another animal have given Mo what he wanted? Explain using his reason for being quiet.",
+        "Mo adds an umbrella to an animal game. What new category could you agree to add, and which rule must the actor still follow?"
+      ]
+    }
+  ],
+  "off_screen_prompt": "Play silent guessing with a partner. Each person acts one animal and one household object, swapping jobs after every guess, then invent a new category together.",
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-10-21T04:40:01.411Z",
+    "review_date": "2026-10-21",
+    "reviewer": "AI-authored by GitHub Copilot; independent editorial and visual AI reviews; final maintainer verification",
+    "approval_basis": "Maintainer auto-publication policy and explicit user request; parent veto remains available."
+  }
+}

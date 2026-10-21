@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-a-032",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "The Pretend Train",
+  "language": "en",
+  "level": "A",
+  "reading_mode": "shared_reading",
+  "topic": "play",
+  "genre": "fiction",
+  "learning_objectives": [
+    "Retell how Mo joins the pretend train ride.",
+    "Identify Sam wanting to hear waves and Mo wanting to sing with Sam."
+  ],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": {
+    "text": "low",
+    "conceptual": "low",
+    "visual_support": "high"
+  },
+  "rights": {
+    "text_author": "GitHub Copilot (AI-authored original) for Read Oasis",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG by GitHub Copilot (AI-generated)",
+    "original": true
+  },
+  "parent_prompts": [
+    "Before reading: Sam makes a train from chairs. Where could this pretend train go?",
+    "After page 3: Mo wants to sing with Sam. How could Sam include Mo in the train game?",
+    "After reading: Why does Sam stop before they go to the sea together?"
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "Sam makes a pretend train.",
+      "image_asset": "images/ro-a-032-p01.svg",
+      "image_alt": "Sam, in a blue shirt, pushes a yellow chair behind a red chair while Mo watches beside a blue rug and a small sea picture.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Sam makes a pretend train.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "pretend",
+          "definition": "To play as if something is real.",
+          "example": "We pretend a chair is a train."
+        }
+      ]
+    },
+    {
+      "page_id": "p02",
+      "text": "Sam wants to hear the waves.",
+      "image_asset": "images/ro-a-032-p02.svg",
+      "image_alt": "Sam sits on the front red chair and points toward the sea picture, while Mo stands beside the empty yellow chair.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Sam wants to hear the waves.",
+      "timing_segments": [],
+      "vocabulary": []
+    },
+    {
+      "page_id": "p03",
+      "text": "Mo wants to sing with Sam.",
+      "image_asset": "images/ro-a-032-p03.svg",
+      "image_alt": "Mo lifts a wing toward Sam on the front chair, with the empty yellow chair between them.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Mo wants to sing with Sam.",
+      "timing_segments": [],
+      "vocabulary": []
+    },
+    {
+      "page_id": "p04",
+      "text": "Sam stops the pretend train.",
+      "image_asset": "images/ro-a-032-p04.svg",
+      "image_alt": "Sam sits still on the red chair with both hands lowered onto his lap and knees while Mo waits on the floor beside the yellow chair.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Sam stops the pretend train.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "train",
+          "definition": "A line of carriages that moves on tracks.",
+          "example": "The train takes us to the sea."
+        }
+      ]
+    },
+    {
+      "page_id": "p05",
+      "text": "Mo sits down with Sam.",
+      "image_asset": "images/ro-a-032-p05.svg",
+      "image_alt": "Mo lands feet first on the yellow chair as Sam opens his arms in welcome from the red chair.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Mo sits down with Sam.",
+      "timing_segments": [],
+      "vocabulary": []
+    },
+    {
+      "page_id": "p06",
+      "text": "They go to the sea.",
+      "image_asset": "images/ro-a-032-p06.svg",
+      "image_alt": "Sam spreads his arms on the red chair and Mo sits on the yellow chair, with blue pretend waves curling along their rug.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "They go to the sea.",
+      "timing_segments": [],
+      "vocabulary": []
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "cause_effect",
+      "difficulty": "easy",
+      "prompt": "Why does Mo want to join Sam?",
+      "options": [
+        {
+          "id": "a",
+          "text": "To drive for him"
+        },
+        {
+          "id": "b",
+          "text": "To sing with him"
+        },
+        {
+          "id": "c",
+          "text": "To sleep beside him"
+        }
+      ],
+      "correct_option_id": "b",
+      "evidence_page_ids": [
+        "p03"
+      ],
+      "explanation": "Page 3 says Mo wants to sing with Sam. The words tell us his wish; the picture does not show what he wants to do.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "explicit_detail",
+      "difficulty": "easy",
+      "prompt": "What do Sam and Mo want to do?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Hear waves and sing"
+        },
+        {
+          "id": "b",
+          "text": "Hear waves and sleep"
+        },
+        {
+          "id": "c",
+          "text": "Hear bells and sing"
+        }
+      ],
+      "correct_option_id": "a",
+      "evidence_page_ids": [
+        "p02",
+        "p03"
+      ],
+      "explanation": "Page 2 says Sam wants to hear the waves. Page 3 says Mo wants to sing with Sam. We need both pages to know both wishes, which the pictures do not show.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "expression",
+      "difficulty": "easy",
+      "response_type": "open",
+      "prompt": "Tell how Mo gets a ride on the pretend train.",
+      "evidence_page_ids": [
+        "p03",
+        "p04",
+        "p05",
+        "p06"
+      ],
+      "rubric": "not yet: names Sam or the train without telling how Mo joins; with support: says Mo wants to sing with Sam and Sam stops, with prompting; independent: explains that Mo wants to sing with Sam, Sam stops, Mo sits down, and they go to the sea together.",
+      "explanation": "A retell connects Mo wanting to sing with Sam, Sam stopping, and their shared ride."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "prompt": "Put Mo joining the train ride in order.",
+      "items": [
+        {
+          "id": "want",
+          "text": "Mo wants to sing with Sam.",
+          "page_id": "p03"
+        },
+        {
+          "id": "stop",
+          "text": "Sam stops for Mo.",
+          "page_id": "p04"
+        },
+        {
+          "id": "ride",
+          "text": "They ride to the sea together.",
+          "page_id": "p06"
+        }
+      ],
+      "correct_order": [
+        "want",
+        "stop",
+        "ride"
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "discussion",
+      "skill": "expression",
+      "prompts": [
+        "What could Sam say to welcome Mo onto the pretend train?",
+        "If the train stops again, where could Sam and Mo pretend to go next?"
+      ]
+    }
+  ],
+  "off_screen_prompt": "Sit beside a grown-up and pretend to ride to the sea. Take turns stopping the train to welcome each other.",
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-10-21T04:40:01.411Z",
+    "review_date": "2026-10-21",
+    "reviewer": "AI-authored by GitHub Copilot; independent editorial and visual AI reviews; final maintainer verification",
+    "approval_basis": "Maintainer auto-publication policy and explicit user request; parent veto remains available."
+  }
+}

@@ -1,7 +1,7 @@
 {
   "index_version": 1,
   "generated_by": "tools/validate_content.py",
-  "content_hash": "e265b82a70a0",
+  "content_hash": "b0f52b6f19ea",
   "greetings": {},
   "books": [
     {
@@ -158,6 +158,28 @@
       ]
     },
     {
+      "book_id": "ro-a-032",
+      "revision": 1,
+      "file": "books/ro-a-032.json",
+      "title": "The Pretend Train",
+      "level": "A",
+      "reading_mode": "shared_reading",
+      "topic": "play",
+      "genre": "fiction",
+      "pages": 6,
+      "sha256": "003eb05ca01497d9e562dfcf7097b487e7d1b7267654ea7396964077088a9429",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
+      "assets": [
+        "images/ro-a-032-p01.svg",
+        "images/ro-a-032-p02.svg",
+        "images/ro-a-032-p03.svg",
+        "images/ro-a-032-p04.svg",
+        "images/ro-a-032-p05.svg",
+        "images/ro-a-032-p06.svg"
+      ]
+    },
+    {
       "book_id": "ro-b-001",
       "revision": 1,
       "file": "books/ro-b-001.json",
@@ -285,6 +307,28 @@
         "images/ro-b-032-p04.svg",
         "images/ro-b-032-p05.svg",
         "images/ro-b-032-p06.svg"
+      ]
+    },
+    {
+      "book_id": "ro-b-033",
+      "revision": 1,
+      "file": "books/ro-b-033.json",
+      "title": "A Dance for the Toys",
+      "level": "B",
+      "reading_mode": "shared_reading",
+      "topic": "music",
+      "genre": "fiction",
+      "pages": 6,
+      "sha256": "66587d209305c9505ae69a218c223080dae4d53074e876d8b51d44cec3016019",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
+      "assets": [
+        "images/ro-b-033-p01.svg",
+        "images/ro-b-033-p02.svg",
+        "images/ro-b-033-p03.svg",
+        "images/ro-b-033-p04.svg",
+        "images/ro-b-033-p05.svg",
+        "images/ro-b-033-p06.svg"
       ]
     },
     {
@@ -444,6 +488,28 @@
       ]
     },
     {
+      "book_id": "ro-c-033",
+      "revision": 1,
+      "file": "books/ro-c-033.json",
+      "title": "Room for Mo",
+      "level": "C",
+      "reading_mode": "shared_reading",
+      "topic": "indoor play",
+      "genre": "fiction",
+      "pages": 6,
+      "sha256": "3f84aacda460fcc6341b48f71abb15797f25a3953ea0d44d6c0e38e85adc09f9",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
+      "assets": [
+        "images/ro-c-033-p01.svg",
+        "images/ro-c-033-p02.svg",
+        "images/ro-c-033-p03.svg",
+        "images/ro-c-033-p04.svg",
+        "images/ro-c-033-p05.svg",
+        "images/ro-c-033-p06.svg"
+      ]
+    },
+    {
       "book_id": "ro-d-001",
       "revision": 1,
       "file": "books/ro-d-001.json",
@@ -535,6 +601,30 @@
       ]
     },
     {
+      "book_id": "ro-d-033",
+      "revision": 1,
+      "file": "books/ro-d-033.json",
+      "title": "The Windy Sock Show",
+      "level": "D",
+      "reading_mode": "independent_reading",
+      "topic": "weather and play",
+      "genre": "fiction",
+      "pages": 8,
+      "sha256": "69b1fcf70c192f553696525e61eb3c7a37f4c77eb0dec34b7139598d8e617257",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
+      "assets": [
+        "images/ro-d-033-p01.svg",
+        "images/ro-d-033-p02.svg",
+        "images/ro-d-033-p03.svg",
+        "images/ro-d-033-p04.svg",
+        "images/ro-d-033-p05.svg",
+        "images/ro-d-033-p06.svg",
+        "images/ro-d-033-p07.svg",
+        "images/ro-d-033-p08.svg"
+      ]
+    },
+    {
       "book_id": "ro-e-030",
       "revision": 1,
       "file": "books/ro-e-030.json",
@@ -607,6 +697,30 @@
       ]
     },
     {
+      "book_id": "ro-e-033",
+      "revision": 1,
+      "file": "books/ro-e-033.json",
+      "title": "A Ribbon for Grandma",
+      "level": "E",
+      "reading_mode": "independent_reading",
+      "topic": "family gifts",
+      "genre": "fiction",
+      "pages": 8,
+      "sha256": "616ca2cbe79f08a781aef0a3968cf792c9a4e0abe94e0f6b0d66d060b396486b",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
+      "assets": [
+        "images/ro-e-033-p01.svg",
+        "images/ro-e-033-p02.svg",
+        "images/ro-e-033-p03.svg",
+        "images/ro-e-033-p04.svg",
+        "images/ro-e-033-p05.svg",
+        "images/ro-e-033-p06.svg",
+        "images/ro-e-033-p07.svg",
+        "images/ro-e-033-p08.svg"
+      ]
+    },
+    {
       "book_id": "ro-f-030",
       "revision": 1,
       "file": "books/ro-f-030.json",
@@ -628,6 +742,30 @@
         "images/ro-f-030-p06.svg",
         "images/ro-f-030-p07.svg",
         "images/ro-f-030-p08.svg"
+      ]
+    },
+    {
+      "book_id": "ro-f-031",
+      "revision": 1,
+      "file": "books/ro-f-031.json",
+      "title": "The One-Boot Puzzle",
+      "level": "F",
+      "reading_mode": "independent_reading",
+      "topic": "patterns and play",
+      "genre": "fiction",
+      "pages": 8,
+      "sha256": "c236dcd17b08ab98bcfa9624f359cda25ceb7d4b51cafab21e20b282cc55814d",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
+      "assets": [
+        "images/ro-f-031-p01.svg",
+        "images/ro-f-031-p02.svg",
+        "images/ro-f-031-p03.svg",
+        "images/ro-f-031-p04.svg",
+        "images/ro-f-031-p05.svg",
+        "images/ro-f-031-p06.svg",
+        "images/ro-f-031-p07.svg",
+        "images/ro-f-031-p08.svg"
       ]
     },
     {
@@ -703,6 +841,30 @@
       ]
     },
     {
+      "book_id": "ro-g-033",
+      "revision": 1,
+      "file": "books/ro-g-033.json",
+      "title": "A Flower for the Shopkeeper",
+      "level": "G",
+      "reading_mode": "shared_reading",
+      "topic": "kindness at the market",
+      "genre": "fiction",
+      "pages": 8,
+      "sha256": "63531c2615f7fa29b471890829438e17f454803dcf328078c9b9200f483ba130",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
+      "assets": [
+        "images/ro-g-033-p01.svg",
+        "images/ro-g-033-p02.svg",
+        "images/ro-g-033-p03.svg",
+        "images/ro-g-033-p04.svg",
+        "images/ro-g-033-p05.svg",
+        "images/ro-g-033-p06.svg",
+        "images/ro-g-033-p07.svg",
+        "images/ro-g-033-p08.svg"
+      ]
+    },
+    {
       "book_id": "ro-h-030",
       "revision": 1,
       "file": "books/ro-h-030.json",
@@ -751,6 +913,30 @@
       ]
     },
     {
+      "book_id": "ro-h-032",
+      "revision": 1,
+      "file": "books/ro-h-032.json",
+      "title": "Mo's Quiet Turn",
+      "level": "H",
+      "reading_mode": "read_aloud",
+      "topic": "rainy day game",
+      "genre": "fiction",
+      "pages": 8,
+      "sha256": "0fef7e9d231da26ddc3f5aad98920c22c077c78f0b63c70623de3ab934f5248b",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
+      "assets": [
+        "images/ro-h-032-p01.svg",
+        "images/ro-h-032-p02.svg",
+        "images/ro-h-032-p03.svg",
+        "images/ro-h-032-p04.svg",
+        "images/ro-h-032-p05.svg",
+        "images/ro-h-032-p06.svg",
+        "images/ro-h-032-p07.svg",
+        "images/ro-h-032-p08.svg"
+      ]
+    },
+    {
       "book_id": "ro-i-030",
       "revision": 1,
       "file": "books/ro-i-030.json",
@@ -772,6 +958,30 @@
         "images/ro-i-030-p06.svg",
         "images/ro-i-030-p07.svg",
         "images/ro-i-030-p08.svg"
+      ]
+    },
+    {
+      "book_id": "ro-i-031",
+      "revision": 1,
+      "file": "books/ro-i-031.json",
+      "title": "The Missing Rustle",
+      "level": "I",
+      "reading_mode": "independent_reading",
+      "topic": "sounds and music",
+      "genre": "fiction",
+      "pages": 8,
+      "sha256": "d7a5b98b14b409c14b1dcd6ec48edb0bca8ee0ae719ccbf1b943243f9dc137f7",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
+      "assets": [
+        "images/ro-i-031-p01.svg",
+        "images/ro-i-031-p02.svg",
+        "images/ro-i-031-p03.svg",
+        "images/ro-i-031-p04.svg",
+        "images/ro-i-031-p05.svg",
+        "images/ro-i-031-p06.svg",
+        "images/ro-i-031-p07.svg",
+        "images/ro-i-031-p08.svg"
       ]
     },
     {
@@ -797,6 +1007,30 @@
         "images/ro-j-030-p07.svg",
         "images/ro-j-030-p08.svg",
         "images/ro-j-030-p09.svg"
+      ]
+    },
+    {
+      "book_id": "ro-j-031",
+      "revision": 1,
+      "file": "books/ro-j-031.json",
+      "title": "Sam Sails Through the Parade",
+      "level": "J",
+      "reading_mode": "independent_reading",
+      "topic": "making and pretending",
+      "genre": "fiction",
+      "pages": 8,
+      "sha256": "8b457f692e4e61deeccd5ca3eb957604658e07dd69f3f5d718d7fe7602178770",
+      "pair_id": null,
+      "reserved_for_unseen_check": false,
+      "assets": [
+        "images/ro-j-031-p01.svg",
+        "images/ro-j-031-p02.svg",
+        "images/ro-j-031-p03.svg",
+        "images/ro-j-031-p04.svg",
+        "images/ro-j-031-p05.svg",
+        "images/ro-j-031-p06.svg",
+        "images/ro-j-031-p07.svg",
+        "images/ro-j-031-p08.svg"
       ]
     },
     {

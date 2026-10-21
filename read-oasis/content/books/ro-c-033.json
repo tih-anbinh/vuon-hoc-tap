@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-c-033",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "Room for Mo",
+  "language": "en",
+  "level": "C",
+  "reading_mode": "shared_reading",
+  "topic": "indoor play",
+  "genre": "fiction",
+  "learning_objectives": [
+    "Retell how moving the pillow makes room to share stories in the tent.",
+    "Name the different stories Sam and Mo want to share."
+  ],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": {
+    "text": "low",
+    "conceptual": "low",
+    "visual_support": "high"
+  },
+  "rights": {
+    "text_author": "GitHub Copilot (AI-authored) for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
+  "parent_prompts": [
+    "Before reading: What might Sam use for an indoor camping game?",
+    "After page 4: Which story does each friend want to share?",
+    "After reading: How does moving the pillow help both friends get what they want?"
+  ],
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-10-21T04:40:01.411Z",
+    "review_date": "2026-10-21",
+    "reviewer": "AI-authored by GitHub Copilot; independent editorial and visual AI reviews; final maintainer verification",
+    "approval_basis": "Maintainer auto-publication policy and explicit user request; parent veto remains available."
+  },
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "Sam makes a tent in the room.",
+      "image_asset": "images/ro-c-033-p01.svg",
+      "image_alt": "Sam, a dark-haired child in a blue shirt, holds the cloth of a small indoor tent while Mo watches.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Sam makes a tent in the room.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "tent",
+          "definition": "A cloth shelter with space inside.",
+          "example": "Sam sits inside the cloth tent."
+        }
+      ]
+    },
+    {
+      "page_id": "p02",
+      "text": "Sam wants to tell a space story.",
+      "image_asset": "images/ro-c-033-p02.svg",
+      "image_alt": "Sam kneels beside the indoor tent with one hand raised. Mo stands with both feet on the rug, waiting outside. A large pink pillow occupies the tent floor.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Sam wants to tell a space story.",
+      "timing_segments": [],
+      "vocabulary": []
+    },
+    {
+      "page_id": "p03",
+      "text": "The big pillow fills the little tent.",
+      "image_asset": "images/ro-c-033-p03.svg",
+      "image_alt": "The same large pink pillow crowds the tent floor while Sam kneels nearby and Mo stands waiting on the rug.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "The big pillow fills the little tent.",
+      "timing_segments": [],
+      "vocabulary": []
+    },
+    {
+      "page_id": "p04",
+      "text": "Mo waits to share a forest story.",
+      "image_asset": "images/ro-c-033-p04.svg",
+      "image_alt": "Mo stands facing Sam beside the tent, with the same pink pillow still taking up space inside.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Mo waits to share a forest story.",
+      "timing_segments": [],
+      "vocabulary": []
+    },
+    {
+      "page_id": "p05",
+      "text": "Sam puts the pillow by the door.",
+      "image_asset": "images/ro-c-033-p05.svg",
+      "image_alt": "Sam kneels with both hands on the pink pillow beside the closed room door, leaving the tent opening clear.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Sam puts the pillow by the door.",
+      "timing_segments": [],
+      "vocabulary": []
+    },
+    {
+      "page_id": "p06",
+      "text": "Inside the tent, they share both stories.",
+      "image_asset": "images/ro-c-033-p06.svg",
+      "image_alt": "Sam kneels at his usual size inside the open cloth tent, with Mo beside him in the space freed by the pillow. The same large pink pillow rests beside the room door.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Inside the tent, they share both stories.",
+      "timing_segments": [],
+      "vocabulary": []
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "cause_effect",
+      "difficulty": "easy",
+      "prompt": "Why does Sam want Mo beside him?",
+      "options": [
+        {
+          "id": "a",
+          "text": "To hear Mo's space story"
+        },
+        {
+          "id": "b",
+          "text": "To tell Mo his space story"
+        },
+        {
+          "id": "c",
+          "text": "To tell Mo his sea story"
+        }
+      ],
+      "correct_option_id": "b",
+      "evidence_page_ids": [
+        "p02",
+        "p06"
+      ],
+      "explanation": "Sam wants to tell a space story on page 2. They share both stories inside the tent on page 6, so making room gives Sam someone to tell his story to.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "explicit_detail",
+      "difficulty": "easy",
+      "prompt": "Which stories do they want to share?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A space story and a forest story"
+        },
+        {
+          "id": "b",
+          "text": "A space story and a sea story"
+        },
+        {
+          "id": "c",
+          "text": "A forest story and a sea story"
+        }
+      ],
+      "correct_option_id": "a",
+      "evidence_page_ids": [
+        "p02",
+        "p04"
+      ],
+      "explanation": "Sam wants to tell a space story on page 2. Mo waits to share a forest story on page 4.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "expression",
+      "difficulty": "easy",
+      "response_type": "open",
+      "prompt": "Tell how Sam makes room for Mo to share stories.",
+      "rubric": "not yet: names only the tent or pillow; with support: says Sam moves the pillow by the door after a prompt; independent: connects the crowded tent, moving the pillow, and making room for Sam's space story and Mo's forest story inside",
+      "evidence_page_ids": [
+        "p02",
+        "p03",
+        "p04",
+        "p05",
+        "p06"
+      ],
+      "explanation": "The retell should connect both friends' story wishes with moving the pillow and sharing the tent."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "prompt": "Put the tent and story sharing in order.",
+      "items": [
+        {
+          "id": "s1",
+          "text": "Sam builds a cloth tent.",
+          "page_id": "p01"
+        },
+        {
+          "id": "s2",
+          "text": "Mo waits to share a forest story.",
+          "page_id": "p04"
+        },
+        {
+          "id": "s3",
+          "text": "Sam and Mo share both stories inside.",
+          "page_id": "p06"
+        }
+      ],
+      "correct_order": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "discussion",
+      "skill": "listening_comprehension",
+      "prompts": [
+        "What does each friend want to share? Use the words on pages 2 and 4.",
+        "How does moving the pillow help both friends?"
+      ]
+    }
+  ],
+  "off_screen_prompt": "Draw Sam and Mo inside the tent and the pillow by the door. Tell someone which story each friend wants to share and why Sam moves the pillow."
+}

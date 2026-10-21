@@ -1,0 +1,288 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-f-031",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "The One-Boot Puzzle",
+  "language": "en",
+  "level": "F",
+  "reading_mode": "independent_reading",
+  "topic": "patterns and play",
+  "genre": "fiction",
+  "learning_objectives": [
+    "Use matching marks as a clue, then check a guess by watching how prints are made.",
+    "Compare whom Grandma and Sam each plan a stepping game for."
+  ],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": {
+    "text": "low",
+    "conceptual": "medium",
+    "visual_support": "high"
+  },
+  "rights": {
+    "text_author": "GitHub Copilot (AI) for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG by GitHub Copilot (AI)",
+    "original": true
+  },
+  "parent_prompts": [
+    "Before reading: What might make a row of boot prints without anyone walking in those boots?",
+    "After page 4: Why does Sam think a nick might explain the matching gaps in the big prints?",
+    "After reading: How does Sam turn the answer to the puzzle into something for Mo?"
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "Sam found footprints in Grandma's smooth sand patch. Each mark showed the bottom of a big boot.",
+      "image_asset": "images/ro-f-031-p01.svg",
+      "image_alt": "Sam crouches low, leaning over to inspect a row of boot prints in smooth sand while Mo watches.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Sam found footprints in Grandma's smooth sand patch. Each mark showed the bottom of a big boot.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "footprints",
+          "definition": "Marks left where feet or boots press down.",
+          "example": "The footprints show where a boot touched the sand."
+        }
+      ]
+    },
+    {
+      "page_id": "p02",
+      "text": "A trail of marks curved around an empty flowerpot. Sam wondered why the prints made two circles.",
+      "image_asset": "images/ro-f-031-p02.svg",
+      "image_alt": "Two rings of boot prints surround an empty flowerpot as Sam and Mo look down at them.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "A trail of marks curved around an empty flowerpot. Sam wondered why the prints made two circles.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "trail",
+          "definition": "A line of marks that you can follow.",
+          "example": "The trail bends around the flowerpot."
+        }
+      ]
+    },
+    {
+      "page_id": "p03",
+      "text": "Sam made two prints beside the trail. His left and right boots made different shapes in the sand.",
+      "image_asset": "images/ro-f-031-p03.svg",
+      "image_alt": "Sam steps beside the large boot prints, leaving a left and right pair of smaller prints.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Sam made two prints beside the trail. His left and right boots made different shapes in the sand.",
+      "timing_segments": [],
+      "vocabulary": []
+    },
+    {
+      "page_id": "p04",
+      "text": "Each big print had the same little gap. Sam wondered if a nick in a boot had made it.",
+      "image_asset": "images/ro-f-031-p04.svg",
+      "image_alt": "Sam points to matching notches on two large boot prints in the sand.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Each big print had the same little gap. Sam wondered if a nick in a boot had made it.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "nick",
+          "definition": "A small cut in an edge.",
+          "example": "The nick leaves a gap in the boot print."
+        }
+      ]
+    },
+    {
+      "page_id": "p05",
+      "text": "Sam guessed that one boot had made the big prints. He asked Grandma how one boot could walk alone.",
+      "image_asset": "images/ro-f-031-p05.svg",
+      "image_alt": "Sam gestures toward the boot prints while Grandma listens beside the sand patch.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Sam guessed that one boot had made the big prints. He asked Grandma how one boot could walk alone.",
+      "timing_segments": [],
+      "vocabulary": []
+    },
+    {
+      "page_id": "p06",
+      "text": "Grandma lifted an empty boot from behind the flowerpot. She pressed it into the sand with both hands.",
+      "image_asset": "images/ro-f-031-p06.svg",
+      "image_alt": "Grandma grips a purple boot with both hands, pressing its notched sole onto the sand in a fresh print beside the flowerpot.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Grandma lifted an empty boot from behind the flowerpot. She pressed it into the sand with both hands.",
+      "timing_segments": [],
+      "vocabulary": []
+    },
+    {
+      "page_id": "p07",
+      "text": "Grandma had made a stepping game for Sam. The two circles gave him a longer path to follow.",
+      "image_asset": "images/ro-f-031-p07.svg",
+      "image_alt": "Grandma gestures along the two rings of boot prints while Sam stands ready at the start.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Grandma had made a stepping game for Sam. The two circles gave him a longer path to follow.",
+      "timing_segments": [],
+      "vocabulary": []
+    },
+    {
+      "page_id": "p08",
+      "text": "Mo wanted a turn after Sam finished. Sam used a toy boot to stamp a tiny trail.",
+      "image_asset": "images/ro-f-031-p08.svg",
+      "image_alt": "Sam grips a small blue toy boot against the sand at the end of a matching tiny trail while Mo claps.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Mo wanted a turn after Sam finished. Sam used a toy boot to stamp a tiny trail.",
+      "timing_segments": [],
+      "vocabulary": []
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "inference",
+      "difficulty": "medium",
+      "prompt": "Why did Sam ask how one boot could walk?",
+      "options": [
+        {
+          "id": "a",
+          "text": "To check his guess about the prints"
+        },
+        {
+          "id": "b",
+          "text": "To ask Grandma to teach him hopping"
+        },
+        {
+          "id": "c",
+          "text": "To ask for boots in his size"
+        }
+      ],
+      "correct_option_id": "a",
+      "evidence_page_ids": [
+        "p04",
+        "p05"
+      ],
+      "explanation": "Page 4 gives the matching gaps in the big prints as a clue. Page 5 says Sam guessed one boot made the big prints and asked Grandma how, suggesting he wanted to check his guess.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "inference",
+      "difficulty": "medium",
+      "prompt": "What do Grandma's trail and Sam's trail show about their plans?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Each makes a game for Grandma"
+        },
+        {
+          "id": "b",
+          "text": "Each makes a game for someone else"
+        },
+        {
+          "id": "c",
+          "text": "Each makes a game for both at once"
+        }
+      ],
+      "correct_option_id": "b",
+      "evidence_page_ids": [
+        "p07",
+        "p08"
+      ],
+      "explanation": "Page 7 says Grandma made a stepping game for Sam. Page 8 says Mo wanted a turn and Sam made a tiny trail with a toy boot, so each planned a game for someone else.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "cause_effect",
+      "difficulty": "medium",
+      "prompt": "What made Sam decide to stamp another trail?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Grandma wanted him to start again"
+        },
+        {
+          "id": "b",
+          "text": "Sam wanted to practise making circles"
+        },
+        {
+          "id": "c",
+          "text": "Mo wanted to play next"
+        }
+      ],
+      "correct_option_id": "c",
+      "evidence_page_ids": [
+        "p07",
+        "p08"
+      ],
+      "explanation": "Page 7 says the first stepping game was for Sam. Page 8 says Mo wanted a turn after Sam finished, which explains why Sam made the next trail for him.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "expression",
+      "difficulty": "medium",
+      "response_type": "open",
+      "prompt": "Tell how Sam's one-boot guess turned out to be right, and what the trail was for.",
+      "rubric": "not yet: names a boot or a print without explaining the puzzle; with support: links the matching gaps to a possible boot nick or names the stepping game after a prompt; independent: connects the matching big prints as a clue with seeing Grandma stamp one empty boot and explains that two circles make a longer stepping game for Sam",
+      "evidence_page_ids": [
+        "p04",
+        "p05",
+        "p06",
+        "p07"
+      ],
+      "explanation": "Pages 4 and 5 give Sam's clue and guess; pages 6 and 7 reveal Grandma's method and the purpose of her trail."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "prompt": "Put these events in story order.",
+      "items": [
+        {
+          "id": "s1",
+          "text": "Sam finds big boot prints in the sand.",
+          "page_id": "p01"
+        },
+        {
+          "id": "s2",
+          "text": "Sam tries making prints with his own boots.",
+          "page_id": "p03"
+        },
+        {
+          "id": "s3",
+          "text": "Grandma presses an empty boot into the sand.",
+          "page_id": "p06"
+        },
+        {
+          "id": "s4",
+          "text": "Sam stamps a tiny trail for Mo with a toy boot.",
+          "page_id": "p08"
+        }
+      ],
+      "correct_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "discussion",
+      "skill": "expression",
+      "prompts": [
+        "Which would help you test the one-boot guess: the shape of each print or the number of circles, and why?",
+        "How could Sam change his little trail to give Mo a longer stepping game?"
+      ]
+    }
+  ],
+  "off_screen_prompt": "Trace a spoon to make a trail for someone else. Explain how your plan is like Grandma's and Sam's.",
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-10-21T04:40:01.411Z",
+    "review_date": "2026-10-21",
+    "reviewer": "AI-authored by GitHub Copilot; independent editorial and visual AI reviews; final maintainer verification",
+    "approval_basis": "Maintainer auto-publication policy and explicit user request; parent veto remains available."
+  }
+}

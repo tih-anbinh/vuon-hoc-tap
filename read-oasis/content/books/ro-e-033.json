@@ -1,0 +1,287 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-e-033",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "A Ribbon for Grandma",
+  "language": "en",
+  "level": "E",
+  "reading_mode": "independent_reading",
+  "topic": "family gifts",
+  "genre": "fiction",
+  "learning_objectives": [
+    "Connect a noticed difficulty with a thoughtful gift.",
+    "Compare searching for a place with finding it using a bookmark."
+  ],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": {
+    "text": "low",
+    "conceptual": "medium",
+    "visual_support": "high"
+  },
+  "rights": {
+    "text_author": "GitHub Copilot (AI) for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG by GitHub Copilot (AI)",
+    "original": true
+  },
+  "parent_prompts": [
+    "Before reading: What could help Grandma pause a story and return to it later?",
+    "After page 5: Why does Sam want the bead to stay on the ribbon?",
+    "After reading: How did Sam's small birthday gift help Grandma share a story with him?"
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "Grandma loved reading stories beside her window. Sam wanted to make a gift for her birthday.",
+      "image_asset": "images/ro-e-033-p01.svg",
+      "image_alt": "Sam smiles at Grandma reading in a chair beside the window and a vase of flowers.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Grandma loved reading stories beside her window. Sam wanted to make a gift for her birthday.",
+      "timing_segments": [],
+      "vocabulary": []
+    },
+    {
+      "page_id": "p02",
+      "text": "She stopped reading when her tea was ready. Later, she searched the pages but could not find her place.",
+      "image_asset": "images/ro-e-033-p02.svg",
+      "image_alt": "Grandma frowns in puzzlement and lifts a page to search her open book beside a cup of tea.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "She stopped reading when her tea was ready. Later, she searched the pages but could not find her place.",
+      "timing_segments": [],
+      "vocabulary": []
+    },
+    {
+      "page_id": "p03",
+      "text": "Sam chose a ribbon, a long strip of cloth. It could stay between the pages of Grandma's book.",
+      "image_asset": "images/ro-e-033-p03.svg",
+      "image_alt": "Sam holds a long yellow ribbon above an open book while Mo watches from the table.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Sam chose a ribbon, a long strip of cloth. It could stay between the pages of Grandma's book.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "ribbon",
+          "definition": "A long, narrow strip of cloth.",
+          "example": "A yellow ribbon lies across the open book."
+        }
+      ]
+    },
+    {
+      "page_id": "p04",
+      "text": "He slipped one end through a shiny bead. This small piece had a hole through its middle.",
+      "image_asset": "images/ro-e-033-p04.svg",
+      "image_alt": "Sam holds the ribbon ends apart, threading the yellow ribbon through a clearly visible hole in a turquoise bead.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "He slipped one end through a shiny bead. This small piece had a hole through its middle.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "bead",
+          "definition": "A small piece with a hole for threading.",
+          "example": "Sam puts the ribbon through a bead."
+        }
+      ]
+    },
+    {
+      "page_id": "p05",
+      "text": "Sam tied a thick knot just below the bead. Now the bead could not slide off that end.",
+      "image_asset": "images/ro-e-033-p05.svg",
+      "image_alt": "A long yellow bookmark ribbon rests across the table, with a thick stopper knot below its bead, wider than the hole.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Sam tied a thick knot just below the bead. Now the bead could not slide off that end.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "knot",
+          "definition": "A tied part of string or ribbon.",
+          "example": "The knot stops the bead from slipping off."
+        }
+      ]
+    },
+    {
+      "page_id": "p06",
+      "text": "Grandma opened her gift and smiled at Sam. She tucked the ribbon inside her book before making tea.",
+      "image_asset": "images/ro-e-033-p06.svg",
+      "image_alt": "Grandma places the yellow ribbon in her book as Sam stands beside the open gift box.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Grandma opened her gift and smiled at Sam. She tucked the ribbon inside her book before making tea.",
+      "timing_segments": [],
+      "vocabulary": []
+    },
+    {
+      "page_id": "p07",
+      "text": "After tea, Grandma lifted the bead and opened her book. There was the place where she had stopped.",
+      "image_asset": "images/ro-e-033-p07.svg",
+      "image_alt": "Grandma holds the bead above her open book with an empty tea cup beside her.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "After tea, Grandma lifted the bead and opened her book. There was the place where she had stopped.",
+      "timing_segments": [],
+      "vocabulary": []
+    },
+    {
+      "page_id": "p08",
+      "text": "Grandma read the next part of her story aloud. Sam and Mo listened beside her birthday flowers.",
+      "image_asset": "images/ro-e-033-p08.svg",
+      "image_alt": "Grandma reads to Sam and Mo beside a vase of bright birthday flowers.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Grandma read the next part of her story aloud. Sam and Mo listened beside her birthday flowers.",
+      "timing_segments": [],
+      "vocabulary": []
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "sequence",
+      "difficulty": "medium",
+      "prompt": "When did Grandma put the ribbon inside her book?",
+      "options": [
+        {
+          "id": "a",
+          "text": "After tea, before finding her place"
+        },
+        {
+          "id": "b",
+          "text": "Before making tea"
+        },
+        {
+          "id": "c",
+          "text": "After reading the next part aloud"
+        }
+      ],
+      "correct_option_id": "b",
+      "evidence_page_ids": [
+        "p06"
+      ],
+      "explanation": "Page 6 says Grandma tucked the ribbon inside her book before making tea.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "compare",
+      "difficulty": "medium",
+      "prompt": "How did Grandma's return to reading change?",
+      "options": [
+        {
+          "id": "a",
+          "text": "From finding her place to searching"
+        },
+        {
+          "id": "b",
+          "text": "From reading aloud to reading silently"
+        },
+        {
+          "id": "c",
+          "text": "From searching to finding her place"
+        }
+      ],
+      "correct_option_id": "c",
+      "evidence_page_ids": [
+        "p02",
+        "p07"
+      ],
+      "explanation": "Page 2 says Grandma searched but could not find her place. Page 7 says she opened her book at the place where she had stopped.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "inference",
+      "difficulty": "medium",
+      "prompt": "What mattered to Sam when choosing a birthday gift?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Helping with Grandma's reading"
+        },
+        {
+          "id": "b",
+          "text": "Matching the colour of her flowers"
+        },
+        {
+          "id": "c",
+          "text": "Making the biggest birthday present"
+        }
+      ],
+      "correct_option_id": "a",
+      "evidence_page_ids": [
+        "p01",
+        "p02",
+        "p07"
+      ],
+      "explanation": "Page 1 says Sam wants a gift for Grandma. Her unsuccessful search on page 2 and the successful return on page 7 show that his gift helps her reading.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "expression",
+      "difficulty": "medium",
+      "response_type": "open",
+      "prompt": "Explain how Sam's ribbon helped Grandma enjoy her book after tea.",
+      "rubric": "not yet: names the ribbon without linking it to reading; with support: says the ribbon kept a page when prompted about tea; independent: connects the unsuccessful search, the ribbon left in the book, and Grandma finding her place after tea",
+      "evidence_page_ids": [
+        "p02",
+        "p06",
+        "p07"
+      ],
+      "explanation": "The retell should link the difficulty on page 2 with the ribbon on page 6 and its useful result on page 7."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "prompt": "Put these events in story order.",
+      "items": [
+        {
+          "id": "s1",
+          "text": "Grandma searches but cannot find her place.",
+          "page_id": "p02"
+        },
+        {
+          "id": "s2",
+          "text": "Sam threads a bead onto the ribbon.",
+          "page_id": "p04"
+        },
+        {
+          "id": "s3",
+          "text": "Grandma puts the ribbon in her book.",
+          "page_id": "p06"
+        },
+        {
+          "id": "s4",
+          "text": "Grandma finds her place after tea.",
+          "page_id": "p07"
+        }
+      ],
+      "correct_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "discussion",
+      "skill": "expression",
+      "prompts": [
+        "What does Sam notice about Grandma that helps him choose her gift?",
+        "How would the ending change if Grandma left the ribbon in its gift box?"
+      ]
+    }
+  ],
+  "off_screen_prompt": "Place a strip of paper inside a book, close it, and find that page again with a grown-up. Explain how this is like Sam and Grandma with the ribbon.",
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-10-21T04:40:01.411Z",
+    "review_date": "2026-10-21",
+    "reviewer": "AI-authored by GitHub Copilot; independent editorial and visual AI reviews; final maintainer verification",
+    "approval_basis": "Maintainer auto-publication policy and explicit user request; parent veto remains available."
+  }
+}

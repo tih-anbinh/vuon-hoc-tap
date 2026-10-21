@@ -1,0 +1,295 @@
+{
+  "schema_version": 1,
+  "revision": 1,
+  "status": "PUBLISHED",
+  "language": "en",
+  "genre": "fiction",
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": {
+    "text": "medium",
+    "conceptual": "medium",
+    "visual_support": "high"
+  },
+  "rights": {
+    "text_author": "GitHub Copilot (AI) for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG by GitHub Copilot (AI)",
+    "original": true
+  },
+  "book_id": "ro-g-033",
+  "title": "A Flower for the Shopkeeper",
+  "level": "G",
+  "reading_mode": "shared_reading",
+  "topic": "kindness at the market",
+  "learning_objectives": [
+    "Explain the reasons for Sam and Grandma's small acts of kindness.",
+    "Compare the two uses of paper bags in the story."
+  ],
+  "parent_prompts": [
+    "Before reading: The title names a gift for a shopkeeper. What could someone want to thank a shopkeeper for?",
+    "After page 5: Why does Grandma want to buy a flower? How is her reason different from Sam's reason for holding the bag?",
+    "After reading: Compare the bag carrying tomatoes with the bag decorating the jar. What holds the flower and water? Why is Sam glad?"
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "Sam and Grandma visit the market for tomatoes. Colorful awnings shade the stalls, including one selling flowers.",
+      "image_alt": "Sam in a blue shirt walks with Grandma toward a tomato stall under a red awning, beside flowers under a green awning.",
+      "vocabulary": [
+        {
+          "word": "awnings",
+          "definition": "Covers above stalls that give shade.",
+          "example": "We stand under the awnings beside the stalls."
+        }
+      ],
+      "image_asset": "images/ro-g-033-p01.svg",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Sam and Grandma visit the market for tomatoes. Colorful awnings shade the stalls, including one selling flowers.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p02",
+      "text": "The shopkeeper weighs their tomatoes on a scale. She needs both hands, but the paper bag keeps closing.",
+      "image_alt": "The shopkeeper holds a bowl of tomatoes with both hands over a scale while Sam watches a folded paper bag on the counter.",
+      "vocabulary": [
+        {
+          "word": "scale",
+          "definition": "A tool that shows how heavy something is.",
+          "example": "The shopkeeper puts the tomatoes on the scale."
+        }
+      ],
+      "image_asset": "images/ro-g-033-p02.svg",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "The shopkeeper weighs their tomatoes on a scale. She needs both hands, but the paper bag keeps closing.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p03",
+      "text": "Sam wants to help. He asks to hold the tomato bag open, and the shopkeeper says yes.",
+      "image_alt": "Sam raises an open hand toward the folded bag as the shopkeeper turns to him and nods beside the tomatoes.",
+      "vocabulary": [],
+      "image_asset": "images/ro-g-033-p03.svg",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Sam wants to help. He asks to hold the tomato bag open, and the shopkeeper says yes.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p04",
+      "text": "Sam grips both sides of the bag while the shopkeeper tips their tomatoes inside. She thanks him.",
+      "image_alt": "Sam holds both edges of an open paper bag while the shopkeeper tips tomatoes from a bowl into it.",
+      "vocabulary": [
+        {
+          "word": "grips",
+          "definition": "Holds something firmly with a hand.",
+          "example": "Sam grips the bag so it stays open."
+        }
+      ],
+      "image_asset": "images/ro-g-033-p04.svg",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Sam grips both sides of the bag while the shopkeeper tips their tomatoes inside. She thanks him.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p05",
+      "text": "Grandma pauses beside the flowers after paying. She wants to thank the shopkeeper for saving her favorite tomatoes every visit.",
+      "image_alt": "Grandma pauses beside buckets of colorful flowers while Sam carries the filled tomato bag next to her.",
+      "vocabulary": [],
+      "image_asset": "images/ro-g-033-p05.svg",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Grandma pauses beside the flowers after paying. She wants to thank the shopkeeper for saving her favorite tomatoes every visit.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p06",
+      "text": "Grandma buys a flower with yellow petals. Where will the shopkeeper put it? Sam carries their surprise back.",
+      "image_alt": "Sam carries a large yellow flower by its stem toward the tomato stall while Grandma follows with the paper bag.",
+      "vocabulary": [
+        {
+          "word": "petals",
+          "definition": "The colorful parts around the middle of a flower.",
+          "example": "The flower has yellow petals around its middle."
+        }
+      ],
+      "image_asset": "images/ro-g-033-p06.svg",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Grandma buys a flower with yellow petals. Where will the shopkeeper put it? Sam carries their surprise back.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p07",
+      "text": "The shopkeeper puts the flower in a jar of water. Sam wraps a spare paper bag around the jar.",
+      "image_alt": "Sam wraps a paper bag around the bottom of a wide glass jar resting flat on the counter. Water and the flower stem remain visible above the wrapper as the shopkeeper watches.",
+      "vocabulary": [],
+      "image_asset": "images/ro-g-033-p07.svg",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "The shopkeeper puts the flower in a jar of water. Sam wraps a spare paper bag around the jar.",
+      "timing_segments": []
+    },
+    {
+      "page_id": "p08",
+      "text": "The flower stands in the jar beside the scale. Sam smiles because the shopkeeper can enjoy their gift.",
+      "image_alt": "The yellow flower stands in a wide jar resting flat beside the scale, with blue water visible above a paper bag wrapper. The shopkeeper waves as Sam leaves smiling with Grandma.",
+      "vocabulary": [],
+      "image_asset": "images/ro-g-033-p08.svg",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "The flower stands in the jar beside the scale. Sam smiles because the shopkeeper can enjoy their gift.",
+      "timing_segments": []
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "compare",
+      "difficulty": "medium",
+      "prompt": "How are Sam's and Grandma's reasons different?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Sam thanks her; Grandma needs help"
+        },
+        {
+          "id": "b",
+          "text": "Sam helps; Grandma thanks past kindness"
+        },
+        {
+          "id": "c",
+          "text": "Both thank her for today's packing"
+        }
+      ],
+      "correct_option_id": "b",
+      "evidence_page_ids": [
+        "p03",
+        "p05"
+      ],
+      "explanation": "Page 3 says Sam wants to help with packing now. Page 5 says Grandma wants to thank the shopkeeper for saving her favorite tomatoes every visit.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "inference",
+      "difficulty": "medium",
+      "prompt": "Why does Sam carry a flower back after shopping?",
+      "options": [
+        {
+          "id": "a",
+          "text": "To ask for another bag"
+        },
+        {
+          "id": "b",
+          "text": "To trade it for more tomatoes"
+        },
+        {
+          "id": "c",
+          "text": "To deliver Grandma's thanks"
+        }
+      ],
+      "correct_option_id": "c",
+      "evidence_page_ids": [
+        "p05",
+        "p06"
+      ],
+      "explanation": "Page 5 says Grandma wants to thank the shopkeeper for saving her favorite tomatoes. On page 6, Grandma buys the flower and Sam carries it back.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "inference",
+      "difficulty": "medium",
+      "prompt": "Why does Grandma's gift belong in this story?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It returns kindness from earlier visits"
+        },
+        {
+          "id": "b",
+          "text": "It pays for today's tomatoes"
+        },
+        {
+          "id": "c",
+          "text": "It thanks Sam for holding the bag"
+        }
+      ],
+      "correct_option_id": "a",
+      "evidence_page_ids": [
+        "p05",
+        "p06",
+        "p08"
+      ],
+      "explanation": "Grandma remembers the shopkeeper saving her favorite tomatoes on every visit (page 5), buys a flower (page 6), and leaves a gift the shopkeeper can enjoy (page 8). The gift returns earlier kindness.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "expression",
+      "difficulty": "medium",
+      "response_type": "open",
+      "prompt": "Compare the bag carrying tomatoes with the bag around the jar. Why does Sam smile when he leaves?",
+      "evidence_page_ids": [
+        "p03",
+        "p04",
+        "p07",
+        "p08"
+      ],
+      "rubric": "not yet: names the tomatoes or flower without explaining either bag use; with support: describes a bag carrying tomatoes or decorating the jar; independent: contrasts carrying tomatoes with decorating the water jar, identifies the jar as the flower holder, and connects Sam's smile to the shopkeeper enjoying their gift",
+      "explanation": "Pages 3 and 4 show a bag holding tomatoes for carrying. On page 7, another bag decorates a jar; the jar holds the water and flower. Page 8 says Sam is glad the shopkeeper can enjoy their gift."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "prompt": "Put the helping and thanking moments in story order.",
+      "items": [
+        {
+          "id": "s1",
+          "text": "The shopkeeper weighs the tomatoes.",
+          "page_id": "p02"
+        },
+        {
+          "id": "s2",
+          "text": "Sam holds the bag open.",
+          "page_id": "p04"
+        },
+        {
+          "id": "s3",
+          "text": "Grandma buys a flower.",
+          "page_id": "p06"
+        },
+        {
+          "id": "s4",
+          "text": "Sam wraps a paper bag around the jar.",
+          "page_id": "p07"
+        }
+      ],
+      "correct_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "discussion",
+      "skill": "listening_comprehension",
+      "prompts": [
+        "Grandma remembers the tomatoes the shopkeeper saves. How can remembering a kindness change what someone does next?",
+        "What earlier kindness might the shopkeeper remember when she sees the flower in its decorated jar? Use an event from the book."
+      ]
+    }
+  ],
+  "off_screen_prompt": "Make a pretend market with three household objects. Take turns being a shopper and shopkeeper, and invent a small thank you for something your partner does.",
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-10-21T04:40:01.411Z",
+    "review_date": "2026-10-21",
+    "reviewer": "AI-authored by GitHub Copilot; independent editorial and visual AI reviews; final maintainer verification",
+    "approval_basis": "Maintainer auto-publication policy and explicit user request; parent veto remains available."
+  }
+}

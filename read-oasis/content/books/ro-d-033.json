@@ -1,0 +1,299 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-d-033",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "The Windy Sock Show",
+  "language": "en",
+  "level": "D",
+  "reading_mode": "independent_reading",
+  "topic": "weather and play",
+  "genre": "fiction",
+  "learning_objectives": [
+    "Explain how Sam keeps his promise to Grandma despite the missing socks.",
+    "Infer what the puppets will tell Grandma from the windy sheet and Sam's plan.",
+    "Explain gust, wraps, pair, and lump using the story."
+  ],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": {
+    "text": "low",
+    "conceptual": "low",
+    "visual_support": "high"
+  },
+  "rights": {
+    "text_author": "GitHub Copilot (AI-authored) for Read Oasis (original)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
+  "parent_prompts": [
+    "Before reading: What could Sam make with two socks in a puppet show?",
+    "After page 5: Why might the lump help Sam keep his promise? Use pages 1 and 4.",
+    "After reading: How does the windy problem give Sam an idea for his promised show?"
+  ],
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-10-21T04:40:01.411Z",
+    "review_date": "2026-10-21",
+    "reviewer": "AI-authored by GitHub Copilot; independent editorial and visual AI reviews; final maintainer verification",
+    "approval_basis": "Maintainer auto-publication policy and explicit user request; parent veto remains available."
+  },
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "Sam promised Grandma a sock show. His dry blue socks rest over a sheet on the line.",
+      "image_asset": "images/ro-d-033-p01.svg",
+      "image_alt": "Sam watches Grandma beside a white sheet on the washing line. Two unfastened blue socks bend over the sheet's top fold, with their toes resting against its front; only the sheet has pegs.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Sam promised Grandma a sock show. His dry blue socks rest over a sheet on the line.",
+      "timing_segments": [],
+      "vocabulary": []
+    },
+    {
+      "page_id": "p02",
+      "text": "A gust of wind blows the white sheet sideways. Sam laughs at its big, flapping shape.",
+      "image_asset": "images/ro-d-033-p02.svg",
+      "image_alt": "Sam kneels and smiles as the sheet billows sideways. The same two unfastened blue socks remain draped over its top fold, tilting with the wind.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "A gust of wind blows the white sheet sideways. Sam laughs at its big, flapping shape.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "gust",
+          "definition": "A short, strong rush of wind.",
+          "example": "A gust makes the sheet flap."
+        }
+      ]
+    },
+    {
+      "page_id": "p03",
+      "text": "The sheet wraps around the line, catching the socks inside. Sam looks up but cannot see them.",
+      "image_asset": "images/ro-d-033-p03.svg",
+      "image_alt": "Sam looks up with open hands at the sheet now rolled around the line. The socks are hidden inside the roll, whose lower edge has a small localized bulge.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "The sheet wraps around the line, catching the socks inside. Sam looks up but cannot see them.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "wraps",
+          "definition": "Goes around and covers something.",
+          "example": "The sheet wraps around the line and catches the socks."
+        }
+      ]
+    },
+    {
+      "page_id": "p04",
+      "text": "Sam checks the basket for his missing pair. It is empty, so he looks up at the sheet.",
+      "image_asset": "images/ro-d-033-p04.svg",
+      "image_alt": "Sam kneels at the rim of an empty washing basket beneath the rolled white sheet.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Sam checks the basket for his missing pair. It is empty, so he looks up at the sheet.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "pair",
+          "definition": "Two things that belong together.",
+          "example": "Sam looks for his pair of matching blue socks."
+        }
+      ]
+    },
+    {
+      "page_id": "p05",
+      "text": "Grandma feels a lump inside the rolled sheet. Sam hopes his socks are hidden inside that little bump.",
+      "image_asset": "images/ro-d-033-p05.svg",
+      "image_alt": "Grandma touches a small rounded lump protruding below the rolled sheet, distinct from its long folds, while Sam looks up beside her.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Grandma feels a lump inside the rolled sheet. Sam hopes his socks are hidden inside that little bump.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "lump",
+          "definition": "A part that sticks out in a bump.",
+          "example": "The hidden socks make a lump in the sheet."
+        }
+      ]
+    },
+    {
+      "page_id": "p06",
+      "text": "Grandma opens the sheet while Sam holds its corner. Two blue socks slide out onto the green grass.",
+      "image_asset": "images/ro-d-033-p06.svg",
+      "image_alt": "Grandma and Sam hold opposite corners of the opened white sheet as two blue socks tumble onto the grass.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Grandma opens the sheet while Sam holds its corner. Two blue socks slide out onto the green grass.",
+      "timing_segments": [],
+      "vocabulary": []
+    },
+    {
+      "page_id": "p07",
+      "text": "Sam puts the dry socks on his hands. He wants his puppets to tell Grandma about their windy ride.",
+      "image_asset": "images/ro-d-033-p07.svg",
+      "image_alt": "Sam stands with a blue sock covering each raised hand while the opened sheet flaps behind him.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Sam puts the dry socks on his hands. He wants his puppets to tell Grandma about their windy ride.",
+      "timing_segments": [],
+      "vocabulary": []
+    },
+    {
+      "page_id": "p08",
+      "text": "Grandma sits by the line to watch the sock puppets. The white sheet flaps behind Sam like a curtain.",
+      "image_asset": "images/ro-d-033-p08.svg",
+      "image_alt": "Grandma sits with her hips supported by a garden stool, thighs extending toward Sam and knees bent above her grounded feet, as Sam raises the sock puppets in front of the flapping sheet.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Grandma sits by the line to watch the sock puppets. The white sheet flaps behind Sam like a curtain.",
+      "timing_segments": [],
+      "vocabulary": []
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "cause_effect",
+      "difficulty": "easy",
+      "prompt": "Why does Sam keep searching?",
+      "options": [
+        {
+          "id": "a",
+          "text": "To get ready to go outside"
+        },
+        {
+          "id": "b",
+          "text": "To help Grandma finish folding"
+        },
+        {
+          "id": "c",
+          "text": "To keep his promise to Grandma"
+        }
+      ],
+      "correct_option_id": "c",
+      "evidence_page_ids": [
+        "p01",
+        "p04",
+        "p07"
+      ],
+      "explanation": "Sam promised Grandma a sock show on page 1. He keeps searching on page 4 and puts the socks on his hands on page 7 to give that show.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "inference",
+      "difficulty": "easy",
+      "prompt": "What will Sam's puppets probably talk about?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Their time inside the windy sheet"
+        },
+        {
+          "id": "b",
+          "text": "Their time inside the washing basket"
+        },
+        {
+          "id": "c",
+          "text": "Their time on Sam's feet"
+        }
+      ],
+      "correct_option_id": "a",
+      "evidence_page_ids": [
+        "p03",
+        "p07"
+      ],
+      "explanation": "Sam wants the puppets to tell Grandma about their windy ride on page 7. Page 3 tells us what that ride was: the sheet wrapped around the line and caught the socks inside.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "main_idea",
+      "difficulty": "easy",
+      "prompt": "What is this story mostly about?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Changing a promise to make washing easier"
+        },
+        {
+          "id": "b",
+          "text": "Giving the promised show despite a problem"
+        },
+        {
+          "id": "c",
+          "text": "Learning a puppet game from Grandma"
+        }
+      ],
+      "correct_option_id": "b",
+      "evidence_page_ids": [
+        "p01",
+        "p03",
+        "p08"
+      ],
+      "explanation": "Sam promises Grandma a sock show on page 1. The sheet catches his socks on page 3, but he finds them and Grandma watches the promised show on page 8.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "expression",
+      "difficulty": "easy",
+      "response_type": "open",
+      "prompt": "Tell how Sam keeps his promise and uses the windy problem in his sock show.",
+      "rubric": "not yet: names socks or the sheet without a link; with support: says the socks hide in the sheet and come out with prompting; independent: connects Sam's promise, socks caught in the roll, the empty basket, finding the socks, and his plan to tell their windy ride with the sheet as a curtain",
+      "evidence_page_ids": [
+        "p01",
+        "p03",
+        "p04",
+        "p06",
+        "p07",
+        "p08"
+      ],
+      "explanation": "A connected retell explains how Sam finds the socks to keep his promise and plans to make their windy ride the puppets' story, with the sheet behind them as a curtain."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "prompt": "Put Sam's promise, search, and show in order.",
+      "items": [
+        {
+          "id": "s1",
+          "text": "Sam promises Grandma a sock show.",
+          "page_id": "p01"
+        },
+        {
+          "id": "s2",
+          "text": "Sam searches the empty basket.",
+          "page_id": "p04"
+        },
+        {
+          "id": "s3",
+          "text": "The socks slide out of the sheet.",
+          "page_id": "p06"
+        },
+        {
+          "id": "s4",
+          "text": "Grandma watches the sock puppets.",
+          "page_id": "p08"
+        }
+      ],
+      "correct_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "discussion",
+      "skill": "expression",
+      "prompts": [
+        "Why does Sam keep searching after he finds the basket empty? Use his promise.",
+        "How does the windy sheet give Sam something for his puppets to tell Grandma?"
+      ]
+    }
+  ],
+  "off_screen_prompt": "Use your hands as two pretend sock puppets. Tell Grandma the socks' windy ride: resting over the sheet, getting caught inside, and sliding out. Explain how Sam keeps his promise."
+}

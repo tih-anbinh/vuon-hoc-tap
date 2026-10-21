@@ -1,0 +1,295 @@
+{
+  "schema_version": 1,
+  "book_id": "ro-i-031",
+  "revision": 1,
+  "status": "PUBLISHED",
+  "title": "The Missing Rustle",
+  "language": "en",
+  "level": "I",
+  "reading_mode": "independent_reading",
+  "topic": "sounds and music",
+  "genre": "fiction",
+  "learning_objectives": [
+    "Explain how the loud drum hid a quieter sound",
+    "Connect listening pauses with the new band rhythm"
+  ],
+  "prerequisite_skills": [],
+  "target_phonics": [],
+  "irregular_words": [],
+  "difficulty": {
+    "text": "medium",
+    "conceptual": "medium",
+    "visual_support": "high"
+  },
+  "rights": {
+    "text_author": "GitHub Copilot for Read Oasis (original, AI-authored)",
+    "text_license": "family-use, all rights reserved",
+    "media_license": "family-use, original SVG",
+    "original": true
+  },
+  "parent_prompts": [
+    "Before reading: The title is The Missing Rustle; what might make a soft rustling sound in a band?",
+    "After page 4: Why did Sam stop completely after hearing the bag between drumbeats?",
+    "After reading: How did Sam make room for Mo without changing the paper bag?"
+  ],
+  "pages": [
+    {
+      "page_id": "p01",
+      "text": "Sam wanted their band to sound like rain. He could hear his drum, but Mo's soft rustle was missing.",
+      "image_asset": "images/ro-i-031-p01.svg",
+      "image_alt": "Sam sits with sticks over a red drum while Mo shakes a crumpled paper bag beside a rainy window.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Sam wanted their band to sound like rain. He could hear his drum, but Mo's soft rustle was missing.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "rustle",
+          "definition": "A soft sound like paper or leaves moving.",
+          "example": "The paper bag makes a little rustle."
+        }
+      ]
+    },
+    {
+      "page_id": "p02",
+      "text": "Mo shook a paper bag beside the big drum. Sam saw it moving, but he could not hear it.",
+      "image_asset": "images/ro-i-031-p02.svg",
+      "image_alt": "Mo shakes the same creased paper bag as Sam strikes the red drum, surrounded by strong curved vibration marks.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Mo shook a paper bag beside the big drum. Sam saw it moving, but he could not hear it.",
+      "timing_segments": [],
+      "vocabulary": []
+    },
+    {
+      "page_id": "p03",
+      "text": "Sam slowed his drumbeats and listened. Between two beats, he heard a soft rustle from Mo's paper bag.",
+      "image_asset": "images/ro-i-031-p03.svg",
+      "image_alt": "Sam tilts his head and cups a hand beside his ear, resting a stick on the drum between beats while Mo shakes the same bag.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Sam slowed his drumbeats and listened. Between two beats, he heard a soft rustle from Mo's paper bag.",
+      "timing_segments": [],
+      "vocabulary": []
+    },
+    {
+      "page_id": "p04",
+      "text": "Sam stopped drumming to listen. Mo shook the same paper bag, and Sam could hear its soft rustle.",
+      "image_asset": "images/ro-i-031-p04.svg",
+      "image_alt": "Sam rests both drumsticks away from the drum while Mo shakes the paper bag in the open space beside him.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Sam stopped drumming to listen. Mo shook the same paper bag, and Sam could hear its soft rustle.",
+      "timing_segments": [],
+      "vocabulary": []
+    },
+    {
+      "page_id": "p05",
+      "text": "The bag was never silent during their rainy song. Sam's loud drum had hidden it, like talking over someone's whisper.",
+      "image_asset": "images/ro-i-031-p05.svg",
+      "image_alt": "Sam gestures toward Mo and the paper bag with his drumsticks resting across the red drum.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "The bag was never silent during their rainy song. Sam's loud drum had hidden it, like talking over someone's whisper.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "whisper",
+          "definition": "A very quiet way of speaking.",
+          "example": "I use a whisper so only you can hear."
+        }
+      ]
+    },
+    {
+      "page_id": "p06",
+      "text": "Sam suggested a pause, a short wait between beats. Then they could hear Mo's bag as well.",
+      "image_asset": "images/ro-i-031-p06.svg",
+      "image_alt": "Sam holds one palm open toward Mo while his other hand holds a drumstick beside the drum.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Sam suggested a pause, a short wait between beats. Then they could hear Mo's bag as well.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "pause",
+          "definition": "A short wait before you start again.",
+          "example": "We pause between taps to hear the bag."
+        }
+      ]
+    },
+    {
+      "page_id": "p07",
+      "text": "They tried their new rhythm, a pattern of sounds. Sam tapped twice, then waited while Mo shook the paper bag.",
+      "image_asset": "images/ro-i-031-p07.svg",
+      "image_alt": "Sam waits with both sticks resting flat on the drum while Mo shakes the same creased paper bag beside him.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "They tried their new rhythm, a pattern of sounds. Sam tapped twice, then waited while Mo shook the paper bag.",
+      "timing_segments": [],
+      "vocabulary": [
+        {
+          "word": "rhythm",
+          "definition": "A pattern of sounds and quiet spaces.",
+          "example": "Two taps and a shake make our rhythm."
+        }
+      ]
+    },
+    {
+      "page_id": "p08",
+      "text": "Their band sounded like drops and rustling leaves. Sam enjoyed listening to Mo in the quiet spaces.",
+      "image_asset": "images/ro-i-031-p08.svg",
+      "image_alt": "Sam smiles with his eyes closed and a hand cupped beside his ear, listening during a pause with a stick resting flat on the drum while curved marks show Mo shaking the same bag.",
+      "image_provenance": "Original SVG by GitHub Copilot (AI), 2026-10-21; independently reviewed",
+      "audio_script": "Their band sounded like drops and rustling leaves. Sam enjoyed listening to Mo in the quiet spaces.",
+      "timing_segments": [],
+      "vocabulary": []
+    }
+  ],
+  "quiz": [
+    {
+      "question_id": "q01",
+      "skill": "cause_effect",
+      "difficulty": "medium",
+      "prompt": "Why did Sam stop after slowing his drumbeats?",
+      "options": [
+        {
+          "id": "a",
+          "text": "To let Mo start a new song"
+        },
+        {
+          "id": "b",
+          "text": "To hear the small sound more clearly"
+        },
+        {
+          "id": "c",
+          "text": "To help Mo find another paper bag"
+        }
+      ],
+      "correct_option_id": "b",
+      "evidence_page_ids": [
+        "p03",
+        "p04"
+      ],
+      "explanation": "Page 3 says Sam slowed down and heard a soft rustle between beats. Page 4 says he stopped drumming to listen to the bag.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q02",
+      "skill": "compare",
+      "difficulty": "medium",
+      "prompt": "What changed between Sam's first try and their new rhythm?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The bag changed, not the pauses"
+        },
+        {
+          "id": "b",
+          "text": "Both the bag and the pauses changed"
+        },
+        {
+          "id": "c",
+          "text": "The pauses changed, not the bag"
+        }
+      ],
+      "correct_option_id": "c",
+      "evidence_page_ids": [
+        "p02",
+        "p04",
+        "p07"
+      ],
+      "explanation": "Page 2 shows Sam unable to hear the moving bag. Page 4 confirms the same bag can be heard when he stops. Page 7 changes the pauses between drumbeats, not the bag.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q03",
+      "skill": "main_idea",
+      "difficulty": "medium",
+      "prompt": "What helped Sam make the rain music he wanted?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Leaving room for a quieter band member"
+        },
+        {
+          "id": "b",
+          "text": "Finding a louder sound for every beat"
+        },
+        {
+          "id": "c",
+          "text": "Playing the whole rain song by himself"
+        }
+      ],
+      "correct_option_id": "a",
+      "evidence_page_ids": [
+        "p01",
+        "p08"
+      ],
+      "explanation": "Page 1 introduces rain music with a missing soft rustle. Page 8 resolves this when quiet spaces let Sam hear Mo as part of the rain sound.",
+      "distractors_reviewed": true
+    },
+    {
+      "question_id": "q04",
+      "skill": "expression",
+      "difficulty": "medium",
+      "response_type": "open",
+      "prompt": "Tell how Sam solved the missing rustle mystery, from the loud drum to the new rhythm.",
+      "rubric": "not yet: names the drum or bag without explaining the missing rustle; with support: links the loud drum to the hidden bag sound after a prompt; independent: explains hearing the rustle between beats, stopping to listen, and adding pauses so both sounds belong.",
+      "evidence_page_ids": [
+        "p02",
+        "p03",
+        "p04",
+        "p07"
+      ],
+      "explanation": "A retell should connect the listening clues to the choice to leave pauses, not claim the bag was repaired."
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "a01",
+      "type": "sequence_events",
+      "skill": "sequence",
+      "prompt": "Put the listening clues and new band rhythm in order.",
+      "items": [
+        {
+          "id": "s3",
+          "text": "Sam stops to listen to the bag.",
+          "page_id": "p04"
+        },
+        {
+          "id": "s1",
+          "text": "Sam cannot hear the moving bag.",
+          "page_id": "p02"
+        },
+        {
+          "id": "s4",
+          "text": "Their rhythm leaves space for Mo.",
+          "page_id": "p07"
+        },
+        {
+          "id": "s2",
+          "text": "A rustle reaches Sam between drumbeats.",
+          "page_id": "p03"
+        }
+      ],
+      "correct_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "activity_id": "a02",
+      "type": "discussion",
+      "skill": "listening_comprehension",
+      "prompts": [
+        "Why was seeing the bag move not enough to solve the mystery?",
+        "What might happen to the rain music if Sam filled every pause with a drumbeat?"
+      ]
+    }
+  ],
+  "off_screen_prompt": "With a grown-up, tap your knees while they rustle a paper bag; then leave pauses like Sam did and describe what you hear differently.",
+  "review": {
+    "content_approved": true,
+    "media_approved": true,
+    "parent_approved": true,
+    "published_at": "2026-10-21T04:40:01.411Z",
+    "review_date": "2026-10-21",
+    "reviewer": "AI-authored by GitHub Copilot; independent editorial and visual AI reviews; final maintainer verification",
+    "approval_basis": "Maintainer auto-publication policy and explicit user request; parent veto remains available."
+  }
+}
