@@ -17,8 +17,7 @@ Read Oasis - child app (library, reader, activities, quiz). Local-first; no netw
   <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgZm9jdXNhYmxlPSJmYWxzZSI+PGVsbGlwc2UgY3g9IjMyIiBjeT0iMzQiIHJ4PSIyMiIgcnk9IjIwIiBmaWxsPSIjRjdEMTU0IiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSI0Ii8+PGNpcmNsZSBjeD0iNDAiIGN5PSIyOCIgcj0iMy41IiBmaWxsPSJjdXJyZW50Q29sb3IiLz48cGF0aCBkPSJNNTIgMzIgTDYyIDM2IEw1MiA0MCBaIiBmaWxsPSIjRjJBNTQxIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIzIi8+PC9zdmc+Cg==" type="image/svg+xml">
   <style>
 /* Author: Huy Tran
-   Company: Cadence Design Systems Vietnam
-   Email: huytran@cadence.com
+   Email: hqt.msg@gmail.com
    Created: 2026-09-27
    Revision: 2.0 - Read Oasis visual redesign, accessible and theme-aware
    Read Oasis shared styles - "soft oasis" visual system: cute, modern, gently dynamic.
@@ -481,6 +480,58 @@ h2 { letter-spacing:-.035em;line-height:1.16; }
   .parent-page .stat { padding:12px 14px; }.parent-page .stat b { font-size:1.7em; }
 }
 @media (max-width:360px) { .grid { grid-template-columns:1fr; }.topbar h1 { font-size:.82em; }.parent-page .grid { grid-template-columns:1fr; } }
+
+body:has(.library-home) { background:var(--paper); }
+body:has(.library-home)::before,body:has(.library-home)::after { display:none; }
+.library-home { letter-spacing:0; }
+.library-welcome { padding:12px 0 28px;border-bottom:2px solid var(--line); }
+.library-greeting { display:flex;align-items:center;justify-content:space-between;gap:18px; }
+.library-greeting>div:first-child { min-width:0; }
+.welcome-name { font-size:.95rem;font-weight:700;color:var(--muted);overflow-wrap:anywhere; }
+.library-welcome h2 { font-size:2.4rem;letter-spacing:0;line-height:1.12;margin:.15em 0;color:var(--ink); }
+.welcome-invite { font-size:1.05rem;overflow-wrap:anywhere; }
+.welcome-mascot { flex:none;width:112px;height:112px;display:grid;place-items:center; }
+.welcome-mascot .mascot { width:100%;height:100%;animation:pop .5s var(--ease) both; }
+.library-actions { margin-top:20px;gap:12px; }
+.library-actions button { min-height:52px;max-width:100%; }
+.library-actions button span { overflow-wrap:anywhere;min-width:0; }
+.library-actions .greeting-replay { margin-left:auto;padding:0;width:52px;flex:none; }
+.greeting-replay>span { display:none; }
+.library-home .shelf { margin-top:28px; }
+.library-home .shelf-heading { display:flex;align-items:center;margin:0 0 16px;gap:12px; }
+.library-home .shelf-heading h2 { display:flex;align-items:center;gap:10px;font-size:1.35rem;letter-spacing:0;margin:0;min-width:0; }
+.library-home .shelf-heading h2 span { overflow-wrap:anywhere; }
+.library-home .shelf-heading .ic { width:40px;height:40px;padding:8px;border-radius:12px;background:var(--primary-soft);color:var(--primary); }
+.shelf-count { color:var(--muted);font-size:.8rem;white-space:nowrap; }
+.shelf-description { margin:-6px 0 16px;font-size:.9rem; }
+.library-home .book-tile { border-radius:16px;border-top:4px solid var(--primary);background:var(--surface);min-width:0;gap:8px; }
+.library-home .book-tile:nth-child(4n+2) { border-top-color:var(--coral); }
+.library-home .book-tile:nth-child(4n+3) { border-top-color:var(--sun); }
+.library-home .book-tile:nth-child(4n+4) { border-top-color:#68B7D1; }
+.library-home .book-tile .cover { width:100%;min-width:0;border-radius:8px;background:var(--paper); }
+.library-home .book-tile .cover::after { display:none; }
+.library-home .book-tile .cover img { padding:0; }
+.library-home .book-tile .t { overflow-wrap:anywhere;letter-spacing:0; }
+.library-home .book-tile .tile-invite { font-size:.8rem; }
+.library-home .stagger>* { animation:fade .25s var(--ease) both; }
+.library-home .stagger>*:nth-child(2) { animation-delay:.04s; }
+.library-home .stagger>*:nth-child(3) { animation-delay:.08s; }
+.library-home .stagger>*:nth-child(4) { animation-delay:.12s; }
+@media (max-width:520px) {
+  .library-welcome { padding:8px 0 22px; }
+  .library-welcome h2 { font-size:1.85rem; }
+  .welcome-name { font-size:.8rem; }
+  .welcome-invite { font-size:.9rem; }
+  .welcome-mascot { width:72px;height:72px; }
+  .library-actions { display:grid;grid-template-columns:minmax(0,1fr) 52px;gap:10px;margin-top:16px; }
+  .library-actions>.primary { grid-column:1/-1; }
+  .library-actions button { font-size:.85rem;padding:0 .65em; }
+  .library-actions .greeting-replay { margin-left:0; }
+  .library-home .shelf-heading h2 { font-size:1.1rem; }
+  .library-home .shelf-heading .ic { width:32px;height:32px;padding:6px; }
+  .library-home .book-tile { padding:8px; }
+  .library-home .book-tile .tile-invite { font-size:.7rem; }
+}
 @media (prefers-reduced-motion:reduce) { .hero-mascot,.hero-book,.hero-sun,.hero-cloud,body::before,body::after { animation:none; } }
 html[data-motion="reduce"] .hero-mascot,html[data-motion="reduce"] .hero-book,html[data-motion="reduce"] .hero-sun,html[data-motion="reduce"] .hero-cloud,html[data-motion="reduce"] body::before,html[data-motion="reduce"] body::after { animation:none; }
 @media (prefers-contrast:more) { .hero,.book-tile,.story-card,.card,.topbar { border-width:2px; }.hero .sub { color:var(--ink); } }
@@ -647,6 +698,7 @@ html[data-motion="reduce"] .letter-inner { animation: none; }
     <symbol id="i-back" viewBox="0 0 64 64"><path d="M40 12 L20 32 L40 52" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-next" viewBox="0 0 64 64"><path d="M24 12 L44 32 L24 52" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-home" viewBox="0 0 64 64"><path d="M10 32 L32 12 L54 32 M16 28 L16 52 L48 52 L48 28" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-book" viewBox="0 0 64 64"><path d="M10 14 Q32 6 32 18 L32 54 Q32 44 10 50 Z M54 14 Q32 6 32 18 L32 54 Q32 44 54 50 Z" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-play" viewBox="0 0 64 64"><path d="M22 12 L54 32 L22 52 Z" fill="currentColor"/></symbol>
     <symbol id="i-pause" viewBox="0 0 64 64"><rect x="18" y="12" width="10" height="40" rx="3" fill="currentColor"/><rect x="36" y="12" width="10" height="40" rx="3" fill="currentColor"/></symbol>
     <symbol id="i-replay" viewBox="0 0 64 64"><path d="M48 22 A20 20 0 1 0 50 40" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><path d="M48 8 L48 24 L32 24" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
@@ -722,6 +774,7 @@ html[data-motion="reduce"] .letter-inner { animation: none; }
       <section class="letter-author">
         <p class="letter-author-lede" lang="en">Created with love by</p>
         <p class="letter-author-name">Huy Tran</p>
+        <p class="letter-author-role" lang="en">Senior Principal Application Engineer</p>
         <p class="letter-author-place" lang="en">Ho Chi Minh City, Vietnam</p>
         <p class="letter-author-tags" lang="en">Father&nbsp;•&nbsp;Engineer&nbsp;•&nbsp;Lifelong Learner</p>
         <p class="letter-author-built" lang="en">Built for children who dream, learn, and grow.</p>
@@ -745,8 +798,7 @@ html[data-motion="reduce"] .letter-inner { animation: none; }
 "use strict";
 // ---- progress-store.mjs
 // Author: Huy Tran
-// Company: Cadence Design Systems Vietnam
-// Email: huytran@cadence.com
+// Email: hqt.msg@gmail.com
 // Created: 2026-09-27
 //
 // Read Oasis progress store: local-first persistence, migrations, idempotent
@@ -1458,8 +1510,7 @@ function nextStatus(book, action) {
 
 // ---- ui.mjs
 // Author: Huy Tran
-// Company: Cadence Design Systems Vietnam
-// Email: huytran@cadence.com
+// Email: hqt.msg@gmail.com
 // Created: 2026-09-27
 //
 // Shared browser helpers: DOM builder, settings -> CSS variables, narration, toast, break timer,
@@ -1608,16 +1659,22 @@ const narrator = {
    * voices. Each item is { uri, name, label, lang, online, kid }. Returns [] when the engine has no voices
    * yet (retry on 'voiceschanged'). accent biases the ordering toward the parent's chosen region.
    */
-  listVoices(accent = this.accent) {
+  listVoices(accent = this.accent, currentUri = this.voiceURI) {
     if (!this.supported) return [];
     const voices = speechSynthesis.getVoices() || [];
     return voices
       .map(v => ({ v, sc: scoreVoice(v, accent) }))
       .filter(x => x.sc >= 0)                                    // drop non-English + rejected junk voices
-      .sort((a, b) => b.sc - a.sc || (a.v.lang || '').localeCompare(b.v.lang) || (a.v.name || '').localeCompare(b.v.name))
+      // The currently-chosen voice floats to the very top; the rest follow by score, then lang, then name.
+      .sort((a, b) =>
+        ((b.v.voiceURI === currentUri) - (a.v.voiceURI === currentUri))
+        || b.sc - a.sc
+        || (a.v.lang || '').localeCompare(b.v.lang)
+        || (a.v.name || '').localeCompare(b.v.name))
       .map(({ v }) => ({
         uri: v.voiceURI, name: v.name, label: friendlyVoiceLabel(v),
         lang: v.lang, online: v.localService === false, kid: VOICE_CHILDREN.test(v.name),
+        current: v.voiceURI === currentUri,
       }));
   },
   /** True when a specific device voice is chosen AND still installed — then we always use device TTS. */
@@ -2446,8 +2503,7 @@ function notEnough(mount, ctx) {
 
 // ---- kid-app.mjs
 // Author: Huy Tran
-// Company: Cadence Design Systems Vietnam
-// Email: huytran@cadence.com
+// Email: hqt.msg@gmail.com
 // Created: 2026-09-27
 // Revision: 2.0 - richer library/reader/quiz presentation; learning logic preserved
 //
@@ -2465,6 +2521,16 @@ const store = new ProgressStore(window.localStorage);
 const S = store.load();
 applySettings(S.settings);
 
+// Push the parent-chosen reading voice / accent / device-TTS flag into the shared narrator.
+// Done at startup AND on every settings change so EVERY route — reader, quiz, AND the Vocabulary
+// Garden — speaks with the same chosen voice (single source of truth = S.settings.voice_uri).
+function syncNarrator(s) {
+  narrator.deviceAllowed = s.allow_device_tts !== false;
+  narrator.accent = s.accent || 'en-GB';
+  narrator.voiceURI = s.voice_uri || null;
+}
+syncNarrator(S.settings);
+
 const app = document.getElementById('app');
 const titleEl = document.getElementById('titleText') || document.getElementById('title');
 let library = [];                      // published book summaries
@@ -2478,7 +2544,7 @@ let session = null;
 let breakTimer = null;
 let gardenAvailable = false;           // true when content/vocabulary/manifest.json loads (Phase 4)
 
-store.onChange(d => { applySettings(d.settings); renderStars(); if (breakTimer && breakTimer.minutes !== d.settings.break_minutes) breakTimer.setMinutes(d.settings.break_minutes); });
+store.onChange(d => { applySettings(d.settings); syncNarrator(d.settings); renderStars(); if (breakTimer && breakTimer.minutes !== d.settings.break_minutes) breakTimer.setMinutes(d.settings.break_minutes); });
 session = store.startSession();
 breakTimer = new BreakTimer({ minutes: S.settings.break_minutes, onCue: showBreak });
 
@@ -2637,7 +2703,7 @@ function tile(b) {
   const p = store.bookProgress(b.book_id, b.revision, false);
   const cover = h('div', { class: 'cover' });
   const img = b.assets?.find(a => a.startsWith('images/'));
-  if (img && S.settings.illustration_size !== 'hidden') { const im = h('img', { src: assetUrl(img), alt: '' }); im.onerror = () => cover.replaceChildren(icon('book', '')); cover.append(im); }
+  if (img && S.settings.illustration_size !== 'hidden') { const im = h('img', { src: assetUrl(img), alt: '', loading: 'lazy', decoding: 'async', width: 400, height: 300 }); im.onerror = () => cover.replaceChildren(icon('book', '')); cover.append(im); }
   else cover.append(icon('book'));
   const inProgress = p && !p.completed_reads && p.page_index > 0;
   if (inProgress) cover.append(h('span', { class: 'ribbon', text: 'Continue' }));
@@ -2653,7 +2719,7 @@ function tile(b) {
     h('span', { class: 'progress', 'aria-hidden': 'true' }, h('span', { style: `width:${pct}%` })));
 }
 function renderLibrary() {
-  setTitle('Choose a book');
+  setTitle('Read Oasis');
   const last = store.lastOpened();
   const hasBand = !!S.settings.independent_track_band;
   const mascot = S.settings.mascot_enabled ? icon('mascot', 'mascot') : null;
@@ -2671,24 +2737,23 @@ function renderLibrary() {
     for (const [m, label] of modes) { const arr = library.filter(b => b.reading_mode === m); if (arr.length) groups.push([label, '', arr]); }
   }
   const continueBook = last && !last.completed_reads && last.page_index > 0 ? library.find(b => b.book_id === last.book_id) : null;
+  const suggestedBook = continueBook || groups[0]?.[2].find(b => !store.bookProgress(b.book_id, b.revision, false)?.completed_reads) || groups[0]?.[2][0];
   app.replaceChildren(
-    h('section', { class: 'fade' },
-      h('div', { class: mascot ? 'hero' : 'hero hero-no-art' },
-        h('div', { class: 'hero-copy' },
-          h('span', { class: 'hero-eyebrow', text: 'WELCOME TO YOUR STORY GARDEN' }),
-          h('h2', { text: `${greeting()}, ${S.profile.display_name || 'Reader'}!` }),
-          h('p', { class: 'sub', text: continueBook ? `Your book "${continueBook.title}" is waiting where you left it.` : 'A lovely new story is waiting for you. Pick a book and let’s explore together.' }),
-          h('div', { class: 'row hero-actions' },
-            continueBook ? btn('Continue', () => go({ view: 'preview', bookId: continueBook.book_id }), { primary: true, ic: 'play' }) : null,
-            gardenAvailable ? btn('Vocabulary Garden', () => go({ view: 'garden' }), { primary: !continueBook, ic: 'star' }) : null,
-            btn('Hear that again', speakGreetingAgain, { quiet: true, ic: 'ear' }),
-            hasBand ? h('span', { class: 'chip accent', text: 'Your level: ' + S.settings.independent_track_band + (S.settings.read_aloud_track_band && S.settings.read_aloud_track_band !== S.settings.independent_track_band ? ' · listening ' + S.settings.read_aloud_track_band : '') }) : h('span', { class: 'chip', text: 'A grown-up can set your reading level' }))),
-        mascot ? h('div', { class: 'hero-art', 'aria-hidden': 'true' },
-          h('span', { class: 'hero-sun' }), h('span', { class: 'hero-cloud cloud-one' }), h('span', { class: 'hero-cloud cloud-two' }),
-          h('span', { class: 'hero-book' }, h('span'), h('span')),
-          h('span', { class: 'hero-mascot' }, mascot), h('span', { class: 'hero-hill' })) : null),
+    h('section', { class: 'library-home fade' },
+      h('header', { class: 'library-welcome' },
+        h('div', { class: 'library-greeting' },
+          h('div', {},
+            h('p', { class: 'welcome-name', text: `${greeting()}, ${S.profile.display_name || 'Reader'}!` }),
+            h('h2', { text: 'Read Oasis' }),
+            h('p', { class: 'welcome-invite', text: continueBook ? `Back to "${continueBook.title}"?` : 'Which story will you jump into?' })),
+          mascot ? h('div', { class: 'welcome-mascot', 'aria-hidden': 'true' }, mascot) : null),
+        h('div', { class: 'row library-actions' },
+          suggestedBook ? btn(continueBook ? 'Continue reading' : 'Read a story', () => go({ view: 'preview', bookId: suggestedBook.book_id }), { primary: true, ic: 'play' }) : null,
+          gardenAvailable ? btn('Vocabulary Garden', () => go({ view: 'garden' }), { quiet: true, ic: 'star' }) : null,
+          btn('Hear that again', speakGreetingAgain, { quiet: true, ic: 'ear', attrs: { class: 'quiet greeting-replay', title: 'Hear that again', 'aria-label': 'Hear that again' } }))),
       ...groups.map(([title, sub, arr]) => h('div', { class: 'shelf' },
-        h('div', { class: 'shelf-heading' }, h('div', {}, h('span', { class: 'shelf-kicker', text: 'YOUR BOOKS' }), h('h2', { text: title })), sub ? h('p', { class: 'muted', text: sub }) : null),
+        h('div', { class: 'shelf-heading' }, h('h2', {}, icon(title === 'Listen' ? 'ear' : 'book'), h('span', { text: title })), h('span', { class: 'shelf-count', text: `${arr.length} ${arr.length === 1 ? 'book' : 'books'}` })),
+        sub ? h('p', { class: 'shelf-description muted', text: sub }) : null,
         h('div', { class: 'grid stagger' }, arr.map(tile)))),
       library.length ? null : h('p', { class: 'card', text: 'No approved books yet. Ask a grown-up to approve a book in the parent area.' })));
   speakGreeting();
@@ -2804,8 +2869,7 @@ function renderReader(book) {
     story.focus?.();
   };
   let speed = S.settings.default_speed || 'normal';
-  narrator.deviceAllowed = S.settings.allow_device_tts !== false; narrator.accent = S.settings.accent || 'en-GB';
-  narrator.voiceURI = S.settings.voice_uri || null;
+  syncNarrator(S.settings);   // chosen voice / accent / device-TTS (single source of truth)
   const togglePlay = (pg, b) => {
     if (narrator.speaking) { narrator.stop(); reader_clearHighlight(); b.setAttribute('aria-pressed', 'false'); b.querySelector('span').textContent = 'Listen'; return; }
     audioUsedThisBook = true; store.setPage(book.book_id, book.revision, i, { audio: true });
@@ -2820,10 +2884,11 @@ function renderReader(book) {
 /** Small voice picker: lists the device's English voices and lets the child/grown-up choose one. The choice
  * is saved (settings.voice_uri) and, once set, is always used for reading so it also enables word highlight. */
 function showVoicePicker(anchorBtn) {
-  const voices = narrator.listVoices(S.settings.accent || 'en-GB');
+  const current = S.settings.voice_uri || null;
+  // Pass current so the chosen voice floats to the TOP of the list (default on top).
+  const voices = narrator.listVoices(S.settings.accent || 'en-GB', current);
   const overlay = h('div', { class: 'voice-overlay', role: 'dialog', 'aria-modal': 'true', 'aria-label': 'Choose a reading voice' });
   const close = () => overlay.remove();
-  const current = S.settings.voice_uri || null;
   const pick = (uri) => {
     store.setSettings({ voice_uri: uri });
     narrator.voiceURI = uri;

@@ -200,7 +200,7 @@ function tile(b) {
   const p = store.bookProgress(b.book_id, b.revision, false);
   const cover = h('div', { class: 'cover' });
   const img = b.assets?.find(a => a.startsWith('images/'));
-  if (img && S.settings.illustration_size !== 'hidden') { const im = h('img', { src: assetUrl(img), alt: '' }); im.onerror = () => cover.replaceChildren(icon('book', '')); cover.append(im); }
+  if (img && S.settings.illustration_size !== 'hidden') { const im = h('img', { src: assetUrl(img), alt: '', loading: 'lazy', decoding: 'async', width: 400, height: 300 }); im.onerror = () => cover.replaceChildren(icon('book', '')); cover.append(im); }
   else cover.append(icon('book'));
   const inProgress = p && !p.completed_reads && p.page_index > 0;
   if (inProgress) cover.append(h('span', { class: 'ribbon', text: 'Continue' }));
@@ -216,7 +216,7 @@ function tile(b) {
     h('span', { class: 'progress', 'aria-hidden': 'true' }, h('span', { style: `width:${pct}%` })));
 }
 function renderLibrary() {
-  setTitle('Choose a book');
+  setTitle('Read Oasis');
   const last = store.lastOpened();
   const hasBand = !!S.settings.independent_track_band;
   const mascot = S.settings.mascot_enabled ? icon('mascot', 'mascot') : null;
@@ -234,24 +234,23 @@ function renderLibrary() {
     for (const [m, label] of modes) { const arr = library.filter(b => b.reading_mode === m); if (arr.length) groups.push([label, '', arr]); }
   }
   const continueBook = last && !last.completed_reads && last.page_index > 0 ? library.find(b => b.book_id === last.book_id) : null;
+  const suggestedBook = continueBook || groups[0]?.[2].find(b => !store.bookProgress(b.book_id, b.revision, false)?.completed_reads) || groups[0]?.[2][0];
   app.replaceChildren(
-    h('section', { class: 'fade' },
-      h('div', { class: mascot ? 'hero' : 'hero hero-no-art' },
-        h('div', { class: 'hero-copy' },
-          h('span', { class: 'hero-eyebrow', text: 'WELCOME TO YOUR STORY GARDEN' }),
-          h('h2', { text: `${greeting()}, ${S.profile.display_name || 'Reader'}!` }),
-          h('p', { class: 'sub', text: continueBook ? `Your book "${continueBook.title}" is waiting where you left it.` : 'A lovely new story is waiting for you. Pick a book and let’s explore together.' }),
-          h('div', { class: 'row hero-actions' },
-            continueBook ? btn('Continue', () => go({ view: 'preview', bookId: continueBook.book_id }), { primary: true, ic: 'play' }) : null,
-            gardenAvailable ? btn('Vocabulary Garden', () => go({ view: 'garden' }), { primary: !continueBook, ic: 'star' }) : null,
-            btn('Hear that again', speakGreetingAgain, { quiet: true, ic: 'ear' }),
-            hasBand ? h('span', { class: 'chip accent', text: 'Your level: ' + S.settings.independent_track_band + (S.settings.read_aloud_track_band && S.settings.read_aloud_track_band !== S.settings.independent_track_band ? ' · listening ' + S.settings.read_aloud_track_band : '') }) : h('span', { class: 'chip', text: 'A grown-up can set your reading level' }))),
-        mascot ? h('div', { class: 'hero-art', 'aria-hidden': 'true' },
-          h('span', { class: 'hero-sun' }), h('span', { class: 'hero-cloud cloud-one' }), h('span', { class: 'hero-cloud cloud-two' }),
-          h('span', { class: 'hero-book' }, h('span'), h('span')),
-          h('span', { class: 'hero-mascot' }, mascot), h('span', { class: 'hero-hill' })) : null),
+    h('section', { class: 'library-home fade' },
+      h('header', { class: 'library-welcome' },
+        h('div', { class: 'library-greeting' },
+          h('div', {},
+            h('p', { class: 'welcome-name', text: `${greeting()}, ${S.profile.display_name || 'Reader'}!` }),
+            h('h2', { text: 'Read Oasis' }),
+            h('p', { class: 'welcome-invite', text: continueBook ? `Back to "${continueBook.title}"?` : 'Which story will you jump into?' })),
+          mascot ? h('div', { class: 'welcome-mascot', 'aria-hidden': 'true' }, mascot) : null),
+        h('div', { class: 'row library-actions' },
+          suggestedBook ? btn(continueBook ? 'Continue reading' : 'Read a story', () => go({ view: 'preview', bookId: suggestedBook.book_id }), { primary: true, ic: 'play' }) : null,
+          gardenAvailable ? btn('Vocabulary Garden', () => go({ view: 'garden' }), { quiet: true, ic: 'star' }) : null,
+          btn('Hear that again', speakGreetingAgain, { quiet: true, ic: 'ear', attrs: { class: 'quiet greeting-replay', title: 'Hear that again', 'aria-label': 'Hear that again' } }))),
       ...groups.map(([title, sub, arr]) => h('div', { class: 'shelf' },
-        h('div', { class: 'shelf-heading' }, h('div', {}, h('span', { class: 'shelf-kicker', text: 'YOUR BOOKS' }), h('h2', { text: title })), sub ? h('p', { class: 'muted', text: sub }) : null),
+        h('div', { class: 'shelf-heading' }, h('h2', {}, icon(title === 'Listen' ? 'ear' : 'book'), h('span', { text: title })), h('span', { class: 'shelf-count', text: `${arr.length} ${arr.length === 1 ? 'book' : 'books'}` })),
+        sub ? h('p', { class: 'shelf-description muted', text: sub }) : null,
         h('div', { class: 'grid stagger' }, arr.map(tile)))),
       library.length ? null : h('p', { class: 'card', text: 'No approved books yet. Ask a grown-up to approve a book in the parent area.' })));
   speakGreeting();
