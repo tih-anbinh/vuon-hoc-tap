@@ -1088,7 +1088,13 @@ nav.main{position:sticky;top:62px;z-index:55;background:transparent}
       <button class="icon-btn" id="btnSound" title="Bật/tắt âm thanh" aria-label="Bật hoặc tắt âm thanh">🔊</button>
       <button class="td-nav-btn" onclick="tdMo()" style="padding:6px 14px;border-radius:20px;font-weight:700;font-size:.85rem;border:none;cursor:pointer;margin-right:4px">&#127942; Thi Đấu</button>
       <button class="top-tool-btn" onclick="moVuonGame()" title="Vườn Vui Học" style="padding:6px 14px;border-radius:20px;font-weight:700;font-size:.85rem;background:#10b981;color:#fff;border:none;cursor:pointer;margin-right:4px;transition:.15s">&#127803; Vườn Game</button>
-      <button class="top-tool-btn" onclick="moVangTrang()" title="Vầng Trăng Chọn Bạn" style="padding:6px 14px;border-radius:20px;font-weight:700;font-size:.85rem;background:#6366f1;color:#fff;border:none;cursor:pointer;margin-right:4px;transition:.15s">&#127769; Gọi tên</button>
+      <div style="position:relative;display:inline-block;margin-right:4px">
+        <button class="top-tool-btn" onclick="vtMenu(event)" title="Vầng Trăng" aria-haspopup="true" style="padding:6px 14px;border-radius:20px;font-weight:700;font-size:.85rem;background:#6366f1;color:#fff;border:none;cursor:pointer;transition:.15s">&#127769; Vầng Trăng</button>
+        <div id="vtMenu" style="display:none;position:absolute;top:calc(100% + 6px);right:0;background:#1e1e2e;border-radius:14px;padding:6px;box-shadow:0 8px 32px rgba(0,0,0,.55);min-width:210px;z-index:2000;border:1px solid rgba(255,255,255,.08)">
+          <button onclick="vtMo('vang_trang_chon_ban.html?embed=1','Vầng Trăng Chọn Bạn')" style="display:block;width:100%;text-align:left;padding:9px 12px;border:none;background:none;color:#fff;font-weight:700;cursor:pointer;border-radius:10px">&#127775; Gọi tên (chọn bạn)</button>
+          <button onclick="vtMo('vang_trang_toa_sang.html','Vầng Trăng Tỏa Sáng')" style="display:block;width:100%;text-align:left;padding:9px 12px;border:none;background:none;color:#fff;font-weight:700;cursor:pointer;border-radius:10px">&#127769; Ghép từ – Bài 59</button>
+        </div>
+      </div>
       <div style="position:relative;display:inline-block">
         <button id="btnLogin" onclick="btnLoginClick()" style="padding:6px 14px;border-radius:20px;font-weight:700;font-size:.85rem;background:var(--purple);color:#fff;box-shadow:0 2px 8px rgba(120,80,200,.25);border:none;cursor:pointer;transition:.15s">Đăng nhập</button>
         <div id="gvMenu" style="display:none;position:absolute;top:calc(100% + 6px);right:0;background:#1e1e2e;border-radius:14px;padding:6px;box-shadow:0 8px 32px rgba(0,0,0,.55);min-width:220px;z-index:2000;border:1px solid rgba(255,255,255,.08)"></div>
@@ -7007,18 +7013,25 @@ window.csLuu = async function() {
   finally { if(btn){ btn.disabled=false; btn.textContent='💾 Lưu câu chuyện'; } }
 };
 </script>
-<!-- Vầng Trăng Chọn Bạn (nhúng vang_trang_chon_ban.html) -->
-<div id="vVangTrang" style="display:none;position:fixed;inset:0;z-index:3000;background:#0f172a">
-  <button onclick="dongVangTrang()" aria-label="Đóng" style="position:absolute;top:10px;right:10px;z-index:2;width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,.2);color:#fff;font-size:1.5rem;cursor:pointer">&times;</button>
-  <iframe id="vVangTrangFrame" title="Vầng Trăng Chọn Bạn" style="width:100%;height:100%;border:0"></iframe>
+<!-- Vầng Trăng: nhúng vang_trang_chon_ban.html / vang_trang_toa_sang.html -->
+<div id="vEmbed" style="display:none;position:fixed;inset:0;z-index:3000;background:#0f172a">
+  <button onclick="vtDong()" aria-label="Đóng" style="position:absolute;top:6px;left:50%;transform:translateX(-50%);z-index:2;height:30px;padding:0 14px;border-radius:15px;border:none;background:rgba(15,23,42,.65);color:#fff;font-size:.8rem;font-weight:700;cursor:pointer">&times; Đóng</button>
+  <iframe id="vEmbedFrame" title="Vầng Trăng" style="width:100%;height:100%;border:0"></iframe>
 </div>
 <script>
-function moVangTrang(){
-  var w=document.getElementById('vVangTrang'),f=document.getElementById('vVangTrangFrame');
-  if(!f.getAttribute('src'))f.setAttribute('src','vang_trang_chon_ban.html?embed=1');
-  w.style.display='block';
+function vtMenu(e){e.stopPropagation();var m=document.getElementById('vtMenu');m.style.display=m.style.display==='block'?'none':'block';}
+function vtMo(src,title){
+  var f=document.getElementById('vEmbedFrame');
+  document.getElementById('vtMenu').style.display='none';
+  f.title=title;f.setAttribute('src',src);
+  document.getElementById('vEmbed').style.display='block';
 }
-function dongVangTrang(){document.getElementById('vVangTrang').style.display='none';}
+function vtDong(){
+  document.getElementById('vEmbed').style.display='none';
+  document.getElementById('vEmbedFrame').setAttribute('src','about:blank');
+}
+document.addEventListener('click',function(){document.getElementById('vtMenu').style.display='none';});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&document.getElementById('vEmbed').style.display==='block')vtDong();});
 </script>
 </body>
 </html>
