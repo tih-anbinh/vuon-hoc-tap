@@ -1,0 +1,3723 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VẦNG TRĂNG TỎA SÁNG - Tiếng Việt 1 (Bài 59)</title>
+  <style>
+    /* ==========================================================================
+       1. THIẾT LẬP CƠ BẢN & BẢNG MÀU CHUẨN TRÌNH CHIẾU TV 16:9 (1920x1080)
+       ========================================================================== */
+    :root {
+      --font-rounded: "SF Pro Rounded", "Quicksand", "Nunito", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+
+      /* Màu 3 thẻ đáp án hài hòa, nổi bật trên khu vườn đêm */
+      --teal-top: #4ce6d6;
+      --teal-bot: #18a3a8;
+      --teal-shadow: #0b6973;
+      --teal-border: #d2fff9;
+
+      --lavender-top: #ba9eff;
+      --lavender-bot: #7559e0;
+      --lavender-shadow: #472fa3;
+      --lavender-border: #efe8ff;
+
+      --amber-top: #ffd566;
+      --amber-bot: #f58c28;
+      --amber-shadow: #b35207;
+      --amber-border: #fff4cc;
+
+      /* Phản hồi đúng */
+      --correct-top: #7ef5ab;
+      --correct-bot: #20ba67;
+      --correct-shadow: #117841;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      min-height: 100vh;
+      font-family: var(--font-rounded);
+      color: #ffffff;
+      overflow: hidden;
+      user-select: none;
+      background: #1b367d;
+    }
+
+    /* ==========================================================================
+       2. CẢNH NỀN KHU VƯỜN ĐÊM CỔ TÍCH 3D PHỦ KÍN 100% MÀN HÌNH
+          4 cấp độ ánh sáng: stage-0 -> stage-1 -> stage-2 -> stage-3
+       ========================================================================== */
+    .world-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse at 24% 25%, rgba(164, 134, 255, 0.34) 0%, rgba(164, 134, 255, 0) 56%),
+        radial-gradient(ellipse at 52% 85%, rgba(88, 218, 208, 0.38) 0%, rgba(88, 218, 208, 0) 58%),
+        linear-gradient(180deg, #1a357a 0%, #3444a3 35%, #675fd1 68%, #4ab8bd 100%);
+      transition: filter 1s ease, background 1s ease;
+    }
+
+    body.moon-stage-1 .world-backdrop {
+      background:
+        radial-gradient(ellipse at 24% 26%, rgba(182, 152, 255, 0.4) 0%, rgba(182, 152, 255, 0) 56%),
+        radial-gradient(ellipse at 52% 85%, rgba(102, 232, 220, 0.44) 0%, rgba(102, 232, 220, 0) 60%),
+        linear-gradient(180deg, #1f3e8f 0%, #3d4eb8 34%, #756ae0 68%, #54c7c9 100%);
+    }
+
+    body.moon-stage-2 .world-backdrop {
+      background:
+        radial-gradient(circle at 22% 48%, rgba(255, 236, 145, 0.34) 0%, rgba(255, 224, 115, 0) 52%),
+        radial-gradient(ellipse at 72% 24%, rgba(196, 168, 255, 0.45) 0%, rgba(196, 168, 255, 0) 56%),
+        radial-gradient(ellipse at 50% 84%, rgba(114, 242, 228, 0.5) 0%, rgba(114, 242, 228, 0) 62%),
+        linear-gradient(180deg, #2548a6 0%, #4b5cc9 34%, #8275eb 67%, #61d6d2 100%);
+    }
+
+    body.moon-stage-3 .world-backdrop {
+      background:
+        radial-gradient(circle at 50% 34%, rgba(255, 248, 188, 0.56) 0%, rgba(255, 226, 118, 0.28) 38%, rgba(255, 226, 118, 0) 72%),
+        radial-gradient(ellipse at 20% 28%, rgba(206, 178, 255, 0.48) 0%, rgba(206, 178, 255, 0) 58%),
+        radial-gradient(ellipse at 52% 86%, rgba(128, 248, 234, 0.54) 0%, rgba(128, 248, 234, 0) 64%),
+        linear-gradient(180deg, #2d54ba 0%, #5868d8 33%, #8e80f2 66%, #6de2da 100%);
+    }
+
+    .sky-aurora {
+      position: absolute;
+      inset: -10% -10%;
+      background:
+        radial-gradient(ellipse 52% 20% at 28% 20%, rgba(164, 245, 240, 0.22), transparent 72%),
+        radial-gradient(ellipse 52% 22% at 74% 30%, rgba(220, 192, 255, 0.26), transparent 70%);
+      filter: blur(22px);
+      animation: auroraDrift 22s ease-in-out infinite alternate;
+    }
+
+    @keyframes auroraDrift {
+      0% { transform: translate(-2%, -1%) scale(1); opacity: 0.72; }
+      100% { transform: translate(2.5%, 1.5%) scale(1.05); opacity: 1; }
+    }
+
+    .garden-light-rays {
+      position: absolute;
+      inset: -15%;
+      opacity: 0.12;
+      background:
+        conic-gradient(
+          from 20deg at 22% 45%,
+          transparent 0deg,
+          rgba(255, 246, 186, 0.26) 14deg,
+          transparent 30deg,
+          rgba(182, 248, 255, 0.2) 48deg,
+          transparent 66deg,
+          rgba(255, 244, 175, 0.24) 86deg,
+          transparent 110deg
+        );
+      transition: opacity 1s ease, transform 1.2s ease;
+    }
+
+    body.moon-stage-1 .garden-light-rays { opacity: 0.28; }
+    body.moon-stage-2 .garden-light-rays { opacity: 0.65; }
+    body.moon-stage-3 .garden-light-rays {
+      opacity: 0.95;
+      background:
+        conic-gradient(
+          from 0deg at 50% 34%,
+          transparent 0deg,
+          rgba(255, 248, 190, 0.28) 16deg,
+          transparent 34deg,
+          rgba(182, 248, 255, 0.22) 56deg,
+          transparent 76deg,
+          rgba(255, 242, 168, 0.28) 100deg,
+          transparent 128deg,
+          rgba(255, 248, 190, 0.24) 160deg,
+          transparent 190deg,
+          rgba(182, 248, 255, 0.2) 225deg,
+          transparent 260deg,
+          rgba(255, 244, 172, 0.28) 300deg,
+          transparent 360deg
+        );
+      animation: raysSpin 40s linear infinite;
+    }
+
+    @keyframes raysSpin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .fairy-cloud {
+      position: absolute;
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.34) 0%, rgba(208, 198, 255, 0.12) 100%);
+      box-shadow: inset 0 6px 14px rgba(255, 255, 255, 0.26);
+      filter: blur(1.2px);
+      animation: cloudMove 32s ease-in-out infinite alternate;
+    }
+
+    .fairy-cloud::before,
+    .fairy-cloud::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: inherit;
+    }
+
+    .fairy-cloud::before { width: 52%; height: 136%; top: -48%; left: 16%; }
+    .fairy-cloud::after { width: 42%; height: 112%; top: -32%; right: 16%; }
+
+    .cloud-1 { width: 220px; height: 54px; top: 10%; left: 8%; }
+    .cloud-2 { width: 250px; height: 60px; top: 14%; right: 12%; opacity: 0.78; animation-duration: 38s; animation-direction: alternate-reverse; }
+    .cloud-3 { width: 170px; height: 42px; top: 32%; left: 26%; opacity: 0.5; animation-duration: 34s; }
+
+    @keyframes cloudMove {
+      0% { transform: translateX(-18px); }
+      100% { transform: translateX(22px); }
+    }
+
+    /* Lớp sao trên bầu trời */
+    .stars-layer {
+      position: absolute;
+      inset: 0;
+    }
+
+    .star {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.3;
+      transition: opacity 0.8s ease, filter 0.8s ease;
+      animation: starTwinkle var(--dur, 3.6s) ease-in-out infinite alternate;
+      animation-delay: var(--delay, 0s);
+    }
+
+    .star.gold { background: #ffe98a; box-shadow: 0 0 10px 2px rgba(255, 233, 138, 0.85); }
+    .star.ivory { background: #fffef5; box-shadow: 0 0 10px 2px rgba(255, 254, 245, 0.85); }
+    .star.cyan { background: #c2f5ff; box-shadow: 0 0 10px 2px rgba(194, 245, 255, 0.85); }
+
+    .star.cross {
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+
+    .star.cross::before,
+    .star.cross::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 999px;
+      background: var(--sc, #fff8cc);
+      box-shadow: 0 0 14px var(--sg, rgba(255, 240, 160, 0.95));
+    }
+
+    .star.cross::before { width: 100%; height: 22%; }
+    .star.cross::after { width: 22%; height: 100%; }
+
+    .star.tier-1 { opacity: 0.14; }
+    .star.tier-2 { opacity: 0.1; }
+    .star.tier-3 { opacity: 0.08; }
+
+    body.moon-stage-1 .star.tier-1 { opacity: 0.9; filter: brightness(1.15); }
+    body.moon-stage-2 .star.tier-1,
+    body.moon-stage-2 .star.tier-2 { opacity: 1; filter: brightness(1.25); }
+    body.moon-stage-3 .star { opacity: 1; filter: brightness(1.4); }
+
+    @keyframes starTwinkle {
+      0% { transform: scale(0.76); }
+      100% { transform: scale(1.24); }
+    }
+
+    /* Bụi ánh sáng bay lên ở cấp độ 3 */
+    .rising-dust-layer {
+      position: fixed;
+      inset: 0;
+      z-index: 5;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.9s ease;
+    }
+
+    body.moon-stage-3 .rising-dust-layer {
+      opacity: 1;
+    }
+
+    .dust-mote {
+      position: absolute;
+      bottom: -20px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #fffef0 0%, #ffe47a 55%, transparent 100%);
+      box-shadow: 0 0 12px 3px rgba(255, 232, 130, 0.85);
+      animation: dustRise var(--dur, 6s) ease-in infinite;
+      animation-delay: var(--delay, 0s);
+    }
+
+    @keyframes dustRise {
+      0% { transform: translateY(0) translateX(0) scale(0.6); opacity: 0; }
+      20% { opacity: 0.95; }
+      85% { opacity: 0.75; }
+      100% { transform: translateY(-92vh) translateX(var(--drift, 30px)) scale(1.25); opacity: 0; }
+    }
+
+    /* ==========================================================================
+       3. RẶNG TRE NHIỀU TẦNG, THẢM CỎ CÓ CHIỀU SÂU & ĐOM ĐÓM
+       ========================================================================== */
+    .garden-scenery {
+      position: fixed;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .garden-svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .sway-l-back { transform-origin: 8% 100%; animation: swayL 9s ease-in-out infinite alternate; }
+    .sway-l-front { transform-origin: 4% 100%; animation: swayL 6.8s ease-in-out infinite alternate; }
+    .sway-r-back { transform-origin: 92% 100%; animation: swayR 9.2s ease-in-out infinite alternate; }
+    .sway-r-front { transform-origin: 96% 100%; animation: swayR 7s ease-in-out infinite alternate; }
+
+    @keyframes swayL {
+      0% { transform: rotate(-1.3deg); }
+      100% { transform: rotate(1.5deg); }
+    }
+
+    @keyframes swayR {
+      0% { transform: rotate(1.3deg); }
+      100% { transform: rotate(-1.5deg); }
+    }
+
+    .fireflies-layer {
+      position: fixed;
+      inset: 0;
+      z-index: 4;
+      pointer-events: none;
+    }
+
+    .firefly {
+      position: absolute;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #fffde4 0%, #ffe169 52%, rgba(255, 225, 105, 0) 100%);
+      box-shadow: 0 0 12px 3px rgba(255, 232, 118, 0.72);
+      animation: fireflyDrift var(--dur, 8s) ease-in-out infinite alternate;
+      animation-delay: var(--delay, 0s);
+      transition: filter 0.8s ease, box-shadow 0.8s ease;
+    }
+
+    .firefly.aqua {
+      background: radial-gradient(circle, #ebfffb 0%, #80f5e3 52%, rgba(128, 245, 227, 0) 100%);
+      box-shadow: 0 0 12px 3px rgba(128, 245, 227, 0.72);
+    }
+
+    body.moon-stage-2 .firefly,
+    body.moon-stage-3 .firefly {
+      filter: brightness(1.45);
+      box-shadow: 0 0 22px 7px rgba(255, 238, 130, 0.95);
+    }
+
+    @keyframes fireflyDrift {
+      0% { transform: translate(0, 0) scale(0.74); opacity: 0.3; }
+      50% { opacity: 1; }
+      100% { transform: translate(var(--tx, 34px), var(--ty, -40px)) scale(1.2); opacity: 0.6; }
+    }
+
+    /* ==========================================================================
+       4. NHÂN VẬT VẦNG TRĂNG 3D & HIỆU ỨNG TỎA SÁNG
+       ========================================================================== */
+    .moon-character-stage {
+      position: relative;
+      width: clamp(170px, 19vw, 290px);
+      height: clamp(170px, 19vw, 290px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      pointer-events: none;
+    }
+
+    .moon-aura {
+      position: absolute;
+      inset: -26%;
+      border-radius: 50%;
+      background: radial-gradient(
+        circle,
+        rgba(255, 248, 206, 0.42) 0%,
+        rgba(255, 230, 140, 0.16) 44%,
+        rgba(255, 230, 140, 0) 74%
+      );
+      transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    body.moon-stage-1 .moon-aura {
+      inset: -44%;
+      background: radial-gradient(
+        circle,
+        rgba(255, 250, 210, 0.72) 0%,
+        rgba(255, 232, 130, 0.34) 44%,
+        rgba(155, 245, 245, 0.12) 64%,
+        rgba(255, 232, 130, 0) 78%
+      );
+    }
+
+    body.moon-stage-2 .moon-aura {
+      inset: -64%;
+      background: radial-gradient(
+        circle,
+        rgba(255, 253, 222, 0.92) 0%,
+        rgba(255, 232, 118, 0.54) 42%,
+        rgba(148, 246, 248, 0.22) 66%,
+        rgba(255, 224, 95, 0) 82%
+      );
+      animation: auraBreath 1.8s ease-in-out infinite alternate;
+    }
+
+    body.moon-stage-3 .moon-aura {
+      inset: -88%;
+      background: radial-gradient(
+        circle,
+        rgba(255, 254, 232, 1) 0%,
+        rgba(255, 236, 122, 0.72) 38%,
+        rgba(154, 250, 244, 0.32) 64%,
+        rgba(255, 224, 95, 0) 84%
+      );
+      animation: auraBreath 1.2s ease-in-out infinite alternate;
+    }
+
+    @keyframes auraBreath {
+      0% { transform: scale(0.95); opacity: 0.9; }
+      100% { transform: scale(1.1); opacity: 1; }
+    }
+
+    .moon-pulse-ring {
+      position: absolute;
+      inset: 8%;
+      border-radius: 50%;
+      border: 6px solid rgba(255, 246, 178, 0.9);
+      box-shadow: 0 0 28px rgba(255, 236, 130, 0.9);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .moon-pulse-ring.expanding {
+      animation: ringExpand 1.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes ringExpand {
+      0% { transform: scale(0.85); opacity: 1; }
+      100% { transform: scale(2.45); opacity: 0; }
+    }
+
+    /* Tia sáng lấp lánh tỏa quanh vầng trăng khi học sinh ghép đúng */
+    .moon-burst-rays {
+      position: absolute;
+      inset: -32%;
+      border-radius: 50%;
+      background: repeating-conic-gradient(
+        from 0deg,
+        rgba(255, 248, 186, 0.72) 0deg 8deg,
+        transparent 8deg 30deg
+      );
+      -webkit-mask-image: radial-gradient(circle, transparent 34%, black 52%, transparent 74%);
+      mask-image: radial-gradient(circle, transparent 34%, black 52%, transparent 74%);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .moon-burst-rays.bursting {
+      animation: raysBurst 1.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes raysBurst {
+      0% { transform: scale(0.6) rotate(0deg); opacity: 0; }
+      25% { opacity: 0.95; }
+      100% { transform: scale(1.45) rotate(32deg); opacity: 0; }
+    }
+
+    .moon-orbit-stars {
+      position: absolute;
+      inset: -16%;
+      opacity: 0.35;
+      transition: all 0.8s ease;
+    }
+
+    body.moon-stage-1 .moon-orbit-stars { opacity: 0.85; transform: scale(1.06); }
+    body.moon-stage-2 .moon-orbit-stars { opacity: 1; transform: scale(1.14); }
+    body.moon-stage-3 .moon-orbit-stars { opacity: 1; transform: scale(1.22); }
+
+    .moon-orbit-stars span {
+      position: absolute;
+      font-size: clamp(20px, 2vw, 30px);
+      filter: drop-shadow(0 0 10px rgba(255, 244, 166, 0.95));
+      animation: starTwinkle 2.2s ease-in-out infinite alternate;
+    }
+
+    .moon-orbit-stars .os1 { top: 2%; left: 10%; }
+    .moon-orbit-stars .os2 { top: 14%; right: 2%; animation-delay: 0.5s; }
+    .moon-orbit-stars .os3 { bottom: 14%; left: 2%; animation-delay: 1s; }
+    .moon-orbit-stars .os4 { bottom: 4%; right: 12%; animation-delay: 1.5s; }
+
+    .moon-zzz {
+      position: absolute;
+      top: -6%;
+      right: 6%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 2px;
+      color: #fff8cf;
+      font-weight: 900;
+      text-shadow: 0 2px 10px rgba(32, 38, 112, 0.65);
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+
+    body:not(.moon-stage-0) .moon-zzz {
+      opacity: 0;
+    }
+
+    .moon-zzz span {
+      display: inline-block;
+      animation: zzzFloat 3s ease-in-out infinite;
+    }
+
+    .moon-zzz .z1 { font-size: clamp(1.1rem, 1.5vw, 1.5rem); animation-delay: 0s; }
+    .moon-zzz .z2 { font-size: clamp(1.4rem, 1.9vw, 1.95rem); margin-right: 12px; animation-delay: 0.5s; }
+    .moon-zzz .z3 { font-size: clamp(1.75rem, 2.3vw, 2.4rem); margin-right: 26px; animation-delay: 1s; }
+
+    @keyframes zzzFloat {
+      0%, 100% { transform: translateY(0) scale(0.92); opacity: 0.55; }
+      50% { transform: translateY(-10px) scale(1.08); opacity: 1; }
+    }
+
+    .moon-svg {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      filter: drop-shadow(0 16px 28px rgba(20, 26, 86, 0.36));
+      transition: filter 0.8s ease;
+    }
+
+    body.moon-stage-0 .moon-svg {
+      animation: sleepBreath 4s ease-in-out infinite;
+    }
+
+    body:not(.moon-stage-0) .moon-svg {
+      animation: awakeFloat 4.2s ease-in-out infinite alternate;
+    }
+
+    body.moon-stage-2 .moon-svg {
+      filter: drop-shadow(0 0 24px rgba(255, 238, 145, 0.72)) drop-shadow(0 14px 26px rgba(20, 26, 86, 0.3));
+    }
+
+    body.moon-stage-3 .moon-svg {
+      filter: drop-shadow(0 0 38px rgba(255, 245, 168, 0.96)) drop-shadow(0 14px 26px rgba(20, 26, 86, 0.25));
+    }
+
+    @keyframes sleepBreath {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-6px) scale(1.035); }
+    }
+
+    @keyframes awakeFloat {
+      0% { transform: translateY(0) rotate(-2deg); }
+      100% { transform: translateY(-10px) rotate(2deg); }
+    }
+
+    .moon-svg.waking-wiggle {
+      animation: wakeWiggle 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+    }
+
+    @keyframes wakeWiggle {
+      0% { transform: scale(1) rotate(0deg); }
+      20% { transform: scale(1.08) rotate(-8deg); }
+      45% { transform: scale(1.12) rotate(8deg); }
+      70% { transform: scale(1.08) rotate(-4deg); }
+      100% { transform: scale(1.04) rotate(0deg); }
+    }
+
+    /* ==========================================================================
+       5. ĐIỀU KHIỂN GÓC TRÊN PHẢI (ÂM THANH, ÂM LƯỢNG & CHỌN CHẾ ĐỘ)
+       ========================================================================== */
+    .corner-controls {
+      position: fixed;
+      top: clamp(12px, 1.8vh, 22px);
+      right: clamp(14px, 2.2vw, 32px);
+      z-index: 30;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .mini-glass-btn {
+      border: 2px solid rgba(255, 255, 255, 0.45);
+      background: rgba(24, 34, 96, 0.42);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      color: #ffffff;
+      border-radius: 999px;
+      padding: 8px 16px;
+      font-family: var(--font-rounded);
+      font-size: clamp(0.92rem, 1.15vw, 1.08rem);
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      text-shadow: 0 1px 4px rgba(14, 18, 66, 0.45);
+      transition: transform 0.16s ease, background 0.2s ease;
+    }
+
+    .mini-glass-btn:hover {
+      background: rgba(255, 255, 255, 0.26);
+      transform: translateY(-2px);
+    }
+
+    .mini-glass-btn:active {
+      transform: translateY(1px);
+    }
+
+    .audio-control-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px 6px 8px;
+      border-radius: 999px;
+      border: 2px solid rgba(255, 255, 255, 0.45);
+      background: rgba(24, 34, 96, 0.42);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .audio-toggle-icon-btn {
+      border: none;
+      background: rgba(255, 255, 255, 0.16);
+      color: #ffffff;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.15s ease, background 0.2s ease;
+    }
+
+    .audio-toggle-icon-btn:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(1.08);
+    }
+
+    .volume-slider {
+      width: clamp(68px, 6.5vw, 96px);
+      height: 6px;
+      accent-color: #ffe270;
+      cursor: pointer;
+    }
+
+    /* ==========================================================================
+       6. HỆ THỐNG CÁC MÀN HÌNH ĐỘC LẬP
+       ========================================================================== */
+    .stage-container {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: clamp(16px, 2.4vh, 32px) clamp(20px, 3.6vw, 56px);
+    }
+
+    .screen {
+      display: none;
+      width: 100%;
+      max-width: 1620px;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      animation: screenFadeIn 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .screen.active {
+      display: flex;
+    }
+
+    @keyframes screenFadeIn {
+      from { opacity: 0; transform: translateY(14px) scale(0.985); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    /* Nút hành động chính 3D */
+    .btn-primary-fairy {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: clamp(14px, 2vh, 22px) clamp(36px, 4.2vw, 62px);
+      border-radius: 999px;
+      border: 4px solid #fff7c2;
+      background: linear-gradient(135deg, #3eead5 0%, #34c7c9 38%, #ffd257 100%);
+      color: #1c2066;
+      font-family: var(--font-rounded);
+      font-size: clamp(1.35rem, 2.2vw, 2.15rem);
+      font-weight: 900;
+      letter-spacing: 0.8px;
+      cursor: pointer;
+      box-shadow:
+        0 9px 0 #147482,
+        0 18px 34px rgba(12, 30, 82, 0.42),
+        0 0 30px rgba(124, 245, 228, 0.45),
+        inset 0 6px 12px rgba(255, 255, 255, 0.8);
+      transition: transform 0.16s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.16s ease, filter 0.16s ease;
+    }
+
+    .btn-primary-fairy:hover {
+      transform: translateY(-5px) scale(1.03);
+      filter: brightness(1.06);
+      box-shadow:
+        0 14px 0 #147482,
+        0 24px 40px rgba(12, 30, 82, 0.48),
+        0 0 40px rgba(255, 238, 148, 0.75),
+        inset 0 6px 14px rgba(255, 255, 255, 0.9);
+    }
+
+    .btn-primary-fairy:active {
+      transform: translateY(4px);
+      box-shadow: 0 5px 0 #147482, 0 10px 18px rgba(12, 30, 82, 0.38);
+    }
+
+    .btn-secondary-fairy {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: clamp(14px, 2vh, 22px) clamp(30px, 3.4vw, 50px);
+      border-radius: 999px;
+      border: 4px solid #efe8ff;
+      background: linear-gradient(135deg, #c1a6ff 0%, #8668eb 100%);
+      color: #ffffff;
+      font-family: var(--font-rounded);
+      font-size: clamp(1.3rem, 2.05vw, 1.95rem);
+      font-weight: 900;
+      letter-spacing: 0.6px;
+      cursor: pointer;
+      text-shadow: 0 2px 6px rgba(42, 24, 108, 0.45);
+      box-shadow:
+        0 9px 0 #4d32a8,
+        0 18px 34px rgba(12, 30, 82, 0.4),
+        inset 0 5px 12px rgba(255, 255, 255, 0.45);
+      transition: transform 0.16s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.16s ease, filter 0.16s ease;
+    }
+
+    .btn-secondary-fairy:hover {
+      transform: translateY(-5px) scale(1.03);
+      filter: brightness(1.06);
+    }
+
+    .btn-secondary-fairy:active {
+      transform: translateY(4px);
+      box-shadow: 0 5px 0 #4d32a8;
+    }
+
+    /* ==========================================================================
+       MÀN HÌNH 1: VƯỜN TRĂNG CHÀO ĐÓN (CHỌN HỌC SINH / GIÁO VIÊN)
+       ========================================================================== */
+    .welcome-grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1.45fr 0.78fr;
+      align-items: center;
+      gap: clamp(20px, 3.5vw, 52px);
+      padding-bottom: 3vh;
+    }
+
+    .welcome-center-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: clamp(18px, 3vh, 34px);
+    }
+
+    .game-main-title {
+      font-size: clamp(2.9rem, 6.2vw, 5.4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: 1.6px;
+      color: #fff9db;
+      -webkit-text-stroke: 2.8px #292a85;
+      paint-order: stroke fill;
+      text-shadow:
+        0 7px 0 #292a85,
+        0 14px 30px rgba(16, 20, 74, 0.56),
+        0 0 38px rgba(255, 242, 165, 0.68);
+    }
+
+    .mode-choices-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(230px, 360px));
+      gap: clamp(16px, 2.2vw, 28px);
+      width: 100%;
+      justify-content: center;
+    }
+
+    .mode-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: clamp(20px, 2.6vh, 30px) clamp(20px, 2.2vw, 30px);
+      border-radius: 34px;
+      cursor: pointer;
+      font-family: var(--font-rounded);
+      text-align: center;
+      transition: transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.18s ease, filter 0.18s ease;
+    }
+
+    .mode-btn.mode-group {
+      border: 4px solid #d4fff8;
+      background: linear-gradient(155deg, #4df0dc 0%, #1cb3b5 58%, #ffd257 140%);
+      color: #122d54;
+      box-shadow:
+        0 10px 0 #0e6f78,
+        0 20px 36px rgba(12, 30, 82, 0.42),
+        inset 0 6px 14px rgba(255, 255, 255, 0.72);
+    }
+
+    .mode-btn.mode-teacher {
+      border: 4px solid #fff3c4;
+      background: linear-gradient(155deg, #ffe073 0%, #f5942c 62%, #b56eff 145%);
+      color: #3d1b00;
+      box-shadow:
+        0 10px 0 #a84d06,
+        0 20px 36px rgba(12, 30, 82, 0.42),
+        inset 0 6px 14px rgba(255, 255, 255, 0.72);
+    }
+
+    .mode-btn:hover {
+      transform: translateY(-6px) scale(1.03);
+      filter: brightness(1.06);
+    }
+
+    .mode-btn:active {
+      transform: translateY(4px) scale(0.99);
+    }
+
+    .mode-btn-icon {
+      font-size: clamp(2.1rem, 3.2vw, 3rem);
+      line-height: 1;
+    }
+
+    .mode-btn-title {
+      font-size: clamp(1.45rem, 2.2vw, 2.1rem);
+      font-weight: 900;
+      letter-spacing: 0.8px;
+    }
+
+    .mode-btn-sub {
+      font-size: clamp(0.95rem, 1.25vw, 1.15rem);
+      font-weight: 800;
+      opacity: 0.9;
+      line-height: 1.3;
+    }
+
+    .welcome-moon-col {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .welcome-moon-col .moon-character-stage {
+      width: clamp(220px, 25vw, 370px);
+      height: clamp(220px, 25vw, 370px);
+    }
+
+    .settings-trigger-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 24px;
+      border-radius: 999px;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      background: rgba(24, 34, 96, 0.42);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      color: #eef9ff;
+      font-family: var(--font-rounded);
+      font-size: clamp(1rem, 1.25vw, 1.2rem);
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(14, 22, 74, 0.25);
+      transition: transform 0.16s ease, background 0.2s ease;
+    }
+
+    .settings-trigger-btn:hover {
+      background: rgba(255, 255, 255, 0.24);
+      transform: translateY(-2px);
+    }
+
+    .student-count-badge {
+      background: linear-gradient(180deg, #b8fff4 0%, #6ce8dc 100%);
+      color: #104954;
+      font-size: 0.88em;
+      font-weight: 900;
+      padding: 3px 11px;
+      border-radius: 999px;
+    }
+
+    /* ==========================================================================
+       MÀN HÌNH DẪN CHẾ ĐỘ GIÁO VIÊN: AI SẼ ĐƯỢC VẦNG TRĂNG CHỌN?
+       ========================================================================== */
+    .teacher-intro-grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1.42fr 0.78fr;
+      align-items: center;
+      gap: clamp(20px, 3.5vw, 52px);
+      padding-bottom: 3vh;
+    }
+
+    .teacher-intro-center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: clamp(26px, 4.2vh, 48px);
+    }
+
+    .teacher-intro-title {
+      font-size: clamp(2.8rem, 5.8vw, 5.1rem);
+      font-weight: 900;
+      line-height: 1.16;
+      letter-spacing: 1.4px;
+      color: #fff9db;
+      -webkit-text-stroke: 2.6px #292a85;
+      paint-order: stroke fill;
+      text-shadow:
+        0 7px 0 #292a85,
+        0 14px 30px rgba(16, 20, 74, 0.56),
+        0 0 42px rgba(255, 242, 165, 0.76);
+      animation: popScale 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    /* ==========================================================================
+       MÀN HÌNH 2: VẦNG TRĂNG GỌI TÊN (CHẾ ĐỘ GIÁO VIÊN)
+       ========================================================================== */
+    .callname-grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 0.78fr 1.42fr;
+      align-items: center;
+      gap: clamp(18px, 3.5vw, 52px);
+      padding-bottom: 4vh;
+    }
+
+    .callname-moon-col {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .callname-moon-col .moon-character-stage {
+      width: clamp(210px, 23vw, 350px);
+      height: clamp(210px, 23vw, 350px);
+    }
+
+    .callname-center-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: clamp(18px, 2.8vh, 32px);
+    }
+
+    .callname-prompt {
+      font-size: clamp(1.4rem, 2.3vw, 2.2rem);
+      font-weight: 800;
+      color: #eef9ff;
+      background: rgba(24, 34, 96, 0.36);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 2px solid rgba(255, 255, 255, 0.42);
+      border-radius: 999px;
+      padding: 12px 34px;
+      text-shadow: 0 2px 8px rgba(14, 20, 72, 0.55);
+    }
+
+    .student-name-spotlight {
+      position: relative;
+      padding: clamp(24px, 3.4vh, 42px) clamp(44px, 6vw, 92px);
+      border-radius: 44px;
+      background: radial-gradient(circle at 50% 40%, rgba(255, 252, 224, 0.24) 0%, rgba(30, 42, 118, 0.44) 100%);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 4px solid rgba(255, 246, 186, 0.85);
+      box-shadow:
+        0 20px 44px rgba(14, 22, 74, 0.38),
+        0 0 54px rgba(255, 236, 138, 0.52),
+        inset 0 0 28px rgba(255, 250, 205, 0.28);
+      animation: nameSpotlightPop 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+      overflow: visible;
+    }
+
+    .spotlight-burst-rays {
+      position: absolute;
+      inset: -48%;
+      border-radius: 50%;
+      background: repeating-conic-gradient(
+        from 0deg,
+        rgba(255, 246, 178, 0.42) 0deg 10deg,
+        transparent 10deg 24deg
+      );
+      -webkit-mask-image: radial-gradient(circle, black 26%, transparent 72%);
+      mask-image: radial-gradient(circle, black 26%, transparent 72%);
+      opacity: 0;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    #screen2.callname-revealed .spotlight-burst-rays {
+      opacity: 1;
+      animation: raysSpin 18s linear infinite, spotlightRaysAppear 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    @keyframes spotlightRaysAppear {
+      0% { transform: scale(0.45); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes nameSpotlightPop {
+      0% { opacity: 0; transform: scale(0.76); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    .spotlight-star {
+      position: absolute;
+      font-size: clamp(26px, 2.8vw, 42px);
+      filter: drop-shadow(0 0 12px rgba(255, 240, 145, 0.95));
+      animation: starTwinkle 2s ease-in-out infinite alternate;
+    }
+
+    .spotlight-star.s-tl { top: -22px; left: -18px; }
+    .spotlight-star.s-tr { top: -18px; right: -20px; animation-delay: 0.6s; }
+    .spotlight-star.s-bl { bottom: -18px; left: 16px; animation-delay: 1.1s; }
+    .spotlight-star.s-br { bottom: -22px; right: 16px; animation-delay: 1.6s; }
+
+    .called-student-name {
+      font-size: clamp(2.8rem, 6vw, 5.4rem);
+      font-weight: 900;
+      letter-spacing: 2px;
+      line-height: 1.12;
+      color: #fff8cc;
+      -webkit-text-stroke: 2.5px #2a2b82;
+      paint-order: stroke fill;
+      text-shadow:
+        0 6px 0 #2a2b82,
+        0 12px 26px rgba(16, 20, 74, 0.55),
+        0 0 36px rgba(255, 238, 145, 0.85);
+    }
+
+    #screen2.callname-rolling .moon-aura {
+      animation: callMoonShimmer 0.9s ease-in-out infinite alternate;
+    }
+
+    #screen2.callname-rolling .moon-svg {
+      filter: drop-shadow(0 0 26px rgba(255, 244, 168, 0.85)) drop-shadow(0 16px 28px rgba(20, 26, 86, 0.34));
+    }
+
+    #screen2.callname-rolling .moon-orbit-stars {
+      opacity: 1;
+      animation: callOrbitSpin 3.6s linear infinite;
+    }
+
+    #screen2.callname-rolling .student-name-spotlight {
+      border-color: rgba(162, 248, 242, 0.88);
+      box-shadow:
+        0 20px 44px rgba(14, 22, 74, 0.38),
+        0 0 46px rgba(132, 242, 238, 0.58),
+        inset 0 0 26px rgba(255, 250, 205, 0.25);
+      animation: spotlightRollPulse 0.45s ease-in-out infinite alternate;
+    }
+
+    @keyframes spotlightRollPulse {
+      0% { transform: scale(0.985); box-shadow: 0 20px 44px rgba(14, 22, 74, 0.38), 0 0 36px rgba(132, 242, 238, 0.48), inset 0 0 22px rgba(255, 250, 205, 0.2); }
+      100% { transform: scale(1.02); box-shadow: 0 20px 48px rgba(14, 22, 74, 0.44), 0 0 60px rgba(255, 238, 138, 0.78), inset 0 0 32px rgba(255, 250, 205, 0.36); }
+    }
+
+    #screen2.callname-rolling .called-student-name {
+      color: #e8fcff;
+      text-shadow:
+        0 5px 0 #2a2b82,
+        0 10px 22px rgba(16, 20, 74, 0.5),
+        0 0 26px rgba(136, 246, 242, 0.78);
+    }
+
+    .called-student-name.name-tick-anim {
+      animation: nameTickSlide 0.14s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    @keyframes nameTickSlide {
+      0% { opacity: 0.45; transform: translateY(-14px) scale(0.93); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    #screen2.callname-rolling #goToQuestionBtn {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translateY(14px) scale(0.92);
+    }
+
+    .callname-congrats-banner {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 32px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(255, 242, 152, 0.96) 0%, rgba(255, 198, 72, 0.96) 100%);
+      border: 3.5px solid #ffffff;
+      color: #3d1d00;
+      font-size: clamp(1.2rem, 1.95vw, 1.85rem);
+      font-weight: 900;
+      letter-spacing: 0.4px;
+      box-shadow: 0 12px 28px rgba(14, 22, 74, 0.38), 0 0 32px rgba(255, 238, 138, 0.75);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px) scale(0.9);
+      transition: opacity 0.45s ease, transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), visibility 0.45s ease;
+    }
+
+    #screen2.callname-revealed .callname-congrats-banner {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0) scale(1);
+    }
+
+    #screen2.callname-revealed .student-name-spotlight {
+      border-color: #fff8b8;
+      background: radial-gradient(circle at 50% 40%, rgba(255, 253, 218, 0.38) 0%, rgba(42, 54, 148, 0.56) 100%);
+      box-shadow:
+        0 24px 56px rgba(14, 22, 74, 0.46),
+        0 0 92px rgba(255, 238, 132, 0.96),
+        inset 0 0 42px rgba(255, 252, 214, 0.58);
+      animation: nameFinalReveal 0.75s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    #screen2.callname-revealed .called-student-name {
+      font-size: clamp(3.3rem, 6.8vw, 6.1rem);
+      color: #fffbe0;
+      text-shadow:
+        0 7px 0 #2a2b82,
+        0 14px 30px rgba(16, 20, 74, 0.6),
+        0 0 48px rgba(255, 240, 142, 0.98);
+      animation: winnerNameGlow 1.6s ease-in-out infinite alternate;
+    }
+
+    @keyframes winnerNameGlow {
+      0% { transform: scale(1); filter: brightness(1); }
+      100% { transform: scale(1.045); filter: brightness(1.12); }
+    }
+
+    #screen2.callname-revealed .moon-orbit-stars {
+      opacity: 1;
+      transform: scale(1.14);
+    }
+
+    #screen2 #goToQuestionBtn {
+      transition: opacity 0.45s ease, transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), visibility 0.45s ease, box-shadow 0.16s ease, filter 0.16s ease;
+    }
+
+    #screen2.callname-revealed #goToQuestionBtn {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translateY(0) scale(1);
+    }
+
+    @keyframes callMoonShimmer {
+      0% { transform: scale(0.96); opacity: 0.72; }
+      100% { transform: scale(1.16); opacity: 1; }
+    }
+
+    @keyframes callOrbitSpin {
+      from { transform: rotate(0deg) scale(1.06); }
+      to { transform: rotate(360deg) scale(1.06); }
+    }
+
+    @keyframes nameFinalReveal {
+      0% { transform: scale(0.86); }
+      55% { transform: scale(1.07); }
+      100% { transform: scale(1); }
+    }
+
+    /* ==========================================================================
+       MÀN HÌNH 3: GHÉP 3 TRANH VỚI 3 THẺ TỪ (DÙNG CHUNG CHO CẢ 2 CHẾ ĐỘ)
+       ========================================================================== */
+    .awake-layout {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: clamp(10px, 1.6vh, 20px);
+      padding: clamp(4px, 0.6vh, 8px) 0 clamp(10px, 1.8vh, 22px);
+    }
+
+    .awake-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      padding-right: clamp(0px, 8vw, 140px);
+    }
+
+    .awake-title-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 24px;
+      border-radius: 999px;
+      background: rgba(24, 34, 96, 0.44);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 2.5px solid rgba(255, 246, 196, 0.55);
+      font-size: clamp(1.1rem, 1.65vw, 1.55rem);
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      color: #fff9db;
+      text-shadow: 0 2px 8px rgba(14, 18, 66, 0.55);
+    }
+
+    .active-student-pill {
+      display: none;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 22px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(255, 240, 145, 0.94), rgba(255, 198, 72, 0.94));
+      border: 2.5px solid #ffffff;
+      color: #3d1d00;
+      font-size: clamp(1.08rem, 1.55vw, 1.45rem);
+      font-weight: 900;
+      box-shadow: 0 6px 18px rgba(16, 22, 74, 0.3);
+    }
+
+    .active-student-pill.visible {
+      display: inline-flex;
+    }
+
+    .teacher-call-mini-btn {
+      display: none;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 20px;
+      border-radius: 999px;
+      border: 2.5px solid #d4fff8;
+      background: linear-gradient(135deg, #3de6d3, #19a3a8);
+      color: #ffffff;
+      font-family: var(--font-rounded);
+      font-size: clamp(0.98rem, 1.35vw, 1.25rem);
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 5px 0 #0c6970, 0 10px 20px rgba(12, 26, 76, 0.34);
+      transition: transform 0.15s ease;
+    }
+
+    .teacher-call-mini-btn.visible {
+      display: inline-flex;
+    }
+
+    .teacher-call-mini-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .turn-stars {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(24, 34, 96, 0.38);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 2px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .turn-star-dot {
+      width: clamp(30px, 2.4vw, 40px);
+      height: clamp(30px, 2.4vw, 40px);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: clamp(0.95rem, 1.2vw, 1.2rem);
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.16);
+      border: 2px solid rgba(255, 255, 255, 0.45);
+      transition: all 0.35s ease;
+    }
+
+    .turn-star-dot.done {
+      background: linear-gradient(180deg, #82f7b0 0%, #20ba67 100%);
+      color: #ffffff;
+      border-color: #ffffff;
+      box-shadow: 0 0 16px rgba(102, 245, 165, 0.85);
+      transform: scale(1.08);
+    }
+
+    /* Khu vực giữa: Vầng trăng bên trái + Bảng ghép 3 tranh & 3 từ */
+    .awake-main-stage {
+      width: 100%;
+      flex: 1;
+      display: grid;
+      grid-template-columns: 0.42fr 1.58fr;
+      align-items: center;
+      gap: clamp(14px, 2.4vw, 34px);
+      min-height: 0;
+    }
+
+    .awake-moon-side {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .awake-moon-side .moon-character-stage {
+      width: clamp(175px, 19vw, 290px);
+      height: clamp(175px, 19vw, 290px);
+    }
+
+    .match-board {
+      width: 100%;
+      max-width: 1120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: clamp(14px, 2.2vh, 26px);
+    }
+
+    .match-guide-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 24px;
+      border-radius: 999px;
+      background: rgba(20, 32, 92, 0.46);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 2px solid rgba(210, 245, 255, 0.45);
+      font-size: clamp(1rem, 1.38vw, 1.32rem);
+      font-weight: 800;
+      color: #eefaff;
+      text-align: center;
+    }
+
+    /* Hàng 3 hình ảnh minh họa */
+    .pictures-grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(14px, 2vw, 26px);
+    }
+
+    .picture-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: clamp(12px, 1.6vh, 18px) clamp(10px, 1.2vw, 16px);
+      border-radius: 34px;
+      background: radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.96) 0%, rgba(232, 249, 255, 0.9) 76%, rgba(206, 238, 255, 0.84) 100%);
+      border: 4.5px solid rgba(255, 255, 255, 0.92);
+      box-shadow:
+        0 16px 32px rgba(16, 24, 82, 0.34),
+        0 0 28px rgba(176, 242, 255, 0.34),
+        inset 0 6px 14px rgba(255, 255, 255, 0.96);
+      cursor: pointer;
+      transition: transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .picture-card:hover:not(.is-matched) {
+      transform: translateY(-5px) scale(1.02);
+      border-color: #fff6aa;
+    }
+
+    .picture-card.is-selected,
+    .picture-card.drag-over {
+      transform: translateY(-7px) scale(1.04);
+      border-color: #ffe866;
+      box-shadow:
+        0 18px 36px rgba(16, 24, 82, 0.4),
+        0 0 42px rgba(255, 236, 118, 0.92),
+        inset 0 6px 14px rgba(255, 255, 255, 0.98);
+    }
+
+    .picture-card.is-matched {
+      cursor: default;
+      border-color: #7ef5ab;
+      box-shadow:
+        0 16px 32px rgba(16, 24, 82, 0.3),
+        0 0 42px rgba(126, 245, 171, 0.78),
+        inset 0 6px 14px rgba(255, 255, 255, 0.98);
+    }
+
+    .picture-card.is-wrong {
+      animation: softShake 0.42s ease;
+    }
+
+    .picture-svg-box {
+      width: 100%;
+      height: clamp(140px, 24vh, 235px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .illustration-svg {
+      width: 100%;
+      height: 100%;
+      max-width: 310px;
+      max-height: 230px;
+      filter: drop-shadow(0 10px 14px rgba(28, 38, 98, 0.16));
+      pointer-events: none;
+    }
+
+    .picture-slot-label {
+      width: 100%;
+      min-height: clamp(44px, 5.6vh, 58px);
+      border-radius: 18px;
+      border: 3px dashed rgba(68, 112, 184, 0.45);
+      background: rgba(214, 238, 255, 0.55);
+      color: #46689e;
+      font-size: clamp(1rem, 1.35vw, 1.3rem);
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 12px;
+      transition: all 0.25s ease;
+    }
+
+    .picture-card.is-matched .picture-slot-label {
+      border: 3px solid #e8fff1;
+      background: linear-gradient(180deg, var(--correct-top) 0%, var(--correct-bot) 100%);
+      color: #ffffff;
+      font-size: clamp(1.45rem, 2.2vw, 2.15rem);
+      font-weight: 900;
+      text-shadow: 0 2px 0 rgba(12, 104, 52, 0.72);
+      box-shadow: 0 5px 0 var(--correct-shadow);
+    }
+
+    /* Hàng 3 thẻ từ (hỗ trợ cả kéo thả lẫn chạm chọn) */
+    .options-grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(14px, 2vw, 26px);
+    }
+
+    .word-card {
+      width: 100%;
+      min-height: clamp(78px, 10vh, 114px);
+      padding: 14px 16px;
+      border-radius: 28px;
+      font-family: var(--font-rounded);
+      font-size: clamp(1.85rem, 3vw, 3.05rem);
+      font-weight: 900;
+      letter-spacing: 0.4px;
+      cursor: grab;
+      touch-action: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      transition: transform 0.16s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.16s ease, filter 0.18s ease, opacity 0.25s ease;
+    }
+
+    .word-card:active:not(:disabled) {
+      cursor: grabbing;
+    }
+
+    .word-card.theme-teal {
+      background: linear-gradient(180deg, var(--teal-top) 0%, var(--teal-bot) 100%);
+      border: 4px solid var(--teal-border);
+      color: #ffffff;
+      text-shadow: 0 3px 0 rgba(10, 86, 94, 0.72), 0 4px 12px rgba(10, 62, 72, 0.32);
+      box-shadow:
+        0 9px 0 var(--teal-shadow),
+        0 16px 26px rgba(12, 26, 76, 0.36),
+        inset 0 6px 12px rgba(255, 255, 255, 0.45);
+    }
+
+    .word-card.theme-lavender {
+      background: linear-gradient(180deg, var(--lavender-top) 0%, var(--lavender-bot) 100%);
+      border: 4px solid var(--lavender-border);
+      color: #ffffff;
+      text-shadow: 0 3px 0 rgba(56, 32, 136, 0.75), 0 4px 12px rgba(42, 24, 108, 0.32);
+      box-shadow:
+        0 9px 0 var(--lavender-shadow),
+        0 16px 26px rgba(12, 26, 76, 0.36),
+        inset 0 6px 12px rgba(255, 255, 255, 0.42);
+    }
+
+    .word-card.theme-amber {
+      background: linear-gradient(180deg, var(--amber-top) 0%, var(--amber-bot) 100%);
+      border: 4px solid var(--amber-border);
+      color: #4a2000;
+      text-shadow: 0 2px 0 rgba(255, 248, 212, 0.72);
+      box-shadow:
+        0 9px 0 var(--amber-shadow),
+        0 16px 26px rgba(12, 26, 76, 0.36),
+        inset 0 6px 12px rgba(255, 255, 255, 0.56);
+    }
+
+    .word-card:hover:not(:disabled) {
+      transform: translateY(-6px) scale(1.03);
+      filter: brightness(1.06);
+    }
+
+    .word-card.is-selected {
+      transform: translateY(-8px) scale(1.05);
+      border-color: #fff8a8 !important;
+      box-shadow:
+        0 12px 0 rgba(18, 32, 92, 0.65),
+        0 0 38px rgba(255, 240, 128, 0.95),
+        inset 0 6px 12px rgba(255, 255, 255, 0.65) !important;
+    }
+
+    .word-card.is-dragging-source {
+      opacity: 0.35;
+      transform: scale(0.95);
+    }
+
+    .word-card.is-used {
+      opacity: 0.36;
+      filter: grayscale(0.25);
+      transform: scale(0.94);
+      cursor: default;
+      pointer-events: none;
+    }
+
+    .word-card.is-wrong {
+      animation: softShake 0.42s ease;
+    }
+
+    /* Bản sao nổi theo ngón tay / con trỏ khi kéo thẻ từ */
+    .drag-floating-clone {
+      position: fixed;
+      z-index: 90;
+      pointer-events: none;
+      transform: translate(-50%, -50%) scale(1.06) rotate(-2deg);
+      box-shadow: 0 22px 42px rgba(10, 18, 64, 0.52), 0 0 32px rgba(255, 244, 150, 0.85) !important;
+      opacity: 0.97;
+    }
+
+    @keyframes softShake {
+      0%, 100% { transform: translateX(0); }
+      20% { transform: translateX(-10px); }
+      45% { transform: translateX(10px); }
+      70% { transform: translateX(-6px); }
+      88% { transform: translateX(6px); }
+    }
+
+    @keyframes popScale {
+      from { opacity: 0; transform: scale(0.84); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Thanh phản hồi ngắn & nút điều khiển bên dưới */
+    .awake-footer-bar {
+      width: 100%;
+      min-height: clamp(64px, 8.2vh, 88px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .feedback-toast {
+      display: none;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 30px;
+      border-radius: 999px;
+      font-size: clamp(1.35rem, 2.1vw, 2.05rem);
+      font-weight: 900;
+      letter-spacing: 0.4px;
+      color: #ffffff;
+      animation: popScale 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .feedback-toast.show-praise {
+      display: inline-flex;
+      background: linear-gradient(135deg, rgba(28, 182, 100, 0.94), rgba(20, 152, 118, 0.94));
+      border: 3px solid #dcffea;
+      box-shadow: 0 12px 28px rgba(14, 130, 74, 0.45), 0 0 28px rgba(126, 255, 182, 0.62);
+    }
+
+    .feedback-toast.show-retry {
+      display: inline-flex;
+      background: linear-gradient(135deg, rgba(238, 142, 42, 0.94), rgba(216, 110, 26, 0.94));
+      border: 3px solid #ffedc7;
+      box-shadow: 0 12px 28px rgba(164, 78, 14, 0.42);
+    }
+
+    .btn-continue-turn {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 34px;
+      border-radius: 999px;
+      border: 3.5px solid #fff8cc;
+      background: linear-gradient(180deg, #fff199 0%, #ffb732 100%);
+      color: #4f2400;
+      font-family: var(--font-rounded);
+      font-size: clamp(1.2rem, 1.75vw, 1.65rem);
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow:
+        0 7px 0 #b86606,
+        0 14px 26px rgba(14, 22, 72, 0.38),
+        inset 0 4px 10px rgba(255, 255, 255, 0.82);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .btn-continue-turn.visible {
+      display: inline-flex;
+      animation: popScale 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .btn-continue-turn:hover {
+      transform: translateY(-4px) scale(1.04);
+    }
+
+    .btn-continue-turn:active {
+      transform: translateY(3px);
+      box-shadow: 0 4px 0 #b86606;
+    }
+
+    /* ==========================================================================
+       MÀN HÌNH 4: BƯỚC 1 - HIỆU ỨNG CHIẾN THẮNG (2–3 GIÂY)
+       ========================================================================== */
+    .radiant-layout {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: clamp(18px, 2.8vh, 32px);
+      padding-bottom: 3vh;
+    }
+
+    .radiant-moon-wrap .moon-character-stage {
+      width: clamp(210px, 22vw, 320px);
+      height: clamp(210px, 22vw, 320px);
+    }
+
+    .congrats-title {
+      font-size: clamp(2.4rem, 5vw, 4.5rem);
+      font-weight: 900;
+      line-height: 1.18;
+      letter-spacing: 1px;
+      color: #fff9db;
+      -webkit-text-stroke: 2.4px #292a85;
+      paint-order: stroke fill;
+      text-shadow:
+        0 7px 0 #292a85,
+        0 14px 30px rgba(16, 20, 74, 0.54),
+        0 0 44px rgba(255, 240, 148, 0.88);
+    }
+
+    .winners-ribbon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(12px, 1.8vw, 24px);
+      flex-wrap: wrap;
+    }
+
+    .winner-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 28px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 3.5px solid #fff4b2;
+      color: #211d63;
+      font-size: clamp(1.3rem, 2vw, 1.9rem);
+      font-weight: 900;
+      box-shadow: 0 12px 26px rgba(16, 24, 78, 0.32), 0 0 22px rgba(255, 240, 150, 0.55);
+    }
+
+    .transition-hint-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 26px;
+      border-radius: 999px;
+      background: rgba(24, 34, 96, 0.42);
+      border: 2px solid rgba(255, 248, 196, 0.55);
+      color: #fff8d4;
+      font-size: clamp(1.05rem, 1.45vw, 1.35rem);
+      font-weight: 800;
+      animation: pulseSoft 1.2s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulseSoft {
+      from { opacity: 0.72; transform: scale(0.98); }
+      to { opacity: 1; transform: scale(1.02); }
+    }
+
+    /* ==========================================================================
+       MÀN HÌNH 5: BƯỚC 2 - TỔNG HỢP ĐÁP ÁN (CÙNG KIỂM TRA KẾT QUẢ NÀO!)
+       ========================================================================== */
+    .review-layout {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: clamp(12px, 2vh, 24px);
+      padding: clamp(6px, 1.2vh, 14px) 0 clamp(14px, 2.4vh, 28px);
+    }
+
+    .review-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      text-align: center;
+    }
+
+    .review-title {
+      font-size: clamp(2.1rem, 4.2vw, 3.6rem);
+      font-weight: 900;
+      letter-spacing: 1.2px;
+      color: #fff9db;
+      -webkit-text-stroke: 2.2px #292a85;
+      paint-order: stroke fill;
+      text-shadow:
+        0 6px 0 #292a85,
+        0 12px 24px rgba(16, 20, 74, 0.52),
+        0 0 34px rgba(255, 240, 152, 0.72);
+    }
+
+    .review-pairs-grid {
+      width: 100%;
+      max-width: 1320px;
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+      gap: clamp(16px, 2.4vw, 34px);
+      min-height: 0;
+    }
+
+    .review-pair-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      opacity: 0;
+      animation: reviewCardAppear 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    .review-pair-card:nth-child(1) { animation-delay: 0.08s; }
+    .review-pair-card:nth-child(2) { animation-delay: 0.22s; }
+    .review-pair-card:nth-child(3) { animation-delay: 0.36s; }
+
+    @keyframes reviewCardAppear {
+      from { opacity: 0; transform: translateY(20px) scale(0.95); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .review-pic-frame {
+      width: 100%;
+      height: clamp(190px, 31vh, 300px);
+      padding: 14px;
+      border-radius: 36px;
+      background: radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.97) 0%, rgba(232, 249, 255, 0.92) 78%, rgba(206, 238, 255, 0.88) 100%);
+      border: 4.5px solid #88f7b5;
+      box-shadow:
+        0 18px 34px rgba(16, 24, 82, 0.34),
+        0 0 34px rgba(124, 250, 178, 0.45),
+        inset 0 6px 14px rgba(255, 255, 255, 0.96);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .review-pic-frame .illustration-svg {
+      max-width: 340px;
+      max-height: 265px;
+    }
+
+    .review-connector {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      height: clamp(44px, 5.6vh, 58px);
+    }
+
+    .review-connector-line {
+      width: 6px;
+      height: 100%;
+      background: linear-gradient(180deg, #98ffbe 0%, #fff294 100%);
+      box-shadow: 0 0 14px rgba(154, 255, 192, 0.9);
+      border-radius: 999px;
+    }
+
+    .review-check-badge {
+      position: absolute;
+      width: clamp(36px, 3.2vw, 46px);
+      height: clamp(36px, 3.2vw, 46px);
+      border-radius: 50%;
+      background: linear-gradient(180deg, #7ef5ab 0%, #1eb864 100%);
+      border: 3.5px solid #ffffff;
+      color: #ffffff;
+      font-size: clamp(1.15rem, 1.6vw, 1.5rem);
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 16px rgba(12, 92, 48, 0.42), 0 0 18px rgba(126, 245, 171, 0.85);
+    }
+
+    .review-word-box {
+      width: 100%;
+      min-height: clamp(78px, 10.5vh, 114px);
+      padding: 14px 20px;
+      border-radius: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: clamp(2rem, 3.3vw, 3.3rem);
+      font-weight: 900;
+      letter-spacing: 0.5px;
+    }
+
+    .review-word-box.theme-teal {
+      background: linear-gradient(180deg, var(--teal-top) 0%, var(--teal-bot) 100%);
+      border: 4px solid var(--teal-border);
+      color: #ffffff;
+      text-shadow: 0 3px 0 rgba(10, 86, 94, 0.72);
+      box-shadow: 0 9px 0 var(--teal-shadow), 0 16px 28px rgba(12, 26, 76, 0.35);
+    }
+
+    .review-word-box.theme-lavender {
+      background: linear-gradient(180deg, var(--lavender-top) 0%, var(--lavender-bot) 100%);
+      border: 4px solid var(--lavender-border);
+      color: #ffffff;
+      text-shadow: 0 3px 0 rgba(56, 32, 136, 0.75);
+      box-shadow: 0 9px 0 var(--lavender-shadow), 0 16px 28px rgba(12, 26, 76, 0.35);
+    }
+
+    .review-word-box.theme-amber {
+      background: linear-gradient(180deg, var(--amber-top) 0%, var(--amber-bot) 100%);
+      border: 4px solid var(--amber-border);
+      color: #4a2000;
+      text-shadow: 0 2px 0 rgba(255, 248, 212, 0.72);
+      box-shadow: 0 9px 0 var(--amber-shadow), 0 16px 28px rgba(12, 26, 76, 0.35);
+    }
+
+    .finale-actions-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(14px, 2vw, 28px);
+      flex-wrap: wrap;
+    }
+
+    /* ==========================================================================
+       7. CỬA SỔ CÀI ĐẶT DANH SÁCH HỌC SINH (MODAL)
+       ========================================================================== */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 60;
+      background: rgba(16, 22, 68, 0.58);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-overlay.open {
+      display: flex;
+      animation: screenFadeIn 0.25s ease;
+    }
+
+    .modal-card {
+      width: 100%;
+      max-width: 600px;
+      background: linear-gradient(180deg, rgba(40, 52, 134, 0.96) 0%, rgba(28, 38, 108, 0.98) 100%);
+      border: 3px solid rgba(206, 244, 255, 0.65);
+      border-radius: 34px;
+      padding: 26px 28px;
+      box-shadow: 0 24px 54px rgba(10, 14, 52, 0.58);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .modal-title {
+      font-size: clamp(1.35rem, 2vw, 1.75rem);
+      font-weight: 900;
+      color: #fff8d4;
+    }
+
+    .modal-close-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, 0.45);
+      background: rgba(255, 255, 255, 0.14);
+      color: #ffffff;
+      font-size: 1.35rem;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .modal-textarea {
+      width: 100%;
+      min-height: 210px;
+      max-height: 360px;
+      resize: vertical;
+      border-radius: 20px;
+      border: 2.5px solid rgba(255, 255, 255, 0.45);
+      background: rgba(255, 255, 255, 0.95);
+      padding: 14px 18px;
+      font-family: var(--font-rounded);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #1c1a54;
+      outline: none;
+    }
+
+    .modal-textarea:focus {
+      border-color: #7df2e6;
+      box-shadow: 0 0 0 4px rgba(125, 242, 230, 0.35);
+    }
+
+    .modal-hint {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: #d8edff;
+      line-height: 1.45;
+    }
+
+    .modal-actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-modal-save {
+      padding: 12px 28px;
+      border-radius: 999px;
+      border: 3px solid #fff7c2;
+      background: linear-gradient(135deg, #3eead5 0%, #ffd257 100%);
+      color: #1c2066;
+      font-family: var(--font-rounded);
+      font-size: 1.15rem;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .btn-modal-clear {
+      padding: 12px 22px;
+      border-radius: 999px;
+      border: 2px solid rgba(255, 255, 255, 0.45);
+      background: rgba(255, 255, 255, 0.14);
+      color: #ffffff;
+      font-family: var(--font-rounded);
+      font-size: 1.05rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    /* ==========================================================================
+       8. PHÁO HOA SAO NHỎ
+       ========================================================================== */
+    .fireworks-layer {
+      position: fixed;
+      inset: 0;
+      z-index: 45;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .spark-star {
+      position: absolute;
+      font-size: clamp(22px, 2.3vw, 38px);
+      animation: sparkFly 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes sparkFly {
+      0% { opacity: 1; transform: translate(0, 0) scale(0.45) rotate(0deg); }
+      100% { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(1.35) rotate(var(--rot)); }
+    }
+
+    /* ==========================================================================
+       9. CO GIÃN MƯỢT MÀ TRÊN MÁY TÍNH BẢNG & ĐIỆN THOẠI
+       ========================================================================== */
+    @media (max-width: 1024px) {
+      html, body { overflow-y: auto; }
+      .stage-container { height: auto; min-height: 100vh; padding-top: 66px; }
+      .welcome-grid,
+      .teacher-intro-grid,
+      .callname-grid,
+      .awake-main-stage {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .awake-header { padding-right: 0; }
+      .awake-moon-side .moon-character-stage { width: 150px; height: 150px; }
+      .mode-choices-row { grid-template-columns: 1fr; max-width: 420px; }
+      .pictures-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+      .picture-svg-box { height: 120px; }
+      .options-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+      .word-card { font-size: clamp(1.25rem, 3.4vw, 1.85rem); min-height: 68px; }
+      .review-pairs-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+      .review-pic-frame { height: 155px; }
+      .review-word-box { font-size: clamp(1.35rem, 3.2vw, 2rem); min-height: 68px; }
+    }
+
+    @media (max-width: 640px) {
+      .pictures-grid,
+      .options-grid,
+      .review-pairs-grid { grid-template-columns: 1fr; max-width: 380px; }
+      .picture-svg-box { height: 155px; }
+      .review-pic-frame { height: 175px; }
+    }
+  </style>
+</head>
+<body class="moon-stage-0">
+
+  <!-- ======================================================================
+       LỚP 1: BẦU TRỜI ĐÊM CỔ TÍCH, MÂY MỀM, TIA SÁNG & CÁC NGÔI SAO
+       ====================================================================== -->
+  <div class="world-backdrop" aria-hidden="true">
+    <div class="sky-aurora"></div>
+    <div class="garden-light-rays"></div>
+    <div class="stars-layer" id="starsLayer"></div>
+    <div class="fairy-cloud cloud-1"></div>
+    <div class="fairy-cloud cloud-2"></div>
+    <div class="fairy-cloud cloud-3"></div>
+  </div>
+
+  <!-- ======================================================================
+       LỚP 2: RẶNG TRE NHIỀU TẦNG HAI BÊN & THẢM CỎ HOA KHU VƯỜN
+       ====================================================================== -->
+  <div class="garden-scenery" aria-hidden="true">
+    <svg class="garden-svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMax slice">
+      <defs>
+        <linearGradient id="farHill" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#3c829b" stop-opacity="0.72"/>
+          <stop offset="100%" stop-color="#1c4c68" stop-opacity="0.92"/>
+        </linearGradient>
+        <linearGradient id="midHill" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#2c927b"/>
+          <stop offset="100%" stop-color="#165252"/>
+        </linearGradient>
+        <linearGradient id="frontGrass" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#4aba7a"/>
+          <stop offset="50%" stop-color="#248058"/>
+          <stop offset="100%" stop-color="#134c3d"/>
+        </linearGradient>
+        <linearGradient id="bambooFar" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#69cca2" stop-opacity="0.5"/>
+          <stop offset="100%" stop-color="#1b4f52" stop-opacity="0.5"/>
+        </linearGradient>
+        <linearGradient id="bambooMid" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#9ef290"/>
+          <stop offset="40%" stop-color="#45b56b"/>
+          <stop offset="100%" stop-color="#144f3c"/>
+        </linearGradient>
+        <linearGradient id="bambooFront" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#e4ffba"/>
+          <stop offset="30%" stop-color="#74e082"/>
+          <stop offset="78%" stop-color="#2a9458"/>
+          <stop offset="100%" stop-color="#185c3e"/>
+        </linearGradient>
+        <linearGradient id="leafBright" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#d6ffa8"/>
+          <stop offset="54%" stop-color="#5ad477"/>
+          <stop offset="100%" stop-color="#227c4d"/>
+        </linearGradient>
+        <linearGradient id="leafDark" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#7ce386"/>
+          <stop offset="100%" stop-color="#1d6e4a"/>
+        </linearGradient>
+      </defs>
+
+      <path d="M0,855 Q440,745 960,830 T1920,785 L1920,1080 L0,1080 Z" fill="url(#farHill)"/>
+
+      <g class="sway-l-back" opacity="0.6">
+        <path d="M245,1040 Q262,720 285,340" stroke="url(#bambooFar)" stroke-width="18" stroke-linecap="round" fill="none"/>
+        <path d="M306,1040 Q314,760 332,440" stroke="url(#bambooFar)" stroke-width="14" stroke-linecap="round" fill="none"/>
+        <path d="M272,480 Q348,440 392,475 Q338,504 272,492 Z" fill="#5ec497" opacity="0.65"/>
+      </g>
+
+      <g class="sway-r-back" opacity="0.6">
+        <path d="M1675,1040 Q1655,700 1630,300" stroke="url(#bambooFar)" stroke-width="18" stroke-linecap="round" fill="none"/>
+        <path d="M1605,1040 Q1595,750 1575,420" stroke="url(#bambooFar)" stroke-width="14" stroke-linecap="round" fill="none"/>
+        <path d="M1635,410 Q1552,374 1506,412 Q1564,438 1635,424 Z" fill="#63cfa0" opacity="0.65"/>
+      </g>
+
+      <path d="M0,920 Q480,835 960,915 T1920,870 L1920,1080 L0,1080 Z" fill="url(#midHill)"/>
+
+      <g class="sway-l-front">
+        <path d="M56,1080 Q74,680 108,180" stroke="url(#bambooFront)" stroke-width="34" stroke-linecap="round" fill="none"/>
+        <line x1="51" y1="860" x2="88" y2="858" stroke="#e4ffba" stroke-width="6" stroke-linecap="round"/>
+        <line x1="62" y1="670" x2="99" y2="668" stroke="#e4ffba" stroke-width="6" stroke-linecap="round"/>
+        <line x1="76" y1="480" x2="112" y2="478" stroke="#e4ffba" stroke-width="6" stroke-linecap="round"/>
+        <line x1="92" y1="300" x2="126" y2="298" stroke="#e4ffba" stroke-width="5.5" stroke-linecap="round"/>
+        <path d="M138,1080 Q154,740 192,330" stroke="url(#bambooMid)" stroke-width="23" stroke-linecap="round" fill="none"/>
+        <path d="M12,1080 Q16,740 34,390" stroke="url(#bambooMid)" stroke-width="21" stroke-linecap="round" fill="none"/>
+        <path d="M100,280 Q182,226 248,262 Q180,296 100,292 Z" fill="url(#leafBright)"/>
+        <path d="M92,310 Q170,295 220,346 Q154,346 90,322 Z" fill="url(#leafDark)"/>
+        <path d="M174,458 Q258,416 314,452 Q248,486 172,470 Z" fill="url(#leafBright)"/>
+        <path d="M154,648 Q232,612 286,648 Q224,678 152,660 Z" fill="url(#leafBright)"/>
+        <path d="M72,670 Q150,645 198,688 Q134,702 70,682 Z" fill="url(#leafDark)"/>
+      </g>
+
+      <g class="sway-r-front">
+        <path d="M1864,1080 Q1846,680 1810,170" stroke="url(#bambooFront)" stroke-width="34" stroke-linecap="round" fill="none"/>
+        <line x1="1832" y1="860" x2="1870" y2="858" stroke="#e4ffba" stroke-width="6" stroke-linecap="round"/>
+        <line x1="1820" y1="670" x2="1858" y2="668" stroke="#e4ffba" stroke-width="6" stroke-linecap="round"/>
+        <line x1="1806" y1="480" x2="1843" y2="478" stroke="#e4ffba" stroke-width="6" stroke-linecap="round"/>
+        <line x1="1792" y1="300" x2="1828" y2="298" stroke="#e4ffba" stroke-width="5.5" stroke-linecap="round"/>
+        <path d="M1782,1080 Q1768,740 1730,350" stroke="url(#bambooMid)" stroke-width="23" stroke-linecap="round" fill="none"/>
+        <path d="M1908,1080 Q1902,740 1884,390" stroke="url(#bambooMid)" stroke-width="21" stroke-linecap="round" fill="none"/>
+        <path d="M1818,270 Q1734,218 1668,256 Q1736,292 1818,284 Z" fill="url(#leafBright)"/>
+        <path d="M1826,302 Q1748,288 1698,340 Q1766,340 1828,316 Z" fill="url(#leafDark)"/>
+        <path d="M1744,472 Q1658,430 1602,468 Q1668,502 1746,486 Z" fill="url(#leafBright)"/>
+        <path d="M1764,656 Q1686,620 1630,656 Q1692,688 1766,670 Z" fill="url(#leafBright)"/>
+        <path d="M1848,678 Q1770,652 1720,696 Q1786,710 1850,690 Z" fill="url(#leafDark)"/>
+      </g>
+
+      <path d="M0,972 Q420,912 960,972 T1920,942 L1920,1080 L0,1080 Z" fill="url(#frontGrass)"/>
+      <ellipse cx="960" cy="1012" rx="460" ry="34" fill="#82f7d4" opacity="0.18"/>
+
+      <g opacity="0.95">
+        <circle cx="94" cy="1030" r="68" fill="#1e6e50"/>
+        <circle cx="174" cy="1048" r="56" fill="#2c8f62"/>
+        <circle cx="242" cy="1062" r="44" fill="#46b576"/>
+        <circle cx="1826" cy="1028" r="70" fill="#1e6e50"/>
+        <circle cx="1742" cy="1046" r="58" fill="#2c8f62"/>
+        <circle cx="1670" cy="1062" r="46" fill="#46b576"/>
+      </g>
+
+      <g>
+        <circle cx="340" cy="1012" r="9" fill="#fff3b5"/>
+        <circle cx="340" cy="1012" r="4" fill="#ffb732"/>
+        <circle cx="435" cy="1036" r="7.5" fill="#c7fff6"/>
+        <circle cx="435" cy="1036" r="3.2" fill="#ffffff"/>
+        <circle cx="650" cy="1044" r="8" fill="#ffdbf2"/>
+        <circle cx="650" cy="1044" r="3.5" fill="#ffe169"/>
+        <circle cx="1270" cy="1040" r="8.5" fill="#d9ffba"/>
+        <circle cx="1270" cy="1040" r="3.8" fill="#fff7a8"/>
+        <circle cx="1495" cy="1022" r="9" fill="#fff3b5"/>
+        <circle cx="1495" cy="1022" r="4" fill="#ffb732"/>
+        <circle cx="1585" cy="1002" r="7.5" fill="#c7fff6"/>
+        <circle cx="1585" cy="1002" r="3.2" fill="#ffffff"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- Lớp đom đóm, bụi sáng bay lên & pháo hoa sao -->
+  <div class="fireflies-layer" id="firefliesLayer" aria-hidden="true"></div>
+  <div class="rising-dust-layer" id="risingDustLayer" aria-hidden="true"></div>
+  <div class="fireworks-layer" id="fireworksLayer" aria-hidden="true"></div>
+
+  <!-- Điều khiển âm thanh, âm lượng & quay lại chọn chế độ ở góc trên phải -->
+  <div class="corner-controls">
+    <div class="audio-control-pill" aria-label="Điều khiển âm thanh và âm lượng">
+      <button type="button" class="audio-toggle-icon-btn" id="soundToggleBtn" aria-label="Bật hoặc tắt âm thanh">
+        <span id="soundIcon">🔊</span>
+      </button>
+      <input
+        type="range"
+        id="volumeSlider"
+        class="volume-slider"
+        min="0"
+        max="100"
+        value="55"
+        aria-label="Điều chỉnh âm lượng"
+      />
+    </div>
+    <button type="button" class="mini-glass-btn" id="homeCornerBtn" style="display: none;" aria-label="Quay lại màn hình chọn chế độ">
+      <span>🏠</span>
+      <span>Chọn chế độ</span>
+    </button>
+  </div>
+
+  <!-- ======================================================================
+       KHÔNG GIAN CÁC MÀN HÌNH ĐỘC LẬP
+       ====================================================================== -->
+  <main class="stage-container">
+
+    <!-- ====================================================================
+         MÀN HÌNH 1: VƯỜN TRĂNG CHÀO ĐÓN (CHỌN HỌC SINH / GIÁO VIÊN)
+         ==================================================================== -->
+    <section class="screen active" id="screen1" aria-label="Vườn trăng chào đón">
+      <div class="welcome-grid">
+        <div class="welcome-center-col">
+          <h1 class="game-main-title">VẦNG TRĂNG<br>TỎA SÁNG</h1>
+
+          <div class="mode-choices-row">
+            <button type="button" class="mode-btn mode-group" id="groupModeBtn">
+              <span class="mode-btn-icon">🤝</span>
+              <span class="mode-btn-title">HỌC SINH</span>
+              <span class="mode-btn-sub">Giúp vầng trăng tìm đúng từ</span>
+            </button>
+
+            <button type="button" class="mode-btn mode-teacher" id="teacherModeBtn">
+              <span class="mode-btn-icon">👩‍🏫</span>
+              <span class="mode-btn-title">GIÁO VIÊN</span>
+              <span class="mode-btn-sub">Gọi tên và ghép từ trên TV</span>
+            </button>
+          </div>
+
+          <button type="button" class="settings-trigger-btn" id="openSettingsBtn">
+            <span>⚙️ Danh sách học sinh (Giáo viên)</span>
+            <span class="student-count-badge" id="studentCountBadge">Chưa nhập</span>
+          </button>
+        </div>
+
+        <div class="welcome-moon-col">
+          <div class="moon-character-stage" id="moonSlot1"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         MÀN HÌNH DẪN CHẾ ĐỘ GIÁO VIÊN: AI SẼ ĐƯỢC VẦNG TRĂNG CHỌN?
+         ==================================================================== -->
+    <section class="screen" id="screen6" aria-label="Chuẩn bị gọi tên học sinh">
+      <div class="teacher-intro-grid">
+        <div class="teacher-intro-center">
+          <h2 class="teacher-intro-title">AI SẼ ĐƯỢC<br>VẦNG TRĂNG CHỌN?</h2>
+
+          <button type="button" class="btn-primary-fairy" id="teacherStartSpinBtn">
+            <span>✨ BẮT ĐẦU</span>
+          </button>
+        </div>
+
+        <div class="welcome-moon-col">
+          <div class="moon-character-stage" id="moonSlot6"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         MÀN HÌNH 2: VẦNG TRĂNG GỌI TÊN (CHẾ ĐỘ GIÁO VIÊN)
+         ==================================================================== -->
+    <section class="screen" id="screen2" aria-label="Vầng trăng gọi tên">
+      <div class="callname-grid">
+        <div class="callname-moon-col">
+          <div class="moon-character-stage" id="moonSlot2"></div>
+        </div>
+
+        <div class="callname-center-col">
+          <div class="callname-prompt" id="callnamePrompt">✨ Vầng trăng đang quay chọn bạn nhỏ may mắn...</div>
+
+          <div class="student-name-spotlight" id="nameSpotlight">
+            <div class="spotlight-burst-rays" aria-hidden="true"></div>
+            <span class="spotlight-star s-tl">⭐</span>
+            <span class="spotlight-star s-tr">✨</span>
+            <span class="spotlight-star s-bl">✦</span>
+            <span class="spotlight-star s-br">🌟</span>
+            <div class="called-student-name" id="calledStudentName">LƯỢT 1</div>
+          </div>
+
+          <div class="callname-congrats-banner" id="callnameCongratsBanner">
+            🎉 CHÚC MỪNG! BẠN ĐÃ ĐƯỢC VẦNG TRĂNG CHỌN!
+          </div>
+
+          <button type="button" class="btn-primary-fairy" id="goToQuestionBtn">
+            <span>TIẾP TỤC ➜</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         MÀN HÌNH 3: GHÉP 3 TRANH VỚI 3 THẺ TỪ (CẢ 2 CHẾ ĐỘ)
+         ==================================================================== -->
+    <section class="screen" id="screen3" aria-label="Giúp vầng trăng tìm đúng từ">
+      <div class="awake-layout">
+        <div class="awake-header">
+          <div class="awake-title-pill" id="boardModeTitle">🌙 GIÚP VẦNG TRĂNG TÌM ĐÚNG TỪ</div>
+          <div class="active-student-pill" id="activeStudentPill">⭐ Bạn: ...</div>
+          <button type="button" class="teacher-call-mini-btn" id="teacherCallHeaderBtn">
+            <span>🎲 Gọi tên bạn khác</span>
+          </button>
+          <div class="turn-stars" aria-label="Tiến độ 3 cặp từ">
+            <div class="turn-star-dot" id="dot0">1</div>
+            <div class="turn-star-dot" id="dot1">2</div>
+            <div class="turn-star-dot" id="dot2">3</div>
+          </div>
+        </div>
+
+        <div class="awake-main-stage">
+          <div class="awake-moon-side">
+            <div class="moon-character-stage" id="moonSlot3"></div>
+          </div>
+
+          <div class="match-board">
+            <div class="match-guide-pill" id="matchGuidePill">
+              🗣️ Cùng đọc to 3 từ rồi kéo thẻ từ hoặc chạm chọn để ghép với tranh nhé!
+            </div>
+
+            <div class="pictures-grid" id="picturesGrid" aria-label="Ba hình ảnh minh họa"></div>
+
+            <div class="options-grid" id="optionsGrid" role="group" aria-label="Ba thẻ từ"></div>
+          </div>
+        </div>
+
+        <div class="awake-footer-bar" aria-live="polite">
+          <div class="feedback-toast" id="feedbackToast"></div>
+          <button type="button" class="btn-continue-turn" id="continueTurnBtn">
+            <span id="continueTurnText">🎲 GỌI BẠN TIẾP THEO</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         MÀN HÌNH 4: BƯỚC 1 - HIỆU ỨNG CHIẾN THẮNG (GIỮ 2.8 GIÂY)
+         ==================================================================== -->
+    <section class="screen" id="screen4" aria-label="Vầng trăng tỏa sáng">
+      <div class="radiant-layout">
+        <div class="radiant-moon-wrap">
+          <div class="moon-character-stage" id="moonSlot4"></div>
+        </div>
+
+        <h2 class="congrats-title">Chúc mừng các bạn!<br>Vầng trăng đã tỏa sáng!</h2>
+
+        <div class="winners-ribbon" id="winnersRibbon"></div>
+
+        <div class="transition-hint-pill">✨ Chuẩn bị kiểm tra kết quả nào...</div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         MÀN HÌNH 5: BƯỚC 2 - TỔNG HỢP ĐÁP ÁN (CÙNG KIỂM TRA KẾT QUẢ NÀO!)
+         ==================================================================== -->
+    <section class="screen" id="screen5" aria-label="Cùng kiểm tra kết quả nào">
+      <div class="review-layout">
+        <div class="review-header">
+          <h2 class="review-title">🌟 CÙNG KIỂM TRA KẾT QUẢ NÀO!</h2>
+        </div>
+
+        <div class="review-pairs-grid" id="reviewPairsGrid" aria-label="Ba cặp tranh và từ đã ghép đúng"></div>
+
+        <div class="finale-actions-row">
+          <button type="button" class="btn-primary-fairy" id="replayBtn">
+            <span>🔄 Chơi lại</span>
+          </button>
+          <button type="button" class="btn-secondary-fairy" id="finaleHomeBtn">
+            <span>🏠 Về màn hình chính</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================================
+       CỬA SỔ NHẬP DANH SÁCH HỌC SINH (CHẾ ĐỘ GIÁO VIÊN)
+       ====================================================================== -->
+  <div class="modal-overlay" id="settingsModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle">🌙 Danh sách học sinh</h3>
+        <button type="button" class="modal-close-btn" id="closeSettingsBtn" aria-label="Đóng">✕</button>
+      </div>
+      <textarea
+        id="studentListInput"
+        class="modal-textarea"
+        placeholder="Nhập tên các bạn trong lớp (mỗi tên một dòng hoặc cách nhau bằng dấu phẩy). Hỗ trợ danh sách 35 học sinh trở lên..."
+      ></textarea>
+      <p class="modal-hint">
+        Dùng cho chế độ Giáo viên để gọi ngẫu nhiên các bạn không trùng tên. Nếu để trống, lớp vẫn chơi bình thường.
+      </p>
+      <div class="modal-actions">
+        <button type="button" class="btn-modal-clear" id="clearStudentsBtn">Xóa danh sách</button>
+        <button type="button" class="btn-modal-save" id="saveStudentsBtn">Lưu danh sách</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* ========================================================================
+       1. DỮ LIỆU HỌC TẬP CHÍNH XÁC (TIẾNG VIỆT 1 - BÀI 59: ang, ăng, âng)
+       ======================================================================== */
+    const LESSON_WORDS = [
+      { id: "ca-vang", word: "Cá vàng" },
+      { id: "mang-tre", word: "Măng tre" },
+      { id: "nha-tang", word: "Nhà tầng" }
+    ];
+
+    const PRAISE_BY_STAGE = {
+      1: "Chính xác rồi!",
+      2: "Giỏi lắm!",
+      3: "Bạn thật tuyệt!"
+    };
+
+    const CARD_THEMES = ["theme-teal", "theme-lavender", "theme-amber"];
+
+    /* ========================================================================
+       2. TRẠNG THÁI TRÒ CHƠI (HAI CHẾ ĐỘ ĐỘC LẬP: 'group' | 'teacher')
+       ======================================================================== */
+    const state = {
+      mode: "group",
+      currentScreen: 1,
+      moonStage: 0,
+      pictureOrder: [],
+      wordOrder: [],
+      matchedIds: new Set(),
+      selectedPicId: null,
+      selectedWordId: null,
+      allStudents: [],
+      remainingStudents: [],
+      calledStudents: [],
+      currentStudent: "",
+      callCount: 0,
+      wakeTimeoutId: null,
+      reviewTimeoutId: null,
+      nameRollTimeoutId: null,
+      fireworkIntervalId: null,
+      soundEnabled: true,
+      volume: 0.55,
+      audioCtx: null,
+      masterGain: null,
+      activeSfxGains: [],
+      suppressNextClick: false
+    };
+
+    /* ========================================================================
+       3. THAM CHIẾU DOM
+       ======================================================================== */
+    const els = {
+      starsLayer: document.getElementById("starsLayer"),
+      firefliesLayer: document.getElementById("firefliesLayer"),
+      risingDustLayer: document.getElementById("risingDustLayer"),
+      fireworksLayer: document.getElementById("fireworksLayer"),
+
+      soundToggleBtn: document.getElementById("soundToggleBtn"),
+      soundIcon: document.getElementById("soundIcon"),
+      volumeSlider: document.getElementById("volumeSlider"),
+      homeCornerBtn: document.getElementById("homeCornerBtn"),
+
+      screens: {
+        1: document.getElementById("screen1"),
+        2: document.getElementById("screen2"),
+        3: document.getElementById("screen3"),
+        4: document.getElementById("screen4"),
+        5: document.getElementById("screen5"),
+        6: document.getElementById("screen6")
+      },
+
+      moonSlots: {
+        1: document.getElementById("moonSlot1"),
+        2: document.getElementById("moonSlot2"),
+        3: document.getElementById("moonSlot3"),
+        4: document.getElementById("moonSlot4"),
+        6: document.getElementById("moonSlot6")
+      },
+
+      groupModeBtn: document.getElementById("groupModeBtn"),
+      teacherModeBtn: document.getElementById("teacherModeBtn"),
+      teacherStartSpinBtn: document.getElementById("teacherStartSpinBtn"),
+      openSettingsBtn: document.getElementById("openSettingsBtn"),
+      studentCountBadge: document.getElementById("studentCountBadge"),
+
+      callnamePrompt: document.getElementById("callnamePrompt"),
+      nameSpotlight: document.getElementById("nameSpotlight"),
+      calledStudentName: document.getElementById("calledStudentName"),
+      callnameCongratsBanner: document.getElementById("callnameCongratsBanner"),
+      goToQuestionBtn: document.getElementById("goToQuestionBtn"),
+
+      boardModeTitle: document.getElementById("boardModeTitle"),
+      activeStudentPill: document.getElementById("activeStudentPill"),
+      teacherCallHeaderBtn: document.getElementById("teacherCallHeaderBtn"),
+      matchGuidePill: document.getElementById("matchGuidePill"),
+      picturesGrid: document.getElementById("picturesGrid"),
+      optionsGrid: document.getElementById("optionsGrid"),
+      feedbackToast: document.getElementById("feedbackToast"),
+      continueTurnBtn: document.getElementById("continueTurnBtn"),
+      continueTurnText: document.getElementById("continueTurnText"),
+
+      winnersRibbon: document.getElementById("winnersRibbon"),
+      reviewPairsGrid: document.getElementById("reviewPairsGrid"),
+      replayBtn: document.getElementById("replayBtn"),
+      finaleHomeBtn: document.getElementById("finaleHomeBtn"),
+
+      settingsModal: document.getElementById("settingsModal"),
+      closeSettingsBtn: document.getElementById("closeSettingsBtn"),
+      studentListInput: document.getElementById("studentListInput"),
+      saveStudentsBtn: document.getElementById("saveStudentsBtn"),
+      clearStudentsBtn: document.getElementById("clearStudentsBtn")
+    };
+
+    /* ========================================================================
+       4. NHÂN VẬT VẦNG TRĂNG 3D VỚI 4 TRẠNG THÁI BIỂU CẢM RÕ RỆT
+       ======================================================================== */
+    function buildMoonMarkup(stage, wiggle = false) {
+      let faceSVG = "";
+      if (stage === 0) {
+        faceSVG = `
+          <path d="M68,118 Q79,128 90,118" fill="none" stroke="#5c3610" stroke-width="5.2" stroke-linecap="round"/>
+          <path d="M108,131 Q119,141 130,131" fill="none" stroke="#5c3610" stroke-width="5.2" stroke-linecap="round"/>
+          <path d="M90,145 Q99,151 108,146" fill="none" stroke="#5c3610" stroke-width="4.4" stroke-linecap="round"/>
+        `;
+      } else if (stage === 1) {
+        faceSVG = `
+          <circle cx="79" cy="116" r="9.5" fill="#472608"/>
+          <circle cx="75.5" cy="112.5" r="3.4" fill="#ffffff"/>
+          <circle cx="82.5" cy="119" r="1.5" fill="#ffffff"/>
+          <circle cx="118" cy="130" r="9.5" fill="#472608"/>
+          <circle cx="114.5" cy="126.5" r="3.4" fill="#ffffff"/>
+          <circle cx="121.5" cy="133" r="1.5" fill="#ffffff"/>
+          <path d="M86,140 Q100,154 114,145" fill="none" stroke="#57300a" stroke-width="5" stroke-linecap="round"/>
+        `;
+      } else if (stage === 2) {
+        faceSVG = `
+          <circle cx="79" cy="115" r="10" fill="#452407"/>
+          <circle cx="75" cy="111" r="3.8" fill="#ffffff"/>
+          <circle cx="83" cy="118.5" r="1.8" fill="#fff7a8"/>
+          <circle cx="118" cy="129" r="10" fill="#452407"/>
+          <circle cx="114" cy="125" r="3.8" fill="#ffffff"/>
+          <circle cx="122" cy="132.5" r="1.8" fill="#fff7a8"/>
+          <path d="M84,139 Q100,162 117,147 Z" fill="#ff6b82" stroke="#57300a" stroke-width="4" stroke-linejoin="round"/>
+        `;
+      } else {
+        faceSVG = `
+          <path d="M67,118 Q79,102 91,118" fill="none" stroke="#57300a" stroke-width="5.8" stroke-linecap="round"/>
+          <path d="M107,132 Q119,116 131,132" fill="none" stroke="#57300a" stroke-width="5.8" stroke-linecap="round"/>
+          <path d="M83,138 Q100,166 118,148 Z" fill="#ff617b" stroke="#57300a" stroke-width="4.2" stroke-linejoin="round"/>
+          <path d="M93,152 Q100,158 108,153" fill="none" stroke="#ffb3c0" stroke-width="3.2" stroke-linecap="round"/>
+        `;
+      }
+
+      const uid = `m${state.currentScreen}_${stage}`;
+      const bodyStart = stage === 0 ? "#fffbe6" : stage === 1 ? "#fffff0" : "#ffffff";
+      const bodyMid = stage === 0 ? "#f7e39c" : stage === 1 ? "#fff09c" : "#fff294";
+      const bodyEnd = stage === 0 ? "#dea13b" : stage === 1 ? "#f5b832" : "#ffbe2e";
+
+      return `
+        <div class="moon-aura"></div>
+        <div class="moon-burst-rays ${wiggle ? "bursting" : ""}"></div>
+        <div class="moon-pulse-ring ${wiggle ? "expanding" : ""}"></div>
+        <div class="moon-orbit-stars">
+          <span class="os1">✦</span>
+          <span class="os2">⭐</span>
+          <span class="os3">✧</span>
+          <span class="os4">✨</span>
+        </div>
+        <div class="moon-zzz">
+          <span class="z3">Z</span>
+          <span class="z2">z</span>
+          <span class="z1">z</span>
+        </div>
+        <svg class="moon-svg ${wiggle ? "waking-wiggle" : ""}" viewBox="0 0 220 220" role="img" aria-label="Vầng trăng dễ thương">
+          <defs>
+            <radialGradient id="${uid}_grad" cx="30%" cy="28%" r="76%">
+              <stop offset="0%" stop-color="${bodyStart}"/>
+              <stop offset="40%" stop-color="${bodyMid}"/>
+              <stop offset="80%" stop-color="${bodyEnd}"/>
+              <stop offset="100%" stop-color="#e3941c"/>
+            </radialGradient>
+            <radialGradient id="${uid}_cheek" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ff8da4" stop-opacity="${stage === 0 ? 0.55 : 0.88}"/>
+              <stop offset="100%" stop-color="#ff8da4" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <path
+            d="M140,24
+               C80,18 26,68 26,124
+               C26,178 72,208 128,202
+               C168,197 194,168 200,136
+               C168,156 126,148 108,118
+               C92,88 106,48 140,24 Z"
+            fill="url(#${uid}_grad)"
+            stroke="#fffdf2"
+            stroke-width="4.5"
+            stroke-linejoin="round"
+          />
+          <path d="M78,46 C52,66 42,96 44,124" fill="none" stroke="#ffffff" stroke-width="9" stroke-linecap="round" opacity="0.65"/>
+          <circle cx="60" cy="156" r="9" fill="#e09420" opacity="0.22"/>
+          <circle cx="150" cy="176" r="11" fill="#e09420" opacity="0.18"/>
+          <circle cx="71" cy="136" r="12.5" fill="url(#${uid}_cheek)"/>
+          <circle cx="129" cy="154" r="12.5" fill="url(#${uid}_cheek)"/>
+          <line x1="140" y1="31" x2="140" y2="55" stroke="#fff7c2" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M140,51 L144,60 L154,62 L146,69 L148,79 L140,74 L132,79 L134,69 L126,62 L136,60 Z" fill="#fff7a8" stroke="#f0ae1f" stroke-width="2"/>
+          ${faceSVG}
+        </svg>
+      `;
+    }
+
+    function setMoonStage(stage, wiggle = false) {
+      state.moonStage = stage;
+      document.body.classList.remove("moon-stage-0", "moon-stage-1", "moon-stage-2", "moon-stage-3");
+      document.body.classList.add(`moon-stage-${stage}`);
+      renderMoonInCurrentScreen(wiggle);
+    }
+
+    function renderMoonInCurrentScreen(wiggle = false) {
+      const slot = els.moonSlots[state.currentScreen];
+      if (!slot) return;
+      slot.innerHTML = buildMoonMarkup(state.moonStage, wiggle);
+    }
+
+    /* ========================================================================
+       5. TRANH MINH HỌA HOẠT HÌNH 3D RÕ NGHĨA CHO 3 TỪ (KHÔNG CHỨA CHỮ)
+       ======================================================================== */
+    function getIllustrationSVG(id, uidPrefix = "") {
+      const p = uidPrefix || `s${state.currentScreen}_`;
+
+      if (id === "ca-vang") {
+        return `
+          <svg class="illustration-svg" viewBox="0 0 420 320" role="img" aria-label="Cá vàng trong bể cá">
+            <defs>
+              <radialGradient id="${p}bowlGlass" cx="45%" cy="35%" r="62%">
+                <stop offset="0%" stop-color="#f5feff"/>
+                <stop offset="58%" stop-color="#c4f0ff"/>
+                <stop offset="100%" stop-color="#84d6ff"/>
+              </radialGradient>
+              <linearGradient id="${p}bowlWater" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#9ee7ff" stop-opacity="0.72"/>
+                <stop offset="100%" stop-color="#4dbce8" stop-opacity="0.88"/>
+              </linearGradient>
+              <radialGradient id="${p}goldfishBody" cx="38%" cy="30%" r="68%">
+                <stop offset="0%" stop-color="#fff496"/>
+                <stop offset="44%" stop-color="#ffbe33"/>
+                <stop offset="84%" stop-color="#ff781a"/>
+                <stop offset="100%" stop-color="#d44900"/>
+              </radialGradient>
+              <linearGradient id="${p}goldfishFin" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#ffea80"/>
+                <stop offset="60%" stop-color="#ffa024"/>
+                <stop offset="100%" stop-color="#ed5f0e"/>
+              </linearGradient>
+            </defs>
+            <ellipse cx="210" cy="292" rx="120" ry="16" fill="#70b5d6" opacity="0.35"/>
+            <path d="M126,64 C66,94 52,188 94,244 C122,280 164,292 210,292 C256,292 298,280 326,244 C368,188 354,94 294,64 Z"
+                  fill="url(#${p}bowlGlass)" stroke="#62bde6" stroke-width="5.5"/>
+            <path d="M84,126 Q146,112 210,126 T336,126 C354,174 342,226 318,252 C288,282 248,290 210,290 C172,290 132,282 102,252 C78,226 66,174 84,126 Z"
+                  fill="url(#${p}bowlWater)"/>
+            <ellipse cx="210" cy="126" rx="126" ry="15" fill="#dff8ff" opacity="0.72"/>
+            <ellipse cx="152" cy="272" rx="22" ry="10" fill="#e6b87a"/>
+            <ellipse cx="196" cy="278" rx="26" ry="11" fill="#d99a5b"/>
+            <ellipse cx="244" cy="276" rx="24" ry="10" fill="#f0c88c"/>
+            <ellipse cx="280" cy="268" rx="18" ry="9" fill="#c98d55"/>
+            <path d="M114,262 Q98,224 114,190 Q130,220 124,262 Z" fill="#32c97d"/>
+            <path d="M132,268 Q148,236 134,206 Q120,232 126,268 Z" fill="#21a868"/>
+            <path d="M300,262 Q314,226 298,194 Q282,224 290,262 Z" fill="#32c97d"/>
+            <circle cx="294" cy="150" r="10" fill="#ffffff" fill-opacity="0.78" stroke="#75d4ff" stroke-width="2.5"/>
+            <circle cx="308" cy="176" r="6.5" fill="#ffffff" fill-opacity="0.75" stroke="#75d4ff" stroke-width="2"/>
+            <circle cx="118" cy="158" r="7.5" fill="#ffffff" fill-opacity="0.72" stroke="#75d4ff" stroke-width="2"/>
+            <path d="M156,192 C114,150 84,152 94,192 C84,232 116,236 156,198 Z"
+                  fill="url(#${p}goldfishFin)" stroke="#d95807" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M178,148 C198,116 240,120 246,154 Z"
+                  fill="url(#${p}goldfishFin)" stroke="#d95807" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M192,236 C204,260 232,256 234,232 Z"
+                  fill="url(#${p}goldfishFin)" stroke="#d95807" stroke-width="3.8" stroke-linejoin="round"/>
+            <ellipse cx="220" cy="192" rx="74" ry="50" fill="url(#${p}goldfishBody)" stroke="#d95807" stroke-width="4"/>
+            <ellipse cx="214" cy="162" rx="40" ry="13" fill="#ffffff" opacity="0.46"/>
+            <path d="M180,188 Q189,199 198,188" fill="none" stroke="#fff4b8" stroke-width="3.8" stroke-linecap="round" opacity="0.84"/>
+            <path d="M198,205 Q207,216 216,205" fill="none" stroke="#fff4b8" stroke-width="3.8" stroke-linecap="round" opacity="0.84"/>
+            <path d="M204,184 Q213,195 222,184" fill="none" stroke="#fff4b8" stroke-width="3.8" stroke-linecap="round" opacity="0.84"/>
+            <path d="M218,204 C200,216 205,235 228,227 C236,224 238,210 231,204 Z" fill="#ffe675" stroke="#d95807" stroke-width="3.2"/>
+            <circle cx="262" cy="180" r="14" fill="#ffffff" stroke="#d45600" stroke-width="3"/>
+            <circle cx="266" cy="180" r="7.8" fill="#231942"/>
+            <circle cx="268.5" cy="176.5" r="3" fill="#ffffff"/>
+            <ellipse cx="256" cy="202" rx="9" ry="5.5" fill="#ff738a" opacity="0.58"/>
+            <path d="M274,202 Q284,210 290,200" fill="none" stroke="#993500" stroke-width="4" stroke-linecap="round"/>
+            <ellipse cx="210" cy="64" rx="84" ry="16" fill="#e6faff" fill-opacity="0.72" stroke="#62bde6" stroke-width="5"/>
+            <path d="M104,136 C92,174 96,214 116,244" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity="0.55"/>
+          </svg>
+        `;
+      }
+
+      if (id === "mang-tre") {
+        return `
+          <svg class="illustration-svg" viewBox="0 0 420 320" role="img" aria-label="Măng tre non mọc cạnh bụi tre">
+            <defs>
+              <linearGradient id="${p}stalkGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#c4fa8c"/>
+                <stop offset="45%" stop-color="#58c754"/>
+                <stop offset="100%" stop-color="#2a8038"/>
+              </linearGradient>
+              <linearGradient id="${p}shootCore" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#fff8d4"/>
+                <stop offset="52%" stop-color="#f7e297"/>
+                <stop offset="100%" stop-color="#d4b15d"/>
+              </linearGradient>
+              <linearGradient id="${p}shootLeaf" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#b4f277"/>
+                <stop offset="55%" stop-color="#5bc74a"/>
+                <stop offset="100%" stop-color="#31872e"/>
+              </linearGradient>
+              <linearGradient id="${p}shootSheath" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#e0b579"/>
+                <stop offset="100%" stop-color="#9e6935"/>
+              </linearGradient>
+              <linearGradient id="${p}groundGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#92de68"/>
+                <stop offset="100%" stop-color="#45993e"/>
+              </linearGradient>
+            </defs>
+            <ellipse cx="210" cy="264" rx="176" ry="38" fill="url(#${p}groundGrad)"/>
+            <ellipse cx="210" cy="256" rx="142" ry="20" fill="#b8f58c" opacity="0.52"/>
+            <g>
+              <rect x="296" y="34" width="24" height="226" rx="10" fill="url(#${p}stalkGrad)" stroke="#297534" stroke-width="3.5"/>
+              <line x1="293" y1="92" x2="323" y2="92" stroke="#e4ffb5" stroke-width="5" stroke-linecap="round"/>
+              <line x1="293" y1="152" x2="323" y2="152" stroke="#e4ffb5" stroke-width="5" stroke-linecap="round"/>
+              <line x1="293" y1="212" x2="323" y2="212" stroke="#e4ffb5" stroke-width="5" stroke-linecap="round"/>
+              <rect x="334" y="64" width="20" height="196" rx="9" fill="url(#${p}stalkGrad)" stroke="#297534" stroke-width="3.5"/>
+              <line x1="332" y1="126" x2="356" y2="126" stroke="#e4ffb5" stroke-width="4.5" stroke-linecap="round"/>
+              <line x1="332" y1="186" x2="356" y2="186" stroke="#e4ffb5" stroke-width="4.5" stroke-linecap="round"/>
+              <rect x="78" y="54" width="22" height="206" rx="9" fill="url(#${p}stalkGrad)" stroke="#297534" stroke-width="3.5"/>
+              <line x1="76" y1="116" x2="102" y2="116" stroke="#e4ffb5" stroke-width="4.5" stroke-linecap="round"/>
+              <line x1="76" y1="180" x2="102" y2="180" stroke="#e4ffb5" stroke-width="4.5" stroke-linecap="round"/>
+              <path d="M298,86 Q246,56 226,84 Q260,104 298,96 Z" fill="#63cf51" stroke="#2d7a2d" stroke-width="3"/>
+              <path d="M320,106 Q372,76 392,106 Q358,126 320,116 Z" fill="#8ae864" stroke="#2d7a2d" stroke-width="3"/>
+              <path d="M352,138 Q396,118 408,146 Q376,162 350,148 Z" fill="#58c449" stroke="#2d7a2d" stroke-width="3"/>
+              <path d="M80,108 Q36,80 22,110 Q52,130 82,118 Z" fill="#8ae864" stroke="#2d7a2d" stroke-width="3"/>
+              <path d="M98,136 Q142,110 156,136 Q128,154 98,146 Z" fill="#58c449" stroke="#2d7a2d" stroke-width="3"/>
+            </g>
+            <g transform="translate(12, 46) scale(0.74)">
+              <path d="M180,68 C154,116 140,178 136,242 L224,242 C220,178 206,116 180,68 Z" fill="url(#${p}shootCore)" stroke="#8a5f2f" stroke-width="4.5" stroke-linejoin="round"/>
+              <path d="M144,174 Q180,146 218,186 L223,242 L137,242 Z" fill="url(#${p}shootLeaf)" stroke="#317829" stroke-width="4"/>
+              <path d="M138,206 Q178,180 222,214 L224,242 L136,242 Z" fill="url(#${p}shootSheath)" stroke="#704720" stroke-width="4"/>
+            </g>
+            <g>
+              <path d="M210,58 C176,116 154,188 148,262 L272,262 C266,188 244,116 210,58 Z" fill="url(#${p}shootCore)" stroke="#8a5f2f" stroke-width="4.5" stroke-linejoin="round"/>
+              <path d="M170,148 Q212,112 252,156 L260,208 L160,208 Z" fill="url(#${p}shootLeaf)" stroke="#317529" stroke-width="4" stroke-linejoin="round"/>
+              <path d="M158,188 Q208,152 264,198 L268,238 L152,238 Z" fill="#7fd95b" stroke="#317529" stroke-width="4" stroke-linejoin="round"/>
+              <path d="M150,222 Q210,194 270,226 L272,262 L148,262 Z" fill="url(#${p}shootSheath)" stroke="#704720" stroke-width="4" stroke-linejoin="round"/>
+              <path d="M198,90 Q188,128 185,156" fill="none" stroke="#ffffff" stroke-width="6.5" stroke-linecap="round" opacity="0.65"/>
+              <circle cx="228" cy="176" r="6" fill="#ebfcff" stroke="#70d4f7" stroke-width="2.2"/>
+            </g>
+          </svg>
+        `;
+      }
+
+      return `
+        <svg class="illustration-svg" viewBox="0 0 420 320" role="img" aria-label="Ngôi nhà nhiều tầng">
+          <defs>
+            <linearGradient id="${p}houseWall" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#fffbf2"/>
+              <stop offset="72%" stop-color="#ffe8c2"/>
+              <stop offset="100%" stop-color="#f2c98d"/>
+            </linearGradient>
+            <linearGradient id="${p}houseRoof" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#ff8a7a"/>
+              <stop offset="100%" stop-color="#db4842"/>
+            </linearGradient>
+            <linearGradient id="${p}houseWin" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#fffcc4"/>
+              <stop offset="100%" stop-color="#ffd052"/>
+            </linearGradient>
+            <linearGradient id="${p}yardGrass" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#84e878"/>
+              <stop offset="100%" stop-color="#3fa646"/>
+            </linearGradient>
+          </defs>
+          <ellipse cx="210" cy="276" rx="176" ry="30" fill="url(#${p}yardGrass)"/>
+          <g>
+            <rect x="74" y="232" width="14" height="36" rx="6" fill="#9c643b"/>
+            <circle cx="81" cy="216" r="28" fill="#52cf6b" stroke="#2c9142" stroke-width="3.5"/>
+            <circle cx="72" cy="206" r="9.5" fill="#a2f5ad" opacity="0.68"/>
+            <rect x="332" y="232" width="14" height="36" rx="6" fill="#9c643b"/>
+            <circle cx="339" cy="216" r="28" fill="#52cf6b" stroke="#2c9142" stroke-width="3.5"/>
+            <circle cx="330" cy="206" r="9.5" fill="#a2f5ad" opacity="0.68"/>
+          </g>
+          <rect x="124" y="68" width="172" height="206" rx="16" fill="url(#${p}houseWall)" stroke="#c78c4e" stroke-width="4.5"/>
+          <path d="M104,76 L210,18 L316,76 Z" fill="url(#${p}houseRoof)" stroke="#b3302b" stroke-width="4.5" stroke-linejoin="round"/>
+          <circle cx="210" cy="54" r="11" fill="url(#${p}houseWin)" stroke="#b3302b" stroke-width="3"/>
+          <rect x="116" y="134" width="188" height="12" rx="6" fill="#f7b368" stroke="#c47d35" stroke-width="3"/>
+          <rect x="116" y="202" width="188" height="12" rx="6" fill="#f7b368" stroke="#c47d35" stroke-width="3"/>
+          <rect x="148" y="88" width="44" height="34" rx="8" fill="url(#${p}houseWin)" stroke="#6280c9" stroke-width="3.5"/>
+          <line x1="170" y1="88" x2="170" y2="122" stroke="#6280c9" stroke-width="3"/>
+          <rect x="228" y="88" width="44" height="34" rx="8" fill="url(#${p}houseWin)" stroke="#6280c9" stroke-width="3.5"/>
+          <line x1="250" y1="88" x2="250" y2="122" stroke="#6280c9" stroke-width="3"/>
+          <rect x="148" y="156" width="44" height="34" rx="8" fill="url(#${p}houseWin)" stroke="#6280c9" stroke-width="3.5"/>
+          <line x1="170" y1="156" x2="170" y2="190" stroke="#6280c9" stroke-width="3"/>
+          <rect x="228" y="156" width="44" height="34" rx="8" fill="url(#${p}houseWin)" stroke="#6280c9" stroke-width="3.5"/>
+          <line x1="250" y1="156" x2="250" y2="190" stroke="#6280c9" stroke-width="3"/>
+          <path d="M186,274 L186,236 A24,24 0 0,1 234,236 L234,274 Z" fill="#b86932" stroke="#753d16" stroke-width="4"/>
+          <circle cx="222" cy="254" r="4" fill="#ffe678"/>
+          <rect x="140" y="226" width="32" height="28" rx="6" fill="url(#${p}houseWin)" stroke="#6280c9" stroke-width="3"/>
+          <rect x="248" y="226" width="32" height="28" rx="6" fill="url(#${p}houseWin)" stroke="#6280c9" stroke-width="3"/>
+        </svg>
+      `;
+    }
+
+    /* ========================================================================
+       6. KHỞI TẠO SAO, ĐOM ĐÓM & BỤI ÁNH SÁNG CỔ TÍCH
+       ======================================================================== */
+    function initAtmosphere() {
+      const starFrag = document.createDocumentFragment();
+      const colors = ["gold", "ivory", "cyan"];
+      const crossPalette = [
+        { c: "#ffe88a", g: "rgba(255, 232, 138, 0.95)" },
+        { c: "#fffef4", g: "rgba(255, 254, 244, 0.95)" },
+        { c: "#c2f4ff", g: "rgba(194, 244, 255, 0.95)" }
+      ];
+
+      for (let i = 0; i < 56; i++) {
+        const star = document.createElement("div");
+        const isCross = i % 7 === 0;
+        const color = colors[i % colors.length];
+        const tier = i < 14 ? "tier-0" : i < 28 ? "tier-1" : i < 42 ? "tier-2" : "tier-3";
+        star.className = isCross ? `star cross ${color} ${tier}` : `star ${color} ${tier}`;
+
+        const size = isCross ? (12 + Math.random() * 12) : (3 + Math.random() * 5);
+        star.style.width = `${size}px`;
+        star.style.height = `${size}px`;
+        star.style.left = `${Math.random() * 98}%`;
+        star.style.top = `${Math.random() * 68}%`;
+        star.style.setProperty("--dur", `${2.8 + Math.random() * 3.4}s`);
+        star.style.setProperty("--delay", `${Math.random() * 3.2}s`);
+
+        if (isCross) {
+          const p = crossPalette[i % crossPalette.length];
+          star.style.setProperty("--sc", p.c);
+          star.style.setProperty("--sg", p.g);
+        }
+        starFrag.appendChild(star);
+      }
+      els.starsLayer.appendChild(starFrag);
+
+      const flyFrag = document.createDocumentFragment();
+      for (let i = 0; i < 14; i++) {
+        const fly = document.createElement("div");
+        fly.className = i % 4 === 0 ? "firefly aqua" : "firefly";
+        const zone = i % 3;
+        const leftPct = zone === 0
+          ? (2 + Math.random() * 18)
+          : zone === 1
+            ? (80 + Math.random() * 18)
+            : (18 + Math.random() * 64);
+        const bottomPx = zone === 2
+          ? (18 + Math.random() * 90)
+          : (40 + Math.random() * 260);
+        fly.style.left = `${leftPct}%`;
+        fly.style.bottom = `${bottomPx}px`;
+        fly.style.setProperty("--dur", `${6.5 + Math.random() * 4.5}s`);
+        fly.style.setProperty("--delay", `${Math.random() * 4}s`);
+        fly.style.setProperty("--tx", `${(Math.random() - 0.5) * 70}px`);
+        fly.style.setProperty("--ty", `${-24 - Math.random() * 46}px`);
+        flyFrag.appendChild(fly);
+      }
+      els.firefliesLayer.appendChild(flyFrag);
+
+      const dustFrag = document.createDocumentFragment();
+      for (let i = 0; i < 20; i++) {
+        const mote = document.createElement("div");
+        mote.className = "dust-mote";
+        const size = 5 + Math.random() * 8;
+        mote.style.width = `${size}px`;
+        mote.style.height = `${size}px`;
+        mote.style.left = `${4 + Math.random() * 92}%`;
+        mote.style.setProperty("--dur", `${4.5 + Math.random() * 4.5}s`);
+        mote.style.setProperty("--delay", `${Math.random() * 4.5}s`);
+        mote.style.setProperty("--drift", `${(Math.random() - 0.5) * 70}px`);
+        dustFrag.appendChild(mote);
+      }
+      els.risingDustLayer.appendChild(dustFrag);
+    }
+
+    /* ========================================================================
+       7. ÂM THANH CHẤT LƯỢNG CAO BẰNG WEB AUDIO API (CHỐNG RÈ & CHỐNG CHỒNG LẤN)
+       ======================================================================== */
+    function getAudioCtx() {
+      if (!state.audioCtx) {
+        const Ctx = window.AudioContext || window.webkitAudioContext;
+        if (Ctx) {
+          state.audioCtx = new Ctx();
+          const compressor = state.audioCtx.createDynamicsCompressor();
+          compressor.threshold.setValueAtTime(-16, state.audioCtx.currentTime);
+          compressor.knee.setValueAtTime(18, state.audioCtx.currentTime);
+          compressor.ratio.setValueAtTime(6, state.audioCtx.currentTime);
+          compressor.attack.setValueAtTime(0.005, state.audioCtx.currentTime);
+          compressor.release.setValueAtTime(0.15, state.audioCtx.currentTime);
+
+          state.masterGain = state.audioCtx.createGain();
+          state.masterGain.gain.setValueAtTime(state.soundEnabled ? state.volume : 0, state.audioCtx.currentTime);
+
+          state.masterGain.connect(compressor);
+          compressor.connect(state.audioCtx.destination);
+        }
+      }
+      if (state.audioCtx && state.audioCtx.state === "suspended") {
+        state.audioCtx.resume().catch(() => {});
+      }
+      return state.audioCtx;
+    }
+
+    function updateMasterVolume() {
+      if (state.masterGain && state.audioCtx) {
+        const target = state.soundEnabled ? state.volume : 0;
+        state.masterGain.gain.setTargetAtTime(target, state.audioCtx.currentTime, 0.02);
+        if (target === 0) {
+          clearOverlappingSfx();
+        }
+      }
+      if (!state.soundEnabled || state.volume === 0) {
+        els.soundIcon.textContent = "🔇";
+      } else if (state.volume < 0.45) {
+        els.soundIcon.textContent = "🔉";
+      } else {
+        els.soundIcon.textContent = "🔊";
+      }
+    }
+
+    function clearOverlappingSfx() {
+      if (!state.audioCtx || state.activeSfxGains.length === 0) return;
+      const now = state.audioCtx.currentTime;
+      state.activeSfxGains.forEach((g) => {
+        try {
+          g.gain.cancelScheduledValues(now);
+          g.gain.setTargetAtTime(0.0001, now, 0.02);
+        } catch (e) {}
+      });
+      state.activeSfxGains = [];
+    }
+
+    function playTone(freq, offset, dur, type = "sine", vol = 0.16, groupGain = null) {
+      if (!state.soundEnabled || state.volume <= 0) return;
+      try {
+        const ctx = getAudioCtx();
+        if (!ctx || !state.masterGain) return;
+        const now = ctx.currentTime + offset;
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+
+        osc.type = type;
+        osc.frequency.setValueAtTime(freq, now);
+
+        gain.gain.setValueAtTime(0.0001, now);
+        gain.gain.linearRampToValueAtTime(vol, now + 0.018);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + dur);
+
+        osc.connect(gain);
+        gain.connect(groupGain || state.masterGain);
+
+        osc.start(now);
+        osc.stop(now + dur + 0.03);
+      } catch (e) {}
+    }
+
+    function createSfxChannel(clearPrev = true) {
+      if (!state.soundEnabled || state.volume <= 0) return null;
+      const ctx = getAudioCtx();
+      if (!ctx || !state.masterGain) return null;
+      if (clearPrev) clearOverlappingSfx();
+      const ch = ctx.createGain();
+      ch.gain.setValueAtTime(1, ctx.currentTime);
+      ch.connect(state.masterGain);
+      state.activeSfxGains.push(ch);
+      return ch;
+    }
+
+    function playSelectSound() {
+      const ch = createSfxChannel(false);
+      if (!ch) return;
+      playTone(620, 0, 0.08, "sine", 0.09, ch);
+      playTone(780, 0.04, 0.09, "sine", 0.07, ch);
+    }
+
+    /** Âm thanh chúc mừng vui tươi khi công bố tên học sinh được chọn */
+    function playNameRevealSound() {
+      const ch = createSfxChannel(true);
+      if (!ch) return;
+      const fanfare = [
+        { f: 523.25, t: 0.00, d: 0.16, v: 0.19 },
+        { f: 659.25, t: 0.09, d: 0.18, v: 0.19 },
+        { f: 783.99, t: 0.18, d: 0.20, v: 0.21 },
+        { f: 1046.50, t: 0.28, d: 0.56, v: 0.23 }
+      ];
+      fanfare.forEach((n) => {
+        playTone(n.f, n.t, n.d, "triangle", n.v, ch);
+        playTone(n.f * 0.5, n.t, n.d, "sine", n.v * 0.45, ch);
+      });
+      playTone(1318.51, 0.30, 0.54, "sine", 0.12, ch);
+      playTone(1567.98, 0.34, 0.50, "sine", 0.09, ch);
+    }
+
+    /** Âm thanh nền hồi hộp, vui tươi tăng nhịp nhẹ khi quay tên học sinh */
+    function playRollTickSound(progress, stepIdx) {
+      const ch = createSfxChannel(false);
+      if (!ch) return;
+      const bassFreq = 135 + progress * 65;
+      playTone(bassFreq, 0, 0.09, "triangle", 0.12 + progress * 0.04, ch);
+      const suspenseScale = [392.0, 440.0, 493.88, 523.25, 587.33, 659.25, 739.99, 783.99];
+      const baseNote = suspenseScale[stepIdx % suspenseScale.length];
+      const liftedNote = baseNote * (1 + progress * 0.25);
+      playTone(liftedNote, 0.012, 0.075, "sine", 0.09 + progress * 0.05, ch);
+    }
+
+    function playPairCompleteSound(stage) {
+      const ch = createSfxChannel(true);
+      if (!ch) return;
+      const melodies = {
+        1: [523.25, 659.25, 783.99, 1046.50],
+        2: [587.33, 739.99, 880.00, 1174.66],
+        3: [659.25, 783.99, 987.77, 1318.51]
+      };
+      const notes = melodies[stage] || melodies[1];
+      notes.forEach((f, idx) => {
+        playTone(f, idx * 0.085, 0.36, "triangle", 0.18, ch);
+        playTone(f * 2, idx * 0.085 + 0.02, 0.24, "sine", 0.06, ch);
+      });
+      const topNote = notes[notes.length - 1];
+      playTone(topNote, 0.34, 0.55, "sine", 0.14, ch);
+      playTone(topNote * 1.25, 0.38, 0.5, "sine", 0.08, ch);
+    }
+
+    function playRetrySound() {
+      const ch = createSfxChannel(true);
+      if (!ch) return;
+      playTone(392.00, 0.00, 0.16, "sine", 0.12, ch);
+      playTone(329.63, 0.13, 0.24, "sine", 0.11, ch);
+    }
+
+    function playFinaleSound() {
+      const ch = createSfxChannel(true);
+      if (!ch) return;
+      const fanfare = [
+        { f: 523.25, t: 0.00, d: 0.22 },
+        { f: 659.25, t: 0.11, d: 0.22 },
+        { f: 783.99, t: 0.22, d: 0.24 },
+        { f: 1046.50, t: 0.34, d: 0.34 },
+        { f: 880.00, t: 0.54, d: 0.22 },
+        { f: 987.77, t: 0.66, d: 0.22 },
+        { f: 1046.50, t: 0.78, d: 0.75 }
+      ];
+      fanfare.forEach((n) => {
+        playTone(n.f, n.t, n.d, "triangle", 0.18, ch);
+        playTone(n.f * 0.5, n.t, n.d, "sine", 0.09, ch);
+      });
+      playTone(1318.51, 0.80, 0.78, "sine", 0.11, ch);
+      playTone(1567.98, 0.86, 0.72, "sine", 0.08, ch);
+    }
+
+    /* ========================================================================
+       8. HIỆU ỨNG PHÁO HOA SAO NHỎ
+       ======================================================================== */
+    function launchStarFirework(originX, originY, count = 20) {
+      const icons = ["⭐", "✨", "🌟", "💫"];
+      for (let i = 0; i < count; i++) {
+        const el = document.createElement("div");
+        el.className = "spark-star";
+        el.textContent = icons[i % icons.length];
+        el.style.left = `${originX}px`;
+        el.style.top = `${originY}px`;
+        const angle = (Math.PI * 2 * i) / count + (Math.random() - 0.5) * 0.35;
+        const dist = 100 + Math.random() * 190;
+        el.style.setProperty("--dx", `${Math.cos(angle) * dist}px`);
+        el.style.setProperty("--dy", `${Math.sin(angle) * dist - 30}px`);
+        el.style.setProperty("--rot", `${(Math.random() - 0.5) * 320}deg`);
+        els.fireworksLayer.appendChild(el);
+        setTimeout(() => el.remove(), 1550);
+      }
+    }
+
+    function stopFinaleFireworks() {
+      if (state.fireworkIntervalId) {
+        clearInterval(state.fireworkIntervalId);
+        state.fireworkIntervalId = null;
+      }
+    }
+
+    /* ========================================================================
+       9. QUẢN LÝ DANH SÁCH HỌC SINH & XÁO TRỘN KHÔNG TRÙNG VỊ TRÍ
+       ======================================================================== */
+    function parseStudentList(rawText) {
+      const cleaned = rawText
+        .split(/[\n,;]+/)
+        .map((n) => n.trim())
+        .filter((n) => n.length > 0);
+
+      const unique = [];
+      const seen = new Set();
+      for (const name of cleaned) {
+        const key = name.toLowerCase();
+        if (!seen.has(key)) {
+          seen.add(key);
+          unique.push(name);
+        }
+      }
+      return unique;
+    }
+
+    function updateStudentCountBadge() {
+      const count = state.allStudents.length;
+      els.studentCountBadge.textContent = count > 0 ? `${count} học sinh` : "Chưa nhập";
+    }
+
+    function shuffleArray(list) {
+      const copy = [...list];
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    /** Tạo thứ tự thẻ từ luôn lệch vị trí so với thứ tự 3 hình ảnh */
+    function createDerangedOrder(referenceList) {
+      let shuffled = shuffleArray(referenceList);
+      let guard = 0;
+      while (shuffled.some((item, idx) => item.id === referenceList[idx].id) && guard < 20) {
+        shuffled = shuffleArray(referenceList);
+        guard += 1;
+      }
+      if (shuffled.some((item, idx) => item.id === referenceList[idx].id)) {
+        return [referenceList[1], referenceList[2], referenceList[0]];
+      }
+      return shuffled;
+    }
+
+    /** Rút ngẫu nhiên 1 học sinh chưa gọi trong vòng chơi hiện tại */
+    function drawNextStudent() {
+      state.callCount += 1;
+      if (state.allStudents.length === 0) {
+        return "";
+      }
+      if (state.remainingStudents.length === 0) {
+        state.remainingStudents = shuffleArray(state.allStudents);
+      }
+      const picked = state.remainingStudents.shift();
+      state.calledStudents.push(picked);
+      return picked;
+    }
+
+    /* ========================================================================
+       10. ĐIỀU HƯỚNG MÀN HÌNH & KHỞI TẠO 2 CHẾ ĐỘ ĐỘC LẬP
+       ======================================================================== */
+    function showScreen(num) {
+      stopFinaleFireworks();
+      if (state.wakeTimeoutId) {
+        clearTimeout(state.wakeTimeoutId);
+        state.wakeTimeoutId = null;
+      }
+      if (state.reviewTimeoutId) {
+        clearTimeout(state.reviewTimeoutId);
+        state.reviewTimeoutId = null;
+      }
+      if (state.nameRollTimeoutId) {
+        clearTimeout(state.nameRollTimeoutId);
+        state.nameRollTimeoutId = null;
+        clearOverlappingSfx();
+      }
+
+      state.currentScreen = num;
+      Object.keys(els.screens).forEach((k) => {
+        els.screens[k].classList.toggle("active", Number(k) === num);
+      });
+
+      els.homeCornerBtn.style.display = num === 1 ? "none" : "inline-flex";
+      renderMoonInCurrentScreen(false);
+    }
+
+    /** Khởi tạo bàn chơi mới độc lập theo chế độ ('group' hoặc 'teacher') */
+    function startMode(mode) {
+      state.mode = mode;
+      state.matchedIds = new Set();
+      state.selectedPicId = null;
+      state.selectedWordId = null;
+      state.pictureOrder = shuffleArray(LESSON_WORDS);
+      state.wordOrder = createDerangedOrder(state.pictureOrder);
+      state.remainingStudents = shuffleArray(state.allStudents);
+      state.calledStudents = [];
+      state.currentStudent = "";
+      state.callCount = 0;
+
+      setMoonStage(0, false);
+
+      if (mode === "group") {
+        openMatchBoard();
+      } else {
+        openTeacherIntroScreen();
+      }
+    }
+
+    /** MÀN HÌNH DẪN CHẾ ĐỘ GIÁO VIÊN: AI SẼ ĐƯỢC VẦNG TRĂNG CHỌN? */
+    function openTeacherIntroScreen() {
+      showScreen(6);
+    }
+
+    /** MÀN HÌNH 2: VẦNG TRĂNG GỌI TÊN (CHẾ ĐỘ GIÁO VIÊN) */
+    function openCallNameScreen() {
+      showScreen(2);
+      const screen2 = els.screens[2];
+      const studentName = drawNextStudent();
+      state.currentStudent = studentName;
+
+      const finalLabel = studentName
+        ? studentName.toUpperCase()
+        : `LƯỢT ${state.callCount}`;
+
+      const rollPool = state.allStudents.length > 1
+        ? state.allStudents.map((n) => n.toUpperCase())
+        : state.allStudents.length === 1
+          ? [state.allStudents[0].toUpperCase(), "⭐", "✨"]
+          : ["BẠN NHỎ 1", "BẠN NHỎ 2", "BẠN NHỎ 3", "NGÔI SAO NHỎ", "BẠN XINH XẮN", "BẠN CHĂM NGOAN"];
+
+      screen2.classList.remove("callname-revealed");
+      screen2.classList.add("callname-rolling");
+      els.callnamePrompt.textContent = "✨ Vầng trăng đang quay chọn bạn nhỏ may mắn...";
+      els.calledStudentName.textContent = "✨ ... ✨";
+
+      const stepDelays = [55, 55, 60, 60, 65, 70, 75, 80, 90, 100, 115, 130, 150, 175, 205, 240, 285, 340, 410, 480];
+      let stepIdx = 0;
+      let lastShown = "";
+
+      function runRollStep() {
+        if (state.currentScreen !== 2) return;
+
+        if (stepIdx < stepDelays.length) {
+          let candidate = rollPool[Math.floor(Math.random() * rollPool.length)];
+          if (rollPool.length > 1) {
+            let guard = 0;
+            while (
+              (candidate === lastShown || (stepIdx === stepDelays.length - 1 && candidate === finalLabel)) &&
+              guard < 10
+            ) {
+              candidate = rollPool[Math.floor(Math.random() * rollPool.length)];
+              guard += 1;
+            }
+          }
+          lastShown = candidate;
+          els.calledStudentName.textContent = candidate;
+          els.calledStudentName.classList.remove("name-tick-anim");
+          void els.calledStudentName.offsetWidth;
+          els.calledStudentName.classList.add("name-tick-anim");
+
+          playRollTickSound(stepIdx / stepDelays.length, stepIdx);
+
+          const delay = stepDelays[stepIdx];
+          stepIdx += 1;
+          state.nameRollTimeoutId = setTimeout(runRollStep, delay);
+        } else {
+          // Dừng lại một nhịp ngắn tạo điểm nhấn rồi công bố kết quả thật nổi bật
+          state.nameRollTimeoutId = setTimeout(() => {
+            if (state.currentScreen !== 2) return;
+            state.nameRollTimeoutId = null;
+            els.calledStudentName.classList.remove("name-tick-anim");
+            els.calledStudentName.textContent = finalLabel;
+            els.callnamePrompt.textContent = "🌟 Vầng trăng đã gọi tên!";
+            screen2.classList.remove("callname-rolling");
+            screen2.classList.add("callname-revealed");
+
+            renderMoonInCurrentScreen(true);
+            playNameRevealSound();
+
+            const spotRect = els.nameSpotlight.getBoundingClientRect();
+            const sx = spotRect.left + spotRect.width * 0.5;
+            const sy = spotRect.top + spotRect.height * 0.5;
+            launchStarFirework(sx, sy, 26);
+
+            const moonRect = els.moonSlots[2].getBoundingClientRect();
+            launchStarFirework(moonRect.left + moonRect.width * 0.5, moonRect.top + moonRect.height * 0.5, 16);
+
+            setTimeout(() => {
+              if (state.currentScreen === 2) {
+                launchStarFirework(sx - 110, sy - 40, 14);
+                launchStarFirework(sx + 110, sy - 40, 14);
+              }
+            }, 320);
+          }, 180);
+        }
+      }
+
+      state.nameRollTimeoutId = setTimeout(runRollStep, 120);
+    }
+
+    /* ========================================================================
+       11. MÀN HÌNH 3: BẢNG GHÉP 3 TRANH - 3 TỪ (KÉO THẢ & CHẠM CHỌN)
+       ======================================================================== */
+    function openMatchBoard() {
+      state.selectedPicId = null;
+      state.selectedWordId = null;
+      showScreen(3);
+
+      const isTeacher = state.mode === "teacher";
+      els.boardModeTitle.textContent = isTeacher
+        ? "👩‍🏫 GIÁO VIÊN • GHÉP TRANH VỚI TỪ"
+        : "🌙 GIÚP VẦNG TRĂNG TÌM ĐÚNG TỪ";
+
+      if (isTeacher && state.currentStudent) {
+        els.activeStudentPill.textContent = `⭐ Mời bạn: ${state.currentStudent}`;
+        els.activeStudentPill.classList.add("visible");
+      } else {
+        els.activeStudentPill.classList.remove("visible");
+      }
+
+      els.teacherCallHeaderBtn.classList.toggle("visible", isTeacher && state.matchedIds.size < 3);
+
+      els.feedbackToast.className = "feedback-toast";
+      els.feedbackToast.textContent = "";
+      els.continueTurnBtn.classList.remove("visible");
+
+      renderMatchBoard();
+      updateTurnStars();
+    }
+
+    function renderMatchBoard() {
+      // 1. Dựng 3 khung hình ảnh minh họa
+      els.picturesGrid.innerHTML = "";
+      state.pictureOrder.forEach((item, idx) => {
+        const isMatched = state.matchedIds.has(item.id);
+        const card = document.createElement("div");
+        card.className = `picture-card${isMatched ? " is-matched" : ""}`;
+        card.dataset.picId = item.id;
+        card.setAttribute("role", "button");
+        card.setAttribute("tabindex", isMatched ? "-1" : "0");
+        card.setAttribute("aria-label", isMatched ? `Đã ghép đúng: ${item.word}` : "Hình ảnh cần ghép từ");
+
+        card.innerHTML = `
+          <div class="picture-svg-box">${getIllustrationSVG(item.id, `p${idx}_`)}</div>
+          <div class="picture-slot-label">${isMatched ? `✓ ${item.word}` : "Chọn hoặc thả từ vào đây"}</div>
+        `;
+
+        card.addEventListener("click", () => handlePictureClick(item.id));
+        card.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            handlePictureClick(item.id);
+          }
+        });
+        els.picturesGrid.appendChild(card);
+      });
+
+      // 2. Dựng 3 thẻ từ (đã xáo lệch vị trí so với hình ảnh)
+      els.optionsGrid.innerHTML = "";
+      state.wordOrder.forEach((item, idx) => {
+        const isUsed = state.matchedIds.has(item.id);
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = `word-card ${CARD_THEMES[idx % CARD_THEMES.length]}${isUsed ? " is-used" : ""}`;
+        btn.dataset.wordId = item.id;
+        btn.textContent = item.word;
+        btn.disabled = isUsed;
+
+        btn.addEventListener("click", () => {
+          if (state.suppressNextClick) return;
+          handleWordClick(item.id);
+        });
+
+        attachPointerDrag(btn, item.id);
+        els.optionsGrid.appendChild(btn);
+      });
+
+      refreshSelectionHighlights();
+    }
+
+    /** Hỗ trợ kéo thả thẻ từ bằng Pointer Events (mượt trên cả chuột máy tính, TV cảm ứng & máy tính bảng) */
+    function attachPointerDrag(btn, wordId) {
+      btn.addEventListener("pointerdown", (e) => {
+        if (state.matchedIds.has(wordId) || e.button > 0) return;
+
+        const startX = e.clientX;
+        const startY = e.clientY;
+        const rect = btn.getBoundingClientRect();
+        let dragging = false;
+        let clone = null;
+        let hoveredPic = null;
+
+        function onPointerMove(moveEvent) {
+          const dx = moveEvent.clientX - startX;
+          const dy = moveEvent.clientY - startY;
+
+          if (!dragging && Math.hypot(dx, dy) > 8) {
+            dragging = true;
+            state.selectedPicId = null;
+            state.selectedWordId = null;
+            refreshSelectionHighlights();
+
+            btn.classList.add("is-dragging-source");
+            clone = btn.cloneNode(true);
+            clone.classList.remove("is-dragging-source");
+            clone.classList.add("drag-floating-clone");
+            clone.style.width = `${rect.width}px`;
+            clone.style.height = `${rect.height}px`;
+            document.body.appendChild(clone);
+          }
+
+          if (dragging && clone) {
+            clone.style.left = `${moveEvent.clientX}px`;
+            clone.style.top = `${moveEvent.clientY}px`;
+
+            const targetEl = document.elementFromPoint(moveEvent.clientX, moveEvent.clientY);
+            const picCard = targetEl ? targetEl.closest(".picture-card") : null;
+            const validPic = picCard && !picCard.classList.contains("is-matched") ? picCard : null;
+
+            if (hoveredPic && hoveredPic !== validPic) {
+              hoveredPic.classList.remove("drag-over");
+            }
+            hoveredPic = validPic;
+            if (hoveredPic) {
+              hoveredPic.classList.add("drag-over");
+            }
+          }
+        }
+
+        function onPointerUp(upEvent) {
+          window.removeEventListener("pointermove", onPointerMove);
+          window.removeEventListener("pointerup", onPointerUp);
+          window.removeEventListener("pointercancel", onPointerUp);
+
+          if (dragging) {
+            btn.classList.remove("is-dragging-source");
+            if (clone) clone.remove();
+            if (hoveredPic) hoveredPic.classList.remove("drag-over");
+
+            const dropTarget = document.elementFromPoint(upEvent.clientX, upEvent.clientY);
+            const picCard = dropTarget ? dropTarget.closest(".picture-card") : null;
+            if (picCard && !picCard.classList.contains("is-matched")) {
+              attemptMatch(picCard.dataset.picId, wordId);
+            }
+
+            state.suppressNextClick = true;
+            setTimeout(() => { state.suppressNextClick = false; }, 120);
+          }
+        }
+
+        window.addEventListener("pointermove", onPointerMove);
+        window.addEventListener("pointerup", onPointerUp);
+        window.addEventListener("pointercancel", onPointerUp);
+      });
+    }
+
+    function refreshSelectionHighlights() {
+      els.picturesGrid.querySelectorAll(".picture-card").forEach((el) => {
+        el.classList.toggle("is-selected", el.dataset.picId === state.selectedPicId);
+      });
+      els.optionsGrid.querySelectorAll(".word-card").forEach((el) => {
+        el.classList.toggle("is-selected", el.dataset.wordId === state.selectedWordId);
+      });
+    }
+
+    function handlePictureClick(picId) {
+      if (state.matchedIds.has(picId)) return;
+      if (state.selectedWordId) {
+        const wordId = state.selectedWordId;
+        state.selectedWordId = null;
+        state.selectedPicId = null;
+        refreshSelectionHighlights();
+        attemptMatch(picId, wordId);
+      } else {
+        state.selectedPicId = state.selectedPicId === picId ? null : picId;
+        if (state.selectedPicId) playSelectSound();
+        refreshSelectionHighlights();
+      }
+    }
+
+    function handleWordClick(wordId) {
+      if (state.matchedIds.has(wordId)) return;
+      if (state.selectedPicId) {
+        const picId = state.selectedPicId;
+        state.selectedPicId = null;
+        state.selectedWordId = null;
+        refreshSelectionHighlights();
+        attemptMatch(picId, wordId);
+      } else {
+        state.selectedWordId = state.selectedWordId === wordId ? null : wordId;
+        if (state.selectedWordId) playSelectSound();
+        refreshSelectionHighlights();
+      }
+    }
+
+    /** Kiểm tra ghép cặp tranh - từ (giữ nguyên cho cả 2 chế độ) */
+    function attemptMatch(picId, wordId) {
+      if (state.matchedIds.has(picId) || state.matchedIds.has(wordId)) return;
+
+      const picEl = els.picturesGrid.querySelector(`.picture-card[data-pic-id="${picId}"]`);
+      const wordEl = els.optionsGrid.querySelector(`.word-card[data-word-id="${wordId}"]`);
+
+      if (picId === wordId) {
+        // GHÉP ĐÚNG
+        state.matchedIds.add(picId);
+        const matchedCount = state.matchedIds.size;
+        const item = LESSON_WORDS.find((w) => w.id === picId);
+
+        if (picEl) {
+          picEl.classList.remove("is-wrong", "is-selected", "drag-over");
+          picEl.classList.add("is-matched");
+          const label = picEl.querySelector(".picture-slot-label");
+          if (label && item) label.textContent = `✓ ${item.word}`;
+        }
+
+        if (wordEl) {
+          wordEl.classList.remove("is-wrong", "is-selected");
+          wordEl.classList.add("is-used");
+          wordEl.disabled = true;
+        }
+
+        // Nâng cấp độ sáng Vầng Trăng tương ứng (1 -> 2 -> 3)
+        setMoonStage(matchedCount, true);
+        playPairCompleteSound(matchedCount);
+        updateTurnStars();
+
+        // Hiệu ứng pháo hoa sao quanh vầng trăng & tại cặp tranh vừa ghép đúng
+        const moonRect = els.moonSlots[3].getBoundingClientRect();
+        launchStarFirework(
+          moonRect.left + moonRect.width * 0.5,
+          moonRect.top + moonRect.height * 0.5,
+          matchedCount === 1 ? 18 : matchedCount === 2 ? 24 : 30
+        );
+
+        if (picEl) {
+          const pr = picEl.getBoundingClientRect();
+          launchStarFirework(pr.left + pr.width * 0.5, pr.top + pr.height * 0.5, 14);
+        }
+
+        els.feedbackToast.className = "feedback-toast show-praise";
+        els.feedbackToast.textContent = `✨ ${PRAISE_BY_STAGE[matchedCount]}`;
+
+        if (matchedCount === 3) {
+          els.teacherCallHeaderBtn.classList.remove("visible");
+          els.continueTurnBtn.classList.remove("visible");
+
+          // Sau 1.1 giây chuyển sang Bước 1: Hiệu ứng chiến thắng
+          state.wakeTimeoutId = setTimeout(() => {
+            openRadiantScreen();
+          }, 1100);
+        } else if (state.mode === "teacher") {
+          els.continueTurnText.textContent = "🎲 GỌI BẠN TIẾP THEO";
+          els.continueTurnBtn.classList.add("visible");
+        }
+      } else {
+        // GHÉP CHƯA ĐÚNG: nhắc nhẹ nhàng và cho thử lại (không làm tối vầng trăng)
+        if (picEl) {
+          picEl.classList.remove("is-wrong");
+          void picEl.offsetWidth;
+          picEl.classList.add("is-wrong");
+        }
+        if (wordEl) {
+          wordEl.classList.remove("is-wrong");
+          void wordEl.offsetWidth;
+          wordEl.classList.add("is-wrong");
+        }
+        els.feedbackToast.className = "feedback-toast show-retry";
+        els.feedbackToast.textContent = "💛 Chưa đúng rồi, thử lại nhé!";
+        playRetrySound();
+      }
+    }
+
+    function updateTurnStars() {
+      const doneCount = state.matchedIds.size;
+      for (let i = 0; i < 3; i++) {
+        const dot = document.getElementById(`dot${i}`);
+        dot.classList.remove("done");
+        if (i < doneCount) {
+          dot.classList.add("done");
+          dot.textContent = "★";
+        } else {
+          dot.textContent = String(i + 1);
+        }
+      }
+    }
+
+    /* ========================================================================
+       12. KẾT THÚC 2 BƯỚC: HIỆU ỨNG CHIẾN THẮNG (2.8s) -> TỔNG HỢP ĐÁP ÁN
+       ======================================================================== */
+    function openRadiantScreen() {
+      setMoonStage(3, true);
+      showScreen(4);
+
+      els.winnersRibbon.innerHTML = "";
+      if (state.mode === "teacher" && state.calledStudents.length > 0) {
+        state.calledStudents.forEach((name) => {
+          const pill = document.createElement("div");
+          pill.className = "winner-pill";
+          pill.textContent = `⭐ ${name}`;
+          els.winnersRibbon.appendChild(pill);
+        });
+      }
+
+      playFinaleSound();
+      launchStarFirework(window.innerWidth * 0.5, window.innerHeight * 0.28, 32);
+      setTimeout(() => {
+        if (state.currentScreen === 4) {
+          launchStarFirework(window.innerWidth * 0.28, window.innerHeight * 0.34, 18);
+          launchStarFirework(window.innerWidth * 0.72, window.innerHeight * 0.34, 18);
+        }
+      }, 650);
+
+      // Giữ hiệu ứng chiến thắng 2.8 giây rồi tự động chuyển sang Màn hình tổng hợp đáp án
+      state.reviewTimeoutId = setTimeout(() => {
+        openReviewScreen();
+      }, 2800);
+    }
+
+    function openReviewScreen() {
+      setMoonStage(3, false);
+      showScreen(5);
+
+      els.reviewPairsGrid.innerHTML = "";
+      LESSON_WORDS.forEach((item, idx) => {
+        const card = document.createElement("div");
+        card.className = "review-pair-card";
+        card.innerHTML = `
+          <div class="review-pic-frame">${getIllustrationSVG(item.id, `r${idx}_`)}</div>
+          <div class="review-connector" aria-hidden="true">
+            <div class="review-connector-line"></div>
+            <div class="review-check-badge">✓</div>
+          </div>
+          <div class="review-word-box ${CARD_THEMES[idx % CARD_THEMES.length]}">${item.word}</div>
+        `;
+        els.reviewPairsGrid.appendChild(card);
+      });
+    }
+
+    function goHome() {
+      setMoonStage(0, false);
+      showScreen(1);
+    }
+
+    /* ========================================================================
+       13. CỬA SỔ CÀI ĐẶT DANH SÁCH HỌC SINH
+       ======================================================================== */
+    function openSettingsModal() {
+      els.settingsModal.classList.add("open");
+      els.studentListInput.focus();
+    }
+
+    function closeSettingsModal() {
+      els.settingsModal.classList.remove("open");
+    }
+
+    function saveStudentList() {
+      state.allStudents = parseStudentList(els.studentListInput.value);
+      updateStudentCountBadge();
+      closeSettingsModal();
+    }
+
+    function clearStudentList() {
+      els.studentListInput.value = "";
+      state.allStudents = [];
+      updateStudentCountBadge();
+    }
+
+    /* ========================================================================
+       14. KHỞI CHẠY ỨNG DỤNG
+       ======================================================================== */
+    function initApp() {
+      initAtmosphere();
+      setMoonStage(0, false);
+      updateStudentCountBadge();
+      updateMasterVolume();
+
+      // Chọn 2 chế độ chơi độc lập
+      els.groupModeBtn.addEventListener("click", () => {
+        getAudioCtx();
+        startMode("group");
+      });
+
+      els.teacherModeBtn.addEventListener("click", () => {
+        getAudioCtx();
+        startMode("teacher");
+      });
+
+      // Màn hình dẫn chế độ Giáo viên -> chỉ khi nhấn BẮT ĐẦU mới quay tên
+      els.teacherStartSpinBtn.addEventListener("click", () => {
+        getAudioCtx();
+        openCallNameScreen();
+      });
+
+      // Chế độ Giáo viên: từ màn hình gọi tên sang bảng ghép từ & nút gọi bạn khác
+      els.goToQuestionBtn.addEventListener("click", openMatchBoard);
+      els.continueTurnBtn.addEventListener("click", openCallNameScreen);
+      els.teacherCallHeaderBtn.addEventListener("click", openCallNameScreen);
+
+      // Chơi lại & về màn hình chính
+      els.replayBtn.addEventListener("click", () => {
+        getAudioCtx();
+        startMode(state.mode);
+      });
+      els.finaleHomeBtn.addEventListener("click", goHome);
+      els.homeCornerBtn.addEventListener("click", goHome);
+
+      // Cài đặt danh sách học sinh
+      els.openSettingsBtn.addEventListener("click", openSettingsModal);
+      els.closeSettingsBtn.addEventListener("click", closeSettingsModal);
+      els.saveStudentsBtn.addEventListener("click", saveStudentList);
+      els.clearStudentsBtn.addEventListener("click", clearStudentList);
+      els.settingsModal.addEventListener("click", (e) => {
+        if (e.target === els.settingsModal) closeSettingsModal();
+      });
+
+      // Bật/tắt âm thanh và điều chỉnh âm lượng
+      els.soundToggleBtn.addEventListener("click", () => {
+        getAudioCtx();
+        state.soundEnabled = !state.soundEnabled;
+        if (state.soundEnabled && state.volume === 0) {
+          state.volume = 0.55;
+          els.volumeSlider.value = "55";
+        }
+        updateMasterVolume();
+      });
+
+      els.volumeSlider.addEventListener("input", (e) => {
+        getAudioCtx();
+        const val = Number(e.target.value) / 100;
+        state.volume = val;
+        state.soundEnabled = val > 0;
+        updateMasterVolume();
+      });
+    }
+
+    window.addEventListener("DOMContentLoaded", initApp);
+  </script>
+</body>
+</html>
